@@ -1,47 +1,103 @@
 # Protocol
 
-`WHO 17` provides scenario-programmer execution and scenario-management operations. It is distinct from [`WHO 0`](../who-0-scenarios/), whose principal role is invocation of stored scenario numbers.
+`WHO 17` controls scenes managed by scenario-programmer/gateway devices. Its published functional model consists of Start, Stop, Enable and Disable operations addressed to a scene identifier, together with status requests and event reporting.
 
-## Execution-state commands
+It is distinct from [`WHO 0`](../who-0-scenarios/): `WHO 0` invokes and programs scenario-module memories, whereas `WHO 17` controls the execution state of scenes managed by a scenario programmer.
+
+## `WHAT` reference
 
 | `WHAT` | Meaning |
 | ---: | --- |
-| `1` | Start |
-| `2` | Stop |
-| `3` | Enable |
-| `4` | Disable |
+| `1` | Start scene |
+| `2` | Stop scene |
+| `3` | Enable scene |
+| `4` | Disable scene |
 
-The ordinary execution form is `*17*WHAT*WHERE##`, where `WHERE` identifies the scenario/programmer target defined by the `WHO 17` addressing model. For example, a start operation uses `WHAT 1`; the numeric target remains a `WHO 17` `WHERE`, not a `WHO 0` scenario field.
+These values are both command operations and reported scene states/events. Their interpretation is scoped to `WHO 17`.
 
-## Execution versus programming
+## `WHERE`
 
-Starting or stopping a scenario is distinct from modifying its programmed content or state. A client should therefore separate the four execution-state commands from the programming workflow described below.
-
-## MyHOME_Suite programming operations
-
-The MyHOME_Suite `OPEN.db` protocol definitions extend the functional model with explicit scenario-programming operations. The defined workflow includes:
-
-| Operation | Role |
+| `WHERE` | Meaning |
 | --- | --- |
-| Start scenario programming | Opens programming for the selected scenario target |
-| Reset scenario programming | Clears/resets the scenario programming context |
-| End scenario programming | Closes the programming operation |
-| `DIMENSION 40` | Set/request/report scenario state |
-| `DIMENSION 41` | Scenario error information |
-| Test scenario activation | Executes/tests the scenario in the programming context |
+| `0` | General |
+| `1`–`300` | Scene number on MH200N |
+| Numeric value | Scene identifier on MH202 |
 
-These operations are implemented as protocol sequences rather than as aliases for `WHAT 1`–`4`. Session state and direction are therefore significant.
+The public specification intentionally gives MH202 as a numeric scene identifier rather than imposing the MH200N `1`–`300` range. Implementations should therefore preserve the target-device distinction instead of globally validating every `WHO 17` `WHERE` against the MH200N range.
 
-## `DIMENSION 40` — scenario state
+## Start scene — `WHAT 1`
 
-MyHOME_Suite defines operations to set scenario state and to request/report the same state through `DIMENSION 40`. Implementations should distinguish the write, request, and response frame classes even though they share the identifier.
+Command: `*17*1*WHERE##`.
 
-## `DIMENSION 41` — scenario error
+On a command connection the gateway acknowledges an accepted operation with `ACK`. The corresponding event is `*17*1*WHERE##` on the event connection.
 
-`DIMENSION 41` reports scenario-programming error information. Error values belong to the scenario-management workflow and should not be treated as general OpenWebNet `NACK` codes.
+Start changes the execution state of the addressed scene; it is not equivalent to `WHO 0` selecting a numbered slot in an F420 scenario module.
 
-## Relationship to `WHO 0`
+## Stop scene — `WHAT 2`
 
-`WHO 0` and `WHO 17` can both result in scenario execution, but they expose different protocol abstractions. `WHO 0` addresses the scenario function directly; `WHO 17` exposes scenario-programmer execution and management. Applications should preserve the originating namespace instead of normalizing both to one synthetic command family.
+Command: `*17*2*WHERE##`.
 
-See [`../../programming/`](../../programming/) for configuration/programming concepts that span protocol systems.
+The event form is the same frame on an event connection. Stop terminates execution of the addressed scene without changing whether that scene is enabled for subsequent activation.
+
+## Enable scene — `WHAT 3`
+
+Command: `*17*3*WHERE##`.
+
+Enable controls scene availability. It is therefore orthogonal to the Start/Stop execution pair: an enabled scene can subsequently be started, while a disabled scene is not available for normal activation.
+
+## Disable scene — `WHAT 4`
+
+Command: `*17*4*WHERE##`.
+
+The corresponding event uses the same functional frame. Disable changes availability rather than merely stopping a currently executing scene.
+
+## Status request
+
+The published status request is `*#17*WHERE##`.
+
+The server reports scene state using the same `WHO 17` `WHAT` vocabulary and then terminates the response with `ACK`. The specification groups the possible returned states as `WHAT 1`–`2` and `WHAT 3`–`4`, reflecting the two independent aspects of scene state:
+
+| State axis | Returned `WHAT` |
+| --- | --- |
+| Execution | `1` Start / running, `2` Stop / stopped |
+| Availability | `3` Enabled, `4` Disabled |
+
+A status request can therefore produce more than one functional state frame before the final `ACK`; clients should not assume a single scalar status.
+
+## Event connection
+
+The event connection reports changes with the same four normal frames:
+
+| Event | Frame |
+| --- | --- |
+| Scene started | `*17*1*WHERE##` |
+| Scene stopped | `*17*2*WHERE##` |
+| Scene enabled | `*17*3*WHERE##` |
+| Scene disabled | `*17*4*WHERE##` |
+
+Command acknowledgement and event propagation are separate. `ACK` confirms the command transaction, while the event frame represents the functional scene state/event visible to event-session clients.
+
+## MyHOME_Suite extended scenario-programmer operations
+
+The MyHOME_Suite `OPEN.db` definitions contain additional scenario-programmer operations beyond the four ordinary functional commands published in the `WHO 17` document. These include starting scenario programming, resetting programming, ending programming, setting/requesting scenario state through `DIMENSION 40`, reporting scenario errors through `DIMENSION 41`, and testing scenario activation.
+
+These definitions establish that MyHOME_Suite has a richer scenario-programmer workflow than the public Start/Stop/Enable/Disable reference. They should be interpreted in their sequence/session context rather than assigned ordinary `WHAT` semantics without the corresponding frame definitions.
+
+In particular, the implementation data distinguishes operations for:
+
+| Operation family | Established implementation role |
+| --- | --- |
+| Programming start | Enter scenario-programming workflow |
+| Scenario reset | Reset scenario-programming state |
+| Programming end | Finish scenario programming |
+| `DIMENSION 40` | Set, request and report scenario state |
+| `DIMENSION 41` | Scenario error reporting |
+| Test activation | Exercise scenario activation in the programming workflow |
+
+The public `WHO 17` functional state model remains the canonical interpretation of `WHAT 1`–`4`; implementation-only programming operations are complementary and must not be collapsed into that four-value table.
+
+## Relationship to scenario systems
+
+[`WHO 0`](../who-0-scenarios/) addresses scenario modules such as F420 and their stored scenario slots. `WHO 17` addresses scenes managed by scenario-programmer/gateway devices. The MyHOME_Suite [`scenario-engine`](../../scenario-engine/) is a higher-level capability model that can compose functional operations from multiple `WHO` namespaces.
+
+See [`../../protocol/`](../../protocol/) for common command, status and event-session behavior.
