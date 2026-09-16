@@ -1,19 +1,33 @@
 # Protocol
 
-`WHO 0` addresses stored scenarios. The ordinary functional frame uses the scenario number as `WHAT` and the scenario device or scenario unit as `WHERE`.
+`WHO 0` addresses stored scenarios. In the ordinary functional form the scenario number occupies `WHAT`, while `WHERE` identifies the scenario device or scenario unit that stores or exposes the scenario.
 
 ## Scenario activation
 
-The canonical command form is `*0*N*WHERE##`, where `N` identifies the stored scenario. The published functional range is scenarios `1` through `16`.
+The canonical command form is `*0*N*WHERE##`, where `N` identifies the stored scenario. The published functional range is `1`–`16`.
 
 | Field | Meaning |
 | --- | --- |
 | `WHO` | `0` |
-| `WHAT` | Scenario number `N` |
+| `WHAT` | Stored scenario number `N` |
 | `WHERE` | Scenario target |
 
-Scenario programming operations published for this family include parameterized `WHAT` forms such as `40#N`. These operations are distinct from the scenario execution-state functions carried by [`WHO 17`](../who-17-scenario-management/).
+This differs from most command-oriented systems because the ordinary `WHAT` is principally an indexed scenario selection rather than a small fixed verb vocabulary.
 
-## MyHOME_Suite scenario engine
+The MyHOME_Suite ScenarioDevices data uses `*0*N*WHERE##` as the functional scenario-action template, confirming that stored-scenario activation is also exposed to the application's higher-level scenario engine.
 
-The MyHOME_Suite scenario engine uses `WHO 0` commands as one class of functional action, but the higher-level trigger/condition/action capability model is not itself the `WHO 0` wire protocol. That model is documented separately under [`../../scenario-engine/`](../../scenario-engine/).
+## Programming operations
+
+The published `WHO 0` family also defines parameterized programming operations, including forms based on `WHAT 40#N`. The parameterized `WHAT` must be retained as structured protocol syntax; `40#N` is not equivalent to an ordinary activation of scenario `N`.
+
+Programming changes the scenario definition or programming context, whereas `*0*N*WHERE##` invokes an already stored scenario. Implementations should keep these operations separate even when they address the same scenario unit.
+
+## Relationship to `WHO 17`
+
+[`WHO 17`](../who-17-scenario-management/) provides scenario-programmer execution and management functions such as start, stop, enable and disable, together with MyHOME_Suite scenario-state/programming operations. `WHO 0` remains the canonical namespace for direct stored-scenario activation.
+
+## Relationship to the MyHOME_Suite scenario engine
+
+The MyHOME_Suite scenario engine represents triggers, conditions and actions across many functional `WHO` systems. A `WHO 0` frame can be one such action, but the capability graph itself is not part of the `WHO 0` wire protocol. See [`../../scenario-engine/`](../../scenario-engine/).
+
+A protocol implementation should therefore preserve three layers: the `WHO 0` frame, the scenario device addressed by `WHERE`, and any higher-level application rule that caused the frame to be sent.
