@@ -18,7 +18,7 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 ## Conventions
 
-Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. The canonical OpenWebNet frame term is `DIMENSION`; forms such as `Dimension` and `Dimensions` are not used for the protocol field or its identifiers. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
+Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
 
 `WHAT`, `WHERE`, and `DIMENSION` semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
