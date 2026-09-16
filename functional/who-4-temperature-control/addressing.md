@@ -2,7 +2,7 @@
 
 Temperature Control uses its own zone-oriented `WHERE` grammar rather than the A/PL grammar used by Lighting and Automation.
 
-MyHOME Suite 3.5.38 address rules include:
+The MyHOME_Suite 3.5.38 `OPEN.db` address-rule definitions include:
 
 | Form | Purpose |
 | --- | --- |
