@@ -16,7 +16,54 @@
 | `22` | Split control | Read / write |
 | `30` | Holiday-scenario end date/time | Read / write |
 
-The MyHOME_Suite protocol data additionally defines Temperature Control command templates using `DIMENSION 7`. This implementation operation is not part of the published functional `DIMENSION` table above and should be treated according to its MyHOME_Suite command template rather than silently equated with another public `DIMENSION`.
+The MyHOME_Suite ScenarioDevices capability data additionally defines Temperature Control action templates using `DIMENSION 7`, and write forms using `DIMENSION 5` and `11`. These implementation operations complement the published functional table and should be interpreted from their exact MyHOME_Suite templates rather than silently mapped onto unrelated public operations.
+
+## MyHOME_Suite `DIMENSION 7` action model
+
+ScenarioDevices defines `DIMENSION 7` actions with a two-field mode structure after the `DIMENSION` identifier. The first value selects the thermal context and the second selects the requested operating state.
+
+### Thermal context
+
+| First value | Context |
+| ---: | --- |
+| `0` | Generic |
+| `1` | Heating |
+| `2` | Cooling |
+| `3` | Automatic |
+
+### Operating state
+
+| Second value | State | Additional value |
+| ---: | --- | --- |
+| `1` | Setpoint | four-digit `c1c2c3c4` temperature |
+| `2` | Protection | none |
+| `3` | Comfort | none |
+| `4` | Eco | none |
+| `5` | OFF | none; ScenarioDevices uses generic context `0` |
+
+The exact MyHOME_Suite templates are:
+
+| Operation | Generic | Heating | Cooling | Automatic |
+| --- | --- | --- | --- | --- |
+| Comfort | `*#4*ZAZB*#7*0*3*##` | `*#4*ZAZB*#7*1*3*##` | `*#4*ZAZB*#7*2*3*##` | `*#4*ZAZB*#7*3*3*##` |
+| Eco | `*#4*ZAZB*#7*0*4*##` | `*#4*ZAZB*#7*1*4*##` | `*#4*ZAZB*#7*2*4*##` | `*#4*ZAZB*#7*3*4*##` |
+| Protection | `*#4*ZAZB*#7*0*2*##` | `*#4*ZAZB*#7*1*2*##` | `*#4*ZAZB*#7*2*2*##` | `*#4*ZAZB*#7*3*2*##` |
+| Setpoint | `*#4*ZAZB*#7*0*1*c1c2c3c4##` | `*#4*ZAZB*#7*1*1*c1c2c3c4##` | `*#4*ZAZB*#7*2*1*c1c2c3c4##` | `*#4*ZAZB*#7*3*1*c1c2c3c4##` |
+
+OFF is encoded by ScenarioDevices as `*#4*ZAZB*#7*0*5*##`.
+
+The MyHOME_Suite labels distinguish antifreeze/protection according to thermal context: heating uses antifreeze, cooling uses protection, and automatic/generic variants retain their own action labels. The wire structure remains the same two-value `DIMENSION 7` model.
+
+## MyHOME_Suite local-control and fan-coil writes
+
+ScenarioDevices also defines:
+
+| Capability | Template |
+| --- | --- |
+| Local control | `*#4*ZAZB*#5*val##` |
+| Fan-coil speed | `*#4*ZAZB*#11*val##` |
+
+These are scenario-engine action templates. Their presence establishes that MyHOME_Suite can emit the write form for these operations; it does not by itself redefine every public read/status meaning attached to the same `DIMENSION` number.
 
 ## `DIMENSION 0` — measured temperature
 
@@ -26,7 +73,9 @@ Published measured/status temperature fields use four decimal digits and can rep
 
 ## `DIMENSION 11` — fan-coil speed
 
-`DIMENSION 11` reports fan-coil speed. It is a status operation; its value must be interpreted using the Temperature Control fan-coil state model rather than as a temperature.
+`DIMENSION 11` reports fan-coil speed in the published status model. ScenarioDevices additionally defines the write template `*#4*ZAZB*#11*val##`, establishing a MyHOME_Suite scenario action for fan-coil speed.
+
+Read and write forms should therefore be distinguished by frame direction and operation context rather than assuming that the identifier is globally read-only in the implementation.
 
 ## `DIMENSION 12` — complete probe status
 
@@ -76,8 +125,9 @@ Temperature-looking values in `WHO 4` do not have one universal range or resolut
 | --- | --- |
 | Measured/status temperature | four digits, typically 0.1 °C resolution |
 | Manual zone/central-unit setpoint write | `0050`–`0400`, 0.5 °C steps |
-| MyHOME_Suite command parameters | range/step defined by the associated parameter record |
+| MyHOME_Suite ScenarioDevices `DIMENSION 7` setpoint | four-digit `c1c2c3c4` field; use the associated implementation parameter definition for validation |
+| Other MyHOME_Suite command parameters | range/step defined by the associated parameter record |
 
 Decoders and encoders should therefore select the temperature representation from the `DIMENSION`/operation definition, not from `WHO 4` alone.
 
-See [`addressing.md`](addressing.md) for zone/probe/actuator forms, [`what.md`](what.md) for operating modes, and [`../../protocol/dimensions.md`](../../protocol/dimensions.md) for the common `DIMENSION` frame classes.
+See [`addressing.md`](addressing.md) for zone/probe/actuator forms, [`what.md`](what.md) for operating modes, [`../cross-database-coverage.md`](../cross-database-coverage.md) for the implementation cross-reference, and [`../../protocol/dimensions.md`](../../protocol/dimensions.md) for the common `DIMENSION` frame classes.
