@@ -8,13 +8,13 @@ OpenWebNet frames are ASCII messages delimited by `*` and terminated by `##`. Th
 | --- | --- | --- |
 | Command/status | `*WHO*WHAT*WHERE##` | Command, state, or asynchronous event |
 | Status request | `*#WHO*WHERE##` | Requests current state |
-| Dimension request | `*#WHO*WHERE*DIMENSION##` | Requests a Dimension value |
-| Dimension response | `*#WHO*WHERE*DIMENSION*VALUE...##` | Reports a Dimension value |
-| Dimension write | `*#WHO*WHERE*#DIMENSION*VALUE...##` | Writes a Dimension value |
+| `Dimension` request | `*#WHO*WHERE*DIMENSION##` | Requests a `Dimension` value |
+| `Dimension` response | `*#WHO*WHERE*DIMENSION*VALUE...##` | Reports a `Dimension` value |
+| `Dimension` write | `*#WHO*WHERE*#DIMENSION*VALUE...##` | Writes a `Dimension` value |
 | `ACK` | `*#*1##` | Positive acknowledgement |
 | `NACK` | `*#*0##` | Negative acknowledgement |
 
-The ellipsis in `VALUE...` denotes zero or more additional `*`-separated values defined by that Dimension. It is notation used by this reference and is not transmitted.
+The ellipsis in `VALUE...` denotes zero or more additional `*`-separated values defined by that `Dimension`. It is notation used by this reference and is not transmitted.
 
 ## Delimiters
 
@@ -32,11 +32,11 @@ The normal form is `*WHO*WHAT*WHERE##`. Depending on direction and session conte
 
 `WHAT` can itself be parameterized. The valid syntax is defined by the selected `WHO`; see [`what.md`](what.md).
 
-## Dimension frames
+## `Dimension` frames
 
-Dimension operations use the `*#WHO...` family. A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends the Dimension values. A write prefixes the Dimension field with `#`.
+`Dimension` operations use the `*#WHO...` family. A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends the `Dimension` values. A write prefixes the `Dimension` field with `#`.
 
-Dimension identifiers and value layouts are scoped to their `WHO`. See [`dimensions.md`](dimensions.md).
+`Dimension` identifiers and value layouts are scoped to their `WHO`. See [`dimensions.md`](dimensions.md).
 
 ## Addressing
 
