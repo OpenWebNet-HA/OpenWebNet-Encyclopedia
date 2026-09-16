@@ -1,5 +1,9 @@
 # MyHOME Suite 3.5.38 Support Files
 
-Canonical non-database support files extracted from the MyHOME Suite 3.5.38 installation belong here.
+This directory contains canonical non-database support files copied from the MyHOME Suite 3.5.38 installation.
 
-`OpenQuery.txt` will be stored in this directory and documented in the source manifest with its original installation path, size, SHA-256 fingerprint, and provenance.
+`OpenQuery.txt` originates from:
+
+`C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OpenQuery.txt`
+
+It is preserved byte-for-byte, including its UTF-8 BOM and CRLF line endings. Its exact byte size and SHA-256 fingerprint are recorded in [`../../../manifest.yaml`](../../../manifest.yaml).

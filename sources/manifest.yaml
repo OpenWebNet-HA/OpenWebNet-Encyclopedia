@@ -1,0 +1,94 @@
+schema_version: 1
+corpus: OpenWebNet protocol documentation source corpus
+fingerprint_algorithm: SHA-256
+policy:
+  canonical_files: "Original evidence is preserved byte-for-byte. Analysis and inferred relationships must not modify files under sources/."
+  private_material: "Network captures are intentionally excluded because they contain private installation information."
+
+source_sets:
+  myhome-suite-3.5.38:
+    product: MyHOME Suite
+    version: 3.5.38
+    publisher: BTICINO S.P.A. / LegrandGroup
+    provenance: Files copied unmodified from a MyHOME Suite 3.5.38 installation.
+    build_evidence_date: 2026-06-18
+    installer:
+      filename: MyHOME_Suite_030538.exe
+      repository_status: not_redistributed
+      size: 599437936
+      sha256: 707D8A43A5296A1EA87C33F111E9269C8BBD0FE524AC5EFE87BDEDE8B6EB311B
+      authenticode_status: Valid
+      signer: BTICINO S.P.A.
+      authenticated_timestamp: "2026-06-19 11:01"
+    files:
+      - id: myhome-suite-3.5.38-mhcatalogue
+        path: myhome-suite/3.5.38/databases/MHCatalogue.db
+        original_filename: MHCatalogue.db
+        original_path: 'C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_MHCatalogue\MHCatalogue.db'
+        type: sqlite
+        size: 2625536
+        sha256: f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
+      - id: myhome-suite-3.5.38-open
+        path: myhome-suite/3.5.38/databases/OPEN.db
+        original_filename: OPEN.db
+        original_path: 'C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OPEN.db'
+        type: sqlite
+        size: 80896
+        sha256: d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051
+      - id: myhome-suite-3.5.38-scenario-devices-program-files
+        path: myhome-suite/3.5.38/databases/ScenarioDevices-program-files.sqlite
+        original_filename: ScenarioDevices.sqlite
+        original_path: 'C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\ScenarioDevices.sqlite'
+        type: sqlite
+        size: 35840
+        sha256: 2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569
+        note: Distinct from the ProgramData copy.
+      - id: myhome-suite-3.5.38-scenario-devices-programdata
+        path: myhome-suite/3.5.38/databases/ScenarioDevices-programdata.sqlite
+        original_filename: ScenarioDevices.sqlite
+        original_path: 'C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_ScenarioDevices\ScenarioDevices.sqlite'
+        type: sqlite
+        size: 34816
+        sha256: cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3
+        note: Distinct from the Program Files copy.
+      - id: myhome-suite-3.5.38-thermo-rules
+        path: myhome-suite/3.5.38/databases/rules.db3
+        original_filename: rules.db3
+        original_path: 'C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_KeyOThermoValidator\rules.db3'
+        type: sqlite
+        size: 36864
+        sha256: 23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06
+      - id: myhome-suite-3.5.38-open-query
+        path: myhome-suite/3.5.38/support/OpenQuery.txt
+        original_filename: OpenQuery.txt
+        original_path: 'C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OpenQuery.txt'
+        type: text
+        encoding: UTF-8 with BOM
+        line_endings: CRLF
+        size: 3661
+        sha256: 104bc9fcd780799f3b6bb85f2510b1b0424747c30c315f0a04c93e88f4163c10
+
+  openwebnet-public:
+    publisher: BTicino / Legrand
+    provenance: Publicly distributed OpenWebNet protocol documentation supplied as the canonical documentation corpus.
+    note: These documents may predate functionality present in MyHOME Suite 3.5.38; discrepancies are documented rather than silently reconciled.
+    files:
+      - { id: openwebnet-hmac, path: openwebnet-public/pdf/Hmac.pdf, type: pdf, size: 289323, sha256: 787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680 }
+      - { id: openwebnet-zigbee, path: openwebnet-public/pdf/OpenWebNet_Zigbee.pdf, type: pdf, size: 929707, sha256: 9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776 }
+      - { id: openwebnet-introduction, path: openwebnet-public/pdf/OWN_Intro_ENG.pdf, type: pdf, size: 475501, sha256: 97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2 }
+      - { id: openwebnet-who-0, path: openwebnet-public/pdf/WHO_0.pdf, type: pdf, size: 312343, sha256: 246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8 }
+      - { id: openwebnet-who-1, path: openwebnet-public/pdf/WHO_1.pdf, type: pdf, size: 318496, sha256: 8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a }
+      - { id: openwebnet-who-2, path: openwebnet-public/pdf/WHO_2.pdf, type: pdf, size: 189823, sha256: e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88 }
+      - { id: openwebnet-who-3, path: openwebnet-public/pdf/WHO_3.pdf, type: pdf, size: 239458, sha256: 4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1 }
+      - { id: openwebnet-who-4, path: openwebnet-public/pdf/WHO_4.pdf, type: pdf, size: 1128550, sha256: 35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89 }
+      - { id: openwebnet-who-5, path: openwebnet-public/pdf/WHO_5.pdf, type: pdf, size: 817591, sha256: 20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d }
+      - { id: openwebnet-who-6-l4686sdk, path: openwebnet-public/pdf/WHO_6_L4686SDK.pdf, type: pdf, size: 96584, sha256: 519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b }
+      - { id: openwebnet-who-7, path: openwebnet-public/pdf/WHO_7.pdf, type: pdf, size: 338944, sha256: 702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83 }
+      - { id: openwebnet-who-13, path: openwebnet-public/pdf/WHO_13.pdf, type: pdf, size: 231472, sha256: aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798 }
+      - { id: openwebnet-who-15-25, path: openwebnet-public/pdf/WHO_15-25.pdf, type: pdf, size: 931576, sha256: 8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21 }
+      - { id: openwebnet-who-16, path: openwebnet-public/pdf/WHO_16.pdf, type: pdf, size: 618488, sha256: 0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6 }
+      - { id: openwebnet-who-17, path: openwebnet-public/pdf/WHO_17.pdf, type: pdf, size: 225080, sha256: 58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753 }
+      - { id: openwebnet-who-18, path: openwebnet-public/pdf/WHO_18.pdf, type: pdf, size: 675526, sha256: 9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e }
+      - { id: openwebnet-who-22, path: openwebnet-public/pdf/WHO_22.pdf, type: pdf, size: 348003, sha256: 138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0 }
+      - { id: openwebnet-who-24, path: openwebnet-public/pdf/WHO_24.pdf, type: pdf, size: 689678, sha256: 4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298 }
+      - { id: openwebnet-who-25, path: openwebnet-public/pdf/WHO_25.pdf, type: pdf, size: 425272, sha256: 122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927 }
