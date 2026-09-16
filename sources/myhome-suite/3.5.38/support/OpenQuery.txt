@@ -1,0 +1,3 @@
+#DB Open Query File
+
+#NOTE: The following query strings are extracted from the canonical MyHOME Suite 3.5.38 installation. This file is preserved verbatim as source evidence.
