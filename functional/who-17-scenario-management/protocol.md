@@ -11,6 +11,6 @@
 | `3` | Enable |
 | `4` | Disable |
 
-The MyHOME Suite implementation also contains operations for starting scenario programming, resetting scenario programming, ending programming, setting and requesting scenario state through `DIMENSION 40`, reporting scenario errors through `DIMENSION 41`, and testing scenario activation.
+The MyHOME_Suite protocol data also defines operations for starting scenario programming, resetting scenario programming, ending programming, setting and requesting scenario state through `DIMENSION 40`, reporting scenario errors through `DIMENSION 41`, and testing scenario activation.
 
 These programming/state-management operations should be interpreted in their session context; they are not interchangeable with ordinary `WHO 0` scenario activation frames.
