@@ -1,37 +1,37 @@
 # OpenWebNet Protocol Documentation
 
-Professional reference documentation for the OpenWebNet protocol and the MyHOME data model used by BTicino and Legrand systems.
+Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and programming protocols, and supporting MyHOME Suite implementation data.
 
-The project combines the published OpenWebNet specification with implementation information represented by the canonical MyHOME Suite corpus. Unknown or undocumented behavior remains explicitly identified as unknown; inferred behavior is not presented as canonical protocol semantics.
+## Documentation
 
-## Reference
-
-| Section | Purpose |
+| Section | Scope |
 | --- | --- |
-| [`protocol/`](protocol/) | Common OpenWebNet frame language, addressing, `WHAT`, Dimensions, and acknowledgements |
-| `functional/` | Functional systems and their WHO-specific commands, addressing, Dimensions, and values |
-| `diagnostics/` | Device discovery, interview, diagnostic WHATs, and diagnostic Dimensions |
-| `programming/` | Device and Object configuration and programming operations |
-| `device-model/` | Device → Module → Object → Configuration model |
-| `scenario-engine/` | MyHOME Suite scenario capability model |
-| `internals/` | Implementation structures used by MyHOME Suite |
-| `reverse-engineering/` | Methodology, correlations, inferred structures, and open questions |
-| [`sources/`](sources/) | Canonical source corpus and provenance manifest |
-
-Sections that are not yet present are part of the approved documentation structure and will be added as their reference material is written.
+| [`protocol/`](protocol/) | Common OpenWebNet frame syntax, addressing, `WHAT`, Dimensions, and acknowledgements |
+| [`functional/`](functional/) | Functional OpenWebNet systems organized by `WHO` |
+| [`diagnostics/`](diagnostics/) | Device discovery, interview, diagnostic operations, and diagnostic Dimensions |
+| [`programming/`](programming/) | Device and Object configuration and programming workflows |
+| [`device-model/`](device-model/) | Device → Module → Object → Configuration model |
+| [`scenario-engine/`](scenario-engine/) | MyHOME Suite scenario capability and execution model |
+| [`internals/`](internals/) | MyHOME Suite implementation details relevant to the protocol |
+| [`reverse-engineering/`](reverse-engineering/) | Methodology, correlations, inferred relationships, and unresolved questions |
+| [`sources/`](sources/) | Canonical source material and provenance records |
 
 ## Conventions
 
-Canonical names and nomenclature are used wherever the source corpus defines them. Protocol fields, frame fragments, database identifiers, paths, and short literal values are formatted as inline code. Numeric examples are used only where they clarify an encoding or protocol rule.
+Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
 
-`WHAT` and Dimension meanings are scoped to their `WHO`; the same numeric value can have different semantics in different systems. Common concepts are documented under [`protocol/`](protocol/), while system-specific value references belong with the corresponding functional or diagnostic system.
+`WHAT`, `WHERE`, and Dimension semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
-Database queries use SQL. Algorithmic implementation examples default to Python 3.
+The device-model terminology used throughout the reference is **Device → Module → Object → Configuration**. Database identifiers retain their original names when referenced directly.
 
-## Sources
+Each documentation directory uses its `README.md` as its landing-page overview. Subject-specific reference material is kept in the other Markdown files in that directory.
 
-Canonical evidence is registered in [`sources/manifest.yaml`](sources/manifest.yaml). Files under [`sources/`](sources/) are preserved as evidence and are not modified to encode interpretations or reconstructed relationships.
+## Sources and provenance
+
+Canonical evidence is stored under [`sources/`](sources/). Source files are preserved as original evidence; derived schemas, analysis, and reverse-engineering notes belong elsewhere in the repository.
+
+See [`sources/manifest.yaml`](sources/manifest.yaml) for machine-readable provenance and cryptographic fingerprints.
 
 ## License
 
-This repository is distributed under the [GNU General Public License v3.0](LICENSE). Canonical source material under `sources/` retains the rights and provenance of its respective publishers.
+Repository-authored documentation is licensed under the GNU General Public License v3.0. Canonical source materials under `sources/` retain the rights and licensing terms of their respective publishers and authors.
