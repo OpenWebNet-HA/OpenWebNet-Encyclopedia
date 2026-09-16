@@ -1,26 +1,38 @@
 # Overview
 
-`WHO 13` defines functional Gateway operations. It must be distinguished from the TCP/OpenWebNet transport role of a gateway: authentication, connection establishment, command/event sessions and generic `ACK`/`NACK` handling are protocol-layer concerns, while `WHO 13` frames address gateway functions through the ordinary OpenWebNet message grammar.
+`WHO 13` is the OpenWebNet namespace for the external interface / gateway device itself. It exposes gateway-local information and management functions rather than the state of the SCS Devices reached through that gateway.
 
-## Protocol role
+The published protocol defines a compact but important management interface: clock and calendar access, network identity, gateway model identification, software-version information, and uptime. Time, date, and combined date/time can also be written.
 
-The published `WHO 13` specification describes gateway-specific commands and information exchange. The MyHOME_Suite `OPEN.db` model also represents Gateway as a functional system, confirming that these operations belong to a `WHO` namespace rather than to the framing layer itself.
+## Reference
 
-Consequently, a client should model two separate concepts:
-
-| Layer | Responsibility |
+| Subject | Page |
 | --- | --- |
-| OpenWebNet gateway session | TCP connection, authentication, session selection, `ACK`/`NACK`, timeouts |
-| `WHO 13` functional traffic | Gateway-specific `WHAT`, `WHERE`, parameters and information |
+| Gateway capabilities and frame model | [`capabilities.md`](capabilities.md) |
+| `DIMENSION` values, payloads, and access modes | [`dimensions.md`](dimensions.md) |
 
-## Address and parameter handling
+## Capability groups
 
-`WHO 13` values are system-specific. Numeric fields must not be reinterpreted using Lighting A/PL, Thermoregulation zones, or another functional namespace merely because the common frame delimiters are identical.
+| Capability | `DIMENSION` | Access |
+| --- | ---: | --- |
+| Time and time zone | `0` | Read / write |
+| Date | `1` | Read / write |
+| IP address | `10` | Read |
+| Network mask | `11` | Read |
+| MAC address | `12` | Read |
+| Gateway model / device type | `15` | Read |
+| OpenWebNet server firmware version | `16` | Read |
+| Uptime | `19` | Read |
+| Combined date and time | `22` | Read / write |
+| Kernel version | `23` | Read |
+| Distribution version | `24` | Read |
 
-Where a gateway operation returns structured information, the complete parameter tuple should be retained. Generic OpenWebNet parsers should first classify `WHO`, then dispatch the remaining fields to the `WHO 13` grammar.
+This makes `WHO 13` useful for gateway discovery and inventory, network identification, software/firmware reporting, clock synchronisation, and operational-health information such as uptime.
 
-## Relationship to diagnostic gateway traffic
+## Scope
 
-MyHOME_Suite also uses diagnostic families such as `WHO 1013` for gateway/device diagnostics. Those are separate namespaces. A frame under `WHO 1013` is not an extended form of functional `WHO 13` and is documented under [`../../diagnostics/`](../../diagnostics/).
+`WHO 13` must not be conflated with the transport session used to connect to an IP gateway. TCP connection establishment, command/monitor sessions, authentication, HMAC, and generic `ACK` / `NACK` handling are common OpenWebNet transport concerns and are documented under [`../../protocol/`](../../protocol/).
 
-The canonical public specification is preserved as `WHO_13.pdf` under [`../../sources/openwebnet-public/pdf/`](../../sources/openwebnet-public/pdf/). Common session behavior is documented under [`../../protocol/`](../../protocol/).
+It is also distinct from diagnostic `WHO 1013`. The latter belongs to the diagnostic namespace; the numeric relationship does not make diagnostic operations part of the functional `WHO 13` gateway-management vocabulary.
+
+The published `WHO 13` specification calls this system the **External interface device**. The MyHOME_Suite `OPEN.db` definitions represent `WHO 13` as the Integration / Gateway functional system. These are complementary descriptions of the same functional namespace.
