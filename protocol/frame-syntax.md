@@ -11,8 +11,8 @@ OpenWebNet frames are ASCII messages delimited by `*` and terminated by `##`. Th
 | Dimension request | `*#WHO*WHERE*DIMENSION##` | Requests a Dimension value |
 | Dimension response | `*#WHO*WHERE*DIMENSION*VALUE...##` | Reports a Dimension value |
 | Dimension write | `*#WHO*WHERE*#DIMENSION*VALUE...##` | Writes a Dimension value |
-| ACK | `*#*1##` | Positive acknowledgement |
-| NACK | `*#*0##` | Negative acknowledgement |
+| `ACK` | `*#*1##` | Positive acknowledgement |
+| `NACK` | `*#*0##` | Negative acknowledgement |
 
 The ellipsis in `VALUE...` denotes zero or more additional `*`-separated values defined by that Dimension. It is notation used by this reference and is not transmitted.
 
@@ -44,4 +44,4 @@ Dimension identifiers and value layouts are scoped to their `WHO`. See [`dimensi
 
 ## Acknowledgements
 
-ACK and NACK are standalone frames rather than `WHO`-specific command frames. See [`acknowledgements.md`](acknowledgements.md).
+`ACK` and `NACK` are standalone frames rather than `WHO`-specific command frames. See [`acknowledgements.md`](acknowledgements.md).
