@@ -6,7 +6,7 @@
 #NOTA1:la parte solo sequence va ancora definita
 #NOTA2:vanno definite anche le query mancanti per il giro dello scenario
 addressruleConstQuery=select address_rule_virt from en_address_rule where id_address_rule in (4,5) order by id_address_rule desc
-systemaddressruleDictQuery=select sar.id_system,ar.id_address_rule,ar.address_rule_virt,ar.address_rule_adv,ar.level_2_rule,ar.level_4_rule,ar.validity_rule,ar.object_device_family,ar.offset_adv from as_system_address_rule sar, en_address_rule ar where sar.id_address_rule=ar.id_address_rule order by sar.id_system,ar.id_address_rule
+systemaddressruleDictQuery=select sar.id_system,ar.id_address_rule,ar.address_rule_virt,ar.address_rule_adv&ar.level_2_rule,ar.level_4_rule,ar.validity_rule,ar.object_device_family,ar.offset_adv from as_system_address_rule sar, en_address_rule ar where sar.id_address_rule=ar.id_address_rule order by sar.id_system,ar.id_address_rule
 systemDictQuery=select * from en_system order by id_system
 openframeErrDictQuery=select id_open,open_label,open_string,has_address,has_param,open_type,diag_open,error_open,open4keyo from en_open where error_open = 1 order by id_open
 #openframeabortconfQuery=select open_string from en_open where id_open=13
@@ -18,10 +18,8 @@ sequenceQuery=select id_sequence from en_sequence where sequence_label='{0}'
 scenarioQuery=select id_scenario,scenario_type from en_scenario where scenario_label='{0}'
 scenseq1Query=select ss.id_sequence,s.sequence_label,ss.sequence_order,ss.repeated_sequence from as_scenario_sequence ss,en_sequence s where ss.id_scenario={0} and ss.id_sequence=s.id_sequence order by ss.sequence_order;
 scenseq2Query=select * from as_scenario_sequence where id_sequence={0} order by sequence_order
-#openseq1Query=select op.* from as_scenario_sequence ss, as_open_sequence op where ss.id_scenario={0} and ss.id_sequence in ({1}) and ss.id_sequence=op.id_sequence order by ss.sequence_order, op.open_order
-#openseq1Query=select op.id_open,op.mandatory_open,op.open_order,op.repeated_open,o.open_label,o.open_string,o.has_address,o.has_param,o.open_type,o.diag_open,o.error_open from as_open_sequence op, en_open o where op.id_sequence={0} and op.id_open=o.id_open order by op.open_order
 openseq1Query=select distinct op.id_open,op.mandatory_open,op.open_order,op.repeated_open,op.status4nack,op.status4error,o.open_label,o.open_string,ep.param_string,ep.param_descr,o.has_address,o.has_param,o.open_type,o.diag_open,o.error_open,o.open4keyo from as_open_sequence op, en_open o left outer join as_open_param ap on o.id_open=ap.id_open left outer join en_open_param ep on ep.param_descr like '%[%' and ap.id_param = ep.id_param where op.id_sequence={0} and op.id_open=o.id_open order by op.open_order
-opentimeoutQuery=select tos.id_open,t.id_timeout,t.timeout_label,t.type,t.'default',tos.action,tos.status4timeout from as_timeout_open_sequence tos, en_timeout t where tos.id_sequence={0} and tos.id_timeout=t.id_timeout order by tos.id_open, tos.action desc, t.type
+opentimeoutQuery=select tos.id_open,t.id_timeout,t.timeout_label,t.type,t'.default',tos.action,tos.status4timeout from as_timeout_open_sequence tos, en_timeout t where tos.id_sequence={0} and tos.id_timeout=t.id_timeout order by tos.id_open, tos.action desc, t.type
 #addressruleQuery=select os.id_open,ar.id_address_rule,ar.address_rule,ar.level_2_rule,ar.level_4_rule from as_open_sequence os,as_open_address_rule oar,en_address_rule ar where os.id_sequence={0} and os.id_open=oar.id_open and oar.id_address_rule=ar.id_address_rule order by os.id_open, ar.id_address_rule
 
 #openparamsQuery=TODO
