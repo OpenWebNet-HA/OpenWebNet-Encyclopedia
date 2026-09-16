@@ -14,6 +14,6 @@ The canonical command form is `*0*N*WHERE##`, where `N` identifies the stored sc
 
 Scenario programming operations published for this family include parameterized `WHAT` forms such as `40#N`. These operations are distinct from the scenario execution-state functions carried by [`WHO 17`](../who-17-scenario-management/).
 
-## MyHOME Suite scenario engine
+## MyHOME_Suite scenario engine
 
-The MyHOME Suite scenario engine uses `WHO 0` commands as one class of functional action, but the higher-level trigger/condition/action capability model is not itself the `WHO 0` wire protocol. That model is documented separately under [`../../scenario-engine/`](../../scenario-engine/).
+The MyHOME_Suite scenario engine uses `WHO 0` commands as one class of functional action, but the higher-level trigger/condition/action capability model is not itself the `WHO 0` wire protocol. That model is documented separately under [`../../scenario-engine/`](../../scenario-engine/).
