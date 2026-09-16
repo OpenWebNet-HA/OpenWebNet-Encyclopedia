@@ -36,7 +36,7 @@ Common frame syntax is defined in [`../protocol/`](../protocol/). Reference mate
 | `27` | Nurse Call basic level | [`who-27-nurse-call/`](who-27-nurse-call/) |
 | `99` | Service Identification | [`who-99-service-identification/`](who-99-service-identification/) |
 
-The table reflects the functional namespace established by the combined public and MyHOME Suite implementation corpus. A listed `WHO` does not imply that every semantic value is currently known.
+The table reflects the functional namespace established by the public specifications together with the MyHOME_Suite implementation data, including the `OPEN.db` system definitions. A listed `WHO` does not imply that every semantic value is currently known.
 
 ## By function
 
