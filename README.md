@@ -22,6 +22,8 @@ Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, 
 
 `WHAT`, `WHERE`, and `DIMENSION` semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
+Reference material follows the canonical structure of the protocol or implementation model it documents. Landing pages and indexes may provide additional navigation organized around related functions or reader tasks, linking to the same canonical reference material rather than duplicating it.
+
 The device-model terminology used throughout the reference is **Device → Module → Object → Configuration**. Database identifiers retain their original names when referenced directly.
 
 Each documentation directory uses its `README.md` as its landing-page overview. Subject-specific reference material is kept in the other Markdown files in that directory.
