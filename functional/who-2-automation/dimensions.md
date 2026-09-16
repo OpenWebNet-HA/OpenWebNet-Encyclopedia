@@ -9,7 +9,7 @@ Known Automation `DIMENSION` identifiers include:
 
 ## Absolute position
 
-MyHOME_Suite 3.5.38 uses the absolute-position form `*#2*WHERE*#11#001*LEVEL##`.
+MyHOME_Suite uses the absolute-position form `*#2*WHERE*#11#001*LEVEL##`.
 
 Known level semantics are:
 
