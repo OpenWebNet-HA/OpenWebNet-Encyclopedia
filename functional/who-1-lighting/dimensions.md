@@ -13,10 +13,10 @@ Known Lighting `DIMENSION` identifiers include:
 
 ## Level and speed
 
-MyHOME Suite 3.5.38 uses the write form `*#1*WHERE*#1*LEVEL*SPEED##` for `DIMENSION 1`.
+MyHOME_Suite 3.5.38 uses the write form `*#1*WHERE*#1*LEVEL*SPEED##` for `DIMENSION 1`.
 
 ## Temporization
 
-MyHOME Suite 3.5.38 uses `*#1*WHERE*#2*HOURS*MINUTES*SECONDS##` for `DIMENSION 2`.
+MyHOME_Suite 3.5.38 uses `*#1*WHERE*#2*HOURS*MINUTES*SECONDS##` for `DIMENSION 2`.
 
 Read requests and responses follow the common `DIMENSION` frame classes documented in [`../../protocol/dimensions.md`](../../protocol/dimensions.md). Read and write support are capabilities of the target operation and must not be assumed solely from the existence of a `DIMENSION` identifier.
