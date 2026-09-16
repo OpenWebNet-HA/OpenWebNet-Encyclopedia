@@ -4,6 +4,8 @@ The functional protocol reference documents OpenWebNet systems using `WHO` as th
 
 Common frame syntax is defined in [`../protocol/`](../protocol/). Reference material is organized by protocol namespace, while the indexes below provide both protocol-oriented and function-oriented navigation to the same canonical pages.
 
+The MyHOME_Suite [`OPEN.db` coverage matrix](open-db-coverage.md) documents what the implementation database establishes for every functional namespace: system identity, diagnostic-family mapping, management support, address rules, and concrete `EN_OPEN` frame associations where present. It also records the boundary between database-backed facts and semantics that must come from the functional specifications, ScenarioDevices data, catalogue data, captures, or implementation analysis.
+
 ## By `WHO`
 
 | `WHO` | System | Reference |
@@ -66,4 +68,4 @@ The table reflects the functional namespace established by the public specificat
 
 Where one `WHO` contains several functional groups, those groups are divided into subordinate pages when that improves the reference while remaining under the canonical `WHO` directory. Systems with a larger established vocabulary use dedicated `WHAT`, addressing, or `DIMENSION` pages; smaller or less completely established systems keep the supported semantics together.
 
-Diagnostic and configuration/programming operations are documented separately under `diagnostics/` and `programming/`.
+Diagnostic and configuration/programming operations are documented separately under `diagnostics/` and `programming/`. The [`OPEN.db` coverage matrix](open-db-coverage.md) cross-references those management capabilities without reclassifying diagnostic frames as functional `WHO` commands.
