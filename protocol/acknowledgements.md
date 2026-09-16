@@ -4,16 +4,16 @@ OpenWebNet defines standalone positive and negative acknowledgement frames.
 
 | Result | Frame |
 | --- | --- |
-| ACK | `*#*1##` |
-| NACK | `*#*0##` |
+| `ACK` | `*#*1##` |
+| `NACK` | `*#*0##` |
 
 These frames do not contain `WHO`, `WHAT`, or `WHERE` fields.
 
-## ACK
+## `ACK`
 
 `*#*1##` indicates positive acknowledgement of the operation for which an acknowledgement is expected.
 
-## NACK
+## `NACK`
 
 `*#*0##` indicates negative acknowledgement. The meaning of the failure and the subsequent protocol action depend on the operation or sequence in progress.
 
