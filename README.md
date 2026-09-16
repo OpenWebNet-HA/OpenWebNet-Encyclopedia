@@ -6,9 +6,9 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 | Section | Scope |
 | --- | --- |
-| [`protocol/`](protocol/) | Common OpenWebNet frame syntax, addressing, `WHAT`, Dimensions, and acknowledgements |
+| [`protocol/`](protocol/) | Common OpenWebNet frame syntax, addressing, `WHAT`, `Dimensions`, and acknowledgements |
 | [`functional/`](functional/) | Functional OpenWebNet systems organized by `WHO` |
-| [`diagnostics/`](diagnostics/) | Device discovery, interview, diagnostic operations, and diagnostic Dimensions |
+| [`diagnostics/`](diagnostics/) | Device discovery, interview, diagnostic operations, and diagnostic `Dimensions` |
 | [`programming/`](programming/) | Device and Object configuration and programming workflows |
 | [`device-model/`](device-model/) | Device → Module → Object → Configuration model |
 | [`scenario-engine/`](scenario-engine/) | MyHOME Suite scenario capability and execution model |
@@ -18,9 +18,9 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 ## Conventions
 
-Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
+Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. When the OpenWebNet protocol concept is named in prose, `Dimension` and `Dimensions` are likewise capitalized and written as inline code. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
 
-`WHAT`, `WHERE`, and Dimension semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
+`WHAT`, `WHERE`, and `Dimension` semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
 The device-model terminology used throughout the reference is **Device → Module → Object → Configuration**. Database identifiers retain their original names when referenced directly.
 
