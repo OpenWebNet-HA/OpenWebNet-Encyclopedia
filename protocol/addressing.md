@@ -1,20 +1,18 @@
 # Overview
 
-`WHERE` identifies the destination or source of an OpenWebNet operation. Its grammar is defined by the selected `WHO`; OpenWebNet does not use one universal address representation for every system.
+OpenWebNet addressing is system-specific. `WHERE` identifies the destination or source of a frame, but its grammar depends on the selected `WHO` and must not be interpreted as a single universal address type.
 
-## Address scope
+## Address interpretation
 
-A `WHERE` value can represent a physical or logical endpoint, a group, an area, a general destination, or another system-specific recipient. The available forms depend on the system.
+A parser should resolve `WHO` before interpreting `WHERE`. Different systems can use different address layouts, ranges, hierarchy levels, and advanced-address forms.
 
-For example, Lighting and Automation use addressing forms based on SCS address concepts such as `A` and `PL`, while Thermoregulation uses zone-oriented fields such as `ZA` and `ZB`. Other systems define additional recipient structures.
+For example, Lighting and Automation use address structures based on A/PL and related environment or group forms, while Thermoregulation uses its own zone-oriented grammar.
 
-Consequently, a parser must resolve `WHO` before interpreting `WHERE`.
+## MyHOME Suite address rules
 
-## Address rules in MyHOME Suite
+MyHOME Suite 3.5.38 stores protocol address grammars in `OPEN.db`. `EN_ADDRESS_RULE` defines individual rules and `AS_SYSTEM_ADDRESS_RULE` associates them with systems.
 
-The canonical MyHOME Suite 3.5.38 `OPEN.db` represents address grammars in `EN_ADDRESS_RULE` and associates them with systems through `AS_SYSTEM_ADDRESS_RULE`. Rules include virtual and advanced forms and can define additional Level 2 or Level 4 addressing.
-
-The database can be inspected with:
+The following query lists the configured address rules by system:
 
 ```sql
 SELECT
@@ -33,10 +31,14 @@ JOIN EN_ADDRESS_RULE AS ar
 ORDER BY sar.id_system, ar.id_address_rule;
 ```
 
-The same relationship is used by the canonical `OpenQuery.txt` support file.
+These rules demonstrate that address syntax is part of the selected system rather than a property of the frame transport itself.
 
-## Parsing rule
+## Advanced addressing
 
-Implementations should treat `WHERE` as a system-specific grammar rather than coercing it into a single numeric type. A suitable parser first identifies `WHO`, selects the applicable address rule, and then parses the `WHERE` field according to that rule.
+Some address forms use `#`-qualified syntax. The role of `#` is determined by the address grammar of the selected `WHO`; it should not be interpreted independently of that grammar.
 
-See [`frame-syntax.md`](frame-syntax.md) for the enclosing frame forms.
+## Implementation guidance
+
+An implementation should model an address as a system-specific structure rather than storing only an undifferentiated `WHERE` string. The raw field should still be retained when exact frame reproduction or diagnostics are required.
+
+See [`frame-syntax.md`](frame-syntax.md) for frame structure, [`what.md`](what.md) for `WHAT`, and [`dimensions.md`](dimensions.md) for `DIMENSION` operations.
