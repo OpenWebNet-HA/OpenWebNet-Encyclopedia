@@ -12,7 +12,7 @@ A frame identifies a system through `WHO`, an operation or state through `WHAT` 
 | `WHAT` | Identifies a command, event, or state within a `WHO` | [`what.md`](what.md) |
 | `WHERE` | Identifies the destination or source according to the addressing rules of the `WHO` | [`addressing.md`](addressing.md) |
 | `DIMENSION` | Identifies a readable or writable property within a `WHO` | [`dimensions.md`](dimensions.md) |
-| ACK/NACK | Reports positive or negative acknowledgement | [`acknowledgements.md`](acknowledgements.md) |
+| `ACK` / `NACK` | Reports positive or negative acknowledgement | [`acknowledgements.md`](acknowledgements.md) |
 
 `WHAT`, `WHERE`, and `DIMENSION` are not globally uniform namespaces. Their syntax and semantics depend on the selected `WHO`.
 
