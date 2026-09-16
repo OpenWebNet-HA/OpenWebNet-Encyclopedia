@@ -1,26 +1,24 @@
 # Overview
 
-OpenWebNet defines standalone positive and negative acknowledgement frames.
+`ACK` and `NACK` are standalone OpenWebNet acknowledgement frames used to report positive or negative processing results.
 
 | Result | Frame |
 | --- | --- |
 | `ACK` | `*#*1##` |
 | `NACK` | `*#*0##` |
 
-These frames do not contain `WHO`, `WHAT`, or `WHERE` fields.
+They do not contain `WHO`, `WHAT`, `WHERE`, or `DIMENSION` fields.
 
 ## `ACK`
 
-`*#*1##` indicates positive acknowledgement of the operation for which an acknowledgement is expected.
+`*#*1##` reports a positive acknowledgement. Its exact implication depends on the operation and session in which it appears; it should not be interpreted as a global statement about Device state.
 
 ## `NACK`
 
-`*#*0##` indicates negative acknowledgement. The meaning of the failure and the subsequent protocol action depend on the operation or sequence in progress.
+`*#*0##` reports a negative acknowledgement. The reason for rejection or failure is not encoded in the acknowledgement frame itself. Additional protocol frames, session state, or implementation-specific error handling may provide further information.
 
 ## Sequence context
 
-Acknowledgements must be interpreted in session context. They are not self-describing responses and do not identify the operation to which they apply.
+Acknowledgements are interpreted in the context of the immediately preceding operation and the active protocol sequence. Implementations should associate an acknowledgement with the operation that is awaiting it rather than treating it as an independently addressable message.
 
-MyHOME Suite additionally represents operation-specific error handling, status transitions, and timeouts in `OPEN.db`. Those sequence semantics belong with the corresponding diagnostic, programming, or service workflow rather than in this common acknowledgement reference.
-
-See [`frame-syntax.md`](frame-syntax.md) for the other common frame classes.
+See [`frame-syntax.md`](frame-syntax.md) for the common frame families.
