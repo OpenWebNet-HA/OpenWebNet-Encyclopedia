@@ -2,7 +2,7 @@
 
 OpenWebNet is a frame-based protocol used to exchange commands, status information, measurements, configuration data, and service information between compatible systems.
 
-A frame identifies a system through `WHO`, an operation or state through `WHAT` where applicable, and a recipient through `WHERE`. `Dimension` frames add a `DIMENSION` identifier and zero or more values.
+A frame identifies a system through `WHO`, an operation or state through `WHAT` where applicable, and a recipient through `WHERE`. `DIMENSION` frames add a `DIMENSION` identifier and zero or more values.
 
 ## Core concepts
 
@@ -24,9 +24,9 @@ The common functional frame families are summarized below. See [`frame-syntax.md
 | --- | --- |
 | Command or status | `*WHO*WHAT*WHERE##` |
 | Status request | `*#WHO*WHERE##` |
-| `Dimension` request | `*#WHO*WHERE*DIMENSION##` |
-| `Dimension` response | `*#WHO*WHERE*DIMENSION*VALUE...##` |
-| `Dimension` write | `*#WHO*WHERE*#DIMENSION*VALUE...##` |
+| `DIMENSION` request | `*#WHO*WHERE*DIMENSION##` |
+| `DIMENSION` response | `*#WHO*WHERE*DIMENSION*VALUE...##` |
+| `DIMENSION` write | `*#WHO*WHERE*#DIMENSION*VALUE...##` |
 | Positive acknowledgement | `*#*1##` |
 | Negative acknowledgement | `*#*0##` |
 
@@ -34,6 +34,6 @@ Fields can contain additional parameters. Their exact grammar is defined by the 
 
 ## Reference organization
 
-This directory defines concepts shared by OpenWebNet systems. Functional command values and `Dimensions` are documented with their corresponding `WHO`, because identical numeric identifiers can have unrelated meanings in different systems.
+This directory defines concepts shared by OpenWebNet systems. Functional command values and `DIMENSION` identifiers are documented with their corresponding `WHO`, because identical numeric identifiers can have unrelated meanings in different systems.
 
-Diagnostic and programming protocols use the same frame language while defining their own operations, `Dimensions`, sequences, and addressing rules.
+Diagnostic and programming protocols use the same frame language while defining their own operations, `DIMENSION` identifiers, sequences, and addressing rules.

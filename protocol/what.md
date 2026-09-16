@@ -1,30 +1,25 @@
 # Overview
 
-`WHAT` identifies a command, state, or event within the system selected by `WHO`.
+`WHAT` identifies a command, state, or event within an OpenWebNet `WHO`.
 
-A `WHAT` value has meaning only in the context of its `WHO`. It must therefore be represented semantically as the pair `(WHO, WHAT)`, not as a globally unique command identifier.
+A `WHAT` value is meaningful only in the context of its `WHO`. The semantic identity of an operation is therefore `(WHO, WHAT)`, not `WHAT` alone.
 
-## Syntax
+## Frame position
 
-The common command/status frame places `WHAT` between `WHO` and `WHERE`: `*WHO*WHAT*WHERE##`.
+The normal command/status form is `*WHO*WHAT*WHERE##`.
 
-Some operations extend `WHAT` with one or more `#`-introduced parameters. The number, order, range, and meaning of those parameters are defined by the corresponding system.
+`WHAT` can include parameters introduced with `#` when defined by the selected system. Parameter structure is part of the `WHAT` grammar for that `WHO` and must not be interpreted globally.
 
 ## Scope
 
-The same numeric `WHAT` can identify unrelated operations in different systems. For example, a value defined by Lighting must not be interpreted using the Automation or scenario-management command table.
+A numeric `WHAT` value can have unrelated meanings in different systems. Implementations should therefore resolve `WHO` before interpreting `WHAT`.
 
-For this reason, this page defines the common concept only. Complete `WHAT` tables belong in the reference for the corresponding functional, diagnostic, or programming system.
+System-specific `WHAT` reference tables belong with the corresponding functional or diagnostic system documentation rather than in a global value table.
 
-## Implementation model
+## Relationship to `DIMENSION`
 
-A protocol implementation should retain at least:
+`WHAT` represents commands, states, and events expressed through the normal frame family. Properties read or written through `*#WHO...` frames are identified by `DIMENSION` instead. See [`dimensions.md`](dimensions.md).
 
-| Field | Purpose |
-| --- | --- |
-| `WHO` | Selects the command namespace |
-| `WHAT` | Selects the operation or state within that namespace |
-| Parameters | Carries any `WHAT`-specific arguments |
-| Direction/session | Distinguishes command, state, and event use where required |
+The distinction is structural rather than purely semantic: the same real-world function can expose command behavior through `WHAT` and state or configuration data through one or more `DIMENSION` identifiers.
 
-See [`frame-syntax.md`](frame-syntax.md) for frame structure and [`addressing.md`](addressing.md) for `WHERE` parsing.
+See [`frame-syntax.md`](frame-syntax.md) for the common frame forms and [`addressing.md`](addressing.md) for `WHERE` interpretation.
