@@ -9,7 +9,7 @@
 | Field | Range in `OPEN.db` | Interpretation |
 | --- | ---: | --- |
 | `OBJECT_MODEL` | `1`–`65535` | item/model value |
-| `N_CONF` | `0`–`12` | labelled “Configurator number”; broader meaning unresolved |
+| `N_CONF` | `0`–`12` | number of physical configurator positions |
 | `BRAND` | `0`–`4` | brand code |
 | `LINE` | `0`–`8` | product-line code |
 
@@ -20,7 +20,7 @@
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | corroborated |
 | `BRAND` | `EN_BRAND.brand_modobj` | corroborated |
 | `LINE` | `EN_LINE.line_modobj` | corroborated |
-| `N_CONF` | no established catalogue field | unresolved |
+| `N_CONF` | no direct catalogue field identified | interpreted from `OPEN.db` wording and product documentation |
 
 The established path uses `OBJECT_MODEL` within the relevant catalogue system, then applies brand and line metadata to narrow or present the matching product identity. It must not be replaced by a numeric join to `EN_DEVICE.id_device` or `EN_ITEM.id_item`; those are independent internal identifiers.
 
@@ -48,19 +48,23 @@ The observed Device `00C58E91` (`12947089` decimal) reported model value `107`. 
 
 The example corroborates the model-to-item path while also demonstrating why `OBJECT_MODEL` alone does not uniquely identify one SKU. Brand and line values, plus project/UI context where available, are required to narrow the Device record.
 
-## `N_CONF` remains unresolved
+## `N_CONF` and physical configurators
 
-`OPEN.db` calls `N_CONF` a configurator number and constrains it to `0`–`12`. Current evidence does not establish that it identifies:
+`OPEN.db` describes `N_CONF` as “Configurator number” / “number of physical configurator” and constrains it to `0`–`12`. Product configuration diagrams provide an independent interpretation: the value corresponds to the number of physical configurator positions provided by the Device.
 
-- an Object or Virgin Object;
-- a Module count or internal slot;
-- a form factor or product platform;
-- a firmware class;
-- the Object assigned to internal slot `1`.
+Documented examples include:
 
-Do not attach one of these meanings because a sample value happens to correlate. Preserve the raw value and source label until catalogue, UI, and traffic evidence establish a stable interpretation.
+| Device | `N_CONF` | Physical configuration layout |
+| --- | ---: | --- |
+| `F420` | `2` | 2 configurator positions |
+| `F429` | `3` | 3 positions: `A`, `G`, `M` |
+| `H4652/3` | `7` | 7 configurator positions |
 
-The database description “number of physical configurator” is retained as source wording, not promoted to a stronger interpretation. Its numeric range does not establish how configurators are counted or represented on every Device.
+This field therefore describes the Device's physical configuration interface. It is not a Module count, Object identifier, Virgin Object, form factor, firmware class, or indication of the Object assigned to internal slot `1`.
+
+MyHOME Devices can alternatively use advanced configuration, which can represent values outside the limits of the physical configurator interface. `N_CONF` remains a hardware characteristic: it does not describe the active configuration method or the number of logical configuration parameters.
+
+Older Devices for which configuration diagrams have not yet been located remain useful targets for further cross-checking, but the available examples support the physical-position interpretation across multiple distinct `N_CONF` values.
 
 ## Address context
 
