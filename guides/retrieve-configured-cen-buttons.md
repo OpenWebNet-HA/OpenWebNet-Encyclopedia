@@ -74,6 +74,87 @@ Identify definitions whose resolved semantics represent:
 
 Use property identity and semantics, not matching numeric values or a global index list. CEN-capable Objects do not all expose the same properties.
 
+### SQL example: find the CEN properties for each resolved Object
+
+Resolve each configured `KEYO` first:
+
+```sql
+SELECT id_key_object, key_object, descr
+FROM EN_KEY_OBJECT
+WHERE key_object = :reported_keyo;
+```
+
+For that resolved Object and firmware, inspect the actual property definitions rather than assuming the indices used by one Object variant:
+
+```sql
+WITH applicable_conf AS (
+    SELECT c.*, 'object' AS source_scope
+    FROM EN_CONF AS c
+    WHERE c.id_key_object = :id_key_object
+      AND c.id_firmware = 0
+
+    UNION ALL
+
+    SELECT c.*, 'firmware' AS source_scope
+    FROM EN_CONF AS c
+    WHERE c.id_key_object = 0
+      AND c.id_firmware = :id_firmware
+)
+SELECT
+    source_scope,
+    id_conf,
+    conf_name,
+    descr,
+    idx,
+    id_conf_data_type,
+    hidden,
+    visible,
+    read_only
+FROM applicable_conf
+WHERE upper(conf_name) LIKE '%CEN%'
+   OR upper(conf_name) LIKE '%BUTTON%'
+   OR upper(conf_name) LIKE '%BUTT%'
+   OR upper(descr) LIKE '%CEN%'
+   OR upper(descr) LIKE '%BUTTON%'
+ORDER BY idx, id_conf;
+```
+
+The text predicates produce candidates for semantic review; they do not themselves prove that a property is part of a CEN address. Retain only definitions compatible with the resolved Object.
+
+Retrieve the base domains and the filters for the exact Object/firmware association:
+
+```sql
+SELECT
+    c.id_conf,
+    c.conf_name,
+    c.idx,
+    r.value,
+    r.name AS range_name,
+    r."default" AS default_value,
+    r.min_value,
+    r.max_value,
+    r.step,
+    f.id_filter,
+    f.whole_range,
+    fr.range AS filtered_range
+FROM EN_CONF AS c
+LEFT JOIN EN_CONF_RANGE AS r
+  ON r.id_conf = c.id_conf
+LEFT JOIN AS_OBJECT_FIRMWARE AS aof
+  ON aof.id_key_object = :id_key_object
+ AND aof.id_firmware = :id_firmware
+LEFT JOIN EN_FILTER AS f
+  ON f.id_conf = c.id_conf
+ AND f.id_object_firmware = aof.id_object_firmware
+LEFT JOIN EN_FILTER_RANGE AS fr
+  ON fr.id_filter = f.id_filter
+WHERE c.id_conf IN (:cen_low_id_conf, :cen_high_id_conf,
+                    :button_1_id_conf, :button_2_id_conf)
+ORDER BY c.idx, r.progressive;
+```
+
+If a variant has fewer properties, omit the absent `id_conf` parameters rather than binding an invented row.
+
 ## 4. Request the detailed configuration
 
 After the complete Module/Object layout is known, send once:
