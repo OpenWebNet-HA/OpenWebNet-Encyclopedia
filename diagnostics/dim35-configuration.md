@@ -64,6 +64,25 @@ No explicit end marker belongs to `DiagKO`; completion is therefore governed by 
 
 Numeric equality alone is insufficient to map a parameter to a UI field.
 
+## Physical-configurator counterparts
+
+After resolving `INDEX` to an Object property, compare that property with the physical fields declared for the resolved firmware. This can establish whether the effective property can also be configured through a physical configurator.
+
+For shutter actuator Object `218` on firmware `192`, the catalogue provides these correspondences:
+
+| Firmware physical field | Object property | `INDEX` | Correspondence |
+| --- | --- | ---: | --- |
+| `M` | `M` | `0` | direct symbol and semantic match |
+| `TYPE` | `SHUTTER_TYPE` | `1` | semantic match; different symbols |
+| `PRE` | `PRESET_NUMBER` | `8` | semantic match; different symbols |
+| `G1` | `G1` | `240` | direct symbol and semantic match |
+
+The same firmware also declares physical `A` and `PL` positions. Those are address properties with `idx = -1` on the Object and are projected through `DIMENSION 32`, not ordinary indexed `DIMENSION 35` properties.
+
+A direct symbol match is strong catalogue evidence. A semantic match between different symbols requires filters, symbol references, conversion rules, product documentation, UI behavior, or captures to corroborate it. Absence of a matching physical field supports an advanced-only interpretation only after the correct firmware and Object context have been resolved.
+
+A physical counterpart does not identify the active configuration method, and physical and advanced forms need not share the same encoded value or permitted range. See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared method.
+
 ## Value forms
 
 Depending on the configuration definition, `VAL_PAR` can represent an enum member, numeric range value, padded address, boolean, fixed value, or user-supplied value. It can also require a conversion rule before presentation.
