@@ -1,12 +1,12 @@
-# Complete Examples
+# Practical Guides
 
-Complete Examples start from an installer or application goal and raw OpenWebNet evidence, then follow the complete resolution path to structured, user-presentable data or a safely validated action. They combine the canonical protocol, Device Model, diagnostics, programming, and MyHOME_Suite implementation references.
+Practical Guides start from an installer or application goal and raw OpenWebNet evidence, then follow the complete resolution path to structured, user-presentable data or a safely validated action. They combine the canonical protocol, Device Model, diagnostics, programming, and MyHOME_Suite implementation references.
 
-Each page is an end-to-end example pattern rather than an alternative protocol specification. When an example and a canonical reference appear to differ, follow the canonical page and record the discrepancy.
+Each guide must stand on its own as a complete end-to-end example rather than an alternative protocol specification. When an example and a canonical reference appear to differ, follow the canonical page and record the discrepancy.
 
-## Examples
+## Guides
 
-| Starting goal | Complete example |
+| Starting goal | Practical guide |
 | --- | --- |
 | Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
 | Turn raw interview frames into a user-presentable Device configuration | [Read and Present a Device Configuration](read-device-configuration.md) |
@@ -15,9 +15,9 @@ Each page is an end-to-end example pattern rather than an alternative protocol s
 | Prove the effective state after programming | [Verify Programming](verify-programming.md) |
 | Explain incomplete scans and interviews | [Troubleshoot Diagnostics](troubleshoot-diagnostics.md) |
 
-## Example structure
+## Guide structure
 
-Every example should:
+Every guide should:
 
 1. state the user or installer goal;
 2. identify the required raw frames and other inputs;
