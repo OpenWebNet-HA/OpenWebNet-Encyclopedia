@@ -84,6 +84,17 @@ This placeholder describes multiple duration components. `Min`, `Max`, and `Step
 
 Temperature setpoint actions use a `3..40` semantic range with step `0.5`, while the placeholder name suggests a fixed encoded representation. The conversion from temperature to the four-character wire field must come from the functional Temperature Control definition or corroborated application behavior.
 
+## Stored `Value` evidence
+
+Seventeen Parameter rows have a non-null `Value`, and every stored value is the text `1`:
+
+- one Lighting dimmer condition Parameter with `OperatorType=1`;
+- sixteen CEN/CEN+ event Parameters across the two event categories.
+
+The CEN/CEN+ rows also provide button-number domains: one CEN start-pressure form allows `0..99`, while the other CEN and CEN+ forms allow `0..31`.
+
+The repeated `1` is implementation data, but the column is not declared as a default-value field. Preserve it as a stored selector/value until UI or runtime behavior establishes whether it is a default, comparison operand, or another editor setting.
+
 ## Parameters without placeholders
 
 A `NULL` Placeholder can still describe editor state, comparison criteria, time structures, or fixed selections. Such Parameters are not automatically unused and should not be discarded.
