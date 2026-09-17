@@ -57,7 +57,7 @@ The target write must use a permitted configured Object, validated through Virgi
 
 ## `DIMENSION 32`
 
-The frame contains one embedded `#` separator between `32` and `SLOT`. The earlier `#` in `#32` marks the `DIMENSION` portion rather than separating two fields. `SYS` and `ADDR` require the Object/system address rule. Do not decode every value as `A`/`PL`.
+`#32#[SLOT]` is the parameterized `DIMENSION` selector: the leading `#` selects the write form and the following `#` attaches `SLOT` to the selector. `SYS` and `ADDR` are ordinary `DIMENSION` values separated with `*`. They require the Object/system address rule and must not all be decoded as `A`/`PL`.
 
 ## `DIMENSION 35`
 
