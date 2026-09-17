@@ -99,6 +99,85 @@ For every selected property:
 4. retain `EN_CONF.id_conf`, the raw response, and the decoded value;
 5. distinguish a missing response from a reported zero.
 
+### SQL example: resolve and constrain the group properties
+
+First resolve the configured Object reported by `DIMENSION 30`:
+
+```sql
+SELECT id_key_object, key_object, descr
+FROM EN_KEY_OBJECT
+WHERE key_object = :reported_keyo;
+```
+
+Then retrieve the Object- and firmware-scoped definitions, their base ranges, and the filters for the exact Object/firmware pairing:
+
+```sql
+WITH applicable_conf AS (
+    SELECT c.*, 'object' AS source_scope
+    FROM EN_CONF AS c
+    WHERE c.id_key_object = :id_key_object
+      AND c.id_firmware = 0
+
+    UNION ALL
+
+    SELECT c.*, 'firmware' AS source_scope
+    FROM EN_CONF AS c
+    WHERE c.id_key_object = 0
+      AND c.id_firmware = :id_firmware
+),
+object_firmware AS (
+    SELECT id_object_firmware
+    FROM AS_OBJECT_FIRMWARE
+    WHERE id_key_object = :id_key_object
+      AND id_firmware = :id_firmware
+)
+SELECT
+    c.source_scope,
+    c.id_conf,
+    c.conf_name,
+    c.descr,
+    c.idx,
+    c.id_conf_data_type,
+    c.hidden,
+    c.visible,
+    c.read_only,
+    r.value,
+    r.name AS range_name,
+    r."default" AS default_value,
+    r.min_value,
+    r.max_value,
+    r.step,
+    f.id_filter,
+    f.whole_range,
+    fr.range AS filtered_range
+FROM applicable_conf AS c
+LEFT JOIN EN_CONF_RANGE AS r
+  ON r.id_conf = c.id_conf
+LEFT JOIN EN_FILTER AS f
+  ON f.id_conf = c.id_conf
+ AND f.id_object_firmware IN (SELECT id_object_firmware FROM object_firmware)
+LEFT JOIN EN_FILTER_RANGE AS fr
+  ON fr.id_filter = f.id_filter
+WHERE c.conf_name IN ('G1', 'G2', 'G3', 'G4', 'G5',
+                      'G6', 'G7', 'G8', 'G9', 'G10')
+ORDER BY c.idx, r.progressive;
+```
+
+If `rules.db3` is a separate file, attach it explicitly before testing for additional dependencies:
+
+```sql
+ATTACH DATABASE 'rules.db3' AS rule_db;
+
+SELECT *
+FROM rule_db.rules
+WHERE KOBJECTS = :key_object
+  AND "1_Parameter" IN ('G1', 'G2', 'G3', 'G4', 'G5',
+                        'G6', 'G7', 'G8', 'G9', 'G10')
+ORDER BY N_RULES, Condition_order;
+```
+
+Here `:id_key_object` is the internal catalogue key, while `:key_object` is the external Object number reported on the wire. Do not interchange them.
+
 ## 5. Interpret the memberships
 
 For the common actuator definitions above, the catalogue provides a numeric range of `0` through `255` and a default of `0` for each position.
