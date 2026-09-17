@@ -1,6 +1,6 @@
 # Addressing
 
-`WHO 1` uses the SCS Lighting A/PL addressing model. `WHERE` can select an individual light point, an environment, a group, the complete Lighting system, or a point reached through an interface/extended address form.
+`WHO 1` uses the SCS Lighting `A`/`PL` addressing model. `WHERE` can select an individual light point, an environment, a group, the complete Lighting system, or a point reached through an interface/extended address form.
 
 The same broad address family is shared with Automation, but `WHERE` remains scoped to the selected `WHO`: a Lighting address identifies Lighting Objects and must be interpreted using the Lighting operation in which it occurs.
 
@@ -10,11 +10,11 @@ The same broad address family is shared with Automation, but `WHERE` remains sco
 | --- | --- |
 | General | Addresses the complete Lighting system |
 | Environment | Addresses the Lighting Objects belonging to an environment |
-| Point to point | Addresses an individual A/PL light point |
+| Point to point | Addresses an individual `A`/`PL` light point |
 | Group | Addresses the Lighting Objects belonging to a group |
 | Extended / local bus | Reaches a point through the applicable interface or advanced address rule |
 
-The published Lighting grammar preserves significant leading zeroes in extended A/PL forms. A `WHERE` should therefore be parsed as protocol syntax before any numeric conversion.
+The published Lighting grammar preserves significant leading zeroes in extended `A`/`PL` forms. A `WHERE` should therefore be parsed as protocol syntax before any numeric conversion.
 
 ## MyHOME_Suite address rules
 
