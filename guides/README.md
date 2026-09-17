@@ -31,6 +31,8 @@ Each page is independently executable. A specialized guide may repeat acquisitio
 
 Whenever a guide retrieves information from a database, it must include a concrete SQL example for that lookup. Cross-database correlations must show the attachment or separate staged queries, identify the correlation keys, and state whether the relationship is a declared key or a semantic mapping.
 
+Where a workflow contains iteration, branching, retries, or several resolution stages, include implementation-oriented pseudocode or an equivalent algorithm. The algorithm must preserve raw evidence, ambiguity, timeouts, and stop conditions rather than presenting only the successful path.
+
 Every guide should:
 
 1. state the user or installer goal;
