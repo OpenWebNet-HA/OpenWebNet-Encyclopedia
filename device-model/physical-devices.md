@@ -86,7 +86,23 @@ The implementation database defines these Device-level identity responses:
 | `6` | `MICRO_VERSION` | Microcontroller version |
 | `13` | `ID` | Installed-instance identifier |
 
-`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0`–`12`. Its exact relationship to physical configurators or catalogue structures has not been established. It must not be relabelled as a Module count, Object, Virgin Object, form factor, firmware class, or other Device classification.
+`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0`–`12`. Comparison with product configuration diagrams indicates that `N_CONF` represents the number of physical configurator positions provided by the Device.
+
+### `N_CONF` and physical configurators
+
+The interpretation is supported by Devices whose physical configuration layouts are documented independently:
+
+| Device | `N_CONF` | Documented physical positions |
+| --- | ---: | --- |
+| `F420` | `2` | 2 |
+| `F429` | `3` | 3 (`A`, `G`, `M`) |
+| `H4652/3` | `7` | 7 |
+
+The correspondence across Devices with different values argues against interpreting `N_CONF` as a Module count or general Device classification. Instead, it describes the size of the Device's physical configurator interface.
+
+MyHOME Devices can be configured either through physical configurators installed on the Device or through advanced configuration. Physical configuration constrains values to those representable by the available configurators; advanced configuration can expose values beyond those physical limits. `N_CONF` describes the physical configurator positions provided by the hardware, not the number of logical configuration parameters or the active configuration method.
+
+This interpretation remains to be checked against additional Devices, particularly older products for which configuration diagrams are less readily available.
 
 ## Physical composition
 
@@ -155,6 +171,6 @@ For SCS Lighting/Automation Devices, the diagnostic `WHERE` of a Physical Device
 
 ## Sources
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Device, item, brand, line, dependency, and bus records. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines Device-identity frames and parameter ranges. Observed traffic and MyHOME_Suite behavior establish installed-instance values and displayed Device descriptions.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Device, item, brand, line, dependency, and bus records. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines Device-identity frames and parameter ranges. Observed traffic and MyHOME_Suite behavior establish installed-instance values and displayed Device descriptions. Product configuration diagrams provide independent evidence for the physical configurator layouts used to interpret `N_CONF`.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy and [`sources/manifest.yaml`](../sources/manifest.yaml) for provenance.
