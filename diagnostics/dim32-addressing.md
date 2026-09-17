@@ -47,6 +47,16 @@ An observed Device layout included:
 
 The repeated `10` demonstrates that different Modules can share an address while exposing different Objects.
 
+## Physical address counterparts
+
+After applying the Object and system-specific address rule, decoded `ADDR` components can be compared with the firmware's physical configurator positions. For Lighting/Automation Devices, `A` and `PL` commonly appear both as physical positions in the firmware definition and as the effective address components reported through `DIMENSION 32`.
+
+This establishes that the address property has a physical-configurator counterpart; it does not establish that physical configurators supplied the reported value. An `A` or `PL` value within the physical range can also have been assigned by advanced or virtual configuration. A value outside the established physical range can exclude physical configuration for that address component.
+
+Other physical positions such as `M`, `TYPE`, `PRE`, or `G1` are not encoded as address components merely because they occur beside `A` and `PL` on the Device. Indexed counterparts belong to `DIMENSION 35` where the Object and firmware define them.
+
+See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared resolution and evidence rules.
+
 Observed sensor Device `08CF44BF` used diagnostic `WHERE 0015`, interpreted as `A = 0`, `PL = 15`. Retaining the raw field is important because padding and family-specific formatting can be lost by integer-only storage.
 
 ## Other systems
