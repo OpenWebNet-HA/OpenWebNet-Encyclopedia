@@ -184,6 +184,69 @@ A display name does not replace the encoded value. Store both so that verificati
 
 Where the database supplies no unit or complete interpretation, do not invent one from the numeric range.
 
+## Worked retrieval: find an actuator's group memberships
+
+Suppose the application must answer: “Which groups does this actuator belong to?”
+
+1. Run the Device interview and resolve the actuator Module's internal `SLOT` and configured Object from `DIMENSION 30`.
+2. Send `*#[WHO]*0*38#0##` and collect the resulting `DIMENSION 35` frames.
+3. Load the `EN_CONF` rows for that Module's resolved `id_key_object`.
+4. Select the Object-scoped properties that represent group-membership positions. Common actuator Objects expose `G1` through `G10`, often at indices `240` through `249`.
+5. Match each selected property's `idx` to the `INDEX` in the response for the same `SLOT`.
+6. Decode and validate each `VAL_PAR` with its own `EN_CONF_RANGE` and applicable filters.
+7. Present the non-empty memberships as group identifiers, while retaining the position and raw value.
+
+For example, after resolving internal slot `2` as a compatible lighting-actuator Object, the detailed read might yield these normalized tuples:
+
+| `SLOT` | `INDEX` | `VAL_PAR` | Object-scoped property | Result |
+| ---: | ---: | ---: | --- | --- |
+| 2 | 240 | 7 | `G1` | member of group 7 |
+| 2 | 241 | 12 | `G2` | member of group 12 |
+| 2 | 242–249 | 0 | `G3`–`G10` | default/unassigned positions, subject to the applicable rules |
+
+A suitable user-facing result is “Groups 7 and 12,” with provenance such as “Module slot 2; `G1=7`; `G2=12`.”
+
+Indices `240` through `249` are not global group indices. They are confirmed for several common actuator Objects in the catalogue, but other Objects use different group properties and indices. Resolve the Object first. Likewise, the catalogue permits `0` in these numeric ranges and supplies it as the default; treat it as unassigned only where the applicable Object, filters, rules, or verified application behavior establish that meaning.
+
+## Worked retrieval: find the configured CEN buttons
+
+Suppose the application must answer: “Which CEN buttons are configured on this Device?”
+
+This is a Device-wide question, so inspect every Module rather than stopping at the first scenario-related Object:
+
+1. Run the Device interview and build the complete Module list from `DIMENSION 30`.
+2. Resolve each configured Module's Object.
+3. Identify Objects whose Object-scoped `EN_CONF` definitions represent a CEN number and buttons. Do this by resolved property identity and semantics, not by searching the received values.
+4. Send `*#[WHO]*0*38#0##` once and collect all `DIMENSION 35` responses.
+5. For every matching Module, join responses to properties by `(SLOT, INDEX)`.
+6. Decode the CEN identifier and button values according to that Object's definitions.
+7. Return one entry per Module and button, preserving internal slot, Object, raw components, and interpretation status.
+
+For example, the catalogue defines the two-button “Scheduled scenario PLUS” Object with:
+
+| `INDEX` | Symbol | Meaning |
+| ---: | --- | --- |
+| 0 | `PPT_CEN_LOW` | low component of the Scheduled scenario PLUS/CEN number |
+| 1 | `PPT_CEN_HIG` | high component of the Scheduled scenario PLUS/CEN number |
+| 2 | `BUTTON_1` | upper button |
+| 3 | `BUTTON_2` | lower button |
+
+If the detailed read returns the following normalized values for two Modules:
+
+| `SLOT` | low | high | upper button | lower button |
+| ---: | ---: | ---: | ---: | ---: |
+| 3 | 33 | 0 | 5 | 6 |
+| 4 | 33 | 0 | 7 | 8 |
+
+the presentation can state:
+
+- CEN 33, Module slot 3: upper button 5; lower button 6;
+- CEN 33, Module slot 4: upper button 7; lower button 8.
+
+The `LOW` and `HIG` names and their ranges strongly indicate byte components; where the combined-number rule has been independently established for the applicable Device family, decode them as `LOW + 256 × HIG`. Otherwise show both raw components and mark the combined identifier as an evidence-backed inference rather than silently assuming the formula.
+
+Do not apply the four indices above to every CEN-capable Object. For example, another “Scheduled scenario PLUS” Object variant exposes only one `BUTTON_1`, and other scenario-control Objects use different symbols and indices. The resolved Object's `EN_CONF` rows define which buttons exist; an absent property is different from a reported value of zero or a missing response.
+
 ## 8. Determine presentation and editability
 
 A user-presentable property record should include:
