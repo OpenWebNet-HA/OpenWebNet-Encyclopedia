@@ -155,6 +155,33 @@ ORDER BY c.idx, r.progressive;
 
 If a variant has fewer properties, omit the absent `id_conf` parameters rather than binding an invented row.
 
+If `rules.db3` is separate, attach it before checking for Object-specific dependencies:
+
+```sql
+ATTACH DATABASE 'rules.db3' AS rule_db;
+
+SELECT
+    KOBJECTS,
+    N_RULES,
+    "1_Parameter" AS controlling_property,
+    Condition,
+    "2_Parameter" AS affected_property,
+    TrueCondition,
+    FalseCondition,
+    Condition_order
+FROM rule_db.rules
+WHERE KOBJECTS = :key_object
+  AND (
+      upper("1_Parameter") LIKE '%CEN%'
+      OR upper("1_Parameter") LIKE '%BUTTON%'
+      OR upper("2_Parameter") LIKE '%CEN%'
+      OR upper("2_Parameter") LIKE '%BUTTON%'
+  )
+ORDER BY N_RULES, Condition_order;
+```
+
+Here `:key_object` is the external `EN_KEY_OBJECT.key_object`, not `id_key_object`. This is a semantic cross-database correlation; the files declare no foreign key between those columns.
+
 ## 4. Request the detailed configuration
 
 After the complete Module/Object layout is known, send once:
