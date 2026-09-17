@@ -17,11 +17,13 @@ The canonical sources for this section are the two ScenarioDevices databases pre
 
 | Subject | Page |
 | --- | --- |
+| Source provenance, evidence roles, and identifier boundaries | [Sources and Identifier Boundaries](sources-and-identifiers.md) |
 | Database roles, schema, relationships, and revision differences | [Database Model](database-model.md) |
 | Scenario roles and cross-role matching identifiers | [Categories and Matching](categories-and-matching.md) |
 | Resolving systems, Objects, commands, and parameters | [Capability Resolution](capability-resolution.md) |
 | Parameter types, operators, domains, and composite values | [Parameters](parameters.md) |
 | Interpreting and rendering stored command templates | [Frame Templates](frame-templates.md) |
+| Correlations with functional OpenWebNet namespaces | [Functional Correlations](functional-correlations.md) |
 | Functional/category coverage and source-revision delta | [Capability Coverage](capability-coverage.md) |
 | Established action pipeline and runtime boundaries | [Execution Model](execution-model.md) |
 | Evidence limits and questions requiring further investigation | [Open Questions](open-questions.md) |
@@ -54,7 +56,9 @@ These IDs are local to each ScenarioDevices file. They are not `WHO`, `WHAT`, ca
 | `ScenarioDevices-program-files.sqlite` | 29 | 44 | 157 | 42 | `ObjectSystems.FamilyId` |
 | `ScenarioDevices-programdata.sqlite` | 27 | 42 | 151 | 40 | none |
 
-The files overlap substantially but are not byte-identical or row-identical revisions. Documentation must identify which source supports a statement. A row present in one file must not automatically be described as universally available in the other.
+The repository names distinguish two files that were both originally named `ScenarioDevices.sqlite`: one installed under `Program Files (x86)` and one under the shared `ProgramData` directory. Their canonical fingerprints and paths are recorded in [Sources and Identifier Boundaries](sources-and-identifiers.md).
+
+The files overlap substantially but are not byte-identical or row-identical revisions. The semantic content of `programdata` is an exact subset of `program-files` when compared through the full hierarchy; local row IDs are not cross-file identifiers.
 
 The larger `program-files` revision adds Virtual Key Card event capabilities and two Temperature Control actions absent from `programdata`. See [Capability Coverage](capability-coverage.md) for the exact delta.
 
