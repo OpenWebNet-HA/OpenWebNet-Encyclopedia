@@ -1,6 +1,6 @@
 # Addressing
 
-Temperature Control uses a zone/probe-oriented `WHERE` grammar rather than the A/PL grammar used by Lighting and Automation. Leading zeroes are significant because they distinguish address classes.
+Temperature Control uses a zone/probe-oriented `WHERE` grammar rather than the `A`/`PL` grammar used by Lighting and Automation. Leading zeroes are significant because they distinguish address classes.
 
 ## Published functional `WHERE` forms
 
