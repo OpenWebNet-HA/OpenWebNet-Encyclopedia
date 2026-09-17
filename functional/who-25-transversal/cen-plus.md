@@ -35,7 +35,7 @@ Conceptually:
 
 Published examples include `21` for Object 1, `20` for Object 0, `2101` for Object 101, `22010` for Object 2010, and `22047` for Object 2047. The field is therefore a protocol composition, not a decimal arithmetic addition.
 
-A decoder should remove/interpret the CEN+ prefix according to the `WHO 25` grammar rather than parse the complete field as a Lighting/Automation A/PL address.
+A decoder should remove/interpret the CEN+ prefix according to the `WHO 25` grammar rather than parse the complete field as a Lighting/Automation `A`/`PL` address.
 
 ## Short pressure — `WHAT 21`
 
@@ -90,7 +90,7 @@ The same event form can therefore represent an interaction originating from a ph
 
 The published CEN documentation states that CEN+ devices use Advanced Virtual Configuration and do not use a conventional SCS bus address for this function. The configured virtual Object becomes the OpenWebNet `WHERE`, while the button number is represented by the `WHAT` parameter.
 
-This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can represent an A/PL source address and the button number itself occupies `WHAT`.
+This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can represent an `A`/`PL` source address and the button number itself occupies `WHAT`.
 
 ## Relationship to CEN
 
@@ -98,7 +98,7 @@ This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can 
 | --- | --- | --- |
 | Button number | `WHAT 00`–`31` | `WHAT` parameter `0`–`31` |
 | Interaction phase | optional `WHAT` parameter `#1`–`#3` | `WHAT 21`–`24` |
-| Source/target | A/PL and advanced CEN `WHERE` forms | virtual Object `0`–`2047` with prefix `2` |
+| Source/target | `A`/`PL` and advanced CEN `WHERE` forms | virtual Object `0`–`2047` with prefix `2` |
 | Rotary events | not defined in the published CEN table | `WHAT 25`–`28` |
 
 The two systems should be modeled separately even when a physical command device is capable of both modes.
