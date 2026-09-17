@@ -6,7 +6,7 @@ Address programming assigns the effective functional system and address of one c
 
 `*#[WHO]*0*#32#[SLOT]*[SYS]*[ADDR]##`
 
-The frame contains one embedded `#` separator between `32` and `SLOT`. The earlier `#` in `#32` marks the `DIMENSION` portion of the frame; it is not a second field separator.
+`#32#[SLOT]` is the parameterized `DIMENSION` selector. The leading `#` selects the write form, and the following `#` attaches `SLOT` to that selector. `SYS` and `ADDR` are ordinary `DIMENSION` values separated with `*`.
 
 | Field | `OPEN.db` range | Meaning |
 | --- | ---: | --- |
