@@ -1,6 +1,6 @@
 # Protocol
 
-`WHO 24` defines Lighting Management through a Programmer Gateway. It is distinct from ordinary [`WHO 1`](../who-1-lighting/) Lighting: the namespace models management devices, zones, profiles and control parameters rather than SCS A/PL light points.
+`WHO 24` defines Lighting Management through a Programmer Gateway. It is distinct from ordinary [`WHO 1`](../who-1-lighting/) Lighting: the namespace models management devices, zones, profiles and control parameters rather than SCS `A`/`PL` light points.
 
 ## Frame model
 
