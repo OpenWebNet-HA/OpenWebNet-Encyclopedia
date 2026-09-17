@@ -52,7 +52,7 @@ The `Light and Automation system` is associated with 65 `EN_OPEN` records. The s
 
 `OPEN.db` therefore provides substantial evidence about the MyHOME_Suite management plane for Lighting and Automation, but it is not the source of the ordinary `WHO 1` and `WHO 2` functional command tables.
 
-The system-level address rules include normal Light/Automation A/PL addressing and the F422 logic/physical-extension form:
+The system-level address rules include normal Light/Automation `A`/`PL` addressing and the F422 logic/physical-extension form:
 
 | Rule | Virtual form | Advanced form |
 | --- | --- | --- |
