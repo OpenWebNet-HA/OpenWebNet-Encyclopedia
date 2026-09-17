@@ -57,8 +57,10 @@ For a Parameter proven to be a numeric scalar:
 ```text
 require Min is absent or value >= Min
 require Max is absent or value <= Max
-if Step is present and non-zero:
+if Step is present and non-zero and Min is present:
     require (value - Min) / Step is integral within numeric tolerance
+else if Step is present but Min is absent:
+    do not infer the step-grid origin from this row alone
 ```
 
 Do not apply that algorithm to composite Types `6` or `7`, or to time/date structures, without first expanding their grammar.
