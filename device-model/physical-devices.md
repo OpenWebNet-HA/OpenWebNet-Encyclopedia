@@ -4,7 +4,7 @@ A Physical Device is one installed hardware product instance. It is the root of 
 
 ## Catalogue identity
 
-The principal Device record is `MHCatalogue.db.EN_DEVICE`.
+The principal Device record is `EN_DEVICE` in `MHCatalogue.db`.
 
 | Column | Role |
 | --- | --- |
@@ -31,9 +31,9 @@ Several branded products can share one `EN_ITEM` capability definition. For exam
 
 When identifying a scanned physical product, use `EN_DEVICE.name` as the standard Device description. Do not substitute:
 
-- `EN_ITEM.descr`, which describes the shared capability item;
-- `EN_KEY_OBJECT.descr`, which describes one logical Object;
-- a user-interface suffix added outside the catalogue;
+- `EN_ITEM.descr`, which describes the shared capability item
+- `EN_KEY_OBJECT.descr`, which describes one logical Object
+- a user-interface suffix added outside the catalogue
 - an inferred class derived from one Module.
 
 This preserves the distinction between “what product is installed?” and “what functions does it expose?”.
@@ -49,7 +49,7 @@ This preserves the distinction between “what product is installed?” and “w
 | `modobj` | Item-level model value |
 | `main` | Marks the main system association |
 
-`MHCatalogue.db.EN_SYSTEM` is a catalogue namespace. Its `id_system` values must not be numerically joined to `OPEN.db.EN_SYSTEM.id_system`.
+`EN_SYSTEM` in `MHCatalogue.db` is a catalogue namespace. Its `id_system` values must not be numerically joined to `EN_SYSTEM.id_system` in `OPEN.db`.
 
 The item-level `modobj`, `EN_BRAND.brand_modobj`, and `EN_LINE.line_modobj` correlate with the `OBJECT_MODEL`, `BRAND`, and `LINE` values carried by diagnostic `DIMENSION 1`. This gives a supported identification path:
 
@@ -67,11 +67,11 @@ The `[ID]` parameter spans `0` through `4294967295`. Captured Device IDs are rep
 
 A Device ID identifies an installed physical instance. It is not:
 
-- `EN_DEVICE.id_device`;
-- a SKU;
-- the item-level `modobj`;
-- an Object identifier;
-- an internal slot;
+- `EN_DEVICE.id_device`
+- a SKU
+- the item-level `modobj`
+- an Object identifier
+- an internal slot
 - a configured functional address.
 
 ## Diagnostic identity dimensions
@@ -151,12 +151,10 @@ A Device can carry several kinds of address:
 2. configured functional addresses belonging to individual Modules/Objects;
 3. installation-wide groups, environments, zones, CEN identifiers, or other system-specific associations.
 
-For SCS Lighting/Automation Devices, a physical Device `WHERE` can resemble an `A`/`PL` address. That resemblance does not establish that every Device uses the first Module’s configured address. The relationship must be documented per family or per verified behavior.
+For SCS Lighting/Automation Devices, the diagnostic `WHERE` of a Physical Device can resemble an `A`/`PL` address. That resemblance does not establish that every Device uses the first Module’s configured address. The relationship must be documented per family or per verified behavior.
 
 ## Sources
 
-- [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db): Device, item, brand, line, system, dependency, and bus records.
-- [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db): identity-response frames and parameter ranges.
-- [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt): implementation query definitions for systems and management sequences.
-- [`sources/manifest.yaml`](../sources/manifest.yaml): provenance and SHA-256 fingerprints.
-- Observed traffic and MyHOME_Suite UI behavior: instance IDs and user-visible Device descriptions.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Device, item, brand, line, dependency, and bus records. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines Device-identity frames and parameter ranges. Observed traffic and MyHOME_Suite behavior establish installed-instance values and displayed Device descriptions.
+
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy and [`sources/manifest.yaml`](../sources/manifest.yaml) for provenance.
