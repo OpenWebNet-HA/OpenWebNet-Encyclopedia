@@ -82,7 +82,7 @@ valid = value >= Min
     and (Step is absent or (value - Min) modulo Step == 0)
 ```
 
-This rule applies only after `Type` and the placeholder have been shown to represent a numeric scalar. Some parameters encode composite values such as time components and cannot be validated as one scalar range.
+This rule applies only after `Type` and the placeholder have been shown to represent a numeric scalar. Some parameters encode composite values such as time components and cannot be validated as one scalar range. See [Parameters](parameters.md) for the observed type and operator domains and the composite-placeholder cases.
 
 ## Security and correctness rules
 
@@ -110,3 +110,5 @@ and an independently validated `WHO 2` destination `11`, rendering produces:
 `*2*1*11##`
 
 The resulting `WHAT 1` and `WHERE 11` semantics must still be read from the [`WHO 2` functional reference](../functional/who-2-automation/). The ScenarioDevices row establishes the template offered by MyHOME_Suite; it does not replace the protocol definition.
+
+See [Execution Model](execution-model.md) for the boundary between rendering an action frame and executing a complete scenario.
