@@ -23,7 +23,7 @@ The canonical sequences order the following response families:
 
 | Order | `DIMENSION` | Data |
 | ---: | ---: | --- |
-| 1 | `1` | item/model identity, physical configurator-position count (`N_CONF`), brand, line |
+| 1 | `1` | item/model identity, physical configurator-slot count (`N_CONF`), brand, line |
 | 2 | `2` | firmware version |
 | 3 | `3` | hardware version |
 | 4 | `4` | configurators 1–6 |
@@ -68,7 +68,7 @@ Do not overwrite repeated frames merely because their `DIMENSION` matches. `DIME
 
 ## Reconstructing the Device
 
-1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata and retain `N_CONF` as the Device's physical configurator-position count.
+1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata.
 2. Record the reported firmware, hardware, and microcontroller versions without assuming that a version number is a catalogue primary key.
 3. Build one Module record per internal slot from `DIMENSION 30`.
 4. Attach `DIMENSION 32` system/address data to the matching internal slot.
@@ -84,7 +84,7 @@ The catalogue and runtime projections must remain distinct:
 | Which product capability is possible? | `MHCatalogue.db` item, firmware, slots, Objects, and constraints |
 | Which installed Device responded? | `DIMENSION 13` plus diagnostic context |
 | Which product description should be shown? | `EN_DEVICE.name` after `DIMENSION 1` resolution |
-| Which Object is active at a Module? | `DIMENSION 30` |
+| Which configured Object or unconfigured Virgin Object is reported for a Module? | `DIMENSION 30` |
 | Which functional address is reported for that Module? | `DIMENSION 32` |
 | Which indexed value is reported? | `DIMENSION 35` interpreted through the resolved Object/firmware configuration |
 
