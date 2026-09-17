@@ -23,7 +23,7 @@ All 541 Device rows in the canonical database resolve to an `EN_ITEM`, `EN_BRAND
 
 ### Device, item, and SKU
 
-`EN_DEVICE.code` is the product code presented in the catalogue. It is not a language code. The canonical source contains 508 non-null Device codes, and treating this column as a reference to `EN_LANGUAGE.code` would destroy valid SKU data.
+`EN_DEVICE.code` is the product code presented in the catalogue. It is not a language code. All 541 canonical Device rows contain a distinct non-null product code. Treating this column as a reference to `EN_LANGUAGE.code` would destroy valid SKU data.
 
 Several branded products can share one `EN_ITEM` capability definition. For example, products `64391`, `64191`, and `64192` all select item `1184`, named “Flush mounted actuator and free control”. They therefore share the same firmware, Module, Object, and configuration capability model while retaining distinct catalogue Device records.
 
