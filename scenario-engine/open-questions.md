@@ -11,14 +11,14 @@ This page records Scenario Engine semantics that are not yet established strongl
 
 ## Category and family fields
 
-- Confirm the exact enumeration of `ObjectSystems.CategoryFlag`.
+- Confirm the application's own labels for `CategoryFlag 0` and `1`; the data establishes primary/start and complementary/stop event categories, but not one universal public name.
 - Determine whether `FamilyId` maps to a functional family, editor family, localization family, or another internal namespace.
 - Explain the two Object System rows that can share a resource key but use different category flags.
 
 ## Matching identifiers
 
 - Establish the purpose of `ObjectMatchingId` and `CommandMatchingId`.
-- Determine whether matching IDs connect triggers to conditions/actions, correlate equivalent capabilities, or reference another application model.
+- Determine how the application uses the established cross-role matching groups at runtime or in the editor: event binding, suggested actions, display grouping, serialization, or another purpose.
 - Test whether matching identifiers are local to one file or stable across both revisions.
 
 ## Object identifiers
