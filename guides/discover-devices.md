@@ -68,6 +68,54 @@ The canonical `ScanByAID` scenario makes the same conceptual distinction: `ScanA
 5. Use `EN_DEVICE.name` as the preferred MyHOME_Suite-facing Device type or description.
 6. Keep `EN_KEY_OBJECT.descr` for Module/Object functions; it is not the Physical Device type.
 
+### SQL example: resolve Device candidates from `DIMENSION 1`
+
+Bind the reported values as `:modobj`, `:brand_modobj`, and `:line_modobj`. This query preserves every matching commercial Device instead of selecting the first row:
+
+```sql
+SELECT
+    i.id_item,
+    i.descr AS item_description,
+    d.id_device,
+    d.name AS device_description,
+    d.code AS sku,
+    b.id_brand,
+    b.brand_name,
+    l.id_line,
+    l.line_name AS collection_name
+FROM AS_ITEM_SYSTEM AS ais
+JOIN EN_ITEM AS i
+  ON i.id_item = ais.id_item
+JOIN EN_DEVICE AS d
+  ON d.id_item = i.id_item
+LEFT JOIN EN_BRAND AS b
+  ON b.id_brand = d.id_brand
+LEFT JOIN EN_LINE AS l
+  ON l.id_line = d.id_line
+WHERE ais.modobj = :modobj
+  AND (:brand_modobj IS NULL OR b.brand_modobj = :brand_modobj)
+  AND (:line_modobj IS NULL OR l.line_modobj = :line_modobj)
+ORDER BY d.name, b.brand_name, l.line_name, d.code;
+```
+
+Use `NULL` for a brand or collection value that was not reported or is not yet trustworthy. Do not bind unresolved `DIMENSION 1` VALUE 2 to any catalogue column.
+
+Resolve firmware candidates separately through the selected item:
+
+```sql
+SELECT
+    f.id_firmware,
+    f.firmware_V,
+    f.firmware_R,
+    f.slots,
+    f.FW_default
+FROM EN_FIRMWARE AS f
+WHERE f.id_item = :id_item
+  AND (:firmware_v IS NULL OR f.firmware_V = :firmware_v)
+  AND (:firmware_r IS NULL OR f.firmware_R = :firmware_r)
+ORDER BY f.FW_default DESC, f.id_firmware;
+```
+
 ### Resolve brands and collections
 
 Use the brand and line/collection values reported by `DIMENSION 1` to resolve the corresponding catalogue brand and collection records. Apply them as evidence when narrowing the candidate `EN_DEVICE` rows.
