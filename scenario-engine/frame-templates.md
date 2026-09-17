@@ -39,33 +39,6 @@ This is not a complete OpenWebNet frame. It requires an application mapping or a
 
 A `NULL` frame does not prove that the capability is non-executable. It proves only that this database row does not contain a renderable frame template.
 
-## Retrieve one template
-
-```sql
-SELECT
-    c.Id,
-    c.Name,
-    c.ChiOpen,
-    c.Frame,
-    c.WherePlaceholder,
-    c.WhereType,
-    c.WhereName,
-    p.Id AS parameter_id,
-    p.Placeholder,
-    p.Name AS parameter_name,
-    p.Min,
-    p.Max,
-    p.Step,
-    p.Type,
-    p.OperatorType,
-    p.Value
-FROM Commands AS c
-LEFT JOIN Parameters AS p
-  ON p.Command_Id = c.Id
-WHERE c.Id = :command_row_id
-ORDER BY p.Id;
-```
-
 ## Safe rendering algorithm
 
 ```text
