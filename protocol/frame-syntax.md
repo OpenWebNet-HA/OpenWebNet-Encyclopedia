@@ -1,4 +1,4 @@
-# Overview
+# Frame Syntax
 
 OpenWebNet frames are ASCII messages delimited by `*` and terminated by `##`. The meaning and permitted structure of individual fields depend on the frame family and selected `WHO`.
 
@@ -35,6 +35,8 @@ The normal form is `*WHO*WHAT*WHERE##`. Depending on direction and session conte
 ## `DIMENSION` frames
 
 `DIMENSION` operations use the `*#WHO...` family. A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends the `DIMENSION` values. A write prefixes the `DIMENSION` field with `#`.
+
+Some operations parameterize the `DIMENSION` selector itself with additional `#`-introduced components. For example, `32#[SLOT]` identifies `DIMENSION 32` for one internal slot; the following `SYS` and `ADDR` remain ordinary `*`-separated values. The `#` inside a selector therefore does not replace the major-field delimiter.
 
 `DIMENSION` identifiers and value layouts are scoped to their `WHO`. See [`dimensions.md`](dimensions.md).
 
