@@ -101,28 +101,73 @@ Use the row primary keys for joins inside one file. Do not join the two files by
 
 ## Compare the revisions
 
-Attach both files and compare semantic columns rather than local row IDs:
+Attach both files and compare a Command by its full hierarchy rather than local IDs or `Commands.Name` alone:
 
 ```sql
 ATTACH DATABASE 'ScenarioDevices-program-files.sqlite' AS files_db;
 ATTACH DATABASE 'ScenarioDevices-programdata.sqlite' AS data_db;
 
-SELECT
-    f.Name AS command_name,
-    f.CommandId AS files_command_id,
-    d.CommandId AS data_command_id,
-    f.Frame AS files_frame,
-    d.Frame AS data_frame
-FROM files_db.Commands AS f
-LEFT JOIN data_db.Commands AS d
-  ON d.Name = f.Name
-WHERE d.Id IS NULL
+WITH files_commands AS (
+    SELECT
+        os.Name AS system_name,
+        os.CategoryFlag,
+        d.Name AS object_name,
+        d.ObjectId,
+        d.ObjectMatchingId,
+        c.Name AS command_name,
+        c.CommandId,
+        c.CommandMatchingId,
+        c.WherePlaceholder,
+        c.WhereType,
+        c.WhereName,
+        c.ChiOpen,
+        c.Frame
+    FROM files_db.ObjectSystems AS os
+    JOIN files_db.DeviceObjects AS d ON d.ObjectSystem_Id = os.Id
+    JOIN files_db.Commands AS c ON c.DeviceObject_Id = d.Id
+),
+data_commands AS (
+    SELECT
+        os.Name AS system_name,
+        os.CategoryFlag,
+        d.Name AS object_name,
+        d.ObjectId,
+        d.ObjectMatchingId,
+        c.Name AS command_name,
+        c.CommandId,
+        c.CommandMatchingId,
+        c.WherePlaceholder,
+        c.WhereType,
+        c.WhereName,
+        c.ChiOpen,
+        c.Frame
+    FROM data_db.ObjectSystems AS os
+    JOIN data_db.DeviceObjects AS d ON d.ObjectSystem_Id = os.Id
+    JOIN data_db.Commands AS c ON c.DeviceObject_Id = d.Id
+)
+SELECT f.*
+FROM files_commands AS f
+LEFT JOIN data_commands AS d
+  ON d.system_name = f.system_name
+ AND d.CategoryFlag = f.CategoryFlag
+ AND d.object_name = f.object_name
+ AND d.command_name = f.command_name
+WHERE d.command_name IS NULL
+   OR d.ObjectId IS NOT f.ObjectId
+   OR d.ObjectMatchingId IS NOT f.ObjectMatchingId
    OR d.CommandId IS NOT f.CommandId
+   OR d.CommandMatchingId IS NOT f.CommandMatchingId
+   OR d.WherePlaceholder IS NOT f.WherePlaceholder
+   OR d.WhereType IS NOT f.WhereType
+   OR d.WhereName IS NOT f.WhereName
+   OR d.ChiOpen IS NOT f.ChiOpen
    OR d.Frame IS NOT f.Frame
-ORDER BY f.Name;
+ORDER BY f.system_name, f.CategoryFlag, f.object_name, f.command_name;
 ```
 
-`Name` is useful comparison evidence because it is a resource key, but it is not declared as a unique cross-file key. Preserve duplicate matches and inspect their parent Object/System context.
+The canonical comparison shows that the semantic rows in `programdata` are an exact subset of `program-files` when the full parent path and non-local fields are used. The six additional Commands are four Virtual Key Card event rows and the Temperature Control local-control and fan-coil-speed actions. The latter two have one additional Parameter each.
+
+`Commands.Name` alone is unsafe as a comparison key because the same resource key can occur beneath primary and complementary event categories.
 
 ## Integrity checks
 
