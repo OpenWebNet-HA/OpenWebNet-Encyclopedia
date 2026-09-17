@@ -2,6 +2,8 @@
 
 Diagnostic `DIMENSION` values describe identity, versions, health, Modules, addresses, and configuration. They are scoped to the selected diagnostic `WHO` even where the canonical implementation reuses one template across several families.
 
+The tables below cover the Device interview and detailed configuration sequences. Additional system-level service diagnostics with an empty `WHERE` are listed separately because they are not part of the standard per-Device interview.
+
 ## Identity and versions
 
 | `DIMENSION` | Response frame | Meaning |
@@ -16,7 +18,11 @@ Diagnostic `DIMENSION` values describe identity, versions, health, Modules, addr
 | `8` | `*#[WHO]*[WHERE]*8*[BITMASK_DIA_B]##` | 24-bit diagnostic bitmask B |
 | `13` | `*#[WHO]*[WHERE]*13*[ID]##` | 32-bit Device ID |
 
-`OPEN.db` describes the version values as version/release/build components. The compact frame placeholder does not by itself establish a printable dotted-version encoding; preserve the raw components or source representation used by the actual response.
+`OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1`–`99` to `FW_VERSION` and `0`–`99` to `HW_VERSION` and `MICRO_VERSION`, but the compact placeholder does not by itself establish how the three components are packed into the transmitted fields. Preserve the actual field sequence until capture evidence establishes the encoding.
+
+`DIMENSION 4` and `5` each carry six configurator values in the range `0`–`255`. They are Device-level physical/virtual configurator reports, not `EN_CONF.idx` configuration parameters.
+
+`DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings, so bit labels require family-specific implementation or capture evidence.
 
 ## Modules, addresses, and configuration
 
@@ -46,6 +52,8 @@ The `#` separators before `SLOT` and `INDEX` are part of the canonical templates
 
 The frame also carries a boolean `STATE` labelled configured/not configured. The two “not implemented” descriptions are preserved from distinct source entries; the source does not further clarify their boundary.
 
+`DIMENSION 31` records have different `error_open` classifications in `OPEN.db`: codes `0`, `2`, `3`, and `4` are errors, while busy code `1` is classified as error-and-information. These implementation categories do not add wire fields.
+
 ## Value ranges
 
 | Field | Range in `OPEN.db` |
@@ -62,6 +70,23 @@ The frame also carries a boolean `STATE` labelled configured/not configured. The
 
 These are transport/database ranges, not claims that every Device, Object, or system accepts every value.
 
+## General and gateway service forms
+
+`OPEN.db` contains a second diagnostic surface using an empty `WHERE` field:
+
+| `DIMENSION` | Frame | Database meaning |
+| ---: | --- | --- |
+| `1` | `*#[WHO]**1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | gateway model identity response |
+| `7` | `*#[WHO]**7##` | request general diagnostic A |
+| `7` | `*#[WHO]**7*[BIT]##` | diagnostic/autodiagnostic bitmask response |
+| `11` | `*#[WHO]**11*[BIT]##` | automatic hardware/software diagnostic event |
+| `12` | `*#[WHO]**12##` / `*#[WHO]**12*[MAC1]*[MAC2]*[MAC3]*[MAC4]*[MAC5]*[MAC6]##` | MAC-address request/response |
+| `15` | `*#[WHO]**15##` / `*#[WHO]**15*[OBJECT_MODEL]##` | WebServer model request/response |
+
+The general `DIMENSION 7`, `11`, `12`, and `15` records are directly associated with the Nurse Call system in `AS_OPEN_SYSTEM`. `OpenQuery.txt` also selects the general `DIMENSION 7` frames and the gateway `DIMENSION 1` form for gateway-connection handling. This supports reuse in a gateway/service workflow but does not make these frames part of every diagnostic family’s Device interview.
+
 ## Requests and unsolicited values
 
 The canonical database includes both sequence-driven responses and general diagnostic forms. `DIMENSION 7`, for example, has Device-specific and general diagnostic templates. A collector should retain unknown or unsolicited diagnostic frames and interpret them only within the selected `WHO`, active sequence, and source direction.
+
+The `diag_open` flag in `EN_OPEN` is broader than this page: it also marks configuration, Object programming, and scenario-programming frames. Sequence membership and frame direction are required to classify an operation correctly.
