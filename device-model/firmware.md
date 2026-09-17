@@ -4,7 +4,7 @@ Firmware is the catalogue layer that projects an item into a concrete set of Mod
 
 ## Catalogue representation
 
-`MHCatalogue.db.EN_FIRMWARE` contains 311 firmware definitions.
+`EN_FIRMWARE` in `MHCatalogue.db` contains 311 firmware definitions.
 
 | Column | Role |
 | --- | --- |
@@ -40,11 +40,11 @@ Some catalogue rows use negative version/release values. These are implementatio
 
 Its parameter description gives the logical form `Version*Release*Build`, with components in the range `1`–`99`.
 
-This response can be used to select or corroborate a catalogue firmware definition, but the databases do not contain a direct cross-database key between `OPEN.db.FW_VERSION` and `MHCatalogue.db.id_firmware`.
+This response can be used to select or corroborate a catalogue firmware definition, but the databases do not contain a direct cross-database key between `FW_VERSION` in `OPEN.db` and `id_firmware` in `MHCatalogue.db`.
 
 Related Device-level responses are:
 
-- `DIMENSION 3`: hardware version;
+- `DIMENSION 3`: hardware version
 - `DIMENSION 6`: microcontroller version.
 
 These values identify implementation revisions. They are not Object or Module identifiers.
@@ -87,7 +87,7 @@ The Module count is four; the Object-option count is ten.
 
 `EN_CONF` contains both Object-scoped and firmware-scoped definitions. Firmware-scoped rows use:
 
-- `id_key_object = 0`;
+- `id_key_object = 0`
 - an `id_firmware` resolving to `EN_FIRMWARE`.
 
 The canonical database contains 1,463 such rows. They represent configuration that cannot be attributed solely to a reusable Object definition.
@@ -100,31 +100,19 @@ Object-scoped rows use the complementary pattern described in [`configuration.md
 
 The database column name is evidence for a fixed/designated Object relationship. It is not, by itself, sufficient to decide every user-interface behavior:
 
-- whether Function type is visible;
-- whether the user can change it;
-- whether another Object is selected automatically;
+- whether Function type is visible
+- whether the user can change it
+- whether another Object is selected automatically
 - whether a Device variant hides alternatives.
 
 Those behaviors require catalogue conditions, filters, and observed UI behavior.
 
-## Firmware examples
+## Firmware example
 
-| Product | Item | Firmware | Declared slots | Capability outline |
-| --- | ---: | ---: | ---: | --- |
-| `64391` / `64191` / `64192` | `1184` | `157` | `4` | two actuator Modules and two free-command Modules |
-| `64360` | `281` | `145` | `2` | two configurable command Modules |
-| `F411U2` | `2115` | `659` | `2` | two relay/actuator Modules |
-| `F418U2` | `2065` | `590` | `2` | two dimmer Modules |
-| `3476` | `55` | `194` | `1` | one Light actuator Module |
-| `3477` | `81` | `129` | `2` | two contact/command Modules |
+Firmware `157`, used by `64391`, `64191`, and `64192`, declares four internal slots. Its slot/Object rows expose two actuator Modules and two independently configurable command Modules. The product-level examples are collected in [Physical Devices](physical-devices.md).
 
-These are catalogue examples, not a complete product matrix.
+## Sources
 
-## Source boundaries
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
 
-- [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) establishes firmware definitions and capability associations.
-- [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) establishes the diagnostic firmware-version response.
-- Captured traffic establishes the actual version returned by an installed Device.
-- MyHOME_Suite behavior establishes which compatible firmware definition it selects.
-
-Do not infer that equal numeric values from these sources share an identifier space unless the selection has been corroborated.
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
