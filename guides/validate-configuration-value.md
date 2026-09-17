@@ -4,18 +4,43 @@
 
 Decide whether one intended semantic value is writable for the resolved Device, firmware, Module, and Object, and derive its wire encoding.
 
+## Prerequisites
+
+- the applicable diagnostic `WHO`;
+- a Device selector: 32-bit ID, diagnostic address, or local interaction;
+- the intended Module, property, and semantic value;
+- access to `MHCatalogue.db`, `OPEN.db`, and applicable `rules.db3`;
+- the ability to send and receive frames as MyHOME_Suite does.
+
 ## Acquire the current state
 
-Validation requires the installed context, not only the proposed value.
+Validation depends on the installed context, not only the proposed value.
 
-1. If the Device is not yet identified, execute [Discover and Identify Devices](discover-devices.md).
-2. Start a fresh interview with `*[WHO]*10#[ID]*0##`, or the documented address/local alternative.
-3. Collect identity, firmware, `DIMENSION 30`, and `DIMENSION 32` responses through Device `WHAT 4` or a classified timeout.
-4. After resolving the Module/Object layout, send `*#[WHO]*0*38#0##`.
-5. Collect the resulting repeated `DIMENSION 35` values and any `DIMENSION 310` response during the detailed-read window.
-6. Transform those raw frames using [Read and Present a Device Configuration](read-device-configuration.md).
+Select the Device and collect a fresh interview:
 
-Do not validate against a stale or partially identified configuration without marking that limitation.
+| Selection method | Send | First-response window |
+| --- | --- | ---: |
+| Device ID | `*[WHO]*10#[ID]*0##` | 15 s |
+| diagnostic address | `*#[WHO]*[WHERE]*0##` | 15 s |
+| local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction | 300 s |
+
+Continue collecting during the 20-second further-information window used by MyHOME_Suite. Preserve identity and version frames, repeated `DIMENSION 30` and `32`, errors, and the terminal condition. Device `WHAT 4` is the normal interview terminator.
+
+Resolve:
+
+1. the catalogue item and all compatible `EN_DEVICE` candidates;
+2. the applicable firmware;
+3. the target internal `SLOT`;
+4. the current configured Object or Virgin Object;
+5. the current address and configuration context.
+
+Then request the detailed values:
+
+`*#[WHO]*0*38#0##`
+
+Collect repeated `DIMENSION 35`, applicable `DIMENSION 39` errors, and any `DIMENSION 310` response during the eight-second response window.
+
+Keep the current-state snapshot immutable for the rest of validation. If the interview or detailed read is partial, record that limitation and fail closed whenever missing state can affect the candidate value.
 
 ## Procedure
 
@@ -31,6 +56,87 @@ Do not validate against a stale or partially identified configuration without ma
 10. Revalidate the converted value against the effective domain.
 11. Confirm the result fits the `OPEN.db` transport field.
 12. Record the expected diagnostic read-back.
+
+## Validation algorithm
+
+```text
+function validate_candidate(snapshot, target_slot, target_property, semantic_value):
+    require snapshot identifies one Device context and compatible firmware context
+    module = snapshot.modules[target_slot]
+    if module is missing:
+        return invalid("target Module was not reported")
+
+    target_object = resolve_requested_or_current_object(module)
+    if target_object differs from current object:
+        prove target_object is allowed by:
+            Virgin Object mapping
+            AND firmware support
+            AND slot placement
+        otherwise return invalid or ambiguous
+
+    definitions = object_scoped_EN_CONF(target_object)
+                UNION firmware_scoped_EN_CONF(snapshot.firmware)
+
+    property = resolve target_property within definitions
+    if zero matches:
+        return unknown_property
+    if more than one compatible match:
+        return ambiguous_property
+
+    if property is fixed or read-only:
+        return invalid("property is not writable")
+
+    base_domain = decode EN_CONF_RANGE(property)
+    filtered_domain = apply EN_FILTER and EN_FILTER_RANGE
+    conditional_domain = apply:
+        slot conditions
+        EN_CONDITION
+        EN_CONV_RULE
+        CONF_SYMBOL_REF
+        applicable rules.db3 dependencies
+        current values of linked properties
+
+    encoded = convert semantic_value using the selected definition
+    if conversion is ambiguous or lossy without an established rule:
+        return invalid_or_ambiguous
+
+    if encoded not in conditional_domain:
+        return invalid with rejected milestone and effective domain
+
+    transport = resolve exact OPEN.db write-frame parameter
+    if encoded does not fit transport:
+        return invalid("wire representation cannot carry value")
+
+    return valid {
+        semantic value,
+        encoded value,
+        complete domain evidence,
+        linked values assumed,
+        expected DIMENSION 35 or DIMENSION 310 read-back
+    }
+```
+
+### Milestone results
+
+Do not return only `true` or `false`. Record each milestone independently:
+
+| Milestone | Evidence |
+| --- | --- |
+| Device identity | candidate `id_device`, item, brand, collection, SKU |
+| firmware | reported version and selected `id_firmware` |
+| Module | internal slot and raw `DIMENSION 30` |
+| Object eligibility | current Object or Virgin-to-Object intersection |
+| property identity | selected `id_conf`, scope, symbol, and `INDEX` |
+| writability | fixed, hidden, visible, and read-only metadata |
+| base domain | `EN_CONF_RANGE` rows |
+| filtered domain | selected Object/firmware filter rows |
+| conditional domain | catalogue conditions and linked-property state |
+| external rules | applicable `rules.db3` rows |
+| conversion | semantic-to-wire transformation |
+| transport | selected `OPEN.db` parameter envelope |
+| read-back | expected diagnostic property and encoded value |
+
+A failure at an early milestone prevents later milestones from making the value safe.
 
 ## SQL example: build the effective domain
 
