@@ -178,6 +178,52 @@ ORDER BY N_RULES, Condition_order;
 
 Here `:id_key_object` is the internal catalogue key, while `:key_object` is the external Object number reported on the wire. Do not interchange them.
 
+## Reference algorithm
+
+```text
+function retrieve_groups(selector, requested_actuator):
+    interview = acquire_complete_interview(selector)
+    context = resolve_device_firmware_modules_and_objects(interview)
+
+    actuator = select_actuator(context.modules, requested_actuator)
+    if actuator is not unique:
+        return ambiguous_actuator_candidates(actuator)
+
+    detailed = acquire_DIMENSION_35_with_DIMENSION_38()
+
+    definitions = resolve_applicable_EN_CONF(
+        actuator.object.id_key_object,
+        context.firmware.id_firmware
+    )
+
+    group_positions = definitions whose established semantics are group membership
+    result = []
+
+    for property in group_positions ordered by property position:
+        responses = detailed where
+            SLOT == actuator.internal_slot and INDEX == property.idx
+
+        if responses is empty:
+            retain(property, status = "not reported")
+            continue
+
+        if responses contains conflicting values:
+            retain_all(property, status = "conflicting responses")
+            continue
+
+        decoded = apply_range_filters_conditions_rules(property, responses[0])
+
+        if decoded is established as unassigned:
+            retain(decoded, status = "unassigned")
+        else:
+            result.append(decoded.group_identifier)
+
+    return unique memberships in property order,
+           plus every raw position and resolution status
+```
+
+Do not deduplicate raw property positions when two positions contain the same group number. The user-facing membership list can contain one group once, but provenance must show that the Device reported the duplicate assignment.
+
 ## 5. Interpret the memberships
 
 For the common actuator definitions above, the catalogue provides a numeric range of `0` through `255` and a default of `0` for each position.
