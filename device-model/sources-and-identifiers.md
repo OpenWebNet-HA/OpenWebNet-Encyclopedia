@@ -43,8 +43,8 @@ The following identifiers must not be numerically joined without explicit eviden
 | `EN_VIRGIN_OBJECT.virgin_key_object` | Virgin Object number |
 | `EN_CONF.id_conf` | Configuration-definition key |
 | `EN_CONF.idx` | Configuration index |
-| `MHCatalogue.db.EN_SYSTEM.id_system` | Catalogue system |
-| `OPEN.db.EN_SYSTEM.id_system` | Protocol implementation system record |
+| `EN_SYSTEM.id_system` in `MHCatalogue.db` | Catalogue system |
+| `EN_SYSTEM.id_system` in `OPEN.db` | Protocol implementation system record |
 | functional `WHO` | OpenWebNet functional namespace |
 | diagnostic `WHO` | Management/diagnostic namespace |
 | ScenarioDevices `FamilyId`, `ObjectId`, `CommandId` | Scenario-engine namespaces |
@@ -91,18 +91,7 @@ Supported catalogue counterparts are:
 
 This is a semantic/structural correlation; the files contain no foreign key.
 
-## Evidence levels
-
-Use these labels when a claim needs qualification:
-
-| Level | Meaning |
-| --- | --- |
-| Direct | Explicit in a canonical source or observed frame |
-| Corroborated | Independent sources agree on structure and semantics |
-| Inferred | Best explanation of the available evidence, but not directly declared |
-| Unresolved | Evidence is insufficient or conflicting |
-
-Routine catalogue facts do not need a label on every sentence. Labels are most useful for cross-database mappings and protocol semantics.
+Cross-source claims in this section are described directly as corroborated, inferred, context-dependent, or unresolved where qualification is necessary.
 
 ## Relationship reconstruction
 
@@ -117,14 +106,14 @@ This establishes a documentation join, not permission to modify the canonical da
 
 Notable complete joins include:
 
-- `EN_DEVICE.id_item` → `EN_ITEM.id_item`;
-- `EN_DEVICE.id_brand` → `EN_BRAND.id_brand`;
-- `EN_DEVICE.id_line` → `EN_LINE.id_line`;
-- `EN_FIRMWARE.id_item` → `EN_ITEM.id_item`;
-- `AS_OBJECT_FIRMWARE` → firmware and Object;
-- `EN_SLOTS.id_object_firmware` → `AS_OBJECT_FIRMWARE.id_object_firmware`;
-- firmware/Virgin-Object and Virgin-Object/Object associations;
-- `EN_CONF_RANGE.id_conf` → `EN_CONF.id_conf`;
+- `EN_DEVICE.id_item` → `EN_ITEM.id_item`
+- `EN_DEVICE.id_brand` → `EN_BRAND.id_brand`
+- `EN_DEVICE.id_line` → `EN_LINE.id_line`
+- `EN_FIRMWARE.id_item` → `EN_ITEM.id_item`
+- `AS_OBJECT_FIRMWARE` → firmware and Object
+- `EN_SLOTS.id_object_firmware` → `AS_OBJECT_FIRMWARE.id_object_firmware`
+- firmware/Virgin-Object and Virgin-Object/Object associations
+- `EN_CONF_RANGE.id_conf` → `EN_CONF.id_conf`
 - `EN_FILTER` → Object/firmware association and configuration definition.
 
 ## Known exclusions and cautions
@@ -143,23 +132,8 @@ ScenarioDevices Object identifiers are application-level capability IDs. They mu
 
 ### System IDs
 
-`MHCatalogue.db.EN_SYSTEM.id_system` and `OPEN.db.EN_SYSTEM.id_system` describe different registries. Link them through established system semantics, `WHO`, frame templates, or Device/Object evidence—not through equal numeric IDs.
+`EN_SYSTEM.id_system` in `MHCatalogue.db` and `EN_SYSTEM.id_system` in `OPEN.db` describe different registries. Link them through established system semantics, `WHO`, frame templates, or Device/Object evidence—not through equal numeric IDs.
 
 ### Counts are source-revision facts
 
 Database row counts document the canonical source revision. They are neither protocol maxima nor claims about all MyHOME products.
-
-## Cross-reference workflow
-
-For a Device investigation:
-
-1. preserve the raw diagnostic Device ID and identity frames;
-2. resolve item model, brand, and line without assigning semantics to `N_CONF`;
-3. identify candidate `EN_DEVICE` records and select the standard Device description;
-4. select or corroborate firmware from reported version data;
-5. enumerate catalogue slot/Object capability;
-6. compare with `DIMENSION 30` and `32`;
-7. resolve `DIMENSION 35` indices against applicable configuration definitions and filters;
-8. apply domain-specific rules such as `rules.db3`;
-9. use functional documentation or ScenarioDevices only for runtime semantics;
-10. record direct facts, correlations, inferences, and unknowns separately.
