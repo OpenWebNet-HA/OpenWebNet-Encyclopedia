@@ -4,46 +4,83 @@
 
 Answer the installer or application question: “Which groups does this actuator belong to?”
 
-The result should identify the Physical Device and actuator Module, list its effective group memberships, and retain the raw diagnostic values and catalogue definitions that support the answer.
+Starting only with a way to select the installed Physical Device, this guide obtains the required raw frames, identifies the actuator Module and Object, resolves its group properties, and produces a user-presentable membership list.
 
 ## Prerequisites
 
-- an inventory entry from [Discover and Identify Devices](discover-devices.md);
-- the Device interview and Module/Object model described in [Read and Present a Device Configuration](read-device-configuration.md);
+- a Device selector: preferably its discovered 32-bit ID, otherwise a diagnostic address or local-interaction workflow;
+- the applicable diagnostic `WHO`;
 - access to `MHCatalogue.db` and applicable `rules.db3` data;
-- the ability to send and receive diagnostic frames as MyHOME_Suite does.
+- the ability to establish the required session and send and receive frames as MyHOME_Suite does;
+- raw frames retained in arrival order.
 
-## 1. Identify the Device and actuator Module
+No previously captured interview or configuration response is assumed.
 
-Run the Device interview using the installed Device ID, diagnostic address, or local-interaction workflow described in [Read and Present a Device Configuration](read-device-configuration.md).
+## 1. Interview the selected Device
 
-From the resulting `DIMENSION 30` records:
+Start one of these selection workflows:
 
-1. build the complete Module list;
-2. retain each protocol internal `SLOT`;
-3. resolve configured `KEYO` values against `EN_KEY_OBJECT.key_object`;
-4. select the actuator Module whose membership is required;
-5. retain its internal `id_key_object` for catalogue joins.
+| Selection method | Send |
+| --- | --- |
+| Device ID | `*[WHO]*10#[ID]*0##` |
+| diagnostic address | `*#[WHO]*[WHERE]*0##` |
+| local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction |
 
-Do not select a Module from its slot number alone. A Physical Device can contain actuator and command Modules with different property sets.
+A Device ID is represented as eight hexadecimal characters.
 
-## 2. Request the detailed configuration
+Collect the initial stream in arrival order. The frames needed by this guide are:
 
-After resolving the Device's Module/Object layout, send:
+- `DIMENSION 1` for catalogue identity;
+- `DIMENSION 2`, `3`, and `6` where reported, for firmware resolution;
+- repeated `DIMENSION 30` records for the Module/Object layout;
+- `DIMENSION 13` for the installed Device ID;
+- applicable `DIMENSION 31` errors;
+- Device `WHAT 4` as the normal interview terminator.
+
+Use the applicable 15-second first-response window for ID/address selection or the 300-second local-interaction window, followed by the 20-second further-information window used by MyHOME_Suite. Record whether `WHAT 4`, abort, timeout, or transport closure ended collection.
+
+## 2. Resolve the Device, Modules, and Objects
+
+Resolve `DIMENSION 1` through the catalogue and use `EN_DEVICE.name` as the preferred Physical Device description. Retain candidate brands, collections, SKUs, and firmware when identity is not unique.
+
+Parse every Module record:
+
+`*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##`
+
+For each response:
+
+1. use protocol `SLOT` as the Device-local internal-slot key;
+2. if `STATE=1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`;
+3. if `STATE=0`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module unconfigured;
+4. retain the resolved Object's internal `id_key_object`;
+5. attach any `DIMENSION 31` error without discarding a valid Module record.
+
+Select the actuator Module requested by the user. Do not select it from slot number alone: one Physical Device can contain actuator and command Modules with different property sets. If several actuator Modules match and the user has not supplied a distinguishing channel or address, return the candidates rather than guessing.
+
+## 3. Request the detailed configuration
+
+After resolving the complete Module/Object layout, send:
 
 `*#[WHO]*0*38#0##`
 
-Collect the repeated `DIMENSION 35` responses during the MyHOME_Suite eight-second response window:
+Collect the repeated responses during the MyHOME_Suite eight-second response window:
 
 `*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
 
-Retain every response as the raw tuple `(SLOT, INDEX, VAL_PAR)`. Do not merge equal indices from different Modules.
+Retain every raw tuple `(SLOT, INDEX, VAL_PAR)`. Do not merge equal indices from different Modules. Also retain applicable `DIMENSION 39` property errors and any `DIMENSION 310` response separately; `DIMENSION 310` has no generic `INDEX`.
 
-## 3. Resolve the group properties
+A one-Module `DIMENSION 38` form exists, but the canonical `DiagKO` sequence uses the all-Module request above. The source also uses reset terminology for `DIMENSION 38`; preserve that ambiguity and exercise caution with unfamiliar Devices.
 
-Load the Object-scoped `EN_CONF` rows for the actuator's resolved `id_key_object`, using `id_firmware = 0`.
+## 4. Resolve the group properties
 
-Select the properties that represent group-membership positions. Several common actuator Objects expose:
+Load both configuration scopes applicable to the selected Module:
+
+- Object-scoped `EN_CONF` rows with its `id_key_object` and `id_firmware = 0`;
+- firmware-scoped rows with `id_key_object = 0` and the resolved firmware.
+
+The zero is a “not applicable” sentinel on the unused ownership axis.
+
+Select the definitions that represent group-membership positions. Several common actuator Objects expose:
 
 | Symbol | Common `INDEX` |
 | --- | ---: |
@@ -56,55 +93,53 @@ This layout is Object-scoped, not global. Other Objects can use different symbol
 
 For every selected property:
 
-1. match `EN_CONF.idx` to the response `INDEX` for the actuator's `SLOT`;
+1. match `EN_CONF.idx` to `INDEX` for the selected internal `SLOT`;
 2. load its `EN_CONF_RANGE`;
-3. apply applicable `EN_FILTER`, `EN_FILTER_RANGE`, conditions, and rules;
-4. retain the selected `EN_CONF.id_conf` and raw `VAL_PAR`;
+3. apply applicable `EN_FILTER`, `EN_FILTER_RANGE`, conditions, conversion rules, and `rules.db3` dependencies;
+4. retain `EN_CONF.id_conf`, the raw response, and the decoded value;
 5. distinguish a missing response from a reported zero.
 
-## 4. Interpret the memberships
+## 5. Interpret the memberships
 
 For the common actuator definitions above, the catalogue provides a numeric range of `0` through `255` and a default of `0` for each position.
 
-Suppose internal slot `2` produces these normalized values:
+Suppose internal slot `2` produces:
 
 | `SLOT` | `INDEX` | `VAL_PAR` | Resolved property | Result |
 | ---: | ---: | ---: | --- | --- |
 | 2 | 240 | 7 | `G1` | member of group 7 |
 | 2 | 241 | 12 | `G2` | member of group 12 |
-| 2 | 242–249 | 0 | `G3`–`G10` | default/unassigned positions, subject to the applicable rules |
+| 2 | 242–249 | 0 | `G3`–`G10` | default/unassigned positions, subject to applicable rules |
 
-The user-facing result is:
+The user-facing result is “Groups 7 and 12.” Retain provenance such as “Module internal slot 2; `G1=7`; `G2=12`.”
 
-> Groups 7 and 12
+The catalogue permits zero and supplies it as the default. Treat zero as unassigned only where the applicable Object, filters, rules, or verified application behavior establish that meaning.
 
-Retain provenance such as “Module internal slot 2; `G1=7`; `G2=12`.”
+## 6. Handle incomplete or ambiguous results
 
-The catalogue permits zero and supplies it as the default. Treat zero as an unassigned position only where the applicable Object, filters, rules, or verified application behavior establish that meaning.
-
-## 5. Handle incomplete or ambiguous results
-
+- If the interview does not terminate normally, return the partial result with its completion status.
+- If Device or firmware identity remains ambiguous, retain all compatible catalogue candidates.
 - If the Object cannot be resolved, preserve the raw tuples and do not assume indices `240` through `249`.
 - If several compatible `EN_CONF` definitions remain, report the candidate interpretations.
 - If an expected group property is not reported, label it “not reported”; do not replace it with zero.
 - If a value violates the effective filtered domain, retain it and add a warning.
-- If no group-membership properties exist for the resolved Object, report that the Object exposes no catalogue-defined group list through this mechanism.
+- If no membership properties exist for the resolved Object, report that the Object exposes no catalogue-defined group list through this mechanism.
 
 ## Expected result
 
-Return a record such as:
-
 ```text
 Device ID: 004FBEC8
+Device: <resolved EN_DEVICE.name>
 Module internal slot: 1
 Object: Shutter actuator
 Groups: [1, 3]
 Raw properties:
   G1: INDEX 240, value 1
   G2: INDEX 241, value 3
+Interview status: complete
 Resolution status: resolved
 ```
 
-The Object description is the Module function. Use the resolved `EN_DEVICE.name` separately for the Physical Device description.
+The Object description is the Module function; it does not replace the Physical Device description.
 
-See [`DIMENSION 30`](../diagnostics/dim30-modules.md), [`DIMENSION 35`](../diagnostics/dim35-configuration.md), [Configuration](../device-model/configuration.md), and [Configuration Reading](../diagnostics/configuration-reading.md).
+See [Device Discovery](../diagnostics/device-discovery.md), [Device Interview](../diagnostics/device-interview.md), [`DIMENSION 30`](../diagnostics/dim30-modules.md), [`DIMENSION 35`](../diagnostics/dim35-configuration.md), [Configuration](../device-model/configuration.md), and [Configuration Reading](../diagnostics/configuration-reading.md).
