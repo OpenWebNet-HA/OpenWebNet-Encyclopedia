@@ -4,18 +4,24 @@
 
 Prove that the effective installed state matches the intended configuration after the programming session has ended.
 
-## Procedure
+## Acquire the verification frames
 
 1. Preserve the programming result: accepted, warning, rejected, aborted, or timed out.
-2. Close the outer programming session when appropriate.
-3. Start a new diagnostic interview, preferably by Device ID.
-4. Reconfirm `DIMENSION 1` and `DIMENSION 13` identity.
-5. Compare the entire `DIMENSION 30` Module/Object layout.
-6. Compare all expected `DIMENSION 32` address tuples.
-7. Read and compare applicable `DIMENSION 35` properties.
-8. Preserve `DIMENSION 310` separately.
-9. Compare `DIMENSION 4` and `5` as raw reports until their precise field semantics are established.
-10. Classify every intended change independently.
+2. Close the outer programming session with `*[WHO]*2*0##` when the canonical workflow reaches close.
+3. Start an independent diagnostic interview, preferably with `*[WHO]*10#[ID]*0##`. Use `*#[WHO]*[WHERE]*0##` only when address selection is required.
+4. Collect the interview projection through Device `WHAT 4` or a classified timeout.
+5. After resolving the returned Module/Object layout, send `*#[WHO]*0*38#0##`.
+6. Collect repeated `DIMENSION 35` and any `DIMENSION 310` response during the detailed-read window.
+
+## Compare the effective state
+
+1. Reconfirm `DIMENSION 1` and `DIMENSION 13` identity.
+2. Compare the entire `DIMENSION 30` Module/Object layout.
+3. Compare all expected `DIMENSION 32` address tuples.
+4. Compare the newly requested `DIMENSION 35` properties.
+5. Preserve `DIMENSION 310` separately.
+6. Compare `DIMENSION 4` and `5` as raw reports until their precise field semantics are established.
+7. Classify every intended change independently.
 
 ## Result classes
 

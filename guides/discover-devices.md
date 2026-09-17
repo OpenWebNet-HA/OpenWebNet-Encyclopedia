@@ -39,11 +39,17 @@ Deduplicate by the full 32-bit Device ID, not by `WHERE`. Preserve the raw numer
 
 ## Phase 2: interview every discovered Device
 
+The ID response from phase 1 does not contain the Device description or configuration. Obtain those frames by starting a separate interview for each unique ID:
+
+| Send | Collect |
+| --- | --- |
+| `*[WHO]*10#[ID]*0##` | optional `DIMENSION 1`, versions, configurator reports, `DIMENSION 13`, repeated `DIMENSION 30`/`32`, errors, and Device `WHAT 4` |
+
 For each unique ID:
 
 1. Send `*[WHO]*10#[ID]*0##`.
 2. Confirm that the returned `DIMENSION 13`, where present, matches the selected ID.
-3. Collect `DIMENSION 1` identity.
+3. Collect the `DIMENSION 1` identity response produced by that interview.
 4. Collect firmware, hardware, and microcontroller versions when reported.
 5. Preserve `DIMENSION 30` and `32` for later configuration inspection.
 6. Record whether `WHAT 4`, abort, timeout, or transport closure ended the interview.

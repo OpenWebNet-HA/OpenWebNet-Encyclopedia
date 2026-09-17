@@ -17,10 +17,26 @@ The guide does not stop at collecting `DIMENSION` responses. Its output should a
 ## Prerequisites
 
 - an inventory entry from [Discover and Identify Devices](discover-devices.md);
-- one completed or explicitly classified Device interview;
+- a Device selector: preferably the discovered 32-bit ID, otherwise a diagnostic address or local-interaction workflow;
 - access to `MHCatalogue.db`, `OPEN.db`, and applicable `rules.db3` data;
 - the diagnostic `WHO` and Device-selection context;
 - raw frames retained in arrival order.
+
+## Acquire the raw frames
+
+Start the Device interview before attempting to parse any `DIMENSION` response:
+
+| Selection method | Send |
+| --- | --- |
+| Device ID | `*[WHO]*10#[ID]*0##` |
+| diagnostic address | `*#[WHO]*[WHERE]*0##` |
+| local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction during the 300-second first-response window |
+
+Collect the initial response stream in arrival order. The canonical stream can contain `DIMENSION 1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `13`, repeated `30` and `32`, applicable `31` errors, and Device `WHAT 4`.
+
+Use the applicable 15-second first-response window for ID/address selection or the 300-second local-interaction window, followed by the 20-second further-information window used by MyHOME_Suite. Record whether `WHAT 4`, abort, timeout, or transport closure ended collection.
+
+Only after this request/response phase should the following frames be parsed.
 
 ## Inputs
 
@@ -114,11 +130,11 @@ When no decoder is established, display the raw tuple and mark the address inter
 
 ## 5. Request detailed configuration
 
-After the Module/Object layout is known, the canonical detailed read uses:
+The initial interview does not ordinarily supply the complete indexed property set. After its Module/Object layout is known, send the canonical detailed-read request:
 
 `*#[WHO]*0*38#0##`
 
-Collect repeated `DIMENSION 35` responses during the configured response window:
+Collect the repeated `DIMENSION 35` responses produced by that request during the MyHOME_Suite eight-second response window:
 
 `*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
 
