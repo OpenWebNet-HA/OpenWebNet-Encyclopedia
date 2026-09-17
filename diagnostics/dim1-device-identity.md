@@ -35,6 +35,19 @@ The established path uses `OBJECT_MODEL` within the relevant catalogue system, t
 
 The result can be one shared item with several branded Device/SKU records. That is expected in the catalogue model.
 
+Use `EN_DEVICE.name` as the standard MyHOME_Suite-facing description after resolution. `EN_ITEM.descr` names the shared capability item, while `EN_KEY_OBJECT.descr` names one logical function and must not replace the Physical Device description.
+
+## Corroborated example
+
+The observed Device `00C58E91` (`12947089` decimal) reported model value `107`. In the canonical catalogue:
+
+- `AS_ITEM_SYSTEM.modobj = 107` resolves to item `1184`;
+- `EN_ITEM.descr` is “Flush mounted actuator and free control”;
+- firmware definition `157` declares four internal slots;
+- several branded SKUs, including `64391`, `64191`, and `64192`, share that item.
+
+The example corroborates the model-to-item path while also demonstrating why `OBJECT_MODEL` alone does not uniquely identify one SKU. Brand and line values, plus project/UI context where available, are required to narrow the Device record.
+
 ## `N_CONF` remains unresolved
 
 `OPEN.db` calls `N_CONF` a configurator number and constrains it to `0`–`12`. Current evidence does not establish that it identifies:
@@ -47,6 +60,8 @@ The result can be one shared item with several branded Device/SKU records. That 
 
 Do not attach one of these meanings because a sample value happens to correlate. Preserve the raw value and source label until catalogue, UI, and traffic evidence establish a stable interpretation.
 
+The database description “number of physical configurator” is retained as source wording, not promoted to a stronger interpretation. Its numeric range does not establish how configurators are counted or represented on every Device.
+
 ## Address context
 
 `WHERE` identifies the diagnostic response context. It is not part of the catalogue identity tuple and can differ from functional addresses reported later for individual Modules.
@@ -58,3 +73,5 @@ Do not attach one of these meanings because a sample value happens to correlate.
 `*#[WHO]**1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##`
 
 Treat this as a distinct frame variant. Do not repair the empty field or silently convert it to the addressed form.
+
+`OpenQuery.txt` includes this gateway variant in its gateway-connection query together with address scan and general diagnostic frames. That implementation use does not alter the identity-field mappings above.
