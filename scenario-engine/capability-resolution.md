@@ -111,7 +111,7 @@ Present both:
 - the resource-key-derived role;
 - the raw `CategoryFlag`.
 
-Do not discard a row solely because its flag is not yet interpreted.
+Do not discard a row solely because its flag is not yet interpreted. See [Categories and Matching](categories-and-matching.md) for the complete observed flag distribution and the evidence supporting the current role names.
 
 ## Installed-Device filtering
 
@@ -125,6 +125,8 @@ The ScenarioDevices files contain no installed Device ID and no direct Module sl
 Do not write a cross-database SQL join equating `DeviceObjects.ObjectId` with `EN_KEY_OBJECT.key_object` unless independent evidence establishes that relationship for the relevant rows.
 
 ## Result
+
+Parameter rows require type-specific handling, especially where several rows share one composite placeholder. See [Parameters](parameters.md).
 
 Return a capability record containing:
 
