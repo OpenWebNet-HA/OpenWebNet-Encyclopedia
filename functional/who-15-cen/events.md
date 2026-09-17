@@ -56,14 +56,14 @@ Receivers should tolerate repeated `#3` frames for one physical hold. They repre
 
 ## `WHERE` addressing
 
-The published CEN address table includes normal A/PL and advanced/local-bus forms.
+The published CEN address table includes normal `A`/`PL` and advanced/local-bus forms.
 
 | Form | Meaning |
 | --- | --- |
-| `[1-9][1-9]` | Normal area/light-point A/PL |
-| `[00][01-15]` | Zone 0, advanced A/PL |
-| `[10][01-15]` | Zone 10, advanced A/PL |
-| `[01-09][10-15]` | Light point 10–15, advanced A/PL |
+| `[1-9][1-9]` | Normal area/light-point `A`/`PL` |
+| `[00][01-15]` | Zone 0, advanced `A`/`PL` |
+| `[10][01-15]` | Zone 10, advanced `A`/`PL` |
+| `[01-09][10-15]` | Light point 10–15, advanced `A`/`PL` |
 | `WHERE#3` | Private riser bus parameter |
 | `WHERE#4#[01-15]` | Local bus selected by interface `I4` |
 
