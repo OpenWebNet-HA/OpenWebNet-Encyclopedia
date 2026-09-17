@@ -1,4 +1,4 @@
-# Overview
+# Protocol
 
 OpenWebNet is a frame-based protocol used to exchange commands, status information, measurements, configuration data, and service information between compatible systems.
 

@@ -1,4 +1,4 @@
-# Overview
+# Device Model
 
 The MyHOME device model describes how one physical product exposes configurable functions to MyHOME_Suite and to the diagnostic, programming, and functional protocols.
 
