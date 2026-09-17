@@ -12,18 +12,20 @@ Responses are never assumed to be available spontaneously. Before a guide parses
 
 ## Guides
 
-| Starting goal | Practical guide |
-| --- | --- |
-| Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
-| Turn raw interview frames into a user-presentable Device configuration | [Read and Present a Device Configuration](read-device-configuration.md) |
-| Find the effective group memberships of an actuator | [Retrieve an Actuator's Group Memberships](retrieve-actuator-group-memberships.md) |
-| Find every configured CEN button on a Device | [Retrieve Configured CEN Buttons](retrieve-configured-cen-buttons.md) |
-| Decide whether a candidate value is allowed | [Validate a Configuration Value](validate-configuration-value.md) |
-| Construct and execute a programming session | [Program a Device](program-device.md) |
-| Prove the effective state after programming | [Verify Programming](verify-programming.md) |
-| Explain incomplete scans and interviews | [Troubleshoot Diagnostics](troubleshoot-diagnostics.md) |
+| Scope | Starting goal | Practical guide |
+| --- | --- | --- |
+| General | Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
+| General | Turn raw interview frames into a user-presentable Device configuration | [Read and Present a Device Configuration](read-device-configuration.md) |
+| ↳ Configuration-reading instance | Find the effective group memberships of an actuator | [Retrieve an Actuator's Group Memberships](retrieve-actuator-group-memberships.md) |
+| ↳ Configuration-reading instance | Find every configured CEN button on a Device | [Retrieve Configured CEN Buttons](retrieve-configured-cen-buttons.md) |
+| General | Decide whether a candidate value is allowed | [Validate a Configuration Value](validate-configuration-value.md) |
+| General | Construct and execute a programming session | [Program a Device](program-device.md) |
+| General | Prove the effective state after programming | [Verify Programming](verify-programming.md) |
+| General | Explain incomplete scans and interviews | [Troubleshoot Diagnostics](troubleshoot-diagnostics.md) |
 
 ## Guide structure
+
+Each page is independently executable. A specialized guide may repeat acquisition and resolution steps from a general guide; links provide deeper reference material but are not prerequisites for completing the workflow.
 
 Every guide should:
 
