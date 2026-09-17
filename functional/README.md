@@ -4,6 +4,8 @@ The functional protocol reference documents OpenWebNet systems using `WHO` as th
 
 Common frame syntax is defined in [`../protocol/`](../protocol/). Reference material is organized by protocol namespace, while the indexes below provide both protocol-oriented and function-oriented navigation to the same canonical pages.
 
+The MyHOME_Suite [`OPEN.db` coverage matrix](open-db-coverage.md) documents what that implementation database establishes for every functional namespace: system identity, diagnostic-family mapping, management support, address rules, and concrete `EN_OPEN` frame associations where present. The broader [`cross-database functional coverage`](cross-database-coverage.md) correlates `OPEN.db` with `MHCatalogue.db`, the two ScenarioDevices databases, and `rules.db3`, including functional command templates and Device/Object applicability that are not represented in `OPEN.db` alone.
+
 ## By `WHO`
 
 | `WHO` | System | Reference |
@@ -36,7 +38,7 @@ Common frame syntax is defined in [`../protocol/`](../protocol/). Reference mate
 | `27` | Nurse Call basic level | [`who-27-nurse-call/`](who-27-nurse-call/) |
 | `99` | Service Identification | [`who-99-service-identification/`](who-99-service-identification/) |
 
-The table reflects the functional namespace established by the public specifications together with the MyHOME_Suite implementation data, including the `OPEN.db` system definitions. A listed `WHO` does not imply that every semantic value is currently known.
+The table reflects the functional namespace established by the public specifications together with the MyHOME_Suite implementation data. A listed `WHO` does not imply that every semantic value is currently known.
 
 ## By function
 
@@ -66,4 +68,4 @@ The table reflects the functional namespace established by the public specificat
 
 Where one `WHO` contains several functional groups, those groups are divided into subordinate pages when that improves the reference while remaining under the canonical `WHO` directory. Systems with a larger established vocabulary use dedicated `WHAT`, addressing, or `DIMENSION` pages; smaller or less completely established systems keep the supported semantics together.
 
-Diagnostic and configuration/programming operations are documented separately under `diagnostics/` and `programming/`.
+Diagnostic and configuration/programming operations are documented separately under `diagnostics/` and `programming/`. The [`OPEN.db` coverage matrix](open-db-coverage.md) cross-references those management capabilities without reclassifying diagnostic frames as functional `WHO` commands; the [`cross-database functional coverage`](cross-database-coverage.md) adds catalogue and scenario-engine evidence while preserving each database's independent identifier spaces.

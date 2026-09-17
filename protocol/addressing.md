@@ -6,7 +6,7 @@ OpenWebNet addressing is system-specific. `WHERE` identifies the destination or 
 
 A parser should resolve `WHO` before interpreting `WHERE`. Different systems can use different address layouts, ranges, hierarchy levels, and advanced-address forms.
 
-For example, Lighting and Automation use address structures based on A/PL and related environment or group forms, while Thermoregulation uses its own zone-oriented grammar.
+For example, Lighting and Automation use address structures based on `A`/`PL` and related environment or group forms, while Thermoregulation uses its own zone-oriented grammar.
 
 ## MyHOME Suite address rules
 
