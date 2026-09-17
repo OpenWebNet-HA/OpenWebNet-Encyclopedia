@@ -29,6 +29,6 @@ These forms preserve significant leading zeroes. An Automation address should th
 
 Commands addressed to a group, environment, or the general scope can produce event/status frames for the individual Automation Objects affected by the operation. A group command can additionally produce a frame retaining the group `WHERE` itself.
 
-The MyHOME_Suite `OPEN.db` address-rule definitions represent the same A/PL address family through system-specific point-to-point, environment, and advanced rules.
+The MyHOME_Suite `OPEN.db` address-rule definitions represent the same `A`/`PL` address family through system-specific point-to-point, environment, and advanced rules.
 
 See [`what.md`](what.md) for movement commands, [`dimensions.md`](dimensions.md) for advanced shutter state/position data, and [`../../protocol/addressing.md`](../../protocol/addressing.md) for the common system-scoped addressing model.
