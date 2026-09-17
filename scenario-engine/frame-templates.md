@@ -77,12 +77,16 @@ function render(command, selected_where, supplied_values):
 For a numeric Parameter with established numeric semantics:
 
 ```text
-valid = value >= Min
-    and value <= Max
-    and (Step is absent or (value - Min) modulo Step == 0)
+valid = (Min is absent or value >= Min)
+    and (Max is absent or value <= Max)
+    and (
+        Step is absent
+        or Step is zero
+        or (Min is present and (value - Min) modulo Step == 0)
+    )
 ```
 
-This rule applies only after `Type` and the placeholder have been shown to represent a numeric scalar. Some parameters encode composite values such as time components and cannot be validated as one scalar range. See [Parameters](parameters.md) for the observed type and operator domains and the composite-placeholder cases.
+If `Step` is present but `Min` is absent, this row does not establish the step-grid origin. This rule applies only after `Type` and the placeholder have been shown to represent a numeric scalar. Some parameters encode composite values such as time components and cannot be validated as one scalar range. See [Parameters](parameters.md) for the observed type and operator domains and the composite-placeholder cases.
 
 ## Security and correctness rules
 
