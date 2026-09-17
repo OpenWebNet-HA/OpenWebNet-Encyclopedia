@@ -1,25 +1,33 @@
-# Practical Guides
+# Complete Examples
 
-Practical Guides transform an installer or application goal and raw OpenWebNet evidence into structured, user-presentable data or a safely validated action. They combine the canonical protocol, Device Model, diagnostics, programming, and MyHOME_Suite implementation references.
+Complete Examples start from an installer or application goal and raw OpenWebNet evidence, then follow the complete resolution path to structured, user-presentable data or a safely validated action. They combine the canonical protocol, Device Model, diagnostics, programming, and MyHOME_Suite implementation references.
 
-These pages are procedures, not alternative protocol specifications. When a guide and a canonical reference appear to differ, follow the canonical page and record the discrepancy.
+Each page is an end-to-end example pattern rather than an alternative protocol specification. When an example and a canonical reference appear to differ, follow the canonical page and record the discrepancy.
 
-## Guides
+## Examples
 
-| Goal | Guide |
+| Starting goal | Complete example |
 | --- | --- |
 | Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
 | Turn raw interview frames into a user-presentable Device configuration | [Read and Present a Device Configuration](read-device-configuration.md) |
 | Decide whether a candidate value is allowed | [Validate a Configuration Value](validate-configuration-value.md) |
 | Construct and execute a programming session | [Program a Device](program-device.md) |
 | Prove the effective state after programming | [Verify Programming](verify-programming.md) |
-| Compare physical and Virtual configuration | [Physical and Virtual Configuration](physical-and-virtual-configuration.md) |
-| Diagnose incomplete scans and interviews | [Troubleshoot Diagnostics](troubleshoot-diagnostics.md) |
-| Follow complete examples | [Worked Examples](worked-examples/) |
+| Explain incomplete scans and interviews | [Troubleshoot Diagnostics](troubleshoot-diagnostics.md) |
 
-## Guide structure
+## Example structure
 
-Each guide begins with a high-level goal, identifies its raw inputs, traces every protocol and database resolution step, and ends with a defined user-presentable result or validated action. Examples preserve raw frames and distinguish established behavior, inference, ambiguity, and unresolved semantics.
+Every example should:
+
+1. state the user or installer goal;
+2. identify the required raw frames and other inputs;
+3. resolve every protocol and database identifier in context;
+4. transform raw values into user-presentable concepts;
+5. apply validation and stop conditions;
+6. define the final output or action;
+7. preserve provenance, ambiguity, and unresolved semantics.
+
+Concrete captures can be substituted into these workflows without changing their resolution rules. Examples must never invent missing frames, catalogue mappings, display labels, or Device behavior.
 
 ## Safety model
 
