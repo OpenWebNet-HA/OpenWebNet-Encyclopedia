@@ -43,6 +43,61 @@ Preserve the exact request, all returned frames, their direction and order, and 
 8. Compare with a second selection method where safe.
 9. Classify the outcome rather than guessing the missing value.
 
+## SQL example: inspect response membership and timeouts
+
+Bind the expected response label as `:open_label`, or replace that predicate with an exact `open_string` match when the label is unknown:
+
+```sql
+SELECT
+    o.id_open,
+    o.open_label,
+    o.open_string,
+    seq.id_sequence,
+    seq.sequence_label,
+    seq.descr AS sequence_description,
+    os.open_order,
+    os.mandatory_open,
+    os.repeated_open,
+    os.status4nack,
+    os.status4error
+FROM EN_OPEN AS o
+JOIN AS_OPEN_SEQUENCE AS os
+  ON os.id_open = o.id_open
+JOIN EN_SEQUENCE AS seq
+  ON seq.id_sequence = os.id_sequence
+WHERE o.open_label = :open_label
+ORDER BY seq.sequence_label, os.open_order;
+```
+
+Interpret `mandatory_open` and `repeated_open` only within the returned sequence. The same stored frame can participate in several sequences with different roles.
+
+Retrieve the timeout actions for a selected sequence and frame:
+
+```sql
+SELECT
+    seq.sequence_label,
+    o.open_label,
+    o.open_string,
+    t.timeout_label,
+    t.descr AS timeout_description,
+    t.type AS timeout_type,
+    t."default" AS timeout_value,
+    atos.action,
+    atos.status4timeout
+FROM AS_TIMEOUT_OPEN_SEQUENCE AS atos
+JOIN EN_SEQUENCE AS seq
+  ON seq.id_sequence = atos.id_sequence
+JOIN EN_OPEN AS o
+  ON o.id_open = atos.id_open
+JOIN EN_TIMEOUT AS t
+  ON t.id_timeout = atos.id_timeout
+WHERE seq.sequence_label = :sequence_label
+  AND o.open_label = :open_label
+ORDER BY t.id_timeout;
+```
+
+A missing row proves only that the installed `OPEN.db` revision does not describe that membership or timeout. It does not prove that a Device can never emit the frame.
+
 ## Outcome classes
 
 - no Device observed;
