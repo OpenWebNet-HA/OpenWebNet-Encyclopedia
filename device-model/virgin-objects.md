@@ -6,7 +6,7 @@ A Virgin Object is a catalogue template for a configurable Module before its fin
 
 ## Catalogue identity
 
-`MHCatalogue.db.EN_VIRGIN_OBJECT` contains 18 definitions.
+`EN_VIRGIN_OBJECT` in `MHCatalogue.db` contains 18 definitions.
 
 | Column | Role |
 | --- | --- |
@@ -51,11 +51,11 @@ Every row in these association tables resolves to its parent record in the canon
 
 A Virgin Object relationship establishes that an Object is permitted by the catalogue. It does not establish that:
 
-- an installed Module currently uses that Object;
-- the Object is visible in every UI context;
-- the user can select it under every configuration;
-- the Device reported that Object in `DIMENSION 30`;
-- the Object is enabled;
+- an installed Module currently uses that Object
+- the Object is visible in every UI context
+- the user can select it under every configuration
+- the Device reported that Object in `DIMENSION 30`
+- the Object is enabled
 - the Object’s address or parameters are valid.
 
 Runtime state must be obtained from diagnostic responses or project configuration.
@@ -68,9 +68,9 @@ Virgin Object `500`, “Automation double command virgin”, permits five concre
 
 For firmware `157`, it is placed at internal slots `3` and `4`, whose Object choices include:
 
-- Light control;
-- Automation control;
-- Scheduled scenario;
+- Light control
+- Automation control
+- Scheduled scenario
 - Scheduled scenario PLUS.
 
 This corresponds to the free-command portion of `64391`, `64191`, and `64192`.
@@ -99,8 +99,8 @@ Virgin Object `515`, “Daylight and motion sensor virgin”, permits six Object
 
 A `STATE` indicating an unconfigured Module is compatible with Virgin Object semantics, but `OPEN.db` does not carry a `virgin_key_object` field in this frame. Therefore:
 
-- do not substitute the Virgin Object number for `KEYO`;
-- do not assume an unconfigured `KEYO` directly encodes `EN_VIRGIN_OBJECT.virgin_key_object`;
+- do not substitute the Virgin Object number for `KEYO`
+- do not assume an unconfigured `KEYO` directly encodes `EN_VIRGIN_OBJECT.virgin_key_object`
 - resolve permitted Objects through firmware and internal slot when the firmware is known.
 
 Any direct wire representation of a Virgin Object remains protocol-family-specific and must be established separately.
@@ -109,11 +109,11 @@ Any direct wire representation of a Virgin Object remains protocol-family-specif
 
 A permitted Object can still be constrained by:
 
-- `AS_SLOT_CONDITION`;
-- `EN_CONDITION`;
-- `EN_CONV_RULE`;
-- `EN_FILTER` and `EN_FILTER_RANGE`;
-- firmware-scoped configuration;
+- `AS_SLOT_CONDITION`
+- `EN_CONDITION`
+- `EN_CONV_RULE`
+- `EN_FILTER` and `EN_FILTER_RANGE`
+- firmware-scoped configuration
 - MyHOME_Suite UI rules.
 
 Consequently, `AS_OBJECT_VIRGIN_OBJECT` is a compatibility set, not a complete selection algorithm.
@@ -133,8 +133,8 @@ To determine which Objects a Module may expose:
 
 The intersection step prevents a global Virgin Object vocabulary from being applied too broadly to a particular firmware.
 
-## Source boundary
+## Sources
 
-Virgin Objects are defined only by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) in the canonical corpus.
+Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies configured/unconfigured Module state but no explicit Virgin Object field; ScenarioDevices is not a Virgin Object registry.
 
-`OPEN.db` supplies configured/unconfigured Module state but no explicit Virgin Object table or parameter. ScenarioDevices describes scenario-engine Objects and must not be used as a Virgin Object registry.
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
