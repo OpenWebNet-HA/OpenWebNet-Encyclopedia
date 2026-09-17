@@ -104,6 +104,48 @@ ORDER BY ss.sequence_order, seq.id_sequence, o.id_open, t.id_timeout;
 
 The database describes stored members and transitions. It does not eliminate the need for the capture-backed cautions in this guide, including the unresolved coordination of address and local-button selection.
 
+## Prepare the complete replacement payload
+
+Programming is not a patch operation at the safety-model level. Build the complete intended Device state before transmitting the first destructive frame.
+
+For every reported or intended Module, retain:
+
+| Field | Required evidence |
+| --- | --- |
+| internal slot | raw `DIMENSION 30.SLOT` and catalogue slot support |
+| configured state | intended enabled/unconfigured state |
+| Object | external `key_object` and internal `id_key_object` |
+| address | encoded `SYS` and `ADDR`, plus decoded components |
+| properties | each `INDEX`, encoded `VAL_PAR`, and selected `id_conf` |
+| dependencies | linked properties and conditions used during validation |
+| expected read-back | expected `DIMENSION 30`, `32`, `35`, or `310` value |
+
+Validate every value as described in [Validate a Configuration Value](validate-configuration-value.md). Then validate the configuration as a whole:
+
+1. every target Object is allowed for its Virgin Object, firmware, and slot;
+2. no two Modules create a forbidden address or role conflict;
+3. all linked-property rules are evaluated against the final state, not a mixture of old and new values;
+4. every required property is present;
+5. hidden or fixed properties required by the Device are preserved or regenerated;
+6. each semantic value has exactly one established wire encoding;
+7. the payload can be ordered without forward references that violate the selected scenario;
+8. a read-back expectation exists for every transmitted assignment.
+
+Keep the previous snapshot and the intended snapshot as separate immutable records.
+
+### Construct the ordered frames
+
+For advanced Object programming, order the payload as:
+
+1. reset all Objects;
+2. Object assignments by internal slot;
+3. addresses after the corresponding Object exists;
+4. properties after the corresponding Object exists;
+5. programmer end marker;
+6. outer-session close when the selected scenario reaches that state.
+
+Within each class, use the ordering established by the canonical scenario and verified captures. Do not assume arbitrary slot or property ordering is accepted merely because the wire grammar can represent it.
+
 ## Advanced Object procedure
 
 1. Start the ID or local-interaction scenario.
@@ -127,6 +169,80 @@ For a scenario containing `ConfConfigurators`:
 4. do not wait for `WHAT 52`, which is not a canonical member of `ConfConfigurators`.
 
 The precise field-level meaning of `C1`–`C12` remains unresolved. Send only values derived from an established MyHOME_Suite configuration workflow.
+
+## Reference programming algorithm
+
+```text
+function program_device(selector, intended_state):
+    previous = acquire_and_resolve_fresh_snapshot(selector)
+    require previous identity matches the requested Physical Device
+
+    validation = validate_complete_intended_state(previous, intended_state)
+    if validation contains invalid, ambiguous, unknown, or missing requirements:
+        stop before entering programming
+
+    scenario = select canonical scenario from selection method
+    projection = start scenario and collect through its projection terminator
+    require projection identity and firmware are compatible with validation
+
+    journal = durable append-only programming record
+    state = "selected"
+
+    try:
+        if scenario uses advanced Objects:
+            send_and_journal(reset_all)
+            state = "reset sent"
+
+            for assignment in ordered_object_assignments:
+                send_and_journal(assignment)
+
+            for address in ordered_addresses:
+                send_and_journal(address)
+
+            for property in ordered_properties:
+                send_and_journal(property)
+
+            send_and_journal(programmer_end)
+
+        if scenario uses virtual configurators:
+            send_and_journal(configurator_positions_1_to_6)
+            if positions_7_to_12 are established and required:
+                send_and_journal(configurator_positions_7_to_12)
+
+        collect and classify every response, error, warning, NACK, and timeout
+
+        if scenario reaches its close state:
+            send_and_journal(outer_session_close)
+
+    except transport_loss or cancellation:
+        record last definitely transmitted frame
+        record last acknowledged or observed Device state
+        do not resume at the next unsent frame
+        classify Device state as indeterminate
+
+    verification = start a new diagnostic session
+    compare complete effective state with intended_state
+
+    return journal, terminal classification, verification result
+```
+
+The journal should be durable before a destructive frame is sent. At minimum it contains timestamps, direction, raw frame, scenario/sequence state, timeout state, and the intended semantic operation.
+
+## Response and failure handling
+
+| Observation | Action |
+| --- | --- |
+| expected success/progress response | record it and continue only if the scenario permits |
+| `WHAT 51` or `WHAT 52` | interpret in the active sequence; do not assign one global meaning |
+| structured programming error | attach it to the affected operation and stop or transition as defined |
+| warning | retain it; continue only when the scenario and safety policy allow |
+| `NACK` | classify the active frame as rejected and stop the replacement transfer |
+| timeout before destructive work | abort without changing the Device |
+| timeout after reset or a write | mark Device state indeterminate; close if safe, then diagnose |
+| transport loss | never assume the last write was or was not applied |
+| user cancellation | treat like transport interruption once destructive work has started |
+
+After any interruption following reset-all, do not resume from the next frame. Re-interview the Device, rebuild the effective state, and decide whether to restart the entire validated replacement workflow.
 
 ## Safety gates
 
