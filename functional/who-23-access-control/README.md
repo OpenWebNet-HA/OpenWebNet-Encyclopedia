@@ -4,7 +4,7 @@
 
 ## Protocol boundary
 
-Access Control is a dedicated `WHO` namespace with its own addressing and functional semantics. It must not be interpreted using the A/PL grammar of Lighting/Automation or the zone/sensor grammar of Burglar Alarm merely because those systems may participate in the same installation.
+Access Control is a dedicated `WHO` namespace with its own addressing and functional semantics. It must not be interpreted using the `A`/`PL` grammar of Lighting/Automation or the zone/sensor grammar of Burglar Alarm merely because those systems may participate in the same installation.
 
 ## Corpus status
 
