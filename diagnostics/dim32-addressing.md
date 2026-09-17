@@ -12,7 +12,7 @@
 | `SYS` | `1`–`255` | system selector |
 | `ADDR` | `0`–`65535` | encoded address value |
 
-The `#` before `SLOT` is part of the frame grammar.
+`32#[SLOT]` is a parameterized `DIMENSION` selector: `#` attaches `SLOT` to `DIMENSION 32`. `SYS` and `ADDR` are the ordinary response values and are separated with `*`.
 
 ## Interpretation boundary
 

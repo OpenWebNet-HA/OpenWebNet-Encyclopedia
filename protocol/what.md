@@ -1,4 +1,4 @@
-# Overview
+# `WHAT`
 
 `WHAT` identifies a command, state, or event within an OpenWebNet `WHO`.
 
