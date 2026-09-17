@@ -4,7 +4,7 @@ An Object is the logical function exposed by or assigned to a Module. It defines
 
 ## Catalogue identity
 
-`MHCatalogue.db.EN_KEY_OBJECT` contains 158 Object definitions.
+`EN_KEY_OBJECT` in `MHCatalogue.db` contains 158 Object definitions.
 
 | Column | Role |
 | --- | --- |
@@ -17,7 +17,7 @@ An Object is the logical function exposed by or assigned to a Module. It defines
 
 The two Object identifiers serve different purposes:
 
-- `id_key_object` joins catalogue tables;
+- `id_key_object` joins catalogue tables
 - `key_object` is the Object number exposed in the wider MyHOME_Suite model and correlated with diagnostic `KEYO`.
 
 Documentation uses **Object**, not “KO”, except when quoting database column names or source descriptions.
@@ -36,11 +36,11 @@ A Device can therefore have one standard Device description and several Object d
 
 For example, `64391` is catalogued as “Flush mounted actuator and free control”. Its Modules can expose Objects including:
 
-- `6`: Light actuator;
-- `7`: Automation actuator;
-- `400`: Light control;
-- `401`: Automation control;
-- `404`: Scheduled scenario;
+- `6`: Light actuator
+- `7`: Automation actuator
+- `400`: Light control
+- `401`: Automation control
+- `404`: Scheduled scenario
 - `406`: Scheduled scenario PLUS.
 
 None of those individual Object descriptions is a complete Device-model name.
@@ -53,7 +53,7 @@ Objects become available to a Device through:
 
 The canonical database contains:
 
-- 827 firmware/Object associations;
+- 827 firmware/Object associations
 - 1,725 slot/Object placements.
 
 A reusable Object can appear in many firmware definitions and at many slots. The same Object semantics can therefore be shared by different product models.
@@ -62,12 +62,12 @@ A reusable Object can appear in many firmware definitions and at many slots. The
 
 `AS_OBJECT_SYSTEM` associates an Object with a catalogue system. The canonical database contains 251 such rows.
 
-This is a catalogue relationship. `MHCatalogue.db.EN_SYSTEM.id_system` is not the same identifier space as:
+This is a catalogue relationship. `EN_SYSTEM.id_system` in `MHCatalogue.db` is not the same identifier space as:
 
-- functional OpenWebNet `WHO`;
-- diagnostic `WHO`;
-- `OPEN.db.EN_SYSTEM.id_system`;
-- ScenarioDevices `FamilyId`;
+- functional OpenWebNet `WHO`
+- diagnostic `WHO`
+- `EN_SYSTEM.id_system` in `OPEN.db`
+- ScenarioDevices `FamilyId`
 - ScenarioDevices `ObjectId`.
 
 A functional-system mapping can be made when the Object’s semantics, functional frame, or another explicit association establishes it. Numeric equality alone is not evidence.
@@ -116,11 +116,11 @@ This table can establish that a command Object is intended to control a particul
 
 Additional catalogue relationships include:
 
-- `EN_OBJECT_ITEM_FAMILY`: Object/item family vocabulary;
-- `AS_OBJECT_COLLECTION`: Object membership in collections;
-- `AS_OBJECT_FUNCTION`: special-function associations;
-- `AS_ICON_KO`: Object icons, subtypes, and modifiability metadata;
-- `AS_OBJECT_VIRGIN_OBJECT`: Objects permitted by a Virgin Object;
+- `EN_OBJECT_ITEM_FAMILY`: Object/item family vocabulary
+- `AS_OBJECT_COLLECTION`: Object membership in collections
+- `AS_OBJECT_FUNCTION`: special-function associations
+- `AS_ICON_KO`: Object icons, subtypes, and modifiability metadata
+- `AS_OBJECT_VIRGIN_OBJECT`: Objects permitted by a Virgin Object
 - `RIF_MH_OBJECT`: installation/project Object instances with addresses and collection membership.
 
 `RIF_MH_OBJECT` describes project-instance data structures, whereas `EN_KEY_OBJECT` describes reusable catalogue Object types.
@@ -149,10 +149,10 @@ They contain:
 | Program Files copy | 29 | 44 | 157 | 42 |
 | ProgramData copy | 27 | 42 | 151 | 40 |
 
-These Object IDs are not `MHCatalogue.db.EN_KEY_OBJECT.key_object`. ScenarioDevices contributes:
+These Object IDs are not `EN_KEY_OBJECT.key_object` in `MHCatalogue.db`. ScenarioDevices contributes:
 
-- user-facing action/trigger/condition semantics;
-- exact functional frames where `Commands.Frame` is populated;
+- user-facing action/trigger/condition semantics
+- exact functional frames where `Commands.Frame` is populated
 - parameter limits for scenario commands.
 
 It does not determine which Physical Device or internal slot exposes a catalogue Object.
@@ -163,7 +163,7 @@ See [cross-database functional coverage](../functional/cross-database-coverage.m
 
 An Object can own reusable configuration definitions. In `EN_CONF`, Object-scoped rows use:
 
-- an `id_key_object` resolving to `EN_KEY_OBJECT`;
+- an `id_key_object` resolving to `EN_KEY_OBJECT`
 - `id_firmware = 0`.
 
 The canonical database contains 1,420 Object-scoped configuration rows. Firmware-scoped configuration uses the complementary pattern described in [`configuration.md`](configuration.md).
@@ -180,15 +180,8 @@ Object `406` is catalogued as “Scheduled scenario PLUS”. On products such as
 
 Its catalogue presence establishes that the Module can expose that logical function. Its complete runtime and programming behavior must be documented from the relevant scenario protocol and observed traffic, not inferred from the Object number alone.
 
-## Source boundaries
+## Sources
 
-| Source | Object evidence |
-| --- | --- |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Object identity, families, firmware/slot availability, configuration, Virgin Object mappings |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | Diagnostic `KEYO`, system/address, and parameter frames |
-| [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/) | Scenario-engine capability names and functional command templates |
-| [public OpenWebNet documents](../sources/openwebnet-public/) | Published functional semantics |
-| Observed traffic | Actual Object identity and runtime behavior |
-| MyHOME_Suite UI | Displayed Function type and editability |
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines catalogue Object identity and availability. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic Object projection. ScenarioDevices and the [public OpenWebNet documents](../sources/openwebnet-public/) describe adjacent scenario and functional semantics.
 
-When sources disagree or use different identifier spaces, retain the source-specific values and document the correlation explicitly.
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
