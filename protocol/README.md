@@ -1,4 +1,4 @@
-# Overview
+# Protocol
 
 OpenWebNet is a frame-based protocol used to exchange commands, status information, measurements, configuration data, and service information between compatible systems.
 
@@ -9,16 +9,16 @@ A frame identifies a system through `WHO`, an operation or state through `WHAT` 
 | Concept | Purpose | Reference |
 | --- | --- | --- |
 | `WHO` | Selects the OpenWebNet system or function family | System-specific documentation |
-| `WHAT` | Identifies a command, event, or state within a `WHO` | [`what.md`](what.md) |
-| `WHERE` | Identifies the destination or source according to the addressing rules of the `WHO` | [`addressing.md`](addressing.md) |
-| `DIMENSION` | Identifies a readable or writable property within a `WHO` | [`dimensions.md`](dimensions.md) |
-| `ACK` / `NACK` | Reports positive or negative acknowledgement | [`acknowledgements.md`](acknowledgements.md) |
+| `WHAT` | Identifies a command, event, or state within a `WHO` | [`WHAT`](what.md) |
+| `WHERE` | Identifies the destination or source according to the addressing rules of the `WHO` | [Addressing](addressing.md) |
+| `DIMENSION` | Identifies a readable or writable property within a `WHO` | [`DIMENSION`](dimensions.md) |
+| `ACK` / `NACK` | Reports positive or negative acknowledgement | [Acknowledgements](acknowledgements.md) |
 
 `WHAT`, `WHERE`, and `DIMENSION` are not globally uniform namespaces. Their syntax and semantics depend on the selected `WHO`.
 
 ## Frame families
 
-The common functional frame families are summarized below. See [`frame-syntax.md`](frame-syntax.md) for the complete structural reference.
+The common functional frame families are summarized below. See [Frame Syntax](frame-syntax.md) for the complete structural reference.
 
 | Purpose | Form |
 | --- | --- |
