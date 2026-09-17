@@ -26,6 +26,24 @@ Configuration programming writes indexed Object or firmware properties after the
 
 Do not require one `EN_CONF` row to contain both a valid Object and firmware key; the scopes are mutually exclusive in the canonical catalogue.
 
+### Object and firmware scopes
+
+`EN_CONF` uses `0` as a “not applicable” sentinel on the unused ownership axis:
+
+| Scope | `id_key_object` | `id_firmware` |
+| --- | --- | --- |
+| Object property | resolved Object ID | `0` |
+| Firmware property | `0` | resolved firmware ID |
+
+The zero values do not identify Object 0 or firmware 0. They take the place of `NULL` and distinguish which entity owns the definition. Applicable definitions must therefore be collected as the union of the two scopes:
+
+```sql
+WHERE (id_key_object = :object_id AND id_firmware = 0)
+   OR (id_key_object = 0 AND id_firmware = :firmware_id)
+```
+
+A query requiring both resolved IDs in the same row would miss the canonical definitions. Resolve the scope before interpreting `idx`, because an index is not globally unique.
+
 ## Transfer behavior
 
 Parameter writes are optional and repeatable within `ConfKO`. `NACK` transitions the canonical sequence to Warning rather than Error.
