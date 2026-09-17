@@ -4,20 +4,24 @@ The diagnostic protocol is a management layer carried in OpenWebNet frames. It d
 
 ## Managed systems
 
-`OPEN.db` associates functional systems with diagnostic families as follows:
+A diagnostic `WHO` identifies a management family, not the diagnostic counterpart of exactly one functional `WHO`. In particular, diagnostic `WHO 1001` covers the Lighting and Automation domain: functional `WHO 1` controls Lighting and functional `WHO 2` controls Automation.
 
-| System | Functional `WHO` | Diagnostic `WHO` | Managed in source |
-| --- | ---: | ---: | --- |
-| Lighting and Automation | `1` | `1001` | yes |
-| Temperature Control | `4` | `1004` | yes |
-| Video Door Entry and telephony | `8` | `1008` | yes |
-| Integration Functions | `13` | `1013` | yes |
-| Energy Management | `18` | `1018` | yes |
-| Access Control | `23` | `1023` | yes |
-| Multimedia | `22` | `1022` | no |
-| Nurse Call | `27` | `1027` | no |
+The complete set of non-empty diagnostic mappings in `OPEN.db` is:
 
-The source also assigns diagnostic `WHO 1001` to two additional Automation interface-system records. A diagnostic mapping identifies a namespace; the `managed` flag separately records whether MyHOME_Suite treats the system as managed in this source revision.
+| Diagnostic `WHO` | Functional domain or protocols | `OPEN.db` system records | `managed` |
+| ---: | --- | --- | --- |
+| `1001` | Lighting (`WHO 1`) and Automation (`WHO 2`) | Light and Automation system; Interface AUTOM L3; Interface AUTOM L4 | yes |
+| `1004` | Temperature Control (`WHO 4`) | Thermoregulation | yes |
+| `1008` | Video Door Entry and telephony (`WHO 8`) | Video Door entry system and telephony | yes |
+| `1013` | Integration Functions (`WHO 13`) | Integration Functions | yes |
+| `1018` | Energy Management (`WHO 18`) | Energy Management system | yes |
+| `1022` | Multimedia (`WHO 22`) | Multimedia System | no |
+| `1023` | Access Control (`WHO 23`) | Access Control | yes |
+| `1027` | Nurse Call (`WHO 27`) | Nurse Call basic level system | no |
+
+The “Functional domain or protocols” column documents the functional namespaces covered by the management family; it is not a one-to-one database join. `OPEN.db` records `WHO 1` on its combined “Light and Automation system” row and on both Automation interface rows, but that implementation shortcut does not erase functional `WHO 2` or redefine Automation as Lighting.
+
+The `managed` flag separately records whether MyHOME_Suite treats the system as managed in this source revision. Rows with diagnostic `WHO 1022` and `1027` therefore establish named diagnostic families without claiming that MyHOME_Suite implements their complete management workflow.
 
 The common mechanics documented here form the implementation model shared by these diagnostic families. A mapping in `OPEN.db` is not proof that every Device implements every operation or `DIMENSION`.
 
