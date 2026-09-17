@@ -252,4 +252,22 @@ A missing row proves only that the installed `OPEN.db` revision does not describ
 
 Silence alone cannot distinguish these outcomes.
 
+## Expected result
+
+Return a troubleshooting record containing:
+
+- the original symptom and expected evidence;
+- the exact reproduced request;
+- diagnostic family and selector;
+- timestamped raw traffic;
+- active sequence, membership, and timeout evidence;
+- Device, firmware, Module, Object, and property context where applicable;
+- retries and cleanup/release operations;
+- eliminated hypotheses and the evidence that eliminated them;
+- the selected outcome class;
+- remaining ambiguity;
+- the safest next read-only action.
+
+A useful conclusion is bounded and falsifiable—for example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
+
 See [Diagnostic Error Handling](../diagnostics/device-interview.md#errors-and-abnormal-termination) and [Address Discovery](../diagnostics/address-discovery.md).
