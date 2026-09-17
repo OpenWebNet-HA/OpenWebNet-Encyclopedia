@@ -12,13 +12,13 @@ Firmware is an implementation layer between the product model and its exposed Mo
 
 | Subject | Page |
 | --- | --- |
-| Evidence roles, identifier boundaries, and source handling | [`sources-and-identifiers.md`](sources-and-identifiers.md) |
-| Product identity, catalogue records, and Device composition | [`physical-devices.md`](physical-devices.md) |
-| Firmware selection and capability projection | [`firmware.md`](firmware.md) |
-| Firmware-exposed Modules and internal slots | [`modules.md`](modules.md) |
-| Logical functions and Object identity | [`objects.md`](objects.md) |
-| Configurable Module templates and permitted Objects | [`virgin-objects.md`](virgin-objects.md) |
-| Configuration definitions, values, constraints, and protocol representation | [`configuration.md`](configuration.md) |
+| Evidence roles, identifier boundaries, and source handling | [Sources and Identifier Boundaries](sources-and-identifiers.md) |
+| Product identity, catalogue records, and Device composition | [Physical Devices](physical-devices.md) |
+| Firmware selection and capability projection | [Firmware](firmware.md) |
+| Firmware-exposed Modules and internal slots | [Modules](modules.md) |
+| Logical functions and Object identity | [Objects](objects.md) |
+| Configurable Module templates and permitted Objects | [Virgin Objects](virgin-objects.md) |
+| Configuration definitions, values, constraints, and protocol representation | [Configuration](configuration.md) |
 
 ## Canonical model
 
@@ -85,7 +85,7 @@ The Device description and Object description are also distinct. `EN_DEVICE.name
 
 ## Evidence
 
-The evidence sources and their identifier boundaries are defined in [`sources-and-identifiers.md`](sources-and-identifiers.md). In summary, `MHCatalogue.db` defines catalogue capability, `OPEN.db` defines diagnostic and programming structures, the ScenarioDevices databases describe scenario-engine capabilities, `rules.db3` adds selected configuration constraints, and the public OpenWebNet documents define published functional behavior.
+The evidence sources and their identifier boundaries are defined in [Sources and Identifier Boundaries](sources-and-identifiers.md). In summary, `MHCatalogue.db` defines catalogue capability, `OPEN.db` defines diagnostic and programming structures, the ScenarioDevices databases describe scenario-engine capabilities, `rules.db3` adds selected configuration constraints, and the public OpenWebNet documents define published functional behavior.
 
 Original evidence remains unchanged under [`sources/`](../sources/); derived relationships are documented outside the canonical corpus.
 
@@ -93,4 +93,4 @@ Original evidence remains unchanged under [`sources/`](../sources/); derived rel
 
 Use each source only for the layer it establishes. Do not join independent identifier spaces because their numeric values happen to match, and do not promote implementation labels to protocol semantics without corroborating evidence.
 
-Unknown fields remain unknown. The unresolved `N_CONF` value in diagnostic `DIMENSION 1` is documented with Physical Device identity in [`physical-devices.md`](physical-devices.md).
+Unknown fields remain unknown. The unresolved `N_CONF` value in diagnostic `DIMENSION 1` is documented with Physical Device identity in [Physical Devices](physical-devices.md).

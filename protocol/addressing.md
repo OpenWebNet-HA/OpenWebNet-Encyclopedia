@@ -1,4 +1,4 @@
-# Overview
+# Addressing
 
 OpenWebNet addressing is system-specific. `WHERE` identifies the destination or source of a frame, but its grammar depends on the selected `WHO` and must not be interpreted as a single universal address type.
 

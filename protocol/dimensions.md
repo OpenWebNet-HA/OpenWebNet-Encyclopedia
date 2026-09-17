@@ -1,4 +1,4 @@
-# Overview
+# `DIMENSION`
 
 A `DIMENSION` identifies a property that can be requested, reported, or, where supported, written through an OpenWebNet `DIMENSION` frame.
 
