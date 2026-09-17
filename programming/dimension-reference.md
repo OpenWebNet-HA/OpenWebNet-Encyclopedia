@@ -57,7 +57,7 @@ The target write must use a permitted configured Object, validated through Virgi
 
 ## `DIMENSION 32`
 
-The two `#` separators are part of the canonical frame. `SYS` and `ADDR` require the Object/system address rule. Do not decode every value as `A`/`PL`.
+The frame contains one embedded `#` separator between `32` and `SLOT`. The earlier `#` in `#32` marks the `DIMENSION` portion rather than separating two fields. `SYS` and `ADDR` require the Object/system address rule. Do not decode every value as `A`/`PL`.
 
 ## `DIMENSION 35`
 
