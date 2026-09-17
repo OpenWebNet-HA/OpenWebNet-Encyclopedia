@@ -23,7 +23,7 @@ The canonical sequences order the following response families:
 
 | Order | `DIMENSION` | Data |
 | ---: | ---: | --- |
-| 1 | `1` | item/model identity, `N_CONF`, brand, line |
+| 1 | `1` | item/model identity, physical configurator-position count (`N_CONF`), brand, line |
 | 2 | `2` | firmware version |
 | 3 | `3` | hardware version |
 | 4 | `4` | configurators 1–6 |
@@ -68,7 +68,7 @@ Do not overwrite repeated frames merely because their `DIMENSION` matches. `DIME
 
 ## Reconstructing the Device
 
-1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata.
+1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata and retain `N_CONF` as the Device's physical configurator-position count.
 2. Record the reported firmware, hardware, and microcontroller versions without assuming that a version number is a catalogue primary key.
 3. Build one Module record per internal slot from `DIMENSION 30`.
 4. Attach `DIMENSION 32` system/address data to the matching internal slot.
