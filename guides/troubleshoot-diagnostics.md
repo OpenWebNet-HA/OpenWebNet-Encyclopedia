@@ -4,6 +4,17 @@
 
 Classify incomplete discovery or interview results without converting silence, optionality, or ambiguous identity into false conclusions.
 
+## Prerequisites
+
+- the applicable diagnostic `WHO` and selection method;
+- the exact request that should have produced the missing evidence;
+- raw traffic with direction, order, and timestamps;
+- the timeout and sequence state active when collection stopped;
+- the relevant `OPEN.db` revision;
+- catalogue identity and firmware candidates where the failure is interpretive rather than transport-level.
+
+If raw traffic was not retained, reproduce the read-only request before drawing conclusions. Do not reproduce programming writes merely to troubleshoot a missing diagnostic response.
+
 ## Triage
 
 | Symptom | Check first |
@@ -42,6 +53,136 @@ Preserve the exact request, all returned frames, their direction and order, and 
 7. Close or release scan state after abandonment.
 8. Compare with a second selection method where safe.
 9. Classify the outcome rather than guessing the missing value.
+
+## Diagnostic decision algorithm
+
+```text
+function troubleshoot(request, captured_frames, expected_evidence):
+    verify transport connection and authentication
+    verify request syntax, diagnostic WHO, selector, and direction
+
+    if request was not definitely transmitted:
+        return local_transport_or_logging_failure
+
+    classify every received frame before filtering
+
+    if explicit NACK, abort, or structured error exists:
+        return classify_explicit_terminal_evidence()
+
+    membership = query_OPEN_db_sequence_membership(expected_evidence)
+    timeout = resolve_active_sequence_timeout(request, membership)
+
+    if expected response was received but parser rejected it:
+        return parsing_or_context_resolution_failure
+
+    if other valid Device responses were received:
+        if expected response is optional:
+            return completed_with_optional_omission
+        if response depends on Object/firmware capability:
+            resolve Device, Module, Object, and firmware
+            return supported_missing, unsupported, or still_ambiguous
+        return partial_interview
+
+    if no valid response was received:
+        compare selector with a second safe selection method
+        verify diagnostic family support
+        return one of:
+            no Device observed
+            invalid selector
+            wrong diagnostic family
+            transport/gateway failure
+            timeout with indeterminate Device state
+
+    never infer zero, disabled, or unconfigured from silence
+```
+
+## Symptom-specific checks
+
+### No Device IDs
+
+1. Confirm the correct diagnostic family.
+2. Send the release frame before enumeration.
+3. Verify that the inventory request was transmitted exactly.
+4. Collect for the configured first-response window.
+5. Check whether another scanner could be suppressing Devices.
+6. Retry under a bounded policy.
+7. Release scan state even after failure.
+
+“No IDs” means no Device was observed under those conditions; it does not prove the installation contains no Devices.
+
+### The same Device repeats indefinitely
+
+1. Preserve the exact eight-character ID from `DIMENSION 13`.
+2. Verify the corresponding `WHAT 11` suppression frame.
+3. Confirm that hexadecimal formatting did not truncate leading zeroes.
+4. Check frame direction and whether the gateway actually transmitted suppression.
+5. Bound the enumeration rounds and release scan state on exit.
+
+### Missing `WHAT 4`
+
+1. Determine whether the Device returned useful interview frames first.
+2. Apply the further-information timer rather than waiting forever.
+3. Check for abort, `NACK`, structured error, or transport closure.
+4. Mark the interview partial if the normal terminator never arrived.
+5. Do not discard already valid `DIMENSION` responses.
+
+### Missing `DIMENSION 32`
+
+1. Resolve every `DIMENSION 30` Module and Object.
+2. Determine whether that Module class is expected to expose an address.
+3. Check Object/firmware support and `OPEN.db` optionality.
+4. Keep “not reported” separate from “no address.”
+5. Remember that configurable commands and actuators do not necessarily expose identical diagnostic Dimensions.
+
+### Unknown `DIMENSION 30.KEYO`
+
+1. Read `STATE`.
+2. For `STATE=1`, query `EN_KEY_OBJECT.key_object`.
+3. For `STATE=0`, query `EN_VIRGIN_OBJECT.virgin_key_object`.
+4. Verify the catalogue revision and firmware context.
+5. Preserve the raw Object number if unresolved.
+
+### Unknown `DIMENSION 35.INDEX`
+
+1. Attach the response to its internal `SLOT`.
+2. Resolve that Module's configured Object.
+3. Union Object-scoped and firmware-scoped `EN_CONF` rows.
+4. Match `idx` only within that context.
+5. Apply filters and conditions before selecting among duplicates.
+6. If no definition survives, report the raw tuple as unknown.
+
+### Wrong product match
+
+1. Recheck `DIMENSION 1` VALUE 1 against `AS_ITEM_SYSTEM.modobj`.
+2. Apply brand and collection evidence without forcing absent values.
+3. Use `EN_DEVICE.name` for the Physical Device description.
+4. Keep all surviving SKUs.
+5. Do not use unresolved VALUE 2 as a classification key.
+6. Do not substitute an Object description for the Device description.
+
+### Local-button timeout
+
+1. Confirm that the 300-second first-response window was used.
+2. Record whether and when the installer operated the Device.
+3. Verify that the Device and workflow support local selection.
+4. Separate failure to select a Device from failure during the later interview.
+5. Close or abort the waiting workflow explicitly where supported.
+
+## Evidence bundle
+
+Every troubleshooting result should retain:
+
+- request and selector;
+- diagnostic family;
+- transport/session identifier;
+- timestamped raw frames in both directions;
+- parser output and rejected frames;
+- first-response and further-response timers;
+- sequence and timeout database rows used;
+- Device, firmware, Module, and Object candidates;
+- retry count and policy;
+- release/close action;
+- final outcome class and confidence.
 
 ## SQL example: inspect response membership and timeouts
 
