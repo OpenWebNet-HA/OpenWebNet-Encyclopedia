@@ -67,6 +67,33 @@ Firmware-scoped definitions describe properties tied to one firmware capability 
 
 A complete configuration UI may combine both scopes.
 
+## Physical-configurator counterparts
+
+A configuration property can have both a physical representation on the Device and an advanced or virtual representation in the catalogue and diagnostic protocol. This is a correspondence between ways of configuring one effective property, not a separate Object or parameter variant.
+
+For firmware definitions corroborated against product documentation, the physical configurator positions appear as firmware-scoped `EN_CONF` rows with `idx = -1`. The common `AID`/ID row is not a physical position and is excluded. `AS_FIRMWARE_CONFIG_MODE` and `EN_CONFIG_MODE` establish whether the firmware supports physical configuration.
+
+To check whether a reported property has a physical-configurator counterpart:
+
+1. resolve the Physical Device, firmware, internal slot, and configured Object;
+2. confirm that the firmware supports physical configuration;
+3. enumerate the firmware-scoped physical `EN_CONF` fields, excluding `AID`;
+4. resolve the effective property from decoded `DIMENSION 32` addressing or the `DIMENSION 35` configuration index;
+5. compare symbols, semantic types, ranges, filters, symbol references, and conversion rules;
+6. use product documentation, UI behavior, or captures where the physical and advanced symbols differ.
+
+| Diagnostic projection | Possible physical counterpart |
+| --- | --- |
+| decoded `DIMENSION 32.ADDR` component | address positions such as `A` and `PL` |
+| `DIMENSION 35.INDEX` property | positions such as `M`, `TYPE`, `PRE`, or `G1` |
+| property with no matching physical field | advanced-only unless another mapping source establishes a correspondence |
+
+An identical symbol and compatible meaning provide a direct correspondence. Different symbols can still represent the same property, but require semantic corroboration; for example, a firmware position named `TYPE` can correspond to an Object property named `SHUTTER_TYPE`.
+
+The correspondence does not reveal the active configuration method. `DIMENSION 32` and `35` report effective values. A value representable by a physical configurator could still have been assigned through advanced or virtual configuration. A value outside the physical representation can exclude physical configuration for that property, provided the applicable physical range is established.
+
+`EN_PHY_TO_ADV_TRANS` contains conversion data for only three firmware definitions in this catalogue revision. It can support those cases but is not a general physical-to-advanced mapping registry.
+
 ## Configuration type and data type
 
 `EN_CONF_TYPE` supplies semantic categories. Observed categories include:
