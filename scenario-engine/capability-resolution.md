@@ -24,7 +24,7 @@ Start with one source file and, where possible:
 9. Validate parameter values against stored metadata and the functional reference.
 10. Return the capability with source-file and row provenance.
 
-## SQL example
+## Resolve the hierarchy
 
 ```sql
 SELECT
