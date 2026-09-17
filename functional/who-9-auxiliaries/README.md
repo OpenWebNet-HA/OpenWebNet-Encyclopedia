@@ -4,7 +4,7 @@
 
 ## Namespace semantics
 
-`WHAT`, `WHERE`, and any structured values are scoped to `WHO 9`. An auxiliary number is not an Automation A/PL address and should not be normalized as one.
+`WHAT`, `WHERE`, and any structured values are scoped to `WHO 9`. An auxiliary number is not an Automation `A`/`PL` address and should not be normalized as one.
 
 The Alarm specification's references to AUX targets demonstrate cross-system use of auxiliary channels, but do not make `WHO 9` part of the Alarm namespace. Integrations should preserve the originating `WHO` when correlating such events.
 
