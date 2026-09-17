@@ -8,16 +8,16 @@ Diagnostics does not expose the catalogue database directly. It reports installe
 
 | Subject | Page |
 | --- | --- |
-| Diagnostic families, sessions, and model projection | [`architecture.md`](architecture.md) |
-| Enumeration by Device ID | [`device-discovery.md`](device-discovery.md) |
-| Discovery using an address | [`address-discovery.md`](address-discovery.md) |
-| Full Device interview | [`device-interview.md`](device-interview.md) |
-| Diagnostic `WHAT` values | [`what-reference.md`](what-reference.md) |
-| Diagnostic `DIMENSION` index | [`dimension-reference.md`](dimension-reference.md) |
-| `DIMENSION 1`: Device identity | [`dim1-device-identity.md`](dim1-device-identity.md) |
-| `DIMENSION 30`: Modules and Objects | [`dim30-modules.md`](dim30-modules.md) |
-| `DIMENSION 32`: Module addressing | [`dim32-addressing.md`](dim32-addressing.md) |
-| `DIMENSION 35`: configuration parameters | [`dim35-configuration.md`](dim35-configuration.md) |
+| Diagnostic families, sessions, and model projection | [Diagnostic Architecture](architecture.md) |
+| Enumeration by Device ID | [Device Discovery](device-discovery.md) |
+| Discovery using an address | [Address Discovery](address-discovery.md) |
+| Full Device interview | [Device Interview](device-interview.md) |
+| Diagnostic `WHAT` values | [Diagnostic `WHAT` Reference](what-reference.md) |
+| Diagnostic `DIMENSION` index | [Diagnostic `DIMENSION` Reference](dimension-reference.md) |
+| `DIMENSION 1`: Device identity | [`DIMENSION 1`: Device Identity](dim1-device-identity.md) |
+| `DIMENSION 30`: Modules and Objects | [`DIMENSION 30`: Modules and Objects](dim30-modules.md) |
+| `DIMENSION 32`: Module addressing | [`DIMENSION 32`: Module Addressing](dim32-addressing.md) |
+| `DIMENSION 35`: configuration parameters | [`DIMENSION 35`: Configuration Parameters](dim35-configuration.md) |
 
 ## Principal workflows
 
