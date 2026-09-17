@@ -198,6 +198,50 @@ Retain applicable `DIMENSION 39` property errors. Keep any `DIMENSION 310` respo
 
 A one-Module `DIMENSION 38` form exists, but the canonical `DiagKO` sequence uses the all-Module request above. The source also uses reset terminology for `DIMENSION 38`; preserve that ambiguity and exercise caution with unfamiliar Devices.
 
+## Reference algorithm
+
+```text
+function retrieve_cen_buttons(selector):
+    interview = acquire_complete_interview(selector)
+    context = resolve_device_firmware_modules_and_objects(interview)
+    candidates = []
+
+    for module in context.modules:
+        if module is not configured or module.object is unresolved:
+            continue
+
+        definitions = resolve_applicable_EN_CONF(
+            module.object.id_key_object,
+            context.firmware.id_firmware
+        )
+
+        semantic_set = identify_established_cen_and_button_properties(definitions)
+        if semantic_set contains a CEN identity and at least one button:
+            candidates.append(module, semantic_set)
+
+    detailed = acquire_DIMENSION_35_with_DIMENSION_38()
+    output = []
+
+    for module, semantic_set in candidates:
+        values = map responses by (module.internal_slot, property.idx)
+
+        cen = decode_cen_components_only_with_established_rule(values, semantic_set)
+        buttons = []
+
+        for button_property in semantic_set.button_properties:
+            response = values[button_property.idx]
+            buttons.append(
+                decode_or_mark_not_reported(button_property, response)
+            )
+
+        output.append(module, cen, buttons, raw tuples, statuses)
+
+    return output for every candidate Module,
+           including partial and ambiguous entries
+```
+
+Do not decide that a Module is CEN-capable merely because it reports indices `0` through `3`. Those indices recur on unrelated Objects; the resolved Object and its property definitions establish the semantics.
+
 ## 5. Decode a two-button Scheduled scenario PLUS Object
 
 The catalogue defines one two-button “Scheduled scenario PLUS” Object with this Object-scoped property set:
