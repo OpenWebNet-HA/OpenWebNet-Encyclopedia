@@ -69,10 +69,10 @@ All 1,725 slot records resolve to an `AS_OBJECT_FIRMWARE` association in the can
 
 A Module can expose:
 
-- one Object only;
-- one designated Object plus alternatives;
-- a Virgin Object template that permits a set of Objects;
-- a fixed Object whose configuration is still editable;
+- one Object only
+- one designated Object plus alternatives
+- a Virgin Object template that permits a set of Objects
+- a fixed Object whose configuration is still editable
 - no user-visible Object in a particular Device/UI context.
 
 `fixed_ko` must not be translated mechanically into “Function type not user modifiable”. The visible behavior can also depend on Virgin Object associations, conditions, filters, and product-specific UI rules.
@@ -104,8 +104,8 @@ The Physical Device therefore has four Modules, not ten.
 
 This response exposes the Device’s current Module/Object state:
 
-- `SLOT` locates the Module;
-- `KEYO` identifies the current Object;
+- `SLOT` locates the Module
+- `KEYO` identifies the current Object
 - `STATE` reports a binary configuration state.
 
 The catalogue association between `EN_KEY_OBJECT.key_object` and `KEYO` is supported by matching Object identity and observed behavior. It is not a cross-database foreign key.
@@ -147,11 +147,11 @@ For example, Device `007B269D` was observed with internal slot `1` disabled, int
 
 A Module can correspond directly to hardware, such as:
 
-- a relay output;
-- a dimmer output;
-- a pushbutton pair;
-- a dry-contact input;
-- a sensor;
+- a relay output
+- a dimmer output
+- a pushbutton pair
+- a dry-contact input
+- a sensor
 - an IR scenario channel.
 
 It can also represent a logical capability exposed by firmware. The catalogue establishes availability but does not always describe the physical implementation.
@@ -170,11 +170,8 @@ The IP55 PIR sensor observed as Device `08CF44BF` illustrates a large Module set
 
 Conditions can restrict whether a slot/Object association is applicable. `EN_CONDITION` references `EN_CONV_RULE`, which expresses configuration-dependent logic. Therefore, the raw existence of an `EN_SLOTS` row establishes catalogue capability, not unconditional availability in every configuration.
 
-## Source boundaries
+## Sources
 
-- [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) establishes declared slots, Object alternatives, and slot conditions.
-- [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) establishes the `DIMENSION 30`, `32`, and `35` wire structures.
-- Observed traffic establishes the actual Modules reported by a Device.
-- MyHOME_Suite UI behavior establishes visibility, display order, labels, and editability.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines declared slots, Object alternatives, and slot conditions. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the `DIMENSION 30`, `32`, and `35` wire structures. Observed traffic and MyHOME_Suite behavior establish the Modules actually reported, displayed, and editable.
 
-Where these layers differ, document the difference instead of forcing them into one slot numbering scheme.
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
