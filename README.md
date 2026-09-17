@@ -11,6 +11,7 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 | [`diagnostics/`](diagnostics/) | Device discovery, interview, diagnostic operations, and diagnostic `DIMENSION` values |
 | [`programming/`](programming/) | Device and Object configuration and programming workflows |
 | [`device-model/`](device-model/) | Device → Module → Object → Configuration model |
+| [`guides/`](guides/) | Practical workflows combining discovery, catalogue resolution, validation, programming, and verification |
 | [`scenario-engine/`](scenario-engine/) | MyHOME Suite scenario capability and execution model |
 | [`internals/`](internals/) | MyHOME Suite implementation details relevant to the protocol |
 | [`reverse-engineering/`](reverse-engineering/) | Methodology, correlations, inferred relationships, and unresolved questions |
