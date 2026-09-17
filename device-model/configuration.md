@@ -18,7 +18,7 @@ Not every Object uses every layer.
 
 ## Core catalogue table
 
-`MHCatalogue.db.EN_CONF` contains 2,883 configuration definitions.
+`EN_CONF` in `MHCatalogue.db` contains 2,883 configuration definitions.
 
 | Column | Role |
 | --- | --- |
@@ -52,13 +52,13 @@ This is a discriminator pattern, not two mandatory foreign keys. Treating both c
 
 Object-scoped definitions describe reusable properties of a logical function. Examples include:
 
-- Function type;
-- point-to-point address;
-- group membership;
-- mode;
-- delays;
-- setpoints;
-- scenario numbers;
+- Function type
+- point-to-point address
+- group membership
+- mode
+- delays
+- setpoints
+- scenario numbers
 - button assignments.
 
 ### Firmware-scoped configuration
@@ -71,9 +71,9 @@ A complete configuration UI may combine both scopes.
 
 `EN_CONF_TYPE` supplies semantic categories. Observed categories include:
 
-- point-to-point address;
-- zone/room address;
-- group;
+- point-to-point address
+- zone/room address
+- group
 - mode.
 
 `EN_CONF_DATA_TYPE` supplies value representation. The canonical source uses:
@@ -113,7 +113,7 @@ Do not assume that a missing range row means the protocol accepts every value. A
 
 `EN_FILTER` contains 1,909 rows. Every row resolves to both:
 
-- an `AS_OBJECT_FIRMWARE.id_object_firmware` context;
+- an `AS_OBJECT_FIRMWARE.id_object_firmware` context
 - an `EN_CONF.id_conf` definition.
 
 This makes the filter context explicit: a configuration definition can have different allowed values for different Object/firmware combinations.
@@ -134,8 +134,8 @@ The practical evaluation is:
 
 The catalogue contains:
 
-- 1,000 `AS_SLOT_CONDITION` rows;
-- 488 `EN_CONDITION` rows;
+- 1,000 `AS_SLOT_CONDITION` rows
+- 488 `EN_CONDITION` rows
 - 7,899 `EN_CONV_RULE` rows.
 
 `AS_SLOT_CONDITION` attaches a condition to a slot/Object assignment. `EN_CONDITION.id_conv_rule` selects the conversion-rule logic used by that condition.
@@ -156,7 +156,7 @@ The catalogue contains:
 
 Its `rules` table references configuration indices using expressions such as `$1`, `$2`, and `$21`. Its `DisablelinkedParameter` table contains 194 dependency rows that enable, disable, or constrain related parameters.
 
-The Object numbers and configuration indices align with `MHCatalogue.db.EN_KEY_OBJECT.key_object` and `EN_CONF.idx` for those Temperature Control Objects. There is no database foreign key between the files, so the correlation is semantic and structural rather than relational.
+The Object numbers and configuration indices align with `EN_KEY_OBJECT.key_object` in `MHCatalogue.db` and `EN_CONF.idx` for those Temperature Control Objects. There is no database foreign key between the files, so the correlation is semantic and structural rather than relational.
 
 `rules.db3` is not a general Object or `WHO` registry.
 
@@ -211,11 +211,11 @@ Addresses are configuration values scoped to the Object’s functional system. T
 
 Examples include:
 
-- Lighting/Automation `A`/`PL`;
-- group and environment addresses;
-- Temperature Control zones;
-- CEN and CEN+ identifiers;
-- Energy Management target forms;
+- Lighting/Automation `A`/`PL`
+- group and environment addresses
+- Temperature Control zones
+- CEN and CEN+ identifiers
+- Energy Management target forms
 - Access Control indicator addresses.
 
 `DIMENSION 32` reports:
@@ -228,7 +228,7 @@ Examples include:
 
 The public OpenWebNet documents define runtime values such as `WHAT`, functional `DIMENSION` values, and `WHERE` grammars. Those values are not automatically configuration indices.
 
-The ScenarioDevices databases define scenario-engine command parameters. Their `Parameters` tables establish ranges and placeholders for scenario actions, not `MHCatalogue.db.EN_CONF` identities.
+The ScenarioDevices databases define scenario-engine command parameters. Their `Parameters` tables establish ranges and placeholders for scenario actions, not `EN_CONF` in `MHCatalogue.db` identities.
 
 A scenario parameter can correspond conceptually to a Device/Object configuration value while remaining a separate application-level identifier.
 
@@ -236,39 +236,25 @@ A scenario parameter can correspond conceptually to a Device/Object configuratio
 
 Configuration values can be:
 
-- user-selectable;
-- fixed by Object or firmware;
-- hidden by a condition;
-- narrowed by a filter;
-- read-only;
-- calculated or compiled by MyHOME_Suite;
-- reported by the Device;
+- user-selectable
+- fixed by Object or firmware
+- hidden by a condition
+- narrowed by a filter
+- read-only
+- calculated or compiled by MyHOME_Suite
+- reported by the Device
 - reserved or unknown.
 
 The `read_only`, `visible`, and `hidden` fields provide direct catalogue metadata. They may be complemented by filter and rule behavior.
 
 For example, a preset position or load-dependent minimum level can have a value range in the catalogue while UI visibility or editability depends on another configuration property.
 
-## Evidence needed for a field mapping
+## Mapping requirements
 
-A mapping between a UI field, catalogue definition, and protocol value should record:
-
-| Layer | Evidence |
-| --- | --- |
-| UI | Label, visibility, editability, and observed value |
-| Catalogue | `id_conf`, `conf_name`, `idx`, type, range, scope, and applicable filter |
-| Protocol | `DIMENSION`, internal slot, index, raw value, and sequence context |
-| Runtime effect | Functional behavior or subsequent status |
-| Confidence | Direct, corroborated, inferred, or unresolved |
-
-Matching numeric values alone are insufficient.
+A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol slot/value evidence, and—where available—the resulting runtime behavior. Numeric equality alone is insufficient.
 
 ## Sources
 
-- [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db): configuration definitions, ranges, filters, conditions, and conversion rules.
-- [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db): parameter frames, parameter metadata, sequences, and timeouts.
-- [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt): implementation query logic for frames and sequences.
-- [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3): additional Temperature Control dependencies.
-- [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/): scenario action parameters.
-- [public OpenWebNet documents](../sources/openwebnet-public/): functional protocol value semantics.
-- Observed traffic and MyHOME_Suite UI behavior: concrete values, ordering, and editability.
+Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
+
+See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
