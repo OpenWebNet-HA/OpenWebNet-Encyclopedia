@@ -12,7 +12,7 @@ Firmware is an implementation layer between the product model and its exposed Mo
 
 | Subject | Page |
 | --- | --- |
-| Evidence roles, identifier boundaries, and confidence rules | [`sources-and-identifiers.md`](sources-and-identifiers.md) |
+| Evidence roles, identifier boundaries, and source handling | [`sources-and-identifiers.md`](sources-and-identifiers.md) |
 | Product identity, catalogue records, and Device composition | [`physical-devices.md`](physical-devices.md) |
 | Firmware selection and capability projection | [`firmware.md`](firmware.md) |
 | Firmware-exposed Modules and internal slots | [`modules.md`](modules.md) |
@@ -83,30 +83,14 @@ A Physical Device is not equivalent to one OpenWebNet address, one Module, one O
 
 The Device description and Object description are also distinct. `EN_DEVICE.name` is the preferred MyHOME_Suite-facing description for the physical model. `EN_KEY_OBJECT.descr` identifies an individual logical function.
 
-## Sources of truth
+## Evidence
 
-The model is reconstructed from complementary evidence:
+The evidence sources and their identifier boundaries are defined in [`sources-and-identifiers.md`](sources-and-identifiers.md). In summary, `MHCatalogue.db` defines catalogue capability, `OPEN.db` defines diagnostic and programming structures, the ScenarioDevices databases describe scenario-engine capabilities, `rules.db3` adds selected configuration constraints, and the public OpenWebNet documents define published functional behavior.
 
-| Source | What it establishes |
-| --- | --- |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Device, item, firmware, slot, Object, Virgin Object, and configuration capability data |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | Diagnostic/programming frames, parameters, address rules, sequences, and management families |
-| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | The queries used to assemble `OPEN.db` systems, frames, sequences, address rules, and timeouts |
-| [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/) | Scenario-engine Objects, commands, frames, and parameter constraints |
-| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) | Additional cross-property validation for specific Temperature Control Objects |
-| [public OpenWebNet documents](../sources/openwebnet-public/) | Published functional protocol terminology and behavior |
-| Observed traffic | Runtime ordering and values not completely described by the databases |
-| MyHOME_Suite user interface | User-visible labels, editability, and field behavior for observed Device configurations |
-
-The canonical-source policy and fingerprints are recorded in [`sources/manifest.yaml`](../sources/manifest.yaml). Canonical files are not modified to encode inferred relationships.
+Original evidence remains unchanged under [`sources/`](../sources/); derived relationships are documented outside the canonical corpus.
 
 ## Interpretation rules
 
-1. Use each source only for the layer it establishes.
-2. Do not join independent identifier spaces because their numeric values happen to match.
-3. Treat database descriptions as implementation labels, not automatically as complete protocol semantics.
-4. Mark a relationship as inferred when no explicit foreign key or protocol declaration exists.
-5. Preserve contradictions between sources instead of silently choosing one.
-6. Keep unknown fields unknown until corroborating evidence establishes their meaning.
+Use each source only for the layer it establishes. Do not join independent identifier spaces because their numeric values happen to match, and do not promote implementation labels to protocol semantics without corroborating evidence.
 
-In particular, the second value of diagnostic `DIMENSION 1` is labelled `N_CONF` in `OPEN.db`, but its exact relationship to catalogue slots, Objects, physical configurators, form factor, or Device class is not established. It remains an implementation-labelled field with unresolved operational semantics.
+Unknown fields remain unknown. The unresolved `N_CONF` value in diagnostic `DIMENSION 1` is documented with Physical Device identity in [`physical-devices.md`](physical-devices.md).
