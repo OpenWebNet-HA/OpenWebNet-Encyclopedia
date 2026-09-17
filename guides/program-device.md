@@ -12,6 +12,38 @@ Apply a completely validated Virtual configuration and preserve enough evidence 
 - selected canonical programming scenario;
 - prepared diagnostic verification plan.
 
+## Acquire and preserve the pre-programming state
+
+Do not rely on a snapshot from an earlier application session.
+
+Start a read-only diagnostic interview with the same Physical Device:
+
+| Selection method | Send |
+| --- | --- |
+| Device ID | `*[WHO]*10#[ID]*0##` |
+| diagnostic address | `*#[WHO]*[WHERE]*0##` |
+| local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction |
+
+Collect identity, versions, Device ID, repeated `DIMENSION 30` and `32`, errors, and the terminal condition. Use the applicable 15-second ID/address or 300-second local first-response window, followed by the 20-second further-information window.
+
+After resolving the Module/Object layout, send:
+
+`*#[WHO]*0*38#0##`
+
+Collect repeated `DIMENSION 35`, applicable `DIMENSION 39`, and any `DIMENSION 310` response during the eight-second detailed-read window.
+
+Resolve this evidence into a complete snapshot containing:
+
+- installed Device ID and catalogue identity candidates;
+- firmware and hardware evidence;
+- every reported Module and configured/unconfigured state;
+- each Object or Virgin Object;
+- addresses;
+- indexed and special properties;
+- raw frames and field-level resolution status.
+
+Store the snapshot before opening the programming scenario. It is both the validation input and the recovery baseline; it is not proof that the Device can automatically be restored after a failed reset.
+
 ## Start the programming scenario and acquire its projection
 
 Select the Device and start the applicable scenario:
