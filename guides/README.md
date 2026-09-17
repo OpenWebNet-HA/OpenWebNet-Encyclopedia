@@ -29,6 +29,8 @@ The `↳` rows are specialized instances of the nearest preceding general guide.
 
 Each page is independently executable. A specialized guide may repeat acquisition and resolution steps from a general guide; links provide deeper reference material but are not prerequisites for completing the workflow.
 
+Whenever a guide retrieves information from a database, it must include a concrete SQL example for that lookup. Cross-database correlations must show the attachment or separate staged queries, identify the correlation keys, and state whether the relationship is a declared key or a semantic mapping.
+
 Every guide should:
 
 1. state the user or installer goal;
