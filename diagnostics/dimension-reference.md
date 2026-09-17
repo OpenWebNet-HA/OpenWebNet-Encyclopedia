@@ -8,7 +8,7 @@ The tables below cover the Device interview and detailed configuration sequences
 
 | `DIMENSION` | Response frame | Meaning |
 | ---: | --- | --- |
-| `1` | `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | Device identity |
+| `1` | `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | Device identity; `N_CONF` is the physical configurator-position count |
 | `2` | `*#[WHO]*[WHERE]*2*[FW_VERSION]##` | firmware version |
 | `3` | `*#[WHO]*[WHERE]*3*[HW_VERSION]##` | hardware version |
 | `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | configurators 1–6 |
@@ -20,7 +20,9 @@ The tables below cover the Device interview and detailed configuration sequences
 
 `OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1`–`99` to `FW_VERSION` and `0`–`99` to `HW_VERSION` and `MICRO_VERSION`, but the compact placeholder does not by itself establish how the three components are packed into the transmitted fields. Preserve the actual field sequence until capture evidence establishes the encoding.
 
-`DIMENSION 4` and `5` each carry six configurator values in the range `0`–`255`. They are Device-level physical/virtual configurator reports, not `EN_CONF.idx` configuration parameters.
+`N_CONF` is constrained to `0`–`12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
+
+`DIMENSION 4` and `5` each carry six configurator values in the range `0`–`255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
 
 `DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings, so bit labels require family-specific implementation or capture evidence.
 
