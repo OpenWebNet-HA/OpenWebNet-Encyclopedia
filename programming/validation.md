@@ -75,7 +75,7 @@ Record at least:
 
 Stop if no catalogue item or firmware can be justified. If several SKUs remain but share the same relevant firmware capability, validation may continue only with that common capability; do not claim a unique SKU.
 
-See [Device Identity](../diagnostics/dim1-device-identity.md) and [Physical Device](../device-model/physical-device.md).
+See [Device Identity](../diagnostics/dim1-device-identity.md) and [Physical Device](../device-model/physical-devices.md).
 
 ## 2. Resolve the Module and internal slot
 
