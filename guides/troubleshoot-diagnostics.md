@@ -17,6 +17,20 @@ Classify incomplete discovery or interview results without converting silence, o
 | wrong product match | item mapping, brand/line, firmware, and SKU ambiguity |
 | local-button timeout | installer interaction, 300-second window, Device capability |
 
+## Reproduce the request
+
+Troubleshooting begins with the frame that was supposed to produce the missing response:
+
+| Missing evidence | Request to reproduce |
+| --- | --- |
+| Device IDs | release with `*[WHO]*12*0##`, then send `*#[WHO]*0*13##` |
+| addressed identity | `*#[WHO]*[WHERE]*1##` |
+| full interview | `*[WHO]*10#[ID]*0##` or `*#[WHO]*[WHERE]*0##` |
+| local interview | `*[WHO]*5*0##`, then perform the local interaction |
+| detailed properties | after resolving Modules, send `*#[WHO]*0*38#0##` |
+
+Preserve the exact request, all returned frames, their direction and order, and the timer that ended collection. Do not troubleshoot a parsed value without retaining the request that elicited it.
+
 ## Procedure
 
 1. Confirm the transport session and authentication.
