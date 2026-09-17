@@ -18,7 +18,7 @@ Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*W
 
 `WHAT 0`–`31` provide the ordinary Lighting vocabulary, including ON/OFF, discrete dimmer levels, timed ON, blinking and relative dimming. Fine level control and other structured values are carried by Lighting-specific `DIMENSION` operations.
 
-Lighting uses the SCS A/PL address family, with point-to-point, environment, group, general and advanced forms. Address syntax and event expansion are described in [`addressing.md`](addressing.md).
+Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment, group, general and advanced forms. Address syntax and event expansion are described in [`addressing.md`](addressing.md).
 
 Lighting Management is a distinct protocol namespace under [`WHO 24`](../who-24-lighting-management/). Diagnostic discovery and configuration of Lighting-capable Devices belong to the diagnostic protocol rather than to functional `WHO 1` traffic.
 
