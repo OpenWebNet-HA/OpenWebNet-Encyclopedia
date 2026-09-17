@@ -57,16 +57,16 @@ Some of these identifiers are correlated by structure and behavior, but correlat
 
 `OPEN.db` `DIMENSION 1` uses `OBJECT_MODEL`, `N_CONF`, `BRAND`, and `LINE`.
 
-Supported catalogue counterparts are:
+Supported counterparts and interpretations are:
 
-| Diagnostic field | Catalogue field | Status |
+| Diagnostic field | Catalogue/documentation counterpart | Status |
 | --- | --- | --- |
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | Corroborated |
 | `BRAND` | `EN_BRAND.brand_modobj` | Corroborated |
 | `LINE` | `EN_LINE.line_modobj` | Corroborated |
-| `N_CONF` | no established catalogue field | Unresolved |
+| `N_CONF` | physical configurator positions shown in product documentation | Corroborated across documented Devices; no direct `MHCatalogue.db` field identified |
 
-`N_CONF` retains its `OPEN.db` label but is not assigned a broader semantic category.
+`OPEN.db` describes `N_CONF` as the configurator number / number of physical configurators. Product diagrams for Devices including `F420`, `F429`, and `H4652/3` independently match their `N_CONF` values to the number of physical configurator positions. Treat it as a hardware-interface count, not as a Module, Object, Virgin Object, or firmware classification.
 
 ### Diagnostic Object identity
 
