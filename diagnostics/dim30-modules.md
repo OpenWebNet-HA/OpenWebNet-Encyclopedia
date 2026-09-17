@@ -1,6 +1,6 @@
 # `DIMENSION 30`: Modules and Objects
 
-`DIMENSION 30` reports the Object assigned to a firmware-exposed Module and whether that assignment is configured.
+`DIMENSION 30` reports the configured Object or unconfigured Virgin Object associated with a firmware-exposed Module, together with its configured state.
 
 ## Frame
 
@@ -9,7 +9,7 @@
 | Field | Range in `OPEN.db` | Meaning |
 | --- | ---: | --- |
 | `SLOT` | `1`–`255` | numeric internal slot |
-| `KEYO` | `1`–`65535` | Object number |
+| `KEYO` | `1`–`65535` | Object or Virgin Object number, selected by `STATE` |
 | `STATE` | `0`–`1` | unconfigured/configured state |
 
 Use **Module** for the logical container and **internal slot** for `SLOT`. `OPEN.db` uses the legacy label “ko slot”; this documentation retains that wording only when quoting or naming source fields.
@@ -19,10 +19,11 @@ Use **Module** for the logical container and **internal slot** for `SLOT`. `OPEN
 | Diagnostic field | Catalogue concept | Status |
 | --- | --- | --- |
 | `SLOT` | `EN_SLOTS.first_slot` placement | structurally corroborated |
-| `KEYO` | `EN_KEY_OBJECT.key_object` | structurally and behaviorally corroborated |
+| `KEYO`, when `STATE = 1` | `EN_KEY_OBJECT.key_object` | structurally and behaviorally corroborated |
+| `KEYO`, when `STATE = 0` | `EN_VIRGIN_OBJECT.virgin_key_object` | structurally and behaviorally corroborated |
 | `STATE` | installed runtime state | direct database label; no single catalogue column equivalent |
 
-`KEYO` is not `EN_KEY_OBJECT.id_key_object`. The former is the exposed Object number; the latter is an internal catalogue row key.
+`KEYO` selects one of two external number spaces according to `STATE`. It is not the internal catalogue key `EN_KEY_OBJECT.id_key_object` or `EN_VIRGIN_OBJECT.id_virgin_key_object`, even where a particular database revision happens to assign equal numeric values.
 
 Likewise, `SLOT` is not `EN_SLOTS.id_slot`. Diagnostic `SLOT` is a Device-local position correlated with catalogue placement such as `EN_SLOTS.first_slot`; `id_slot` identifies a database association row.
 
@@ -30,18 +31,25 @@ Likewise, `SLOT` is not `EN_SLOTS.id_slot`. Diagnostic `SLOT` is a Device-local 
 
 1. Group records by Physical Device interview.
 2. Use `SLOT` as the Device-local internal-slot key.
-3. Resolve `KEYO` against `EN_KEY_OBJECT.key_object`.
-4. retain `STATE` even when the Object is known.
-5. Attach `DIMENSION 32` address data using the same internal slot.
-6. Attach `DIMENSION 35` configuration values only when both Device and internal slot match.
+3. When `STATE = 1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`.
+4. When `STATE = 0`, resolve `KEYO` against `EN_VIRGIN_OBJECT.virgin_key_object`.
+5. Use the resolved Virgin Object and its catalogue associations to derive the unconfigured Module's functional role and permitted Object set.
+6. Retain `STATE` alongside the resolved record so an Object and Virgin Object are never conflated.
+7. Attach `DIMENSION 32` address data using the same internal slot.
+8. Attach `DIMENSION 35` configuration values only when both Device and internal slot match.
 
 Do not renumber internal slots to match a UI’s visible Module numbering. MyHOME_Suite can hide or relabel slots, and observed scenario Devices show UI numbering that differs from the numeric diagnostic position.
 
 ## Configured and unconfigured Modules
 
-`STATE 1` indicates configured and `STATE 0` indicates unconfigured according to `OPEN.db`. An unconfigured record is still meaningful: it can expose a Virgin-Object/template state or a supported Module position.
+`STATE 1` indicates configured and `STATE 0` indicates unconfigured according to `OPEN.db`. The meaning of `KEYO` changes with that state:
 
-The diagnostic frame reports an Object number even when `STATE` is false. Whether that number represents a Virgin Object, default Object, placeholder, or Device-specific unconfigured state must be established for the particular firmware. Do not globally join it to `EN_VIRGIN_OBJECT.virgin_key_object` merely because the numbers match.
+| `STATE` | `KEYO` namespace | Interpretation |
+| ---: | --- | --- |
+| `1` | `EN_KEY_OBJECT.key_object` | Object selected for the Module |
+| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | Virgin Object describing the unconfigured Module's functional role |
+
+An unconfigured Module is therefore not unidentified or semantically empty. Its Virgin Object describes the role exposed by that Module before an Object is selected. `AS_OBJECT_VIRGIN_OBJECT` relates the Virgin Object to the Objects into which it can be configured; firmware and slot associations further constrain availability on the resolved Physical Device.
 
 Catalogue capability and runtime state answer different questions:
 
@@ -50,7 +58,7 @@ Catalogue capability and runtime state answer different questions:
 | `EN_FIRMWARE.slots` | number of internal slots declared by a firmware definition |
 | `EN_SLOTS` and `AS_OBJECT_FIRMWARE` | Objects permitted or designated at an internal slot |
 | Virgin-Object associations | configurable template and allowed Object set |
-| `DIMENSION 30` | Object and configured state currently reported by the installed Device |
+| `DIMENSION 30` | configured Object or unconfigured Virgin Object currently reported by the installed Device |
 | MyHOME_Suite UI | visible numbering, enabled state, and editability in that application context |
 
 ## Example interpretation
@@ -62,9 +70,9 @@ Observed Device `00C58E91`, correlated with item model `107` and firmware defini
 | `1` | `6` | yes | Light actuator |
 | `2` | `6` | yes | Light actuator |
 | `3` | `400` | yes | Light control |
-| `4` | `500` | no | unconfigured/virgin state |
+| `4` | `500` | no | Automation double command Virgin Object |
 
-This table is an interpretation of observed Device state, not a raw transcript or a universal four-slot schema.
+For internal slot `4`, `STATE = 0` selects the Virgin Object namespace. `EN_VIRGIN_OBJECT.virgin_key_object = 500` resolves to “Automation double command virgin”; there is no ordinary `EN_KEY_OBJECT.key_object = 500` in this catalogue revision. This table is an interpretation of observed Device state, not a raw transcript or a universal four-slot schema.
 
 The catalogue independently corroborates the four-slot capability: firmware `157` offers actuator Objects at internal slots `1` and `2`, command/scenario Objects at slots `3` and `4`, Automation relay Virgin Object `510` at slots `1` and `2`, and Automation double-command Virgin Object `500` at slots `3` and `4`.
 
