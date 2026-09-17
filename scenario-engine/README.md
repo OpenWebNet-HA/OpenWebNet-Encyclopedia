@@ -18,8 +18,12 @@ The canonical sources for this section are the two ScenarioDevices databases pre
 | Subject | Page |
 | --- | --- |
 | Database roles, schema, relationships, and revision differences | [Database Model](database-model.md) |
+| Scenario roles and cross-role matching identifiers | [Categories and Matching](categories-and-matching.md) |
 | Resolving systems, Objects, commands, and parameters | [Capability Resolution](capability-resolution.md) |
+| Parameter types, operators, domains, and composite values | [Parameters](parameters.md) |
 | Interpreting and rendering stored command templates | [Frame Templates](frame-templates.md) |
+| Functional/category coverage and source-revision delta | [Capability Coverage](capability-coverage.md) |
+| Established action pipeline and runtime boundaries | [Execution Model](execution-model.md) |
 | Evidence limits and questions requiring further investigation | [Open Questions](open-questions.md) |
 
 ## Canonical hierarchy
@@ -51,6 +55,8 @@ These IDs are local to each ScenarioDevices file. They are not `WHO`, `WHAT`, ca
 | `ScenarioDevices-programdata.sqlite` | 27 | 42 | 151 | 40 | none |
 
 The files overlap substantially but are not byte-identical or row-identical revisions. Documentation must identify which source supports a statement. A row present in one file must not automatically be described as universally available in the other.
+
+The larger `program-files` revision adds Virtual Key Card event capabilities and two Temperature Control actions absent from `programdata`. See [Capability Coverage](capability-coverage.md) for the exact delta.
 
 ## Capability path
 
