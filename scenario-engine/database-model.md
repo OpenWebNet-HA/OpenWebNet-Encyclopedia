@@ -9,7 +9,7 @@ The ScenarioDevices databases are compact SQLite capability catalogues used by t
 | `ScenarioDevices-program-files.sqlite` | larger capability set and the only revision with `ObjectSystems.FamilyId` |
 | `ScenarioDevices-programdata.sqlite` | closely related capability set without `FamilyId` |
 
-The filenames suggest different packaging roles, but the precise application selection rule is not yet established.
+The repository filenames record their original installation locations: the larger file came from `Program Files (x86)`, while the smaller file came from the shared `ProgramData` database directory. The precise application selection, synchronization, or precedence rule is not established.
 
 ## Tables
 
@@ -20,9 +20,9 @@ Groups Device Objects into named functional/category contexts.
 | Column | Notes |
 | --- | --- |
 | `Id` | local primary key |
-| `FamilyId` | present only in `program-files`; semantics require further correlation |
+| `FamilyId` | present only in `program-files`; consistently groups category rows into one local functional family |
 | `Name` | localization/resource key such as `miniScenarioSuite.automation.action` |
-| `CategoryFlag` | numeric category discriminator; names strongly suggest trigger/condition/action grouping, but numeric semantics remain provisional |
+| `CategoryFlag` | implementation-derived role category: primary/start event, complementary/stop event, condition, or action |
 
 ### Observed `FamilyId` grouping
 
