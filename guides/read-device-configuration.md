@@ -184,6 +184,186 @@ A display name does not replace the encoded value. Store both so that verificati
 
 Where the database supplies no unit or complete interpretation, do not invent one from the numeric range.
 
+## SQL examples for catalogue and cross-database resolution
+
+The following examples use SQLite named parameters. When the files are separate, open one connection and attach the others explicitly:
+
+```sql
+ATTACH DATABASE 'MHCatalogue.db' AS catalogue;
+ATTACH DATABASE 'OPEN.db' AS open_ref;
+ATTACH DATABASE 'rules.db3' AS rule_db;
+```
+
+Adjust paths to the application installation. Schema aliases make the source of every identifier explicit.
+
+### Resolve Device identity
+
+Bind the established `DIMENSION 1` values. VALUE 2 is deliberately absent because its semantics remain unresolved.
+
+```sql
+SELECT
+    i.id_item,
+    d.id_device,
+    d.name AS device_description,
+    d.code AS sku,
+    b.brand_name,
+    l.line_name AS collection_name
+FROM catalogue.AS_ITEM_SYSTEM AS ais
+JOIN catalogue.EN_ITEM AS i
+  ON i.id_item = ais.id_item
+JOIN catalogue.EN_DEVICE AS d
+  ON d.id_item = i.id_item
+LEFT JOIN catalogue.EN_BRAND AS b
+  ON b.id_brand = d.id_brand
+LEFT JOIN catalogue.EN_LINE AS l
+  ON l.id_line = d.id_line
+WHERE ais.modobj = :dim1_value_1
+  AND (:dim1_value_3 IS NULL OR b.brand_modobj = :dim1_value_3)
+  AND (:dim1_value_4 IS NULL OR l.line_modobj = :dim1_value_4)
+ORDER BY d.name, b.brand_name, l.line_name, d.code;
+```
+
+### Resolve an Object or Virgin Object
+
+Use `STATE` to choose the namespace; do not join the same `KEYO` to both tables as though the numbers were interchangeable.
+
+```sql
+SELECT id_key_object, key_object, descr
+FROM catalogue.EN_KEY_OBJECT
+WHERE :state = 1
+  AND key_object = :keyo;
+
+SELECT id_virgin_key_object, virgin_key_object, descr
+FROM catalogue.EN_VIRGIN_OBJECT
+WHERE :state = 0
+  AND virgin_key_object = :keyo;
+```
+
+For an unconfigured Module, retrieve the permitted configured Objects:
+
+```sql
+SELECT
+    k.id_key_object,
+    k.key_object,
+    k.descr
+FROM catalogue.AS_OBJECT_VIRGIN_OBJECT AS avo
+JOIN catalogue.EN_KEY_OBJECT AS k
+  ON k.id_key_object = avo.id_key_object
+WHERE avo.id_virgin_key_object = :id_virgin_key_object
+ORDER BY k.descr, k.key_object;
+```
+
+Intersect this candidate set with the resolved firmware and slot support before presenting it as selectable.
+
+### Resolve an indexed property and its effective domain
+
+```sql
+WITH applicable_conf AS (
+    SELECT c.*, 'object' AS source_scope
+    FROM catalogue.EN_CONF AS c
+    WHERE c.id_key_object = :id_key_object
+      AND c.id_firmware = 0
+
+    UNION ALL
+
+    SELECT c.*, 'firmware' AS source_scope
+    FROM catalogue.EN_CONF AS c
+    WHERE c.id_key_object = 0
+      AND c.id_firmware = :id_firmware
+),
+object_firmware AS (
+    SELECT id_object_firmware
+    FROM catalogue.AS_OBJECT_FIRMWARE
+    WHERE id_key_object = :id_key_object
+      AND id_firmware = :id_firmware
+)
+SELECT
+    c.source_scope,
+    c.id_conf,
+    c.conf_name,
+    c.descr,
+    c.idx,
+    c.id_conf_data_type,
+    c.hidden,
+    c.visible,
+    c.read_only,
+    r.value,
+    r.name AS range_name,
+    r."default" AS default_value,
+    r.min_value,
+    r.max_value,
+    r.step,
+    f.id_filter,
+    f.whole_range,
+    fr.range AS filtered_range
+FROM applicable_conf AS c
+LEFT JOIN catalogue.EN_CONF_RANGE AS r
+  ON r.id_conf = c.id_conf
+LEFT JOIN catalogue.EN_FILTER AS f
+  ON f.id_conf = c.id_conf
+ AND f.id_object_firmware IN (SELECT id_object_firmware FROM object_firmware)
+LEFT JOIN catalogue.EN_FILTER_RANGE AS fr
+  ON fr.id_filter = f.id_filter
+WHERE c.idx = :dimension_35_index
+ORDER BY c.source_scope, c.id_conf, r.progressive;
+```
+
+Several rows mean that more context or rule evaluation is required; they are not permission to choose the first match.
+
+### Correlate catalogue properties with `rules.db3`
+
+The two files do not share declared foreign keys. Correlate only the external Object number and configuration symbols whose semantics have already been established:
+
+```sql
+SELECT
+    r.KOBJECTS AS key_object,
+    r.N_RULES,
+    r."1_Parameter" AS controlling_property,
+    r.Condition,
+    r."2_Parameter" AS affected_property,
+    r.TrueCondition,
+    r.FalseCondition,
+    r.Condition_order
+FROM rule_db.rules AS r
+WHERE r.KOBJECTS = :key_object
+  AND (
+      r."1_Parameter" = :conf_name
+      OR r."2_Parameter" = :conf_name
+  )
+ORDER BY r.N_RULES, r.Condition_order;
+```
+
+Here `:key_object` is `EN_KEY_OBJECT.key_object`, not `id_key_object`.
+
+### Retrieve an `OPEN.db` address rule
+
+`MHCatalogue.db` and `OPEN.db` do not expose a declared cross-database foreign key for this lookup. Resolve the functional system first, establish its functional `WHO` from documented evidence, then query `OPEN.db` independently:
+
+```sql
+SELECT
+    s.id_system,
+    s.descr AS system_description,
+    s.who,
+    s.diag_who,
+    ar.id_address_rule,
+    ar.descr AS address_rule_description,
+    ar.address_rule_virt,
+    ar.address_rule_adv,
+    ar.level_4_rule,
+    ar.level_2_rule,
+    ar.validity_rule,
+    ar.offset_adv
+FROM open_ref.EN_SYSTEM AS s
+JOIN open_ref.AS_SYSTEM_ADDRESS_RULE AS sar
+  ON sar.id_system = s.id_system
+JOIN open_ref.EN_ADDRESS_RULE AS ar
+  ON ar.id_address_rule = sar.id_address_rule
+WHERE s.who = :functional_who
+ORDER BY ar.id_address_rule;
+```
+
+Do not join same-named or equal numeric IDs across the attached databases unless an independently established mapping supports that join.
+
 ## Focused configuration retrieval examples
 
 For complete goal-to-output workflows built on this resolution process, see:
