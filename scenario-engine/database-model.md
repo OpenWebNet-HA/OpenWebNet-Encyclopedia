@@ -24,6 +24,27 @@ Groups Device Objects into named functional/category contexts.
 | `Name` | localization/resource key such as `miniScenarioSuite.automation.action` |
 | `CategoryFlag` | numeric category discriminator; names strongly suggest trigger/condition/action grouping, but numeric semantics remain provisional |
 
+### Observed `FamilyId` grouping
+
+`FamilyId` appears only in the Program Files copy and consistently groups all category rows for one resource-key functional family:
+
+| `FamilyId` | Resource-key family |
+| ---: | --- |
+| `1` | Alarm |
+| `2` | Automation |
+| `3` | Auxiliaries |
+| `4` | Delay |
+| `5` | Hotel |
+| `6` | Lighting |
+| `7` | Scenarios |
+| `8` | Scheduled Scenarios |
+| `9` | Special Commands |
+| `10` | Temperature Control |
+| `11` | Time |
+| `12` | Virtual Key Card |
+
+This establishes `FamilyId` as a local scenario-editor family grouping. It does not establish equality with a functional `WHO`, `OPEN.db` system ID, catalogue family ID, or any other database namespace.
+
 ### `DeviceObjects`
 
 | Column | Notes |
