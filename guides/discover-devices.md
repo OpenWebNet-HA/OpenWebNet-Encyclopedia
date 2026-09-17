@@ -130,6 +130,65 @@ Collect `EN_DEVICE.code` from every candidate Device record surviving the item, 
 
 Reported firmware and hardware versions can narrow capability and reject incompatible candidates, but a shared firmware implementation does not by itself prove one SKU.
 
+## Reference algorithm
+
+The following pseudocode preserves suppression, retry, interview, and ambiguity as separate concerns:
+
+```text
+function build_inventory(diagnostic_who):
+    discovered = ordered_map()   # key: exact 8-character Device ID
+    round = 0
+
+    send("*[" + diagnostic_who + "]*12*0##")   # release prior scan state
+
+    while round < MAX_ENUMERATION_ROUNDS:
+        round += 1
+        responses = request_and_collect(
+            "*#[" + diagnostic_who + "]*0*13##",
+            first_response_timeout = 15 seconds,
+            further_response_timeout = configured scan window
+        )
+
+        new_ids = 0
+
+        for frame in responses:
+            if frame is a valid DIMENSION 13 response:
+                id = normalize_exact_32_bit_hex(frame.ID)
+                remember_address_evidence(discovered[id], frame.WHERE)
+
+                if id not previously seen:
+                    discovered[id] = new inventory candidate
+                    new_ids += 1
+
+                send("*[" + diagnostic_who + "]*11*" + id + "*0##")
+
+            else:
+                retain_as_scan_evidence(frame)
+
+        if new_ids == 0:
+            break
+
+    send("*[" + diagnostic_who + "]*12*0##")   # always release scan state
+
+    for id in discovered in first-seen order:
+        stream = request_and_collect_interview(
+            "*[" + diagnostic_who + "]*10#" + id + "*0##"
+        )
+        discovered[id].raw_interview = stream
+        discovered[id].identity = resolve_identity_without_first_row_wins(stream)
+
+    return every candidate, including partial and unresolved records
+```
+
+Implementation requirements:
+
+- Put the release operation in a `finally`-equivalent path so cancellation and transport errors do not intentionally leave Devices suppressed.
+- Deduplicate only by the exact 32-bit Device ID. Do not deduplicate by address, SKU, item, or Device description.
+- Preserve every address observed for an ID; conflicting addresses are evidence to investigate.
+- Bound the number of empty/non-progress rounds so a noisy bus cannot create an infinite scan.
+- Interview Devices serially unless captures establish that the selected gateway and diagnostic family safely support concurrency.
+- Store raw frames before parsing them so later resolver improvements can be applied without rescanning.
+
 ## Identifier boundaries
 
 | Runtime or catalogue value | Meaning |
