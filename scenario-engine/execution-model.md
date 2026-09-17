@@ -12,7 +12,7 @@ For an action with a literal OpenWebNet template, a safe application can:
 4. validate the target functional address under the stored or parsed `WHO`;
 5. validate and encode every Parameter;
 6. render and reparse the complete frame;
-7. send it through an authenticated command session;
+7. send it through the appropriate command session, authenticated where the selected gateway requires it;
 8. collect acknowledgement and functional state evidence where applicable;
 9. record the action result independently from the scenario's future control flow.
 
