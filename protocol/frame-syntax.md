@@ -1,4 +1,4 @@
-# Overview
+# Frame Syntax
 
 OpenWebNet frames are ASCII messages delimited by `*` and terminated by `##`. The meaning and permitted structure of individual fields depend on the frame family and selected `WHO`.
 
