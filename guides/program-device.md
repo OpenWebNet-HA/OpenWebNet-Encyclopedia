@@ -36,6 +36,74 @@ Collect the initial Device projection through Device `WHAT 4` or an explicit abo
 
 Virtual configuration is the umbrella for configuration performed through MyHOME_Suite. Advanced Object programming and virtual-configurator transfer are mechanisms within it.
 
+### SQL example: inspect the selected `OPEN.db` scenario
+
+Use the scenario label from the table above as `:scenario_label`:
+
+```sql
+SELECT
+    sc.id_scenario,
+    sc.scenario_label,
+    sc.descr AS scenario_description,
+    ss.sequence_order,
+    ss.repeated_sequence,
+    seq.id_sequence,
+    seq.sequence_label,
+    seq.descr AS sequence_description,
+    os.open_order,
+    os.mandatory_open,
+    os.repeated_open,
+    os.status4nack,
+    os.status4error,
+    o.id_open,
+    o.open_label,
+    o.open_string,
+    o.diag_open,
+    o.error_open
+FROM EN_SCENARIO AS sc
+JOIN AS_SCENARIO_SEQUENCE AS ss
+  ON ss.id_scenario = sc.id_scenario
+JOIN EN_SEQUENCE AS seq
+  ON seq.id_sequence = ss.id_sequence
+JOIN AS_OPEN_SEQUENCE AS os
+  ON os.id_sequence = seq.id_sequence
+JOIN EN_OPEN AS o
+  ON o.id_open = os.id_open
+WHERE sc.scenario_label = :scenario_label
+ORDER BY ss.sequence_order, os.open_order;
+```
+
+Retrieve the timeout transitions for the same scenario rather than hard-coding only the nominal path:
+
+```sql
+SELECT
+    sc.scenario_label,
+    ss.sequence_order,
+    seq.sequence_label,
+    o.open_label,
+    o.open_string,
+    t.timeout_label,
+    t."default" AS timeout_value,
+    t.type AS timeout_type,
+    tos.action,
+    tos.status4timeout
+FROM EN_SCENARIO AS sc
+JOIN AS_SCENARIO_SEQUENCE AS ss
+  ON ss.id_scenario = sc.id_scenario
+JOIN EN_SEQUENCE AS seq
+  ON seq.id_sequence = ss.id_sequence
+JOIN AS_TIMEOUT_OPEN_SEQUENCE AS tos
+  ON tos.id_sequence = seq.id_sequence
+JOIN EN_OPEN AS o
+  ON o.id_open = tos.id_open
+JOIN EN_TIMEOUT AS t
+  ON t.id_timeout = tos.id_timeout
+WHERE sc.scenario_label = :scenario_label
+ORDER BY ss.sequence_order, seq.id_sequence, o.id_open, t.id_timeout;
+```
+
+The database describes stored members and transitions. It does not eliminate the need for the capture-backed cautions in this guide, including the unresolved coordination of address and local-button selection.
+
 ## Advanced Object procedure
 
 1. Start the ID or local-interaction scenario.
