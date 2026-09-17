@@ -14,7 +14,7 @@
 
 Alarm traffic is not reducible to one armed/disarmed Boolean. A central-unit status request can produce several frames describing system mode, engagement, battery and mains conditions, active/divided zones, and alarm conditions before the terminating `ACK`.
 
-Zone-specific requests similarly report whether a selected zone is engaged or divided. Alarm events identify their scope through the `WHO 5` `WHERE` grammar, which is independent of Lighting/Automation A/PL addressing.
+Zone-specific requests similarly report whether a selected zone is engaged or divided. Alarm events identify their scope through the `WHO 5` `WHERE` grammar, which is independent of Lighting/Automation `A`/`PL` addressing.
 
 The published interface does not define a general-purpose modern security-control API. Implementations should therefore expose the documented states and events without inventing write semantics for status values that are only established as reports.
 
