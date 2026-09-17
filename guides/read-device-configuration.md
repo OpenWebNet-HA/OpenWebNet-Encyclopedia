@@ -184,6 +184,70 @@ A display name does not replace the encoded value. Store both so that verificati
 
 Where the database supplies no unit or complete interpretation, do not invent one from the numeric range.
 
+## Reference algorithm
+
+```text
+function read_device_configuration(selector, diagnostic_who):
+    interview = acquire_interview(selector, diagnostic_who)
+    device = resolve_device_identity(interview.DIMENSION_1,
+                                     interview.versions,
+                                     interview.DIMENSION_13)
+
+    modules = ordered_map()
+
+    for dim30 in interview.DIMENSION_30:
+        module = modules.get_or_create(dim30.SLOT)
+        module.raw_module_frame = dim30
+        module.configured = (dim30.STATE == 1)
+
+        if module.configured:
+            module.object = lookup_EN_KEY_OBJECT(dim30.KEYO)
+        else:
+            module.virgin_object = lookup_EN_VIRGIN_OBJECT(dim30.KEYO)
+            module.available_objects = resolve_permitted_objects(
+                module.virgin_object, device.firmware, dim30.SLOT
+            )
+
+    for dim32 in interview.DIMENSION_32:
+        module = modules.get_or_create(dim32.SLOT)
+        module.address = decode_address_in_resolved_system_context(dim32)
+
+    detailed = send_and_collect("*#[" + diagnostic_who + "]*0*38#0##",
+                                response_window = 8 seconds)
+
+    for dim35 in detailed.DIMENSION_35:
+        module = modules.get_or_create(dim35.SLOT)
+        definitions = resolve_EN_CONF_union(
+            module.object.id_key_object,
+            device.firmware.id_firmware,
+            dim35.INDEX
+        )
+
+        property = disambiguate_with_filters_conditions_and_rules(definitions)
+
+        if exactly_one(property):
+            module.properties.append(
+                decode_and_retain_raw(property, dim35.VAL_PAR)
+            )
+        else:
+            module.unknown_or_ambiguous_properties.append(
+                raw_tuple_and_candidates(dim35, definitions)
+            )
+
+    attach_DIMENSION_310_separately(modules, detailed)
+    attach_errors_without_overwriting_valid_values(interview, detailed, modules)
+
+    return {
+        raw evidence,
+        identity candidates,
+        modules,
+        completion status,
+        per-field resolution status
+    }
+```
+
+Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for an internal slot absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
+
 ## SQL examples for catalogue and cross-database resolution
 
 The following examples use SQLite named parameters. When the files are separate, open one connection and attach the others explicitly:
