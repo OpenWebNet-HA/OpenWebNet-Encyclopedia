@@ -8,8 +8,7 @@ These pages are procedures, not alternative protocol specifications. When a guid
 
 | Goal | Guide |
 | --- | --- |
-| Build an inventory of installed Devices | [Discover Devices](discover-devices.md) |
-| Resolve one response to a catalogue Device | [Identify a Device](identify-device.md) |
+| Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
 | Determine whether Modules are configured | [Inspect Configuration State](inspect-configuration-state.md) |
 | Read Objects, addresses, and indexed values | [Read Device Configuration](read-device-configuration.md) |
 | Map an indexed value to its catalogue definition | [Resolve a Configuration Property](resolve-configuration-property.md) |
