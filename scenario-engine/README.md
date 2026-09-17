@@ -98,11 +98,18 @@ Established directly:
 - row counts in the canonical files;
 - differences between the two source revisions.
 
-Partially interpreted:
+Implementation-derived:
 
-- the practical meaning of `CategoryFlag`, `WhereType`, parameter `Type`, and `OperatorType`;
-- the roles of matching IDs;
-- commands with symbolic or absent frames;
-- how MyHOME_Suite chooses between overlapping rows in the two files.
+- `CategoryFlag` separates primary/start events, complementary/stop events, conditions, and actions;
+- `FamilyId` groups category rows into local scenario-editor functional families;
+- matching IDs correlate selected Lighting and Hotel concepts across scenario roles;
+- literal templates cover functional `WHO 0`, `1`, `2`, `4`, and `14`.
+
+Still partially interpreted or unknown:
+
+- the exact application enumerations for `WhereType`, parameter `Type`, and `OperatorType`;
+- how matching groups are used by the editor or runtime;
+- the execution mapping for symbolic and frame-absent Commands;
+- how MyHOME_Suite selects, synchronizes, or prioritizes the two source files.
 
 Unknown values remain unknown until database correlations, application behavior, public documentation, or observed execution establishes their semantics.
