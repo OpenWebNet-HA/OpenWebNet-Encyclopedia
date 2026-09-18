@@ -25,6 +25,8 @@ The files declare this hierarchy:
 | Command to Device Object | `Commands.DeviceObject_Id → DeviceObjects.Id` |
 | Parameter to Command | `Parameters.Command_Id → Commands.Id` |
 
+![ScenarioDevices capability hierarchy](../assets/diagrams/scenario-capability.svg)
+
 Use local row primary keys only inside one source file.
 
 `ObjectId`, `ObjectMatchingId`, `CommandId`, and `CommandMatchingId` are scenario-engine identifiers. They are not catalogue Object numbers or OpenWebNet fields without a separately established correlation.

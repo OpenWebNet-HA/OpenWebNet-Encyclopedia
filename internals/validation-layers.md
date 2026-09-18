@@ -17,6 +17,10 @@ MyHOME Suite validation spans several stores. Transport ranges, catalogue domain
 
 The effective domain is the intersection of all applicable layers. A broad `OPEN.db` transport range never overrides a narrower catalogue rule.
 
+![Configuration ownership and validation model](../assets/diagrams/configuration-validation.svg)
+
+The diagram separates polymorphic property ownership from the contextual filters, slot conditions, and conversions that narrow or transform the base domain.
+
 ## Context first
 
 Validation begins only after resolving the Physical Device, firmware, internal slot, current Object or Virgin Object, target Object, and applicable Object/firmware association.

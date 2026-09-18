@@ -4,7 +4,7 @@ This directory contains repository-native diagrams used by the documentation.
 
 SVG is the canonical format. Diagrams must be self-contained, contain no external resources or scripts, and remain readable when rendered by GitHub.
 
-## Pending diagram files
+## Installed diagram files
 
 | Filename | Intended page | Purpose | SHA-256 of generated file |
 | --- | --- | --- | --- |
@@ -14,4 +14,4 @@ SVG is the canonical format. Diagrams must be self-contained, contain no externa
 | `scenario-capability.svg` | `internals/scenario-capability-loading.md` | ScenarioDevices declared hierarchy and revision boundary | `49b55d4d03b9bb0aba68cfb659e6bcee1fbf93f5247e024d8acf7d3dd4e0a00f` |
 | `cross-database-correlation.svg` | `reverse-engineering/cross-database-correlation.md` | staged semantic correlation across traffic and independent source models | `805caacd2b510b8c04d1f7bf6806a784ecc725bdf1e88a107f5cda4b5524ca0a` |
 
-The documentation pages should reference these files only after the uploaded content matches the recorded hashes. PNG renderings are review artifacts and are not canonical repository assets.
+The uploaded SVG content matches the recorded hashes and is referenced from the intended documentation pages. PNG renderings are review artifacts and are not canonical repository assets.

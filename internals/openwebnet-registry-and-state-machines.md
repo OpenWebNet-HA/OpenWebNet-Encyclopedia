@@ -16,6 +16,10 @@
 
 An `EN_SYSTEM` row proves namespace knowledge. It does not prove that `EN_OPEN` contains every functional command for that `WHO`.
 
+![OPEN.db systems, frames, and workflow registry](../assets/diagrams/openwebnet-registry.svg)
+
+The association tables carry ordering, repetition, direction-sensitive composition, and timeout context. Those properties do not belong to the frame template alone.
+
 ## State-machine assembly
 
 A management operation is resolved in two stages:
