@@ -59,7 +59,6 @@ This register summarizes relationships whose evidence affects more than one docu
 
 ## Explicit unknowns
 
-- `DIMENSION 1` VALUE 2;
 - generic meaning of `DIMENSION 310.VAL_PAR`;
 - exact `DIMENSION 4` and `5` configurator encoding;
 - runtime purpose of ScenarioDevices matching identifiers;

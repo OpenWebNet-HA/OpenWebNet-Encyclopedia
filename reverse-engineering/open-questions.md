@@ -4,10 +4,6 @@ These questions require evidence not currently present in the canonical database
 
 ## Diagnostic and programming fields
 
-### `DIMENSION 1` VALUE 2
-
-Observed values do not establish whether this field represents a hardware class, platform, form factor, or another implementation property. It must remain unlabeled until a stable database or product correlation is found.
-
 ### `DIMENSION 32.SYS`
 
 `MHCatalogue.db.EN_SYSTEM.sys_modobj` is the leading candidate. A non-Lighting capture is required to distinguish it from database system IDs and functional `WHO` values.

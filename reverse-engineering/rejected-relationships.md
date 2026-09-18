@@ -18,7 +18,7 @@ Rejected interpretations are retained because they are easy to rediscover from n
 
 | Proposed interpretation | Reason rejected or constrained |
 | --- | --- |
-| `DIMENSION 1` VALUE 2 is an Object or Virgin Object | observed values and catalogue structure do not establish the namespace |
+| `DIMENSION 1.N_CONF` is an Object or Virgin Object | `N_CONF` is the number of physical configurator positions; it is a count, not an Object namespace |
 | `DIMENSION 32.SYS` is automatically a functional `WHO` | system grouping and candidate values differ; no direct evidence |
 | diagnostic outer `WHERE` always equals slot `1` address | observed correlation is not a universal rule |
 | every Module returns `DIMENSION 32` | observed command-only layouts and optional response behavior contradict universality |
