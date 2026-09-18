@@ -1,4 +1,4 @@
-# `WHO 4` — Temperature Control
+# `WHO 4` - Temperature Control
 
 `WHO 4` defines the OpenWebNet Temperature Control system. It covers zones and probes, central-unit operating modes, measured and target temperatures, local offsets, fan-coil speed, valve and actuator state, holiday operation, and split-unit control.
 
