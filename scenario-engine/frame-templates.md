@@ -60,10 +60,16 @@ function render(command, selected_where, supplied_values):
     else if selected_where was supplied:
         reject unused input
 
-    for parameter in command.Parameters:
-        value = supplied value or established stored constant
-        validate type, operator, min, max, and step where interpreted
-        replace only the complete declared placeholder
+    groups = resolve_parameters(command), grouped by complete placeholder
+    for group in groups:
+        if group has no placeholder:
+            retain it as editor metadata; do not substitute it
+            continue
+        values = supplied values or established stored constants
+        validate each component using its interpreted type and domain
+        encode the complete group using the established scalar/composite rule
+        replace the declared placeholder once
+        reject the group if its component order or encoding is unresolved
 
     require no unresolved placeholder remains
     serialize and parse the result again

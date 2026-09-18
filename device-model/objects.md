@@ -78,7 +78,7 @@ A functional-system mapping can be made when the Object’s semantics, functiona
 
 `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##`
 
-`KEYO` is described as the “device object model” and has range `1`–`65535`. In the catalogue, `EN_KEY_OBJECT.key_object` supplies the corresponding Object number.
+`KEYO` is described as the “device object model” and has range `1`–`65535`. When `STATE = 1`, `EN_KEY_OBJECT.key_object` supplies the corresponding configured Object number. When `STATE = 0`, resolve against `EN_VIRGIN_OBJECT.virgin_key_object` instead; see [Virgin Objects](virgin-objects.md).
 
 This mapping is structurally and behaviorally supported, but there is no foreign key between the two databases. A decoder should retain both the raw `KEYO` value and the resolved catalogue Object record.
 
@@ -166,7 +166,7 @@ An Object can own reusable configuration definitions. In `EN_CONF`, Object-scope
 - an `id_key_object` resolving to `EN_KEY_OBJECT`
 - `id_firmware = 0`.
 
-The canonical database contains 1,420 Object-scoped configuration rows. Firmware-scoped configuration uses the complementary pattern described in [`configuration.md`](configuration.md).
+The canonical database contains 1,420 Object-scoped configuration rows. Firmware-scoped configuration uses the complementary pattern described in [Configuration](configuration.md).
 
 ## Light-control-only Devices
 

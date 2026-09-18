@@ -26,7 +26,7 @@ Start one of these selection workflows:
 | diagnostic address | `*#[WHO]*[WHERE]*0##` |
 | local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction |
 
-A Device ID is represented as eight hexadecimal characters.
+A Device ID is displayed as eight hexadecimal characters. Encode the frame field as the decimal 32-bit transport value; do not send the hexadecimal display string.
 
 Collect the initial stream in arrival order. The frames needed by this guide are:
 
@@ -160,25 +160,13 @@ If `rules.db3` is separate, attach it before checking for Object-specific depend
 ```sql
 ATTACH DATABASE 'rules.db3' AS rule_db;
 
-SELECT
-    KOBJECTS,
-    N_RULES,
-    "1_Parameter" AS controlling_property,
-    Condition,
-    "2_Parameter" AS affected_property,
-    TrueCondition,
-    FalseCondition,
-    Condition_order
+SELECT *
 FROM rule_db.rules
 WHERE KOBJECTS = :key_object
-  AND (
-      upper("1_Parameter") LIKE '%CEN%'
-      OR upper("1_Parameter") LIKE '%BUTTON%'
-      OR upper("2_Parameter") LIKE '%CEN%'
-      OR upper("2_Parameter") LIKE '%BUTTON%'
-  )
 ORDER BY N_RULES, Condition_order;
 ```
+
+The canonical rule database covers Objects `95`, `96`, and `184`; it has no CEN-Object rules. Load complete rule groups for any supported Object and resolve `$N` operands to `EN_CONF.idx`. Do not search operands for names such as `CEN` or `BUTTON`.
 
 Here `:key_object` is the external `EN_KEY_OBJECT.key_object`, not `id_key_object`. This is a semantic cross-database correlation; the files declare no foreign key between those columns.
 
@@ -317,6 +305,10 @@ Return one entry per applicable Module:
 | raw properties | exact `INDEX` and `VAL_PAR` tuples |
 | status | resolved, inferred, ambiguous, not reported, or error |
 | provenance | selected `id_key_object` and `id_conf` records |
+
+## Close the diagnostic session
+
+After detailed collection, send `*[WHO]*6*0##` before selecting another Device. Put cleanup in a finally-equivalent path and record whether it was sent or transport failure prevented it. `WHAT 4` ends the initial Device transmission; it does not replace this outer close.
 
 ## Expected result
 

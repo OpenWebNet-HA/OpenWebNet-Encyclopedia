@@ -42,7 +42,7 @@ Resolve this evidence into a complete snapshot containing:
 - indexed and special properties;
 - raw frames and field-level resolution status.
 
-Store the snapshot before opening the programming scenario. It is both the validation input and the recovery baseline; it is not proof that the Device can automatically be restored after a failed reset.
+Close the diagnostic context with `*[WHO]*6*0##` after collection, then store the snapshot before opening the programming scenario. It is both the validation input and the recovery baseline; it is not proof that the Device can automatically be restored after a failed reset.
 
 ## Start the programming scenario and acquire its projection
 
@@ -214,43 +214,52 @@ function program_device(selector, intended_state):
         stop before entering programming
 
     scenario = select canonical scenario from selection method
-    projection = start scenario and collect through its projection terminator
-    require projection identity and firmware are compatible with validation
-
     journal = durable append-only programming record
-    state = "selected"
+    state = "not selected"
 
+    # send_and_process_active_sequence journals before/after transmission,
+    # drains incoming responses and applies active NACK/error/timeout transitions
+    # before another payload frame is allowed. Fatal results stop transmission.
     try:
+        projection = start scenario and collect through its projection terminator
+        require projection identity and firmware are compatible with validation
+        state = "selected"
+
         if scenario uses advanced Objects:
-            send_and_journal(reset_all)
+            send_and_process_active_sequence(reset_all)
             state = "reset sent"
 
             for assignment in ordered_object_assignments:
-                send_and_journal(assignment)
+                send_and_process_active_sequence(assignment)
 
             for address in ordered_addresses:
-                send_and_journal(address)
+                send_and_process_active_sequence(address)
 
             for property in ordered_properties:
-                send_and_journal(property)
+                send_and_process_active_sequence(property)
 
-            send_and_journal(programmer_end)
+            send_and_process_active_sequence(programmer_end)
+            await and classify the advanced-transfer terminal result
+            proceed only if the scenario permits the next sequence
 
         if scenario uses virtual configurators:
-            send_and_journal(configurator_positions_1_to_6)
+            send_and_process_active_sequence(configurator_positions_1_to_6)
             if positions_7_to_12 are established and required:
-                send_and_journal(configurator_positions_7_to_12)
+                send_and_process_active_sequence(configurator_positions_7_to_12)
 
         collect and classify every response, error, warning, NACK, and timeout
 
         if scenario reaches its close state:
-            send_and_journal(outer_session_close)
+            send_and_process_active_sequence(outer_session_close)
 
     except transport_loss or cancellation:
         record last definitely transmitted frame
         record last acknowledged or observed Device state
         do not resume at the next unsent frame
         classify Device state as indeterminate
+    finally:
+        if programming remains active and transport is available:
+            follow the defined abort/close transition and record cleanup
 
     verification = start a new diagnostic session
     compare complete effective state with intended_state
@@ -268,7 +277,7 @@ The journal should be durable before a destructive frame is sent. At minimum it 
 | `WHAT 51` or `WHAT 52` | interpret in the active sequence; do not assign one global meaning |
 | structured programming error | attach it to the affected operation and stop or transition as defined |
 | warning | retain it; continue only when the scenario and safety policy allow |
-| `NACK` | classify the active frame as rejected and stop the replacement transfer |
+| `NACK` | apply the active sequence transition; this guide conservatively stops on rejection unless the explicitly handled parameter-warning path permits continuation |
 | timeout before destructive work | abort without changing the Device |
 | timeout after reset or a write | mark Device state indeterminate; close if safe, then diagnose |
 | transport loss | never assume the last write was or was not applied |

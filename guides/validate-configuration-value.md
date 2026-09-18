@@ -40,6 +40,8 @@ Then request the detailed values:
 
 Collect repeated `DIMENSION 35`, applicable `DIMENSION 39` errors, and any `DIMENSION 310` response during the eight-second response window.
 
+Close the diagnostic session with `*[WHO]*6*0##` after detailed collection, including cleanup on failure when the transport permits.
+
 Keep the current-state snapshot immutable for the rest of validation. If the interview or detailed read is partial, record that limitation and fail closed whenever missing state can affect the candidate value.
 
 ## Procedure
@@ -227,11 +229,13 @@ LEFT JOIN catalogue.EN_CONDITION AS c
 LEFT JOIN catalogue.EN_CONV_RULE AS cr
   ON cr.id_conv_rule = c.id_conv_rule
 WHERE s.id_object_firmware = :id_object_firmware
-  AND :internal_slot >= s.first_slot
+  AND s.id_slot = :resolved_id_slot
 ORDER BY s.first_slot, sc.id_condition;
 ```
 
-Then retrieve any external rules that refer to the same external Object number and configuration symbol:
+`:resolved_id_slot` is the exact catalogue placement already resolved for the Module. A comparison such as `internal_slot >= first_slot` would incorrectly include unrelated earlier placements; multi-slot occupancy needs its established Object-specific rule.
+
+Then retrieve complete external rule groups for the same external Object number:
 
 ```sql
 SELECT
@@ -245,14 +249,10 @@ SELECT
     Condition_order
 FROM rule_db.rules
 WHERE KOBJECTS = :key_object
-  AND (
-      "1_Parameter" = :conf_name
-      OR "2_Parameter" = :conf_name
-  )
 ORDER BY N_RULES, Condition_order;
 ```
 
-This correlation is semantic: `:key_object` is `EN_KEY_OBJECT.key_object`, not the catalogue primary key `id_key_object`. No declared foreign key connects these databases.
+This correlation is semantic: `:key_object` is `EN_KEY_OBJECT.key_object`, not the catalogue primary key `id_key_object`. Resolve `$N` references in the operands to configuration index `N`, not to `conf_name`. Evaluate complete ordered rule groups rather than selecting isolated rows by display name. No declared foreign key connects these databases.
 
 Finally, inspect the actual `OPEN.db` parameter definition used by the selected write frame:
 

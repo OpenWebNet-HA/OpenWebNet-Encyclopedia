@@ -30,7 +30,7 @@ The exact `#`-parameterized form is part of `WHAT`; parsing only the leading num
 
 The priority payload contains a set/clear selector and Safety, High, and Medium flags. A zero flag leaves that priority unchanged. This is a bit-selection operation, not a single ordinal priority number.
 
-## Command-translation reports — `WHAT 1000`
+## Command-translation reports - `WHAT 1000`
 
 The published Automation flows use `1000#INNER_WHAT...` when reporting translated commands for point targets. Base operations can appear as:
 
@@ -48,6 +48,6 @@ Values `10`–`14` also appear as `DIMENSION 10` shutter-state values: Stop, Up,
 
 ## Evidence basis
 
-The command table, step and priority model, collective event behavior, and translation frames come from [`WHO_2.pdf`](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
+The command table, step and priority model, collective event behavior, and translation frames come from [WHO 2 specification](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
 
-See [`dimensions.md`](dimensions.md), [`addressing.md`](addressing.md), and the common [`WHAT` model](../../protocol/what.md).
+See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and the common [`WHAT` model](../../protocol/what.md).

@@ -8,9 +8,9 @@ The namespace is heterogeneous: the selected `WHERE` identifies a device family,
 
 | Subject | Page |
 | --- | --- |
-| Commands and command parameters | [`what.md`](what.md) |
-| Device families and `WHERE` grammar | [`addressing.md`](addressing.md) |
-| Measurements, totalizers, actuator state, Stop&Go and historical data | [`dimensions.md`](dimensions.md) |
+| Commands and command parameters | [`WHAT` Reference](what.md) |
+| Device families and `WHERE` grammar | [Addressing](addressing.md) |
+| Measurements, totalizers, actuator state, Stop&Go and historical data | [`DIMENSION` Reference](dimensions.md) |
 
 ## Device families
 
@@ -22,7 +22,7 @@ The published `WHO 18` model identifies three address families:
 | Energy measurement / central unit | `5N` | `N = 1–255` | F520, F523, 3522 and corresponding Legrand devices |
 | Energy Management actuator | `7N#0` | `N = 1–255` | F522, F523 and corresponding Legrand devices |
 
-See [`addressing.md`](addressing.md) for the implications of these forms.
+See [Addressing](addressing.md) for the implications of these forms.
 
 ## Operation classes
 
@@ -51,4 +51,4 @@ Automatic active-power reporting is configured with `DIMENSION 1200`. Historical
 
 `WHO 18` is distinct from [`WHO 3`](../who-3-load-management/) Load Management and [`WHO 11`](../who-11-energy-distribution/) Energy Distribution. Their `WHAT`, `WHERE`, and `DIMENSION` namespaces are not interchangeable.
 
-For common frame syntax, see [`../../protocol/`](../../protocol/).
+For common frame syntax, see [Protocol](../../protocol/).

@@ -12,8 +12,8 @@ This page records Scenario Engine semantics that are not yet established strongl
 ## Category and family fields
 
 - Confirm the application's own labels for `CategoryFlag 0` and `1`; the data establishes primary/start and complementary/stop event categories, but not one universal public name.
-- Determine whether `FamilyId` maps to a functional family, editor family, localization family, or another internal namespace.
-- Explain the two Object System rows that can share a resource key but use different category flags.
+- The local editor-family grouping of `FamilyId` is established in [Database Model](database-model.md). Determine whether application code defines any additional cross-source mapping; equal values alone do not establish one.
+- Confirm the runtime/editor purpose of the established primary/complementary category pairs that share a resource key.
 
 ## Matching identifiers
 

@@ -14,7 +14,7 @@ The namespace provides five main capability groups.
 | Software identity | Read OpenWebNet firmware, kernel, and distribution versions |
 | Runtime state | Read elapsed uptime since the last start-up |
 
-The detailed payload definitions are documented in [`dimensions.md`](dimensions.md).
+The detailed payload definitions are documented in [`DIMENSION` Reference](dimensions.md).
 
 ## Command-session behavior
 
@@ -46,11 +46,11 @@ A decoder should consequently treat a `WHO 13` value frame as a gateway property
 
 Three related properties exist:
 
-- `DIMENSION 0` — time plus time zone;
-- `DIMENSION 1` — day of week and calendar date;
-- `DIMENSION 22` — complete date and time in one payload.
+- `DIMENSION 0` - time plus time zone;
+- `DIMENSION 1` - day of week and calendar date;
+- `DIMENSION 22` - complete date and time in one payload.
 
-All three are writable. `DIMENSION 22` is the natural operation for atomic clock synchronisation because the time and calendar components travel in the same frame.
+All three are writable. `DIMENSION 22` carries time and calendar components in one frame. This avoids two separate submissions, but the specification does not establish transactional atomicity inside the gateway.
 
 The protocol's time-zone encoding is an hour-offset representation rather than a named time-zone database identifier. Implementations should not infer daylight-saving rules from it; it carries the offset represented by the gateway.
 

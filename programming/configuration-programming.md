@@ -38,6 +38,8 @@ Do not require one `EN_CONF` row to contain both a valid Object and firmware key
 The zero values do not identify Object 0 or firmware 0. They take the place of `NULL` and distinguish which entity owns the definition. Applicable definitions must therefore be collected as the union of the two scopes:
 
 ```sql
+SELECT *
+FROM EN_CONF
 WHERE (id_key_object = :object_id AND id_firmware = 0)
    OR (id_key_object = 0 AND id_firmware = :firmware_id)
 ```

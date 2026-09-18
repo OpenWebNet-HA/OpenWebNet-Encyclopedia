@@ -89,8 +89,8 @@ The source does not define numeric scaling, signedness, precision, or the energy
 
 ## Evidence basis
 
-The value tables and frame flows come from [`WHO_3.pdf`](../../sources/openwebnet-public/pdf/WHO_3.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
+The value tables and frame flows come from [WHO 3 specification](../../sources/openwebnet-public/pdf/WHO_3.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
 
 MyHOME Suite `OPEN.db` confirms the namespace name but does not associate a concrete functional operation set with it in this revision.
 
-See the [functional overview](../) for navigation by `WHO` and by function, and [`../../protocol/`](../../protocol/) for common frame and session syntax.
+See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

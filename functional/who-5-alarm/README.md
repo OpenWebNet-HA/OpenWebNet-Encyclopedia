@@ -6,9 +6,9 @@
 
 | Subject | Page |
 | --- | --- |
-| Session behavior and status reporting | [`protocol.md`](protocol.md) |
-| Published `WHAT` vocabulary | [`what.md`](what.md) |
-| Central unit, zone, sensor and auxiliary addressing | [`addressing.md`](addressing.md) |
+| Session behavior and status reporting | [Protocol](protocol.md) |
+| Published `WHAT` vocabulary | [`WHAT` Reference](what.md) |
+| Central unit, zone, sensor and auxiliary addressing | [Addressing](addressing.md) |
 
 ## State model
 
@@ -18,4 +18,4 @@ Zone-specific requests similarly report whether a selected zone is engaged or di
 
 The published interface does not define a general-purpose modern security-control API. Implementations should therefore expose the documented states and events without inventing write semantics for status values that are only established as reports.
 
-`WHO 5` is distinct from Access Control [`WHO 23`](../who-23-access-control/) and from diagnostic protocol families. Common frame/session syntax is documented under [`../../protocol/`](../../protocol/).
+`WHO 5` is distinct from Access Control [`WHO 23`](../who-23-access-control/) and from diagnostic protocol families. Common frame/session syntax is documented under [Protocol](../../protocol/).

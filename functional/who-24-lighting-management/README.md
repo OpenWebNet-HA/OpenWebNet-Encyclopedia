@@ -6,9 +6,9 @@
 
 | Subject | Page |
 | --- | --- |
-| Protocol and frame structure | [`protocol.md`](protocol.md) |
-| `WHAT` operations | [`what.md`](what.md) |
-| Addressing and `WHERE` structure | [`addressing.md`](addressing.md) |
-| `DIMENSION` operations | [`dimensions.md`](dimensions.md) |
+| Protocol and frame structure | [Protocol](protocol.md) |
+| `WHAT` operations | [`WHAT` Reference](what.md) |
+| Addressing and `WHERE` structure | [Addressing](addressing.md) |
+| `DIMENSION` operations | [`DIMENSION` Reference](dimensions.md) |
 
 The [functional overview](../) groups both systems under Lighting.
