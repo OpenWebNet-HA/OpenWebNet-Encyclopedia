@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="760" viewBox="0 0 1450 760" role="img" aria-labelledby="title desc">
+  <title id="title">ScenarioDevices capability hierarchy</title>
+  <desc id="desc">Declared Object System to Device Object to Command to Parameter hierarchy, with local semantic identifiers kept distinct from relational keys.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#50606b"/></marker>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#50606b"/></marker>
+    <style>
+      .title{font:600 28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#17232b}
+      .subtitle{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+      .entity-title{font:600 16px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#fff}
+      .field{font:400 13px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#22313a}
+      .relation{stroke:#50606b;stroke-width:2;fill:none}
+      .dashed{stroke-dasharray:7 6}
+      .edge-label{font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#34444f;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+      .note-box{fill:#fff7df;stroke:#c99416;stroke-width:1.5}
+      .note{font:500 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#634a11}
+      .legend{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="50" y="48" class="title">ScenarioDevices capability hierarchy</text>
+  <text x="50" y="76" class="subtitle">Declared Object System to Device Object to Command to Parameter hierarchy, with local semantic identifiers kept distinct from relational keys.</text>
+  <g class="entity">
+    <rect x="70" y="170" width="260" height="145" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M77,170 H323 Q330,170 330,177 V206 H70 V177 Q70,170 77,170" fill="#174d70"/>
+    <text x="200" y="194" class="entity-title" text-anchor="middle">ObjectSystems</text>
+    <text x="84" y="227" class="field">PK Id</text><text x="84" y="247" class="field">FamilyId (Program Files only)</text><text x="84" y="267" class="field">Name resource key</text><text x="84" y="287" class="field">CategoryFlag</text>
+  </g>
+<g class="entity">
+    <rect x="420" y="155" width="270" height="175" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M427,155 H683 Q690,155 690,162 V191 H420 V162 Q420,155 427,155" fill="#174d70"/>
+    <text x="555" y="179" class="entity-title" text-anchor="middle">DeviceObjects</text>
+    <text x="434" y="212" class="field">PK Id</text><text x="434" y="232" class="field">FK ObjectSystem_Id</text><text x="434" y="252" class="field">ObjectId</text><text x="434" y="272" class="field">ObjectMatchingId</text><text x="434" y="292" class="field">Name resource key</text>
+  </g>
+<g class="entity">
+    <rect x="800" y="130" width="285" height="225" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M807,130 H1078 Q1085,130 1085,137 V166 H800 V137 Q800,130 807,130" fill="#174d70"/>
+    <text x="942.5" y="154" class="entity-title" text-anchor="middle">Commands</text>
+    <text x="814" y="187" class="field">PK Id</text><text x="814" y="207" class="field">FK DeviceObject_Id</text><text x="814" y="227" class="field">CommandId</text><text x="814" y="247" class="field">CommandMatchingId</text><text x="814" y="267" class="field">WhereType / ChiOpen</text><text x="814" y="287" class="field">Frame / resource key</text>
+  </g>
+<g class="entity">
+    <rect x="1190" y="170" width="220" height="185" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1197,170 H1403 Q1410,170 1410,177 V206 H1190 V177 Q1190,170 1197,170" fill="#174d70"/>
+    <text x="1300" y="194" class="entity-title" text-anchor="middle">Parameters</text>
+    <text x="1204" y="227" class="field">PK Id</text><text x="1204" y="247" class="field">FK Command_Id</text><text x="1204" y="267" class="field">Type / OperatorType</text><text x="1204" y="287" class="field">Min / Max / Step</text><text x="1204" y="307" class="field">Placeholder / Value</text>
+  </g>
+<g>
+    <line x1="330" y1="240" x2="420" y2="240" class="relation" marker-end="url(#arrow)"/>
+    <text x="375" y="233" class="edge-label" text-anchor="middle">1 → many</text>
+  </g>
+<g>
+    <line x1="690" y1="240" x2="800" y2="240" class="relation" marker-end="url(#arrow)"/>
+    <text x="745" y="233" class="edge-label" text-anchor="middle">1 → many</text>
+  </g>
+<g>
+    <line x1="1085" y1="240" x2="1190" y2="240" class="relation" marker-end="url(#arrow)"/>
+    <text x="1137.5" y="233" class="edge-label" text-anchor="middle">1 → many</text>
+  </g>
+<g><rect x="90" y="430" width="340" height="34" rx="17" class="note-box"/><text x="260" y="452" class="note" text-anchor="middle">Id and foreign keys are source-file local</text></g>
+<g><rect x="555" y="430" width="390" height="34" rx="17" class="note-box"/><text x="750" y="452" class="note" text-anchor="middle">ObjectId / MatchingId are scenario-engine identifiers</text></g>
+<g><rect x="1020" y="430" width="340" height="34" rx="17" class="note-box"/><text x="1190" y="452" class="note" text-anchor="middle">Frame can be literal, symbolic, or absent</text></g>
+<g class="entity">
+    <rect x="185" y="570" width="390" height="85" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
+    <path d="M192,570 H568 Q575,570 575,577 V606 H185 V577 Q185,570 192,570" fill="#46606f"/>
+    <text x="380" y="594" class="entity-title" text-anchor="middle">Program Files revision</text>
+    <text x="199" y="627" class="field">29 systems · 44 objects · 157 commands · 42 parameters</text>
+  </g>
+<g class="entity">
+    <rect x="875" y="570" width="390" height="85" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
+    <path d="M882,570 H1258 Q1265,570 1265,577 V606 H875 V577 Q875,570 882,570" fill="#46606f"/>
+    <text x="1070" y="594" class="entity-title" text-anchor="middle">ProgramData revision</text>
+    <text x="889" y="627" class="field">27 systems · 42 objects · 151 commands · 40 parameters</text>
+  </g>
+<g>
+    <line x1="575" y1="612" x2="875" y2="612" class="relation dashed" marker-end="url(#arrow)" marker-start="url(#arrow-start)"/>
+    <text x="725" y="605" class="edge-label" text-anchor="middle">semantic subset; local IDs can diverge</text>
+  </g>
+  <text x="50" y="736" class="legend">Only the vertical hierarchy is relational. Matching identifiers and resource keys require application/runtime interpretation.</text>
+</svg>
