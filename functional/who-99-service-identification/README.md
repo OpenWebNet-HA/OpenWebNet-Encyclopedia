@@ -1,23 +1,41 @@
-# Overview
+# `WHO 99` — Session and Service Identification
 
-The MyHOME_Suite `OPEN.db` protocol definitions represent `WHO 99` as Service Identification.
+`99` appears in two related but differently evidenced roles:
 
-## Protocol role
+1. the public connection workflow uses `*99*X##` to select an OpenWebNet session;
+2. MyHOME Suite `OPEN.db` names functional namespace `WHO 99` **Service Identification**.
 
-Service Identification is a protocol service rather than an ordinary automation function such as Lighting, Automation or Thermoregulation. It remains under `functional/` because it occupies a known non-diagnostic `WHO` namespace and is carried using ordinary OpenWebNet functional framing.
+These facts must be preserved without inventing a broader functional vocabulary.
 
-The implementation data establishes a service-identification operation in the MyHOME_Suite protocol catalogue. This should be modeled separately from gateway authentication, connection/session selection and diagnostic device identification.
+## Published session selectors
+
+| Frame | Session |
+| --- | --- |
+| `*99*9##` | Commands/actions |
+| `*99*1##` | Events |
+| `*99*0##` | Programmed scenario |
+
+These frames occur during connection setup after the server greeting. They omit the normal `WHERE` field and are parsed by the session state machine, not by an ordinary three-field functional dispatcher.
+
+See [Connection and Sessions](../../protocol/sessions.md) for the complete workflow.
+
+## `OPEN.db` namespace evidence
+
+`OPEN.db.EN_SYSTEM` contains a `WHO 99` row labelled Service Identification. It has no direct `AS_OPEN_SYSTEM` association to an `EN_OPEN` operation in this database revision.
+
+The database therefore establishes the namespace label, but **does not** establish an additional service-identification `WHAT` table or prove that every `*99*X##` value is valid. The published selectors above are the concrete operations supported by the current source corpus.
 
 ## Distinctions
 
-| Mechanism | Purpose |
-| --- | --- |
-| `WHO 99` | Functional service identification namespace |
-| Gateway authentication/session | Establishes access to the OpenWebNet gateway |
-| Diagnostic `DIMENSION 1` / `13` etc. | Identifies/interviews physical Devices in diagnostic families |
+`WHO 99` session selection is not:
 
-A service-identification frame must therefore not be interpreted as a Device catalogue identity or diagnostic Device ID solely because all three mechanisms involve “identification”.
+- gateway authentication (`WHO 98` declarations and challenge-response);
+- a diagnostic Device interview;
+- catalogue identity resolution;
+- functional `WHO 8`'s parameterized service-identification association in `OPEN.db`.
 
-## Corpus status
+Implementations should represent the raw numeric namespace while dispatching the published selector frames according to connection state.
 
-The current corpus establishes the namespace and service operation but does not justify a broader inferred `WHAT` vocabulary. Unknown values remain unspecified. Session-level behavior is cross-referenced under [`../../protocol/`](../../protocol/), while physical Device identification belongs under [`../../diagnostics/`](../../diagnostics/).
+## Evidence basis
+
+The selector frames and order come from [`OWN_Intro_ENG.pdf`](../../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The Service Identification label and absence of an associated concrete operation come from `OPEN.db`; see [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md).
