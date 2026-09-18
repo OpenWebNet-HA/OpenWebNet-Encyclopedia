@@ -37,7 +37,7 @@ The wire protocol has no transaction identifier that can recover this context af
 
 ## `OpenQuery.txt` as a data-access contract
 
-`OpenQuery.txt` defines named SQL statements for selected registry reads:
+The repository-held `OpenQuery.txt` defines named SQL statements for selected registry reads. Its text is implementation evidence, but its current repository blob does not match the original-file fingerprint registered in the source manifest:
 
 | Query key | Data loaded |
 | --- | --- |
@@ -64,7 +64,7 @@ The file itself records unfinished work:
 - `openparamsQuery` is literally `TODO`;
 - the operation-specific address-rule query is commented out.
 
-These are source facts. `OpenQuery.txt` cannot be treated as a complete schema-access specification.
+These are facts in the repository-held text. `OpenQuery.txt` cannot be treated as a complete schema-access specification, and the known byte-level provenance mismatch must be retained when citing it.
 
 The `systemaddressruleDictQuery` select list contains the SQLite expression `ar.address_rule_adv&ar.level_2_rule`. As written, `&` is a bitwise operator, not a column separator. Do not silently rewrite it as a comma. Whether the expression is intentional, unused, or a defect requires runtime evidence.
 
