@@ -1,50 +1,91 @@
 # `DIMENSION` Reference
 
-`WHO 1` uses `DIMENSION` operations for Lighting values that are more structured or more precise than the ordinary `WHAT` vocabulary. The published protocol defines level, speed, temporization, status and operating-time functions; MyHOME_Suite functional data confirms the parameterized write forms used by the application.
+`WHO 1` uses `DIMENSION` operations for Lighting values that are more structured or precise than ordinary `WHAT` values.
 
-| `DIMENSION` | Meaning |
-| ---: | --- |
-| `1` | Lighting level and transition speed |
-| `2` | Temporization |
-| `3` | Required-only-ON operation |
-| `4` | 100-level status |
-| `8` | Lamp working-time information |
-| `9` | Lamp working-time information |
+| `DIMENSION` | Meaning | Published operations |
+| ---: | --- | --- |
+| `1` | Level and transition speed | Read/report/write |
+| `2` | Temporization | Read/report/write |
+| `3` | Return only Lighting Objects that are ON | Read |
+| `4` | 100-level dimmer status with ON/OFF speed | Identifier listed; no detailed flow in the source |
+| `8` | Accumulated lamp working time | Read/report |
+| `9` | Maximum lamp working time | Read/report/write |
 
-Read requests and responses follow the common `DIMENSION` frame classes documented in [`../../protocol/dimensions.md`](../../protocol/dimensions.md). Read and write support is operation- and Device-dependent and must not be inferred solely from the existence of a `DIMENSION` identifier.
+## Value fields
 
-## `DIMENSION 1` — level and transition speed
+| Field | Published range and encoding |
+| --- | --- |
+| `LEVEL100` | `100` = OFF; `101`–`199` = 1%–99%; `200` = maximum |
+| `SPEED` | `0` = last speed; `1`–`254` = explicit speed; `255` = default speed |
+| `HOURS` | `0`–`255` |
+| `MINUTES` | `0`–`59` |
+| `SECONDS` | `0`–`59` |
+| `WORKING_TIME` | `1`–`100000` hours |
 
-MyHOME_Suite uses the write form `*#1*WHERE*#1*LEVEL*SPEED##`.
+`LEVEL100` is offset by 100. It is not a literal percentage field and must not be decoded as `100%`–`200%`.
 
-`LEVEL` expresses the requested Lighting level while `SPEED` expresses the transition behavior. This operation provides finer control than the ordinary `WHAT 2`–`10` discrete levels. Encoders must preserve both values: transition speed is part of the operation rather than metadata external to the frame.
+## `DIMENSION 1` — level and speed
 
-The MyHOME_Suite ScenarioDevices capability data also represents Lighting level control through this functional template, confirming that the operation is available to higher-level scenario actions as well as direct functional control.
+Write:
+
+~~~text
+*#1*WHERE*#1*LEVEL100*SPEED##
+~~~
+
+Request and response/report:
+
+~~~text
+*#1*WHERE*1##
+*#1*WHERE*1*LEVEL100*SPEED##
+~~~
+
+The PDF prints one write example without the `*` before `#1`; this conflicts with its common write grammar and the otherwise consistent frame family. This documentation uses the structurally consistent form above and records the source inconsistency rather than treating the missing separator as a new syntax.
 
 ## `DIMENSION 2` — temporization
 
-MyHOME_Suite uses `*#1*WHERE*#2*HOURS*MINUTES*SECONDS##` for explicit Lighting temporization.
+~~~text
+*#1*WHERE*#2*HOURS*MINUTES*SECONDS##
+*#1*WHERE*2##
+*#1*WHERE*2*HOURS*MINUTES*SECONDS##
+~~~
 
-The three-value payload represents the duration as hours, minutes and seconds. This structured temporization is distinct from the predefined timed `WHAT 11`–`18` operations: those `WHAT` values select fixed durations, whereas `DIMENSION 2` carries an explicit duration.
+This explicit duration is distinct from fixed-duration `WHAT 11`–`18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
 
-## `DIMENSION 3` — required only ON
+## `DIMENSION 3` — only Objects that are ON
 
-`DIMENSION 3` belongs to the Lighting advanced-operation vocabulary and is associated with the required-only-ON function. Its values are local to this `DIMENSION`; they must not be interpreted using the level or temporization schemas of `DIMENSION 1` or `2`.
+`*#1*WHERE*3##` is a filtered request. The server returns ordinary Lighting status frames only for addressed lights or dimmers that are ON, then terminates the sequence with `ACK`.
+
+This is not a scalar property response and should be modeled as a query producing zero or more result frames.
 
 ## `DIMENSION 4` — 100-level status
 
-`DIMENSION 4` provides Lighting status on the finer 100-level scale. It complements the coarse ordinary `WHAT` status values and allows a client to represent dimmer state with greater precision.
+The canonical `DIMENSION` table names `4` as 100-level dimmer status with ON/OFF speed, but the document does not provide a detailed request/write flow for it. Do not invent its payload from `DIMENSION 1` merely because their descriptions overlap.
 
-This status representation should remain distinct from a command template: a fine-grained reported level does not imply that every target supports the same write capabilities.
+## `DIMENSION 8` — working time
 
-## `DIMENSION 8` and `DIMENSION 9` — lamp working time
+~~~text
+*#1*WHERE*8##
+*#1*WHERE*8*WORKING_TIME##
+~~~
 
-`DIMENSION 8` and `DIMENSION 9` expose lamp operating-time information. These are informational/measurement functions rather than ordinary switching commands.
+The response can also appear on the event session.
 
-Working-time values describe accumulated operation and should not be normalized into Lighting level or temporization values merely because all are carried in `DIMENSION` frames.
+## `DIMENSION 9` — maximum working time
 
-## Capability model
+~~~text
+*#1*WHERE*#9*WORKING_TIME##
+*#1*WHERE*9##
+*#1*WHERE*9*WORKING_TIME##
+~~~
 
-The presence of a Lighting `DIMENSION` in the protocol namespace does not mean that every Lighting Object implements it. The MyHOME_Suite catalogue distinguishes command, actuator and dimmer capabilities at the Object/firmware level, while ScenarioDevices exposes only the operations usable in its scenario capability model. Protocol implementations should therefore separate the global `WHO 1` vocabulary from per-Object capabilities.
+The value is expressed in hours. Read and write support still depends on the target capability.
 
-See [`what.md`](what.md) for ordinary Lighting operations and [`addressing.md`](addressing.md) for address scopes.
+## Capability boundary
+
+The global `WHO 1` vocabulary does not imply that every Lighting Object implements every operation. Validate Device/firmware/Object applicability through the catalogue model where available.
+
+## Evidence basis
+
+Identifiers, ranges, direction, and frame flows come from [`WHO_1.pdf`](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
+
+See [`what.md`](what.md), [`addressing.md`](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).

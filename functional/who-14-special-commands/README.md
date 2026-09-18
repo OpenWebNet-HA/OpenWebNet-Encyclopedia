@@ -1,4 +1,4 @@
-# Overview
+# `WHO 14` - Special Commands
 
 `WHO 14` is the OpenWebNet Special Commands namespace. The canonical public PDF corpus does not contain a dedicated `WHO 14` specification, but the MyHOME_Suite ScenarioDevices capability databases provide direct implementation evidence for the operations they expose.
 

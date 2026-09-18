@@ -1,4 +1,4 @@
-# Overview
+# `WHO 25` - Transversal Functions
 
 `WHO 25` contains multiple transversal OpenWebNet functions whose grammars are selected by their `WHAT` family. The namespace includes CEN+ virtual-command events and dry-contact/IR state reporting. Sharing `WHO 25` does not make these functions one address or parameter model.
 
