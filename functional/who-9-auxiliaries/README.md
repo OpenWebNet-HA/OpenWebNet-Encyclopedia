@@ -1,4 +1,4 @@
-# `WHO 9` — Auxiliaries
+# `WHO 9` - Auxiliaries
 
 `WHO 9` defines the OpenWebNet Auxiliaries system. Auxiliary channels provide general-purpose binary/event functions that can also appear as references from other systems, including the published `WHO 5` Alarm addressing model.
 
