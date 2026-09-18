@@ -1,4 +1,4 @@
-# Overview
+# `WHO 17` — Scenario Management
 
 `WHO 17` defines Home-automation Main Unit / scenario-management functions, including scenario execution-state operations.
 
