@@ -1,4 +1,4 @@
-# `WHO 27` — Nurse Call Basic Level
+# `WHO 27` - Nurse Call Basic Level
 
 MyHOME Suite `OPEN.db` identifies functional `WHO 27` as Nurse Call basic level and assigns diagnostic family `WHO 1027`.
 
