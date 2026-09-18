@@ -2,16 +2,16 @@
 
 This directory contains repository-native diagrams used by the documentation.
 
-SVG is the canonical format. Diagrams must be self-contained, contain no external resources or scripts, and remain readable when rendered by GitHub.
+SVG is the canonical format. Diagrams must be self-contained, contain no external resources or scripts, and remain readable when rendered by GitHub. Relationship connectors must use dedicated whitespace or routing gutters and must not cross entity bodies.
 
 ## Installed diagram files
 
 | Filename | Intended page | Purpose | SHA-256 of generated file |
 | --- | --- | --- | --- |
-| `catalogue-capability.svg` | `internals/catalogue-resolution.md` | Device, item, firmware, Object, slot, build, and system relationships | `3999bd43820ff8038c9fa91bc8e7327acf5f41f712b63fecd232f539e166fef3` |
-| `configuration-validation.svg` | `internals/validation-layers.md` | polymorphic configuration ownership and validation layers | `dedfb26811a646783f2db88f461c36df423926ef66678aefe9defed2d5ec661b` |
-| `openwebnet-registry.svg` | `internals/openwebnet-registry-and-state-machines.md` | `OPEN.db` systems, frames, parameters, sequences, and timeouts | `51fa5b8ce73ded13cd96c4dae1070856d46aec9e08e71b1ebeb3e90df2469547` |
+| `catalogue-capability.svg` | `internals/catalogue-resolution.md` | Device, item, firmware, Object, slot, build, and system relationships | `6a2dc26de76f51eb42e8c45a92b9fb792af97db91ff1666cb33a4e0a77c8ef8a` |
+| `configuration-validation.svg` | `internals/validation-layers.md` | polymorphic configuration ownership and validation layers | `dd7bb3655d9fab72419b20bb025433826b81ddbd5ceb845b0a8202bccfb9ee84` |
+| `openwebnet-registry.svg` | `internals/openwebnet-registry-and-state-machines.md` | `OPEN.db` systems, frames, parameters, sequences, and timeouts | `56c8d7a94899f77c6b72fafaadceb95ea5e977b42fcf65e299787176f3620146` |
 | `scenario-capability.svg` | `internals/scenario-capability-loading.md` | ScenarioDevices declared hierarchy and revision boundary | `49b55d4d03b9bb0aba68cfb659e6bcee1fbf93f5247e024d8acf7d3dd4e0a00f` |
-| `cross-database-correlation.svg` | `reverse-engineering/cross-database-correlation.md` | staged semantic correlation across traffic and independent source models | `805caacd2b510b8c04d1f7bf6806a784ecc725bdf1e88a107f5cda4b5524ca0a` |
+| `cross-database-correlation.svg` | `reverse-engineering/cross-database-correlation.md` | staged semantic correlation across traffic and independent source models | `2da0a1098f3ef62912403730b786c794099fb8c65b28b558b9bd8bf34409f90f` |
 
 The uploaded SVG content matches the recorded hashes and is referenced from the intended documentation pages. PNG renderings are review artifacts and are not canonical repository assets.
