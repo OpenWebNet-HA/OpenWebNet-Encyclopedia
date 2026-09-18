@@ -21,7 +21,7 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
 
-Use a simple hyphen (`-`) instead of an em dash (`—`) in prose and headings.
+Use a simple hyphen (`-`) for parenthetical breaks and title separators; do not use Unicode U+2014.
 
 `WHAT`, `WHERE`, and `DIMENSION` semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
