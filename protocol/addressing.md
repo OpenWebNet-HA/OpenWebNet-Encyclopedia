@@ -70,36 +70,28 @@ The generalized model is also consistent with MyHOME Suite's separate level-rule
 
 ## Local-bus forms
 
-Local-bus addressing uses the structural suffix `#4#INTERFACE`, but the combinations explicitly established by the public `WHO 1` and `WHO 2` specifications differ.
-
-### Lighting WHO 1
-
-The Lighting specification explicitly permits the suffix on every Lighting scope:
-
-| Scope | Local-bus `WHERE` |
-| --- | --- |
-| General | `0#4#<Int>` |
-| Area | `<A>#4#<Int>` |
-| Group | `#<G>#4#<Int>` |
-| Point to point | `<A><PL>#4#<Int>` |
-
-For `WHO 1`, `Int` is the local-bus interface address. The specification decomposes it as `I3I4`, with `I3=0, I4=1–9` or `I3=1, I4=1–5`. The published interface range is therefore `01`–`09` and `11`–`15`; `10` is not included.
-
-Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
-
-### Automation WHO 2
-
-The Automation specification defines its local-bus address as:
+Local-bus addressing is the Level-4 routing form:
 
 ~~~text
-APL#4#interface
+BASE#4#INTERFACE
 ~~~
 
-and gives `interface = [0-1][1-9]`, i.e. `01`–`09` or `11`–`19`. This `interface` field is semantically the same routing-interface address called `Int` by the Lighting specification.
+`INTERFACE` is the routing-interface address. The published specifications use different labels for the same field: `Int` in `WHO 1` and `interface` in `WHO 2`; MyHOME Suite represents its components as `I3`/`I4`.
 
-Unlike the Lighting `WHERE` table, the published Automation table does not explicitly define local-bus General, Area, or Group forms. They must therefore not be promoted to canonical `WHO 2` syntax merely because the corresponding Lighting forms exist.
+The combined Light/Automation model in MyHOME Suite supports treating this as a shared SCS routing concept rather than two unrelated `WHO`-specific mechanisms. The base target can be General, Area, Group, or point where that scope is applicable:
 
-This difference also means that the interface range must not be generalized across `WHO 1` and `WHO 2`: the two published documents give different upper bounds.
+| Scope | Level-4 `WHERE` form |
+| --- | --- |
+| General | `0#4#INTERFACE` |
+| Area | `A#4#INTERFACE` |
+| Group | `#GR#4#INTERFACE` |
+| Point to point | `APL#4#INTERFACE` |
+
+The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`; this is best understood as an instance of the same routing grammar, not as evidence for a different Automation local-bus mechanism.
+
+The source documents differ in the range they state for the interface field: the Lighting document gives `01`–`09` and `11`–`15`, while the Automation document expresses it as `[0-1][1-9]` (`01`–`09`, `11`–`19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
+
+Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
 
 ## Parsing rules
 
