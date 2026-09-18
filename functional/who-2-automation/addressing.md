@@ -10,7 +10,7 @@
 | Environment | `A` | `00`, `1`–`9`, or `100` as defined by the published Automation grammar |
 | Point to point | `APL` | Address ranges depend on `A` |
 | Group | `#GR` | `GR = 1`–`255` |
-| Local bus | `APL#4#INTERFACE` | `INTERFACE = [0-1][1-9]` |
+| Local bus | `APL#4#INTERFACE` | `INTERFACE = [0-1][1-9]` (`01`–`09`, `11`–`19`) |
 
 ## Point-to-point ranges
 
@@ -23,7 +23,7 @@ The published grammar constrains `PL` according to the `A` representation:
 | `10` | `01`–`15` |
 | `01`–`09` | `10`–`15` |
 
-These forms preserve significant leading zeroes. An Automation address should therefore be parsed according to the applicable grammar rather than converted to an integer before its address class is known.
+These forms preserve significant leading zeroes. An Automation address should therefore be parsed according to the applicable grammar rather than converted to an integer before its address class is known. The published `WHO 2` table explicitly defines the local-bus form for point-to-point `APL`; unlike the `WHO 1` Lighting table, it does not explicitly define local-bus General, Area, or Group forms. See the [canonical addressing reference](../../protocol/addressing.md#local-bus-forms) for the cross-source distinction.
 
 ## Event expansion
 
