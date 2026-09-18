@@ -21,6 +21,8 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 Protocol fields and tokens are written as inline code, including `WHO`, `WHAT`, `WHERE`, `DIMENSION`, `ACK`, and `NACK`. Complete frames are likewise written as inline code when they fit naturally in prose or tables.
 
+Use a simple hyphen (`-`) instead of an em dash (`—`) in prose and headings.
+
 `WHAT`, `WHERE`, and `DIMENSION` semantics are scoped to their `WHO`. Identical numeric values in different systems do not imply identical meanings.
 
 Reference material follows the canonical structure of the protocol or implementation model it documents. Landing pages and indexes may provide additional navigation organized around related functions or reader tasks, linking to the same canonical reference material rather than duplicating it.
