@@ -2,7 +2,7 @@
 
 The canonical MyHOME Suite source set was copied from a version 3.5.38 installation. Original Windows paths are evidence of packaging location; they do not by themselves establish which copy is opened first, whether data is copied or synchronized at runtime, or whether a file is writable during normal use.
 
-## Preserved implementation files
+## Registered implementation files
 
 | Repository file | Original installation path | Size | SHA-256 |
 | --- | --- | ---: | --- |
@@ -12,6 +12,8 @@ The canonical MyHOME Suite source set was copied from a version 3.5.38 installat
 | `ScenarioDevices-programdata.sqlite` | `C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_ScenarioDevices\ScenarioDevices.sqlite` | 34,816 | `cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3` |
 | `rules.db3` | `C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_KeyOThermoValidator\rules.db3` | 36,864 | `23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06` |
 | `OpenQuery.txt` | `C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OpenQuery.txt` | 3,661 | `104bc9fcd780799f3b6bb85f2510b1b0424747c30c315f0a04c93e88f4163c10` |
+
+The table records the original-file metadata registered in the manifest. The current repository blob for `OpenQuery.txt` is a known mismatch: 3,172 bytes with SHA-256 `3ddec2aecdd930d9154b1adf63e5fa480a30f5e3c841ac548b0dd8017258b4de`. Its SQL text remains useful implementation evidence, but it is not the byte-for-byte canonical file identified by the registered original fingerprint.
 
 The installer is not redistributed. Its registered size is 599,437,936 bytes and its SHA-256 is `707D8A43A5296A1EA87C33F111E9269C8BBD0FE524AC5EFE87BDEDE8B6EB311B`. The recorded Authenticode signature is valid and identifies BTICINO S.P.A. as signer.
 
@@ -23,7 +25,7 @@ The names `program-files` and `programdata` are provenance labels, not asserted 
 
 ## File-format observations
 
-All five database files are SQLite databases. `OpenQuery.txt` is preserved as UTF-8 with a byte-order mark and CRLF line endings.
+All five database files are SQLite databases. The manifest describes the original `OpenQuery.txt` as UTF-8 with a byte-order mark and CRLF line endings; the current repository blob fails the registered size and SHA-256 check, so exact encoding and line-ending preservation must not be claimed from the repository copy.
 
 The canonical-source policy requires byte-for-byte preservation. Do not:
 
