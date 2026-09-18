@@ -67,11 +67,6 @@ source_sets:
         line_endings: CRLF
         size: 3661
         sha256: 104bc9fcd780799f3b6bb85f2510b1b0424747c30c315f0a04c93e88f4163c10
-        repository_blob:
-          verification_status: mismatch
-          size: 3172
-          sha256: 3ddec2aecdd930d9154b1adf63e5fa480a30f5e3c841ac548b0dd8017258b4de
-          note: "The current Git repository blob does not match the registered original-file size or SHA-256 and must not be treated as the canonical file identified above."
 
   openwebnet-public:
     publisher: BTicino / Legrand
