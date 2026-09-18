@@ -1,4 +1,4 @@
-# Overview
+# `WHO 18` — Energy Management
 
 `WHO 18` defines the OpenWebNet Energy Management system. It covers energy measurement, accumulated consumption, historical series, Energy Management actuators, differential-current information, Stop&Go supervision, and automatic reporting of active power.
 
