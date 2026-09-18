@@ -1,4 +1,4 @@
-# `WHO 8` — Video Door Entry and Telephony
+# `WHO 8` - Video Door Entry and Telephony
 
 `WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. The current corpus establishes the namespace and a narrow MyHOME Suite service operation, but not a complete public functional grammar.
 
