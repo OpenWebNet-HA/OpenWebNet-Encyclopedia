@@ -113,7 +113,7 @@
     <line x1="590" y1="760" x2="820" y2="760" class="relation dashed" marker-end="url(#arrow)"/>
     <text x="705" y="753" class="edge-label" text-anchor="middle">render / interpret functional address</text>
   </g>
-<g><rect x="600" y="590" width="300" height="34" rx="17" class="note-box"/><text x="750" y="612" class="note" text-anchor="middle">Dashed arrows are semantic correlations</text></g>
+<g><rect x="35" y="585" width="300" height="34" rx="17" class="note-box"/><text x="185" y="607" class="note" text-anchor="middle">Dashed arrows are semantic correlations</text></g>
 <g><rect x="1150" y="610" width="300" height="34" rx="17" class="note-box"/><text x="1300" y="632" class="note" text-anchor="middle">Never join database-local IDs directly</text></g>
   <text x="50" y="896" class="legend">This is a correlation flow, not a shared ER schema. Dashed arrows cross source-model boundaries.</text>
 </svg>
