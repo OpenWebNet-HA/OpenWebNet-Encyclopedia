@@ -68,7 +68,7 @@ MyHOME Suite's address-rule model contains separate level-rule fields and suppor
 
 The preserved public `WHO 1` table describes unqualified private-riser targets and explicit Level-4 forms; it does not itself enumerate `BASE#3` variants. Level-3 applicability is therefore implementation/address-rule evidence in this corpus, not a published universal Lighting grammar. Do not generate `0#3`, `A#3`, `#GR#3`, or `APL#3` merely from the generalized model without system- and operation-specific evidence.
 
-## Local-bus forms
+### Level 4 / local bus
 
 Local-bus addressing is the Level-4 routing form:
 
@@ -87,7 +87,7 @@ The combined Light/Automation model in MyHOME Suite supports treating this as a 
 | Group | `#GR#4#INTERFACE` |
 | Point to point | `APL#4#INTERFACE` |
 
-### Interface address components `I3` and `I4`
+#### Interface address components `I3` and `I4`
 
 `INTERFACE` is not merely an integer formatted as two decimal digits. In the SCS configuration model it is formed from the interface configurator positions `I3` and `I4`. For the F422 SCS/SCS interface these positions identify the interface within the installation; in modes that use an A/PL-like interface address, they are assigned with the same structure as the normal `A` and `PL` positions:
 
