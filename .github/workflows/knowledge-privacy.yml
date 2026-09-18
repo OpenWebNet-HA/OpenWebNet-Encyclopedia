@@ -1,0 +1,19 @@
+name: Machine knowledge privacy
+
+on:
+  pull_request:
+    paths:
+      - "knowledge/**"
+      - ".github/workflows/knowledge-privacy.yml"
+  push:
+    paths:
+      - "knowledge/**"
+      - ".github/workflows/knowledge-privacy.yml"
+
+jobs:
+  validate-privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject private values in generated artifacts
+        run: python knowledge/tools/validate_privacy.py

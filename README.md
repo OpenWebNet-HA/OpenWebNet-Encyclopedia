@@ -22,7 +22,7 @@ Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and 
 
 The [Machine-Readable Knowledge Base for LLMs and Automated Tools](knowledge/) is the entry point for language models, retrieval systems, indexers, validators, code generators, and other automated consumers. Its directory names distinguish complete LLM context, retrieval units, atomic claims, controlled reference data, schemas, and generation tooling.
 
-The human-readable Markdown documentation remains authoritative. Machine artifacts are deterministic derivatives that retain source paths, provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions.
+The human-readable Markdown documentation remains authoritative. Machine artifacts are deterministic derivatives that retain source paths, provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions. They must also pass the [Machine Knowledge Privacy Policy](knowledge/policy/privacy.md): concrete network addresses, installed Device identifiers, credentials, private capture contents, and other private or installation-specific data are prohibited.
 
 ## Conventions
 
