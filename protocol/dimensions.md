@@ -143,7 +143,9 @@ The existence of a readable or reportable `DIMENSION` does not imply write suppo
 
 ## Arity and typing
 
-Neither parameter count nor value count is globally fixed. System-specific definitions can impose:
+Neither parameter count nor value count is globally fixed. The available public specification establishes no protocol-wide maximum count for selector parameters or payload values, and it does not specify a universal maximum frame length. This absence of a common limit does not make the arity unrestricted for a particular operation: the exact `(WHO, DIMENSION, operation)` definition determines which counts are valid.
+
+System-specific definitions can impose:
 
 - exact or variable selector-parameter counts;
 - exact or variable payload counts;
