@@ -1,4 +1,4 @@
-# `WHO 19` — Interface
+# `WHO 19` - Interface
 
 The MyHOME_Suite `OPEN.db` system definitions identify `WHO 19` as Interface.
 
