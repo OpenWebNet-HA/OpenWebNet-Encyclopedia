@@ -87,6 +87,24 @@ The combined Light/Automation model in MyHOME Suite supports treating this as a 
 | Group | `#GR#4#INTERFACE` |
 | Point to point | `APL#4#INTERFACE` |
 
+### Interface address components `I3` and `I4`
+
+`INTERFACE` is not merely an integer formatted as two decimal digits. In the SCS configuration model it is formed from the interface configurator positions `I3` and `I4`. For the F422 SCS/SCS interface these positions identify the interface within the installation; in modes that use an A/PL-like interface address, they are assigned with the same structure as the normal `A` and `PL` positions:
+
+~~~text
+I3 ≈ A
+I4 ≈ PL
+INTERFACE = I3I4
+~~~
+
+The distinction is historical and structural: `I3` and `I4` are separate SCS configuration positions, not a protocol-level split of an abstract decimal number into tens and units.
+
+Their exact role depends on the operating mode of the interface. In F422 physical-expansion mode (`MOD=1`), `I3` and `I4` define the **separation address** between the two connected bus sections. For example, `I3=3, I4=2` establishes separation address `32`: Automation addresses below that boundary belong on the lower-address side and addresses above it on the higher-address side. In logical-expansion mode (`MOD=2`), the interface address is again assigned using the A/PL method; documentation also permits `I3=0, I4=1–9` to avoid consuming an ordinary `11`–`99` Automation address.
+
+Consequently, a wire value such as `#4#03` should be preserved structurally as interface address `I3=0, I4=3`, rather than normalized to integer `3`. Leading zeroes can therefore carry address-component information just as they do in extended A/PL addressing.
+
+This configurator-level explanation and the OpenWebNet routing syntax describe different layers of the same concept: `I3`/`I4` define the SCS interface address, while `#4#INTERFACE` uses that address to qualify a functional target as being on the local bus reached through that interface.
+
 The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`; this is best understood as an instance of the same routing grammar, not as evidence for a different Automation local-bus mechanism.
 
 The source documents differ in the range they state for the interface field: the Lighting document gives `01`–`09` and `11`–`15`, while the Automation document expresses it as `[0-1][1-9]` (`01`–`09`, `11`–`19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
