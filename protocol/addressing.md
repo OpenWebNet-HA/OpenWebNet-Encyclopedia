@@ -48,9 +48,29 @@ An environment/area address contains only the `A` component. Valid forms are `1`
 
 A group address is explicitly marked by `#`: `#1` through `#255`. The prefix is part of the protocol syntax, so a group must not be represented as the bare decimal group number.
 
+## Routing qualifiers
+
+The public specifications and MyHOME Suite implementation data are most coherently represented as a **base address plus an optional routing qualifier**:
+
+~~~text
+BASE
+BASE#3
+BASE#4#INTERFACE
+~~~
+
+`BASE` is the functional target: General, Area, Group, or point where that combination is defined by the selected `WHO`. `INTERFACE` is the address of the routing interface. The `Int` label used by the `WHO 1` specification, the `interface` label used by `WHO 2`, and the `I3`/`I4` components used by MyHOME Suite describe the same interface-address concept in their respective notations.
+
+`#3` selects the riser/backbone level. `#4#INTERFACE` selects a local bus reached through the specified interface. These suffixes are therefore routing qualifications of a target address rather than new point-address formats.
+
+### Level 3 / riser
+
+The published Lighting material includes Level-3 variants such as `0#3`, `A#3`, `#GR#3`, and `APL#3`. The qualifier should be retained structurally when parsing; it is not part of `A`, `PL`, or the group number.
+
+The generalized model is also consistent with MyHOME Suite's separate level-rule fields. However, database structure alone does not prove that every base-address/qualifier combination is valid for every functional `WHO`.
+
 ## Local-bus forms
 
-Local-bus addressing uses the structural suffix `#4#<interface>`, but the valid target forms differ between the two published functional specifications.
+Local-bus addressing uses the structural suffix `#4#INTERFACE`, but the combinations explicitly established by the public `WHO 1` and `WHO 2` specifications differ.
 
 ### Lighting WHO 1
 
@@ -63,7 +83,7 @@ The Lighting specification explicitly permits the suffix on every Lighting scope
 | Group | `#<G>#4#<Int>` |
 | Point to point | `<A><PL>#4#<Int>` |
 
-For `WHO 1`, `Int = I3I4` with `I3=0, I4=1–9` or `I3=1, I4=1–5`. The published interface range is therefore `01`–`09` and `11`–`15`; `10` is not included.
+For `WHO 1`, `Int` is the local-bus interface address. The specification decomposes it as `I3I4`, with `I3=0, I4=1–9` or `I3=1, I4=1–5`. The published interface range is therefore `01`–`09` and `11`–`15`; `10` is not included.
 
 Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
 
@@ -75,7 +95,7 @@ The Automation specification defines its local-bus address as:
 APL#4#interface
 ~~~
 
-and gives `interface = [0-1][1-9]`, i.e. `01`–`09` or `11`–`19`.
+and gives `interface = [0-1][1-9]`, i.e. `01`–`09` or `11`–`19`. This `interface` field is semantically the same routing-interface address called `Int` by the Lighting specification.
 
 Unlike the Lighting `WHERE` table, the published Automation table does not explicitly define local-bus General, Area, or Group forms. They must therefore not be promoted to canonical `WHO 2` syntax merely because the corresponding Lighting forms exist.
 
@@ -99,7 +119,7 @@ Three source layers contribute different kinds of evidence:
 
 The public functional specifications are authoritative for functional `WHO 1`/`WHO 2` wire syntax. `OPEN.db` is complementary implementation evidence: `EN_ADDRESS_RULE` and `AS_SYSTEM_ADDRESS_RULE` show that MyHOME Suite selects address rules by system and, for some rules, by Object/Device family.
 
-For the combined Light/Automation system, `OPEN.db` records a general virtual form `[A][PL]` with advanced form `[A][PL]+`, plus F422 logic/physical-extension forms `[I3][I4]` and `[I3][I4]+`. The `+` notation belongs to the database's address-rule vocabulary; it should not be emitted literally as part of an OpenWebNet `WHERE`.
+For the combined Light/Automation system, `OPEN.db` records a general virtual form `[A][PL]` with advanced form `[A][PL]+`, plus F422 logic/physical-extension forms `[I3][I4]` and `[I3][I4]+`. Together with the separate `level_2_rule` and `level_4_rule` fields, this supports modeling advanced addressing as qualification/routing layered onto a base address. The `+` notation belongs to the database's address-rule vocabulary; it should not be emitted literally as part of an OpenWebNet `WHERE`, and it does not by itself establish which qualifier combinations are legal for a particular functional `WHO`.
 
 The database also contains `validity_rule`, `object_device_family`, `level_2_rule`, `level_4_rule`, and `offset_adv`. These fields are evidence that syntactic range validation alone is insufficient for every managed Object. Where an address rule is family-qualified, its `object_device_family` correlates with the catalogue Object-family model; applicability should be resolved before encoding a Device-specific management address.
 
