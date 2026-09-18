@@ -1,6 +1,6 @@
 # `WHAT` Reference
 
-`WHAT` in `WHO 2` expresses Automation movement commands. The published Automation specification distinguishes base motor-actuator commands from advanced commands carrying movement-step and priority parameters.
+`WHAT` in `WHO 2` expresses Automation movement commands. The published specification distinguishes base motor commands, advanced parameterized commands, and translated event reports.
 
 ## Base commands
 
@@ -10,46 +10,44 @@
 | `1` | Up | `*2*1*WHERE##` |
 | `2` | Down | `*2*2*WHERE##` |
 
-For group addressing, an event may be reported for the group and for the individual Automation Objects affected by the command. For environment and general addressing, status/event reporting may likewise expand to the affected Objects.
+Collective commands can expand into events for the addressed scope and the individual affected Objects. Up/Down movement normally produces a later Stop event when the endpoint is reached.
 
 ## Advanced commands
 
-| `WHAT` | Function | Optional parameters |
+| Leading `WHAT` | Function | Parameters |
 | ---: | --- | --- |
-| `10` | Stop advanced | shutter priority |
-| `11` | Up advanced | shutter step; shutter priority |
-| `12` | Down advanced | shutter step; shutter priority |
+| `10` | Advanced Stop | priority; set/clear selector |
+| `11` | Advanced Up | optional step; priority; set/clear selector |
+| `12` | Advanced Down | optional step; priority; set/clear selector |
 
-The advanced operations use `WHAT` parameters rather than assigning the complete operation to the numeric `WHAT` alone. Implementations must therefore preserve the parameterized form of the command.
+The exact `#`-parameterized form is part of `WHAT`; parsing only the leading number loses the requested step and priority operation.
 
-### Shutter step
+### Step
 
-The shutter-step parameter is in the range `1`–`99`; `100` or an omitted/null step denotes the complete movement to the open or closed endpoint, according to direction. Values `1`–`99` denote movement by the corresponding amount.
+`1`–`99` requests the corresponding relative movement. An omitted/null value or `100` means movement to the endpoint for the selected direction.
 
 ### Priority
 
-Advanced commands can carry a priority operation composed of a set/clear selector and three priority flags:
+The priority payload contains a set/clear selector and Safety, High, and Medium flags. A zero flag leaves that priority unchanged. This is a bit-selection operation, not a single ordinal priority number.
 
-| Priority flag | Meaning |
-| --- | --- |
-| `p1` | Safety priority |
-| `p2` | High priority |
-| `p3` | Medium priority |
+## Command-translation reports — `WHAT 1000`
 
-The selector determines whether the indicated priority bits are set or cleared. A zero bit leaves the corresponding priority unaffected. With no priority bits selected, the priority operation has no effect.
+The published Automation flows use `1000#INNER_WHAT...` when reporting translated commands for point targets. Base operations can appear as:
 
-## Extended movement states
+~~~text
+*2*1000#INNER_WHAT*WHERE##
+~~~
 
-The Automation data model also represents the following advanced shutter states:
+Advanced reports preserve their parameters, for example the inner operation, priority, set/clear selector, and target `WHERE`. Some tables in the source omit `WHERE` in individual rows while later rows include it; parsers should accept only forms corroborated by the actual gateway/device family and preserve the raw frame when the source is inconsistent.
 
-| Value | State |
-| ---: | --- |
-| `10` | Stop |
-| `11` | Up |
-| `12` | Down |
-| `13` | Step-by-step up |
-| `14` | Step-by-step down |
+Do not mistake `1000` for a movement state. It is a wrapper around another Automation operation.
 
-These values are used as shutter-status values in `DIMENSION 10`; they must not be interpreted as additional published command functions merely because they occupy the same numeric range. See [`dimensions.md`](dimensions.md).
+## State values are not commands
 
-See [`addressing.md`](addressing.md) for `WHERE` forms and [`../../protocol/what.md`](../../protocol/what.md) for the common `WHAT` model.
+Values `10`–`14` also appear as `DIMENSION 10` shutter-state values: Stop, Up, Down, step-by-step Up, and step-by-step Down. That value table is local to the `DIMENSION` payload. In particular, `13` and `14` are not established ordinary command `WHAT` values.
+
+## Evidence basis
+
+The command table, step and priority model, collective event behavior, and translation frames come from [`WHO_2.pdf`](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
+
+See [`dimensions.md`](dimensions.md), [`addressing.md`](addressing.md), and the common [`WHAT` model](../../protocol/what.md).
