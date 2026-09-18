@@ -17,6 +17,10 @@
 
 The conceptual model is **Physical Device → Firmware → Module → Object → Configuration**.
 
+![Catalogue identity and capability model](../assets/diagrams/catalogue-capability.svg)
+
+The diagram shows established catalogue relationships and association tables. It is a capability model: installed Device state still comes from diagnostics or a loaded project.
+
 ## Identity resolution
 
 A diagnostic identity response does not return an `EN_DEVICE` primary key. Resolution proceeds through meaning:
@@ -31,11 +35,13 @@ A diagnostic identity response does not return an `EN_DEVICE` primary key. Resol
 
 Several SKUs can share one item and firmware capability. Preserve the candidate set unless the evidence identifies one marketed product uniquely.
 
-`DIMENSION 1` VALUE 2 remains unknown. It must not be treated as an Object, Virgin Object, form factor, firmware class, or database key.
+`DIMENSION 1.N_CONF` is the second value after `OBJECT_MODEL`. It reports the number of physical configurator positions provided by the Device. This interpretation is corroborated by `OPEN.db`, catalogue configuration definitions, observed responses, and product diagrams; it is not an Object, Virgin Object, form factor, firmware class, or database key. See [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#n_conf-and-physical-configurators).
 
 ## Firmware and Module resolution
 
-An item can have multiple firmware definitions. The installed firmware response, build information, and default metadata can narrow the choice, but the exact MyHOME Suite selection algorithm is not present in the canonical corpus.
+An item can have multiple firmware definitions. Resolve the three-component `V.R.b` identity across `EN_FIRMWARE.firmware_V`, `EN_FIRMWARE.firmware_R`, and `EN_BUILDS.firmware_b`. The installed firmware response and default/localization metadata can narrow the choice, but the exact MyHOME Suite selection algorithm is not present in the canonical corpus.
+
+An explicit component value of `-1` is strongly corroborated as **any or unspecified** for that component: the catalogue contains both `-1.-1.-1` defaults and concrete `V.R.-1` definitions. Preserve this as an inferred wildcard/default semantic, not as a proven precedence algorithm. Do not equate an explicit build of `-1` with the absence of an `EN_BUILDS` row. See [Firmware](../device-model/firmware.md#the--1-sentinel) for the evidence and counts.
 
 Once firmware is resolved, `AS_OBJECT_FIRMWARE` gives supported Objects, `EN_SLOTS.first_slot` places Object alternatives, Virgin-Object associations describe configurable templates, and slot conditions can remove alternatives in a particular configuration.
 
