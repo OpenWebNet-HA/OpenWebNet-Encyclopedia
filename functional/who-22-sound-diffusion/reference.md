@@ -1,44 +1,64 @@
-# Protocol Reference
+# `WHO 22` Protocol Reference
 
-`WHO 22` models Sound Diffusion using explicit source, speaker, area and general target forms. It includes amplifier power, source selection, tuner and track navigation, RDS, tone/balance adjustment, presets and absolute `DIMENSION` state.
+`WHO 22` is the later Sound Diffusion / Multimedia dialect. It uses structured source, speaker, area, and general addresses, with operation parameters embedded in `WHAT`.
+
+## Core parameters
+
+| Parameter | Published domain |
+| --- | --- |
+| Multimedia type | `1` voice; `2` right; `3` left; `4` stereo; `11` all sources |
+| Source ID | `1`–`4` |
+| Area / speaker point | `1`–`9` |
+| Device state | `0` OFF; `1` ON |
+| Frequency step | `1`–`15` |
+| Modulation | `1` FM; `2` AM-LW; `3` AM-MW; `4` AM-SW |
+| Stored station | `1`–`5` for F500; `1`–`15` for F500N |
+| Track | `1`–`999` |
+| Volume / volume step | absolute `0`–`31`; step `1`–`31` |
+| Tone / balance value | `1`–`63` |
+| 3D level | `0`–`10` |
+| Loudness | `0` OFF; `1` ON |
+
+The source describes frequency steps as `50`, `100`, … `750 Hz`; this appears unusually small for radio tuning. This reference preserves the published values without silently relabelling their unit.
 
 ## `WHAT`
 
 | `WHAT` | Meaning |
 | ---: | --- |
-| `0` | Turn off |
-| `1` | Turn on |
+| `0` / `1` | Turn source or speaker OFF / ON |
 | `2` | Source turned on |
-| `3` | Increase volume |
-| `4` | Decrease volume |
-| `5` | Automatic tuner search toward higher frequencies |
-| `6` | Manual tuner search toward lower frequencies |
+| `3` / `4` | Increase / decrease volume |
+| `5` / `6` | Search/tune toward higher / lower frequencies |
 | `9` / `10` | Next / previous station |
 | `11` / `12` | Next / previous track |
 | `22` | Sliding request |
-| `31` / `32` | Start / stop RDS message |
+| `31` / `32` | Start / stop RDS message reporting |
 | `33` | Store tuned frequency as a station |
-| `34` | Turn on amplifier using Follow Me |
-| `35` | Turn on amplifier to a specified source |
+| `34` | Turn amplifier ON using Follow Me |
+| `35` | Turn amplifier ON using a specified source |
 | `36` / `37` | Increment / decrement low tones |
 | `38` / `39` | Increment / decrement mid tones |
 | `40` / `41` | Increment / decrement high tones |
-| `42` / `43` | Increment / decrement balance |
+| `42` / `43` | Move balance right / left |
 | `55` / `56` | Next / previous preset |
 
-Paired values are directional operations. They should remain explicit in an implementation because station, track, tone and balance navigation are semantically different even where their interaction pattern is similar.
+Most commands are parameterized. For example, source power uses `WHAT#MULTIMEDIA_TYPE#AREA`, while the target source remains in `WHERE`. A decoder must retain the entire `WHAT` field.
+
+### Frequency search
+
+For `WHAT 5` and `6`, an empty step parameter requests automatic search; a supplied frequency-step value requests movement by that step. The flat `WHAT` table's wording for `6` is therefore incomplete by itself; the allowed-message flow establishes both modes.
 
 ## `WHERE`
 
 | Target | `WHERE` form |
 | --- | --- |
-| Source | `2#sourceID` |
-| Speaker | `3#area#point` |
-| Speaker area | `4#area` |
-| General | `5#sender_address` |
+| Source | `2#SOURCE_ID` |
+| Speaker | `3#AREA#POINT` |
+| Speaker area | `4#AREA` |
+| General | `5#SENDER_ADDRESS` |
 | All sources | `6` |
 
-The first component identifies the target class. `3#area#point` is therefore not a numeric address with separators removed: it is a structured speaker address. Area commands and individual-speaker commands must remain distinct.
+These are tagged target classes, not decimal numbers with punctuation. Keep the structure intact.
 
 ## `DIMENSION`
 
@@ -49,7 +69,7 @@ The first component identifies the target class. `3#area#point` is therefore not
 | `3` | Medium tones |
 | `4` | Low tones |
 | `5` | Frequency |
-| `6` | Track / station |
+| `6` | Track/station |
 | `7` | Play status |
 | `11` | Frequency and station |
 | `12` | Device state |
@@ -58,14 +78,18 @@ The first component identifies the target class. `3#area#point` is therefore not
 | `19` | Preset |
 | `20` | Loudness |
 
-These `DIMENSION` operations provide absolute or structured state alongside the relative command vocabulary. A state cache should therefore use `DIMENSION` responses where available instead of attempting to reconstruct absolute values solely by counting increment/decrement events.
+Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer reported values for state caches instead of reconstructing state from increments.
 
-## Source selection and Follow Me
+## Source and speaker semantics
 
-`WHAT 35` explicitly turns an amplifier on using a specified source, while `WHAT 34` uses Follow Me behavior. These operations encode routing intent in addition to power state. Likewise `WHAT 2` reports source-on state and should not be reduced to a generic amplifier ON event.
+Source commands and reports use source addresses; volume/tone/balance operations generally apply to speaker endpoints or areas. `WHAT 35` carries routing intent by selecting a source while turning an amplifier on. Follow Me (`WHAT 34`) is a separate operation and should not be normalized to ordinary ON.
 
-## Tuner, media and RDS
+The same namespace includes tuner, media-track, presets, RDS, and equalization. Interpretation depends on the selected source and target class.
 
-The namespace supports both tuner-oriented station/frequency operations and track-oriented media navigation. The target class and active source determine which interpretation is applicable. RDS start/stop and RDS-related `DIMENSION` data are source functions and should remain associated with the source rather than a speaker endpoint.
+## Relationship to `WHO 16`
 
-`WHO 22` is a separate protocol dialect from [`WHO 16`](../who-16-sound-system/); numeric values and address forms must not be translated between them by number alone.
+[`WHO 16`](../who-16-sound-system/) represents a different sound dialect. Similar terms do not imply compatible numeric values, address forms, or parameter layouts.
+
+## Evidence basis
+
+Parameters, identifiers, and allowed-message distinctions come from [`WHO_22.pdf`](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
