@@ -23,4 +23,3 @@ Network captures are intentionally excluded from the repository because they can
 
 For a source file, calculate SHA-256 over the exact file bytes and compare it with the corresponding `sha256` entry in `manifest.yaml`. A mismatch means the file must not be treated as the canonical source identified by that manifest entry.
 
-The current repository blob for `OpenQuery.txt` is a known mismatch. Its registered original-file fingerprint and the differing repository-blob fingerprint are both recorded in the manifest. The blob remains useful implementation evidence, but its exact provenance must be described as unresolved until the registered original is restored or the discrepancy is otherwise explained.
