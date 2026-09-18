@@ -64,9 +64,9 @@ BASE#4#INTERFACE
 
 ### Level 3 / riser
 
-The published Lighting material includes Level-3 variants such as `0#3`, `A#3`, `#GR#3`, and `APL#3`. The qualifier should be retained structurally when parsing; it is not part of `A`, `PL`, or the group number.
+MyHOME Suite's address-rule model contains separate level-rule fields and supports a Level-3/riser qualification layer. A wire form such as `BASE#3`, when established for the selected system and operation, should be retained structurally: the qualifier is not part of `A`, `PL`, or a group number.
 
-The generalized model is also consistent with MyHOME Suite's separate level-rule fields. However, database structure alone does not prove that every base-address/qualifier combination is valid for every functional `WHO`.
+The preserved public `WHO 1` table describes unqualified private-riser targets and explicit Level-4 forms; it does not itself enumerate `BASE#3` variants. Level-3 applicability is therefore implementation/address-rule evidence in this corpus, not a published universal Lighting grammar. Do not generate `0#3`, `A#3`, `#GR#3`, or `APL#3` merely from the generalized model without system- and operation-specific evidence.
 
 ## Local-bus forms
 
