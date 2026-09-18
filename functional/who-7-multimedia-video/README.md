@@ -1,4 +1,4 @@
-# `WHO 7` — Multimedia System
+# `WHO 7` - Multimedia System
 
 `WHO 7` controls cameras from the Video Door Entry catalogue: video-resource acquisition/release, image adjustment, and display DIAL selection.
 
