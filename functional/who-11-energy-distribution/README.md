@@ -1,4 +1,4 @@
-# `WHO 11` — Energy Distribution
+# `WHO 11` - Energy Distribution
 
 The MyHOME_Suite `OPEN.db` system definitions identify `WHO 11` as Energy distribution.
 
