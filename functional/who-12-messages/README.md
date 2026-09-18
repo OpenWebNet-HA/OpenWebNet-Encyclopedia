@@ -1,4 +1,4 @@
-# `WHO 12` — Messages
+# `WHO 12` - Messages
 
 The MyHOME_Suite `OPEN.db` system definitions identify `WHO 12` as Messages.
 
