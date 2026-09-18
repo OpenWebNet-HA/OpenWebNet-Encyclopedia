@@ -1,4 +1,4 @@
-# Overview
+# `WHO 16` — Sound System
 
 `WHO 16` defines the original OpenWebNet Sound System namespace. It combines amplifier and source control with tuner, RDS, volume, tone, balance and media-navigation functions.
 
