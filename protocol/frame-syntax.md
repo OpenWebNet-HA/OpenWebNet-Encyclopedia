@@ -1,49 +1,82 @@
 # Frame Syntax
 
-OpenWebNet frames are ASCII messages delimited by `*` and terminated by `##`. The meaning and permitted structure of individual fields depend on the frame family and selected `WHO`.
+An ordinary OpenWebNet frame is an ASCII message that begins with `*`, contains `*`-separated tags, and ends with `##`.
+
+~~~text
+*tag1*tag2*...*tagN##
+~~~
+
+The introductory specification limits ordinary frame characters to decimal digits, `*`, and `#`. The meaning and permitted structure of each tag depend on the frame family and selected `WHO`.
 
 ## Common frame forms
 
 | Frame class | Syntax | Purpose |
 | --- | --- | --- |
-| Command/status | `*WHO*WHAT*WHERE##` | Command, state, or asynchronous event |
-| Status request | `*#WHO*WHERE##` | Requests current state |
-| `DIMENSION` request | `*#WHO*WHERE*DIMENSION##` | Requests a `DIMENSION` value |
-| `DIMENSION` response | `*#WHO*WHERE*DIMENSION*VALUE...##` | Reports a `DIMENSION` value |
-| `DIMENSION` write | `*#WHO*WHERE*#DIMENSION*VALUE...##` | Writes a `DIMENSION` value |
-| `ACK` | `*#*1##` | Positive acknowledgement |
-| `NACK` | `*#*0##` | Negative acknowledgement |
+| Command/status/event | `*WHO*WHAT*WHERE##` | Command, reported state, or asynchronous event |
+| Status request | `*#WHO*WHERE##` | Request current state |
+| `DIMENSION` request | `*#WHO*WHERE*DIMENSION##` | Request a property value |
+| `DIMENSION` response/report | `*#WHO*WHERE*DIMENSION*VALUE...##` | Return or asynchronously report a property value |
+| `DIMENSION` write | `*#WHO*WHERE*#DIMENSION*VALUE...##` | Write a supported property |
+| `ACK` | `*#*1##` | Positive result or sequence terminator |
+| `NACK` | `*#*0##` | Negative result or failed-sequence terminator |
 
-The ellipsis in `VALUE...` denotes zero or more additional `*`-separated values defined by that `DIMENSION`. It is notation used by this reference and is not transmitted.
+`VALUE...` is notation used by this reference for the ordered value fields defined by that `DIMENSION`; the ellipsis is not transmitted.
 
-## Delimiters
+Connection selectors and authentication frames use the same outer delimiters but have their own state-dependent grammars. See [Connection and Sessions](sessions.md) and [Authentication](authentication.md).
+
+## Delimiters and empty tags
 
 | Token | Role |
 | --- | --- |
-| `*` | Separates major frame fields |
+| `*` | Starts a frame and separates major tags |
 | `##` | Terminates a frame |
-| `#` | Introduces frame variants, advanced addressing, or parameterized fields according to context |
+| `#` | Participates in a frame variant or parameterized field according to context |
 
-`#` does not have one context-independent meaning. Its interpretation follows the grammar of the field in which it appears.
+Tags can be empty. For example, `*#13**1##` contains an intentionally empty `WHERE`. A tokenizer must preserve that empty field rather than collapsing adjacent separators.
 
-## Command and status frames
+`#` has no single context-independent meaning. It can introduce a request family, prefix a writable `DIMENSION`, mark a group address, add routing qualifiers, or separate operation-specific parameters.
 
-The normal form is `*WHO*WHAT*WHERE##`. Depending on direction and session context, the same structural form can represent a command, a reported state, or an event.
+## Command, status, and event frames
 
-`WHAT` can itself be parameterized. The valid syntax is defined by the selected `WHO`; see [`what.md`](what.md).
+The form `*WHO*WHAT*WHERE##` is direction- and session-dependent:
 
-## `DIMENSION` frames
+- in a commands/actions session, the client uses it to request an action;
+- the server can use it to answer a status request;
+- in an events session, it reports an asynchronous state change or event.
 
-`DIMENSION` operations use the `*#WHO...` family. A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends the `DIMENSION` values. A write prefixes the `DIMENSION` field with `#`.
+`WHAT` and `WHERE` can each contain `#`-introduced parameters when defined by the selected `WHO`. Parse them only after resolving the system.
 
-Some operations parameterize the `DIMENSION` selector itself with additional `#`-introduced components. For example, `32#[SLOT]` identifies `DIMENSION 32` for one internal slot; the following `SYS` and `ADDR` remain ordinary `*`-separated values. The `#` inside a selector therefore does not replace the major-field delimiter.
+## Status requests
 
-`DIMENSION` identifiers and value layouts are scoped to their `WHO`. See [`dimensions.md`](dimensions.md).
+A status request has form `*#WHO*WHERE##`. If `WHERE` is omitted where the system permits it, the request can address the complete system.
 
-## Addressing
+The server can return one or more normal command/status frames. The response sequence ends with `ACK` on success or `NACK` on failure; it is not safe to assume a single result frame.
 
-`WHERE` is interpreted using the address grammar of the selected system. It must not be parsed as a universal A/PL value. See [`addressing.md`](addressing.md).
+## `DIMENSION` operations
 
-## Acknowledgements
+A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends ordered values. The same response form can also appear asynchronously on an events connection when a value changes or is reported periodically.
 
-`ACK` and `NACK` are standalone frames rather than `WHO`-specific command frames. See [`acknowledgements.md`](acknowledgements.md).
+A write prefixes the `DIMENSION` selector with `#`. A syntactically valid write does not imply that the selected property is writable.
+
+Some systems parameterize the selector itself. For example, diagnostic `32#SLOT` selects `DIMENSION 32` for one internal slot; the following `SYS` and `ADDR` remain ordinary `*`-separated values. The `#` inside the selector does not replace the major-field delimiter.
+
+## Field scope
+
+The semantic identity of a field includes its namespace and structural role:
+
+- an operation is at least `(WHO, WHAT)` plus any `WHAT` parameters and target context;
+- an address is `(WHO, WHERE)`;
+- a property is at least `(WHO, DIMENSION)` plus selector parameters;
+- user-facing meaning can additionally depend on the target Object.
+
+Equal numeric values in different `WHO` namespaces do not imply equal meaning.
+
+## Parsing requirements
+
+Do not parse OpenWebNet with a single delimiter split and immediate integer conversion. Preserve the raw frame, recognize the family, preserve empty tags and leading zeroes, and then apply field-specific grammars.
+
+See [Stream Parsing](stream-parsing.md) for an incremental parser model, [Addressing](addressing.md) for `WHERE`, [`WHAT`](what.md), [`DIMENSION`](dimensions.md), and [Acknowledgements](acknowledgements.md).
+
+## Evidence basis
+
+The common frame forms, alphabet, empty-tag rule, request/response direction, and acknowledgement-terminated sequences come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). System-specific extensions are documented only where the relevant `WHO` source, implementation database, or observed workflow establishes them.
