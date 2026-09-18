@@ -1,4 +1,4 @@
-# Overview
+# `WHO 2` - Automation
 
 `WHO 2` defines the OpenWebNet Automation system. It covers movement commands, shutter state, relative and absolute positioning, priority handling, and Automation-specific addressing.
 
