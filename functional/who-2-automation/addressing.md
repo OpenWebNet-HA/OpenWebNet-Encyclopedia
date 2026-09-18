@@ -23,7 +23,7 @@ The published grammar constrains `PL` according to the `A` representation:
 | `10` | `01`–`15` |
 | `01`–`09` | `10`–`15` |
 
-These forms preserve significant leading zeroes. An Automation address should therefore be parsed according to the applicable grammar rather than converted to an integer before its address class is known. The published `WHO 2` table explicitly defines the local-bus form for point-to-point `APL`; unlike the `WHO 1` Lighting table, it does not explicitly define local-bus General, Area, or Group forms. See the [canonical addressing reference](../../protocol/addressing.md#local-bus-forms) for the cross-source distinction.
+These forms preserve significant leading zeroes. An Automation address should therefore be parsed according to the applicable grammar rather than converted to an integer before its address class is known. The published `WHO 2` table explicitly defines the local-bus form for point-to-point `APL`; its `interface` field is the same routing-interface concept called `Int` by the `WHO 1` specification. Unlike the `WHO 1` Lighting material, the published Automation table does not explicitly establish `#3` variants or local-bus General, Area, or Group forms. See the [canonical addressing reference](../../protocol/addressing.md#local-bus-forms) for the cross-source distinction.
 
 ## Event expansion
 
