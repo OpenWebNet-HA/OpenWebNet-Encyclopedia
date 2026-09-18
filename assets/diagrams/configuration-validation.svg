@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920" role="img" aria-labelledby="title desc">
+  <title id="title">Configuration ownership and validation model</title>
+  <desc id="desc">Object- and firmware-scoped configuration definitions, ranges, contextual filters, slot conditions, and conversion rules.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#50606b"/></marker>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#50606b"/></marker>
+    <style>
+      .title{font:600 28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#17232b}
+      .subtitle{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+      .entity-title{font:600 16px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#fff}
+      .field{font:400 13px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#22313a}
+      .relation{stroke:#50606b;stroke-width:2;fill:none}
+      .dashed{stroke-dasharray:7 6}
+      .edge-label{font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#34444f;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+      .note-box{fill:#fff7df;stroke:#c99416;stroke-width:1.5}
+      .note{font:500 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#634a11}
+      .legend{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="50" y="48" class="title">Configuration ownership and validation model</text>
+  <text x="50" y="76" class="subtitle">Object- and firmware-scoped configuration definitions, ranges, contextual filters, slot conditions, and conversion rules.</text>
+  <g class="entity">
+    <rect x="70" y="150" width="240" height="115" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M77,150 H303 Q310,150 310,157 V186 H70 V157 Q70,150 77,150" fill="#174d70"/>
+    <text x="190" y="174" class="entity-title" text-anchor="middle">EN_KEY_OBJECT</text>
+    <text x="84" y="207" class="field">PK id_key_object</text><text x="84" y="227" class="field">key_object</text>
+  </g>
+<g class="entity">
+    <rect x="70" y="360" width="240" height="125" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M77,360 H303 Q310,360 310,367 V396 H70 V367 Q70,360 77,360" fill="#174d70"/>
+    <text x="190" y="384" class="entity-title" text-anchor="middle">EN_FIRMWARE</text>
+    <text x="84" y="417" class="field">PK id_firmware</text><text x="84" y="437" class="field">firmware_V / firmware_R</text><text x="84" y="457" class="field">slots</text>
+  </g>
+<g class="entity">
+    <rect x="430" y="240" width="260" height="190" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M437,240 H683 Q690,240 690,247 V276 H430 V247 Q430,240 437,240" fill="#174d70"/>
+    <text x="560" y="264" class="entity-title" text-anchor="middle">EN_CONF</text>
+    <text x="444" y="297" class="field">PK id_conf</text><text x="444" y="317" class="field">id_key_object OR id_firmware</text><text x="444" y="337" class="field">idx, conf_name</text><text x="444" y="357" class="field">type, visible, read_only</text>
+  </g>
+<g class="entity">
+    <rect x="800" y="110" width="245" height="120" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M807,110 H1038 Q1045,110 1045,117 V146 H800 V117 Q800,110 807,110" fill="#174d70"/>
+    <text x="922.5" y="134" class="entity-title" text-anchor="middle">EN_CONF_RANGE</text>
+    <text x="814" y="167" class="field">FK id_conf</text><text x="814" y="187" class="field">range/value metadata</text><text x="814" y="207" class="field">defaults / labels</text>
+  </g>
+<g class="entity">
+    <rect x="800" y="315" width="270" height="125" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
+    <path d="M807,315 H1063 Q1070,315 1070,322 V351 H800 V322 Q800,315 807,315" fill="#5b3f86"/>
+    <text x="935" y="339" class="entity-title" text-anchor="middle">AS_OBJECT_FIRMWARE</text>
+    <text x="814" y="372" class="field">PK id_object_firmware</text><text x="814" y="392" class="field">FK id_firmware</text><text x="814" y="412" class="field">FK id_key_object</text>
+  </g>
+<g class="entity">
+    <rect x="1190" y="265" width="240" height="150" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1197,265 H1423 Q1430,265 1430,272 V301 H1190 V272 Q1190,265 1197,265" fill="#174d70"/>
+    <text x="1310" y="289" class="entity-title" text-anchor="middle">EN_FILTER</text>
+    <text x="1204" y="322" class="field">id_filter</text><text x="1204" y="342" class="field">FK id_object_firmware</text><text x="1204" y="362" class="field">FK id_conf</text><text x="1204" y="382" class="field">whole_range</text>
+  </g>
+<g class="entity">
+    <rect x="1190" y="520" width="240" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1197,520 H1423 Q1430,520 1430,527 V556 H1190 V527 Q1190,520 1197,520" fill="#174d70"/>
+    <text x="1310" y="544" class="entity-title" text-anchor="middle">EN_FILTER_RANGE</text>
+    <text x="1204" y="577" class="field">id_filter</text><text x="1204" y="597" class="field">range</text>
+  </g>
+<g class="entity">
+    <rect x="430" y="600" width="245" height="125" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M437,600 H668 Q675,600 675,607 V636 H430 V607 Q430,600 437,600" fill="#174d70"/>
+    <text x="552.5" y="624" class="entity-title" text-anchor="middle">EN_SLOTS</text>
+    <text x="444" y="657" class="field">PK id_slot</text><text x="444" y="677" class="field">FK id_object_firmware</text><text x="444" y="697" class="field">first_slot, fixed_ko</text>
+  </g>
+<g class="entity">
+    <rect x="800" y="610" width="250" height="105" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
+    <path d="M807,610 H1043 Q1050,610 1050,617 V646 H800 V617 Q800,610 807,610" fill="#5b3f86"/>
+    <text x="925" y="634" class="entity-title" text-anchor="middle">AS_SLOT_CONDITION</text>
+    <text x="814" y="667" class="field">FK id_slot</text><text x="814" y="687" class="field">FK id_condition</text>
+  </g>
+<g class="entity">
+    <rect x="1160" y="700" width="240" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1167,700 H1393 Q1400,700 1400,707 V736 H1160 V707 Q1160,700 1167,700" fill="#174d70"/>
+    <text x="1280" y="724" class="entity-title" text-anchor="middle">EN_CONDITION</text>
+    <text x="1174" y="757" class="field">PK id_condition</text><text x="1174" y="777" class="field">condition</text><text x="1174" y="797" class="field">id_conv_rule</text>
+  </g>
+<g class="entity">
+    <rect x="790" y="770" width="260" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M797,770 H1043 Q1050,770 1050,777 V806 H790 V777 Q790,770 797,770" fill="#174d70"/>
+    <text x="920" y="794" class="entity-title" text-anchor="middle">EN_CONV_RULE</text>
+    <text x="804" y="827" class="field">item_conf/value</text><text x="804" y="847" class="field">object_conf/value</text><text x="804" y="867" class="field">jump / always_true</text>
+  </g>
+<g>
+    <line x1="310" y1="205" x2="430" y2="285" class="relation" marker-end="url(#arrow)"/>
+    <text x="370" y="238" class="edge-label" text-anchor="middle">Object-scoped; firmware = 0</text>
+  </g>
+<g>
+    <line x1="310" y1="420" x2="430" y2="380" class="relation" marker-end="url(#arrow)"/>
+    <text x="370" y="393" class="edge-label" text-anchor="middle">firmware-scoped; Object = 0</text>
+  </g>
+<g>
+    <line x1="690" y1="285" x2="800" y2="170" class="relation" marker-end="url(#arrow)"/>
+    <text x="745" y="220.5" class="edge-label" text-anchor="middle">base domain</text>
+  </g>
+<g>
+    <line x1="1070" y1="375" x2="1190" y2="340" class="relation" marker-end="url(#arrow)"/>
+    <text x="1130" y="350.5" class="edge-label" text-anchor="middle">context</text>
+  </g>
+<g><polyline points="690,335 1110,335 1110,360 1190,360" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="900" y="324" class="edge-label" text-anchor="middle">property</text></g>
+<g>
+    <line x1="1310" y1="415" x2="1310" y2="520" class="relation" marker-end="url(#arrow)"/>
+    <text x="1310" y="460.5" class="edge-label" text-anchor="middle">allowed subset</text>
+  </g>
+<g><polyline points="930,440 930,520 552,520 552,600" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="760" y="510" class="edge-label" text-anchor="middle">slot placement</text></g>
+<g>
+    <line x1="675" y1="662" x2="800" y2="662" class="relation" marker-end="url(#arrow)"/>
+    <text x="737.5" y="655" class="edge-label" text-anchor="middle">condition link</text>
+  </g>
+<g>
+    <line x1="1050" y1="680" x2="1160" y2="745" class="relation" marker-end="url(#arrow)"/>
+    <text x="1105" y="705.5" class="edge-label" text-anchor="middle">condition</text>
+  </g>
+<g><polyline points="1160,785 1100,785 1100,822 1050,822" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="1105" y="810" class="edge-label" text-anchor="middle">conversion rule</text></g>
+<g><rect x="90" y="535" width="275" height="34" rx="17" class="note-box"/><text x="227.5" y="557" class="note" text-anchor="middle">EN_CONF ownership is polymorphic</text></g>
+<g><rect x="1110" y="115" width="320" height="34" rx="17" class="note-box"/><text x="1270" y="137" class="note" text-anchor="middle">Transport range ≠ final valid domain</text></g>
+  <text x="50" y="896" class="legend">Validation proceeds from property definition through context-specific filters, conditions, and conversions.</text>
+</svg>
