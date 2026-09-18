@@ -1,4 +1,4 @@
-# `WHO 23` — Access Control
+# `WHO 23` - Access Control
 
 `WHO 23` identifies Access Control. The current corpus establishes a managed functional/diagnostic family and concrete MyHOME Suite address classes, but not a complete ordinary functional command table.
 
