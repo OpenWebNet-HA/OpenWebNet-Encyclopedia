@@ -1,4 +1,4 @@
-# Overview
+# `WHO 5` — Alarm
 
 `WHO 5` defines the OpenWebNet Burglar Alarm system. The published protocol is primarily a monitoring and state-reporting interface: it exposes central-unit state, zone state, alarm events, power and battery conditions, technical and silent alarms, and a small set of programming-related operations.
 
