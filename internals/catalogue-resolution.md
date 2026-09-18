@@ -35,7 +35,9 @@ Several SKUs can share one item and firmware capability. Preserve the candidate 
 
 ## Firmware and Module resolution
 
-An item can have multiple firmware definitions. The installed firmware response, build information, and default metadata can narrow the choice, but the exact MyHOME Suite selection algorithm is not present in the canonical corpus.
+An item can have multiple firmware definitions. Resolve the three-component `V.R.b` identity across `EN_FIRMWARE.firmware_V`, `EN_FIRMWARE.firmware_R`, and `EN_BUILDS.firmware_b`. The installed firmware response and default/localization metadata can narrow the choice, but the exact MyHOME Suite selection algorithm is not present in the canonical corpus.
+
+An explicit component value of `-1` is strongly corroborated as **any or unspecified** for that component: the catalogue contains both `-1.-1.-1` defaults and concrete `V.R.-1` definitions. Preserve this as an inferred wildcard/default semantic, not as a proven precedence algorithm. Do not equate an explicit build of `-1` with the absence of an `EN_BUILDS` row. See [Firmware](../device-model/firmware.md#the--1-sentinel) for the evidence and counts.
 
 Once firmware is resolved, `AS_OBJECT_FIRMWARE` gives supported Objects, `EN_SLOTS.first_slot` places Object alternatives, Virgin-Object associations describe configurable templates, and slot conditions can remove alternatives in a particular configuration.
 

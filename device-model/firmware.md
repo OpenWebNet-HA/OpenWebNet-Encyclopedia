@@ -11,14 +11,25 @@ Firmware is the catalogue layer that projects an item into a concrete set of Mod
 | `id_firmware` | Internal firmware-definition identifier |
 | `id_item` | Item to which the firmware belongs |
 | `firmware_V` | Version component |
-| `firmware_R` | Release component |
+| `firmware_R` | Release/revision component (`R`) |
 | `slots` | Number of internal slots declared by the firmware |
 | `id_status` | Firmware status |
 | `FW_default` | Marks the default firmware definition |
 
 All firmware rows resolve to an `EN_ITEM` record in the canonical database.
 
-`EN_BUILDS` supplies build and localization data associated with firmware definitions. Consequently, the catalogue’s firmware identity is distributed across `EN_FIRMWARE` and `EN_BUILDS`, rather than stored as one textual version.
+`EN_BUILDS` supplies the third firmware component and localization data:
+
+| Column | Role |
+| --- | --- |
+| `id_build` | Internal build-row identifier |
+| `firmware_b` | Build component (`b`) |
+| `localization_level` | Build localization metadata |
+| `id_firmware` | Firmware definition to which the build belongs |
+
+A complete catalogue firmware version is therefore **Version.Release.Build**, written here as `V.R.b`: `firmware_V` and `firmware_R` come from `EN_FIRMWARE`, while `firmware_b` comes from each associated `EN_BUILDS` row. The identity is distributed across the two tables rather than stored as one textual version.
+
+The relationship is not one-to-one in every case. In the canonical database, 19 firmware definitions have no `EN_BUILDS` row and 15 have more than one. A missing build row, an explicit build value, and an explicit `firmware_b = -1` must consequently remain distinct during resolution.
 
 ## Firmware selection
 
@@ -28,9 +39,20 @@ The catalogue path is:
 
 `EN_DEVICE.id_item` → `EN_FIRMWARE.id_item` → selected `EN_FIRMWARE.id_firmware`
 
-The exact selection rule can depend on the reported firmware version, default flags, build data, and MyHOME_Suite behavior. A row being marked `FW_default` does not prove that every installed Device of that item runs that firmware.
+The exact selection rule can depend on all three reported components, default flags, localization metadata, and MyHOME Suite behavior. A row being marked `FW_default` does not prove that every installed Device of that item runs that firmware.
 
-Some catalogue rows use negative version/release values. These are implementation sentinels and must not be rendered as literal negative firmware versions.
+### The `-1` sentinel
+
+Negative components are implementation sentinels and must not be rendered as literal negative firmware versions. The canonical data provides strong evidence that `-1` means **any or unspecified value** for that component:
+
+- all 101 firmware definitions with `firmware_V = -1` and `firmware_R = -1` have an associated `firmware_b = -1`, producing `-1.-1.-1`;
+- all 101 of those definitions have `FW_default = 1`;
+- another five definitions retain concrete version and release values but use `firmware_b = -1`: four are `1.0.-1`, and one is `5.2.-1`;
+- an explicit `firmware_b = -1` is structurally different from having no `EN_BUILDS` row.
+
+The mixed forms are particularly important: `1.0.-1` and `5.2.-1` show that the build sentinel can apply independently, rather than `-1.-1.-1` being only a malformed whole-version value.
+
+The evidence therefore supports interpreting `-1.-1.-1` as a version-independent default or fallback and `V.R.-1` as any or unspecified build for a particular version and release. This is a **strongly corroborated interpretation of the data**, not a recovered MyHOME Suite comparison algorithm. Implementations should retain the raw components and must not claim that the precise wildcard-selection precedence is proven.
 
 ## Diagnostic firmware identity
 
@@ -38,7 +60,7 @@ Some catalogue rows use negative version/release values. These are implementatio
 
 `*#[WHO]*[WHERE]*2*[FW_VERSION]##`
 
-Its parameter description gives the logical form `Version*Release*Build`, with components in the range `1`–`99`.
+Its parameter description gives the logical form `Version*Release*Build`. In this documentation, the equivalent catalogue tuple is written `V.R.b` to distinguish the three stored numeric components from the `*` separators used by OpenWebNet frames.
 
 This response can be used to select or corroborate a catalogue firmware definition, but the databases do not contain a direct cross-database key between `FW_VERSION` in `OPEN.db` and `id_firmware` in `MHCatalogue.db`.
 
