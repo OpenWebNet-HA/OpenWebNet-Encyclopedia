@@ -1,21 +1,17 @@
-# Overview
+# `WHO 3` — Load Management
 
-`WHO 3` defines the OpenWebNet Load Management system. It represents the older load-control domain: managed electrical loads, priority/disconnection behavior and associated load-management states.
+`WHO 3` controls load-shedding priorities and reports the basic electrical measurements exposed by the load-management control unit.
 
 ## Reference
 
-| Subject | Page |
-| --- | --- |
-| Functional model and protocol boundaries | [`protocol.md`](protocol.md) |
+- [`WHO 3` Protocol Reference](protocol.md) — `WHAT`, `WHERE`, measurement `DIMENSION` values, and complete request/response patterns.
 
-## Relationship to energy systems
+## Scope
 
-Load Management must not be merged with [`WHO 18`](../who-18-energy-management/) Energy Management. `WHO 3` concerns load-control behavior, while `WHO 18` provides the later power, energy-totalizer, actuator, Stop&Go and historical-energy model. [`WHO 11`](../who-11-energy-distribution/) is another distinct namespace.
+The namespace models eight priority targets (`#1`–`#8`), their disabled/enabled/forced states, and voltage/current/power/energy readings from `WHERE 10`.
 
-The MyHOME_Suite functional-system data retains Load Management as its own system, which is consistent with this protocol separation.
+It is separate from [`WHO 11`](../who-11-energy-distribution/) and the later [`WHO 18`](../who-18-energy-management/) Energy Management namespace. Values must not be copied between them based on similar terminology.
 
-## Implementation rule
+## Evidence basis
 
-`WHAT`, `WHERE`, and any structured values are scoped to `WHO 3`. Similar concepts in `WHO 18` must not be substituted by numeric resemblance. Where the current integrated corpus does not establish a value precisely, it remains unspecified rather than inferred from the newer Energy Management protocol.
-
-See [`../../protocol/`](../../protocol/) for common OpenWebNet frame syntax.
+The functional grammar is established by [`WHO_3.pdf`](../../sources/openwebnet-public/pdf/WHO_3.pdf). MyHOME Suite `OPEN.db` confirms the namespace name but does not associate a concrete functional operation set with it in this revision.
