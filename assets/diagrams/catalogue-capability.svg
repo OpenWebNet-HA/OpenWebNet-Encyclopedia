@@ -22,118 +22,120 @@
   <text x="50" y="48" class="title">Catalogue identity and capability model</text>
   <text x="50" y="76" class="subtitle">Core MHCatalogue relationships from marketed Device through item, firmware, Objects, internal slots, builds, and catalogue systems.</text>
   <g class="entity">
-    <rect x="50" y="150" width="230" height="130" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M57,150 H273 Q280,150 280,157 V186 H50 V157 Q50,150 57,150" fill="#174d70"/>
-    <text x="165" y="174" class="entity-title" text-anchor="middle">EN_DEVICE</text>
-    <text x="64" y="207" class="field">PK id_device</text><text x="64" y="227" class="field">FK id_item</text><text x="64" y="247" class="field">FK id_brand / id_line</text><text x="64" y="267" class="field">code (SKU), name</text>
+    <rect x="40" y="140" width="230" height="130" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M47,140 H263 Q270,140 270,147 V176 H40 V147 Q40,140 47,140" fill="#174d70"/>
+    <text x="155" y="164" class="entity-title" text-anchor="middle">EN_DEVICE</text>
+    <text x="54" y="197" class="field">PK id_device</text><text x="54" y="217" class="field">FK id_item</text><text x="54" y="237" class="field">FK id_brand / id_line</text><text x="54" y="257" class="field">code (SKU), name</text>
   </g>
 <g class="entity">
-    <rect x="340" y="150" width="210" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M347,150 H543 Q550,150 550,157 V186 H340 V157 Q340,150 347,150" fill="#174d70"/>
-    <text x="445" y="174" class="entity-title" text-anchor="middle">EN_ITEM</text>
-    <text x="354" y="207" class="field">PK id_item</text><text x="354" y="227" class="field">descr</text>
+    <rect x="330" y="150" width="200" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M337,150 H523 Q530,150 530,157 V186 H330 V157 Q330,150 337,150" fill="#174d70"/>
+    <text x="430" y="174" class="entity-title" text-anchor="middle">EN_ITEM</text>
+    <text x="344" y="207" class="field">PK id_item</text><text x="344" y="227" class="field">descr</text>
   </g>
 <g class="entity">
-    <rect x="610" y="130" width="235" height="150" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M617,130 H838 Q845,130 845,137 V166 H610 V137 Q610,130 617,130" fill="#174d70"/>
-    <text x="727.5" y="154" class="entity-title" text-anchor="middle">EN_FIRMWARE</text>
-    <text x="624" y="187" class="field">PK id_firmware</text><text x="624" y="207" class="field">FK id_item</text><text x="624" y="227" class="field">firmware_V / firmware_R</text><text x="624" y="247" class="field">slots, FW_default</text>
+    <rect x="590" y="130" width="235" height="150" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M597,130 H818 Q825,130 825,137 V166 H590 V137 Q590,130 597,130" fill="#174d70"/>
+    <text x="707.5" y="154" class="entity-title" text-anchor="middle">EN_FIRMWARE</text>
+    <text x="604" y="187" class="field">PK id_firmware</text><text x="604" y="207" class="field">FK id_item</text><text x="604" y="227" class="field">firmware_V / firmware_R</text><text x="604" y="247" class="field">slots, FW_default</text>
   </g>
 <g class="entity">
-    <rect x="930" y="110" width="270" height="130" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
-    <path d="M937,110 H1193 Q1200,110 1200,117 V146 H930 V117 Q930,110 937,110" fill="#5b3f86"/>
-    <text x="1065" y="134" class="entity-title" text-anchor="middle">AS_OBJECT_FIRMWARE</text>
-    <text x="944" y="167" class="field">PK id_object_firmware</text><text x="944" y="187" class="field">FK id_firmware</text><text x="944" y="207" class="field">FK id_key_object</text>
+    <rect x="890" y="130" width="270" height="130" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
+    <path d="M897,130 H1153 Q1160,130 1160,137 V166 H890 V137 Q890,130 897,130" fill="#5b3f86"/>
+    <text x="1025" y="154" class="entity-title" text-anchor="middle">AS_OBJECT_FIRMWARE</text>
+    <text x="904" y="187" class="field">PK id_object_firmware</text><text x="904" y="207" class="field">FK id_firmware</text><text x="904" y="227" class="field">FK id_key_object</text>
   </g>
 <g class="entity">
-    <rect x="1260" y="110" width="200" height="130" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M1267,110 H1453 Q1460,110 1460,117 V146 H1260 V117 Q1260,110 1267,110" fill="#174d70"/>
-    <text x="1360" y="134" class="entity-title" text-anchor="middle">EN_SLOTS</text>
-    <text x="1274" y="167" class="field">PK id_slot</text><text x="1274" y="187" class="field">FK id_object_firmware</text><text x="1274" y="207" class="field">first_slot, fixed_ko</text>
+    <rect x="1220" y="130" width="230" height="130" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1227,130 H1443 Q1450,130 1450,137 V166 H1220 V137 Q1220,130 1227,130" fill="#174d70"/>
+    <text x="1335" y="154" class="entity-title" text-anchor="middle">EN_SLOTS</text>
+    <text x="1234" y="187" class="field">PK id_slot</text><text x="1234" y="207" class="field">FK id_object_firmware</text><text x="1234" y="227" class="field">first_slot, fixed_ko</text>
   </g>
 <g class="entity">
-    <rect x="930" y="350" width="240" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M937,350 H1163 Q1170,350 1170,357 V386 H930 V357 Q930,350 937,350" fill="#174d70"/>
-    <text x="1050" y="374" class="entity-title" text-anchor="middle">EN_KEY_OBJECT</text>
-    <text x="944" y="407" class="field">PK id_key_object</text><text x="944" y="427" class="field">key_object, id_family</text>
+    <rect x="25" y="405" width="200" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M32,405 H218 Q225,405 225,412 V441 H25 V412 Q25,405 32,405" fill="#174d70"/>
+    <text x="125" y="429" class="entity-title" text-anchor="middle">EN_BRAND</text>
+    <text x="39" y="462" class="field">PK id_brand</text><text x="39" y="482" class="field">brand_modobj</text>
   </g>
 <g class="entity">
-    <rect x="610" y="370" width="235" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M617,370 H838 Q845,370 845,377 V406 H610 V377 Q610,370 617,370" fill="#174d70"/>
-    <text x="727.5" y="394" class="entity-title" text-anchor="middle">EN_BUILDS</text>
-    <text x="624" y="427" class="field">PK id_build</text><text x="624" y="447" class="field">FK id_firmware</text><text x="624" y="467" class="field">firmware_b</text><text x="624" y="487" class="field">localization_level</text>
+    <rect x="255" y="405" width="200" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M262,405 H448 Q455,405 455,412 V441 H255 V412 Q255,405 262,405" fill="#174d70"/>
+    <text x="355" y="429" class="entity-title" text-anchor="middle">EN_LINE</text>
+    <text x="269" y="462" class="field">PK id_line</text><text x="269" y="482" class="field">line_modobj</text>
   </g>
 <g class="entity">
-    <rect x="340" y="390" width="235" height="120" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
-    <path d="M347,390 H568 Q575,390 575,397 V426 H340 V397 Q340,390 347,390" fill="#5b3f86"/>
-    <text x="457.5" y="414" class="entity-title" text-anchor="middle">AS_ITEM_SYSTEM</text>
-    <text x="354" y="447" class="field">FK id_item / id_system</text><text x="354" y="467" class="field">modobj, main</text>
+    <rect x="500" y="390" width="235" height="120" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
+    <path d="M507,390 H728 Q735,390 735,397 V426 H500 V397 Q500,390 507,390" fill="#5b3f86"/>
+    <text x="617.5" y="414" class="entity-title" text-anchor="middle">AS_ITEM_SYSTEM</text>
+    <text x="514" y="447" class="field">FK id_item / id_system</text><text x="514" y="467" class="field">modobj, main</text>
   </g>
 <g class="entity">
-    <rect x="50" y="410" width="220" height="120" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M57,410 H263 Q270,410 270,417 V446 H50 V417 Q50,410 57,410" fill="#174d70"/>
-    <text x="160" y="434" class="entity-title" text-anchor="middle">EN_SYSTEM</text>
-    <text x="64" y="467" class="field">PK id_system</text><text x="64" y="487" class="field">xml_key_system</text><text x="64" y="507" class="field">sys_modobj</text>
+    <rect x="775" y="385" width="235" height="130" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M782,385 H1003 Q1010,385 1010,392 V421 H775 V392 Q775,385 782,385" fill="#174d70"/>
+    <text x="892.5" y="409" class="entity-title" text-anchor="middle">EN_BUILDS</text>
+    <text x="789" y="442" class="field">PK id_build</text><text x="789" y="462" class="field">FK id_firmware</text><text x="789" y="482" class="field">firmware_b</text><text x="789" y="502" class="field">localization_level</text>
   </g>
 <g class="entity">
-    <rect x="930" y="570" width="240" height="100" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
-    <path d="M937,570 H1163 Q1170,570 1170,577 V606 H930 V577 Q930,570 937,570" fill="#5b3f86"/>
-    <text x="1050" y="594" class="entity-title" text-anchor="middle">AS_OBJECT_SYSTEM</text>
-    <text x="944" y="627" class="field">FK id_key_object</text><text x="944" y="647" class="field">FK id_system</text>
+    <rect x="1060" y="390" width="240" height="110" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1067,390 H1293 Q1300,390 1300,397 V426 H1060 V397 Q1060,390 1067,390" fill="#174d70"/>
+    <text x="1180" y="414" class="entity-title" text-anchor="middle">EN_KEY_OBJECT</text>
+    <text x="1074" y="447" class="field">PK id_key_object</text><text x="1074" y="467" class="field">key_object, id_family</text>
   </g>
 <g class="entity">
-    <rect x="50" y="650" width="210" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M57,650 H253 Q260,650 260,657 V686 H50 V657 Q50,650 57,650" fill="#174d70"/>
-    <text x="155" y="674" class="entity-title" text-anchor="middle">EN_BRAND</text>
-    <text x="64" y="707" class="field">PK id_brand</text><text x="64" y="727" class="field">brand_modobj</text>
+    <rect x="500" y="650" width="235" height="120" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M507,650 H728 Q735,650 735,657 V686 H500 V657 Q500,650 507,650" fill="#174d70"/>
+    <text x="617.5" y="674" class="entity-title" text-anchor="middle">EN_SYSTEM</text>
+    <text x="514" y="707" class="field">PK id_system</text><text x="514" y="727" class="field">xml_key_system</text><text x="514" y="747" class="field">sys_modobj</text>
   </g>
 <g class="entity">
-    <rect x="340" y="650" width="210" height="105" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
-    <path d="M347,650 H543 Q550,650 550,657 V686 H340 V657 Q340,650 347,650" fill="#174d70"/>
-    <text x="445" y="674" class="entity-title" text-anchor="middle">EN_LINE</text>
-    <text x="354" y="707" class="field">PK id_line</text><text x="354" y="727" class="field">line_modobj</text>
+    <rect x="1060" y="655" width="240" height="100" rx="7" fill="#f6f2fb" stroke="#6d55a0" stroke-width="2"/>
+    <path d="M1067,655 H1293 Q1300,655 1300,662 V691 H1060 V662 Q1060,655 1067,655" fill="#5b3f86"/>
+    <text x="1180" y="679" class="entity-title" text-anchor="middle">AS_OBJECT_SYSTEM</text>
+    <text x="1074" y="712" class="field">FK id_key_object</text><text x="1074" y="732" class="field">FK id_system</text>
   </g>
 <g>
-    <line x1="280" y1="205" x2="340" y2="205" class="relation" marker-end="url(#arrow)"/>
-    <text x="310" y="198" class="edge-label" text-anchor="middle">many Devices → one item</text>
+    <line x1="270" y1="205" x2="330" y2="205" class="relation" marker-end="url(#arrow)"/>
+    <text x="300" y="198" class="edge-label" text-anchor="middle">many Devices → one item</text>
   </g>
 <g>
-    <line x1="550" y1="205" x2="610" y2="205" class="relation" marker-end="url(#arrow)"/>
-    <text x="580" y="198" class="edge-label" text-anchor="middle">item firmware</text>
+    <line x1="530" y1="205" x2="590" y2="205" class="relation" marker-end="url(#arrow)"/>
+    <text x="560" y="198" class="edge-label" text-anchor="middle">item firmware</text>
   </g>
 <g>
-    <line x1="845" y1="205" x2="930" y2="175" class="relation" marker-end="url(#arrow)"/>
-    <text x="887.5" y="183" class="edge-label" text-anchor="middle">firmware support</text>
+    <line x1="825" y1="205" x2="890" y2="195" class="relation" marker-end="url(#arrow)"/>
+    <text x="857.5" y="193" class="edge-label" text-anchor="middle">firmware support</text>
   </g>
 <g>
-    <line x1="1200" y1="175" x2="1260" y2="175" class="relation" marker-end="url(#arrow)"/>
-    <text x="1230" y="168" class="edge-label" text-anchor="middle">placement</text>
+    <line x1="1160" y1="195" x2="1220" y2="195" class="relation" marker-end="url(#arrow)"/>
+    <text x="1190" y="188" class="edge-label" text-anchor="middle">placement</text>
+  </g>
+<g><polyline points="90,270 90,330 125,330 125,405" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="125" y="325" class="edge-label" text-anchor="middle">brand</text></g>
+<g><polyline points="210,270 210,350 355,350 355,405" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="285" y="344" class="edge-label" text-anchor="middle">line</text></g>
+<g><polyline points="430,260 430,330 618,330 618,390" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="525" y="324" class="edge-label" text-anchor="middle">system association</text></g>
+<g>
+    <line x1="708" y1="280" x2="892" y2="385" class="relation" marker-end="url(#arrow)"/>
+    <text x="800" y="325.5" class="edge-label" text-anchor="middle">0..n builds</text>
   </g>
 <g>
-    <line x1="1050" y1="240" x2="1050" y2="350" class="relation" marker-end="url(#arrow)"/>
-    <text x="1050" y="288" class="edge-label" text-anchor="middle">Object parent</text>
+    <line x1="1025" y1="260" x2="1180" y2="390" class="relation" marker-end="url(#arrow)"/>
+    <text x="1102.5" y="318" class="edge-label" text-anchor="middle">Object parent</text>
   </g>
 <g>
-    <line x1="728" y1="280" x2="728" y2="370" class="relation" marker-end="url(#arrow)"/>
-    <text x="728" y="318" class="edge-label" text-anchor="middle">0..n builds</text>
+    <line x1="618" y1="510" x2="618" y2="650" class="relation" marker-end="url(#arrow)"/>
+    <text x="618" y="573" class="edge-label" text-anchor="middle">catalogue system</text>
   </g>
-<g><polyline points="445,260 445,330 458,330 458,390" class="relation" marker-end="url(#arrow)" fill="none"/>
-  <text x="535" y="330" class="edge-label" text-anchor="middle">system association</text></g>
 <g>
-    <line x1="340" y1="450" x2="270" y2="470" class="relation" marker-end="url(#arrow)"/>
-    <text x="305" y="453" class="edge-label" text-anchor="middle">catalogue system</text>
+    <line x1="1180" y1="500" x2="1180" y2="655" class="relation" marker-end="url(#arrow)"/>
+    <text x="1180" y="570.5" class="edge-label" text-anchor="middle">Object system</text>
   </g>
-<g><polyline points="930,620 810,620 810,470 270,470" class="relation" marker-end="url(#arrow)" fill="none"/>
-  <text x="740" y="606" class="edge-label" text-anchor="middle">Object system</text></g>
 <g>
-    <line x1="1050" y1="460" x2="1050" y2="570" class="relation" marker-end="url(#arrow)"/>
-    <text x="1050" y="508" class="edge-label" text-anchor="middle">Object parent</text>
+    <line x1="735" y1="710" x2="1060" y2="705" class="relation" marker-end="url(#arrow)"/>
+    <text x="897.5" y="700.5" class="edge-label" text-anchor="middle">system parent</text>
   </g>
-<g><polyline points="150,650 150,585 110,585 110,280" class="relation" marker-end="url(#arrow)" fill="none"/>
-  <text x="90" y="580" class="edge-label" text-anchor="middle">brand</text></g>
-<g><polyline points="445,650 445,570 210,570 210,280" class="relation" marker-end="url(#arrow)" fill="none"/>
-  <text x="350" y="558" class="edge-label" text-anchor="middle">line</text></g>
-<g><rect x="1170" y="300" width="280" height="34" rx="17" class="note-box"/><text x="1310" y="322" class="note" text-anchor="middle">first_slot is the Device-local position</text></g>
-<g><rect x="590" y="540" width="300" height="34" rx="17" class="note-box"/><text x="740" y="562" class="note" text-anchor="middle">V.R.b spans EN_FIRMWARE + EN_BUILDS</text></g>
+<g><rect x="1160" y="315" width="290" height="34" rx="17" class="note-box"/><text x="1305" y="337" class="note" text-anchor="middle">first_slot is the Device-local position</text></g>
+<g><rect x="775" y="555" width="300" height="34" rx="17" class="note-box"/><text x="925" y="577" class="note" text-anchor="middle">V.R.b spans EN_FIRMWARE + EN_BUILDS</text></g>
   <text x="50" y="876" class="legend">Solid arrows show established catalogue relationships. Purple headers are association tables.</text>
 </svg>
