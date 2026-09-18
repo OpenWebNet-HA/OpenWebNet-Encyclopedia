@@ -1,69 +1,99 @@
-# Protocol Reference
+# `WHO 16` Protocol Reference
 
-`WHO 16` combines amplifier control, source selection, tuner navigation and audio parameters. The numeric structure of several `WHAT` families encodes both an operation and a magnitude, so clients should preserve the full value rather than normalize it to a bare action.
+`WHO 16` controls the earlier Sound System dialect: amplifiers, sources, tuner frequency, stored stations, RDS, volume, tone, balance, sleep, and Follow Me.
 
-## `WHAT`
+## `WHAT` values
 
 | `WHAT` | Meaning |
 | ---: | --- |
-| `0` | ON amplifier / base-band source |
-| `3` | ON amplifier / stereo-channel source |
-| `10` | OFF amplifier / base-band source |
-| `13` | OFF amplifier / stereo-channel source |
-| `20` | Source cycle, base band |
-| `23` | Source cycle, stereo channel |
-| `30` | Sleep on base band |
-| `33` | Sleep on stereo channel |
+| `0` / `3` | ON using base-band / stereo-channel source |
+| `10` / `13` | OFF using base-band / stereo-channel source |
+| `20` / `23` | Cycle source, base band / stereo channel |
+| `30` / `33` | Sleep on base band / stereo channel |
 | `40` | Sleep OFF |
-| `50` | Follow me, base band |
-| `53` | Follow me, stereo channel |
+| `50` / `53` | Follow Me, base band / stereo channel |
 | `100` | Source busy |
-| `101` | Start RDS transmission |
-| `102` | Stop RDS transmission |
-| `1001`–`1015` | Increase volume by 1–15 |
-| `1101`–`1115` | Decrease volume by 1–15 |
-| `2001`–`2015` | Increase high tones by 1–15 |
-| `2101`–`2115` | Decrease high tones by 1–15 |
-| `5000` | Find first free higher frequency |
-| `5001`–`5015` | Increase frequency in 0.05 MHz steps |
-| `5100` | Find first free lower frequency |
-| `5101`–`5115` | Decrease frequency in 0.05 MHz steps |
-| `6001`–`6015` | Advance radio station/track by 1–15 |
-| `6101`–`6115` | Move back radio station/track by 1–15 |
+| `101` / `102` | Start / stop RDS transmission |
+| `1001`–`1015` | Increase volume by `1`–`15` |
+| `1101`–`1115` | Decrease volume by `1`–`15` |
+| `2001`–`2015` | Increase high tones by `1`–`15` |
+| `2101`–`2115` | Decrease high tones by `1`–`15` |
+| `5000` | Seek next higher free frequency |
+| `5001`–`5015` | Increase frequency by `0.05`–`0.75 MHz` |
+| `5100` | Seek next lower free frequency |
+| `5101`–`5115` | Decrease frequency by `0.05`–`0.75 MHz` |
+| `6001`–`6015` | Advance station/track by `1`–`15` |
+| `6101`–`6115` | Move back station/track by `1`–`15` |
 
-The `100x`/`110x`, `200x`/`210x`, `500x`/`510x`, and `600x`/`610x` ranges are parameterized command families encoded directly in `WHAT`. Their final digits carry the step magnitude.
+The final digits carry magnitude and are part of `WHAT`.
 
 ## `WHERE`
 
-| `WHERE` | Meaning |
+| Target | `WHERE` |
 | --- | --- |
-| `0` | General amplifiers |
-| `#0`–`#9` | Amplifiers in environment 0–9 |
-| `01`–`99` | Individual amplifier |
-| `100` | General source |
-| `101`–`109` | Source 1–9 |
+| All amplifiers | `0` |
+| Amplifiers in environment 0–9 | `#0`–`#9` |
+| Individual amplifier | `01`–`99` |
+| All sources | `100` |
+| Source 1–9 | `101`–`109` |
 
-Amplifier and source targets occupy different ranges in the same namespace. Leading zeroes on individual-amplifier addresses are therefore significant protocol syntax.
+Amplifier and source targets share the namespace but have different ranges. Preserve leading zeroes on amplifier addresses.
 
-## `DIMENSION`
+## `DIMENSION` values
 
-| `DIMENSION` | Meaning |
-| ---: | --- |
-| `1` | Volume |
-| `2` | High tones |
-| `3` | Low tones |
-| `4` | Balance |
-| `5` | State |
-| `6` | Frequency |
-| `7` | Radio station / track |
-| `8` | RDS |
-| `9` | Frequency + radio station / track |
-| `10` | Radio station |
+| `DIMENSION` | Meaning | Established detail |
+| ---: | --- | --- |
+| `1` | Volume | `0`–`31`; readable/reportable/writable |
+| `2` | High tones | listed in the global table |
+| `3` | Low tones | listed in the global table |
+| `4` | Balance | listed in the global table |
+| `5` | State | request returns ordinary `WHAT` state frames |
+| `6` | Frequency | six decimal digits, expressed in kHz by the examples (`107000` = 107.00 MHz) |
+| `7` | Stored station / track | station write range `1`–`5` |
+| `8` | RDS | eight ASCII character codes as separate values |
+| `9` | Frequency plus station/track | listed in the global table |
+| `10` | Memorized station | station range `1`–`5` |
 
-`DIMENSION` operations expose absolute/structured sound-system information that complements relative `WHAT` operations. For example, a volume increment command and a volume `DIMENSION` value are different representations and should not be conflated.
+The source gives complete flows only for a subset. Do not invent payloads for table-only `DIMENSION` values `2`, `3`, `4`, or `9`.
 
-## Source and amplifier state
+## Volume
 
-ON/OFF, source cycling, sleep and Follow Me operations carry base-band/stereo-channel variants. Source-busy and RDS values are source-side state/event functions rather than amplifier-volume commands.
+~~~text
+*#16*WHERE*1##
+*#16*AMPLIFIER*1*VOLUME##
+*#16*WHERE*#1*VOLUME##
+~~~
 
-`WHO 16` is a distinct sound-system dialect from [`WHO 22`](../who-22-sound-diffusion/). Similar concepts such as volume, source and frequency have different `WHAT`, `WHERE`, and `DIMENSION` encodings in the two namespaces.
+General or environment reads can return one response for each active amplifier, followed by a terminating acknowledgement.
+
+## State
+
+`*#16*WHERE*5##` returns ordinary `*16*WHAT*WHERE##` frames. Collective requests can expand to individual active amplifiers or sources. State is therefore a result sequence, not necessarily a scalar `DIMENSION 5` response.
+
+## Frequency, station, and RDS
+
+Frequency request/write:
+
+~~~text
+*#16*SOURCE*6##
+*#16*SOURCE*6*0*FREQUENCY##
+*#16*SOURCE*#6*0*FREQUENCY##
+~~~
+
+Stored station request/write uses `DIMENSION 7`; memorized-station write uses `DIMENSION 10`. A frequency or station change can additionally emit RDS (`DIMENSION 8`) when available.
+
+RDS text is carried as eight separate decimal ASCII codes, not as literal characters. For example, the source encodes an eight-character label as eight `*`-separated values.
+
+## Direction and capability
+
+Relative `WHAT` operations and absolute `DIMENSION` values are complementary. Do not reconstruct authoritative volume, tone, or frequency state solely by counting relative commands when a corresponding report is available.
+
+Support is target-dependent: amplifier addresses accept amplifier operations; source addresses accept source/tuner operations. A namespace-level identifier does not imply applicability to both.
+
+## Relationship to `WHO 22`
+
+`WHO 16` and [`WHO 22`](../who-22-sound-diffusion/) encode similar concepts using different commands, addresses, and properties. They are separate dialects and must not be translated by numeric coincidence.
+
+## Evidence basis
+
+Tables, ranges, and flows come from [`WHO_16.pdf`](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
