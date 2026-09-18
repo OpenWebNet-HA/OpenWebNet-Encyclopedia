@@ -1,4 +1,4 @@
-# `WHO 10` — Navigation Commands
+# `WHO 10` - Navigation Commands
 
 The MyHOME_Suite `OPEN.db` system definitions identify `WHO 10` as Navigation commands.
 
