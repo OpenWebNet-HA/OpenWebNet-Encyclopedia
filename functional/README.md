@@ -1,10 +1,10 @@
-# Overview
+# Functional Protocol
 
 The functional protocol reference documents OpenWebNet systems using `WHO` as the canonical protocol namespace. Each `WHO` defines the context in which its `WHAT` values, `WHERE` grammar, `DIMENSION` identifiers, parameters, and operation-specific behavior are interpreted.
 
 Common frame syntax is defined in [`../protocol/`](../protocol/). Reference material is organized by protocol namespace, while the indexes below provide both protocol-oriented and function-oriented navigation to the same canonical pages.
 
-The MyHOME_Suite [`OPEN.db` coverage matrix](open-db-coverage.md) documents what that implementation database establishes for every functional namespace: system identity, diagnostic-family mapping, management support, address rules, and concrete `EN_OPEN` frame associations where present. The broader [`cross-database functional coverage`](cross-database-coverage.md) correlates `OPEN.db` with `MHCatalogue.db`, the two ScenarioDevices databases, and `rules.db3`, including functional command templates and Device/Object applicability that are not represented in `OPEN.db` alone.
+The [`Functional Source Coverage`](source-coverage.md) page records which namespaces have a dedicated public specification and which rely on narrower implementation evidence. The MyHOME_Suite [`OPEN.db` coverage matrix](open-db-coverage.md) documents what that implementation database establishes for every functional namespace: system identity, diagnostic-family mapping, management support, address rules, and concrete `EN_OPEN` frame associations where present. The broader [`cross-database functional coverage`](cross-database-coverage.md) correlates `OPEN.db` with `MHCatalogue.db`, the two ScenarioDevices databases, and `rules.db3`, including functional command templates and Device/Object applicability that are not represented in `OPEN.db` alone.
 
 ## By `WHO`
 
@@ -61,6 +61,17 @@ The table reflects the functional namespace established by the public specificat
 | Dry contacts / IR | [Dry-contact and IR functions in `WHO 25`](who-25-transversal/dry-contact-ir.md) |
 | Nurse Call | [`WHO 27`](who-27-nurse-call/) |
 | Protocol services | [`WHO 99`](who-99-service-identification/) |
+
+## Evidence labels
+
+Each page should distinguish:
+
+- **published protocol** — values and grammar stated by a canonical public `WHO` document;
+- **implementation evidence** — MyHOME Suite database templates, address rules, or scenario capabilities;
+- **observed behavior** — private captures or Device experiments;
+- **unresolved** — namespace or field exists, but the current corpus does not establish its semantics.
+
+A namespace row is not evidence for a complete vocabulary. Conversely, absence from an implementation table is not proof that a published functional operation does not exist.
 
 ## Scope
 
