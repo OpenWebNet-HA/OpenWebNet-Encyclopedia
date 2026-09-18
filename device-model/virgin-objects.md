@@ -97,13 +97,16 @@ Virgin Object `515`, “Daylight and motion sensor virgin”, permits six Object
 
 `OPEN.db` defines `DIMENSION 30` with `SLOT`, `KEYO`, and `STATE`. The database describes `STATE` only as “configured or not configured”.
 
-A `STATE` indicating an unconfigured Module is compatible with Virgin Object semantics, but `OPEN.db` does not carry a `virgin_key_object` field in this frame. Therefore:
+`KEYO` uses a state-dependent external identifier namespace:
 
-- do not substitute the Virgin Object number for `KEYO`
-- do not assume an unconfigured `KEYO` directly encodes `EN_VIRGIN_OBJECT.virgin_key_object`
-- resolve permitted Objects through firmware and internal slot when the firmware is known.
+| `STATE` | Resolve `KEYO` against | Meaning |
+| ---: | --- | --- |
+| `1` | `EN_KEY_OBJECT.key_object` | configured Object |
+| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object and functional role |
 
-Any direct wire representation of a Virgin Object remains protocol-family-specific and must be established separately.
+This interpretation is structurally and behaviorally corroborated. Observed Device `00C58E91` reported `KEYO = 500`, `STATE = 0` at internal slot `4`; the catalogue resolves external Virgin Object number `500` as “Automation double command virgin”, while no ordinary Object with external number `500` exists in this source revision.
+
+Retain `STATE` with every `KEYO`: the two external number spaces are independent, and neither value is an internal database primary key. Once the Virgin Object is resolved, intersect its permitted Objects with the selected firmware and internal-slot capability before presenting configuration choices.
 
 ## Conditions and visibility
 
@@ -135,6 +138,6 @@ The intersection step prevents a global Virgin Object vocabulary from being appl
 
 ## Sources
 
-Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies configured/unconfigured Module state but no explicit Virgin Object field; ScenarioDevices is not a Virgin Object registry.
+Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies the `KEYO` value and configured/unconfigured `STATE`; observed traffic and catalogue resolution establish the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
