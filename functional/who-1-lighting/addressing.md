@@ -29,4 +29,4 @@ Commands sent to a collective scope can result in state/event reporting for the 
 
 This behavior is especially relevant when maintaining a live Lighting state model: the command target describes the requested scope, while subsequent events describe the resulting state of Objects within that scope.
 
-See [`what.md`](what.md) for Lighting commands, [`dimensions.md`](dimensions.md) for structured Lighting values, and [`../../protocol/addressing.md`](../../protocol/addressing.md) for the common system-scoped addressing model.
+See [`WHAT` Reference](what.md) for Lighting commands, [`DIMENSION` Reference](dimensions.md) for structured Lighting values, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.

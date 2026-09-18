@@ -68,7 +68,7 @@ Begin with the identified inventory record:
 
 The installed Device ID, catalogue primary keys, SKU, Object numbers, and functional addresses are separate identifier spaces.
 
-Do not use unresolved `DIMENSION 1` VALUE 2 to refine identity or Device class.
+Retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier.
 
 ## 2. Build the Module list
 
@@ -202,21 +202,27 @@ function read_device_configuration(selector, diagnostic_who):
 
         if module.configured:
             module.object = lookup_EN_KEY_OBJECT(dim30.KEYO)
-        else:
+        else if dim30.STATE == 0:
             module.virgin_object = lookup_EN_VIRGIN_OBJECT(dim30.KEYO)
             module.available_objects = resolve_permitted_objects(
                 module.virgin_object, device.firmware, dim30.SLOT
             )
+        else:
+            module.configured = unknown
+            retain raw KEYO and STATE without namespace inference
 
     for dim32 in interview.DIMENSION_32:
         module = modules.get_or_create(dim32.SLOT)
         module.address = decode_address_in_resolved_system_context(dim32)
 
-    detailed = send_and_collect("*#[" + diagnostic_who + "]*0*38#0##",
+    detailed = send_and_collect("*#" + decimal_string(diagnostic_who) + "*0*38#0##",
                                 response_window = 8 seconds)
 
     for dim35 in detailed.DIMENSION_35:
         module = modules.get_or_create(dim35.SLOT)
+        if module.object is unresolved or device.firmware is unresolved:
+            retain dim35 as unresolved with candidate contexts
+            continue
         definitions = resolve_EN_CONF_union(
             module.object.id_key_object,
             device.firmware.id_firmware,
@@ -236,6 +242,8 @@ function read_device_configuration(selector, diagnostic_who):
 
     attach_DIMENSION_310_separately(modules, detailed)
     attach_errors_without_overwriting_valid_values(interview, detailed, modules)
+
+    close diagnostic session with WHAT 6 in a finally-equivalent path
 
     return {
         raw evidence,
@@ -262,7 +270,7 @@ Adjust paths to the application installation. Schema aliases make the source of 
 
 ### Resolve Device identity
 
-Bind the established `DIMENSION 1` values. VALUE 2 is deliberately absent because its semantics remain unresolved.
+Resolve `:catalogue_system_id` by established diagnostic-family semantics. Bind the model, brand, and line values. VALUE 2 is `N_CONF`, the physical configurator-position count; it is omitted from this join because no direct catalogue field mapping is established.
 
 ```sql
 SELECT
@@ -281,7 +289,8 @@ LEFT JOIN catalogue.EN_BRAND AS b
   ON b.id_brand = d.id_brand
 LEFT JOIN catalogue.EN_LINE AS l
   ON l.id_line = d.id_line
-WHERE ais.modobj = :dim1_value_1
+WHERE ais.id_system = :catalogue_system_id
+  AND ais.modobj = :dim1_value_1
   AND (:dim1_value_3 IS NULL OR b.brand_modobj = :dim1_value_3)
   AND (:dim1_value_4 IS NULL OR l.line_modobj = :dim1_value_4)
 ORDER BY d.name, b.brand_name, l.line_name, d.code;
@@ -376,7 +385,7 @@ Several rows mean that more context or rule evaluation is required; they are not
 
 ### Correlate catalogue properties with `rules.db3`
 
-The two files do not share declared foreign keys. Correlate only the external Object number and configuration symbols whose semantics have already been established:
+The two files do not share declared foreign keys. Correlate only the external Object number and configuration indices whose semantics have already been established:
 
 ```sql
 SELECT
@@ -391,17 +400,17 @@ SELECT
 FROM rule_db.rules AS r
 WHERE r.KOBJECTS = :key_object
   AND (
-      r."1_Parameter" = :conf_name
-      OR r."2_Parameter" = :conf_name
+      r."1_Parameter" = :parameter_token
+      OR r."2_Parameter" = :parameter_token
   )
 ORDER BY r.N_RULES, r.Condition_order;
 ```
 
-Here `:key_object` is `EN_KEY_OBJECT.key_object`, not `id_key_object`.
+Here `:key_object` is `EN_KEY_OBJECT.key_object`, not `id_key_object`. Bind `:parameter_token` as `$` followed by the resolved `EN_CONF.idx`, for example `$21`, not the display name or `conf_name`. This finds direct operand references only; evaluate the entire associated rule group, including other expressions and control-flow rows.
 
 ### Retrieve an `OPEN.db` address rule
 
-`MHCatalogue.db` and `OPEN.db` do not expose a declared cross-database foreign key for this lookup. Resolve the functional system first, establish its functional `WHO` from documented evidence, then query `OPEN.db` independently:
+`MHCatalogue.db` and `OPEN.db` do not expose a declared cross-database foreign key for this lookup. Resolve the management family first, then query `OPEN.db` independently by its diagnostic `WHO`. This preserves the combined Lighting/Automation system even though its `EN_SYSTEM.who` is `1` and no separate `who = 2` row exists:
 
 ```sql
 SELECT
@@ -422,7 +431,7 @@ JOIN open_ref.AS_SYSTEM_ADDRESS_RULE AS sar
   ON sar.id_system = s.id_system
 JOIN open_ref.EN_ADDRESS_RULE AS ar
   ON ar.id_address_rule = sar.id_address_rule
-WHERE s.who = :functional_who
+WHERE s.diag_who = :diagnostic_who
 ORDER BY ar.id_address_rule;
 ```
 

@@ -11,36 +11,36 @@ The distinction is important. A system row establishes that MyHOME_Suite knows t
 
 | `WHO` | MyHOME_Suite system | `EN_SYSTEM.id_system` | Diagnostic `WHO` | `managed` | `EN_OPEN` associations | What `OPEN.db` establishes |
 | ---: | --- | ---: | ---: | ---: | ---: | --- |
-| `0` | Scenarios | `30` | — | `0` | `0` | Namespace and system identity |
+| `0` | Scenarios | `30` | - | `0` | `0` | Namespace and system identity |
 | `1` | Light and Automation system | `1` | `1001` | `1` | `65` | Shared Lighting/Automation diagnostic and programming model |
 | `1` | Interface AUTOM L3 | `10` | `1001` | `1` | shared | Automation interface level and F422 addressing support |
 | `1` | Interface AUTOM L4 | `11` | `1001` | `1` | shared | Automation interface level and F422 addressing support |
-| `3` | Load Management system | `7` | — | `0` | `0` | Namespace and system identity |
+| `3` | Load Management system | `7` | - | `0` | `0` | Namespace and system identity |
 | `4` | Thermoregulation | `2` | `1004` | `1` | `46` | Diagnostic/configuration workflow plus thermoregulation-specific scan and address rules |
-| `5` | Alarms | `3` | — | `0` | `0` | Namespace and system identity |
-| `5` | Interface AI L3 | `12` | — | `0` | `0` | Alarm-interface system variant |
-| `6` | Interface Multimedia L2 | `13` | — | `0` | `0` | Multimedia interface system variant |
-| `6` | Basic Video door entry system | `32` | — | `0` | `0` | Namespace and system identity |
-| `7` | Multimedia | `42` | — | `0` | `0` | Namespace and system identity |
+| `5` | Alarms | `3` | - | `0` | `0` | Namespace and system identity |
+| `5` | Interface AI L3 | `12` | - | `0` | `0` | Alarm-interface system variant |
+| `6` | Interface Multimedia L2 | `13` | - | `0` | `0` | Multimedia interface system variant |
+| `6` | Basic Video door entry system | `32` | - | `0` | `0` | Namespace and system identity |
+| `7` | Multimedia | `42` | - | `0` | `0` | Namespace and system identity |
 | `8` | Video Door entry system and telephony | `5` | `1008` | `1` | `1` | Managed diagnostic family and service-identification operation association |
-| `9` | Auxiliaries | `6` | — | `0` | `0` | Namespace and system identity |
-| `10` | Navigation command | `33` | — | `0` | `0` | Namespace and system identity |
-| `11` | Energy distribution | `34` | — | `0` | `0` | Namespace and system identity |
-| `12` | Messages | `39` | — | `0` | `0` | Namespace and system identity |
+| `9` | Auxiliaries | `6` | - | `0` | `0` | Namespace and system identity |
+| `10` | Navigation command | `33` | - | `0` | `0` | Namespace and system identity |
+| `11` | Energy distribution | `34` | - | `0` | `0` | Namespace and system identity |
+| `12` | Messages | `39` | - | `0` | `0` | Namespace and system identity |
 | `13` | Integration Functions | `26` | `1013` | `1` | `0` | Managed functional/diagnostic family and F422 interface address rules |
-| `14` | Special commands | `35` | — | `0` | `0` | Namespace and system identity |
-| `15` | Home automation main unit command | `36` | — | `0` | `0` | Namespace and system identity |
-| `16` | Sound system | `4` | — | `0` | `0` | Namespace and system identity |
-| `17` | Home automation main unit management | `37` | — | `0` | `0` | Namespace and system identity |
+| `14` | Special commands | `35` | - | `0` | `0` | Namespace and system identity |
+| `15` | Home automation main unit command | `36` | - | `0` | `0` | Namespace and system identity |
+| `16` | Sound system | `4` | - | `0` | `0` | Namespace and system identity |
+| `17` | Home automation main unit management | `37` | - | `0` | `0` | Namespace and system identity |
 | `18` | Energy Management system | `20` | `1018` | `1` | `65` | Shared managed diagnostic/programming model and energy-specific address rules |
-| `19` | Interface | `40` | — | `0` | `0` | Namespace and system identity |
+| `19` | Interface | `40` | - | `0` | `0` | Namespace and system identity |
 | `22` | Multimedia System | `41` | `1022` | `0` | `0` | Functional namespace plus a diagnostic-family identifier |
 | `23` | Access Control | `8` | `1023` | `1` | `65` | Shared managed diagnostic/programming model and Access Control address rules |
-| `24` | Lighting Management system | `23` | — | `0` | `0` | Namespace and system identity |
-| `25` | Transversal Command | `24` | — | `0` | `0` | Namespace and system identity |
-| `26` | UPnP Multimedia Command | `25` | — | `0` | `0` | Namespace and system identity |
+| `24` | Lighting Management system | `23` | - | `0` | `0` | Namespace and system identity |
+| `25` | Transversal Command | `24` | - | `0` | `0` | Namespace and system identity |
+| `26` | UPnP Multimedia Command | `25` | - | `0` | `0` | Namespace and system identity |
 | `27` | Nurse Call basic level system | `38` | `1027` | `0` | `9` | Authentication/service identity and general diagnostic operations |
-| `99` | Service Identification | `31` | — | `0` | `0` | Namespace and system identity |
+| `99` | Service Identification | `31` | - | `0` | `0` | Namespace and system identity |
 
 `WHO 2` is intentionally absent as a separate `EN_SYSTEM` row: MyHOME_Suite groups Lighting and Automation in `id_system = 1`, whose functional `WHO` field is `1` and whose diagnostic family is `1001`. This database representation must not be interpreted as eliminating functional `WHO 2`; the functional protocol still uses `WHO 2` for Automation.
 

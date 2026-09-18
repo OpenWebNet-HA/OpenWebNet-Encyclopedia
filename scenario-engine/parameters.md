@@ -42,8 +42,8 @@ These descriptions are derived from resource keys and value shapes. Retain the n
 
 ## Observed `OperatorType` values
 
-| Operator type | Rows | Observed context |
-| ---: | ---: | --- |
+| Operator type | Rows | Observed context | Working interpretation |
+| ---: | ---: | --- | --- |
 | `0` | 38 | ordinary values and action parameters | direct/single-value editor |
 | `1` | 1 | lighting dimmer condition with stored `Value=1` | condition-specific operator/value selector |
 | `2` | 3 | time-range conditions | range-oriented editor |

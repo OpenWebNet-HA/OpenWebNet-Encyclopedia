@@ -139,6 +139,8 @@ Preserve source field names in code formatting even when their historical termin
 
 ## Success criterion
 
+The [18 September 2026 documentation review](documentation-review-2026-09-18.md) records the completed cross-section consistency pass, validation, and remaining evidence limits.
+
 Reverse engineering is successful when uncertainty becomes smaller, explicit, and testable. It does not require assigning a convenient meaning to every value.
 
 A precise unknown with a discriminating experiment is better documentation than an unqualified mapping that happens to fit one capture.

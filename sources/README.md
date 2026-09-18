@@ -10,8 +10,8 @@ Files under `sources/` are preserved as original evidence. They must not be modi
 
 ## Source sets
 
-- `myhome-suite/3.5.38/` — files copied unmodified from MyHOME Suite 3.5.38.
-- `openwebnet-public/` — publicly distributed OpenWebNet protocol documentation.
+- `myhome-suite/3.5.38/` - files copied unmodified from MyHOME Suite 3.5.38.
+- `openwebnet-public/` - publicly distributed OpenWebNet protocol documentation.
 
 The MyHOME Suite installer is fingerprinted in the manifest for provenance but is not redistributed in this repository.
 
@@ -22,4 +22,5 @@ Network captures are intentionally excluded from the repository because they can
 ## Verification
 
 For a source file, calculate SHA-256 over the exact file bytes and compare it with the corresponding `sha256` entry in `manifest.yaml`. A mismatch means the file must not be treated as the canonical source identified by that manifest entry.
+
 

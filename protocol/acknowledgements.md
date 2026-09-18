@@ -47,4 +47,4 @@ Connection closure can itself be the failure signal during authentication or uns
 
 ## Evidence basis
 
-The frame values, acceptance semantics, and end-of-sequence behavior come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), particularly “Particular Open Messages” and the status/`DIMENSION` request sequences. Session-specific authentication behavior is refined by [`Hmac.pdf`](../sources/openwebnet-public/pdf/Hmac.pdf).
+The frame values, acceptance semantics, and end-of-sequence behavior come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), particularly “Particular Open Messages” and the status/`DIMENSION` request sequences. Session-specific authentication behavior is refined by [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf).

@@ -112,7 +112,7 @@ function troubleshoot(request, captured_frames, expected_evidence):
 
 ### The same Device repeats indefinitely
 
-1. Preserve the exact eight-character ID from `DIMENSION 13`.
+1. Preserve the raw decimal ID from `DIMENSION 13` and its eight-character hexadecimal display; encode the numeric value in decimal in the suppression frame.
 2. Verify the corresponding `WHAT 11` suppression frame.
 3. Confirm that hexadecimal formatting did not truncate leading zeroes.
 4. Check frame direction and whether the gateway actually transmitted suppression.
@@ -157,7 +157,7 @@ function troubleshoot(request, captured_frames, expected_evidence):
 2. Apply brand and collection evidence without forcing absent values.
 3. Use `EN_DEVICE.name` for the Physical Device description.
 4. Keep all surviving SKUs.
-5. Do not use unresolved VALUE 2 as a classification key.
+5. Retain VALUE 2 as `N_CONF`, a physical configurator-position count, rather than a classification key.
 6. Do not substitute an Object description for the Device description.
 
 ### Local-button timeout
@@ -268,6 +268,6 @@ Return a troubleshooting record containing:
 - remaining ambiguity;
 - the safest next read-only action.
 
-A useful conclusion is bounded and falsifiable—for example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
+A useful conclusion is bounded and falsifiable-for example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
 
 See [Diagnostic Error Handling](../diagnostics/device-interview.md#errors-and-abnormal-termination) and [Address Discovery](../diagnostics/address-discovery.md).

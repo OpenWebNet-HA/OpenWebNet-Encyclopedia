@@ -1,6 +1,6 @@
 # `DIMENSION`
 
-A `DIMENSION` identifies a property, query, or structured operation within an OpenWebNet `WHO`. It can be requested, reported asynchronously, returned in a response, or—where explicitly supported—written.
+A `DIMENSION` identifies a property, query, or structured operation within an OpenWebNet `WHO`. It can be requested, reported asynchronously, returned in a response, or-where explicitly supported-written.
 
 The complete identity is not always just `(WHO, DIMENSION)`. A `DIMENSION` selector can contain `#`-separated parameters:
 
@@ -184,6 +184,6 @@ Do not globally split the entire frame on both `*` and `#`; doing so erases the 
 
 ## Evidence basis
 
-Flat request, response, and write forms come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
+Flat request, response, and write forms come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
 
 See [Frame Syntax](frame-syntax.md), [Stream Parsing](stream-parsing.md), [Addressing](addressing.md), the relevant functional `WHO` page, and the [Diagnostic `DIMENSION` Reference](../diagnostics/dimension-reference.md).

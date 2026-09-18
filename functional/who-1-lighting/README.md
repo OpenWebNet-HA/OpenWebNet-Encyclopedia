@@ -8,18 +8,18 @@ The published Lighting specification defines the functional command and `DIMENSI
 
 | Subject | Page |
 | --- | --- |
-| Commands, states and timed operations | [`what.md`](what.md) |
-| `WHERE` forms and address scopes | [`addressing.md`](addressing.md) |
-| Level, speed, temporization and operating-time `DIMENSION` operations | [`dimensions.md`](dimensions.md) |
+| Commands, states and timed operations | [`WHAT` Reference](what.md) |
+| `WHERE` forms and address scopes | [Addressing](addressing.md) |
+| Level, speed, temporization and operating-time `DIMENSION` operations | [`DIMENSION` Reference](dimensions.md) |
 
 ## Functional model
 
-Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*WHERE##`. `DIMENSION` operations use the common frame classes defined in [`../../protocol/dimensions.md`](../../protocol/dimensions.md).
+Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*WHERE##`. `DIMENSION` operations use the common frame classes defined in [`DIMENSION`](../../protocol/dimensions.md).
 
 `WHAT 0`–`31` provide the ordinary Lighting vocabulary, including ON/OFF, discrete dimmer levels, timed ON, blinking and relative dimming. Fine level control and other structured values are carried by Lighting-specific `DIMENSION` operations.
 
-Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment, group, general and advanced forms. Address syntax and event expansion are described in [`addressing.md`](addressing.md).
+Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment, group, general and advanced forms. Address syntax and event expansion are described in [Addressing](addressing.md).
 
 Lighting Management is a distinct protocol namespace under [`WHO 24`](../who-24-lighting-management/). Diagnostic discovery and configuration of Lighting-capable Devices belong to the diagnostic protocol rather than to functional `WHO 1` traffic.
 
-For the Device → Module → Object → Configuration model, see [`../../device-model/`](../../device-model/).
+For the Device → Module → Object → Configuration model, see [Device Model](../../device-model/).

@@ -94,7 +94,7 @@ All 827 `AS_OBJECT_FIRMWARE` rows resolve to both a firmware definition and an O
 
 `EN_FIRMWARE.slots` is the declared count of internal slots. It must not be compared directly with the number of `EN_SLOTS` rows: one internal slot can have several supported Object alternatives.
 
-For example, firmware `157` declares four slots but has ten slot/Object rows:
+For example, firmware `157` declares four slots but has eleven slot/Object rows:
 
 | Internal slot | Objects offered |
 | ---: | --- |
@@ -103,7 +103,7 @@ For example, firmware `157` declares four slots but has ten slot/Object rows:
 | `3` | Light control; Automation control; Scheduled scenario; Scheduled scenario PLUS |
 | `4` | Light control; Automation control; Scheduled scenario; Scheduled scenario PLUS |
 
-The Module count is four; the Object-option count is ten.
+The Module count is four; the Object-option count is eleven.
 
 ## Firmware-scoped configuration
 
@@ -114,7 +114,7 @@ The Module count is four; the Object-option count is ten.
 
 The canonical database contains 1,463 such rows. They represent configuration that cannot be attributed solely to a reusable Object definition.
 
-Object-scoped rows use the complementary pattern described in [`configuration.md`](configuration.md).
+Object-scoped rows use the complementary pattern described in [Configuration](configuration.md).
 
 ## Default and fixed capability
 

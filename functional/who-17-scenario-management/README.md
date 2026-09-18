@@ -100,6 +100,6 @@ The public `WHO 17` functional state model remains the canonical interpretation 
 
 [`WHO 0`](../who-0-scenarios/) addresses scenario modules such as F420 and their stored scenario slots. `WHO 17` addresses scenes managed by scenario-programmer/gateway devices. The MyHOME_Suite [`scenario-engine`](../../scenario-engine/) is a higher-level capability model that can compose functional operations from multiple `WHO` namespaces.
 
-See [`../../protocol/`](../../protocol/) for common command, status and event-session behavior.
+See [Protocol](../../protocol/) for common command, status and event-session behavior.
 
 The [functional overview](../) groups `WHO 0` and `WHO 17` under scenario-related functions without merging their protocol namespaces.

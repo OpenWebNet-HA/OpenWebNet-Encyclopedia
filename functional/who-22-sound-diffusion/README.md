@@ -18,6 +18,7 @@
 | Tone / balance value | `1`–`63` |
 | 3D level | `0`–`10` |
 | Loudness | `0` OFF; `1` ON |
+| Preset | `2` normal, `3` dance, `4` pop, `5` rock, `6` classic, `7` techno, `8` party, `9` soft, `10` full bass, `11` full treble; `16`–`25` user defined |
 
 The source describes frequency steps as `50`, `100`, … `750 Hz`; this appears unusually small for radio tuning. This reference preserves the published values without silently relabelling their unit.
 
@@ -80,6 +81,46 @@ These are tagged target classes, not decimal numbers with punctuation. Keep the 
 
 Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer reported values for state caches instead of reconstructing state from increments.
 
+### Payloads and concrete operations
+
+| Dimension | Report payload following the dimension |
+| --- | --- |
+| `1` | `VOLUME` |
+| `2`, `3`, `4` | `TONE_VALUE` |
+| `5` | `MODULATION*FREQUENCY` |
+| `6` | `STATION_OR_TRACK` |
+| `11` | `MODULATION*FREQUENCY*STATION_OR_TRACK` |
+| `12` | `DEVICE_STATE*MULTIMEDIA_TYPE` |
+| `17` | `BALANCE` |
+| `18` | `3D_LEVEL` |
+| `19` | `PRESET` |
+| `20` | `LOUDNESS` |
+
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands 1–3, 4–6, and 7–8 respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+
+Examples with unambiguous separators in the detailed flows include:
+
+| Operation | Frame |
+| --- | --- |
+| Increase speaker volume | `*22*3#VOLUME_STEP*3#AREA#POINT##` |
+| Decrease speaker volume | `*22*4#VOLUME_STEP*3#AREA#POINT##` |
+| Follow Me | `*22*34#MULTIMEDIA_TYPE#AREA*3#AREA#POINT##` |
+| Select source and turn on speaker | `*22*35#4#AREA#SOURCE_ID*3#AREA#POINT##` |
+| Store tuned station | `*22*33#STATION*2#SOURCE_ID##` |
+| Request source frequency | `*#22*5#2#SOURCE_ID*5##` |
+| Request speaker volume | `*#22*3#AREA#POINT*1##` |
+| Set speaker balance | `*#22*3#AREA#POINT*#17*BALANCE##` |
+| Set speaker preset | `*#22*3#AREA#POINT*#19*PRESET##` |
+| Set speaker loudness | `*#22*3#AREA#POINT*#20*LOUDNESS##` |
+
+Source dimension requests use the general-source form `5#2#SOURCE_ID` in these flows; some responses instead use `2#SOURCE_ID`. Retain the reported address rather than requiring textual equality with the request. Status requests receive an action-session ACK while the specified state reports appear on the event session; dimension reads have their own response flows.
+
+### Published inconsistencies
+
+The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1`–`4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
+
+Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+
 ## Source and speaker semantics
 
 Source commands and reports use source addresses; volume/tone/balance operations generally apply to speaker endpoints or areas. `WHAT 35` carries routing intent by selecting a source while turning an amplifier on. Follow Me (`WHAT 34`) is a separate operation and should not be normalized to ordinary ON.
@@ -92,6 +133,6 @@ The same namespace includes tuner, media-track, presets, RDS, and equalization. 
 
 ## Evidence basis
 
-Parameters, identifiers, and allowed-message distinctions come from [`WHO_22.pdf`](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+Parameters, identifiers, and allowed-message distinctions come from [WHO 22 specification](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
 
-See the [functional overview](../) for navigation by `WHO` and by function, and [`../../protocol/`](../../protocol/) for common frame and session syntax.
+See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

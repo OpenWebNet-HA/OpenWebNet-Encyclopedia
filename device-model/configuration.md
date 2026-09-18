@@ -278,7 +278,7 @@ For example, a preset position or load-dependent minimum level can have a value 
 
 ## Mapping requirements
 
-A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol slot/value evidence, and—where available—the resulting runtime behavior. Numeric equality alone is insufficient.
+A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol slot/value evidence, and-where available-the resulting runtime behavior. Numeric equality alone is insufficient.
 
 ## Sources
 

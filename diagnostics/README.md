@@ -48,7 +48,7 @@ A diagnostic `WHO` is a management namespace and is not necessarily equal to the
 
 Never infer the diagnostic family by arithmetically transforming a functional `WHO`. Use an established system mapping.
 
-`OPEN.db` represents Lighting and Automation as one system row whose stored functional `WHO` is `1`; it contains no separate `WHO 2` row. The broader `WHO 1001` Lighting/Automation scope is established by the combined system identity, the independent functional specifications, the catalogue Object model, and observed behavior—not by a second literal database mapping. See [Diagnostic Architecture](architecture.md).
+`OPEN.db` represents Lighting and Automation as one system row whose stored functional `WHO` is `1`; it contains no separate `WHO 2` row. The broader `WHO 1001` Lighting/Automation scope is established by the combined system identity, the independent functional specifications, the catalogue Object model, and observed behavior-not by a second literal database mapping. See [Diagnostic Architecture](architecture.md).
 
 ## Source roles
 
@@ -72,3 +72,7 @@ Private packet captures are intentionally excluded from the repository. Capture-
 Identifier boundaries and cross-source rules are defined once in [Sources and Identifier Boundaries](../device-model/sources-and-identifiers.md). In particular, functional `WHO`, diagnostic `WHO`, database system IDs, Object numbers, internal catalogue keys, Device IDs, and functional addresses are independent namespaces unless an explicit correlation is documented.
 
 Observed behavior does not prove universal support across all products, firmware revisions, or diagnostic families. Unknown fields and unverified equivalences remain explicitly unresolved.
+
+## Published family-specific fault diagnostics
+
+[Temperature Control Fault Diagnostics](temperature-control-faults.md) documents the public `WHO 1004` central-unit and zone fault queries, automatic notifications, and active-low bit labels. This is a separate surface from the database-driven Device interview.

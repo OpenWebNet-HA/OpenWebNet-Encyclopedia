@@ -25,7 +25,7 @@ The general form is `*25*WHAT#PUSHBUTTON*WHERE##`.
 
 `PUSHBUTTON` and the Object embedded in `WHERE` are independent fields: the first identifies the control on the source Object, while the second identifies the configured CEN+ virtual Object.
 
-## `WHERE` — virtual Object
+## `WHERE` - virtual Object
 
 CEN+ uses a virtual address formed from the prefix `2` and an Object value in the range `0`–`2047`.
 
@@ -37,7 +37,7 @@ Published examples include `21` for Object 1, `20` for Object 0, `2101` for Obje
 
 A decoder should remove/interpret the CEN+ prefix according to the `WHO 25` grammar rather than parse the complete field as a Lighting/Automation `A`/`PL` address.
 
-## Short pressure — `WHAT 21`
+## Short pressure - `WHAT 21`
 
 Action frame: `*25*21#PUSHBUTTON*WHERE##`.
 
@@ -45,19 +45,19 @@ A short interaction is complete in one event. It represents a press and release 
 
 The accepted virtual action is acknowledged with `ACK`, and the corresponding CEN+ frame is visible on event connections.
 
-## Start of extended pressure — `WHAT 22`
+## Start of extended pressure - `WHAT 22`
 
 Action frame: `*25*22#PUSHBUTTON*WHERE##`.
 
 This marks that the button has reached the extended-pressure threshold. It begins the long-interaction sequence and is distinct from the periodic continued-pressure event `WHAT 23`.
 
-## Extended pressure — `WHAT 23`
+## Extended pressure - `WHAT 23`
 
 Action frame: `*25*23#PUSHBUTTON*WHERE##`.
 
 While a physical CEN+ button remains pressed, continued-pressure events can follow the initial `WHAT 22`. Multiple `WHAT 23` frames may therefore belong to one physical interaction.
 
-## End of extended pressure — `WHAT 24`
+## End of extended pressure - `WHAT 24`
 
 Action frame: `*25*24#PUSHBUTTON*WHERE##`.
 
@@ -69,7 +69,7 @@ A typical held-button event sequence is therefore:
 
 The published examples show both sequences with repeated `23` frames and a sequence in which `22` is followed directly by `24` when release occurs before another continued-pressure interval is emitted.
 
-## Rotary-selector events — `WHAT 25`–`28`
+## Rotary-selector events - `WHAT 25`–`28`
 
 CEN+ also defines directional rotary interactions:
 
@@ -94,7 +94,7 @@ This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can 
 
 ## Relationship to CEN
 
-| Property | CEN — `WHO 15` | CEN+ — `WHO 25` |
+| Property | CEN - `WHO 15` | CEN+ - `WHO 25` |
 | --- | --- | --- |
 | Button number | `WHAT 00`–`31` | `WHAT` parameter `0`–`31` |
 | Interaction phase | optional `WHAT` parameter `#1`–`#3` | `WHAT 21`–`24` |
@@ -105,4 +105,4 @@ The two systems should be modeled separately even when a physical command device
 
 ## Other `WHO 25` functions
 
-`WHO 25` also carries dry-contact and IR functions using `WHAT 31` and `32`. Those operations use different parameters and `WHERE` grammars and are documented in [`dry-contact-ir.md`](dry-contact-ir.md).
+`WHO 25` also carries dry-contact and IR functions using `WHAT 31` and `32`. Those operations use different parameters and `WHERE` grammars and are documented in [Dry Contact and IR](dry-contact-ir.md).

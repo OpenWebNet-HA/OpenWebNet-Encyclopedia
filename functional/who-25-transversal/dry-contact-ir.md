@@ -31,4 +31,4 @@ The published device families include automation dry-contact interfaces such as 
 
 ## Functional navigation
 
-Dry contacts are indexed separately in [`../README.md`](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.
+Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.

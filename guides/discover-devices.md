@@ -30,7 +30,7 @@ The inventory should contain, for every installed Device:
 3. Collect `*#[WHO]*[WHERE]*13*[ID]##` responses during the four-second MyHOME_Suite discovery window.
 4. For every new ID, send `*[WHO]*11#[ID]*0##` to suppress it during the active enumeration.
 5. Repeat the same request.
-6. Treat a complete pass with no new response as the capture-supported end condition.
+6. Treat a complete pass with no Device-ID response as the capture-supported end condition.
 7. Send `*[WHO]*12*0##` again to release scan state.
 
 Use `*#[WHO]*0*13#1##` or `*#[WHO]*0*13#0##` only when the configured/unconfigured filter is intentionally required. Those frames exist in `OPEN.db` but are not the ordinary `ScanAID` member.
@@ -53,7 +53,8 @@ For each unique ID:
 4. Collect firmware, hardware, and microcontroller versions when reported.
 5. Preserve `DIMENSION 30` and `32` for later configuration inspection.
 6. Record whether `WHAT 4`, abort, timeout, or transport closure ended the interview.
-7. Do not let one failed interview discard the ID discovered in phase 1.
+7. Send `*[WHO]*6*0##` to close the interview before selecting another Device; record failed cleanup separately.
+8. Do not let one failed interview discard the ID discovered in phase 1.
 
 The canonical `ScanByAID` scenario makes the same conceptual distinction: `ScanAID` enumerates IDs, then repeated `DiagAID` operations interview the discovered Devices.
 
@@ -70,7 +71,7 @@ The canonical `ScanByAID` scenario makes the same conceptual distinction: `ScanA
 
 ### SQL example: resolve Device candidates from `DIMENSION 1`
 
-Bind the reported values as `:modobj`, `:brand_modobj`, and `:line_modobj`. This query preserves every matching commercial Device instead of selecting the first row:
+Resolve `:catalogue_system_id` from the diagnostic family using established system semantics, not numeric equality with `WHO` or `OPEN.db` IDs. Bind the reported values as `:modobj`, `:brand_modobj`, and `:line_modobj`. This query preserves every matching commercial Device instead of selecting the first row:
 
 ```sql
 SELECT
@@ -92,13 +93,14 @@ LEFT JOIN EN_BRAND AS b
   ON b.id_brand = d.id_brand
 LEFT JOIN EN_LINE AS l
   ON l.id_line = d.id_line
-WHERE ais.modobj = :modobj
+WHERE ais.id_system = :catalogue_system_id
+  AND ais.modobj = :modobj
   AND (:brand_modobj IS NULL OR b.brand_modobj = :brand_modobj)
   AND (:line_modobj IS NULL OR l.line_modobj = :line_modobj)
 ORDER BY d.name, b.brand_name, l.line_name, d.code;
 ```
 
-Use `NULL` for a brand or collection value that was not reported or is not yet trustworthy. Do not bind unresolved `DIMENSION 1` VALUE 2 to any catalogue column.
+Use `NULL` for a brand or collection value that was not reported or is not yet trustworthy. Retain VALUE 2 as `N_CONF`, the physical configurator-position count; no direct catalogue-column mapping is established.
 
 Resolve firmware candidates separately through the selected item:
 
@@ -107,14 +109,18 @@ SELECT
     f.id_firmware,
     f.firmware_V,
     f.firmware_R,
+    b.id_build,
+    b.firmware_b,
+    b.localization_level,
     f.slots,
     f.FW_default
 FROM EN_FIRMWARE AS f
+LEFT JOIN EN_BUILDS AS b ON b.id_firmware = f.id_firmware
 WHERE f.id_item = :id_item
-  AND (:firmware_v IS NULL OR f.firmware_V = :firmware_v)
-  AND (:firmware_r IS NULL OR f.firmware_R = :firmware_r)
-ORDER BY f.FW_default DESC, f.id_firmware;
+ORDER BY f.id_firmware, b.id_build;
 ```
+
+Keep exact version matches, `-1` wildcard/fallback candidates, and missing build rows distinct. This query deliberately lists the item's candidates rather than discarding fallback definitions with equality filters or selecting the first `FW_default` row. Apply the evidence limits in [Firmware](../device-model/firmware.md).
 
 ### Resolve brands and collections
 
@@ -136,48 +142,48 @@ The following pseudocode preserves suppression, retry, interview, and ambiguity 
 
 ```text
 function build_inventory(diagnostic_who):
-    discovered = ordered_map()   # key: exact 8-character Device ID
-    round = 0
+    who = decimal_string(validate_diagnostic_who(diagnostic_who))
+    discovered = ordered_map()   # key: integer 32-bit ID
+    discovery_status = "round limit reached"
 
-    send("*[" + diagnostic_who + "]*12*0##")   # release prior scan state
+    try:
+        send("*" + who + "*12*0##")
+        for round in 1..MAX_ENUMERATION_ROUNDS:
+            responses = request_and_collect(
+                "*#" + who + "*0*13##",
+                response_window = configured discovery window  # default 4 seconds
+            )
+            id_responses = 0
+            for frame in responses:
+                if frame is a valid DIMENSION 13 response for this WHO:
+                    id_number = parse_decimal_uint32(frame.ID)
+                    id_responses += 1
+                    candidate = discovered.get_or_create(id_number)
+                    candidate.display_id = format_hex_8(id_number)
+                    remember_address_evidence(candidate, frame.WHERE)
+                    send("*" + who + "*11#" + decimal_string(id_number) + "*0##")
+                else:
+                    retain_as_scan_evidence(frame)
 
-    while round < MAX_ENUMERATION_ROUNDS:
-        round += 1
-        responses = request_and_collect(
-            "*#[" + diagnostic_who + "]*0*13##",
-            first_response_timeout = 15 seconds,
-            further_response_timeout = configured scan window
-        )
+            if id_responses == 0:
+                discovery_status = "empty pass observed"
+                break
+            # Repeated known IDs are failed suppression/progress evidence,
+            # not an empty bus; retain them and apply the bounded retry policy.
+    finally:
+        send_if_transport_available("*" + who + "*12*0##")
 
-        new_ids = 0
+    for id_number, candidate in discovered in first-seen order:
+        try:
+            stream = request_and_collect_interview(
+                "*" + who + "*10#" + decimal_string(id_number) + "*0##"
+            )
+            candidate.raw_interview = stream
+            candidate.identity = resolve_identity_without_first_row_wins(stream)
+        finally:
+            send_if_transport_available("*" + who + "*6*0##")
 
-        for frame in responses:
-            if frame is a valid DIMENSION 13 response:
-                id = normalize_exact_32_bit_hex(frame.ID)
-                remember_address_evidence(discovered[id], frame.WHERE)
-
-                if id not previously seen:
-                    discovered[id] = new inventory candidate
-                    new_ids += 1
-
-                send("*[" + diagnostic_who + "]*11*" + id + "*0##")
-
-            else:
-                retain_as_scan_evidence(frame)
-
-        if new_ids == 0:
-            break
-
-    send("*[" + diagnostic_who + "]*12*0##")   # always release scan state
-
-    for id in discovered in first-seen order:
-        stream = request_and_collect_interview(
-            "*[" + diagnostic_who + "]*10#" + id + "*0##"
-        )
-        discovered[id].raw_interview = stream
-        discovered[id].identity = resolve_identity_without_first_row_wins(stream)
-
-    return every candidate, including partial and unresolved records
+    return every candidate plus discovery_status and cleanup outcomes
 ```
 
 Implementation requirements:
@@ -205,7 +211,7 @@ Implementation requirements:
 
 The Device ID is not a catalogue primary key. Equal numeric values across these identifier spaces must not be joined.
 
-Do not use the unresolved `DIMENSION 1` VALUE 2 as an Object, Virgin Object, form factor, firmware class, or additional Device discriminator.
+`DIMENSION 1` VALUE 2 is `N_CONF`, the physical configurator-position count. It is not an Object, Virgin Object, form factor, or firmware-class identifier.
 
 ## Inventory record
 
