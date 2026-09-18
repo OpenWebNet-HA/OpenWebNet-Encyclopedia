@@ -43,7 +43,7 @@ Confusing these layers produces common errors. A catalogue Object does not prove
 
 ## Source authority
 
-The registered source files and their SHA-256 fingerprints are listed in [`sources/manifest.yaml`](../sources/manifest.yaml). The five SQLite files are treated as the canonical MyHOME Suite 3.5.38 database set. The current repository blob for `OpenQuery.txt` does not match its registered original-file fingerprint; its SQL text is usable implementation evidence, but its exact-byte provenance is unresolved. Quantitative database facts are source-revision facts, not protocol maxima or claims about later releases.
+The canonical files and their SHA-256 fingerprints are registered in [`sources/manifest.yaml`](../sources/manifest.yaml). Database facts in this section describe that exact MyHOME Suite 3.5.38 source set; they are not protocol maxima or claims about later releases.
 
 The public OpenWebNet documents remain authoritative for published functional frame semantics. MyHOME Suite implementation data adds unpublished management structures and editor capability, but differences must be retained as source/version differences rather than silently reconciled.
 
