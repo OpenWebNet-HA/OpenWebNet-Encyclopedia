@@ -1,4 +1,4 @@
-# `WHO 99` — Session and Service Identification
+# `WHO 99` - Session and Service Identification
 
 `99` appears in two related but differently evidenced roles:
 
