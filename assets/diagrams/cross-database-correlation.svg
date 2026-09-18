@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920" role="img" aria-labelledby="title desc">
+  <title id="title">Cross-database correlation path</title>
+  <desc id="desc">A staged semantic resolution from raw management traffic to catalogue capability, validation, address rules, and functional/scenario context.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#50606b"/></marker>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#50606b"/></marker>
+    <style>
+      .title{font:600 28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#17232b}
+      .subtitle{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+      .entity-title{font:600 16px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#fff}
+      .field{font:400 13px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#22313a}
+      .relation{stroke:#50606b;stroke-width:2;fill:none}
+      .dashed{stroke-dasharray:7 6}
+      .edge-label{font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#34444f;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}
+      .note-box{fill:#fff7df;stroke:#c99416;stroke-width:1.5}
+      .note{font:500 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#634a11}
+      .legend{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#50606b}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="50" y="48" class="title">Cross-database correlation path</text>
+  <text x="50" y="76" class="subtitle">A staged semantic resolution from raw management traffic to catalogue capability, validation, address rules, and functional/scenario context.</text>
+  <g class="entity">
+    <rect x="60" y="130" width="260" height="120" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
+    <path d="M67,130 H313 Q320,130 320,137 V166 H60 V137 Q60,130 67,130" fill="#46606f"/>
+    <text x="190" y="154" class="entity-title" text-anchor="middle">Observed traffic</text>
+    <text x="74" y="187" class="field">raw frame + direction</text><text x="74" y="207" class="field">Device/session context</text>
+  </g>
+<g class="entity">
+    <rect x="420" y="120" width="260" height="140" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
+    <path d="M427,120 H673 Q680,120 680,127 V156 H420 V127 Q420,120 427,120" fill="#46606f"/>
+    <text x="550" y="144" class="entity-title" text-anchor="middle">DIMENSION 1</text>
+    <text x="434" y="177" class="field">OBJECT_MODEL / N_CONF</text><text x="434" y="197" class="field">BRAND / LINE</text><text x="434" y="217" class="field">installed Device ID ≠ row ID</text>
+  </g>
+<g class="entity">
+    <rect x="800" y="105" width="280" height="175" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M807,105 H1073 Q1080,105 1080,112 V141 H800 V112 Q800,105 807,105" fill="#174d70"/>
+    <text x="940" y="129" class="entity-title" text-anchor="middle">Catalogue identity</text>
+    <text x="814" y="162" class="field">AS_ITEM_SYSTEM.modobj</text><text x="814" y="182" class="field">EN_ITEM</text><text x="814" y="202" class="field">candidate EN_DEVICE rows</text><text x="814" y="222" class="field">brand / line metadata</text>
+  </g>
+<g class="entity">
+    <rect x="1190" y="120" width="250" height="145" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1197,120 H1433 Q1440,120 1440,127 V156 H1190 V127 Q1190,120 1197,120" fill="#174d70"/>
+    <text x="1315" y="144" class="entity-title" text-anchor="middle">Firmware V.R.b</text>
+    <text x="1204" y="177" class="field">EN_FIRMWARE V / R</text><text x="1204" y="197" class="field">EN_BUILDS b</text><text x="1204" y="217" class="field">wildcard/default context</text>
+  </g>
+<g class="entity">
+    <rect x="100" y="390" width="280" height="175" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
+    <path d="M107,390 H373 Q380,390 380,397 V426 H100 V397 Q100,390 107,390" fill="#46606f"/>
+    <text x="240" y="414" class="entity-title" text-anchor="middle">Runtime Modules</text>
+    <text x="114" y="447" class="field">DIMENSION 30</text><text x="114" y="467" class="field">STATE selects Object namespace</text><text x="114" y="487" class="field">SLOT is Device-local</text>
+  </g>
+<g class="entity">
+    <rect x="500" y="400" width="280" height="155" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M507,400 H773 Q780,400 780,407 V436 H500 V407 Q500,400 507,400" fill="#174d70"/>
+    <text x="640" y="424" class="entity-title" text-anchor="middle">Catalogue capability</text>
+    <text x="514" y="457" class="field">AS_OBJECT_FIRMWARE</text><text x="514" y="477" class="field">EN_SLOTS.first_slot</text><text x="514" y="497" class="field">Virgin Object alternatives</text>
+  </g>
+<g class="entity">
+    <rect x="900" y="385" width="280" height="185" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M907,385 H1173 Q1180,385 1180,392 V421 H900 V392 Q900,385 907,385" fill="#174d70"/>
+    <text x="1040" y="409" class="entity-title" text-anchor="middle">Configuration</text>
+    <text x="914" y="442" class="field">DIMENSION 32 / 35</text><text x="914" y="462" class="field">EN_CONF ownership</text><text x="914" y="482" class="field">ranges / filters / conditions</text>
+  </g>
+<g class="entity">
+    <rect x="1230" y="400" width="230" height="150" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M1237,400 H1453 Q1460,400 1460,407 V436 H1230 V407 Q1230,400 1237,400" fill="#174d70"/>
+    <text x="1345" y="424" class="entity-title" text-anchor="middle">Linked validation</text>
+    <text x="1244" y="457" class="field">rules.db3</text><text x="1244" y="477" class="field">conversion rules</text><text x="1244" y="497" class="field">contextual dependencies</text>
+  </g>
+<g class="entity">
+    <rect x="290" y="690" width="300" height="145" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M297,690 H583 Q590,690 590,697 V726 H290 V697 Q290,690 297,690" fill="#174d70"/>
+    <text x="440" y="714" class="entity-title" text-anchor="middle">Systems + address rules</text>
+    <text x="304" y="747" class="field">AS_OBJECT_SYSTEM</text><text x="304" y="767" class="field">EN_OBJECT_ITEM_FAMILY</text><text x="304" y="787" class="field">OPEN.db address grammar</text>
+  </g>
+<g class="entity">
+    <rect x="820" y="690" width="300" height="145" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>
+    <path d="M827,690 H1113 Q1120,690 1120,697 V726 H820 V697 Q820,690 827,690" fill="#174d70"/>
+    <text x="970" y="714" class="entity-title" text-anchor="middle">Functional/scenario context</text>
+    <text x="834" y="747" class="field">functional WHO frames</text><text x="834" y="767" class="field">ScenarioDevices semantics</text><text x="834" y="787" class="field">runtime matching remains local</text>
+  </g>
+<g>
+    <line x1="320" y1="190" x2="420" y2="190" class="relation" marker-end="url(#arrow)"/>
+    <text x="370" y="183" class="edge-label" text-anchor="middle">parse</text>
+  </g>
+<g>
+    <line x1="680" y1="190" x2="800" y2="190" class="relation dashed" marker-end="url(#arrow)"/>
+    <text x="740" y="183" class="edge-label" text-anchor="middle">semantic lookup</text>
+  </g>
+<g>
+    <line x1="1080" y1="190" x2="1190" y2="190" class="relation" marker-end="url(#arrow)"/>
+    <text x="1135" y="183" class="edge-label" text-anchor="middle">candidate selection</text>
+  </g>
+<g><polyline points="1315,265 1315,330 240,330 240,390" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="800" y="318" class="edge-label" text-anchor="middle">resolved firmware context</text></g>
+<g>
+    <line x1="380" y1="475" x2="500" y2="475" class="relation dashed" marker-end="url(#arrow)"/>
+    <text x="440" y="468" class="edge-label" text-anchor="middle">validate placement</text>
+  </g>
+<g>
+    <line x1="780" y1="475" x2="900" y2="475" class="relation" marker-end="url(#arrow)"/>
+    <text x="840" y="468" class="edge-label" text-anchor="middle">attach by Device + slot</text>
+  </g>
+<g>
+    <line x1="1180" y1="475" x2="1230" y2="475" class="relation" marker-end="url(#arrow)"/>
+    <text x="1205" y="468" class="edge-label" text-anchor="middle">refine validity</text>
+  </g>
+<g><polyline points="640,555 640,620 440,620 440,690" class="relation" marker-end="url(#arrow)" fill="none"/>
+  <text x="540" y="608" class="edge-label" text-anchor="middle">Object system + family</text></g>
+<g>
+    <line x1="590" y1="760" x2="820" y2="760" class="relation dashed" marker-end="url(#arrow)"/>
+    <text x="705" y="753" class="edge-label" text-anchor="middle">render / interpret functional address</text>
+  </g>
+<g><rect x="35" y="585" width="300" height="34" rx="17" class="note-box"/><text x="185" y="607" class="note" text-anchor="middle">Dashed arrows are semantic correlations</text></g>
+<g><rect x="1150" y="610" width="300" height="34" rx="17" class="note-box"/><text x="1300" y="632" class="note" text-anchor="middle">Never join database-local IDs directly</text></g>
+  <text x="50" y="896" class="legend">This is a correlation flow, not a shared ER schema. Dashed arrows cross source-model boundaries.</text>
+</svg>
