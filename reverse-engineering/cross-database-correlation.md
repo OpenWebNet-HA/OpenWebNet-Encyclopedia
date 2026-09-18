@@ -33,6 +33,10 @@ Use staged resolution:
 
 At every stage, preserve both the raw value and the resolved record.
 
+![Cross-database correlation path](../assets/diagrams/cross-database-correlation.svg)
+
+This is a semantic resolution flow, not a shared ER schema. Dashed relationships cross independent source-model namespaces and require the conditions documented below.
+
 ## Device identity correlation
 
 `DIMENSION 1` provides four catalogue-facing values:

@@ -17,6 +17,10 @@
 
 The conceptual model is **Physical Device → Firmware → Module → Object → Configuration**.
 
+![Catalogue identity and capability model](../assets/diagrams/catalogue-capability.svg)
+
+The diagram shows established catalogue relationships and association tables. It is a capability model: installed Device state still comes from diagnostics or a loaded project.
+
 ## Identity resolution
 
 A diagnostic identity response does not return an `EN_DEVICE` primary key. Resolution proceeds through meaning:
