@@ -10,33 +10,33 @@ The [`Functional Source Coverage`](source-coverage.md) page records which namesp
 
 | `WHO` | System | Reference |
 | ---: | --- | --- |
-| `0` | Scenarios | [`WHO 0` — Scenarios](who-0-scenarios/) |
-| `1` | Lighting | [`WHO 1` — Lighting](who-1-lighting/) |
-| `2` | Automation | [`WHO 2` — Automation](who-2-automation/) |
-| `3` | Load Management | [`WHO 3` — Load Management](who-3-load-management/) |
-| `4` | Temperature Control | [`WHO 4` — Temperature Control](who-4-temperature-control/) |
-| `5` | Alarm | [`WHO 5` — Alarm](who-5-alarm/) |
-| `6` | Basic Video Door Entry | [`WHO 6` — Basic Video Door Entry](who-6-basic-video-door-entry/) |
-| `7` | Multimedia / Video | [`WHO 7` — Multimedia System](who-7-multimedia-video/) |
-| `8` | Video Door Entry and Telephony | [`WHO 8` — Video Door Entry and Telephony](who-8-video-door-entry-telephony/) |
-| `9` | Auxiliaries | [`WHO 9` — Auxiliaries](who-9-auxiliaries/) |
-| `10` | Navigation commands | [`WHO 10` — Navigation Commands](who-10-navigation/) |
-| `11` | Energy distribution | [`WHO 11` — Energy Distribution](who-11-energy-distribution/) |
-| `12` | Messages | [`WHO 12` — Messages](who-12-messages/) |
-| `13` | Integration / Gateway functions | [`WHO 13` — Integration and Gateway Functions](who-13-integration-gateway/) |
-| `14` | Special commands | [`WHO 14` — Special Commands](who-14-special-commands/) |
-| `15` | Home-automation Main Unit / CEN | [`WHO 15` — CEN](who-15-cen/) |
-| `16` | Sound System | [`WHO 16` — Sound System](who-16-sound-system/) |
-| `17` | Scenario Management | [`WHO 17` — Scenario Management](who-17-scenario-management/) |
-| `18` | Energy Management | [`WHO 18` — Energy Management](who-18-energy-management/) |
-| `19` | Interface | [`WHO 19` — Interface](who-19-interface/) |
-| `22` | Multimedia / Sound Diffusion | [`WHO 22` — Sound Diffusion](who-22-sound-diffusion/) |
-| `23` | Access Control | [`WHO 23` — Access Control](who-23-access-control/) |
-| `24` | Lighting Management | [`WHO 24` — Lighting Management](who-24-lighting-management/) |
-| `25` | Transversal Functions | [`WHO 25` — Transversal Functions](who-25-transversal/) |
-| `26` | UPnP multimedia command | [`WHO 26` — UPnP Multimedia](who-26-upnp-multimedia/) |
-| `27` | Nurse Call basic level | [`WHO 27` — Nurse Call Basic Level](who-27-nurse-call/) |
-| `99` | Service Identification | [`WHO 99` — Session and Service Identification](who-99-service-identification/) |
+| `0` | Scenarios | [`WHO 0` - Scenarios](who-0-scenarios/) |
+| `1` | Lighting | [`WHO 1` - Lighting](who-1-lighting/) |
+| `2` | Automation | [`WHO 2` - Automation](who-2-automation/) |
+| `3` | Load Management | [`WHO 3` - Load Management](who-3-load-management/) |
+| `4` | Temperature Control | [`WHO 4` - Temperature Control](who-4-temperature-control/) |
+| `5` | Alarm | [`WHO 5` - Alarm](who-5-alarm/) |
+| `6` | Basic Video Door Entry | [`WHO 6` - Basic Video Door Entry](who-6-basic-video-door-entry/) |
+| `7` | Multimedia / Video | [`WHO 7` - Multimedia System](who-7-multimedia-video/) |
+| `8` | Video Door Entry and Telephony | [`WHO 8` - Video Door Entry and Telephony](who-8-video-door-entry-telephony/) |
+| `9` | Auxiliaries | [`WHO 9` - Auxiliaries](who-9-auxiliaries/) |
+| `10` | Navigation commands | [`WHO 10` - Navigation Commands](who-10-navigation/) |
+| `11` | Energy distribution | [`WHO 11` - Energy Distribution](who-11-energy-distribution/) |
+| `12` | Messages | [`WHO 12` - Messages](who-12-messages/) |
+| `13` | Integration / Gateway functions | [`WHO 13` - Integration and Gateway Functions](who-13-integration-gateway/) |
+| `14` | Special commands | [`WHO 14` - Special Commands](who-14-special-commands/) |
+| `15` | Home-automation Main Unit / CEN | [`WHO 15` - CEN](who-15-cen/) |
+| `16` | Sound System | [`WHO 16` - Sound System](who-16-sound-system/) |
+| `17` | Scenario Management | [`WHO 17` - Scenario Management](who-17-scenario-management/) |
+| `18` | Energy Management | [`WHO 18` - Energy Management](who-18-energy-management/) |
+| `19` | Interface | [`WHO 19` - Interface](who-19-interface/) |
+| `22` | Multimedia / Sound Diffusion | [`WHO 22` - Sound Diffusion](who-22-sound-diffusion/) |
+| `23` | Access Control | [`WHO 23` - Access Control](who-23-access-control/) |
+| `24` | Lighting Management | [`WHO 24` - Lighting Management](who-24-lighting-management/) |
+| `25` | Transversal Functions | [`WHO 25` - Transversal Functions](who-25-transversal/) |
+| `26` | UPnP multimedia command | [`WHO 26` - UPnP Multimedia](who-26-upnp-multimedia/) |
+| `27` | Nurse Call basic level | [`WHO 27` - Nurse Call Basic Level](who-27-nurse-call/) |
+| `99` | Service Identification | [`WHO 99` - Session and Service Identification](who-99-service-identification/) |
 
 The table reflects the functional namespace established by the public specifications together with the MyHOME_Suite implementation data. A listed `WHO` does not imply that every semantic value is currently known.
 
@@ -66,10 +66,10 @@ The table reflects the functional namespace established by the public specificat
 
 Each page should distinguish:
 
-- **published protocol** — values and grammar stated by a canonical public `WHO` document;
-- **implementation evidence** — MyHOME Suite database templates, address rules, or scenario capabilities;
-- **observed behavior** — private captures or Device experiments;
-- **unresolved** — namespace or field exists, but the current corpus does not establish its semantics.
+- **published protocol** - values and grammar stated by a canonical public `WHO` document;
+- **implementation evidence** - MyHOME Suite database templates, address rules, or scenario capabilities;
+- **observed behavior** - private captures or Device experiments;
+- **unresolved** - namespace or field exists, but the current corpus does not establish its semantics.
 
 A namespace row is not evidence for a complete vocabulary. Conversely, absence from an implementation table is not proof that a published functional operation does not exist.
 
