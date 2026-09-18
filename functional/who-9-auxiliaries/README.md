@@ -12,4 +12,4 @@ The Alarm specification's references to AUX targets demonstrate cross-system use
 
 The current integrated corpus establishes the Auxiliaries namespace and its use by MyHOME_Suite, but does not justify a complete independent `WHAT`/`DIMENSION` table beyond supported implementation evidence. Unknown values remain unspecified rather than inferred from generic binary-control behavior.
 
-See [`../../protocol/`](../../protocol/) for common frame syntax and [`../who-5-alarm/`](../who-5-alarm/) for Alarm-side AUX references.
+See [Protocol](../../protocol/) for common frame syntax and [`WHO 5` - Alarm](../who-5-alarm/) for Alarm-side AUX references.

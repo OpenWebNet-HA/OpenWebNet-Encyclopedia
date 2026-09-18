@@ -40,7 +40,7 @@ The local-bus form uses the level-4 interface parameter. It is part of the addre
 
 ## F420 programming connection
 
-The F420 recording/erase/lock operations require the dedicated programming connection selected by `*99*9##` before the `WHO 0` programming frames are exchanged. These operations are therefore session-sensitive and should not be treated as ordinary scenario activation commands.
+The F420 recording/erase/lock operations use the commands/actions connection selected by `*99*9##` before the `WHO 0` programming frames are exchanged. These operations alter scenario storage and must be distinguished from scenario activation. The introduction separately defines `*99*0##` for programmed-scenario traffic; it is not the selector printed in these `WHO 0` command flows.
 
 The 3456 IR interface does not support the F420 programming operations described below.
 
@@ -86,4 +86,4 @@ A receiver should therefore distinguish three categories inside `WHO 0`:
 
 `WHO 0` operates scenario modules and stored scenario memories. [`WHO 17`](../who-17-scenario-management/) addresses scenario execution on scenario-programmer/gateway devices using Start, Stop, Enable and Disable operations. The two namespaces are related functionally but have different `WHAT` and `WHERE` models and must not be merged.
 
-See the [functional overview](../) for navigation by `WHO` and by function, [`../../scenario-engine/`](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [`../../protocol/`](../../protocol/) for common frame/session syntax.
+See the [functional overview](../) for navigation by `WHO` and by function, [Scenario Engine](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [Protocol](../../protocol/) for common frame/session syntax.

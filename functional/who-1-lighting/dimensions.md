@@ -24,7 +24,7 @@
 
 `LEVEL100` is offset by 100. It is not a literal percentage field and must not be decoded as `100%`–`200%`.
 
-## `DIMENSION 1` — level and speed
+## `DIMENSION 1` - level and speed
 
 Write:
 
@@ -41,7 +41,7 @@ Request and response/report:
 
 The PDF prints one write example without the `*` before `#1`; this conflicts with its common write grammar and the otherwise consistent frame family. This documentation uses the structurally consistent form above and records the source inconsistency rather than treating the missing separator as a new syntax.
 
-## `DIMENSION 2` — temporization
+## `DIMENSION 2` - temporization
 
 ~~~text
 *#1*WHERE*#2*HOURS*MINUTES*SECONDS##
@@ -51,17 +51,17 @@ The PDF prints one write example without the `*` before `#1`; this conflicts wit
 
 This explicit duration is distinct from fixed-duration `WHAT 11`–`18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
 
-## `DIMENSION 3` — only Objects that are ON
+## `DIMENSION 3` - only Objects that are ON
 
 `*#1*WHERE*3##` is a filtered request. The server returns ordinary Lighting status frames only for addressed lights or dimmers that are ON, then terminates the sequence with `ACK`.
 
 This is not a scalar property response and should be modeled as a query producing zero or more result frames.
 
-## `DIMENSION 4` — 100-level status
+## `DIMENSION 4` - 100-level status
 
 The canonical `DIMENSION` table names `4` as 100-level dimmer status with ON/OFF speed, but the document does not provide a detailed request/write flow for it. Do not invent its payload from `DIMENSION 1` merely because their descriptions overlap.
 
-## `DIMENSION 8` — working time
+## `DIMENSION 8` - working time
 
 ~~~text
 *#1*WHERE*8##
@@ -70,7 +70,7 @@ The canonical `DIMENSION` table names `4` as 100-level dimmer status with ON/OFF
 
 The response can also appear on the event session.
 
-## `DIMENSION 9` — maximum working time
+## `DIMENSION 9` - maximum working time
 
 ~~~text
 *#1*WHERE*#9*WORKING_TIME##
@@ -86,6 +86,6 @@ The global `WHO 1` vocabulary does not imply that every Lighting Object implemen
 
 ## Evidence basis
 
-Identifiers, ranges, direction, and frame flows come from [`WHO_1.pdf`](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
+Identifiers, ranges, direction, and frame flows come from [WHO 1 specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
 
-See [`what.md`](what.md), [`addressing.md`](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).
+See [`WHAT` Reference](what.md), [Addressing](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).

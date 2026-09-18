@@ -7,7 +7,7 @@
 | `10` | Shutter status | Request / response / event |
 | `11` | Go to level | Write |
 
-## `DIMENSION 10` — shutter status
+## `DIMENSION 10` - shutter status
 
 Request: `*#2*WHERE*10##`.
 
@@ -40,7 +40,7 @@ The level is the shutter's absolute position model. It is distinct from the rela
 
 ### Shutter priority
 
-`shutterPriority` carries the encoded priority state associated with the advanced shutter. The Automation priority model distinguishes Safety, High, and Medium priority flags. The same priority model participates in advanced movement commands and the parameterized absolute-position operation; see [`what.md`](what.md).
+`shutterPriority` carries the encoded priority state associated with the advanced shutter. The Automation priority model distinguishes Safety, High, and Medium priority flags. The same priority model participates in advanced movement commands and the parameterized absolute-position operation; see [`WHAT` Reference](what.md).
 
 ### Shutter information
 
@@ -54,7 +54,7 @@ The level is the shutter's absolute position model. It is distinct from the rela
 
 For general, environment, or group requests, the server can return one `DIMENSION 10` status frame for each Automation Object in the addressed scope. This expansion is part of the functional addressing behavior rather than a change to the four-value payload.
 
-## `DIMENSION 11` — go to level
+## `DIMENSION 11` - go to level
 
 `DIMENSION 11` writes an absolute shutter position. The published write form is `*#2*WHERE*#11#SHUTTER_PRIORITY*SHUTTER_LEVEL##`.
 
@@ -76,4 +76,4 @@ An absolute-position operation changes shutter state over time rather than repre
 
 The exact sequence visible to a client depends on the addressed device and event propagation; clients should use the resulting state reports rather than assuming that the write frame alone represents the final physical state.
 
-See [`addressing.md`](addressing.md) for scope expansion rules and [`../../protocol/dimensions.md`](../../protocol/dimensions.md) for the common `DIMENSION` frame classes.
+See [Addressing](addressing.md) for scope expansion rules and [`DIMENSION`](../../protocol/dimensions.md) for the common `DIMENSION` frame classes.

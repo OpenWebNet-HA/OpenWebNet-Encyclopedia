@@ -20,4 +20,4 @@ Profiles belong to Lighting Management rather than ordinary `WHO 1` Lighting sce
 
 ## Namespace rule
 
-These values are not aliases for `WHO 1` `WHAT` values. Their meaning follows the `WHO 24` management grammar and the structured sender/recipient address described in [`addressing.md`](addressing.md).
+These values are not aliases for `WHO 1` `WHAT` values. Their meaning follows the `WHO 24` management grammar and the structured sender/recipient address described in [Addressing](addressing.md).

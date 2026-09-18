@@ -37,10 +37,10 @@ No source class is universally superior. A declared local foreign key is decisiv
 
 Separate compound statements before assigning confidence. For example:
 
-1. `DIMENSION 3` has a `Version*Release*Build` logical form — established by `OPEN.db`.
-2. It is returned by a particular Device — established only by a capture of that Device.
-3. It maps to a catalogue column — currently unsupported because no hardware-version column exists.
-4. MyHOME Suite uses it for compatibility selection — open runtime question.
+1. `DIMENSION 3` has a `Version*Release*Build` logical form - established by `OPEN.db`.
+2. It is returned by a particular Device - established only by a capture of that Device.
+3. It maps to a catalogue column - currently unsupported because no hardware-version column exists.
+4. MyHOME Suite uses it for compatibility selection - open runtime question.
 
 Combining these into “hardware version is established” would hide three different evidence states.
 

@@ -4,7 +4,7 @@
 
 ## Frame model
 
-`WHO 24` uses the common OpenWebNet frame delimiters but gives `WHERE` a specialized sender/recipient grammar. The target can encode a Lighting Management zone, device type and system address. Sender frames add the `#00#` prefix documented in [`addressing.md`](addressing.md).
+`WHO 24` uses the common OpenWebNet frame delimiters but gives `WHERE` a specialized sender/recipient grammar. The target can encode a Lighting Management zone, device type and system address. The complete address combines recipient and sender, separated by `#00#`, as documented in [Lighting Management Addressing](addressing.md).
 
 `WHAT` operations are parameterized forms rather than a flat scalar table. `DIMENSION` operations carry configuration/state values such as maintained level, timers, stand-by/off values, operating state and centralised lux.
 
@@ -26,4 +26,4 @@ The `WHAT 1#PROFILE_ID` family identifies a profile operation. The profile ident
 
 `DIMENSION 17` reports the Lighting Management operating state (Automatic / Manual / Stop). `DIMENSION 18` carries the centralised lux value. These are management-system properties and are not aliases of `WHO 1` dimmer state or level.
 
-See [`what.md`](what.md), [`addressing.md`](addressing.md), and [`dimensions.md`](dimensions.md) for the system-specific grammar.
+See [`WHAT` Reference](what.md), [Addressing](addressing.md), and [`DIMENSION` Reference](dimensions.md) for the system-specific grammar.

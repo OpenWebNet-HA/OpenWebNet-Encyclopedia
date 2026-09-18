@@ -33,7 +33,7 @@ The full functional namespace and association matrix is maintained in [MyHOME_Su
 
 | Layer | Establishes | Does not independently establish |
 | --- | --- | --- |
-| Public protocol | frame language and functional behavior | diagnostic session state machines |
+| Public protocol | frame language, functional behavior, and explicitly published family-specific fault diagnostics | the MyHOME Suite Device-interview state machines |
 | `OPEN.db` | management templates, parameters, sequences, address rules, and timeouts | installed Device values or complete catalogue semantics |
 | `OpenQuery.txt` | how MyHOME_Suite reads and orders `OPEN.db` structures | semantics absent from those tables |
 | `MHCatalogue.db` | supported Device/firmware/Module/Object/configuration capability | current installed state |

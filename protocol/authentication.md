@@ -46,7 +46,7 @@ The exchange has three cryptographic steps:
 2. The client generates `Rb` and returns `Rb` with the client proof over `Ra`, `Rb`, the two role identities, and `Kab`.
 3. The server returns its confirmation over `Ra`, `Rb`, and `Kab`.
 
-If the proof fails, the server closes the connection. The specification also requires temporary throttling after repeated failures.
+The client must verify the server confirmation and then send `*#*1##` to finish the published handshake. A server confirmation is not itself permission to skip this final client acknowledgement. If authentication fails, the connection is closed. The specification calls for a 60-second authentication suspension after three failed handshakes within 60 seconds.
 
 ## Wire encoding
 
@@ -61,6 +61,33 @@ The HMAC document uses decimal characters for binary values because ordinary Ope
 A 20-byte SHA-1 value therefore occupies 80 decimal characters on the wire; a 32-byte SHA-256 value occupies 128.
 
 This transport representation is not the input representation used by the hash calculation. Implementations should keep functions for binary values, hash-input serialization, and OpenWebNet wire encoding separate.
+
+## Proof calculation and source discrepancy
+
+The document calls this scheme HMAC, but describes its proof operation as SHA-1 or SHA-256 over concatenated fields. It does not describe the standard keyed HMAC inner/outer-pad construction. Substituting a library's generic `HMAC(key, message)` operation is therefore not justified by the protocol name.
+
+For the negotiated hash `H`, the published layout is:
+
+~~~text
+Kab = H(OPEN_PASSWORD)
+client_proof = H(hex(Ra) || hex(Rb) || A || B || hex(Kab))
+server_proof = H(hex(Ra) || hex(Rb) || hex(Kab))
+~~~
+
+Here `hex` means lowercase hexadecimal text with two characters per byte; `||` means concatenation without separators. This is the hash-input representation, not the decimal-nibble transport representation. The password is the permitted alphanumeric character string.
+
+The identity constants need special care. The source pairs the client label `copen` with `736F70653E` and the server label `sopen` with `636F70653E`. Those hex strings decode to `sope>` and `cope>`, respectively, and do not match the accompanying labels. This reference preserves that discrepancy rather than inventing corrected constants. Interoperable implementations need an independently verified gateway transcript or implementation source to resolve it.
+
+The published exchange, with transport-encoded binary values, is:
+
+| Direction | Frame |
+| --- | --- |
+| Server → client | `*#Ra##` |
+| Client → server | `*#Rb*CLIENT_PROOF##` |
+| Server → client | `*#SERVER_PROOF##` |
+| Client → server, after verification | `*#*1##` |
+
+See the authentication specification's printed pages 2–3 and 7–8 for the proof layout and serialization. The unresolved identity-constant discrepancy prevents treating this page as a complete, independently verified implementation recipe.
 
 ## Password constraints and security boundary
 
@@ -82,4 +109,4 @@ Do not place passwords, derived keys, nonces, proofs, or complete authentication
 
 ## Evidence basis
 
-The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [`Hmac.pdf`](../sources/openwebnet-public/pdf/Hmac.pdf), version 1.1. The connection position and open-range exception are corroborated by [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf).
+The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf), version 1.1. The connection position and open-range exception are corroborated by [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf).

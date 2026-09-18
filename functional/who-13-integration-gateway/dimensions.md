@@ -36,7 +36,7 @@ Writable properties use the `#DIMENSION` form:
 
 The published writable set is limited to `DIMENSION 0`, `1`, and `22`.
 
-## `DIMENSION 0` — Time
+## `DIMENSION 0` - Time
 
 Payload: `H*M*S*T`.
 
@@ -53,7 +53,7 @@ Read: `*#13**0##`.
 
 Write: `*#13**#0*H*M*S*T##`.
 
-## `DIMENSION 1` — Date
+## `DIMENSION 1` - Date
 
 Payload: `W*D*M*Y`.
 
@@ -68,25 +68,25 @@ Read: `*#13**1##`.
 
 Write: `*#13**#1*W*D*M*Y##`.
 
-## `DIMENSION 10` — IP address
+## `DIMENSION 10` - IP address
 
 Payload: four decimal octets: `IP1*IP2*IP3*IP4`.
 
 A gateway at `192.168.10.1`, for example, reports the values as `192*168*10*1` rather than as a dotted string.
 
-## `DIMENSION 11` — Netmask
+## `DIMENSION 11` - Netmask
 
 Payload: four decimal octets: `MASK1*MASK2*MASK3*MASK4`.
 
 A netmask of `255.255.255.0` is therefore represented as `255*255*255*0`.
 
-## `DIMENSION 12` — MAC address
+## `DIMENSION 12` - MAC address
 
 Payload: six values: `MAC1*MAC2*MAC3*MAC4*MAC5*MAC6`.
 
 The published specification requires the six octets to be carried as decimal values, not hexadecimal text. A parser should therefore preserve the numeric octets and format a conventional hexadecimal MAC address only at the presentation layer.
 
-## `DIMENSION 15` — Device type
+## `DIMENSION 15` - Device type
 
 The published model table defines these values:
 
@@ -101,11 +101,11 @@ The published model table defines these values:
 
 This table describes the models defined by the published specification. It should not be treated as an exhaustive list of every later OpenWebNet gateway implementation.
 
-## `DIMENSION 16` — Firmware version
+## `DIMENSION 16` - Firmware version
 
 Payload: `V*R*B`, where `V` is version, `R` release, and `B` build. The specification describes this as the version of the device software implementing the OpenWebNet server.
 
-## `DIMENSION 19` — Uptime
+## `DIMENSION 19` - Uptime
 
 Payload: `D*H*M*S`, representing elapsed time since the last gateway start-up.
 
@@ -116,7 +116,7 @@ Payload: `D*H*M*S`, representing elapsed time since the last gateway start-up.
 | `M` | Minutes | two digits, `00`–`59` |
 | `S` | Seconds | two digits, `00`–`59` |
 
-## `DIMENSION 22` — Date and time
+## `DIMENSION 22` - Date and time
 
 Payload: `H*M*S*T*W*D*M*Y`. It combines the complete payloads of `DIMENSION 0` and `DIMENSION 1` and is both readable and writable.
 
@@ -126,13 +126,13 @@ Write: `*#13**#22*H*M*S*T*W*D*M*Y##`.
 
 For clock synchronisation, this combined operation avoids separate time and date transactions.
 
-## `DIMENSION 23` — Kernel version
+## `DIMENSION 23` - Kernel version
 
 Payload: `V*R*B`, with version, release, and build components.
 
 This is distinct from `DIMENSION 16`: `16` identifies the OpenWebNet server/device firmware, while `23` reports the underlying kernel version.
 
-## `DIMENSION 24` — Distribution version
+## `DIMENSION 24` - Distribution version
 
 Payload: `V*R*B`, with version, release, and build components.
 

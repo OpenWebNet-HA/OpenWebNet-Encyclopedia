@@ -31,4 +31,4 @@ ScenarioDevices exposes `WHO 14` as an action capability, so MyHOME_Suite can pl
 
 Stored scenarios remain under [`WHO 0`](../who-0-scenarios/), while scenario-programmer execution and management are under [`WHO 17`](../who-17-scenario-management/).
 
-See [`../cross-database-coverage.md`](../cross-database-coverage.md) for the relationship between ScenarioDevices, `OPEN.db`, and `MHCatalogue.db`, and [`../../scenario-engine/`](../../scenario-engine/) for the higher-level trigger/condition/action model.
+See [Cross-database functional coverage](../cross-database-coverage.md) for the relationship between ScenarioDevices, `OPEN.db`, and `MHCatalogue.db`, and [Scenario Engine](../../scenario-engine/) for the higher-level trigger/condition/action model.

@@ -57,7 +57,7 @@ Establish the catalogue context corresponding to the installed Physical Device w
 6. Preserve multiple SKU candidates when several catalogue items share the same implementation identity.
 7. Retain the installed Device ID from `DIMENSION 13` separately from every catalogue identifier.
 
-Do not use `DIMENSION 1` VALUE 2 as a Device class, Object, Virgin Object, or firmware key; its meaning remains unresolved.
+`DIMENSION 1` VALUE 2 is `N_CONF`, the physical configurator-position count. Do not use it as a Device class, Object, Virgin Object, or firmware key.
 
 ### Milestone output
 
@@ -190,6 +190,8 @@ Collect every configuration definition that can describe the resolved Object/fir
 Collect their union:
 
 ```sql
+SELECT *
+FROM EN_CONF
 WHERE (id_key_object = :object_id AND id_firmware = 0)
    OR (id_key_object = 0 AND id_firmware = :firmware_id)
 ```

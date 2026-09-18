@@ -12,7 +12,7 @@ A client must therefore collect the complete response sequence. Treating the fir
 
 A zone request follows `*#5*#N##`, with published zones `N = 1..8`. The response identifies the zone as active/engaged with `WHAT 11` or non-active/divided with `WHAT 18`, followed by `ACK`.
 
-The `#N` form is a zone selector, not a numeric point-to-point address. See [`addressing.md`](addressing.md).
+The `#N` form is a zone selector, not a numeric point-to-point address. See [Addressing](addressing.md).
 
 ## Event connection
 
@@ -20,10 +20,10 @@ Alarm state changes are also emitted as events. Consumers should normalize event
 
 ## Programming values
 
-The published vocabulary includes `WHAT 26` and `27` for start/stop programming. These belong to the historical `WHO 5` functional protocol. They are not the same subsystem as the MyHOME_Suite Device/Object configuration protocol documented under [`../../programming/`](../../programming/).
+The published vocabulary includes `WHAT 26` and `27` for start/stop programming. These belong to the historical `WHO 5` functional protocol. They are not the same subsystem as the MyHOME_Suite Device/Object configuration protocol documented under [Programming](../../programming/).
 
 ## Write support
 
 Some published `WHAT` values describe system states rather than commands. Their presence in the vocabulary must not be interpreted as permission to transmit them as control operations. Where the corpus only establishes a value in responses/events, this reference treats it as report-only.
 
-See [`what.md`](what.md) for values and [`addressing.md`](addressing.md) for target syntax.
+See [`WHAT` Reference](what.md) for values and [Addressing](addressing.md) for target syntax.

@@ -79,4 +79,4 @@ See [Stream Parsing](stream-parsing.md) for an incremental parser model, [Addres
 
 ## Evidence basis
 
-The common frame forms, alphabet, empty-tag rule, request/response direction, and acknowledgement-terminated sequences come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). System-specific extensions are documented only where the relevant `WHO` source, implementation database, or observed workflow establishes them.
+The common frame forms, alphabet, empty-tag rule, request/response direction, and acknowledgement-terminated sequences come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). System-specific extensions are documented only where the relevant `WHO` source, implementation database, or observed workflow establishes them.

@@ -96,6 +96,6 @@ Support is target-dependent: amplifier addresses accept amplifier operations; so
 
 ## Evidence basis
 
-Tables, ranges, and flows come from [`WHO_16.pdf`](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
+Tables, ranges, and flows come from [WHO 16 specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
-See the [functional overview](../) for navigation by `WHO` and by function, and [`../../protocol/`](../../protocol/) for common frame and session syntax.
+See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

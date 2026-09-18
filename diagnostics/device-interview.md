@@ -35,7 +35,7 @@ The canonical sequences order the following response families:
 | 10 | `30` | repeated Module/Object records |
 | 11 | `32` | repeated Module-address records |
 | 12 | `31` | Object-state errors when applicable |
-| 13 | — | `WHAT 4` end marker |
+| 13 | - | `WHAT 4` end marker |
 
 This is the canonical implementation order, not a guarantee that every Device returns every optional frame. In `AS_OPEN_SEQUENCE`, the start frame is mandatory; the listed Device responses are optional, and `DIMENSION 30`, `32`, and the busy `DIMENSION 31` form are repeatable. The end marker is present at the final sequence position but is not marked mandatory by the database.
 

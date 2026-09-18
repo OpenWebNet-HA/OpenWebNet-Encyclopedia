@@ -38,4 +38,4 @@ Implementations should represent the raw numeric namespace while dispatching the
 
 ## Evidence basis
 
-The selector frames and order come from [`OWN_Intro_ENG.pdf`](../../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The Service Identification label and absence of an associated concrete operation come from `OPEN.db`; see [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md).
+The selector frames and order come from [OpenWebNet Introduction specification](../../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The Service Identification label and absence of an associated concrete operation come from `OPEN.db`; see [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md).

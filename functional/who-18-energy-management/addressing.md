@@ -32,4 +32,4 @@ The published `WHO 18` functional specification defines direct device addressing
 
 The published ranges describe valid address spaces, not proof that every index is populated. Software that needs to probe functional Energy Management addresses must distinguish “address can exist” from “device is present.”
 
-See [`what.md`](what.md) for command applicability and [`dimensions.md`](dimensions.md) for family-specific data operations.
+See [`WHAT` Reference](what.md) for command applicability and [`DIMENSION` Reference](dimensions.md) for family-specific data operations.

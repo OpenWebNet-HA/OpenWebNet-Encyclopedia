@@ -11,9 +11,9 @@ These roles belong to the same functional namespace but should not be collapsed 
 
 | Subject | Page |
 | --- | --- |
-| Gateway capabilities and frame model | [`capabilities.md`](capabilities.md) |
-| `DIMENSION` values, payloads, and access modes | [`dimensions.md`](dimensions.md) |
-| Cross-namespace MyHOME_Suite `OPEN.db` evidence | [`../open-db-coverage.md`](../open-db-coverage.md) |
+| Gateway capabilities and frame model | [Gateway Capabilities](capabilities.md) |
+| `DIMENSION` values, payloads, and access modes | [`DIMENSION` Reference](dimensions.md) |
+| Cross-namespace MyHOME_Suite `OPEN.db` evidence | [MyHOME_Suite `OPEN.db` Coverage](../open-db-coverage.md) |
 
 ## Gateway capability groups
 
@@ -48,7 +48,7 @@ This is significant: the implementation model treats `WHO 13` as more than a set
 
 ## Scope
 
-`WHO 13` must not be conflated with the transport session used to connect to an IP gateway. TCP connection establishment, command/monitor sessions, authentication, HMAC, and generic `ACK` / `NACK` handling are common OpenWebNet transport concerns and are documented under [`../../protocol/`](../../protocol/).
+`WHO 13` must not be conflated with the transport session used to connect to an IP gateway. TCP connection establishment, command/monitor sessions, authentication, HMAC, and generic `ACK` / `NACK` handling are common OpenWebNet transport concerns and are documented under [Protocol](../../protocol/).
 
 It is also distinct from diagnostic `WHO 1013`. The latter is the diagnostic family assigned by MyHOME_Suite to the Integration Functions system; the numeric relationship does not make diagnostic operations part of the functional `WHO 13` vocabulary.
 

@@ -43,7 +43,7 @@ A generic decoder should retain the protocol meaning; an Object-aware applicatio
 | ---: | --- |
 | `20`–`29` | 0.5–5 seconds in 0.5-second increments |
 
-## Command translation — `WHAT 1000`
+## Command translation - `WHAT 1000`
 
 The published Lighting specification defines `1000#INNER_WHAT` as a command-translation wrapper:
 
@@ -59,6 +59,6 @@ MyHOME Suite emits ordinary OFF/ON frames for Lighting Objects and for controlle
 
 ## Evidence basis
 
-The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [`WHO_1.pdf`](../../sources/openwebnet-public/pdf/WHO_1.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
+The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [WHO 1 specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
 
-See [`dimensions.md`](dimensions.md), [`addressing.md`](addressing.md), and [Cross-database functional coverage](../cross-database-coverage.md).
+See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and [Cross-database functional coverage](../cross-database-coverage.md).

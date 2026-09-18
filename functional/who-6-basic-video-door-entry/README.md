@@ -10,4 +10,4 @@ The integrated corpus establishes `WHO 6` as a distinct Video Door Entry namespa
 
 `WHO 6`, [`WHO 7`](../who-7-multimedia-video/), and [`WHO 8`](../who-8-video-door-entry-telephony/) are related by application domain but are independent protocol namespaces. A camera/video operation documented for `WHO 7`, for example, is not automatically valid under `WHO 6`.
 
-Future values should be added only when supported by the MyHOME_Suite implementation corpus, a canonical specification, or observed wire behavior. Common frame syntax remains defined under [`../../protocol/`](../../protocol/).
+Future values should be added only when supported by the MyHOME_Suite implementation corpus, a canonical specification, or observed wire behavior. Common frame syntax remains defined under [Protocol](../../protocol/).

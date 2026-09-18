@@ -121,4 +121,4 @@ A cross-database relationship should be asserted only when one of the following 
 
 This keeps implementation-derived enrichment useful without turning coincidental numeric equality into protocol semantics.
 
-See [`open-db-coverage.md`](open-db-coverage.md) for the complete `OPEN.db` namespace/management matrix and [`../device-model/`](../device-model/) for the catalogue Device → Module → Object → Configuration model. See [Scenario Engine](../scenario-engine/) for the complete ScenarioDevices schema, category and matching model, parameter types, template rendering rules, capability coverage, and execution boundaries.
+See [MyHOME_Suite `OPEN.db` Coverage](open-db-coverage.md) for the complete `OPEN.db` namespace/management matrix and [Device Model](../device-model/) for the catalogue Device → Module → Object → Configuration model. See [Scenario Engine](../scenario-engine/) for the complete ScenarioDevices schema, category and matching model, parameter types, template rendering rules, capability coverage, and execution boundaries.

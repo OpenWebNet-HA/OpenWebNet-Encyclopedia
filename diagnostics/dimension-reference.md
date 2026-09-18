@@ -18,13 +18,13 @@ The tables below cover the Device interview and detailed configuration sequences
 | `8` | `*#[WHO]*[WHERE]*8*[BITMASK_DIA_B]##` | 24-bit diagnostic bitmask B |
 | `13` | `*#[WHO]*[WHERE]*13*[ID]##` | 32-bit Device ID |
 
-`OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1`–`99` to `FW_VERSION` and `0`–`99` to `HW_VERSION` and `MICRO_VERSION`, but the compact placeholder does not by itself establish how the three components are packed into the transmitted fields. Preserve the actual field sequence until capture evidence establishes the encoding.
+`OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1`–`99` to `FW_VERSION` and `0`–`99` to `HW_VERSION` and `MICRO_VERSION`, and explicitly describe the expansion as `[Version]*[Release]*[Build]`. Thus each version placeholder represents three `*`-separated components, not one scalar. Preserve all three values and distinguish this protocol representation from the catalogue tuple `V.R.b`; the metadata does not establish a firmware-selection algorithm.
 
 `N_CONF` is constrained to `0`–`12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
 
 `DIMENSION 4` and `5` each carry six configurator values in the range `0`–`255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
 
-`DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings, so bit labels require family-specific implementation or capture evidence.
+`DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings. The public [Temperature Control Fault Diagnostics](temperature-control-faults.md) separately establishes active-low labels for the `WHO 1004` central-unit/zone workflow; those labels must not be generalized to other families.
 
 ## Modules, addresses, and configuration
 
@@ -92,3 +92,7 @@ The general `DIMENSION 7`, `11`, `12`, and `15` records are directly associated 
 The canonical database includes both sequence-driven responses and general diagnostic forms. `DIMENSION 7`, for example, has Device-specific and general diagnostic templates. A collector should retain unknown or unsolicited diagnostic frames and interpret them only within the selected `WHO`, active sequence, and source direction.
 
 The `diag_open` flag in `EN_OPEN` is broader than this page: it also marks configuration, Object programming, and scenario-programming frames. Sequence membership and frame direction are required to classify an operation correctly.
+
+## Published Temperature Control fault surface
+
+The [Temperature Control Fault Diagnostics](temperature-control-faults.md) reference adds `WHO 1004` central-unit `DIMENSION 7`/`11`, zone queries `20`/`21`, automatic zone faults `22`, and fault counts `23`. These published flows are separate from the common Device interview above.

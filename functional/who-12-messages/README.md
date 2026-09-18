@@ -12,4 +12,4 @@ The generic name “Messages” is not sufficient to infer payload encoding, rec
 
 OpenWebNet parsers should still recognize `WHO 12` and retain its fields losslessly. This permits later decoding while keeping unknown protocol values distinct from generic `ACK`/`NACK` frames and from application messages transported outside this `WHO` namespace.
 
-Common frame/session concepts remain documented under [`../../protocol/`](../../protocol/).
+Common frame/session concepts remain documented under [Protocol](../../protocol/).

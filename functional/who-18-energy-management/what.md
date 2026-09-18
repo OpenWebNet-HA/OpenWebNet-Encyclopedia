@@ -23,7 +23,7 @@
 
 The command forms are `*18*26*WHERE##` and `*18*27*WHERE##`. Successful command processing is acknowledged with `ACK`.
 
-Stop&Go status is read separately through `DIMENSION 250`–`263`; see [`dimensions.md`](dimensions.md).
+Stop&Go status is read separately through `DIMENSION 250`–`263`; see [`DIMENSION` Reference](dimensions.md).
 
 ## Historical-series commands
 
@@ -82,4 +82,4 @@ The current actuator state can be read through `DIMENSION 71`.
 
 The state of a totalizer, including accumulated energy and last-reset timestamp, is available through `DIMENSION 72#Tot_N`.
 
-See [`addressing.md`](addressing.md) for valid target families and [`dimensions.md`](dimensions.md) for returned values.
+See [Addressing](addressing.md) for valid target families and [`DIMENSION` Reference](dimensions.md) for returned values.

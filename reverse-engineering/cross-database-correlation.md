@@ -135,7 +135,7 @@ The cross-model check can be reproduced by attaching the databases in a derived 
 ```sql
 SELECT ar.id_address_rule,
        ar.object_device_family,
-       f.name
+       f.family_name
 FROM open_db.EN_ADDRESS_RULE AS ar
 LEFT JOIN catalogue.EN_OBJECT_ITEM_FAMILY AS f
   ON f.id_family = ar.object_device_family

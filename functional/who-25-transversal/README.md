@@ -6,8 +6,8 @@
 
 | Function | Reference | Established vocabulary |
 | --- | --- | --- |
-| CEN+ | [`cen-plus.md`](cen-plus.md) | `WHAT 21`–`28`; pushbutton `0`–`31`; virtual Object `0`–`2047` |
-| Dry contact / IR | [`dry-contact-ir.md`](dry-contact-ir.md) | `WHAT 31`–`32`; state/event parameter `0`/`1` |
+| CEN+ | [CEN+](cen-plus.md) | `WHAT 21`–`28`; pushbutton `0`–`31`; virtual Object `0`–`2047` |
+| Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31`–`32`; state/event parameter `0`/`1` |
 
 ## Function selection
 

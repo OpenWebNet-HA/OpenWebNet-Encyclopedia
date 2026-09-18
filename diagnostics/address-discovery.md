@@ -73,6 +73,6 @@ Avoid broad address sweeps on live installations unless the transport and Device
 
 ## Identity resolution
 
-The returned `OBJECT_MODEL`, `BRAND`, and `LINE` can be correlated with catalogue fields as documented in [`dim1-device-identity.md`](dim1-device-identity.md). `N_CONF` represents the number of physical configurator positions provided by the Device. It is a hardware-interface characteristic and must not be confused with Module count, Object identity, logical configuration parameters, or product form factor. See [`dim1-device-identity.md`](dim1-device-identity.md) for the evidence and interpretation.
+The returned `OBJECT_MODEL`, `BRAND`, and `LINE` can be correlated with catalogue fields as documented in [`DIMENSION 1`: Device Identity](dim1-device-identity.md). `N_CONF` represents the number of physical configurator positions provided by the Device. It is a hardware-interface characteristic and must not be confused with Module count, Object identity, logical configuration parameters, or product form factor. See [`DIMENSION 1`: Device Identity](dim1-device-identity.md) for the evidence and interpretation.
 
 Address rules come from `OPEN.db`; product identity comes from `MHCatalogue.db`. Equal internal system IDs across those databases must not be joined. See [Sources and Identifier Boundaries](../device-model/sources-and-identifiers.md).

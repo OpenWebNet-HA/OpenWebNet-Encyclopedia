@@ -23,7 +23,7 @@ Device discovery by ID enumerates installed Device instances within one diagnost
 3. Collect every `DIMENSION 13` response during the response window.
 4. For each newly discovered ID, send `*[WHO]*11#[ID]*0##`.
 5. Repeat the same request.
-6. Stop when a complete pass yields no new response.
+6. Stop when a complete response window yields no ID response. A pass containing only previously seen IDs indicates ineffective suppression, not successful completion; bound retries and report the incomplete scan.
 7. Send `*[WHO]*12*0##` to release the enumeration state.
 
 The request-repeat-suppress behavior is present in the `OPEN.db` `ScanAID` sequence and corroborated by observed traffic. In the sequence metadata, both the ID request and the ID response/flag steps are repeatable. `ScanIDWindowDiscoveryTimeWait` assigns a default four-second discovery window to the request.

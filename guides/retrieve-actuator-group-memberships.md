@@ -26,7 +26,7 @@ Start one of these selection workflows:
 | diagnostic address | `*#[WHO]*[WHERE]*0##` |
 | local interaction | `*[WHO]*5*0##`, then perform the Device-side interaction |
 
-A Device ID is represented as eight hexadecimal characters.
+A Device ID is displayed as eight hexadecimal characters. Encode the frame field as the decimal 32-bit transport value; do not send the hexadecimal display string.
 
 Collect the initial stream in arrival order. The frames needed by this guide are:
 
@@ -171,10 +171,10 @@ ATTACH DATABASE 'rules.db3' AS rule_db;
 SELECT *
 FROM rule_db.rules
 WHERE KOBJECTS = :key_object
-  AND "1_Parameter" IN ('G1', 'G2', 'G3', 'G4', 'G5',
-                        'G6', 'G7', 'G8', 'G9', 'G10')
 ORDER BY N_RULES, Condition_order;
 ```
+
+The canonical rule database covers Objects `95`, `96`, and `184`. Its operands use `$N` configuration-index references, not names such as `G1`; load complete groups and evaluate applicable dependencies. An empty result is expected for Objects outside that coverage.
 
 Here `:id_key_object` is the internal catalogue key, while `:key_object` is the external Object number reported on the wire. Do not interchange them.
 
@@ -249,6 +249,10 @@ The catalogue permits zero and supplies it as the default. Treat zero as unassig
 - If an expected group property is not reported, label it “not reported”; do not replace it with zero.
 - If a value violates the effective filtered domain, retain it and add a warning.
 - If no membership properties exist for the resolved Object, report that the Object exposes no catalogue-defined group list through this mechanism.
+
+## Close the diagnostic session
+
+After detailed collection, send `*[WHO]*6*0##` before selecting another Device. Put cleanup in a finally-equivalent path and record whether it was sent or transport failure prevented it. `WHAT 4` ends the initial Device transmission; it does not replace this outer close.
 
 ## Expected result
 

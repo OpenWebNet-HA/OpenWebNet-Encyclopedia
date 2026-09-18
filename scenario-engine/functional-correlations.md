@@ -28,11 +28,11 @@ The Parameter row supplies placeholder `N` with numeric metadata. Interpret `N` 
 
 ScenarioDevices stores ordinary Lighting actions such as:
 
-- `*1*0*WHERE##` — OFF;
-- `*1*1*WHERE##` — ON;
-- `*1*11*WHERE##` through `*1*16*WHERE##` — fixed timed actions;
-- `*#1*WHERE*#2*ora*min*sec##` — parameterized timed action;
-- `*#1*WHERE*#1*liv*v##` — 100-level dimming action.
+- `*1*0*WHERE##` - OFF;
+- `*1*1*WHERE##` - ON;
+- `*1*11*WHERE##` through `*1*16*WHERE##` - fixed timed actions;
+- `*#1*WHERE*#2*ora*min*sec##` - parameterized timed action;
+- `*#1*WHERE*#1*liv*v##` - 100-level dimming action.
 
 It also labels `*1*17*WHERE##` as `automation.actionAutomationDoorLock.on`. Public `WHO 1` semantics still apply at the wire level; the door-lock label is an Object-contextual MyHOME_Suite presentation. This demonstrates that user-facing meaning can depend on the target Object as well as `WHO` and `WHAT`.
 

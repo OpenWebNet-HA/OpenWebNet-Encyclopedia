@@ -31,7 +31,7 @@ Do not treat responses still arriving in the programming session as diagnostic r
 
 ## 2. Start a fresh Device interview
 
-Prefer selection by the exact Device ID used for programming:
+Establish and authenticate a new command connection if the previous transport was discarded. Prefer selection by the exact Device ID used for programming, converting its eight-character hexadecimal display to the decimal transport value:
 
 `*[WHO]*10#[ID]*0##`
 
@@ -66,7 +66,7 @@ Collect during the MyHOME_Suite eight-second response window:
 - applicable `DIMENSION 39` property errors;
 - any `DIMENSION 310` Object-specific value.
 
-Keep `DIMENSION 310` separate from the generic `INDEX` model.
+Keep `DIMENSION 310` separate from the generic `INDEX` model. Close the diagnostic context with `*[WHO]*6*0##` after collection, using a finally-equivalent cleanup path.
 
 ## 4. Resolve the observed state
 
@@ -198,12 +198,13 @@ function verify_programming(programming_record, intended_state):
                 expected[key], actual[key]
             ))
 
-    if acquisition is partial:
-        outcome = "indeterminate" unless every required field was proved
-    else if any mismatch, error, unresolved, or required missing field:
+    if any required field has a proven mismatch or explicit error:
         outcome = "failed"
+    else if any required field is unresolved, ambiguous, or not reported:
+        outcome = "indeterminate"
     else:
         outcome = "verified"
+    retain acquisition completion separately, even if all required fields matched
 
     return outcome, comparisons, raw frames, resolver provenance
 ```

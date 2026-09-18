@@ -72,7 +72,8 @@ Supported counterparts and interpretations are:
 
 | Diagnostic field | Catalogue field | Status |
 | --- | --- | --- |
-| `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | Structurally and behaviorally corroborated |
+| `DIMENSION 30.KEYO`, `STATE = 1` | `EN_KEY_OBJECT.key_object` | Configured Object; structurally and behaviorally corroborated |
+| `DIMENSION 30.KEYO`, `STATE = 0` | `EN_VIRGIN_OBJECT.virgin_key_object` | Unconfigured Virgin Object; structurally and behaviorally corroborated |
 | `DIMENSION 30.SLOT` | internal slot represented by `EN_SLOTS.first_slot` | Structurally corroborated |
 | `DIMENSION 30.STATE` | no single catalogue column | Runtime state; database only labels configured/unconfigured |
 
@@ -132,7 +133,7 @@ ScenarioDevices Object identifiers are application-level capability IDs. They mu
 
 ### System IDs
 
-`EN_SYSTEM.id_system` in `MHCatalogue.db` and `EN_SYSTEM.id_system` in `OPEN.db` describe different registries. Link them through established system semantics, `WHO`, frame templates, or Device/Object evidence—not through equal numeric IDs.
+`EN_SYSTEM.id_system` in `MHCatalogue.db` and `EN_SYSTEM.id_system` in `OPEN.db` describe different registries. Link them through established system semantics, `WHO`, frame templates, or Device/Object evidence-not through equal numeric IDs.
 
 ### Counts are source-revision facts
 

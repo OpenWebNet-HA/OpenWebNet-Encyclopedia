@@ -67,4 +67,4 @@ Only the system-specific decoder should expose typed integers, temperatures, dur
 
 ## Evidence basis
 
-The character set, delimiters, empty-tag rule, and common frame families come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The incremental transport guidance is an implementation consequence of delimiter-framed messages over TCP; it is identified as parser guidance rather than a quoted protocol guarantee.
+The character set, delimiters, empty-tag rule, and common frame families come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The incremental transport guidance is an implementation consequence of delimiter-framed messages over TCP; it is identified as parser guidance rather than a quoted protocol guarantee.

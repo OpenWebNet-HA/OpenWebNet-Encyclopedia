@@ -18,7 +18,7 @@ After accepting a TCP connection, the server sends `*#*1##`. The client must rec
 | Events | `*99*1##` | Server to client | Receive asynchronous bus events and property reports |
 | Programmed scenario | `*99*0##` | Server to client in the published example | Forward traffic while programming an F420/03551 scenario module in configuration mode |
 
-A successful selector is acknowledged with `*#*1##`. Authentication, if required, follows session selection.
+After the selector, the server can accept an open-range connection with `*#*1##`, send a legacy challenge, or declare HMAC with `*98*1##` or `*98*2##`. Do not require a separate selector `ACK` before accepting an authentication frame: the HMAC specification shows the declaration immediately after the client selector. Normal traffic begins only after the selected setup path completes.
 
 These selectors belong to connection setup. They are not functional `WHO 99` commands and must not be fed to the ordinary functional-frame dispatcher.
 
@@ -59,7 +59,7 @@ A robust client should explicitly model these states:
 | State | Accepted input |
 | --- | --- |
 | Awaiting server greeting | Initial `ACK` |
-| Awaiting session result | `ACK`, `NACK`, or connection close |
+| Awaiting session result | Open-range `ACK`, legacy challenge, HMAC declaration, `NACK`, or connection close |
 | Authenticating | Frames belonging to the negotiated authentication method |
 | Active command session | Requests plus their result sequences |
 | Active event session | Asynchronous OpenWebNet frames |
@@ -69,4 +69,4 @@ Do not treat every `ACK` as equivalent. Its role is determined by the current st
 
 ## Evidence basis
 
-The session selectors, TCP port, and basic sequences come from [`OWN_Intro_ENG.pdf`](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), pages 6–10. HMAC negotiation is specified separately in [`Hmac.pdf`](../sources/openwebnet-public/pdf/Hmac.pdf). Observed gateway behavior can refine compatibility handling, but should not silently replace these published sequences.
+The session selectors, TCP port, and basic sequences come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), pages 6–10. HMAC negotiation is specified separately in [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf). Observed gateway behavior can refine compatibility handling, but should not silently replace these published sequences.

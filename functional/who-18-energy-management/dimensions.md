@@ -38,7 +38,7 @@ The value tuple and units are `DIMENSION`-specific. Numeric similarity does not 
 
 ## Power and accumulated energy
 
-### `DIMENSION 113` — active power
+### `DIMENSION 113` - active power
 
 Request: `*#18*WHERE*113##`
 
@@ -46,7 +46,7 @@ Response/event: `*#18*WHERE*113*Val##`
 
 `Val` is active power in watts. `DIMENSION 113` is also the event payload used when automatic active-power reporting is enabled through `DIMENSION 1200`.
 
-### `DIMENSION 51` — energy/unit totalizer
+### `DIMENSION 51` - energy/unit totalizer
 
 Request: `*#18*WHERE*51##`
 
@@ -54,7 +54,7 @@ Response/event: `*#18*WHERE*51*Val##`
 
 The published specification describes `Val` as the energy/unit totalizer value and labels its unit as Watt. This terminology is preserved rather than silently correcting the wire model from the word “totalizer.”
 
-### `DIMENSION 52` — monthly energy/unit totalizer
+### `DIMENSION 52` - monthly energy/unit totalizer
 
 Request: `*#18*WHERE*52#Y#M##`
 
@@ -62,13 +62,13 @@ Response/event: `*#18*WHERE*52#Y#M*Val##`
 
 `Y` is the year in two-digit `yy` form and `M` is the month.
 
-### `DIMENSION 53` — current-month partial totalizer
+### `DIMENSION 53` - current-month partial totalizer
 
 Request: `*#18*WHERE*53##`
 
 Response/event: `*#18*WHERE*53*Val##`
 
-### `DIMENSION 54` — current-day partial totalizer
+### `DIMENSION 54` - current-day partial totalizer
 
 Request: `*#18*WHERE*54##`
 
@@ -78,7 +78,7 @@ Response/event: `*#18*WHERE*54*Val##`
 
 ## Energy Management actuator information
 
-### `DIMENSION 71` — actuator status
+### `DIMENSION 71` - actuator status
 
 Request: `*#18*WHERE*71##`
 
@@ -103,7 +103,7 @@ The six fields are positional.
 
 The published event section contains inconsistent wording for `forcing`, while the request/response definition states `1 = Forced`, `0 = Not Forced`. The request/response definition is retained as the field semantics; the source discrepancy is not converted into a second state model.
 
-### `DIMENSION 72` — totalizer state
+### `DIMENSION 72` - totalizer state
 
 Request: `*#18*WHERE*72#Tot_N##`
 
@@ -121,7 +121,7 @@ Response/event: `*#18*WHERE*72#Tot_N*Energy*D*M*Y*H*m##`
 
 This operation couples the accumulated value with the timestamp of its reset boundary.
 
-### `DIMENSION 73` — differential-current level
+### `DIMENSION 73` - differential-current level
 
 Request: `*#18*WHERE*73##`
 
@@ -133,7 +133,7 @@ The published range for `level` is `1`–`3`. The public specification does not 
 
 Stop&Go exposes both a complete 13-bit state and individual one-bit `DIMENSION` values.
 
-### `DIMENSION 250` — complete status mask
+### `DIMENSION 250` - complete status mask
 
 Request: `*#18*WHERE*250##`
 
@@ -183,7 +183,7 @@ A Stop&Go event can expose the complete mask and/or individual status frames. St
 
 Historical operations return sequences of frames. The `#` parameters attached to the `DIMENSION` identify the requested period; `Tag` identifies a point within the series.
 
-### `DIMENSION 511` — daily hourly series
+### `DIMENSION 511` - daily hourly series
 
 Request: `*#18*WHERE*511#M#D##`
 
@@ -196,25 +196,25 @@ Data frames: `*#18*WHERE*511#M#D*Tag*Val##`
 
 The published source renders the unit as “Watt/h”; the operation represents the daily energy-history series. The same sequence can be initiated by `WHAT 57#M#D`.
 
-### `DIMENSION 512` — monthly-average hourly series
+### `DIMENSION 512` - monthly-average hourly series
 
 Data frame: `*#18*WHERE*512#M*Tag*Val##`
 
 Tags `1`–`24` identify hourly measures averaged over the selected month. Tag `25` carries the monthly-average total/unit value defined by the published protocol. The sequence is initiated by `WHAT 58#M`.
 
-### `DIMENSION 513` — current-year monthly series
+### `DIMENSION 513` - current-year monthly series
 
 Data frame: `*#18*WHERE*513#M*Tag*Val##`
 
 `Tag` identifies the day, `1`–`31`. The series represents daily values for the selected month in the current-year monthly graph model. It is initiated by `WHAT 59#M`.
 
-### `DIMENSION 514` — previous-year monthly series
+### `DIMENSION 514` - previous-year monthly series
 
 Data frame: `*#18*WHERE*514#M*Tag*Val##`
 
 `Tag` identifies the measure/day, `1`–`31`. The series is used for the previous-year comparison graph and is initiated by `WHAT 510#M`.
 
-## `DIMENSION 1200` — automatic active-power updates
+## `DIMENSION 1200` - automatic active-power updates
 
 `DIMENSION 1200` configures automatic reporting.
 
@@ -237,4 +237,4 @@ A significant part of `WHO 18` uses the same `DIMENSION` payload for direct resp
 
 Parsers should decode these frames by `WHO`, `WHERE`, `DIMENSION` and payload shape rather than assuming that a given payload can only appear immediately after a request.
 
-See [`what.md`](what.md) for command-driven historical transmission and actuator control, and [`addressing.md`](addressing.md) for the device-family address grammar.
+See [`WHAT` Reference](what.md) for command-driven historical transmission and actuator control, and [Addressing](addressing.md) for the device-family address grammar.

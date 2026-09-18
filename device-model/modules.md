@@ -29,7 +29,7 @@ Examples:
 
 | Firmware | Declared slots | Slot/Object rows | Interpretation |
 | ---: | ---: | ---: | --- |
-| `157` | `4` | `10` | four Modules with multiple Object alternatives |
+| `157` | `4` | `11` | four Modules with multiple Object alternatives |
 | `145` | `2` | `8` | two command Modules, four Object alternatives per slot |
 | `590` | `2` | `3` | two dimmer Modules; one slot carries an additional combined alternative |
 | `194` | `1` | `1` | one fixed Light actuator Module |
@@ -84,11 +84,11 @@ Firmware `157`, used by `64391`, `64191`, and `64192`, shows why Object alternat
 | Slot | Designated Object | Additional Objects |
 | ---: | --- | --- |
 | `1` | Light actuator | Automation actuator |
-| `2` | Light actuator | — |
+| `2` | Light actuator | - |
 | `3` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 | `4` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 
-The Physical Device therefore has four Modules, not ten.
+The Physical Device therefore has four Modules, with eleven slot/Object alternatives.
 
 ## Diagnostic Module enumeration
 
@@ -105,10 +105,10 @@ The Physical Device therefore has four Modules, not ten.
 This response exposes the Device’s current Module/Object state:
 
 - `SLOT` locates the Module
-- `KEYO` identifies the current Object
+- `KEYO` identifies the configured Object when `STATE = 1`, or the unconfigured Virgin Object when `STATE = 0`
 - `STATE` reports a binary configuration state.
 
-The catalogue association between `EN_KEY_OBJECT.key_object` and `KEYO` is supported by matching Object identity and observed behavior. It is not a cross-database foreign key.
+Resolve `KEYO` against `EN_KEY_OBJECT.key_object` for `STATE = 1` and `EN_VIRGIN_OBJECT.virgin_key_object` for `STATE = 0`, as established by catalogue identity and observed behavior. It is not a cross-database foreign key.
 
 ### Address response
 

@@ -32,10 +32,10 @@ These implementation forms complement the public functional grammar. The selecte
 
 ## Actuator addressing
 
-Actuator-oriented `DIMENSION` operations can append an actuator selector to the zone address. This is distinct from addressing a probe in the same zone and is used by operations such as actuator state/control represented by `DIMENSION 20`.
+Actuator-oriented `DIMENSION` operations can append an actuator selector to the zone address. This is distinct from addressing a probe in the same zone and is used by operations such as actuator state reported by read-only `DIMENSION 20`. The public forms are `Z#N` for actuator `N` (`1`–`9`) in zone `Z` (`0`–`99`), `Z#0` for all actuators of a zone, and `0#0` for all actuators. Split control uses the additional prefix `3#Z#N` under `DIMENSION 22`.
 
 ## Central-unit addressing
 
 A leading `#` identifies central-unit scope in the published functional grammar. `#0` addresses the central unit itself; `#N` addresses zone `N` through the central unit. Central-unit commands include zone mode changes, setpoint changes, program/scenario selection, and holiday operations.
 
-See [`what.md`](what.md) for central-unit commands, [`dimensions.md`](dimensions.md) for operation-specific payloads, and [`../../protocol/addressing.md`](../../protocol/addressing.md) for the common system-scoped addressing model.
+See [`WHAT` Reference](what.md) for central-unit commands, [`DIMENSION` Reference](dimensions.md) for operation-specific payloads, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.
