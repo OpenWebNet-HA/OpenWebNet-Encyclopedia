@@ -1,4 +1,4 @@
-# `WHO 13` — Integration and Gateway Functions
+# `WHO 13` - Integration and Gateway Functions
 
 `WHO 13` covers Integration / Gateway functions. Two complementary roles are established by the corpus:
 
