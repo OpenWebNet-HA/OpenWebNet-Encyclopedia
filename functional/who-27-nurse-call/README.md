@@ -1,15 +1,23 @@
-# Overview
+# `WHO 27` - Nurse Call Basic Level
 
-The MyHOME_Suite `OPEN.db` system definitions identify `WHO 27` as Nurse Call basic level.
+MyHOME Suite `OPEN.db` identifies functional `WHO 27` as Nurse Call basic level and assigns diagnostic family `WHO 1027`.
 
-## Corpus status
+## Evidence boundary
 
-The namespace is directly established by the implementation data. The currently integrated corpus does not, however, establish a complete ordinary functional `WHAT`, `WHERE`, or `DIMENSION` vocabulary at the level required for an implementation table.
+The current public corpus contains no dedicated `WHO 27` functional specification. `OPEN.db` marks the system `managed = 0`, so it does not establish a normal managed-Device workflow or an ordinary functional `WHAT` table.
 
-## Implementation guidance
+Nevertheless, nine `EN_OPEN` records are associated with the system. They cover password challenge/result handling, general diagnostic requests and masks, automatic diagnostic events, WebServer model identification, and MAC-address retrieval.
 
-A parser should recognize `WHO 27` as Nurse Call and preserve subsequent fields losslessly. Unknown values remain raw protocol values until their semantics are supported by MyHOME_Suite data, a canonical specification, or observed traffic.
+Those records establish a concrete service/diagnostic surface. Most are parameterized by `[WHO]`; substitution and session context must be resolved from the database workflow before assigning them to functional `WHO 27` or diagnostic `WHO 1027`. They must not be presented as an invented Nurse Call functional vocabulary.
 
-The phrase “basic level” is retained from the MyHOME_Suite system definition; it is not expanded here into inferred call-state, room, bed, acknowledgement, or alarm semantics. Those concepts may be plausible for a nurse-call system but are not established by the current corpus.
+## Decoder guidance
 
-This evidence boundary prevents application-domain expectations from becoming undocumented protocol claims.
+- Recognize `WHO 27` as Nurse Call basic level.
+- Preserve unknown functional fields losslessly.
+- Treat `WHO 1027` as a distinct diagnostic namespace.
+- Do not infer room, bed, call-state, acknowledgement, or alarm values from the application domain.
+- Use the associated service templates only in the context established by their `OPEN.db` sequence and parameter records.
+
+## Evidence basis
+
+The namespace name, diagnostic-family assignment, management flag, and associated service records come from `OPEN.db`. See [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md) for the exact templates and [Functional Source Coverage](../source-coverage.md) for the absence rule.

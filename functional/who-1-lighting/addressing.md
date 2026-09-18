@@ -6,15 +6,16 @@ The same broad address family is shared with Automation, but `WHERE` remains sco
 
 ## Address scopes
 
-| Scope | Role |
-| --- | --- |
-| General | Addresses the complete Lighting system |
-| Environment | Addresses the Lighting Objects belonging to an environment |
-| Point to point | Addresses an individual `A`/`PL` light point |
-| Group | Addresses the Lighting Objects belonging to a group |
-| Extended / local bus | Reaches a point through the applicable interface or advanced address rule |
+| Scope | `WHERE` form | Role |
+| --- | --- | --- |
+| General | `0` | Addresses the complete Lighting system |
+| Environment / area | `A` | Addresses the Lighting Objects belonging to an environment |
+| Point to point | `APL` | Addresses an individual `A`/`PL` light point |
+| Group | `#GR` | Addresses the Lighting Objects belonging to a group |
+| Riser / level 3 | `0#3`, `A#3`, `#G#3`, or `APL#3` | Routes the corresponding scope on the riser/backbone level |
+| Local bus / level 4 | `0#4#Int`, `A#4#Int`, `#G#4#Int`, or `APL#4#Int` | Routes the corresponding scope through local-bus interface `Int` |
 
-The published Lighting grammar preserves significant leading zeroes in extended `A`/`PL` forms. A `WHERE` should therefore be parsed as protocol syntax before any numeric conversion.
+The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier: `#3` for the riser/backbone level or `#4#Int` for a local bus. The published `WHO 1` material establishes these qualifiers for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01`–`09` or `11`–`15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
 
 ## MyHOME_Suite address rules
 

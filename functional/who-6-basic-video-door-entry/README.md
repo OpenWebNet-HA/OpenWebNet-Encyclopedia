@@ -1,4 +1,4 @@
-# Overview
+# `WHO 6` - Basic Video Door Entry
 
 `WHO 6` identifies the Basic Video Door Entry system in the known OpenWebNet namespace catalogue.
 

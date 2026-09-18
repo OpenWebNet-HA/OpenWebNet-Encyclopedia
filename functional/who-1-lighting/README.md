@@ -1,4 +1,4 @@
-# Overview
+# `WHO 1` - Lighting
 
 `WHO 1` defines the OpenWebNet Lighting system. It covers switching, discrete and fine-grained dimming, timed and blinking operation, status reporting, transition speed, temporization, and lamp operating-time information.
 
