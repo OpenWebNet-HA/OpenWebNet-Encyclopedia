@@ -122,4 +122,4 @@ Accordingly, the claim **"The discovery and product-inventory mechanisms exposed
 
 This conclusion does not establish tested interoperability, support by every product or Firmware revision, or equivalence with MyHOME Suite diagnostics.
 
-The remaining ZigBee task is the **final repository-wide source-to-documentation completeness matrix**: map every remaining part of the ZigBee v4.0 source to its canonical encyclopedia location or explicit exclusion/conflict record, verify that the already completed functional Step 1 and discovery/inventory Step 2 together leave no uncovered OpenWebNet-visible source material, and record the final source-wide conclusion. That matrix is intentionally not performed here.
+At the time of this Step 2 review, the remaining ZigBee task was the final repository-wide source-to-documentation completeness matrix. That later task is now recorded in the [ZigBee Final Source Completeness Certification](zigbee-final-source-completeness-certification.md); it verifies Step 1 and Step 2 together against the full source without changing this review's intentionally narrower historical scope.
