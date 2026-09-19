@@ -1033,7 +1033,7 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 ### P4-FAC-002 - Lighting WHAT 17 duration remains contradictory
 
 - **Finding ID:** `P4-FAC-002`
-- **Status:** ASTRA-FINAL-REVIEW
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** functional/who-1-lighting/what.md; functional/cross-database-coverage.md
 - **Claim/issue:** Documentation asserted 30 seconds and treated ScenarioDevices label as compatible settled meaning.
@@ -1047,11 +1047,13 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
 - **Verification:** Targeted cross-page search found both previously unqualified duration claims and both are now qualified; no timing value invented.
 - **Open evidence gap:** Known product/firmware/gateway experiment measuring WHAT 17 behavior with controlled timing and independent reference if available.
+- **Phase 9 adjudication:** Accepted as a genuine evidence gap after fresh inspection of WHO_1 summary, sections 3.1.9 and 3.2.20, and both stored ScenarioDevices door-lock rows. Section 3.2.20 also says 30 seconds, but agreement between two locations in the same document is not independent target evidence and does not erase section 3.1.9. Preserve unresolved duration and the separate capability label. Resolution requires timed target/Firmware/gateway evidence and independently applicable clarification; neither exists in the supplied corpus.
+- **Final reviewer/model:** Independent fresh-context GPT-6 Astra, Medium reasoning; targeted review from `db0dc893d569b9b0ad72796b063e92ac8fd4dacc`.
 
 ### P4-FAC-003 - Address namespaces and PL=0 interpretation cannot be collapsed
 
 - **Finding ID:** `P4-FAC-003`
-- **Status:** ASTRA-FINAL-REVIEW
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** protocol/addressing.md; diagnostics/dim32-addressing.md; programming/address-programming.md; programming/validation.md
 - **Claim/issue:** Shared routing model implied broader WHO 2 support; diagnostic example rendered PL=0 as functional WHERE 10; programming recipe implied address-rule rendering established ADDR encoding.
@@ -1065,6 +1067,8 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
 - **Verification:** Checked changed claims against existing WHO-specific address domains and Phase 3 source limits. Prior example retained as history, no longer offered as valid WHERE.
 - **Open evidence gap:** Recover raw SYS/ADDR and exact Object/firmware context for PL=0 example; discriminating non-Lighting SYS responses; validated address encoder/consumer including routing and offsets.
+- **Phase 9 adjudication:** Accepted as a genuine evidence gap after fresh inspection of WHO_1/WHO_2 address tables, OPEN.db res_ko_sys/cmd_ko_sys and SYS/ADDR metadata, and the canonical read/write gates. Neither a field domain nor an address-rule template establishes an encoder. Retain raw tuples, the historical PL=0 interpretation as unvalidated, and the prohibition on unsupported writes. Resolution requires raw tuples with exact Object/Firmware context, discriminating non-Lighting responses, and an applicable encoder/consumer corroborated by controlled operation evidence.
+- **Final reviewer/model:** Independent fresh-context GPT-6 Astra, Medium reasoning; targeted review from `db0dc893d569b9b0ad72796b063e92ac8fd4dacc`.
 
 ### P4-FAC-004 - Catalogue consistency and templates are not runtime proof
 
@@ -1087,7 +1091,7 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 ### P4-FAC-005 - Detailed-read guides omit DIMENSION 38 effect ambiguity
 
 - **Finding ID:** `P4-FAC-005`
-- **Status:** ASTRA-FINAL-REVIEW
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** guides/program-device.md; guides/read-device-configuration.md; guides/retrieve-actuator-group-memberships.md; guides/retrieve-configured-cen-buttons.md; guides/validate-configuration-value.md; guides/verify-programming.md; guides/troubleshoot-diagnostics.md
 - **Claim/issue:** Guides unconditionally send 38#0 while canonical diagnostics preserves the reset/select versus retrieval ambiguity.
@@ -1101,6 +1105,8 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
 - **Verification:** Targeted DIMENSION 38 call-site review confirms explicit gate in all seven affected guides; no operation or timeout changed.
 - **Open evidence gap:** Restore-safe target experiments or applicable implementation evidence explaining reset/select effects, scope and repetition behavior.
+- **Phase 9 adjudication:** Accepted as a genuine evidence gap after fresh OPEN.db inspection: EN_OPEN 83 says reset keyo on all slot, EN_OPEN 25 says reset keyo on selected slot, and DiagKO sequence 11 describes retrieving detail. All seven prose gates survive. Phase 9 found and corrected three reference algorithms (actuator-group retrieval, CEN-button retrieval, and programming verification) that omitted an explicit precondition: each now stops without sending DIMENSION 38 when target effects are unestablished. These bounded omissions qualify the earlier verification claim. Effect semantics remain unresolved; resolution requires restore-safe before/after tests or applicable implementation evidence covering scope and repetition.
+- **Final reviewer/model:** Independent fresh-context GPT-6 Astra, Medium reasoning; targeted review from `db0dc893d569b9b0ad72796b063e92ac8fd4dacc`.
 
 ### P4-FAC-006 - Missing physical match is not advanced-only evidence
 
@@ -1177,7 +1183,7 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 ### P4-REV-001 - Independent adjudication of source contradictions
 
 - **Finding ID:** `P4-REV-001`
-- **Status:** ASTRA-FINAL-REVIEW
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** protocol/authentication.md; protocol/zigbee-interface.md; functional/who-7-multimedia-video/README.md; functional/who-18-energy-management/what.md; functional/who-22-sound-diffusion/README.md; functional/who-24-lighting-management/dimensions.md
 - **Claim/issue:** Conflicting public literals/flows cannot be settled by choosing the more plausible or more detailed source location.
@@ -1191,6 +1197,8 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
 - **Verification:** Checked current caveats against Phase 3 findings; independent behavioral resolution intentionally not claimed.
 - **Open evidence gap:** Working HMAC vectors; safe product/interface tests; remaining detailed source-flow adjudication. Lighting timing is separately P4-FAC-002.
+- **Phase 9 adjudication:** Accepted as a genuine evidence gap after independent source-location checks of Hmac identities; ZigBee sections 3.3, 9.2/9.3 and 12.2/12.3; WHO_7 address table/flow; WHO_18 section 5.1.4; WHO_22 frequency, malformed-frame, tone and source-address flows; and WHO_24 OFF-value/illuminance forms. No conflicting literal was chosen or repaired. Canonical qualifications preserve source revision and variant scope. Resolution requires working authentication vectors, applicable product/interface tests and source-specific corroboration. Source inspection establishes the discrepancies, not runtime behavior; detailed flows outside these checks remain unexamined.
+- **Final reviewer/model:** Independent fresh-context GPT-6 Astra, Medium reasoning; targeted review from `db0dc893d569b9b0ad72796b063e92ac8fd4dacc`.
 
 ### P4-ARC-001 - Incidental canonicality handoff for Phase 5
 
@@ -1533,6 +1541,64 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
 - **Verification:** Exact ledger status count and packet rows both equal four; canonical qualifications remain present.
 - **Open evidence gap:** The independent evidence specified by each of the four Phase 4 records.
+
+## Phase 9 targeted certification
+
+The four former Astra queue entries are adjudicated above; their Phase 4 verification text is retained as history. See the [Targeted Certification Report](phase-9-targeted-certification.md) for the exact sample, source locations, bounded corrections and certification limits. Historical phase records and the Phase 8 packet counts describe their own exit states.
+
+### P9-FAC-001 - Lighting command translation was incorrectly restricted to dimmers
+
+- **Finding ID:** `P9-FAC-001`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** functional/who-1-lighting/what.md
+- **Claim/issue:** WHAT 1000 was described as restricted to dimmer targets.
+- **ECV/ESG rule:** ECV 2, 4, 7, 10
+- **Evidence inspected:** WHO_1.pdf section 3.1.21 command and event tables.
+- **Evidence class:** PUB
+- **Applicability:** Stored WHO_1 revision; target support not independently tested.
+- **Finding:** The source says valid for dimmers too, not only for dimmers.
+- **Required remediation:** Remove the unsupported exclusive restriction without asserting universal support.
+- **Resolution:** Canonical prose now states the source's inclusive dimmer note and its limits.
+- **Reviewer/model:** Independent GPT-6 Astra, Medium reasoning (Phase 9).
+- **Verification:** Compared replacement directly with section 3.1.21 and checked unchanged wrapper frames.
+- **Open evidence gap:** Target-specific support remains untested.
+
+### P9-FAC-002 - Multimedia DIAL values are a structured set
+
+- **Finding ID:** `P9-FAC-002`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** functional/who-7-multimedia-video/README.md
+- **Claim/issue:** The DIAL table used inclusive range 311..344, contradicting its constrained digit semantics.
+- **ECV/ESG rule:** ECV 9, 20; ESG 6
+- **Evidence inspected:** WHO_7.pdf WHAT table, printed pages 3-4.
+- **Evidence class:** PUB
+- **Applicability:** Published DIAL command family only.
+- **Finding:** The table enumerates four groups of four commands; values such as 315 and 320 are not established DIAL commands.
+- **Required remediation:** Express the structural 3RC family with both digits 1..4.
+- **Resolution:** Corrected the table; retained the adjacent explanation and address-range conflict.
+- **Reviewer/model:** Independent GPT-6 Astra, Medium reasoning (Phase 9).
+- **Verification:** Compared all sixteen listed commands to the constrained representation.
+- **Open evidence gap:** No new gap for the DIAL set; the separate camera-range discrepancy remains accepted under P4-REV-001.
+
+### P9-AUD-001 - Bounded final certification
+
+- **Finding ID:** `P9-AUD-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** project/review/phase-9-targeted-certification.md
+- **Claim/issue:** Independent adjudication and high-risk sampling are required before Phase 10.
+- **ECV/ESG rule:** ECV 1, 2, 6, 7, 8, 19
+- **Evidence inspected:** Exact canonical pages and primary-source slices listed in the report; all four Astra records.
+- **Evidence class:** PUB, REG, SCN, RES
+- **Applicability:** Targeted sample only, beginning at db0dc893d569b9b0ad72796b063e92ac8fd4dacc; no exhaustive certification.
+- **Finding:** No systemic failure detected in the bounded sample. Two local factual defects and three omitted algorithm gates were corrected. Source conflicts remain accurately bounded gaps.
+- **Required remediation:** Record adjudications, exact sample and limitations; do not expand into routine or exhaustive review.
+- **Resolution:** Complete; ready for Phase 10 within the stated evidence limits.
+- **Reviewer/model:** Independent fresh-context GPT-6 Astra, Medium reasoning (Phase 9).
+- **Verification:** Compared necessary corrections with primary evidence and existing applicability gates; reviewed exact changed-file diffs. No routine full-corpus ESG or link rerun.
+- **Open evidence gap:** All accepted gaps remain; this review supplies neither captures, hardware tests, application-consumer behavior nor missing product documentation.
 
 ## Finding record template
 
