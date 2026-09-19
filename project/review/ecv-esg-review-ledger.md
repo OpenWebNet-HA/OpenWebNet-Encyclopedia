@@ -1195,7 +1195,7 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 ### P4-ARC-001 - Incidental canonicality handoff for Phase 5
 
 - **Finding ID:** `P4-ARC-001`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Editorial
 - **Path:** guides/; protocol/addressing.md; protocol/zigbee-interface.md; device-model/; diagnostics/; reverse-engineering/open-questions.md
 - **Claim/issue:** Factual work exposed duplicated semantics and unclear ownership that could recreate corrected drift.
@@ -1205,10 +1205,10 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Applicability:** Documentation architecture only; no new wire conclusions.
 - **Finding:** Seven guides repeated DIMENSION38 without canonical caveat; common routing prose exceeded WHO2 reference; N_CONF landing drifted from identity reference; physical versus advanced classification spans model/diagnostics/programming. New ZigBee boundary is canonical for interface applicability, not an alternate complete WHO encyclopedia.
 - **Required remediation:** Phase 5 Sol: retain independently executable guide material but preserve canonical applicability caveats; cross-reference DIMENSION38 definition; keep SCS/variant address applicability explicit; centralize entity/counterpart definitions and keep research as history. Integrate future ZigBee operation details under their WHO/mechanism owners with interface links, avoiding duplicate numeric tables.
-- **Resolution:** Immediate factual inconsistencies fixed; structural consolidation deferred as requested.
+- **Resolution:** Phase 5 added the cross-area scope/architecture owner, centralized `DIMENSION 38` detailed-read ownership under Diagnostics, linked guide copies to that owner, preserved Device Model identity ownership, and connected the ZigBee interface boundary to its functional namespace owners. No ambiguous semantics were selected.
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
-- **Verification:** Issues observed naturally during factual review; no separate architecture inventory or sweep performed.
-- **Open evidence gap:** Phase 5 design choices; unresolved semantics must remain visible through any restructuring.
+- **Verification:** Phase 5 inspected every named path and dependency, checked the changed ownership links, and retained all four Phase 4 `ASTRA-FINAL-REVIEW` qualifications.
+- **Open evidence gap:** The unresolved semantics in `P4-FAC-002`, `P4-FAC-003`, `P4-FAC-005`, and `P4-REV-001`; future detailed ZigBee integration must follow the established ownership rule.
 
 ### P4-AUD-001 - Bounded factual audit and retained findings
 
@@ -1227,6 +1227,150 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
 - **Verification:** Claim-level inspection and post-edit reading used; remote committed blob verification provides change integrity, not protocol interoperability certification.
 - **Open evidence gap:** All Phase 3 residual gaps not explicitly closed remain; unchanged pages are not automatically approved by this pass.
+
+### P5-ARC-001 - Cross-area OpenWebNet scope and mechanism ownership
+
+- **Finding ID:** `P5-ARC-001`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** protocol/scope-and-architecture.md; README.md; protocol/README.md; diagnostics/README.md; programming/README.md; device-model/README.md
+- **Claim/issue:** Transport/interface behavior, runtime functional control, discovery, interview, detailed configuration reading, programming, and catalogue capability lacked one canonical cross-area ownership map.
+- **ECV/ESG rule:** ECV 11, 12, 13, 14, 15, 16, 19; ESG 10, 13
+- **Evidence inspected:** Phase 1 canonical-placement map; Phase 4 report; P4-ARC-001; existing Protocol, Device Model, Diagnostics, and Programming landing pages and architecture pages.
+- **Evidence class:** META, RES
+- **Applicability:** Documentation architecture and navigation; no protocol behavior or transport support newly asserted.
+- **Finding:** The local landing-page boundaries were substantially consistent, but a reader had to reconstruct the complete layer model across sections. This left OpenWebNet scope and composed-workflow boundaries vulnerable to drift.
+- **Required remediation:** Establish one cross-area map and have the principal landing pages consume it while retaining their subject-specific definitions.
+- **Resolution:** Added OpenWebNet Scope and Architecture and linked it from the five principal entry points. The page defines scope, mechanism separation, interface applicability, entity/identity boundaries, and canonical owners from conclusions already established by Phase 4.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Changed passages inspected against ECV 11 through 16 and Phase 4; post-edit link/fragment checks pass.
+- **Open evidence gap:** Detailed operation applicability remains bounded by Phase 3/4 evidence; the architecture map does not certify an interface or Device.
+
+### P5-ARC-002 - Device entities, protocol identities, and addresses have explicit owners
+
+- **Finding ID:** `P5-ARC-002`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** protocol/scope-and-architecture.md; device-model/README.md; device-model/sources-and-identifiers.md; diagnostics/architecture.md; programming/device-selection.md
+- **Claim/issue:** Physical Device, catalogue Device record/SKU, installed Device ID, diagnostic `WHERE`, functional `WHERE`, Module/`slot`, Object/Virgin Object, and Configuration are frequently composed in one workflow and require a stable cross-area boundary.
+- **ECV/ESG rule:** ECV 9, 13, 15, 16, 19; ESG 2, 13
+- **Evidence inspected:** Phase 4 P4-FAC-003, P4-FAC-006, and P4-FAC-007; Device Model canonical hierarchy and identifier matrix; diagnostic address roles; programming selection boundaries.
+- **Evidence class:** META, RES, CAT, REG
+- **Applicability:** Documentation entity model and identifier ownership; existing factual correlations and uncertainties are unchanged.
+- **Finding:** The detailed definitions were already correct in Device Model, but no cross-area entry point summarized which identity selects which layer. Local descriptions were not competing definitions and should remain for comprehension.
+- **Required remediation:** Link the architecture map to the detailed Device Model policy and state the identity/address separations without collapsing local context.
+- **Resolution:** Added the entity/identity boundary table and made Device Model the explicit canonical owner. Individual entity-page definitions were retained because they agree and provide local context.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Compared all table entries with Sources and Identifier Boundaries, Device Model, Diagnostic Architecture, and Device Selection; no namespace mapping was added.
+- **Open evidence gap:** Exact diagnostic-address relationships and `DIMENSION 32` decoding remain `P4-FAC-003`.
+
+### P5-ARC-003 - Detailed configuration reading has one canonical protocol definition
+
+- **Finding ID:** `P5-ARC-003`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** diagnostics/dim35-configuration.md; diagnostics/device-interview.md; device-model/configuration.md; guides/
+- **Claim/issue:** `DIMENSION 38` frames, `DiagKO` ordering, and their unresolved reset/select effect were substantially defined in both Diagnostics and Device Model, while guides necessarily repeated the operational step.
+- **ECV/ESG rule:** ECV 1, 3, 10, 13, 14, 19; ESG 13
+- **Evidence inspected:** P4-FAC-005 and P4-ARC-001; diagnostic detailed-read page; Device Interview; Device Model configuration projection; all seven guide call sites identified in Phase 4.
+- **Evidence class:** META, RES, REG
+- **Applicability:** Documentation ownership only; `DIMENSION 38` effects remain unresolved by Device family and firmware.
+- **Finding:** Diagnostics is the proper owner of the management frame and sequence. Device Model should own catalogue correlation, and Practical Guides may repeat the operation only with the canonical qualification required for safe execution.
+- **Required remediation:** Remove the competing frame/sequence definition from Device Model; link Device Interview and guide copies to the diagnostic owner; preserve each guide's operational caveat.
+- **Resolution:** Applied. Device Model now summarizes only the projection/correlation; Device Interview links the later phase; all exposed guide copies retain the Phase 4 gate and link to the canonical treatment.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Targeted search confirms the canonical definition remains in Diagnostics and each guide call site retains the effect qualification; internal links pass.
+- **Open evidence gap:** `P4-FAC-005` remains `ASTRA-FINAL-REVIEW`; no non-destructive interpretation was selected.
+
+### P5-ARC-004 - ZigBee applicability links to functional namespace owners
+
+- **Finding ID:** `P5-ARC-004`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** protocol/zigbee-interface.md; functional/source-coverage.md; functional/who-1-lighting/README.md; functional/who-2-automation/README.md; functional/who-4-temperature-control/README.md; functional/who-13-integration-gateway/README.md; functional/who-18-energy-management/README.md; functional/who-25-transversal/README.md
+- **Claim/issue:** The new ZigBee interface boundary named six functional namespaces, but three owners lacked variant notices and the source-coverage page still said the inspected material had not been integrated.
+- **ECV/ESG rule:** ECV 3, 11, 12, 13, 19; ESG 13
+- **Evidence inspected:** P4-FAC-009, P4-ARC-001, protocol/zigbee-interface.md, the six functional landing pages, and functional/source-coverage.md.
+- **Evidence class:** META, RES
+- **Applicability:** Canonical placement for the source-scoped Legrand ZigBee interface; no detailed operation support added.
+- **Finding:** The interface page should own cross-cutting transport/applicability limits while each functional directory owns any established runtime semantics. Stale coverage wording obscured the bounded Phase 4 integration.
+- **Required remediation:** Add reciprocal owner links and bounded notices; state accurately that interface boundaries are integrated while detailed operations remain incomplete.
+- **Resolution:** Applied to the interface page, the three previously unlinked `WHO` owners, and the source-coverage statement. Existing `WHO 13`, `18`, and `25` notices were retained.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** All six namespace owners are linked from the interface page; each owner now has an interface boundary directly or through its existing notice; no conflicting value was adjudicated.
+- **Open evidence gap:** Publication provenance, unexamined detailed flows, interface testing, and ZigBee conflicts remain as recorded in Phase 3 and `P4-REV-001`.
+
+### P5-ARC-005 - Practical Guide repetition retains canonical qualifications
+
+- **Finding ID:** `P5-ARC-005`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** guides/read-device-configuration.md; guides/retrieve-actuator-group-memberships.md; guides/retrieve-configured-cen-buttons.md; guides/troubleshoot-diagnostics.md; guides/validate-configuration-value.md; guides/program-device.md; guides/verify-programming.md
+- **Claim/issue:** The guide exception permits operational repetition, but repeated `DIMENSION 38` instructions must remain connected to the canonical uncertainty so future edits do not recreate Phase 4 drift.
+- **ECV/ESG rule:** ECV 3, 13, 14, 19; ESG 13
+- **Evidence inspected:** P4-FAC-005; P4-ARC-001; seven guide call sites and the canonical diagnostic treatment.
+- **Evidence class:** META, RES
+- **Applicability:** Independently executable Practical Guides; no guide was treated as protocol authority.
+- **Finding:** Removing the repeated step would impair executable workflows. Retaining the frame, stop condition, and applicability caveat while linking the canonical owner satisfies the Practical Guide exception.
+- **Required remediation:** Preserve local operational context and add canonical links wherever absent.
+- **Resolution:** Six missing links added; program-device.md already linked correctly and was left unchanged.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Targeted search confirms seven qualified guide call sites and canonical links; wording still stops execution where effects are not established.
+- **Open evidence gap:** End-to-end guide validation and `DIMENSION 38` target effects remain unavailable.
+
+### P5-ARC-006 - Machine KB consistency cannot yet be evaluated
+
+- **Finding ID:** `P5-ARC-006`
+- **Status:** Accepted evidence gap
+- **Severity:** Informational
+- **Path:** repository-wide; project/encyclopedia-core-values.md; project/review/phase-5-architecture-audit.md
+- **Claim/issue:** ECV 19 requires canonical consistency between human documentation and the Machine KB, but this branch contains no Machine KB representation.
+- **ECV/ESG rule:** ECV 19
+- **Evidence inspected:** Phase 1 complete repository inventory; current top-level tree; ECV 19; Phase 5 canonical ownership changes.
+- **Evidence class:** META
+- **Applicability:** `general-once-over` human encyclopedia at Phase 5.
+- **Finding:** There is no second representation to compare. Absence of a Machine KB is not evidence of consistency or inconsistency.
+- **Required remediation:** When a Machine KB is introduced, derive or validate it against the canonical owners and preserve the same unresolved/observed/inferred states and applicability boundaries.
+- **Resolution:** Evidence gap recorded; no placeholder machine representation manufactured.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** No Machine KB directory or representation appears in the complete Phase 1 inventory or current branch tree.
+- **Open evidence gap:** The future Machine KB schema, content, generation path, and consistency validation.
+
+### P5-REV-001 - Phase 4 Astra queue retained through restructuring
+
+- **Finding ID:** `P5-REV-001`
+- **Status:** ASTRA-FINAL-REVIEW
+- **Severity:** Substantive
+- **Path:** protocol/authentication.md; protocol/zigbee-interface.md; protocol/addressing.md; diagnostics/dim32-addressing.md; diagnostics/dim35-configuration.md; functional/who-1-lighting/what.md; functional/who-7-multimedia-video/README.md; functional/who-18-energy-management/what.md; functional/who-22-sound-diffusion/README.md; functional/who-24-lighting-management/dimensions.md
+- **Claim/issue:** Architecture changes must not silently resolve or obscure factual conflicts handed off by Astra.
+- **ECV/ESG rule:** ECV 1, 2, 3, 7, 10, 12, 13, 19
+- **Evidence inspected:** `P4-FAC-002`, `P4-FAC-003`, `P4-FAC-005`, `P4-REV-001`; Phase 4 report; every Phase 5 changed passage touching those boundaries.
+- **Evidence class:** META, RES
+- **Applicability:** The four exact Phase 4 final-review records and their existing source/Device/transport scopes.
+- **Finding:** Lighting timing, `DIMENSION 32`/routing interpretations, `DIMENSION 38` effects, authentication constants, ZigBee conflicts, and retained functional contradictions still require evidence adjudication. Canonical ownership can be improved without choosing among them.
+- **Required remediation:** Retain all four Phase 4 records as `ASTRA-FINAL-REVIEW`; use the evidence specified by each record before changing their factual conclusions.
+- **Resolution:** Queue retained unchanged. Phase 5 added links and ownership statements only; all qualifications remain visible.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Compared final changed text with each Phase 4 guardrail; no disputed value, mapping, effect, or frame repair was selected.
+- **Open evidence gap:** Exactly the evidence listed in `P4-FAC-002`, `P4-FAC-003`, `P4-FAC-005`, and `P4-REV-001`.
+
+### P5-AUD-001 - Bounded architecture audit
+
+- **Finding ID:** `P5-AUD-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** project/review/phase-5-architecture-audit.md; project/review/ecv-esg-review-ledger.md
+- **Claim/issue:** Phase 5 must resolve architectural drift without repeating Phase 4 source analysis or turning a bounded pass into an exhaustive new factual certification.
+- **ECV/ESG rule:** ECV 1, 5, 6, 7, 8, 13, 19
+- **Evidence inspected:** Canonical ECV/ESG; existing inventory/canonical map; Phase 3 assessment; Phase 4 report and findings; targeted dependent pages.
+- **Evidence class:** META, RES
+- **Applicability:** Phase 5 starts at `694da72957f584e0c744613a80543ab069767462`.
+- **Finding:** The requested architecture issues could be resolved from established conclusions. No new source inspection or ambiguous protocol adjudication was necessary.
+- **Required remediation:** Record scope, ownership decisions, verification, residual gaps, and the exact Astra queue.
+- **Resolution:** Phase 5 report and ledger entries added; Phase 4 remains factual authority.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
+- **Verification:** Changed-file review, deterministic link/fragment checks, ESG checker, and targeted architecture searches completed after remediation.
+- **Open evidence gap:** All Phase 3/4 gaps not explicitly closed remain genuine; unchanged pages are not newly factually certified.
 
 ## Finding record template
 

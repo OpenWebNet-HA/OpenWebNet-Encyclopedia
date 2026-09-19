@@ -13,6 +13,7 @@ Other interfaces can carry OpenWebNet without this TCP session setup. The [ZigBe
 
 | Topic | Purpose |
 | --- | --- |
+| [Scope and Architecture](scope-and-architecture.md) | Encyclopedia boundary, interface applicability, mechanism ownership, and entity layers |
 | [Frame Syntax](frame-syntax.md) | Common message families, delimiters, empty fields, and parameterized tags |
 | [Connection and Sessions](sessions.md) | TCP gateway setup, session selectors, and session state |
 | [Authentication](authentication.md) | Open-range behavior, legacy authentication boundary, and HMAC negotiation |
@@ -76,7 +77,7 @@ Syntactic validity does not prove that a Device supports an operation. The funct
 
 ## Reference organization
 
-This directory contains mechanics shared across systems. Functional commands and properties are organized by `WHO` under [`functional/`](../functional/). Diagnostic and programming protocols reuse the frame language but define separate operations, sequences, and evidence boundaries under [`diagnostics/`](../diagnostics/) and [`programming/`](../programming/).
+This directory contains mechanics shared across systems. [Scope and Architecture](scope-and-architecture.md) defines the boundary between interfaces, runtime control, discovery, interview, configuration reading, programming, and catalogue capability. Functional commands and properties are organized by `WHO` under [`functional/`](../functional/). Diagnostic and programming protocols reuse the frame language but define separate operations, sequences, and evidence boundaries under [`diagnostics/`](../diagnostics/) and [`programming/`](../programming/).
 
 ## Evidence basis
 
