@@ -191,6 +191,9 @@ function retrieve_groups(selector, requested_actuator):
     if actuator is not unique:
         return ambiguous_actuator_candidates(actuator)
 
+    if DIMENSION 38 effects are not established for the target family and Firmware:
+        return unresolved_group_read_back without sending DIMENSION 38
+
     detailed = acquire_DIMENSION_35_with_DIMENSION_38()
 
     definitions = resolve_applicable_EN_CONF(

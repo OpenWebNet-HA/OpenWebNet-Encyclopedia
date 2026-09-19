@@ -15,7 +15,7 @@
 | `160` / `161` | Increase / decrease contrast |
 | `170` / `171` | Increase / decrease colour |
 | `180` / `181` | Increase / decrease image quality |
-| `311..344` | Select DIAL row `1..4`, position `1..4` |
+| `3RC`, with `R` and `C` each `1..4` | Select DIAL row `R`, position `C` |
 
 The adjustment operations are relative. The `3RC` family is structural: `R` selects DIAL row and `C` selects position, both `1..4`.
 

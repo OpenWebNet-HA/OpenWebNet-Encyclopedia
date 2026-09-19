@@ -181,6 +181,9 @@ function verify_programming(programming_record, intended_state):
         return wrong_target with raw evidence
 
     observed_layout = resolve_modules_objects_and_addresses(observed_frames)
+    if DIMENSION 38 effects are not established for the target family and Firmware:
+        return unverifiable_detailed_parameters without sending DIMENSION 38
+
     detailed_frames = acquire_DIMENSION_35_with_DIMENSION_38()
     observed_state = resolve_properties_independently(
         observed_layout, detailed_frames

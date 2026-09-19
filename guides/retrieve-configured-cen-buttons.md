@@ -209,6 +209,9 @@ function retrieve_cen_buttons(selector):
         if semantic_set contains a CEN identity and at least one button:
             candidates.append(module, semantic_set)
 
+    if DIMENSION 38 effects are not established for the target family and Firmware:
+        return unresolved_button_read_back without sending DIMENSION 38
+
     detailed = acquire_DIMENSION_35_with_DIMENSION_38()
     output = []
 
