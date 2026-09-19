@@ -4,7 +4,9 @@
 
 ## Corpus status
 
-The integrated corpus establishes `WHO 6` as a distinct Video Door Entry namespace, but it does not currently provide the same complete public functional grammar available for `WHO 7`. Accordingly, this page records the namespace and its protocol boundary without importing `WHAT`, `WHERE`, or `DIMENSION` values from adjacent Video Door Entry systems.
+The corpus includes the [L4686SDK Specification](../../sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf), version 1.0.0 dated 11 February 2009. Its eight pages contain `WHO 6` command/address tables and send/receive flows for cameras, calls, locks, and stair lighting. This is product-specific published evidence, not merely a namespace record and not a complete generic Video Door Entry specification.
+
+The current page does not yet integrate that product-specific grammar. Phase 4 must review its applicability and internal discrepancies before adding the detailed reference. Values from adjacent Video Door Entry systems must not be substituted for the available L4686SDK evidence.
 
 ## Protocol boundary
 

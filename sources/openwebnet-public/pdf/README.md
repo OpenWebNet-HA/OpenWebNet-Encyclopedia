@@ -1,6 +1,6 @@
 # Public OpenWebNet PDFs
 
-This directory contains 19 canonical copies of publicly distributed OpenWebNet protocol documents supplied as the public documentation corpus.
+This directory contains 19 canonical OpenWebNet protocol documents supplied as the public documentation corpus. That classification does not independently establish publication or redistribution status for every file. In particular, the ZigBee document carries “Confidential” footers; see the [Source Provenance Qualification](../README.md).
 
 The files are retained byte-for-byte as source evidence. Exact byte sizes and SHA-256 fingerprints are recorded in the [Source Manifest](../../manifest.yaml).
 

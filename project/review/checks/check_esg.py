@@ -125,7 +125,7 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
     known_paths = {p.resolve() for p in root.rglob("*")}
     heading_cache = {
         p.resolve(): heading_slugs(p.read_text(encoding="utf-8"))
-        for p in pages
+        for p in root.rglob("*.md")
     }
 
     # Every human documentation directory containing Markdown has a README.
