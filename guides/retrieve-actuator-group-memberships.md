@@ -49,7 +49,7 @@ Parse every Module record:
 
 For each response:
 
-1. use protocol `SLOT` as the Device-local internal-slot key;
+1. use protocol `SLOT` as the Device-local `slot` key;
 2. if `STATE=1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`;
 3. if `STATE=0`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module unconfigured;
 4. retain the resolved Object's internal `id_key_object`;
@@ -228,15 +228,15 @@ Do not deduplicate raw property positions when two positions contain the same gr
 
 For the common actuator definitions above, the catalogue provides a numeric range of `0` through `255` and a default of `0` for each position.
 
-Suppose internal slot `2` produces:
+Suppose `slot` `2` produces:
 
 | `SLOT` | `INDEX` | `VAL_PAR` | Resolved property | Result |
 | ---: | ---: | ---: | --- | --- |
 | 2 | 240 | 7 | `G1` | member of group 7 |
 | 2 | 241 | 12 | `G2` | member of group 12 |
-| 2 | 242–249 | 0 | `G3`–`G10` | default/unassigned positions, subject to applicable rules |
+| 2 | `242..249` | 0 | `G3..G10` | default/unassigned positions, subject to applicable rules |
 
-The user-facing result is “Groups 7 and 12.” Retain provenance such as “Module internal slot 2; `G1=7`; `G2=12`.”
+The user-facing result is “Groups 7 and 12.” Retain provenance such as “Module `slot` 2; `G1=7`; `G2=12`.”
 
 The catalogue permits zero and supplies it as the default. Treat zero as unassigned only where the applicable Object, filters, rules, or verified application behavior establish that meaning.
 
@@ -259,7 +259,7 @@ After detailed collection, send `*[WHO]*6*0##` before selecting another Device. 
 ```text
 Device ID: 004FBEC8
 Device: <resolved EN_DEVICE.name>
-Module internal slot: 1
+Module `slot`: 1
 Object: Shutter actuator
 Groups: [1, 3]
 Raw properties:

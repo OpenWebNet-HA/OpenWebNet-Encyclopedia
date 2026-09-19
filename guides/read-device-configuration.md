@@ -77,13 +77,13 @@ Use every `DIMENSION 30` response:
 `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##`
 
 1. Group records within the same Device interview.
-2. Use protocol `SLOT` as the Device-local internal-slot key.
+2. Use protocol `SLOT` as the Device-local `slot` key.
 3. Do not renumber slots to match MyHOME_Suite visible Module numbering.
-4. Correlate the internal slot with catalogue placement such as `EN_SLOTS.first_slot`.
+4. Correlate the `slot` with catalogue placement such as `EN_SLOTS.first_slot`.
 5. Retain fixed-Object, hidden, conditional, and slot-capacity metadata.
 6. Do not synthesize Modules only because `EN_FIRMWARE.slots` declares a capacity.
 
-For each internal slot create one Module record, even when its function is unresolved.
+For each `slot` create one Module record, even when its function is unresolved.
 
 ## 3. Resolve configured and unconfigured functions
 
@@ -146,7 +146,7 @@ Keep `DIMENSION 310` outside the generic indexed-property model because it carri
 
 For each tuple `(SLOT, INDEX, VAL_PAR)`:
 
-1. select the Module by internal slot;
+1. select the Module by `slot`;
 2. require its resolved configured Object;
 3. collect Object-scoped `EN_CONF` definitions using the Object's `id_key_object` and `id_firmware = 0`;
 4. collect firmware-scoped definitions using `id_key_object = 0` and the resolved firmware;
@@ -254,7 +254,7 @@ function read_device_configuration(selector, diagnostic_who):
     }
 ```
 
-Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for an internal slot absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
+Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for an `slot` absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
 
 ## SQL examples for catalogue and cross-database resolution
 
@@ -487,7 +487,7 @@ Device
   identity status
   diagnostic completion status
   Modules[]
-    internal slot
+    `slot`
     display order/name, when established
     configured state
     function or Virgin Object role

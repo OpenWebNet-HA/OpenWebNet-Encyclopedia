@@ -74,7 +74,7 @@ Request: `*#18*WHERE*54##`
 
 Response/event: `*#18*WHERE*54*Val##`
 
-`DIMENSION 51`–`54` are scalar totalizer operations. They are distinct from the multi-frame historical series under `DIMENSION 511`–`514`.
+`DIMENSION 51..54` are scalar totalizer operations. They are distinct from the multi-frame historical series under `DIMENSION 511..514`.
 
 ## Energy Management actuator information
 
@@ -111,7 +111,7 @@ Response/event: `*#18*WHERE*72#Tot_N*Energy*D*M*Y*H*m##`
 
 | Field | Meaning |
 | --- | --- |
-| `Tot_N` | Totalizer number, `1`–`2` |
+| `Tot_N` | Totalizer number, `1..2` |
 | `Energy` | Energy accumulated since reset, in Wh |
 | `D` | Day of last reset |
 | `M` | Month of last reset |
@@ -127,7 +127,7 @@ Request: `*#18*WHERE*73##`
 
 Response/event: `*#18*WHERE*73*level##`
 
-The published range for `level` is `1`–`3`. The public specification does not assign a more detailed semantic label to each individual numeric level, so those meanings remain unspecified.
+The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level, so those meanings remain unspecified.
 
 ## Stop&Go status
 
@@ -159,7 +159,7 @@ Response/event: `*#18*WHERE*250*MASC##`
 
 ### Individual Stop&Go flags
 
-Each `DIMENSION 251`–`263` can be requested independently using `*#18*WHERE*DIMENSION##` and returns one bit as `*#18*WHERE*DIMENSION*bN##`.
+Each `DIMENSION 251..263` can be requested independently using `*#18*WHERE*DIMENSION##` and returns one bit as `*#18*WHERE*DIMENSION*bN##`.
 
 | `DIMENSION` | `1` | `0` |
 | ---: | --- | --- |
@@ -191,7 +191,7 @@ Data frames: `*#18*WHERE*511#M#D*Tag*Val##`
 
 | `Tag` | Meaning |
 | ---: | --- |
-| `1`–`24` | Hourly measure |
+| `1..24` | Hourly measure |
 | `25` | Daily total |
 
 The published source renders the unit as “Watt/h”; the operation represents the daily energy-history series. The same sequence can be initiated by `WHAT 57#M#D`.
@@ -200,19 +200,19 @@ The published source renders the unit as “Watt/h”; the operation represents 
 
 Data frame: `*#18*WHERE*512#M*Tag*Val##`
 
-Tags `1`–`24` identify hourly measures averaged over the selected month. Tag `25` carries the monthly-average total/unit value defined by the published protocol. The sequence is initiated by `WHAT 58#M`.
+Tags `1..24` identify hourly measures averaged over the selected month. Tag `25` carries the monthly-average total/unit value defined by the published protocol. The sequence is initiated by `WHAT 58#M`.
 
 ### `DIMENSION 513` - current-year monthly series
 
 Data frame: `*#18*WHERE*513#M*Tag*Val##`
 
-`Tag` identifies the day, `1`–`31`. The series represents daily values for the selected month in the current-year monthly graph model. It is initiated by `WHAT 59#M`.
+`Tag` identifies the day, `1..31`. The series represents daily values for the selected month in the current-year monthly graph model. It is initiated by `WHAT 59#M`.
 
 ### `DIMENSION 514` - previous-year monthly series
 
 Data frame: `*#18*WHERE*514#M*Tag*Val##`
 
-`Tag` identifies the measure/day, `1`–`31`. The series is used for the previous-year comparison graph and is initiated by `WHAT 510#M`.
+`Tag` identifies the measure/day, `1..31`. The series is used for the previous-year comparison graph and is initiated by `WHAT 510#M`.
 
 ## `DIMENSION 1200` - automatic active-power updates
 
@@ -223,7 +223,7 @@ Start/update form: `*#18*WHERE*#1200#Type*Time##`
 | Field | Meaning |
 | --- | --- |
 | `Type` | Energy type; published value `1` = active power |
-| `Time` | Update/change reporting parameter in minutes, `1`–`255` |
+| `Time` | Update/change reporting parameter in minutes, `1..255` |
 
 After configuration, active-power events are reported as `*#18*WHERE*113*Val##`.
 

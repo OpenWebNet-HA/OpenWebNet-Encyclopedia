@@ -9,7 +9,7 @@ This source set contains canonical implementation artifacts copied from MyHOME S
 | [MyHOME Suite 3.5.38 Databases](databases/) | `MHCatalogue.db`, `OPEN.db`, both `ScenarioDevices.sqlite` variants, and `rules.db3` |
 | [MyHOME Suite 3.5.38 Support Files](support/) | Non-database support material, including `OpenQuery.txt` |
 
-The original installation paths, byte sizes, SHA-256 fingerprints, and installer provenance are recorded in [`../../manifest.yaml`](../../manifest.yaml).
+The original installation paths, byte sizes, SHA-256 fingerprints, and installer provenance are recorded in the [Source Manifest](../../manifest.yaml).
 
 ## Provenance
 

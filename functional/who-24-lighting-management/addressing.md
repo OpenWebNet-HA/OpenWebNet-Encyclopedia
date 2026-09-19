@@ -38,7 +38,7 @@ The zone encoding is therefore offset-based. A displayed zone number and its wir
 
 ## System address
 
-`sys_addr` uses the published range `1`–`9`. It is a Lighting Management system-address component and must not be interpreted as an SCS `A` or `PL` configurator.
+`sys_addr` uses the published range `1..9`. It is a Lighting Management system-address component and must not be interpreted as an SCS `A` or `PL` configurator.
 
 ## Sender versus recipient
 

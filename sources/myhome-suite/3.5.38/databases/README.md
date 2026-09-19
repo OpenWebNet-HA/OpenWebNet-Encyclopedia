@@ -1,6 +1,6 @@
 # MyHOME Suite 3.5.38 Databases
 
-These are canonical, unmodified databases from MyHOME Suite 3.5.38. Exact byte sizes, SHA-256 fingerprints, original filenames, and original Windows paths are recorded in [`../../../manifest.yaml`](../../../manifest.yaml).
+These are canonical, unmodified databases from MyHOME Suite 3.5.38. Exact byte sizes, SHA-256 fingerprints, original filenames, and original Windows paths are recorded in the [Source Manifest](../../../manifest.yaml).
 
 | Repository file | Original installation location |
 | --- | --- |

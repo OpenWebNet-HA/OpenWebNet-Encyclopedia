@@ -7,18 +7,18 @@
 | Parameter | Published domain |
 | --- | --- |
 | Multimedia type | `1` voice; `2` right; `3` left; `4` stereo; `11` all sources |
-| Source ID | `1`–`4` |
-| Area / speaker point | `1`–`9` |
+| Source ID | `1..4` |
+| Area / speaker point | `1..9` |
 | Device state | `0` OFF; `1` ON |
-| Frequency step | `1`–`15` |
+| Frequency step | `1..15` |
 | Modulation | `1` FM; `2` AM-LW; `3` AM-MW; `4` AM-SW |
-| Stored station | `1`–`5` for F500; `1`–`15` for F500N |
-| Track | `1`–`999` |
-| Volume / volume step | absolute `0`–`31`; step `1`–`31` |
-| Tone / balance value | `1`–`63` |
-| 3D level | `0`–`10` |
+| Stored station | `1..5` for F500; `1..15` for F500N |
+| Track | `1..999` |
+| Volume / volume step | absolute `0..31`; step `1..31` |
+| Tone / balance value | `1..63` |
+| 3D level | `0..10` |
 | Loudness | `0` OFF; `1` ON |
-| Preset | `2` normal, `3` dance, `4` pop, `5` rock, `6` classic, `7` techno, `8` party, `9` soft, `10` full bass, `11` full treble; `16`–`25` user defined |
+| Preset | `2` normal, `3` dance, `4` pop, `5` rock, `6` classic, `7` techno, `8` party, `9` soft, `10` full bass, `11` full treble; `16..25` user defined |
 
 The source describes frequency steps as `50`, `100`, … `750 Hz`; this appears unusually small for radio tuning. This reference preserves the published values without silently relabelling their unit.
 
@@ -96,7 +96,7 @@ Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer report
 | `19` | `PRESET` |
 | `20` | `LOUDNESS` |
 
-The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands 1–3, 4–6, and 7–8 respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
 
 Examples with unambiguous separators in the detailed flows include:
 
@@ -117,7 +117,7 @@ Source dimension requests use the general-source form `5#2#SOURCE_ID` in these f
 
 ### Published inconsistencies
 
-The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1`–`4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
+The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1..4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
 
 Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
 
@@ -133,6 +133,6 @@ The same namespace includes tuner, media-track, presets, RDS, and equalization. 
 
 ## Evidence basis
 
-Parameters, identifiers, and allowed-message distinctions come from [WHO 22 specification](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

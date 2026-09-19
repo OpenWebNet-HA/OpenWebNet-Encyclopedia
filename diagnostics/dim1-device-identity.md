@@ -8,10 +8,10 @@
 
 | Field | Range in `OPEN.db` | Interpretation |
 | --- | ---: | --- |
-| `OBJECT_MODEL` | `1`–`65535` | item/model value |
-| `N_CONF` | `0`–`12` | number of physical configurator positions |
-| `BRAND` | `0`–`4` | brand code |
-| `LINE` | `0`–`8` | product-line code |
+| `OBJECT_MODEL` | `1..65535` | item/model value |
+| `N_CONF` | `0..12` | number of physical configurator positions |
+| `BRAND` | `0..4` | brand code |
+| `LINE` | `0..8` | product-line code |
 
 ## Catalogue correlations
 
@@ -43,14 +43,14 @@ The observed Device `00C58E91` (`12947089` decimal) reported model value `107`. 
 
 - `AS_ITEM_SYSTEM.modobj = 107` resolves to item `1184`;
 - `EN_ITEM.descr` is “Flush mounted actuator and free control”;
-- firmware definition `157` declares four internal slots;
+- firmware definition `157` declares four `slot` positions;
 - several branded SKUs, including `64391`, `64191`, and `64192`, share that item.
 
 The example corroborates the model-to-item path while also demonstrating why `OBJECT_MODEL` alone does not uniquely identify one SKU. Brand and line values, plus project/UI context where available, are required to narrow the Device record.
 
 ## `N_CONF` and physical configurators
 
-`OPEN.db` describes `N_CONF` as “Configurator number” / “number of physical configurator” and constrains it to `0`–`12`. Product configuration diagrams provide an independent interpretation: the value corresponds to the number of physical configurator positions provided by the Device.
+`OPEN.db` describes `N_CONF` as “Configurator number” / “number of physical configurator” and constrains it to `0..12`. Product configuration diagrams provide an independent interpretation: the value corresponds to the number of physical configurator positions provided by the Device.
 
 Documented examples include:
 
@@ -60,7 +60,7 @@ Documented examples include:
 | `F429` | `3` | 3 positions: `A`, `G`, `M` |
 | `H4652/3` | `7` | 7 configurator positions |
 
-This field therefore describes the Device's physical configuration interface. It is not a Module count, Object identifier, Virgin Object, form factor, firmware class, or indication of the Object assigned to internal slot `1`.
+This field therefore describes the Device's physical configuration interface. It is not a Module count, Object identifier, Virgin Object, form factor, firmware class, or indication of the Object assigned to `slot` `1`.
 
 MyHOME Devices can alternatively use advanced configuration, which can represent values outside the limits of the physical configurator interface. `N_CONF` remains a hardware characteristic: it does not describe the active configuration method or the number of logical configuration parameters.
 

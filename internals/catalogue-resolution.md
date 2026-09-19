@@ -11,7 +11,7 @@
 | System identity | `AS_ITEM_SYSTEM` | catalogue system association and item-level `modobj` |
 | Firmware | `EN_FIRMWARE`, `EN_BUILDS` | versioned capability definition |
 | Object support | `AS_OBJECT_FIRMWARE` | Objects supported by one firmware |
-| Module placement | `EN_SLOTS` | Object alternatives at Device-local internal slots |
+| Module placement | `EN_SLOTS` | Object alternatives at Device-local `slot` positions |
 | Configurable template | Virgin-Object association tables | permitted Object set before final assignment |
 | Configuration | `EN_CONF` and related tables | properties, domains, filters, conditions, and conversions |
 
@@ -45,7 +45,7 @@ An explicit component value of `-1` is strongly corroborated as **any or unspeci
 
 Once firmware is resolved, `AS_OBJECT_FIRMWARE` gives supported Objects, `EN_SLOTS.first_slot` places Object alternatives, Virgin-Object associations describe configurable templates, and slot conditions can remove alternatives in a particular configuration.
 
-Do not count `EN_SLOTS` rows as Modules: one internal slot can have several Object alternatives.
+Do not count `EN_SLOTS` rows as Modules: one `slot` can have several Object alternatives.
 
 ## Runtime Module projection
 
@@ -58,7 +58,7 @@ Do not count `EN_SLOTS` rows as Modules: one internal slot can have several Obje
 
 This is a state-dependent external identifier. It is neither `EN_KEY_OBJECT.id_key_object` nor `EN_VIRGIN_OBJECT.id_virgin_key_object`.
 
-Use the same internal slot to attach `DIMENSION 32` address data and `DIMENSION 35` configuration values. Do not renumber protocol slots to match the UI.
+Use the same `slot` to attach `DIMENSION 32` address data and `DIMENSION 35` configuration values. Do not renumber protocol slots to match the UI.
 
 ## Configuration ownership
 

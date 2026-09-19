@@ -4,7 +4,7 @@ The public Temperature Control specification defines a `WHO 1004` fault-reportin
 
 ## Targets and operations
 
-`#0` selects the central unit. `#1`–`#99` select zones through the central unit. The source also lists unprefixed master-probe addresses `1`–`99`, but the detailed central-unit fault flows below use the prefixed forms.
+`#0` selects the central unit. `#1..#99` select zones through the central unit. The source also lists unprefixed master-probe addresses `1..99`, but the detailed central-unit fault flows below use the prefixed forms.
 
 | Purpose | Request | Response/report |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ The public Temperature Control specification defines a `WHO 1004` fault-reportin
 | Automatic zone fault notification | No request defined in this flow | `*#1004*#ZONE*22*BIT##` |
 | Fault/non-response counts | `*#1004*#0*23##` | `*#1004*#0*23*NO_RESPONSE*FAULTS##` |
 
-`ZONE` is a placeholder for `1`–`99`. `NO_RESPONSE` is the number of non-answering probes; `FAULTS` is the number of probes with failures. Preserve that order.
+`ZONE` is a placeholder for `1..99`. `NO_RESPONSE` is the number of non-answering probes; `FAULTS` is the number of probes with failures. Preserve that order.
 
 The collective flows can begin with an echo-shaped header such as `*#1004*#0*20##` or `*#1004*#0*21##`, before the zone data. A command-session sequence then terminates with `ACK` or `NACK`. The request selector need not equal every returned selector: a `DIMENSION 20` request returns `DIMENSION 21` zone records. Correlate using the complete operation, not selector equality alone.
 

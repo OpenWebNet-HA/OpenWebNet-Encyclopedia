@@ -21,9 +21,9 @@ The public command flow explicitly defines `WHAT 2` as a force command. All four
 | --- | --- |
 | General | `0` |
 | Control unit / measurement target | `10` |
-| Load priority | `#1`–`#8` |
+| Load priority | `#1..#8` |
 
-The leading `#` is part of a priority address. A priority must not be normalized to bare decimal `1`–`8`.
+The leading `#` is part of a priority address. A priority must not be normalized to bare decimal `1..8`.
 
 ## Load forcing
 
@@ -55,7 +55,7 @@ A single-priority request uses the corresponding `#PRIORITY` as `WHERE`:
 *#3*#PRIORITY##
 ~~~
 
-The published text is typographically degraded in places, but the surrounding tables and repeated examples consistently establish general `0` and priority `#1`–`#8` targets.
+The published text is typographically degraded in places, but the surrounding tables and repeated examples consistently establish general `0` and priority `#1..#8` targets.
 
 ## Measurement `DIMENSION` values
 
@@ -89,7 +89,7 @@ The source does not define numeric scaling, signedness, precision, or the energy
 
 ## Evidence basis
 
-The value tables and frame flows come from [WHO 3 specification](../../sources/openwebnet-public/pdf/WHO_3.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
+The value tables and frame flows come from [`WHO 3` specification](../../sources/openwebnet-public/pdf/WHO_3.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
 
 MyHOME Suite `OPEN.db` confirms the namespace name but does not associate a concrete functional operation set with it in this revision.
 

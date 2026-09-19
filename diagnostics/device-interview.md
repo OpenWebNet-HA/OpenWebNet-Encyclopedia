@@ -26,8 +26,8 @@ The canonical sequences order the following response families:
 | 1 | `1` | item/model identity, physical configurator-position count (`N_CONF`), brand, line |
 | 2 | `2` | firmware version |
 | 3 | `3` | hardware version |
-| 4 | `4` | configurators 1–6 |
-| 5 | `5` | configurators 7–12 |
+| 4 | `4` | configurators `1..6` |
+| 5 | `5` | configurators `7..12` |
 | 6 | `6` | microcontroller version |
 | 7 | `7` | diagnostic bitmask A |
 | 8 | `8` | diagnostic bitmask B |
@@ -60,7 +60,7 @@ For each active interview, retain:
 - selected Device ID or `WHERE`;
 - raw frames in arrival order;
 - one or more values for each `DIMENSION`;
-- `DIMENSION 30` and `32` grouped by internal slot;
+- `DIMENSION 30` and `32` grouped by `slot`;
 - structured errors;
 - whether `WHAT 4`, `WHAT 6`, timeout, or transport closure ended the operation.
 
@@ -70,8 +70,8 @@ Do not overwrite repeated frames merely because their `DIMENSION` matches. `DIME
 
 1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata and retain `N_CONF` as the Device's physical configurator-position count.
 2. Record the reported firmware, hardware, and microcontroller versions without assuming that a version number is a catalogue primary key.
-3. Build one Module record per internal slot from `DIMENSION 30`.
-4. Attach `DIMENSION 32` system/address data to the matching internal slot.
+3. Build one Module record per `slot` from `DIMENSION 30`.
+4. Attach `DIMENSION 32` system/address data to the matching `slot`.
 5. Preserve configured and unconfigured Module states.
 6. Request detailed parameters only after the Module/Object layout is known.
 
@@ -104,4 +104,4 @@ A timeout is not equivalent to `WHAT 4`: it leaves completion uncertain. Send `W
 
 ## Observed-runtime limits
 
-Observed `WHO 1001` traffic corroborates ID-based interview, repeated Module records, detailed configuration responses, and `WHAT 4` termination. It also shows product-specific response surfaces: a command-only Device can omit an observed `DIMENSION 32`, while a multi-Module sensor can expose many internal slots. These observations refine optionality but do not redefine the database sequence for all diagnostic families.
+Observed `WHO 1001` traffic corroborates ID-based interview, repeated Module records, detailed configuration responses, and `WHAT 4` termination. It also shows product-specific response surfaces: a command-only Device can omit an observed `DIMENSION 32`, while a multi-Module sensor can expose many `slot` positions. These observations refine optionality but do not redefine the database sequence for all diagnostic families.

@@ -27,7 +27,7 @@ The target `WHERE` follows the selected management family's address rules.
 
 ## `WHAT 9`: start by Device ID
 
-`ID` has the database range `0`–`4294967295`. It identifies the installed Device instance and must not be replaced by a catalogue identifier.
+`ID` has the database range `0..4294967295`. It identifies the installed Device instance and must not be replaced by a catalogue identifier.
 
 ## `WHAT 14`: reset Object configuration
 
