@@ -30,7 +30,7 @@ The SCS-oriented reference also documents blinking `WHAT 20..29`, relative dimmi
 
 Ordinary ZigBee Lighting commands use the interface-specific acknowledgement model described in [ZigBee acknowledgement behavior](../../protocol/zigbee-interface.md#acknowledgement-behavior). `ACK` means the command was sent according to the source; `NACK` means it was not, and BUSY uses the documented BUSY/NACK retry sequence.
 
-When Supervisor mode is enabled through ZigBee `WHO 13`, the command definitions show server-originated state frames after OFF, ON, level, and timed operations. This is interface-specific behavior and should not be transferred to SCS sessions by analogy.
+When Supervisor mode is enabled through ZigBee `WHO 13`, the command definitions show server-originated state frames after OFF, ON, level, and timed operations. For dimmers, the detailed OFF and timed-OFF flows can show an additional OFF report when the dimmer reaches its 0% level, while ON at a requested speed reports the 100% state as `WHAT 10`. These are interface-specific event sequences and should not be transferred to SCS sessions by analogy.
 
 Toggle is special in the source. It states that the product replies with its resulting state even when Supervisor mode is disabled and that Supervisor mode can therefore produce duplicate state replies. The switch case returns state `0` or `1`. The dimmer cases return `0` when OFF or `2..10` when ON according to the last dimming level.
 
