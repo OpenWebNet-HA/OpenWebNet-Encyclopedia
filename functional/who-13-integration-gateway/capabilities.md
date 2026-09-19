@@ -1,6 +1,8 @@
 # Gateway Capabilities
 
-`WHO 13` is a management interface to the OpenWebNet external interface device. Unlike functional traffic for Lighting, Automation, or Thermoregulation, the target is the gateway itself and the published frames use an empty `WHERE` field.
+This page describes the SCS/TCP external-interface `WHO 13` property surface. In that published interface model the target is the gateway itself and the property frames use an empty `WHERE` field.
+
+The ZigBee OpenWebNet interface defines a different `WHO 13` management surface with additional `WHAT` values, a different `DIMENSION` set, and both empty and product-addressed `WHERE` forms. See [ZigBee Network Management](zigbee-network-management.md). Neither variant should be used to fill gaps in the other by numeric analogy.
 
 ## Functional model
 
