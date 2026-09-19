@@ -521,7 +521,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P1-GAP-003 - ZigBee-backed OpenWebNet not integrated
 
 - **Finding ID:** `P1-GAP-003`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Substantive
 - **Path:** Protocol, Functional, Diagnostics, Programming, Device Model, and source-coverage sections
 - **Claim/issue:** The baseline contains `OpenWebNet_Zigbee.pdf` but no canonical human-facing treatment of its OpenWebNet-visible differences.
@@ -531,9 +531,9 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** OpenWebNet variants/transports, especially Lighting, Automation, addressing, Diagnostics, and Programming
 - **Finding:** Current coverage cannot establish where SCS-specific behavior is being treated as universal or how ZigBee-backed systems affect the documented mechanisms.
 - **Required remediation:** Later factual review must inspect the canonical ZigBee PDF, map only OpenWebNet-visible differences, scope SCS behavior, and leave underlying ZigBee internals outside the encyclopedia unless mediated by OpenWebNet.
-- **Resolution:** Pending later phase; no speculative protocol edits made.
+- **Resolution:** Phase 3 recovered and inspected the source; Phase 4 added the source-scoped ZigBee interface treatment and qualified shared protocol claims; Phase 5 connected that boundary to the functional namespace owners. No SCS behavior was transferred by namespace equality.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** No substantive ZigBee treatment appears in the 136-page human-facing baseline.
+- **Verification:** `protocol/zigbee-interface.md`, `protocol/scope-and-architecture.md`, the six linked functional owners, and the Diagnostics/Programming applicability notices were checked in Phases 4, 5, and 7. The original baseline omission is closed; detailed unintegrated source material remains an explicit gap.
 - **Open evidence gap:** Diagnostic-family behavior, programming behavior, address translation, gateway mediation, and Device applicability on ZigBee-backed systems.
 
 ### P1-GAP-004 - Functional namespaces without dedicated public specifications
@@ -557,7 +557,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P1-GAP-005 - Diagnostics and programming rely on non-public evidence
 
 - **Finding ID:** `P1-GAP-005`
-- **Status:** Open
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** `diagnostics/`, `programming/`, associated guides
 - **Claim/issue:** Most MyHOME Suite Device interview and programming mechanisms are established from implementation data and private observations rather than a complete public protocol specification.
@@ -567,15 +567,15 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** Diagnostic families, configuration reading, and Device programming workflows
 - **Finding:** Coverage exists but independent reproducibility and general applicability cannot yet be established across all Devices, firmware, gateways, diagnostic families, or transports.
 - **Required remediation:** Claim-level deep review must tag evidence class/applicability, separate syntax from support and behavior, and preserve open fields.
-- **Resolution:** Pending later factual review.
+- **Resolution:** Phases 4 through 7 separated stored sequence syntax, catalogue capability, observed workflow behavior, and target applicability throughout Diagnostics, Programming, and their Guides. The unavailable independent evidence is now accurately represented and accepted as a bounded gap.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** No complete public diagnostic/programming specification is present; the pages themselves identify observation limits.
+- **Verification:** Deterministic drift review checked all mentions of the high-risk diagnostic dimensions and repeated management frames; canonical pages and guide copies retain evidence and applicability qualifications. No complete public diagnostic/programming specification or controlled Device matrix is present.
 - **Open evidence gap:** Sanitized captures, controlled Device matrices, gateway/version matrices, abort/error paths, and transport variants.
 
 ### P1-GAP-006 - Application runtime and localization evidence incomplete
 
 - **Finding ID:** `P1-GAP-006`
-- **Status:** Open
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** `internals/`, `scenario-engine/`, `reverse-engineering/open-questions.md`
 - **Claim/issue:** Stored databases and `OpenQuery.txt` do not preserve callers, selection precedence, caching/migration, localization resources, or full runtime control flow.
@@ -585,15 +585,15 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** MyHOME Suite 3.5.38 implementation behavior only
 - **Finding:** Database structure can establish stored capability and associations, but not the complete application algorithm or UI semantics.
 - **Required remediation:** Later review must scope implementation claims and identify where APP evidence or legitimate runtime tracing is required.
-- **Resolution:** Pending; no application behavior inferred from data presence alone.
+- **Resolution:** Internals and Scenario Engine now consistently classify database structures as implementation capability and keep consumer, loader, localization, UI, and persistence behavior unresolved. The missing runtime layer is accepted as an explicit evidence gap.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Open questions and Internals pages explicitly identify these missing layers.
+- **Verification:** `internals/implementation-boundaries.md`, `internals/localization-and-presentation.md`, `scenario-engine/database-model.md`, `scenario-engine/execution-model.md`, and the canonical open-question list were sampled against the Phase 4 conclusions; no stored row is presented as proof of unavailable application behavior.
 - **Open evidence gap:** Installer/application binary inspection, file-access traces, executed-query traces, localization resources, UI workflows, and persistence behavior.
 
 ### P1-GAP-007 - Scenario execution persistence and control flow unavailable
 
 - **Finding ID:** `P1-GAP-007`
-- **Status:** Open
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** `scenario-engine/`
 - **Claim/issue:** ScenarioDevices files describe capabilities but do not establish complete user-authored graph storage or runtime execution.
@@ -603,9 +603,9 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** MyHOME Suite 3.5.38 Scenario Engine
 - **Finding:** Capability templates, categories, and parameters can be inventoried, while graph persistence, branches, ordering, event matching, scheduling, retries, and error handling remain incompletely supported.
 - **Required remediation:** Later factual review must prevent capability rows from being presented as complete runtime behavior and identify the missing APP/OBS evidence.
-- **Resolution:** Pending.
+- **Resolution:** Phase 4 separated stored capability templates and a proposed safe rendering algorithm from actual matching, graph persistence, scheduling, and runtime control flow. The Scenario Engine canonical pages retain this boundary; the missing runtime evidence is accepted as a bounded gap.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Neither preserved ScenarioDevices database contains an evident complete scenario-instance graph model.
+- **Verification:** `scenario-engine/execution-model.md`, `database-model.md`, `categories-and-matching.md`, and `frame-templates.md` visibly distinguish established stored capability, proposed processing, and unavailable runtime behavior. Neither preserved ScenarioDevices database contains an identified complete scenario-instance graph model.
 - **Open evidence gap:** Runtime/editor traces, persisted user project data, and application mapping code.
 
 ### P1-GAP-008 - Hardware and firmware applicability not exhaustively testable
@@ -629,7 +629,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P1-GAP-009 - High-priority unresolved semantic areas
 
 - **Finding ID:** `P1-GAP-009`
-- **Status:** Open
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** `reverse-engineering/open-questions.md` and linked canonical pages
 - **Claim/issue:** Known unresolved areas require targeted evidence rather than editorial completion.
@@ -639,9 +639,9 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** Individual questions as scoped in their canonical pages
 - **Finding:** Highest-priority gaps include `DIMENSION 32.SYS`; `DIMENSION 4`/`5`; Object-specific `DIMENSION 310`; hardware/microcontroller version mapping; address-rule selection/rendering; firmware selection precedence; Object replacement; physical-to-advanced translation; catalogue-wide `N_CONF` equivalence; ScenarioDevices precedence; and application runtime/localization behavior.
 - **Required remediation:** Carry each question into claim-level review and later evidence acquisition without reopening already established boundaries.
-- **Resolution:** Consolidated into the coverage matrix; no semantic decision made.
+- **Resolution:** Each surviving question is represented as Unknown or Unresolved in `reverse-engineering/open-questions.md` and its canonical owner. Phase 4 resolved `N_CONF` meaning while retaining count-equivalence and diagram provenance limits; the evidence-sensitive `DIMENSION 32` portion is tracked separately as `P4-FAC-003`.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Each item is explicitly recorded in the baseline open-question pages.
+- **Verification:** Phase 7 traced every listed subject to the current open-question entry and canonical page. None is presented as settled; programming pages fail closed where unresolved encoding would affect a write.
 - **Open evidence gap:** The discriminating observations listed in `reverse-engineering/open-questions.md`.
 
 ### P1-ESG-001 - Deterministic ESG review not yet performed
@@ -809,7 +809,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P2-AMB-001 - Device entity terminology requires semantic review
 
 - **Finding ID:** `P2-AMB-001`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Editorial
 - **Path:** Human-facing pages using “Device” or “Devices” outside literal identifiers and source quotations
 - **Claim/issue:** Deterministic replacement cannot decide whether each occurrence denotes a Physical Device, product model, generic device, protocol endpoint, catalogue record, or source wording.
@@ -819,15 +819,15 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** Entity terminology across all subject areas
 - **Finding:** The obsolete `slot` phrase was mechanically decidable, but Device/Physical Device usage is context-dependent and cannot be safely normalized in this phase.
 - **Required remediation:** Review entity references during the semantic ESG/ECV pass; change only occurrences whose referent is established.
-- **Resolution:** Deferred; no bulk replacement made.
+- **Resolution:** Phase 6 reviewed entity terminology semantically and retained context-appropriate uses: Physical Device for an installed hardware instance; Device for a protocol target, source term, product/device family, or context whose physical-instance identity is not established. Phase 7 found no case where a stronger abstraction could be selected without changing meaning.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Deferred cases remain visible through repository search rather than being silently normalized.
-- **Open evidence gap:** Claim context and intended abstraction level for each occurrence.
+- **Verification:** Repository-wide lower-case and capitalized Device searches were reviewed against the canonical entity boundary. Literal source phrases, code variables, target-device compounds, and generic device-family wording remain distinguishable from installed Physical Device references.
+- **Open evidence gap:** None for the editorial classification. Individual unresolved identity relationships remain under their substantive findings.
 
 ### P2-AMB-002 - Unlabelled multi-frame blocks require semantic classification
 
 - **Finding ID:** `P2-AMB-002`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Editorial
 - **Path:** Functional and protocol pages containing fenced lists of request, response, report, or write frame forms
 - **Claim/issue:** A parser can enforce `Source -> Destination: frame` once a block is a transcript, but cannot decide from multiple frame-shaped lines alone whether the block is a temporal exchange or a compact reference list.
@@ -837,10 +837,10 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** Unlabelled or reference-form fenced blocks only
 - **Finding:** The apparent initial candidates in Lighting, Load Management, and Sound System pages are introduced as request/response forms or property forms, not represented as observed transcripts. They were not rewritten mechanically.
 - **Required remediation:** During semantic ESG review, identify any block intended as a real exchange; if so, add explicit source/destination labels and evidence status.
-- **Resolution:** Deferred; checker now avoids treating every multi-frame reference block as a transcript.
+- **Resolution:** Phase 7 classified all eight current multi-frame candidates as compact request, response, report, write, or property-form references. None claims to reproduce an observed temporal exchange, so transcript direction labels are inapplicable.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Explicitly labelled transcripts/exchanges pass the direction parser; reference-form blocks remain unchanged.
-- **Open evidence gap:** Authorial intent and evidence status of each unlabelled multi-frame block.
+- **Verification:** Candidate blocks in Lighting, Load Management, and Sound System were inspected with their headings and introducing prose. Explicitly labelled transcripts/exchanges continue to pass the direction parser.
+- **Open evidence gap:** None for the current blocks; newly added blocks still require the same classification.
 
 ## Phase 3 findings
 
@@ -939,7 +939,7 @@ The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed so
 ### P3-COV-004 - ZigBee scope materially qualifies the coverage map
 
 - **Finding ID:** `P3-COV-004`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Substantive
 - **Path:** Protocol, Functional, Diagnostics, Programming and Device Model; functional/source-coverage.md
 - **Claim/issue:** ZigBee evidence is not limited to addressing and is not integrated into the human reference.
@@ -949,15 +949,15 @@ The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed so
 - **Applicability:** Legrand serial interface described by ZigBee OpenWebNet 4.0, 22 November 2016
 - **Finding:** Source sections describe serial framing, busy responses, discovery including WHO 1000 neighbor queries, management, firmware metadata, binding and variant functional surfaces. No inspected source establishes parity with Suite's SCS programming/interview model.
 - **Required remediation:** Integrate only OpenWebNet-visible mechanisms in Phase 4 with exact interface applicability; keep bootloader and underlying ZigBee internals out of scope.
-- **Resolution:** Source-coverage page now names the cross-cutting document and links the audit. P1-GAP-003 remains open.
+- **Resolution:** Phase 4 added the source-scoped ZigBee interface boundary and qualified shared protocol claims; Phase 5 linked the six functional owners and corrected the coverage statement. OpenWebNet-visible transport, acknowledgement, addressing, management, and conflict boundaries are integrated without importing underlying radio or bootloader internals.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Selected sections and rendered PDF pages 9 and 38 inspected; full inspection register in audit.
+- **Verification:** Phase 7 confirmed the interface page and linked canonical owners retain exact interface applicability, distinguish SCS, and leave detailed unexamined flows and live behavior open.
 - **Open evidence gap:** Detailed source flows/diagrams, live interface tests, variant conflicts, and publication provenance.
 
 ### P3-PROV-003 - Public-corpus classification requires a qualification
 
 - **Finding ID:** `P3-PROV-003`
-- **Status:** Open
+- **Status:** Accepted evidence gap
 - **Severity:** Substantive
 - **Path:** sources/openwebnet-public/README.md; sources/openwebnet-public/pdf/README.md; sources/manifest.yaml
 - **Claim/issue:** Public-source wording conflicts with Confidential markings in the supplied ZigBee document.
@@ -967,15 +967,15 @@ The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed so
 - **Applicability:** OpenWebNet_Zigbee.pdf version 4.0 only
 - **Finding:** The document has Confidential page footers. The manifest records supplied-corpus provenance, not an independently verified public-release chain. This does not by itself establish legal status or invalidate technical content.
 - **Required remediation:** Obtain acquisition/publication provenance before asserting unambiguous public-release status; preserve source bytes.
-- **Resolution:** Qualified the two provenance introductions and functional coverage reference. Historical manifest metadata retained unchanged, with this explicit qualification.
+- **Resolution:** Qualified the two provenance introductions, functional coverage reference, and canonical ZigBee interface page. The unavailable publication/acquisition chain is accepted as an explicit provenance gap; no legal or technical conclusion is inferred from the footer alone.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Footer confirmed in extracted text and rendered PDF pages 9 and 38.
+- **Verification:** Footer confirmed in extracted text and rendered PDF pages 9 and 38; all current reader-facing introductions preserve the qualification.
 - **Open evidence gap:** Publication/acquisition history and any applicable redistribution authorization are not established by this audit.
 
 ### P3-CON-001 - Published source conflicts require semantic adjudication
 
 - **Finding ID:** `P3-CON-001`
-- **Status:** Open
+- **Status:** Superseded
 - **Severity:** Substantive
 - **Path:** functional/who-1-lighting/what.md; protocol/authentication.md; OpenWebNet_Zigbee.pdf
 - **Claim/issue:** Source evidence materially qualifies selected unqualified interpretations and examples.
@@ -985,9 +985,9 @@ The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed so
 - **Applicability:** Specific source revisions and page locations in the Phase 3 inspection register
 - **Finding:** WHO 1 summary gives WHAT 17 as 30 seconds, while section 3.1.9 says 30 minutes. ZigBee page 11's UP example uses 2, while page 38 assigns UP to 1; page 53 reset table gives 0 but detailed frame uses 75. HMAC identity-constant discrepancy remains confirmed. ScenarioDevices labels do not independently settle these conflicts.
 - **Required remediation:** Phase 4 must preserve conflicting locations and seek applicable independent evidence before selecting semantics; also inspect existing WHO 7, 18, 22 and 24 discrepancy records.
-- **Resolution:** Recorded, not semantically repaired. Existing protocol values unchanged in this phase.
+- **Resolution:** Phase 4 replaced this broad queue entry with `P4-FAC-002`, `P4-FAC-003`, `P4-FAC-005`, and `P4-REV-001`. Their canonical guardrails are applied and the unresolved evidence-sensitive questions remain queued individually.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** Direct page/table comparison; HMAC diagram and ZigBee Automation flow visually checked. No runtime test performed.
+- **Verification:** Phase 7 checked every current `ASTRA-FINAL-REVIEW` record and its canonical pages; this historical umbrella record adds no separate fifth review item.
 - **Open evidence gap:** Working authentication vectors and target-scoped Device/interface observations; remaining detailed public-flow inspection.
 
 ### P3-GAP-001 - Secondary research and runtime reproducibility limits
@@ -1339,7 +1339,7 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 ### P5-REV-001 - Phase 4 Astra queue retained through restructuring
 
 - **Finding ID:** `P5-REV-001`
-- **Status:** ASTRA-FINAL-REVIEW
+- **Status:** Verified
 - **Severity:** Substantive
 - **Path:** protocol/authentication.md; protocol/zigbee-interface.md; protocol/addressing.md; diagnostics/dim32-addressing.md; diagnostics/dim35-configuration.md; functional/who-1-lighting/what.md; functional/who-7-multimedia-video/README.md; functional/who-18-energy-management/what.md; functional/who-22-sound-diffusion/README.md; functional/who-24-lighting-management/dimensions.md
 - **Claim/issue:** Architecture changes must not silently resolve or obscure factual conflicts handed off by Astra.
@@ -1349,9 +1349,9 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Applicability:** The four exact Phase 4 final-review records and their existing source/Device/transport scopes.
 - **Finding:** Lighting timing, `DIMENSION 32`/routing interpretations, `DIMENSION 38` effects, authentication constants, ZigBee conflicts, and retained functional contradictions still require evidence adjudication. Canonical ownership can be improved without choosing among them.
 - **Required remediation:** Retain all four Phase 4 records as `ASTRA-FINAL-REVIEW`; use the evidence specified by each record before changing their factual conclusions.
-- **Resolution:** Queue retained unchanged. Phase 5 added links and ownership statements only; all qualifications remain visible.
+- **Resolution:** Queue retention verified. This tracking record is closed so it is not counted as a duplicate fifth issue; the four underlying Phase 4 records remain `ASTRA-FINAL-REVIEW` with all qualifications visible.
 - **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phase 5)
-- **Verification:** Compared final changed text with each Phase 4 guardrail; no disputed value, mapping, effect, or frame repair was selected.
+- **Verification:** Phases 5 and 7 compared current canonical text with each Phase 4 guardrail; no disputed value, mapping, effect, or frame repair was selected. Ledger status search now returns exactly the four underlying records.
 - **Open evidence gap:** Exactly the evidence listed in `P4-FAC-002`, `P4-FAC-003`, `P4-FAC-005`, and `P4-REV-001`.
 
 ### P5-AUD-001 - Bounded architecture audit
@@ -1443,6 +1443,96 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Reviewer/model:** GPT-5.6 Sol, Medium reasoning (Phase 6)
 - **Verification:** Final checker reports 34 review candidates with the same 27/7 disposition and zero objective failures.
 - **Open evidence gap:** Guide workflows still lack the end-to-end experimental validation recorded in Phase 3; repetition does not close that gap.
+
+### P7-EPI-001 - Deterministic contradiction and drift candidate audit
+
+- **Finding ID:** `P7-EPI-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** All 138 human-facing encyclopedia pages; `project/review/checks/audit_epistemic_drift.py`
+- **Claim/issue:** Repeated ranges, frames, evidence-status language, and multi-frame blocks require a reproducible candidate inventory before semantic comparison.
+- **ECV/ESG rule:** ECV 1 through 4, 7, 9, 10, 12, 15 through 17, 19; ESG 3, 6, 8, 13, 15
+- **Evidence inspected:** Complete human-page population; 306 range occurrences; 529 inline frame occurrences; lines combining observation with universal language; implementation-evidence promotion patterns; absence claims; all multi-frame candidates; Phase 4 findings and current canonical owners.
+- **Evidence class:** META, RES
+- **Applicability:** Human encyclopedia at Phase 6 commit `8d79c210046dc2a8d48dcfd45f501894ebde8c82`; candidate detection is lexical and does not decide protocol truth.
+- **Finding:** The script found 106 unique range tokens, 55 repeated range tokens, 283 unique inline frames, 112 repeated exact frames, and 53 semantic candidates. Manual review found the observation/universal and absence candidates were explicit guardrails; repeated exact literals were context-consistent, explicitly contrasted, or permitted Guide copies. Eight unlabelled multi-frame blocks are compact reference forms rather than transcripts. The four Phase 4 evidence conflicts remain visible.
+- **Required remediation:** Correct only established drift; retain context-specific literals and disputed values; rerun after remediation and preserve the candidate classifications.
+- **Resolution:** Reusable candidate checker added. The capability/runtime and range findings below record the clear corrections; no ambiguous value was selected.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
+- **Verification:** Post-edit script completes across 138 pages; targeted searches cover `WHAT 17`, `DIMENSION 32`, `DIMENSION 38`, HMAC, ZigBee, evidence labels, universal terms, and source-absence language.
+- **Open evidence gap:** Mechanical equality cannot establish semantic identity or conflict; the four Phase 4 final-review records require evidence adjudication.
+
+### P7-EPI-002 - Registered management capability overstated as Device participation
+
+- **Finding ID:** `P7-EPI-002`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** `functional/open-db-coverage.md`; `functional/who-8-video-door-entry-telephony/README.md`; `functional/who-99-service-identification/README.md`
+- **Claim/issue:** Three descriptions of implementation templates used wording that could elevate a database association into runtime support or proof.
+- **ECV/ESG rule:** ECV 2, 4, 7, 10, 16, 19; ESG 3, 15
+- **Evidence inspected:** Phase 4 `P4-FAC-004`; `OPEN.db` coverage descriptions for Lighting/Automation, Energy Management, Access Control, `WHO 8`, and `WHO 99`; related canonical applicability statements.
+- **Evidence class:** REG, RES, META
+- **Applicability:** MyHOME Suite 3.5.38 registered operation associations only; no installed Device behavior is newly claimed.
+- **Finding:** A 65-record association establishes the management capability surface registered for a system in MyHOME Suite. It does not establish that every installed Device in that family supports every operation. A parameterized template establishes its database association, not a complete protocol vocabulary.
+- **Required remediation:** State implementation capability and per-Device limits explicitly; replace proof language where it exceeds the database's authority.
+- **Resolution:** Qualified the three managed-system descriptions and replaced two exposed proof phrasings. Functional semantics and stored frames are unchanged.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
+- **Verification:** Targeted review confirms every affected paragraph now separates registered implementation capability from runtime support and protocol completeness.
+- **Open evidence gap:** Installed Device support still requires applicable observations or controlled experiments as recorded by `P1-GAP-005` and `P1-GAP-008`.
+
+### P7-ESG-001 - Inline-code range notation drift
+
+- **Finding ID:** `P7-ESG-001`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** Device Model; Diagnostics; Protocol; selected Functional, Guide, Reverse Engineering, and Scenario Engine pages
+- **Claim/issue:** Phase 2's plain-text detector did not see several inclusive domains whose endpoints were separately code-formatted with “to” or “through”.
+- **ECV/ESG rule:** ESG 5, 6
+- **Evidence inspected:** Repository search for code-formatted numeric endpoints joined by “to” or “through”; exact surrounding claims; Phase 4 values and applicability.
+- **Evidence class:** META, RES
+- **Applicability:** Unambiguous inclusive numeric domains only; relationship phrases and non-domain sequences are excluded.
+- **Finding:** Fifteen exposed domain expressions used prose separators despite ESG 6. The values themselves agreed with their canonical definitions and required no factual change.
+- **Required remediation:** Render the domains with `..` while preserving values, fixed widths, prefixes, units, and qualifications.
+- **Resolution:** Corrected the exposed Device ID, `slot`, group, HMAC nibble, implementation, CEN, group-membership, temperature, and timed-action domains. Also corrected one residual “An `slot`” grammar defect.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
+- **Verification:** The targeted endpoint search now returns only relationship uses, one non-contiguous example sequence, and phrases where “through” describes resolution rather than a numeric domain; Phase 2 checker passes.
+- **Open evidence gap:** None for notation; this finding does not validate the factual origin of each range beyond the established Phase 4 state.
+
+### P8-REM-001 - Historical ledger queue reconciled
+
+- **Finding ID:** `P8-REM-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** `project/review/ecv-esg-review-ledger.md`; canonical pages referenced by reconciled findings
+- **Claim/issue:** Several Phase 1 through 3 records remained Open after later phases completed their remediation or accurately bounded the unavailable evidence.
+- **ECV/ESG rule:** ECV 3, 6, 8, 19
+- **Evidence inspected:** Every non-Verified Blocking, Substantive, and Editorial ledger record; Phase 3 coverage conclusions; Phase 4 authority; Phase 5 ownership changes; Phase 6 semantic review; current canonical representations.
+- **Evidence class:** META, RES
+- **Applicability:** Ledger state through Phase 8; historical claim text remains preserved.
+- **Finding:** ZigBee integration and its coverage-map handoff are verified; diagnostics/programming, application runtime, scenario runtime, high-priority semantic questions, and ZigBee publication provenance are accurately represented accepted gaps; the Phase 3 contradiction umbrella is superseded by four specific Phase 4 records; both Phase 2 semantic candidates are verified.
+- **Required remediation:** Update status, resolution, and verification fields without erasing original findings or treating evidence absence as a negative protocol conclusion.
+- **Resolution:** Reconciled `P1-GAP-003`, `P1-GAP-005` through `007`, `P1-GAP-009`, `P2-AMB-001`, `P2-AMB-002`, `P3-COV-004`, `P3-PROV-003`, `P3-CON-001`, and the duplicate Phase 5 queue tracker.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
+- **Verification:** Final status/severity inventory contains no Open, Investigating, Remediation-ready, or Fixed Blocking/Substantive/Editorial item. Accepted gaps point to canonical qualifications and retain precise missing evidence.
+- **Open evidence gap:** Accepted gaps remain open in the evidence, even though their documentation remediation is complete.
+
+### P8-REV-001 - Final Astra queue normalized
+
+- **Finding ID:** `P8-REV-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** `P4-FAC-002`; `P4-FAC-003`; `P4-FAC-005`; `P4-REV-001`; `project/review/phase-9-review-packet.md`
+- **Claim/issue:** Tracking records must not inflate the final evidence-sensitive review queue or obscure the exact unresolved questions.
+- **ECV/ESG rule:** ECV 1 through 4, 6 through 10, 19
+- **Evidence inspected:** All ledger status values; Phase 4 report and findings; canonical pages for every disputed subject; Phase 5 tracking record.
+- **Evidence class:** META, RES
+- **Applicability:** Final independent-review handoff after Phase 8.
+- **Finding:** The final queue contains exactly four substantive records. `P5-REV-001` is a verified queue-retention record, not a separate factual question.
+- **Required remediation:** Keep only the four underlying records at `ASTRA-FINAL-REVIEW` and provide exact evidence pointers in the Phase 9 packet.
+- **Resolution:** Queue normalized without deciding any disputed value or behavior.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning (Phases 7 and 8)
+- **Verification:** Exact ledger status count and packet rows both equal four; canonical qualifications remain present.
+- **Open evidence gap:** The independent evidence specified by each of the four Phase 4 records.
 
 ## Finding record template
 
