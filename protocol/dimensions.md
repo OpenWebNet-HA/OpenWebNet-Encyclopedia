@@ -120,6 +120,8 @@ A response ordinarily repeats enough context to identify the reported property a
 
 The same response-shaped frame can appear asynchronously on an events session. Direction and session state therefore distinguish a solicited response from an unsolicited report; syntax alone may not.
 
+The request and response selectors need not be equal: published [Temperature Control Fault Diagnostics](../diagnostics/temperature-control-faults.md) includes a `DIMENSION 20` request returning `DIMENSION 21` records. [Sound Diffusion](../functional/who-22-sound-diffusion/) also uses differing request and response source addresses. The generic forms above do not override those operation-specific mappings.
+
 A collective request can produce multiple response frames followed by `ACK`. Do not assume one request yields one value frame. If the sequence terminates in `NACK`, the common protocol permits the preceding provisional results to be treated as invalid.
 
 ## Writes

@@ -79,7 +79,7 @@ For shutter actuator Object `218` on firmware `192`, the catalogue provides thes
 
 The same firmware also declares physical `A` and `PL` positions. Those are address properties with `idx = -1` on the Object and are projected through `DIMENSION 32`, not ordinary indexed `DIMENSION 35` properties.
 
-A direct symbol match is strong catalogue evidence. A semantic match between different symbols requires filters, symbol references, conversion rules, product documentation, UI behavior, or captures to corroborate it. Absence of a matching physical field supports an advanced-only interpretation only after the correct firmware and Object context have been resolved.
+A direct symbol match is strong catalogue evidence. A semantic match between different symbols requires filters, symbol references, conversion rules, product documentation, UI behavior, or captures to corroborate it. Even after resolving firmware and Object context, absence of a matching physical field establishes only that no counterpart was found in the inspected metadata. An advanced-only conclusion additionally requires evidence that the applicable physical interface and mappings are complete.
 
 A physical counterpart does not identify the active configuration method, and physical and advanced forms need not share the same encoded value or permitted range. See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared method.
 

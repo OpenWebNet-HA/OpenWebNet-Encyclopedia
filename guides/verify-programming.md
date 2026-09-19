@@ -60,6 +60,8 @@ After resolving the fresh Module/Object layout, send:
 
 `*#[WHO]*0*38#0##`
 
+Proceed only where this operation's effects are established for the target family and firmware. Its `DiagKO` retrieval role and reset/select label in `OPEN.db` do not establish universal non-destructive behavior. If unresolved, mark the affected parameters unverifiable; do not assume that a verification request cannot change state.
+
 Collect during the MyHOME_Suite eight-second response window:
 
 - repeated `DIMENSION 35` indexed properties;

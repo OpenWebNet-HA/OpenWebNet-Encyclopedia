@@ -30,7 +30,7 @@ Do not describe flags `0` and `1` as particular wire states without resolving th
 
 Several Object System resource keys deliberately occur twice with flags `0` and `1`. They are separate rows and have separate Device Objects and Commands even where their names are identical.
 
-This is not duplicate-data noise. It allows the scenario editor to place related events in different logical categories.
+The rows preserve distinct categories. Their use to place related events in the scenario editor is inferred from the metadata; actual editor behavior is not established by the duplicate names alone.
 
 ## Object matching
 
@@ -86,6 +86,8 @@ ORDER BY d.ObjectMatchingId, c.CommandMatchingId, os.CategoryFlag;
 ```
 
 ## Matching algorithm
+
+The following is a proposed inspection algorithm for finding metadata counterparts, not recovered MyHOME Suite code or an established runtime matching contract. The preference for equal `ObjectMatchingId` is an analysis policy.
 
 ```text
 function find_semantic_counterparts(source_command):

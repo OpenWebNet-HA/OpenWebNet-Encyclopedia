@@ -54,7 +54,7 @@ The server can return one or more normal command/status frames. The response seq
 
 ## `DIMENSION` operations
 
-A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats those fields and appends ordered values. The same response form can also appear asynchronously on an events connection when a value changes or is reported periodically.
+A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response carries the context of the reported property and ordered values, but need not repeat the request's selector or address literally. For example, the published `WHO 1004 DIMENSION 20` collective fault request returns `DIMENSION 21` zone records; Sound Diffusion can report a source address different from its request address. Correlate using the operation-specific response grammar. The same response form can also appear asynchronously on an events connection when a value changes or is reported periodically.
 
 A write prefixes the `DIMENSION` selector with `#`. A syntactically valid write does not imply that the selected property is writable.
 

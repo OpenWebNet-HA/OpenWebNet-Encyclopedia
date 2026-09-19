@@ -1,6 +1,6 @@
 # Programming Validation
 
-Programming validation proves that a complete intended configuration is supported by one resolved Physical Device before any write is sent. The numeric ranges in `OPEN.db` describe frame-field capacity; they do not establish that a value, Object, address, or property is valid for a particular Device.
+Programming validation checks a complete intended configuration against the available evidence for one resolved Physical Device before any write is sent. Passing catalogue and encoding checks establishes consistency with those sources, not proven runtime acceptance, persistence, or complete coverage of Device constraints. The numeric ranges in `OPEN.db` describe frame-field capacity; they do not establish that a value, Object, address, or property is valid for a particular Device.
 
 Validation is a staged resolver. Each milestone consumes an established context and produces evidence required by the next milestone. If a required result is ambiguous or unresolved, stop before programming.
 
@@ -53,7 +53,7 @@ Establish the catalogue context corresponding to the installed Physical Device w
 2. Decode `DIMENSION 1` according to that family.
 3. Resolve its item/model value through the documented item and system associations.
 4. Resolve the candidate Physical Device records and use `EN_DEVICE.name` as the standard Device description.
-5. Use reported firmware and hardware versions to narrow the applicable item/firmware association.
+5. Use the reported firmware version to narrow the applicable item/firmware association. Preserve hardware and microcontroller versions as observations; use them for selection only when an independently established mapping exists.
 6. Preserve multiple SKU candidates when several catalogue items share the same implementation identity.
 7. Retain the installed Device ID from `DIMENSION 13` separately from every catalogue identifier.
 
@@ -209,6 +209,8 @@ Index the resulting dictionary by at least:
 - `slot` and Object/firmware context.
 
 An `idx` is not globally unique. It becomes a usable `DIMENSION 35.INDEX` only after this context has been resolved.
+
+The union is a candidate property dictionary, not a list of writable parameters. In particular, firmware physical fields with `idx = -1` cannot be emitted as an unsigned `DIMENSION 35.INDEX`; neither a shared symbol nor catalogue presence establishes their transfer operation.
 
 ### Milestone output
 
@@ -386,7 +388,7 @@ Prove that one Module address can be encoded as a valid `DIMENSION 32` write.
 3. Resolve the rule’s component structure and fixed values.
 4. Validate every component domain and level rule.
 5. Apply required prefixes, padding, validity conditions, and advanced offsets.
-6. Encode the complete `ADDR` without discarding significant zeroes.
+6. Establish the Object-specific numeric `ADDR` encoding independently of the functional or management `WHERE` string. An address-rule template alone does not authorize copying group markers or routing suffixes into `ADDR`.
 7. Resolve `SYS` independently; do not assume it equals a functional `WHO`, diagnostic `WHO`, or either database’s internal system ID.
 8. Decode the generated value again and require a round-trip match.
 
@@ -422,7 +424,7 @@ Classify the result as:
 | mapped counterpart | different symbols, but a conversion or corroborated semantic mapping exists |
 | physically representable | intended effective value lies in the established physical domain |
 | Virtual-only value | property may have a counterpart, but this value is outside the physical domain |
-| Virtual-only property | no physical counterpart remains after complete resolution |
+| Virtual-only property | independent evidence establishes the complete physical interface and excludes a counterpart; a missing catalogue match alone is insufficient |
 | unresolved | evidence is insufficient |
 
 “Virtual configuration” is the general MyHOME_Suite configuration category opposed to physical configurators. Advanced Object programming and virtual-configurator transfer are both Virtual configuration mechanisms.
@@ -480,7 +482,7 @@ Validation should return evidence, not only a Boolean.
 
 | Result | Meaning |
 | --- | --- |
-| valid | directly allowed in the resolved context |
+| valid | allowed by the inspected constraints in the resolved context; runtime acceptance not yet verified |
 | valid after conversion | allowed after a documented conversion path |
 | conditionally valid | valid only while stated dependencies hold |
 | physically representable | a physical counterpart and compatible physical value exist |

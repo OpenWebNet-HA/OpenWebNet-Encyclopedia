@@ -37,15 +37,15 @@ In observed `WHO 1001` Device interviews, the ordinary diagnostic `WHERE` often 
 
 For Lighting/Automation Objects, an encoded value can be rendered as `A`/`PL` only after applying the relevant address rule. Documentation should record both the raw `ADDR` and the decoded components.
 
-An observed Device layout included:
+Prior research records the following interpretation of one observed Device layout. The original raw address fields and decoding derivation are not preserved here; the `PL=0` entries are unresolved, not established functional point addresses:
 
-| `slot` | Object | `A` | `PL` | Rendered `WHERE` |
+| `slot` | Object | Interpreted `A` | Interpreted `PL` | Prior rendering, not validated `WHERE` |
 | ---: | ---: | ---: | ---: | ---: |
 | `1` | `6` | `1` | `0` | `10` |
 | `2` | `6` | `1` | `6` | `16` |
 | `3` | `400` | `1` | `0` | `10` |
 
-The repeated `10` demonstrates that different Modules can share an address while exposing different Objects.
+The repeated `10` records an equal prior rendering, not proof that both Modules have the same usable functional address. The published SCS point grammar excludes `PL=0`; do not send `WHERE 10` from this interpretation. Recover the raw `(SYS, ADDR)` tuples and Device/Object context before deciding whether this is a sentinel, a distinct encoding, or a decoding error. No interpretation is selected here.
 
 ## Physical address counterparts
 

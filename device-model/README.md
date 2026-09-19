@@ -93,4 +93,4 @@ Original evidence remains unchanged under [`sources/`](../sources/); derived rel
 
 Use each source only for the layer it establishes. Do not join independent identifier spaces because their numeric values happen to match, and do not promote implementation labels to protocol semantics without corroborating evidence.
 
-Unknown fields remain unknown. The unresolved `N_CONF` value in diagnostic `DIMENSION 1` is documented with Physical Device identity in [Physical Devices](physical-devices.md).
+The established interpretation of diagnostic `DIMENSION 1.N_CONF` is the physical configurator-position count; it is not an Object or Device-class identifier. See [Physical Devices](physical-devices.md). Catalogue-wide count equivalence and independent reproduction from the cited product diagrams remain separate evidence gaps.

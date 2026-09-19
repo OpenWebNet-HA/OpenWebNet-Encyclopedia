@@ -2,6 +2,8 @@
 
 OpenWebNet addressing is system-specific. `WHERE` identifies the destination or source of a frame, but its grammar depends on the selected `WHO` and must not be interpreted as a single universal address type.
 
+Resolve the interface/variant as well as `WHO`: the [ZigBee Interface](zigbee-interface.md) uses product/unit addresses with `#9` even for namespaces such as Lighting and Automation. The `A`/`PL` and routing material below concerns the SCS sources.
+
 ## Address interpretation
 
 A parser must resolve `WHO` before interpreting `WHERE`. Different systems can use different address layouts, ranges, hierarchy levels, and advanced-address forms.
@@ -78,7 +80,7 @@ BASE#4#INTERFACE
 
 `INTERFACE` is the routing-interface address. The published specifications use different labels for the same field: `Int` in `WHO 1` and `interface` in `WHO 2`; MyHOME Suite represents its components as `I3`/`I4`.
 
-The combined Light/Automation model in MyHOME Suite supports treating this as a shared SCS routing concept rather than two unrelated `WHO`-specific mechanisms. The base target can be General, Area, Group, or point where that scope is applicable:
+The combined Light/Automation model in MyHOME Suite supports an inferred shared SCS routing concept, not proof of every functional command combination. The following four forms are explicitly enumerated by the Lighting source; the Automation source establishes only the point form:
 
 | Scope | Level-4 `WHERE` form |
 | --- | --- |
@@ -105,7 +107,7 @@ Consequently, a wire value such as `#4#03` should be preserved structurally as i
 
 This configurator-level explanation and the OpenWebNet routing syntax describe different layers of the same concept: `I3`/`I4` define the SCS interface address, while `#4#INTERFACE` uses that address to qualify a functional target as being on the local bus reached through that interface.
 
-The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`; this is best understood as an instance of the same routing grammar, not as evidence for a different Automation local-bus mechanism.
+The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`. General, Area, and Group local-bus commands under `WHO 2` remain unestablished by these sources; do not generate them solely by analogy with Lighting or the shared management-system row.
 
 The source documents differ in the range they state for the interface field: the Lighting document gives `01..09` and `11..15`, while the Automation document expresses it as `[0-1][1-9]` (`01..09`, `11..19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
 

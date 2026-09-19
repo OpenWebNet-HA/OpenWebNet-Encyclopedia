@@ -134,6 +134,8 @@ The initial interview does not ordinarily supply the complete indexed property s
 
 `*#[WHO]*0*38#0##`
 
+Use this operation only where its effects are established for the target family and firmware. `OPEN.db` places it in `DiagKO` retrieval but labels it reset/select; non-destructive behavior is not established universally. If unresolved, retain the initial interview and classify detailed configuration as unavailable rather than sending this request.
+
 Collect the repeated `DIMENSION 35` responses produced by that request during the MyHOME_Suite eight-second response window:
 
 `*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
@@ -215,6 +217,7 @@ function read_device_configuration(selector, diagnostic_who):
         module = modules.get_or_create(dim32.SLOT)
         module.address = decode_address_in_resolved_system_context(dim32)
 
+    require DIMENSION 38 effects are established for this family and firmware
     detailed = send_and_collect("*#" + decimal_string(diagnostic_who) + "*0*38#0##",
                                 response_window = 8 seconds)
 
