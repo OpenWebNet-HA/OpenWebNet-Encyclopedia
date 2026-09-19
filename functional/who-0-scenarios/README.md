@@ -6,12 +6,12 @@
 
 | `WHAT` | Meaning | Availability |
 | --- | --- | --- |
-| `1`–`16` | Activate stored scenario 1–16 | F420 and 3456 |
-| `17`–`20` | Activate stored scenario 17–20 | 3456 |
-| `40#X` | Start recording scenario `X` | F420 only; `X=1`–`16` |
-| `41#X` | End recording scenario `X` | F420 only; `X=1`–`16` |
+| `1..16` | Activate stored scenario `1..16` | F420 and 3456 |
+| `17..20` | Activate stored scenario `17..20` | 3456 |
+| `40#X` | Start recording scenario `X` | F420 only; `X=1..16` |
+| `41#X` | End recording scenario `X` | F420 only; `X=1..16` |
 | `42` | Erase all scenarios | F420 only |
-| `42#X` | Erase scenario `X` | F420 only; `X=1`–`16` |
+| `42#X` | Erase scenario `X` | F420 only; `X=1..16` |
 | `43` | Lock scenario central unit | F420 only |
 | `44` | Unlock scenario central unit | F420 only |
 | `45` | Scenario central unit unavailable | State/event indication |
@@ -29,12 +29,12 @@ The MyHOME_Suite ScenarioDevices capability model also exposes `*0*N*WHERE##` as
 
 ## `WHERE`
 
-The published point-to-point range is scenario control panels/modules `01`–`99`.
+The published point-to-point range is scenario control panels/modules `01..99`.
 
 | Form | Meaning |
 | --- | --- |
-| `01`–`99` | Scenario module point to point |
-| `01`–`99#4#I` | Scenario module on local bus through interface `I` |
+| `01..99` | Scenario module point to point |
+| `01..99#4#I` | Scenario module on local bus through interface `I` |
 
 The local-bus form uses the level-4 interface parameter. It is part of the address and must be preserved when routing the command; it is not a parameter of the selected scenario.
 
@@ -46,7 +46,7 @@ The 3456 IR interface does not support the F420 programming operations described
 
 ## Start recording - `WHAT 40#X`
 
-`*0*40#X*WHERE##` starts recording scenario `X`, with `X=1`–`16` for F420. A successful command connection returns `ACK`; failure returns `NACK`. The operation is also visible on an event connection as a `WHO 0` programming event.
+`*0*40#X*WHERE##` starts recording scenario `X`, with `X=1..16` for F420. A successful command connection returns `ACK`; failure returns `NACK`. The operation is also visible on an event connection as a `WHO 0` programming event.
 
 After recording starts, the functional commands to be stored in the scenario are issued through their respective `WHO` namespaces. `WHO 0` identifies the recording lifecycle; it does not encapsulate the recorded Lighting, Automation, or other functional frames.
 
@@ -60,7 +60,7 @@ The published document contains a typographical irregularity in one event-frame 
 
 `*0*42*WHERE##` erases all stored scenarios from the addressed F420.
 
-`*0*42#X*WHERE##` erases only scenario `X`, with `X=1`–`16`.
+`*0*42#X*WHERE##` erases only scenario `X`, with `X=1..16`.
 
 The parameterized and unparameterized forms are distinct operations. Implementations should therefore parse `WHAT` together with its `#` parameter rather than normalize both to a bare numeric `42`.
 
@@ -78,7 +78,7 @@ A receiver should therefore distinguish three categories inside `WHO 0`:
 
 | Category | `WHAT` |
 | --- | --- |
-| Stored-scenario invocation | `1`–`20` according to device capability |
+| Stored-scenario invocation | `1..20` according to device capability |
 | Scenario-storage programming | `40#X`, `41#X`, `42`, `42#X`, `43`, `44` |
 | Scenario-module state | `45`, `46` |
 

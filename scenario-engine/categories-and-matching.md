@@ -54,7 +54,7 @@ Non-null `CommandMatchingId` values likewise correlate cross-role semantics:
 | --- | --- | --- |
 | `1`, `2` | Lighting Light | off/on trigger rows and off/on action rows |
 | `3`, `4` | Lighting Dimmer | off/on trigger rows and dimmer off/on action rows |
-| `56`–`59` | Hotel Room | DND and MUR trigger/action concepts |
+| `56..59` | Hotel Room | DND and MUR trigger/action concepts |
 
 For Light commands, `CommandId` and `CommandMatchingId` can be equal. For Dimmer and Hotel actions they differ. Therefore:
 

@@ -8,7 +8,7 @@ The complete identity is not always just `(WHO, DIMENSION)`. A `DIMENSION` selec
 DIMENSION#PARAMETER#PARAMETER
 ~~~
 
-These parameters select a particular instance, sub-property, internal slot, priority context, or operation variant. The `*`-separated fields following the selector are the ordered payload values:
+These parameters select a particular instance, sub-property, `slot`, priority context, or operation variant. The `*`-separated fields following the selector are the ordered payload values:
 
 ~~~text
 DIMENSION#PARAMETER#PARAMETER*VALUE*VALUE
@@ -57,7 +57,7 @@ Consider the abstract response:
 Here:
 
 - `32` is the `DIMENSION` identifier;
-- `7` is a selector parameter, for example an internal slot;
+- `7` is a selector parameter, for example an `slot`;
 - `SYSTEM` and `ADDRESS` are payload values.
 
 The equivalent structured representation is:
@@ -96,13 +96,13 @@ Advanced Automation absolute positioning uses a parameter attached to the writab
 
 ### Parameterized diagnostic selector
 
-Diagnostic operations use selectors such as `32#SLOT`, where `SLOT` identifies the Device-local internal slot. The following `SYS` and `ADDR` fields are ordinary `*`-separated payload values:
+Diagnostic operations use selectors such as `32#SLOT`, where `SLOT` identifies the Device-local `slot`. The following `SYS` and `ADDR` fields are ordinary `*`-separated payload values:
 
 ~~~text
 *#DIAGNOSTIC_WHO*DEVICE*32#SLOT*SYS*ADDR##
 ~~~
 
-This distinction is essential when correlating a response with a Device Module: the internal slot is addressing the property instance, while `SYS` and `ADDR` describe its configured functional address.
+This distinction is essential when correlating a response with a Device Module: the `slot` is addressing the property instance, while `SYS` and `ADDR` describe its configured functional address.
 
 ## Requests, responses, and reports
 

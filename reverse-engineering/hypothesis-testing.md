@@ -37,7 +37,7 @@ Procedure:
 2. resolve its Object and all catalogue `AS_OBJECT_SYSTEM` rows;
 3. prefer an Object with one nonzero system assignment;
 4. send the interview request that produces `DIMENSION 32`;
-5. preserve raw `SYS`, `ADDR`, Device, and internal slot;
+5. preserve raw `SYS`, `ADDR`, Device, and `slot`;
 6. compare the result with every prediction;
 7. repeat with an Object assigned to several systems to test context selection.
 
@@ -93,7 +93,7 @@ Prioritize Devices with counts other than six and firmware shared by several SKU
 
 ## `DIMENSION 4` and `5`
 
-The working hypothesis is that the two groups of six values encode physical-configurator state, possibly mapping positions `1`–`6` and `7`–`12`.
+The working hypothesis is that the two groups of six values encode physical-configurator state, possibly mapping positions `1..6` and `7..12`.
 
 Use a Device with documented positions and removable configurators:
 
@@ -109,7 +109,7 @@ This matrix distinguishes position, presence, raw configurator code, effective v
 
 ## Diagnostic outer `WHERE`
 
-Repeated `WHO 1001` observations suggest that the outer diagnostic `WHERE` often follows the configured address of internal slot `1`. Test the boundary cases:
+Repeated `WHO 1001` observations suggest that the outer diagnostic `WHERE` often follows the configured address of `slot` `1`. Test the boundary cases:
 
 - slot `1` enabled and addressed;
 - slot `1` disabled or unconfigured;
@@ -124,7 +124,7 @@ For each case, compare discovery address, interview selector, outer response `WH
 
 For a candidate physical field and `DIMENSION 32` or `35` property:
 
-1. resolve the exact firmware, internal slot, and Object;
+1. resolve the exact firmware, `slot`, and Object;
 2. compare `CONF_SYMBOL_REF`, semantic type, and value domain;
 3. inspect filters, conditions, conversion rules, and `EN_PHY_TO_ADV_TRANS`;
 4. change only the physical field and read back the effective configuration;

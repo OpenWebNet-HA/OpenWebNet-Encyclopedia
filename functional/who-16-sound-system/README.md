@@ -14,16 +14,16 @@
 | `50` / `53` | Follow Me, base band / stereo channel |
 | `100` | Source busy |
 | `101` / `102` | Start / stop RDS transmission |
-| `1001`–`1015` | Increase volume by `1`–`15` |
-| `1101`–`1115` | Decrease volume by `1`–`15` |
-| `2001`–`2015` | Increase high tones by `1`–`15` |
-| `2101`–`2115` | Decrease high tones by `1`–`15` |
+| `1001..1015` | Increase volume by `1..15` |
+| `1101..1115` | Decrease volume by `1..15` |
+| `2001..2015` | Increase high tones by `1..15` |
+| `2101..2115` | Decrease high tones by `1..15` |
 | `5000` | Seek next higher free frequency |
-| `5001`–`5015` | Increase frequency by `0.05`–`0.75 MHz` |
+| `5001..5015` | Increase frequency by `0.05..0.75 MHz` |
 | `5100` | Seek next lower free frequency |
-| `5101`–`5115` | Decrease frequency by `0.05`–`0.75 MHz` |
-| `6001`–`6015` | Advance station/track by `1`–`15` |
-| `6101`–`6115` | Move back station/track by `1`–`15` |
+| `5101..5115` | Decrease frequency by `0.05..0.75 MHz` |
+| `6001..6015` | Advance station/track by `1..15` |
+| `6101..6115` | Move back station/track by `1..15` |
 
 The final digits carry magnitude and are part of `WHAT`.
 
@@ -32,10 +32,10 @@ The final digits carry magnitude and are part of `WHAT`.
 | Target | `WHERE` |
 | --- | --- |
 | All amplifiers | `0` |
-| Amplifiers in environment 0–9 | `#0`–`#9` |
-| Individual amplifier | `01`–`99` |
+| Amplifiers in environment `0..9` | `#0..#9` |
+| Individual amplifier | `01..99` |
 | All sources | `100` |
-| Source 1–9 | `101`–`109` |
+| Source `1..9` | `101..109` |
 
 Amplifier and source targets share the namespace but have different ranges. Preserve leading zeroes on amplifier addresses.
 
@@ -43,16 +43,16 @@ Amplifier and source targets share the namespace but have different ranges. Pres
 
 | `DIMENSION` | Meaning | Established detail |
 | ---: | --- | --- |
-| `1` | Volume | `0`–`31`; readable/reportable/writable |
+| `1` | Volume | `0..31`; readable/reportable/writable |
 | `2` | High tones | listed in the global table |
 | `3` | Low tones | listed in the global table |
 | `4` | Balance | listed in the global table |
 | `5` | State | request returns ordinary `WHAT` state frames |
 | `6` | Frequency | six decimal digits, expressed in kHz by the examples (`107000` = 107.00 MHz) |
-| `7` | Stored station / track | station write range `1`–`5` |
+| `7` | Stored station / track | station write range `1..5` |
 | `8` | RDS | eight ASCII character codes as separate values |
 | `9` | Frequency plus station/track | listed in the global table |
-| `10` | Memorized station | station range `1`–`5` |
+| `10` | Memorized station | station range `1..5` |
 
 The source gives complete flows only for a subset. Do not invent payloads for table-only `DIMENSION` values `2`, `3`, `4`, or `9`.
 
@@ -96,6 +96,6 @@ Support is target-dependent: amplifier addresses accept amplifier operations; so
 
 ## Evidence basis
 
-Tables, ranges, and flows come from [WHO 16 specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
+Tables, ranges, and flows come from [`WHO 16` specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

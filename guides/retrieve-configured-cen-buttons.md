@@ -49,13 +49,13 @@ Parse every Module record:
 
 For each response:
 
-1. use protocol `SLOT` as the Device-local internal-slot key;
+1. use protocol `SLOT` as the Device-local `slot` key;
 2. if `STATE=1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`;
 3. if `STATE=0`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module unconfigured;
 4. retain the configured Object's internal `id_key_object`;
 5. attach any `DIMENSION 31` error without discarding a valid Module record.
 
-This is a Device-wide question. Do not stop after the first scenario-related Module, and do not renumber internal slots to match MyHOME_Suite's visible Module numbering.
+This is a Device-wide question. Do not stop after the first scenario-related Module, and do not renumber `slot` positions to match MyHOME_Suite's visible Module numbering.
 
 ## 3. Identify CEN-capable Object properties
 
@@ -250,8 +250,8 @@ Suppose the detailed read yields:
 
 The user-facing result is:
 
-- CEN 33, Module internal slot 3: upper button 5; lower button 6;
-- CEN 33, Module internal slot 4: upper button 7; lower button 8.
+- CEN 33, Module `slot` 3: upper button 5; lower button 6;
+- CEN 33, Module `slot` 4: upper button 7; lower button 8.
 
 Retain the four raw `DIMENSION 35` tuples behind each Module result.
 
@@ -298,7 +298,7 @@ Return one entry per applicable Module:
 | --- | --- |
 | Device ID | identifies the installed Physical Device |
 | Device | preferred `EN_DEVICE.name` |
-| internal slot | preserves the protocol Module key |
+| `slot` | preserves the protocol Module key |
 | Object | identifies the configured Module function |
 | CEN number | decoded identifier, or raw low/high components |
 | buttons | Object-defined button names and decoded values |
@@ -316,12 +316,12 @@ After detailed collection, send `*[WHO]*6*0##` before selecting another Device. 
 Device ID: 007B269D
 Device: <resolved EN_DEVICE.name>
 CEN Modules:
-  - internal slot 3
+  - `slot` 3
     Object: Scheduled scenario PLUS
     CEN: 33
     upper button: 5
     lower button: 6
-  - internal slot 4
+  - `slot` 4
     Object: Scheduled scenario PLUS
     CEN: 33
     upper button: 7

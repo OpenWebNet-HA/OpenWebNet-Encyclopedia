@@ -84,9 +84,9 @@ Enumeration by ID adds a per-Device `WHAT 11` frame so an already reported Devic
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 7`, `8` | diagnostic bitmasks |
 | `DIMENSION 13` | installed Device ID |
-| `DIMENSION 30` | internal slot, configured Object or unconfigured Virgin Object, and configured state |
-| `DIMENSION 32` | internal slot, system selector, encoded address |
-| `DIMENSION 35` | configuration index, internal slot, value |
+| `DIMENSION 30` | `slot`, configured Object or unconfigured Virgin Object, and configured state |
+| `DIMENSION 32` | `slot`, system selector, encoded address |
+| `DIMENSION 35` | configuration index, `slot`, value |
 | `DIMENSION 310` | Object-specific parameter without a generic index |
 
 The projection is intentionally partial. A Physical Device can expose several Modules and functional addresses, while discovery and interview operate on one Device-level identity or address selection.
@@ -100,7 +100,7 @@ The projection is intentionally partial. A Physical Device can expose several Mo
 - it can be a placeholder in an end marker;
 - it does not replace the per-Module address reported by `DIMENSION 32`.
 
-Observed `WHO 1001` traffic often correlates the ordinary diagnostic `WHERE` with the configured address of internal slot `1`. This is a capture-derived hypothesis, not a universal addressing rule.
+Observed `WHO 1001` traffic often correlates the ordinary diagnostic `WHERE` with the configured address of `slot` `1`. This is a capture-derived hypothesis, not a universal addressing rule.
 
 System-specific address grammars are documented in [Address Discovery](address-discovery.md). `OPEN.db` defines distinct forms for Lighting/Automation, Thermoregulation, Video Door Entry interfaces, Integration interfaces, Energy Management, and Access Control; it defines no system address rule for every named diagnostic family.
 

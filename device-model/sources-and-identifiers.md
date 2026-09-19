@@ -14,7 +14,7 @@ Private packet captures are intentionally excluded from the repository. Findings
 
 | Source | Strongest evidence | Does not independently establish |
 | --- | --- | --- |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Product catalogue, firmware capabilities, internal slots, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Product catalogue, firmware capabilities, `slot` positions, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
 | [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | Systems, diagnostic families, frame templates, parameters, address rules, sequences, and timeouts | Complete Device catalogue or complete functional command vocabulary |
 | [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | Queries used by MyHOME_Suite to assemble `OPEN.db` frames, sequences, address rules, and timeouts | Additional semantics absent from the queried tables |
 | [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/) | Scenario-engine Object systems, actions, triggers, conditions, frames, and parameter limits | Physical Device, firmware, Module, or catalogue Object identity |
@@ -36,7 +36,7 @@ The following identifiers must not be numerically joined without explicit eviden
 | diagnostic `ID` | Installed Device instance |
 | `EN_FIRMWARE.id_firmware` | Catalogue firmware definition |
 | `EN_SLOTS.id_slot` | Slot-assignment row |
-| `EN_SLOTS.first_slot` | Internal slot position |
+| `EN_SLOTS.first_slot` | `slot` position |
 | `EN_KEY_OBJECT.id_key_object` | Internal Object database key |
 | `EN_KEY_OBJECT.key_object` | Catalogue/Object number |
 | `EN_VIRGIN_OBJECT.id_virgin_key_object` | Internal Virgin Object key |
@@ -74,7 +74,7 @@ Supported counterparts and interpretations are:
 | --- | --- | --- |
 | `DIMENSION 30.KEYO`, `STATE = 1` | `EN_KEY_OBJECT.key_object` | Configured Object; structurally and behaviorally corroborated |
 | `DIMENSION 30.KEYO`, `STATE = 0` | `EN_VIRGIN_OBJECT.virgin_key_object` | Unconfigured Virgin Object; structurally and behaviorally corroborated |
-| `DIMENSION 30.SLOT` | internal slot represented by `EN_SLOTS.first_slot` | Structurally corroborated |
+| `DIMENSION 30.SLOT` | `slot` represented by `EN_SLOTS.first_slot` | Structurally corroborated |
 | `DIMENSION 30.STATE` | no single catalogue column | Runtime state; database only labels configured/unconfigured |
 
 ### Diagnostic configuration
@@ -82,7 +82,7 @@ Supported counterparts and interpretations are:
 | Diagnostic field | Catalogue field | Status |
 | --- | --- | --- |
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Strong terminology and behavior correlation |
-| `DIMENSION 35.SLOT` | internal slot | Direct structural role |
+| `DIMENSION 35.SLOT` | `slot` | Direct structural role |
 | `DIMENSION 35.VAL_PAR` | selected `EN_CONF_RANGE.value` or user value | Context-dependent |
 | `DIMENSION 310.VAL_PAR` | no generic indexed mapping | Object-specific and unresolved globally |
 

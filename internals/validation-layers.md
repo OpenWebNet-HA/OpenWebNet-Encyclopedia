@@ -23,7 +23,7 @@ The diagram separates polymorphic property ownership from the contextual filters
 
 ## Context first
 
-Validation begins only after resolving the Physical Device, firmware, internal slot, current Object or Virgin Object, target Object, and applicable Object/firmware association.
+Validation begins only after resolving the Physical Device, firmware, `slot`, current Object or Virgin Object, target Object, and applicable Object/firmware association.
 
 Without that context, a configuration `idx`, stored integer, or display label is insufficient.
 

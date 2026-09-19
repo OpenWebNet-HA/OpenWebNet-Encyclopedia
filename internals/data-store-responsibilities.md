@@ -45,7 +45,7 @@ Installed state comes from diagnostic traffic, a loaded project, UI observations
 
 | Question | Correct evidence |
 | --- | --- |
-| Can firmware offer Object `406` at internal slot `3`? | catalogue capability |
+| Can firmware offer Object `406` at `slot` `3`? | catalogue capability |
 | Does this installed Module currently expose Object `406`? | `DIMENSION 30` or project state |
 | Can this property accept value `7` in this context? | catalogue range, filter, condition, and linked-rule evaluation |
 | Which frame writes the value? | `OPEN.db` programming sequence |

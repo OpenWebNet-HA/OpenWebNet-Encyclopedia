@@ -1,6 +1,6 @@
 # `DIMENSION 35`: Configuration Parameters
 
-`DIMENSION 35` reports one indexed configuration value for one internal slot.
+`DIMENSION 35` reports one indexed configuration value for one `slot`.
 
 ## Frame
 
@@ -8,9 +8,9 @@
 
 | Field | Range in `OPEN.db` | Meaning |
 | --- | ---: | --- |
-| `INDEX` | `0`–`255` | parameter number, labelled “kconf index” |
-| `SLOT` | `1`–`255` | Device-local internal slot |
-| `VAL_PAR` | `0`–`65535` | parameter value |
+| `INDEX` | `0..255` | parameter number, labelled “kconf index” |
+| `SLOT` | `1..255` | Device-local `slot` |
+| `VAL_PAR` | `0..65535` | parameter value |
 
 Both `#` separators are significant parts of the canonical template.
 
@@ -19,7 +19,7 @@ Both `#` separators are significant parts of the canonical template.
 The shared “kconf index” terminology and observed behavior strongly support correlating `INDEX` with `MHCatalogue.db` `EN_CONF.idx`. The databases contain no cross-file foreign key, so resolution must retain the full context:
 
 - Physical Device and firmware;
-- internal slot;
+- `slot`;
 - Object selected in `DIMENSION 30`;
 - applicable Object- or firmware-scoped `EN_CONF` definition;
 - filters, conditions, and conversion rules;

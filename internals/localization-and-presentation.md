@@ -25,23 +25,23 @@ A presentation layer should retain the source database and revision, raw resourc
 
 Do not compare capabilities solely through translated strings. Translation can change while the underlying resource key remains the same, and one key can occur in multiple category paths.
 
-## UI numbering and internal slots
+## UI numbering and `slot` positions
 
-MyHOME Suite can hide internal slots or renumber visible Modules. The presentation layer must keep the protocol `SLOT`, catalogue placement, UI-visible Module number or name, and hidden/absent state as separate fields.
+MyHOME Suite can hide `slot` positions or renumber visible Modules. The presentation layer must keep the protocol `SLOT`, catalogue placement, UI-visible Module number or name, and hidden/absent state as separate fields.
 
-Never rewrite the Device-local internal slot to match the UI.
+Never rewrite the Device-local `slot` to match the UI.
 
 ## Visibility and editability
 
 Catalogue metadata such as `visible`, `hidden`, `read_only`, `fixed_ko`, and conditions contributes to UI behavior, but no one flag is a complete presentation rule.
 
-A fixed Object can still expose editable configuration. A hidden property can participate in conversions. An Object alternative can exist in the catalogue but be suppressed by a slot condition. An internal slot can exist while being absent from a particular UI view.
+A fixed Object can still expose editable configuration. A hidden property can participate in conversions. An Object alternative can exist in the catalogue but be suppressed by a slot condition. An `slot` can exist while being absent from a particular UI view.
 
 Use observed UI behavior as presentation evidence and catalogue structures as capability evidence. Do not infer wire encoding from a label or widget alone.
 
 ## Terminology normalization
 
-Repository prose uses **Physical Device**, **Module**, **internal slot**, **Object**, **Configuration**, and **Virtual configuration**. Database names such as `KEYO`, `ko slot`, and `id_key_object` are retained when quoting fields, but do not replace reader-facing terminology.
+Repository prose uses **Physical Device**, **Module**, **`slot`**, **Object**, **Configuration**, and **Virtual configuration**. Database names such as `KEYO`, `ko slot`, and `id_key_object` are retained when quoting fields, but do not replace reader-facing terminology.
 
 ## Unknown localization mechanism
 

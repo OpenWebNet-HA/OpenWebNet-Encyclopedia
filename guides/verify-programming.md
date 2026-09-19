@@ -76,7 +76,7 @@ Build a new configuration model from the verification frames:
 2. key Modules by protocol internal `SLOT`;
 3. resolve configured Objects from `DIMENSION 30.STATE=1`;
 4. resolve Virgin Objects from `STATE=0`;
-5. attach addresses by internal slot;
+5. attach addresses by `slot`;
 6. resolve each `DIMENSION 35.INDEX` in the Module's Object/firmware context;
 7. decode values through ranges, filters, conditions, and applicable rules;
 8. retain raw and decoded values;

@@ -11,18 +11,18 @@ The tables below cover the Device interview and detailed configuration sequences
 | `1` | `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | Device identity; `N_CONF` is the physical configurator-position count |
 | `2` | `*#[WHO]*[WHERE]*2*[FW_VERSION]##` | firmware version |
 | `3` | `*#[WHO]*[WHERE]*3*[HW_VERSION]##` | hardware version |
-| `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | configurators 1–6 |
-| `5` | `*#[WHO]*[WHERE]*5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | configurators 7–12 |
+| `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | configurators `1..6` |
+| `5` | `*#[WHO]*[WHERE]*5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | configurators `7..12` |
 | `6` | `*#[WHO]*[WHERE]*6*[MICRO_VERSION]##` | microcontroller version |
 | `7` | `*#[WHO]*[WHERE]*7*[BITMASK_DIA_A]##` | 24-bit diagnostic bitmask A |
 | `8` | `*#[WHO]*[WHERE]*8*[BITMASK_DIA_B]##` | 24-bit diagnostic bitmask B |
 | `13` | `*#[WHO]*[WHERE]*13*[ID]##` | 32-bit Device ID |
 
-`OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1`–`99` to `FW_VERSION` and `0`–`99` to `HW_VERSION` and `MICRO_VERSION`, and explicitly describe the expansion as `[Version]*[Release]*[Build]`. Thus each version placeholder represents three `*`-separated components, not one scalar. Preserve all three values and distinguish this protocol representation from the catalogue tuple `V.R.b`; the metadata does not establish a firmware-selection algorithm.
+`OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1..99` to `FW_VERSION` and `0..99` to `HW_VERSION` and `MICRO_VERSION`, and explicitly describe the expansion as `[Version]*[Release]*[Build]`. Thus each version placeholder represents three `*`-separated components, not one scalar. Preserve all three values and distinguish this protocol representation from the catalogue tuple `V.R.b`; the metadata does not establish a firmware-selection algorithm.
 
-`N_CONF` is constrained to `0`–`12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
+`N_CONF` is constrained to `0..12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
 
-`DIMENSION 4` and `5` each carry six configurator values in the range `0`–`255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
+`DIMENSION 4` and `5` each carry six configurator values in the range `0..255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
 
 `DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings. The public [Temperature Control Fault Diagnostics](temperature-control-faults.md) separately establishes active-low labels for the `WHO 1004` central-unit/zone workflow; those labels must not be generalized to other families.
 
@@ -60,15 +60,15 @@ The frame also carries a boolean `STATE` labelled configured/not configured. The
 
 | Field | Range in `OPEN.db` |
 | --- | ---: |
-| Device `ID` | `0`–`4294967295` |
-| internal `SLOT` | `1`–`255` |
-| `KEYO` | `1`–`65535` |
-| configured `STATE` | `0`–`1` |
-| `SYS` | `1`–`255` |
-| `ADDR` | `0`–`65535` |
-| configuration `INDEX` | `0`–`255` |
-| `VAL_PAR` | `0`–`65535` |
-| error flag | `0`–`1` |
+| Device `ID` | `0..4294967295` |
+| internal `SLOT` | `1..255` |
+| `KEYO` | `1..65535` |
+| configured `STATE` | `0..1` |
+| `SYS` | `1..255` |
+| `ADDR` | `0..65535` |
+| configuration `INDEX` | `0..255` |
+| `VAL_PAR` | `0..65535` |
+| error flag | `0..1` |
 
 These are transport/database ranges, not claims that every Device, Object, or system accepts every value.
 

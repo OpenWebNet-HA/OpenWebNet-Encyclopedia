@@ -75,7 +75,7 @@ For firmware definitions corroborated against product documentation, the physica
 
 To check whether a reported property has a physical-configurator counterpart:
 
-1. resolve the Physical Device, firmware, internal slot, and configured Object;
+1. resolve the Physical Device, firmware, `slot`, and configured Object;
 2. confirm that the firmware supports physical configuration;
 3. enumerate the firmware-scoped physical `EN_CONF` fields, excluding `AID`;
 4. resolve the effective property from decoded `DIMENSION 32` addressing or the `DIMENSION 35` configuration index;
@@ -150,7 +150,7 @@ This makes the filter context explicit: a configuration definition can have diff
 The practical evaluation is:
 
 1. select firmware;
-2. select internal slot and Object;
+2. select `slot` and Object;
 3. collect applicable Object- and firmware-scoped configuration definitions;
 4. locate the corresponding Object/firmware association;
 5. apply `EN_FILTER`;
@@ -195,9 +195,9 @@ The Object numbers and configuration indices align with `EN_KEY_OBJECT.key_objec
 
 | Field | Database description | Range |
 | --- | --- | ---: |
-| `INDEX` | “Parameter number (also known as kconf index)” | `0`–`255` |
-| `SLOT` | “ko slot” | `1`–`255` |
-| `VAL_PAR` | Parameter value | `0`–`65535` |
+| `INDEX` | “Parameter number (also known as kconf index)” | `0..255` |
+| `SLOT` | “ko slot” | `1..255` |
+| `VAL_PAR` | Parameter value | `0..65535` |
 
 The shared “kconf index” terminology strongly supports correlating diagnostic `INDEX` with catalogue `EN_CONF.idx`. Because the databases have no cross-file key, retain the raw frame and resolved catalogue definition when documenting a mapping.
 
@@ -207,7 +207,7 @@ The shared “kconf index” terminology strongly supports correlating diagnosti
 
 | Purpose | Frame |
 | --- | --- |
-| Select/reset one internal slot | `*#[WHO]*0*38#[SLOT]##` |
+| Select/reset one `slot` | `*#[WHO]*0*38#[SLOT]##` |
 | Select/reset all slots | `*#[WHO]*0*38#0##` |
 
 The database labels use “reset keyo”, while the `DiagKO` sequence describes the operation as obtaining detailed Object and configuration information. This wording difference should be preserved until runtime behavior is fully characterized.

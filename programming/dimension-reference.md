@@ -6,9 +6,9 @@ Programming `DIMENSION` writes transfer virtual configurator values, Object assi
 
 | `DIMENSION` | Frame | Meaning | Sequence |
 | ---: | --- | --- | --- |
-| `4` | `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | write configurator positions 1–6 | `ConfConfigurators` |
-| `5` | `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | write configurator positions 7–12 | `ConfConfigurators` |
-| `30` | `*#[WHO]*0*#30*[SLOT]*[KEYO]##` | assign Object to internal slot | `ConfKO` |
+| `4` | `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | write configurator positions 1..6 | `ConfConfigurators` |
+| `5` | `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | write configurator positions 7..12 | `ConfConfigurators` |
+| `30` | `*#[WHO]*0*#30*[SLOT]*[KEYO]##` | assign Object to `slot` | `ConfKO` |
 | `32` | `*#[WHO]*0*#32#[SLOT]*[SYS]*[ADDR]##` | assign Object system/address | `ConfKO` |
 | `35` | `*#[WHO]*0*#35#[INDEX]#[SLOT]*[VAL_PAR]##` | write indexed configuration value | `ConfKO` |
 
@@ -18,8 +18,8 @@ Programming `DIMENSION` writes transfer virtual configurator values, Object assi
 
 | `DIMENSION` | Frame | Meaning |
 | ---: | --- | --- |
-| `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | Device configurator report 1–6 |
-| `5` | `*#[WHO]*[WHERE]*5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | Device configurator report 7–12 |
+| `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | Device configurator report `1..6` |
+| `5` | `*#[WHO]*[WHERE]*5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | Device configurator report `7..12` |
 | `30` | `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##` | configured Object or Virgin Object state |
 | `31` | `*#[WHO]*[WHERE]*31*[SLOT]*[CODE]*[STATE]##` | Object state/error |
 | `32` | `*#[WHO]*[WHERE]*32#[SLOT]*[SYS]*[ADDR]##` | effective Module address |
@@ -31,14 +31,14 @@ Programming `DIMENSION` writes transfer virtual configurator values, Object assi
 
 | Field | Range in `OPEN.db` |
 | --- | ---: |
-| `C1`–`C12` | `0`–`255` |
-| `SLOT` | `1`–`255` |
-| `KEYO` | `1`–`65535` |
-| `SYS` | `1`–`255` |
-| `ADDR` | `0`–`65535` |
-| `INDEX` | `0`–`255` |
-| `VAL_PAR` | `0`–`65535` |
-| `STATE`, `ERROR` | `0`–`1` |
+| `C1..C12` | `0..255` |
+| `SLOT` | `1..255` |
+| `KEYO` | `1..65535` |
+| `SYS` | `1..255` |
+| `ADDR` | `0..65535` |
+| `INDEX` | `0..255` |
+| `VAL_PAR` | `0..65535` |
+| `STATE`, `ERROR` | `0..1` |
 
 These are frame-field capacities. Catalogue and address rules define the values valid for a particular Device.
 

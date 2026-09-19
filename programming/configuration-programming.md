@@ -1,6 +1,6 @@
 # Configuration Programming
 
-Configuration programming writes indexed Object or firmware properties after the Device, firmware, internal slot, and target Object have been resolved.
+Configuration programming writes indexed Object or firmware properties after the Device, firmware, `slot`, and target Object have been resolved.
 
 ## Write frame
 
@@ -8,9 +8,9 @@ Configuration programming writes indexed Object or firmware properties after the
 
 | Field | `OPEN.db` range | Meaning |
 | --- | ---: | --- |
-| `INDEX` | `0`–`255` | configuration index |
-| `SLOT` | `1`–`255` | Device-local internal slot |
-| `VAL_PAR` | `0`–`65535` | encoded value |
+| `INDEX` | `0..255` | configuration index |
+| `SLOT` | `1..255` | Device-local `slot` |
+| `VAL_PAR` | `0..65535` | encoded value |
 
 `INDEX` correlates with `EN_CONF.idx` but is not globally unique.
 

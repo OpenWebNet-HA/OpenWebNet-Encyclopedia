@@ -22,7 +22,7 @@ Rejected interpretations are retained because they are plausible enough to be re
 
 | Rejected interpretation | Conflicting evidence | Safe treatment |
 | --- | --- | --- |
-| `EN_FIRMWARE.slots = COUNT(EN_SLOTS rows)` | one internal slot can offer several Object alternatives | count distinct `first_slot` positions and interpret alternatives separately |
+| `EN_FIRMWARE.slots = COUNT(EN_SLOTS rows)` | one `slot` can offer several Object alternatives | count distinct `first_slot` positions and interpret alternatives separately |
 | an `EN_SLOTS` row is one runtime Module | rows represent firmware/Object placement alternatives | build runtime Modules from `DIMENSION 30`, then validate against placement capability |
 | `fixed_ko = 1` alone proves the UI field is read-only | visibility, conditions, product context, and UI behavior also contribute | use `fixed_ko` as designated/fixed capability evidence, not a complete UI rule |
 | a Virgin Object is the configured Object | Virgin Objects describe unconfigured templates and permitted Object sets | use `DIMENSION 30.STATE` to select the namespace |
@@ -51,7 +51,7 @@ Rejected interpretations are retained because they are plausible enough to be re
 | validate only against `OPEN.db` range | transport capacity can exceed catalogue capability | apply property range, contextual filters, conditions, conversions, and linked rules |
 | treat `id_key_object = 0` or `id_firmware = 0` as a broken reference | zero selects the complementary `EN_CONF` ownership branch | validate the exclusive ownership pattern |
 | use a global `EN_CONF.idx` lookup | the same index can name different properties across Object/firmware contexts | resolve Device, firmware, Module, Object, and ownership first |
-| use `DIMENSION 35.INDEX` without internal slot | repeated indexes can occur across Modules | include Device and slot in the correlation key |
+| use `DIMENSION 35.INDEX` without `slot` | repeated indexes can occur across Modules | include Device and slot in the correlation key |
 | treat a visible UI field as writable | visibility, editability, fixed state, and conditions differ | corroborate with metadata and observed UI behavior |
 | base range alone defines all legal values | `EN_FILTER`, filtered ranges, conditions, and other-property rules narrow it | evaluate the complete validation stack |
 | physical counterpart proves active physical configuration | diagnostics reports effective configuration, not necessarily how it was set | distinguish physical capability from active method |

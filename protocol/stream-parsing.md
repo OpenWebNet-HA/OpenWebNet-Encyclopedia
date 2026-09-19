@@ -6,7 +6,7 @@ A parser should consume bytes incrementally and emit a frame only after the term
 
 ## Character set
 
-The introductory specification defines ordinary OpenWebNet frames using decimal digits `0`–`9`, `*`, and `#`. A frame begins with `*` and ends with `##`. Major tags are separated by `*`. A tag can contain decimal digits and `#`, and empty tags are permitted.
+The introductory specification defines ordinary OpenWebNet frames using decimal digits `0..9`, `*`, and `#`. A frame begins with `*` and ends with `##`. Major tags are separated by `*`. A tag can contain decimal digits and `#`, and empty tags are permitted.
 
 Do not apply this ordinary-frame alphabet blindly to other transport layers or vendor extensions. Validate at the layer whose grammar is being parsed.
 

@@ -1,6 +1,6 @@
 # Programming Error Handling
 
-Programming failures must remain attached to the active session, target Device, transfer sequence, internal slot, Object, property, and attempted value.
+Programming failures must remain attached to the active session, target Device, transfer sequence, `slot`, Object, property, and attempted value.
 
 ## Terminal responses
 

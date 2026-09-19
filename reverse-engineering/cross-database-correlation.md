@@ -25,7 +25,7 @@ Use staged resolution:
 4. retain all compatible marketed Device/SKU records;
 5. resolve the three-component firmware candidate set;
 6. build Module/Object state from `DIMENSION 30`;
-7. attach addresses and configuration by Device and internal slot;
+7. attach addresses and configuration by Device and `slot`;
 8. resolve Object systems and family;
 9. select candidate `OPEN.db` address rules and functional context;
 10. apply catalogue filters, conditions, conversions, and `rules.db3` only in that resolved context;
@@ -88,7 +88,7 @@ STATE = 0 → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
 The safe lookup order is:
 
 1. resolve firmware;
-2. select the reported internal slot;
+2. select the reported `slot`;
 3. choose configured Object or Virgin Object namespace from `STATE`;
 4. verify that the firmware permits that Object/template at that slot;
 5. retain mismatches as evidence rather than forcing the nearest candidate.
@@ -102,7 +102,7 @@ This order prevents a globally valid Object number from being accepted in a firm
 ```text
 Physical Device
 + firmware
-+ internal slot
++ `slot`
 + configured Object
 + Object-scoped or firmware-scoped ownership
 + INDEX
