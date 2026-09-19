@@ -66,11 +66,23 @@ The source recommends only one OpenWebNet interface with supervisor mode enabled
 
 ## Scan and product database
 
-The interface maintains an internal product database. Section 6 states that it can contain up to 175 products, is populated automatically as products join, and retains its product count across an interface power cycle. Those database semantics matter because several OpenWebNet operations query this stored inventory rather than reporting only currently reachable radio products.
+The interface maintains an internal product database. Section 6 says the database can contain up to 175 products and is managed automatically by the interface. The database is a stored inventory, not a statement that every stored product is currently reachable.
+
+### Database population and persistence
+
+When the interface is present as products join a network, the source says each new joining product fills the product database. The section 6.1.1 use case shows the stored product count increasing as both routers and end Devices join.
+
+When the interface itself joins an existing ZigBee network, section 6.1.2 says it initially does not know the existing products. The OpenWebNet user sends Scan to learn active products. Products that are not active during that process, particularly sleeping battery end Devices, require later activity described by the source before they can be added. Section 6.1.3 likewise states that a product which joins while the interface is powered off is not known to the interface at that time; its use case shows later Scan or product activity as ways the stored population can be updated.
+
+The source explicitly says that the number of products in the database does not change across an interface power cycle. Section 6.1.4 also states that a product which leaves the ZigBee network while the interface is powered off remains in the database. The source defines no OpenWebNet command in the inspected discovery/inventory material for deleting that stale entry, no aging interval, and no automatic stale-entry pruning rule.
+
+These rules establish that database membership and current reachability are distinct states.
+
+### Scan
 
 `WHAT 65` initiates a scan with `*13*65*##`. The specification says the interface broadcasts over the ZigBee network and active routers plus awake end Devices can answer. The command returns `ACK` when sent. The documented flow then reports `DIMENSION 67` approximately 13 seconds later.
 
-The detailed Scan definition explicitly warns that the resulting count is the number of products stored in the interface product database, not simply the number of active routers seen during that scan. A stored product count therefore does not establish current reachability.
+The detailed Scan definition explicitly warns that the resulting count is the number of products stored in the interface product database, not simply the number of active routers seen during that scan. A Scan can therefore contribute newly active products to the stored database without turning `DIMENSION 67` into a count of only the current responders.
 
 ## `DIMENSION` reference
 
@@ -152,20 +164,28 @@ The frame can carry a Unit-specific `WHERE`. That addressing does not by itself 
 | `1` | mains-powered Device |
 | `2` | battery-powered Device |
 
-The source labels this operation "Device MAC address by index," but the returned `WHERE` is the ZigBee OpenWebNet product identifier form derived from the product address model, not the eight-value interface IEEE address returned by `DIMENSION 12`.
+The detailed use case says this operation asks the interface database for the product identifier and does not send a ZigBee frame to reach the product. This makes `DIMENSION 73` a local stored-inventory lookup rather than a reachability test.
 
-## Discovery relationship and source conflict
+The same use-case paragraph also repeats a statement that the "product information command" could take 30 seconds when a product is unreachable. That warning conflicts with the immediately following statement that this indexed lookup does not contact the product. The 30-second reachability warning is therefore retained for `DIMENSION 66`, where it is independently defined, and is not promoted as established `DIMENSION 73` timing.
+
+The source labels `DIMENSION 73` "Device MAC address by index," but the returned `WHERE` is the ZigBee OpenWebNet product identifier form derived from the product address model, not the eight-value interface IEEE address returned by `DIMENSION 12`.
+
+## Discovery relationship and source conflicts
 
 The specification exposes several distinct discovery mechanisms:
 
-1. [`WHO 1000 DIMENSION 81` neighbor discovery](../../protocol/zigbee-interface.md#namespace-and-management-boundaries) walks router neighbor information.
+1. [`WHO 1000 DIMENSION 81` neighbor discovery](../../protocol/zigbee-interface.md#neighbor-discovery---who-1000-dimension-81) traverses neighbor information reported by the interface and newly discovered routers.
 2. `WHO 13 WHAT 65` scans the ZigBee network and later reports the product-database count through `DIMENSION 67`.
-3. `DIMENSION 73` resolves a product-database index to its stored ZigBee product identifier and power type.
-4. `DIMENSION 66` queries Units/endpoints and numeric Device-ID/type information for an indexed or addressed product.
+3. `DIMENSION 73` resolves a product-database index locally to its stored ZigBee product identifier and power type.
+4. `DIMENSION 66` queries Units/endpoints and numeric Device-ID/type information for an indexed or addressed product and can expose that a stored product is unreachable.
 
 The source does not define one contradiction-free canonical sequence combining all four. Section 5.4 shows Scan followed by `DIMENSION 67` and then indexed `DIMENSION 73` requests, but its explanatory prose under those `DIMENSION 73` exchanges says that the product supplies endpoints and Device IDs. The detailed definitions later assign endpoint/Device-ID information to `DIMENSION 66` and define `DIMENSION 73` as index-to-product-identifier/power-type lookup.
 
-The encyclopedia therefore preserves the primitives and this source inconsistency rather than replacing it with an inferred canonical workflow.
+Section 5.2 also shows a product-join discovery frame with command/status content but a leading `*#13` form. The detailed `WHO 13` Product Joins use case and `WHAT 33` definition use the command/status form `*13*33*WHERE#9##`. The leading `#` in section 5.2 is therefore preserved as a source inconsistency rather than promoted as an alternate join grammar.
+
+The `DIMENSION 73` use-case paragraph contains a separate copied-looking reachability warning while also stating that the operation is a local database lookup which sends no ZigBee frame. The encyclopedia preserves that contradiction and does not assign the `DIMENSION 66` 30-second reachability behavior to `DIMENSION 73`.
+
+The encyclopedia therefore preserves the primitives and these source inconsistencies rather than replacing them with an inferred canonical workflow.
 
 ## Evidence limits
 
