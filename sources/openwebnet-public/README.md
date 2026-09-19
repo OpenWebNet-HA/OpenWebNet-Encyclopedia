@@ -6,7 +6,7 @@ This source set contains canonical copies of publicly distributed OpenWebNet pro
 
 The [Public OpenWebNet PDFs](pdf/) directory contains the OpenWebNet introduction, HMAC and Zigbee documentation, and the available WHO-specific protocol documents.
 
-Exact byte sizes and SHA-256 fingerprints are maintained in [`../manifest.yaml`](../manifest.yaml).
+Exact byte sizes and SHA-256 fingerprints are maintained in the [Source Manifest](../manifest.yaml).
 
 ## Use in this reference
 

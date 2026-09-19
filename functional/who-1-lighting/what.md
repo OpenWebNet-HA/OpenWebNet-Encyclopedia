@@ -8,13 +8,13 @@
 | ---: | --- |
 | `0` | OFF |
 | `1` | ON |
-| `2`–`10` | 20%–100% in ten-percent steps |
+| `2..10` | `20%..100%` in ten-percent steps |
 | `30` | Increase one level |
 | `31` | Decrease one level |
 
 The parameterized forms `0#SPEED` and `1#SPEED` switch OFF or ON using the requested transition speed. `30#LEVELS#SPEED` and `31#LEVELS#SPEED` change several levels at the specified speed. These forms must not be reduced to their leading numeric `WHAT`.
 
-For the published speed field, `0` means the last speed used, `1`–`254` are explicit speeds, and `255` selects the default speed.
+For the published speed field, `0` means the last speed used, `1..254` are explicit speeds, and `255` selects the default speed.
 
 ## Timed operations
 
@@ -41,7 +41,7 @@ A generic decoder should retain the protocol meaning; an Object-aware applicatio
 
 | `WHAT` | Blink period |
 | ---: | --- |
-| `20`–`29` | 0.5–5 seconds in 0.5-second increments |
+| `20..29` | `0.5..5` seconds in 0.5-second increments |
 
 ## Command translation - `WHAT 1000`
 
@@ -59,6 +59,6 @@ MyHOME Suite emits ordinary OFF/ON frames for Lighting Objects and for controlle
 
 ## Evidence basis
 
-The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [WHO 1 specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
+The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [`WHO 1` specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
 
 See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and [Cross-database functional coverage](../cross-database-coverage.md).

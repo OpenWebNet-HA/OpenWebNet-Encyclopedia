@@ -24,7 +24,7 @@ Two published address forms are established:
 
 | `WHERE` | Application |
 | --- | --- |
-| `1`–`201` | Automation dry-contact interfaces configured using Virtual Configurator Software |
+| `1..201` | Automation dry-contact interfaces configured using Virtual Configurator Software |
 | `[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.

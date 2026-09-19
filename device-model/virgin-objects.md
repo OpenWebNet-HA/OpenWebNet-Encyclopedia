@@ -21,12 +21,12 @@ The Virgin Object identifier space is distinct from `EN_KEY_OBJECT.key_object`. 
 The catalogue uses three associations:
 
 1. `AS_FIRMWARE_VIRGIN_OBJECT` connects a firmware to a Virgin Object and assigns an intermediate `id_fw_virgin_object`.
-2. `EN_SLOT_KO_VIRGIN` places that firmware/Virgin-Object association at one or more internal slots.
+2. `EN_SLOT_KO_VIRGIN` places that firmware/Virgin-Object association at one or more `slot` positions.
 3. `AS_OBJECT_VIRGIN_OBJECT` lists the concrete Objects permitted by a Virgin Object.
 
 The resulting capability chain is:
 
-`EN_FIRMWARE` → `AS_FIRMWARE_VIRGIN_OBJECT` → `EN_SLOT_KO_VIRGIN` → internal slot
+`EN_FIRMWARE` → `AS_FIRMWARE_VIRGIN_OBJECT` → `EN_SLOT_KO_VIRGIN` → `slot`
 
 and:
 
@@ -66,7 +66,7 @@ Runtime state must be obtained from diagnostic responses or project configuratio
 
 Virgin Object `500`, “Automation double command virgin”, permits five concrete Objects and is used by six firmware definitions in the canonical database.
 
-For firmware `157`, it is placed at internal slots `3` and `4`, whose Object choices include:
+For firmware `157`, it is placed at `slot` positions `3` and `4`, whose Object choices include:
 
 - Light control
 - Automation control
@@ -79,11 +79,11 @@ This corresponds to the free-command portion of `64391`, `64191`, and `64192`.
 
 Virgin Object `510`, “Automation relay virgin”, permits three concrete Objects and is used by five firmware definitions.
 
-For firmware `157`, it is placed at internal slots `1` and `2`, corresponding to the relay/actuator Modules.
+For firmware `157`, it is placed at `slot` positions `1` and `2`, corresponding to the relay/actuator Modules.
 
 ### Dimmer actuator virgin
 
-Virgin Object `528`, “Dimmer actuator virgin”, permits two concrete Objects. It is placed at both internal slots of firmware `590`, used by `F418U2`.
+Virgin Object `528`, “Dimmer actuator virgin”, permits two concrete Objects. It is placed at both `slot` positions of firmware `590`, used by `F418U2`.
 
 ### Contact interface single virgin
 
@@ -104,9 +104,9 @@ Virgin Object `515`, “Daylight and motion sensor virgin”, permits six Object
 | `1` | `EN_KEY_OBJECT.key_object` | configured Object |
 | `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object and functional role |
 
-This interpretation is structurally and behaviorally corroborated. Observed Device `00C58E91` reported `KEYO = 500`, `STATE = 0` at internal slot `4`; the catalogue resolves external Virgin Object number `500` as “Automation double command virgin”, while no ordinary Object with external number `500` exists in this source revision.
+This interpretation is structurally and behaviorally corroborated. Observed Device `00C58E91` reported `KEYO = 500`, `STATE = 0` at `slot` `4`; the catalogue resolves external Virgin Object number `500` as “Automation double command virgin”, while no ordinary Object with external number `500` exists in this source revision.
 
-Retain `STATE` with every `KEYO`: the two external number spaces are independent, and neither value is an internal database primary key. Once the Virgin Object is resolved, intersect its permitted Objects with the selected firmware and internal-slot capability before presenting configuration choices.
+Retain `STATE` with every `KEYO`: the two external number spaces are independent, and neither value is an internal database primary key. Once the Virgin Object is resolved, intersect its permitted Objects with the selected firmware and `slot` capability before presenting configuration choices.
 
 ## Conditions and visibility
 
@@ -127,7 +127,7 @@ To determine which Objects a Module may expose:
 
 1. identify the Physical Device’s `EN_ITEM`;
 2. select the applicable firmware;
-3. select the internal slot;
+3. select the `slot`;
 4. locate the firmware/Virgin-Object association for that slot;
 5. enumerate the Virgin Object’s permitted Objects;
 6. intersect that set with the firmware/Object rows present at the same slot;

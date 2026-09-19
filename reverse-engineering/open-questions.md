@@ -18,7 +18,7 @@ It also remains unknown how `SYS` selects one active context when an Object belo
 
 The two dimensions each carry six Device-level configurator values. They are related to physical/Virtual configurator transfer and are not ordinary `EN_CONF.idx` records.
 
-The exact positional and value encoding remains unresolved. In particular, controlled captures must determine whether the twelve values represent configurator contents, presence state, another encoding, or a combination of these, and whether positions `1`–`6` and `7`–`12` correspond directly to the two dimensions.
+The exact positional and value encoding remains unresolved. In particular, controlled captures must determine whether the twelve values represent configurator contents, presence state, another encoding, or a combination of these, and whether positions `1..6` and `7..12` correspond directly to the two dimensions.
 
 ### `DIMENSION 310`
 
@@ -42,7 +42,7 @@ The remaining questions are:
 - How are `level_2_rule` and `level_4_rule` consumed? Their nonzero values occur on the Lighting/Automation general, environment, group, and F422 extension rules, but the runtime composition with the dedicated level rules is not encoded.
 - How is `validity_rule` evaluated? The only nonempty expression in this revision is `MOD=SLA;` on the Thermoregulation slave-probe rule.
 - How is `offset_adv` applied? It is populated only for the two F422 mode-specific rules, with values `496` and `256`.
-- Under which Device layouts does the diagnostic outer `WHERE` follow the configured address of internal slot `1`, and what rule applies when slot `1` is absent, disabled, or differently addressed?
+- Under which Device layouts does the diagnostic outer `WHERE` follow the configured address of `slot` `1`, and what rule applies when slot `1` is absent, disabled, or differently addressed?
 
 ## Catalogue behavior
 

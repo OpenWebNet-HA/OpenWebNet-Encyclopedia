@@ -32,7 +32,7 @@ These are `DIMENSION 10` state values. Values `13` and `14` therefore describe s
 | Value | Meaning |
 | ---: | --- |
 | `0` | Fully closed |
-| `1`–`99` | Current position (%) |
+| `1..99` | Current position (%) |
 | `100` | Fully open |
 | `255` | Unknown position |
 
@@ -65,7 +65,7 @@ The MyHOME_Suite functional data uses the same parameterized operation. A concre
 | Value | Meaning |
 | ---: | --- |
 | `0` | Fully closed |
-| `1`–`99` | Target position (%) |
+| `1..99` | Target position (%) |
 | `100` | Fully open |
 
 `255`, used by `DIMENSION 10` to report an unknown current position, is not a target position.

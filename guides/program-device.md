@@ -144,7 +144,7 @@ For every reported or intended Module, retain:
 
 | Field | Required evidence |
 | --- | --- |
-| internal slot | raw `DIMENSION 30.SLOT` and catalogue slot support |
+| `slot` | raw `DIMENSION 30.SLOT` and catalogue slot support |
 | configured state | intended enabled/unconfigured state |
 | Object | external `key_object` and internal `id_key_object` |
 | address | encoded `SYS` and `ADDR`, plus decoded components |
@@ -170,7 +170,7 @@ Keep the previous snapshot and the intended snapshot as separate immutable recor
 For advanced Object programming, order the payload as:
 
 1. reset all Objects;
-2. Object assignments by internal slot;
+2. Object assignments by `slot`;
 3. addresses after the corresponding Object exists;
 4. properties after the corresponding Object exists;
 5. programmer end marker;
@@ -195,12 +195,12 @@ Within each class, use the ordering established by the canonical scenario and ve
 
 For a scenario containing `ConfConfigurators`:
 
-1. send positions 1–6 as `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`;
-2. where applicable, send positions 7–12 as `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`;
+1. send positions `1..6` as `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`;
+2. where applicable, send positions `7..12` as `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`;
 3. collect Device configurator reports, `WHAT 51`, abort, `NACK`, timeout, and Device `WHAT 4`;
 4. do not wait for `WHAT 52`, which is not a canonical member of `ConfConfigurators`.
 
-The precise field-level meaning of `C1`–`C12` remains unresolved. Send only values derived from an established MyHOME_Suite configuration workflow.
+The precise field-level meaning of `C1..C12` remains unresolved. Send only values derived from an established MyHOME_Suite configuration workflow.
 
 ## Reference programming algorithm
 

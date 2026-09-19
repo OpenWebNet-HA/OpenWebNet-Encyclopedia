@@ -58,7 +58,7 @@ A read request identifies `WHO`, `WHERE`, and `DIMENSION`. A response repeats th
 
 A write prefixes the `DIMENSION` selector with `#`. A syntactically valid write does not imply that the selected property is writable.
 
-Some systems parameterize the selector itself. For example, diagnostic `32#SLOT` selects `DIMENSION 32` for one internal slot; the following `SYS` and `ADDR` remain ordinary `*`-separated values. The `#` inside the selector does not replace the major-field delimiter.
+Some systems parameterize the selector itself. For example, diagnostic `32#SLOT` selects `DIMENSION 32` for one `slot`; the following `SYS` and `ADDR` remain ordinary `*`-separated values. The `#` inside the selector does not replace the major-field delimiter.
 
 ## Field scope
 

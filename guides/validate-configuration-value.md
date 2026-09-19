@@ -47,7 +47,7 @@ Keep the current-state snapshot immutable for the rest of validation. If the int
 ## Procedure
 
 1. Take the resolved installed Device and firmware from the freshly acquired configuration model.
-2. Resolve the internal slot and current Object or Virgin Object.
+2. Resolve the `slot` and current Object or Virgin Object.
 3. Prove that the target Object survives the Virgin Object, firmware, and slot intersections.
 4. Resolve the Object- and firmware-scoped `EN_CONF` property.
 5. Evaluate `read_only`, `visible`, `hidden`, fixed-value, and conditional metadata.
@@ -126,7 +126,7 @@ Do not return only `true` or `false`. Record each milestone independently:
 | --- | --- |
 | Device identity | candidate `id_device`, item, brand, collection, SKU |
 | firmware | reported version and selected `id_firmware` |
-| Module | internal slot and raw `DIMENSION 30` |
+| Module | `slot` and raw `DIMENSION 30` |
 | Object eligibility | current Object or Virgin-to-Object intersection |
 | property identity | selected `id_conf`, scope, symbol, and `INDEX` |
 | writability | fixed, hidden, visible, and read-only metadata |
@@ -299,7 +299,7 @@ Fail closed when the property, domain, condition, or encoding is ambiguous.
 
 ## Common mistakes
 
-- treating `0–65535` as the allowed value set;
+- treating `0..65535` as the allowed value set;
 - resolving `INDEX` without Object/firmware context;
 - merging filters from unrelated firmware associations;
 - assuming a hidden value is invalid;

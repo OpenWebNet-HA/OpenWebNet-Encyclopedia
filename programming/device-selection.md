@@ -10,7 +10,7 @@ Programming begins by selecting one installed Physical Device within a managemen
 | Device ID | `*[WHO]*9#[ID]*0##` | 15 s |
 | Local-interaction scenario | `*[WHO]*1*[WHERE]##` | 300 s |
 
-The Device ID has the `OPEN.db` range `0`–`4294967295`. Observed interfaces render it as eight hexadecimal characters; the wire template carries the `ID` field without defining that display representation.
+The Device ID has the `OPEN.db` range `0..4294967295`. Observed interfaces render it as eight hexadecimal characters; the wire template carries the `ID` field without defining that display representation.
 
 ## Selecting by Device ID
 
@@ -28,7 +28,7 @@ The ID-based scenario proceeds to advanced Object configuration. It does not inc
 
 `WHERE` follows the selected management family's address grammar. It is not one universal integer and must be generated from the applicable `OPEN.db` address rule.
 
-A Physical Device can expose several Modules and functional addresses. The diagnostic/programming selection address must therefore remain distinct from per-Module addresses written through `DIMENSION 32`. Observed `WHO 1001` traffic often correlates the Device context with internal slot `1`, but this is not a universal rule.
+A Physical Device can expose several Modules and functional addresses. The diagnostic/programming selection address must therefore remain distinct from per-Module addresses written through `DIMENSION 32`. Observed `WHO 1001` traffic often correlates the Device context with `slot` `1`, but this is not a universal rule.
 
 The address-selected programming scenario proceeds to virtual-configurator transfer and does not include `ConfKO`.
 
@@ -45,7 +45,7 @@ Before transmitting configuration, compare the returned initial projection with 
 - `DIMENSION 1` item/model, physical configurator count, brand, and line;
 - `DIMENSION 2` firmware version;
 - `DIMENSION 13` Device ID;
-- `DIMENSION 30` configured Object or Virgin Object by internal slot;
+- `DIMENSION 30` configured Object or Virgin Object by `slot`;
 - `DIMENSION 32` current Module addresses where reported.
 
 Resolve the Device through the documented catalogue path and retain ambiguity where several SKUs share an item.
