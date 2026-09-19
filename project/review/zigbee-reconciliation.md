@@ -44,10 +44,18 @@ The ZigBee `WHO 1`, `WHO 2`, `WHO 4`, and `WHO 18` sections were subsequently re
 
 That review establishes source-bounded completeness for those four namespaces within ZigBee OpenWebNet version 4.0 while preserving the unresolved Automation Up-value, Energy Reset, and Energy Frequency/Energy conflicts. It does not extend the conclusion to runtime support across products or Firmware, `WHO 1000` discovery, or the final ZigBee source-to-documentation completeness matrix.
 
+## Discovery and inventory Step 2 reconciliation
+
+The ZigBee discovery and product-inventory mechanisms in sections 5 and 6 were subsequently reconciled against the detailed `WHO 13` definitions and the interface's transport/addressing model. The complete claim matrix, `WHO 1000 DIMENSION 81` field adjudication, source conflicts, product-database lifecycle, and mechanism boundaries are recorded in [ZigBee Discovery and Inventory Reconciliation - Step 2](zigbee-discovery-inventory-reconciliation.md).
+
+That review establishes source-bounded completeness for the discovery and product-inventory mechanisms exposed by ZigBee OpenWebNet version 4.0. It keeps `WHO 1000 DIMENSION 81` router-neighbor traversal, `WHO 13` Scan/product-database inventory, and MyHOME Suite diagnostic discovery as separate mechanisms. It also preserves the unknown `DIMENSION 81` field, unresolved neighbor freshness/duplicate semantics, the Scan example's `DIMENSION 73`/Product Information conflict, the section 5.2 join-frame syntax inconsistency, the copied-looking `DIMENSION 73` reachability warning, and the undefined stale-entry cleanup lifecycle.
+
+The final repository-wide ZigBee source-to-documentation completeness matrix remains a later task and is intentionally outside Step 2.
+
 ## Canonical placement
 
 Cross-cutting transport, addressing, acknowledgement behavior, and applicability remain canonical in [ZigBee OpenWebNet Interface](../../protocol/zigbee-interface.md).
 
 ZigBee `WHO 13` management and product-database semantics are canonical in [ZigBee Network Management](../../functional/who-13-integration-gateway/zigbee-network-management.md). ZigBee `WHO 25` binding semantics are canonical in [ZigBee Binding](../../functional/who-25-transversal/zigbee-binding.md).
 
-Diagnostics and Practical Guides link to these variant-specific mechanisms rather than copying them into the Suite diagnostic model.
+Cross-cutting ZigBee discovery and `WHO 1000 DIMENSION 81` are canonical in [ZigBee OpenWebNet Interface](../../protocol/zigbee-interface.md). Diagnostics and Practical Guides link to these variant-specific mechanisms rather than copying them into the Suite diagnostic model.
