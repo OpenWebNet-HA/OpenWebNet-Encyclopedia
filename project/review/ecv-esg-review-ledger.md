@@ -1008,6 +1008,226 @@ The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed so
 - **Verification:** Manifest/tree absence checks, direct source probes, Relationship Register and rejected-interpretation review; no hardware experiment or software execution claimed.
 - **Open evidence gap:** Sanitized captures; product diagram editions/pages; APP loaders/resources/traces; controlled Device/gateway/transport matrix; SYS/configurator/special-parameter/firmware-selection and scenario-runtime questions.
 
+## Phase 4 factual and epistemic findings
+
+This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` and continues the existing inventory and source-coverage assessment. See the [Phase 4 Audit](phase-4-factual-audit.md) for scope, retained conclusions and the final-review handoff. `ASTRA-FINAL-REVIEW` means the documented guardrail is in place but substantive adjudication needs independent evidence or disproportionate further work; it is not a verified semantic resolution.
+
+### P4-FAC-001 - Generic grammar must admit scoped response and product variants
+
+- **Finding ID:** `P4-FAC-001`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** protocol/frame-syntax.md; protocol/dimensions.md; protocol/acknowledgements.md; functional/who-6-basic-video-door-entry/README.md
+- **Claim/issue:** Generic response text required selector/address equality; WHO 6 remained namespace-only despite an available product reference.
+- **ECV/ESG rule:** ECV 2, 4, 7, 9, 10, 12, 17, 20
+- **Evidence inspected:** Phase 3 WHO 1004 and WHO 22 inspection results; canonical Temperature Control Faults and Sound Diffusion pages; WHO_6_L4686SDK.pdf sections 1 and 2 and tables (all extracted pages read in Phase 4).
+- **Evidence class:** PUB, RES
+- **Applicability:** Published WHO 1004 collective faults, WHO 22 source-address replies, and L4686SDK 1.0.0 only.
+- **Finding:** WHO 1004 request selector 20 returns 21; WHO 22 can change source address. L4686SDK Camera OFF omits WHERE, incoming broadcast call uses special 4100, and ACK means sent on SCS rather than physical success. These counterexamples invalidate universal field equality/arity or two-result assumptions.
+- **Required remediation:** Qualify generic grammar; add bounded WHO 6 reference without repairing inconsistent labels/arrows.
+- **Resolution:** Applied; WHO 6 distinguishes send from receive-only operations, preserves broadcast sentinel and unknown error codes.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Compared changed forms and value ranges with the cited source sections; preserved inconsistent endpoint label and direction caveats.
+- **Open evidence gap:** L4686SDK error-code enumeration, exact endpoint-number mapping and ambiguous arrows require applicable product evidence.
+
+### P4-FAC-002 - Lighting WHAT 17 duration remains contradictory
+
+- **Finding ID:** `P4-FAC-002`
+- **Status:** ASTRA-FINAL-REVIEW
+- **Severity:** Substantive
+- **Path:** functional/who-1-lighting/what.md; functional/cross-database-coverage.md
+- **Claim/issue:** Documentation asserted 30 seconds and treated ScenarioDevices label as compatible settled meaning.
+- **ECV/ESG rule:** ECV 1, 2, 3, 4, 7, 10, 16, 19
+- **Evidence inspected:** P3-CON-001 / Phase 3 WHO_1.pdf page register: summary table versus section 3.1.9; both ScenarioDevices stored door-lock templates; both affected pages.
+- **Evidence class:** PUB, SCN, RES
+- **Applicability:** Preserved WHO_1.pdf revision and stored Suite 3.5.38 door-lock capability; no target experiment.
+- **Finding:** 30 seconds versus 30 minutes is an unresolved internal source contradiction. A door-lock resource key and frame template cannot independently choose duration or establish actual emission.
+- **Required remediation:** Expose both durations in the canonical command table and dependent coverage page; seek target-scoped timing evidence before selecting one.
+- **Resolution:** Unsupported certainty removed. Canonical duration is Unresolved; stored capability label retained separately.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Targeted cross-page search found both previously unqualified duration claims and both are now qualified; no timing value invented.
+- **Open evidence gap:** Known product/firmware/gateway experiment measuring WHAT 17 behavior with controlled timing and independent reference if available.
+
+### P4-FAC-003 - Address namespaces and PL=0 interpretation cannot be collapsed
+
+- **Finding ID:** `P4-FAC-003`
+- **Status:** ASTRA-FINAL-REVIEW
+- **Severity:** Substantive
+- **Path:** protocol/addressing.md; diagnostics/dim32-addressing.md; programming/address-programming.md; programming/validation.md
+- **Claim/issue:** Shared routing model implied broader WHO 2 support; diagnostic example rendered PL=0 as functional WHERE 10; programming recipe implied address-rule rendering established ADDR encoding.
+- **ECV/ESG rule:** ECV 1, 2, 4, 7, 9, 10, 12, 15, 20
+- **Evidence inspected:** Canonical WHO 1/WHO 2 address tables and Phase 3 PUB/REG address evidence; DIMENSION 32 example; OPEN.db SYS label and 0..65535 ADDR domain already inspected in Phase 3; current programming procedures.
+- **Evidence class:** PUB, REG, RES
+- **Applicability:** SCS published A/PL syntax; Suite management DIMENSION 32; specific secondary observed-layout example only.
+- **Finding:** WHO 2 public source establishes local-bus point form, not all Lighting collective forms. PL=0 is outside the cited point grammar; prior rendered 10 is not a justified usable address. Functional WHERE, selection WHERE and numeric ADDR are distinct. SYS namespace and conversion cannot be inferred from equal numbers or a template.
+- **Required remediation:** Restrict routing claim; preserve prior PL=0 interpretation as unresolved; require independently established SYS/ADDR encoding before writes.
+- **Resolution:** Applied guardrails. No sentinel, address decoder or cross-database SYS identity selected.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Checked changed claims against existing WHO-specific address domains and Phase 3 source limits. Prior example retained as history, no longer offered as valid WHERE.
+- **Open evidence gap:** Recover raw SYS/ADDR and exact Object/firmware context for PL=0 example; discriminating non-Lighting SYS responses; validated address encoder/consumer including routing and offsets.
+
+### P4-FAC-004 - Catalogue consistency and templates are not runtime proof
+
+- **Finding ID:** `P4-FAC-004`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** programming/validation.md; programming/configuration-programming.md; programming/session-lifecycle.md; guides/program-device.md; scenario-engine/categories-and-matching.md; scenario-engine/execution-model.md; functional/who-1-lighting/what.md; functional/cross-database-coverage.md
+- **Claim/issue:** Validation claimed to prove Physical Device support; template rows were described as emission; sent close implied closed state; proposed matching logic looked like recovered behavior.
+- **ECV/ESG rule:** ECV 1, 2, 4, 7, 10, 15, 16, 17
+- **Evidence inspected:** Phase 3 CAT ownership/idx and SCN template/schema findings; Phase 3 REG stored sequence/timeout authority limits; current validation, transfer, matching and graph prose.
+- **Evidence class:** CAT, REG, SCN, RES
+- **Applicability:** Suite 3.5.38 stored artifacts; no executed consumer or Device experiment.
+- **Finding:** Passing known constraints proves only consistency with inspected evidence. Candidate property union includes firmware idx=-1 fields, not unsigned INDEX writes. Hardware-version selection has no established mapping. Transmission of WHAT 2 is not confirmed closure or durability; an absent graph schema is not proof of impossible serialization.
+- **Required remediation:** Separate capability, candidate selection, algorithm proposal, transmission and observed state; retain unknown consumer behavior.
+- **Resolution:** Applied. Matching pseudocode explicitly proposed; graph conclusion bounded to inspected schemas; close classified Close sent; timeout before writes no longer guarantees unchanged Device.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Reviewed each revised assertion against Phase 3 authority boundaries and canonical INDEX 0..255 domain; no source bytes or wire templates changed.
+- **Open evidence gap:** APP consumer/matching/serialization evidence and target-scoped acceptance, closure, persistence and recovery experiments remain unavailable.
+
+### P4-FAC-005 - Detailed-read guides omit DIMENSION 38 effect ambiguity
+
+- **Finding ID:** `P4-FAC-005`
+- **Status:** ASTRA-FINAL-REVIEW
+- **Severity:** Substantive
+- **Path:** guides/program-device.md; guides/read-device-configuration.md; guides/retrieve-actuator-group-memberships.md; guides/retrieve-configured-cen-buttons.md; guides/validate-configuration-value.md; guides/verify-programming.md; guides/troubleshoot-diagnostics.md
+- **Claim/issue:** Guides unconditionally send 38#0 while canonical diagnostics preserves the reset/select versus retrieval ambiguity.
+- **ECV/ESG rule:** ECV 1, 2, 4, 7, 10, 14, 19, 20
+- **Evidence inspected:** Phase 3 DiagKO composition and template label; diagnostics/dim35-configuration.md Reading detailed parameters; seven guide call sites and read-guide pseudocode.
+- **Evidence class:** REG, RES
+- **Applicability:** Suite DiagKO all-Module operation; non-destructive applicability not established across families/firmware.
+- **Finding:** Membership in a retrieval sequence is not sufficient proof that reset/select has no state-changing effect. Guide repetition dropped a material canonical qualification and could turn verification into an uncharacterized operation.
+- **Required remediation:** Gate every exposed guide call on established target effects; classify unavailable read-back instead of assuming safety; obtain controlled before/after evidence.
+- **Resolution:** Seven call sites and executable-looking read pseudocode now preserve the boundary. Canonical ambiguity retained; no destructive interpretation asserted.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Targeted DIMENSION 38 call-site review confirms explicit gate in all seven affected guides; no operation or timeout changed.
+- **Open evidence gap:** Restore-safe target experiments or applicable implementation evidence explaining reset/select effects, scope and repetition behavior.
+
+### P4-FAC-006 - Missing physical match is not advanced-only evidence
+
+- **Finding ID:** `P4-FAC-006`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** device-model/configuration.md; diagnostics/dim35-configuration.md; programming/validation.md
+- **Claim/issue:** Absence of a matching physical field was sufficient for advanced-only or Virtual-only classification.
+- **ECV/ESG rule:** ECV 1, 2, 4, 7, 15, 16
+- **Evidence inspected:** Phase 3 sparse EN_PHY_TO_ADV_TRANS findings and unavailable product diagrams; existing physical-counterpart resolution text.
+- **Evidence class:** CAT, RES
+- **Applicability:** Resolved Object/firmware contexts with potentially incomplete physical mappings.
+- **Finding:** Resolving the correct firmware does not make the physical-interface or conversion evidence exhaustive. A bounded metadata negative cannot exclude an unrepresented counterpart.
+- **Required remediation:** Retain no counterpart established unless independent evidence establishes complete physical scope and excludes a counterpart.
+- **Resolution:** Applied consistently in canonical model, diagnostic interpretation and programming classification.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Compared the three revised classifications; all distinguish absent metadata from excluded capability.
+- **Open evidence gap:** Complete applicable physical-interface diagrams and conversion mappings where a stronger exclusion is needed.
+
+### P4-FAC-007 - N_CONF landing page contradicted established interpretation
+
+- **Finding ID:** `P4-FAC-007`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** device-model/README.md
+- **Claim/issue:** Landing page still called N_CONF unresolved while canonical identity pages and research established physical configurator-position count.
+- **ECV/ESG rule:** ECV 3, 8, 15, 19
+- **Evidence inspected:** Phase 3 product-diagram provenance boundary; diagnostics/dim1-device-identity.md; device-model/physical-devices.md; reverse-engineering/open-questions.md.
+- **Evidence class:** REG, RES
+- **Applicability:** Established interpretation preserved from prior validated research; no fresh product-diagram reproduction claimed.
+- **Finding:** The stale unknown label is a representation-consistency defect, not new evidence against the interpretation. Catalogue-wide row-count equivalence remains separately unresolved.
+- **Required remediation:** Align landing page to canonical conclusion while retaining provenance and count-equivalence limits.
+- **Resolution:** Applied; N_CONF not repurposed as Object, Virgin Object or firmware class.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Compared landing statement to all three canonical/research treatments; original diagram gap retained.
+- **Open evidence gap:** Specific product-diagram editions/pages and catalogue-wide equivalence remain Phase 3 gaps; meaning not reopened.
+
+### P4-FAC-008 - Historical commands are an enumeration, not a range
+
+- **Finding ID:** `P4-FAC-008`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** functional/who-18-energy-management/what.md
+- **Claim/issue:** WHAT 57..510 falsely denotes hundreds of values while adjacent source-backed table lists four commands.
+- **ECV/ESG rule:** ECV 9, 20
+- **Evidence inspected:** Existing canonical command table and historical-operation sections: 57, 58, 59, 510; Phase 3 WHO 18 source basis.
+- **Evidence class:** PUB, RES
+- **Applicability:** Published WHO_18.pdf historical-series commands only.
+- **Finding:** The intended set is {57,58,59,510}; inclusive-range notation expands unsupported vocabulary.
+- **Required remediation:** Write the four-value enumeration explicitly.
+- **Resolution:** Applied without changing any actual command frame.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Compared prose with all four table entries and detailed subsections.
+- **Open evidence gap:** No new gap for enumeration; existing operation-specific runtime and source discrepancies remain.
+
+### P4-FAC-009 - ZigBee applicability must qualify shared protocol claims
+
+- **Finding ID:** `P4-FAC-009`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** protocol/zigbee-interface.md; protocol/README.md; protocol/addressing.md; protocol/acknowledgements.md; diagnostics/README.md; programming/README.md; functional/who-13-integration-gateway/README.md; functional/who-18-energy-management/README.md; functional/who-25-transversal/README.md
+- **Claim/issue:** TCP setup, SCS addressing and Suite management surfaces could be read as transport-wide despite Phase 3's known variant evidence.
+- **ECV/ESG rule:** ECV 2, 4, 7, 9, 10, 11, 12, 14, 15, 18, 20
+- **Evidence inspected:** Phase 3 ZigBee inspection register reused; Phase 4 targeted text inspection of sections 2.3, 3.1 through 3.9 and 5.3 for newly stated serial/address/BUSY/discovery boundaries.
+- **Evidence class:** PUB, RES
+- **Applicability:** Legrand serial interface described by ZigBee OpenWebNet 4.0 only; public-release provenance unresolved; no runtime test.
+- **Finding:** Serial setup, product/unit/#9 WHERE, BUSY then NACK, WHO1000 neighbor discovery and separate management/binding invalidate address-only or TCP-universal integration. Source SYS family suffix is not DIMENSION32 SYS; product-address bytes do not establish Suite Device-ID identity.
+- **Required remediation:** Add compact canonical interface boundary and scoped entry-point qualifications; defer unexamined detailed flows.
+- **Resolution:** Applied using symbolic identifiers only. No MAC examples, new device observations, bootloader internals or speculative wire repairs added.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Compared each new transport/address/BUSY claim to named source subsections. Conflicts and unexamined flows explicitly preserved.
+- **Open evidence gap:** Detailed variant reference integration, interface experiments, publication provenance and unexamined flows remain; this correction is not exhaustive ZigBee certification.
+
+### P4-REV-001 - Independent adjudication of source contradictions
+
+- **Finding ID:** `P4-REV-001`
+- **Status:** ASTRA-FINAL-REVIEW
+- **Severity:** Substantive
+- **Path:** protocol/authentication.md; protocol/zigbee-interface.md; functional/who-7-multimedia-video/README.md; functional/who-18-energy-management/what.md; functional/who-22-sound-diffusion/README.md; functional/who-24-lighting-management/dimensions.md
+- **Claim/issue:** Conflicting public literals/flows cannot be settled by choosing the more plausible or more detailed source location.
+- **ECV/ESG rule:** ECV 1, 2, 3, 7, 9, 10, 12, 20
+- **Evidence inspected:** P3-CON-001 and Phase 3 register; current authentication proof discrepancy; current WHO7/18/22/24 preserved discrepancy sections; ZigBee conflicts carried into canonical variant page.
+- **Evidence class:** PUB, RES
+- **Applicability:** Exact supplied source revisions and operations, not all commands in those namespaces.
+- **Finding:** HMAC copen/sopen versus hex constants, ZigBee UP 1/2 and reset 0/75 remain unresolved. Existing WHO7 range conflict, WHO18 forcing-duration upper bound, WHO22 malformed frames/tone and unit discrepancies, and WHO24 read/write mismatches remain source contradictions. Prior qualification is retained; Phase 4 did not freshly re-extract every detailed flow.
+- **Required remediation:** Use independently validated authentication vectors or target-scoped operation tests and exact source locations. Do not repair frames by generic grammar or transfer SCS values into ZigBee.
+- **Resolution:** No unsupported selection made. HMAC and previously qualified functional sections retained; newly exposed ZigBee conflicts visible canonically.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Checked current caveats against Phase 3 findings; independent behavioral resolution intentionally not claimed.
+- **Open evidence gap:** Working HMAC vectors; safe product/interface tests; remaining detailed source-flow adjudication. Lighting timing is separately P4-FAC-002.
+
+### P4-ARC-001 - Incidental canonicality handoff for Phase 5
+
+- **Finding ID:** `P4-ARC-001`
+- **Status:** Open
+- **Severity:** Editorial
+- **Path:** guides/; protocol/addressing.md; protocol/zigbee-interface.md; device-model/; diagnostics/; reverse-engineering/open-questions.md
+- **Claim/issue:** Factual work exposed duplicated semantics and unclear ownership that could recreate corrected drift.
+- **ECV/ESG rule:** ECV 11, 12, 13, 14, 15, 16, 19
+- **Evidence inspected:** P4-FAC-003, 005, 007 and 009 changed claims and existing Phase 1 canonical-placement map.
+- **Evidence class:** META, RES
+- **Applicability:** Documentation architecture only; no new wire conclusions.
+- **Finding:** Seven guides repeated DIMENSION38 without canonical caveat; common routing prose exceeded WHO2 reference; N_CONF landing drifted from identity reference; physical versus advanced classification spans model/diagnostics/programming. New ZigBee boundary is canonical for interface applicability, not an alternate complete WHO encyclopedia.
+- **Required remediation:** Phase 5 Sol: retain independently executable guide material but preserve canonical applicability caveats; cross-reference DIMENSION38 definition; keep SCS/variant address applicability explicit; centralize entity/counterpart definitions and keep research as history. Integrate future ZigBee operation details under their WHO/mechanism owners with interface links, avoiding duplicate numeric tables.
+- **Resolution:** Immediate factual inconsistencies fixed; structural consolidation deferred as requested.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Issues observed naturally during factual review; no separate architecture inventory or sweep performed.
+- **Open evidence gap:** Phase 5 design choices; unresolved semantics must remain visible through any restructuring.
+
+### P4-AUD-001 - Bounded factual audit and retained findings
+
+- **Finding ID:** `P4-AUD-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** project/review/phase-4-factual-audit.md; project/review/ecv-esg-review-ledger.md
+- **Claim/issue:** A cost-constrained pass must not turn focused inspection into an exhaustive factual certificate.
+- **ECV/ESG rule:** ECV 1, 2, 5, 6, 7, 8, 16, 19, 20
+- **Evidence inspected:** Canonical ECV/ESG; Phase 1 ledger inventory/matrix; Phase 2 findings; Phase 3 report; targeted canonical pages and named source sections in this phase's findings.
+- **Evidence class:** META, RES, PUB, REG, CAT, SCN
+- **Applicability:** Phase 4 starts at 6b25b581d1a5c8189d9589ec89d8aa844adebb54; source revisions unchanged.
+- **Finding:** Retained correctly scoped STATE-dependent Object/Virgin Object resolution, firmware -1 versus missing build distinction, SYS unknown boundary, configuration ownership sentinels, optional diagnostic support and acceptance-versus-readback separation. No complete raw-capture archive, APP execution or Device experiment became available.
+- **Required remediation:** Use the phase report and ledger for later work; retain Phase 3 genuine gaps and unexamined portions.
+- **Resolution:** Focused corrections and final-review handoff recorded; no inventory restart, source fingerprint rerun, prose polishing or mechanical ESG/link sweep.
+- **Reviewer/model:** GPT-6 Astra, Medium reasoning (Phase 4)
+- **Verification:** Claim-level inspection and post-edit reading used; remote committed blob verification provides change integrity, not protocol interoperability certification.
+- **Open evidence gap:** All Phase 3 residual gaps not explicitly closed remain; unchanged pages are not automatically approved by this pass.
+
 ## Finding record template
 
 New findings must preserve all fields below. A field may say “None” or “Not yet established,” but must not be omitted.
