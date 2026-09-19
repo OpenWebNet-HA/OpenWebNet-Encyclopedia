@@ -82,7 +82,7 @@ These rules establish that database membership and current reachability are dist
 
 `WHAT 65` initiates a scan with `*13*65*##`. The specification says the interface broadcasts over the ZigBee network and active routers plus awake end Devices can answer. The command returns `ACK` when sent. The documented flow then reports `DIMENSION 67` approximately 13 seconds later.
 
-The detailed Scan definition explicitly warns that the resulting count is the number of products stored in the interface product database, not simply the number of active routers seen during that scan. A Scan can therefore contribute newly active products to the stored database without turning `DIMENSION 67` into a count of only the current responders.
+The detailed Scan definition explicitly warns that the resulting count is the number of products stored in the interface product database, not simply the number of active routers seen during that scan. A Scan can therefore contribute newly active products to the stored database without turning `DIMENSION 67` into a count of only the current responders. The detailed operation returns `NACK` when the Scan command was not sent; it does not assign a Scan-specific BUSY result.
 
 ## `DIMENSION` reference
 
@@ -127,13 +127,13 @@ Product information can be requested either by a zero-based product-database ind
 
 Responses use `DIMENSION 66` and identify product Units/endpoints with an index and a numeric Device-ID/type value. The specification provides a value registry for scenario, Lighting, Automation, interface, and video product types.
 
-The source says this operation may take up to 30 seconds when a product is not reachable, for example when a battery-powered Device is sleeping. It defines a response value of `0` for an unreachable product and terminates the reported Unit sequence with `ACK`.
+The source says this operation may take up to 30 seconds when a product is not reachable, for example when a battery-powered Device is sleeping. It defines a response value of `0` for an unreachable product and terminates the reported Unit sequence with `ACK`. `NACK` is defined when the command cannot be sent over ZigBee or when the requested index is beyond the interface's known range. BUSY uses the interface-wide BUSY/NACK retry sequence documented under [ZigBee acknowledgement behavior](../../protocol/zigbee-interface.md#acknowledgement-behavior).
 
 The published parameter separator is `#INDEX`. The exploratory ZigBee branch recorded an alternate `*INDEX` form as an implementation compatibility claim, but that form is not established by this specification and is not part of the canonical grammar.
 
 ### `DIMENSION 67` - Product count
 
-`*#13**67##` requests the number of products in the interface product database. The response is `*#13**67*VALUE##` followed by `ACK`.
+`*#13**67##` requests the number of products in the interface product database. The response is `*#13**67*VALUE##` followed by `ACK`; `NACK` is defined when the command is not sent.
 
 The source uses "products discovered" in parts of the detailed description while explicitly stating that the value comes from the interface product database. The database interpretation is therefore retained as the stronger local qualification.
 
@@ -168,7 +168,7 @@ The detailed use case says this operation asks the interface database for the pr
 
 The same use-case paragraph also repeats a statement that the "product information command" could take 30 seconds when a product is unreachable. That warning conflicts with the immediately following statement that this indexed lookup does not contact the product. The 30-second reachability warning is therefore retained for `DIMENSION 66`, where it is independently defined, and is not promoted as established `DIMENSION 73` timing.
 
-The source labels `DIMENSION 73` "Device MAC address by index," but the returned `WHERE` is the ZigBee OpenWebNet product identifier form derived from the product address model, not the eight-value interface IEEE address returned by `DIMENSION 12`.
+The source labels `DIMENSION 73` "Device MAC address by index," but the returned `WHERE` is the ZigBee OpenWebNet product identifier form derived from the product address model, not the eight-value interface IEEE address returned by `DIMENSION 12`. A successful indexed lookup ends with `ACK`; `NACK` is defined when the index is unknown.
 
 ## Discovery relationship and source conflicts
 
