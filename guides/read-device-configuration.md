@@ -257,7 +257,7 @@ function read_device_configuration(selector, diagnostic_who):
     }
 ```
 
-Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for an `slot` absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
+Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for a `slot` absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
 
 ## SQL examples for catalogue and cross-database resolution
 

@@ -1372,6 +1372,78 @@ This cost-optimized pass starts at `6b25b581d1a5c8189d9589ec89d8aa844adebb54` an
 - **Verification:** Changed-file review, deterministic link/fragment checks, ESG checker, and targeted architecture searches completed after remediation.
 - **Open evidence gap:** All Phase 3/4 gaps not explicitly closed remain genuine; unchanged pages are not newly factually certified.
 
+### P6-ESG-001 - Bounded semantic and editorial review
+
+- **Finding ID:** `P6-ESG-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** All 138 human-facing encyclopedia pages
+- **Claim/issue:** Phase 6 must assess semantic presentation under the ESG without weakening Phase 4 evidence, uncertainty, or applicability decisions.
+- **ECV/ESG rule:** ECV 1 through 4, 10, 12 through 17, 19; ESG 1 through 15
+- **Evidence inspected:** Canonical ESG; current ledger; Phase 4 factual audit and final-review queue; Phase 5 canonical ownership map; every human-facing page through deterministic checks and targeted terminology, heading, example, link, presentation, and editorial searches.
+- **Evidence class:** META, RES
+- **Applicability:** Human-facing encyclopedia at Phase 5 commit `bd8aee0e17d05fde6770ed38891d229df567b3cb`.
+- **Finding:** The established evidence vocabulary and Phase 4 qualifications remain visible. No editorial issue required a new protocol interpretation, and no new issue met the `ASTRA-FINAL-REVIEW` threshold.
+- **Required remediation:** Correct only clear semantic or editorial defects and preserve all factual guardrails.
+- **Resolution:** Applied the bounded corrections recorded below; no factual value, applicability statement, evidence status, or canonical protocol conclusion changed.
+- **Reviewer/model:** GPT-5.6 Sol, Medium reasoning (Phase 6)
+- **Verification:** Changed passages compared with Phase 4 and Phase 5; deterministic checker and full Markdown link/structure validation rerun after edits.
+- **Open evidence gap:** All Phase 3 and Phase 4 evidence gaps remain unchanged; this editorial pass supplies no new protocol evidence.
+
+### P6-ESG-002 - Canonical `slot` notation and grammar
+
+- **Finding ID:** `P6-ESG-002`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** device-model/README.md; device-model/configuration.md; device-model/modules.md; device-model/physical-devices.md; diagnostics/dim30-modules.md; guides/read-device-configuration.md; protocol/dimensions.md; reverse-engineering/methodology.md
+- **Claim/issue:** Several passages used the literal implementation position as plain “slot” or retained the ungrammatical article “an” after Phase 2 replaced the obsolete term.
+- **ECV/ESG rule:** ESG 2, 5
+- **Evidence inspected:** Canonical Module/`slot` definitions; affected passages; repository searches for `an \`slot\`` and plain `slot` in the corrected canonical contexts.
+- **Evidence class:** META
+- **Applicability:** Editorial notation for numeric protocol/database `slot`; scenario-memory uses of ordinary “slot” are outside this finding.
+- **Finding:** The affected passages clearly refer to the numeric `SLOT`, `first_slot`, or catalogue placement concept and therefore require code formatting. Ten article mismatches were objective grammar defects.
+- **Required remediation:** Use `slot` for the literal numeric/index concept, retain Module for the logical entity, and use the article “a”.
+- **Resolution:** Corrected the grammar and the exposed canonical labels/descriptions without changing Module/Object relationships or runtime claims.
+- **Reviewer/model:** GPT-5.6 Sol, Medium reasoning (Phase 6)
+- **Verification:** Targeted search returns no `an \`slot\`` occurrences; deterministic terminology checks pass.
+- **Open evidence gap:** None for terminology; the underlying protocol relationships retain their existing evidence status.
+
+### P6-ESG-003 - Punctuation-normalization regressions
+
+- **Finding ID:** `P6-ESG-003`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** device-model/configuration.md; reverse-engineering/database-relationship-reconstruction.md; guides/troubleshoot-diagnostics.md
+- **Claim/issue:** Three former parenthetical breaks had become joined compounds: “and-where available-the”, “relationship-not”, and “falsifiable-for example”.
+- **ECV/ESG rule:** ESG 1; ESG editorial mechanics
+- **Evidence inspected:** Exact affected sentences and repository search for the same joined-parenthetical patterns.
+- **Evidence class:** META
+- **Applicability:** Prose mechanics only.
+- **Finding:** Each construction was grammatically malformed and impeded the intended qualification.
+- **Required remediation:** Restore normal sentence or comma structure without changing the qualified claim.
+- **Resolution:** Recast the three sentences with commas or a sentence boundary; their evidence and uncertainty content is unchanged.
+- **Reviewer/model:** GPT-5.6 Sol, Medium reasoning (Phase 6)
+- **Verification:** Targeted search returns no remaining instances of the identified joined-parenthetical forms.
+- **Open evidence gap:** None.
+
+### P6-ESG-004 - Review candidates retained without semantic churn
+
+- **Finding ID:** `P6-ESG-004`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** project/review/phase-4-factual-audit.md; guides/read-device-configuration.md; guides/retrieve-actuator-group-memberships.md; guides/retrieve-configured-cen-buttons.md
+- **Claim/issue:** The deterministic checker reports protocol-literal candidates in a historical audit report and repeated operational passages in Practical Guides.
+- **ECV/ESG rule:** ECV 3; ESG 5, 13
+- **Evidence inspected:** All 34 post-edit checker candidates and the Phase 4/5 records governing their status.
+- **Evidence class:** META, RES
+- **Applicability:** Historical review report and independently executable Practical Guides.
+- **Finding:** Twenty-seven candidates occur only in the Phase 4 report and preserve its review record; seven are permitted guide repetitions needed for executable workflows. None is a human-reference regression or competing canonical definition.
+- **Required remediation:** Retain the report history and operational guide context; continue linking guides to canonical owners.
+- **Resolution:** No prose removed or weakened. Existing canonical links and Phase 4 qualifications remain in place.
+- **Reviewer/model:** GPT-5.6 Sol, Medium reasoning (Phase 6)
+- **Verification:** Final checker reports 34 review candidates with the same 27/7 disposition and zero objective failures.
+- **Open evidence gap:** Guide workflows still lack the end-to-end experimental validation recorded in Phase 3; repetition does not close that gap.
+
 ## Finding record template
 
 New findings must preserve all fields below. A field may say “None” or “Not yet established,” but must not be omitted.

@@ -270,6 +270,6 @@ Return a troubleshooting record containing:
 - remaining ambiguity;
 - the safest next read-only action.
 
-A useful conclusion is bounded and falsifiable-for example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
+A useful conclusion is bounded and falsifiable. For example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
 
 See [Diagnostic Error Handling](../diagnostics/device-interview.md#errors-and-abnormal-termination) and [Address Discovery](../diagnostics/address-discovery.md).

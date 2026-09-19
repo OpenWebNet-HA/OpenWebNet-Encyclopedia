@@ -64,7 +64,7 @@ The same integer can legitimately occur in unrelated namespaces. A value describ
 - `EN_VIRGIN_OBJECT.id_virgin_key_object`, an internal row key;
 - `EN_VIRGIN_OBJECT.virgin_key_object`, an external Virgin Object number;
 - ScenarioDevices `ObjectId`, local to the scenario engine;
-- an `slot` carried by a diagnostic frame;
+- a `slot` carried by a diagnostic frame;
 - an OpenWebNet `WHAT`, `WHERE`, or `DIMENSION` value.
 
 Build a namespace ledger before testing equality:

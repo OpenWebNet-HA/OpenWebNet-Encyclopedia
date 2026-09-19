@@ -211,7 +211,7 @@ Independent SQLite files do not share primary-key namespaces. A cross-database r
 - a functional `WHO` extracted from a literal frame;
 - a revision-specific data pattern.
 
-For example, all 11 nonzero `OPEN.db.EN_ADDRESS_RULE.object_device_family` values resolve to `MHCatalogue.db.EN_OBJECT_ITEM_FAMILY.id_family`, and the rule descriptions agree with family membership. This is a structurally and semantically corroborated cross-model relationship-not a declared foreign key.
+For example, all 11 nonzero `OPEN.db.EN_ADDRESS_RULE.object_device_family` values resolve to `MHCatalogue.db.EN_OBJECT_ITEM_FAMILY.id_family`, and the rule descriptions agree with family membership. This is a structurally and semantically corroborated cross-model relationship, not a declared foreign key.
 
 See [Cross-Database Correlation](cross-database-correlation.md) for the staged resolution rules.
 
