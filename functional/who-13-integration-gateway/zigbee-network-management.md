@@ -29,7 +29,7 @@ Gateway-directed commands use an empty `WHERE`, for example `*13*30*##` for Crea
 
 ### Boot mode and reset
 
-`WHAT 12` requests boot mode. The specification describes an OpenWebNet `ACK` or `NACK` followed, on success, by an ASCII boot-mode acknowledgement and states that subsequent communication no longer uses ordinary OpenWebNet frames. The OpenWebNet encyclopedia therefore stops at that handoff; the subsequent bootloader protocol is not established as OpenWebNet.
+`WHAT 12` requests boot mode with `*13*12*##`. The specification describes an OpenWebNet `ACK` or `NACK` followed, on success, by the ASCII boot-mode acknowledgement `STX 03600796 ETX`, and states that subsequent communication no longer uses ordinary OpenWebNet frames. The OpenWebNet encyclopedia therefore stops at that handoff; the subsequent bootloader protocol referenced by the source is not established as OpenWebNet.
 
 `WHAT 22` resets the interface. The source says the interface returns `ACK` before reset when the request is accepted.
 
@@ -37,11 +37,11 @@ Gateway-directed commands use an empty `WHERE`, for example `*13*30*##` for Crea
 
 `WHAT 30` creates a ZigBee network. The source use case states that a successful Create leaves the network created and open.
 
-`WHAT 31` closes an existing network, while `WHAT 32` opens it. The specification also defines addressed, server-originated `WHAT 31` and `WHAT 32` frames as product indications that a ZigBee product closed or opened the network.
+`WHAT 31` closes an existing network, while `WHAT 32` opens it. The specification also defines addressed, server-originated `WHAT 31` and `WHAT 32` frames as product indications that a ZigBee product closed or opened the network. For interface-directed Open, the detailed table additionally defines `NACK` when a binding procedure is in progress.
 
 `WHAT 33` requests that the interface join an existing network. The detailed `WHAT` definition also assigns addressed, server-originated `WHAT 33` frames to product join indications.
 
-`WHAT 34` requests that the interface leave its network. The detailed definition additionally allows `*13*34*WHERE#9##` to request that an addressed product leave, and uses the same addressed form as a product-originated leave indication.
+`WHAT 34` requests that the interface leave its network. The detailed definition additionally allows `*13*34*WHERE#9##` to request that an addressed product leave, and uses the same addressed form as a product-originated leave indication. For the client-to-product form, the table explicitly defines `ACK` when the command has been sent; it does not separately list a client-to-product `NACK` case.
 
 ### Source inconsistencies
 
@@ -58,9 +58,9 @@ The source contains two material inconsistencies that must not be silently norma
 
 ## Supervisor mode
 
-`WHAT 66` sends the supervisor command. The specification describes this as a broadcast to active products that enables reporting of subsequent state changes to the OpenWebNet interface. A newly joined product requires the supervisor command to be sent again before that product participates in this mode.
+`WHAT 66` sends the supervisor command. The specification describes this as a broadcast to active products that enables reporting of subsequent state changes to the OpenWebNet interface. The detailed definition also lists addressed server-originated `*13*66*WHERE#9##` traffic "from ZigBee product"; the source does not assign that indication a stronger meaning than the table provides. A newly joined product requires the supervisor command to be sent again before that product participates in this mode.
 
-`WHAT 67` is the complementary Supervisor Remove operation. The source calls it the default mode and says it prevents receipt of product state changes enabled through Supervisor.
+`WHAT 67` is the complementary Supervisor Remove operation. The source calls it the default mode and says it prevents receipt of product state changes enabled through Supervisor. Its detailed definition likewise lists addressed server-originated `*13*67*WHERE#9##` traffic from a product without defining additional payload semantics.
 
 The source recommends only one OpenWebNet interface with supervisor mode enabled in a ZigBee network for normal operation because multiple supervisors reduce radio-network performance. This is an interface-specific ZigBee constraint, not a generic OpenWebNet session rule.
 
@@ -112,11 +112,11 @@ This property is protocol knowledge, but real installation identifiers are not. 
 
 `DIMENSION 16` reports three firmware components: version, release, and build. `DIMENSION 17` reports major, minor, and release hardware-version components.
 
-Both can address the interface with an empty `WHERE` or a ZigBee product with the product-level Unit form described by the source. Availability for one target does not establish support by every product.
+Both can address the interface with an empty `WHERE` or a ZigBee product with product-level Unit `00`. The exact request forms are `*#13**16##` or `*#13*PRODUCT00#9*16##` for firmware and `*#13**17##` or `*#13*PRODUCT00#9*17##` for hardware. Firmware responses append `VERSION*RELEASE*BUILD`; hardware responses append `MAJOR*MINOR*RELEASE`. Both operations end successfully with `ACK`, define `NACK` when the command is not sent, and use the interface-wide BUSY/NACK sequence. Availability for one target does not establish support by every product.
 
 ### `DIMENSION 26` - Implemented `WHO` values
 
-`DIMENSION 26` reports the functional `WHO` values implemented by the selected target. The returned list is capability evidence for that target; it does not establish that every operation of every reported namespace is supported.
+`DIMENSION 26` reports the functional `WHO` values implemented by the selected target. The exact requests are `*#13**26##` for the interface or `*#13*PRODUCT00#9*26##` for an addressed product; the response appends one or more `WHO` values before the terminating `ACK`. The source also defines `NACK` when the command is not sent and the interface-wide BUSY/NACK sequence. The returned list is capability evidence for that target; it does not establish that every operation of every reported namespace is supported.
 
 ### `DIMENSION 66` - Product information
 
@@ -125,7 +125,42 @@ Product information can be requested either by a zero-based product-database ind
 - by index: `*#13**66#INDEX##`;
 - by product: `*#13*WHERE#9*66##`, using product-level Unit `00`.
 
-Responses use `DIMENSION 66` and identify product Units/endpoints with an index and a numeric Device-ID/type value. The specification provides a value registry for scenario, Lighting, Automation, interface, and video product types.
+Responses use `DIMENSION 66` and identify product Units/endpoints with an index and a numeric Device-ID/type value. The specification provides this Device-ID registry:
+
+| Device ID | Source label | Source category |
+| ---: | --- | --- |
+| `2` | `scenario_control` | Scenario |
+| `256` | `on_off_switch` | Lighting |
+| `257` | `dimmer_control` | Lighting |
+| `258` | `dimmer_switch` | Lighting |
+| `259` | `switch_motion_detector` | Lighting |
+| `260` | `daylight_sensor` | Lighting |
+| `261` | `scs_on_off_switch` | Lighting |
+| `262` | `scs_dimmer_control` | Lighting |
+| `263` | `scs_dimmer_switch` | Lighting |
+| `264` | `waterproof_1_gang_switch` | Lighting |
+| `265` | `automatic_dimmer_switch` | Lighting |
+| `266` | `toggle_control` | Lighting |
+| `267` | `scs_toggle_control` | Lighting |
+| `268` | `motion_detector` | Lighting |
+| `269` | `switch_motion_detector_II` | Lighting |
+| `270` | `motion_detector_II` | Lighting |
+| `271` | `auxilliary_toggle_control` | Lighting |
+| `272` | `scs_auxilliary_toggle_control` | Lighting |
+| `273` | `multifonction_scenario_control` | Lighting |
+| `274` | `on_off_control` | Lighting |
+| `275` | `auxiliary_on_off_1_gang_switch` | Lighting |
+| `512` | `shutter_control` | Automation |
+| `513` | `shutter_switch` | Automation |
+| `514` | `scs_shutter_control` | Automation |
+| `515` | `scs_shutter_switch` | Automation |
+| `1024` | `scs_1_System_1-4_Gateway` | Interface |
+| `1025` | `scs_2_System_1-4_Gateway` | Interface |
+| `1029` | `network_repeater` | Interface |
+| `1030` | `OpenWebNet interface` | Interface |
+| `1536` | `video_switcher` | Video |
+
+These labels are preserved as source vocabulary. Numeric equality with catalogue or MyHOME Suite entities is not established by this table.
 
 The source says this operation may take up to 30 seconds when a product is not reachable, for example when a battery-powered Device is sleeping. It defines a response value of `0` for an unreachable product and terminates the reported Unit sequence with `ACK`. `NACK` is defined when the command cannot be sent over ZigBee or when the requested index is beyond the interface's known range. BUSY uses the interface-wide BUSY/NACK retry sequence documented under [ZigBee acknowledgement behavior](../../protocol/zigbee-interface.md#acknowledgement-behavior).
 
@@ -139,11 +174,11 @@ The source uses "products discovered" in parts of the detailed description while
 
 ### `DIMENSION 71` - ZigBee channel
 
-`*#13**71##` requests the ZigBee network channel. The published range is `11..26`. This page records the OpenWebNet-visible value only; ZigBee RF channel-selection mechanics are outside scope.
+`*#13**71##` requests the ZigBee network channel. The published range is `11..26`; the source defines `NACK` when the interface is not inside a ZigBee network. This page records the OpenWebNet-visible value only; ZigBee RF channel-selection mechanics are outside scope.
 
 ### `DIMENSION 72` - Battery information
 
-Battery information is a server-originated frame of the form `*#13*WHERE#9*72*VALUE##`. The source defines:
+Battery information is a server-originated frame of the form `*#13*WHERE#9*72*VALUE##`. The source says this frame is visible when a sleepy end Device sends activity after its network/learn buttons are used; receiving it from the source-named applicative button requires the prior source-named "PnL" procedure with the interface. Those physical-button details describe event availability, not an additional OpenWebNet command. The source defines:
 
 | `VALUE` | Source label |
 | ---: | --- |
