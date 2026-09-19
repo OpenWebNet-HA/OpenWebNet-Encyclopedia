@@ -1,10 +1,10 @@
 # ZigBee Network Management
 
-The Legrand ZigBee OpenWebNet specification version 4.0 defines an interface-specific `WHO 13` management surface for the ZigBee OpenWebNet interface. It manages the interface's ZigBee-network role, exposes product-database operations, and reports selected interface and radio-Device properties.
+The Legrand ZigBee OpenWebNet specification version 4.0 defines an interface-specific `WHO 13` management surface for the ZigBee OpenWebNet interface. It manages the interface's ZigBee-network role, exposes product-database operations, and reports selected interface and radio Device properties.
 
 This page documents only behavior represented through OpenWebNet. ZigBee radio commissioning, routing, security, and other radio-internal mechanisms are outside the encyclopedia boundary except where an OpenWebNet field exposes their result.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **published protocol** evidence for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
+The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **specification evidence** for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
 
 ## `WHAT` reference
 
