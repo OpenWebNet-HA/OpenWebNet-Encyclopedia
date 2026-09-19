@@ -35,7 +35,7 @@ Canonical runtime semantics remain organized under the relevant functional names
 | Binding | Section 13 defines OpenWebNet-visible binding operations under `WHO 25`. See [ZigBee Binding](../functional/who-25-transversal/zigbee-binding.md); the SCS virtual-button grammar is not a complete account of this variant. |
 | Firmware boundary | Version readout and boot-mode handoff are OpenWebNet-visible; a handoff is not evidence that the subsequent upload protocol is OpenWebNet. |
 
-Detailed ZigBee `WHO 13` management and `WHO 25` binding semantics are integrated under their canonical functional namespaces. This page remains the canonical owner of cross-cutting transport, addressing, acknowledgement behavior, and applicability limits. Other ZigBee functional namespaces still require operation-level review before they can be treated as exhaustively documented.
+Detailed ZigBee semantics for `WHO 1`, `2`, `4`, `13`, `18`, and `25` are now integrated under their canonical functional namespaces. This page remains the canonical owner of cross-cutting transport, addressing, acknowledgement behavior, and applicability limits. The broader `WHO 1000` discovery reconciliation and final source-to-documentation completeness matrix remain separate review tasks.
 
 ## Preserved source conflicts
 
@@ -43,5 +43,6 @@ Detailed ZigBee `WHO 13` management and `WHO 25` binding semantics are integrate
 | --- | --- | --- |
 | Automation UP value | PDF page 11 labels a `WHAT 2` example UP; page 38 assigns UP to `1` and DOWN to `2` | Preserve the conflict; do not use the example to redefine Automation direction. Applicable interface evidence is required. |
 | Energy reset value | PDF page 53 summary gives `0`; the detailed reset frame uses `75` | Unresolved for this variant. SCS `WHAT 75` is not independent confirmation of the ZigBee operation. |
+| Energy Frequency/Energy mapping | PDF page 53 Frequency use case uses `DIMENSION 51`; pages 54-55 define `51` as Energy and `112` as Frequency | Preserve the conflict. The detailed table and definitions do not erase the contradictory use case. |
 
-No private address from the source examples is reproduced here. Relevant inspected portions are sections 2.3, 3, 5.3 and the Phase 3 register for sections 11 through 13. Unexamined flows and Device behavior remain explicitly outside this assessment.
+No private address from the source examples is reproduced here. Functional sections 8 through 13 have now received operation-level reconciliation for `WHO 1`, `2`, `4`, `13`, `18`, and `25`; their detailed evidence decisions are recorded in the [ZigBee Functional Reconciliation](../project/review/zigbee-functional-reconciliation.md) and the earlier [ZigBee Reconciliation Review](../project/review/zigbee-reconciliation.md). `WHO 1000` discovery and the final source-to-documentation completeness matrix remain outside this assessment.
