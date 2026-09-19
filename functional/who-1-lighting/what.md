@@ -51,7 +51,7 @@ The published Lighting specification defines `1000#INNER_WHAT` as a command-tran
 *1*1000#INNER_WHAT*WHERE##
 ~~~
 
-The source restricts the command-session use to dimmer targets and shows the same wrapper on the event session. `INNER_WHAT` is a value from the Lighting `WHAT` table. Preserve both the wrapper and inner operation; do not normalize it silently to `INNER_WHAT` because the wrapper itself is observable protocol information.
+Section 3.1.21 says the command is valid for dimmers too and shows the same wrapper on the event session. This does not establish a dimmer-only restriction or support on every Lighting target. `INNER_WHAT` is a value from the Lighting `WHAT` table. Preserve both the wrapper and inner operation; do not normalize it silently to `INNER_WHAT` because the wrapper itself is observable protocol information.
 
 ## ScenarioDevices coverage
 
