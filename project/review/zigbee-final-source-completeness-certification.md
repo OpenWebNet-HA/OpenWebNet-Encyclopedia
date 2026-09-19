@@ -238,7 +238,7 @@ The audited canonical pages satisfy these isolation requirements:
 
 The ZigBee-facing documentation on `zigbee-reconciliation` was checked for source example identifiers and installation-specific data. Canonical examples use symbolic forms such as `PRODUCT00#9`, `WHERE`, `INDEX`, and `NEIGHBOR`. The source's real-looking MAC-derived decimal identifiers are not reproduced in the canonical ZigBee pages or in this certification matrix.
 
-The audit found no real MAC address, MAC-derived product identifier, private IP address, installation-specific identifier, serial number, or installation topology in the ZigBee documentation added or modified on this branch. Protocol fields capable of carrying those identifiers remain documented symbolically.
+The audit found no real MAC address, MAC-derived product identifier, installation-specific private IP address, installation-specific identifier, serial number, or installation topology in the ZigBee canonical material. The modified shared `WHO 13` dimension reference contains the generic classic-profile example `192.168.10.1`; it is a synthetic RFC1918 example outside the ZigBee-specific surface, not installation data. No ZigBee canonical example contains an IP address. Protocol fields capable of carrying identifiers remain documented symbolically.
 
 **Privacy result: PASS.**
 
@@ -279,11 +279,13 @@ No remediation required changing the Step 1 functional model, the Step 2 discove
 
 ## Validation
 
-The canonical ESG checker is stored at `project/review/checks/check_esg.py`. This environment does not provide a network-capable repository checkout, so the checker cannot be executed literally against a local Git worktree. Its relevant objective checks were reproduced against every ZigBee-facing file added or modified on `zigbee-reconciliation`, using the repository tree for relative-link targets and the current branch contents for headings and anchors.
+The canonical ESG checker is stored at `project/review/checks/check_esg.py`. This environment does not provide a network-capable repository checkout, so the checker could not be executed literally against a local Git worktree. Its relevant objective checks were reproduced against all 22 ZigBee-facing files that differ from `main`, using the current branch tree for link targets and current file contents for headings and anchors.
 
-The final validation checks one descriptive H1, heading hierarchy, em dashes, trailing whitespace, protocol-literal formatting candidates, human-readable link labels, relative links, anchors, duplicated canonical definitions introduced by this work, stale ZigBee incompleteness statements, source-bounded wording, variant isolation, and privacy-sensitive example tokens.
+The reproduced checks passed for one descriptive H1, heading hierarchy, prohibited em dashes, trailing whitespace, relative-link targets, referenced anchors, and the human-readable-link-label heuristic. Protocol-literal candidates produced no substantive issue. Range-review candidates in the support review documents were source page locators rather than protocol value ranges. The epistemic-drift probes produced only protective statements such as observations not proving universal behavior; no promotion or universality defect was found. Multi-frame code fences introduced no unlabeled transcript issue. The reviewed ZigBee source fingerprint also matches `sources/manifest.yaml` exactly: 929707 bytes and SHA-256 `9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776`.
 
-**Mechanical/style/link/reference result: pending final post-write verification.**
+The final pass also found no broken changed-file links or anchors, no duplicated ZigBee canonical definition introduced by reconciliation, no remaining statement that the final ZigBee completeness matrix is outstanding, and no source-bounded ZigBee claim broadened into universal SCS, Suite, product, gateway, or firmware behavior.
+
+**Mechanical/style/link/reference result: PASS (checker-equivalent reproduction; literal local-checker execution unavailable in this environment).**
 
 ## Certification criteria
 
@@ -294,7 +296,9 @@ The final validation checks one descriptive H1, heading hierarchy, em dashes, tr
 | 3. Epistemic integrity | **PASS** | Contradictions, Unknowns, evidence gaps, provenance, and applicability limits remain explicit |
 | 4. Variant integrity | **PASS** | ZigBee semantics are isolated from SCS and Suite namespaces |
 | 5. Scope integrity | **PASS** | ZigBee-native internals outside OpenWebNet are excluded |
-| 6. Privacy | **PASS** | Canonical ZigBee documentation uses symbolic/synthetic identifiers only |
-| 7. Navigation/style | **PENDING FINAL VALIDATION** | Final checker-equivalent pass follows the last repository writes |
+| 6. Privacy | **PASS** | ZigBee canonical examples contain no real installation identifiers |
+| 7. Navigation/style | **PASS** | Checker-equivalent ESG/link/anchor/reference validation passed on all 22 changed ZigBee-facing files |
 
-The source-bounded completeness statement is issued only after criterion 7 is changed to PASS following final validation.
+**The OpenWebNet-visible surface of ZigBee OpenWebNet version 4.0 is source-bounded complete in the encyclopedia.**
+
+This certification is deliberately narrower than complete ZigBee protocol documentation. It is not proof of interoperability with every gateway or Device, support across all Firmware revisions, or the absence of undocumented vendor extensions.
