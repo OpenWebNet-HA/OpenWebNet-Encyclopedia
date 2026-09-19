@@ -48,7 +48,7 @@ The distinction is important. A system row establishes that MyHOME_Suite knows t
 
 ### `WHO 1` / diagnostic `WHO 1001`
 
-The `Light and Automation system` is associated with 65 `EN_OPEN` records. The set defines the common managed-device workflow used by Lighting/Automation devices: identity (`DIMENSION 1`, `2`, `3`, `6`, `13`), physical configurators (`DIMENSION 4` and `5`), diagnostic masks (`7`, `8`), Module/Object discovery (`30`, `32`), configuration parameters (`35`, `38`, `39`, `310`), configuration lifecycle, discovery by address or Device ID, and scenario-programming operations.
+The `Light and Automation system` is associated with 65 `EN_OPEN` records. The set registers the common managed-device workflow available to MyHOME_Suite for Lighting/Automation: identity (`DIMENSION 1`, `2`, `3`, `6`, `13`), physical configurators (`DIMENSION 4` and `5`), diagnostic masks (`7`, `8`), Module/Object discovery (`30`, `32`), configuration parameters (`35`, `38`, `39`, `310`), configuration lifecycle, discovery by address or Device ID, and scenario-programming operations. This association establishes an implementation capability surface, not support for every operation on every installed Device.
 
 `OPEN.db` therefore provides substantial evidence about the MyHOME_Suite management plane for Lighting and Automation, but it is not the source of the ordinary `WHO 1` and `WHO 2` functional command tables.
 
@@ -94,7 +94,7 @@ This shows that the MyHOME_Suite `WHO 13` model is not limited to IP-gateway clo
 
 ### `WHO 18` / diagnostic `WHO 1018`
 
-Energy Management is marked `managed = 1`, uses diagnostic `WHO 1018`, and is associated with the same 65-record managed-device operation set as Lighting/Automation and Access Control. This means MyHOME_Suite supports the common Device → Module → Object → Configuration management model for this family in addition to the functional energy `DIMENSION` operations.
+Energy Management is marked `managed = 1`, uses diagnostic `WHO 1018`, and is associated with the same 65-record managed-device operation set as Lighting/Automation and Access Control. This associates the family with MyHOME_Suite's common Device → Module → Object → Configuration management capability in addition to the functional energy `DIMENSION` operations. It does not establish that every installed Energy Management Device supports every registered operation.
 
 The database defines two Energy Management address classes:
 
@@ -107,7 +107,7 @@ The functional `WHO 18` reference should preserve the distinction between these 
 
 ### `WHO 23` / diagnostic `WHO 1023`
 
-Access Control is marked `managed = 1`, uses diagnostic `WHO 1023`, and is associated with the same 65-record managed-device operation set. The database therefore establishes that Access Control devices participate in the same identity, discovery, Module/Object, configuration, error, and scenario-programming infrastructure where applicable.
+Access Control is marked `managed = 1`, uses diagnostic `WHO 1023`, and is associated with the same 65-record managed-device operation set. The database therefore associates Access Control with the same identity, discovery, Module/Object, configuration, error, and scenario-programming capability surface. It does not establish support for every registered operation on every installed Access Control Device.
 
 Two Access Control address classes are explicit:
 

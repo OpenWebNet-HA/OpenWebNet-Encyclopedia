@@ -84,7 +84,7 @@ Read and write forms should therefore be distinguished by frame direction and op
 
 `DIMENSION 12` returns the complete probe state, combining the zone's target/status information with its operating context. It is the appropriate operation when a client needs more than the scalar measured temperature returned by `DIMENSION 0`.
 
-The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges from `0020` to `0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
+The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges over `0020..0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
 
 ## `DIMENSION 13` - local set offset
 
@@ -106,7 +106,7 @@ These are codes, not signed decimal temperatures.
 
 `DIMENSION 14` is readable and writable. A zone setpoint written through the central unit uses `*#4*#WHERE*#14*T*M##`.
 
-For this operation, `T` is encoded as four digits from `0050` to `0400` (5.0..40.0 °C) in 0.5 °C steps. `M` identifies the operating context: `1` heating, `2` conditioning, `3` generic.
+For this operation, `T` is encoded as four digits in `0050..0400` (5.0..40.0 °C) in 0.5 °C steps. `M` identifies the operating context: `1` heating, `2` conditioning, `3` generic.
 
 The MyHOME_Suite functional parameter definitions likewise represent setpoint ranges and steps for Temperature Control operations; the exact parameter definition attached to the command remains authoritative for the implementation form being encoded.
 

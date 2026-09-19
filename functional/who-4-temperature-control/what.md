@@ -80,7 +80,7 @@ Zone setup is performed through the central unit using `WHERE` forms `#1..#99`.
 | Thermal protection | `*4*202*#WHERE##` |
 | Generic protection | `*4*302*#WHERE##` |
 
-For the manual setpoint operation, `T` is a four-digit temperature value from `0050` to `0400` in 0.5 °C steps. `M` identifies the operating context: `1` heating, `2` conditioning, `3` generic.
+For the manual setpoint operation, `T` is a four-digit temperature value in `0050..0400` with 0.5 °C steps. `M` identifies the operating context: `1` heating, `2` conditioning, `3` generic.
 
 A successful command-session submission is acknowledged with `ACK`; failure to submit the command to the bus is reported with `NACK`.
 

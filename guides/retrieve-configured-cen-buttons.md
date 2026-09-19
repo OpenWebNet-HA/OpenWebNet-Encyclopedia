@@ -31,7 +31,7 @@ A Device ID is displayed as eight hexadecimal characters. Encode the frame field
 Collect the initial stream in arrival order. The frames needed by this guide are:
 
 - `DIMENSION 1` for catalogue identity;
-- `DIMENSION 2`, `3`, and `6` where reported, for firmware resolution;
+- `DIMENSION 2`, `3`, and `6` where reported, for Firmware resolution;
 - repeated `DIMENSION 30` records for the Module/Object layout;
 - `DIMENSION 13` for the installed Device ID;
 - applicable `DIMENSION 31` errors;
@@ -41,7 +41,7 @@ Use the applicable 15-second first-response window for ID/address selection or t
 
 ## 2. Resolve the Device, Modules, and Objects
 
-Resolve `DIMENSION 1` through the catalogue and use `EN_DEVICE.name` as the preferred Physical Device description. Retain candidate brands, collections, SKUs, and firmware when identity is not unique.
+Resolve `DIMENSION 1` through the catalogue and use `EN_DEVICE.name` as the preferred Physical Device description. Retain candidate brands, collections, SKUs, and Firmware when identity is not unique.
 
 Parse every Module record:
 
@@ -62,7 +62,7 @@ This is a Device-wide question. Do not stop after the first scenario-related Mod
 For every configured Module, load both applicable configuration scopes:
 
 - Object-scoped `EN_CONF` rows using its `id_key_object` and `id_firmware = 0`;
-- firmware-scoped rows using `id_key_object = 0` and the resolved firmware.
+- Firmware-scoped rows using `id_key_object = 0` and the resolved Firmware.
 
 The zero is a “not applicable” sentinel on the unused ownership axis.
 
@@ -84,7 +84,7 @@ FROM EN_KEY_OBJECT
 WHERE key_object = :reported_keyo;
 ```
 
-For that resolved Object and firmware, inspect the actual property definitions rather than assuming the indices used by one Object variant:
+For that resolved Object and Firmware, inspect the actual property definitions rather than assuming the indices used by one Object variant:
 
 ```sql
 WITH applicable_conf AS (
@@ -121,7 +121,7 @@ ORDER BY idx, id_conf;
 
 The text predicates produce candidates for semantic review; they do not themselves prove that a property is part of a CEN address. Retain only definitions compatible with the resolved Object.
 
-Retrieve the base domains and the filters for the exact Object/firmware association:
+Retrieve the base domains and the filters for the exact Object/Firmware association:
 
 ```sql
 SELECT
@@ -176,7 +176,7 @@ After the complete Module/Object layout is known, send once:
 
 `*#[WHO]*0*38#0##`
 
-Proceed only where this operation's effects are established for the target family and firmware. `OPEN.db` uses it for `DiagKO` retrieval but labels it reset/select; the corpus does not establish universal non-destructive behavior. Otherwise classify button read-back as unresolved and stop before this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
+Proceed only where this operation's effects are established for the target family and Firmware. `OPEN.db` uses it for `DiagKO` retrieval but labels it reset/select; the corpus does not establish universal non-destructive behavior. Otherwise classify button read-back as unresolved and stop before this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
 
 Collect the repeated responses during the MyHOME_Suite eight-second response window:
 
@@ -230,7 +230,7 @@ function retrieve_cen_buttons(selector):
            including partial and ambiguous entries
 ```
 
-Do not decide that a Module is CEN-capable merely because it reports indices `0` through `3`. Those indices recur on unrelated Objects; the resolved Object and its property definitions establish the semantics.
+Do not decide that a Module is CEN-capable merely because it reports indices `0..3`. Those indices recur on unrelated Objects; the resolved Object and its property definitions establish the semantics.
 
 ## 5. Decode a two-button Scheduled scenario PLUS Object
 
@@ -272,7 +272,7 @@ The `LOW` and `HIG` names and catalogue ranges strongly indicate byte components
 
 Otherwise, show both raw components and mark the combined number as an evidence-backed inference. Do not silently promote the formula to a universal protocol rule.
 
-CEN virtual addresses occupy the range `0` through `2047`; the effective Object, filter, and rule constraints still apply.
+CEN virtual addresses occupy the range `0..2047`; the effective Object, filter, and rule constraints still apply.
 
 ## 7. Handle Object variants and missing evidence
 
@@ -288,7 +288,7 @@ For example:
 Also:
 
 - if the interview does not terminate normally, return the partial result with its completion status;
-- if Device, firmware, Object, or property resolution remains ambiguous, retain all compatible candidates;
+- if Device, Firmware, Object, or property resolution remains ambiguous, retain all compatible candidates;
 - if a value violates its effective domain, preserve it with a warning;
 - if no configured Object exposes CEN-button properties, return an empty list with the successful interview and resolution evidence.
 

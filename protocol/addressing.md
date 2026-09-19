@@ -48,7 +48,7 @@ For example, `56` is `A=5, PL=6`; `0311` is `A=03, PL=11`; and `1014` is `A=10, 
 
 An environment/area address contains only the `A` component. Valid forms are `1..9`, `00`, and `100`. In particular, `100` is the collective address for `A=10`; it is not a point address.
 
-A group address is explicitly marked by `#`: `#1` through `#255`. The prefix is part of the protocol syntax, so a group must not be represented as the bare decimal group number.
+A group address is explicitly marked by `#`: `#1..#255`. The prefix is part of the protocol syntax, so a group must not be represented as the bare decimal group number.
 
 ## Routing qualifiers
 

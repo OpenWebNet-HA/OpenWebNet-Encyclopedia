@@ -50,7 +50,7 @@ The client must verify the server confirmation and then send `*#*1##` to finish 
 
 ## Wire encoding
 
-The HMAC document uses decimal characters for binary values because ordinary OpenWebNet tags do not contain hexadecimal letters. Each binary byte is split into two hexadecimal nibbles, and each nibble is encoded as a two-digit decimal number from `00` to `15`.
+The HMAC document uses decimal characters for binary values because ordinary OpenWebNet tags do not contain hexadecimal letters. Each binary byte is split into two hexadecimal nibbles, and each nibble is encoded as a two-digit decimal number in `00..15`.
 
 | Byte | Nibbles | OpenWebNet representation |
 | --- | --- | --- |
