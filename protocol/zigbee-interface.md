@@ -4,7 +4,7 @@ This page records the interface-specific boundary established by the supplied Le
 
 ## Transport and addressing
 
-Section 2.3 specifies serial communication at 19200 baud, eight data bits, one stop bit, and no parity for the described interfaces. The TCP session selectors and authentication workflow documented elsewhere are not prerequisites established for this serial interface.
+Section 2.3 specifies serial communication at 19200 baud, eight data bits, one stop bit, and no parity for the described interfaces. The same section says the USB interface can increase its baud rate up to 115200 baud, but it defines no OpenWebNet negotiation command, host-side selection procedure, or revision applicability for that higher rate. Treat 19200 baud as the documented base setting and 115200 baud as a source-stated optional USB capability, not a universal default. The TCP session selectors and authentication workflow documented elsewhere are not prerequisites established for this serial interface.
 
 Section 3 retains the OpenWebNet delimiters and principal frame classes but defines its own `WHERE`:
 
@@ -16,7 +16,11 @@ Section 3 retains the OpenWebNet delimiters and principal frame classes but defi
 
 These are symbolic forms, not observed installation identifiers. They are not SCS `A`/`PL` addresses. The suffix named `SYS` by this document is a `WHERE` family marker; it is not evidence for the numeric payload `SYS` in Suite `DIMENSION 32`. The four-byte address component does not by itself establish identity with the Suite diagnostic Physical Device ID namespace.
 
-Section 3.3 limits broadcast sending to no more than one per second. Preserve this interface-specific constraint; do not infer a protocol-wide throughput limit.
+Section 3.3 limits broadcast sending to no more than one per second. It warns that exceeding this rate can saturate the ZigBee network and cause products to miss traffic during the following eight seconds. Preserve this interface-specific constraint; do not infer a protocol-wide throughput limit.
+
+The source presents the abstract form `*WHO*WHAT*WHERE*WHEN##`, but section 3.5 explicitly states that `WHEN` is never used by this interface. Its operational command/status, request, parameterized `DIMENSION`, response/report, and write forms are instances of the canonical structures in [Frame Syntax](frame-syntax.md) and [`DIMENSION`](dimensions.md); ZigBee-specific `WHERE` parsing still follows the rules above.
+
+Section 4 states that only products compatible with the source's ZigBee network 2.1 profile can be managed by this interface. This is an applicability limit of the documented interface revision, not evidence that all ZigBee products expose OpenWebNet.
 
 ## Acknowledgement behavior
 
