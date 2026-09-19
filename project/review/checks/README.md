@@ -67,3 +67,17 @@ The Machine KB has an additional fail-closed privacy validator on its
 development branch. That validator remains authoritative for generated
 machine-readable artifacts and should be retained when the Machine KB is
 eventually integrated with the main repository history.
+
+
+## Required branch protection
+
+To make deterministic compliance merge-blocking, configure the `main` branch
+ruleset or branch protection to require these status checks before merging:
+
+- `Mechanical ESG and ECV compliance`
+- `Source integrity and reproducibility`
+
+`Advisory epistemic review` should run on every pull request but must not be a
+required factual gate. Its findings require evidence-aware adjudication and can
+legitimately remain unresolved when the evidence does not support a stronger
+conclusion.
