@@ -86,7 +86,7 @@ To check whether a reported property has a physical-configurator counterpart:
 | --- | --- |
 | decoded `DIMENSION 32.ADDR` component | address positions such as `A` and `PL` |
 | `DIMENSION 35.INDEX` property | positions such as `M`, `TYPE`, `PRE`, or `G1` |
-| property with no matching physical field | advanced-only unless another mapping source establishes a correspondence |
+| property with no matching physical field | no physical counterpart established; absence of a match alone does not prove advanced-only support |
 
 An identical symbol and compatible meaning provide a direct correspondence. Different symbols can still represent the same property, but require semantic corroboration; for example, a firmware position named `TYPE` can correspond to an Object property named `SHUTTER_TYPE`.
 

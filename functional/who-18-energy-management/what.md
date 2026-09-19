@@ -27,7 +27,7 @@ Stop&Go status is read separately through `DIMENSION 250..263`; see [`DIMENSION`
 
 ## Historical-series commands
 
-The `WHAT 57..510` family starts transmission of data intended for graphical histories. The command parameters select the requested calendar period; the returned data is carried by `DIMENSION 511..514` event frames.
+The four commands `WHAT 57`, `58`, `59`, and `510` start transmission of data intended for graphical histories. They are an enumerated set, not the inclusive interval `57..510`. The command parameters select the requested calendar period; the returned data is carried by `DIMENSION 511..514` event frames.
 
 | Command | Parameters | Resulting `DIMENSION` |
 | --- | --- | ---: |

@@ -4,6 +4,8 @@ The programming protocol changes the installed configuration of a Physical Devic
 
 Programming is distinct from diagnostics. Diagnostics reports installed state; programming requests a state change. A successful response is not a substitute for validation before transmission or diagnostic read-back afterward.
 
+These are stored Suite management workflows, not established programming support on every OpenWebNet transport. The [ZigBee Interface](../protocol/zigbee-interface.md) exposes separate management and binding mechanisms; neither their existence nor shared functional namespaces establishes `ConfKO` compatibility.
+
 ## Reference
 
 | Subject | Page |

@@ -2,10 +2,12 @@
 
 OpenWebNet is a delimiter-framed application protocol used to exchange commands, events, state, measurements, configuration data, and service information with compatible gateways and systems.
 
-The protocol has two layers that must not be collapsed:
+For the published TCP gateway workflow, two layers must not be collapsed:
 
 1. a connection/session layer that selects commands, events, or programmed-scenario traffic and performs authentication where required;
 2. an application-frame layer in which `WHO` selects a system and the remaining fields are interpreted in that system's grammar.
+
+Other interfaces can carry OpenWebNet without this TCP session setup. The [ZigBee Interface](zigbee-interface.md) has distinct serial, addressing, acknowledgement, discovery, and management rules; selecting `WHO` alone is insufficient to establish the variant grammar.
 
 ## Reference
 
@@ -19,6 +21,7 @@ The protocol has two layers that must not be collapsed:
 | [`WHAT`](what.md) | Command, state, and event selector semantics |
 | [`DIMENSION`](dimensions.md) | Property request, report, and write forms |
 | [Acknowledgements](acknowledgements.md) | `ACK`/`NACK` roles, including result-sequence termination |
+| [ZigBee Interface](zigbee-interface.md) | Source-scoped serial variant, namespace applicability, and unresolved conflicts |
 
 ## Core fields
 

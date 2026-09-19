@@ -22,12 +22,14 @@ These ranges are transport capacity, not universal validity.
 2. Determine the functional system supported by that Object.
 3. Select the applicable `OPEN.db` address rule for the management family and Object/device family.
 4. Validate component values, fixed prefixes, padding, advanced offsets, level rules, and validity conditions.
-5. Encode the complete `ADDR` without discarding significant zero padding.
+5. Establish the Object-specific mapping from the semantic address to numeric `ADDR`. Do not copy a functional `WHERE` or append routing suffixes into this value merely because an address-rule template can render them.
 6. Preserve `SYS` as a separate field.
 7. Send the address only after the corresponding Object write.
 8. Verify the effective tuple through diagnostic `DIMENSION 32`.
 
 `SYS` is labelled “KeyObject system” by `OPEN.db`. It is not automatically a functional `WHO`, diagnostic `WHO`, or internal `EN_SYSTEM.id_system`. A numeric mapping requires Object/system and capture corroboration.
+
+Functional `WHERE`, management selection `WHERE`, and the `DIMENSION 32.ADDR` payload are distinct representations. The stored range `0..65535` does not encode a universal conversion from strings such as group or routed addresses. Address-rule selection and rendering remain partly unresolved; stop before a write if either `SYS` or the `ADDR` conversion lacks applicable evidence.
 
 ## Address families
 
