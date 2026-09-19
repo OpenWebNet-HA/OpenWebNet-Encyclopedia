@@ -39,7 +39,7 @@ For every event, retain:
 | active operation | discovery, interview, detailed read, programming, or functional traffic |
 | active sequence | expected frames and transition context from `OPEN.db` |
 | selected Device | address, local interaction, or Device-ID selector |
-| correlation key | internal slot, configuration index, or outstanding request where applicable |
+| correlation key | `slot`, configuration index, or outstanding request where applicable |
 | classification | expected, optional, repeated, terminal, error, timeout, or unexpected |
 | notes | uncertainty, redaction, or transport anomaly |
 
@@ -94,7 +94,7 @@ Use the narrowest available context, in this order:
 2. active operation and sequence;
 3. selected Physical Device or address;
 4. last outstanding request;
-5. internal slot, configuration index, or Object selector;
+5. `slot`, configuration index, or Object selector;
 6. repetition and timeout window;
 7. terminal or error transition.
 
@@ -133,7 +133,7 @@ Physical Device instance
 └─ errors, omissions, retries, and terminal evidence
 ```
 
-Preserve protocol slot numbers even when the UI renumbers visible Modules. Attach `DIMENSION 32` and `35` data only with the same Device and internal-slot context. `DIMENSION 35.INDEX` is not globally unique.
+Preserve protocol slot numbers even when the UI renumbers visible Modules. Attach `DIMENSION 32` and `35` data only with the same Device and `slot` context. `DIMENSION 35.INDEX` is not globally unique.
 
 ## Analyze version responses
 

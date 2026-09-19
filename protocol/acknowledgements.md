@@ -9,6 +9,8 @@
 
 Their meaning depends on the active connection state and operation. They are not globally equivalent to “the Device is now in the requested state.”
 
+The roles below primarily follow the TCP gateway introduction. Product-specific extensions include L4686SDK `*#*x##` error forms and the [ZigBee Interface](zigbee-interface.md) BUSY NACK `*#*6##` followed by NACK. Do not reject or correlate these through a two-value acknowledgement model without the applicable interface context.
+
 ## Roles of `ACK`
 
 The canonical introduction uses `ACK` in several roles:

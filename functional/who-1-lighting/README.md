@@ -4,6 +4,8 @@
 
 The published Lighting specification defines the functional command and `DIMENSION` model. The MyHOME_Suite data structures complement it with implemented address rules and functional command templates. Lighting Objects represented by the MyHOME_Suite catalogue may be command Objects, actuator Objects, dimmer Objects, or functions embedded in combined Devices; the functional `WHO 1` namespace describes their Lighting traffic rather than their physical Device class.
 
+The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `WHO 1` but uses a different transport and `WHERE` grammar. The SCS forms on this page do not establish ZigBee-backed applicability merely because the namespace number is shared.
+
 ## Reference
 
 | Subject | Page |
@@ -16,7 +18,7 @@ The published Lighting specification defines the functional command and `DIMENSI
 
 Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*WHERE##`. `DIMENSION` operations use the common frame classes defined in [`DIMENSION`](../../protocol/dimensions.md).
 
-`WHAT 0`–`31` provide the ordinary Lighting vocabulary, including ON/OFF, discrete dimmer levels, timed ON, blinking and relative dimming. Fine level control and other structured values are carried by Lighting-specific `DIMENSION` operations.
+`WHAT 0..31` provide the ordinary Lighting vocabulary, including ON/OFF, discrete dimmer levels, timed ON, blinking and relative dimming. Fine level control and other structured values are carried by Lighting-specific `DIMENSION` operations.
 
 Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment, group, general and advanced forms. Address syntax and event expansion are described in [Addressing](addressing.md).
 

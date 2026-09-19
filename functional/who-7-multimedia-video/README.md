@@ -15,15 +15,15 @@
 | `160` / `161` | Increase / decrease contrast |
 | `170` / `171` | Increase / decrease colour |
 | `180` / `181` | Increase / decrease image quality |
-| `311`–`344` | Select DIAL row `1`–`4`, position `1`–`4` |
+| `3RC`, with `R` and `C` each `1..4` | Select DIAL row `R`, position `C` |
 
-The adjustment operations are relative. The `3RC` family is structural: `R` selects DIAL row and `C` selects position, both `1`–`4`.
+The adjustment operations are relative. The `3RC` family is structural: `R` selects DIAL row and `C` selects position, both `1..4`.
 
 ## Camera addressing
 
-The published `WHERE` table lists cameras `4000`–`4099`, with the final two digits identifying camera `00`–`99`.
+The published `WHERE` table lists cameras `4000..4099`, with the final two digits identifying camera `00..99`.
 
-Individual command-flow tables state `WHERE=[4000-5000]`, which conflicts with the explicit address table. This documentation treats `4000`–`4099` as the established enumerated range and records the broader command-note range as a source inconsistency, not as proof that every value through `5000` is a camera.
+Individual command-flow tables state `WHERE=[4000-5000]`, which conflicts with the explicit address table. This documentation treats `4000..4099` as the established enumerated range and records the broader command-note range as a source inconsistency, not as proof that every value through `5000` is a camera.
 
 ## Frame shape
 
@@ -51,4 +51,4 @@ The gateway answers commands with `ACK` or `NACK`. Adjustment and DIAL operation
 
 ## Evidence basis
 
-Values, addresses, trailing-empty-tag frames, and command sequences come from [WHO 7 specification](../../sources/openwebnet-public/pdf/WHO_7.pdf). The source's address-range discrepancy is retained explicitly.
+Values, addresses, trailing-empty-tag frames, and command sequences come from [`WHO 7` specification](../../sources/openwebnet-public/pdf/WHO_7.pdf). The source's address-range discrepancy is retained explicitly.

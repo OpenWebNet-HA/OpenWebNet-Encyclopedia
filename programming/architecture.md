@@ -26,7 +26,7 @@ As in diagnostics, `WHO 1001` covers the broader Lighting/Automation management 
 | Gateway/transport | carries frames and preserves direction; it does not validate catalogue semantics |
 | Catalogue resolver | maps Device, firmware, Module, Object, address, and configuration constraints before transmission |
 
-The wire protocol has no transaction identifier. A programmer should serialize ambiguous programming operations on one connection and retain the active `WHO`, Device selector, scenario, sequence, and internal-slot context.
+The wire protocol has no transaction identifier. A programmer should serialize ambiguous programming operations on one connection and retain the active `WHO`, Device selector, scenario, sequence, and `slot` context.
 
 ## Three layers of state
 
@@ -47,13 +47,13 @@ A request can be syntactically valid while being semantically invalid for the re
 - `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`
 - `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`
 
-Each value has the `OPEN.db` transport range `0`–`255`. `N_CONF` reports the number of physical configurator positions provided by the Device, but the precise semantics of the twelve `C` values remain under investigation. Do not equate a transport position with physical-jumper presence until capture evidence establishes it.
+Each value has the `OPEN.db` transport range `0..255`. `N_CONF` reports the number of physical configurator positions provided by the Device, but the precise semantics of the twelve `C` values remain under investigation. Do not equate a transport position with physical-jumper presence until capture evidence establishes it.
 
 ### Advanced Object transfer
 
 `ConfKO` rebuilds the Device's Module/Object projection using:
 
-- `DIMENSION 30` for internal slot and Object;
+- `DIMENSION 30` for `slot` and Object;
 - `DIMENSION 32` for system/address;
 - `DIMENSION 35` for indexed configuration values.
 

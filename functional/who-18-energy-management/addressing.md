@@ -6,9 +6,9 @@
 
 | `WHERE` | Device family | Index |
 | --- | --- | --- |
-| `1N` | Stop&Go | `N = 1–127` |
-| `5N` | Energy Management central unit, pulse counter, power meter | `N = 1–255` |
-| `7N#0` | Energy Management actuator | `N = 1–255` |
+| `1N` | Stop&Go | `N = 1..127` |
+| `5N` | Energy Management central unit, pulse counter, power meter | `N = 1..255` |
+| `7N#0` | Energy Management actuator | `N = 1..255` |
 
 The published examples associate the `5N` family with devices including BTicino F520/F523/3522 and the `7N#0` family with Energy Management actuators including F522/F523.
 
@@ -16,9 +16,9 @@ The published examples associate the `5N` family with devices including BTicino 
 
 The address prefix is not merely routing metadata. It constrains the operation set:
 
-- Stop&Go addresses use automatic-reset commands and `DIMENSION 250`–`263` status functions.
+- Stop&Go addresses use automatic-reset commands and `DIMENSION 250..263` status functions.
 - `5N` measurement addresses expose power, accumulated energy and historical-series operations where supported by the target.
-- `7N#0` actuator addresses expose actuator commands and `DIMENSION 71`–`73` state/information where supported.
+- `7N#0` actuator addresses expose actuator commands and `DIMENSION 71..73` state/information where supported.
 
 A decoder should therefore resolve the `WHERE` family before interpreting the complete operation.
 

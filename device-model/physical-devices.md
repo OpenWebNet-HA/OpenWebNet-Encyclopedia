@@ -63,7 +63,7 @@ The product code is not the bus instance identifier. `OPEN.db` defines the Devic
 
 `*#[WHO]*[WHERE]*13*[ID]##`
 
-The `[ID]` parameter spans `0` through `4294967295`. Captured Device IDs are represented as eight hexadecimal characters in this documentation, preserving leading zeroes.
+The `[ID]` parameter spans `0..4294967295`. Captured Device IDs are represented as eight hexadecimal characters in this documentation, preserving leading zeroes.
 
 A Device ID identifies an installed physical instance. It is not:
 
@@ -71,7 +71,7 @@ A Device ID identifies an installed physical instance. It is not:
 - a SKU
 - the item-level `modobj`
 - an Object identifier
-- an internal slot
+- a `slot`
 - a configured functional address.
 
 ## Diagnostic identity dimensions
@@ -86,7 +86,7 @@ The implementation database defines these Device-level identity responses:
 | `6` | `MICRO_VERSION` | Microcontroller version |
 | `13` | `ID` | Installed-instance identifier |
 
-`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0`–`12`. Comparison with product configuration diagrams indicates that `N_CONF` represents the number of physical configurator positions provided by the Device.
+`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0..12`. Comparison with product configuration diagrams indicates that `N_CONF` represents the number of physical configurator positions provided by the Device.
 
 ### `N_CONF` and physical configurators
 
@@ -122,12 +122,12 @@ The classification describes hardware composition. It does not define the Device
 
 ### `64391`, `64191`, and `64192`
 
-These three SKUs share item `1184`, item model `107`, and firmware `157`. The firmware declares four internal slots:
+These three SKUs share item `1184`, item model `107`, and firmware `157`. The firmware declares four `slot` positions:
 
 | Slots | Capability |
 | --- | --- |
-| `1`–`2` | Relay/actuator Modules |
-| `3`–`4` | Independently configurable command Modules |
+| `1..2` | Relay/actuator Modules |
+| `3..4` | Independently configurable command Modules |
 
 This is a combined Device. Describing it only as a Light actuator or only as a Light control would discard part of its physical capability.
 

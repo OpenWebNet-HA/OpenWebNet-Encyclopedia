@@ -12,7 +12,7 @@
 - the F422 public-riser-interface address rule `1[I1][I2][I3][I4]`, with advanced form `1[I1I2I3I4]`;
 - one system-associated generic identification template, `*[WHO]*[WHAT]##`, labelled `cmd_ident`.
 
-The template proves that MyHOME Suite associates a service-identification operation with this system. Because the database does not enumerate the substituted `WHAT` semantics here, it does not justify a `WHAT` table.
+The template establishes that MyHOME Suite associates a service-identification operation with this system. Because the database does not enumerate the substituted `WHAT` semantics here, it does not justify a `WHAT` table.
 
 ## Evidence boundary
 

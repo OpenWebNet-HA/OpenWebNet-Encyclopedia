@@ -73,7 +73,7 @@ Normal close uses:
 
 `*[WHO]*2*0##`
 
-This is the sole mandatory member of `CloseConf`. It stops the ten-minute configuration timeout and starts the one-second scenario-close wait.
+This is the sole mandatory member of `CloseConf`. Its stored timeout associations stop the ten-minute configuration timer and start the one-second scenario-close wait in the Suite sequence model; they do not prove Device-side commit or persistence.
 
 Programmer abort and Device abort share:
 
@@ -106,7 +106,7 @@ These are MyHOME_Suite defaults, not wire-level constants.
 | Warning | nonfatal structured error such as an unmanaged parameter |
 | Aborted | `WHAT 3` from either participant |
 | Timed out | an active timer expired without its stopping transition |
-| Closed | programmer sent `WHAT 2` |
+| Close sent | programmer transmitted `WHAT 2`; Device-side closure is not independently confirmed by transmission alone |
 | Verified | a later diagnostic interview matches the intended effective state |
 
 Closing a session does not change a rejection or timeout into success.

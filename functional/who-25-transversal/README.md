@@ -2,12 +2,14 @@
 
 `WHO 25` contains multiple transversal OpenWebNet functions whose grammars are selected by their `WHAT` family. The namespace includes CEN+ virtual-command events and dry-contact/IR state reporting. Sharing `WHO 25` does not make these functions one address or parameter model.
 
+The [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes CEN+ binding operations under `WHO 25`. Resolve the interface variant before applying the SCS virtual-Object and button rules below; this page is not a complete binding reference.
+
 ## Reference
 
 | Function | Reference | Established vocabulary |
 | --- | --- | --- |
-| CEN+ | [CEN+](cen-plus.md) | `WHAT 21`–`28`; pushbutton `0`–`31`; virtual Object `0`–`2047` |
-| Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31`–`32`; state/event parameter `0`/`1` |
+| CEN+ | [CEN+](cen-plus.md) | `WHAT 21..28`; pushbutton `0..31`; virtual Object `0..2047` |
+| Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31..32`; state/event parameter `0`/`1` |
 
 ## Function selection
 
@@ -15,7 +17,7 @@ A parser should resolve `WHO 25` and then the `WHAT` family before decoding the 
 
 ## CEN+ relationship
 
-CEN+ complements Basic/Evolved CEN under [`WHO 15`](../who-15-cen/). In CEN+, the interaction phase moves into `WHAT 21`–`24`, the pushbutton becomes a `WHAT` parameter, and the source is represented by a virtual Object. Rotary-selector operations `25`–`28` extend that model further.
+CEN+ complements Basic/Evolved CEN under [`WHO 15`](../who-15-cen/). In CEN+, the interaction phase moves into `WHAT 21..24`, the pushbutton becomes a `WHAT` parameter, and the source is represented by a virtual Object. Rotary-selector operations `25..28` extend that model further.
 
 ## Dry-contact and IR relationship
 

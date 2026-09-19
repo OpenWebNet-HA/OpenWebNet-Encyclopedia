@@ -75,7 +75,7 @@ For firmware definitions corroborated against product documentation, the physica
 
 To check whether a reported property has a physical-configurator counterpart:
 
-1. resolve the Physical Device, firmware, internal slot, and configured Object;
+1. resolve the Physical Device, firmware, `slot`, and configured Object;
 2. confirm that the firmware supports physical configuration;
 3. enumerate the firmware-scoped physical `EN_CONF` fields, excluding `AID`;
 4. resolve the effective property from decoded `DIMENSION 32` addressing or the `DIMENSION 35` configuration index;
@@ -86,7 +86,7 @@ To check whether a reported property has a physical-configurator counterpart:
 | --- | --- |
 | decoded `DIMENSION 32.ADDR` component | address positions such as `A` and `PL` |
 | `DIMENSION 35.INDEX` property | positions such as `M`, `TYPE`, `PRE`, or `G1` |
-| property with no matching physical field | advanced-only unless another mapping source establishes a correspondence |
+| property with no matching physical field | no physical counterpart established; absence of a match alone does not prove advanced-only support |
 
 An identical symbol and compatible meaning provide a direct correspondence. Different symbols can still represent the same property, but require semantic corroboration; for example, a firmware position named `TYPE` can correspond to an Object property named `SHUTTER_TYPE`.
 
@@ -150,14 +150,14 @@ This makes the filter context explicit: a configuration definition can have diff
 The practical evaluation is:
 
 1. select firmware;
-2. select internal slot and Object;
+2. select `slot` and Object;
 3. collect applicable Object- and firmware-scoped configuration definitions;
 4. locate the corresponding Object/firmware association;
 5. apply `EN_FILTER`;
 6. apply `EN_FILTER_RANGE`;
 7. apply conditions and cross-property rules.
 
-## Slot conditions and conversion rules
+## `slot` conditions and conversion rules
 
 The catalogue contains:
 
@@ -165,11 +165,11 @@ The catalogue contains:
 - 488 `EN_CONDITION` rows
 - 7,899 `EN_CONV_RULE` rows.
 
-`AS_SLOT_CONDITION` attaches a condition to a slot/Object assignment. `EN_CONDITION.id_conv_rule` selects the conversion-rule logic used by that condition.
+`AS_SLOT_CONDITION` attaches a condition to a `slot`/Object assignment. `EN_CONDITION.id_conv_rule` selects the conversion-rule logic used by that condition.
 
 `EN_CONV_RULE` can compare item-level and Object-level configuration symbols and values, mark an always-true rule, or jump to another rule. These structures affect capability selection and value conversion; they are not OpenWebNet frames.
 
-`CONF_SYMBOL_REF` supplies explicit symbol correspondence between item configuration and Object configuration for a system and slot.
+`CONF_SYMBOL_REF` supplies explicit symbol correspondence between item configuration and Object configuration for a system and `slot`.
 
 ## Additional Temperature Control rules
 
@@ -189,48 +189,9 @@ The Object numbers and configuration indices align with `EN_KEY_OBJECT.key_objec
 
 ## Diagnostic parameter representation
 
-`OPEN.db` defines the normal parameter response as:
+Diagnostics projects an installed configuration through `DIMENSION 32`, indexed `DIMENSION 35` values, and Object-specific `DIMENSION 310` values. The canonical frame definitions, detailed-read sequence, timeout, and unresolved `DIMENSION 38` reset/select effect are maintained in [`DIMENSION 35`: Configuration Parameters](../diagnostics/dim35-configuration.md#reading-detailed-parameters).
 
-`*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
-
-| Field | Database description | Range |
-| --- | --- | ---: |
-| `INDEX` | “Parameter number (also known as kconf index)” | `0`–`255` |
-| `SLOT` | “ko slot” | `1`–`255` |
-| `VAL_PAR` | Parameter value | `0`–`65535` |
-
-The shared “kconf index” terminology strongly supports correlating diagnostic `INDEX` with catalogue `EN_CONF.idx`. Because the databases have no cross-file key, retain the raw frame and resolved catalogue definition when documenting a mapping.
-
-### Parameter request/reset
-
-`OPEN.db` defines:
-
-| Purpose | Frame |
-| --- | --- |
-| Select/reset one internal slot | `*#[WHO]*0*38#[SLOT]##` |
-| Select/reset all slots | `*#[WHO]*0*38#0##` |
-
-The database labels use “reset keyo”, while the `DiagKO` sequence describes the operation as obtaining detailed Object and configuration information. This wording difference should be preserved until runtime behavior is fully characterized.
-
-### Special parameter response
-
-`OPEN.db` defines:
-
-`*#[WHO]*[WHERE]*310*[SLOT]*[VAL_PAR]##`
-
-It labels this as the Device response for a special Object parameter. The template does not include an `INDEX`, so its value must not be forced into the ordinary `EN_CONF.idx` model without Object-specific evidence.
-
-## Sequence context
-
-The `OPEN.db` sequence `DiagKO` is described as “To get keyobject and kconf detailed info”. It orders:
-
-1. the all-slot `DIMENSION 38` operation;
-2. repeated `DIMENSION 35` parameter responses;
-3. the special `DIMENSION 310` response where applicable.
-
-Other diagnostic and configuration sequences include repeated `DIMENSION 30` and `32` responses before detailed parameter retrieval.
-
-[`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) shows how MyHOME_Suite retrieves sequence membership, parameterized frames, address rules, and timeout behavior from `OPEN.db`.
+The shared “kconf index” terminology strongly supports correlating diagnostic `DIMENSION 35.INDEX` with catalogue `EN_CONF.idx`. Because the databases have no cross-file key, retain the raw frame, resolved Physical Device, firmware, `slot`, Object, and catalogue definition when documenting a mapping. `DIMENSION 310` contains no generic `INDEX` and must remain outside that correlation without Object-specific evidence.
 
 ## Address configuration
 
@@ -278,7 +239,7 @@ For example, a preset position or load-dependent minimum level can have a value 
 
 ## Mapping requirements
 
-A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol slot/value evidence, and-where available-the resulting runtime behavior. Numeric equality alone is insufficient.
+A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
 
 ## Sources
 

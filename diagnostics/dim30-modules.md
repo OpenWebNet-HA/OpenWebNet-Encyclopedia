@@ -8,11 +8,11 @@
 
 | Field | Range in `OPEN.db` | Meaning |
 | --- | ---: | --- |
-| `SLOT` | `1`–`255` | numeric internal slot |
-| `KEYO` | `1`–`65535` | Object or Virgin Object number, selected by `STATE` |
-| `STATE` | `0`–`1` | unconfigured/configured state |
+| `SLOT` | `1..255` | numeric `slot` |
+| `KEYO` | `1..65535` | Object or Virgin Object number, selected by `STATE` |
+| `STATE` | `0..1` | unconfigured/configured state |
 
-Use **Module** for the logical container and **internal slot** for `SLOT`. `OPEN.db` uses the legacy label “ko slot”; this documentation retains that wording only when quoting or naming source fields.
+Use **Module** for the logical container and **`slot`** for `SLOT`. `OPEN.db` uses the legacy label “ko slot”; this documentation retains that wording only when quoting or naming source fields.
 
 ## Catalogue interpretation
 
@@ -30,15 +30,15 @@ Likewise, `SLOT` is not `EN_SLOTS.id_slot`. Diagnostic `SLOT` is a Device-local 
 ## Building the Module list
 
 1. Group records by Physical Device interview.
-2. Use `SLOT` as the Device-local internal-slot key.
+2. Use `SLOT` as the Device-local `slot` key.
 3. When `STATE = 1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`.
 4. When `STATE = 0`, resolve `KEYO` against `EN_VIRGIN_OBJECT.virgin_key_object`.
 5. Use the resolved Virgin Object and its catalogue associations to derive the unconfigured Module's functional role and permitted Object set.
 6. Retain `STATE` alongside the resolved record so an Object and Virgin Object are never conflated.
-7. Attach `DIMENSION 32` address data using the same internal slot.
-8. Attach `DIMENSION 35` configuration values only when both Device and internal slot match.
+7. Attach `DIMENSION 32` address data using the same `slot`.
+8. Attach `DIMENSION 35` configuration values only when both Device and `slot` match.
 
-Do not renumber internal slots to match a UI’s visible Module numbering. MyHOME_Suite can hide or relabel slots, and observed scenario Devices show UI numbering that differs from the numeric diagnostic position.
+Do not renumber `slot` positions to match a UI’s visible Module numbering. MyHOME_Suite can hide or relabel slots, and observed scenario Devices show UI numbering that differs from the numeric diagnostic position.
 
 ## Configured and unconfigured Modules
 
@@ -55,8 +55,8 @@ Catalogue capability and runtime state answer different questions:
 
 | Evidence | Meaning |
 | --- | --- |
-| `EN_FIRMWARE.slots` | number of internal slots declared by a firmware definition |
-| `EN_SLOTS` and `AS_OBJECT_FIRMWARE` | Objects permitted or designated at an internal slot |
+| `EN_FIRMWARE.slots` | number of `slot` positions declared by a firmware definition |
+| `EN_SLOTS` and `AS_OBJECT_FIRMWARE` | Objects permitted or designated at a `slot` |
 | Virgin-Object associations | configurable template and allowed Object set |
 | `DIMENSION 30` | configured Object or unconfigured Virgin Object currently reported by the installed Device |
 | MyHOME_Suite UI | visible numbering, enabled state, and editability in that application context |
@@ -65,27 +65,27 @@ Catalogue capability and runtime state answer different questions:
 
 Observed Device `00C58E91`, correlated with item model `107` and firmware definition `157`, reported a four-slot runtime layout interpreted as:
 
-| Internal slot | Object | Configured | Functional role |
+| `slot` | Object | Configured | Functional role |
 | ---: | ---: | --- | --- |
 | `1` | `6` | yes | Light actuator |
 | `2` | `6` | yes | Light actuator |
 | `3` | `400` | yes | Light control |
 | `4` | `500` | no | Automation double command Virgin Object |
 
-For internal slot `4`, `STATE = 0` selects the Virgin Object namespace. `EN_VIRGIN_OBJECT.virgin_key_object = 500` resolves to “Automation double command virgin”; there is no ordinary `EN_KEY_OBJECT.key_object = 500` in this catalogue revision. This table is an interpretation of observed Device state, not a raw transcript or a universal four-slot schema.
+For `slot` `4`, `STATE = 0` selects the Virgin Object namespace. `EN_VIRGIN_OBJECT.virgin_key_object = 500` resolves to “Automation double command virgin”; there is no ordinary `EN_KEY_OBJECT.key_object = 500` in this catalogue revision. This table is an interpretation of observed Device state, not a raw transcript or a universal four-slot schema.
 
-The catalogue independently corroborates the four-slot capability: firmware `157` offers actuator Objects at internal slots `1` and `2`, command/scenario Objects at slots `3` and `4`, Automation relay Virgin Object `510` at slots `1` and `2`, and Automation double-command Virgin Object `500` at slots `3` and `4`.
+The catalogue independently corroborates the four-slot capability: firmware `157` offers actuator Objects at `slot` positions `1` and `2`, command/scenario Objects at slots `3` and `4`, Automation relay Virgin Object `510` at slots `1` and `2`, and Automation double-command Virgin Object `500` at slots `3` and `4`.
 
 ## Observed Module-shape differences
 
-- Device `007B269D` demonstrated that internal-slot numbering and UI-visible Module numbering can differ: internal slot `2` was absent from the UI while later slots were renumbered for display.
-- Device `08CF44BF` demonstrated a large layout with internal slots through `17`, consistent with the maximum `EN_SLOTS.first_slot` observed in this catalogue revision.
+- Device `007B269D` demonstrated that `slot` numbering and UI-visible Module numbering can differ: `slot` `2` was absent from the UI while later slots were renumbered for display.
+- Device `08CF44BF` demonstrated a large layout with `slot` positions through `17`, consistent with the maximum `EN_SLOTS.first_slot` observed in this catalogue revision.
 - Light-control-only Device `00C44420` exposed command Modules as its actual hardware function; those Objects must not be interpreted as alternate actuator modes.
 
 These observations constrain interpretation but do not prove that every Device returns `DIMENSION 30` or uses the same optional response set.
 
 ## Errors
 
-`DIMENSION 31` reports Object-state results for an internal slot, including busy, already configured, insufficient capacity, and unsupported Object conditions. Preserve the accompanying configured state and do not substitute the error record for the last valid `DIMENSION 30` assignment.
+`DIMENSION 31` reports Object-state results for a `slot`, including busy, already configured, insufficient capacity, and unsupported Object conditions. Preserve the accompanying configured state and do not substitute the error record for the last valid `DIMENSION 30` assignment.
 
 See [Modules](../device-model/modules.md), [Objects](../device-model/objects.md), and [Virgin Objects](../device-model/virgin-objects.md) for the catalogue structures behind this runtime projection.

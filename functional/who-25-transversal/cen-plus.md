@@ -19,7 +19,7 @@ Unlike `WHO 15`, the interaction type is encoded by `WHAT`; the virtual pushbutt
 
 ## Pushbutton parameter
 
-The parameter attached to `WHAT` identifies the virtual pushbutton and has the range `0`–`31`.
+The parameter attached to `WHAT` identifies the virtual pushbutton and has the range `0..31`.
 
 The general form is `*25*WHAT#PUSHBUTTON*WHERE##`.
 
@@ -27,7 +27,7 @@ The general form is `*25*WHAT#PUSHBUTTON*WHERE##`.
 
 ## `WHERE` - virtual Object
 
-CEN+ uses a virtual address formed from the prefix `2` and an Object value in the range `0`–`2047`.
+CEN+ uses a virtual address formed from the prefix `2` and an Object value in the range `0..2047`.
 
 Conceptually:
 
@@ -69,7 +69,7 @@ A typical held-button event sequence is therefore:
 
 The published examples show both sequences with repeated `23` frames and a sequence in which `22` is followed directly by `24` when release occurs before another continued-pressure interval is emitted.
 
-## Rotary-selector events - `WHAT 25`–`28`
+## Rotary-selector events - `WHAT 25..28`
 
 CEN+ also defines directional rotary interactions:
 
@@ -96,10 +96,10 @@ This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can 
 
 | Property | CEN - `WHO 15` | CEN+ - `WHO 25` |
 | --- | --- | --- |
-| Button number | `WHAT 00`–`31` | `WHAT` parameter `0`–`31` |
-| Interaction phase | optional `WHAT` parameter `#1`–`#3` | `WHAT 21`–`24` |
-| Source/target | `A`/`PL` and advanced CEN `WHERE` forms | virtual Object `0`–`2047` with prefix `2` |
-| Rotary events | not defined in the published CEN table | `WHAT 25`–`28` |
+| Button number | `WHAT 00..31` | `WHAT` parameter `0..31` |
+| Interaction phase | optional `WHAT` parameter `#1..#3` | `WHAT 21..24` |
+| Source/target | `A`/`PL` and advanced CEN `WHERE` forms | virtual Object `0..2047` with prefix `2` |
+| Rotary events | not defined in the published CEN table | `WHAT 25..28` |
 
 The two systems should be modeled separately even when a physical command device is capable of both modes.
 

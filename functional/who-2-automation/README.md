@@ -4,6 +4,8 @@
 
 The published OpenWebNet Automation specification defines the functional command, addressing, and advanced shutter model. The MyHOME_Suite data structures complement that model with the address rules and frame forms used by the application. Device configuration is represented separately by the MyHOME_Suite catalogue model; diagnostic discovery and configuration reading belong to the diagnostic protocol rather than to `WHO 2` functional traffic.
 
+The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `WHO 2` but uses a different transport and `WHERE` grammar. Its unresolved UP-value conflict remains on that interface page; this SCS-oriented reference does not settle the variant by namespace equality.
+
 ## Reference
 
 | Subject | Page |
