@@ -1,6 +1,8 @@
 # `DIMENSION` Reference
 
-`WHO 13` uses `DIMENSION` frames to expose properties of the external interface / gateway. The published specification explicitly identifies whether each property is readable or writable.
+This page records the SCS/TCP external-interface `WHO 13` `DIMENSION` surface. The published SCS/TCP specification explicitly identifies whether each property is readable or writable.
+
+The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Some numeric IDs overlap while others differ, so the two registries must not be merged by number. See [ZigBee Network Management](zigbee-network-management.md#dimension-reference) for the ZigBee variant.
 
 | `DIMENSION` | Property | Access | Payload |
 | ---: | --- | --- | --- |
