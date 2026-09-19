@@ -90,9 +90,7 @@ The catalogue and runtime projections must remain distinct:
 
 ## Detailed configuration phase
 
-`OPEN.db` defines a separate `DiagKO` sequence beginning with `*#[WHO]*0*38#0##`. It can return repeated `DIMENSION 35` parameter records and `DIMENSION 310` Object-specific values. The database labels `DIMENSION 38` as a reset/select operation, while the sequence description frames it as retrieval of detailed Object/configuration information. Preserve that ambiguity until Device behavior is characterized per family.
-
-`ScanKOTimeWait` assigns an eight-second response window to the all-Module operation. A one-Module variant, `*#[WHO]*0*38#[SLOT]##`, also exists but is not the command used by the canonical `DiagKO` sequence.
+After the initial interview, `DiagKO` is a separate detailed configuration-reading sequence. Its request, repeated `DIMENSION 35` responses, possible `DIMENSION 310` response, timeout, and unresolved `DIMENSION 38` reset/select effect are defined canonically in [`DIMENSION 35`: Configuration Parameters](dim35-configuration.md#reading-detailed-parameters). The interview does not imply that this later operation is supported or non-destructive for every target.
 
 ## Errors and abnormal termination
 

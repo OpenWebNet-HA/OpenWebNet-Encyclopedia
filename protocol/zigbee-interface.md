@@ -26,6 +26,8 @@ Sections 3.6 through 3.9 define `ACK = *#*1##`, `NACK = *#*0##`, and `BUSY NACK 
 
 Section 3.1 lists `WHO 1`, `2`, `4`, `13`, `18`, `25`, and diagnostic `1000`. A shared `WHO` number does not establish identical operations, ranges, addressing, or support to the SCS-oriented references.
 
+Canonical runtime semantics remain organized under the relevant functional namespace. The current owners are [`WHO 1`](../functional/who-1-lighting/), [`WHO 2`](../functional/who-2-automation/), [`WHO 4`](../functional/who-4-temperature-control/), [`WHO 13`](../functional/who-13-integration-gateway/), [`WHO 18`](../functional/who-18-energy-management/), and [`WHO 25`](../functional/who-25-transversal/). This interface page owns cross-cutting transport and applicability limits; it does not create a second set of functional command definitions.
+
 | Mechanism | Evidence and limit |
 | --- | --- |
 | Neighbor discovery | Section 5.3 uses `WHO 1000 DIMENSION 81`, including interface request `*#1000**81##`, indexed responses and final ACK. This is not Suite `DIMENSION 13` ID enumeration. |

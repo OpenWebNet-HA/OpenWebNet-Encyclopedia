@@ -40,7 +40,7 @@ Troubleshooting begins with the frame that was supposed to produce the missing r
 | local interview | `*[WHO]*5*0##`, then perform the local interaction |
 | detailed properties | after resolving Modules, use `*#[WHO]*0*38#0##` only where its effects are established for the family and firmware |
 
-The `DIMENSION 38` template is labelled reset/select despite its `DiagKO` retrieval role. It must not be included in a presumed read-only retry on an unfamiliar target. Preserve the uncertainty and obtain applicable evidence first.
+The `DIMENSION 38` template is labelled reset/select despite its `DiagKO` retrieval role. It must not be included in a presumed read-only retry on an unfamiliar target. Preserve the uncertainty and obtain applicable evidence first; see [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters).
 
 Preserve the exact request, all returned frames, their direction and order, and the timer that ended collection. Do not troubleshoot a parsed value without retaining the request that elicited it.
 

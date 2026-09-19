@@ -189,48 +189,9 @@ The Object numbers and configuration indices align with `EN_KEY_OBJECT.key_objec
 
 ## Diagnostic parameter representation
 
-`OPEN.db` defines the normal parameter response as:
+Diagnostics projects an installed configuration through `DIMENSION 32`, indexed `DIMENSION 35` values, and Object-specific `DIMENSION 310` values. The canonical frame definitions, detailed-read sequence, timeout, and unresolved `DIMENSION 38` reset/select effect are maintained in [`DIMENSION 35`: Configuration Parameters](../diagnostics/dim35-configuration.md#reading-detailed-parameters).
 
-`*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
-
-| Field | Database description | Range |
-| --- | --- | ---: |
-| `INDEX` | “Parameter number (also known as kconf index)” | `0..255` |
-| `SLOT` | “ko slot” | `1..255` |
-| `VAL_PAR` | Parameter value | `0..65535` |
-
-The shared “kconf index” terminology strongly supports correlating diagnostic `INDEX` with catalogue `EN_CONF.idx`. Because the databases have no cross-file key, retain the raw frame and resolved catalogue definition when documenting a mapping.
-
-### Parameter request/reset
-
-`OPEN.db` defines:
-
-| Purpose | Frame |
-| --- | --- |
-| Select/reset one `slot` | `*#[WHO]*0*38#[SLOT]##` |
-| Select/reset all slots | `*#[WHO]*0*38#0##` |
-
-The database labels use “reset keyo”, while the `DiagKO` sequence describes the operation as obtaining detailed Object and configuration information. This wording difference should be preserved until runtime behavior is fully characterized.
-
-### Special parameter response
-
-`OPEN.db` defines:
-
-`*#[WHO]*[WHERE]*310*[SLOT]*[VAL_PAR]##`
-
-It labels this as the Device response for a special Object parameter. The template does not include an `INDEX`, so its value must not be forced into the ordinary `EN_CONF.idx` model without Object-specific evidence.
-
-## Sequence context
-
-The `OPEN.db` sequence `DiagKO` is described as “To get keyobject and kconf detailed info”. It orders:
-
-1. the all-slot `DIMENSION 38` operation;
-2. repeated `DIMENSION 35` parameter responses;
-3. the special `DIMENSION 310` response where applicable.
-
-Other diagnostic and configuration sequences include repeated `DIMENSION 30` and `32` responses before detailed parameter retrieval.
-
-[`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) shows how MyHOME_Suite retrieves sequence membership, parameterized frames, address rules, and timeout behavior from `OPEN.db`.
+The shared “kconf index” terminology strongly supports correlating diagnostic `DIMENSION 35.INDEX` with catalogue `EN_CONF.idx`. Because the databases have no cross-file key, retain the raw frame, resolved Physical Device, firmware, `slot`, Object, and catalogue definition when documenting a mapping. `DIMENSION 310` contains no generic `INDEX` and must remain outside that correlation without Object-specific evidence.
 
 ## Address configuration
 
