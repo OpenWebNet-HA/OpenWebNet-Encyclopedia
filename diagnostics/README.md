@@ -2,6 +2,8 @@
 
 The diagnostic protocol discovers installed Physical Devices and reads the runtime projection of their firmware, Modules, Objects, addresses, and configuration. It uses the common OpenWebNet frame language with management-specific `WHO`, `WHAT`, `WHERE`, and `DIMENSION` values.
 
+[OpenWebNet Scope and Architecture](../protocol/scope-and-architecture.md) defines how discovery, interview, detailed configuration reading, runtime control, and programming remain separate mechanisms even when one workflow composes them.
+
 The Suite management model described here is not universal across transports. The [ZigBee Interface](../protocol/zigbee-interface.md) defines separate `WHO 1000` neighbor discovery; no inspected evidence establishes that the Suite interview sequences below apply to that interface.
 
 Diagnostics does not expose the catalogue database directly. It reports installed state that can be interpreted against the canonical **Physical Device → Firmware → Module → Object → Configuration** model described in [`device-model/`](../device-model/).

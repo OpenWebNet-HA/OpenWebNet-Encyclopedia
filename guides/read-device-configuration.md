@@ -134,7 +134,7 @@ The initial interview does not ordinarily supply the complete indexed property s
 
 `*#[WHO]*0*38#0##`
 
-Use this operation only where its effects are established for the target family and firmware. `OPEN.db` places it in `DiagKO` retrieval but labels it reset/select; non-destructive behavior is not established universally. If unresolved, retain the initial interview and classify detailed configuration as unavailable rather than sending this request.
+Use this operation only where its effects are established for the target family and firmware. `OPEN.db` places it in `DiagKO` retrieval but labels it reset/select; non-destructive behavior is not established universally. If unresolved, retain the initial interview and classify detailed configuration as unavailable rather than sending this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
 
 Collect the repeated `DIMENSION 35` responses produced by that request during the MyHOME_Suite eight-second response window:
 

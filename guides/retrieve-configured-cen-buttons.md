@@ -176,7 +176,7 @@ After the complete Module/Object layout is known, send once:
 
 `*#[WHO]*0*38#0##`
 
-Proceed only where this operation's effects are established for the target family and firmware. `OPEN.db` uses it for `DiagKO` retrieval but labels it reset/select; the corpus does not establish universal non-destructive behavior. Otherwise classify button read-back as unresolved and stop before this request.
+Proceed only where this operation's effects are established for the target family and firmware. `OPEN.db` uses it for `DiagKO` retrieval but labels it reset/select; the corpus does not establish universal non-destructive behavior. Otherwise classify button read-back as unresolved and stop before this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
 
 Collect the repeated responses during the MyHOME_Suite eight-second response window:
 

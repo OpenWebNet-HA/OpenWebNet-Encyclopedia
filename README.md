@@ -2,6 +2,8 @@
 
 Reference documentation for OpenWebNet, the MyHOME device model, diagnostic and programming protocols, and supporting MyHOME Suite implementation data.
 
+The encyclopedia covers SCS, ZigBee-backed systems, catalogue data, configuration software, and other technologies only where they establish an OpenWebNet-visible interface or its applicability. See [OpenWebNet Scope and Architecture](protocol/scope-and-architecture.md) for the canonical boundary between transports, runtime control, diagnostics, programming, and implementation data.
+
 ## Documentation
 
 | Section | Scope |

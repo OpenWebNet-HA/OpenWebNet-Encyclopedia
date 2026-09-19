@@ -38,7 +38,7 @@ Then request the detailed values:
 
 `*#[WHO]*0*38#0##`
 
-Proceed only where this operation's effects are established for the target family and firmware. Its `DiagKO` retrieval role and reset/select label in `OPEN.db` leave universal non-destructive behavior unresolved. If that boundary is not established, stop before requesting detailed values or programming from an incomplete snapshot.
+Proceed only where this operation's effects are established for the target family and firmware. Its `DiagKO` retrieval role and reset/select label in `OPEN.db` leave universal non-destructive behavior unresolved. If that boundary is not established, stop before requesting detailed values or programming from an incomplete snapshot. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
 
 Collect repeated `DIMENSION 35`, applicable `DIMENSION 39` errors, and any `DIMENSION 310` response during the eight-second response window.
 
