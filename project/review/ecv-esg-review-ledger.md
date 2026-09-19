@@ -18,7 +18,7 @@ It is a review artifact, not canonical protocol knowledge. Phase 1 establishes t
 | Included evidence | The complete baseline `sources/` tree, `sources/manifest.yaml`, source-provenance pages, and repository-authored records that preserve earlier research or evidence limits |
 | Excluded from factual adjudication | Claim-by-claim truth review, new protocol interpretations, remediation edits, interoperability testing, and application or firmware reverse engineering not already represented in the corpus |
 
-The Phase 1 inventory contains 136 human-facing encyclopedia pages: the root page plus 135 pages across the nine subject areas. The baseline also contains three project-governance pages and seven source-provenance pages. These ten supporting pages are inventoried separately because they govern or describe the encyclopedia rather than form its protocol content.
+The Phase 1 inventory contains 136 human-facing encyclopedia pages: the root page plus 135 pages across the nine subject areas. The baseline also contains three project-governance pages, seven source-provenance pages, and one asset-documentation page. These eleven supporting pages are inventoried separately because they govern or describe the encyclopedia rather than form its protocol content.
 
 ## Ledger conventions
 
@@ -290,6 +290,12 @@ sources/openwebnet-public/README.md
 sources/openwebnet-public/pdf/README.md
 ```
 
+### Asset documentation - 1 page
+
+```text
+assets/diagrams/README.md
+```
+
 ## Source and evidence corpus inventory
 
 The source manifest records two stored source sets. Stored source artifacts are preserved byte-for-byte and must not be edited to encode conclusions. The 23 locally materialized primary files matched the manifest SHA-256 values during this phase. Two additional PDF blobs are present in the authoritative baseline and fingerprinted in the manifest but were not locally materialized for fresh content inspection.
@@ -410,6 +416,27 @@ The complete table-name surface was enumerated read-only. This is a structural i
 | Practical workflows | `guides/` | All canonical page families plus OBS/EXP | Workflows must be checked later for alignment with canonical claims and safe failure behavior; they do not independently establish protocol semantics. |
 | Reverse-engineering method and history | `reverse-engineering/` | All evidence classes | Raw private captures are excluded; reproducibility varies with retained source chains and must be assessed claim by claim. |
 | ZigBee-backed OpenWebNet | No dedicated human-facing canonical treatment at this baseline | PUB: `OpenWebNet_Zigbee.pdf`; relevant functional PUB; OBS/EXP; APP/gateway behavior | The source exists, but OpenWebNet-visible ZigBee applicability, addressing differences, Diagnostics impact, and Programming impact are not integrated into the encyclopedia. Underlying ZigBee internals remain outside project scope unless exposed through OpenWebNet. |
+
+## Phase 2 deterministic ESG audit
+
+Phase 2 used the reusable checker at `project/review/checks/check_esg.py` together with repository-wide `rg` searches and focused parsers. The automated scope was the 136 human-facing encyclopedia pages. The same structural, link, heading, em-dash, fence, and link-label checks also covered the eleven project-governance, source-provenance, and asset-documentation pages, excluding this ledger from self-review.
+
+The deterministic checks covered:
+
+- internal link targets and Markdown heading fragments;
+- one-H1 and heading-level progression;
+- `README.md` landing pages for every human-documentation directory containing Markdown;
+- Unicode em dashes and trailing whitespace;
+- the obsolete formal terms “internal slot”, “internal-slot”, and “logical slot”;
+- obvious filename, directory-name, and path-only link labels, with source artifact names retained when the resource name itself is the subject;
+- bare protocol and database literal candidates outside code spans;
+- inclusive numeric range notation;
+- Physical Device ID case/width candidates in explicit Device-ID contexts;
+- fenced transcript direction syntax when a block is identified as a transcript or exchange;
+- stale root-level conventions; and
+- exact duplicated long paragraphs.
+
+Final result: zero objective failures. Seven duplicate-paragraph candidates remain, all in Practical Guides where ESG 13 permits repetition needed to keep a workflow independently executable. Thirteen remaining en dashes are citation page ranges, not integer domains. Source database/support filenames used as labels are the names of the resources themselves and therefore fall within the ESG 13 path-subject exception.
 
 ## Findings
 
@@ -616,7 +643,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P1-ESG-001 - Deterministic ESG review not yet performed
 
 - **Finding ID:** `P1-ESG-001`
-- **Status:** Open
+- **Status:** Verified
 - **Severity:** Editorial
 - **Path:** All 136 human-facing pages
 - **Claim/issue:** Phase 1 inventoried pages and dependencies but did not perform the later deterministic or semantic ESG pass.
@@ -624,12 +651,12 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Evidence inspected:** Page paths, H1 headings, local-link dependency graph, canonical ESG
 - **Evidence class:** META
 - **Applicability:** Fixed baseline human-facing documentation
-- **Finding:** Page population and architecture are known; compliance with terminology, evidence vocabulary, code formatting, range/hex notation, transcript direction, hierarchy, recurring sections, link labels, presentation form, and example labelling remains to be tested systematically.
-- **Required remediation:** Execute the dedicated ESG phases using this complete inventory; record defects as separate findings rather than silently editing protocol meaning.
-- **Resolution:** Pending later phase.
+- **Finding:** The deterministic portion of the ESG review has been completed. Semantic evidence vocabulary, page flow, presentation choices, example classification, and entity-context questions remain for later judgment.
+- **Required remediation:** None for the deterministic pass. Continue with the later semantic ESG phase using the open Phase 2 findings below.
+- **Resolution:** Mechanical violations were corrected and recorded in `P2-ESG-001` through `P2-ESG-005`; ambiguous questions remain separate.
 - **Reviewer/model:** Codex, GPT-5
-- **Verification:** No claim of complete ESG compliance is made by this phase.
-- **Open evidence gap:** None; this is unperformed review work rather than unavailable external evidence.
+- **Verification:** `project/review/checks/check_esg.py` reports zero objective failures after remediation across 136 human pages and eleven supporting Markdown pages.
+- **Open evidence gap:** Semantic ESG compliance remains outside the deterministic pass.
 
 ### P1-ECV-001 - Deep factual review not yet performed
 
@@ -648,6 +675,168 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Reviewer/model:** Codex, GPT-5
 - **Verification:** Scope limitation is stated at the top of this ledger and in every relevant gap.
 - **Open evidence gap:** Determined per claim during deep review.
+
+### P2-INV-001 - Asset documentation added to supporting inventory
+
+- **Finding ID:** `P2-INV-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** `assets/diagrams/README.md`
+- **Claim/issue:** Phase 1's supporting-page inventory omitted the diagram-asset documentation page even though it is reader-facing repository documentation.
+- **ECV/ESG rule:** ECV 13, 20; ESG 9, 11, 13
+- **Evidence inspected:** Authoritative Markdown path inventory; page heading and links; installed-diagram table
+- **Evidence class:** META
+- **Applicability:** Supporting documentation at the Phase 2 branch state; the 136-page encyclopedia-content count is unchanged
+- **Finding:** One supporting page was omitted from the Phase 1 count. The complete supporting population is three project-governance pages, seven source-provenance pages, and one asset-documentation page.
+- **Required remediation:** Add the page to the supporting inventory and deterministic audit scope.
+- **Resolution:** The supporting inventory and checker now include `assets/diagrams/README.md`, increasing the supporting-page total from ten to eleven.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** The checker reports 136 human pages and eleven supporting pages; the repository-wide Markdown pass also includes this page.
+- **Open evidence gap:** None for page presence or mechanical coverage. Diagram content accuracy remains a later semantic/evidentiary question.
+
+### P2-ESG-001 - Deterministic ESG checker and full mechanical pass
+
+- **Finding ID:** `P2-ESG-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** All 136 human-facing pages; eleven supporting Markdown pages; `project/review/checks/check_esg.py`
+- **Claim/issue:** Establish a repeatable mechanical ESG audit and run it across the complete Phase 1 page population.
+- **ECV/ESG rule:** ECV 8, 13, 19, 20; ESG 2, 5-9, 11, 13, Editorial Mechanics
+- **Evidence inspected:** Authoritative Markdown tree; internal targets and fragments; headings; directory layout; characters; code spans; fences; links; exact paragraph duplication
+- **Evidence class:** META
+- **Applicability:** Human-facing documentation at the Phase 2 branch state; structural checks additionally apply to governance and provenance pages
+- **Finding:** The reusable checker now encodes the deterministic checks described in the Phase 2 audit section. Its final run reports 136 human pages, eleven supporting pages, zero objective failures, and seven review candidates.
+- **Required remediation:** Re-run the checker after later documentation changes and investigate any new objective failure before merging.
+- **Resolution:** Checker added; all objective failures found in this phase remediated.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** `python3 project/review/checks/check_esg.py . --show-candidates` exits successfully with `objective_failures=0`.
+- **Open evidence gap:** The checker cannot decide semantic evidence vocabulary, applicability, page-flow quality, or whether an unlabeled frame block is intended as a transcript.
+
+### P2-ESG-002 - Obsolete formal `slot` terminology
+
+- **Finding ID:** `P2-ESG-002`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** 44 pages across Device Model, Diagnostics, Guides, Internals, Programming, Protocol, and Reverse Engineering
+- **Claim/issue:** The baseline used “internal slot”, “internal slots”, and “internal-slot” as formal model terms despite ESG 2 requiring the numeric/indexed concept to be written as `slot`.
+- **ECV/ESG rule:** ESG 2, 5
+- **Evidence inspected:** Case-insensitive repository search outside code spans; all 167 matching occurrences and their surrounding lines
+- **Evidence class:** META
+- **Applicability:** Reader-facing formal terminology; quoted source labels such as “ko slot” remain unchanged
+- **Finding:** 167 obsolete formal-term occurrences were present across 44 pages.
+- **Required remediation:** Replace the obsolete phrase with `slot` or `slot` positions without changing Module/Object semantics or quoted source identifiers.
+- **Resolution:** All 167 occurrences remediated mechanically. Source field names and quoted legacy labels were preserved.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** The final checker and independent `rg` search find no “internal slot”, “internal-slot”, or “logical slot” occurrence in the 136-page human-facing scope.
+- **Open evidence gap:** None for these literal phrases. Broader entity-context choices such as Device versus Physical Device remain semantic.
+
+### P2-ESG-003 - Canonical range notation
+
+- **Finding ID:** `P2-ESG-003`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** 57 human-facing pages containing numeric or identifier ranges
+- **Claim/issue:** Numeric and identifier domains used en-dash notation instead of the ESG 6 two-period form.
+- **ECV/ESG rule:** ESG 5, 6
+- **Evidence inspected:** Repository-wide en-dash and range-pattern searches; inline code and plain-text range candidates; citation context
+- **Evidence class:** META
+- **Applicability:** Protocol/data domains and identifier intervals, not bibliographic page citations
+- **Finding:** The baseline contained 333 en-dash characters in the human-facing scope. Mechanical classification identified 320 range/domain occurrences requiring `..`; the remaining 13 occurrences are page-number citation ranges.
+- **Required remediation:** Convert unambiguous value, identifier, percentage, temperature, selector, address, and position intervals to `..`; preserve citation page ranges.
+- **Resolution:** All 320 domain/range occurrences converted. Citation page ranges remain unchanged because they are not integer domains.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Final candidate output contains no protocol/data range. Independent search finds only 13 en dashes, all in explicit page citations.
+- **Open evidence gap:** None for the remediated syntax. Whether a prose sequence should be expressed as a range is a writing judgment, not a protocol-domain check.
+
+### P2-ESG-004 - Heading, link-label, and protocol-literal mechanics
+
+- **Finding ID:** `P2-ESG-004`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** `functional/who-24-lighting-management/dimensions.md`; `functional/who-17-scenario-management/README.md`; seven functional evidence links; six source-provenance pages
+- **Claim/issue:** One page skipped from H1 to H3; one link used a destination slug as its visible label; six manifest links exposed relative paths; seven specification link labels left `WHO n` unformatted.
+- **ECV/ESG rule:** ESG 5, 9, 13
+- **Evidence inspected:** Heading parser; deterministic link-label candidates; bare protocol-literal candidates outside code spans
+- **Evidence class:** META
+- **Applicability:** Listed pages and labels only
+- **Finding:** Each case had a single unambiguous mechanical correction with no protocol-semantic effect.
+- **Required remediation:** Correct the heading level, use human-readable titles, and format literal `WHO` identifiers as code.
+- **Resolution:** H3 changed to H2; `scenario-engine` label changed to “Scenario Engine”; path labels changed to “Source Manifest”; specification labels now code-format `WHO n`.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Final checker reports no heading failures, missing/non-human-readable path labels, or bare literal candidates in the remediated cases.
+- **Open evidence gap:** None.
+
+### P2-ESG-005 - Links, landing pages, em dashes, IDs, and transcript syntax
+
+- **Finding ID:** `P2-ESG-005`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** Complete human-facing page population and supporting Markdown
+- **Claim/issue:** Verify the requested mechanical classes that produced no confirmed violation.
+- **ECV/ESG rule:** ESG 5, 6, 8, 9, 11, 13, Editorial Mechanics
+- **Evidence inspected:** Link/fragment resolver; directory/README map; Unicode search; Physical Device ID context scan; fenced-block parser; root conventions check
+- **Evidence class:** META
+- **Applicability:** Phase 2 branch state
+- **Finding:** No broken internal link or fragment, missing landing-page README, Unicode em dash, stale root conventions section, lowercase explicit Physical Device ID, or malformed explicitly identified transcript was found.
+- **Required remediation:** None.
+- **Resolution:** Verified without documentation changes.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Final checker reports zero objective failures; independent searches corroborate zero em dashes and no obsolete root conventions section.
+- **Open evidence gap:** Unlabelled multi-frame reference blocks require semantic classification before transcript-direction rules can be applied to them.
+
+### P2-ESG-006 - Repeated Practical Guide material
+
+- **Finding ID:** `P2-ESG-006`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** `guides/read-device-configuration.md`, `guides/retrieve-actuator-group-memberships.md`, `guides/retrieve-configured-cen-buttons.md`
+- **Claim/issue:** Exact-paragraph comparison found seven repeated blocks concerning discovery inputs, interview dimensions, timing, cleanup, and related material.
+- **ECV/ESG rule:** ESG 13
+- **Evidence inspected:** Exact normalized paragraphs of at least 180 characters across all human-facing pages
+- **Evidence class:** META
+- **Applicability:** Practical Guides only
+- **Finding:** Every exact duplicate detected is confined to Practical Guides and supports independently executable workflows. ESG 13 expressly permits this form of repetition.
+- **Required remediation:** None in this phase. Reconsider only if a later semantic review finds contradiction or drift between the repeated workflows.
+- **Resolution:** Reviewed and retained.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** No exact long-paragraph duplication was detected outside Practical Guides.
+- **Open evidence gap:** Semantic equivalence and future drift cannot be established by exact-text comparison alone.
+
+### P2-AMB-001 - Device entity terminology requires semantic review
+
+- **Finding ID:** `P2-AMB-001`
+- **Status:** Open
+- **Severity:** Editorial
+- **Path:** Human-facing pages using “Device” or “Devices” outside literal identifiers and source quotations
+- **Claim/issue:** Deterministic replacement cannot decide whether each occurrence denotes a Physical Device, product model, generic device, protocol endpoint, catalogue record, or source wording.
+- **ECV/ESG rule:** ECV 15; ESG 2, 3
+- **Evidence inspected:** Repository terminology searches and the canonical entity definitions
+- **Evidence class:** META
+- **Applicability:** Entity terminology across all subject areas
+- **Finding:** The obsolete `slot` phrase was mechanically decidable, but Device/Physical Device usage is context-dependent and cannot be safely normalized in this phase.
+- **Required remediation:** Review entity references during the semantic ESG/ECV pass; change only occurrences whose referent is established.
+- **Resolution:** Deferred; no bulk replacement made.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Deferred cases remain visible through repository search rather than being silently normalized.
+- **Open evidence gap:** Claim context and intended abstraction level for each occurrence.
+
+### P2-AMB-002 - Unlabelled multi-frame blocks require semantic classification
+
+- **Finding ID:** `P2-AMB-002`
+- **Status:** Open
+- **Severity:** Editorial
+- **Path:** Functional and protocol pages containing fenced lists of request, response, report, or write frame forms
+- **Claim/issue:** A parser can enforce `Source -> Destination: frame` once a block is a transcript, but cannot decide from multiple frame-shaped lines alone whether the block is a temporal exchange or a compact reference list.
+- **ECV/ESG rule:** ESG 7, 8, 14, 15
+- **Evidence inspected:** All fenced blocks; explicit transcript/exchange labels; frame-line direction syntax; surrounding headings and prose
+- **Evidence class:** META
+- **Applicability:** Unlabelled or reference-form fenced blocks only
+- **Finding:** The apparent initial candidates in Lighting, Load Management, and Sound System pages are introduced as request/response forms or property forms, not represented as observed transcripts. They were not rewritten mechanically.
+- **Required remediation:** During semantic ESG review, identify any block intended as a real exchange; if so, add explicit source/destination labels and evidence status.
+- **Resolution:** Deferred; checker now avoids treating every multi-frame reference block as a transcript.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Explicitly labelled transcripts/exchanges pass the direction parser; reference-form blocks remain unchanged.
+- **Open evidence gap:** Authorial intent and evidence status of each unlabelled multi-frame block.
 
 ## Finding record template
 
