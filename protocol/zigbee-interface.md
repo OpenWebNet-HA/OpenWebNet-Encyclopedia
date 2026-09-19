@@ -31,11 +31,11 @@ Canonical runtime semantics remain organized under the relevant functional names
 | Mechanism | Evidence and limit |
 | --- | --- |
 | Neighbor discovery | Section 5.3 uses `WHO 1000 DIMENSION 81`, including interface request `*#1000**81##`, indexed responses and final ACK. This is not Suite `DIMENSION 13` ID enumeration. |
-| Interface/network management | Section 11 specifies `WHO 13` operations and firmware/hardware/product queries. These do not establish Suite interview or programming parity. |
-| CEN+ binding | Section 13 includes OpenWebNet-visible binding operations under `WHO 25`; the SCS virtual-button grammar is not a complete account of this variant. |
+| Interface/network management | Section 11 specifies `WHO 13` network lifecycle, scan/supervisor operations, product-database queries, and interface/product properties. See [ZigBee Network Management](../functional/who-13-integration-gateway/zigbee-network-management.md). These do not establish Suite interview or programming parity. |
+| Binding | Section 13 defines OpenWebNet-visible binding operations under `WHO 25`. See [ZigBee Binding](../functional/who-25-transversal/zigbee-binding.md); the SCS virtual-button grammar is not a complete account of this variant. |
 | Firmware boundary | Version readout and boot-mode handoff are OpenWebNet-visible; a handoff is not evidence that the subsequent upload protocol is OpenWebNet. |
 
-The complete detailed variant reference remains an integration backlog. This page establishes applicability and prevents reuse of incompatible SCS assumptions; it does not certify all listed operations or their full flows.
+Detailed ZigBee `WHO 13` management and `WHO 25` binding semantics are integrated under their canonical functional namespaces. This page remains the canonical owner of cross-cutting transport, addressing, acknowledgement behavior, and applicability limits. Other ZigBee functional namespaces still require operation-level review before they can be treated as exhaustively documented.
 
 ## Preserved source conflicts
 
