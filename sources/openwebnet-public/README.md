@@ -1,6 +1,8 @@
 # Public OpenWebNet Documentation
 
-This source set contains canonical copies of publicly distributed OpenWebNet protocol documents published by BTicino and Legrand.
+This source set contains the canonical OpenWebNet protocol documents supplied as the project's public documentation corpus, attributed to BTicino and Legrand. The directory name records the source-set classification, not independently verified publication or redistribution status for every file.
+
+`OpenWebNet_Zigbee.pdf` version 4.0 carries “Confidential” page footers. Its acquisition/publication provenance needs clarification before this file is represented as unambiguously public. The source bytes are unchanged; this is a provenance qualification, not a determination of legal status.
 
 ## Contents
 

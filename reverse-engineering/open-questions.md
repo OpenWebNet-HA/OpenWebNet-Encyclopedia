@@ -91,7 +91,7 @@ The remaining questions are:
 
 - When and how are the databases opened, cached, invalidated, refreshed, synchronized, or migrated?
 - Which application components execute each query in `OpenQuery.txt`, and are all named queries used?
-- Is the bitwise expression `ar.address_rule_adv&ar.level_2_rule` in `systemaddressruleDictQuery` intentional, consumed despite its result shape, or a dormant defect?
+- How are the separately selected address-rule columns consumed? The earlier bitwise-expression question was based on an incorrect source attribution; see the [Registry Source Correction](../internals/openwebnet-registry-and-state-machines.md#incompleteness-preserved-in-the-source).
 - Which resources and application components resolve stored localization keys?
 - What locale-selection, fallback, missing-key, and composed-label rules are applied?
 
