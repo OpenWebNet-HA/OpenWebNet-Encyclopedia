@@ -30,6 +30,8 @@ After resolving the Module/Object layout, send:
 
 `*#[WHO]*0*38#0##`
 
+Use this detailed-read operation only where its effects are established for the target family and firmware. `OPEN.db` places it in `DiagKO` retrieval but labels it reset/select; its non-destructive behavior is not established universally. If that boundary is unresolved, stop before sending it. See [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters).
+
 Collect repeated `DIMENSION 35`, applicable `DIMENSION 39`, and any `DIMENSION 310` response during the eight-second detailed-read window.
 
 Resolve this evidence into a complete snapshot containing:
@@ -278,7 +280,7 @@ The journal should be durable before a destructive frame is sent. At minimum it 
 | structured programming error | attach it to the affected operation and stop or transition as defined |
 | warning | retain it; continue only when the scenario and safety policy allow |
 | `NACK` | apply the active sequence transition; this guide conservatively stops on rejection unless the explicitly handled parameter-warning path permits continuation |
-| timeout before destructive work | abort without changing the Device |
+| timeout before reset or writes | record that no configuration write was sent; do not claim entry or abort had no Device-side effect |
 | timeout after reset or a write | mark Device state indeterminate; close if safe, then diagnose |
 | transport loss | never assume the last write was or was not applied |
 | user cancellation | treat like transport interruption once destructive work has started |

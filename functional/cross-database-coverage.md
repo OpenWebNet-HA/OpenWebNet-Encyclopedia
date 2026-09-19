@@ -64,9 +64,9 @@ This is direct MyHOME_Suite implementation evidence for `WHAT 0` and `WHAT 1` in
 
 ### `WHO 1` target-dependent interpretation
 
-ScenarioDevices contains a notable overlap with the published Lighting vocabulary. The command `miniScenarioSuite.automation.actionAutomationDoorLock.on` emits `*1*17*WHERE##`. In the published Lighting table, ordinary `WHAT 17` is the 30-second timed-ON command.
+ScenarioDevices contains a notable overlap with the published Lighting vocabulary. The command `miniScenarioSuite.automation.actionAutomationDoorLock.on` stores the template `*1*17*WHERE##`. The published Lighting summary calls `WHAT 17` 30-second timed ON, but section 3.1.9 says 30 minutes; the duration is unresolved. See the [Lighting Timing Qualification](who-1-lighting/what.md#target-dependent-myhome-suite-label-for-what-17).
 
-The databases therefore show that the same wire frame can be presented by MyHOME_Suite as an **Automation Door Lock ON** action when the selected Object is a door-lock capability. A decoder should not discard the published `WHO 1` meaning; instead, higher-level UI semantics can depend on the target Object while the wire-level `WHAT` remains `17`.
+The databases establish a target-specific capability label, not observed emission, actual lock behavior, or independent resolution of the timing conflict. Preserve the label, template, and unresolved timing separately.
 
 This is an example of why `WHO` + `WHAT` alone is not always sufficient for a user-facing capability label.
 

@@ -2,6 +2,8 @@
 
 `WHO 25` contains multiple transversal OpenWebNet functions whose grammars are selected by their `WHAT` family. The namespace includes CEN+ virtual-command events and dry-contact/IR state reporting. Sharing `WHO 25` does not make these functions one address or parameter model.
 
+The [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes CEN+ binding operations under `WHO 25`. Resolve the interface variant before applying the SCS virtual-Object and button rules below; this page is not a complete binding reference.
+
 ## Reference
 
 | Function | Reference | Established vocabulary |
