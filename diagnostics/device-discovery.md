@@ -14,7 +14,7 @@ Device discovery by ID enumerates installed Device instances within one diagnost
 | Suppress an already found Device | `*[WHO]*11#[ID]*0##` |
 | Abort/close diagnosis | `*[WHO]*6*0##` |
 
-`ID` ranges from `0` to `4294967295` in `OPEN.db`. The hexadecimal display form is a presentation convention; the frame field itself is the numeric transport representation used by the participating implementation.
+`ID` ranges over `0..4294967295` in `OPEN.db`. The hexadecimal display form is a presentation convention; the frame field itself is the numeric transport representation used by the participating implementation.
 
 ## Enumeration algorithm
 

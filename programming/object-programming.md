@@ -8,8 +8,8 @@ Object programming assigns a logical Object to each firmware-exposed Module duri
 
 | Field | `OPEN.db` range | Meaning |
 | --- | ---: | --- |
-| `SLOT` | `1`–`255` | Device-local internal slot |
-| `KEYO` | `1`–`65535` | target Object number |
+| `SLOT` | `1..255` | Device-local `slot` |
+| `KEYO` | `1..65535` | target Object number |
 
 `KEYO` is the external `EN_KEY_OBJECT.key_object` value, not `EN_KEY_OBJECT.id_key_object`.
 
@@ -25,7 +25,7 @@ The canonical `ConfKO` sequence begins with:
 
 `*[WHO]*14#[SLOT]*0##`
 
-for resetting one internal slot. It is not a member of the canonical `ConfKO` sequence, so its standalone lifecycle and completion behavior are not established by that scenario.
+for resetting one `slot`. It is not a member of the canonical `ConfKO` sequence, so its standalone lifecycle and completion behavior are not established by that scenario.
 
 ## Resolving the permitted Object
 
@@ -62,6 +62,6 @@ After all Object, address, and parameter writes, the programmer sends `WHAT 4` e
 | `3` | insufficient free Object capacity |
 | `4` | requested Object not implemented |
 
-Codes `0`, `2`, `3`, and `4` are fatal errors in `ConfKO`. Busy code `1` is classified as error-and-information but still maps to Error through `status4error` in that sequence. Retain the accompanying `STATE` and internal slot.
+Codes `0`, `2`, `3`, and `4` are fatal errors in `ConfKO`. Busy code `1` is classified as error-and-information but still maps to Error through `status4error` in that sequence. Retain the accompanying `STATE` and `slot`.
 
 See [Modules](../device-model/modules.md), [Objects](../device-model/objects.md), [Virgin Objects](../device-model/virgin-objects.md), and [`DIMENSION 30`](../diagnostics/dim30-modules.md).

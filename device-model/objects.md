@@ -78,7 +78,7 @@ A functional-system mapping can be made when the Object’s semantics, functiona
 
 `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##`
 
-`KEYO` is described as the “device object model” and has range `1`–`65535`. When `STATE = 1`, `EN_KEY_OBJECT.key_object` supplies the corresponding configured Object number. When `STATE = 0`, resolve against `EN_VIRGIN_OBJECT.virgin_key_object` instead; see [Virgin Objects](virgin-objects.md).
+`KEYO` is described as the “device object model” and has range `1..65535`. When `STATE = 1`, `EN_KEY_OBJECT.key_object` supplies the corresponding configured Object number. When `STATE = 0`, resolve against `EN_VIRGIN_OBJECT.virgin_key_object` instead; see [Virgin Objects](virgin-objects.md).
 
 This mapping is structurally and behaviorally supported, but there is no foreign key between the two databases. A decoder should retain both the raw `KEYO` value and the resolved catalogue Object record.
 
@@ -155,7 +155,7 @@ These Object IDs are not `EN_KEY_OBJECT.key_object` in `MHCatalogue.db`. Scenari
 - exact functional frames where `Commands.Frame` is populated
 - parameter limits for scenario commands.
 
-It does not determine which Physical Device or internal slot exposes a catalogue Object.
+It does not determine which Physical Device or `slot` exposes a catalogue Object.
 
 See [cross-database functional coverage](../functional/cross-database-coverage.md) for the supported intersections.
 

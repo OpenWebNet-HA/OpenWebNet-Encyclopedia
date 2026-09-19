@@ -12,7 +12,7 @@ Firmware is the catalogue layer that projects an item into a concrete set of Mod
 | `id_item` | Item to which the firmware belongs |
 | `firmware_V` | Version component |
 | `firmware_R` | Release/revision component (`R`) |
-| `slots` | Number of internal slots declared by the firmware |
+| `slots` | Number of `slot` positions declared by the firmware |
 | `id_status` | Firmware status |
 | `FW_default` | Marks the default firmware definition |
 
@@ -78,9 +78,9 @@ Once a firmware definition is selected, its capabilities are assembled through s
 | Association | Capability |
 | --- | --- |
 | `AS_OBJECT_FIRMWARE` | Objects supported by the firmware |
-| `EN_SLOTS` | Internal slots at which each firmware/Object association is available |
+| `EN_SLOTS` | `slot` positions at which each firmware/Object association is available |
 | `AS_FIRMWARE_VIRGIN_OBJECT` | Virgin Object templates supported by the firmware |
-| `EN_SLOT_KO_VIRGIN` | Internal slots to which those templates apply |
+| `EN_SLOT_KO_VIRGIN` | `slot` positions to which those templates apply |
 | firmware-scoped `EN_CONF` rows | Configuration properties belonging to the firmware rather than one Object |
 | `AS_FIRMWARE_CONFIG_MODE` | Supported configuration modes |
 | `AS_CONNECTION_FIRMWARE` | Supported connection modalities |
@@ -92,11 +92,11 @@ All 827 `AS_OBJECT_FIRMWARE` rows resolve to both a firmware definition and an O
 
 ## Declared slots and Object alternatives
 
-`EN_FIRMWARE.slots` is the declared count of internal slots. It must not be compared directly with the number of `EN_SLOTS` rows: one internal slot can have several supported Object alternatives.
+`EN_FIRMWARE.slots` is the declared count of `slot` positions. It must not be compared directly with the number of `EN_SLOTS` rows: one `slot` can have several supported Object alternatives.
 
 For example, firmware `157` declares four slots but has eleven slot/Object rows:
 
-| Internal slot | Objects offered |
+| `slot` | Objects offered |
 | ---: | --- |
 | `1` | Light actuator; Automation actuator |
 | `2` | Light actuator |
@@ -131,7 +131,7 @@ Those behaviors require catalogue conditions, filters, and observed UI behavior.
 
 ## Firmware example
 
-Firmware `157`, used by `64391`, `64191`, and `64192`, declares four internal slots. Its slot/Object rows expose two actuator Modules and two independently configurable command Modules. The product-level examples are collected in [Physical Devices](physical-devices.md).
+Firmware `157`, used by `64391`, `64191`, and `64192`, declares four `slot` positions. Its slot/Object rows expose two actuator Modules and two independently configurable command Modules. The product-level examples are collected in [Physical Devices](physical-devices.md).
 
 ## Sources
 
