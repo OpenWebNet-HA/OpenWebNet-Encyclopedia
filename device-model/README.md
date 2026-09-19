@@ -2,6 +2,8 @@
 
 The MyHOME device model describes how one physical product exposes configurable functions to MyHOME_Suite and to the diagnostic, programming, and functional protocols.
 
+It is the canonical owner of entity definitions and catalogue relationships. The cross-area distinction between catalogue capability, installed state, runtime control, and programming is defined in [OpenWebNet Scope and Architecture](../protocol/scope-and-architecture.md).
+
 The canonical hierarchy used throughout this documentation is:
 
 **Physical Device → Firmware → Module → Object → Configuration**
@@ -15,7 +17,7 @@ Firmware is an implementation layer between the product model and its exposed Mo
 | Evidence roles, identifier boundaries, and source handling | [Sources and Identifier Boundaries](sources-and-identifiers.md) |
 | Product identity, catalogue records, and Device composition | [Physical Devices](physical-devices.md) |
 | Firmware selection and capability projection | [Firmware](firmware.md) |
-| Firmware-exposed Modules and internal slots | [Modules](modules.md) |
+| Firmware-exposed Modules and `slot` positions | [Modules](modules.md) |
 | Logical functions and Object identity | [Objects](objects.md) |
 | Configurable Module templates and permitted Objects | [Virgin Objects](virgin-objects.md) |
 | Configuration definitions, values, constraints, and protocol representation | [Configuration](configuration.md) |
@@ -26,12 +28,12 @@ Firmware is an implementation layer between the product model and its exposed Mo
 | --- | --- | --- |
 | Physical Device | An installed hardware product instance | `EN_DEVICE` → `EN_ITEM` |
 | Firmware | A versioned capability definition for an item | `EN_FIRMWARE`, `EN_BUILDS` |
-| Module | A firmware-exposed logical container at an internal slot | `EN_SLOTS`, `AS_OBJECT_FIRMWARE` |
+| Module | A firmware-exposed logical container at a `slot` | `EN_SLOTS`, `AS_OBJECT_FIRMWARE` |
 | Object | The logical function assigned to or offered by a Module | `EN_KEY_OBJECT` |
 | Virgin Object | A template constraining which Objects a configurable Module can become | `EN_VIRGIN_OBJECT` and association tables |
 | Configuration | Object- or firmware-scoped properties and their allowed values | `EN_CONF`, ranges, filters, conditions, and conversion rules |
 
-The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 slot/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
+The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
 
 ## End-to-end catalogue path
 
@@ -41,7 +43,7 @@ For a catalogue Device, the principal capability path is:
 2. `AS_ITEM_SYSTEM` associates the item with one or more catalogue systems and supplies the item-level `modobj`.
 3. `EN_FIRMWARE.id_item` selects the firmware definitions available for that item.
 4. `AS_OBJECT_FIRMWARE` associates each firmware with supported Objects.
-5. `EN_SLOTS.id_object_firmware` places those Object options at internal slots.
+5. `EN_SLOTS.id_object_firmware` places those Object options at `slot` positions.
 6. Virgin-Object associations describe configurable Module templates and the Objects they permit.
 7. `EN_CONF` defines Object-scoped or firmware-scoped configuration properties.
 8. Ranges, filters, conditions, and rules constrain the values available in a particular context.
@@ -59,10 +61,10 @@ The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) proj
 | `DIMENSION 3` | hardware version |
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 13` | 32-bit Device ID |
-| `DIMENSION 30` | internal slot, Object identifier, and configured state |
-| `DIMENSION 32` | internal slot, system, and configured address |
-| `DIMENSION 35` | configuration index, internal slot, and parameter value |
-| `DIMENSION 38` | request/reset operation selecting one or all internal slots |
+| `DIMENSION 30` | `slot`, Object identifier, and configured state |
+| `DIMENSION 32` | `slot`, system, and configured address |
+| `DIMENSION 35` | configuration index, `slot`, and parameter value |
+| `DIMENSION 38` | request/reset operation selecting one or all `slot` positions |
 | `DIMENSION 310` | special Object parameter response |
 
 These frames expose a runtime projection of the catalogue model; they do not reproduce the catalogue schema directly.
@@ -79,7 +81,7 @@ A Physical Device is not equivalent to one OpenWebNet address, one Module, one O
 - Different Modules of one Device can participate in different functional systems.
 - The Device address used for discovery or interview can differ from the functional addresses configured on its Modules.
 
-**Module** is the preferred term for a firmware-exposed logical container. **Internal slot** is reserved for the numeric slot or index used by diagnostic frames and catalogue structures.
+**Module** is the preferred term for a firmware-exposed logical container. **`slot`** is reserved for the numeric position or index used by diagnostic frames and catalogue structures.
 
 The Device description and Object description are also distinct. `EN_DEVICE.name` is the preferred MyHOME_Suite-facing description for the physical model. `EN_KEY_OBJECT.descr` identifies an individual logical function.
 
@@ -93,4 +95,4 @@ Original evidence remains unchanged under [`sources/`](../sources/); derived rel
 
 Use each source only for the layer it establishes. Do not join independent identifier spaces because their numeric values happen to match, and do not promote implementation labels to protocol semantics without corroborating evidence.
 
-Unknown fields remain unknown. The unresolved `N_CONF` value in diagnostic `DIMENSION 1` is documented with Physical Device identity in [Physical Devices](physical-devices.md).
+The established interpretation of diagnostic `DIMENSION 1.N_CONF` is the physical configurator-position count; it is not an Object or Device-class identifier. See [Physical Devices](physical-devices.md). Catalogue-wide count equivalence and independent reproduction from the cited product diagrams remain separate evidence gaps.

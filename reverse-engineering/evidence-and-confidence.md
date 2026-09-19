@@ -68,7 +68,7 @@ Every important inference should be recoverable from a compact claim record:
 
 The claim “`DIMENSION 1.N_CONF` is the number of physical configurator positions” is corroborated because:
 
-- `OPEN.db` labels it as the number of physical configurators and constrains it to `0`–`12`;
+- `OPEN.db` labels it as the number of physical configurators and constrains it to `0..12`;
 - observed `N_CONF` values agree with product diagrams for Devices with two, three, and seven positions;
 - resolved catalogue firmware fields independently produce the same counts in those examples;
 - the field is part of Device identity rather than a Module record.

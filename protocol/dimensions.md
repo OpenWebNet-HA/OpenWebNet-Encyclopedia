@@ -8,7 +8,7 @@ The complete identity is not always just `(WHO, DIMENSION)`. A `DIMENSION` selec
 DIMENSION#PARAMETER#PARAMETER
 ~~~
 
-These parameters select a particular instance, sub-property, internal slot, priority context, or operation variant. The `*`-separated fields following the selector are the ordered payload values:
+These parameters select a particular instance, sub-property, `slot`, priority context, or operation variant. The `*`-separated fields following the selector are the ordered payload values:
 
 ~~~text
 DIMENSION#PARAMETER#PARAMETER*VALUE*VALUE
@@ -57,7 +57,7 @@ Consider the abstract response:
 Here:
 
 - `32` is the `DIMENSION` identifier;
-- `7` is a selector parameter, for example an internal slot;
+- `7` is a selector parameter, for example a `slot`;
 - `SYSTEM` and `ADDRESS` are payload values.
 
 The equivalent structured representation is:
@@ -96,13 +96,13 @@ Advanced Automation absolute positioning uses a parameter attached to the writab
 
 ### Parameterized diagnostic selector
 
-Diagnostic operations use selectors such as `32#SLOT`, where `SLOT` identifies the Device-local internal slot. The following `SYS` and `ADDR` fields are ordinary `*`-separated payload values:
+Diagnostic operations use selectors such as `32#SLOT`, where `SLOT` identifies the Device-local `slot`. The following `SYS` and `ADDR` fields are ordinary `*`-separated payload values:
 
 ~~~text
 *#DIAGNOSTIC_WHO*DEVICE*32#SLOT*SYS*ADDR##
 ~~~
 
-This distinction is essential when correlating a response with a Device Module: the internal slot is addressing the property instance, while `SYS` and `ADDR` describe its configured functional address.
+This distinction is essential when correlating a response with a Device Module: the `slot` is addressing the property instance, while `SYS` and `ADDR` describe its configured functional address.
 
 ## Requests, responses, and reports
 
@@ -119,6 +119,8 @@ A response ordinarily repeats enough context to identify the reported property a
 ~~~
 
 The same response-shaped frame can appear asynchronously on an events session. Direction and session state therefore distinguish a solicited response from an unsolicited report; syntax alone may not.
+
+The request and response selectors need not be equal: published [Temperature Control Fault Diagnostics](../diagnostics/temperature-control-faults.md) includes a `DIMENSION 20` request returning `DIMENSION 21` records. [Sound Diffusion](../functional/who-22-sound-diffusion/) also uses differing request and response source addresses. The generic forms above do not override those operation-specific mappings.
 
 A collective request can produce multiple response frames followed by `ACK`. Do not assume one request yields one value frame. If the sequence terminates in `NACK`, the common protocol permits the preceding provisional results to be treated as invalid.
 

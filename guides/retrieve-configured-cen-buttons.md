@@ -31,7 +31,7 @@ A Device ID is displayed as eight hexadecimal characters. Encode the frame field
 Collect the initial stream in arrival order. The frames needed by this guide are:
 
 - `DIMENSION 1` for catalogue identity;
-- `DIMENSION 2`, `3`, and `6` where reported, for firmware resolution;
+- `DIMENSION 2`, `3`, and `6` where reported, for Firmware resolution;
 - repeated `DIMENSION 30` records for the Module/Object layout;
 - `DIMENSION 13` for the installed Device ID;
 - applicable `DIMENSION 31` errors;
@@ -41,7 +41,7 @@ Use the applicable 15-second first-response window for ID/address selection or t
 
 ## 2. Resolve the Device, Modules, and Objects
 
-Resolve `DIMENSION 1` through the catalogue and use `EN_DEVICE.name` as the preferred Physical Device description. Retain candidate brands, collections, SKUs, and firmware when identity is not unique.
+Resolve `DIMENSION 1` through the catalogue and use `EN_DEVICE.name` as the preferred Physical Device description. Retain candidate brands, collections, SKUs, and Firmware when identity is not unique.
 
 Parse every Module record:
 
@@ -49,20 +49,20 @@ Parse every Module record:
 
 For each response:
 
-1. use protocol `SLOT` as the Device-local internal-slot key;
+1. use protocol `SLOT` as the Device-local `slot` key;
 2. if `STATE=1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`;
 3. if `STATE=0`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module unconfigured;
 4. retain the configured Object's internal `id_key_object`;
 5. attach any `DIMENSION 31` error without discarding a valid Module record.
 
-This is a Device-wide question. Do not stop after the first scenario-related Module, and do not renumber internal slots to match MyHOME_Suite's visible Module numbering.
+This is a Device-wide question. Do not stop after the first scenario-related Module, and do not renumber `slot` positions to match MyHOME_Suite's visible Module numbering.
 
 ## 3. Identify CEN-capable Object properties
 
 For every configured Module, load both applicable configuration scopes:
 
 - Object-scoped `EN_CONF` rows using its `id_key_object` and `id_firmware = 0`;
-- firmware-scoped rows using `id_key_object = 0` and the resolved firmware.
+- Firmware-scoped rows using `id_key_object = 0` and the resolved Firmware.
 
 The zero is a “not applicable” sentinel on the unused ownership axis.
 
@@ -84,7 +84,7 @@ FROM EN_KEY_OBJECT
 WHERE key_object = :reported_keyo;
 ```
 
-For that resolved Object and firmware, inspect the actual property definitions rather than assuming the indices used by one Object variant:
+For that resolved Object and Firmware, inspect the actual property definitions rather than assuming the indices used by one Object variant:
 
 ```sql
 WITH applicable_conf AS (
@@ -121,7 +121,7 @@ ORDER BY idx, id_conf;
 
 The text predicates produce candidates for semantic review; they do not themselves prove that a property is part of a CEN address. Retain only definitions compatible with the resolved Object.
 
-Retrieve the base domains and the filters for the exact Object/firmware association:
+Retrieve the base domains and the filters for the exact Object/Firmware association:
 
 ```sql
 SELECT
@@ -176,6 +176,8 @@ After the complete Module/Object layout is known, send once:
 
 `*#[WHO]*0*38#0##`
 
+Proceed only where this operation's effects are established for the target family and Firmware. `OPEN.db` uses it for `DiagKO` retrieval but labels it reset/select; the corpus does not establish universal non-destructive behavior. Otherwise classify button read-back as unresolved and stop before this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
+
 Collect the repeated responses during the MyHOME_Suite eight-second response window:
 
 `*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
@@ -207,6 +209,9 @@ function retrieve_cen_buttons(selector):
         if semantic_set contains a CEN identity and at least one button:
             candidates.append(module, semantic_set)
 
+    if DIMENSION 38 effects are not established for the target family and Firmware:
+        return unresolved_button_read_back without sending DIMENSION 38
+
     detailed = acquire_DIMENSION_35_with_DIMENSION_38()
     output = []
 
@@ -228,7 +233,7 @@ function retrieve_cen_buttons(selector):
            including partial and ambiguous entries
 ```
 
-Do not decide that a Module is CEN-capable merely because it reports indices `0` through `3`. Those indices recur on unrelated Objects; the resolved Object and its property definitions establish the semantics.
+Do not decide that a Module is CEN-capable merely because it reports indices `0..3`. Those indices recur on unrelated Objects; the resolved Object and its property definitions establish the semantics.
 
 ## 5. Decode a two-button Scheduled scenario PLUS Object
 
@@ -250,8 +255,8 @@ Suppose the detailed read yields:
 
 The user-facing result is:
 
-- CEN 33, Module internal slot 3: upper button 5; lower button 6;
-- CEN 33, Module internal slot 4: upper button 7; lower button 8.
+- CEN 33, Module `slot` 3: upper button 5; lower button 6;
+- CEN 33, Module `slot` 4: upper button 7; lower button 8.
 
 Retain the four raw `DIMENSION 35` tuples behind each Module result.
 
@@ -270,7 +275,7 @@ The `LOW` and `HIG` names and catalogue ranges strongly indicate byte components
 
 Otherwise, show both raw components and mark the combined number as an evidence-backed inference. Do not silently promote the formula to a universal protocol rule.
 
-CEN virtual addresses occupy the range `0` through `2047`; the effective Object, filter, and rule constraints still apply.
+CEN virtual addresses occupy the range `0..2047`; the effective Object, filter, and rule constraints still apply.
 
 ## 7. Handle Object variants and missing evidence
 
@@ -286,7 +291,7 @@ For example:
 Also:
 
 - if the interview does not terminate normally, return the partial result with its completion status;
-- if Device, firmware, Object, or property resolution remains ambiguous, retain all compatible candidates;
+- if Device, Firmware, Object, or property resolution remains ambiguous, retain all compatible candidates;
 - if a value violates its effective domain, preserve it with a warning;
 - if no configured Object exposes CEN-button properties, return an empty list with the successful interview and resolution evidence.
 
@@ -298,7 +303,7 @@ Return one entry per applicable Module:
 | --- | --- |
 | Device ID | identifies the installed Physical Device |
 | Device | preferred `EN_DEVICE.name` |
-| internal slot | preserves the protocol Module key |
+| `slot` | preserves the protocol Module key |
 | Object | identifies the configured Module function |
 | CEN number | decoded identifier, or raw low/high components |
 | buttons | Object-defined button names and decoded values |
@@ -316,12 +321,12 @@ After detailed collection, send `*[WHO]*6*0##` before selecting another Device. 
 Device ID: 007B269D
 Device: <resolved EN_DEVICE.name>
 CEN Modules:
-  - internal slot 3
+  - `slot` 3
     Object: Scheduled scenario PLUS
     CEN: 33
     upper button: 5
     lower button: 6
-  - internal slot 4
+  - `slot` 4
     Object: Scheduled scenario PLUS
     CEN: 33
     upper button: 7

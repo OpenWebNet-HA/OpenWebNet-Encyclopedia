@@ -39,7 +39,7 @@ A value can be:
 - a database-local primary key;
 - an external catalogue number;
 - an installed 32-bit Device identifier;
-- a Device-local internal slot;
+- a Device-local `slot`;
 - an OpenWebNet wire field;
 - one component of a composite version or address;
 - a discriminator-dependent value;
@@ -130,7 +130,7 @@ Use the documentation's established terms consistently:
 
 - **Physical Device** for the installed hardware;
 - **Module** for a firmware-exposed logical container/function position;
-- **internal slot** only for the numeric Device-local position carried by frames or catalogue placement;
+- **`slot`** only for the numeric Device-local position carried by frames or catalogue placement;
 - **Object** for `EN_KEY_OBJECT` functionality;
 - **Virgin Object** for an unconfigured functional template;
 - **Virtual configuration** for configuration performed through MyHOME Suite, contrasted with physical configurators.

@@ -1,6 +1,6 @@
 # Programming Validation
 
-Programming validation proves that a complete intended configuration is supported by one resolved Physical Device before any write is sent. The numeric ranges in `OPEN.db` describe frame-field capacity; they do not establish that a value, Object, address, or property is valid for a particular Device.
+Programming validation checks a complete intended configuration against the available evidence for one resolved Physical Device before any write is sent. Passing catalogue and encoding checks establishes consistency with those sources, not proven runtime acceptance, persistence, or complete coverage of Device constraints. The numeric ranges in `OPEN.db` describe frame-field capacity; they do not establish that a value, Object, address, or property is valid for a particular Device.
 
 Validation is a staged resolver. Each milestone consumes an established context and produces evidence required by the next milestone. If a required result is ambiguous or unresolved, stop before programming.
 
@@ -25,7 +25,7 @@ Retain raw frames beside decoded values. Do not replace an unresolved field with
 | Milestone | Goal | Required output |
 | ---: | --- | --- |
 | 1 | Resolve the installed Device | one item/firmware context or an explicit ambiguity set |
-| 2 | Resolve the Module | one Device-local internal slot and its catalogue placement |
+| 2 | Resolve the Module | one Device-local `slot` and its catalogue placement |
 | 3 | Resolve the current role | configured Object or unconfigured Virgin Object |
 | 4 | Prove the target Object is available | one permitted target Object and Object/firmware association |
 | 5 | Build the property dictionary | applicable Object- and firmware-scoped `EN_CONF` definitions |
@@ -39,7 +39,7 @@ Retain raw frames beside decoded values. Do not replace an unresolved field with
 | 13 | Build wire values | validated `KEYO`, `SYS`/`ADDR`, and `INDEX`/`VAL_PAR` tuples |
 | 14 | Validate the complete transfer | internally consistent replacement payload and verification plan |
 
-The milestones are dependencies, not merely a convenient order. For example, an `INDEX` cannot be resolved safely before the Object, firmware, and internal slot are known.
+The milestones are dependencies, not merely a convenient order. For example, an `INDEX` cannot be resolved safely before the Object, firmware, and `slot` are known.
 
 ## 1. Resolve the installed Device
 
@@ -53,7 +53,7 @@ Establish the catalogue context corresponding to the installed Physical Device w
 2. Decode `DIMENSION 1` according to that family.
 3. Resolve its item/model value through the documented item and system associations.
 4. Resolve the candidate Physical Device records and use `EN_DEVICE.name` as the standard Device description.
-5. Use reported firmware and hardware versions to narrow the applicable item/firmware association.
+5. Use the reported firmware version to narrow the applicable item/firmware association. Preserve hardware and microcontroller versions as observations; use them for selection only when an independently established mapping exists.
 6. Preserve multiple SKU candidates when several catalogue items share the same implementation identity.
 7. Retain the installed Device ID from `DIMENSION 13` separately from every catalogue identifier.
 
@@ -77,15 +77,15 @@ Stop if no catalogue item or firmware can be justified. If several SKUs remain b
 
 See [Device Identity](../diagnostics/dim1-device-identity.md) and [Physical Device](../device-model/physical-devices.md).
 
-## 2. Resolve the Module and internal slot
+## 2. Resolve the Module and `slot`
 
 ### Goal
 
-Bind the intended change to one firmware-exposed Module and the numeric internal slot carried by programming frames.
+Bind the intended change to one firmware-exposed Module and the numeric `slot` carried by programming frames.
 
 ### Procedure
 
-1. Use diagnostic `DIMENSION 30.SLOT` as the Device-local internal-slot number.
+1. Use diagnostic `DIMENSION 30.SLOT` as the Device-local `slot` number.
 2. Correlate it with catalogue placement such as `EN_SLOTS.first_slot`.
 3. Resolve the relevant `AS_OBJECT_FIRMWARE` and slot records for the selected firmware.
 4. Retain UI-visible Module numbering only as presentation metadata.
@@ -96,7 +96,7 @@ Bind the intended change to one firmware-exposed Module and the numeric internal
 Produce one Module context containing:
 
 - installed Device and firmware;
-- protocol internal slot;
+- protocol `slot`;
 - matching catalogue slot records;
 - current `DIMENSION 30` state;
 - associated `DIMENSION 32` and `35` records;
@@ -104,7 +104,7 @@ Produce one Module context containing:
 
 ### Stop conditions
 
-Stop if the internal slot does not exist for the resolved firmware or if several incompatible catalogue placements remain.
+Stop if the `slot` does not exist for the resolved firmware or if several incompatible catalogue placements remain.
 
 ## 3. Resolve the current Object or Virgin Object
 
@@ -142,7 +142,7 @@ Reduce the global Object catalogue to the set supported by this firmware, Module
 
 1. If the Module is unconfigured, enumerate candidates related to its Virgin Object through `AS_OBJECT_VIRGIN_OBJECT`.
 2. Intersect that set with Objects related to the resolved firmware through `AS_OBJECT_FIRMWARE`.
-3. Intersect again with Objects placed at the resolved internal slot through `EN_SLOTS`.
+3. Intersect again with Objects placed at the resolved `slot` through `EN_SLOTS`.
 4. Apply `fixed_ko` and slot-condition metadata.
 5. If the Module is already configured, determine whether replacement is permitted; current membership alone does not prove writability.
 6. Select the target by external `EN_KEY_OBJECT.key_object`, but retain its internal `id_key_object` for catalogue joins.
@@ -154,7 +154,7 @@ Conceptually:
 permitted targets =
     Virgin-Object candidates, when applicable
   ∩ firmware-supported Objects
-  ∩ internal-slot-supported Objects
+  ∩ `slot`-supported Objects
   ∩ satisfied fixed/conditional constraints
 ```
 
@@ -206,9 +206,11 @@ Index the resulting dictionary by at least:
 - symbolic name;
 - semantic type;
 - data type;
-- internal slot and Object/firmware context.
+- `slot` and Object/firmware context.
 
 An `idx` is not globally unique. It becomes a usable `DIMENSION 35.INDEX` only after this context has been resolved.
+
+The union is a candidate property dictionary, not a list of writable parameters. In particular, firmware physical fields with `idx = -1` cannot be emitted as an unsigned `DIMENSION 35.INDEX`; neither a shared symbol nor catalogue presence establishes their transfer operation.
 
 ### Milestone output
 
@@ -339,7 +341,7 @@ Determine whether the target Object/property is active in this slot and convert 
 6. Use `CONF_SYMBOL_REF` where it explicitly relates an item symbol to an Object symbol for the system and slot.
 7. Record the branch taken and the resulting value.
 
-A conversion is not valid merely because its output fits `0`–`65535`. Revalidate the converted result against the effective domain.
+A conversion is not valid merely because its output fits `0..65535`. Revalidate the converted result against the effective domain.
 
 `CONF_SYMBOL_REF` is supporting mapping evidence, not a global symbol-alias table. A symbol correspondence from one system or slot must not be applied universally.
 
@@ -386,7 +388,7 @@ Prove that one Module address can be encoded as a valid `DIMENSION 32` write.
 3. Resolve the rule’s component structure and fixed values.
 4. Validate every component domain and level rule.
 5. Apply required prefixes, padding, validity conditions, and advanced offsets.
-6. Encode the complete `ADDR` without discarding significant zeroes.
+6. Establish the Object-specific numeric `ADDR` encoding independently of the functional or management `WHERE` string. An address-rule template alone does not authorize copying group markers or routing suffixes into `ADDR`.
 7. Resolve `SYS` independently; do not assume it equals a functional `WHO`, diagnostic `WHO`, or either database’s internal system ID.
 8. Decode the generated value again and require a round-trip match.
 
@@ -422,7 +424,7 @@ Classify the result as:
 | mapped counterpart | different symbols, but a conversion or corroborated semantic mapping exists |
 | physically representable | intended effective value lies in the established physical domain |
 | Virtual-only value | property may have a counterpart, but this value is outside the physical domain |
-| Virtual-only property | no physical counterpart remains after complete resolution |
+| Virtual-only property | independent evidence establishes the complete physical interface and excludes a counterpart; a missing catalogue match alone is insufficient |
 | unresolved | evidence is insufficient |
 
 “Virtual configuration” is the general MyHOME_Suite configuration category opposed to physical configurators. Advanced Object programming and virtual-configurator transfer are both Virtual configuration mechanisms.
@@ -462,7 +464,7 @@ Prove that the entire payload is coherent before the canonical advanced sequence
 Validate the complete desired Device state, not merely changed fields:
 
 1. Include every Module/Object assignment that must remain after reset-all.
-2. Require unique Device-local internal slots.
+2. Require unique Device-local `slot` positions.
 3. Require every address and parameter to reference an Object included in the same candidate layout.
 4. Order each Module’s Object assignment before its address and parameter writes.
 5. Preserve fixed and untouched Modules in the replacement plan.
@@ -480,7 +482,7 @@ Validation should return evidence, not only a Boolean.
 
 | Result | Meaning |
 | --- | --- |
-| valid | directly allowed in the resolved context |
+| valid | allowed by the inspected constraints in the resolved context; runtime acceptance not yet verified |
 | valid after conversion | allowed after a documented conversion path |
 | conditionally valid | valid only while stated dependencies hold |
 | physically representable | a physical counterpart and compatible physical value exist |
@@ -514,7 +516,7 @@ Restart validation from the earliest affected milestone when any of these change
 | Change | Restart at |
 | --- | ---: |
 | Device identity or firmware | 1 |
-| internal slot or Module layout | 2 |
+| `slot` or Module layout | 2 |
 | current Virgin Object or target Object | 3 |
 | Object/firmware association | 4 |
 | property or `INDEX` | 5 |

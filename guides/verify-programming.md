@@ -60,6 +60,8 @@ After resolving the fresh Module/Object layout, send:
 
 `*#[WHO]*0*38#0##`
 
+Proceed only where this operation's effects are established for the target family and firmware. Its `DiagKO` retrieval role and reset/select label in `OPEN.db` do not establish universal non-destructive behavior. If unresolved, mark the affected parameters unverifiable; do not assume that a verification request cannot change state. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
+
 Collect during the MyHOME_Suite eight-second response window:
 
 - repeated `DIMENSION 35` indexed properties;
@@ -76,7 +78,7 @@ Build a new configuration model from the verification frames:
 2. key Modules by protocol internal `SLOT`;
 3. resolve configured Objects from `DIMENSION 30.STATE=1`;
 4. resolve Virgin Objects from `STATE=0`;
-5. attach addresses by internal slot;
+5. attach addresses by `slot`;
 6. resolve each `DIMENSION 35.INDEX` in the Module's Object/firmware context;
 7. decode values through ranges, filters, conditions, and applicable rules;
 8. retain raw and decoded values;
@@ -179,6 +181,9 @@ function verify_programming(programming_record, intended_state):
         return wrong_target with raw evidence
 
     observed_layout = resolve_modules_objects_and_addresses(observed_frames)
+    if DIMENSION 38 effects are not established for the target family and Firmware:
+        return unverifiable_detailed_parameters without sending DIMENSION 38
+
     detailed_frames = acquire_DIMENSION_35_with_DIMENSION_38()
     observed_state = resolve_properties_independently(
         observed_layout, detailed_frames

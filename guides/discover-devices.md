@@ -4,6 +4,8 @@
 
 Build a structured inventory of installed Physical Devices for one diagnostic `WHO`. Discovery is not complete when an ID is returned: each discovered instance must be interviewed and resolved as far as the available runtime and catalogue evidence permits.
 
+This guide applies to the MyHOME Suite diagnostic-family workflow described under [Diagnostics](../diagnostics/). It is not a generic ZigBee discovery procedure. The ZigBee OpenWebNet interface instead exposes [`WHO 1000 DIMENSION 81` neighbor discovery](../protocol/zigbee-interface.md#neighbor-discovery---who-1000-dimension-81) and separate [`WHO 13` scan/product-database operations](../functional/who-13-integration-gateway/zigbee-network-management.md#discovery-relationship-and-source-conflicts); the available evidence does not establish Suite interview parity on that interface.
+
 The inventory should contain, for every installed Device:
 
 - the 32-bit Device ID;

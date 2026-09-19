@@ -15,14 +15,14 @@
 
 | Field | Published range and encoding |
 | --- | --- |
-| `LEVEL100` | `100` = OFF; `101`–`199` = 1%–99%; `200` = maximum |
-| `SPEED` | `0` = last speed; `1`–`254` = explicit speed; `255` = default speed |
-| `HOURS` | `0`–`255` |
-| `MINUTES` | `0`–`59` |
-| `SECONDS` | `0`–`59` |
-| `WORKING_TIME` | `1`–`100000` hours |
+| `LEVEL100` | `100` = OFF; `101..199` = 1%..99%; `200` = maximum |
+| `SPEED` | `0` = last speed; `1..254` = explicit speed; `255` = default speed |
+| `HOURS` | `0..255` |
+| `MINUTES` | `0..59` |
+| `SECONDS` | `0..59` |
+| `WORKING_TIME` | `1..100000` hours |
 
-`LEVEL100` is offset by 100. It is not a literal percentage field and must not be decoded as `100%`–`200%`.
+`LEVEL100` is offset by 100. It is not a literal percentage field and must not be decoded as `100%..200%`.
 
 ## `DIMENSION 1` - level and speed
 
@@ -49,7 +49,7 @@ The PDF prints one write example without the `*` before `#1`; this conflicts wit
 *#1*WHERE*2*HOURS*MINUTES*SECONDS##
 ~~~
 
-This explicit duration is distinct from fixed-duration `WHAT 11`–`18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
+This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
 
 ## `DIMENSION 3` - only Objects that are ON
 
@@ -86,6 +86,6 @@ The global `WHO 1` vocabulary does not imply that every Lighting Object implemen
 
 ## Evidence basis
 
-Identifiers, ranges, direction, and frame flows come from [WHO 1 specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
+Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
 
 See [`WHAT` Reference](what.md), [Addressing](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).

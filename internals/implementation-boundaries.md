@@ -43,7 +43,7 @@ These conclusions do not establish universal support across all MyHOME releases 
 | What enumerations back `WhereType`, `Type`, and `OperatorType`? | application enum definitions or exhaustive UI/runtime correlation |
 | How is the installed firmware row selected when several catalogue rows match? | controlled Device/version tests or loader code |
 | Are `DIMENSION 4` and `5` values presence flags, raw configurator codes, or another encoding? | captures across known physical configurator layouts |
-| Is the bitwise expression in `systemaddressruleDictQuery` intentional? | traced query execution and consumer behavior |
+| How are the separately selected address-rule columns consumed? | traced query execution and consumer behavior |
 
 ## Investigation rules
 
