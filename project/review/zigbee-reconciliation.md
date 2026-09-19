@@ -50,7 +50,7 @@ The ZigBee discovery and product-inventory mechanisms in sections 5 and 6 were s
 
 That review establishes source-bounded completeness for the discovery and product-inventory mechanisms exposed by ZigBee OpenWebNet version 4.0. It keeps `WHO 1000 DIMENSION 81` router-neighbor traversal, `WHO 13` Scan/product-database inventory, and MyHOME Suite diagnostic discovery as separate mechanisms. It also preserves the unknown `DIMENSION 81` field, unresolved neighbor freshness/duplicate semantics, the Scan example's `DIMENSION 73`/Product Information conflict, the section 5.2 join-frame syntax inconsistency, the copied-looking `DIMENSION 73` reachability warning, and the undefined stale-entry cleanup lifecycle.
 
-The final repository-wide ZigBee source-to-documentation completeness matrix remains a later task and is intentionally outside Step 2.
+The subsequent [ZigBee Final Source Completeness Certification](zigbee-final-source-completeness-certification.md) audits the entire 60-page source against the reconciled canonical documentation and records the final source-bounded conclusion.
 
 ## Canonical placement
 
