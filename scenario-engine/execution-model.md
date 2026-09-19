@@ -16,7 +16,7 @@ For an action with a literal OpenWebNet template, a safe application can:
 8. collect acknowledgement and functional state evidence where applicable;
 9. record the action result independently from the scenario's future control flow.
 
-Steps 1–6 are partly represented by ScenarioDevices. Transport/session behavior, acknowledgements, retries, scheduling, and state persistence are not defined by these tables.
+Steps 1 through 6 are partly represented by ScenarioDevices. Transport/session behavior, acknowledgements, retries, scheduling, and state persistence are not defined by these tables.
 
 ## Trigger and condition model
 
@@ -46,7 +46,7 @@ Document the grouping; keep the runtime purpose provisional.
 
 ## Scenario graph boundary
 
-The four ScenarioDevices tables contain no obvious scenario-instance, node, edge, ordering, branch, schedule, or execution-history tables. Therefore they cannot, by themselves, persist a complete user-authored scenario graph.
+The four ScenarioDevices tables contain no identified scenario-instance, node, edge, ordering, branch, schedule, or execution-history model. The inspected schemas and contents establish a capability catalogue, not a recovered persistence format for user-authored scenario graphs. This bounded finding does not prove where the application stores graphs or exclude an unexamined serialization mechanism.
 
 A complete engine model still needs evidence for:
 

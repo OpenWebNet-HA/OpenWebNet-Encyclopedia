@@ -1,11 +1,13 @@
 # `WHO 13` - Integration and Gateway Functions
 
-`WHO 13` covers Integration / Gateway functions. Two complementary roles are established by the corpus:
+`WHO 13` covers Integration / Gateway functions. The following two roles are established by the SCS/TCP and Suite sources:
 
 1. the published OpenWebNet External interface device API, which exposes gateway-local clock, network identity, model, software-version, and uptime information;
 2. the MyHOME_Suite `OPEN.db` Integration Functions model, which associates `WHO 13` with F422 interface modes and diagnostic family `WHO 1013`.
 
 These roles belong to the same functional namespace but should not be collapsed into TCP/session behavior.
+
+The [ZigBee Interface](../../protocol/zigbee-interface.md) adds a separate interface/network-management use of `WHO 13`. Its selectors and target semantics must not be inferred from the gateway dimensions on this page.
 
 ## Reference
 

@@ -1,6 +1,6 @@
 # Configuration Programming
 
-Configuration programming writes indexed Object or firmware properties after the Device, firmware, internal slot, and target Object have been resolved.
+Configuration programming writes indexed Object or firmware properties after the Device, firmware, `slot`, and target Object have been resolved.
 
 ## Write frame
 
@@ -8,9 +8,9 @@ Configuration programming writes indexed Object or firmware properties after the
 
 | Field | `OPEN.db` range | Meaning |
 | --- | ---: | --- |
-| `INDEX` | `0`–`255` | configuration index |
-| `SLOT` | `1`–`255` | Device-local internal slot |
-| `VAL_PAR` | `0`–`65535` | encoded value |
+| `INDEX` | `0..255` | configuration index |
+| `SLOT` | `1..255` | Device-local `slot` |
+| `VAL_PAR` | `0..65535` | encoded value |
 
 `INDEX` correlates with `EN_CONF.idx` but is not globally unique.
 
@@ -45,6 +45,8 @@ WHERE (id_key_object = :object_id AND id_firmware = 0)
 ```
 
 A query requiring both resolved IDs in the same row would miss the canonical definitions. Resolve the scope before interpreting `idx`, because an index is not globally unique.
+
+This union selects candidate definitions, not permission to write all of them. Firmware physical fields with `idx = -1` have no representation in the unsigned `INDEX` range above. Establish the applicable transfer mechanism and encoding separately before emitting a property.
 
 ## Transfer behavior
 

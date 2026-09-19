@@ -4,26 +4,26 @@
 
 | `DIMENSION` | Property | Published value domain |
 | ---: | --- | --- |
-| `1` | Switch-on level | `1`–`100` percent |
-| `2` | Maximum illuminance | `1`–`2000` lux |
-| `3` | Maintained illuminance | `0`–`2000` lux |
+| `1` | Switch-on level | `1..100` percent |
+| `2` | Maximum illuminance | `1..2000` lux |
+| `3` | Maintained illuminance | `0..2000` lux |
 | `4` | Automatic switch ON | `0` disabled; `1` enabled |
-| `5` | Switch-on delay | `0`–`300` seconds |
+| `5` | Switch-on delay | `0..300` seconds |
 | `6` | Automatic switch OFF | `0` disabled; `1` enabled |
-| `7` | Switch-off delay | `0`–`900` seconds |
-| `8` | Delay timer | `0`–`3600` seconds |
-| `9` | Stand-by timer | `0`–`900` seconds |
-| `10` | Stand-by level | `0`–`100` percent |
-| `11` | OFF level | `0`–`100` percent |
-| `12` | Slave offset (GAP) | `0`–`100` percent |
+| `7` | Switch-off delay | `0..900` seconds |
+| `8` | Delay timer | `0..3600` seconds |
+| `9` | Stand-by timer | `0..900` seconds |
+| `10` | Stand-by level | `0..100` percent |
+| `11` | OFF level | `0..100` percent |
+| `12` | Slave offset (GAP) | `0..100` percent |
 | `17` | Operating state | `MOD*EXIT*H*M*S` |
 | `18` | Centralised illuminance | `SENSOR*LUX*ERROR` |
 
 The detailed specification provides writes and reads for these properties. Scalar writes use `*#24*WHERE*#D*VALUE##` and reports use `*#24*WHERE*D*VALUE##`, with `D` replaced by the selected identifier. `WHERE` contains both [recipient and sender](addressing.md).
 
-### Read-form inconsistencies
+## Read-form inconsistencies
 
-The source prints `*#24*WHERE*D##` for scalar requests `1`–`10`, but `*#24*WHERE*12*##` with a trailing empty value for slave offset. The state request is `*#24*WHERE*17##`. Its OFF-value request section instead repeats the write form `*#24*WHERE*#11*Off_val##`, apparently a copy error. That row does not establish a safe read command: do not send the write form when intending only to query. Confirm the OFF-value read variant on the target.
+The source prints `*#24*WHERE*D##` for scalar requests `1..10`, but `*#24*WHERE*12*##` with a trailing empty value for slave offset. The state request is `*#24*WHERE*17##`. Its OFF-value request section instead repeats the write form `*#24*WHERE*#11*Off_val##`, apparently a copy error. That row does not establish a safe read command: do not send the write form when intending only to query. Confirm the OFF-value read variant on the target.
 
 The illuminance request has a separate discrepancy, documented below. Preserve these distinctions rather than deriving every read mechanically by deleting the write marker.
 
@@ -55,7 +55,7 @@ State response/event: `*#24*WHERE*17*MOD*EXIT*H*M*S##`.
 | --- | --- |
 | `MOD` | `0` Stop; `1` Automatic; `2` Manual |
 | `EXIT` | Return-to-automatic condition: `1` TIME; `2` FOR; `3` PROFILE; `4` NORMAL; `5` NEVER |
-| `H*M*S` | Time or duration for TIME/FOR, with ranges `0`–`23`, `0`–`59`, `0`–`59` |
+| `H*M*S` | Time or duration for TIME/FOR, with ranges `0..23`, `0..59`, `0..59` |
 
 The source's `TIME` placeholder expands to three `*`-separated values. Do not treat the whole state report as one enum or transmit a literal `TIME` string.
 
