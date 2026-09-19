@@ -4,6 +4,8 @@ This ledger records the formal review of the human-facing OpenWebNet Encyclopedi
 
 It is a review artifact, not canonical protocol knowledge. Phase 1 establishes the inventory, canonical-placement map, evidence-corpus register, coverage matrix, and explicit evidence gaps. It does not adjudicate protocol claims or authorize speculative protocol changes.
 
+Phase 3 continues this record in the [Source-Coverage Audit](phase-3-source-coverage.md), including an updated major-area matrix, actual inspection register, reproducible database probes, source-state distinctions, and residual evidence gaps. Phase 1 statements below are historical unless explicitly updated; they are not current claims that the two recovered PDFs remain inaccessible.
+
 ## Review baseline and scope
 
 | Field | Value |
@@ -365,6 +367,8 @@ The complete table-name surface was enumerated read-only. This is a structural i
 
 “Relevant evidence” identifies source families that should be considered in the deep review; it does not claim that every family has already been exhausted. “Current boundary” records the Phase 1 coverage limit and must not be read as proof of protocol absence.
 
+For the post-inspection state, use the [Phase 3 Coverage Matrix](phase-3-source-coverage.md#updated-coverage-matrix-by-major-area) and [Functional Namespace Disposition](phase-3-source-coverage.md#functional-namespace-source-family-disposition). They preserve this canonical map while distinguishing absent, inaccessible, unexamined, bounded negative, supporting, and qualifying evidence.
+
 | Major area | Canonical page set | Relevant evidence families | Current boundary or known gap |
 | --- | --- | --- | --- |
 | Common frame syntax and parsing | `protocol/frame-syntax.md`, `protocol/stream-parsing.md` | PUB: `OWN_Intro_ENG.pdf`; OBS; gateway APP behavior | Published TCP framing is present; transport-variant applicability, especially ZigBee-backed use, is not yet integrated. |
@@ -499,7 +503,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 ### P1-GAP-002 - Two public PDFs not freshly inspectable
 
 - **Finding ID:** `P1-GAP-002`
-- **Status:** Accepted evidence gap
+- **Status:** Verified
 - **Severity:** Substantive
 - **Path:** `sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf`, `sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf`
 - **Claim/issue:** Both PDFs are present and fingerprinted in the authoritative repository but are not materialized in the local review workspace.
@@ -509,7 +513,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Applicability:** ZigBee-backed OpenWebNet and product-specific `WHO 6` coverage
 - **Finding:** Their existence, size, and fingerprint are established; their contents were not freshly reviewed in Phase 1.
 - **Required remediation:** Materialize and inspect both PDFs in a later evidence-review phase before certifying those subject areas.
-- **Resolution:** Recorded as an explicit inspection boundary.
+- **Resolution:** Phase 1 inspection boundary preserved historically. Phase 3 retrieved both files from the authoritative commit, verified their fingerprints and inspected their contents at the scope recorded in `P3-COV-001`. The access gap is closed; integration and semantic review are not complete.
 - **Reviewer/model:** Codex, GPT-5
 - **Verification:** Baseline tree contains both blobs and manifest fingerprints; local baseline snapshot lacks both files.
 - **Open evidence gap:** Page-level claims, diagrams, examples, caveats, and internal contradictions in these documents remain unexamined in this phase.
@@ -837,6 +841,172 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Reviewer/model:** Codex, GPT-5
 - **Verification:** Explicitly labelled transcripts/exchanges pass the direction parser; reference-form blocks remain unchanged.
 - **Open evidence gap:** Authorial intent and evidence status of each unlabelled multi-frame block.
+
+## Phase 3 findings
+
+The [Source-Coverage Audit](phase-3-source-coverage.md) supplies the detailed source/page register, major-area matrix and bounded residual-gap list for these records.
+
+### P3-COV-001 - Previously inaccessible PDFs recovered
+
+- **Finding ID:** `P3-COV-001`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** sources/openwebnet-public/pdf/
+- **Claim/issue:** Two primary documents existed but were not locally inspectable in earlier phases.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** META, PUB
+- **Applicability:** Exact manifest revisions; not later releases
+- **Finding:** All 25 primary files matched size and SHA-256; all five database integrity checks passed. WHO 6 was read in full as extracted text; ZigBee was inspected selectively, including rendered address and Automation pages.
+- **Required remediation:** None for access. Continue the remaining page/claim review and integration.
+- **Resolution:** Closed P1-GAP-002 access gap only.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Source-Coverage Probe reports 25 verified fingerprints, no failures, and five integrity results of ok.
+- **Open evidence gap:** Unexamined detailed PDF flows and diagrams remain; publication provenance is separately open.
+
+### P3-COV-002 - Major-area source coverage assessed
+
+- **Finding ID:** `P3-COV-002`
+- **Status:** Verified
+- **Severity:** Informational
+- **Path:** project/review/phase-3-source-coverage.md
+- **Claim/issue:** Assess relevant source families by actual content rather than artifact presence alone.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** PUB, CAT, REG, SCN, VAL, SUP, RES, META
+- **Applicability:** Phase 3 starting commit and inspected source portions
+- **Finding:** The audit records all nine major areas plus cross-cutting ZigBee, all 19 PDFs, all five databases and the complete query file. Supporting, qualifying, bounded-negative, absent, inaccessible and unexamined states are explicit. No major area is certified as source-exhausted.
+- **Required remediation:** Use the updated matrix to prioritize Phase 4; do not promote coverage inspection into universal correctness.
+- **Resolution:** Coverage/provenance audit complete at its explicitly bounded inspection depth.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Read-only schema/content queries and PDF page inspection are enumerated in the audit; reproducible probes committed.
+- **Open evidence gap:** Live behavior, source portions not examined, unavailable originals and missing dedicated references remain distinct.
+
+### P3-PROV-001 - Incorrect OpenQuery source attribution
+
+- **Finding ID:** `P3-PROV-001`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** internals/openwebnet-registry-and-state-machines.md; internals/implementation-boundaries.md; reverse-engineering/open-questions.md
+- **Claim/issue:** Documentation attributed a bitwise expression to the canonical query file.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** SUP, META
+- **Applicability:** MyHOME Suite 3.5.38 OpenQuery.txt with manifest SHA-256
+- **Finding:** The exact systemaddressruleDictQuery contains comma-separated address_rule_adv and level_2_rule fields. It contains no ampersand. The alleged bitwise-expression defect was not supported by this source.
+- **Required remediation:** Correct the attribution and remove the false open question while retaining correction history.
+- **Resolution:** Corrected all three affected pages; did not modify the evidence file or infer runtime consumers.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Whole-file read and exact query extraction; query_contains_ampersand is false in the reproducible probe.
+- **Open evidence gap:** Actual callers and address-rule consumer behavior remain unobserved; the alleged expression is no longer a genuine gap.
+
+### P3-PROV-002 - Direct association counts for Automation interfaces
+
+- **Finding ID:** `P3-PROV-002`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** functional/open-db-coverage.md
+- **Claim/issue:** The direct EN_OPEN association column said shared for interface system rows 10 and 11.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** REG
+- **Applicability:** OPEN.db system rows 10 and 11 only
+- **Finding:** A complete left join shows zero direct AS_OPEN_SYSTEM associations for each interface row, while system 1 has 65. Shared diagnostic-family labels do not establish runtime operation inheritance.
+- **Required remediation:** Report zero direct associations, preserving diagnostic-family identity.
+- **Resolution:** Corrected the two source-coverage table cells and their descriptions; no runtime semantics inferred.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Grouped query covers all 33 system rows and reproduces the zero counts.
+- **Open evidence gap:** Whether runtime software inherits or selects operations through another context requires APP evidence.
+
+### P3-COV-003 - WHO 6 product-specific coverage omitted
+
+- **Finding ID:** `P3-COV-003`
+- **Status:** Verified
+- **Severity:** Editorial
+- **Path:** functional/who-6-basic-video-door-entry/README.md
+- **Claim/issue:** The page presented namespace-only coverage despite an available product-specific specification.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** PUB
+- **Applicability:** L4686SDK version 1.0.0 dated 11 February 2009
+- **Finding:** The eight-page source contains command/address tables and send/receive flows for cameras, calls, locks and stair lighting. It does not establish universal WHO 6 support.
+- **Required remediation:** Acknowledge and link the source; defer detailed grammar integration and discrepancies to Phase 4.
+- **Resolution:** Corpus-status wording corrected without copying adjacent namespace semantics.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** All eight extracted pages read; source fingerprint verified.
+- **Open evidence gap:** Detailed integration, inconsistent address labels/direction arrows, and wider product applicability remain open.
+
+### P3-COV-004 - ZigBee scope materially qualifies the coverage map
+
+- **Finding ID:** `P3-COV-004`
+- **Status:** Open
+- **Severity:** Substantive
+- **Path:** Protocol, Functional, Diagnostics, Programming and Device Model; functional/source-coverage.md
+- **Claim/issue:** ZigBee evidence is not limited to addressing and is not integrated into the human reference.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** PUB, FW-interface, META
+- **Applicability:** Legrand serial interface described by ZigBee OpenWebNet 4.0, 22 November 2016
+- **Finding:** Source sections describe serial framing, busy responses, discovery including WHO 1000 neighbor queries, management, firmware metadata, binding and variant functional surfaces. No inspected source establishes parity with Suite's SCS programming/interview model.
+- **Required remediation:** Integrate only OpenWebNet-visible mechanisms in Phase 4 with exact interface applicability; keep bootloader and underlying ZigBee internals out of scope.
+- **Resolution:** Source-coverage page now names the cross-cutting document and links the audit. P1-GAP-003 remains open.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Selected sections and rendered PDF pages 9 and 38 inspected; full inspection register in audit.
+- **Open evidence gap:** Detailed source flows/diagrams, live interface tests, variant conflicts, and publication provenance.
+
+### P3-PROV-003 - Public-corpus classification requires a qualification
+
+- **Finding ID:** `P3-PROV-003`
+- **Status:** Open
+- **Severity:** Substantive
+- **Path:** sources/openwebnet-public/README.md; sources/openwebnet-public/pdf/README.md; sources/manifest.yaml
+- **Claim/issue:** Public-source wording conflicts with Confidential markings in the supplied ZigBee document.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** META, PUB
+- **Applicability:** OpenWebNet_Zigbee.pdf version 4.0 only
+- **Finding:** The document has Confidential page footers. The manifest records supplied-corpus provenance, not an independently verified public-release chain. This does not by itself establish legal status or invalidate technical content.
+- **Required remediation:** Obtain acquisition/publication provenance before asserting unambiguous public-release status; preserve source bytes.
+- **Resolution:** Qualified the two provenance introductions and functional coverage reference. Historical manifest metadata retained unchanged, with this explicit qualification.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Footer confirmed in extracted text and rendered PDF pages 9 and 38.
+- **Open evidence gap:** Publication/acquisition history and any applicable redistribution authorization are not established by this audit.
+
+### P3-CON-001 - Published source conflicts require semantic adjudication
+
+- **Finding ID:** `P3-CON-001`
+- **Status:** Open
+- **Severity:** Substantive
+- **Path:** functional/who-1-lighting/what.md; protocol/authentication.md; OpenWebNet_Zigbee.pdf
+- **Claim/issue:** Source evidence materially qualifies selected unqualified interpretations and examples.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** PUB, SCN, RES
+- **Applicability:** Specific source revisions and page locations in the Phase 3 inspection register
+- **Finding:** WHO 1 summary gives WHAT 17 as 30 seconds, while section 3.1.9 says 30 minutes. ZigBee page 11's UP example uses 2, while page 38 assigns UP to 1; page 53 reset table gives 0 but detailed frame uses 75. HMAC identity-constant discrepancy remains confirmed. ScenarioDevices labels do not independently settle these conflicts.
+- **Required remediation:** Phase 4 must preserve conflicting locations and seek applicable independent evidence before selecting semantics; also inspect existing WHO 7, 18, 22 and 24 discrepancy records.
+- **Resolution:** Recorded, not semantically repaired. Existing protocol values unchanged in this phase.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Direct page/table comparison; HMAC diagram and ZigBee Automation flow visually checked. No runtime test performed.
+- **Open evidence gap:** Working authentication vectors and target-scoped Device/interface observations; remaining detailed public-flow inspection.
+
+### P3-GAP-001 - Secondary research and runtime reproducibility limits
+
+- **Finding ID:** `P3-GAP-001`
+- **Status:** Accepted evidence gap
+- **Severity:** Substantive
+- **Path:** Device Model; Diagnostics; Programming; Scenario Engine; Internals; Guides; Reverse Engineering
+- **Claim/issue:** Prior validated research is not a substitute for retrievable independent primary observations.
+- **ECV/ESG rule:** ECV 2, 4, 5, 6, 7, 8; ESG 3, 15
+- **Evidence inspected:** Phase 3 inspection register and reproducible source probe; source locations stated in this finding
+- **Evidence class:** RES, CAT, REG, SCN, VAL, SUP, META
+- **Applicability:** Stored Suite 3.5.38 artifacts and the specific documented Device/firmware observations only
+- **Finding:** Selected structural counts, ownership patterns, sequence composition, scenario-frame distributions and validation Object groups reproduce from source. Private captures, UI observations and cited product configuration diagrams cannot be independently replayed here. Installer fingerprint is available but binary/runtime artifacts are not. Narrow firmware-interface specifications exist, unlike a general firmware implementation corpus.
+- **Required remediation:** Acquire only privacy-safe reproducible evidence and precise product-document references; keep semantic uncertainties scoped. Do not reopen established meanings solely because original observations are not retained.
+- **Resolution:** Residual gaps consolidated in Phase 3; P1-GAP-001 and P1-GAP-005 through P1-GAP-009 remain substantively open or accepted as before.
+- **Reviewer/model:** Codex, GPT-5
+- **Verification:** Manifest/tree absence checks, direct source probes, Relationship Register and rejected-interpretation review; no hardware experiment or software execution claimed.
+- **Open evidence gap:** Sanitized captures; product diagram editions/pages; APP loaders/resources/traces; controlled Device/gateway/transport matrix; SYS/configurator/special-parameter/firmware-selection and scenario-runtime questions.
 
 ## Finding record template
 

@@ -70,7 +70,7 @@ The file itself records unfinished work:
 
 These are source facts. `OpenQuery.txt` cannot be treated as a complete schema-access specification.
 
-The `systemaddressruleDictQuery` select list contains the SQLite expression `ar.address_rule_adv&ar.level_2_rule`. As written, `&` is a bitwise operator, not a column separator. Do not silently rewrite it as a comma. Whether the expression is intentional, unused, or a defect requires runtime evidence.
+The preserved `systemaddressruleDictQuery` selects `ar.address_rule_adv` and `ar.level_2_rule` as separate comma-delimited columns. An earlier review attributed a bitwise expression to this file; direct inspection of the fingerprinted source disproved that attribution. Query execution and consumer behavior still require runtime evidence. The correction is recorded in the [Review Ledger](../project/review/ecv-esg-review-ledger.md#p3-prov-001---incorrect-openquery-source-attribution).
 
 ## Runtime algorithm
 

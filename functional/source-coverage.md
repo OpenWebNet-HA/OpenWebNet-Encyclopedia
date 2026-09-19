@@ -34,6 +34,8 @@ The functional reference combines several evidence classes. They answer differen
 
 The corpus contains no dedicated public functional specification for `WHO 8`, `9`, `10`, `11`, `12`, `14`, `19`, `23`, `26`, `27`, or `99`. Their pages must therefore distinguish namespace identity and narrow implementation evidence from a complete grammar.
 
+The [ZigBee Interface Specification](../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0, is also relevant to Protocol, Diagnostics, Programming boundaries, and functional `WHO 1`, `2`, `4`, `13`, `18`, and `25`. It describes a particular Legrand serial interface, not a universal replacement for the SCS-oriented references. Its OpenWebNet-visible transport, discovery, management, and binding coverage has not yet been integrated here. Its publication status also requires the [Source Provenance Qualification](../sources/openwebnet-public/README.md). See the [Phase 3 Source-Coverage Audit](../project/review/phase-3-source-coverage.md) for inspection scope and remaining gaps.
+
 ## Implementation-only enrichment
 
 Notable relationships established outside the public functional PDFs include:

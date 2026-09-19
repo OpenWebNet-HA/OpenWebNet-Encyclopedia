@@ -13,8 +13,8 @@ The distinction is important. A system row establishes that MyHOME_Suite knows t
 | ---: | --- | ---: | ---: | ---: | ---: | --- |
 | `0` | Scenarios | `30` | - | `0` | `0` | Namespace and system identity |
 | `1` | Light and Automation system | `1` | `1001` | `1` | `65` | Shared Lighting/Automation diagnostic and programming model |
-| `1` | Interface AUTOM L3 | `10` | `1001` | `1` | shared | Automation interface level and F422 addressing support |
-| `1` | Interface AUTOM L4 | `11` | `1001` | `1` | shared | Automation interface level and F422 addressing support |
+| `1` | Interface AUTOM L3 | `10` | `1001` | `1` | `0` | Namespace/interface variant; no direct operation association |
+| `1` | Interface AUTOM L4 | `11` | `1001` | `1` | `0` | Namespace/interface variant; no direct operation association |
 | `3` | Load Management system | `7` | - | `0` | `0` | Namespace and system identity |
 | `4` | Thermoregulation | `2` | `1004` | `1` | `46` | Diagnostic/configuration workflow plus thermoregulation-specific scan and address rules |
 | `5` | Alarms | `3` | - | `0` | `0` | Namespace and system identity |
