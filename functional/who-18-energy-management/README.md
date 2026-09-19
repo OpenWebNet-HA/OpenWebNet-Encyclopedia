@@ -4,7 +4,7 @@
 
 The namespace is heterogeneous: the selected `WHERE` identifies a device family, and the valid `WHAT` and `DIMENSION` operations depend on that family. A Stop&Go address, an energy meter/central unit address, and an Energy Management actuator address therefore cannot be treated as interchangeable numeric targets.
 
-These references follow `WHO_18.pdf`. The [ZigBee Interface](../../protocol/zigbee-interface.md) defines a separate Energy Management surface and address model, including an unresolved reset-value conflict. Do not transfer SCS ranges or reset semantics to that variant solely from `WHO 18` equality.
+These references follow `WHO_18.pdf`. The [ZigBee Interface](../../protocol/zigbee-interface.md) defines a separate Energy Management surface and address model, including unresolved Reset and Frequency/Energy source conflicts and a materially different `DIMENSION 1200` grammar. See the [ZigBee Energy Management Variant](zigbee-variant.md). Do not transfer SCS ranges, units, or reset semantics to that variant solely from `WHO 18` equality.
 
 ## Reference
 
@@ -13,6 +13,7 @@ These references follow `WHO_18.pdf`. The [ZigBee Interface](../../protocol/zigb
 | Commands and command parameters | [`WHAT` Reference](what.md) |
 | Device families and `WHERE` grammar | [Addressing](addressing.md) |
 | Measurements, totalizers, actuator state, Stop&Go and historical data | [`DIMENSION` Reference](dimensions.md) |
+| ZigBee-specific Energy Management semantics and source conflicts | [ZigBee Energy Management Variant](zigbee-variant.md) |
 
 ## Device families
 
