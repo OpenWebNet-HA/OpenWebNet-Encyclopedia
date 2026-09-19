@@ -28,12 +28,12 @@ Firmware is an implementation layer between the product model and its exposed Mo
 | --- | --- | --- |
 | Physical Device | An installed hardware product instance | `EN_DEVICE` → `EN_ITEM` |
 | Firmware | A versioned capability definition for an item | `EN_FIRMWARE`, `EN_BUILDS` |
-| Module | A firmware-exposed logical container at an `slot` | `EN_SLOTS`, `AS_OBJECT_FIRMWARE` |
+| Module | A firmware-exposed logical container at a `slot` | `EN_SLOTS`, `AS_OBJECT_FIRMWARE` |
 | Object | The logical function assigned to or offered by a Module | `EN_KEY_OBJECT` |
 | Virgin Object | A template constraining which Objects a configurable Module can become | `EN_VIRGIN_OBJECT` and association tables |
 | Configuration | Object- or firmware-scoped properties and their allowed values | `EN_CONF`, ranges, filters, conditions, and conversion rules |
 
-The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 slot/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
+The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
 
 ## End-to-end catalogue path
 
@@ -81,7 +81,7 @@ A Physical Device is not equivalent to one OpenWebNet address, one Module, one O
 - Different Modules of one Device can participate in different functional systems.
 - The Device address used for discovery or interview can differ from the functional addresses configured on its Modules.
 
-**Module** is the preferred term for a firmware-exposed logical container. **`slot`** is reserved for the numeric slot or index used by diagnostic frames and catalogue structures.
+**Module** is the preferred term for a firmware-exposed logical container. **`slot`** is reserved for the numeric position or index used by diagnostic frames and catalogue structures.
 
 The Device description and Object description are also distinct. `EN_DEVICE.name` is the preferred MyHOME_Suite-facing description for the physical model. `EN_KEY_OBJECT.descr` identifies an individual logical function.
 

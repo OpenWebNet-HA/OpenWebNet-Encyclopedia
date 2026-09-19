@@ -56,7 +56,7 @@ Catalogue capability and runtime state answer different questions:
 | Evidence | Meaning |
 | --- | --- |
 | `EN_FIRMWARE.slots` | number of `slot` positions declared by a firmware definition |
-| `EN_SLOTS` and `AS_OBJECT_FIRMWARE` | Objects permitted or designated at an `slot` |
+| `EN_SLOTS` and `AS_OBJECT_FIRMWARE` | Objects permitted or designated at a `slot` |
 | Virgin-Object associations | configurable template and allowed Object set |
 | `DIMENSION 30` | configured Object or unconfigured Virgin Object currently reported by the installed Device |
 | MyHOME_Suite UI | visible numbering, enabled state, and editability in that application context |
@@ -86,6 +86,6 @@ These observations constrain interpretation but do not prove that every Device r
 
 ## Errors
 
-`DIMENSION 31` reports Object-state results for an `slot`, including busy, already configured, insufficient capacity, and unsupported Object conditions. Preserve the accompanying configured state and do not substitute the error record for the last valid `DIMENSION 30` assignment.
+`DIMENSION 31` reports Object-state results for a `slot`, including busy, already configured, insufficient capacity, and unsupported Object conditions. Preserve the accompanying configured state and do not substitute the error record for the last valid `DIMENSION 30` assignment.
 
 See [Modules](../device-model/modules.md), [Objects](../device-model/objects.md), and [Virgin Objects](../device-model/virgin-objects.md) for the catalogue structures behind this runtime projection.

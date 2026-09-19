@@ -71,7 +71,7 @@ A Device ID identifies an installed physical instance. It is not:
 - a SKU
 - the item-level `modobj`
 - an Object identifier
-- an `slot`
+- a `slot`
 - a configured functional address.
 
 ## Diagnostic identity dimensions
