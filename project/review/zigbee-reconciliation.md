@@ -38,6 +38,12 @@ The detailed Leave definition contains duplicated negative wording for both `ACK
 
 The already-recorded ZigBee Automation UP/DOWN and Energy reset conflicts remain separate from this reconciliation and are not resolved by the binding or management material.
 
+## Functional Step 1 reconciliation
+
+The ZigBee `WHO 1`, `WHO 2`, `WHO 4`, and `WHO 18` sections were subsequently reconciled operation by operation against the reviewed SCS-oriented references. The complete claim matrix, source conflicts, evidence limits, and canonical placements are recorded in [ZigBee Functional Reconciliation - Step 1](zigbee-functional-reconciliation.md).
+
+That review establishes source-bounded completeness for those four namespaces within ZigBee OpenWebNet version 4.0 while preserving the unresolved Automation Up-value, Energy Reset, and Energy Frequency/Energy conflicts. It does not extend the conclusion to runtime support across products or Firmware, `WHO 1000` discovery, or the final ZigBee source-to-documentation completeness matrix.
+
 ## Canonical placement
 
 Cross-cutting transport, addressing, acknowledgement behavior, and applicability remain canonical in [ZigBee OpenWebNet Interface](../../protocol/zigbee-interface.md).
