@@ -24,9 +24,9 @@ The SCS-oriented Automation reference also defines advanced `WHAT 10..12` and co
 
 Stop, Up, and Down use the interface-specific `ACK`, `NACK`, and BUSY/NACK behavior described in [ZigBee acknowledgement behavior](../../protocol/zigbee-interface.md#acknowledgement-behavior).
 
-With Supervisor mode enabled through ZigBee `WHO 13`, the detailed command definitions show a server-originated command-state frame matching Stop, Up, or Down. The Up use case additionally shows a later Stop report when the shutter reaches its upper limit, followed by a `DIMENSION 10` status report with level `100`.
+With Supervisor mode enabled through ZigBee `WHO 13`, the detailed command definitions show a server-originated command-state frame matching Stop, Up, or Down. The detailed Stop definition then shows a `DIMENSION 10` status frame; unlike the preceding `WHAT 0` report, that status frame is not explicitly labelled as conditional on Supervisor mode. The Up use case additionally shows a later Stop report when the shutter reaches its upper limit, followed by a `DIMENSION 10` status report with level `100`.
 
-These are ZigBee-interface behaviors and must not be generalized to SCS Automation event ordering.
+The source does not state whether the Stop-associated `DIMENSION 10` report is universal across supported shutters, so it is retained as documented sequence evidence rather than generalized into a mandatory rule. These ZigBee-interface behaviors must not be generalized to SCS Automation event ordering.
 
 ## `DIMENSION 10` - read position
 
