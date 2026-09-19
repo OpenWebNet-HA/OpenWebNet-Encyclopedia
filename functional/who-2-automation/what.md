@@ -24,7 +24,7 @@ The exact `#`-parameterized form is part of `WHAT`; parsing only the leading num
 
 ### Step
 
-`1`–`99` requests the corresponding relative movement. An omitted/null value or `100` means movement to the endpoint for the selected direction.
+`1..99` requests the corresponding relative movement. An omitted/null value or `100` means movement to the endpoint for the selected direction.
 
 ### Priority
 
@@ -44,10 +44,10 @@ Do not mistake `1000` for a movement state. It is a wrapper around another Autom
 
 ## State values are not commands
 
-Values `10`–`14` also appear as `DIMENSION 10` shutter-state values: Stop, Up, Down, step-by-step Up, and step-by-step Down. That value table is local to the `DIMENSION` payload. In particular, `13` and `14` are not established ordinary command `WHAT` values.
+Values `10..14` also appear as `DIMENSION 10` shutter-state values: Stop, Up, Down, step-by-step Up, and step-by-step Down. That value table is local to the `DIMENSION` payload. In particular, `13` and `14` are not established ordinary command `WHAT` values.
 
 ## Evidence basis
 
-The command table, step and priority model, collective event behavior, and translation frames come from [WHO 2 specification](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
+The command table, step and priority model, collective event behavior, and translation frames come from [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
 
 See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and the common [`WHAT` model](../../protocol/what.md).

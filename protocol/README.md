@@ -2,15 +2,18 @@
 
 OpenWebNet is a delimiter-framed application protocol used to exchange commands, events, state, measurements, configuration data, and service information with compatible gateways and systems.
 
-The protocol has two layers that must not be collapsed:
+For the published TCP gateway workflow, two layers must not be collapsed:
 
 1. a connection/session layer that selects commands, events, or programmed-scenario traffic and performs authentication where required;
 2. an application-frame layer in which `WHO` selects a system and the remaining fields are interpreted in that system's grammar.
+
+Other interfaces can carry OpenWebNet without this TCP session setup. The [ZigBee Interface](zigbee-interface.md) has distinct serial, addressing, acknowledgement, discovery, and management rules; selecting `WHO` alone is insufficient to establish the variant grammar.
 
 ## Reference
 
 | Topic | Purpose |
 | --- | --- |
+| [Scope and Architecture](scope-and-architecture.md) | Encyclopedia boundary, interface applicability, mechanism ownership, and entity layers |
 | [Frame Syntax](frame-syntax.md) | Common message families, delimiters, empty fields, and parameterized tags |
 | [Connection and Sessions](sessions.md) | TCP gateway setup, session selectors, and session state |
 | [Authentication](authentication.md) | Open-range behavior, legacy authentication boundary, and HMAC negotiation |
@@ -19,6 +22,7 @@ The protocol has two layers that must not be collapsed:
 | [`WHAT`](what.md) | Command, state, and event selector semantics |
 | [`DIMENSION`](dimensions.md) | Property request, report, and write forms |
 | [Acknowledgements](acknowledgements.md) | `ACK`/`NACK` roles, including result-sequence termination |
+| [ZigBee Interface](zigbee-interface.md) | Source-scoped serial variant, namespace applicability, and unresolved conflicts |
 
 ## Core fields
 
@@ -73,7 +77,7 @@ Syntactic validity does not prove that a Device supports an operation. The funct
 
 ## Reference organization
 
-This directory contains mechanics shared across systems. Functional commands and properties are organized by `WHO` under [`functional/`](../functional/). Diagnostic and programming protocols reuse the frame language but define separate operations, sequences, and evidence boundaries under [`diagnostics/`](../diagnostics/) and [`programming/`](../programming/).
+This directory contains mechanics shared across systems. [Scope and Architecture](scope-and-architecture.md) defines the boundary between interfaces, runtime control, discovery, interview, configuration reading, programming, and catalogue capability. Functional commands and properties are organized by `WHO` under [`functional/`](../functional/). Diagnostic and programming protocols reuse the frame language but define separate operations, sequences, and evidence boundaries under [`diagnostics/`](../diagnostics/) and [`programming/`](../programming/).
 
 ## Evidence basis
 

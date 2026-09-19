@@ -23,7 +23,7 @@ See [Connection and Sessions](../../protocol/sessions.md) for the complete workf
 
 `OPEN.db.EN_SYSTEM` contains a `WHO 99` row labelled Service Identification. It has no direct `AS_OPEN_SYSTEM` association to an `EN_OPEN` operation in this database revision.
 
-The database therefore establishes the namespace label, but **does not** establish an additional service-identification `WHAT` table or prove that every `*99*X##` value is valid. The published selectors above are the concrete operations supported by the current source corpus.
+The database therefore establishes the namespace label, but **does not** establish an additional service-identification `WHAT` table or show that every `*99*X##` value is valid. The published selectors above are the concrete operations supported by the current source corpus.
 
 ## Distinctions
 

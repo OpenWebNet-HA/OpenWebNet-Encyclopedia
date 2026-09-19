@@ -9,13 +9,13 @@ This review continues the documentation-wide pass on `general-once-over`, starti
 | Protocol | Corrected session-selection/authentication branching, final client authentication acknowledgement, proof serialization, and failure throttling; recorded the published identity-constant discrepancy. |
 | Functional references | Expanded Temperature Control dimensions and holiday commands; corrected Lighting Management address composition and payloads; added Sound Diffusion payload examples and source discrepancies; removed an unsupported atomic-clock guarantee. |
 | Diagnostics | Added the public Temperature Control fault model, keeping it distinct from Suite Device interviews; aligned discovery termination and version-payload explanations. |
-| Device Model | Preserved configured Object versus Virgin Object resolution; corrected firmware 157's placement count to 11 alternatives across four internal slots. |
+| Device Model | Preserved configured Object versus Virgin Object resolution; corrected firmware 157's placement count to 11 alternatives across four `slot` positions. |
 | Programming and guides | Scoped product queries by catalogue system, preserved firmware candidates, corrected slot and rule queries, distinguished decimal wire IDs from hexadecimal display, added cleanup, and processed active sequence outcomes before subsequent writes. |
 | Scenario Engine | Corrected shared-placeholder rendering and the parameter table; narrowed open questions to genuinely unresolved mappings. |
 | Internals and reverse engineering | Preserved established namespace and ownership boundaries; corrected a nonexistent SQL column and clarified the position of `N_CONF`. |
 | Navigation and style | Replaced path-only navigation labels with page titles, removed em dashes, repaired an obsolete address anchor, and checked Markdown tables. |
 
-The accepted interpretation of `DIMENSION 1.N_CONF` as a physical configurator-position count remains intact. `EN_DEVICE.name` remains the preferred Device description; Module, internal slot, Object, and database row identity remain separate concepts. Existing one-page functional references remain consolidated.
+The accepted interpretation of `DIMENSION 1.N_CONF` as a physical configurator-position count remains intact. `EN_DEVICE.name` remains the preferred Device description; Module, `slot`, Object, and database row identity remain separate concepts. Existing one-page functional references remain consolidated.
 
 ## Validation
 

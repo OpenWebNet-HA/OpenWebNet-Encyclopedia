@@ -10,24 +10,26 @@ Address programming assigns the effective functional system and address of one c
 
 | Field | `OPEN.db` range | Meaning |
 | --- | ---: | --- |
-| `SLOT` | `1`–`255` | Device-local internal slot |
-| `SYS` | `1`–`255` | Object system selector |
-| `ADDR` | `0`–`65535` | encoded address |
+| `SLOT` | `1..255` | Device-local `slot` |
+| `SYS` | `1..255` | Object system selector |
+| `ADDR` | `0..65535` | encoded address |
 
 These ranges are transport capacity, not universal validity.
 
 ## Resolution procedure
 
-1. Resolve the Device, firmware, internal slot, and target Object.
+1. Resolve the Device, firmware, `slot`, and target Object.
 2. Determine the functional system supported by that Object.
 3. Select the applicable `OPEN.db` address rule for the management family and Object/device family.
 4. Validate component values, fixed prefixes, padding, advanced offsets, level rules, and validity conditions.
-5. Encode the complete `ADDR` without discarding significant zero padding.
+5. Establish the Object-specific mapping from the semantic address to numeric `ADDR`. Do not copy a functional `WHERE` or append routing suffixes into this value merely because an address-rule template can render them.
 6. Preserve `SYS` as a separate field.
 7. Send the address only after the corresponding Object write.
 8. Verify the effective tuple through diagnostic `DIMENSION 32`.
 
 `SYS` is labelled “KeyObject system” by `OPEN.db`. It is not automatically a functional `WHO`, diagnostic `WHO`, or internal `EN_SYSTEM.id_system`. A numeric mapping requires Object/system and capture corroboration.
+
+Functional `WHERE`, management selection `WHERE`, and the `DIMENSION 32.ADDR` payload are distinct representations. The stored range `0..65535` does not encode a universal conversion from strings such as group or routed addresses. Address-rule selection and rendering remain partly unresolved; stop before a write if either `SYS` or the `ADDR` conversion lacks applicable evidence.
 
 ## Address families
 
@@ -55,6 +57,6 @@ The Device can report:
 
 `*#[WHO]*[WHERE]*34*[SLOT]*[ERROR]##`
 
-`ERROR` is boolean. `OPEN.db` supplies no more detailed reason. Preserve the attempted Object, `SYS`, raw `ADDR`, internal slot, and applicable address rule when reporting the failure.
+`ERROR` is boolean. `OPEN.db` supplies no more detailed reason. Preserve the attempted Object, `SYS`, raw `ADDR`, `slot`, and applicable address rule when reporting the failure.
 
 The address write is optional and repeatable within `ConfKO`. Omission can be valid for an Object without an address; it must not be used to infer that every unaddressed Module is erroneous.

@@ -4,6 +4,8 @@
 
 The namespace is heterogeneous: the selected `WHERE` identifies a device family, and the valid `WHAT` and `DIMENSION` operations depend on that family. A Stop&Go address, an energy meter/central unit address, and an Energy Management actuator address therefore cannot be treated as interchangeable numeric targets.
 
+These references follow `WHO_18.pdf`. The [ZigBee Interface](../../protocol/zigbee-interface.md) defines a separate Energy Management surface and address model, including unresolved Reset and Frequency/Energy source conflicts and a materially different `DIMENSION 1200` grammar. See the [ZigBee Energy Management Variant](zigbee-variant.md). Do not transfer SCS ranges, units, or reset semantics to that variant solely from `WHO 18` equality.
+
 ## Reference
 
 | Subject | Page |
@@ -11,6 +13,7 @@ The namespace is heterogeneous: the selected `WHERE` identifies a device family,
 | Commands and command parameters | [`WHAT` Reference](what.md) |
 | Device families and `WHERE` grammar | [Addressing](addressing.md) |
 | Measurements, totalizers, actuator state, Stop&Go and historical data | [`DIMENSION` Reference](dimensions.md) |
+| ZigBee-specific Energy Management semantics and source conflicts | [ZigBee Energy Management Variant](zigbee-variant.md) |
 
 ## Device families
 
@@ -18,9 +21,9 @@ The published `WHO 18` model identifies three address families:
 
 | Family | `WHERE` form | Published index range | Examples |
 | --- | --- | ---: | --- |
-| Stop&Go | `1N` | `N = 1–127` | Stop&Go protection/control devices |
-| Energy measurement / central unit | `5N` | `N = 1–255` | F520, F523, 3522 and corresponding Legrand devices |
-| Energy Management actuator | `7N#0` | `N = 1–255` | F522, F523 and corresponding Legrand devices |
+| Stop&Go | `1N` | `N = 1..127` | Stop&Go protection/control devices |
+| Energy measurement / central unit | `5N` | `N = 1..255` | F520, F523, 3522 and corresponding Legrand devices |
+| Energy Management actuator | `7N#0` | `N = 1..255` | F522, F523 and corresponding Legrand devices |
 
 See [Addressing](addressing.md) for the implications of these forms.
 
@@ -39,13 +42,13 @@ Several operations parameterize `WHAT` or `DIMENSION` using `#`. Those parameter
 
 ## Measurement model
 
-Energy Management separates instantaneous values from accumulated and historical values. `DIMENSION 113` reports active power in watts. Totalizer operations expose accumulated values, while `DIMENSION 511`–`514` return time-series data for daily and monthly graphics. The published specification labels several accumulated values as “Watt”; where the frame description explicitly identifies energy since reset it uses Wh. Implementations should preserve the published field semantics rather than silently normalizing units from the identifier alone.
+Energy Management separates instantaneous values from accumulated and historical values. `DIMENSION 113` reports active power in watts. Totalizer operations expose accumulated values, while `DIMENSION 511..514` return time-series data for daily and monthly graphics. The published specification labels several accumulated values as “Watt”; where the frame description explicitly identifies energy since reset it uses Wh. Implementations should preserve the published field semantics rather than silently normalizing units from the identifier alone.
 
 ## Event model
 
 Many `WHO 18` values can arrive both as direct responses and as events. Actuator state, totalizer state, differential-current level, active power, and Stop&Go status all have event forms. Clients maintaining state should therefore process `DIMENSION` events independently of whether they initiated the corresponding request.
 
-Automatic active-power reporting is configured with `DIMENSION 1200`. Historical-series commands similarly cause a sequence of `DIMENSION 511`–`514` event frames rather than a single scalar response.
+Automatic active-power reporting is configured with `DIMENSION 1200`. Historical-series commands similarly cause a sequence of `DIMENSION 511..514` event frames rather than a single scalar response.
 
 ## Relationship to other energy systems
 

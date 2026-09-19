@@ -30,7 +30,7 @@ ScenarioDevices stores ordinary Lighting actions such as:
 
 - `*1*0*WHERE##` - OFF;
 - `*1*1*WHERE##` - ON;
-- `*1*11*WHERE##` through `*1*16*WHERE##` - fixed timed actions;
+- `WHAT 11..16` using `*1*WHAT*WHERE##` - fixed timed actions;
 - `*#1*WHERE*#2*ora*min*sec##` - parameterized timed action;
 - `*#1*WHERE*#1*liv*v##` - 100-level dimming action.
 

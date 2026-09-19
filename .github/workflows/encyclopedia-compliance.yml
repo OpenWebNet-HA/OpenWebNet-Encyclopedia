@@ -1,0 +1,119 @@
+name: Encyclopedia compliance
+
+on:
+  pull_request:
+    branches:
+      - main
+      - machine-knowledge-base
+  push:
+    branches:
+      - main
+      - machine-knowledge-base
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mechanical-compliance:
+    name: Mechanical ESG and ECV compliance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile validation scripts
+        run: |
+          python -m py_compile             project/review/checks/check_esg.py             project/review/checks/check_ecv.py             project/review/checks/audit_epistemic_drift.py             project/review/checks/audit_source_coverage.py
+
+      - name: Enforce Encyclopedia Style Guide
+        run: python project/review/checks/check_esg.py .
+
+      - name: Enforce deterministic Encyclopedia Core Values rules
+        run: python project/review/checks/check_ecv.py .
+
+      - name: Enforce Machine KB privacy when present
+        shell: bash
+        run: |
+          if [[ -f knowledge/tools/validate_privacy.py ]]; then
+            python knowledge/tools/validate_privacy.py
+          else
+            echo "Machine KB privacy validator not present on this branch; skipped."
+          fi
+
+  source-integrity:
+    name: Source integrity and reproducibility
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install source-audit dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Verify canonical sources
+        run: |
+          python project/review/checks/audit_source_coverage.py | tee source-audit.json
+
+      - name: Preserve source audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-integrity-audit
+          path: source-audit.json
+          if-no-files-found: ignore
+
+  epistemic-review:
+    name: Advisory epistemic review
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate review queues
+        shell: bash
+        run: |
+          {
+            python project/review/checks/audit_epistemic_drift.py . --show-candidates
+            python project/review/checks/check_ecv.py . --show-candidates
+          } | tee epistemic-review.txt
+
+      - name: Add review queue to job summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Advisory ECV review queue"
+            echo
+            echo "These findings require evidence-aware review and do not constitute factual verdicts."
+            echo
+            echo '~~~text'
+            head -n 200 epistemic-review.txt 2>/dev/null || true
+            echo '~~~'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve full epistemic review queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: epistemic-review
+          path: epistemic-review.txt
+          if-no-files-found: ignore

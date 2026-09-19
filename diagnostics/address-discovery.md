@@ -25,9 +25,9 @@ The full addressed interview uses a different start frame and can return the bro
 
 Diagnostic `WHERE` follows the address rules of the selected diagnostic family. It is not one universal integer format and it is not necessarily the only address exposed by the Device.
 
-For Lighting and Automation, a Device can contain multiple Modules with different functional `A`/`PL` addresses. `DIMENSION 32` reports those per-internal-slot addresses. The address used to find or interview the Physical Device must therefore be kept distinct from the Module addresses learned during the interview.
+For Lighting and Automation, a Device can contain multiple Modules with different functional `A`/`PL` addresses. `DIMENSION 32` reports those per-`slot` addresses. The address used to find or interview the Physical Device must therefore be kept distinct from the Module addresses learned during the interview.
 
-Observed `WHO 1001` captures suggest that the diagnostic `WHERE` commonly corresponds to the configured address of internal slot `1`. The observation is useful for implementation testing but is not sufficient to define a universal rule for every Object layout, Device, or diagnostic family.
+Observed `WHO 1001` captures suggest that the diagnostic `WHERE` commonly corresponds to the configured address of `slot` `1`. The observation is useful for implementation testing but is not sufficient to define a universal rule for every Object layout, Device, or diagnostic family.
 
 ## Scan procedure
 

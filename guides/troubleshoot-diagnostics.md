@@ -38,7 +38,9 @@ Troubleshooting begins with the frame that was supposed to produce the missing r
 | addressed identity | `*#[WHO]*[WHERE]*1##` |
 | full interview | `*[WHO]*10#[ID]*0##` or `*#[WHO]*[WHERE]*0##` |
 | local interview | `*[WHO]*5*0##`, then perform the local interaction |
-| detailed properties | after resolving Modules, send `*#[WHO]*0*38#0##` |
+| detailed properties | after resolving Modules, use `*#[WHO]*0*38#0##` only where its effects are established for the family and firmware |
+
+The `DIMENSION 38` template is labelled reset/select despite its `DiagKO` retrieval role. It must not be included in a presumed read-only retry on an unfamiliar target. Preserve the uncertainty and obtain applicable evidence first; see [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters).
 
 Preserve the exact request, all returned frames, their direction and order, and the timer that ended collection. Do not troubleshoot a parsed value without retaining the request that elicited it.
 
@@ -268,6 +270,6 @@ Return a troubleshooting record containing:
 - remaining ambiguity;
 - the safest next read-only action.
 
-A useful conclusion is bounded and falsifiable-for example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
+A useful conclusion is bounded and falsifiable. For example, “the selected Device completed its interview, but this configured command Object did not report optional `DIMENSION 32` in two fresh sessions.” Avoid conclusions such as “the Device has no address” unless independent evidence establishes that stronger claim.
 
 See [Diagnostic Error Handling](../diagnostics/device-interview.md#errors-and-abnormal-termination) and [Address Discovery](../diagnostics/address-discovery.md).

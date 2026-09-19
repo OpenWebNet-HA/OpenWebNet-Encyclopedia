@@ -77,13 +77,13 @@ Use every `DIMENSION 30` response:
 `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##`
 
 1. Group records within the same Device interview.
-2. Use protocol `SLOT` as the Device-local internal-slot key.
+2. Use protocol `SLOT` as the Device-local `slot` key.
 3. Do not renumber slots to match MyHOME_Suite visible Module numbering.
-4. Correlate the internal slot with catalogue placement such as `EN_SLOTS.first_slot`.
+4. Correlate the `slot` with catalogue placement such as `EN_SLOTS.first_slot`.
 5. Retain fixed-Object, hidden, conditional, and slot-capacity metadata.
 6. Do not synthesize Modules only because `EN_FIRMWARE.slots` declares a capacity.
 
-For each internal slot create one Module record, even when its function is unresolved.
+For each `slot` create one Module record, even when its function is unresolved.
 
 ## 3. Resolve configured and unconfigured functions
 
@@ -134,6 +134,8 @@ The initial interview does not ordinarily supply the complete indexed property s
 
 `*#[WHO]*0*38#0##`
 
+Use this operation only where its effects are established for the target family and firmware. `OPEN.db` places it in `DiagKO` retrieval but labels it reset/select; non-destructive behavior is not established universally. If unresolved, retain the initial interview and classify detailed configuration as unavailable rather than sending this request. See the canonical [Detailed Configuration Reading](../diagnostics/dim35-configuration.md#reading-detailed-parameters) treatment.
+
 Collect the repeated `DIMENSION 35` responses produced by that request during the MyHOME_Suite eight-second response window:
 
 `*#[WHO]*[WHERE]*35#[INDEX]#[SLOT]*[VAL_PAR]##`
@@ -146,7 +148,7 @@ Keep `DIMENSION 310` outside the generic indexed-property model because it carri
 
 For each tuple `(SLOT, INDEX, VAL_PAR)`:
 
-1. select the Module by internal slot;
+1. select the Module by `slot`;
 2. require its resolved configured Object;
 3. collect Object-scoped `EN_CONF` definitions using the Object's `id_key_object` and `id_firmware = 0`;
 4. collect firmware-scoped definitions using `id_key_object = 0` and the resolved firmware;
@@ -215,6 +217,7 @@ function read_device_configuration(selector, diagnostic_who):
         module = modules.get_or_create(dim32.SLOT)
         module.address = decode_address_in_resolved_system_context(dim32)
 
+    require DIMENSION 38 effects are established for this family and firmware
     detailed = send_and_collect("*#" + decimal_string(diagnostic_who) + "*0*38#0##",
                                 response_window = 8 seconds)
 
@@ -254,7 +257,7 @@ function read_device_configuration(selector, diagnostic_who):
     }
 ```
 
-Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for an internal slot absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
+Never make `get_or_create` silently assert that a Module exists: a `DIMENSION 32` or `35` response for a `slot` absent from `DIMENSION 30` must produce an anomalous placeholder with the raw frame attached.
 
 ## SQL examples for catalogue and cross-database resolution
 
@@ -487,7 +490,7 @@ Device
   identity status
   diagnostic completion status
   Modules[]
-    internal slot
+    `slot`
     display order/name, when established
     configured state
     function or Virgin Object role

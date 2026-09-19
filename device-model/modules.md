@@ -1,12 +1,12 @@
 # Modules
 
-A Module is a firmware-exposed logical container within a Physical Device. A Device can expose one or more Modules, each located by an internal slot.
+A Module is a firmware-exposed logical container within a Physical Device. A Device can expose one or more Modules, each located by a `slot`.
 
 ## Terminology
 
 **Module** is the preferred term for the logical units presented by a Device in MyHOME_Suite and by the diagnostic protocol.
 
-**Internal slot** refers specifically to the numeric position used in catalogue structures and diagnostic frames. The internal slot locates the Module; it is not the Module’s functional address.
+**`slot`** refers specifically to the numeric position used in catalogue structures and diagnostic frames. The `slot` locates the Module; it is not the Module’s functional address.
 
 The following must remain distinct:
 
@@ -14,16 +14,16 @@ The following must remain distinct:
 | --- | --- |
 | Physical Device | Installed hardware product |
 | Module | Firmware-exposed logical container |
-| Internal slot | Numeric position locating a Module |
+| `slot` | Numeric position locating a Module |
 | Object | Logical function assigned to a Module |
-| UI position | User-facing order or label, which may differ from the internal slot |
+| UI position | User-facing order or label, which may differ from the `slot` |
 | Functional address | Address configured on an Object |
 
 ## Firmware-declared Module count
 
-`EN_FIRMWARE.slots` declares the number of internal slots for a firmware definition.
+`EN_FIRMWARE.slots` declares the number of `slot` positions for a firmware definition.
 
-This is the closest catalogue representation of the Module count, but it is not the number of rows in `EN_SLOTS`. The latter records Object alternatives and can contain several rows for one internal slot.
+This is the closest catalogue representation of the Module count, but it is not the number of rows in `EN_SLOTS`. The latter records Object alternatives and can contain several rows for one `slot`.
 
 Examples:
 
@@ -52,18 +52,18 @@ This association states that a firmware supports an Object:
 
 ### `EN_SLOTS`
 
-This table places a firmware/Object association at an internal slot:
+This table places a firmware/Object association at a `slot`:
 
 | Column | Role |
 | --- | --- |
 | `id_slot` | Slot-assignment record |
-| `first_slot` | Internal slot at which the Object association starts |
+| `first_slot` | `slot` at which the Object association starts |
 | `fixed_ko` | Marks the designated/fixed Object association in the catalogue data |
 | `id_object_firmware` | Firmware/Object association |
 
-All 1,725 slot records resolve to an `AS_OBJECT_FIRMWARE` association in the canonical database.
+All 1,725 `slot` records resolve to an `AS_OBJECT_FIRMWARE` association in the canonical database.
 
-`first_slot` ranges from `1` through `17` in this source revision. That is observed catalogue coverage, not a universal protocol limit; `OPEN.db` permits diagnostic `[SLOT]` values from `1` through `255`.
+`first_slot` covers `1..17` in this source revision. That is observed catalogue coverage, not a universal protocol limit; `OPEN.db` permits diagnostic `[SLOT]` values in `1..255`.
 
 ## Object alternatives at a Module
 
@@ -81,14 +81,14 @@ A Module can expose:
 
 Firmware `157`, used by `64391`, `64191`, and `64192`, shows why Object alternatives cannot be counted as Modules:
 
-| Slot | Designated Object | Additional Objects |
+| `slot` | Designated Object | Additional Objects |
 | ---: | --- | --- |
 | `1` | Light actuator | Automation actuator |
 | `2` | Light actuator | - |
 | `3` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 | `4` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 
-The Physical Device therefore has four Modules, with eleven slot/Object alternatives.
+The Physical Device therefore has four Modules, with eleven `slot`/Object alternatives.
 
 ## Diagnostic Module enumeration
 
@@ -98,9 +98,9 @@ The Physical Device therefore has four Modules, with eleven slot/Object alternat
 
 | Field | Database description | Range |
 | --- | --- | ---: |
-| `SLOT` | “ko slot” | `1`–`255` |
-| `KEYO` | “device object model” | `1`–`65535` |
-| `STATE` | “configured or not configured” | `0`–`1` |
+| `SLOT` | “ko slot” | `1..255` |
+| `KEYO` | “device object model” | `1..65535` |
+| `STATE` | “configured or not configured” | `0..1` |
 
 This response exposes the Device’s current Module/Object state:
 
@@ -116,7 +116,7 @@ Resolve `KEYO` against `EN_KEY_OBJECT.key_object` for `STATE = 1` and `EN_VIRGIN
 
 `*#[WHO]*[WHERE]*32#[SLOT]*[SYS]*[ADDR]##`
 
-This reports a system and address for the Object at an internal slot. It does not redefine the Module itself as an address.
+This reports a system and address for the Object at a `slot`. It does not redefine the Module itself as an address.
 
 ### Configuration response
 
@@ -135,13 +135,13 @@ These states are distinct:
 | Present and configured | Module exists and has a configured Object |
 | Present and unconfigured | Module exists but has not received a final configuration |
 | Disabled | Module exists but its Object is disabled by configuration |
-| Absent from UI | MyHOME_Suite does not present the internal slot in that context |
+| Absent from UI | MyHOME_Suite does not present the `slot` in that context |
 | Fixed-function | Catalogue/UI does not allow selection of another Object |
-| Alternative Object | Firmware supports another Object at the same internal slot |
+| Alternative Object | Firmware supports another Object at the same `slot` |
 
 A captured `STATE` value alone does not establish all these UI distinctions.
 
-For example, Device `007B269D` was observed with internal slot `1` disabled, internal slot `2` absent from the UI, and internal slots `3` and `4` displayed under shifted UI numbering. This demonstrates that UI position and internal slot cannot be assumed identical.
+For example, Device `007B269D` was observed with `slot` `1` disabled, `slot` `2` absent from the UI, and `slot` positions `3` and `4` displayed under shifted UI numbering. This demonstrates that UI position and `slot` cannot be assumed identical.
 
 ## Hardware-backed and logical Modules
 
@@ -160,7 +160,7 @@ Command-only Devices such as `64360` expose Light control Objects as their actua
 
 ## Repeated Modules
 
-Some firmware definitions expose repeated Modules with the same Object vocabulary. Repetition does not make the Modules interchangeable at runtime: each internal slot can have its own Object selection, address, groups, and parameters.
+Some firmware definitions expose repeated Modules with the same Object vocabulary. Repetition does not make the Modules interchangeable at runtime: each `slot` can have its own Object selection, address, groups, and parameters.
 
 The IP55 PIR sensor observed as Device `08CF44BF` illustrates a large Module set: one sensor Module plus optional IR scenario-control Modules across later slots. The catalogue’s maximum observed `first_slot` of `17` is consistent with this class of Device.
 

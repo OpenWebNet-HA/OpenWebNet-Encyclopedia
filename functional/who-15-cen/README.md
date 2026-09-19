@@ -17,11 +17,11 @@ Basic CEN reports the initial pressure. Evolved CEN adds release and hold inform
 
 ## Button `WHAT`
 
-The button identifier occupies the range `00`–`31`. The leading zero is significant in the published examples and should be preserved when representing the canonical frame text.
+The button identifier occupies the range `00..31`. The leading zero is significant in the published examples and should be preserved when representing the canonical frame text.
 
 | `WHAT` | Meaning |
 | --- | --- |
-| `00`–`31` | CEN button number |
+| `00..31` | CEN button number |
 
 The button number is not the physical address of the command device. Device/source addressing is carried separately by `WHERE`.
 
@@ -63,7 +63,7 @@ The published CEN address table includes normal `A`/`PL` and advanced/local-bus 
 | `[1-9][1-9]` | Normal area/light-point `A`/`PL` |
 | `[00][01-15]` | Zone 0, advanced `A`/`PL` |
 | `[10][01-15]` | Zone 10, advanced `A`/`PL` |
-| `[01-09][10-15]` | Light point 10–15, advanced `A`/`PL` |
+| `[01-09][10-15]` | Light point 10..15, advanced `A`/`PL` |
 | `WHERE#3` | Private riser bus parameter |
 | `WHERE#4#[01-15]` | Local bus selected by interface `I4` |
 
@@ -104,7 +104,7 @@ This configuration distinction affects the source represented by `WHERE`; it doe
 
 ## CEN versus CEN+
 
-CEN+ is carried under [`WHO 25`](../who-25-transversal/cen-plus.md) and uses a different event model: `WHAT 21`–`24` encode the interaction phase while the pushbutton number becomes a `WHAT` parameter and `WHERE` identifies a virtual Object. Rotary-selector events are also defined there.
+CEN+ is carried under [`WHO 25`](../who-25-transversal/cen-plus.md) and uses a different event model: `WHAT 21..24` encode the interaction phase while the pushbutton number becomes a `WHAT` parameter and `WHERE` identifies a virtual Object. Rotary-selector events are also defined there.
 
 A parser must therefore select `WHO 15` or `WHO 25` before interpreting the numeric fields. CEN and CEN+ are related command systems but are not alternate encodings of one universal `WHAT` table.
 

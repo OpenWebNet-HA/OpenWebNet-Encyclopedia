@@ -1,21 +1,23 @@
 # `WHO 13` - Integration and Gateway Functions
 
-`WHO 13` covers Integration / Gateway functions. Two complementary roles are established by the corpus:
+`WHO 13` covers Integration / Gateway functions. The namespace has three source-scoped roles that must remain distinct:
 
-1. the published OpenWebNet External interface device API, which exposes gateway-local clock, network identity, model, software-version, and uptime information;
-2. the MyHOME_Suite `OPEN.db` Integration Functions model, which associates `WHO 13` with F422 interface modes and diagnostic family `WHO 1013`.
+1. the published SCS/TCP OpenWebNet External interface device API, which exposes gateway-local clock, network identity, model, software-version, and uptime information;
+2. the MyHOME_Suite `OPEN.db` Integration Functions model, which associates `WHO 13` with F422 interface modes and diagnostic family `WHO 1013`;
+3. the ZigBee OpenWebNet interface, which defines a separate `WHO 13` network-management, product-database, and product-property surface.
 
-These roles belong to the same functional namespace but should not be collapsed into TCP/session behavior.
+These roles share the numeric namespace but do not automatically share `WHERE` grammar, `WHAT` values, `DIMENSION` sets, transport behavior, or Device support.
 
 ## Reference
 
 | Subject | Page |
 | --- | --- |
-| Gateway capabilities and frame model | [Gateway Capabilities](capabilities.md) |
-| `DIMENSION` values, payloads, and access modes | [`DIMENSION` Reference](dimensions.md) |
+| SCS/TCP gateway capabilities and frame model | [Gateway Capabilities](capabilities.md) |
+| SCS/TCP `DIMENSION` values, payloads, and access modes | [`DIMENSION` Reference](dimensions.md) |
+| ZigBee network management, product inventory, and properties | [ZigBee Network Management](zigbee-network-management.md) |
 | Cross-namespace MyHOME_Suite `OPEN.db` evidence | [MyHOME_Suite `OPEN.db` Coverage](../open-db-coverage.md) |
 
-## Gateway capability groups
+## SCS/TCP gateway capability groups
 
 | Capability | `DIMENSION` | Access |
 | --- | ---: | --- |
@@ -52,4 +54,4 @@ This is significant: the implementation model treats `WHO 13` as more than a set
 
 It is also distinct from diagnostic `WHO 1013`. The latter is the diagnostic family assigned by MyHOME_Suite to the Integration Functions system; the numeric relationship does not make diagnostic operations part of the functional `WHO 13` vocabulary.
 
-The published `WHO 13` specification calls this system the **External interface device**. The MyHOME_Suite `OPEN.db` definitions call it **Integration Functions**. The reference preserves both established views: gateway-local management from the published functional API and F422 integration/interface support from the implementation data.
+The published SCS/TCP `WHO 13` specification calls this system the **External interface device**. The MyHOME_Suite `OPEN.db` definitions call it **Integration Functions**. The ZigBee specification defines a third, interface-specific management role documented in [ZigBee Network Management](zigbee-network-management.md). These views remain separate where their wire grammars or applicability differ.

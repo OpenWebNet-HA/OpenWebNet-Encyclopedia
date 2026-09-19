@@ -2,6 +2,8 @@
 
 OpenWebNet addressing is system-specific. `WHERE` identifies the destination or source of a frame, but its grammar depends on the selected `WHO` and must not be interpreted as a single universal address type.
 
+Resolve the interface/variant as well as `WHO`: the [ZigBee Interface](zigbee-interface.md) uses product/unit addresses with `#9` even for namespaces such as Lighting and Automation. The `A`/`PL` and routing material below concerns the SCS sources.
+
 ## Address interpretation
 
 A parser must resolve `WHO` before interpreting `WHERE`. Different systems can use different address layouts, ranges, hierarchy levels, and advanced-address forms.
@@ -19,9 +21,9 @@ The published `WHO 1` and `WHO 2` specifications agree on these base forms:
 | Scope | `WHERE` syntax | Valid values |
 | --- | --- | --- |
 | General | `0` | complete system selected by `WHO` |
-| Environment / area | `A` | `00`, `1`–`9`, or `100` |
+| Environment / area | `A` | `00`, `1..9`, or `100` |
 | Point to point | `APL` | valid combinations listed below |
-| Group | `#GR` | `GR = 1`–`255` |
+| Group | `#GR` | `GR = 1..255` |
 
 The labels *environment*, *ambient*, and *area* are used by different sources for the same collective `A` level. The meaning remains scoped to the selected functional `WHO`.
 
@@ -31,10 +33,10 @@ A point address is the concatenation of its `A` and `PL` representations; it is 
 
 | `A` representation | Valid `PL` | Examples |
 | --- | --- | --- |
-| `1`–`9` | `1`–`9` | `11`, `56`, `99` |
-| `00` | `01`–`15` | `0001`, `0015` |
-| `10` | `01`–`15` | `1001`, `1015` |
-| `01`–`09` | `10`–`15` | `0110`, `0915` |
+| `1..9` | `1..9` | `11`, `56`, `99` |
+| `00` | `01..15` | `0001`, `0015` |
+| `10` | `01..15` | `1001`, `1015` |
+| `01..09` | `10..15` | `0110`, `0915` |
 
 The ordinary physical-configurator range therefore produces two-digit point addresses such as `56`. Extended values produce four-digit forms such as `0015`, `0311`, or `1014`. A three-digit string is not a valid representation of this grammar: leading zeroes are required to keep the `A`/`PL` boundary unambiguous.
 
@@ -44,9 +46,9 @@ For example, `56` is `A=5, PL=6`; `0311` is `A=03, PL=11`; and `1014` is `A=10, 
 
 `WHERE=0` is the general address and targets the complete functional system selected by `WHO`.
 
-An environment/area address contains only the `A` component. Valid forms are `1`–`9`, `00`, and `100`. In particular, `100` is the collective address for `A=10`; it is not a point address.
+An environment/area address contains only the `A` component. Valid forms are `1..9`, `00`, and `100`. In particular, `100` is the collective address for `A=10`; it is not a point address.
 
-A group address is explicitly marked by `#`: `#1` through `#255`. The prefix is part of the protocol syntax, so a group must not be represented as the bare decimal group number.
+A group address is explicitly marked by `#`: `#1..#255`. The prefix is part of the protocol syntax, so a group must not be represented as the bare decimal group number.
 
 ## Routing qualifiers
 
@@ -78,7 +80,7 @@ BASE#4#INTERFACE
 
 `INTERFACE` is the routing-interface address. The published specifications use different labels for the same field: `Int` in `WHO 1` and `interface` in `WHO 2`; MyHOME Suite represents its components as `I3`/`I4`.
 
-The combined Light/Automation model in MyHOME Suite supports treating this as a shared SCS routing concept rather than two unrelated `WHO`-specific mechanisms. The base target can be General, Area, Group, or point where that scope is applicable:
+The combined Light/Automation model in MyHOME Suite supports an inferred shared SCS routing concept, not proof of every functional command combination. The following four forms are explicitly enumerated by the Lighting source; the Automation source establishes only the point form:
 
 | Scope | Level-4 `WHERE` form |
 | --- | --- |
@@ -99,15 +101,15 @@ INTERFACE = I3I4
 
 The distinction is historical and structural: `I3` and `I4` are separate SCS configuration positions, not a protocol-level split of an abstract decimal number into tens and units.
 
-Their exact role depends on the operating mode of the interface. In F422 physical-expansion mode (`MOD=1`), `I3` and `I4` define the **separation address** between the two connected bus sections. For example, `I3=3, I4=2` establishes separation address `32`: Automation addresses below that boundary belong on the lower-address side and addresses above it on the higher-address side. In logical-expansion mode (`MOD=2`), the interface address is again assigned using the A/PL method; documentation also permits `I3=0, I4=1–9` to avoid consuming an ordinary `11`–`99` Automation address.
+Their exact role depends on the operating mode of the interface. In F422 physical-expansion mode (`MOD=1`), `I3` and `I4` define the **separation address** between the two connected bus sections. For example, `I3=3, I4=2` establishes separation address `32`: Automation addresses below that boundary belong on the lower-address side and addresses above it on the higher-address side. In logical-expansion mode (`MOD=2`), the interface address is again assigned using the A/PL method; documentation also permits `I3=0, I4=1..9` to avoid consuming an ordinary `11..99` Automation address.
 
 Consequently, a wire value such as `#4#03` should be preserved structurally as interface address `I3=0, I4=3`, rather than normalized to integer `3`. Leading zeroes can therefore carry address-component information just as they do in extended A/PL addressing.
 
 This configurator-level explanation and the OpenWebNet routing syntax describe different layers of the same concept: `I3`/`I4` define the SCS interface address, while `#4#INTERFACE` uses that address to qualify a functional target as being on the local bus reached through that interface.
 
-The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`; this is best understood as an instance of the same routing grammar, not as evidence for a different Automation local-bus mechanism.
+The public `WHO 1` material explicitly enumerates all four forms. The public `WHO 2` document shows the point form `APL#4#interface`. General, Area, and Group local-bus commands under `WHO 2` remain unestablished by these sources; do not generate them solely by analogy with Lighting or the shared management-system row.
 
-The source documents differ in the range they state for the interface field: the Lighting document gives `01`–`09` and `11`–`15`, while the Automation document expresses it as `[0-1][1-9]` (`01`–`09`, `11`–`19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
+The source documents differ in the range they state for the interface field: the Lighting document gives `01..09` and `11..15`, while the Automation document expresses it as `[0-1][1-9]` (`01..09`, `11..19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
 
 Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
 

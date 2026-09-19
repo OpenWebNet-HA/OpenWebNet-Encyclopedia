@@ -1,6 +1,8 @@
 # `DIMENSION` Reference
 
-`WHO 13` uses `DIMENSION` frames to expose properties of the external interface / gateway. The published specification explicitly identifies whether each property is readable or writable.
+This page records the SCS/TCP external-interface `WHO 13` `DIMENSION` surface. The published SCS/TCP specification explicitly identifies whether each property is readable or writable.
+
+The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Some numeric IDs overlap while others differ, so the two registries must not be merged by number. See [ZigBee Network Management](zigbee-network-management.md#dimension-reference) for the ZigBee variant.
 
 | `DIMENSION` | Property | Access | Payload |
 | ---: | --- | --- | --- |
@@ -42,9 +44,9 @@ Payload: `H*M*S*T`.
 
 | Field | Meaning | Encoding |
 | --- | --- | --- |
-| `H` | Hour | two digits, `00`–`23` |
-| `M` | Minute | two digits, `00`–`59` |
-| `S` | Second | two digits, `00`–`59` |
+| `H` | Hour | two digits, `00..23` |
+| `M` | Minute | two digits, `00..59` |
+| `S` | Second | two digits, `00..59` |
 | `T` | Time zone | three digits, sign + hour offset |
 
 For `T`, the first digit encodes the sign: `0` for a positive offset and `1` for a negative offset. The remaining two digits encode the hour offset. The published examples therefore interpret `001` as GMT+1 and `102` as GMT-2.
@@ -60,8 +62,8 @@ Payload: `W*D*M*Y`.
 | Field | Meaning | Encoding |
 | --- | --- | --- |
 | `W` | Day of week | `00` Sunday through `06` Saturday |
-| `D` | Day | `01`–`31` |
-| `M` | Month | `01`–`12` |
+| `D` | Day | `01..31` |
+| `M` | Month | `01..12` |
 | `Y` | Year | four digits |
 
 Read: `*#13**1##`.
@@ -111,10 +113,10 @@ Payload: `D*H*M*S`, representing elapsed time since the last gateway start-up.
 
 | Field | Meaning | Published encoding |
 | --- | --- | --- |
-| `D` | Days | two digits, `00`–`31` |
-| `H` | Hours | two digits, `00`–`23` |
-| `M` | Minutes | two digits, `00`–`59` |
-| `S` | Seconds | two digits, `00`–`59` |
+| `D` | Days | two digits, `00..31` |
+| `H` | Hours | two digits, `00..23` |
+| `M` | Minutes | two digits, `00..59` |
+| `S` | Seconds | two digits, `00..59` |
 
 ## `DIMENSION 22` - Date and time
 

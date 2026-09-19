@@ -10,4 +10,4 @@ Each product version is isolated in its own directory so that protocol and catal
 | --- | --- |
 | 3.5.38 | [MyHOME Suite 3.5.38](3.5.38/) |
 
-Exact provenance and SHA-256 fingerprints are maintained in [`../manifest.yaml`](../manifest.yaml).
+Exact provenance and SHA-256 fingerprints are maintained in the [Source Manifest](../manifest.yaml).

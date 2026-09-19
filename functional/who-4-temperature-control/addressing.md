@@ -7,11 +7,11 @@ Temperature Control uses a zone/probe-oriented `WHERE` grammar rather than the `
 | Scope | Form | Meaning |
 | --- | --- | --- |
 | General probes | `0` | All probes |
-| Master probe | `1`–`99` | Master probe of zone 1–99 |
-| All probes in zone | `001`–`099` | Master and slave probes belonging to the selected zone |
-| Individual probe | `PZZ` | Probe `P` (`1`–`8`) of zone `ZZ` (`01`–`99`) |
+| Master probe | `1..99` | Master probe of zone `1..99` |
+| All probes in zone | `001..099` | Master and slave probes belonging to the selected zone |
+| Individual probe | `PZZ` | Probe `P` (`1..8`) of zone `ZZ` (`01..99`) |
 | Central unit | `#0` | Temperature Control central unit |
-| Zone via central unit | `#1`–`#99` | Selected zone controlled through the central unit |
+| Zone via central unit | `#1..#99` | Selected zone controlled through the central unit |
 
 Examples of individual-probe encoding include `101` for probe 1 of zone 1, `801` for probe 8 of zone 1, and `899` for probe 8 of zone 99.
 
@@ -32,7 +32,7 @@ These implementation forms complement the public functional grammar. The selecte
 
 ## Actuator addressing
 
-Actuator-oriented `DIMENSION` operations can append an actuator selector to the zone address. This is distinct from addressing a probe in the same zone and is used by operations such as actuator state reported by read-only `DIMENSION 20`. The public forms are `Z#N` for actuator `N` (`1`–`9`) in zone `Z` (`0`–`99`), `Z#0` for all actuators of a zone, and `0#0` for all actuators. Split control uses the additional prefix `3#Z#N` under `DIMENSION 22`.
+Actuator-oriented `DIMENSION` operations can append an actuator selector to the zone address. This is distinct from addressing a probe in the same zone and is used by operations such as actuator state reported by read-only `DIMENSION 20`. The public forms are `Z#N` for actuator `N` (`1..9`) in zone `Z` (`0..99`), `Z#0` for all actuators of a zone, and `0#0` for all actuators. Split control uses the additional prefix `3#Z#N` under `DIMENSION 22`.
 
 ## Central-unit addressing
 

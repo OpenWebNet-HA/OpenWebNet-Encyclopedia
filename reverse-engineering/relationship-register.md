@@ -65,7 +65,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `DIMENSION 30.KEYO` | `EN_VIRGIN_OBJECT.virgin_key_object` | `STATE = 0`, resolved firmware and slot | corroborated |
 | `DIMENSION 30.SLOT` | `EN_SLOTS.first_slot` placement | resolved firmware; not `id_slot` | structurally corroborated |
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Device, firmware, Module, Object, and ownership scope | strongly corroborated |
-| diagnostic outer `WHERE` | configured address of internal slot `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
+| diagnostic outer `WHERE` | configured address of `slot` `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
 | `DIMENSION 32.SYS` | `MHCatalogue.db.EN_SYSTEM.sys_modobj` | resolved Object/system context | strongly inferred; needs discriminating non-Lighting capture |
 
 ## Across database models
