@@ -4,7 +4,7 @@
 
 The published Lighting specification defines the functional command and `DIMENSION` model. The MyHOME_Suite data structures complement it with implemented address rules and functional command templates. Lighting Objects represented by the MyHOME_Suite catalogue may be command Objects, actuator Objects, dimmer Objects, or functions embedded in combined Devices; the functional `WHO 1` namespace describes their Lighting traffic rather than their physical Device class.
 
-The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `WHO 1` but uses a different transport and `WHERE` grammar. The SCS forms on this page do not establish ZigBee-backed applicability merely because the namespace number is shared.
+The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes `WHO 1`, but with a different transport, `WHERE` grammar, documented command set, event surface, and `DIMENSION 1` semantics. See the [ZigBee Lighting Variant](zigbee-variant.md). SCS forms do not establish ZigBee-backed applicability merely because the namespace number is shared.
 
 ## Reference
 
@@ -13,6 +13,7 @@ The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `
 | Commands, states and timed operations | [`WHAT` Reference](what.md) |
 | `WHERE` forms and address scopes | [Addressing](addressing.md) |
 | Level, speed, temporization and operating-time `DIMENSION` operations | [`DIMENSION` Reference](dimensions.md) |
+| ZigBee-specific Lighting semantics and evidence limits | [ZigBee Lighting Variant](zigbee-variant.md) |
 
 ## Functional model
 
