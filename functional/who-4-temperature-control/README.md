@@ -6,7 +6,7 @@ Unlike Lighting and Automation, Temperature Control uses a zone/probe-oriented `
 
 The published OpenWebNet specification defines the functional state and command model. The MyHOME_Suite `OPEN.db` definitions complement it with implemented address rules and command templates, while the MyHOME_Suite catalogue and rule data describe the configuration capabilities of physical Temperature Control Objects. Diagnostic traffic uses the separate diagnostic namespace `WHO 1004` and is documented under [Diagnostics](../../diagnostics/).
 
-The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `WHO 4`, but the shared namespace number does not establish identical addressing, operations, or Device support for that interface.
+The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes a much narrower `WHO 4` surface: the version 4.0 source defines server-originated signed temperature reports through `DIMENSION 0`, not the broad SCS zone and central-unit model below. See the [ZigBee Temperature Control Variant](zigbee-variant.md).
 
 ## Reference
 
@@ -15,6 +15,7 @@ The supplied [ZigBee Interface](../../protocol/zigbee-interface.md) also lists `
 | Operating modes and commands | [`WHAT` Reference](what.md) |
 | Zones, probes, central unit and actuator `WHERE` forms | [Addressing](addressing.md) |
 | Temperature, status and control `DIMENSION` operations | [`DIMENSION` Reference](dimensions.md) |
+| ZigBee-specific temperature-reporting semantics | [ZigBee Temperature Control Variant](zigbee-variant.md) |
 
 ## Temperature representation
 
