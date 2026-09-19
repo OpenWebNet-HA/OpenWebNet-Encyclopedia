@@ -63,7 +63,7 @@ The product code is not the bus instance identifier. `OPEN.db` defines the Devic
 
 `*#[WHO]*[WHERE]*13*[ID]##`
 
-The `[ID]` parameter spans `0` through `4294967295`. Captured Device IDs are represented as eight hexadecimal characters in this documentation, preserving leading zeroes.
+The `[ID]` parameter spans `0..4294967295`. Captured Device IDs are represented as eight hexadecimal characters in this documentation, preserving leading zeroes.
 
 A Device ID identifies an installed physical instance. It is not:
 

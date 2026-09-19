@@ -35,7 +35,7 @@ Never rewrite the Device-local `slot` to match the UI.
 
 Catalogue metadata such as `visible`, `hidden`, `read_only`, `fixed_ko`, and conditions contributes to UI behavior, but no one flag is a complete presentation rule.
 
-A fixed Object can still expose editable configuration. A hidden property can participate in conversions. An Object alternative can exist in the catalogue but be suppressed by a slot condition. An `slot` can exist while being absent from a particular UI view.
+A fixed Object can still expose editable configuration. A hidden property can participate in conversions. An Object alternative can exist in the catalogue but be suppressed by a `slot` condition. A `slot` can exist while being absent from a particular UI view.
 
 Use observed UI behavior as presentation evidence and catalogue structures as capability evidence. Do not infer wire encoding from a label or widget alone.
 

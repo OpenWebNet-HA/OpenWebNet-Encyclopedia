@@ -63,7 +63,7 @@ This table places a firmware/Object association at a `slot`:
 
 All 1,725 `slot` records resolve to an `AS_OBJECT_FIRMWARE` association in the canonical database.
 
-`first_slot` ranges from `1` through `17` in this source revision. That is observed catalogue coverage, not a universal protocol limit; `OPEN.db` permits diagnostic `[SLOT]` values from `1` through `255`.
+`first_slot` covers `1..17` in this source revision. That is observed catalogue coverage, not a universal protocol limit; `OPEN.db` permits diagnostic `[SLOT]` values in `1..255`.
 
 ## Object alternatives at a Module
 

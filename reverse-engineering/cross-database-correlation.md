@@ -6,7 +6,7 @@ Cross-database analysis connects meanings, not local primary keys. Each MyHOME S
 
 | Source | Principal model | Must not be assumed to contain |
 | --- | --- | --- |
-| `MHCatalogue.db` | products, items, firmware capability, Modules, Objects, configuration and validation | installed Device state or complete functional protocol |
+| `MHCatalogue.db` | products, items, Firmware capability, Modules, Objects, configuration and validation | installed Device state or complete functional protocol |
 | `OPEN.db` | systems, address grammars, management frames, sequences, timeouts | product catalogue capability or all functional commands |
 | `rules.db3` | linked-property rules for selected Objects | global configuration dictionary |
 | ScenarioDevices databases | scenario-editor capability hierarchy | installed scenarios or catalogue Object identity |
@@ -23,7 +23,7 @@ Use staged resolution:
 2. parse `DIMENSION 1` without translating its values prematurely;
 3. resolve the catalogue item through model/system meaning;
 4. retain all compatible marketed Device/SKU records;
-5. resolve the three-component firmware candidate set;
+5. resolve the three-component Firmware candidate set;
 6. build Module/Object state from `DIMENSION 30`;
 7. attach addresses and configuration by Device and `slot`;
 8. resolve Object systems and family;
@@ -56,7 +56,7 @@ Use `EN_DEVICE.name` as the MyHOME Suite-facing Physical Device description. Do 
 
 ## Firmware correlation
 
-Diagnostic firmware is a `Version*Release*Build` tuple. Catalogue correlation is distributed across:
+Diagnostic Firmware is a `Version*Release*Build` tuple. Catalogue correlation is distributed across:
 
 ```text
 EN_FIRMWARE.firmware_V
@@ -67,10 +67,10 @@ EN_BUILDS.firmware_b
 Selection must preserve:
 
 - all `EN_FIRMWARE` rows belonging to the resolved item;
-- zero, one, or several `EN_BUILDS` rows per firmware definition;
+- zero, one, or several `EN_BUILDS` rows per Firmware definition;
 - explicit `-1` components as any/unspecified sentinels;
 - absence of a build row as distinct from `firmware_b = -1`;
-- `FW_default`, status, localization, slot layout, and capability differences.
+- `FW_default`, status, localization, `slot` layout, and capability differences.
 
 The databases establish the candidate model but not MyHOME Suite's exact precedence algorithm. Hardware and microcontroller `V.R.b` responses currently have no direct catalogue fields.
 
@@ -83,17 +83,17 @@ STATE = 1 → KEYO is EN_KEY_OBJECT.key_object
 STATE = 0 → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
 ```
 
-`SLOT` is the Device-local internal position. It correlates with placement through `EN_SLOTS.first_slot` after firmware resolution; it is not `EN_SLOTS.id_slot`.
+`SLOT` is the Device-local internal position. It correlates with placement through `EN_SLOTS.first_slot` after Firmware resolution; it is not `EN_SLOTS.id_slot`.
 
 The safe lookup order is:
 
-1. resolve firmware;
+1. resolve Firmware;
 2. select the reported `slot`;
 3. choose configured Object or Virgin Object namespace from `STATE`;
-4. verify that the firmware permits that Object/template at that slot;
+4. verify that the Firmware permits that Object/template at that `slot`;
 5. retain mismatches as evidence rather than forcing the nearest candidate.
 
-This order prevents a globally valid Object number from being accepted in a firmware/slot where it is unavailable.
+This order prevents a globally valid Object number from being accepted in a Firmware/`slot` where it is unavailable.
 
 ## Configuration correlation
 
@@ -115,7 +115,7 @@ Physical Device
 | Object-scoped | resolved `id_key_object`; `id_firmware = 0` |
 | Firmware-scoped | `id_key_object = 0`; resolved `id_firmware` |
 
-After resolving the property definition, validation proceeds through base ranges, Object/firmware filters, filtered ranges, conditions, conversion rules, and linked-property rules. A transport-valid number can still be invalid in that context.
+After resolving the property definition, validation proceeds through base ranges, Object/Firmware filters, filtered ranges, conditions, conversion rules, and linked-property rules. A transport-valid number can still be invalid in that context.
 
 ## Object-family address-rule relationship
 
@@ -158,7 +158,7 @@ The leading candidate is `MHCatalogue.db.EN_SYSTEM.sys_modobj`.
 | catalogue `xml_key_system` | useful semantic identifier but textual |
 | catalogue `sys_modobj` | numeric external/model field associated with Object systems; strongest candidate |
 
-`sys_modobj` ranges from `0` through `21` in this revision. Multiple system variants can share a value, and one reusable Object can belong to several systems. A reported `SYS` may therefore select an active system context rather than identify one database row.
+`sys_modobj` covers `0..21` in this revision. Multiple system variants can share a value, and one reusable Object can belong to several systems. A reported `SYS` may therefore select an active system context rather than identify one database row.
 
 The mapping remains strongly inferred until a non-Lighting capture distinguishes the candidates. See [Hypothesis Testing](hypothesis-testing.md#dimension-32sys).
 
@@ -190,10 +190,10 @@ Do not equate ScenarioDevices `ObjectId` with `EN_KEY_OBJECT.key_object` or `Fam
 An unsafe correlation looks like this:
 
 1. guess an Object from `KEYO` without applying `STATE`;
-2. select a firmware row that supports that Object;
-3. cite the selected firmware as proof of the Object mapping.
+2. select a Firmware row that supports that Object;
+3. cite the selected Firmware as proof of the Object mapping.
 
-The correct process uses an independently resolved item/firmware, the frame discriminator, and slot placement. If those sources disagree, preserve the disagreement.
+The correct process uses an independently resolved item/Firmware, the frame discriminator, and `slot` placement. If those sources disagree, preserve the disagreement.
 
 ## Result representation
 
