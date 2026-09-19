@@ -157,7 +157,7 @@ The practical evaluation is:
 6. apply `EN_FILTER_RANGE`;
 7. apply conditions and cross-property rules.
 
-## Slot conditions and conversion rules
+## `slot` conditions and conversion rules
 
 The catalogue contains:
 
@@ -165,11 +165,11 @@ The catalogue contains:
 - 488 `EN_CONDITION` rows
 - 7,899 `EN_CONV_RULE` rows.
 
-`AS_SLOT_CONDITION` attaches a condition to a slot/Object assignment. `EN_CONDITION.id_conv_rule` selects the conversion-rule logic used by that condition.
+`AS_SLOT_CONDITION` attaches a condition to a `slot`/Object assignment. `EN_CONDITION.id_conv_rule` selects the conversion-rule logic used by that condition.
 
 `EN_CONV_RULE` can compare item-level and Object-level configuration symbols and values, mark an always-true rule, or jump to another rule. These structures affect capability selection and value conversion; they are not OpenWebNet frames.
 
-`CONF_SYMBOL_REF` supplies explicit symbol correspondence between item configuration and Object configuration for a system and slot.
+`CONF_SYMBOL_REF` supplies explicit symbol correspondence between item configuration and Object configuration for a system and `slot`.
 
 ## Additional Temperature Control rules
 
@@ -239,7 +239,7 @@ For example, a preset position or load-dependent minimum level can have a value 
 
 ## Mapping requirements
 
-A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol slot/value evidence, and-where available-the resulting runtime behavior. Numeric equality alone is insufficient.
+A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
 
 ## Sources
 

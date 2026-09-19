@@ -1,6 +1,6 @@
 # Modules
 
-A Module is a firmware-exposed logical container within a Physical Device. A Device can expose one or more Modules, each located by an `slot`.
+A Module is a firmware-exposed logical container within a Physical Device. A Device can expose one or more Modules, each located by a `slot`.
 
 ## Terminology
 
@@ -52,7 +52,7 @@ This association states that a firmware supports an Object:
 
 ### `EN_SLOTS`
 
-This table places a firmware/Object association at an `slot`:
+This table places a firmware/Object association at a `slot`:
 
 | Column | Role |
 | --- | --- |
@@ -61,7 +61,7 @@ This table places a firmware/Object association at an `slot`:
 | `fixed_ko` | Marks the designated/fixed Object association in the catalogue data |
 | `id_object_firmware` | Firmware/Object association |
 
-All 1,725 slot records resolve to an `AS_OBJECT_FIRMWARE` association in the canonical database.
+All 1,725 `slot` records resolve to an `AS_OBJECT_FIRMWARE` association in the canonical database.
 
 `first_slot` ranges from `1` through `17` in this source revision. That is observed catalogue coverage, not a universal protocol limit; `OPEN.db` permits diagnostic `[SLOT]` values from `1` through `255`.
 
@@ -81,14 +81,14 @@ A Module can expose:
 
 Firmware `157`, used by `64391`, `64191`, and `64192`, shows why Object alternatives cannot be counted as Modules:
 
-| Slot | Designated Object | Additional Objects |
+| `slot` | Designated Object | Additional Objects |
 | ---: | --- | --- |
 | `1` | Light actuator | Automation actuator |
 | `2` | Light actuator | - |
 | `3` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 | `4` | Light control | Automation control; Scheduled scenario; Scheduled scenario PLUS |
 
-The Physical Device therefore has four Modules, with eleven slot/Object alternatives.
+The Physical Device therefore has four Modules, with eleven `slot`/Object alternatives.
 
 ## Diagnostic Module enumeration
 
@@ -116,7 +116,7 @@ Resolve `KEYO` against `EN_KEY_OBJECT.key_object` for `STATE = 1` and `EN_VIRGIN
 
 `*#[WHO]*[WHERE]*32#[SLOT]*[SYS]*[ADDR]##`
 
-This reports a system and address for the Object at an `slot`. It does not redefine the Module itself as an address.
+This reports a system and address for the Object at a `slot`. It does not redefine the Module itself as an address.
 
 ### Configuration response
 

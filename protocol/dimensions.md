@@ -57,7 +57,7 @@ Consider the abstract response:
 Here:
 
 - `32` is the `DIMENSION` identifier;
-- `7` is a selector parameter, for example an `slot`;
+- `7` is a selector parameter, for example a `slot`;
 - `SYSTEM` and `ADDRESS` are payload values.
 
 The equivalent structured representation is:
