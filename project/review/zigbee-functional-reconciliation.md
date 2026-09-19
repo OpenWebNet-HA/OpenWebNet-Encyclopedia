@@ -85,4 +85,4 @@ For these four namespaces, every `WHAT`, `DIMENSION`, general request form, mate
 
 Accordingly, `WHO 1`, `WHO 2`, `WHO 4`, and `WHO 18` are **source-bounded complete for the ZigBee OpenWebNet version 4.0 specification**, subject to the explicit unresolved contradictions and source-provenance qualification above. This conclusion does not establish runtime support or identical behavior across every ZigBee gateway, Device, or Firmware.
 
-`WHO 1000` discovery reconciliation and the final ZigBee source-to-documentation completeness matrix remain later tasks and are intentionally outside this Step 1 review.
+At the time of this Step 1 review, `WHO 1000` discovery reconciliation and the final source-to-documentation matrix were later tasks and intentionally outside its scope. They were subsequently completed in the [ZigBee Discovery and Inventory Reconciliation - Step 2](zigbee-discovery-inventory-reconciliation.md) and [ZigBee Final Source Completeness Certification](zigbee-final-source-completeness-certification.md).
