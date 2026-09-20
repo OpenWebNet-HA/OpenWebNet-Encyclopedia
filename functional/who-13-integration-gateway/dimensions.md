@@ -107,6 +107,8 @@ This table describes the models defined by the published specification. It shoul
 
 First-hand gateway-information captures show that an F454 and an MH202 can both report `MODEL = 200` even though they are distinct gateway models. `DIMENSION 15` is therefore useful identification evidence, but an unlisted or non-unique value must not be converted directly into a unique product identity. Where the gateway supports the Integration Functions diagnostic family, continue identification with diagnostic `WHO 1013 DIMENSION 1` and keep its diagnostic object-model namespace distinct from the functional `DIMENSION 15` model code.
 
+For the complete acquisition-to-catalogue workflow, see [Identify an OpenWebNet Gateway](../../guides/identify-openwebnet-gateway.md).
+
 ## `DIMENSION 16` - Firmware version
 
 Payload: `V*R*B`, where `V` is version, `R` release, and `B` build. The specification describes this as the version of the device software implementing the OpenWebNet server.
