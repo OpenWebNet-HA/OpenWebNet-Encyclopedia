@@ -78,6 +78,8 @@ An indexed property can correspond to a physical configurator position even when
 
 A physical counterpart does not prove that the installed value was physically configured, and physical and advanced encodings need not use the same range.
 
+Physical-property correspondence is separate from physical topology selection. When physical configurator values determine which Object exists in a slot, resolve the topology first with [Catalogue Resolution](../internals/catalogue-resolution.md#physical-configuration-resolution), then evaluate the selected Object's property conversions.
+
 See [Configuration](../device-model/configuration.md), [Programming Validation](validation.md), and diagnostic [`DIMENSION 35`](../diagnostics/dim35-configuration.md).
 
 ## Special parameters

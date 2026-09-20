@@ -81,7 +81,7 @@ The same firmware also declares physical `A` and `PL` positions. Those are addre
 
 A direct symbol match is strong catalogue evidence. A semantic match between different symbols requires filters, symbol references, conversion rules, product documentation, UI behavior, or captures to corroborate it. Even after resolving firmware and Object context, absence of a matching physical field establishes only that no counterpart was found in the inspected metadata. An advanced-only conclusion additionally requires evidence that the applicable physical interface and mappings are complete.
 
-A physical counterpart does not identify the active configuration method, and physical and advanced forms need not share the same encoded value or permitted range. See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared method.
+A physical counterpart does not identify the active configuration method, and physical and advanced forms need not share the same encoded value or permitted range. See [Physical configuration and configuration modes](../device-model/configuration.md#physical-configuration-and-configuration-modes) for the conceptual model, and [Physical-configuration resolution](../internals/catalogue-resolution.md#physical-configuration-resolution) when physical settings select Object topology before property conversion.
 
 ## Value forms
 

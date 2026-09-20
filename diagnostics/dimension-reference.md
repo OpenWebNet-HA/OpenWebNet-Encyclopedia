@@ -22,7 +22,9 @@ The tables below cover the Device interview and detailed configuration sequences
 
 `N_CONF` is constrained to `0..12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
 
-`DIMENSION 4` and `5` each carry six configurator values in the range `0..255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
+`DIMENSION 4` and `5` each carry six configurator transport fields in the range `0..255`: `C1..C6` and `C7..C12`. `OPEN.db` also places their programming forms in the `ConfConfigurators` sequence, described there as virtual configuration. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field transport capacity must not be interpreted as twelve physical positions on every Device.
+
+`MHCatalogue.db` separately defines firmware-specific physical symbols, legal domains, conditions, and conversions. No canonical cross-database relation establishes that `C1` universally equals the firmware `EN_CONF` row with `progressive = 1`, or that every firmware-owned `EN_CONF` definition is a literal physical plug position. Keep `C1..C12`, `EN_CONF.progressive`, and `EN_CONF.idx` as separate identifiers unless an explicit correlation is established. See [Physical-configuration resolution](../internals/catalogue-resolution.md#dimension-4-and-5-are-a-transport-boundary).
 
 `DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings. The public [Temperature Control Fault Diagnostics](temperature-control-faults.md) separately establishes active-low labels for the `WHO 1004` central-unit/zone workflow; those labels must not be generalized to other families.
 
