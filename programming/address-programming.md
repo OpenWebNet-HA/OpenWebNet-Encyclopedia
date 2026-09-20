@@ -49,7 +49,7 @@ For Lighting/Automation, decoded `A` and `PL` can correspond to physical configu
 
 A value outside the established physical range can exclude physical configuration. A value within it remains ambiguous because advanced or virtual programming can produce the same effective address.
 
-See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts).
+See [Physical configuration and configuration modes](../device-model/configuration.md#physical-configuration-and-configuration-modes).
 
 ## Address error
 

@@ -16,9 +16,11 @@ It also remains unknown how `SYS` selects one active context when an Object belo
 
 ### `DIMENSION 4` and `5`
 
-The two dimensions each carry six Device-level configurator values. They are related to physical/Virtual configurator transfer and are not ordinary `EN_CONF.idx` records.
+`OPEN.db` establishes the transport surface: `DIMENSION 4` carries `C1..C6`, `DIMENSION 5` carries `C7..C12`, and every `C` field has range `0..255`. The `ConfConfigurators` sequence sends the corresponding programming forms and is described there as virtual configuration.
 
-The exact positional and value encoding remains unresolved. In particular, controlled captures must determine whether the twelve values represent configurator contents, presence state, another encoding, or a combination of these, and whether positions `1..6` and `7..12` correspond directly to the two dimensions.
+What remains unresolved is the cross-database correlation to catalogue semantics. No canonical relation establishes that `C1` equals the firmware `EN_CONF` row with `progressive = 1`, or an equivalent positional rule for every firmware. Controlled observations are still needed to determine how `C1..C12` encode physical/configurator contents in Device families and how those transport positions correspond, where applicable, to firmware-specific symbols such as `A`, `PL`, `M`, `G`, `I`, `ZA`, `ZB`, `N`, `T`, and `S`.
+
+This question no longer concerns the existence or numeric transport range of `C1..C12`; those are established. It concerns their Device-specific semantic correlation with catalogue definitions and physical positions.
 
 ### `DIMENSION 310`
 
@@ -58,11 +60,17 @@ The exact MyHOME Suite selection precedence remains unknown when concrete compon
 
 The complete rule that determines whether MyHOME Suite displays and permits replacement of an Object at a particular Module remains unknown.
 
-### Physical-to-advanced translation
+### Physical-to-advanced and transport correlation
 
-`EN_PHY_TO_ADV_TRANS` contains explicit translation data for only three firmware definitions. Symbols, configuration types, filters, and observed behavior support additional property-level correlations but do not form a complete general translation table.
+The catalogue-native physical topology mechanism is now established for condition-represented branches: resolve firmware physical definitions and legal domains, enumerate `AS_OBJECT_FIRMWARE`/`EN_SLOTS` candidates, constrain `AS_SLOT_CONDITION`/`EN_CONDITION` branches by reachability, select the matching Object topology, and only then evaluate applicable `EN_CONV_RULE` rows. `EN_PHY_TO_ADV_TRANS` remains a sparse supporting table with only three firmware rows and is not the generic mechanism.
 
-It remains unknown whether the remaining mappings can be reconstructed systematically or require Device-specific application logic.
+Open boundaries remain narrower:
+
+- whether and how `DIMENSION 4.C1..C12` correlate with firmware `EN_CONF` definitions or `progressive` ordering for each Device family;
+- how to interpret catalogue candidates that have no explicit physical predicate when reconstructing a complete physical topology;
+- whether textual irregularities such as `O/I` versus `I/O` have an application-level normalization not represented in the canonical databases;
+- which property-level physical-to-advanced correspondences are complete when symbol, range, conversion, or `CONF_SYMBOL_REF` evidence is absent;
+- how the registered catalogue mode labels correspond to every MyHOME Suite UI path beyond the exact sequence labels preserved in `OPEN.db`.
 
 ### Catalogue-wide `N_CONF` equivalence
 

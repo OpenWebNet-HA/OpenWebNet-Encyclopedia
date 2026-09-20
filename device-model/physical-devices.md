@@ -100,7 +100,7 @@ The interpretation is supported by Devices whose physical configuration layouts 
 
 The correspondence across Devices with different values argues against interpreting `N_CONF` as a Module count or general Device classification. Instead, it describes the size of the Device's physical configurator interface.
 
-MyHOME Devices can be configured either through physical configurators installed on the Device or through advanced configuration. Physical configuration constrains values to those representable by the available configurators; advanced configuration can expose values beyond those physical limits. `N_CONF` describes the physical configurator positions provided by the hardware, not the number of logical configuration parameters or the active configuration method.
+The catalogue registers Physical configuration, Virtual Configuration, Advanced Configuration, and Product Programming as distinct modes, and a firmware can support more than one of them. Physical configuration constrains values to those representable by the firmware's demonstrated physical definitions. `N_CONF` describes the physical configurator positions provided by the hardware, not the number of logical configuration parameters or the active configuration mode.
 
 This interpretation remains to be checked against additional Devices, particularly older products for which configuration diagrams are less readily available.
 
@@ -126,10 +126,10 @@ These three SKUs share item `1184`, item model `107`, and firmware `157`. The fi
 
 | Slots | Capability |
 | --- | --- |
-| `1..2` | Relay/actuator Modules |
-| `3..4` | Independently configurable command Modules |
+| `1..2` | actuator Object candidates |
+| `3..4` | command/scenario Object candidates |
 
-This is a combined Device. Describing it only as a Light actuator or only as a Light control would discard part of its physical capability.
+The exact Object selected in each slot can depend on physical configurator conditions. For example, `M1=CEN;M2=O/I` resolves to Objects `[6, 6, 400, 400]`; other reachable condition branches must be evaluated from the firmware's legal configurator domains. This is a combined Device, but the per-configuration topology should be derived rather than stored as an unconditional four-Module rule.
 
 ### `64360`
 
