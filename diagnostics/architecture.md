@@ -84,7 +84,7 @@ Enumeration by ID adds a per-Device `WHAT 11` frame so an already reported Devic
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 7`, `8` | diagnostic bitmasks |
 | `DIMENSION 13` | installed Device ID |
-| `DIMENSION 30` | `slot`, configured Object or unconfigured Virgin Object, and configured state |
+| `DIMENSION 30` | `slot`, enabled regular Object or disabled Virgin Object, and Module enabled/disabled state |
 | `DIMENSION 32` | `slot`, system selector, encoded address |
 | `DIMENSION 35` | configuration index, `slot`, value |
 | `DIMENSION 310` | Object-specific parameter without a generic index |

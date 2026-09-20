@@ -20,7 +20,7 @@ The shared “kconf index” terminology and observed behavior strongly support 
 
 - Physical Device and firmware;
 - `slot`;
-- Object selected in `DIMENSION 30`;
+- regular configured Object reported by `DIMENSION 30` for an enabled Module; a disabled Module's Virgin Object is a role constraint, not an Object-scoped configuration owner;
 - applicable Object- or firmware-scoped `EN_CONF` definition;
 - filters, conditions, and conversion rules;
 - raw `VAL_PAR`.
@@ -55,7 +55,7 @@ No explicit end marker belongs to `DiagKO`; completion is therefore governed by 
 ## Resolving a value
 
 1. Resolve the Device’s catalogue item and firmware.
-2. Resolve `SLOT` and its selected Object from `DIMENSION 30`.
+2. Resolve `SLOT` from `DIMENSION 30`; proceed with Object-scoped configuration only when `STATE = 0` identifies an enabled Module and resolves a regular configured Object.
 3. Find applicable `EN_CONF` rows whose `idx` equals `INDEX`.
 4. Respect the exclusive Object-scoped or firmware-scoped discriminator in `EN_CONF`.
 5. Apply `EN_CONF_RANGE`, `EN_FILTER`, `EN_FILTER_RANGE`, slot conditions, conversion rules, and any system-specific validation.

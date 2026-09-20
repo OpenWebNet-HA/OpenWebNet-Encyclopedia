@@ -69,7 +69,7 @@ The address-rule inventory used by MyHOME_Suite is documented in [Address Discov
 
 ## Missing records
 
-Not every Module necessarily produces `DIMENSION 32`. A missing address can indicate an unconfigured Module, an Object without an address, unsupported reporting, or an incomplete interview. One observed light-control-only Device returned Module data without an observed `DIMENSION 32`; that single capture does not establish the reason.
+Not every Module necessarily produces `DIMENSION 32`. A missing address can indicate a disabled Module, an Object without an address, unsupported reporting, or an incomplete interview. One observed light-control-only Device returned Module data without an observed `DIMENSION 32`; that single capture does not establish the reason.
 
 The working capture model is therefore narrower than “all Modules have `DIMENSION 32`”: addressed actuator/sensor Modules have produced it, while at least one command-only layout did not. Treat availability as Object- and firmware-dependent until broader evidence is available.
 

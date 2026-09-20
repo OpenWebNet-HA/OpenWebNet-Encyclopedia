@@ -72,7 +72,7 @@ Do not overwrite repeated frames merely because their `DIMENSION` matches. `DIME
 2. Record the reported firmware, hardware, and microcontroller versions without assuming that a version number is a catalogue primary key.
 3. Build one Module record per `slot` from `DIMENSION 30`.
 4. Attach `DIMENSION 32` system/address data to the matching `slot`.
-5. Preserve configured and unconfigured Module states.
+5. Preserve enabled and disabled Module states from `DIMENSION 30`, resolving enabled Modules through the regular Object namespace and disabled Modules through the Virgin Object namespace.
 6. Request detailed parameters only after the Module/Object layout is known.
 
 The result is an installed-state view. Catalogue data supplies permitted capabilities; the interview supplies the choices and values currently reported by the Device.
@@ -84,7 +84,7 @@ The catalogue and runtime projections must remain distinct:
 | Which product capability is possible? | `MHCatalogue.db` item, firmware, slots, Objects, and constraints |
 | Which installed Device responded? | `DIMENSION 13` plus diagnostic context |
 | Which product description should be shown? | `EN_DEVICE.name` after `DIMENSION 1` resolution |
-| Which configured Object or unconfigured Virgin Object is reported for a Module? | `DIMENSION 30` |
+| Is a Module enabled with a regular Object or disabled with a Virgin Object? | `DIMENSION 30` |
 | Which functional address is reported for that Module? | `DIMENSION 32` |
 | Which indexed value is reported? | `DIMENSION 35` interpreted through the resolved Object/firmware configuration |
 

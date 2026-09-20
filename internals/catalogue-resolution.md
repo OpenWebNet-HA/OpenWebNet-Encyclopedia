@@ -53,10 +53,10 @@ Do not count `EN_SLOTS` rows as Modules: one `slot` can have several Object alte
 
 | `STATE` | `KEYO` namespace | Meaning |
 | ---: | --- | --- |
-| `1` | `EN_KEY_OBJECT.key_object` | configured Object |
-| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object and functional role |
+| `0` | `EN_KEY_OBJECT.key_object` | enabled Module; regular configured Object |
+| `1` | `EN_VIRGIN_OBJECT.virgin_key_object` | disabled Module; Virgin Object and configurable role |
 
-This is a state-dependent external identifier. It is neither `EN_KEY_OBJECT.id_key_object` nor `EN_VIRGIN_OBJECT.id_virgin_key_object`.
+This is a state-dependent external identifier. The `DIMENSION 30` polarity is established by controlled diagnostic/programming evidence correlated with MyHOME_Suite UI behavior; it is neither `EN_KEY_OBJECT.id_key_object` nor `EN_VIRGIN_OBJECT.id_virgin_key_object`.
 
 Use the same `slot` to attach `DIMENSION 32` address data and `DIMENSION 35` configuration values. Do not renumber protocol slots to match the UI.
 

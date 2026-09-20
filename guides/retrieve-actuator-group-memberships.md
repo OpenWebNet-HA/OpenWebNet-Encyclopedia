@@ -50,8 +50,8 @@ Parse every Module record:
 For each response:
 
 1. use protocol `SLOT` as the Device-local `slot` key;
-2. if `STATE=1`, resolve `KEYO` against `EN_KEY_OBJECT.key_object`;
-3. if `STATE=0`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module unconfigured;
+2. if `STATE=0`, resolve `KEYO` against `EN_KEY_OBJECT.key_object` and mark the Module enabled;
+3. if `STATE=1`, resolve it against `EN_VIRGIN_OBJECT.virgin_key_object` and mark the Module disabled;
 4. retain the resolved Object's internal `id_key_object`;
 5. attach any `DIMENSION 31` error without discarding a valid Module record.
 

@@ -10,7 +10,7 @@ MyHOME Suite presentation combines stored catalogue text, resource keys, impleme
 | Product code/SKU | `EN_DEVICE.code` | product identity, not a language key |
 | Shared item description | `EN_ITEM.descr` | shared capability item, not necessarily a unique marketed product |
 | Object description | `EN_KEY_OBJECT.descr` | logical function of one Module |
-| Virgin Object description | `EN_VIRGIN_OBJECT.descr` | role of an unconfigured Module |
+| Virgin Object description | `EN_VIRGIN_OBJECT.descr` | configurable role represented for a disabled Module in `DIMENSION 30` |
 | Configuration label | `EN_CONF.descr`, `descr_ext`, and related metadata | property presentation in catalogue context |
 | Scenario capability name | ScenarioDevices `Name` fields | commonly a localization/resource key, not final display text |
 | Protocol operation label | `OPEN.db.EN_OPEN.open_label` | implementation operation label, not a public protocol name |

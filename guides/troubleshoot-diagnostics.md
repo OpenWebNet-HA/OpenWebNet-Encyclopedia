@@ -139,8 +139,8 @@ function troubleshoot(request, captured_frames, expected_evidence):
 ### Unknown `DIMENSION 30.KEYO`
 
 1. Read `STATE`.
-2. For `STATE=1`, query `EN_KEY_OBJECT.key_object`.
-3. For `STATE=0`, query `EN_VIRGIN_OBJECT.virgin_key_object`.
+2. For `STATE=0`, query `EN_KEY_OBJECT.key_object` and treat the Module as enabled.
+3. For `STATE=1`, query `EN_VIRGIN_OBJECT.virgin_key_object` and treat the Module as disabled.
 4. Verify the catalogue revision and firmware context.
 5. Preserve the raw Object number if unresolved.
 

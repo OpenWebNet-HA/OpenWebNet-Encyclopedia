@@ -61,7 +61,7 @@ The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) proj
 | `DIMENSION 3` | hardware version |
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 13` | 32-bit Device ID |
-| `DIMENSION 30` | `slot`, Object identifier, and configured state |
+| `DIMENSION 30` | `slot`, enabled/disabled Module state, and regular Object or Virgin Object identifier |
 | `DIMENSION 32` | `slot`, system, and configured address |
 | `DIMENSION 35` | configuration index, `slot`, and parameter value |
 | `DIMENSION 38` | request/reset operation selecting one or all `slot` positions |

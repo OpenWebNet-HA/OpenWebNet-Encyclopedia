@@ -38,7 +38,7 @@ Resolve this evidence into a complete snapshot containing:
 
 - installed Device ID and catalogue identity candidates;
 - firmware and hardware evidence;
-- every reported Module and configured/unconfigured state;
+- every reported Module and enabled/disabled state;
 - each Object or Virgin Object;
 - addresses;
 - indexed and special properties;
@@ -147,7 +147,7 @@ For every reported or intended Module, retain:
 | Field | Required evidence |
 | --- | --- |
 | `slot` | raw `DIMENSION 30.SLOT` and catalogue slot support |
-| configured state | intended enabled/unconfigured state |
+| Module state | intended enabled/disabled state |
 | Object | external `key_object` and internal `id_key_object` |
 | address | encoded `SYS` and `ADDR`, plus decoded components |
 | properties | each `INDEX`, encoded `VAL_PAR`, and selected `id_conf` |

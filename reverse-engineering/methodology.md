@@ -121,8 +121,8 @@ Some relationships are correct only when a discriminator is part of the key. For
 
 ```text
 DIMENSION 30.KEYO
-    STATE = 1 → EN_KEY_OBJECT.key_object
-    STATE = 0 → EN_VIRGIN_OBJECT.virgin_key_object
+    STATE = 0 → enabled Module → EN_KEY_OBJECT.key_object
+    STATE = 1 → disabled Module → EN_VIRGIN_OBJECT.virgin_key_object
 ```
 
 Similarly, `EN_CONF` ownership is polymorphic:

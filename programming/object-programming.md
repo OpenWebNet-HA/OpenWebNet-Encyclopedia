@@ -31,14 +31,14 @@ for resetting one `slot`. It is not a member of the canonical `ConfKO` sequence,
 
 1. Resolve the Physical Device item and firmware.
 2. Resolve the target `SLOT` against the firmware's slot structures.
-3. Determine whether the current diagnostic `KEYO` is a configured Object or Virgin Object from `DIMENSION 30.STATE`.
-4. If unconfigured, resolve `KEYO` through `EN_VIRGIN_OBJECT.virgin_key_object`.
+3. Determine from `DIMENSION 30.STATE` whether the Module is enabled (`0`) with a regular configured Object or disabled (`1`) with a Virgin Object.
+4. If disabled, resolve `KEYO` through `EN_VIRGIN_OBJECT.virgin_key_object`; if enabled, resolve it through `EN_KEY_OBJECT.key_object`.
 5. Use `AS_OBJECT_VIRGIN_OBJECT` to find Objects permitted by that Virgin Object.
 6. Use `AS_OBJECT_FIRMWARE` and `EN_SLOTS` to require firmware and slot support.
 7. Respect `EN_SLOTS.fixed_ko` and slot conditions.
 8. Use the target Object's external `key_object` in the programming frame.
 
-A Virgin Object constrains the Module's configurable role. It is not itself the configured Object to send unless independent evidence establishes that a specific Device expects such a write.
+A Virgin Object constrains a disabled Module's configurable role. It is not itself the regular configured Object to send unless independent evidence establishes that a specific Device expects such a write.
 
 ## Fixed and absent Modules
 

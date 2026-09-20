@@ -61,8 +61,8 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `DIMENSION 1.N_CONF` | physical configurator-position count | Device identity; product diagrams/captures | corroborated for documented Devices |
 | `DIMENSION 2` `V.R.b` | `EN_FIRMWARE` plus `EN_BUILDS` | resolved item; sentinel/default/build handling | structurally corroborated; exact selection precedence open |
 | `DIMENSION 3`/`6` `V.R.b` | no canonical catalogue field found | retain as installed-state evidence | open database correlation |
-| `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | `STATE = 1`, resolved firmware and slot | corroborated |
-| `DIMENSION 30.KEYO` | `EN_VIRGIN_OBJECT.virgin_key_object` | `STATE = 0`, resolved firmware and slot | corroborated |
+| `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | `STATE = 0`, enabled Module, resolved firmware and `slot` | experimentally corroborated with UI behavior |
+| `DIMENSION 30.KEYO` | `EN_VIRGIN_OBJECT.virgin_key_object` | `STATE = 1`, disabled Module, resolved firmware and `slot` | experimentally corroborated with UI behavior |
 | `DIMENSION 30.SLOT` | `EN_SLOTS.first_slot` placement | resolved firmware; not `id_slot` | structurally corroborated |
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Device, firmware, Module, Object, and ownership scope | strongly corroborated |
 | diagnostic outer `WHERE` | configured address of `slot` `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
@@ -87,7 +87,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `EN_ADDRESS_RULE.object_device_family = 0` | family-unqualified address rule | corroborated by complete rule set |
 | firmware component `-1` | any or unspecified for that component | strongly corroborated by `-1.-1.-1` and concrete `V.R.-1` rows |
 | missing `EN_BUILDS` row | distinct from explicit `firmware_b = -1` | structurally established |
-| `DIMENSION 30.STATE` | selects configured Object versus Virgin Object namespace | corroborated |
+| `DIMENSION 30.STATE` | `0` selects enabled regular Object; `1` selects disabled Virgin Object | experimentally corroborated with MyHOME_Suite UI behavior |
 
 Sentinel meaning is local to the field. This table does not authorize interpreting every zero or negative value the same way.
 

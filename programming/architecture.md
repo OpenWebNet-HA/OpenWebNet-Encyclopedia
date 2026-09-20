@@ -53,7 +53,7 @@ Each value has the `OPEN.db` transport range `0..255`. `N_CONF` reports the numb
 
 `ConfKO` rebuilds the Device's Module/Object projection using:
 
-- `DIMENSION 30` for `slot` and Object;
+- `DIMENSION 30` for `slot`, enabled/disabled Module state, and regular Object or Virgin Object;
 - `DIMENSION 32` for system/address;
 - `DIMENSION 35` for indexed configuration values.
 
