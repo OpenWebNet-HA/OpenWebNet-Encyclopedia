@@ -55,7 +55,7 @@ This establishes that the address property has a physical-configurator counterpa
 
 Other physical positions such as `M`, `TYPE`, `PRE`, or `G1` are not encoded as address components merely because they occur beside `A` and `PL` on the Device. Indexed counterparts belong to `DIMENSION 35` where the Object and firmware define them.
 
-See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared resolution and evidence rules.
+See [Physical configuration and configuration modes](../device-model/configuration.md#physical-configuration-and-configuration-modes) for the shared evidence rules.
 
 Observed sensor Device `08CF44BF` used diagnostic `WHERE 0015`, interpreted as `A = 0`, `PL = 15`. Retaining the raw field is important because padding and family-specific formatting can be lost by integer-only storage.
 

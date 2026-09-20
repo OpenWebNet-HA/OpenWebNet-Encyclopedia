@@ -86,7 +86,7 @@ Once a firmware definition is selected, its capabilities are assembled through s
 | `AS_CONNECTION_FIRMWARE` | Supported connection modalities |
 | `AS_FIRMWARE_PARAMETERS` | Parameter-file associations |
 | `AS_FW_PACKAGE` | Firmware package associations |
-| `EN_PHY_TO_ADV_TRANS` | Physical-to-advanced address translation data |
+| `EN_PHY_TO_ADV_TRANS` | sparse physical-to-advanced translation records for specific firmware definitions |
 
 All 827 `AS_OBJECT_FIRMWARE` rows resolve to both a firmware definition and an Object. All 1,725 `EN_SLOTS` rows resolve to an `AS_OBJECT_FIRMWARE` row.
 
@@ -131,7 +131,7 @@ Those behaviors require catalogue conditions, filters, and observed UI behavior.
 
 ## Firmware example
 
-Firmware `157`, used by `64391`, `64191`, and `64192`, declares four `slot` positions. Its slot/Object rows expose two actuator Modules and two independently configurable command Modules. The product-level examples are collected in [Physical Devices](physical-devices.md).
+Firmware `157`, used by `64391`, `64191`, and `64192`, declares four `slot` positions and multiple Object alternatives. Its physical conditions select among those alternatives. For example, the catalogue condition `M1=CEN;M2=O/I` selects Objects `[6, 6, 400, 400]` across slots `1..4`. Treat this as an output of the generic resolver, not as a hard-coded firmware topology. See [Physical-configuration resolution](../internals/catalogue-resolution.md#worked-example-firmware-157).
 
 ## Sources
 

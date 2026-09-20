@@ -27,6 +27,7 @@ Counts are scoped to the canonical MyHOME Suite 3.5.38 sources.
 | `AS_ITEM_SYSTEM` | item and catalogue-system parents | 223 rows; 0 orphans on either parent | structurally established |
 | `AS_OBJECT_SYSTEM` | Object and catalogue-system parents | 251 rows; 0 orphans on either parent | structurally established |
 | `AS_OBJECT_FIRMWARE` | firmware and Object parents | 827 rows; 0 orphans on either parent | structurally established |
+| `AS_FIRMWARE_CONFIG_MODE` | firmware and configuration-mode parents | firmware capability association; `EN_CONFIG_MODE` keeps Virtual, Advanced, Physical, and Product Programming as distinct records | structurally established |
 | `EN_SLOTS.id_object_firmware` | `AS_OBJECT_FIRMWARE.id_object_firmware` | 1,725 rows; several Object alternatives can share `first_slot` | structurally established |
 | `EN_KEY_OBJECT.id_family` | `EN_OBJECT_ITEM_FAMILY.id_family` | 158 rows; 0 orphans; no zero sentinel used | structurally established |
 | `AS_FIRMWARE_VIRGIN_OBJECT` | firmware and Virgin Object parents | 75 rows; 0 orphans | structurally established |
@@ -34,6 +35,7 @@ Counts are scoped to the canonical MyHOME Suite 3.5.38 sources.
 | `EN_CONF_RANGE.id_conf` | `EN_CONF.id_conf` | 14,346 rows; 0 orphans | structurally established |
 | `EN_FILTER` | Object/firmware association and configuration definition | 1,909 rows; 0 orphans on both references | structurally established |
 | `AS_SLOT_CONDITION` | slot-placement row and condition | 1,000 rows; 0 orphans on both references | structurally established |
+| physical condition branch | firmware `EN_CONF`/`EN_CONF_RANGE` domains plus `EN_SLOTS`/`AS_SLOT_CONDITION`/`EN_CONDITION` | stored condition must be reachable in the exact firmware domain before it can select an Object/slot candidate | catalogue-native resolver established for represented predicates |
 | `EN_CONF` owner | Object or firmware | 1,420 Object-scoped; 1,463 firmware-scoped; selected by zero discriminator | established polymorphic relationship |
 | `EN_FIRMWARE.slots` | distinct internal Module positions | compare with `COUNT(DISTINCT EN_SLOTS.first_slot)`, not row count | corroborated capability relationship |
 
@@ -78,6 +80,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | ScenarioDevices `ChiOpen` | functional `WHO` parsed from literal `Frame` | all 57 literal templates in Program Files revision agree | established for literal templates |
 | ScenarioDevices ProgramData semantic path | Program Files semantic path | compare full hierarchy/non-local fields, never local row IDs | established subset relationship |
 | physical firmware property | advanced Object property | symbol, semantic type, filters, conversions, and controlled read-back | established only for individually corroborated mappings; generalization open |
+| `OPEN.db` `DIMENSION 4/5.C1..C12` | `MHCatalogue.db` firmware `EN_CONF` definitions / `progressive` | transport fields and catalogue ordering coexist, but no explicit cross-database key or universal positional rule is present | open correlation |
 
 ## Sentinel and discriminator rules
 
@@ -95,7 +98,7 @@ Sentinel meaning is local to the field. This table does not authorize interpreti
 
 | Question | Leading evidence | Decisive evidence needed |
 | --- | --- | --- |
-| exact `DIMENSION 4`/`5` position and value encoding | two six-value frames; configurator-transfer context | controlled one-position/one-configurator matrix |
+| `DIMENSION 4`/`5` catalogue correlation | `C1..C12` transport fields and `0..255` ranges are established; `ConfConfigurators` is labelled virtual configuration | controlled Device-family correlation between `C1..C12` and firmware-specific `EN_CONF` symbols/positions |
 | generic `DIMENSION 310.VAL_PAR` meaning | Object-specific response without generic index metadata | Object-specific captures and decoder behavior |
 | catalogue-wide `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested Devices | systematic conditional-field audit across firmware |
 | firmware selection precedence | exact, wildcard, default, missing, multiple-build patterns | controlled loader/UI observation |
