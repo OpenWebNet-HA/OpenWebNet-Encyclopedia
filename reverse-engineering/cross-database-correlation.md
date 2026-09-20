@@ -79,8 +79,8 @@ The databases establish the candidate model but not MyHOME Suite's exact precede
 `DIMENSION 30` is discriminator-dependent:
 
 ```text
-STATE = 1 → KEYO is EN_KEY_OBJECT.key_object
-STATE = 0 → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
+STATE = 0 → Module enabled → KEYO is EN_KEY_OBJECT.key_object
+STATE = 1 → Module disabled → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
 ```
 
 `SLOT` is the Device-local internal position. It correlates with placement through `EN_SLOTS.first_slot` after Firmware resolution; it is not `EN_SLOTS.id_slot`.
@@ -89,7 +89,7 @@ The safe lookup order is:
 
 1. resolve Firmware;
 2. select the reported `slot`;
-3. choose configured Object or Virgin Object namespace from `STATE`;
+3. choose the enabled regular Object or disabled Virgin Object namespace from `STATE`;
 4. verify that the Firmware permits that Object/template at that `slot`;
 5. retain mismatches as evidence rather than forcing the nearest candidate.
 

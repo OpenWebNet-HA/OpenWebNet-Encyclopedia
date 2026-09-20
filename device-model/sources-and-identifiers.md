@@ -72,10 +72,10 @@ Supported counterparts and interpretations are:
 
 | Diagnostic field | Catalogue field | Status |
 | --- | --- | --- |
-| `DIMENSION 30.KEYO`, `STATE = 1` | `EN_KEY_OBJECT.key_object` | Configured Object; structurally and behaviorally corroborated |
-| `DIMENSION 30.KEYO`, `STATE = 0` | `EN_VIRGIN_OBJECT.virgin_key_object` | Unconfigured Virgin Object; structurally and behaviorally corroborated |
+| `DIMENSION 30.KEYO`, `STATE = 0` | `EN_KEY_OBJECT.key_object` | Enabled Module, regular configured Object; polarity experimentally corroborated with UI behavior |
+| `DIMENSION 30.KEYO`, `STATE = 1` | `EN_VIRGIN_OBJECT.virgin_key_object` | Disabled Module, Virgin Object; polarity experimentally corroborated with UI behavior |
 | `DIMENSION 30.SLOT` | `slot` represented by `EN_SLOTS.first_slot` | Structurally corroborated |
-| `DIMENSION 30.STATE` | no single catalogue column | Runtime state; database only labels configured/unconfigured |
+| `DIMENSION 30.STATE` | no single catalogue column | Enabled/disabled runtime state; `OPEN.db` labels it generically, while controlled experiments establish numeric polarity |
 
 ### Diagnostic configuration
 

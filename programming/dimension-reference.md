@@ -50,8 +50,10 @@ These are frame-field capacities. Catalogue and address rules define the values 
 
 The write carries a configured Object number. Diagnostic state determines how a previously reported `KEYO` is resolved:
 
-- `STATE = 1`: `EN_KEY_OBJECT.key_object`;
-- `STATE = 0`: `EN_VIRGIN_OBJECT.virgin_key_object`.
+- `STATE = 0`: enabled Module, `EN_KEY_OBJECT.key_object`;
+- `STATE = 1`: disabled Module, `EN_VIRGIN_OBJECT.virgin_key_object`.
+
+This polarity applies to the `STATE` carried by `DIMENSION 30`; it must not be copied to the separate `STATE` field carried by `DIMENSION 31` without independent evidence.
 
 The target write must use a permitted configured Object, validated through Virgin Object, firmware, and slot associations.
 

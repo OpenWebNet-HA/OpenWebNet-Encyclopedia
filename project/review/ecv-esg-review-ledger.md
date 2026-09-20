@@ -1600,6 +1600,26 @@ The four former Astra queue entries are adjudicated above; their Phase 4 verific
 - **Verification:** Compared necessary corrections with primary evidence and existing applicability gates; reviewed exact changed-file diffs. No routine full-corpus ESG or link rerun.
 - **Open evidence gap:** All accepted gaps remain; this review supplies neither captures, hardware tests, application-consumer behavior nor missing product documentation.
 
+## Post-certification correction: DIMENSION 30 STATE polarity
+
+### CORR-DIM30-001 - DIMENSION 30 STATE polarity was inverted
+
+- **Finding ID:** `CORR-DIM30-001`
+- **Status:** Verified
+- **Severity:** Substantive
+- **Path:** Device Model, Diagnostics, Programming, Practical Guides, MyHOME Suite Internals, and Reverse Engineering pages that resolve `DIMENSION 30.STATE`
+- **Claim/issue:** The Encyclopedia had inverted the numeric polarity of the `STATE` field carried by diagnostic/programming `DIMENSION 30`, causing the regular Object and Virgin Object namespaces to be selected in the wrong Module state.
+- **ECV/ESG rule:** ECV 1, 2, 3, 4, 7, 9, 10, 16, 19; ESG 2, 3, 13, 15
+- **Evidence inspected:** Controlled diagnostic/programming protocol experiments correlated with direct MyHOME_Suite enabled/disabled UI observations; the `OPEN.db` `DIMENSION 30` frame and generic configured/not-configured field label; `MHCatalogue.db` regular Object and Virgin Object namespaces and associations; every repository occurrence and dependent explanation identified by the polarity audit.
+- **Evidence class:** OBS/EXP, APP, REG, CAT, RES
+- **Applicability:** The `STATE` field of diagnostic/programming `DIMENSION 30` only. No meaning is transferred to `DIMENSION 31.STATE`, discovery filters, or any unrelated field named `STATE`.
+- **Finding:** Controlled protocol/UI evidence establishes `STATE = 0` as Module enabled with the regular configured Object applying, and `STATE = 1` as Module disabled with the Virgin Object applying. `OPEN.db` labels the field generically but does not establish the numeric polarity, so its wording is not a contradiction. The earlier opposite mapping was an inference and is superseded.
+- **Required remediation:** Reverse every `DIMENSION 30` Object/Virgin-Object lookup that depended on the old polarity, update enabled/disabled terminology and downstream Module/Object reasoning, preserve unrelated `STATE` semantics, and record the experimental/UI provenance without inventing manufacturer authority.
+- **Resolution:** Corrected the canonical `DIMENSION 30` definition, Device Model, programming validation and read-back workflows, executable guides, internal resolution summaries, reverse-engineering relationships and methodology, and dependent conceptual descriptions. The separate Machine KB development branch contains no current DIM30 polarity claims and was not imported into this branch.
+- **Reviewer/model:** GPT-5.6 Sol, High reasoning.
+- **Verification:** Repository-wide old-mapping and conceptual searches found no remaining inverted `DIMENSION 30` interpretation in the identified dependency set; unrelated `STATE` fields and functional `WHO 4 DIMENSION 30` were left unchanged. GitHub Actions run `35506809942` passed source integrity/reproducibility, mechanical ESG/ECV compliance, script compilation, and advisory epistemic review with zero objective ESG/ECV failures.
+- **Open evidence gap:** No canonical manufacturer statement establishing the numeric polarity has been identified. The experimentally established mapping remains scoped to `DIMENSION 30.STATE`; other binary state fields require independent evidence.
+
 ## Finding record template
 
 New findings must preserve all fields below. A field may say “None” or “Not yet established,” but must not be omitted.

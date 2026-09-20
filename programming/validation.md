@@ -26,7 +26,7 @@ Retain raw frames beside decoded values. Do not replace an unresolved field with
 | ---: | --- | --- |
 | 1 | Resolve the installed Device | one item/firmware context or an explicit ambiguity set |
 | 2 | Resolve the Module | one Device-local `slot` and its catalogue placement |
-| 3 | Resolve the current role | configured Object or unconfigured Virgin Object |
+| 3 | Resolve the current role | enabled regular Object or disabled Module's Virgin Object |
 | 4 | Prove the target Object is available | one permitted target Object and Object/firmware association |
 | 5 | Build the property dictionary | applicable Object- and firmware-scoped `EN_CONF` definitions |
 | 6 | Establish write eligibility | writable, visible, fixed, hidden, or conditional status |
@@ -114,19 +114,19 @@ Interpret the current `DIMENSION 30.KEYO` in the correct external number space.
 
 | `STATE` | Resolve `KEYO` against | Meaning |
 | ---: | --- | --- |
-| `1` | `EN_KEY_OBJECT.key_object` | configured Object |
-| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object |
+| `0` | `EN_KEY_OBJECT.key_object` | enabled Module; regular configured Object |
+| `1` | `EN_VIRGIN_OBJECT.virgin_key_object` | disabled Module; Virgin Object |
 
 Neither value is an internal database primary key. Likewise, protocol `SLOT` is not `EN_SLOTS.id_slot`.
 
-For an unconfigured Module, retain the Virgin Object as the role constraint from which permitted configured Objects will be derived. Do not send its `virgin_key_object` as a target `KEYO` merely because it was reported diagnostically.
+For a disabled Module, retain the Virgin Object as the role constraint from which permitted regular Objects will be derived. Do not send its `virgin_key_object` as a target `KEYO` merely because it was reported diagnostically.
 
 ### Milestone output
 
 Produce exactly one of:
 
-- a resolved current configured Object; or
-- a resolved Virgin Object with its functional role.
+- a resolved current regular Object for an enabled Module; or
+- a resolved Virgin Object with its functional role for a disabled Module.
 
 Stop if `STATE` is absent or if `KEYO` does not resolve uniquely in the selected namespace.
 
@@ -140,7 +140,7 @@ Reduce the global Object catalogue to the set supported by this firmware, Module
 
 ### Procedure
 
-1. If the Module is unconfigured, enumerate candidates related to its Virgin Object through `AS_OBJECT_VIRGIN_OBJECT`.
+1. If the Module is disabled, enumerate candidates related to its Virgin Object through `AS_OBJECT_VIRGIN_OBJECT`.
 2. Intersect that set with Objects related to the resolved firmware through `AS_OBJECT_FIRMWARE`.
 3. Intersect again with Objects placed at the resolved `slot` through `EN_SLOTS`.
 4. Apply `fixed_ko` and slot-condition metadata.

@@ -30,7 +30,7 @@ The tables below cover the Device interview and detailed configuration sequences
 
 | `DIMENSION` | Frame | Meaning |
 | ---: | --- | --- |
-| `30` | `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##` | configured Object or unconfigured Virgin Object by Module |
+| `30` | `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##` | enabled regular Object (`STATE = 0`) or disabled Virgin Object (`STATE = 1`) by Module |
 | `31` | `*#[WHO]*[WHERE]*31*[SLOT]*[CODE]*[STATE]##` | Object-state result or error |
 | `32` | `*#[WHO]*[WHERE]*32#[SLOT]*[SYS]*[ADDR]##` | Module system and address |
 | `34` | `*#[WHO]*[WHERE]*34*[SLOT]*[ERROR]##` | Module address error |

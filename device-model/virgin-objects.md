@@ -1,8 +1,8 @@
 # Virgin Objects
 
-A Virgin Object is a catalogue template for a configurable Module before its final Object assignment. It links firmware/slot capability to a permitted set of concrete Objects.
+A Virgin Object is a catalogue template that constrains the concrete Objects available to a configurable Module. In diagnostic/programming `DIMENSION 30`, it is the Object identity reported while that Module is disabled.
 
-“Virgin” describes configuration state and capability, not a separate physical component.
+“Virgin” describes catalogue capability and the disabled-Module representation used by `DIMENSION 30`, not a separate physical component.
 
 ## Catalogue identity
 
@@ -101,12 +101,12 @@ Virgin Object `515`, “Daylight and motion sensor virgin”, permits six Object
 
 | `STATE` | Resolve `KEYO` against | Meaning |
 | ---: | --- | --- |
-| `1` | `EN_KEY_OBJECT.key_object` | configured Object |
-| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object and functional role |
+| `0` | `EN_KEY_OBJECT.key_object` | enabled Module; regular configured Object |
+| `1` | `EN_VIRGIN_OBJECT.virgin_key_object` | disabled Module; Virgin Object and configurable role |
 
-This interpretation is structurally and behaviorally corroborated. Observed Device `00C58E91` reported `KEYO = 500`, `STATE = 0` at `slot` `4`; the catalogue resolves external Virgin Object number `500` as “Automation double command virgin”, while no ordinary Object with external number `500` exists in this source revision.
+`OPEN.db` supplies the binary field and labels it only generically as “configured or not configured”; that source does not by itself establish which numeric value means enabled or disabled. Controlled diagnostic/programming protocol evidence correlated with MyHOME_Suite UI behavior establishes `0 = enabled` and `1 = disabled`. Catalogue resolution independently corroborates the corresponding Object namespace.
 
-Retain `STATE` with every `KEYO`: the two external number spaces are independent, and neither value is an internal database primary key. Once the Virgin Object is resolved, intersect its permitted Objects with the selected firmware and `slot` capability before presenting configuration choices.
+Retain `STATE` with every `KEYO`: the two external number spaces are independent, and neither value is an internal database primary key. Once the Virgin Object of a disabled Module is resolved, intersect its permitted Objects with the selected firmware and `slot` capability before presenting choices for the regular Object that can apply when enabled.
 
 ## Conditions and visibility
 
@@ -138,6 +138,6 @@ The intersection step prevents a global Virgin Object vocabulary from being appl
 
 ## Sources
 
-Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies the `KEYO` value and configured/unconfigured `STATE`; observed traffic and catalogue resolution establish the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
+Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies the `KEYO` and binary `STATE` fields; controlled diagnostic/programming experiments correlated with MyHOME_Suite UI behavior establish the polarity, while catalogue resolution corroborates the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
