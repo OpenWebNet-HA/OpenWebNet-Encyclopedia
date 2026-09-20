@@ -1,6 +1,6 @@
 # Programming Architecture
 
-The programming protocol is a management layer carried in OpenWebNet frames. It selects one installed Physical Device, receives an initial state projection, transfers virtual or advanced configuration, and closes the programming session.
+The programming protocol is a management layer carried in OpenWebNet frames. It selects one installed Physical Device, receives an initial state projection, runs programming sequences labelled virtual or advanced in `OPEN.db`, and closes the programming session.
 
 ## Managed systems
 
@@ -38,7 +38,7 @@ The wire protocol has no transaction identifier. A programmer should serialize a
 
 A request can be syntactically valid while being semantically invalid for the resolved Device. Conversely, a positive programming response establishes protocol acceptance, not necessarily complete diagnostic verification.
 
-## Virtual and advanced programming
+## `OPEN.db` virtual and advanced programming sequences
 
 ### Virtual-configurator transfer
 
@@ -47,7 +47,7 @@ A request can be syntactically valid while being semantically invalid for the re
 - `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`
 - `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`
 
-Each value has the `OPEN.db` transport range `0..255`. `N_CONF` reports the number of physical configurator positions provided by the Device, but the precise semantics of the twelve `C` values remain under investigation. Do not equate a transport position with physical-jumper presence until capture evidence establishes it.
+Each value has the `OPEN.db` transport range `0..255`. `N_CONF` reports the number of physical configurator positions provided by the Device, but no canonical relation maps `C1..C12` universally to firmware `EN_CONF` definitions or `progressive` ordering. Do not equate a transport field with a physical plug or catalogue position without independent correlation.
 
 ### Advanced Object transfer
 

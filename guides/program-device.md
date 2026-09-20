@@ -2,7 +2,7 @@
 
 ## Goal
 
-Apply a completely validated Virtual configuration and preserve enough evidence to recover and verify the Device.
+Apply a completely validated configuration through a canonical MyHOME Suite programming scenario and preserve enough evidence to recover and verify the Device.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ Collect the initial Device projection through Device `WHAT 4` or an explicit abo
 | Device ID | `ConfPoint2PointWithID` | repeated advanced Object transfer |
 | local interaction | `ConfLocalButton` | advanced Object and virtual-configurator transfer |
 
-Virtual configuration is the umbrella for configuration performed through MyHOME_Suite. Advanced Object programming and virtual-configurator transfer are mechanisms within it.
+The transfer labels in this table come from `OPEN.db`: `ConfConfigurators` is described as virtual configuration, while `ConfKO` is described as advanced configuration. `MHCatalogue.db` independently registers Virtual Configuration and Advanced Configuration as distinct firmware modes. Do not treat Virtual configuration as an umbrella for all MyHOME Suite programming.
 
 ### SQL example: inspect the selected `OPEN.db` scenario
 
@@ -197,12 +197,12 @@ Within each class, use the ordering established by the canonical scenario and ve
 
 For a scenario containing `ConfConfigurators`:
 
-1. send positions `1..6` as `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`;
-2. where applicable, send positions `7..12` as `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`;
+1. send configurator fields `C1..C6` as `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##`;
+2. where applicable, send configurator fields `C7..C12` as `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##`;
 3. collect Device configurator reports, `WHAT 51`, abort, `NACK`, timeout, and Device `WHAT 4`;
 4. do not wait for `WHAT 52`, which is not a canonical member of `ConfConfigurators`.
 
-The precise field-level meaning of `C1..C12` remains unresolved. Send only values derived from an established MyHOME_Suite configuration workflow.
+The transport ranges and ordering of `C1..C12` are established, but their generic correlation with firmware `EN_CONF` definitions and physical positions is unresolved. Send only values derived from an established MyHOME Suite configuration workflow.
 
 ## Reference programming algorithm
 
