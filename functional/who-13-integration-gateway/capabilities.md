@@ -1,12 +1,12 @@
 # Gateway Capabilities
 
-This page describes the SCS/TCP external-interface `WHO 13` property surface. In that published interface model the target is the gateway itself and the property frames use an empty `WHERE` field.
+This page describes the published SCS/TCP external-interface `WHO 13` property surface and its established implementation limits. In the published interface model the target is the gateway itself and the property frames use an empty `WHERE` field. Later gateway implementations can expose additional properties not present in the historical registry; those are documented separately and never back-filled with inferred semantics.
 
 The ZigBee OpenWebNet interface defines a different `WHO 13` management surface with additional `WHAT` values, a different `DIMENSION` set, and both empty and product-addressed `WHERE` forms. See [ZigBee Network Management](zigbee-network-management.md). Neither variant should be used to fill gaps in the other by numeric analogy.
 
 ## Functional model
 
-The namespace provides five main capability groups.
+The published registry provides five main capability groups.
 
 | Group | Operations |
 | --- | --- |
@@ -72,6 +72,8 @@ This is a gateway model code, not a MyHOME Device Object ID and not the diagnost
 
 Because later gateways exist beyond the models listed in the original specification, an unknown numeric `MODEL` value should be retained as an unknown `WHO 13` model code rather than rejected.
 
+First-hand F454 and MH202 gateway-information captures show that both can report `MODEL = 200`. A returned `DIMENSION 15` value is therefore not sufficient, by itself, to identify a later gateway uniquely. Where supported, continue gateway identification through diagnostic `WHO 1013 DIMENSION 1`; do not collapse the functional model code and diagnostic object-model value into one identifier namespace.
+
 ## Software stack identification
 
 Three independent version properties are defined:
@@ -82,7 +84,15 @@ Three independent version properties are defined:
 | `23` | Kernel |
 | `24` | Distribution |
 
-Each uses a three-component `V*R*B` payload for version, release, and build. Keeping these values separate is important: they describe different layers of the gateway software stack and should not be collapsed into a single firmware string.
+Each uses a three-component `V*R*B` payload for version, release, and build in the published specification. Keeping these values separate is important: they describe different layers of the gateway software stack and should not be collapsed into a single firmware string.
+
+Observed implementations can be less complete than the published payload schema. An MH202 has been observed returning an empty `DIMENSION 24` value payload. Consumers should therefore preserve the response as observed rather than manufacturing missing version components.
+
+## Observed extension surface
+
+Later SCS/TCP gateway observations include `DIMENSION 40`, which is absent from the published classic registry. Independent F454 and MH202 information requests both returned a two-value response to that property. Its semantics remain unresolved, so it belongs in the [`DIMENSION` Reference](dimensions.md#observed-implementation-extension-dimension-40) as an observed extension rather than in the published capability table.
+
+The ZigBee registry's `DIMENSION 17` hardware-version meaning is variant-specific, and the current canonical classic corpus does not establish a SCS/TCP meaning for `DIMENSION 20`. Numeric reuse across `WHO 13` variants is not a semantic mapping.
 
 ## Uptime
 
