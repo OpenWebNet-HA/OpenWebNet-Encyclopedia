@@ -1,6 +1,6 @@
 # `DIMENSION` Reference
 
-This page records the SCS/TCP external-interface `WHO 13` `DIMENSION` surface. The published SCS/TCP specification explicitly identifies whether each property is readable or writable.
+This page records the **published SCS/TCP external-interface `WHO 13` `DIMENSION` registry** and separately scoped implementation observations. The published specification explicitly identifies whether each listed property is readable or writable; its registry must not be treated as proof that later gateway implementations expose no additional `DIMENSION` values.
 
 The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Some numeric IDs overlap while others differ, so the two registries must not be merged by number. See [ZigBee Network Management](zigbee-network-management.md#dimension-reference) for the ZigBee variant.
 
@@ -17,6 +17,8 @@ The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Som
 | `22` | Date and time | R/W | `H*M*S*T*W*D*M*Y` |
 | `23` | Kernel version | R | `V*R*B` |
 | `24` | Distribution version | R | `V*R*B` |
+
+The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations are recorded below only where first-hand evidence exists.
 
 ## Read form
 
@@ -103,6 +105,8 @@ The published model table defines these values:
 
 This table describes the models defined by the published specification. It should not be treated as an exhaustive list of every later OpenWebNet gateway implementation.
 
+First-hand gateway-information captures show that an F454 and an MH202 can both report `MODEL = 200` even though they are distinct gateway models. `DIMENSION 15` is therefore useful identification evidence, but an unlisted or non-unique value must not be converted directly into a unique product identity. Where the gateway supports the Integration Functions diagnostic family, continue identification with diagnostic `WHO 1013 DIMENSION 1` and keep its diagnostic object-model namespace distinct from the functional `DIMENSION 15` model code.
+
 ## `DIMENSION 16` - Firmware version
 
 Payload: `V*R*B`, where `V` is version, `R` release, and `B` build. The specification describes this as the version of the device software implementing the OpenWebNet server.
@@ -139,3 +143,25 @@ This is distinct from `DIMENSION 16`: `16` identifies the OpenWebNet server/devi
 Payload: `V*R*B`, with version, release, and build components.
 
 Together, `DIMENSION 16`, `23`, and `24` expose three distinct software layers: gateway/OpenWebNet firmware, kernel, and operating-system distribution.
+
+A first-hand MH202 information request returned an empty value payload for this read (`*#13**24*##`) rather than the published three-component tuple. This is implementation evidence, not a redefinition of the published schema. Parsers should preserve the raw response and tolerate a gateway that cannot supply all published version components.
+
+## Observed implementation extension: `DIMENSION 40`
+
+`DIMENSION 40` is not defined by the preserved classic SCS/TCP `WHO 13` specification, the ZigBee `WHO 13` registry, or the canonical MyHOME Suite `OPEN.db` functional model.
+
+Its **existence on later SCS/TCP gateways is nevertheless established by first-hand observation**. Independent gateway-information captures for an F454 and an MH202 both contain the read request:
+
+`*#13**40##`
+
+and both gateways returned:
+
+`*#13**40*4*0##`
+
+The evidence therefore establishes a readable gateway property with a two-value response on those observed implementations. It does **not** establish the meaning of either value, whether the pair is version-like, whether the values are independently variable, or support by other gateway models or firmware revisions. Preserve the values positionally as unknown fields until discriminating evidence exists.
+
+## Numeric IDs not transferable across variants
+
+ZigBee `WHO 13` explicitly defines `DIMENSION 17` as hardware version. That is established for the ZigBee interface revision documented in [ZigBee Network Management](zigbee-network-management.md#dimension-16-and-17---firmware-and-hardware-versions), but numeric equality does not establish the same meaning for classic SCS/TCP gateways.
+
+`DIMENSION 20` is likewise not assigned a classic SCS/TCP meaning on this page. The currently preserved canonical classic specification, ZigBee specification, MyHOME Suite `OPEN.db`, and the two gateway-information captures examined for this correction do not establish its SCS/TCP payload semantics. The unresolved provenance and required evidence are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
