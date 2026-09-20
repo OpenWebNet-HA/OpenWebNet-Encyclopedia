@@ -4,6 +4,22 @@ This page contains only questions that remain unresolved after cross-checking th
 
 Each entry states the known boundary before the missing evidence so that later investigations do not reopen facts that are already established.
 
+## WHO 13 gateway properties
+
+### `DIMENSION 20`
+
+Prior gateway-identification research has flagged `WHO 13 DIMENSION 20` as an encountered property, but the currently preserved evidence chain does not yet establish its classic SCS/TCP semantics. The canonical classic `WHO_13.pdf` registry does not define it, the ZigBee `WHO 13` registry does not define it, canonical MyHOME Suite `OPEN.db` provides no functional `WHO 13 DIMENSION 20` template, and the preserved F454 and MH202 gateway-information captures examined in the current correction do not contain it.
+
+This is a **provenance gap**, not evidence that the property does not exist. Promotion to the functional reference requires the specific canonical source or first-hand capture that establishes the request/response form and payload, followed by semantic corroboration. Do not infer a meaning from diagnostic `DIMENSION 6` microcontroller-version fields or from any numerically similar namespace.
+
+### `DIMENSION 40`
+
+Existence is established more strongly than semantics. Independent first-hand F454 and MH202 gateway-information captures both show `*#13**40##` and both return `*#13**40*4*0##`.
+
+What remains unresolved is the meaning of the two returned values, whether either field varies independently, and the applicability across gateway models and firmware revisions. The next discriminating evidence is a cross-model or cross-firmware observation in which at least one returned value differs, or a canonical implementation/specification source naming the fields. Until then, preserve the response as two positional unknown values.
+
+The ZigBee specification's `DIMENSION 17` hardware-version definition is not part of this open question: that meaning is established for the ZigBee `WHO 13` variant. What remains unestablished is whether any classic SCS/TCP implementation reuses numeric `17` with the same semantics.
+
 ## Diagnostic and programming fields
 
 ### `DIMENSION 32.SYS`
@@ -107,11 +123,12 @@ The remaining questions are:
 
 The highest-value next observations are:
 
-1. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
-2. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
-3. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
-4. file-access, database-statement, and save-operation traces while creating one minimal scenario;
-5. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
-6. hardware and microcontroller version observations across known revisions of the same product.
+1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
+2. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
+3. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
+4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
+5. file-access, database-statement, and save-operation traces while creating one minimal scenario;
+6. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
+7. hardware and microcontroller version observations across known revisions of the same product.
 
 Each result should update the [Relationship Register](relationship-register.md) and then the appropriate reference section.
