@@ -22,6 +22,7 @@ No gateway model is assumed before the protocol and catalogue evidence are resol
 | Statement used by this guide | Epistemic status | Permitted use |
 | --- | --- | --- |
 | Classic `WHO 13 DIMENSION 15` is the published Device type/model property | **Published protocol** | Record the historical gateway-type value exactly as returned |
+| MyHOME_Suite also labels the general diagnostic `DIMENSION 15` mechanism as the WebServer model request/response | **Implementation evidence** | Recognize the historical Web Server type mechanism without treating it as a catalogue primary key |
 | MyHOME_Suite defines diagnostic `WHO 1013` for Integration Functions and a gateway `DIMENSION 1` response carrying `OBJECT_MODEL`, `N_CONF`, `BRAND`, and `LINE` | **Implementation evidence** | Parse the four gateway-identity fields without merging their namespace with `WHO 13 DIMENSION 15` |
 | `OBJECT_MODEL`, `BRAND`, and `LINE` correlate with `AS_ITEM_SYSTEM.modobj`, `EN_BRAND.brand_modobj`, and `EN_LINE.line_modobj` in the resolved catalogue system | **Implementation evidence** with corroborated cross-source correlation | Resolve catalogue candidates through the established semantic mapping, not numeric primary-key equality |
 | Observed MH202 and F454 captures both return `WHO 13 DIMENSION 15 = 200`; their `WHO 1013 DIMENSION 1` payloads are `5*15*5*0` and `51*15*5*0` respectively | **Observed behavior** | Demonstrate that `200` is non-unique and exercise the catalogue-resolution path on two concrete gateways |
@@ -39,7 +40,7 @@ Client -> Gateway: *#13**15##
 Gateway -> Client: *#13**15*[MODEL]##
 ```
 
-Preserve `MODEL` exactly as received. The published historical model table in the [`WHO 13 DIMENSION` Reference](../functional/who-13-integration-gateway/dimensions.md#dimension-15---device-type) gives meanings for the values defined by that specification, but it is not an exhaustive catalogue of later gateways.
+Collect until the matching value frame, `NACK`, transport closure, or the applicable session/implementation timeout. Preserve the exact acquisition outcome and `MODEL` exactly as received. The published historical model table in the [`WHO 13 DIMENSION` Reference](../functional/who-13-integration-gateway/dimensions.md#dimension-15---device-type) gives meanings for the values defined by that specification, but it is not an exhaustive catalogue of later gateways.
 
 Do not use this value as a direct key into `MHCatalogue.db`. In particular:
 
@@ -69,7 +70,7 @@ The gateway identity response has the form:
 Gateway -> Client: *#1013**1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##
 ```
 
-Retain the complete raw frame before interpreting its fields. The canonical MyHOME_Suite implementation names these fields:
+Collect until that matching response, `NACK`, transport closure, or the applicable session/implementation timeout. Retain the complete raw frame before interpreting its fields. The canonical MyHOME_Suite implementation names these fields:
 
 | Position | Field | Use in this guide |
 | ---: | --- | --- |
@@ -107,7 +108,7 @@ Confirm the implementation diagnostic-family association by meaning rather than 
 ```sql
 SELECT
     id_system,
-    name,
+    descr AS system_description,
     who,
     diag_who,
     managed
@@ -240,7 +241,7 @@ BRAND        = 5
 LINE         = 0
 ```
 
-Run the catalogue query with `id_system = 26`, `object_model = 5`, `brand = 5`, and `line = 0`. The resulting `EN_DEVICE` record or records are the catalogue evidence to present for the MH202 capture. Retain the capture's known MH202 identity as observation provenance; do not use that label in place of the database lookup when implementing the procedure.
+Run the catalogue query with `id_system = 26`, `object_model = 5`, `brand = 5`, and `line = 0`. In the canonical catalogue, this tuple resolves the observed case to the MH202 catalogue identity. Present the returned `EN_DEVICE.name` and `EN_DEVICE.code` rather than substituting a hand-written product label. Retain the capture's known MH202 identity as observation provenance.
 
 The important derived result is that functional `DIMENSION 15 = 200` did not establish MH202 on its own. The diagnostic `OBJECT_MODEL = 5` supplies the discriminating catalogue-facing value.
 
@@ -265,7 +266,7 @@ BRAND        = 5
 LINE         = 0
 ```
 
-Run the same catalogue query with `id_system = 26`, `object_model = 51`, `brand = 5`, and `line = 0`. The resulting `EN_DEVICE` record or records are the catalogue evidence to present for the F454 capture.
+Run the same catalogue query with `id_system = 26`, `object_model = 51`, `brand = 5`, and `line = 0`. In the canonical catalogue, this tuple resolves the observed case to the F454 catalogue identity. Present the returned `EN_DEVICE.name` and `EN_DEVICE.code` and retain the capture's known F454 identity as observation provenance.
 
 Again, `WHO 13 DIMENSION 15 = 200` is identical to the MH202 observation. The diagnostic `OBJECT_MODEL` differs, so the catalogue-resolution stage can distinguish the two observed cases without assigning new semantics to the functional model code.
 
