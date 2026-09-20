@@ -112,7 +112,7 @@ This matrix distinguishes position, presence, raw configurator code, effective v
 Repeated `WHO 1001` observations suggest that the outer diagnostic `WHERE` often follows the configured address of `slot` `1`. Test the boundary cases:
 
 - slot `1` enabled and addressed;
-- slot `1` disabled or unconfigured;
+- slot `1` disabled and represented by its Virgin Object in `DIMENSION 30`;
 - slot `1` assigned a command-only Object;
 - another slot carrying the main physical address;
 - several Modules sharing an address;
