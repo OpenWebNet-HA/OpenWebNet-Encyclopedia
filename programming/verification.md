@@ -15,7 +15,7 @@ Virtual-configurator transfer has no `WHAT 52` member in its canonical sequence.
 3. Wait for the configured close interval.
 4. Start a new diagnostic interview by Device ID when available.
 5. Reconfirm `DIMENSION 1` identity and `DIMENSION 13` Device ID.
-6. Resolve every `DIMENSION 30` record by configured Object or Virgin Object.
+6. Resolve every `DIMENSION 30` record as an enabled regular Object when `STATE = 0` or a disabled Module's Virgin Object when `STATE = 1`.
 7. Compare `DIMENSION 32` effective system/address tuples.
 8. Compare `DIMENSION 35` indexed values using the resolved definitions.
 9. Preserve `DIMENSION 310` separately.
