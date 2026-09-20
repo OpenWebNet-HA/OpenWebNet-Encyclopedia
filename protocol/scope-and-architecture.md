@@ -38,7 +38,7 @@ The canonical Device hierarchy is defined in the [Device Model](../device-model/
 | Diagnostic `WHERE` | Selects or contextualizes a management response according to its diagnostic family | Does not replace the installed Device ID or a Module's configured address |
 | Functional `WHERE` | Selects a runtime target according to one functional `WHO` and interface variant | Not a universal Physical Device identity |
 | Module and `slot` | Module is the firmware-exposed logical container; `slot` is its numeric protocol/catalogue position | Neither is a Physical Device or an Object |
-| Object and Virgin Object | Object is a configured logical function; Virgin Object is an unconfigured capability template | Their external numbers and database keys remain separate namespaces |
+| Object and Virgin Object | Object is a regular configured logical function; Virgin Object is a configurable capability template and is the identity used by `DIMENSION 30` while a Module is disabled | Their external numbers and database keys remain separate namespaces |
 | Configuration | Instance-specific values and associations interpreted in resolved Device, firmware, Module, and Object context | A configuration index is not a functional `WHAT`, `WHERE`, or scenario parameter merely because values coincide |
 
 [Sources and Identifier Boundaries](../device-model/sources-and-identifiers.md) owns the detailed cross-source namespace rules. Functional pages own runtime wire semantics; the Device Model owns catalogue entities; Diagnostics owns reported installed state; Programming owns write workflows.

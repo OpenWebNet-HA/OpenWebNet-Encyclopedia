@@ -132,7 +132,7 @@ Use the documentation's established terms consistently:
 - **Module** for a firmware-exposed logical container/function position;
 - **`slot`** only for the numeric Device-local position carried by frames or catalogue placement;
 - **Object** for `EN_KEY_OBJECT` functionality;
-- **Virgin Object** for an unconfigured functional template;
+- **Virgin Object** for a configurable functional template, including the identity reported by `DIMENSION 30` while a Module is disabled;
 - **Virtual configuration** for configuration performed through MyHOME Suite, contrasted with physical configurators.
 
 Preserve source field names in code formatting even when their historical terminology differs.
