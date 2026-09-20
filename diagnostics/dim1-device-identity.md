@@ -6,7 +6,7 @@
 
 `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##`
 
-| Field | Range in `OPEN.db` | Interpretation |
+| Field | Range in the addressed `OPEN.db` form | Interpretation |
 | --- | ---: | --- |
 | `OBJECT_MODEL` | `1..65535` | item/model value |
 | `N_CONF` | `0..12` | number of physical configurator positions |
@@ -78,4 +78,10 @@ Older Devices for which configuration diagrams have not yet been located remain 
 
 Treat this as a distinct frame variant. Do not repair the empty field or silently convert it to the addressed form.
 
+The addressed-form ranges and the physical-configurator interpretation of `N_CONF` above must not be imposed automatically on this gateway variant. First-hand MH202 and F454 gateway identity captures return payloads `5*15*5*0` and `51*15*5*0` respectively: the observed second-field value `15` and `BRAND = 5` are outside the ordinary addressed-form ranges. These observations establish that those ranges are not valid constraints for the gateway form. They do not, by themselves, establish that gateway-variant `N_CONF` has the ordinary addressed Device field's physical-configurator semantics.
+
+For gateway catalogue identification, preserve the returned `N_CONF` value but resolve `OBJECT_MODEL`, `BRAND`, and `LINE` through their established catalogue correlations in the applicable system context.
+
 `OpenQuery.txt` includes this gateway variant in its gateway-connection query together with address scan and general diagnostic frames. That implementation use does not alter the identity-field mappings above.
+
+For the complete Integration Functions gateway workflow and the MH202/F454 cases, see [Identify an OpenWebNet Gateway](../guides/identify-openwebnet-gateway.md).
