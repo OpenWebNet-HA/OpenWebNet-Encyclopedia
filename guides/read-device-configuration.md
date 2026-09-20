@@ -70,6 +70,20 @@ The installed Device ID, catalogue primary keys, SKU, Object numbers, and functi
 
 Retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier.
 
+### Optional catalogue check: expected physical topology
+
+If the physical configurator values are known independently, use them to calculate an expected catalogue topology before comparing them with the installed `DIMENSION 30` projection:
+
+1. confirm that the exact firmware registers Physical configuration;
+2. resolve each supplied symbol and raw value through that firmware's exact `EN_CONF` and `EN_CONF_RANGE`;
+3. enumerate Object/slot candidates through `AS_OBJECT_FIRMWARE` and `EN_SLOTS`;
+4. load `AS_SLOT_CONDITION` and `EN_CONDITION`;
+5. discard branches that are unreachable under the firmware's legal configurator domains;
+6. evaluate the remaining predicates and require a unique Object per selected `slot`;
+7. only after topology selection, follow applicable `EN_CONDITION.id_conv_rule` into `EN_CONV_RULE` for effective Object properties.
+
+Use [Physical-configuration resolution](../internals/catalogue-resolution.md#physical-configuration-resolution) for the authoritative algorithm and SQL. The result is an expected catalogue capability topology, not installed-state evidence. If it disagrees with `DIMENSION 30`, retain both results and investigate the Device state, configuration mode, firmware resolution, or unsupported catalogue expression rather than replacing the diagnostic observation.
+
 ## 2. Build the Module list
 
 Use every `DIMENSION 30` response:
