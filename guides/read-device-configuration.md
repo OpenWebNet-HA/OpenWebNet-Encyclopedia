@@ -68,7 +68,7 @@ Begin with the identified inventory record:
 
 The installed Device ID, catalogue primary keys, SKU, Object numbers, and functional addresses are separate identifier spaces.
 
-Retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier.
+For the ordinary per-Device diagnostic form used by this workflow, retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier. The empty-`WHERE` gateway identity form is a distinct variant whose `N_CONF` semantics are unresolved; the gateway-specific workflow is documented in [Identify an OpenWebNet Gateway](identify-openwebnet-gateway.md).
 
 ### Optional catalogue check: expected physical topology
 
@@ -289,7 +289,7 @@ Adjust paths to the application installation. Schema aliases make the source of 
 
 ### Resolve Device identity
 
-Resolve `:catalogue_system_id` by established diagnostic-family semantics. Bind the model, brand, and line values. VALUE 2 is `N_CONF`, the physical configurator-position count; it is omitted from this join because no direct catalogue field mapping is established.
+Resolve `:catalogue_system_id` by established diagnostic-family semantics. Bind the model, brand, and line values. In the ordinary per-Device form used here, VALUE 2 is `N_CONF`, the physical configurator-position count; it is omitted from this join because no direct catalogue field mapping is established. Do not transfer this interpretation to the separate empty-`WHERE` gateway form.
 
 ```sql
 SELECT
