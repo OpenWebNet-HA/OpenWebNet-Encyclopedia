@@ -19,11 +19,11 @@ A Device interview reads the runtime diagnostic projection of one Physical Devic
 
 ## Expected response groups
 
-The canonical sequences order the following response families:
+The canonical sequences order the following response families. This page describes the ordinary per-Device interview surface; the empty-`WHERE` gateway `DIMENSION 1` identity form is a distinct service variant documented in [`DIMENSION 1`: Device Identity](dim1-device-identity.md#gateway-variant).
 
 | Order | `DIMENSION` | Data |
 | ---: | ---: | --- |
-| 1 | `1` | item/model identity, physical configurator-position count (`N_CONF`), brand, line |
+| 1 | `1` | item/model identity, ordinary per-Device physical configurator-position count (`N_CONF`), brand, line |
 | 2 | `2` | firmware version |
 | 3 | `3` | hardware version |
 | 4 | `4` | configurators `1..6` |
@@ -68,7 +68,7 @@ Do not overwrite repeated frames merely because their `DIMENSION` matches. `DIME
 
 ## Reconstructing the Device
 
-1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata and retain `N_CONF` as the Device's physical configurator-position count.
+1. Resolve `DIMENSION 1` against catalogue item, brand, and line metadata and, for this ordinary per-Device form, retain `N_CONF` as the Device's physical configurator-position count.
 2. Record the reported firmware, hardware, and microcontroller versions without assuming that a version number is a catalogue primary key.
 3. Build one Module record per `slot` from `DIMENSION 30`.
 4. Attach `DIMENSION 32` system/address data to the matching `slot`.

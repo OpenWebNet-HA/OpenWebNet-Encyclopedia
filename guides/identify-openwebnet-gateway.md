@@ -26,10 +26,12 @@ No gateway model is assumed before the protocol and catalogue evidence are resol
 | MyHOME_Suite defines diagnostic `WHO 1013` for Integration Functions and a gateway `DIMENSION 1` response carrying `OBJECT_MODEL`, `N_CONF`, `BRAND`, and `LINE` | **Implementation evidence** | Parse the four gateway-identity fields without merging their namespace with `WHO 13 DIMENSION 15` |
 | `OBJECT_MODEL`, `BRAND`, and `LINE` correlate with `AS_ITEM_SYSTEM.modobj`, `EN_BRAND.brand_modobj`, and `EN_LINE.line_modobj` in the resolved catalogue system | **Implementation evidence** with corroborated cross-source correlation | Resolve catalogue candidates through the established semantic mapping, not numeric primary-key equality |
 | Observed MH202 and F454 captures both return `WHO 13 DIMENSION 15 = 200`; their `WHO 1013 DIMENSION 1` payloads are `5*15*5*0` and `51*15*5*0` respectively | **Observed behavior** | Demonstrate that `200` is non-unique and exercise the catalogue-resolution path on two concrete gateways |
+| Both observed gateway tuples carry `N_CONF = 15`, outside the ordinary addressed-form `0..12` range | **Observed behavior** | Preserve the raw gateway value and do not apply the ordinary physical-configurator-count interpretation |
+| `15` is numerically `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved or sentinel convention, but its exact meaning is not established | **Inferred** / **Unresolved** | Do not present `15` as a proven count, “zero configurators”, or “not applicable” encoding |
 | `DIMENSION 15 = 200` cannot uniquely distinguish MH202 from F454 | Derived from the two observations above | Require additional identity evidence before selecting one of those models |
 | Support for `WHO 1013 DIMENSION 1` across every older gateway model and firmware revision | **Unresolved** | A timeout or absent response must remain an absence of evidence, not a compatibility or age claim |
 
-The gateway form reuses the field names `OBJECT_MODEL`, `N_CONF`, `BRAND`, and `LINE`. Do not automatically import every range or interpretation from the ordinary addressed Device form into this gateway variant. In particular, the observed MH202 and F454 gateway tuples contain values outside some ordinary addressed-form ranges. This guide therefore preserves `N_CONF` as the raw gateway-variant field and does not use it to identify the catalogue model.
+The gateway form reuses the field names `OBJECT_MODEL`, `N_CONF`, `BRAND`, and `LINE`. Do not automatically import every range or interpretation from the ordinary addressed Device form into this gateway variant. In both observed MH202 and F454 tuples, `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. That pattern is consistent with a reserved or sentinel convention, but neither the sentinel interpretation nor its meaning is established. Preserve the raw value, report its semantics as unresolved, and do not use it to identify the catalogue model.
 
 ## 1. Read the documented `WHO 13` gateway type
 
@@ -75,7 +77,7 @@ Collect until that matching response, `NACK`, transport closure, or the applicab
 | Position | Field | Use in this guide |
 | ---: | --- | --- |
 | 1 | `OBJECT_MODEL` | Resolve against `AS_ITEM_SYSTEM.modobj` inside the Integration Functions catalogue system |
-| 2 | `N_CONF` | Preserve as returned; do not use it as a catalogue key |
+| 2 | `N_CONF` | Preserve as returned; observed gateway value `15` is outside the ordinary `0..12` range and has unresolved semantics |
 | 3 | `BRAND` | Resolve against `EN_BRAND.brand_modobj` |
 | 4 | `LINE` | Resolve against `EN_LINE.line_modobj` |
 
@@ -352,7 +354,7 @@ Gateway identification
 ## Evidence limits
 
 - The two worked captures establish successful `WHO 1013 DIMENSION 1` identity responses for the observed MH202 and F454 cases. They do not establish a universal support matrix for every gateway model or firmware revision.
-- The ordinary addressed `DIMENSION 1.N_CONF` physical-configurator interpretation is not required to identify these gateway cases and is not generalized to the gateway variant here.
+- The ordinary addressed `DIMENSION 1.N_CONF` physical-configurator interpretation is not required to identify these gateway cases and is not generalized to the gateway variant here. The observed gateway value `15` is `0xF`, which makes a sentinel interpretation plausible, but its exact meaning remains unresolved.
 - `WHO 13 DIMENSION 15` and diagnostic `WHO 1013 DIMENSION 1.OBJECT_MODEL` remain independent identifier namespaces. Historical numeric coincidences do not create a mapping.
 - A catalogue result is relative to the inspected `MHCatalogue.db` revision. A missing later product in that revision is a database-coverage limit, not proof that the product or protocol behavior does not exist.
 - Supplementary software or hardware version fields can corroborate an identity only where their relationship to a catalogue candidate is separately established.

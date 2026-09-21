@@ -88,11 +88,17 @@ Open boundaries remain narrower:
 - which property-level physical-to-advanced correspondences are complete when symbol, range, conversion, or `CONF_SYMBOL_REF` evidence is absent;
 - how the registered catalogue mode labels correspond to every MyHOME Suite UI path beyond the exact sequence labels preserved in `OPEN.db`.
 
-### Catalogue-wide `N_CONF` equivalence
+### Catalogue-wide addressed-form `N_CONF` equivalence
 
-The meaning of `N_CONF` is established: it is the number of physical configurator positions provided by the Device. Resolved examples also match the count of applicable firmware-scoped physical configuration fields after excluding the common `AID`/ID field.
+For the ordinary addressed Device form, the meaning of `N_CONF` is corroborated as the number of physical configurator positions provided by the Device. Resolved examples also match the count of applicable firmware-scoped physical configuration fields after excluding the common `AID`/ID field.
 
-What remains open is whether that database-count equivalence holds for every catalogue firmware, including conditional fields, shared firmware definitions, and Devices without available product diagrams. This question does not reopen the meaning of `N_CONF`.
+What remains open is whether that database-count equivalence holds for every catalogue firmware, including conditional fields, shared firmware definitions, and Devices without available product diagrams. This question does not reopen the addressed-form interpretation.
+
+### Gateway `N_CONF = 15`
+
+The empty-`WHERE` gateway identity form is a separate case. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. A reserved or sentinel interpretation is therefore plausible, but the available evidence does not establish what the value signifies.
+
+The open question is the exact gateway semantics of `N_CONF = 15`. Evidence that could resolve it includes an applicable MyHOME_Suite decoder or resource definition, an authoritative protocol definition, or controlled observations across gateway models and firmware revisions that distinguish literal count, reserved-value, and applicability interpretations.
 
 ## Scenario Engine
 

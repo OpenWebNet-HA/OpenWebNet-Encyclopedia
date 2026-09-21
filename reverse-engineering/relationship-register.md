@@ -60,7 +60,8 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `DIMENSION 1.OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | resolved management/catalogue system | corroborated |
 | `DIMENSION 1.BRAND` | `EN_BRAND.brand_modobj` | parsed identity response | corroborated |
 | `DIMENSION 1.LINE` | `EN_LINE.line_modobj` | parsed identity response | corroborated |
-| `DIMENSION 1.N_CONF` | physical configurator-position count | Device identity; product diagrams/captures | corroborated for documented Devices |
+| ordinary addressed `DIMENSION 1.N_CONF` | physical configurator-position count | addressed Device identity; product diagrams/captures | corroborated for documented addressed Devices |
+| gateway `DIMENSION 1.N_CONF` | unresolved gateway-variant field; observed value `15` on MH202 and F454 | empty-`WHERE` gateway identity captures | observed; sentinel interpretation inferred, exact semantics open |
 | `DIMENSION 2` `V.R.b` | `EN_FIRMWARE` plus `EN_BUILDS` | resolved item; sentinel/default/build handling | structurally corroborated; exact selection precedence open |
 | `DIMENSION 3`/`6` `V.R.b` | no canonical catalogue field found | retain as installed-state evidence | open database correlation |
 | `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | `STATE = 0`, enabled Module, resolved firmware and `slot` | experimentally corroborated with UI behavior |
@@ -91,6 +92,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | firmware component `-1` | any or unspecified for that component | strongly corroborated by `-1.-1.-1` and concrete `V.R.-1` rows |
 | missing `EN_BUILDS` row | distinct from explicit `firmware_b = -1` | structurally established |
 | `DIMENSION 30.STATE` | `0` selects enabled regular Object; `1` selects disabled Virgin Object | experimentally corroborated with MyHOME_Suite UI behavior |
+| gateway `DIMENSION 1.N_CONF = 15` | `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved-sentinel convention, but no canonical source establishes the sentinel meaning | observed value; sentinel interpretation inferred and unresolved |
 
 Sentinel meaning is local to the field. This table does not authorize interpreting every zero or negative value the same way.
 
@@ -100,7 +102,8 @@ Sentinel meaning is local to the field. This table does not authorize interpreti
 | --- | --- | --- |
 | `DIMENSION 4`/`5` catalogue correlation | `C1..C12` transport fields and `0..255` ranges are established; `ConfConfigurators` is labelled virtual configuration | controlled Device-family correlation between `C1..C12` and firmware-specific `EN_CONF` symbols/positions |
 | generic `DIMENSION 310.VAL_PAR` meaning | Object-specific response without generic index metadata | Object-specific captures and decoder behavior |
-| catalogue-wide `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested Devices | systematic conditional-field audit across firmware |
+| catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
+| gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
 | firmware selection precedence | exact, wildcard, default, missing, multiple-build patterns | controlled loader/UI observation |
 | ScenarioDevices matching IDs | stable local fields and semantic hierarchy | runtime matcher trace or application code |
 | ScenarioDevices source precedence | two revisions in different installation locations | file-open/update trace |
