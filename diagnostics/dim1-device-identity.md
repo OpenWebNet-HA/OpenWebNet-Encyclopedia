@@ -20,7 +20,7 @@
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | corroborated |
 | `BRAND` | `EN_BRAND.brand_modobj` | corroborated |
 | `LINE` | `EN_LINE.line_modobj` | corroborated |
-| `N_CONF` | no direct catalogue field identified | interpreted from `OPEN.db` wording and product documentation |
+| `N_CONF` | no direct catalogue field identified | ordinary addressed form interpreted from `OPEN.db` wording and product documentation; gateway semantics unresolved |
 
 The established path uses `OBJECT_MODEL` within the relevant catalogue system, then applies brand and line metadata to narrow or present the matching product identity. It must not be replaced by a numeric join to `EN_DEVICE.id_device` or `EN_ITEM.id_item`; those are independent internal identifiers.
 
