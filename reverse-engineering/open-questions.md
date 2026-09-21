@@ -96,7 +96,7 @@ What remains open is whether that database-count equivalence holds for every cat
 
 ### Gateway `N_CONF = 15`
 
-The empty-`WHERE` gateway identity form is a separate case. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`, the all-ones value of a four-bit quantity. A reserved or sentinel interpretation is therefore plausible, but the available evidence does not establish what the value signifies.
+The empty-`WHERE` gateway identity form is a separate case. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. A reserved or sentinel interpretation is therefore plausible, but the available evidence does not establish what the value signifies.
 
 The open question is the exact gateway semantics of `N_CONF = 15`. Evidence that could resolve it includes an applicable MyHOME_Suite decoder or resource definition, an authoritative protocol definition, or controlled observations across gateway models and firmware revisions that distinguish literal count, reserved-value, and applicability interpretations.
 
