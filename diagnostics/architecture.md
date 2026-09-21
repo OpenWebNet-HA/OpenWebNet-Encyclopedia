@@ -77,7 +77,7 @@ Enumeration by ID adds a per-Device `WHAT 11` frame so an already reported Devic
 
 | Diagnostic data | Device-model interpretation |
 | --- | --- |
-| `DIMENSION 1` | item/model identity, physical configurator-position count (`N_CONF`), brand, and line |
+| `DIMENSION 1` | item/model identity, addressed-form physical configurator-position count (`N_CONF`), brand, and line; the empty-`WHERE` gateway form is a distinct variant |
 | `DIMENSION 2` | firmware version |
 | `DIMENSION 3` | hardware version |
 | `DIMENSION 4`, `5` | twelve configurator values |
