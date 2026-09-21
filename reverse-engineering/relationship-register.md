@@ -92,7 +92,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | firmware component `-1` | any or unspecified for that component | strongly corroborated by `-1.-1.-1` and concrete `V.R.-1` rows |
 | missing `EN_BUILDS` row | distinct from explicit `firmware_b = -1` | structurally established |
 | `DIMENSION 30.STATE` | `0` selects enabled regular Object; `1` selects disabled Virgin Object | experimentally corroborated with MyHOME_Suite UI behavior |
-| gateway `DIMENSION 1.N_CONF = 15` | `15` is `0xF`, the all-ones value of a four-bit quantity; this is consistent with a reserved sentinel, but no canonical source establishes the sentinel meaning | observed value; sentinel interpretation inferred and unresolved |
+| gateway `DIMENSION 1.N_CONF = 15` | `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved-sentinel convention, but no canonical source establishes the sentinel meaning | observed value; sentinel interpretation inferred and unresolved |
 
 Sentinel meaning is local to the field. This table does not authorize interpreting every zero or negative value the same way.
 
