@@ -86,7 +86,7 @@ The implementation database defines these Device-level identity responses:
 | `6` | `MICRO_VERSION` | Microcontroller version |
 | `13` | `ID` | Installed-instance identifier |
 
-`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0..12`. Comparison with product configuration diagrams indicates that `N_CONF` represents the number of physical configurator positions provided by the Device.
+`OPEN.db` describes `N_CONF` as “Configurator number” and allows `0..12` for the ordinary addressed diagnostic form. Comparison with product configuration diagrams indicates that, in that addressed Device form, `N_CONF` represents the number of physical configurator positions provided by the Device.
 
 ### `N_CONF` and physical configurators
 
@@ -98,11 +98,13 @@ The interpretation is supported by Devices whose physical configuration layouts 
 | `F429` | `3` | 3 (`A`, `G`, `M`) |
 | `H4652/3` | `7` | 7 |
 
-The correspondence across Devices with different values argues against interpreting `N_CONF` as a Module count or general Device classification. Instead, it describes the size of the Device's physical configurator interface.
+The correspondence across Devices with different values argues against interpreting ordinary addressed-form `N_CONF` as a Module count or general Device classification. In that corroborated scope, it describes the size of the Device's physical configurator interface.
 
-The catalogue registers Physical configuration, Virtual Configuration, Advanced Configuration, and Product Programming as distinct modes, and a firmware can support more than one of them. Physical configuration constrains values to those representable by the firmware's demonstrated physical definitions. `N_CONF` describes the physical configurator positions provided by the hardware, not the number of logical configuration parameters or the active configuration mode.
+The catalogue registers Physical configuration, Virtual Configuration, Advanced Configuration, and Product Programming as distinct modes, and a firmware can support more than one of them. Physical configuration constrains values to those representable by the firmware's demonstrated physical definitions. In the ordinary addressed Device form, `N_CONF` describes the physical configurator positions provided by the hardware, not the number of logical configuration parameters or the active configuration mode.
 
-This interpretation remains to be checked against additional Devices, particularly older products for which configuration diagrams are less readily available.
+The empty-`WHERE` gateway identity form is a separate variant. Observed MH202 and F454 responses both carry `N_CONF = 15`, which is outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`, the all-ones value of a four-bit quantity, so a reserved or sentinel interpretation is plausible; its exact meaning is unresolved. Do not treat that gateway value as a proven physical-position count. See [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#gateway-variant).
+
+The ordinary addressed-form interpretation remains to be checked against additional Devices, particularly older products for which configuration diagrams are less readily available.
 
 ## Physical composition
 
