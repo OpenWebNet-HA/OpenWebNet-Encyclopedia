@@ -102,7 +102,7 @@ WHERE ais.id_system = :catalogue_system_id
 ORDER BY d.name, b.brand_name, l.line_name, d.code;
 ```
 
-Use `NULL` for a brand or collection value that was not reported or is not yet trustworthy. Retain VALUE 2 as `N_CONF`, the physical configurator-position count; no direct catalogue-column mapping is established.
+Use `NULL` for a brand or collection value that was not reported or is not yet trustworthy. In the ordinary per-Device identity form used by this workflow, retain VALUE 2 as `N_CONF`, the physical configurator-position count; no direct catalogue-column mapping is established. The separate empty-`WHERE` gateway identity form has different observed range behavior and is documented in [Identify an OpenWebNet Gateway](identify-openwebnet-gateway.md).
 
 Resolve firmware candidates separately through the selected item:
 
@@ -213,7 +213,7 @@ Implementation requirements:
 
 The Device ID is not a catalogue primary key. Equal numeric values across these identifier spaces must not be joined.
 
-`DIMENSION 1` VALUE 2 is `N_CONF`, the physical configurator-position count. It is not an Object, Virgin Object, form factor, or firmware-class identifier.
+For the ordinary per-Device identity form, `DIMENSION 1` VALUE 2 is `N_CONF`, the physical configurator-position count. It is not an Object, Virgin Object, form factor, or firmware-class identifier. Do not generalize that interpretation to the empty-`WHERE` gateway variant.
 
 ## Inventory record
 
