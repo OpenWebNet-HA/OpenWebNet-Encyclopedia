@@ -68,7 +68,7 @@ Supported counterparts and interpretations are:
 
 `OPEN.db` describes ordinary addressed-form `N_CONF` as the configurator number / number of physical configurators. Product diagrams for Devices including `F420`, `F429`, and `H4652/3` independently match their `N_CONF` values to the number of physical configurator positions. In that addressed Device scope, treat it as a hardware-interface count, not as a Module, Object, Virgin Object, or firmware classification.
 
-The separate empty-`WHERE` gateway identity form must not inherit that interpretation automatically. Observed MH202 and F454 gateway tuples both contain `N_CONF = 15`, outside the ordinary `0..12` range. `15` is numerically `0xF`, the all-ones value of a four-bit quantity, which is consistent with a sentinel but does not establish one. Preserve gateway `N_CONF` as an unresolved raw field unless stronger evidence establishes its semantics.
+The separate empty-`WHERE` gateway identity form must not inherit that interpretation automatically. Observed MH202 and F454 gateway tuples both contain `N_CONF = 15`, outside the ordinary `0..12` range. `15` is numerically `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a sentinel convention but not proof of one. Preserve gateway `N_CONF` as an unresolved raw field unless stronger evidence establishes its semantics.
 
 ### Diagnostic Object identity
 
