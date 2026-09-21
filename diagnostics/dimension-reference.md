@@ -87,7 +87,7 @@ These are transport/database ranges, not claims that every Device, Object, or sy
 | `12` | `*#[WHO]**12##` / `*#[WHO]**12*[MAC1]*[MAC2]*[MAC3]*[MAC4]*[MAC5]*[MAC6]##` | MAC-address request/response |
 | `15` | `*#[WHO]**15##` / `*#[WHO]**15*[OBJECT_MODEL]##` | WebServer model request/response |
 
-The empty-`WHERE` gateway `DIMENSION 1` form is a distinct variant. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`, the all-ones value of a four-bit quantity; this is consistent with a reserved or sentinel value, but its exact meaning is unresolved. Do not import the ordinary physical-configurator-count interpretation into the gateway form. See [`DIMENSION 1`: Device Identity](dim1-device-identity.md#gateway-variant).
+The empty-`WHERE` gateway `DIMENSION 1` form is a distinct variant. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern; this is consistent with a reserved or sentinel value, but its exact meaning is unresolved. Do not import the ordinary physical-configurator-count interpretation into the gateway form. See [`DIMENSION 1`: Device Identity](dim1-device-identity.md#gateway-variant).
 
 The general `DIMENSION 7`, `11`, `12`, and `15` records are directly associated with the Nurse Call system in `AS_OPEN_SYSTEM`. `OpenQuery.txt` also selects the general `DIMENSION 7` frames and the gateway `DIMENSION 1` form for gateway-connection handling. This supports reuse in a gateway/service workflow but does not make these frames part of every diagnostic family’s Device interview.
 
