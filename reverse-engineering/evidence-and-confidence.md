@@ -73,7 +73,7 @@ The scoped claim “in the ordinary addressed Device form, `DIMENSION 1.N_CONF` 
 - resolved catalogue firmware fields independently produce the same counts in those examples;
 - the field is part of Device identity rather than a Module record.
 
-The empty-`WHERE` gateway form prevents promotion of that interpretation to an unconditional `DIMENSION 1` rule. Observed MH202 and F454 gateway identity responses both carry `N_CONF = 15`, outside the ordinary `0..12` range. Numerically, `15` is `0xF`, the all-ones value of a four-bit quantity, which is consistent with a reserved or sentinel value but does not establish one. Gateway `N_CONF` semantics therefore remain unresolved.
+The empty-`WHERE` gateway form prevents promotion of that interpretation to an unconditional `DIMENSION 1` rule. Observed MH202 and F454 gateway identity responses both carry `N_CONF = 15`, outside the ordinary `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved or sentinel convention but not proof of one. Gateway `N_CONF` semantics therefore remain unresolved.
 
 The stronger addressed-form claim “for every firmware, `N_CONF` equals the count of firmware-scoped physical fields excluding `AID`” is not yet equally supported. Conditional fields and products without diagrams prevent catalogue-wide promotion. This example demonstrates why confidence belongs to a scoped claim: the addressed-form interpretation can remain corroborated while the gateway variant remains unresolved.
 
