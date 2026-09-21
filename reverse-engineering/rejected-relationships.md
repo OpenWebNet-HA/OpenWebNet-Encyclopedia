@@ -32,7 +32,7 @@ Rejected interpretations are retained because they are plausible enough to be re
 
 | Rejected interpretation | Conflicting evidence | Safe treatment |
 | --- | --- | --- |
-| `DIMENSION 1.N_CONF` is an Object, class, or form factor | `OPEN.db`, product diagrams, and captures identify a physical-configurator-position count | retain it as the Device-level position count |
+| `DIMENSION 1.N_CONF` is an Object, class, or form factor | ordinary addressed-form `OPEN.db` metadata, product diagrams, and captures identify a physical-configurator-position count; the gateway variant instead has unresolved semantics | retain the physical-position interpretation only for the corroborated ordinary addressed form; preserve gateway `N_CONF` raw and unresolved |
 | `DIMENSION 30.KEYO` always names `EN_KEY_OBJECT.key_object` | disabled Modules (`STATE = 1`) use the Virgin Object namespace | branch on `STATE` before lookup |
 | `DIMENSION 32.SYS` is automatically a functional `WHO` | system grouping and non-Lighting candidate values differ | retain `sys_modobj` as the leading inference pending a discriminating capture |
 | diagnostic outer `WHERE` always equals slot `1` address | only selected layouts have been observed; disabled/alternate layouts are untested | treat the correlation as strong but conditional |
