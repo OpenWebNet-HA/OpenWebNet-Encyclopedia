@@ -9,7 +9,7 @@
 | Field | Range in the addressed `OPEN.db` form | Interpretation |
 | --- | ---: | --- |
 | `OBJECT_MODEL` | `1..65535` | item/model value |
-| `N_CONF` | `0..12` | number of physical configurator positions |
+| `N_CONF` | `0..12` | number of physical configurator positions in the ordinary addressed Device form |
 | `BRAND` | `0..4` | brand code |
 | `LINE` | `0..8` | product-line code |
 
@@ -20,7 +20,7 @@
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | corroborated |
 | `BRAND` | `EN_BRAND.brand_modobj` | corroborated |
 | `LINE` | `EN_LINE.line_modobj` | corroborated |
-| `N_CONF` | no direct catalogue field identified | interpreted from `OPEN.db` wording and product documentation |
+| `N_CONF` | no direct catalogue field identified | ordinary addressed form interpreted from `OPEN.db` wording and product documentation; gateway semantics unresolved |
 
 The established path uses `OBJECT_MODEL` within the relevant catalogue system, then applies brand and line metadata to narrow or present the matching product identity. It must not be replaced by a numeric join to `EN_DEVICE.id_device` or `EN_ITEM.id_item`; those are independent internal identifiers.
 
@@ -50,7 +50,7 @@ The example corroborates the model-to-item path while also demonstrating why `OB
 
 ## `N_CONF` and physical configurators
 
-`OPEN.db` describes `N_CONF` as “Configurator number” / “number of physical configurator” and constrains it to `0..12`. Product configuration diagrams provide an independent interpretation: the value corresponds to the number of physical configurator positions provided by the Device.
+`OPEN.db` describes `N_CONF` as “Configurator number” / “number of physical configurator” and constrains the ordinary addressed form to `0..12`. Product configuration diagrams provide an independent interpretation for that addressed Device form: the value corresponds to the number of physical configurator positions provided by the Device.
 
 Documented examples include:
 
@@ -60,9 +60,9 @@ Documented examples include:
 | `F429` | `3` | 3 positions: `A`, `G`, `M` |
 | `H4652/3` | `7` | 7 configurator positions |
 
-This field therefore describes the Device's physical configuration interface. It is not a Module count, Object identifier, Virgin Object, form factor, firmware class, or indication of the Object assigned to `slot` `1`.
+For the corroborated ordinary addressed Device form, this field therefore describes the Device's physical configuration interface. It is not a Module count, Object identifier, Virgin Object, form factor, firmware class, or indication of the Object assigned to `slot` `1`.
 
-MyHOME Devices can alternatively use advanced configuration, which can represent values outside the limits of the physical configurator interface. `N_CONF` remains a hardware characteristic: it does not describe the active configuration method or the number of logical configuration parameters.
+MyHOME Devices can alternatively use advanced configuration, which can represent values outside the limits of the physical configurator interface. Within the corroborated ordinary addressed Device form, `N_CONF` remains a hardware characteristic: it does not describe the active configuration method or the number of logical configuration parameters.
 
 Older Devices for which configuration diagrams have not yet been located remain useful targets for further cross-checking, but the available examples support the physical-position interpretation across multiple distinct `N_CONF` values.
 
@@ -79,6 +79,8 @@ Older Devices for which configuration diagrams have not yet been located remain 
 Treat this as a distinct frame variant. Do not repair the empty field or silently convert it to the addressed form.
 
 The addressed-form ranges and the physical-configurator interpretation of `N_CONF` above must not be imposed automatically on this gateway variant. First-hand MH202 and F454 gateway identity captures return payloads `5*15*5*0` and `51*15*5*0` respectively: the observed second-field value `15` and `BRAND = 5` are outside the ordinary addressed-form ranges. These observations establish that those ranges are not valid constraints for the gateway form. They do not, by themselves, establish that gateway-variant `N_CONF` has the ordinary addressed Device field's physical-configurator semantics.
+
+Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. Its repeated use in both observed gateway tuples is therefore consistent with a reserved or sentinel value, but no canonical source currently establishes that interpretation or the sentinel's meaning. The evidence does not justify presenting gateway `N_CONF = 15` as a literal count of fifteen physical configurator positions, nor as a proven encoding of “zero configurators” or “not applicable”. Preserve the raw value and its unresolved semantics.
 
 For gateway catalogue identification, preserve the returned `N_CONF` value but resolve `OBJECT_MODEL`, `BRAND`, and `LINE` through their established catalogue correlations in the applicable system context.
 

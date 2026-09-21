@@ -159,7 +159,7 @@ function troubleshoot(request, captured_frames, expected_evidence):
 2. Apply brand and collection evidence without forcing absent values.
 3. Use `EN_DEVICE.name` for the Physical Device description.
 4. Keep all surviving SKUs.
-5. Retain VALUE 2 as `N_CONF`, a physical configurator-position count, rather than a classification key.
+5. For an ordinary per-Device identity response, retain VALUE 2 as `N_CONF`, a physical configurator-position count, rather than a classification key. For the empty-`WHERE` gateway identity variant, preserve `N_CONF` raw and use the scoped treatment in [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#gateway-variant).
 6. Do not substitute an Object description for the Device description.
 
 ### Local-button timeout

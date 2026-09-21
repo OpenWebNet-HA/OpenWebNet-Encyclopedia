@@ -66,14 +66,16 @@ Every important inference should be recoverable from a compact claim record:
 
 ## Worked confidence example: `N_CONF`
 
-The claim “`DIMENSION 1.N_CONF` is the number of physical configurator positions” is corroborated because:
+The scoped claim “in the ordinary addressed Device form, `DIMENSION 1.N_CONF` is the number of physical configurator positions” is corroborated because:
 
-- `OPEN.db` labels it as the number of physical configurators and constrains it to `0..12`;
-- observed `N_CONF` values agree with product diagrams for Devices with two, three, and seven positions;
+- `OPEN.db` labels that field as the number of physical configurators and constrains the ordinary addressed form to `0..12`;
+- observed addressed-form `N_CONF` values agree with product diagrams for Devices with two, three, and seven positions;
 - resolved catalogue firmware fields independently produce the same counts in those examples;
 - the field is part of Device identity rather than a Module record.
 
-The stronger claim “for every firmware, `N_CONF` equals the count of firmware-scoped physical fields excluding `AID`” is not yet equally supported. Conditional fields and products without diagrams prevent catalogue-wide promotion. The first claim is corroborated; the second remains a strong, testable generalization.
+The empty-`WHERE` gateway form prevents promotion of that interpretation to an unconditional `DIMENSION 1` rule. Observed MH202 and F454 gateway identity responses both carry `N_CONF = 15`, outside the ordinary `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved or sentinel convention but not proof of one. Gateway `N_CONF` semantics therefore remain unresolved.
+
+The stronger addressed-form claim “for every firmware, `N_CONF` equals the count of firmware-scoped physical fields excluding `AID`” is not yet equally supported. Conditional fields and products without diagrams prevent catalogue-wide promotion. This example demonstrates why confidence belongs to a scoped claim: the addressed-form interpretation can remain corroborated while the gateway variant remains unresolved.
 
 ## Worked confidence example: `DIMENSION 32.SYS`
 

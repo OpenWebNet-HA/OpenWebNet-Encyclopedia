@@ -44,9 +44,12 @@ This is a semantic resolution flow, not a shared ER schema. Dashed relationships
 | Wire field | Catalogue correlation | Confidence |
 | --- | --- | --- |
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` in the resolved system context | corroborated |
-| `N_CONF` | number of physical configurator positions | corroborated for documented Devices |
+| ordinary addressed `N_CONF` | number of physical configurator positions | corroborated for documented addressed Devices |
+| gateway `N_CONF` | no catalogue correlation established; preserve raw value | observed `15` on MH202 and F454; exact semantics unresolved |
 | `BRAND` | `EN_BRAND.brand_modobj` | corroborated |
 | `LINE` | `EN_LINE.line_modobj` | corroborated |
+
+The empty-`WHERE` gateway `DIMENSION 1` form must be kept separate from the ordinary addressed identity form. Its observed `N_CONF = 15` lies outside the ordinary `0..12` range; although `15 = 0xF` is consistent with a reserved sentinel, no cross-database relation or canonical definition establishes that meaning.
 
 The installed Device ID and `EN_DEVICE.id_device` are different namespaces.
 
