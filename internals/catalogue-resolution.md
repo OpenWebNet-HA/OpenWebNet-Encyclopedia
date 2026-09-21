@@ -35,7 +35,7 @@ A diagnostic identity response does not return an `EN_DEVICE` primary key. Resol
 
 Several SKUs can share one item and firmware capability. Preserve the candidate set unless the evidence identifies one marketed product uniquely.
 
-`DIMENSION 1.N_CONF` is the second payload value, immediately after `OBJECT_MODEL`. It reports the number of physical configurator positions provided by the Device. This interpretation is corroborated by `OPEN.db`, catalogue configuration definitions, observed responses, and product diagrams; it is not an Object, Virgin Object, form factor, firmware class, or database key. See [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#n_conf-and-physical-configurators).
+In the ordinary addressed Device form, `DIMENSION 1.N_CONF` is the second payload value, immediately after `OBJECT_MODEL`, and reports the number of physical configurator positions provided by the Device. This interpretation is corroborated by `OPEN.db`, catalogue configuration definitions, observed responses, and product diagrams; it is not an Object, Virgin Object, form factor, firmware class, or database key. The separate empty-`WHERE` gateway form is not covered by that interpretation: observed MH202 and F454 gateway tuples return `N_CONF = 15`, outside the ordinary `0..12` range, and its exact gateway semantics remain unresolved. See [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#n_conf-and-physical-configurators).
 
 ## Firmware and Module resolution
 
