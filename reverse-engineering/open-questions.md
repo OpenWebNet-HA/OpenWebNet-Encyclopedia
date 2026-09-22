@@ -125,6 +125,30 @@ The remaining questions are:
 - Which resources and application components resolve stored localization keys?
 - What locale-selection, fallback, missing-key, and composed-label rules are applied?
 
+## Sound matrix routing
+
+The routing address `1ES` and the amplifier decomposition `EA` are corroborated on two F441M installations and recorded in [Sound Matrix Source Routing](sound-matrix-routing.md). These remain open:
+
+### Specified form of directed source selection
+
+`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form may be a private mechanism or a published one that has not been located. No examined source contains it. A specification, a Legrand application note, or a stored frame template naming this address would settle its provenance.
+
+### Environment form `#E` in routing
+
+`WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and how it would coexist with `10S` source addresses, is untested; neither plant used it. A capture from an installation whose controls use environment power commands would resolve it.
+
+### Base band against stereo channel
+
+Every observed routing frame uses `WHAT 3`. Whether base-band installations require `WHAT 0` on the same address, or a different address entirely, has no observation either way.
+
+### Sources above 4 and single-digit amplifiers
+
+Both observed plants have four-input matrices and two-digit amplifier addresses. The specification admits sources `101`-`109` and amplifiers `01`-`99`, including single-digit forms whose environment is ambiguous.
+
+### Origin of the second dialect
+
+One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only.
+
 ## Evidence priorities
 
 The highest-value next observations are:
@@ -135,6 +159,7 @@ The highest-value next observations are:
 4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
 5. file-access, database-statement, and save-operation traces while creating one minimal scenario;
 6. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
-7. hardware and microcontroller version observations across known revisions of the same product.
+7. hardware and microcontroller version observations across known revisions of the same product;
+8. a `WHO 16` routing capture from a base-band installation, from a plant using the `#E` environment form, or from a matrix with single-digit amplifier addresses.
 
 Each result should update the [Relationship Register](relationship-register.md) and then the appropriate reference section.
