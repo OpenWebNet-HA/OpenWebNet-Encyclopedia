@@ -39,6 +39,39 @@ The final digits carry magnitude and are part of `WHAT`.
 
 Amplifier and source targets share the namespace but have different ranges. Preserve leading zeroes on amplifier addresses.
 
+## Amplifier address structure
+
+A two-digit amplifier `WHERE` `EA` carries an environment digit followed by the amplifier number within that environment: `23` is amplifier 3 in environment 2. The F441M multichannel matrix ties environments to its outputs one to one: its documentation requires amplifiers on output `n` to be configured with room address `A = n`.
+
+This decomposition is corroborated rather than published: the `WHO 22` counterparts emitted by one gateway write the same addresses as `3#AREA#POINT`, so `11` appears there as area 1, point 1. See [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
+
+Single-digit amplifier addresses are admitted by the specification. Their environment is ambiguous and has not been observed on hardware.
+
+## Matrix source routing
+
+The specification defines no message that assigns a source to an amplifier. Source **cycling** is specified (`WHAT 20` / `23` on `WHERE 100`); directed selection is not.
+
+Implementations perform directed selection with a three-digit `WHERE` outside both the amplifier and the source ranges:
+
+~~~text
+*16*3*10S##     activate source device S
+*16*3*1ES##     route the amplifiers of environment E to source S
+~~~
+
+`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Environment `0` does not occur in this form, because `10S` is a source device address.
+
+| Frame | Effect |
+| --- | --- |
+| `*16*3*112##` | environment 1 listens to source 2 |
+| `*16*3*121##` | environment 2 listens to source 1 |
+| `*16*3*181##` | environment 8 listens to source 1 |
+
+Routing is announced per environment, so every amplifier sharing an environment follows the change. Two amplifiers in one environment cannot listen to different sources.
+
+Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
+
+**Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](../../sources/openwebnet-public/pdf/WHO_16.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+
 ## `DIMENSION` values
 
 | `DIMENSION` | Meaning | Established detail |
@@ -94,8 +127,12 @@ Support is target-dependent: amplifier addresses accept amplifier operations; so
 
 `WHO 16` and [`WHO 22`](../who-22-sound-diffusion/) encode similar concepts using different commands, addresses, and properties. They are separate dialects and must not be translated by numeric coincidence.
 
+One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound event it reported, including amplifier power, volume, source power, routing and RDS. That correspondence is established for that Device and was used to corroborate the addressing above; it does not establish a general mapping, and an MH200 on another plant emitted no `WHO 22` frames at all. The observed pairs are tabulated in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
+
 ## Evidence basis
 
 Tables, ranges, and flows come from [`WHO 16` specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
+
+The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
