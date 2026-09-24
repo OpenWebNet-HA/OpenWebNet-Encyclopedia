@@ -22,11 +22,13 @@ Record durable choices here with status and rationale. A later decision may supe
 | MKB-014 | Accepted, Phase 2 | Separate epistemic standing, typed value, and scoped applicability. Contradicted records require question and relationship references; unresolved records require a question. Cross-artifact truth and referential checks remain mandatory before release. |
 | MKB-015 | Accepted, Phase 2 | Fix the seven planned reference registry names in [schema documentation](../../knowledge/schema/README.md). Schemas and fixtures are curated; generated records remain empty. Registry location and manifest/Markdown formats are later decisions. |
 
+| MKB-017 | Accepted, Phase 4 | A closed canonical Markdown manifest feeds the existing sanitization gate, then a single structural IR. `guides/` is excluded before extraction; a separate path/line hint report identifies candidate guide-only facts for human review. Committed path and heading-anchor mappings retain opaque IDs across editorial changes. Lexical qualification cues preserve evidence for review without inventing claims. |
+
 ## Open decisions for Phase 1 and later
 
 | ID | Target phase | Question |
 | --- | --- | --- |
 | MKB-O03 | Resolved in 2 | Common record schemas and controlled vocabularies in `knowledge/schema/` |
 | MKB-O04 | Resolved, 3 | Source classification and deterministic sanitization use safe fixtures and retain scanner limits; future field transforms require policy and test updates |
-| MKB-O05 | 4 and 8 | IR structure and reviewed claim input representation |
+| MKB-O05 | Partly resolved in 4; remainder 8 | Shared Markdown IR implemented; reviewed claim input representation remains open |
 | MKB-O06 | 2 | Concrete registry schemas and golden serialization examples; exact reference file names and corpus format before v1 |
