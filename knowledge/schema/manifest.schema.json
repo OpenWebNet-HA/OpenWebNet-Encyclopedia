@@ -21,9 +21,9 @@
         }
       }
     },
-    "coverage": {"type": "object", "additionalProperties": false, "required": ["canonical", "guides", "llm_corpus", "references", "retrieval"], "properties": {"canonical": {"$ref": "#/$defs/metrics"}, "guides": {"$ref": "#/$defs/metrics"}, "llm_corpus": {"$ref": "#/$defs/metrics"}, "references": {"$ref": "#/$defs/metrics"}, "retrieval": {"$ref": "#/$defs/metrics"}}},
+    "coverage": {"type": "object", "additionalProperties": false, "required": ["canonical", "guides", "llm_corpus", "references", "retrieval", "claims"], "properties": {"canonical": {"$ref": "#/$defs/metrics"}, "guides": {"$ref": "#/$defs/metrics"}, "llm_corpus": {"$ref": "#/$defs/metrics"}, "references": {"$ref": "#/$defs/metrics"}, "retrieval": {"$ref": "#/$defs/metrics"}, "claims": {"$ref": "#/$defs/metrics"}}},
     "format_version": {"const": "0.1.0"},
-    "generator_version": {"const": "ownkb-build-0.3.0"},
+    "generator_version": {"const": "ownkb-build-0.4.0"},
     "input_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "schema_compatibility_version": {"const": "0.1.0"}
   },

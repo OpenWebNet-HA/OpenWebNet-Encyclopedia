@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "knowledge" / "tools"))
 from serialization import json_bytes, jsonl_bytes  # noqa: E402
 from validate_references import REFERENCE_FILES, validate_integrity  # noqa: E402
+from validate_schema import validate_jsonl  # noqa: E402
 
 
 def reject_duplicate_keys(pairs):
@@ -89,6 +90,38 @@ def validate_artifacts(manifest: dict, output_root: Path) -> None:
             raise ValueError(f"manifest artifact hash is stale: {entry['path']}")
     chunks = validate_chunks(output_root / "knowledge/retrieval/chunks.jsonl")
     registries = validate_integrity(output_root, chunks)
+    claims = validate_jsonl((output_root / "knowledge/claims/claims.jsonl").read_bytes())
+    refs = {record["id"]: record for group in registries.values() for record in group}
+    source_sections = {chunk["section_id"]: chunk for chunk in chunks}
+    claim_ids = {claim["id"] for claim in claims}
+    if len(claim_ids) != len(claims):
+        raise ValueError("duplicate claim ID")
+    for claim in claims:
+        if claim["subject_id"] not in refs or refs[claim["subject_id"]]["kind"] != "entity":
+            raise ValueError(f"dangling claim subject: {claim['id']}")
+        if claim["context"]["namespace_id"] not in refs or refs[claim["context"]["namespace_id"]]["kind"] != "namespace":
+            raise ValueError(f"dangling claim namespace: {claim['id']}")
+        location = claim["provenance"][0]["location"]
+        section = source_sections.get(location["section_id"])
+        if not section or (section["document_id"], section["source_path"]) != (location["document_id"], location["path"]):
+            raise ValueError(f"invalid claim section provenance: {claim['id']}")
+        for provenance in claim["provenance"]:
+            if provenance["source_id"] not in refs or refs[provenance["source_id"]]["kind"] != "source":
+                raise ValueError(f"dangling claim source: {claim['id']}")
+        for field, kind in (("cautions", "caution"), ("questions", "question")):
+            if any(refs.get(x, {}).get("kind") != kind for x in claim[field]):
+                raise ValueError(f"dangling claim {field}: {claim['id']}")
+        for relation, targets in claim["claim_links"].items():
+            for target in targets:
+                if target == claim["id"] or target not in claim_ids:
+                    raise ValueError(f"dangling claim {relation}: {claim['id']}")
+                if relation == "contradicts":
+                    peer = next(x for x in claims if x["id"] == target)
+                    if claim["id"] not in peer["claim_links"]["contradicts"] or not claim["questions"] or not peer["questions"]:
+                        raise ValueError(f"unqualified or asymmetric claim contradiction: {claim['id']}")
+    claim_entry = next((entry for entry in manifest["artifacts"] if entry["kind"] == "claim_records"), None)
+    if not claim_entry or claim_entry["record_count"] != len(claims) or manifest["coverage"]["claims"]["records"] != len(claims):
+        raise ValueError("claim inventory or coverage mismatch")
     retrieval = manifest["coverage"]["retrieval"]
     if len(chunks) != retrieval["emitted_chunks"]:
         raise ValueError("retrieval chunk count does not match coverage")
