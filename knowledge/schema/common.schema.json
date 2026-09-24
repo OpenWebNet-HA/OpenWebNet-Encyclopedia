@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/common.schema.json",
+  "title": "Machine KB common types (pre-release)",
+  "$defs": {
+    "id": {"type": "string", "maxLength": 255, "pattern": "^ownkb:(document|section|namespace|entity|source|claim|chunk|relationship|caution|question|term):(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*(?::(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*)*$"},
+    "idSet": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+    "privacy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["classification", "removed_value_classes"],
+      "properties": {
+        "classification": {"enum": ["public", "sanitized"]},
+        "removed_value_classes": {"type": "array", "uniqueItems": true, "items": {"enum": ["network_address", "device_id", "hardware_id", "credential", "account_identifier", "person_identifier", "location", "installation_topology", "capture_metadata", "other"]}}
+      },
+      "allOf": [
+        {"if": {"properties": {"classification": {"const": "public"}}, "required": ["classification"]}, "then": {"properties": {"removed_value_classes": {"maxItems": 0}}}},
+        {"if": {"properties": {"classification": {"const": "sanitized"}}, "required": ["classification"]}, "then": {"properties": {"removed_value_classes": {"minItems": 1}}}}
+      ]
+    },
+    "sourceLocation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["document_id", "path", "section_id"],
+      "properties": {
+        "document_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:document:"}]},
+        "section_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:section:"}]},
+        "path": {"type": "string", "pattern": "^(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_.-]+(?:/[a-zA-Z0-9_.-]+)*\\.md$"}
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["location", "evidence_class"],
+      "properties": {
+        "location": {"$ref": "#/$defs/sourceLocation"},
+        "source_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:source:"}]},
+        "evidence_class": {"enum": ["official_specification", "official_catalogue", "public_database", "public_capture", "public_experiment", "configuration_software", "implementation_artifact", "firmware_interface", "prior_validated_research", "canonical_documentation"]},
+        "evidence_note": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"evidence_class": {"not": {"const": "canonical_documentation"}}}, "required": ["evidence_class"]}, "then": {"required": ["source_id"]}}
+      ]
+    },
+    "versionScope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["specified", "unknown", "not_versioned"]},
+        "expression": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"state": {"const": "specified"}}, "required": ["state"]}, "then": {"required": ["expression"]}},
+        {"if": {"properties": {"state": {"enum": ["unknown", "not_versioned"]}}, "required": ["state"]}, "then": {"not": {"required": ["expression"]}}}
+      ]
+    },
+    "applicability": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "domain", "target", "version"],
+      "properties": {
+        "state": {"enum": ["applies", "unknown", "not_applicable"]},
+        "domain": {"enum": ["protocol", "transport", "device_model", "firmware", "implementation", "diagnostic", "database", "other"]},
+        "target": {"type": "string", "minLength": 1},
+        "version": {"$ref": "#/$defs/versionScope"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"state": {"enum": ["unknown", "not_applicable"]}}, "required": ["state"]}, "then": {"required": ["reason"]}}
+      ]
+    },
+    "value": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["known", "unknown", "unresolved", "contradictory"]},
+        "text": {"type": "string", "minLength": 1},
+        "integer": {"type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991},
+        "boolean": {"type": "boolean"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"state": {"const": "known"}}, "required": ["state"]}, "then": {"oneOf": [{"required": ["text"], "not": {"anyOf": [{"required": ["integer"]}, {"required": ["boolean"]}]}}, {"required": ["integer"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["boolean"]}]}}, {"required": ["boolean"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["integer"]}]}}]}},
+        {"if": {"properties": {"state": {"enum": ["unknown", "unresolved", "contradictory"]}}, "required": ["state"]}, "then": {"required": ["reason"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["integer"]}, {"required": ["boolean"]}]}}}
+      ]
+    }
+  }
+}

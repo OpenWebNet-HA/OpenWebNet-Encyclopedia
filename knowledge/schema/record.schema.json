@@ -1,0 +1,2215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/record.schema.json",
+  "title": "Machine KB records (pre-release)",
+  "$ref": "#/$defs/record",
+  "$defs": {
+    "record": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/namespace"
+        },
+        {
+          "$ref": "#/$defs/entity"
+        },
+        {
+          "$ref": "#/$defs/source"
+        },
+        {
+          "$ref": "#/$defs/relationship"
+        },
+        {
+          "$ref": "#/$defs/caution"
+        },
+        {
+          "$ref": "#/$defs/question"
+        },
+        {
+          "$ref": "#/$defs/term"
+        },
+        {
+          "$ref": "#/$defs/claim"
+        },
+        {
+          "$ref": "#/$defs/chunk"
+        }
+      ]
+    },
+    "namespace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:namespace:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "namespace"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "description",
+        "entity_type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:entity:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "entity"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity_type": {
+          "enum": [
+            "physical_product",
+            "physical_device",
+            "firmware",
+            "module",
+            "object",
+            "address",
+            "protocol_identity",
+            "database_record",
+            "protocol_value",
+            "other"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "title",
+        "publisher",
+        "source_type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:source:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "source"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "enum": [
+            "official_specification",
+            "official_catalogue",
+            "public_database",
+            "public_capture",
+            "public_experiment",
+            "configuration_software",
+            "implementation_artifact",
+            "firmware_interface",
+            "prior_validated_research",
+            "canonical_documentation"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "subject_id",
+        "predicate",
+        "object_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:relationship:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "relationship"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "subject_id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "predicate": {
+          "enum": [
+            "part_of",
+            "has_part",
+            "documents",
+            "evidenced_by",
+            "applies_to",
+            "defined_in",
+            "related_to",
+            "contradicts",
+            "supersedes",
+            "replaces",
+            "qualifies"
+          ]
+        },
+        "object_id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "qualification": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "caution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:caution:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "caution"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "text",
+        "resolution_state"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:question:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "question"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resolution_state": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "resolution_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "definition"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:term:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "term"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "statement",
+        "value"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:claim:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "claim"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "$ref": "common.schema.json#/$defs/value"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "chunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "context",
+        "applicability",
+        "provenance",
+        "epistemic_status",
+        "confidence",
+        "privacy",
+        "relationships",
+        "cautions",
+        "questions",
+        "text",
+        "document_id",
+        "section_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:chunk:"
+            }
+          ]
+        },
+        "kind": {
+          "const": "chunk"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "namespace_id",
+            "description"
+          ],
+          "properties": {
+            "namespace_id": {
+              "type": "string",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/$defs/id"
+                },
+                {
+                  "pattern": "^ownkb:namespace:"
+                }
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "applicability": {
+          "$ref": "common.schema.json#/$defs/applicability"
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "specified",
+            "catalogue_documented",
+            "observed",
+            "experimentally_confirmed",
+            "corroborated_interpretation",
+            "inferred",
+            "hypothesis",
+            "unresolved",
+            "contradicted",
+            "superseded",
+            "rejected"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "undetermined"
+          ]
+        },
+        "privacy": {
+          "$ref": "common.schema.json#/$defs/privacy"
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:relationship:"
+              }
+            ]
+          }
+        },
+        "cautions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:caution:"
+              }
+            ]
+          }
+        },
+        "questions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              {
+                "pattern": "^ownkb:question:"
+              }
+            ]
+          }
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document_id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:document:"
+            }
+          ]
+        },
+        "section_id": {
+          "type": "string",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:section:"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "epistemic_status": {
+                "const": "contradicted"
+              }
+            },
+            "required": [
+              "epistemic_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "relationships": {
+                "minItems": 1
+              },
+              "questions": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "properties": {
+                  "state": {
+                    "const": "not_applicable"
+                  }
+                },
+                "required": [
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "not": {
+              "properties": {
+                "value": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  },
+                  "required": [
+                    "state"
+                  ]
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

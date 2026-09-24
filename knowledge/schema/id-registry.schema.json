@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/id-registry.schema.json",
+  "title": "Curated ID lifecycle registry (pre-release)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ids",
+    "aliases"
+  ],
+  "properties": {
+    "ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "lifecycle",
+          "first_release"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "lifecycle": {
+            "enum": [
+              "live",
+              "deprecated",
+              "retired"
+            ]
+          },
+          "first_release": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "last_release": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "replaced_by": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "common.schema.json#/$defs/id"
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "lifecycle": {
+                  "enum": [
+                    "deprecated",
+                    "retired"
+                  ]
+                }
+              },
+              "required": [
+                "lifecycle"
+              ]
+            },
+            "then": {
+              "required": [
+                "reason"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "lifecycle": {
+                  "const": "retired"
+                }
+              },
+              "required": [
+                "lifecycle"
+              ]
+            },
+            "then": {
+              "required": [
+                "last_release",
+                "replaced_by"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "alias",
+          "canonical_id",
+          "reason",
+          "first_release"
+        ],
+        "properties": {
+          "alias": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "canonical_id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "first_release": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          }
+        }
+      }
+    }
+  }
+}
