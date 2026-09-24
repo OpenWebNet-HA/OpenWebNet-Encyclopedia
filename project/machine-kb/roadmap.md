@@ -12,7 +12,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | **Complete** - top-level build/check entry points, canonical serialization, committed manifest and schema, clean double-build gate, and temporary-output support |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | **Complete** - deterministic full corpus, coherent section chunks, closed retrieval schema, manifest inventory and coverage, freshness and privacy validation |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | **Complete** - curated semantic seeds and generated canonical-source records, shared-IR provenance, chunk references, cross-file integrity, high-risk boundary tests |
-| 8 | Reviewed atomic claim framework and representative fixtures | Pending |
+| 8 | Reviewed atomic claim framework and representative fixtures | **Complete** - eight curated assertions, shared-IR join, source-section review pins, typed claim links, schema and integrity checks |
 | 9 | Initial claim population, batch 1 | Pending |
 | 10 | Initial claim population, batch 2 | Pending |
 | 11 | Initial claim population, batch 3 | Pending |
@@ -74,6 +74,13 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Referential-integrity validation rejects duplicate IDs, wrong registry kinds, dangling namespaces, relationships, cautions, questions, provenance documents/sections/sources, relationship endpoints, or chunk references. The manifest inventories and hashes every registry and checks record counts and freshness.
 - Verified: `python build.py`; `python check.py`; `python -m unittest discover -s knowledge/tests -v`; `python -m unittest discover -s knowledge/tools -p 'test_schema.py' -v`; `python project/review/checks/check_esg.py .`; `python project/review/checks/check_ecv.py .`; `git diff --check`.
 
+## Phase 8 verification
+
+- Generated exactly eight reviewed atomic claims from one curated input joined to the shared privacy-gated IR. Samples cover WHO/WHAT context, DIMENSION 4/5 transport capacity, installed identity versus address, DIMENSION 30 state, observed gateway N_CONF versus its unresolved sentinel interpretation, and conflicting published authentication label/hex assertions.
+- Added required subject entity, namespace, public source and section provenance, evidence class, epistemic status, applicability/version, cautions/questions, typed links, and prepared-section SHA-256. A changed source section blocks the build for review. The two authentication assertions remain separate, reciprocally conflicting, and unresolved.
+- The manifest inventories and hashes the generated claims; validators cover missing references, stale source pins, malformed scope and links, asymmetric conflicts, and deterministic bytes. Broad claim population and general drift analysis remain Phases 9-12.
+- Verified: `python build.py`; `python check.py`; both unittest suites (24 integration tests and 7 schema tests); ECV/ESG objective checks (zero failures); `git diff --check`.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference input, and these decisions. Implement the reviewed atomic claim framework using the canonical reference IDs; do not repeat glossary definitions inside claims. Keep guides excluded and review the guide remediation queue before expanding corpus coverage. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Expand reviewed atomic claims in bounded batches from canonical non-guide pages. Keep the source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.

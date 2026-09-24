@@ -28,6 +28,7 @@ Record durable choices here with status and rationale. A later decision may supe
 
 | MKB-019 | Accepted, Phase 6 | Generate the LLM corpus and retrieval chunks only from the shared IR. A corpus section is preserved structurally; a retrieval chunk is one nonempty canonical section with a curated opaque identity. Preserve lexical qualification cues as context, never as generated claims. The manifest reports canonical, guide, corpus, and retrieval coverage separately. |
 | MKB-020 | Accepted, Phase 7 | Canonical definitions live once in the glossary. Entity records identify referents and link to glossary terms; relationships, cautions, and questions remain separate stable records. Curated semantic seeds join real IR sections, while canonical-document source records are generated from the IR. Retrieval chunks carry reference IDs instead of a parallel structured definition layer. Cross-file integrity is a mandatory build gate. |
+| MKB-021 | Accepted, Phase 8 | Review atomic claims as curated structured seeds joined to privacy-gated IR sections. Pin a digest of the prepared section to force explicit review after any section change. Preserve independent contradictory statements with reciprocal claim links and open questions, and separate raw observed values from unproven interpretations. This narrow stale-source gate precedes the broader Phase 12 drift audit. |
 
 ## Open decisions for Phase 1 and later
 
@@ -35,5 +36,5 @@ Record durable choices here with status and rationale. A later decision may supe
 | --- | --- | --- |
 | MKB-O03 | Resolved in 2 | Common record schemas and controlled vocabularies in `knowledge/schema/` |
 | MKB-O04 | Resolved, 3 | Source classification and deterministic sanitization use safe fixtures and retain scanner limits; future field transforms require policy and test updates |
-| MKB-O05 | Partly resolved in 4; remainder 8 | Shared Markdown IR implemented; reviewed claim input representation remains open |
+| MKB-O05 | Resolved in 8 | Shared Markdown IR and reviewed claim input representation implemented with section review pins |
 | MKB-O06 | 2 | Concrete registry schemas and golden serialization examples; exact reference file names and corpus format before v1 |

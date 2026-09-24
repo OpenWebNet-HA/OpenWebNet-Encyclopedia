@@ -1742,7 +1742,10 @@
         "cautions",
         "questions",
         "statement",
-        "value"
+        "value",
+        "subject_id",
+        "source_section_sha256",
+        "claim_links"
       ],
       "properties": {
         "id": {
@@ -1874,6 +1877,17 @@
           "type": "string",
           "minLength": 1
         },
+        "subject_id": {"type": "string", "pattern": "^ownkb:entity:"},
+        "source_section_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "claim_links": {
+          "type": "object", "additionalProperties": false,
+          "required": ["supports", "qualifies", "contradicts"],
+          "properties": {
+            "supports": {"$ref": "#/$defs/claimTargets"},
+            "qualifies": {"$ref": "#/$defs/claimTargets"},
+            "contradicts": {"$ref": "#/$defs/claimTargets"}
+          }
+        },
         "value": {
           "$ref": "common.schema.json#/$defs/value"
         }
@@ -1960,6 +1974,7 @@
         }
       ]
     },
+    "claimTargets": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ownkb:claim:"}},
     "chunk": {
       "type": "object",
       "additionalProperties": false,
