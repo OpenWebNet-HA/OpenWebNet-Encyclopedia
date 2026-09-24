@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, reference registries, atomic-claim framework, and bounded `protocol/`/`functional/` claims are implemented. Remaining claim domains, full drift/change-impact checks, release CI, candidate certification, and v1 publication remain pending. Consumers should not infer a released interface from these pre-release artifacts.
+**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, reference registries, atomic-claim framework, and bounded claims for `protocol/`, `functional/`, `diagnostics/`, `programming/`, and `device-model/` are implemented. Remaining claim domains, full drift/change-impact checks, release CI, candidate certification, and v1 publication remain pending. Consumers should not infer a released interface from these pre-release artifacts.
 
 ## Intended consumer contract
 

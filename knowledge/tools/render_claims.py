@@ -107,9 +107,10 @@ def claim_coverage_metrics(ir: dict, claims: list[dict], coverage_path: Path) ->
         raise ValueError("claim coverage input has an unsupported shape or format version")
     if not isinstance(value["domains"], list):
         raise ValueError("claim coverage domains must be an array")
+    bounded_areas = ("protocol", "functional", "diagnostics", "programming", "device-model")
     target_documents = {area: [document for document in ir["documents"]
                                if document["path"].startswith(area + "/")]
-                        for area in ("protocol", "functional")}
+                        for area in bounded_areas}
     actual_counts = Counter(claim["provenance"][0]["location"]["section_id"] for claim in claims)
     metrics = {"records": len(claims), "bounded_domains": {}}
     seen_areas = set()

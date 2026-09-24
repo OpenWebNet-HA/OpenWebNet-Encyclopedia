@@ -14,7 +14,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | **Complete** - curated semantic seeds and generated canonical-source records, shared-IR provenance, chunk references, cross-file integrity, high-risk boundary tests |
 | 8 | Reviewed atomic claim framework and representative fixtures | **Complete** - eight curated assertions, shared-IR join, source-section review pins, typed claim links, schema and integrity checks |
 | 9 | Initial claim population, batch 1 | **Complete** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, source/evidence classifications, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
-| 10 | Initial claim population, batch 2 | Pending |
+| 10 | Initial claim population, batch 2 | **Complete** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with targeted high-risk semantic, privacy, coverage, and integrity checks |
 | 11 | Initial claim population, batch 3 | Pending |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | Pending |
 | 13 | Full CI, contributor workflow, release machinery | Pending - initial privacy CI already present |
@@ -89,6 +89,14 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Added fail-closed bounded-coverage validation and incompatible semantic-duplicate checks. Existing referential-integrity gates continue to reject duplicate IDs, dangling subjects, namespaces, sources, cautions, questions, relationships, and claim links.
 - Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; `git diff --check`.
 
+## Phase 10 verification
+
+- Added 2,684 new reviewed claims across all 32 canonical pages in `diagnostics/`, `programming/`, and `device-model/`. Together with five preserved Phase 8 framework claims already sourced from those areas, the three Phase 10 domains contain 2,689 claims. Their bounded coverage ledger accounts for all 359 source sections: 330 contain claims and 29 are reviewed structural, navigation, source-list, or non-assertive sections.
+- Preserved workflow separation between discovery, Device interview, detailed diagnostics, and programming; Physical Device, Firmware, Module, Object, Configuration, and `slot` boundaries; installed identities versus diagnostic and functional addresses; DIMENSION 30 polarity and Virgin Object semantics; DIMENSION 32 context; DIMENSION 35 index ownership and physical counterparts; sentinel/not-applicable values; capability versus runtime state; and source-qualified numeric namespaces.
+- Reused the established DIMENSION 32, DIMENSION 310, configurator-correlation, firmware-precedence, and gateway N_CONF open questions. Added only distinct open questions for the DIMENSION 38 reset/select effect and standalone Object-reset lifecycle. Raw gateway N_CONF observations remain separate from the unresolved sentinel interpretation.
+- Generalized installation-derived examples and replaced concrete discovery identifiers with `[DEVICE_ID]` before generating claims. No private capture, inventory, or configuration export entered the source set; the final scanner covers all generated artifacts.
+- Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; `git diff --check`.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 10 with a separately committed bounded domain outside `protocol/` and `functional/`. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 11 with a separately committed bounded domain outside the five completed claim areas. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.

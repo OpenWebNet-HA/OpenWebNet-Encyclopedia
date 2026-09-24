@@ -1,6 +1,7 @@
 """Representative safety checks for reviewed claim seeds and their IR join."""
 import copy
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -30,7 +31,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 3533)
+        self.assertEqual(len(claims), 6217)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -81,7 +82,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(3533, metrics["records"])
+        self.assertEqual(6217, metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 96, "sections_with_claims": 86},
@@ -92,6 +93,47 @@ class ClaimFrameworkTests(unittest.TestCase):
              "sections": 422, "sections_with_claims": 396},
             metrics["bounded_domains"]["functional"],
         )
+        self.assertEqual(
+            {"claims": 922, "documents": 12, "reviewed_nonclaim_sections": 1,
+             "sections": 101, "sections_with_claims": 100},
+            metrics["bounded_domains"]["diagnostics"],
+        )
+        self.assertEqual(
+            {"claims": 891, "documents": 12, "reviewed_nonclaim_sections": 17,
+             "sections": 137, "sections_with_claims": 120},
+            metrics["bounded_domains"]["programming"],
+        )
+        self.assertEqual(
+            {"claims": 876, "documents": 8, "reviewed_nonclaim_sections": 11,
+             "sections": 121, "sections_with_claims": 110},
+            metrics["bounded_domains"]["device-model"],
+        )
+
+    def test_phase10_high_risk_boundaries_are_preserved(self):
+        by_id = {record["id"]: record for record in self.render()}
+        self.assertEqual("enabled", by_id["ownkb:claim:c004125"]["statement"].split()[-1].rstrip("."))
+        self.assertIn("disabled", by_id["ownkb:claim:c004128"]["statement"])
+        self.assertIn("Virgin Object", by_id["ownkb:claim:c000004"]["statement"])
+        self.assertIn("not-applicable sentinel", by_id["ownkb:claim:c005134"]["statement"])
+        self.assertEqual("ownkb:namespace:mhcatalogue",
+                         by_id["ownkb:claim:c005134"]["context"]["namespace_id"])
+        self.assertEqual("ownkb:source:s000124",
+                         by_id["ownkb:claim:c005134"]["provenance"][0]["source_id"])
+        self.assertEqual(["ownkb:question:q000007"], by_id["ownkb:claim:c004596"]["questions"])
+        self.assertEqual(["ownkb:question:q200001"], by_id["ownkb:claim:c004010"]["questions"])
+        self.assertIn("ownkb:caution:k000002", by_id["ownkb:claim:c004731"]["cautions"])
+        self.assertIn("ownkb:caution:k000004", by_id["ownkb:claim:c006242"]["cautions"])
+        self.assertIn("discovery and interview", by_id["ownkb:claim:c003838"]["statement"])
+        self.assertIn("Diagnostics reports installed state", by_id["ownkb:claim:c004533"]["statement"])
+
+    def test_phase10_claims_exclude_installed_identifiers(self):
+        claims = [record for record in self.render()
+                  if int(record["id"].rsplit("c", 1)[1]) >= 3612]
+        installed_hex = re.compile(r"\bDevice [0-9A-Fa-f]{8,16}\b")
+        self.assertTrue(all(not installed_hex.search(record["statement"]) for record in claims))
+        self.assertEqual("Step Receive one ID: *#1001*10*13*[DEVICE_ID]##.",
+                         next(record["statement"] for record in claims
+                              if record["id"] == "ownkb:claim:c003898"))
 
 
 if __name__ == "__main__":
