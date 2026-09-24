@@ -42,6 +42,33 @@ Public source provenance may include the repository-relative source path, public
 
 Redaction markers must identify the value class without retaining reversible material. Never hash or encode a private value as a substitute for deletion.
 
+## Source gate and sanitization boundary
+
+Before any parser, identifier allocator, metadata writer, chunker, claim extractor,
+logger, or embedding job runs, every candidate source must appear in a closed
+source manifest. Its classification is one of:
+
+| Classification | Permitted source types | Treatment |
+| --- | --- | --- |
+| `publishable` | Canonical documentation, public specification, or reviewed public implementation evidence | The local gate reads it only when no sensitive shape is found. |
+| `sanitize` | The same publishable source types | The local gate replaces recognised sensitive values with a non-reversible typed marker before emitting a prepared record. |
+| `prohibited` | Capture, log, inventory, configuration export, screenshot, or private submission | The gate does not open or parse the file and emits no record. |
+
+`prepare_sources.py` is the current deterministic gate. It accepts a JSONL manifest,
+checks its closed fields and safe repository-relative paths, rejects a contradictory
+classification, and writes sorted compact JSONL prepared records only. A source
+classified `publishable` fails if it contains a recognised sensitive shape; a source
+classified `sanitize` fails if no recognised transformation occurs, preventing a
+quietly over-broad label. The manifest and prepared-record schemas are in
+[`knowledge/schema/`](../schema/README.md). The tool deliberately emits only the
+public `privacy` values `public` and `sanitized`; it never emits `private`,
+`unknown`, or an omitted classification.
+
+The transformations are conservative typed markers for network addresses, MAC
+addresses, instance identifiers, credential assignments, personal identifiers, and
+local user paths. A later field-aware parser may add transformations only with
+matching tests and a policy update. It must consume prepared records, not raw input.
+
 ## Required metadata
 
 Each generated record must carry a privacy classification. The initial vocabulary is:

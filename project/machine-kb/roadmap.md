@@ -7,7 +7,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 0 | Persist architecture, decisions, maintenance, release gates, review state; verify and commit | **Complete** - this project-control area; no generator delivered |
 | 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | **Complete** - contract and policy reviewed against long-term change cases; no v1 data released |
 | 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | Pending |
-| 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | Pending - initial policy/scanner/CI already present, not sufficient alone |
+| 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete** - closed source-manifest and prepared-source schemas, deterministic local source gate, sanitization, source exclusion, schema tests, and retained final scanner |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | Pending |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | Pending |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | Pending |
@@ -34,6 +34,13 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Defined ID syntax and lifecycle, manifest discovery, deterministic bytes, ownership, knowledge-state semantics, and compatibility policy. Concrete schemas, registry, golden vectors, and all generated records remain Phase 2 onward.
 - Verified: `git diff --check`; `python project/review/checks/check_esg.py .` (0 objective failures); `python project/review/checks/check_ecv.py .` (0 objective failures); relative-link existence across `project/machine-kb/*.md`; `python knowledge/tools/validate_privacy.py` (passed, **0 generated artifacts scanned**). These checks verify the Phase 1 documentation and existing mechanical gates, not an unreleased dataset.
 
+## Phase 3 verification
+
+- Added a closed JSONL source manifest with a fixed classification and source-type vocabulary. Prohibited captures, logs, inventories, configuration exports, screenshots, and private submissions are excluded before their files are opened. Filename/path forms associated with those sources may not be labelled publishable.
+- Added deterministic pre-extraction sanitization. It fails closed for an unclassified source, unexpected manifest field, unsafe path, misclassified private source, sensitive material in a `publishable` source, or a `sanitize` source that matches no defined transformation. It emits sorted compact JSONL only after replacing recognised sensitive forms with typed non-reversible markers.
+- Added publishable-only privacy metadata and prepared-source schemas with `additionalProperties: false`, plus safe fixtures and unit tests. The existing full-output pattern scanner remains the final publication gate. No test fixture contains a private value.
+- Verified: `python -m unittest discover -s knowledge/tests -v`; `python knowledge/tools/validate_privacy.py`; `python -m json.tool knowledge/schema/privacy-metadata.schema.json`; `python -m json.tool knowledge/schema/source-manifest.schema.json`; `python -m json.tool knowledge/schema/prepared-source.schema.json`; `git diff --check`; `python project/review/checks/check_esg.py .`; `python project/review/checks/check_ecv.py .`.
+
 ## Next session
 
-Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 2 schemas, controlled vocabularies, and tests only. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.
+Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 2 schemas, controlled vocabularies, and tests only. Reuse the completed privacy metadata and prepared-source boundary rather than bypassing it. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.

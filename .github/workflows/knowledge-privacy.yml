@@ -15,5 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Test source classification and pre-extraction sanitization
+        run: python -m unittest discover -s knowledge/tests -v
       - name: Reject private values in generated artifacts
         run: python knowledge/tools/validate_privacy.py

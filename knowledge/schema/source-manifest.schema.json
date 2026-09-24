@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-encyclopedia.example/schema/source-manifest-1.json",
+  "title": "Pre-extraction source manifest record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "source_path", "source_type", "classification"],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^ownkb:source/[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "source_path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$"},
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "canonical_documentation",
+        "public_specification",
+        "public_implementation_evidence",
+        "capture",
+        "log",
+        "inventory",
+        "configuration_export",
+        "screenshot",
+        "private_submission"
+      ]
+    },
+    "classification": {"type": "string", "enum": ["publishable", "sanitize", "prohibited"]}
+  }
+}
