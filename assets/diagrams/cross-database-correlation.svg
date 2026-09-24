@@ -49,7 +49,7 @@
     <rect x="100" y="390" width="280" height="175" rx="7" fill="#f3f6f7" stroke="#607d8b" stroke-width="2"/>
     <path d="M107,390 H373 Q380,390 380,397 V426 H100 V397 Q100,390 107,390" fill="#46606f"/>
     <text x="240" y="414" class="entity-title" text-anchor="middle">Runtime Modules</text>
-    <text x="114" y="447" class="field">DIMENSION 30</text><text x="114" y="467" class="field">STATE selects Object namespace</text><text x="114" y="487" class="field">SLOT is Device-local</text>
+    <text x="114" y="447" class="field">DIMENSION 30</text><text x="114" y="467" class="field">STATE 0 regular / 1 Virgin</text><text x="114" y="487" class="field">SLOT is Device-local</text>
   </g>
 <g class="entity">
     <rect x="500" y="400" width="280" height="155" rx="7" fill="#f3f8fb" stroke="#2b6f97" stroke-width="2"/>

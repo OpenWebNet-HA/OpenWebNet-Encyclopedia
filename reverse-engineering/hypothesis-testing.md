@@ -77,7 +77,7 @@ A stable correlation with a printed revision is useful empirical metadata; it do
 
 ## `N_CONF` catalogue-wide equivalence
 
-The meaning of `N_CONF` is established as the number of physical configurator positions. The remaining hypothesis is that it always equals the count of applicable firmware-scoped physical configuration fields after excluding `AID`.
+For the ordinary addressed Device form, `N_CONF` is corroborated as the number of physical configurator positions. The remaining hypothesis is that, within that addressed-form scope, it always equals the count of applicable firmware-scoped physical configuration fields after excluding `AID`.
 
 For each test Device:
 
@@ -90,6 +90,8 @@ For each test Device:
 7. record conditional or duplicated fields instead of counting blindly.
 
 Prioritize Devices with counts other than six and firmware shared by several SKUs. Known corroborating examples include `F420`, `F429`, and `H4652/3`.
+
+Treat the empty-`WHERE` gateway form as a separate hypothesis. Observed MH202 and F454 gateway identity responses both carry `N_CONF = 15`, outside the ordinary `0..12` range. Because `15 = 0xF`, a reserved or sentinel interpretation is plausible, but it is not established. To test it, collect the same field across gateway models and firmware revisions and seek an applicable implementation decoder or authoritative definition. Record any value other than `15`, and do not infer “zero configurators” or “not applicable” without evidence that distinguishes those meanings.
 
 ## `DIMENSION 4` and `5`
 
@@ -112,7 +114,7 @@ This matrix distinguishes position, presence, raw configurator code, effective v
 Repeated `WHO 1001` observations suggest that the outer diagnostic `WHERE` often follows the configured address of `slot` `1`. Test the boundary cases:
 
 - slot `1` enabled and addressed;
-- slot `1` disabled or unconfigured;
+- slot `1` disabled and represented by its Virgin Object in `DIMENSION 30`;
 - slot `1` assigned a command-only Object;
 - another slot carrying the main physical address;
 - several Modules sharing an address;

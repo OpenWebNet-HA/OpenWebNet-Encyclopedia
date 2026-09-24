@@ -4,6 +4,22 @@ This page contains only questions that remain unresolved after cross-checking th
 
 Each entry states the known boundary before the missing evidence so that later investigations do not reopen facts that are already established.
 
+## WHO 13 gateway properties
+
+### `DIMENSION 20`
+
+Prior gateway-identification research has flagged `WHO 13 DIMENSION 20` as an encountered property, but the currently preserved evidence chain does not yet establish its classic SCS/TCP semantics. The canonical classic `WHO_13.pdf` registry does not define it, the ZigBee `WHO 13` registry does not define it, canonical MyHOME Suite `OPEN.db` provides no functional `WHO 13 DIMENSION 20` template, and the preserved F454 and MH202 gateway-information captures examined in the current correction do not contain it.
+
+This is a **provenance gap**, not evidence that the property does not exist. Promotion to the functional reference requires the specific canonical source or first-hand capture that establishes the request/response form and payload, followed by semantic corroboration. Do not infer a meaning from diagnostic `DIMENSION 6` microcontroller-version fields or from any numerically similar namespace.
+
+### `DIMENSION 40`
+
+Existence is established more strongly than semantics. Independent first-hand F454 and MH202 gateway-information captures both show `*#13**40##` and both return `*#13**40*4*0##`.
+
+What remains unresolved is the meaning of the two returned values, whether either field varies independently, and the applicability across gateway models and firmware revisions. The next discriminating evidence is a cross-model or cross-firmware observation in which at least one returned value differs, or a canonical implementation/specification source naming the fields. Until then, preserve the response as two positional unknown values.
+
+The ZigBee specification's `DIMENSION 17` hardware-version definition is not part of this open question: that meaning is established for the ZigBee `WHO 13` variant. What remains unestablished is whether any classic SCS/TCP implementation reuses numeric `17` with the same semantics.
+
 ## Diagnostic and programming fields
 
 ### `DIMENSION 32.SYS`
@@ -16,9 +32,11 @@ It also remains unknown how `SYS` selects one active context when an Object belo
 
 ### `DIMENSION 4` and `5`
 
-The two dimensions each carry six Device-level configurator values. They are related to physical/Virtual configurator transfer and are not ordinary `EN_CONF.idx` records.
+`OPEN.db` establishes the transport surface: `DIMENSION 4` carries `C1..C6`, `DIMENSION 5` carries `C7..C12`, and every `C` field has range `0..255`. The `ConfConfigurators` sequence sends the corresponding programming forms and is described there as virtual configuration.
 
-The exact positional and value encoding remains unresolved. In particular, controlled captures must determine whether the twelve values represent configurator contents, presence state, another encoding, or a combination of these, and whether positions `1..6` and `7..12` correspond directly to the two dimensions.
+What remains unresolved is the cross-database correlation to catalogue semantics. No canonical relation establishes that `C1` equals the firmware `EN_CONF` row with `progressive = 1`, or an equivalent positional rule for every firmware. Controlled observations are still needed to determine how `C1..C12` encode physical/configurator contents in Device families and how those transport positions correspond, where applicable, to firmware-specific symbols such as `A`, `PL`, `M`, `G`, `I`, `ZA`, `ZB`, `N`, `T`, and `S`.
+
+This question no longer concerns the existence or numeric transport range of `C1..C12`; those are established. It concerns their Device-specific semantic correlation with catalogue definitions and physical positions.
 
 ### `DIMENSION 310`
 
@@ -58,17 +76,29 @@ The exact MyHOME Suite selection precedence remains unknown when concrete compon
 
 The complete rule that determines whether MyHOME Suite displays and permits replacement of an Object at a particular Module remains unknown.
 
-### Physical-to-advanced translation
+### Physical-to-advanced and transport correlation
 
-`EN_PHY_TO_ADV_TRANS` contains explicit translation data for only three firmware definitions. Symbols, configuration types, filters, and observed behavior support additional property-level correlations but do not form a complete general translation table.
+The catalogue-native physical topology mechanism is now established for condition-represented branches: resolve firmware physical definitions and legal domains, enumerate `AS_OBJECT_FIRMWARE`/`EN_SLOTS` candidates, constrain `AS_SLOT_CONDITION`/`EN_CONDITION` branches by reachability, select the matching Object topology, and only then evaluate applicable `EN_CONV_RULE` rows. `EN_PHY_TO_ADV_TRANS` remains a sparse supporting table with only three firmware rows and is not the generic mechanism.
 
-It remains unknown whether the remaining mappings can be reconstructed systematically or require Device-specific application logic.
+Open boundaries remain narrower:
 
-### Catalogue-wide `N_CONF` equivalence
+- whether and how `DIMENSION 4.C1..C12` correlate with firmware `EN_CONF` definitions or `progressive` ordering for each Device family;
+- how to interpret catalogue candidates that have no explicit physical predicate when reconstructing a complete physical topology;
+- whether textual irregularities such as `O/I` versus `I/O` have an application-level normalization not represented in the canonical databases;
+- which property-level physical-to-advanced correspondences are complete when symbol, range, conversion, or `CONF_SYMBOL_REF` evidence is absent;
+- how the registered catalogue mode labels correspond to every MyHOME Suite UI path beyond the exact sequence labels preserved in `OPEN.db`.
 
-The meaning of `N_CONF` is established: it is the number of physical configurator positions provided by the Device. Resolved examples also match the count of applicable firmware-scoped physical configuration fields after excluding the common `AID`/ID field.
+### Catalogue-wide addressed-form `N_CONF` equivalence
 
-What remains open is whether that database-count equivalence holds for every catalogue firmware, including conditional fields, shared firmware definitions, and Devices without available product diagrams. This question does not reopen the meaning of `N_CONF`.
+For the ordinary addressed Device form, the meaning of `N_CONF` is corroborated as the number of physical configurator positions provided by the Device. Resolved examples also match the count of applicable firmware-scoped physical configuration fields after excluding the common `AID`/ID field.
+
+What remains open is whether that database-count equivalence holds for every catalogue firmware, including conditional fields, shared firmware definitions, and Devices without available product diagrams. This question does not reopen the addressed-form interpretation.
+
+### Gateway `N_CONF = 15`
+
+The empty-`WHERE` gateway identity form is a separate case. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern. A reserved or sentinel interpretation is therefore plausible, but the available evidence does not establish what the value signifies.
+
+The open question is the exact gateway semantics of `N_CONF = 15`. Evidence that could resolve it includes an applicable MyHOME_Suite decoder or resource definition, an authoritative protocol definition, or controlled observations across gateway models and firmware revisions that distinguish literal count, reserved-value, and applicability interpretations.
 
 ## Scenario Engine
 
@@ -99,11 +129,12 @@ The remaining questions are:
 
 The highest-value next observations are:
 
-1. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
-2. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
-3. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
-4. file-access, database-statement, and save-operation traces while creating one minimal scenario;
-5. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
-6. hardware and microcontroller version observations across known revisions of the same product.
+1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
+2. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
+3. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
+4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
+5. file-access, database-statement, and save-operation traces while creating one minimal scenario;
+6. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
+7. hardware and microcontroller version observations across known revisions of the same product.
 
 Each result should update the [Relationship Register](relationship-register.md) and then the appropriate reference section.

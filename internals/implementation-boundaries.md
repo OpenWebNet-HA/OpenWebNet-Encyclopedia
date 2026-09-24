@@ -22,8 +22,8 @@ The preserved corpus establishes that MyHOME Suite distributes several independe
 The combined evidence supports these conclusions when their scope is retained:
 
 - `OPEN.db` scenarios and sequences form state-machine definitions for MyHOME Suite management workflows;
-- diagnostic `DIMENSION 30.KEYO` uses the configured Object namespace when `STATE = 1` and the Virgin Object namespace when `STATE = 0`;
-- `N_CONF` represents the number of physical configurator positions on corroborated products;
+- diagnostic/programming `DIMENSION 30.KEYO` uses the regular configured Object namespace for an enabled Module when `STATE = 0` and the Virgin Object namespace for a disabled Module when `STATE = 1`;
+- ordinary addressed-form `N_CONF` represents the number of physical configurator positions on corroborated products; the empty-`WHERE` gateway variant is separate, with observed `N_CONF = 15` outside the ordinary `0..12` range and unresolved exact semantics;
 - the two ScenarioDevices files are distinct revisions whose common semantic content overlaps despite unstable local IDs;
 - literal ScenarioDevices action templates can be rendered only after functional address and Parameter validation;
 - catalogue programming validation is context-sensitive and cannot be reduced to `OPEN.db` transport ranges.

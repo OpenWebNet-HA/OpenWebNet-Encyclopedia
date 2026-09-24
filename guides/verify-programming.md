@@ -76,8 +76,8 @@ Build a new configuration model from the verification frames:
 
 1. resolve Device and firmware identity;
 2. key Modules by protocol internal `SLOT`;
-3. resolve configured Objects from `DIMENSION 30.STATE=1`;
-4. resolve Virgin Objects from `STATE=0`;
+3. resolve enabled regular Objects from `DIMENSION 30.STATE=0`;
+4. resolve disabled Modules' Virgin Objects from `STATE=1`;
 5. attach addresses by `slot`;
 6. resolve each `DIMENSION 35.INDEX` in the Module's Object/firmware context;
 7. decode values through ranges, filters, conditions, and applicable rules;
@@ -158,7 +158,7 @@ Classify every intended field as:
 The comparison must detect more than changed values:
 
 1. missing or additional Modules;
-2. configured/unconfigured state changes;
+2. enabled/disabled Module state changes;
 3. wrong Object assignments;
 4. missing, changed, or additional addresses;
 5. missing, changed, or additional properties;

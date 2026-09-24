@@ -9,7 +9,7 @@ The guide does not stop at collecting `DIMENSION` responses. Its output should a
 - Which installed Device is this?
 - Which Modules does it expose?
 - Which function is assigned to each Module?
-- Is each Module configured or still represented by a Virgin Object?
+- Is each Module enabled with its regular Object, or disabled and represented by its Virgin Object?
 - What address and configuration values are effective?
 - Which labels, choices, and constraints should be shown to a user?
 - Which parts remain ambiguous, unsupported, or unreported?
@@ -45,7 +45,7 @@ Only after this request/response phase should the following frames be parsed.
 | `DIMENSION 1` | item/model, physical configurator count, brand, and collection/line evidence |
 | `DIMENSION 2`, `3`, and `6` | firmware, hardware, and microcontroller versions |
 | `DIMENSION 13` | installed Device ID |
-| repeated `DIMENSION 30` | Module, Object or Virgin Object, and configured state |
+| repeated `DIMENSION 30` | Module, enabled/disabled state, and regular Object or Virgin Object |
 | repeated `DIMENSION 32` | Module system and effective address |
 | repeated `DIMENSION 35` | indexed configuration values |
 | `DIMENSION 310` | special Object-specific value |
@@ -68,7 +68,21 @@ Begin with the identified inventory record:
 
 The installed Device ID, catalogue primary keys, SKU, Object numbers, and functional addresses are separate identifier spaces.
 
-Retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier.
+For the ordinary per-Device diagnostic form used by this workflow, retain `DIMENSION 1` VALUE 2 as `N_CONF`, the physical configurator-position count; it is not a Device-class identifier. The empty-`WHERE` gateway identity form is a distinct variant whose `N_CONF` semantics are unresolved; the gateway-specific workflow is documented in [Identify an OpenWebNet Gateway](identify-openwebnet-gateway.md).
+
+### Optional catalogue check: expected physical topology
+
+If the physical configurator values are known independently, use them to calculate an expected catalogue topology before comparing them with the installed `DIMENSION 30` projection:
+
+1. confirm that the exact firmware registers Physical configuration;
+2. resolve each supplied symbol and raw value through that firmware's exact `EN_CONF` and `EN_CONF_RANGE`;
+3. enumerate Object/slot candidates through `AS_OBJECT_FIRMWARE` and `EN_SLOTS`;
+4. load `AS_SLOT_CONDITION` and `EN_CONDITION`;
+5. discard branches that are unreachable under the firmware's legal configurator domains;
+6. evaluate the remaining predicates and require a unique Object per selected `slot`;
+7. only after topology selection, follow applicable `EN_CONDITION.id_conv_rule` into `EN_CONV_RULE` for effective Object properties.
+
+Use [Physical-configuration resolution](../internals/catalogue-resolution.md#physical-configuration-resolution) for the authoritative algorithm and SQL. The result is an expected catalogue capability topology, not installed-state evidence. If it disagrees with `DIMENSION 30`, retain both results and investigate the Device state, configuration mode, firmware resolution, or unsupported catalogue expression rather than replacing the diagnostic observation.
 
 ## 2. Build the Module list
 
@@ -85,24 +99,26 @@ Use every `DIMENSION 30` response:
 
 For each `slot` create one Module record, even when its function is unresolved.
 
-## 3. Resolve configured and unconfigured functions
+## 3. Resolve enabled and disabled Modules
 
-`DIMENSION 30.STATE` selects the namespace of `KEYO`:
+`DIMENSION 30.STATE` selects both the Module state and the namespace of `KEYO`:
 
-| `STATE` | Resolve `KEYO` against | User interpretation |
-| ---: | --- | --- |
-| `1` | `EN_KEY_OBJECT.key_object` | configured Object/function |
-| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Module role |
+| `STATE` | Module state | Resolve `KEYO` against | User interpretation |
+| ---: | --- | --- | --- |
+| `0` | enabled | `EN_KEY_OBJECT.key_object` | regular configured Object/function |
+| `1` | disabled | `EN_VIRGIN_OBJECT.virgin_key_object` | Virgin Object describing the configurable Module role |
 
-For a configured Module:
+This polarity is established by controlled diagnostic/programming evidence correlated with MyHOME_Suite UI behavior. It is specific to `DIMENSION 30.STATE`.
+
+For an enabled Module:
 
 - use the resolved Object description as the function type;
 - retain the internal `id_key_object` for catalogue joins;
 - retain the external `key_object` as the protocol value.
 
-For an unconfigured Module:
+For a disabled Module:
 
-- show that the Module is unconfigured;
+- show that the Module is disabled;
 - use the Virgin Object description to explain its available role;
 - derive permitted configured Objects through `AS_OBJECT_VIRGIN_OBJECT`;
 - intersect them with firmware and slot support;
@@ -200,17 +216,17 @@ function read_device_configuration(selector, diagnostic_who):
     for dim30 in interview.DIMENSION_30:
         module = modules.get_or_create(dim30.SLOT)
         module.raw_module_frame = dim30
-        module.configured = (dim30.STATE == 1)
+        module.enabled = (dim30.STATE == 0)
 
-        if module.configured:
+        if module.enabled:
             module.object = lookup_EN_KEY_OBJECT(dim30.KEYO)
-        else if dim30.STATE == 0:
+        else if dim30.STATE == 1:
             module.virgin_object = lookup_EN_VIRGIN_OBJECT(dim30.KEYO)
             module.available_objects = resolve_permitted_objects(
                 module.virgin_object, device.firmware, dim30.SLOT
             )
         else:
-            module.configured = unknown
+            module.enabled = unknown
             retain raw KEYO and STATE without namespace inference
 
     for dim32 in interview.DIMENSION_32:
@@ -273,7 +289,7 @@ Adjust paths to the application installation. Schema aliases make the source of 
 
 ### Resolve Device identity
 
-Resolve `:catalogue_system_id` by established diagnostic-family semantics. Bind the model, brand, and line values. VALUE 2 is `N_CONF`, the physical configurator-position count; it is omitted from this join because no direct catalogue field mapping is established.
+Resolve `:catalogue_system_id` by established diagnostic-family semantics. Bind the model, brand, and line values. In the ordinary per-Device form used here, VALUE 2 is `N_CONF`, the physical configurator-position count; it is omitted from this join because no direct catalogue field mapping is established. Do not transfer this interpretation to the separate empty-`WHERE` gateway form.
 
 ```sql
 SELECT
@@ -306,16 +322,16 @@ Use `STATE` to choose the namespace; do not join the same `KEYO` to both tables 
 ```sql
 SELECT id_key_object, key_object, descr
 FROM catalogue.EN_KEY_OBJECT
-WHERE :state = 1
+WHERE :state = 0
   AND key_object = :keyo;
 
 SELECT id_virgin_key_object, virgin_key_object, descr
 FROM catalogue.EN_VIRGIN_OBJECT
-WHERE :state = 0
+WHERE :state = 1
   AND virgin_key_object = :keyo;
 ```
 
-For an unconfigured Module, retrieve the permitted configured Objects:
+For a disabled Module, retrieve the permitted regular Objects:
 
 ```sql
 SELECT
@@ -492,8 +508,8 @@ Device
   Modules[]
     `slot`
     display order/name, when established
-    configured state
-    function or Virgin Object role
+    enabled/disabled state
+    regular function or Virgin Object role
     available function choices[]
     address
       raw SYS/ADDR

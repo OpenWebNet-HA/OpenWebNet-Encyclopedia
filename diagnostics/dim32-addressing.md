@@ -55,7 +55,7 @@ This establishes that the address property has a physical-configurator counterpa
 
 Other physical positions such as `M`, `TYPE`, `PRE`, or `G1` are not encoded as address components merely because they occur beside `A` and `PL` on the Device. Indexed counterparts belong to `DIMENSION 35` where the Object and firmware define them.
 
-See [Physical-configurator counterparts](../device-model/configuration.md#physical-configurator-counterparts) for the shared resolution and evidence rules.
+See [Physical configuration and configuration modes](../device-model/configuration.md#physical-configuration-and-configuration-modes) for the shared evidence rules.
 
 Observed sensor Device `08CF44BF` used diagnostic `WHERE 0015`, interpreted as `A = 0`, `PL = 15`. Retaining the raw field is important because padding and family-specific formatting can be lost by integer-only storage.
 
@@ -69,7 +69,7 @@ The address-rule inventory used by MyHOME_Suite is documented in [Address Discov
 
 ## Missing records
 
-Not every Module necessarily produces `DIMENSION 32`. A missing address can indicate an unconfigured Module, an Object without an address, unsupported reporting, or an incomplete interview. One observed light-control-only Device returned Module data without an observed `DIMENSION 32`; that single capture does not establish the reason.
+Not every Module necessarily produces `DIMENSION 32`. A missing address can indicate a disabled Module, an Object without an address, unsupported reporting, or an incomplete interview. One observed light-control-only Device returned Module data without an observed `DIMENSION 32`; that single capture does not establish the reason.
 
 The working capture model is therefore narrower than “all Modules have `DIMENSION 32`”: addressed actuator/sensor Modules have produced it, while at least one command-only layout did not. Treat availability as Object- and firmware-dependent until broader evidence is available.
 

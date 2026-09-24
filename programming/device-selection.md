@@ -45,7 +45,7 @@ Before transmitting configuration, compare the returned initial projection with 
 - `DIMENSION 1` item/model, physical configurator count, brand, and line;
 - `DIMENSION 2` firmware version;
 - `DIMENSION 13` Device ID;
-- `DIMENSION 30` configured Object or Virgin Object by `slot`;
+- `DIMENSION 30` enabled regular Object or disabled Virgin Object by `slot`;
 - `DIMENSION 32` current Module addresses where reported.
 
 Resolve the Device through the documented catalogue path and retain ambiguity where several SKUs share an item.

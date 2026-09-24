@@ -139,8 +139,8 @@ function troubleshoot(request, captured_frames, expected_evidence):
 ### Unknown `DIMENSION 30.KEYO`
 
 1. Read `STATE`.
-2. For `STATE=1`, query `EN_KEY_OBJECT.key_object`.
-3. For `STATE=0`, query `EN_VIRGIN_OBJECT.virgin_key_object`.
+2. For `STATE=0`, query `EN_KEY_OBJECT.key_object` and treat the Module as enabled.
+3. For `STATE=1`, query `EN_VIRGIN_OBJECT.virgin_key_object` and treat the Module as disabled.
 4. Verify the catalogue revision and firmware context.
 5. Preserve the raw Object number if unresolved.
 
@@ -159,7 +159,7 @@ function troubleshoot(request, captured_frames, expected_evidence):
 2. Apply brand and collection evidence without forcing absent values.
 3. Use `EN_DEVICE.name` for the Physical Device description.
 4. Keep all surviving SKUs.
-5. Retain VALUE 2 as `N_CONF`, a physical configurator-position count, rather than a classification key.
+5. For an ordinary per-Device identity response, retain VALUE 2 as `N_CONF`, a physical configurator-position count, rather than a classification key. For the empty-`WHERE` gateway identity variant, preserve `N_CONF` raw and use the scoped treatment in [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md#gateway-variant).
 6. Do not substitute an Object description for the Device description.
 
 ### Local-button timeout

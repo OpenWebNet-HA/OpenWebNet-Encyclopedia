@@ -67,32 +67,61 @@ Firmware-scoped definitions describe properties tied to one firmware capability 
 
 A complete configuration UI may combine both scopes.
 
-## Physical-configurator counterparts
+## Physical configuration and configuration modes
 
-A configuration property can have both a physical representation on the Device and an advanced or virtual representation in the catalogue and diagnostic protocol. This is a correspondence between ways of configuring one effective property, not a separate Object or parameter variant.
+The canonical catalogue represents configuration mode and physical configurator semantics separately.
 
-For firmware definitions corroborated against product documentation, the physical configurator positions appear as firmware-scoped `EN_CONF` rows with `idx = -1`. The common `AID`/ID row is not a physical position and is excluded. `AS_FIRMWARE_CONFIG_MODE` and `EN_CONFIG_MODE` establish whether the firmware supports physical configuration.
+`EN_CONFIG_MODE` contains distinct records for Virtual Configuration, Advanced Configuration, Physical configuration, and Product Programming. `AS_FIRMWARE_CONFIG_MODE` records which modes a firmware supports. A firmware can support both Virtual and Advanced configuration, so neither label should be used as an umbrella synonym for all non-physical configuration.
 
-To check whether a reported property has a physical-configurator counterpart:
+Mode support is a catalogue capability. It does not establish which mode configured an installed Device or which MyHOME Suite UI label was active for a particular operation.
 
-1. resolve the Physical Device, firmware, `slot`, and configured Object;
-2. confirm that the firmware supports physical configuration;
-3. enumerate the firmware-scoped physical `EN_CONF` fields, excluding `AID`;
-4. resolve the effective property from decoded `DIMENSION 32` addressing or the `DIMENSION 35` configuration index;
-5. compare symbols, semantic types, ranges, filters, symbol references, and conversion rules;
-6. use product documentation, UI behavior, or captures where the physical and advanced symbols differ.
+### Firmware-contextual physical definitions
 
-| Diagnostic projection | Possible physical counterpart |
-| --- | --- |
-| decoded `DIMENSION 32.ADDR` component | address positions such as `A` and `PL` |
-| `DIMENSION 35.INDEX` property | positions such as `M`, `TYPE`, `PRE`, or `G1` |
-| property with no matching physical field | no physical counterpart established; absence of a match alone does not prove advanced-only support |
+Physical configurator interpretation is firmware- and definition-contextual. Firmware-scoped `EN_CONF` rows with `idx = -1` contain the principal physical definitions, but that structural pattern is not sufficient by itself: the common `AID`/ID definition also has `idx = -1` and is not a literal plug position.
 
-An identical symbol and compatible meaning provide a direct correspondence. Different symbols can still represent the same property, but require semantic corroboration; for example, a firmware position named `TYPE` can correspond to an Object property named `SHUTTER_TYPE`.
+For a demonstrated physical definition, `EN_CONF_RANGE` supplies the legal raw values and symbolic meanings. The correct conceptual lookup is:
 
-The correspondence does not reveal the active configuration method. `DIMENSION 32` and `35` report effective values. A value representable by a physical configurator could still have been assigned through advanced or virtual configuration. A value outside the physical representation can exclude physical configuration for that property, provided the applicable physical range is established.
+```text
+firmware + exact EN_CONF definition + raw value
+```
 
-`EN_PHY_TO_ADV_TRANS` contains conversion data for only three firmware definitions in this catalogue revision. It can support those cases but is not a general physical-to-advanced mapping registry.
+not a universal lookup from the raw number alone. The same raw value can carry different labels for different symbols on the same firmware and across different firmware definitions.
+
+`EN_CONF.progressive` records ordering metadata inside the catalogue. Although it can resemble physical ordering in examples, no canonical cross-database relation makes it equivalent to `DIMENSION 4.C1`, `C2`, and so on for every firmware.
+
+### Topology selection
+
+Physical configurator values can determine which Object alternative occupies a Device-local `slot`. The catalogue represents that selection through the firmware's Object/slot candidates and their conditions:
+
+```text
+EN_FIRMWARE
+  -> AS_OBJECT_FIRMWARE
+  -> EN_SLOTS
+  -> AS_SLOT_CONDITION
+  -> EN_CONDITION
+```
+
+Condition symbols must be resolved against that firmware's exact `EN_CONF` definitions and legal `EN_CONF_RANGE` domains before a branch is considered reachable. A stored condition that references a value outside the firmware's legal domain remains a stored catalogue row, but it is not a reachable physical configuration for that firmware.
+
+A resolver must report zero-match, multi-match, unsupported-expression, and unresolved states rather than inventing precedence.
+
+### Property conversion
+
+Topology selection is distinct from converting selected physical/item settings into effective Object properties. After an Object branch is selected, `EN_CONDITION.id_conv_rule` can lead to `EN_CONV_RULE`, which maps item-level configuration symbols and values into Object-level configuration.
+
+`CONF_SYMBOL_REF` supplies additional symbol correspondence only in its recorded system and slot context. Because it has no firmware key, it is not a global symbol-alias table.
+
+One physical selector can therefore participate in topology selection and, separately, contribute to one or more resulting Object properties. These are different catalogue operations and should not be described as one undifferentiated physical-to-advanced translation.
+
+### Physical counterparts of effective properties
+
+A resolved Object property can have a physical counterpart, but the counterpart must be established in the exact firmware and Object context. Useful evidence includes compatible symbols, semantic types, legal ranges, filters, conversion rules, and contextual symbol references.
+
+A physical counterpart does not identify the active configuration mode. `DIMENSION 32` and `35` report effective installed values; a value representable physically could still have been established through another supported configuration mode.
+
+`EN_PHY_TO_ADV_TRANS` contains only three rows in the canonical MyHOME Suite 3.5.38 catalogue, for firmware IDs `160`, `691`, and `722`. It is supporting evidence for those cases, not the generic mechanism used to resolve physical topology or property conversion.
+
+The authoritative algorithm, parameterized SQL, reachability rules, firmware `157` worked example, and `DIMENSION 4`/`5` boundary are documented in [Catalogue Resolution](../internals/catalogue-resolution.md#physical-configuration-resolution).
 
 ## Configuration type and data type
 

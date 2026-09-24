@@ -16,6 +16,7 @@ Responses are never assumed to be available spontaneously. Before a guide parses
 | --- | --- |
 | Build an identified inventory of installed Devices | [Discover and Identify Devices](discover-devices.md) |
 | Turn raw interview frames into a user-presentable Device configuration | [Read and Present a Device Configuration](read-device-configuration.md) |
+| ↳ Identify an unknown OpenWebNet gateway to catalogue identity | ↳ [Identify an OpenWebNet Gateway](identify-openwebnet-gateway.md) |
 | ↳ Find the effective group memberships of an actuator | ↳ [Retrieve an Actuator's Group Memberships](retrieve-actuator-group-memberships.md) |
 | ↳ Find every configured CEN button on a Device | ↳ [Retrieve Configured CEN Buttons](retrieve-configured-cen-buttons.md) |
 | Decide whether a candidate value is allowed | [Validate a Configuration Value](validate-configuration-value.md) |

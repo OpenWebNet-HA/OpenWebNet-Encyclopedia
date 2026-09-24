@@ -105,10 +105,10 @@ The Physical Device therefore has four Modules, with eleven `slot`/Object altern
 This response exposes the Device’s current Module/Object state:
 
 - `SLOT` locates the Module
-- `KEYO` identifies the configured Object when `STATE = 1`, or the unconfigured Virgin Object when `STATE = 0`
-- `STATE` reports a binary configuration state.
+- `KEYO` identifies the regular configured Object when `STATE = 0`, or the Virgin Object representing a disabled Module when `STATE = 1`
+- `STATE` reports the Module's enabled/disabled state.
 
-Resolve `KEYO` against `EN_KEY_OBJECT.key_object` for `STATE = 1` and `EN_VIRGIN_OBJECT.virgin_key_object` for `STATE = 0`, as established by catalogue identity and observed behavior. It is not a cross-database foreign key.
+Resolve `KEYO` against `EN_KEY_OBJECT.key_object` for `STATE = 0` and `EN_VIRGIN_OBJECT.virgin_key_object` for `STATE = 1`. The polarity is established by controlled diagnostic/programming evidence correlated with MyHOME_Suite UI behavior; catalogue identity corroborates the selected namespace. It is not a cross-database foreign key.
 
 ### Address response
 
@@ -132,14 +132,13 @@ These states are distinct:
 
 | State | Meaning |
 | --- | --- |
-| Present and configured | Module exists and has a configured Object |
-| Present and unconfigured | Module exists but has not received a final configuration |
-| Disabled | Module exists but its Object is disabled by configuration |
+| Enabled | Module exists, `DIMENSION 30.STATE = 0`, and its regular configured Object applies |
+| Disabled | Module exists, `DIMENSION 30.STATE = 1`, and its Virgin Object represents the Module |
 | Absent from UI | MyHOME_Suite does not present the `slot` in that context |
 | Fixed-function | Catalogue/UI does not allow selection of another Object |
 | Alternative Object | Firmware supports another Object at the same `slot` |
 
-A captured `STATE` value alone does not establish all these UI distinctions.
+For `DIMENSION 30`, a captured `STATE` value establishes enabled versus disabled under the corrected polarity, but it does not establish the other UI distinctions in this table.
 
 For example, Device `007B269D` was observed with `slot` `1` disabled, `slot` `2` absent from the UI, and `slot` positions `3` and `4` displayed under shifted UI numbering. This demonstrates that UI position and `slot` cannot be assumed identical.
 

@@ -27,6 +27,7 @@ Counts are scoped to the canonical MyHOME Suite 3.5.38 sources.
 | `AS_ITEM_SYSTEM` | item and catalogue-system parents | 223 rows; 0 orphans on either parent | structurally established |
 | `AS_OBJECT_SYSTEM` | Object and catalogue-system parents | 251 rows; 0 orphans on either parent | structurally established |
 | `AS_OBJECT_FIRMWARE` | firmware and Object parents | 827 rows; 0 orphans on either parent | structurally established |
+| `AS_FIRMWARE_CONFIG_MODE` | firmware and configuration-mode parents | firmware capability association; `EN_CONFIG_MODE` keeps Virtual, Advanced, Physical, and Product Programming as distinct records | structurally established |
 | `EN_SLOTS.id_object_firmware` | `AS_OBJECT_FIRMWARE.id_object_firmware` | 1,725 rows; several Object alternatives can share `first_slot` | structurally established |
 | `EN_KEY_OBJECT.id_family` | `EN_OBJECT_ITEM_FAMILY.id_family` | 158 rows; 0 orphans; no zero sentinel used | structurally established |
 | `AS_FIRMWARE_VIRGIN_OBJECT` | firmware and Virgin Object parents | 75 rows; 0 orphans | structurally established |
@@ -34,6 +35,7 @@ Counts are scoped to the canonical MyHOME Suite 3.5.38 sources.
 | `EN_CONF_RANGE.id_conf` | `EN_CONF.id_conf` | 14,346 rows; 0 orphans | structurally established |
 | `EN_FILTER` | Object/firmware association and configuration definition | 1,909 rows; 0 orphans on both references | structurally established |
 | `AS_SLOT_CONDITION` | slot-placement row and condition | 1,000 rows; 0 orphans on both references | structurally established |
+| physical condition branch | firmware `EN_CONF`/`EN_CONF_RANGE` domains plus `EN_SLOTS`/`AS_SLOT_CONDITION`/`EN_CONDITION` | stored condition must be reachable in the exact firmware domain before it can select an Object/slot candidate | catalogue-native resolver established for represented predicates |
 | `EN_CONF` owner | Object or firmware | 1,420 Object-scoped; 1,463 firmware-scoped; selected by zero discriminator | established polymorphic relationship |
 | `EN_FIRMWARE.slots` | distinct internal Module positions | compare with `COUNT(DISTINCT EN_SLOTS.first_slot)`, not row count | corroborated capability relationship |
 
@@ -58,11 +60,12 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `DIMENSION 1.OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` | resolved management/catalogue system | corroborated |
 | `DIMENSION 1.BRAND` | `EN_BRAND.brand_modobj` | parsed identity response | corroborated |
 | `DIMENSION 1.LINE` | `EN_LINE.line_modobj` | parsed identity response | corroborated |
-| `DIMENSION 1.N_CONF` | physical configurator-position count | Device identity; product diagrams/captures | corroborated for documented Devices |
+| ordinary addressed `DIMENSION 1.N_CONF` | physical configurator-position count | addressed Device identity; product diagrams/captures | corroborated for documented addressed Devices |
+| gateway `DIMENSION 1.N_CONF` | unresolved gateway-variant field; observed value `15` on MH202 and F454 | empty-`WHERE` gateway identity captures | observed; sentinel interpretation inferred, exact semantics open |
 | `DIMENSION 2` `V.R.b` | `EN_FIRMWARE` plus `EN_BUILDS` | resolved item; sentinel/default/build handling | structurally corroborated; exact selection precedence open |
 | `DIMENSION 3`/`6` `V.R.b` | no canonical catalogue field found | retain as installed-state evidence | open database correlation |
-| `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | `STATE = 1`, resolved firmware and slot | corroborated |
-| `DIMENSION 30.KEYO` | `EN_VIRGIN_OBJECT.virgin_key_object` | `STATE = 0`, resolved firmware and slot | corroborated |
+| `DIMENSION 30.KEYO` | `EN_KEY_OBJECT.key_object` | `STATE = 0`, enabled Module, resolved firmware and `slot` | experimentally corroborated with UI behavior |
+| `DIMENSION 30.KEYO` | `EN_VIRGIN_OBJECT.virgin_key_object` | `STATE = 1`, disabled Module, resolved firmware and `slot` | experimentally corroborated with UI behavior |
 | `DIMENSION 30.SLOT` | `EN_SLOTS.first_slot` placement | resolved firmware; not `id_slot` | structurally corroborated |
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Device, firmware, Module, Object, and ownership scope | strongly corroborated |
 | diagnostic outer `WHERE` | configured address of `slot` `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
@@ -78,6 +81,7 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | ScenarioDevices `ChiOpen` | functional `WHO` parsed from literal `Frame` | all 57 literal templates in Program Files revision agree | established for literal templates |
 | ScenarioDevices ProgramData semantic path | Program Files semantic path | compare full hierarchy/non-local fields, never local row IDs | established subset relationship |
 | physical firmware property | advanced Object property | symbol, semantic type, filters, conversions, and controlled read-back | established only for individually corroborated mappings; generalization open |
+| `OPEN.db` `DIMENSION 4/5.C1..C12` | `MHCatalogue.db` firmware `EN_CONF` definitions / `progressive` | transport fields and catalogue ordering coexist, but no explicit cross-database key or universal positional rule is present | open correlation |
 
 ## Sentinel and discriminator rules
 
@@ -87,7 +91,8 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `EN_ADDRESS_RULE.object_device_family = 0` | family-unqualified address rule | corroborated by complete rule set |
 | firmware component `-1` | any or unspecified for that component | strongly corroborated by `-1.-1.-1` and concrete `V.R.-1` rows |
 | missing `EN_BUILDS` row | distinct from explicit `firmware_b = -1` | structurally established |
-| `DIMENSION 30.STATE` | selects configured Object versus Virgin Object namespace | corroborated |
+| `DIMENSION 30.STATE` | `0` selects enabled regular Object; `1` selects disabled Virgin Object | experimentally corroborated with MyHOME_Suite UI behavior |
+| gateway `DIMENSION 1.N_CONF = 15` | `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern consistent with a reserved-sentinel convention, but no canonical source establishes the sentinel meaning | observed value; sentinel interpretation inferred and unresolved |
 
 Sentinel meaning is local to the field. This table does not authorize interpreting every zero or negative value the same way.
 
@@ -95,9 +100,10 @@ Sentinel meaning is local to the field. This table does not authorize interpreti
 
 | Question | Leading evidence | Decisive evidence needed |
 | --- | --- | --- |
-| exact `DIMENSION 4`/`5` position and value encoding | two six-value frames; configurator-transfer context | controlled one-position/one-configurator matrix |
+| `DIMENSION 4`/`5` catalogue correlation | `C1..C12` transport fields and `0..255` ranges are established; `ConfConfigurators` is labelled virtual configuration | controlled Device-family correlation between `C1..C12` and firmware-specific `EN_CONF` symbols/positions |
 | generic `DIMENSION 310.VAL_PAR` meaning | Object-specific response without generic index metadata | Object-specific captures and decoder behavior |
-| catalogue-wide `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested Devices | systematic conditional-field audit across firmware |
+| catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
+| gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
 | firmware selection precedence | exact, wildcard, default, missing, multiple-build patterns | controlled loader/UI observation |
 | ScenarioDevices matching IDs | stable local fields and semantic hierarchy | runtime matcher trace or application code |
 | ScenarioDevices source precedence | two revisions in different installation locations | file-open/update trace |

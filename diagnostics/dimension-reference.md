@@ -8,7 +8,7 @@ The tables below cover the Device interview and detailed configuration sequences
 
 | `DIMENSION` | Response frame | Meaning |
 | ---: | --- | --- |
-| `1` | `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | Device identity; `N_CONF` is the physical configurator-position count |
+| `1` | `*#[WHO]*[WHERE]*1*[OBJECT_MODEL]*[N_CONF]*[BRAND]*[LINE]##` | Device identity; in the ordinary addressed form, `N_CONF` is the physical configurator-position count |
 | `2` | `*#[WHO]*[WHERE]*2*[FW_VERSION]##` | firmware version |
 | `3` | `*#[WHO]*[WHERE]*3*[HW_VERSION]##` | hardware version |
 | `4` | `*#[WHO]*[WHERE]*4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | configurators `1..6` |
@@ -20,9 +20,11 @@ The tables below cover the Device interview and detailed configuration sequences
 
 `OPEN.db` describes each version placeholder as version/release/build components. Its parameter rows assign `1..99` to `FW_VERSION` and `0..99` to `HW_VERSION` and `MICRO_VERSION`, and explicitly describe the expansion as `[Version]*[Release]*[Build]`. Thus each version placeholder represents three `*`-separated components, not one scalar. Preserve all three values and distinguish this protocol representation from the catalogue tuple `V.R.b`; the metadata does not establish a firmware-selection algorithm.
 
-`N_CONF` is constrained to `0..12`. Product documentation correlates it with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
+In the ordinary addressed form, `N_CONF` is constrained to `0..12`. Product documentation correlates that form with the number of physical configurator positions on the Device; see [`DIMENSION 1`: Device Identity](dim1-device-identity.md).
 
-`DIMENSION 4` and `5` each carry six configurator values in the range `0..255`, providing twelve transport positions in total. `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field diagnostic capacity must not be interpreted as twelve physical positions on every Device. These reports are distinct from `EN_CONF.idx` configuration parameters.
+`DIMENSION 4` and `5` each carry six configurator transport fields in the range `0..255`: `C1..C6` and `C7..C12`. `OPEN.db` also places their programming forms in the `ConfConfigurators` sequence, described there as virtual configuration. In the ordinary addressed Device form, `N_CONF` describes how many physical configurator positions the Device provides; the fixed twelve-field transport capacity must not be interpreted as twelve physical positions on every Device.
+
+`MHCatalogue.db` separately defines firmware-specific physical symbols, legal domains, conditions, and conversions. No canonical cross-database relation establishes that `C1` universally equals the firmware `EN_CONF` row with `progressive = 1`, or that every firmware-owned `EN_CONF` definition is a literal physical plug position. Keep `C1..C12`, `EN_CONF.progressive`, and `EN_CONF.idx` as separate identifiers unless an explicit correlation is established. See [Physical-configuration resolution](../internals/catalogue-resolution.md#dimension-4-and-5-are-a-transport-boundary).
 
 `DIMENSION 7` and `8` are typed as 24-bit bitmasks. `OPEN.db` does not define individual bit meanings. The public [Temperature Control Fault Diagnostics](temperature-control-faults.md) separately establishes active-low labels for the `WHO 1004` central-unit/zone workflow; those labels must not be generalized to other families.
 
@@ -30,7 +32,7 @@ The tables below cover the Device interview and detailed configuration sequences
 
 | `DIMENSION` | Frame | Meaning |
 | ---: | --- | --- |
-| `30` | `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##` | configured Object or unconfigured Virgin Object by Module |
+| `30` | `*#[WHO]*[WHERE]*30*[SLOT]*[KEYO]*[STATE]##` | enabled regular Object (`STATE = 0`) or disabled Virgin Object (`STATE = 1`) by Module |
 | `31` | `*#[WHO]*[WHERE]*31*[SLOT]*[CODE]*[STATE]##` | Object-state result or error |
 | `32` | `*#[WHO]*[WHERE]*32#[SLOT]*[SYS]*[ADDR]##` | Module system and address |
 | `34` | `*#[WHO]*[WHERE]*34*[SLOT]*[ERROR]##` | Module address error |
@@ -84,6 +86,8 @@ These are transport/database ranges, not claims that every Device, Object, or sy
 | `11` | `*#[WHO]**11*[BIT]##` | automatic hardware/software diagnostic event |
 | `12` | `*#[WHO]**12##` / `*#[WHO]**12*[MAC1]*[MAC2]*[MAC3]*[MAC4]*[MAC5]*[MAC6]##` | MAC-address request/response |
 | `15` | `*#[WHO]**15##` / `*#[WHO]**15*[OBJECT_MODEL]##` | WebServer model request/response |
+
+The empty-`WHERE` gateway `DIMENSION 1` form is a distinct variant. First-hand MH202 and F454 captures both return `N_CONF = 15`, outside the ordinary addressed-form `0..12` range. Numerically, `15` is `0xF`; viewed in four bits, it is `1111`, an all-ones pattern; this is consistent with a reserved or sentinel value, but its exact meaning is unresolved. Do not import the ordinary physical-configurator-count interpretation into the gateway form. See [`DIMENSION 1`: Device Identity](dim1-device-identity.md#gateway-variant).
 
 The general `DIMENSION 7`, `11`, `12`, and `15` records are directly associated with the Nurse Call system in `AS_OPEN_SYSTEM`. `OpenQuery.txt` also selects the general `DIMENSION 7` frames and the gateway `DIMENSION 1` form for gateway-connection handling. This supports reuse in a gateway/service workflow but does not make these frames part of every diagnostic family’s Device interview.
 

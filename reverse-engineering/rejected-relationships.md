@@ -25,15 +25,15 @@ Rejected interpretations are retained because they are plausible enough to be re
 | `EN_FIRMWARE.slots = COUNT(EN_SLOTS rows)` | one `slot` can offer several Object alternatives | count distinct `first_slot` positions and interpret alternatives separately |
 | an `EN_SLOTS` row is one runtime Module | rows represent firmware/Object placement alternatives | build runtime Modules from `DIMENSION 30`, then validate against placement capability |
 | `fixed_ko = 1` alone proves the UI field is read-only | visibility, conditions, product context, and UI behavior also contribute | use `fixed_ko` as designated/fixed capability evidence, not a complete UI rule |
-| a Virgin Object is the configured Object | Virgin Objects describe unconfigured templates and permitted Object sets | use `DIMENSION 30.STATE` to select the namespace |
+| a Virgin Object is the regular configured Object | Virgin Objects describe configurable templates and permitted Object sets; `DIMENSION 30` reports the Virgin Object while the Module is disabled | use `DIMENSION 30.STATE` to select the namespace |
 | every Object allowed by a Virgin Object is simultaneously active | association is capability, not runtime selection | resolve one reported configured Object per Module state |
 
 ## Protocol interpretation mistakes
 
 | Rejected interpretation | Conflicting evidence | Safe treatment |
 | --- | --- | --- |
-| `DIMENSION 1.N_CONF` is an Object, class, or form factor | `OPEN.db`, product diagrams, and captures identify a physical-configurator-position count | retain it as the Device-level position count |
-| `DIMENSION 30.KEYO` always names `EN_KEY_OBJECT.key_object` | unconfigured rows use the Virgin Object namespace | branch on `STATE` before lookup |
+| `DIMENSION 1.N_CONF` is an Object, class, or form factor | ordinary addressed-form `OPEN.db` metadata, product diagrams, and captures identify a physical-configurator-position count; the gateway variant instead has unresolved semantics | retain the physical-position interpretation only for the corroborated ordinary addressed form; preserve gateway `N_CONF` raw and unresolved |
+| `DIMENSION 30.KEYO` always names `EN_KEY_OBJECT.key_object` | disabled Modules (`STATE = 1`) use the Virgin Object namespace | branch on `STATE` before lookup |
 | `DIMENSION 32.SYS` is automatically a functional `WHO` | system grouping and non-Lighting candidate values differ | retain `sys_modobj` as the leading inference pending a discriminating capture |
 | diagnostic outer `WHERE` always equals slot `1` address | only selected layouts have been observed; disabled/alternate layouts are untested | treat the correlation as strong but conditional |
 | every Module returns `DIMENSION 32` | command-only and optional-response observations contradict universality | model address response as Object/firmware dependent |

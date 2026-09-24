@@ -31,7 +31,7 @@ Resolve:
 1. the catalogue item and all compatible `EN_DEVICE` candidates;
 2. the applicable firmware;
 3. the target internal `SLOT`;
-4. the current configured Object or Virgin Object;
+4. the current enabled regular Object or disabled Module's Virgin Object;
 5. the current address and configuration context.
 
 Then request the detailed values:
@@ -49,7 +49,7 @@ Keep the current-state snapshot immutable for the rest of validation. If the int
 ## Procedure
 
 1. Take the resolved installed Device and firmware from the freshly acquired configuration model.
-2. Resolve the `slot` and current Object or Virgin Object.
+2. Resolve the `slot`, its enabled/disabled state, and the corresponding regular Object or Virgin Object.
 3. Prove that the target Object survives the Virgin Object, firmware, and slot intersections.
 4. Resolve the Object- and firmware-scoped `EN_CONF` property.
 5. Evaluate `read_only`, `visible`, `hidden`, fixed-value, and conditional metadata.

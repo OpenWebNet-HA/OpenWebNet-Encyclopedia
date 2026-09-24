@@ -61,7 +61,7 @@ The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) proj
 | `DIMENSION 3` | hardware version |
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 13` | 32-bit Device ID |
-| `DIMENSION 30` | `slot`, Object identifier, and configured state |
+| `DIMENSION 30` | `slot`, enabled/disabled Module state, and regular Object or Virgin Object identifier |
 | `DIMENSION 32` | `slot`, system, and configured address |
 | `DIMENSION 35` | configuration index, `slot`, and parameter value |
 | `DIMENSION 38` | request/reset operation selecting one or all `slot` positions |
@@ -95,4 +95,4 @@ Original evidence remains unchanged under [`sources/`](../sources/); derived rel
 
 Use each source only for the layer it establishes. Do not join independent identifier spaces because their numeric values happen to match, and do not promote implementation labels to protocol semantics without corroborating evidence.
 
-The established interpretation of diagnostic `DIMENSION 1.N_CONF` is the physical configurator-position count; it is not an Object or Device-class identifier. See [Physical Devices](physical-devices.md). Catalogue-wide count equivalence and independent reproduction from the cited product diagrams remain separate evidence gaps.
+For the ordinary addressed diagnostic form, the established interpretation of `DIMENSION 1.N_CONF` on corroborated Devices is the physical configurator-position count; it is not an Object or Device-class identifier. The separate empty-`WHERE` gateway variant has returned `N_CONF = 15` in observed MH202 and F454 cases, outside the ordinary `0..12` range, and its exact semantics remain unresolved. See [Physical Devices](physical-devices.md) and [`DIMENSION 1`: Device Identity](../diagnostics/dim1-device-identity.md). Catalogue-wide count equivalence and gateway sentinel semantics remain separate evidence gaps.
