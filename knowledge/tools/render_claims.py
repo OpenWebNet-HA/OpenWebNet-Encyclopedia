@@ -3,6 +3,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
+import unicodedata
+from collections import Counter
 from pathlib import Path
 
 from serialization import json_bytes
@@ -79,4 +82,72 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
                         raise ValueError(f"contradiction lacks common subject and namespace: {record['id']}")
                     if not record["questions"] or not peer["questions"]:
                         raise ValueError("contradiction needs open resolution on both assertions")
+    semantic_units: dict[tuple, str] = {}
+    labelled_units: dict[tuple, dict] = {}
+    for record in records:
+        normalized = re.sub(r"\s+", " ", unicodedata.normalize("NFC", record["statement"])).strip().casefold()
+        scope = json.dumps(record["applicability"], sort_keys=True, separators=(",", ":"))
+        semantic_key = (record["subject_id"], record["context"]["namespace_id"], scope, normalized)
+        if semantic_key in semantic_units:
+            raise ValueError(f"duplicate semantic claim: {semantic_units[semantic_key]} and {record['id']}")
+        semantic_units[semantic_key] = record["id"]
+        labelled_key = (record["subject_id"], record["context"]["namespace_id"], scope,
+                        record["label"].strip().casefold())
+        previous = labelled_units.get(labelled_key)
+        if previous and record["id"] not in {target for values in previous["claim_links"].values() for target in values}:
+            raise ValueError(f"incompatible duplicate claim label: {previous['id']} and {record['id']}")
+        labelled_units[labelled_key] = record
     return sorted(records, key=lambda r: r["id"].encode("ascii"))
+
+
+def claim_coverage_metrics(ir: dict, claims: list[dict], coverage_path: Path) -> dict:
+    """Validate the reviewed bounded-batch ledger and return manifest metrics."""
+    value = json.loads(coverage_path.read_text(encoding="utf-8"))
+    if set(value) != {"format_version", "domains"} or value["format_version"] != "0.1.0":
+        raise ValueError("claim coverage input has an unsupported shape or format version")
+    if not isinstance(value["domains"], list):
+        raise ValueError("claim coverage domains must be an array")
+    target_documents = {area: [document for document in ir["documents"]
+                               if document["path"].startswith(area + "/")]
+                        for area in ("protocol", "functional")}
+    actual_counts = Counter(claim["provenance"][0]["location"]["section_id"] for claim in claims)
+    metrics = {"records": len(claims), "bounded_domains": {}}
+    seen_areas = set()
+    for domain in value["domains"]:
+        if set(domain) != {"area", "documents", "sections"} or domain["area"] not in target_documents:
+            raise ValueError("claim coverage domain has unknown fields or area")
+        area = domain["area"]
+        if area in seen_areas:
+            raise ValueError(f"duplicate claim coverage area: {area}")
+        seen_areas.add(area)
+        documents = target_documents[area]
+        expected = {section["id"]: document["path"] for document in documents for section in document["sections"]}
+        if domain["documents"] != len(documents):
+            raise ValueError(f"claim coverage document count mismatch: {area}")
+        rows = domain["sections"]
+        by_section = {row.get("section_id"): row for row in rows}
+        if len(by_section) != len(rows) or set(by_section) != set(expected):
+            raise ValueError(f"claim coverage sections are stale, duplicate, or incomplete: {area}")
+        claimed = nonclaim = claim_count = 0
+        for section_id, row in by_section.items():
+            if set(row) != {"claim_count", "path", "reason", "section_id", "status"}:
+                raise ValueError(f"claim coverage row has unknown fields: {section_id}")
+            if row["path"] != expected[section_id] or row["status"] not in {"claimed", "nonclaim"}:
+                raise ValueError(f"invalid claim coverage row: {section_id}")
+            count = actual_counts[section_id]
+            if row["claim_count"] != count:
+                raise ValueError(f"claim coverage count mismatch: {section_id}")
+            if row["status"] == "claimed" and count < 1:
+                raise ValueError(f"claimed section has no claim: {section_id}")
+            if row["status"] == "nonclaim" and count != 0:
+                raise ValueError(f"nonclaim section has claims: {section_id}")
+            claimed += row["status"] == "claimed"
+            nonclaim += row["status"] == "nonclaim"
+            claim_count += count
+        metrics["bounded_domains"][area] = {
+            "claims": claim_count, "documents": len(documents), "sections": len(rows),
+            "sections_with_claims": claimed, "reviewed_nonclaim_sections": nonclaim,
+        }
+    if seen_areas != set(target_documents):
+        raise ValueError("claim coverage omits a bounded domain")
+    return metrics

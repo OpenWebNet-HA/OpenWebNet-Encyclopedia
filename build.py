@@ -14,10 +14,10 @@ from build_ir import build as build_ir  # noqa: E402
 from render_artifacts import (bootstrap_chunk_identities, chunk_records, corpus,
                               load_chunk_identities)  # noqa: E402
 from render_references import REFERENCE_FILES, reference_records  # noqa: E402
-from render_claims import claim_records  # noqa: E402
+from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.4.0"
+GENERATOR_VERSION = "ownkb-build-0.5.0"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
@@ -53,7 +53,7 @@ def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_c
     return sorted([*schemas, *generated], key=lambda entry: str(entry["path"]).encode("utf-8"))
 
 
-def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_counts: dict[str, int], claim_count: int) -> dict[str, object]:
+def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_counts: dict[str, int], claim_metrics: dict) -> dict[str, object]:
     documents = ir["documents"]
     assert isinstance(documents, list)
     return {
@@ -64,13 +64,13 @@ def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_cou
         "llm_corpus": {"included_documents": len(documents),
                        "included_sections": sum(len(document["sections"]) for document in documents)},
         "references": {"records": sum(reference_counts.values())},
-        "claims": {"records": claim_count},
+        "claims": claim_metrics,
         "retrieval": chunk_metrics,
     }
 
 
 def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics: dict[str, int],
-             reference_records_by_kind: dict[str, list[dict[str, object]]], claims: list[dict]) -> dict[str, object]:
+             reference_records_by_kind: dict[str, list[dict[str, object]]], claims: list[dict], claim_metrics: dict) -> dict[str, object]:
     ir_digest = dict(ir)
     ir_digest.pop("identities", None)
     documents = ir["documents"]
@@ -78,7 +78,7 @@ def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics
     reference_counts = {kind: len(records) for kind, records in reference_records_by_kind.items()}
     return {
         "artifacts": public_artifacts(root, output_root, len(documents), chunk_metrics["emitted_chunks"], reference_counts, len(claims)),
-        "coverage": coverage(ir, chunk_metrics, reference_counts, len(claims)),
+        "coverage": coverage(ir, chunk_metrics, reference_counts, claim_metrics),
         "format_version": MANIFEST_FORMAT_VERSION,
         "generator_version": GENERATOR_VERSION,
         "input_content_sha256": sha256_bytes(json_bytes({"ir": ir_digest, "references": reference_records_by_kind, "claims": claims})),
@@ -90,6 +90,7 @@ def build(root: Path, output_root: Path) -> Path:
     ir = build_ir(root, root / "knowledge/inputs/canonical-sources.jsonl", root / "knowledge/inputs/identities.json")
     references, section_references = reference_records(ir, root / "knowledge/inputs/reference-records.json")
     claims = claim_records(ir, references, root / "knowledge/inputs/claim-records.json")
+    claim_metrics = claim_coverage_metrics(ir, claims, root / "knowledge/inputs/claim-coverage.json")
     namespace_ids = {}
     for document in ir["documents"]:
         namespace = document["namespace_context"]["namespace"]
@@ -110,7 +111,7 @@ def build(root: Path, output_root: Path) -> Path:
     for kind, filename in REFERENCE_FILES.items():
         write_bytes(output_root / "knowledge/reference" / filename, jsonl_bytes(references[kind]))
     target_manifest = output_root / "knowledge/manifest.json"
-    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references, claims)))
+    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references, claims, claim_metrics)))
     return target_manifest
 
 
