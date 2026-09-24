@@ -113,7 +113,9 @@ def corpus(ir: dict[str, Any]) -> bytes:
     return ("\n".join(lines).rstrip() + "\n").encode("utf-8")
 
 
-def chunk_records(ir: dict[str, Any], identities: dict[str, str]) -> tuple[list[dict[str, Any]], dict[str, int]]:
+def chunk_records(ir: dict[str, Any], identities: dict[str, str],
+                  section_references: dict[str, list[str]],
+                  namespace_ids: dict[str, str]) -> tuple[list[dict[str, Any]], dict[str, int]]:
     records = []
     candidate = emitted = empty = 0
     for document in ir["documents"]:
@@ -135,6 +137,8 @@ def chunk_records(ir: dict[str, Any], identities: dict[str, str]) -> tuple[list[
                 "id": identity, "kind": "retrieval_chunk", "label": section["title"] or "Preamble",
                 "namespace_context": section["namespace_context"], "privacy": section["privacy"],
                 "provenance": section["provenance"], "qualification_cues": cue,
+                "reference_ids": sorted({document["source_id"], namespace_ids[document["id"]],
+                                         *section_references.get(section["id"], [])}, key=str.encode),
                 "section_id": section["id"], "section_path": section_path(document, section),
                 "source_path": document["path"], "text": text,
             })

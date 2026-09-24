@@ -27,6 +27,7 @@ Record durable choices here with status and rationale. A later decision may supe
 | MKB-018 | Accepted, Phase 5 | Use top-level local `build.py` and `check.py`, a shared strict JSON/JSONL serializer, and a schema-validated manifest. The manifest inventories current public schemas and exact hashes; it excludes its own hash and derives its fixed input digest from the shared IR. `check.py` requires two clean temporary outputs to match byte-for-byte. |
 
 | MKB-019 | Accepted, Phase 6 | Generate the LLM corpus and retrieval chunks only from the shared IR. A corpus section is preserved structurally; a retrieval chunk is one nonempty canonical section with a curated opaque identity. Preserve lexical qualification cues as context, never as generated claims. The manifest reports canonical, guide, corpus, and retrieval coverage separately. |
+| MKB-020 | Accepted, Phase 7 | Canonical definitions live once in the glossary. Entity records identify referents and link to glossary terms; relationships, cautions, and questions remain separate stable records. Curated semantic seeds join real IR sections, while canonical-document source records are generated from the IR. Retrieval chunks carry reference IDs instead of a parallel structured definition layer. Cross-file integrity is a mandatory build gate. |
 
 ## Open decisions for Phase 1 and later
 

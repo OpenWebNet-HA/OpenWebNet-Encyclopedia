@@ -13,9 +13,10 @@ sys.path.insert(0, str(ROOT / "knowledge" / "tools"))
 from build_ir import build as build_ir  # noqa: E402
 from render_artifacts import (bootstrap_chunk_identities, chunk_records, corpus,
                               load_chunk_identities)  # noqa: E402
+from render_references import REFERENCE_FILES, reference_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.2.0"
+GENERATOR_VERSION = "ownkb-build-0.3.0"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
@@ -33,7 +34,8 @@ def artifact(path: str, kind: str, content: bytes, record_count: int | None = No
     return result
 
 
-def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_count: int) -> list[dict[str, object]]:
+def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_count: int,
+                     reference_counts: dict[str, int]) -> list[dict[str, object]]:
     schemas = [artifact(str(path.relative_to(root)), "schema", path.read_bytes())
                for path in (root / "knowledge/schema").glob("*.schema.json")]
     generated = [
@@ -42,10 +44,13 @@ def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_c
         artifact("knowledge/retrieval/chunks.jsonl", "retrieval_chunks",
                  (output_root / "knowledge/retrieval/chunks.jsonl").read_bytes(), chunk_count),
     ]
+    generated.extend(artifact(f"knowledge/reference/{filename}", "reference_registry",
+                              (output_root / "knowledge/reference" / filename).read_bytes(), reference_counts[kind])
+                     for kind, filename in REFERENCE_FILES.items())
     return sorted([*schemas, *generated], key=lambda entry: str(entry["path"]).encode("utf-8"))
 
 
-def coverage(ir: dict[str, object], chunk_metrics: dict[str, int]) -> dict[str, object]:
+def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_counts: dict[str, int]) -> dict[str, object]:
     documents = ir["documents"]
     assert isinstance(documents, list)
     return {
@@ -55,29 +60,40 @@ def coverage(ir: dict[str, object], chunk_metrics: dict[str, int]) -> dict[str, 
                    "remediation_hints": len(ir["guide_remediation"])},
         "llm_corpus": {"included_documents": len(documents),
                        "included_sections": sum(len(document["sections"]) for document in documents)},
+        "references": {"records": sum(reference_counts.values())},
         "retrieval": chunk_metrics,
     }
 
 
-def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics: dict[str, int]) -> dict[str, object]:
+def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics: dict[str, int],
+             reference_records_by_kind: dict[str, list[dict[str, object]]]) -> dict[str, object]:
     ir_digest = dict(ir)
     ir_digest.pop("identities", None)
     documents = ir["documents"]
     assert isinstance(documents, list)
+    reference_counts = {kind: len(records) for kind, records in reference_records_by_kind.items()}
     return {
-        "artifacts": public_artifacts(root, output_root, len(documents), chunk_metrics["emitted_chunks"]),
-        "coverage": coverage(ir, chunk_metrics),
+        "artifacts": public_artifacts(root, output_root, len(documents), chunk_metrics["emitted_chunks"], reference_counts),
+        "coverage": coverage(ir, chunk_metrics, reference_counts),
         "format_version": MANIFEST_FORMAT_VERSION,
         "generator_version": GENERATOR_VERSION,
-        "input_content_sha256": sha256_bytes(json_bytes(ir_digest)),
+        "input_content_sha256": sha256_bytes(json_bytes({"ir": ir_digest, "references": reference_records_by_kind})),
         "schema_compatibility_version": SCHEMA_COMPATIBILITY_VERSION,
     }
 
 
 def build(root: Path, output_root: Path) -> Path:
     ir = build_ir(root, root / "knowledge/inputs/canonical-sources.jsonl", root / "knowledge/inputs/identities.json")
+    references, section_references = reference_records(ir, root / "knowledge/inputs/reference-records.json")
+    namespace_ids = {}
+    for document in ir["documents"]:
+        namespace = document["namespace_context"]["namespace"]
+        namespace_ids[document["id"]] = ("ownkb:namespace:who" if namespace.startswith("who:") else
+                                         "ownkb:namespace:diagnostic" if namespace == "diagnostic" else
+                                         "ownkb:namespace:device-model" if document["namespace_context"]["area"] == "device-model" else
+                                         "ownkb:namespace:openwebnet")
     identities = load_chunk_identities(root / "knowledge/inputs/chunk-identities.json")
-    records, metrics = chunk_records(ir, identities)
+    records, metrics = chunk_records(ir, identities, section_references, namespace_ids)
     expected_sections = {section["id"] for document in ir["documents"] for section in document["sections"] if section["blocks"]}
     if set(identities) != expected_sections:
         raise ValueError("curated retrieval chunk identity mapping is stale or incomplete")
@@ -85,8 +101,10 @@ def build(root: Path, output_root: Path) -> Path:
     target_chunks = output_root / "knowledge/retrieval/chunks.jsonl"
     write_bytes(target_corpus, corpus(ir))
     write_bytes(target_chunks, jsonl_bytes(records))
+    for kind, filename in REFERENCE_FILES.items():
+        write_bytes(output_root / "knowledge/reference" / filename, jsonl_bytes(references[kind]))
     target_manifest = output_root / "knowledge/manifest.json"
-    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics)))
+    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references)))
     return target_manifest
 
 

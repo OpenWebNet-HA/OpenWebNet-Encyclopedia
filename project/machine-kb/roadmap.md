@@ -11,7 +11,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | **Complete** - closed canonical input manifest, curated identities, shared structural IR, guide remediation hints, full-tree integration and tests |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | **Complete** - top-level build/check entry points, canonical serialization, committed manifest and schema, clean double-build gate, and temporary-output support |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | **Complete** - deterministic full corpus, coherent section chunks, closed retrieval schema, manifest inventory and coverage, freshness and privacy validation |
-| 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | Pending |
+| 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | **Complete** - curated semantic seeds and generated canonical-source records, shared-IR provenance, chunk references, cross-file integrity, high-risk boundary tests |
 | 8 | Reviewed atomic claim framework and representative fixtures | Pending |
 | 9 | Initial claim population, batch 1 | Pending |
 | 10 | Initial claim population, batch 2 | Pending |
@@ -66,6 +66,14 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Committed 1,052 curated chunk identities. The complete canonical set has 123 documents and 1,081 sections; 1,052 content sections emit chunks and 29 empty structural sections are counted separately. All ten procedural guides are excluded, with the existing 183 remediation hints retained in manifest coverage.
 - Extended the build manifest with corpus/chunk hashes and record counts, coverage dimensions, and artifact freshness validation. The double-build gate compares every generated artifact byte-for-byte and validates the chunk schema and canonical JSONL.
 
+## Phase 7 verification
+
+- Generated seven canonical registries from reviewed semantic seeds joined to the shared IR: 9 namespaces, 12 glossary terms, 135 sources, 10 entities, 22 relationships, 9 cautions, and 15 open questions. The source registry covers every canonical IR document and 12 directly relevant public evidence sources. The ZigBee specification retains its unresolved publication-provenance caution and question.
+- Kept canonical definitions in the glossary. Entity records identify referents and use `defined_in` relationships rather than carrying a second definition. Added explicit relationships and tests for installed identities versus diagnostic and functional addresses, plus Physical Device, Firmware, Module, Object, Configuration, and `slot` boundaries.
+- Added stable `reference_ids` to all 1,052 retrieval chunks. Every chunk references its canonical source and namespace; sections that own curated terms, entities, relationships, cautions, or questions reference those records as well.
+- Referential-integrity validation rejects duplicate IDs, wrong registry kinds, dangling namespaces, relationships, cautions, questions, provenance documents/sections/sources, relationship endpoints, or chunk references. The manifest inventories and hashes every registry and checks record counts and freshness.
+- Verified: `python build.py`; `python check.py`; `python -m unittest discover -s knowledge/tests -v`; `python -m unittest discover -s knowledge/tools -p 'test_schema.py' -v`; `python project/review/checks/check_esg.py .`; `python project/review/checks/check_ecv.py .`; `git diff --check`.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement controlled reference registries from the shared IR. Keep guides excluded and review the guide remediation queue before expanding corpus coverage. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference input, and these decisions. Implement the reviewed atomic claim framework using the canonical reference IDs; do not repeat glossary definitions inside claims. Keep guides excluded and review the guide remediation queue before expanding corpus coverage. The contract remains pre-release.

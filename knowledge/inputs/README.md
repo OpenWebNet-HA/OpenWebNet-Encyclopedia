@@ -4,4 +4,6 @@
 
 `identities.json` maps each canonical path and heading anchor to a durable document or section ID. Its initial allocation was reviewed and committed once. On a move or heading rename, update the mapping key while retaining its ID. Never run `--bootstrap-identities` in routine builds. If a section changes meaning, curate a new identity and retain lifecycle history before publication. No public IDs have yet been released.
 
+`reference-records.json` is the reviewed semantic input for canonical namespaces, glossary terms, entities, relationships, cautions, open questions, and selected public evidence sources. It stores stable IDs and canonical section IDs, not copied source paths or independent source documents. The build resolves those sections through the shared IR, inherits their public or sanitized privacy metadata, generates record provenance, and fails if a referenced section no longer exists. Canonical-document source records are generated directly from the IR and are not duplicated in this input.
+
 The guide remediation check emits path and line only, without copying guide text or adding it to the IR. Review its hints against the canonical pages, then promote any genuine guide-only fact to canonical documentation before publishing derived outputs. Heuristic flags include false positives; an empty hint list does not certify complete coverage.

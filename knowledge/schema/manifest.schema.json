@@ -21,11 +21,11 @@
         }
       }
     },
-    "coverage": {"type": "object", "additionalProperties": false, "required": ["canonical", "guides", "llm_corpus", "retrieval"], "properties": {"canonical": {"$ref": "#/$defs/metrics"}, "guides": {"$ref": "#/$defs/metrics"}, "llm_corpus": {"$ref": "#/$defs/metrics"}, "retrieval": {"$ref": "#/$defs/metrics"}}},
+    "coverage": {"type": "object", "additionalProperties": false, "required": ["canonical", "guides", "llm_corpus", "references", "retrieval"], "properties": {"canonical": {"$ref": "#/$defs/metrics"}, "guides": {"$ref": "#/$defs/metrics"}, "llm_corpus": {"$ref": "#/$defs/metrics"}, "references": {"$ref": "#/$defs/metrics"}, "retrieval": {"$ref": "#/$defs/metrics"}}},
     "format_version": {"const": "0.1.0"},
-    "generator_version": {"const": "ownkb-build-0.2.0"},
+    "generator_version": {"const": "ownkb-build-0.3.0"},
     "input_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "schema_compatibility_version": {"const": "0.1.0"}
   },
-  "$defs": {"metrics": {"type": "object", "additionalProperties": false, "properties": {"candidate_sections": {"type": "integer", "minimum": 0}, "documents": {"type": "integer", "minimum": 0}, "emitted_chunks": {"type": "integer", "minimum": 0}, "empty_sections": {"type": "integer", "minimum": 0}, "excluded_documents": {"type": "integer", "minimum": 0}, "included_documents": {"type": "integer", "minimum": 0}, "included_sections": {"type": "integer", "minimum": 0}, "remediation_hints": {"type": "integer", "minimum": 0}, "sanitized_documents": {"type": "integer", "minimum": 0}, "sections": {"type": "integer", "minimum": 0}}}}
+  "$defs": {"metrics": {"type": "object", "additionalProperties": false, "properties": {"candidate_sections": {"type": "integer", "minimum": 0}, "documents": {"type": "integer", "minimum": 0}, "emitted_chunks": {"type": "integer", "minimum": 0}, "empty_sections": {"type": "integer", "minimum": 0}, "excluded_documents": {"type": "integer", "minimum": 0}, "included_documents": {"type": "integer", "minimum": 0}, "included_sections": {"type": "integer", "minimum": 0}, "records": {"type": "integer", "minimum": 0}, "remediation_hints": {"type": "integer", "minimum": 0}, "sanitized_documents": {"type": "integer", "minimum": 0}, "sections": {"type": "integer", "minimum": 0}}}}
 }
