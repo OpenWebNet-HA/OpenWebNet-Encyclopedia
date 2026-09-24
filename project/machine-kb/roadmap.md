@@ -13,7 +13,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | **Complete** - deterministic full corpus, coherent section chunks, closed retrieval schema, manifest inventory and coverage, freshness and privacy validation |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | **Complete** - curated semantic seeds and generated canonical-source records, shared-IR provenance, chunk references, cross-file integrity, high-risk boundary tests |
 | 8 | Reviewed atomic claim framework and representative fixtures | **Complete** - eight curated assertions, shared-IR join, source-section review pins, typed claim links, schema and integrity checks |
-| 9 | Initial claim population, batch 1 | Pending |
+| 9 | Initial claim population, batch 1 | **Complete** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, source/evidence classifications, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
 | 10 | Initial claim population, batch 2 | Pending |
 | 11 | Initial claim population, batch 3 | Pending |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | Pending |
@@ -81,6 +81,14 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - The manifest inventories and hashes the generated claims; validators cover missing references, stale source pins, malformed scope and links, asymmetric conflicts, and deterministic bytes. Broad claim population and general drift analysis remain Phases 9-12.
 - Verified: `python build.py`; `python check.py`; both unittest suites (24 integration tests and 7 schema tests); ECV/ESG objective checks (zero failures); `git diff --check`.
 
+## Phase 9 verification
+
+- Populated 3,528 reviewed claims across all 71 canonical pages in `protocol/` and `functional/`; the five earlier non-domain framework claims bring the generated total to 3,533. The bounded coverage ledger accounts for all 518 source sections: 482 contain claims and 36 are reviewed structural, navigation, reference-list, or non-assertive sections.
+- Added exact namespaces for every represented `WHO`, stable section-topic subject contexts, and the missing official public `WHO` source records. Claims retain source-section pins, public provenance, evidence class, epistemic status, confidence, applicability/version scope, cautions, questions, and typed claim links.
+- Preserved seven additional source disagreements as fourteen separate, reciprocally contradicting unresolved claims. These cover Lighting `WHAT 17`, ZigBee Automation direction, ZigBee Energy reset and Frequency/Energy mappings, Multimedia camera range, ZigBee Join indication, and ZigBee `DIMENSION 73` behavior. No source was silently selected.
+- Added fail-closed bounded-coverage validation and incompatible semantic-duplicate checks. Existing referential-integrity gates continue to reject duplicate IDs, dangling subjects, namespaces, sources, cautions, questions, relationships, and claim links.
+- Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; `git diff --check`.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Expand reviewed atomic claims in bounded batches from canonical non-guide pages. Keep the source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 10 with a separately committed bounded domain outside `protocol/` and `functional/`. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.
