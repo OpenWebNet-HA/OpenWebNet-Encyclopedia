@@ -6,6 +6,7 @@ This directory contains the canonical project-wide standards governing the OpenW
 | --- | --- |
 | [Encyclopedia Core Values](encyclopedia-core-values.md) | Truth, evidence, interpretation, scope, provenance, completeness, privacy, and knowledge stewardship |
 | [Encyclopedia Style Guide](encyclopedia-style-guide.md) | Human-facing terminology, notation, page structure, navigation, examples, and editorial presentation |
+| [Machine KB Project Control](machine-kb/) | Architecture, decisions, roadmap, maintenance, release gates, and review status for the public machine dataset |
 
 The ECV govern what qualifies as trustworthy encyclopedia knowledge. The ESG governs how that knowledge is presented to human readers.
 
