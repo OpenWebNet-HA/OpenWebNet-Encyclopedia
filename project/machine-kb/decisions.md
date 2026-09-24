@@ -24,6 +24,8 @@ Record durable choices here with status and rationale. A later decision may supe
 
 | MKB-017 | Accepted, Phase 4 | A closed canonical Markdown manifest feeds the existing sanitization gate, then a single structural IR. `guides/` is excluded before extraction; a separate path/line hint report identifies candidate guide-only facts for human review. Committed path and heading-anchor mappings retain opaque IDs across editorial changes. Lexical qualification cues preserve evidence for review without inventing claims. |
 
+| MKB-018 | Accepted, Phase 5 | Use top-level local `build.py` and `check.py`, a shared strict JSON/JSONL serializer, and a schema-validated manifest. The manifest inventories current public schemas and exact hashes; it excludes its own hash and derives its fixed input digest from the shared IR. `check.py` requires two clean temporary outputs to match byte-for-byte. |
+
 ## Open decisions for Phase 1 and later
 
 | ID | Target phase | Question |

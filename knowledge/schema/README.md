@@ -7,6 +7,7 @@
 | [`common.schema.json`](common.schema.json) | Stable IDs, provenance, privacy, applicability, version scope, and value states |
 | [`record.schema.json`](record.schema.json) | `namespace`, `entity`, `source`, `relationship`, `caution`, `question`, `term`, `claim`, and `chunk` records; closed variant shapes |
 | [`id-registry.schema.json`](id-registry.schema.json) | Curated canonical ID lifecycle and one-step aliases (not generated JSONL) |
+| [`manifest.schema.json`](manifest.schema.json) | Deterministic published-artifact inventory, hashes, record counts where applicable, and fixed build compatibility metadata |
 
 The planned reference JSONL names are `knowledge/reference/namespaces.jsonl`, `entities.jsonl`, `sources.jsonl`, `relationships.jsonl`, `cautions.jsonl`, `questions.jsonl`, and `glossary.jsonl` (the `term` variant). Claims use `knowledge/claims/claims.jsonl`; retrieval uses `knowledge/retrieval/chunks.jsonl`. The curated ID registry's location will be set with the parser/curation inputs before publication. The manifest and Markdown corpus formats are later phases. Each JSONL file contains only its named variant. A file cannot be inferred from a bare schema validation; a future build must enforce path-to-kind mapping and cross-file references.
 
@@ -32,3 +33,9 @@ Schemas reject unknown properties. Adding a property or enum member after v1 is 
 Install `python -m pip install -r knowledge/tools/requirements-schema.txt`, then run `python -m unittest discover -s knowledge/tools -p test_schema.py`. [`fixtures/valid/golden.jsonl`](fixtures/valid/golden.jsonl) is an exact two-record serialization vector. The valid and invalid fixtures exercise every record kind, registry lifecycle, evidence, namespace, privacy, applicability, incomplete knowledge, contradictory status, and byte rules. Fixtures are synthetic protocol concepts with no observed installation data. The validator is offline and does not call an LLM.
 
 The Phase 3 privacy foundation also defines [source classification](source-manifest.schema.json), [prepared sources](prepared-source.schema.json), and [privacy metadata](privacy-metadata.schema.json). The parser must consume prepared sources after the privacy gate.
+
+## Build infrastructure
+
+[`../../build.py`](../../build.py) produces the pre-release `knowledge/manifest.json` from the shared IR and a fixed inventory of currently public schema contracts. The manifest lists schema paths, SHA-256 hashes, and format versions; JSONL artifact renderers will add record counts through the same inventory function in later phases. The manifest deliberately excludes its own hash. It contains a deterministic digest of the semantic IR, fixed generator and schema compatibility versions, and no timestamp, local path, random value, or consumer setting.
+
+Run [`../../check.py`](../../check.py) to perform two clean temporary builds, compare the bytes, validate the manifest schema and canonical JSON bytes, verify the committed manifest is fresh, and run the final privacy scanner. Both commands are local and offline.
