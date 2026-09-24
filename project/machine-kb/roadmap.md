@@ -6,7 +6,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | --- | --- | --- |
 | 0 | Persist architecture, decisions, maintenance, release gates, review state; verify and commit | **Complete** - this project-control area; no generator delivered |
 | 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | **Complete** - contract and policy reviewed against long-term change cases; no v1 data released |
-| 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | Pending |
+| 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | **Complete** - curated schemas, valid/invalid fixtures, offline validator, golden JSONL; no dataset generated |
 | 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | Pending - initial policy/scanner/CI already present, not sufficient alone |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | Pending |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | Pending |
@@ -34,6 +34,12 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Defined ID syntax and lifecycle, manifest discovery, deterministic bytes, ownership, knowledge-state semantics, and compatibility policy. Concrete schemas, registry, golden vectors, and all generated records remain Phase 2 onward.
 - Verified: `git diff --check`; `python project/review/checks/check_esg.py .` (0 objective failures); `python project/review/checks/check_ecv.py .` (0 objective failures); relative-link existence across `project/machine-kb/*.md`; `python knowledge/tools/validate_privacy.py` (passed, **0 generated artifacts scanned**). These checks verify the Phase 1 documentation and existing mechanical gates, not an unreleased dataset.
 
+## Phase 2 verification
+
+- Implemented closed Draft 2020-12 common, record variant, and curated ID lifecycle schemas. Evidence, confidence, epistemic standing, typed value state, scoped applicability, privacy, and references are distinct and required.
+- Verified seven schema tests covering all record kinds, registry lifecycle, invalid cases, and exact JSONL bytes. Existing ECV/ESG and privacy checks also ran; the privacy scanner still scans zero generated artifacts.
+- Cross-artifact integrity, input sanitization, source agreement, and release certification remain later gates.
+
 ## Next session
 
-Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 2 schemas, controlled vocabularies, and tests only. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.
+Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 3 pre-extraction source classification and privacy controls only. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.
