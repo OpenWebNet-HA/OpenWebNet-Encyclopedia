@@ -44,9 +44,12 @@ This is a semantic resolution flow, not a shared ER schema. Dashed relationships
 | Wire field | Catalogue correlation | Confidence |
 | --- | --- | --- |
 | `OBJECT_MODEL` | `AS_ITEM_SYSTEM.modobj` in the resolved system context | corroborated |
-| `N_CONF` | number of physical configurator positions | corroborated for documented Devices |
+| ordinary addressed `N_CONF` | number of physical configurator positions | corroborated for documented addressed Devices |
+| gateway `N_CONF` | no catalogue correlation established; preserve raw value | observed `15` on MH202 and F454; exact semantics unresolved |
 | `BRAND` | `EN_BRAND.brand_modobj` | corroborated |
 | `LINE` | `EN_LINE.line_modobj` | corroborated |
+
+The empty-`WHERE` gateway `DIMENSION 1` form must be kept separate from the ordinary addressed identity form. Its observed `N_CONF = 15` lies outside the ordinary `0..12` range; although `15 = 0xF` is consistent with a reserved sentinel, no cross-database relation or canonical definition establishes that meaning.
 
 The installed Device ID and `EN_DEVICE.id_device` are different namespaces.
 
@@ -79,8 +82,8 @@ The databases establish the candidate model but not MyHOME Suite's exact precede
 `DIMENSION 30` is discriminator-dependent:
 
 ```text
-STATE = 1 → KEYO is EN_KEY_OBJECT.key_object
-STATE = 0 → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
+STATE = 0 → Module enabled → KEYO is EN_KEY_OBJECT.key_object
+STATE = 1 → Module disabled → KEYO is EN_VIRGIN_OBJECT.virgin_key_object
 ```
 
 `SLOT` is the Device-local internal position. It correlates with placement through `EN_SLOTS.first_slot` after Firmware resolution; it is not `EN_SLOTS.id_slot`.
@@ -89,7 +92,7 @@ The safe lookup order is:
 
 1. resolve Firmware;
 2. select the reported `slot`;
-3. choose configured Object or Virgin Object namespace from `STATE`;
+3. choose the enabled regular Object or disabled Virgin Object namespace from `STATE`;
 4. verify that the Firmware permits that Object/template at that `slot`;
 5. retain mismatches as evidence rather than forcing the nearest candidate.
 

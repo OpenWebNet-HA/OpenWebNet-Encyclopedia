@@ -126,8 +126,8 @@ Physical Device instance
 ├─ DIMENSION 1 catalogue-facing identity
 ├─ firmware, hardware, and microcontroller V.R.b values
 ├─ internal Module slot
-│  ├─ configured Object or Virgin Object
-│  ├─ configured state
+│  ├─ enabled regular Object or disabled Virgin Object
+│  ├─ enabled/disabled state
 │  ├─ system and functional address
 │  └─ indexed and Object-specific configuration values
 └─ errors, omissions, retries, and terminal evidence
@@ -184,7 +184,7 @@ Silence can mean:
 
 - unsupported optional response;
 - invalid Device or Module selector;
-- unconfigured Object;
+- disabled Module or unresolved Object state;
 - Device busy or not in the required local mode;
 - incomplete interview;
 - transport loss;

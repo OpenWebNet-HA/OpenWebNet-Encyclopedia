@@ -17,7 +17,7 @@ These roles share the numeric namespace but do not automatically share `WHERE` g
 | ZigBee network management, product inventory, and properties | [ZigBee Network Management](zigbee-network-management.md) |
 | Cross-namespace MyHOME_Suite `OPEN.db` evidence | [MyHOME_Suite `OPEN.db` Coverage](../open-db-coverage.md) |
 
-## SCS/TCP gateway capability groups
+## Published SCS/TCP gateway capability groups
 
 | Capability | `DIMENSION` | Access |
 | --- | ---: | --- |
@@ -33,7 +33,9 @@ These roles share the numeric namespace but do not automatically share `WHERE` g
 | Kernel version | `23` | Read |
 | Distribution version | `24` | Read |
 
-This surface supports gateway discovery and inventory, network identification, software/firmware reporting, clock synchronisation, and operational-health information such as uptime.
+This published surface supports gateway discovery and inventory, network identification, software/firmware reporting, clock synchronisation, and operational-health information such as uptime. It is not an exhaustive ceiling for later gateway implementations: first-hand F454 and MH202 observations establish an additional readable `DIMENSION 40`, whose semantics remain unknown. See the [`DIMENSION` Reference](dimensions.md#observed-implementation-extension-dimension-40).
+
+For gateway model identification, `DIMENSION 15` should be treated as one evidence source rather than as a guaranteed unique model discriminator. Later gateways can report values not covered by the historical model table, and distinct observed gateway models can share the same returned value. Where supported, diagnostic `WHO 1013 DIMENSION 1` provides the next identification layer.
 
 ## Integration-interface model in `OPEN.db`
 

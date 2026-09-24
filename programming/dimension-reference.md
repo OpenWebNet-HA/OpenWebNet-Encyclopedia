@@ -1,13 +1,13 @@
 # Programming `DIMENSION` Reference
 
-Programming `DIMENSION` writes transfer virtual configurator values, Object assignments, Module addresses, and indexed parameters. Related Device responses report the written state or structured errors.
+Programming `DIMENSION` writes transfer the configurator fields used by `ConfConfigurators`, Object assignments, Module addresses, and indexed parameters. Related Device responses report the written state or structured errors.
 
 ## Write frames
 
 | `DIMENSION` | Frame | Meaning | Sequence |
 | ---: | --- | --- | --- |
-| `4` | `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | write configurator positions 1..6 | `ConfConfigurators` |
-| `5` | `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | write configurator positions 7..12 | `ConfConfigurators` |
+| `4` | `*#[WHO]*0*#4*[C1]*[C2]*[C3]*[C4]*[C5]*[C6]##` | write configurator fields `C1..C6` | `ConfConfigurators` |
+| `5` | `*#[WHO]*0*#5*[C7]*[C8]*[C9]*[C10]*[C11]*[C12]##` | write configurator fields `C7..C12` | `ConfConfigurators` |
 | `30` | `*#[WHO]*0*#30*[SLOT]*[KEYO]##` | assign Object to `slot` | `ConfKO` |
 | `32` | `*#[WHO]*0*#32#[SLOT]*[SYS]*[ADDR]##` | assign Object system/address | `ConfKO` |
 | `35` | `*#[WHO]*0*#35#[INDEX]#[SLOT]*[VAL_PAR]##` | write indexed configuration value | `ConfKO` |
@@ -44,14 +44,16 @@ These are frame-field capacities. Catalogue and address rules define the values 
 
 ## `DIMENSION 4` and `5`
 
-`OPEN.db` labels the fields “Configurator value” and describes the sequence as virtual configuration. `N_CONF` gives the Device's physical configurator-position count, but the relationship between each `C` field and jumper presence/value has not yet been established. Preserve all twelve raw positions.
+`OPEN.db` labels each `C1..C12` field “Configurator value”, constrains it to `0..255`, and describes `ConfConfigurators` as virtual configuration. Those are transport and sequence facts. `MHCatalogue.db` separately defines firmware-specific physical symbols and legal domains. No canonical cross-database key establishes that `C1` is universally the `EN_CONF` definition with `progressive = 1`, or an equivalent positional mapping. Preserve all twelve raw fields and resolve any catalogue correlation separately through [Physical-configuration resolution](../internals/catalogue-resolution.md#dimension-4-and-5-are-a-transport-boundary).
 
 ## `DIMENSION 30`
 
 The write carries a configured Object number. Diagnostic state determines how a previously reported `KEYO` is resolved:
 
-- `STATE = 1`: `EN_KEY_OBJECT.key_object`;
-- `STATE = 0`: `EN_VIRGIN_OBJECT.virgin_key_object`.
+- `STATE = 0`: enabled Module, `EN_KEY_OBJECT.key_object`;
+- `STATE = 1`: disabled Module, `EN_VIRGIN_OBJECT.virgin_key_object`.
+
+This polarity applies to the `STATE` carried by `DIMENSION 30`; it must not be copied to the separate `STATE` field carried by `DIMENSION 31` without independent evidence.
 
 The target write must use a permitted configured Object, validated through Virgin Object, firmware, and slot associations.
 

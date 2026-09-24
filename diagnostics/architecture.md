@@ -77,14 +77,14 @@ Enumeration by ID adds a per-Device `WHAT 11` frame so an already reported Devic
 
 | Diagnostic data | Device-model interpretation |
 | --- | --- |
-| `DIMENSION 1` | item/model identity, physical configurator-position count (`N_CONF`), brand, and line |
+| `DIMENSION 1` | item/model identity, addressed-form physical configurator-position count (`N_CONF`), brand, and line; the empty-`WHERE` gateway form is a distinct variant |
 | `DIMENSION 2` | firmware version |
 | `DIMENSION 3` | hardware version |
 | `DIMENSION 4`, `5` | twelve configurator values |
 | `DIMENSION 6` | microcontroller version |
 | `DIMENSION 7`, `8` | diagnostic bitmasks |
 | `DIMENSION 13` | installed Device ID |
-| `DIMENSION 30` | `slot`, configured Object or unconfigured Virgin Object, and configured state |
+| `DIMENSION 30` | `slot`, enabled regular Object or disabled Virgin Object, and Module enabled/disabled state |
 | `DIMENSION 32` | `slot`, system selector, encoded address |
 | `DIMENSION 35` | configuration index, `slot`, value |
 | `DIMENSION 310` | Object-specific parameter without a generic index |

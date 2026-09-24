@@ -45,6 +45,8 @@ The scenarios expose two programming projections:
 
 These projections are not interchangeable. The address-selected scenario contains virtual-configurator transfer but no `ConfKO` sequence. The ID-selected scenario contains advanced Object transfer but no `ConfConfigurators` sequence. The local-interaction scenario contains both.
 
+These names are `OPEN.db` programming-sequence terminology. `MHCatalogue.db` independently registers Virtual Configuration and Advanced Configuration as distinct configuration modes, along with Physical configuration and Product Programming. Do not use one source's label as an undocumented umbrella for the other source's concepts.
+
 ## Safe workflow
 
 1. Resolve the diagnostic family and installed Physical Device.

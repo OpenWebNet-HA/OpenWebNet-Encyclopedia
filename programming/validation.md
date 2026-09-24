@@ -26,7 +26,7 @@ Retain raw frames beside decoded values. Do not replace an unresolved field with
 | ---: | --- | --- |
 | 1 | Resolve the installed Device | one item/firmware context or an explicit ambiguity set |
 | 2 | Resolve the Module | one Device-local `slot` and its catalogue placement |
-| 3 | Resolve the current role | configured Object or unconfigured Virgin Object |
+| 3 | Resolve the current role | enabled regular Object or disabled Module's Virgin Object |
 | 4 | Prove the target Object is available | one permitted target Object and Object/firmware association |
 | 5 | Build the property dictionary | applicable Object- and firmware-scoped `EN_CONF` definitions |
 | 6 | Establish write eligibility | writable, visible, fixed, hidden, or conditional status |
@@ -35,7 +35,7 @@ Retain raw frames beside decoded values. Do not replace an unresolved field with
 | 9 | Apply conditions and conversions | selected branches and encoded value |
 | 10 | Apply linked-property rules | cross-property-valid candidate configuration |
 | 11 | Validate addresses | valid `SYS`/`ADDR` encoding for the resolved Object |
-| 12 | Classify physical representation | physically representable, Virtual-only, or unresolved |
+| 12 | Classify physical representation | physically representable, outside the established physical domain, or unresolved |
 | 13 | Build wire values | validated `KEYO`, `SYS`/`ADDR`, and `INDEX`/`VAL_PAR` tuples |
 | 14 | Validate the complete transfer | internally consistent replacement payload and verification plan |
 
@@ -114,19 +114,19 @@ Interpret the current `DIMENSION 30.KEYO` in the correct external number space.
 
 | `STATE` | Resolve `KEYO` against | Meaning |
 | ---: | --- | --- |
-| `1` | `EN_KEY_OBJECT.key_object` | configured Object |
-| `0` | `EN_VIRGIN_OBJECT.virgin_key_object` | unconfigured Virgin Object |
+| `0` | `EN_KEY_OBJECT.key_object` | enabled Module; regular configured Object |
+| `1` | `EN_VIRGIN_OBJECT.virgin_key_object` | disabled Module; Virgin Object |
 
 Neither value is an internal database primary key. Likewise, protocol `SLOT` is not `EN_SLOTS.id_slot`.
 
-For an unconfigured Module, retain the Virgin Object as the role constraint from which permitted configured Objects will be derived. Do not send its `virgin_key_object` as a target `KEYO` merely because it was reported diagnostically.
+For a disabled Module, retain the Virgin Object as the role constraint from which permitted regular Objects will be derived. Do not send its `virgin_key_object` as a target `KEYO` merely because it was reported diagnostically.
 
 ### Milestone output
 
 Produce exactly one of:
 
-- a resolved current configured Object; or
-- a resolved Virgin Object with its functional role.
+- a resolved current regular Object for an enabled Module; or
+- a resolved Virgin Object with its functional role for a disabled Module.
 
 Stop if `STATE` is absent or if `KEYO` does not resolve uniquely in the selected namespace.
 
@@ -140,7 +140,7 @@ Reduce the global Object catalogue to the set supported by this firmware, Module
 
 ### Procedure
 
-1. If the Module is unconfigured, enumerate candidates related to its Virgin Object through `AS_OBJECT_VIRGIN_OBJECT`.
+1. If the Module is disabled, enumerate candidates related to its Virgin Object through `AS_OBJECT_VIRGIN_OBJECT`.
 2. Intersect that set with Objects related to the resolved firmware through `AS_OBJECT_FIRMWARE`.
 3. Intersect again with Objects placed at the resolved `slot` through `EN_SLOTS`.
 4. Apply `fixed_ko` and slot-condition metadata.
@@ -406,30 +406,30 @@ See [Address Programming](address-programming.md) and [Address Discovery](../dia
 
 ### Goal
 
-Determine whether the effective property could also be represented by physical configurators. This does not determine which method configured the installed value.
+Determine whether the effective property could also be represented by physical configurators. This does not determine which configuration mode produced the installed value.
 
-1. Confirm through `AS_FIRMWARE_CONFIG_MODE` and `EN_CONFIG_MODE` that the firmware supports physical configuration.
-2. Enumerate firmware-scoped physical `EN_CONF` definitions, normally represented with `idx = -1`.
-3. Exclude the common `AID`/ID field.
-4. For an address, compare decoded `DIMENSION 32` components with physical positions such as `A` and `PL`.
-5. For an indexed property, compare its `EN_CONF` definition with positions such as `M`, `TYPE`, `PRE`, or `G1`.
-6. Compare symbol, semantic type, domain, filters, `CONF_SYMBOL_REF`, conversion rules, `EN_PHY_TO_ADV_TRANS`, product documentation, and captures.
-7. Establish the physical value domain independently from the Virtual domain.
+1. Confirm through `AS_FIRMWARE_CONFIG_MODE` and `EN_CONFIG_MODE` that the firmware supports the distinct Physical configuration mode.
+2. Enumerate demonstrated physical firmware-scoped `EN_CONF` definitions; do not treat `idx = -1` alone as proof because the common `AID`/ID field shares that structure.
+3. Resolve each physical symbol's legal domain through its exact `EN_CONF_RANGE`.
+4. For an address, compare decoded `DIMENSION 32` components with applicable physical symbols such as `A` and `PL`.
+5. For an indexed property, compare its resolved Object definition with applicable firmware physical symbols such as `M`, `TYPE`, `PRE`, or `G1`.
+6. Compare symbol, semantic type, domain, filters, `CONF_SYMBOL_REF`, conversion rules, sparse `EN_PHY_TO_ADV_TRANS` evidence, product documentation, and captures where applicable.
+7. Establish the physical domain independently from the programming transport domain.
 
 Classify the result as:
 
 | Classification | Meaning |
 | --- | --- |
-| direct counterpart | symbol and semantics match |
-| mapped counterpart | different symbols, but a conversion or corroborated semantic mapping exists |
+| direct counterpart | symbol and semantics match in the resolved context |
+| mapped counterpart | different symbols, but a conversion or independently corroborated semantic mapping exists |
 | physically representable | intended effective value lies in the established physical domain |
-| Virtual-only value | property may have a counterpart, but this value is outside the physical domain |
-| Virtual-only property | independent evidence establishes the complete physical interface and excludes a counterpart; a missing catalogue match alone is insufficient |
-| unresolved | evidence is insufficient |
+| outside established physical domain | a counterpart is established, but this value is not in its legal physical domain |
+| no physical counterpart established | inspected evidence does not establish a counterpart; this is not proof that none exists |
+| unresolved | required physical-interface or mapping evidence is insufficient |
 
-“Virtual configuration” is the general MyHOME_Suite configuration category opposed to physical configurators. Advanced Object programming and virtual-configurator transfer are both Virtual configuration mechanisms.
+The canonical catalogue registers Virtual Configuration and Advanced Configuration as distinct modes. `OPEN.db` separately labels `ConfConfigurators` as virtual configuration and `ConfKO` as advanced configuration. Do not replace these source labels with a single umbrella category or infer the active mode from effective values alone.
 
-See [Configuration](../device-model/configuration.md#physical-configurator-counterparts).
+If physical configurator values are themselves being resolved into a topology, use the deterministic reachability and Object-selection method in [Catalogue Resolution](../internals/catalogue-resolution.md#physical-configuration-resolution) before property-level validation.
 
 ## 13. Encode programming tuples
 
@@ -440,7 +440,7 @@ Only after semantic validation should values be converted into frames.
 | Object selection | `(SLOT, EN_KEY_OBJECT.key_object)` for `DIMENSION 30` |
 | Module address | `(SLOT, SYS, ADDR)` for `DIMENSION 32` |
 | indexed property | `(INDEX, SLOT, VAL_PAR)` for `DIMENSION 35` |
-| virtual-configurator fields | twelve raw values for `DIMENSION 4` and `5`, subject to Device support |
+| `ConfConfigurators` fields | twelve raw values for `DIMENSION 4` and `5`, subject to Device support and unresolved catalogue-position correlation |
 
 For each encoded value retain:
 
@@ -486,7 +486,7 @@ Validation should return evidence, not only a Boolean.
 | valid after conversion | allowed after a documented conversion path |
 | conditionally valid | valid only while stated dependencies hold |
 | physically representable | a physical counterpart and compatible physical value exist |
-| Virtual-only | valid through MyHOME_Suite but not physically representable |
+| outside established physical domain | valid in the resolved programming context but outside a demonstrated physical counterpart's domain |
 | fixed/read-only | part of effective state but not an arbitrary write |
 | invalid | excluded by an applicable capability, domain, filter, condition, or rule |
 | ambiguous | more than one incompatible resolution remains |
