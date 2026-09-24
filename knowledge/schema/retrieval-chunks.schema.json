@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/retrieval-chunks.schema.json",
+  "title": "Machine KB retrieval chunk records (pre-release)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["document_id", "format_version", "id", "kind", "label", "namespace_context", "privacy", "provenance", "qualification_cues", "section_id", "section_path", "source_path", "text"],
+  "properties": {
+    "document_id": {"type": "string", "pattern": "^ownkb:document:"},
+    "format_version": {"const": "0.1.0"},
+    "id": {"type": "string", "pattern": "^ownkb:chunk:r[0-9]{6}$"},
+    "kind": {"const": "retrieval_chunk"},
+    "label": {"type": "string", "minLength": 1},
+    "namespace_context": {"type": "object", "additionalProperties": false, "required": ["area", "namespace"], "properties": {"area": {"enum": ["protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering"]}, "namespace": {"type": "string", "minLength": 1}}},
+    "privacy": {"$ref": "https://openwebnet-encyclopedia.example/schema/privacy-metadata-1.json"},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["document_id", "evidence_class", "path", "section_id", "source_id"], "properties": {"document_id": {"type": "string", "pattern": "^ownkb:document:"}, "evidence_class": {"const": "canonical_documentation"}, "path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+\\.md$"}, "section_id": {"type": "string", "pattern": "^ownkb:section:"}, "source_id": {"type": "string", "pattern": "^ownkb:source:"}}},
+    "qualification_cues": {"type": "object", "additionalProperties": false, "required": ["applicability_cues", "caution_cues", "provenance_cues", "uncertainty_cues"], "properties": {"applicability_cues": {"$ref": "#/$defs/cues"}, "caution_cues": {"$ref": "#/$defs/cues"}, "provenance_cues": {"$ref": "#/$defs/cues"}, "uncertainty_cues": {"$ref": "#/$defs/cues"}}},
+    "section_id": {"type": "string", "pattern": "^ownkb:section:"},
+    "section_path": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "source_path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+\\.md$"},
+    "text": {"type": "string", "minLength": 1}
+  },
+  "$defs": {"cues": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}
+}

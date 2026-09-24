@@ -1,5 +1,5 @@
 # Retrieval Corpus
 
-This directory is reserved for generated `chunks.jsonl` records used by embedding pipelines, search indexes, and retrieval-augmented generation systems.
+[`chunks.jsonl`](chunks.jsonl) is the deterministic retrieval projection of the shared semantic IR. A chunk is one nonempty canonical section, so it retains a coherent section boundary rather than an arbitrary token window. Every record carries a curated stable chunk ID, document and section IDs, source path, section hierarchy, namespace context, provenance, privacy classification, and lexical applicability, caution, uncertainty, and provenance cues.
 
-Each chunk must remain meaningful outside its original page and carry stable identity, source location, section hierarchy, namespace, version scope, evidence status, and related identifiers. Chunking must not detach a protocol value from its `WHO` or turn a qualified interpretation into an unconditional claim.
+`guides/` does not enter this corpus. Empty structural sections are counted separately in `knowledge/manifest.json`; the manifest also distinguishes canonical coverage, excluded guides, and emitted chunks. Validate records with [`../schema/retrieval-chunks.schema.json`](../schema/retrieval-chunks.schema.json), or run `python check.py`.

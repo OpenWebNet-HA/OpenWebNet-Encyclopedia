@@ -10,7 +10,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete** - closed source-manifest and prepared-source schemas, deterministic local source gate, sanitization, source exclusion, schema tests, and retained final scanner |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | **Complete** - closed canonical input manifest, curated identities, shared structural IR, guide remediation hints, full-tree integration and tests |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | **Complete** - top-level build/check entry points, canonical serialization, committed manifest and schema, clean double-build gate, and temporary-output support |
-| 6 | Generated LLM corpus and retrieval chunks from the shared IR | Pending |
+| 6 | Generated LLM corpus and retrieval chunks from the shared IR | **Complete** - deterministic full corpus, coherent section chunks, closed retrieval schema, manifest inventory and coverage, freshness and privacy validation |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | Pending |
 | 8 | Reviewed atomic claim framework and representative fixtures | Pending |
 | 9 | Initial claim population, batch 1 | Pending |
@@ -60,6 +60,12 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Centralized compact UTF-8 NFC JSON/JSONL serialization rejects floats, out-of-range integers, non-NFC strings, duplicate or unsorted JSONL IDs, and unsupported types. JSONL record count support is centralized for later artifact renderers; schemas have no record count.
 - `check.py` builds twice in clean temporary roots, compares manifest bytes, validates the manifest schema and exact serialization, verifies the committed manifest is fresh, and invokes the final privacy scan.
 
+## Phase 6 verification
+
+- Generated `knowledge/llm/llm-corpus.md` and `knowledge/retrieval/chunks.jsonl` exclusively from the shared IR. The corpus retains document and section boundaries, source paths, namespace context, and qualification cues. Each retrieval chunk is one nonempty canonical section and carries the same context in a closed schema.
+- Committed 1,052 curated chunk identities. The complete canonical set has 123 documents and 1,081 sections; 1,052 content sections emit chunks and 29 empty structural sections are counted separately. All ten procedural guides are excluded, with the existing 183 remediation hints retained in manifest coverage.
+- Extended the build manifest with corpus/chunk hashes and record counts, coverage dimensions, and artifact freshness validation. The double-build gate compares every generated artifact byte-for-byte and validates the chunk schema and canonical JSONL.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement the first LLM corpus and retrieval chunks from the shared IR using the completed build and check infrastructure. Keep guides excluded and review the guide remediation queue before corpus publication. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement controlled reference registries from the shared IR. Keep guides excluded and review the guide remediation queue before expanding corpus coverage. The contract remains pre-release.
