@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release. The [Phase 1 consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) are approved for implementation; there is no complete generated Machine KB or published v1 contract yet. Phase 2 must implement and test schemas and finalize exact reference filenames and record shapes. Consumers should not infer a released interface from the current empty output directories.
+**Status:** Pre-release. The [Phase 1 consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) are approved for implementation; there is no complete generated Machine KB or published v1 contract yet. Phase 2 schemas and reference filenames are defined; Phases 3 and 4 provide the privacy source gate and shared internal IR. The manifest and generated output families remain pending. Consumers should not infer a released interface from the current empty output directories.
 
 ## Intended consumer contract
 

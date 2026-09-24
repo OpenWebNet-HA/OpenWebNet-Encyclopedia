@@ -8,7 +8,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | **Complete** - contract and policy reviewed against long-term change cases; no v1 data released |
 | 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | **Complete** - curated schemas, valid/invalid fixtures, offline validator, golden JSONL; no dataset generated |
 | 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete** - closed source-manifest and prepared-source schemas, deterministic local source gate, sanitization, source exclusion, schema tests, and retained final scanner |
-| 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | Pending |
+| 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | **Complete** - closed canonical input manifest, curated identities, shared structural IR, guide remediation hints, full-tree integration and tests |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | Pending |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | Pending |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | Pending |
@@ -41,12 +41,19 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Added publishable-only privacy metadata and prepared-source schemas with `additionalProperties: false`, plus safe fixtures and unit tests. The existing full-output pattern scanner remains the final publication gate. No test fixture contains a private value.
 - Verified: `python -m unittest discover -s knowledge/tests -v`; `python knowledge/tools/validate_privacy.py`; `python -m json.tool knowledge/schema/privacy-metadata.schema.json`; `python -m json.tool knowledge/schema/source-manifest.schema.json`; `python -m json.tool knowledge/schema/prepared-source.schema.json`; `git diff --check`; `python project/review/checks/check_esg.py .`; `python project/review/checks/check_ecv.py .`.
 
-## Next session
-
-Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 2 schemas, controlled vocabularies, and tests only. Reuse the completed privacy metadata and prepared-source boundary rather than bypassing it. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.
-
 ## Phase 2 verification
 
 - Implemented closed Draft 2020-12 common, record variant, and curated ID lifecycle schemas. Evidence, confidence, epistemic standing, typed value state, scoped applicability, privacy, and references are distinct and required.
 - Verified seven schema tests covering all record kinds, registry lifecycle, invalid cases, and exact JSONL bytes. Existing ECV/ESG and privacy checks also ran; the privacy scanner still scans zero generated artifacts.
 - Cross-artifact integrity, input sanitization, source agreement, and release certification remain later gates.
+
+## Phase 4 verification
+
+- Combined the completed Phase 2 schema work and Phase 3 source gate on this branch; normalized Phase 3 source IDs and privacy removal classes to the consumer contract and Phase 2 vocabulary.
+- Parsed all 123 canonical Markdown pages into one internal IR with 1,081 sections. Two public documentation pages require deterministic sanitization. No guide page entered the IR.
+- Flagged 183 candidate guide-only factual lines across ten guide pages for human documentation review. This is a heuristic remediation queue, not 183 established omissions; path and line only are emitted.
+- Tests cover representative protocol, functional, diagnostics, programming, device-model, internals, reverse-engineering, and procedural guide fixtures, structural preservation, stable identities, unsupported HTML, and byte determinism. No output families have been implemented.
+
+## Next session
+
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement Phase 5's manifest, deterministic rebuild comparison, and common build/check commands from the single IR. Keep guides excluded and review the guide remediation queue before corpus publication. The contract remains pre-release.

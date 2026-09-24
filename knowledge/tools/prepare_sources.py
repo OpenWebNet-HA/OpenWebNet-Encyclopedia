@@ -41,10 +41,10 @@ TRANSFORMS: tuple[tuple[str, re.Pattern[str], str], ...] = (
     ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\*{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"), "[NETWORK_ADDRESS]"),
-    ("mac_address", re.compile(r"(?i)(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])"), "[MAC_ADDRESS]"),
-    ("instance_identifier", re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"), "[INSTANCE_IDENTIFIER]"),
-    ("personal_identifier", re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"), "[PERSONAL_IDENTIFIER]"),
-    ("local_path", re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"), "[LOCAL_PATH]"),
+    ("hardware_id", re.compile(r"(?i)(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])"), "[MAC_ADDRESS]"),
+    ("hardware_id", re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"), "[INSTANCE_IDENTIFIER]"),
+    ("person_identifier", re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"), "[PERSONAL_IDENTIFIER]"),
+    ("other", re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"), "[LOCAL_PATH]"),
     ("credential", re.compile(r"(?i)\b(password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*[\"']?[^\s\"'<>]{4,}"), r"\1=[REDACTED]"),
 )
 
@@ -70,7 +70,7 @@ def validate_manifest_record(record: dict[str, object], label: str) -> None:
         raise ValueError(f"{label}: manifest fields must be exactly {sorted(expected)}")
     if not all(isinstance(record[key], str) for key in expected):
         raise ValueError(f"{label}: all manifest fields must be strings")
-    if not re.fullmatch(r"ownkb:source/[a-z0-9]+(?:-[a-z0-9]+)*", str(record["source_id"])):
+    if not re.fullmatch(r"ownkb:source:[a-z0-9]+(?:-[a-z0-9]+)*", str(record["source_id"])):
         raise ValueError(f"{label}: invalid source_id")
     source_path = str(record["source_path"])
     if not re.fullmatch(r"[A-Za-z0-9._/-]+", source_path) or source_path.startswith("/") or ".." in Path(source_path).parts:

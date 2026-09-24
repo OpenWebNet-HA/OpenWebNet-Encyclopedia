@@ -16,11 +16,10 @@
         "type": "string",
         "enum": [
           "network_address",
-          "mac_address",
-          "instance_identifier",
+          "hardware_id",
           "credential",
-          "personal_identifier",
-          "local_path"
+          "person_identifier",
+          "other"
         ]
       },
       "uniqueItems": true

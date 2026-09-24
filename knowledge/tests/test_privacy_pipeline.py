@@ -38,7 +38,7 @@ class PrivacyPipelineTests(unittest.TestCase):
     def test_prohibited_capture_is_excluded_without_being_read(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            manifest = self.write_manifest(root, [{"source_id": "ownkb:source/lab-capture", "source_path": "captures/never-read.pcapng", "source_type": "capture", "classification": "prohibited"}])
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:lab-capture", "source_path": "captures/never-read.pcapng", "source_type": "capture", "classification": "prohibited"}])
             self.assertEqual([], self.pipeline.prepare(manifest, root))
 
     def test_safe_and_prohibited_manifest_fixtures_follow_closed_rules(self):
@@ -63,7 +63,7 @@ class PrivacyPipelineTests(unittest.TestCase):
             (root / "docs").mkdir()
             address = ".".join(("203", "0", "113", "23"))  # RFC 5737 documentation address.
             (root / "docs/example.md").write_text(f"Example endpoint {address} is illustrative.", encoding="utf-8")
-            manifest = self.write_manifest(root, [{"source_id": "ownkb:source/public-example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "sanitize"}])
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:public-example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "sanitize"}])
             record = self.pipeline.prepare(manifest, root)[0]
             self.assertEqual({"classification": "sanitized", "removed_value_classes": ["network_address"]}, record["privacy"])
             self.assertEqual("Example endpoint [NETWORK_ADDRESS] is illustrative.", record["text"])
@@ -73,7 +73,7 @@ class PrivacyPipelineTests(unittest.TestCase):
             root = Path(temporary)
             (root / "docs").mkdir()
             (root / "docs/example.md").write_text("Address " + ".".join(("203", "0", "113", "24")), encoding="utf-8")
-            manifest = self.write_manifest(root, [{"source_id": "ownkb:source/public-example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:public-example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
             with self.assertRaisesRegex(ValueError, "classify it sanitize"):
                 self.pipeline.prepare(manifest, root)
 
@@ -82,7 +82,7 @@ class PrivacyPipelineTests(unittest.TestCase):
             root = Path(temporary)
             (root / "docs").mkdir()
             (root / "docs/example.md").write_text("Payload uses IP1*IP2*IP3*IP4 and MAC1*MAC2*MAC3*MAC4*MAC5*MAC6.", encoding="utf-8")
-            manifest = self.write_manifest(root, [{"source_id": "ownkb:source/protocol-placeholders", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:protocol-placeholders", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
             record = self.pipeline.prepare(manifest, root)[0]
             self.assertEqual({"classification": "public", "removed_value_classes": []}, record["privacy"])
 
@@ -106,7 +106,7 @@ class PrivacyPipelineTests(unittest.TestCase):
             output.unlink(missing_ok=True)
 
     def test_manifest_rejects_unreviewed_fields_and_misclassified_log(self):
-        record = {"source_id": "ownkb:source/observations", "source_path": "logs/session.txt", "source_type": "log", "classification": "publishable", "note": "unreviewed"}
+        record = {"source_id": "ownkb:source:observations", "source_path": "logs/session.txt", "source_type": "log", "classification": "publishable", "note": "unreviewed"}
         with self.assertRaisesRegex(ValueError, "manifest fields"):
             self.pipeline.validate_manifest_record(record, "test")
 
