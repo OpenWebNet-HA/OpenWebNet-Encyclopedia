@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/manifest.schema.json",
+  "title": "Machine KB manifest (pre-release)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifacts", "format_version", "generator_version", "input_content_sha256", "schema_compatibility_version"],
+  "properties": {
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["format_version", "kind", "path", "sha256"],
+        "properties": {
+          "format_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+          "kind": {"enum": ["schema", "llm_corpus", "retrieval_chunks", "claim_records", "reference_registry"]},
+          "path": {"type": "string", "pattern": "^knowledge/(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+$"},
+          "record_count": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "format_version": {"const": "0.1.0"},
+    "generator_version": {"const": "ownkb-build-0.1.0"},
+    "input_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "schema_compatibility_version": {"const": "0.1.0"}
+  }
+}

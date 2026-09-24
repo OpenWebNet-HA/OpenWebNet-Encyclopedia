@@ -14,6 +14,7 @@ The repository's human-readable Markdown pages remain authoritative. Generated r
 | [`reference/`](reference/) | Controlled glossary, namespaces, sources, relationships, cautions, and open questions |
 | [`policy/`](policy/) | Mandatory privacy and publication rules applied before machine artifacts are written |
 | [`schema/`](schema/) | Machine-readable schemas and format contracts for every generated artifact |
+| [`manifest.json`](manifest.json) | Deterministic inventory of the current public artifact set, compatibility versions, and content hashes |
 | [`tools/`](tools/) | Deterministic generation, linting, validation, and consistency tooling |
 
 Generated files belong in their audience-specific directory. Do not mix source documentation, canonical evidence files, or manually maintained protocol prose into this hierarchy.
@@ -39,3 +40,7 @@ The generators must produce stable ordering and byte-for-byte repeatable output 
 Every artifact in this directory is public and intended for broad automated distribution. The [Machine Knowledge Privacy Policy](policy/privacy.md) therefore applies before extraction, during normalization, and after generation. Concrete IP addresses, MAC addresses, installed Device IDs, credentials, private capture contents, installation topology, user identifiers, and similar private values must never enter an artifact. Protocol field names and placeholder grammars may be retained without their observed values.
 
 Generation fails closed when a value cannot be classified safely. Redaction occurs before chunking and claim extraction so private text cannot survive in embeddings, metadata, identifiers, logs, or derived records.
+
+## Build and verification
+
+Run `python build.py` to generate the committed manifest, or pass `--output-root PATH` to write only build output beneath a clean temporary directory. Run `python check.py` to verify fresh canonical output, byte-for-byte double-build determinism, manifest schema and serialization, and the privacy publication gate.

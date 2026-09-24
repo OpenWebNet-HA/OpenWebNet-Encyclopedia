@@ -9,7 +9,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | **Complete** - curated schemas, valid/invalid fixtures, offline validator, golden JSONL; no dataset generated |
 | 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete** - closed source-manifest and prepared-source schemas, deterministic local source gate, sanitization, source exclusion, schema tests, and retained final scanner |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | **Complete** - closed canonical input manifest, curated identities, shared structural IR, guide remediation hints, full-tree integration and tests |
-| 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | Pending |
+| 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | **Complete** - top-level build/check entry points, canonical serialization, committed manifest and schema, clean double-build gate, and temporary-output support |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | Pending |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | Pending |
 | 8 | Reviewed atomic claim framework and representative fixtures | Pending |
@@ -54,6 +54,12 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Flagged 183 candidate guide-only factual lines across ten guide pages for human documentation review. This is a heuristic remediation queue, not 183 established omissions; path and line only are emitted.
 - Tests cover representative protocol, functional, diagnostics, programming, device-model, internals, reverse-engineering, and procedural guide fixtures, structural preservation, stable identities, unsupported HTML, and byte determinism. No output families have been implemented.
 
+## Phase 5 verification
+
+- Added top-level `build.py` and `check.py`. The build derives an internal IR digest, inventories the current seven public schema contracts, and writes a canonical `knowledge/manifest.json` without timestamps, random values, absolute paths, network access, or consumer settings.
+- Centralized compact UTF-8 NFC JSON/JSONL serialization rejects floats, out-of-range integers, non-NFC strings, duplicate or unsorted JSONL IDs, and unsupported types. JSONL record count support is centralized for later artifact renderers; schemas have no record count.
+- `check.py` builds twice in clean temporary roots, compares manifest bytes, validates the manifest schema and exact serialization, verifies the committed manifest is fresh, and invokes the final privacy scan.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement Phase 5's manifest, deterministic rebuild comparison, and common build/check commands from the single IR. Keep guides excluded and review the guide remediation queue before corpus publication. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, and these decisions. Implement the first LLM corpus and retrieval chunks from the shared IR using the completed build and check infrastructure. Keep guides excluded and review the guide remediation queue before corpus publication. The contract remains pre-release.
