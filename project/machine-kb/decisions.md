@@ -16,12 +16,13 @@ Record durable choices here with status and rationale. A later decision may supe
 | MKB-010 | Accepted, Phase 1 | Separate epistemic standing, value availability, and scoped applicability. Represent unresolved and contradictory evidence explicitly; missing records or nulls make no negative assertion. Exact enum values await Phase 2. [Contract](consumer-contract.md#meaning-of-incomplete-or-conflicting-knowledge) |
 | MKB-011 | Accepted, Phase 1 | Curate ID/alias registry and reviewed claim inputs in Git; generate all public data through one IR. Contract and per-artifact formats use compatibility versions distinct from Git content snapshots. [Versioning](schema-versioning.md) |
 | MKB-012 | Accepted, Phase 1 | A closed-schema property or enum addition is breaking unless a predefined extension point and fallback make it compatible. Privacy withdrawal takes priority over ID retention. [Versioning](schema-versioning.md) |
+| MKB-013 | Accepted, Phase 3 | Every candidate source is classified by a closed local manifest before extraction. Prohibited private-source classes are never opened; public sources with recognised sensitive shapes require deterministic sanitization before any derived record exists. Prepared records carry only `public` or `sanitized` privacy metadata, and the final generated-tree scanner remains mandatory. |
 
 ## Open decisions for Phase 1 and later
 
 | ID | Target phase | Question |
 | --- | --- | --- |
 | MKB-O03 | 2 | Exact schema shapes and controlled epistemic/evidence/relationship vocabularies mapped to Encyclopedia language |
-| MKB-O04 | 3 | Source classification and field-aware sanitization, including safe public fixtures and scanner limits |
+| MKB-O04 | Resolved, 3 | Source classification and deterministic sanitization use safe fixtures and retain scanner limits; future field transforms require policy and test updates |
 | MKB-O05 | 4 and 8 | IR structure and reviewed claim input representation |
 | MKB-O06 | 2 | Concrete registry schemas and golden serialization examples; exact reference file names and corpus format before v1 |

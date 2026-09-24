@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-encyclopedia.example/schema/privacy-metadata-1.json",
+  "title": "Publishable privacy metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["classification", "removed_value_classes"],
+  "properties": {
+    "classification": {
+      "type": "string",
+      "enum": ["public", "sanitized"]
+    },
+    "removed_value_classes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "network_address",
+          "mac_address",
+          "instance_identifier",
+          "credential",
+          "personal_identifier",
+          "local_path"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"classification": {"const": "public"}}},
+      "then": {"properties": {"removed_value_classes": {"maxItems": 0}}}
+    },
+    {
+      "if": {"properties": {"classification": {"const": "sanitized"}}},
+      "then": {"properties": {"removed_value_classes": {"minItems": 1}}}
+    }
+  ]
+}

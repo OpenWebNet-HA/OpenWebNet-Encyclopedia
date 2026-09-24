@@ -38,7 +38,7 @@ PATTERNS = {
         r"(?i)\b(?:device[ _-]?id|device identifier)\b[^\n]{0,40}\b[0-9a-f]{8}\b"
     ),
     "credential assignment": re.compile(
-        r"(?i)\b(?:password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*[\"']?[^\s\"'<>]{4,}"
+        r"(?i)\b(?:password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*(?![\"']?\[REDACTED\](?=[^A-Za-z0-9_]|$))[\"']?[^\s\"'<>]{4,}"
     ),
     "private filesystem path": re.compile(
         r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"
