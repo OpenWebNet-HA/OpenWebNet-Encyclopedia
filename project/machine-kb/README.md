@@ -2,7 +2,7 @@
 
 This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; `knowledge/` is its public machine projection.
 
-**Current state (2026-09-24): Phases 0 through 9 complete.** The `machine-knowledge-base` branch has the privacy-gated shared IR, deterministic build/check infrastructure, generated LLM corpus and retrieval chunks, canonical reference registries, the atomic-claim framework, and a first bounded claim population for `protocol/` and `functional/`. The [consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) define the intended interface, but no public dataset has been certified or released. See the [roadmap](roadmap.md) and [review ledger](review-ledger.md) for exact counts, remaining domains, drift/CI work, and certification gates.
+**Current state (2026-09-24): Phases 0 through 10 complete.** The `machine-knowledge-base` branch has the privacy-gated shared IR, deterministic build/check infrastructure, generated LLM corpus and retrieval chunks, canonical reference registries, the atomic-claim framework, and bounded claim populations for `protocol/`, `functional/`, `diagnostics/`, `programming/`, and `device-model/`. The [consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) define the intended interface, but no public dataset has been certified or released. See the [roadmap](roadmap.md) and [review ledger](review-ledger.md) for exact counts, remaining domains, drift/CI work, and certification gates.
 
 | File | Use |
 | --- | --- |
@@ -17,4 +17,4 @@ This directory is the durable operating record for the [Machine-Readable Knowled
 
 The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. These project-control pages describe the planned implementation and do not themselves constitute released schemas or generated data.
 
-**Next:** Phase 10 continues atomic-claim population as a separately reviewed domain batch. Guide remediation, cross-artifact drift checks, full release CI, and independent certification remain open.
+**Next:** Phase 11 continues atomic-claim population as a separately reviewed domain batch. Guide remediation, cross-artifact drift checks, full release CI, and independent certification remain open.

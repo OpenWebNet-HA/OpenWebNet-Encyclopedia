@@ -17,7 +17,7 @@ from render_references import REFERENCE_FILES, reference_records  # noqa: E402
 from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.5.0"
+GENERATOR_VERSION = "ownkb-build-0.6.0"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"

@@ -23,13 +23,13 @@
     },
     "coverage": {"type": "object", "additionalProperties": false, "required": ["canonical", "guides", "llm_corpus", "references", "retrieval", "claims"], "properties": {"canonical": {"$ref": "#/$defs/metrics"}, "guides": {"$ref": "#/$defs/metrics"}, "llm_corpus": {"$ref": "#/$defs/metrics"}, "references": {"$ref": "#/$defs/metrics"}, "retrieval": {"$ref": "#/$defs/metrics"}, "claims": {"$ref": "#/$defs/claimMetrics"}}},
     "format_version": {"const": "0.1.0"},
-    "generator_version": {"const": "ownkb-build-0.5.0"},
+    "generator_version": {"const": "ownkb-build-0.6.0"},
     "input_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "schema_compatibility_version": {"const": "0.1.0"}
   },
   "$defs": {
     "metrics": {"type": "object", "additionalProperties": false, "properties": {"candidate_sections": {"type": "integer", "minimum": 0}, "documents": {"type": "integer", "minimum": 0}, "emitted_chunks": {"type": "integer", "minimum": 0}, "empty_sections": {"type": "integer", "minimum": 0}, "excluded_documents": {"type": "integer", "minimum": 0}, "included_documents": {"type": "integer", "minimum": 0}, "included_sections": {"type": "integer", "minimum": 0}, "records": {"type": "integer", "minimum": 0}, "remediation_hints": {"type": "integer", "minimum": 0}, "sanitized_documents": {"type": "integer", "minimum": 0}, "sections": {"type": "integer", "minimum": 0}}},
     "claimDomainMetrics": {"type": "object", "additionalProperties": false, "required": ["claims", "documents", "reviewed_nonclaim_sections", "sections", "sections_with_claims"], "properties": {"claims": {"type": "integer", "minimum": 0}, "documents": {"type": "integer", "minimum": 0}, "reviewed_nonclaim_sections": {"type": "integer", "minimum": 0}, "sections": {"type": "integer", "minimum": 0}, "sections_with_claims": {"type": "integer", "minimum": 0}}},
-    "claimMetrics": {"type": "object", "additionalProperties": false, "required": ["bounded_domains", "records"], "properties": {"bounded_domains": {"type": "object", "additionalProperties": false, "required": ["functional", "protocol"], "properties": {"functional": {"$ref": "#/$defs/claimDomainMetrics"}, "protocol": {"$ref": "#/$defs/claimDomainMetrics"}}}, "records": {"type": "integer", "minimum": 0}}}
+    "claimMetrics": {"type": "object", "additionalProperties": false, "required": ["bounded_domains", "records"], "properties": {"bounded_domains": {"type": "object", "additionalProperties": false, "required": ["device-model", "diagnostics", "functional", "programming", "protocol"], "properties": {"device-model": {"$ref": "#/$defs/claimDomainMetrics"}, "diagnostics": {"$ref": "#/$defs/claimDomainMetrics"}, "functional": {"$ref": "#/$defs/claimDomainMetrics"}, "programming": {"$ref": "#/$defs/claimDomainMetrics"}, "protocol": {"$ref": "#/$defs/claimDomainMetrics"}}}, "records": {"type": "integer", "minimum": 0}}}
   }
 }

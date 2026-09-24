@@ -50,9 +50,12 @@ class BuildInfrastructureTests(unittest.TestCase):
             self.assertNotIn("guides/", first.read_text())
             self.assertEqual(123, manifest["coverage"]["canonical"]["documents"])
             self.assertEqual(1052, manifest["coverage"]["retrieval"]["emitted_chunks"])
-            self.assertEqual(3533, manifest["coverage"]["claims"]["records"])
+            self.assertEqual(6217, manifest["coverage"]["claims"]["records"])
             self.assertEqual(651, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
             self.assertEqual(2877, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
+            self.assertEqual(922, manifest["coverage"]["claims"]["bounded_domains"]["diagnostics"]["claims"])
+            self.assertEqual(891, manifest["coverage"]["claims"]["bounded_domains"]["programming"]["claims"])
+            self.assertEqual(876, manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
 
     def test_rendered_artifacts_preserve_context_and_exclude_guides(self):
         with tempfile.TemporaryDirectory() as temporary:
