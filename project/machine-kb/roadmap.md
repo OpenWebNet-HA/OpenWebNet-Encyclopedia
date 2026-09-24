@@ -5,7 +5,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
 | 0 | Persist architecture, decisions, maintenance, release gates, review state; verify and commit | **Complete** - this project-control area; no generator delivered |
-| 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | Pending - next |
+| 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | **Complete** - contract and policy reviewed against long-term change cases; no v1 data released |
 | 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | Pending |
 | 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | Pending - initial policy/scanner/CI already present, not sufficient alone |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | Pending |
@@ -28,6 +28,12 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Added only project-control Markdown and a link from `project/README.md`. No datasets, schemas, generator, or CI behavior changed.
 - Verified: `git diff --check`; `python project/review/checks/check_esg.py .` (0 objective failures); `python project/review/checks/check_ecv.py .` (0 objective failures); relative-link existence across these control pages; `python knowledge/tools/validate_privacy.py` (passed, **0 generated artifacts scanned**). These checks do not certify an unreleased dataset.
 
+## Phase 1 verification
+
+- Reviewed page/heading moves, section splits and rechunking, evidence revisions, namespace collisions, multi-target retirement, cross-language serialization, and privacy withdrawal. Contract rules and remaining implementation checks are recorded in [Consumer Contract](consumer-contract.md#stability-challenge-before-v1).
+- Defined ID syntax and lifecycle, manifest discovery, deterministic bytes, ownership, knowledge-state semantics, and compatibility policy. Concrete schemas, registry, golden vectors, and all generated records remain Phase 2 onward.
+- Verified: `git diff --check`; `python project/review/checks/check_esg.py .` (0 objective failures); `python project/review/checks/check_ecv.py .` (0 objective failures); relative-link existence across `project/machine-kb/*.md`; `python knowledge/tools/validate_privacy.py` (passed, **0 generated artifacts scanned**). These checks verify the Phase 1 documentation and existing mechanical gates, not an unreleased dataset.
+
 ## Next session
 
-Read [README](README.md), [architecture](architecture.md), [decisions](decisions.md), [release](release.md), the [privacy policy](../../knowledge/policy/privacy.md), and affected existing `knowledge/` files. Implement Phase 1 only; challenge compatibility choices before freezing them. Update decisions, ledger, and this table after its checks. Do not treat the Phase 0 release outline as a published v1 contract.
+Read [README](README.md), [architecture](architecture.md), [consumer contract](consumer-contract.md), [schema versioning](schema-versioning.md), [decisions](decisions.md), the [Core Values](../encyclopedia-core-values.md), and [privacy policy](../../knowledge/policy/privacy.md). Implement Phase 2 schemas, controlled vocabularies, and tests only. Update decisions, ledger, and this table after checks. The contract is an implementation target, not a released v1 dataset.

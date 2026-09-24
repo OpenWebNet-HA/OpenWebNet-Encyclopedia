@@ -1,12 +1,12 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release design outline. There is no complete generated Machine KB or frozen public v1 contract yet. Phase 1 must define exact stable IDs, filenames/interfaces, encoding and ordering, null/unknown and contradiction representations, aliases/deprecation, and schema compatibility. Phase 2 must implement the schemas. Consumers should not infer a stable interface from the current empty output directories.
+**Status:** Pre-release. The [Phase 1 consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) are approved for implementation; there is no complete generated Machine KB or published v1 contract yet. Phase 2 must implement and test schemas and finalize exact reference filenames and record shapes. Consumers should not infer a released interface from the current empty output directories.
 
 ## Intended consumer contract
 
 The published dataset must be usable by an independent offline consumer without Python, an LLM, MCP, FastMCP, or any network service. It must identify stable entities and records, human-readable labels, source and evidence provenance, epistemic status, applicability/version scope, namespaces, cautions, unresolved states, relationships, and privacy classification. A versioned manifest will identify artifact versions, input revision/digest, hashes, and counts. Generated ownership and compatibility rules will be explicit; source-provenance paths must be public repository-relative paths.
 
-Schema compatibility versions will be separate from content revisions recorded by Git and release tags. Never silently repurpose an ID or remove a qualification. The exact policy is a Phase 1 decision, not settled by this outline.
+Schema compatibility versions are separate from content revisions recorded by Git and release tags. Never silently repurpose an ID or remove a qualification. Follow the linked Phase 1 policy; a release must verify it against the implemented schemas.
 
 ## Release checklist (gates to implement and use before v1)
 
