@@ -2,11 +2,13 @@
 
 This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; `knowledge/` is its public machine projection.
 
-**Current state (2026-09-24): Phase 0 complete.** The `machine-knowledge-base` branch already has the `knowledge/` hierarchy, [privacy policy](../../knowledge/policy/privacy.md), initial [privacy scanner](../../knowledge/tools/validate_privacy.py), and [privacy CI workflow](../../.github/workflows/knowledge-privacy.yml). The generated datasets, schemas, shared parser/IR, consumer contract, and comprehensive checks have not yet been implemented. The existing privacy scanner is an initial final-output check, not a complete privacy guarantee. See the [roadmap](roadmap.md) and [review ledger](review-ledger.md) for exact status.
+**Current state (2026-09-24): Phases 0 and 1 complete.** The `machine-knowledge-base` branch has the `knowledge/` hierarchy, [privacy policy](../../knowledge/policy/privacy.md), initial [privacy scanner](../../knowledge/tools/validate_privacy.py), and [privacy CI workflow](../../.github/workflows/knowledge-privacy.yml). The [consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) specify the intended first release interface, but no public dataset has been released. Generated datasets, schemas, shared parser/IR, and comprehensive checks remain pending. The privacy scanner is an initial final-output check, not a complete privacy guarantee. See the [roadmap](roadmap.md) and [review ledger](review-ledger.md) for exact status.
 
 | File | Use |
 | --- | --- |
 | [Architecture](architecture.md) | Authority, boundaries, source flow, invariants, planned artifacts |
+| [Consumer Contract](consumer-contract.md) | Stable IDs, identity lifecycle, knowledge states, ordering, bytes, ownership, and compatibility boundaries |
+| [Schema Versioning](schema-versioning.md) | Compatibility and release version policy |
 | [Roadmap](roadmap.md) | Phase gates and verified completion status |
 | [Decisions](decisions.md) | Durable decisions and questions still to resolve |
 | [Maintenance](maintenance.md) | Change and review workflow |
@@ -15,4 +17,4 @@ This directory is the durable operating record for the [Machine-Readable Knowled
 
 The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. These project-control pages describe the planned implementation and do not themselves constitute released schemas or generated data.
 
-**Next:** Phase 1 defines and reviews the consumer contract, identifier grammar, compatibility policy, deterministic serialization, and representation of unknown or contradictory knowledge. Preserve existing files and decisions. Do not populate outputs before their contract and privacy path are specified.
+**Next:** Phase 2 maps ECV evidence and uncertainty concepts to controlled vocabularies and implements common schemas, tests, and golden serialization fixtures against the Phase 1 contract. Preserve existing files and decisions. Do not populate outputs before their contract and privacy path are specified.
