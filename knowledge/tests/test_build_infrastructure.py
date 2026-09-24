@@ -48,9 +48,31 @@ class BuildInfrastructureTests(unittest.TestCase):
                              [entry["path"] for entry in manifest["artifacts"]])
             self.assertTrue(all(len(entry["sha256"]) == 64 for entry in manifest["artifacts"]))
             self.assertNotIn("guides/", first.read_text())
+            self.assertEqual(123, manifest["coverage"]["canonical"]["documents"])
+            self.assertEqual(1052, manifest["coverage"]["retrieval"]["emitted_chunks"])
+
+    def test_rendered_artifacts_preserve_context_and_exclude_guides(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            manifest_path = BUILD.build(ROOT, output)
+            manifest = json.loads(manifest_path.read_text())
+            corpus = (output / "knowledge/llm/llm-corpus.md").read_text()
+            chunks = [json.loads(line) for line in (output / "knowledge/retrieval/chunks.jsonl").read_text().splitlines()]
+            self.assertIn("Source path: `protocol/", corpus)
+            self.assertIn("Namespace context:", corpus)
+            self.assertIn("Section ID:", corpus)
+            self.assertNotIn("Source path: `guides/", corpus)
+            self.assertEqual(manifest["coverage"]["retrieval"]["emitted_chunks"], len(chunks))
+            self.assertEqual(manifest["coverage"]["retrieval"]["candidate_sections"],
+                             manifest["coverage"]["retrieval"]["emitted_chunks"] + manifest["coverage"]["retrieval"]["empty_sections"])
+            self.assertTrue(all(not record["source_path"].startswith("guides/") for record in chunks))
+            self.assertTrue(all(record["section_path"] and record["qualification_cues"] for record in chunks))
+            CHECK.validate_artifacts(manifest, output)
 
     def test_manifest_schema_rejects_unknown_and_invalid_artifacts(self):
-        value = BUILD.manifest(ROOT)
+        with tempfile.TemporaryDirectory() as temporary:
+            path = BUILD.build(ROOT, Path(temporary))
+            value = json.loads(path.read_text())
         invalid = copy.deepcopy(value)
         invalid["unexpected"] = "value"
         with self.assertRaises(Exception):
