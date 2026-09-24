@@ -17,6 +17,7 @@ from referencing import Registry, Resource
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "knowledge" / "tools"))
 from serialization import json_bytes, jsonl_bytes  # noqa: E402
+from validate_references import REFERENCE_FILES, validate_integrity  # noqa: E402
 
 
 def reject_duplicate_keys(pairs):
@@ -87,6 +88,7 @@ def validate_artifacts(manifest: dict, output_root: Path) -> None:
         if sha256(path) != entry["sha256"]:
             raise ValueError(f"manifest artifact hash is stale: {entry['path']}")
     chunks = validate_chunks(output_root / "knowledge/retrieval/chunks.jsonl")
+    registries = validate_integrity(output_root, chunks)
     retrieval = manifest["coverage"]["retrieval"]
     if len(chunks) != retrieval["emitted_chunks"]:
         raise ValueError("retrieval chunk count does not match coverage")
@@ -94,6 +96,17 @@ def validate_artifacts(manifest: dict, output_root: Path) -> None:
     chunk_count = next(entry["record_count"] for entry in manifest["artifacts"] if entry["kind"] == "retrieval_chunks")
     if len(chunks) != chunk_count:
         raise ValueError("retrieval chunk count does not match manifest")
+    reference_count = sum(len(records) for records in registries.values())
+    if reference_count != manifest["coverage"]["references"]["records"]:
+        raise ValueError("reference record count does not match coverage")
+    reference_entries = {Path(entry["path"]).name: entry for entry in manifest["artifacts"]
+                         if entry["kind"] == "reference_registry"}
+    if set(reference_entries) != set(REFERENCE_FILES.values()):
+        raise ValueError("manifest reference registry inventory is incomplete")
+    for kind, records in registries.items():
+        entry = reference_entries[REFERENCE_FILES[kind]]
+        if entry["record_count"] != len(records):
+            raise ValueError(f"reference registry count does not match manifest: {entry['path']}")
     validate_corpus(output_root / "knowledge/llm/llm-corpus.md", corpus_count)
 
 
@@ -135,7 +148,7 @@ def main() -> int:
                                  text=True, capture_output=True, check=False)
         if privacy.returncode:
             raise ValueError(privacy.stderr.strip() or "privacy validation failed")
-        print("Machine KB check passed: deterministic artifacts, manifest, retrieval schema, and privacy gate")
+        print("Machine KB check passed: deterministic artifacts, manifest, schemas, references, and privacy gate")
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"Machine KB check failed: {error}", file=sys.stderr)
         return 1

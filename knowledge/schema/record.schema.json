@@ -422,6 +422,7 @@
             "firmware",
             "module",
             "object",
+            "configuration",
             "address",
             "protocol_identity",
             "database_record",
@@ -924,7 +925,10 @@
             "contradicts",
             "supersedes",
             "replaces",
-            "qualifies"
+            "qualifies",
+            "exposes",
+            "identifies",
+            "distinct_from"
           ]
         },
         "object_id": {

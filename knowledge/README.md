@@ -17,7 +17,7 @@ The repository's human-readable Markdown pages remain authoritative. Generated r
 | [`manifest.json`](manifest.json) | Deterministic inventory of the current public artifact set, compatibility versions, and content hashes |
 | [`tools/`](tools/) | Deterministic generation, linting, validation, and consistency tooling |
 
-Generated files belong in their audience-specific directory. The current public set is the LLM corpus, retrieval chunks, schemas, and manifest; claims and reference registries remain later phases. Do not mix source documentation, canonical evidence files, or manually maintained protocol prose into this hierarchy.
+Generated files belong in their audience-specific directory. The current public set is the LLM corpus, retrieval chunks, reference registries, schemas, and manifest; claims remain a later phase. Do not mix source documentation, canonical evidence files, or manually maintained protocol prose into this hierarchy.
 
 ## Required machine semantics
 

@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release. The [Phase 1 consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) are approved for implementation; there is no complete generated Machine KB or published v1 contract yet. Phase 2 schemas and reference filenames are defined; Phases 3 and 4 provide the privacy source gate and shared internal IR. The manifest and generated output families remain pending. Consumers should not infer a released interface from the current empty output directories.
+**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, and reference registries are implemented. Atomic claims, full drift/change-impact checks, release CI, candidate certification, and v1 publication remain pending. Consumers should not infer a released interface from these pre-release artifacts.
 
 ## Intended consumer contract
 
@@ -19,4 +19,4 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [ ] Manifest hashes/counts, artifact versions, licensing, release notes, and consumer-facing examples are checked against the actual release revision.
 - [ ] The [review ledger](review-ledger.md) is current; the roadmap records exact completion and remaining gaps.
 
-Run the planned `python knowledge/tools/check.py` as the release gate when implemented. Today only the initial `python knowledge/tools/validate_privacy.py` exists for Machine KB outputs, and output directories contain no generated records; a passing scan is not release certification. Publish or merge only after the actual gates pass and the user requests that step.
+Run `python check.py` for the current deterministic build, schema, referential-integrity, freshness, and privacy gates. It is not yet a release certification: the remaining roadmap phases and independent review must pass before publication or merge, and merge still requires explicit user authorization.
