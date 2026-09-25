@@ -131,6 +131,19 @@ The same namespace includes tuner, media-track, presets, RDS, and equalization. 
 
 [`WHO 16`](../who-16-sound-system/) represents a different sound dialect. Similar terms do not imply compatible numeric values, address forms, or parameter layouts.
 
+One MH200N was observed reporting every sound event in both dialects. In those captures the `WHO 22` frame states as separate fields what `WHO 16` packs into one address:
+
+| `WHO 16` | `WHO 22` counterpart | `WHO 22` fields |
+| --- | --- | --- |
+| `*16*3*11##` | `*#22*3#1#1*12*1*4##` | speaker area 1, point 1; state ON, stereo |
+| `*16*3*12##` | `*#22*3#1#2*12*1*4##` | speaker area 1, point 2 |
+| `*#16*11*1*17##` | `*#22*3#1#1*1*17##` | volume 17, same `0..31` scale |
+| `*16*3*101##` | `*#22*2#1*12*1*4##` | source 1 active |
+| `*16*3*112##` | `*22*2#4#1*5#2#2##` | area 1 selecting source 2 |
+| `*#16*101*8*…##` | `*#22*5#2#1*10*…##` | RDS text, `DIMENSION 8` against `DIMENSION 10` |
+
+This is **established for that Device** and was used to corroborate the `WHO 16` amplifier and routing addressing. It does not establish a general translation between the dialects: the value ranges, `WHAT` numbering and dimension indices differ, an MH200 on another plant emitted no `WHO 22` frames, and these captures cannot show whether the second dialect originates in the gateway or in another bus device. The claim record is in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
+
 ## Evidence basis
 
 Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
