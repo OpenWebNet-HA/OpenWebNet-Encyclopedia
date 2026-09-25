@@ -14,7 +14,7 @@ from pathlib import Path
 from prepare_sources import prepare, read_manifest
 
 ROOT = Path(__file__).resolve().parents[2]
-AREAS = ("protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering")
+AREAS = ("protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering", "scenario-engine")
 MANIFEST = ROOT / "knowledge/inputs/canonical-sources.jsonl"
 IDENTITIES = ROOT / "knowledge/inputs/identities.json"
 

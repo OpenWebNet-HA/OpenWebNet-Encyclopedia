@@ -16732,3 +16732,1721 @@ When evidence changes a relationship:
 3. remove or narrow the corresponding open question;
 4. retain rejected alternatives when they are likely to recur;
 5. record the source revision and test that caused the change.
+
+# Document: ownkb:document:d000124
+
+Source path: `scenario-engine/README.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Scenario Engine
+
+Section ID: `ownkb:section:d000124:s000001`
+
+The Scenario Engine section documents the capability model used by MyHOME_Suite to expose triggers, conditions, and actions and to associate them with OpenWebNet command templates.
+
+It is distinct from:
+
+- functional OpenWebNet scenarios under functional `WHO 0` and `WHO 17`;
+- diagnostic and programming scenarios in `OPEN.db`, which describe MyHOME_Suite communication sequences;
+- the configuration of scenario-capable Physical Devices.
+
+The canonical sources for this section are the two ScenarioDevices databases preserved under [`sources/`](../sources/myhome-suite/3.5.38/databases/):
+
+- [`ScenarioDevices-program-files.sqlite`](../sources/myhome-suite/3.5.38/databases/ScenarioDevices-program-files.sqlite);
+- [`ScenarioDevices-programdata.sqlite`](../sources/myhome-suite/3.5.38/databases/ScenarioDevices-programdata.sqlite).
+
+### Reference
+
+Section ID: `ownkb:section:d000124:s000002`
+
+Applicability cues: `revision`
+Provenance cues: `database`, `evidence`, `source`
+
+| Subject | Page |
+| --- | --- |
+| Source provenance, evidence roles, and identifier boundaries | [Sources and Identifier Boundaries](sources-and-identifiers.md) |
+| Database roles, schema, relationships, and revision differences | [Database Model](database-model.md) |
+| Scenario roles and cross-role matching identifiers | [Categories and Matching](categories-and-matching.md) |
+| Resolving systems, Objects, commands, and parameters | [Capability Resolution](capability-resolution.md) |
+| Parameter types, operators, domains, and composite values | [Parameters](parameters.md) |
+| Interpreting and rendering stored command templates | [Frame Templates](frame-templates.md) |
+| Correlations with functional OpenWebNet namespaces | [Functional Correlations](functional-correlations.md) |
+| Functional/category coverage and source-revision delta | [Capability Coverage](capability-coverage.md) |
+| Established action pipeline and runtime boundaries | [Execution Model](execution-model.md) |
+| Evidence limits and questions requiring further investigation | [Open Questions](open-questions.md) |
+
+### Canonical hierarchy
+
+Section ID: `ownkb:section:d000124:s000003`
+
+Uncertainty: `may`
+Provenance cues: `catalogue`
+
+Both databases use the same principal hierarchy:
+
+**Object System → Device Object → Command → Parameter**
+
+| Level | Table | Role |
+| --- | --- | --- |
+| Object System | `ObjectSystems` | groups scenario capabilities by functional area and category |
+| Device Object | `DeviceObjects` | describes a scenario-engine Object within one Object System |
+| Command | `Commands` | defines a trigger, condition, or action and may provide a frame template |
+| Parameter | `Parameters` | defines placeholders, domains, operators, constants, and value types for one Command |
+
+The relationships are declared as SQLite foreign keys:
+
+- `DeviceObjects.ObjectSystem_Id → ObjectSystems.Id`;
+- `Commands.DeviceObject_Id → DeviceObjects.Id`;
+- `Parameters.Command_Id → Commands.Id`.
+
+These IDs are local to each ScenarioDevices file. They are not `WHO`, `WHAT`, catalogue `id_key_object`, external `key_object`, or Device IDs.
+
+### Source revisions
+
+Section ID: `ownkb:section:d000124:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+| Source | Object Systems | Device Objects | Commands | Parameters | Additional field |
+| --- | --- | --- | --- | --- | --- |
+| `ScenarioDevices-program-files.sqlite` | 29 | 44 | 157 | 42 | `ObjectSystems.FamilyId` |
+| `ScenarioDevices-programdata.sqlite` | 27 | 42 | 151 | 40 | none |
+
+The repository names distinguish two files that were both originally named `ScenarioDevices.sqlite`: one installed under `Program Files (x86)` and one under the shared `ProgramData` directory. Their canonical fingerprints and paths are recorded in [Sources and Identifier Boundaries](sources-and-identifiers.md).
+
+The files overlap substantially but are not byte-identical or row-identical revisions. The semantic content of `programdata` is an exact subset of `program-files` when compared through the full hierarchy; local row IDs are not cross-file identifiers.
+
+The larger `program-files` revision adds Virtual Key Card event capabilities and two Temperature Control actions absent from `programdata`. See [Capability Coverage](capability-coverage.md) for the exact delta.
+
+### Capability path
+
+Section ID: `ownkb:section:d000124:s000005`
+
+To enumerate one scenario capability:
+
+1. select an `ObjectSystems` row;
+2. enumerate its `DeviceObjects`;
+3. enumerate the Commands for each Device Object;
+4. load zero or more Parameters for each Command;
+5. interpret the Command's `Frame`, `ChiOpen`, `WherePlaceholder`, and `WhereType`;
+6. substitute only validated address and parameter values;
+7. correlate the rendered result with the relevant functional `WHO` reference;
+8. preserve commands whose `Frame` is absent as capabilities requiring separate interpretation rather than discarding them.
+
+### Cross-source boundaries
+
+Section ID: `ownkb:section:d000124:s000006`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `database`, `source`
+
+The ScenarioDevices databases describe scenario-editor capabilities and command templates. They do not directly identify installed Physical Devices or their current configuration.
+
+| Question | Source |
+| --- | --- |
+| Which Device and Modules are installed? | [Diagnostics](../diagnostics/) |
+| Which Objects can firmware expose? | [Device Model](../device-model/) |
+| What does a functional frame mean? | [Functional reference](../functional/) |
+| How are Devices configured? | [Programming](../programming/) |
+| How does MyHOME_Suite order diagnostic/programming exchanges? | `OPEN.db`, not the ScenarioDevices hierarchy |
+
+Equal numeric values across these sources do not establish a join. `ObjectId`, `ObjectMatchingId`, `CommandId`, and `CommandMatchingId` require independent correlation before they can be mapped to another database namespace.
+
+### Evidence status
+
+Section ID: `ownkb:section:d000124:s000007`
+
+Uncertainty: `unknown`
+Provenance cues: `database`, `documentation`, `source`
+
+Established directly:
+
+- table structures and declared foreign keys;
+- stored names, IDs, category flags, templates, placeholders, ranges, steps, and constants;
+- row counts in the canonical files;
+- differences between the two source revisions.
+
+Implementation-derived:
+
+- `CategoryFlag` separates primary/start events, complementary/stop events, conditions, and actions;
+- `FamilyId` groups category rows into local scenario-editor functional families;
+- matching IDs correlate selected Lighting and Hotel concepts across scenario roles;
+- literal templates cover functional `WHO 0`, `1`, `2`, `4`, and `14`.
+
+Still partially interpreted or unknown:
+
+- the exact application enumerations for `WhereType`, parameter `Type`, and `OperatorType`;
+- how matching groups are used by the editor or runtime;
+- the execution mapping for symbolic and frame-absent Commands;
+- how MyHOME_Suite selects, synchronizes, or prioritizes the two source files.
+
+Unknown values remain unknown until database correlations, application behavior, public documentation, or observed execution establishes their semantics.
+
+# Document: ownkb:document:d000125
+
+Source path: `scenario-engine/capability-coverage.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Capability Coverage
+
+Section ID: `ownkb:section:d000125:s000001`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+This page summarizes the capabilities present in `ScenarioDevices-program-files.sqlite`, the larger canonical revision. Counts are descriptive of this source, not protocol limits.
+
+### Coverage by family and category
+
+Section ID: `ownkb:section:d000125:s000002`
+
+| Family | Category | Device Objects | Commands | Parameters | Commands with non-null `Frame` |
+| --- | --- | --- | --- | --- | --- |
+| Alarm | primary event | 1 | 3 | 0 | 0 |
+| Alarm | complementary event | 1 | 3 | 0 | 0 |
+| Alarm | action | 1 | 1 | 0 | 1 |
+| Automation | action | 7 | 23 | 6 | 23 |
+| Auxiliaries | primary event | 1 | 2 | 0 | 0 |
+| Auxiliaries | complementary event | 1 | 2 | 0 | 0 |
+| Auxiliaries | condition | 1 | 2 | 0 | 0 |
+| Delay | action | 1 | 1 | 0 | 0 |
+| Hotel | primary event | 2 | 12 | 0 | 0 |
+| Hotel | complementary event | 2 | 12 | 0 | 0 |
+| Hotel | condition | 1 | 11 | 0 | 0 |
+| Hotel | action | 1 | 4 | 0 | 4 |
+| Lighting | primary event | 2 | 4 | 0 | 0 |
+| Lighting | complementary event | 2 | 4 | 0 | 0 |
+| Lighting | condition | 2 | 4 | 1 | 0 |
+| Lighting | action | 3 | 12 | 3 | 12 |
+| Scenarios | action | 1 | 1 | 1 | 1 |
+| Scheduled Scenarios | primary event | 2 | 8 | 8 | 0 |
+| Scheduled Scenarios | complementary event | 2 | 8 | 8 | 0 |
+| Special Commands | action | 1 | 2 | 0 | 2 |
+| Temperature Control | start event | 1 | 2 | 0 | 0 |
+| Temperature Control | stop event | 1 | 2 | 0 | 0 |
+| Temperature Control | condition | 1 | 2 | 0 | 0 |
+| Temperature Control | action | 1 | 19 | 6 | 19 |
+| Time | primary event | 1 | 3 | 3 | 0 |
+| Time | complementary event | 1 | 3 | 3 | 0 |
+| Time | condition | 1 | 3 | 3 | 0 |
+| Virtual Key Card | primary event | 1 | 2 | 0 | 0 |
+| Virtual Key Card | complementary event | 1 | 2 | 0 | 0 |
+
+Repeated resource keys across primary and complementary event categories are counted as separate scenario roles.
+
+### Frame coverage
+
+Section ID: `ownkb:section:d000125:s000003`
+
+| Frame classification | Commands |
+| --- | --- |
+| `NULL` | 95 |
+| literal OpenWebNet-shaped template | 57 |
+| non-null symbolic text | 5 |
+
+Most event and condition rows have no stored frame, while action rows more often contain literal or symbolic rendering data. This asymmetry suggests that incoming event matching is not represented solely by `Commands.Frame`.
+
+### Stored functional `WHO` evidence
+
+Section ID: `ownkb:section:d000125:s000004`
+
+Provenance cues: `evidence`
+
+| `ChiOpen` | Commands | Functional area indicated by literal frames |
+| --- | --- | --- |
+| `NULL` | 99 | events, conditions, delays, symbolic operations, and other rows |
+| `0` | 1 | Scenarios |
+| `1` | 17 | Lighting |
+| `2` | 19 | Automation; one delay row also stores `2` without a frame |
+| `4` | 19 | Temperature Control |
+| `14` | 2 | Special Commands |
+
+`ChiOpen` aligns with the literal frame `WHO` for established OpenWebNet templates. A non-null value without a literal frame is evidence of intended functional context, not by itself a renderable command.
+
+### Address-type distribution
+
+Section ID: `ownkb:section:d000125:s000005`
+
+| `WhereType` | Commands | Observed contexts |
+| --- | --- | --- |
+| `0` | 58 | many frame-absent events and conditions |
+| `1` | 59 | Alarm symbolic action, Lighting and Automation actions, other point-address-like templates |
+| `2` | 25 | Temperature Control and related zone-address templates |
+| `3` | 6 | Auxiliary contact events/conditions |
+| `4` | 8 | CEN+ scheduled-scenario events |
+| `5` | 1 | Delay action |
+
+The contexts are not sufficient to define a universal address grammar for each numeric type. Use the functional `WHO` and the command template.
+
+### Revision delta
+
+Section ID: `ownkb:section:d000125:s000006`
+
+Provenance cues: `source`
+
+`ScenarioDevices-program-files.sqlite` adds the following resource-key capabilities absent from `programdata`:
+
+- two Virtual Key Card Object Systems;
+- two Virtual Key Card Device Objects;
+- four Virtual Key Card event Commands across the two event categories;
+- Temperature Control local-control action and Parameter;
+- Temperature Control fan-coil-speed action and Parameter.
+
+That accounts for the source-count delta:
+
+| Entity | `program-files` | `programdata` | Difference |
+| --- | --- | --- | --- |
+| Object Systems | 29 | 27 | +2 |
+| Device Objects | 44 | 42 | +2 |
+| Commands | 157 | 151 | +6 |
+| Parameters | 42 | 40 | +2 |
+
+### Scope limits
+
+Section ID: `ownkb:section:d000125:s000007`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`
+
+The coverage table does not establish:
+
+- which capabilities a particular installed Device exposes;
+- how a user-authored scenario graph is persisted;
+- how frame-absent events are matched at runtime;
+- whether every stored action is supported by every gateway;
+- whether `program-files` supersedes `programdata`.
+
+Those questions require Device Model, application, runtime, or additional persistence evidence.
+
+# Document: ownkb:document:d000126
+
+Source path: `scenario-engine/capability-resolution.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Capability Resolution
+
+Section ID: `ownkb:section:d000126:s000001`
+
+This page describes how to turn ScenarioDevices rows into a structured scenario-editor capability without assuming that every stored identifier is an OpenWebNet wire value.
+
+### Input
+
+Section ID: `ownkb:section:d000126:s000002`
+
+Provenance cues: `source`
+
+Start with one source file and, where possible:
+
+- a desired functional area;
+- a desired role such as trigger, condition, or action;
+- the installed Device/Object context from diagnostics and the Device Model;
+- the functional `WHO` reference needed to validate a stored frame.
+
+### Resolution path
+
+Section ID: `ownkb:section:d000126:s000003`
+
+Provenance cues: `evidence`, `source`
+
+1. Select candidate `ObjectSystems` rows by established system/category evidence.
+2. Enumerate their `DeviceObjects`.
+3. Retain `ObjectId` and `ObjectMatchingId` as ScenarioDevices identifiers.
+4. Enumerate each Object's Commands.
+5. Load all Parameters for each Command.
+6. Classify the command as literal-frame, symbolic-frame, or frame-absent.
+7. Validate any stored `ChiOpen` against the functional frame.
+8. Resolve `WHERE` according to the functional `WHO`, not `WhereType` alone.
+9. Validate parameter values against stored metadata and the functional reference.
+10. Return the capability with source-file and row provenance.
+
+### Resolve the hierarchy
+
+Section ID: `ownkb:section:d000126:s000004`
+
+```sql
+SELECT
+    os.Id AS object_system_row,
+    os.Name AS object_system_name,
+    os.CategoryFlag,
+    d.Id AS device_object_row,
+    d.ObjectId,
+    d.ObjectMatchingId,
+    d.Name AS device_object_name,
+    c.Id AS command_row,
+    c.CommandId,
+    c.CommandMatchingId,
+    c.Name AS command_name,
+    c.WherePlaceholder,
+    c.WhereType,
+    c.WhereName,
+    c.ChiOpen,
+    c.Frame,
+    p.Id AS parameter_row,
+    p.Placeholder,
+    p.Name AS parameter_name,
+    p.Min,
+    p.Max,
+    p.Step,
+    p.Type,
+    p.OperatorType,
+    p.Value
+FROM ObjectSystems AS os
+JOIN DeviceObjects AS d
+  ON d.ObjectSystem_Id = os.Id
+JOIN Commands AS c
+  ON c.DeviceObject_Id = d.Id
+LEFT JOIN Parameters AS p
+  ON p.Command_Id = c.Id
+WHERE os.Id = :object_system_id
+ORDER BY d.Id, c.Id, p.Id;
+```
+
+### Reference algorithm
+
+Section ID: `ownkb:section:d000126:s000005`
+
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+```text
+function resolve_capabilities(source, requested_context):
+    systems = query ObjectSystems compatible with requested_context
+    output = []
+
+    for system in systems:
+        for object in DeviceObjects where ObjectSystem_Id == system.Id:
+            object_match = correlate_only_with_established_mapping(object)
+
+            for command in Commands where DeviceObject_Id == object.Id:
+                parameters = Parameters where Command_Id == command.Id
+
+                capability = {
+                    source file and row IDs,
+                    resource keys,
+                    ScenarioDevices IDs,
+                    category evidence,
+                    stored WHO evidence,
+                    address metadata,
+                    frame template,
+                    parameter definitions
+                }
+
+                if command.Frame is a literal OpenWebNet template:
+                    capability.rendering = parse_without_substitution(command.Frame)
+                else if command.Frame is symbolic:
+                    capability.rendering = unresolved symbolic operation
+                else:
+                    capability.rendering = no stored frame
+
+                validate against functional reference and installed Object context
+                output.append(capability with resolution status)
+
+    return output without first-row-wins selection
+```
+
+### Category handling
+
+Section ID: `ownkb:section:d000126:s000006`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+Resource keys commonly end in `.trigger`, `.condition`, or `.action`, and their `CategoryFlag` values form consistent clusters. This is strong implementation evidence, but the draft does not yet declare a universal numeric enumeration for the flags.
+
+Present both:
+
+- the resource-key-derived role;
+- the raw `CategoryFlag`.
+
+Do not discard a row solely because its flag is not yet interpreted. See [Categories and Matching](categories-and-matching.md) for the complete observed flag distribution and the evidence supporting the current role names.
+
+### Installed-Device filtering
+
+Section ID: `ownkb:section:d000126:s000007`
+
+Cautions: `do not`
+Provenance cues: `database`, `evidence`
+
+The ScenarioDevices files contain no installed Device ID and no direct Module slot. Filtering capabilities for a real installation therefore requires a staged correlation:
+
+1. diagnose the Device and resolve its configured Object;
+2. determine the functional system and behavior supported by that Object;
+3. correlate that established behavior with ScenarioDevices Object/resource keys;
+4. retain ambiguity where `ObjectId` or matching IDs lack a proven mapping.
+
+Do not write a cross-database SQL join equating `DeviceObjects.ObjectId` with `EN_KEY_OBJECT.key_object` unless independent evidence establishes that relationship for the relevant rows.
+
+### Result
+
+Section ID: `ownkb:section:d000126:s000008`
+
+Provenance cues: `database`, `evidence`, `source`
+
+Parameter rows require type-specific handling, especially where several rows share one composite placeholder. See [Parameters](parameters.md).
+
+Return a capability record containing:
+
+- source database and row IDs;
+- Object System and Device Object resource keys;
+- raw category and matching identifiers;
+- Command name and identifiers;
+- functional `WHO` evidence;
+- address requirements;
+- frame classification;
+- complete parameter definitions;
+- correlations and their evidence level;
+- status: resolved, partial, ambiguous, symbolic, or unsupported.
+
+# Document: ownkb:document:d000127
+
+Source path: `scenario-engine/categories-and-matching.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Categories and Matching
+
+Section ID: `ownkb:section:d000127:s000001`
+
+This page documents how ScenarioDevices rows classify scenario roles and correlate related trigger, condition, and action capabilities.
+
+### `CategoryFlag`
+
+Section ID: `ownkb:section:d000127:s000002`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Provenance cues: `documentation`, `evidence`
+
+In `ScenarioDevices-program-files.sqlite`, the observed distribution is:
+
+| `CategoryFlag` | Object Systems | Resource-key evidence | Working interpretation |
+| --- | --- | --- | --- |
+| `0` | 8 | `.trigger`, `.start` | first event/trigger role |
+| `1` | 8 | `.trigger`, `.stop` | complementary event/trigger role |
+| `2` | 5 | `.condition`, `.if` | condition role |
+| `3` | 8 | `.action` | action role |
+
+The `programdata` revision has the same five condition and eight action systems, but only seven systems for each of flags `0` and `1` because it lacks the Virtual Key Card family.
+
+The role correlation is exhaustive across the canonical resource keys, so the numeric classification is strong implementation evidence. The precise distinction between flags `0` and `1` is not uniform enough to rename them globally: Alarm, Auxiliaries, Hotel, Lighting, Scheduled Scenarios, Time, and Virtual Key Card reuse the same `.trigger` key for both, while Temperature Control uses `.start` and `.stop`.
+
+Documentation should therefore retain both the raw flag and a contextual role:
+
+- flag `0`: primary/start event category;
+- flag `1`: complementary/stop event category;
+- flag `2`: condition category;
+- flag `3`: action category.
+
+Do not describe flags `0` and `1` as particular wire states without resolving the contained Commands.
+
+### Duplicate Object Systems
+
+Section ID: `ownkb:section:d000127:s000003`
+
+Uncertainty: `not established`
+
+Several Object System resource keys deliberately occur twice with flags `0` and `1`. They are separate rows and have separate Device Objects and Commands even where their names are identical.
+
+The rows preserve distinct categories. Their use to place related events in the scenario editor is inferred from the metadata; actual editor behavior is not established by the duplicate names alone.
+
+### Object matching
+
+Section ID: `ownkb:section:d000127:s000004`
+
+`ObjectMatchingId` is `NULL` for most Device Objects. Non-null values occur in three semantic groups:
+
+| Matching ID | Related Object concepts | Rows |
+| --- | --- | --- |
+| `1` | Lighting Light trigger/action | 3 |
+| `2` | Lighting Dimmer trigger/action | 3 |
+| `13` | Hotel Room trigger/action | 3 |
+
+The three rows per group span the two event categories and the action category. This strongly supports the interpretation that `ObjectMatchingId` correlates compatible concepts across scenario roles.
+
+It does not prove a relationship with `MHCatalogue.db`, and the matching ID is not a Device Object primary key.
+
+### Command matching
+
+Section ID: `ownkb:section:d000127:s000005`
+
+Provenance cues: `evidence`
+
+Non-null `CommandMatchingId` values likewise correlate cross-role semantics:
+
+| Matching IDs | Area | Evidence |
+| --- | --- | --- |
+| `1`, `2` | Lighting Light | off/on trigger rows and off/on action rows |
+| `3`, `4` | Lighting Dimmer | off/on trigger rows and dimmer off/on action rows |
+| `56..59` | Hotel Room | DND and MUR trigger/action concepts |
+
+For Light commands, `CommandId` and `CommandMatchingId` can be equal. For Dimmer and Hotel actions they differ. Therefore:
+
+- `CommandId` identifies the command within the ScenarioDevices command namespace;
+- `CommandMatchingId` links a semantic event/action concept across roles;
+- equality between them is incidental for some rows, not a general rule.
+
+### Relationship inspection
+
+Section ID: `ownkb:section:d000127:s000006`
+
+The following relationship query is useful because it shows the parent roles on both sides of a matching group:
+
+```sql
+SELECT
+    d.ObjectMatchingId,
+    c.CommandMatchingId,
+    os.CategoryFlag,
+    os.Name AS system_name,
+    d.ObjectId,
+    d.Name AS object_name,
+    c.CommandId,
+    c.Name AS command_name,
+    c.Frame
+FROM ObjectSystems AS os
+JOIN DeviceObjects AS d ON d.ObjectSystem_Id = os.Id
+JOIN Commands AS c ON c.DeviceObject_Id = d.Id
+WHERE d.ObjectMatchingId IS NOT NULL
+   OR c.CommandMatchingId IS NOT NULL
+ORDER BY d.ObjectMatchingId, c.CommandMatchingId, os.CategoryFlag;
+```
+
+### Matching algorithm
+
+Section ID: `ownkb:section:d000127:s000007`
+
+Provenance cues: `source`
+
+The following is a proposed inspection algorithm for finding metadata counterparts, not recovered MyHOME Suite code or an established runtime matching contract. The preference for equal `ObjectMatchingId` is an analysis policy.
+
+```text
+function find_semantic_counterparts(source_command):
+    require source_command has CommandMatchingId
+
+    candidates = Commands with the same CommandMatchingId
+    candidates = candidates joined to their Device Object and Object System
+
+    if source Device Object has ObjectMatchingId:
+        prefer candidates whose Device Object has the same ObjectMatchingId
+
+    group by CategoryFlag and preserve all rows
+    return trigger/condition/action counterparts with frames and provenance
+```
+
+Matching can support editor navigation or trigger/action correlation. It does not by itself define runtime execution, event subscription, or a reversible wire mapping.
+
+# Document: ownkb:document:d000128
+
+Source path: `scenario-engine/database-model.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Database Model
+
+Section ID: `ownkb:section:d000128:s000001`
+
+The ScenarioDevices databases are compact SQLite capability catalogues used by the MyHOME_Suite scenario editor. They describe available scenario Objects and commands; they are not databases of user-authored scenario instances.
+
+### Source files
+
+Section ID: `ownkb:section:d000128:s000002`
+
+Applicability cues: `revision`
+Uncertainty: `not established`
+Provenance cues: `database`
+
+| File | Role established by content |
+| --- | --- |
+| `ScenarioDevices-program-files.sqlite` | larger capability set and the only revision with `ObjectSystems.FamilyId` |
+| `ScenarioDevices-programdata.sqlite` | closely related capability set without `FamilyId` |
+
+The repository filenames record their original installation locations: the larger file came from `Program Files (x86)`, while the smaller file came from the shared `ProgramData` database directory. The precise application selection, synchronization, or precedence rule is not established.
+
+### Tables
+
+Section ID: `ownkb:section:d000128:s000003`
+
+#### `ObjectSystems`
+
+Section ID: `ownkb:section:d000128:s000004`
+
+Groups Device Objects into named functional/category contexts.
+
+| Column | Notes |
+| --- | --- |
+| `Id` | local primary key |
+| `FamilyId` | present only in `program-files`; consistently groups category rows into one local functional family |
+| `Name` | localization/resource key such as `miniScenarioSuite.automation.action` |
+| `CategoryFlag` | implementation-derived role category: primary/start event, complementary/stop event, condition, or action |
+
+#### Observed `FamilyId` grouping
+
+Section ID: `ownkb:section:d000128:s000005`
+
+Uncertainty: `appears`
+Provenance cues: `catalogue`, `database`
+
+`FamilyId` appears only in the Program Files copy and consistently groups all category rows for one resource-key functional family:
+
+| `FamilyId` | Resource-key family |
+| --- | --- |
+| `1` | Alarm |
+| `2` | Automation |
+| `3` | Auxiliaries |
+| `4` | Delay |
+| `5` | Hotel |
+| `6` | Lighting |
+| `7` | Scenarios |
+| `8` | Scheduled Scenarios |
+| `9` | Special Commands |
+| `10` | Temperature Control |
+| `11` | Time |
+| `12` | Virtual Key Card |
+
+This establishes `FamilyId` as a local scenario-editor family grouping. It does not establish equality with a functional `WHO`, `OPEN.db` system ID, catalogue family ID, or any other database namespace.
+
+#### `DeviceObjects`
+
+Section ID: `ownkb:section:d000128:s000006`
+
+Uncertainty: `unresolved`
+Provenance cues: `source`
+
+| Column | Notes |
+| --- | --- |
+| `Id` | local primary key |
+| `ObjectId` | scenario-engine Object identifier; not proven equal to `EN_KEY_OBJECT.key_object` |
+| `ObjectMatchingId` | optional matching identifier with unresolved cross-source semantics |
+| `Name` | localization/resource key |
+| `ObjectSystem_Id` | declared foreign key to `ObjectSystems.Id` |
+
+#### `Commands`
+
+Section ID: `ownkb:section:d000128:s000007`
+
+Provenance cues: `evidence`
+
+| Column | Notes |
+| --- | --- |
+| `Id` | local primary key |
+| `CommandId` | scenario-engine command identifier |
+| `CommandMatchingId` | optional matching identifier |
+| `Name` | localization/resource key |
+| `WherePlaceholder` | address placeholder where present |
+| `WhereType` | numeric address-type discriminator |
+| `WhereName` | localization/resource key for the address field |
+| `ChiOpen` | stored functional `WHO` evidence where present |
+| `Frame` | literal or symbolic frame template; can be `NULL` |
+| `DeviceObject_Id` | declared foreign key to `DeviceObjects.Id` |
+
+#### `Parameters`
+
+Section ID: `ownkb:section:d000128:s000008`
+
+| Column | Notes |
+| --- | --- |
+| `Id` | local primary key |
+| `Min`, `Max`, `Step` | numeric-domain metadata where applicable |
+| `Placeholder` | text substituted into a frame or interpreted by the application |
+| `Name` | localization/resource key |
+| `OperatorType` | numeric operator discriminator |
+| `Value` | stored constant or selector value where present |
+| `Type` | numeric parameter-type discriminator |
+| `Command_Id` | declared foreign key to `Commands.Id` |
+
+### Declared relationships
+
+Section ID: `ownkb:section:d000128:s000009`
+
+Cautions: `do not`
+
+```sql
+SELECT
+    os.Id AS object_system_row,
+    os.Name AS object_system_name,
+    os.CategoryFlag,
+    d.Id AS device_object_row,
+    d.ObjectId,
+    d.ObjectMatchingId,
+    d.Name AS device_object_name,
+    c.Id AS command_row,
+    c.CommandId,
+    c.CommandMatchingId,
+    c.Name AS command_name,
+    c.ChiOpen,
+    c.Frame,
+    p.Id AS parameter_row,
+    p.Placeholder,
+    p.Min,
+    p.Max,
+    p.Step,
+    p.Type,
+    p.OperatorType,
+    p.Value
+FROM ObjectSystems AS os
+JOIN DeviceObjects AS d
+  ON d.ObjectSystem_Id = os.Id
+JOIN Commands AS c
+  ON c.DeviceObject_Id = d.Id
+LEFT JOIN Parameters AS p
+  ON p.Command_Id = c.Id
+ORDER BY os.Id, d.Id, c.Id, p.Id;
+```
+
+Use the row primary keys for joins inside one file. Do not join the two files by `Id`: corresponding semantic rows can have different local identities or be absent.
+
+### Compare the revisions
+
+Section ID: `ownkb:section:d000128:s000010`
+
+Provenance cues: `database`
+
+Attach both files and compare a Command by its full hierarchy rather than local IDs or `Commands.Name` alone:
+
+```sql
+ATTACH DATABASE 'ScenarioDevices-program-files.sqlite' AS files_db;
+ATTACH DATABASE 'ScenarioDevices-programdata.sqlite' AS data_db;
+
+WITH files_commands AS (
+    SELECT
+        os.Name AS system_name,
+        os.CategoryFlag,
+        d.Name AS object_name,
+        d.ObjectId,
+        d.ObjectMatchingId,
+        c.Name AS command_name,
+        c.CommandId,
+        c.CommandMatchingId,
+        c.WherePlaceholder,
+        c.WhereType,
+        c.WhereName,
+        c.ChiOpen,
+        c.Frame
+    FROM files_db.ObjectSystems AS os
+    JOIN files_db.DeviceObjects AS d ON d.ObjectSystem_Id = os.Id
+    JOIN files_db.Commands AS c ON c.DeviceObject_Id = d.Id
+),
+data_commands AS (
+    SELECT
+        os.Name AS system_name,
+        os.CategoryFlag,
+        d.Name AS object_name,
+        d.ObjectId,
+        d.ObjectMatchingId,
+        c.Name AS command_name,
+        c.CommandId,
+        c.CommandMatchingId,
+        c.WherePlaceholder,
+        c.WhereType,
+        c.WhereName,
+        c.ChiOpen,
+        c.Frame
+    FROM data_db.ObjectSystems AS os
+    JOIN data_db.DeviceObjects AS d ON d.ObjectSystem_Id = os.Id
+    JOIN data_db.Commands AS c ON c.DeviceObject_Id = d.Id
+)
+SELECT f.*
+FROM files_commands AS f
+LEFT JOIN data_commands AS d
+  ON d.system_name = f.system_name
+ AND d.CategoryFlag = f.CategoryFlag
+ AND d.object_name = f.object_name
+ AND d.command_name = f.command_name
+WHERE d.command_name IS NULL
+   OR d.ObjectId IS NOT f.ObjectId
+   OR d.ObjectMatchingId IS NOT f.ObjectMatchingId
+   OR d.CommandId IS NOT f.CommandId
+   OR d.CommandMatchingId IS NOT f.CommandMatchingId
+   OR d.WherePlaceholder IS NOT f.WherePlaceholder
+   OR d.WhereType IS NOT f.WhereType
+   OR d.WhereName IS NOT f.WhereName
+   OR d.ChiOpen IS NOT f.ChiOpen
+   OR d.Frame IS NOT f.Frame
+ORDER BY f.system_name, f.CategoryFlag, f.object_name, f.command_name;
+```
+
+The canonical comparison shows that the semantic rows in `programdata` are an exact subset of `program-files` when the full parent path and non-local fields are used. The six additional Commands are four Virtual Key Card event rows and the Temperature Control local-control and fan-coil-speed actions. The latter two have one additional Parameter each.
+
+`Commands.Name` alone is unsafe as a comparison key because the same resource key can occur beneath primary and complementary event categories.
+
+### Integrity checks
+
+Section ID: `ownkb:section:d000128:s000011`
+
+Provenance cues: `database`
+
+```sql
+PRAGMA foreign_key_check;
+
+SELECT c.Id, c.Name
+FROM Commands AS c
+LEFT JOIN DeviceObjects AS d ON d.Id = c.DeviceObject_Id
+WHERE d.Id IS NULL;
+
+SELECT p.Id, p.Name
+FROM Parameters AS p
+LEFT JOIN Commands AS c ON c.Id = p.Command_Id
+WHERE c.Id IS NULL;
+```
+
+The canonical files declare the three hierarchy foreign keys. Application-level identifiers and cross-database correlations remain outside those constraints.
+
+# Document: ownkb:document:d000129
+
+Source path: `scenario-engine/execution-model.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Execution Model
+
+Section ID: `ownkb:section:d000129:s000001`
+
+Provenance cues: `evidence`
+
+The ScenarioDevices databases define editor capabilities, not a complete runtime state machine. This page separates the execution behavior that can be derived from stored templates from behavior that requires other evidence.
+
+### Established pipeline
+
+Section ID: `ownkb:section:d000129:s000002`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`
+
+For an action with a literal OpenWebNet template, a safe application can:
+
+1. resolve the selected Object System, Device Object, Command, and Parameters;
+2. confirm the Command belongs to an action category;
+3. resolve the target installed Device/Module using diagnostics and the Device Model;
+4. validate the target functional address under the stored or parsed `WHO`;
+5. validate and encode every Parameter;
+6. render and reparse the complete frame;
+7. send it through the appropriate command session, authenticated where the selected gateway requires it;
+8. collect acknowledgement and functional state evidence where applicable;
+9. record the action result independently from the scenario's future control flow.
+
+Steps 1 through 6 are partly represented by ScenarioDevices. Transport/session behavior, acknowledgements, retries, scheduling, and state persistence are not defined by these tables.
+
+### Trigger and condition model
+
+Section ID: `ownkb:section:d000129:s000003`
+
+Provenance cues: `database`, `evidence`
+
+Event and condition Commands commonly have `Frame=NULL`. Their resource keys, category, IDs, matching IDs, address metadata, and Parameters still describe editor concepts, but the database does not directly provide a complete incoming-frame matcher.
+
+Possible runtime inputs include:
+
+- an event decoded elsewhere and identified by `CommandId`;
+- application code mapping functional frames to Commands;
+- a separate persistence or capability layer;
+- matching identifiers linking incoming concepts with actions;
+- non-bus events such as time, delay, or Virtual Key Card activity.
+
+The current evidence does not select one universal mechanism.
+
+### Matching semantics
+
+Section ID: `ownkb:section:d000129:s000004`
+
+Provenance cues: `database`
+
+`ObjectMatchingId` and `CommandMatchingId` demonstrably group related lighting and hotel concepts across category rows. A runtime or editor can use this relationship to find semantic counterparts, but the database does not specify whether matching is used for:
+
+- event subscription;
+- condition evaluation;
+- suggested action selection;
+- display grouping;
+- serialization compatibility.
+
+Document the grouping; keep the runtime purpose provisional.
+
+### Scenario graph boundary
+
+Section ID: `ownkb:section:d000129:s000005`
+
+Provenance cues: `catalogue`, `evidence`
+
+The four ScenarioDevices tables contain no identified scenario-instance, node, edge, ordering, branch, schedule, or execution-history model. The inspected schemas and contents establish a capability catalogue, not a recovered persistence format for user-authored scenario graphs. This bounded finding does not prove where the application stores graphs or exclude an unexamined serialization mechanism.
+
+A complete engine model still needs evidence for:
+
+| Concern | Missing evidence |
+| --- | --- |
+| scenario identity | instance table or file format |
+| graph structure | nodes, edges, branches, ordering |
+| trigger bindings | mapping from runtime events to stored Commands |
+| condition state | evaluation operands and persistence |
+| action ordering | serial, parallel, delayed, or transactional behavior |
+| error policy | retry, continue, abort, compensation |
+| scheduling | clocks, recurrence, timezone, missed-event handling |
+| runtime state | active executions and recovery after restart |
+
+### Action execution algorithm
+
+Section ID: `ownkb:section:d000129:s000006`
+
+Cautions: `do not`
+
+```text
+function execute_literal_action(capability, target, inputs):
+    require capability category is action
+    require capability Frame is literal OpenWebNet syntax
+
+    address = resolve target under functional WHO grammar
+    parameters = validate and encode all capability Parameters
+    frame = render placeholders atomically
+    parsed = parse rendered frame
+
+    require parsed WHO agrees with established capability context
+    require parsed WHERE agrees with selected target
+    require no placeholder remains
+
+    send frame through the appropriate command transport
+    collect ACK/NACK and applicable state feedback
+
+    return transmitted frame, raw responses, and classified result
+```
+
+Do not generalize this action algorithm to triggers, conditions, symbolic frames, delay rows, or time-based rows.
+
+### Result classification
+
+Section ID: `ownkb:section:d000129:s000007`
+
+Uncertainty: `unresolved`
+Provenance cues: `evidence`
+
+| Result | Meaning |
+| --- | --- |
+| rendered | a complete frame was produced and validated, but not sent |
+| transmitted | transport accepted the outgoing bytes; Device effect not yet proven |
+| acknowledged | an applicable positive acknowledgement was received |
+| rejected | `NACK` or another explicit rejection was received |
+| observed effective | later functional state evidence matches the intended action |
+| timeout | no terminal evidence arrived within the applicable window |
+| indeterminate | transport loss or ambiguous feedback prevents a conclusion |
+| unresolved capability | template, address, Parameter, or symbolic mapping was insufficient |
+
+An acknowledgement and an observed state change answer different questions and should not be collapsed into one success flag.
+
+### Relationship to `OPEN.db`
+
+Section ID: `ownkb:section:d000129:s000008`
+
+Cautions: `do not`
+Provenance cues: `documentation`
+
+`OPEN.db` describes MyHOME_Suite communication scenarios for diagnostics and Device programming. It does not define the Scenario Engine graph or replace the functional meanings of ScenarioDevices action frames.
+
+Use the common OpenWebNet session documentation for transport behavior and the functional `WHO` pages for command semantics. Do not search for ScenarioDevices row IDs in `OPEN.db` unless a separate mapping is established.
+
+# Document: ownkb:document:d000130
+
+Source path: `scenario-engine/frame-templates.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Frame Templates
+
+Section ID: `ownkb:section:d000130:s000001`
+
+`Commands.Frame` stores either a literal OpenWebNet template, a symbolic operation, or no frame. Rendering must therefore begin with classification rather than unconditional string replacement.
+
+### Command fields
+
+Section ID: `ownkb:section:d000130:s000002`
+
+Provenance cues: `evidence`
+
+| Field | Use |
+| --- | --- |
+| `Frame` | literal or symbolic command representation |
+| `ChiOpen` | stored functional `WHO` evidence |
+| `WherePlaceholder` | token representing the destination where present |
+| `WhereType` | raw address-type discriminator |
+| `WhereName` | address-field resource key |
+| `Name` | command resource key and semantic evidence |
+
+### Template classes
+
+Section ID: `ownkb:section:d000130:s000003`
+
+#### Literal OpenWebNet frame
+
+Section ID: `ownkb:section:d000130:s000004`
+
+Example stored value:
+
+`*2*1*WHERE##`
+
+This can be parsed as a functional command template. The `WHERE` token still requires the `WHO 2` address grammar and an independently selected destination.
+
+#### Literal frame with parameter placeholders
+
+Section ID: `ownkb:section:d000130:s000005`
+
+A frame can contain tokens also described by `Parameters.Placeholder`. Each placeholder must be resolved from the Parameter row and validated before substitution.
+
+#### Symbolic operation
+
+Section ID: `ownkb:section:d000130:s000006`
+
+Provenance cues: `source`
+
+Example pattern:
+
+`ResetSOS[WHERE]`
+
+This is not a complete OpenWebNet frame. It requires an application mapping or another source before it can be transmitted.
+
+#### Missing frame
+
+Section ID: `ownkb:section:d000130:s000007`
+
+Provenance cues: `database`
+
+A `NULL` frame does not prove that the capability is non-executable. It proves only that this database row does not contain a renderable frame template.
+
+### Safe rendering algorithm
+
+Section ID: `ownkb:section:d000130:s000008`
+
+Cautions: `do not`
+Uncertainty: `unresolved`
+
+```text
+function render(command, selected_where, supplied_values):
+    if command.Frame is NULL:
+        return unresolved("no stored frame")
+
+    if command.Frame is not syntactically an OpenWebNet template:
+        return unresolved("symbolic operation")
+
+    parsed = parse frame structure before substitution
+
+    if command.ChiOpen is present:
+        require parsed WHO agrees with established ChiOpen interpretation
+
+    if command.WherePlaceholder is present:
+        validate selected_where using the parsed WHO address grammar
+        replace only the complete declared WHERE token
+    else if selected_where was supplied:
+        reject unused input
+
+    groups = resolve_parameters(command), grouped by complete placeholder
+    for group in groups:
+        if group has no placeholder:
+            retain it as editor metadata; do not substitute it
+            continue
+        values = supplied values or established stored constants
+        validate each component using its interpreted type and domain
+        encode the complete group using the established scalar/composite rule
+        replace the declared placeholder once
+        reject the group if its component order or encoding is unresolved
+
+    require no unresolved placeholder remains
+    serialize and parse the result again
+    require serialized frame has the expected WHO and frame family
+
+    return rendered frame plus full substitution provenance
+```
+
+### Numeric-domain validation
+
+Section ID: `ownkb:section:d000130:s000009`
+
+For a numeric Parameter with established numeric semantics:
+
+```text
+valid = (Min is absent or value >= Min)
+    and (Max is absent or value <= Max)
+    and (
+        Step is absent
+        or Step is zero
+        or (Min is present and (value - Min) modulo Step == 0)
+    )
+```
+
+If `Step` is present but `Min` is absent, this row does not establish the step-grid origin. This rule applies only after `Type` and the placeholder have been shown to represent a numeric scalar. Some parameters encode composite values such as time components and cannot be validated as one scalar range. See [Parameters](parameters.md) for the observed type and operator domains and the composite-placeholder cases.
+
+### Security and correctness rules
+
+Section ID: `ownkb:section:d000130:s000010`
+
+Cautions: `do not`
+Uncertainty: `contradictory`, `unresolved`
+Provenance cues: `evidence`, `source`
+
+- Never substitute unvalidated text directly into a frame.
+- Match complete placeholders, not substrings.
+- Reject values containing frame delimiters unless the parameter grammar explicitly requires them.
+- Reparse the rendered frame before transmission.
+- Validate `WHERE` under the functional `WHO`; `WhereType` alone is not a complete address grammar.
+- Treat `ChiOpen` as source evidence, not permission to overwrite a contradictory literal frame.
+- Preserve the stored template and rendered result together.
+- Do not transmit symbolic or unresolved templates.
+
+### Example
+
+Section ID: `ownkb:section:d000130:s000011`
+
+For the stored automation action:
+
+```text
+ChiOpen = 2
+Frame = *2*1*WHERE##
+WherePlaceholder = WHERE
+```
+
+and an independently validated `WHO 2` destination `11`, rendering produces:
+
+`*2*1*11##`
+
+The resulting `WHAT 1` and `WHERE 11` semantics must still be read from the [`WHO 2` functional reference](../functional/who-2-automation/). The ScenarioDevices row establishes the template offered by MyHOME_Suite; it does not replace the protocol definition.
+
+See [Execution Model](execution-model.md) for the boundary between rendering an action frame and executing a complete scenario.
+
+# Document: ownkb:document:d000131
+
+Source path: `scenario-engine/functional-correlations.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Functional Correlations
+
+Section ID: `ownkb:section:d000131:s000001`
+
+Provenance cues: `evidence`
+
+Literal ScenarioDevices frames provide direct implementation evidence for functional OpenWebNet operations offered by the MyHOME_Suite scenario editor.
+
+Across `ScenarioDevices-program-files.sqlite`, 57 Commands contain OpenWebNet-shaped templates. Every one has a non-null `ChiOpen`, and the parsed frame `WHO` agrees with `ChiOpen` in all 57 rows.
+
+### Explicit functional coverage
+
+Section ID: `ownkb:section:d000131:s000002`
+
+| `WHO` | Literal templates | Scenario editor coverage |
+| --- | --- | --- |
+| `0` | 1 | scenario-module action |
+| `1` | 17 | Lighting, timed Lighting, dimming, controlled socket, fan, and an Object-contextual door-lock action |
+| `2` | 18 | shutter, curtain, advanced positioning, and movement actions |
+| `4` | 19 | Temperature Control modes, protection, setpoint, local control, and fan-coil speed |
+| `14` | 2 | actuator lock and unlock |
+
+`ChiOpen=2` occurs on 19 Commands because the Delay action also stores `2` while its `Frame` is `NULL`. It is not included among the 18 literal `WHO 2` templates.
+
+### `WHO 0`: scenario action
+
+Section ID: `ownkb:section:d000131:s000003`
+
+The Scenario action row stores:
+
+`*0*N*WHERE##`
+
+The Parameter row supplies placeholder `N` with numeric metadata. Interpret `N` and `WHERE` through the [`WHO 0` reference](../functional/who-0-scenarios/) rather than treating the ScenarioDevices numeric metadata as a complete protocol grammar.
+
+### `WHO 1`: target-dependent editor semantics
+
+Section ID: `ownkb:section:d000131:s000004`
+
+Provenance cues: `database`
+
+ScenarioDevices stores ordinary Lighting actions such as:
+
+- `*1*0*WHERE##` - OFF;
+- `*1*1*WHERE##` - ON;
+- `WHAT 11..16` using `*1*WHAT*WHERE##` - fixed timed actions;
+- `*#1*WHERE*#2*ora*min*sec##` - parameterized timed action;
+- `*#1*WHERE*#1*liv*v##` - 100-level dimming action.
+
+It also labels `*1*17*WHERE##` as `automation.actionAutomationDoorLock.on`. Public `WHO 1` semantics still apply at the wire level; the door-lock label is an Object-contextual MyHOME_Suite presentation. This demonstrates that user-facing meaning can depend on the target Object as well as `WHO` and `WHAT`.
+
+See the [`WHO 1` reference](../functional/who-1-lighting/) and [cross-database functional coverage](../functional/cross-database-coverage.md).
+
+### `WHO 2`: Automation
+
+Section ID: `ownkb:section:d000131:s000005`
+
+The templates cover:
+
+- UP, DOWN, and STOP;
+- absolute position through `DIMENSION 11`;
+- advanced movement with a step parameter;
+- advanced STOP;
+- step-by-step movement.
+
+Shutter and Curtain editor Objects can emit identical wire templates with different user-facing labels. Preserve the selected Object context while decoding the frame through the [`WHO 2` reference](../functional/who-2-automation/).
+
+### `WHO 4`: Temperature Control
+
+Section ID: `ownkb:section:d000131:s000006`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`
+
+ScenarioDevices supplies implementation templates using functional Dimensions:
+
+| Function | Template form |
+| --- | --- |
+| comfort/eco/protection modes | `*#4*ZAZB*#7*[MODE]*[FUNCTION]*##` |
+| setpoint | `*#4*ZAZB*#7*[MODE]*1*c1c2c3c4##` |
+| OFF | `*#4*ZAZB*#7*0*5*##` |
+| local control | `*#4*ZAZB*#5*val##` |
+| fan-coil speed | `*#4*ZAZB*#11*val##` |
+
+The exact stored rows distinguish Heat, Cool, Auto, and Generic modes and Comfort, Eco, Protection, Setpoint, and OFF functions. The semantic-to-wire conversion for `c1c2c3c4` and the enumeration of `val` require the [`WHO 4` reference](../functional/who-4-temperature-control/) or additional application evidence.
+
+The local-control and fan-coil-speed rows exist only in the Program Files revision.
+
+### `WHO 14`: actuator lock and unlock
+
+Section ID: `ownkb:section:d000131:s000007`
+
+Provenance cues: `evidence`
+
+ScenarioDevices provides direct labels for two otherwise sparsely documented operations:
+
+| Resource-key command | Frame | Implementation meaning |
+| --- | --- | --- |
+| `.lock` | `*14*0*WHERE##` | lock actuator |
+| `.unlock` | `*14*1*WHERE##` | unlock actuator |
+
+This is MyHOME_Suite implementation evidence scoped to the Lock/Unlock Actuator Object. See the [`WHO 14` reference](../functional/who-14-special-commands/).
+
+### Symbolic capabilities
+
+Section ID: `ownkb:section:d000131:s000008`
+
+Five non-null frames are not OpenWebNet frame strings:
+
+- `ResetSOS[WHERE]`;
+- `DND ON` and `DND OFF`;
+- `MUR ON` and `MUR OFF`.
+
+These values establish named internal operations, not complete wire frames. No `WHO` should be manufactured from them.
+
+### Frame-absent capabilities
+
+Section ID: `ownkb:section:d000131:s000009`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+Ninety-five Commands have `Frame=NULL`, including most triggers and conditions, CEN/CEN+ events, time capabilities, Virtual Key Card events, and the Delay action.
+
+Their resource keys and Parameters are useful application evidence. They do not establish an incoming or outgoing OpenWebNet frame without another source.
+
+### Cross-source rule
+
+Section ID: `ownkb:section:d000131:s000010`
+
+Provenance cues: `database`
+
+ScenarioDevices can enrich a protocol frame with editor Object/command context. It cannot override the functional protocol grammar, prove Device applicability, or establish a cross-database Object join by numeric coincidence.
+
+# Document: ownkb:document:d000132
+
+Source path: `scenario-engine/open-questions.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Open Questions
+
+Section ID: `ownkb:section:d000132:s000001`
+
+Provenance cues: `documentation`
+
+This page records Scenario Engine semantics that are not yet established strongly enough for normative documentation.
+
+### Database selection
+
+Section ID: `ownkb:section:d000132:s000002`
+
+- Which application workflow opens `ScenarioDevices-program-files.sqlite`?
+- Which workflow opens `ScenarioDevices-programdata.sqlite`?
+- Are they product variants, generated and packaged revisions, or inputs to different MyHOME_Suite components?
+- When both are available, which file takes precedence?
+
+### Category and family fields
+
+Section ID: `ownkb:section:d000132:s000003`
+
+Cautions: `do not`
+Provenance cues: `database`, `source`
+
+- Confirm the application's own labels for `CategoryFlag 0` and `1`; the data establishes primary/start and complementary/stop event categories, but not one universal public name.
+- The local editor-family grouping of `FamilyId` is established in [Database Model](database-model.md). Determine whether application code defines any additional cross-source mapping; equal values alone do not establish one.
+- Confirm the runtime/editor purpose of the established primary/complementary category pairs that share a resource key.
+
+### Matching identifiers
+
+Section ID: `ownkb:section:d000132:s000004`
+
+- Establish the purpose of `ObjectMatchingId` and `CommandMatchingId`.
+- Determine how the application uses the established cross-role matching groups at runtime or in the editor: event binding, suggested actions, display grouping, serialization, or another purpose.
+- Test whether matching identifiers are local to one file or stable across both revisions.
+
+### Object identifiers
+
+Section ID: `ownkb:section:d000132:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+- Determine whether `DeviceObjects.ObjectId` maps to ScenarioDevices-only concepts, catalogue Objects, public protocol constructs, or a mixture.
+- Do not infer equality with `EN_KEY_OBJECT.key_object` from numeric coincidence.
+- Identify which installed Device/Object evidence MyHOME_Suite uses to filter the scenario editor's Object list.
+
+### Command identifiers
+
+Section ID: `ownkb:section:d000132:s000006`
+
+Provenance cues: `source`
+
+- Determine the namespace and stability of `Commands.CommandId`.
+- Establish whether equal `CommandId` values under different Objects mean semantic equivalence.
+- Correlate commands with the functional `WHAT` or `DIMENSION` reference only where the stored frame or independent source supports it.
+
+### Address metadata
+
+Section ID: `ownkb:section:d000132:s000007`
+
+- Enumerate `WhereType` semantics.
+- Establish how `WherePlaceholder` and `WhereName` interact with system-specific address editors.
+- Determine how virtual, group, general, and multi-level addresses are represented.
+
+### Parameter metadata
+
+Section ID: `ownkb:section:d000132:s000008`
+
+- Enumerate parameter `Type` values.
+- Enumerate `OperatorType` values and their relationship to triggers and conditions.
+- Determine when `Value` is a default, fixed selector, comparison operator operand, or enumeration key.
+- Document composite placeholders whose grammar cannot be expressed by `Min`, `Max`, and `Step` alone.
+
+### Symbolic and missing frames
+
+Section ID: `ownkb:section:d000132:s000009`
+
+Provenance cues: `database`
+
+- Locate the application mapping for symbolic values such as `ResetSOS[WHERE]`.
+- Determine why some trigger/condition rows have no stored frame.
+- Establish whether missing frames are matched against incoming events by IDs, by another database, or by application code.
+
+### Execution model
+
+Section ID: `ownkb:section:d000132:s000010`
+
+Cautions: `do not`
+
+The databases describe capabilities but do not obviously store complete user-authored scenario graphs. Further work should identify:
+
+- where scenario instances are persisted;
+- how triggers, conditions, and actions are ordered;
+- how delays, timers, and branching are represented;
+- how incoming frames are matched to triggers;
+- how actions are scheduled and errors handled;
+- whether the engine retries, serializes, or parallelizes actions.
+
+### Investigation method
+
+Section ID: `ownkb:section:d000132:s000011`
+
+Uncertainty: `hypothesis`
+Provenance cues: `evidence`
+
+For each hypothesis:
+
+1. query both ScenarioDevices revisions;
+2. preserve file and row provenance;
+3. compare resource keys, parents, frames, and parameters;
+4. correlate with the functional protocol reference;
+5. inspect other preserved MyHOME_Suite support files where available;
+6. compare with observed UI behavior or execution;
+7. record counterexamples;
+8. promote the interpretation only when it explains all relevant rows.
+
+Implementation labels are evidence, not automatically public protocol terminology.
+
+# Document: ownkb:document:d000133
+
+Source path: `scenario-engine/parameters.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Parameters
+
+Section ID: `ownkb:section:d000133:s000001`
+
+Applicability cues: `revision`
+
+`Parameters` describes additional values needed by a Command or by the scenario editor. A Command has zero, one, or two Parameter rows in the canonical `program-files` revision.
+
+| Parameters per Command | Commands |
+| --- | --- |
+| 0 | 116 |
+| 1 | 40 |
+| 2 | 1 |
+
+The two-parameter Command is a lighting dimmer action whose shared placeholder encodes both level and transition time.
+
+### Field model
+
+Section ID: `ownkb:section:d000133:s000002`
+
+| Field | Established role | Interpretation limit |
+| --- | --- | --- |
+| `Id` | local row primary key | not stable across databases by declaration |
+| `Command_Id` | foreign key to `Commands.Id` | local to one file |
+| `Name` | localization/resource key | not necessarily unique |
+| `Placeholder` | token or composite pattern used by the command/application | can be `NULL` |
+| `Min`, `Max` | stored numeric bounds | meaningful only after type interpretation |
+| `Step` | stored increment | not sufficient for composite values |
+| `Type` | parameter editor/value-type discriminator | numeric enumeration is not published |
+| `OperatorType` | operator/editor discriminator | numeric enumeration is not published |
+| `Value` | stored fixed or selector value | role depends on the Parameter context |
+
+### Observed `Type` values
+
+Section ID: `ownkb:section:d000133:s000003`
+
+Provenance cues: `evidence`
+
+| Type | Rows in `program-files` | Observed contexts | Evidence-based description |
+| --- | --- | --- | --- |
+| `1` | 3 | time and time-range conditions | time-oriented editor/value |
+| `2` | 24 | shutter levels, steps, scenario numbers, lighting level | numeric scalar |
+| `3` | 4 | Temperature Control setpoints | temperature value with `0.5` step |
+| `4` | 3 | time and date | time/date editor/value |
+| `5` | 3 | time and days of week | time/weekday editor/value |
+| `6` | 2 | dimmer level and transition value sharing `liv*v` | composite dimmer value component |
+| `7` | 1 | timed-light `ora*min*sec` | composite duration |
+| `8` | 1 | Temperature Control local-control enabling | enumeration or specialized selector; only in `program-files` |
+| `9` | 1 | fan-coil speed | enumeration or specialized selector; only in `program-files` |
+
+These descriptions are derived from resource keys and value shapes. Retain the numeric Type in machine-readable output.
+
+### Observed `OperatorType` values
+
+Section ID: `ownkb:section:d000133:s000004`
+
+| Operator type | Rows | Observed context | Working interpretation |
+| --- | --- | --- | --- |
+| `0` | 38 | ordinary values and action parameters | direct/single-value editor |
+| `1` | 1 | lighting dimmer condition with stored `Value=1` | condition-specific operator/value selector |
+| `2` | 3 | time-range conditions | range-oriented editor |
+
+The names above are working descriptions, not a published enumeration.
+
+### Scalar validation
+
+Section ID: `ownkb:section:d000133:s000005`
+
+Cautions: `do not`
+
+For a Parameter proven to be a numeric scalar:
+
+```text
+require Min is absent or value >= Min
+require Max is absent or value <= Max
+if Step is present and non-zero and Min is present:
+    require (value - Min) / Step is integral within numeric tolerance
+else if Step is present but Min is absent:
+    do not infer the step-grid origin from this row alone
+```
+
+Do not apply that algorithm to composite Types `6` or `7`, or to time/date structures, without first expanding their grammar.
+
+### Composite placeholders
+
+Section ID: `ownkb:section:d000133:s000006`
+
+#### `liv*v`
+
+Section ID: `ownkb:section:d000133:s000007`
+
+Two Parameter rows can target the same placeholder:
+
+- level: `1..100`, step `1`;
+- transition/time component: `1..254`, step `1`.
+
+The placeholder contains an internal delimiter and represents a composite encoded field. Rendering must combine the two validated components according to the functional frame grammar; replacing the same token twice is incorrect.
+
+#### `ora*min*sec`
+
+Section ID: `ownkb:section:d000133:s000008`
+
+This placeholder describes multiple duration components. `Min`, `Max`, and `Step` are absent, so the ScenarioDevices row alone does not define each component's domain.
+
+#### `c1c2c3c4`
+
+Section ID: `ownkb:section:d000133:s000009`
+
+Temperature setpoint actions use a `3..40` semantic range with step `0.5`, while the placeholder name suggests a fixed encoded representation. The conversion from temperature to the four-character wire field must come from the functional Temperature Control definition or corroborated application behavior.
+
+### Stored `Value` evidence
+
+Section ID: `ownkb:section:d000133:s000010`
+
+Seventeen Parameter rows have a non-null `Value`, and every stored value is the text `1`:
+
+- one Lighting dimmer condition Parameter with `OperatorType=1`;
+- sixteen CEN/CEN+ event Parameters across the two event categories.
+
+The CEN/CEN+ rows also provide button-number domains: one CEN start-pressure form allows `0..99`, while the other CEN and CEN+ forms allow `0..31`.
+
+The repeated `1` is implementation data, but the column is not declared as a default-value field. Preserve it as a stored selector/value until UI or runtime behavior establishes whether it is a default, comparison operand, or another editor setting.
+
+### Parameters without placeholders
+
+Section ID: `ownkb:section:d000133:s000011`
+
+A `NULL` Placeholder can still describe editor state, comparison criteria, time structures, or fixed selections. Such Parameters are not automatically unused and should not be discarded.
+
+### Resolution algorithm
+
+Section ID: `ownkb:section:d000133:s000012`
+
+Uncertainty: `unresolved`
+Provenance cues: `evidence`
+
+```text
+function resolve_parameters(command):
+    rows = Parameters for command ordered by Id
+    group rows by Placeholder, keeping NULL rows separate
+
+    for group in rows:
+        classify Type and OperatorType only from established evidence
+
+        if one scalar row targets one placeholder:
+            build scalar domain from Min, Max, Step
+        else if several rows target one placeholder:
+            require an established composite encoding rule
+        else if placeholder is NULL:
+            retain as application/editor metadata
+
+        attach stored Value without assuming it is a default
+
+    return typed parameter model plus unresolved semantics
+```
+
+### Revision differences
+
+Section ID: `ownkb:section:d000133:s000013`
+
+`programdata` lacks Types `8` and `9` because it lacks the local-control and fan-coil-speed Commands and their Parameters. The common Types and rows otherwise substantially overlap, but correspondence should be checked by parent Command and resource key rather than primary key alone.
+
+# Document: ownkb:document:d000134
+
+Source path: `scenario-engine/sources-and-identifiers.md`
+Namespace context: `contextual`
+Area: `scenario-engine`
+
+## Sources and Identifier Boundaries
+
+Section ID: `ownkb:section:d000134:s000001`
+
+Provenance cues: `source`
+
+This section is derived from preserved MyHOME_Suite 3.5.38 sources and the repository's functional OpenWebNet reference. Each source establishes a different layer.
+
+### Canonical ScenarioDevices files
+
+Section ID: `ownkb:section:d000134:s000002`
+
+Both repository files were originally named `ScenarioDevices.sqlite`; the repository names distinguish their installation locations.
+
+| Repository file | Original installation path | SHA-256 |
+| --- | --- | --- |
+| `ScenarioDevices-program-files.sqlite` | `C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\ScenarioDevices.sqlite` | `2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569` |
+| `ScenarioDevices-programdata.sqlite` | `C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_ScenarioDevices\ScenarioDevices.sqlite` | `cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3` |
+
+The fingerprints match [`sources/manifest.yaml`](../sources/manifest.yaml). The paths establish packaging location, not precedence or runtime selection behavior.
+
+### Evidence roles
+
+Section ID: `ownkb:section:d000134:s000003`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+| Source | What it establishes | What it does not establish alone |
+| --- | --- | --- |
+| ScenarioDevices files | editor capability hierarchy, resource keys, local IDs, categories, matching IDs, templates, and Parameter metadata | installed Device support, complete runtime graph, or public protocol semantics for frame-absent rows |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Physical Device, firmware, Module, Object, and configuration capability | ScenarioDevices ID equivalence |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | systems, address rules, management frames, diagnostic/programming sequences, and timeouts | Scenario Engine graph or ScenarioDevices row mapping |
+| [Functional reference](../functional/) | functional `WHO`, `WHAT`, `WHERE`, and `DIMENSION` semantics | MyHOME_Suite editor coverage by itself |
+| [Cross-database functional coverage](../functional/cross-database-coverage.md) | corroborated intersections among implementation databases and functional frames | undeclared numeric joins |
+| observed application/runtime behavior | UI labels, filtering, persistence, matching, and execution behavior | universal support beyond observed versions and Devices |
+
+### Identifier namespaces
+
+Section ID: `ownkb:section:d000134:s000004`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Identifier | Scope |
+| --- | --- |
+| `ObjectSystems.Id` | local row key in one ScenarioDevices file |
+| `FamilyId` | grouping value present only in the Program Files copy |
+| `DeviceObjects.Id` | local row key and foreign-key target |
+| `DeviceObjects.ObjectId` | ScenarioDevices Object identifier |
+| `ObjectMatchingId` | sparse cross-role Object correlation |
+| `Commands.Id` | local row key and Parameter foreign-key target |
+| `Commands.CommandId` | ScenarioDevices command identifier |
+| `CommandMatchingId` | sparse cross-role command correlation |
+| `ChiOpen` | stored functional `WHO` evidence where present |
+| catalogue `id_key_object` | internal primary key in `MHCatalogue.db` |
+| catalogue `key_object` | external diagnostic/programming Object number |
+| functional `WHO` / `WHAT` / `WHERE` | OpenWebNet wire namespaces |
+
+Only the declared foreign keys inside one ScenarioDevices file can be joined automatically. Matching IDs are explicit correlations within that model but are not foreign keys.
+
+### Cross-file identity
+
+Section ID: `ownkb:section:d000134:s000005`
+
+The common semantic content of `programdata` is an exact subset of `program-files` when compared using the full hierarchical path and non-local fields:
+
+- Object System resource key and `CategoryFlag`;
+- Device Object resource key and Object/matching identifiers;
+- Command resource key and command/matching/address/frame fields;
+- Parameter resource key, placeholder, domain, type, operator, and stored value.
+
+Local primary keys differ after the additional Program Files rows, so row IDs are not cross-file identities.
+
+### Correlation rules
+
+Section ID: `ownkb:section:d000134:s000006`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`, `specification`
+
+A cross-source relationship can be documented as established when supported by one or more of:
+
+1. a declared foreign key;
+2. a literal OpenWebNet frame whose `WHO` and operation parse unambiguously;
+3. an explicit matching identifier inside ScenarioDevices;
+4. resource-key semantics corroborated by a literal frame or functional specification;
+5. independently observed MyHOME_Suite behavior.
+
+Do not correlate values only because their integers are equal. In particular, `FamilyId`, `ObjectId`, `CommandId`, catalogue system IDs, catalogue Object IDs, and OpenWebNet fields are independent until evidence connects them.
+
+### Evidence labels
+
+Section ID: `ownkb:section:d000134:s000007`
+
+Uncertainty: `unknown`
+
+This section uses:
+
+- **established** for direct schema/data facts or corroborated protocol mappings;
+- **implementation-derived** for stable meaning recovered from resource keys and stored frames;
+- **inferred** for the best explanation of a complete observed pattern without a direct declaration;
+- **unknown** where competing explanations remain.

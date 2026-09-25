@@ -50,6 +50,12 @@ def _namespace_for_document(document: dict[str, Any]) -> str:
         return "ownkb:namespace:diagnostic"
     if document["namespace_context"]["area"] == "device-model":
         return "ownkb:namespace:device-model"
+    if document["namespace_context"]["area"] == "internals":
+        return "ownkb:namespace:implementation"
+    if document["namespace_context"]["area"] == "reverse-engineering":
+        return "ownkb:namespace:research"
+    if document["namespace_context"]["area"] == "scenario-engine":
+        return "ownkb:namespace:scenario-devices"
     return "ownkb:namespace:openwebnet"
 
 
@@ -63,6 +69,12 @@ def _applicability(namespace_id: str) -> dict[str, Any]:
     if namespace_id == "ownkb:namespace:scenario-devices":
         return {"domain": "implementation", "state": "applies", "target": "MyHOME Suite Scenario Engine",
                 "version": {"expression": "3.5.38", "state": "specified"}}
+    if namespace_id == "ownkb:namespace:implementation":
+        return {"domain": "implementation", "state": "applies", "target": "MyHOME Suite implementation",
+                "version": {"expression": "3.5.38", "state": "specified"}}
+    if namespace_id == "ownkb:namespace:research":
+        return {"domain": "other", "state": "applies", "target": "OpenWebNet research",
+                "version": {"state": "unknown"}}
     return {"domain": "protocol", "state": "applies", "target": "OpenWebNet",
             "version": {"state": "unknown"}}
 

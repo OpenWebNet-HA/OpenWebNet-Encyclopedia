@@ -1,6 +1,6 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
+Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 | 8 | Reviewed atomic claim framework and representative fixtures | **Complete** - eight curated assertions, shared-IR join, source-section review pins, typed claim links, schema and integrity checks |
 | 9 | Initial claim population, batch 1 | **Complete** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, source/evidence classifications, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
 | 10 | Initial claim population, batch 2 | **Complete** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with targeted high-risk semantic, privacy, coverage, and integrity checks |
-| 11 | Initial claim population, batch 3 | Pending |
+| 11 | Initial claim population, batch 3 | **Complete** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with explicit implementation scope, rejected relationships, inferred relationships, open questions, and guide-only documentation defects |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | Pending |
 | 13 | Full CI, contributor workflow, release machinery | Pending - initial privacy CI already present |
 | 14 | Full candidate generation and mechanical cleanup | Pending |
@@ -97,6 +97,14 @@ Snapshot: 2026-09-24, branch `machine-knowledge-base`. A phase is complete only 
 - Generalized installation-derived examples and replaced concrete discovery identifiers with `[DEVICE_ID]` before generating claims. No private capture, inventory, or configuration export entered the source set; the final scanner covers all generated artifacts.
 - Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; `git diff --check`.
 
+## Phase 11 verification
+
+- Added 1,125 reviewed claims across all 31 canonical pages in `internals/`, `reverse-engineering/`, and `scenario-engine/`: 321 implementation-internals claims, 493 research claims, and 311 Scenario Engine claims. Their bounded ledger accounts for all 304 source sections: 275 contain claims and 29 are reviewed structural, navigation, procedural, reference-list, or non-assertive sections. The generated total is 7,342 claims.
+- Added `scenario-engine/` to the privacy-gated canonical IR with 11 documents and 100 sections. The complete canonical set now has 134 documents and 1,181 sections; 1,149 nonempty sections emit retrieval chunks.
+- Kept implementation and database evidence scoped to MyHOME Suite 3.5.38. Implementation observations remain `observed`, inferred relationships remain `inferred`, all 47 registered rejected relationships remain `rejected` with their rejecting evidence, and open-question assertions remain `unresolved` with question references. The established `DIMENSION 32.SYS` and gateway `N_CONF` questions are reused rather than resolved by generation.
+- Kept all Practical Guides outside the IR and claim inputs. Review identified two guide-only documentation defects: the Object-scoped Scheduled scenario PLUS CEN property layout and qualified low/high combination rule belong in `device-model/configuration.md` and `diagnostics/dim35-configuration.md`; the Object-scoped `G1` through `G10` index series belongs in `device-model/configuration.md`. Neither entered claims.
+- Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; targeted preservation and Phase 11 coverage assertions; `git diff --check`.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 11 with a separately committed bounded domain outside the five completed claim areas. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.
+Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 12 with cross-artifact consistency, drift, and change-impact checks. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.

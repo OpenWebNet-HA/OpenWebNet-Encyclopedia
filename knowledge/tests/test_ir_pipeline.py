@@ -31,7 +31,7 @@ class IRPipelineTests(unittest.TestCase):
             root = Path(temporary)
             manifest, identities = self.fixture_tree(root)
             first = build(root, manifest, identities, bootstrap=True)
-            self.assertEqual(7, len(first['documents']))
+            self.assertEqual(8, len(first['documents']))
             self.assertTrue(all(d['privacy']['classification'] == 'public' for d in first['documents']))
             self.assertFalse(any(d['path'].startswith('guides/') for d in first['documents']))
             self.assertTrue(first['guide_remediation'])
