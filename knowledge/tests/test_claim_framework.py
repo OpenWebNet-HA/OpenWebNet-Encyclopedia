@@ -31,7 +31,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 6217)
+        self.assertEqual(len(claims), 7342)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -82,7 +82,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(6217, metrics["records"])
+        self.assertEqual(7342, metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 96, "sections_with_claims": 86},
@@ -108,6 +108,45 @@ class ClaimFrameworkTests(unittest.TestCase):
              "sections": 121, "sections_with_claims": 110},
             metrics["bounded_domains"]["device-model"],
         )
+        self.assertEqual(
+            {"claims": 321, "documents": 9, "reviewed_nonclaim_sections": 4,
+             "sections": 75, "sections_with_claims": 71},
+            metrics["bounded_domains"]["internals"],
+        )
+        self.assertEqual(
+            {"claims": 493, "documents": 11, "reviewed_nonclaim_sections": 14,
+             "sections": 129, "sections_with_claims": 115},
+            metrics["bounded_domains"]["reverse-engineering"],
+        )
+        self.assertEqual(
+            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 11,
+             "sections": 100, "sections_with_claims": 89},
+            metrics["bounded_domains"]["scenario-engine"],
+        )
+
+    def test_phase11_epistemic_boundaries_are_preserved(self):
+        claims = self.render()
+        phase11 = [record for record in claims
+                   if int(record["id"].rsplit("c", 1)[1]) >= 6296]
+        self.assertEqual(1125, len(phase11))
+        self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
+                            for record in phase11))
+        rejected = [record for record in phase11 if record["epistemic_status"] == "rejected"]
+        self.assertEqual(47, len(rejected))
+        self.assertTrue(all("rejected because" in record["statement"] for record in rejected))
+        self.assertTrue(all(record["provenance"][0].get("evidence_note") for record in rejected))
+        implementation = [record for record in phase11
+                          if record["context"]["namespace_id"] in {
+                              "ownkb:namespace:implementation", "ownkb:namespace:scenario-devices"}]
+        self.assertTrue(all(record["applicability"]["version"] ==
+                            {"expression": "3.5.38", "state": "specified"}
+                            for record in implementation))
+        scenario_questions = [record for record in phase11
+                              if any(question.startswith("ownkb:question:q300")
+                                     for question in record["questions"])]
+        self.assertTrue(scenario_questions)
+        self.assertTrue(all(record["epistemic_status"] == "unresolved"
+                            for record in scenario_questions))
 
     def test_phase10_high_risk_boundaries_are_preserved(self):
         by_id = {record["id"]: record for record in self.render()}

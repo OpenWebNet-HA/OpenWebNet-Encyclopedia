@@ -121,3 +121,14 @@
 {"classification":"publishable","source_id":"ownkb:source:s000121","source_path":"reverse-engineering/open-questions.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000122","source_path":"reverse-engineering/rejected-relationships.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000123","source_path":"reverse-engineering/relationship-register.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000149","source_path":"scenario-engine/README.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000150","source_path":"scenario-engine/capability-coverage.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000151","source_path":"scenario-engine/capability-resolution.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000152","source_path":"scenario-engine/categories-and-matching.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000153","source_path":"scenario-engine/database-model.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000154","source_path":"scenario-engine/execution-model.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000155","source_path":"scenario-engine/frame-templates.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000156","source_path":"scenario-engine/functional-correlations.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000157","source_path":"scenario-engine/open-questions.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000158","source_path":"scenario-engine/parameters.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000159","source_path":"scenario-engine/sources-and-identifiers.md","source_type":"canonical_documentation"}

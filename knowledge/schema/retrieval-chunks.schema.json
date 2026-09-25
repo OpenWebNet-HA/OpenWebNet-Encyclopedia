@@ -11,7 +11,7 @@
     "id": {"type": "string", "pattern": "^ownkb:chunk:r[0-9]{6}$"},
     "kind": {"const": "retrieval_chunk"},
     "label": {"type": "string", "minLength": 1},
-    "namespace_context": {"type": "object", "additionalProperties": false, "required": ["area", "namespace"], "properties": {"area": {"enum": ["protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering"]}, "namespace": {"type": "string", "minLength": 1}}},
+    "namespace_context": {"type": "object", "additionalProperties": false, "required": ["area", "namespace"], "properties": {"area": {"enum": ["protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering", "scenario-engine"]}, "namespace": {"type": "string", "minLength": 1}}},
     "privacy": {"$ref": "https://openwebnet-encyclopedia.example/schema/privacy-metadata-1.json"},
     "provenance": {"type": "object", "additionalProperties": false, "required": ["document_id", "evidence_class", "path", "section_id", "source_id"], "properties": {"document_id": {"type": "string", "pattern": "^ownkb:document:"}, "evidence_class": {"const": "canonical_documentation"}, "path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+\\.md$"}, "section_id": {"type": "string", "pattern": "^ownkb:section:"}, "source_id": {"type": "string", "pattern": "^ownkb:source:"}}},
     "qualification_cues": {"type": "object", "additionalProperties": false, "required": ["applicability_cues", "caution_cues", "provenance_cues", "uncertainty_cues"], "properties": {"applicability_cues": {"$ref": "#/$defs/cues"}, "caution_cues": {"$ref": "#/$defs/cues"}, "provenance_cues": {"$ref": "#/$defs/cues"}, "uncertainty_cues": {"$ref": "#/$defs/cues"}}},
