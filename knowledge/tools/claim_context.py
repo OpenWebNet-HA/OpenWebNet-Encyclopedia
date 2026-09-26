@@ -101,3 +101,73 @@ def validate_atomicity_review(statement: str, section: dict, review: dict) -> st
     if residual:
         raise ValueError("materialized claim is still structurally incomplete: " + ",".join(residual))
     return rendered
+
+IMPLEMENTATION_TITLE = re.compile(r"(?:MyHOME(?:_Suite| Suite)|OPEN\.db|MHCatalogue\.db|ScenarioDevices)", re.I)
+
+def evidence_boundary(path: str, section: dict, block_indexes: list[int]) -> dict | None:
+    if not IMPLEMENTATION_TITLE.search(section.get("title", "")):
+        return None
+    source_text = " ".join(block_text(section["blocks"][index]) for index in block_indexes)
+    combined = section.get("title", "") + " " + source_text
+    if re.search(r"ScenarioDevices", combined, re.I):
+        source_id = "ownkb:source:s000126"
+    elif re.search(r"MHCatalogue(?:\.db)?", combined, re.I):
+        source_id = "ownkb:source:s000124"
+    else:
+        source_id = "ownkb:source:s000125"
+    return {
+        "applicability_domain": "implementation",
+        "source_id": source_id,
+        "version": {"expression": "3.5.38", "state": "specified"},
+    }
+
+def make_evidence_review(seed: dict, section: dict, block_indexes: list[int],
+                         resolved_source_id: str, path: str) -> dict:
+    boundary = evidence_boundary(path, section, block_indexes)
+    widened = boundary and (
+        seed["evidence_class"] == "official_specification"
+        or seed["applicability"]["domain"] != boundary["applicability_domain"]
+        or seed["applicability"]["version"] != boundary["version"]
+    )
+    override = None
+    if widened:
+        supporting = [boundary["source_id"]]
+        if resolved_source_id not in supporting:
+            supporting.append(resolved_source_id)
+        override = {
+            "reason": (
+                "Reviewed canonical synthesis retains a broader domain applicability "
+                "while the cited implementation source bounds the underlying observation."
+            ),
+            "supporting_source_ids": supporting,
+        }
+    return {
+        "applicability": seed["applicability"],
+        "block_indexes": block_indexes,
+        "evidence_class": seed["evidence_class"],
+        "resolved_source_id": resolved_source_id,
+        "review_status": "reviewed-phase16b",
+        "widening_override": override,
+    }
+
+def validate_evidence_review(seed: dict, section: dict, review: dict,
+                             resolved_source_id: str, path: str) -> None:
+    expected_fields = {"applicability", "block_indexes", "evidence_class",
+                       "resolved_source_id", "review_status", "widening_override"}
+    if set(review) != expected_fields or review["review_status"] != "reviewed-phase16b":
+        raise ValueError("claim evidence review has unknown, missing, or unapproved fields")
+    if review["block_indexes"] != best_block_indexes(seed["statement"], section):
+        raise ValueError("claim evidence block mapping is stale")
+    current = (seed["evidence_class"], resolved_source_id, seed["applicability"])
+    reviewed = (review["evidence_class"], review["resolved_source_id"], review["applicability"])
+    if current != reviewed:
+        raise ValueError("claim provenance or applicability differs from reviewed evidence context")
+    boundary = evidence_boundary(path, section, review["block_indexes"])
+    override = review["widening_override"]
+    if boundary and (seed["evidence_class"] == "official_specification" or
+                     seed["applicability"]["domain"] != boundary["applicability_domain"] or
+                     seed["applicability"]["version"] != boundary["version"]):
+        if not isinstance(override, dict) or set(override) != {"reason", "supporting_source_ids"}:
+            raise ValueError("implementation evidence was widened without reviewed override")
+        if not override["reason"] or not override["supporting_source_ids"]:
+            raise ValueError("reviewed widening override is incomplete")

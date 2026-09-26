@@ -9,7 +9,8 @@ from collections import Counter
 from pathlib import Path
 
 from serialization import json_bytes
-from claim_context import atomicity_reasons, validate_atomicity_review
+from claim_context import (atomicity_reasons, validate_atomicity_review,
+                           validate_evidence_review)
 from validate_schema import validate_record
 
 
@@ -127,7 +128,7 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
     context_value = json.loads(seed_path.with_name("claim-context.json").read_text(encoding="utf-8"))
     if set(context_value) != {"claims", "format_version"} or context_value["format_version"] != "0.1.0":
         raise ValueError("claim context input has unsupported shape or format")
-    contexts = {item["id"]: item["atomicity"] for item in context_value["claims"]}
+    contexts = {item["id"]: item for item in context_value["claims"]}
     if set(contexts) != {seed["id"] for seed in seeds["claims"]}:
         raise ValueError("claim context input is incomplete or stale")
     refs = {r["id"]: r for group in references.values() for r in group}
@@ -155,7 +156,8 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         source_id = seed.get("source_id", sources[doc["id"]])
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
-        published_statement = validate_claim_context(seed, source_id, section, contexts[identity])
+        published_statement = validate_claim_context(seed, source_id, section, contexts[identity]["atomicity"])
+        validate_evidence_review(seed, section, contexts[identity]["evidence"], source_id, doc["path"])
         if seed["evidence_class"] == "canonical_documentation" and source_id != sources[doc["id"]]:
             raise ValueError(f"canonical source does not match section: {identity}")
         for field, kind in (("cautions", "caution"), ("questions", "question")):

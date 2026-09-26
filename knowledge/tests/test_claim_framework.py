@@ -10,7 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "knowledge/tools"))
 from build_ir import build as build_ir  # noqa: E402
-from claim_context import atomicity_reasons, best_block_indexes  # noqa: E402
+from claim_context import (atomicity_reasons, best_block_indexes,
+                           make_evidence_review)  # noqa: E402
 from render_claims import claim_coverage_metrics, claim_records, validate_claim_context  # noqa: E402
 from render_references import reference_records  # noqa: E402
 
@@ -32,13 +33,19 @@ class ClaimFrameworkTests(unittest.TestCase):
         sections = {section["id"]: section for document in selected_ir["documents"]
                     for section in document["sections"]}
         context = {"format_version": "0.1.0", "claims": []}
+        section_docs = {section["id"]: document for document in selected_ir["documents"]
+                        for section in document["sections"]}
         for seed in selected_seeds["claims"]:
             reasons = atomicity_reasons(seed["statement"])
+            indexes = best_block_indexes(seed["statement"], sections[seed["section_id"]])
+            document = section_docs[seed["section_id"]]
+            source_id = seed.get("source_id", document["source_id"])
             context["claims"].append({"id": seed["id"], "atomicity": {
-                "block_indexes": best_block_indexes(seed["statement"], sections[seed["section_id"]]),
+                "block_indexes": indexes,
                 "mode": "materialized" if reasons else "self_contained",
                 "review_status": "reviewed-phase16b",
-            }})
+            }, "evidence": make_evidence_review(
+                seed, sections[seed["section_id"]], indexes, source_id, document["path"])})
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "claims.json"
             path.write_text(json.dumps(selected_seeds))
