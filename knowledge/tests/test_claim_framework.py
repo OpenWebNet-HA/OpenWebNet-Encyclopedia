@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "knowledge/tools"))
 from build_ir import build as build_ir  # noqa: E402
-from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
+from render_claims import claim_coverage_metrics, claim_records, validate_claim_context  # noqa: E402
 from render_references import reference_records  # noqa: E402
 
 
@@ -173,6 +173,56 @@ class ClaimFrameworkTests(unittest.TestCase):
         self.assertEqual("Step Receive one ID: *#1001*10*13*[DEVICE_ID]##.",
                          next(record["statement"] for record in claims
                               if record["id"] == "ownkb:claim:c003898"))
+
+    def test_phase16_context_and_scope_repairs_are_preserved(self):
+        by_id = {record["id"]: record for record in self.render()}
+        for number in range(5724, 5730):
+            claim = by_id[f"ownkb:claim:c{number:06d}"]
+            self.assertEqual({"expression": "157", "state": "specified"},
+                             claim["applicability"]["version"])
+        self.assertTrue(by_id["ownkb:claim:c006494"]["statement"].startswith("Do not "))
+        self.assertTrue(by_id["ownkb:claim:c006495"]["statement"].startswith("Do not "))
+        self.assertFalse(by_id["ownkb:claim:c006493"]["statement"].endswith(":"))
+        for number in range(2181, 2193):
+            claim = by_id[f"ownkb:claim:c{number:06d}"]
+            self.assertEqual(("public_database", "ownkb:source:s000125", "implementation", "3.5.38"),
+                             (claim["provenance"][0]["evidence_class"],
+                              claim["provenance"][0]["source_id"],
+                              claim["applicability"]["domain"],
+                              claim["applicability"]["version"]["expression"]))
+        self.assertNotRegex(by_id["ownkb:claim:c002182"]["statement"],
+                            r"^(?:These|Those|They|This|It)\b")
+        self.assertNotRegex(by_id["ownkb:claim:c002183"]["statement"],
+                            r"^(?:These|Those|They|This|It)\b")
+        self.assertNotRegex(by_id["ownkb:claim:c002184"]["statement"],
+                            r"^(?:These|Those|They|This|It)\b")
+
+    def test_phase16_epistemic_keyword_review_is_preserved(self):
+        by_id = {record["id"]: record for record in self.render()}
+        corrected = {6460, 6494, 6633, 6900, 7081, 7420}
+        retained = {230, 6339, 6827}
+        self.assertTrue(all(by_id[f"ownkb:claim:c{number:06d}"]["epistemic_status"] != "inferred"
+                            for number in corrected))
+        self.assertTrue(all(by_id[f"ownkb:claim:c{number:06d}"]["epistemic_status"] == "inferred"
+                            for number in retained))
+
+    def test_phase16_context_guards_reject_regressions(self):
+        base = copy.deepcopy(self.seeds["claims"][0])
+        base["id"] = "ownkb:claim:c006460"
+        base["statement"] = "Level Inferred: best explanation without a declaration."
+        base["epistemic_status"] = "inferred"
+        with self.assertRaisesRegex(ValueError, "epistemic keyword"):
+            validate_claim_context(base, "ownkb:source:s000105")
+        base["id"] = "ownkb:claim:c002182"
+        base["statement"] = "These include implementation operations."
+        base["epistemic_status"] = "observed"
+        with self.assertRaisesRegex(ValueError, "not standalone"):
+            validate_claim_context(base, "ownkb:source:s000125")
+        base["id"] = "ownkb:claim:c005725"
+        base["statement"] = "slot 1: Light actuator."
+        base["applicability"]["version"] = {"state": "unknown"}
+        with self.assertRaisesRegex(ValueError, "firmware example scope"):
+            validate_claim_context(base, "ownkb:source:s000003")
 
 
 if __name__ == "__main__":
