@@ -34,6 +34,10 @@ Record durable choices here with status and rationale. A later decision may supe
 | MKB-024 | Accepted, Phase 11 | Treat `internals/` and `scenario-engine/` as version-scoped implementation evidence and `reverse-engineering/` as evidence-qualified research. Preserve observations, inferences, rejections, and open questions with their distinct epistemic status. Practical Guides cannot supply claims; record guide-only facts as documentation defects naming the canonical destination required before later extraction. |
 | MKB-025 | Accepted, Phase 12 | Keep drift detection deterministic and separate from semantic adjudication. `check.py` validates cross-artifact counts and identity sets, while `diff_impact.py` maps Git changes to stable dependent records and follows reference/claim links. Canonical document edits receive bounded document/transitive review; stable-ID/source-topology and build/schema changes explicitly require full review. A tooling finding never authorizes silently changing factual or epistemic content. |
 
+| MKB-026 | Accepted, Phase 16 | Treat installed Device IDs as contextual sensitive values rather than rejecting every eight-hex token. Sanitize singular, Markdown, equivalent-wording, and plural-list forms before IR formation; retain legitimate protocol, catalogue, source, firmware, and hash values through negative controls. The final gate scans every manifest/generated metadata surface and exact removed values without exposing those values in diagnostics. |
+| MKB-027 | Accepted, Phase 16 | Reviewed claims must be independently consumable semantic units. Preserve governing negation, explicit referents, example/firmware/version scope, and reviewed evidence/source/applicability across list items, table rows, follow-ups, and mixed-source sections. Source-section hashes remain necessary but are not sufficient; curated renderer guards reject regression of adjudicated boundaries. |
+| MKB-028 | Accepted, Phase 16 | Deterministic build, CI, privacy scans, and bounded review evidence support a remediation candidate but never certify it. A failed independent certification is preserved as failed; remediation produces a new candidate that requires a new independent Phase 15 run before merge, tag, release, or v1 claims. |
+
 ## Open decisions for Phase 1 and later
 
 | ID | Target phase | Question |
@@ -41,4 +45,4 @@ Record durable choices here with status and rationale. A later decision may supe
 | MKB-O03 | Resolved in 2 | Common record schemas and controlled vocabularies in `knowledge/schema/` |
 | MKB-O04 | Resolved, 3 | Source classification and deterministic sanitization use safe fixtures and retain scanner limits; future field transforms require policy and test updates |
 | MKB-O05 | Resolved in 8 | Shared Markdown IR and reviewed claim input representation implemented with section review pins |
-| MKB-O06 | 2 | Concrete registry schemas and golden serialization examples; exact reference file names and corpus format before v1 |
+| MKB-O06 | Resolved across 2, 6, and 7 | Concrete registry schemas and golden serialization examples are implemented; the LLM corpus, retrieval format, and seven exact reference registry files are generated and documented |

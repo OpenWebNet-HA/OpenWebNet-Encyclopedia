@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, reference registries, atomic-claim framework, and bounded initial claims for every canonical documentation area are implemented. Full drift/change-impact checks, release CI, candidate certification, and v1 publication remain pending. Consumers should not infer a released interface from these pre-release artifacts.
+**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, reference registries, atomic-claim framework, bounded claims for every canonical documentation area, drift/change-impact checks, and release CI are implemented. Independent Phase 15 certification of the Phase 14 candidate at `95c1b034104512462551adefe87c6a7c468c56f0` failed. Phase 16 remediates those findings, but the resulting candidate still requires a new independent certification before v1 publication. Consumers should not infer a released interface from these artifacts.
 
 ## Intended consumer contract
 
@@ -8,7 +8,7 @@ The published dataset must be usable by an independent offline consumer without 
 
 Schema compatibility versions are separate from content revisions recorded by Git and release tags. Never silently repurpose an ID or remove a qualification. Follow the linked Phase 1 policy; a release must verify it against the implemented schemas.
 
-## Release checklist (gates to implement and use before v1)
+## Release checklist (gates to use before v1)
 
 - [ ] Contract and schemas are reviewed, versioned, and documented with compatibility and migration behavior.
 - [ ] Allowed sources and pre-extraction sanitization are checked; prohibited/private sources never enter the IR or derived logs.
@@ -24,3 +24,5 @@ Run `python check.py` for the current deterministic build, schema, referential-i
 ## Operational maintenance machinery
 
 Phase 13 provides dedicated Machine KB validation CI: unit tests, schema fixtures, a non-committing build-freshness check, and python check.py. The [maintenance workflow](maintenance.md#normal-contributor-workflow) and release checklist remain mandatory before v1 publication.
+
+Green CI records deterministic/mechanical conformance only. It is not semantic, factual, epistemic, or privacy certification. Phase 16 added contextual installed-Device-ID sanitization/final scanning and context/provenance guards for reviewed claims; an independent Phase 15 rerun must still evaluate the new candidate.
