@@ -1,0 +1,17 @@
+{
+  "candidate_generation": "structural statement indicators joined to parsed IR blocks",
+  "corrected": 2861,
+  "materialized": 2861,
+  "population": 7342,
+  "reasons": {
+    "bare-lead-in": 398,
+    "deictic-referent": 478,
+    "missing-defined-content": 14,
+    "non-propositional-fragment": 2211
+  },
+  "residual_uncertain": 0,
+  "retained_self_contained": 4481,
+  "retired_or_replaced": 0,
+  "reviewed": 7342,
+  "stable_id_decision": "All materializations preserve the same source assertion and therefore retain their IDs."
+}

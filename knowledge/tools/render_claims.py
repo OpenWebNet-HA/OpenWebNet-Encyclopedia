@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 from serialization import json_bytes
+from claim_context import atomicity_reasons, validate_atomicity_review
 from validate_schema import validate_record
 
 
@@ -73,16 +74,22 @@ DIRECT_IMPLEMENTATION_SOURCES = {
 }
 
 
-def validate_claim_context(seed: dict, source_id: str) -> None:
+def validate_claim_context(seed: dict, source_id: str, section: dict | None = None, review: dict | None = None) -> str:
     """Fail closed on the context and provenance boundaries repaired in Phase 16."""
     identity, statement = seed["id"], seed["statement"].strip()
-    if statement in {"Do not:", "This section uses:"} or DEICTIC_FRAGMENT.search(statement):
-        raise ValueError(f"claim is not standalone and context-preserving: {identity}")
     if seed["epistemic_status"] == "inferred" and EPISTEMIC_META.search(statement):
         raise ValueError(f"epistemic keyword leaked into claim classification: {identity}")
     if seed["evidence_class"] == "official_specification" and DIRECT_IMPLEMENTATION_ASSERTION.search(statement):
         raise ValueError(f"implementation assertion uses official-spec provenance: {identity}")
 
+    if review is None:
+        if atomicity_reasons(statement):
+            raise ValueError(f"claim is not standalone and context-preserving: {identity}")
+        published_statement = statement
+    else:
+        if section is None:
+            raise ValueError(f"claim atomicity review lacks source section: {identity}")
+        published_statement = validate_atomicity_review(statement, section, review)
     if identity in WHO17_IMPLEMENTATION | WHO4_IMPLEMENTATION | ADDRESS_IMPLEMENTATION:
         version = seed["applicability"]["version"]
         if (seed["evidence_class"], source_id, seed["applicability"]["domain"],
@@ -109,6 +116,7 @@ def validate_claim_context(seed: dict, source_id: str) -> None:
                 "public_database", DIRECT_IMPLEMENTATION_SOURCES[identity], "implementation",
                 {"expression": "3.5.38", "state": "specified"}):
             raise ValueError(f"direct implementation provenance regressed: {identity}")
+    return published_statement
 
 
 def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
@@ -116,6 +124,12 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
     if set(seeds) != {"claims"} or not isinstance(seeds["claims"], list):
         raise ValueError("claim input must contain only a claims array")
     sections = {section["id"]: (doc, section) for doc in ir["documents"] for section in doc["sections"]}
+    context_value = json.loads(seed_path.with_name("claim-context.json").read_text(encoding="utf-8"))
+    if set(context_value) != {"claims", "format_version"} or context_value["format_version"] != "0.1.0":
+        raise ValueError("claim context input has unsupported shape or format")
+    contexts = {item["id"]: item["atomicity"] for item in context_value["claims"]}
+    if set(contexts) != {seed["id"] for seed in seeds["claims"]}:
+        raise ValueError("claim context input is incomplete or stale")
     refs = {r["id"]: r for group in references.values() for r in group}
     sources = {doc["id"]: doc["source_id"] for doc in ir["documents"]}
     records = []
@@ -141,7 +155,7 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         source_id = seed.get("source_id", sources[doc["id"]])
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
-        validate_claim_context(seed, source_id)
+        published_statement = validate_claim_context(seed, source_id, section, contexts[identity])
         if seed["evidence_class"] == "canonical_documentation" and source_id != sources[doc["id"]]:
             raise ValueError(f"canonical source does not match section: {identity}")
         for field, kind in (("cautions", "caution"), ("questions", "question")):
@@ -151,7 +165,7 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
                       "location": {"document_id": doc["id"], "path": doc["path"], "section_id": section["id"]}}
         if "evidence_note" in seed:
             provenance["evidence_note"] = seed["evidence_note"]
-        record = {"id": identity, "kind": "claim", "label": seed["label"], "statement": seed["statement"],
+        record = {"id": identity, "kind": "claim", "label": seed["label"], "statement": published_statement,
                   "subject_id": seed["subject_id"], "context": {"namespace_id": seed["namespace_id"],
                   "description": subject["label"]}, "source_section_sha256": digest,
                   "provenance": [provenance], "privacy": doc["privacy"], "applicability": seed["applicability"],
