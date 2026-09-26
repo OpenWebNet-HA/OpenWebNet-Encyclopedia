@@ -16,8 +16,10 @@ from render_artifacts import (bootstrap_chunk_identities, chunk_records, corpus,
 from render_references import REFERENCE_FILES, reference_records  # noqa: E402
 from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
+from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
+from validate_schema import validate_registry  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.7.0"
+GENERATOR_VERSION = "ownkb-build-0.8.0"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
@@ -36,7 +38,8 @@ def artifact(path: str, kind: str, content: bytes, record_count: int | None = No
 
 
 def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_count: int,
-                     reference_counts: dict[str, int], claim_count: int) -> list[dict[str, object]]:
+                     reference_counts: dict[str, int], claim_count: int,
+                     lifecycle_count: int) -> list[dict[str, object]]:
     schemas = [artifact(str(path.relative_to(root)), "schema", path.read_bytes())
                for path in (root / "knowledge/schema").glob("*.schema.json")]
     generated = [
@@ -46,6 +49,8 @@ def public_artifacts(root: Path, output_root: Path, document_count: int, chunk_c
                  (output_root / "knowledge/llm/llm-corpus.md").read_bytes(), document_count),
         artifact("knowledge/retrieval/chunks.jsonl", "retrieval_chunks",
                  (output_root / "knowledge/retrieval/chunks.jsonl").read_bytes(), chunk_count),
+        artifact("knowledge/id-registry.json", "id_registry",
+                 (output_root / "knowledge/id-registry.json").read_bytes(), lifecycle_count),
     ]
     generated.extend(artifact(f"knowledge/reference/{filename}", "reference_registry",
                               (output_root / "knowledge/reference" / filename).read_bytes(), reference_counts[kind])
@@ -70,18 +75,21 @@ def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_cou
 
 
 def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics: dict[str, int],
-             reference_records_by_kind: dict[str, list[dict[str, object]]], claims: list[dict], claim_metrics: dict) -> dict[str, object]:
+             reference_records_by_kind: dict[str, list[dict[str, object]]], claims: list[dict],
+             claim_metrics: dict, lifecycle: dict) -> dict[str, object]:
     ir_digest = dict(ir)
     ir_digest.pop("identities", None)
     documents = ir["documents"]
     assert isinstance(documents, list)
     reference_counts = {kind: len(records) for kind, records in reference_records_by_kind.items()}
     return {
-        "artifacts": public_artifacts(root, output_root, len(documents), chunk_metrics["emitted_chunks"], reference_counts, len(claims)),
+        "artifacts": public_artifacts(root, output_root, len(documents), chunk_metrics["emitted_chunks"],
+                                      reference_counts, len(claims), len(lifecycle["ids"])),
         "coverage": coverage(ir, chunk_metrics, reference_counts, claim_metrics),
         "format_version": MANIFEST_FORMAT_VERSION,
         "generator_version": GENERATOR_VERSION,
-        "input_content_sha256": sha256_bytes(json_bytes({"ir": ir_digest, "references": reference_records_by_kind, "claims": claims})),
+        "input_content_sha256": sha256_bytes(json_bytes({"ir": ir_digest, "references": reference_records_by_kind,
+                                                           "claims": claims, "id_lifecycle": lifecycle})),
         "schema_compatibility_version": SCHEMA_COMPATIBILITY_VERSION,
     }
 
@@ -103,6 +111,11 @@ def build(root: Path, output_root: Path) -> Path:
     expected_sections = {section["id"] for document in ir["documents"] for section in document["sections"] if section["blocks"]}
     if set(identities) != expected_sections:
         raise ValueError("curated retrieval chunk identity mapping is stale or incomplete")
+    lifecycle = json.loads((root / "knowledge/inputs/id-registry.json").read_text(encoding="utf-8"))
+    validate_registry(lifecycle)
+    current_ids = emitted_ids(claims, records, (record for group in references.values() for record in group))
+    validate_lifecycle(lifecycle, current_ids)
+    write_bytes(output_root / "knowledge/id-registry.json", json_bytes(lifecycle))
     target_corpus = output_root / "knowledge/llm/llm-corpus.md"
     target_chunks = output_root / "knowledge/retrieval/chunks.jsonl"
     write_bytes(target_corpus, corpus(ir))
@@ -111,7 +124,8 @@ def build(root: Path, output_root: Path) -> Path:
     for kind, filename in REFERENCE_FILES.items():
         write_bytes(output_root / "knowledge/reference" / filename, jsonl_bytes(references[kind]))
     target_manifest = output_root / "knowledge/manifest.json"
-    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references, claims, claim_metrics)))
+    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references,
+                                                     claims, claim_metrics, lifecycle)))
     return target_manifest
 
 

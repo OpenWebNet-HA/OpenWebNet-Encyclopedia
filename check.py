@@ -19,7 +19,8 @@ sys.path.insert(0, str(ROOT / "knowledge" / "tools"))
 from serialization import json_bytes, jsonl_bytes  # noqa: E402
 from validate_consistency import validate_cross_artifact  # noqa: E402
 from validate_references import REFERENCE_FILES, validate_integrity  # noqa: E402
-from validate_schema import validate_jsonl  # noqa: E402
+from validate_schema import validate_jsonl, validate_registry  # noqa: E402
+from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
 
 
 def reject_duplicate_keys(pairs):
@@ -130,6 +131,18 @@ def validate_artifacts(manifest: dict, output_root: Path) -> None:
     chunk_count = next(entry["record_count"] for entry in manifest["artifacts"] if entry["kind"] == "retrieval_chunks")
     if len(chunks) != chunk_count:
         raise ValueError("retrieval chunk count does not match manifest")
+    lifecycle_entries = [entry for entry in manifest["artifacts"] if entry["kind"] == "id_registry"]
+    if len(lifecycle_entries) != 1:
+        raise ValueError("manifest must contain exactly one ID lifecycle registry")
+    lifecycle_path = output_root / lifecycle_entries[0]["path"]
+    lifecycle = load_json(lifecycle_path)
+    validate_registry(lifecycle)
+    lifecycle_metrics = validate_lifecycle(
+        lifecycle, emitted_ids(claims, chunks, (record for group in registries.values() for record in group)))
+    if lifecycle_entries[0].get("record_count") != len(lifecycle["ids"]):
+        raise ValueError("ID lifecycle registry count does not match manifest")
+    if lifecycle_metrics["live"] != len(lifecycle["ids"]) - lifecycle_metrics["retired"]:
+        raise ValueError("ID lifecycle registry metrics are inconsistent")
     reference_count = sum(len(records) for records in registries.values())
     if reference_count != manifest["coverage"]["references"]["records"]:
         raise ValueError("reference record count does not match coverage")

@@ -1,0 +1,30 @@
+{
+  "aliases_required": 0,
+  "baseline_candidate": "275d60f97826341c973065b145b9e0b281ac0d05",
+  "baseline_live_ids": 11161,
+  "baseline_only_ids": [],
+  "current_live_ids": 11161,
+  "current_only_ids": [],
+  "first_release_assignment": "0.1.0",
+  "release_state": "pre-v1-unreleased",
+  "retirements_required": 0,
+  "semantic_continuity_decisions": [
+    {
+      "decision": "retain IDs",
+      "reason": "Sanitization removed private instance values without changing the public assertion identity.",
+      "scope": "privacy-remediated claims"
+    },
+    {
+      "decision": "retain IDs",
+      "reason": "Materialization supplied governing source context while preserving each source assertion.",
+      "scope": "atomicity-materialized claims"
+    },
+    {
+      "decision": "retain IDs",
+      "reason": "Evidence class, source, epistemic status, and applicability were corrected without repurposing the asserted identity.",
+      "scope": "provenance-corrected claims"
+    }
+  ],
+  "tombstones_required": 0,
+  "verification": "The complete curated ID set at the baseline candidate equals the remediated set; no ID disappeared, appeared, aliased, retired, or was reused."
+}

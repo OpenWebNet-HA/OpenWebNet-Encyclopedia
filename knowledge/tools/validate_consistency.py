@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from id_lifecycle import emitted_ids, validate_lifecycle
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -41,6 +43,11 @@ def validate_cross_artifact(root: Path, output_root: Path, manifest: dict[str, A
     retrieval = manifest["coverage"]["retrieval"]
     claim_metrics = manifest["coverage"]["claims"]
     reference_metrics = manifest["coverage"]["references"]
+    lifecycle_entries = [entry for entry in manifest["artifacts"] if entry["kind"] == "id_registry"]
+    if len(lifecycle_entries) != 1:
+        raise ValueError("manifest must contain exactly one ID lifecycle registry")
+    lifecycle = load_json(output_root / lifecycle_entries[0]["path"])
+    lifecycle_metrics = validate_lifecycle(lifecycle, emitted_ids(claims, chunks, reference_records))
 
     if canonical["documents"] != len(identities):
         raise ValueError("canonical document coverage does not match curated identities")
@@ -107,6 +114,7 @@ def validate_cross_artifact(root: Path, output_root: Path, manifest: dict[str, A
             "excluded_documents": manifest["coverage"]["guides"]["excluded_documents"],
             "remediation_hints": manifest["coverage"]["guides"]["remediation_hints"],
         },
+        "id_lifecycle": lifecycle_metrics,
         "references": {"records": len(reference_records)},
         "retrieval": {
             "chunks": len(chunks),
