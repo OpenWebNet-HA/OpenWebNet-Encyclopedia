@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release. The consumer contract, schemas, privacy source gate, shared IR, deterministic build infrastructure, LLM corpus, retrieval chunks, reference registries, atomic-claim framework, bounded claims for every canonical documentation area, drift/change-impact checks, and release CI are implemented. Independent Phase 15 certification of the Phase 14 candidate at `95c1b034104512462551adefe87c6a7c468c56f0` failed. Phase 16 remediates those findings, but the resulting candidate still requires a new independent certification before v1 publication. Consumers should not infer a released interface from these artifacts.
+**Status:** Pre-release, independently certified candidate. The earlier Phase 14 candidate at `95c1b034104512462551adefe87c6a7c468c56f0` failed certification and remains recorded as failed. After Phase 16/16b remediation, independent Phase 15 recertification passed on 2026-09-26 for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. MKB-R03, MKB-R06, and the remaining release checklist still block publication; no merge, tag, release, or v1 interface is implied by certification.
 
 ## Intended consumer contract
 
@@ -25,4 +25,4 @@ Run `python check.py` for the current deterministic build, schema, referential-i
 
 Phase 13 provides dedicated Machine KB validation CI: unit tests, schema fixtures, a non-committing build-freshness check, and python check.py. The [maintenance workflow](maintenance.md#normal-contributor-workflow) and release checklist remain mandatory before v1 publication.
 
-Green CI records deterministic/mechanical conformance only. It is not semantic, factual, epistemic, or privacy certification. Phase 16 added contextual installed-Device-ID sanitization/final scanning and context/provenance guards for reviewed claims; an independent Phase 15 rerun must still evaluate the new candidate.
+Green CI records deterministic/mechanical conformance only. It is not semantic, factual, epistemic, or privacy certification. Phase 16 added contextual installed-Device-ID sanitization/final scanning and context/provenance guards for reviewed claims; independent Phase 15 recertification subsequently passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. Remaining release gates still apply.
