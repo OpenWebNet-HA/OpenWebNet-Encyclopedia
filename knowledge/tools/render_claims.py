@@ -17,6 +17,67 @@ def section_digest(section: dict) -> str:
     return hashlib.sha256(json_bytes(section)).hexdigest()
 
 
+DEICTIC_FRAGMENT = re.compile(r"^(?:These include|These definitions|They should be interpreted)\b", re.IGNORECASE)
+EPISTEMIC_META = re.compile(
+    r"^(?:(?:Level|Outcome|Status)\b.*\binferred\b|Do not\b.*\binferred\b|"
+    r"The inferred evidence label\b)",
+    re.IGNORECASE,
+)
+DIRECT_IMPLEMENTATION_ASSERTION = re.compile(
+    r"(?:implementation data distinguishes operations|Established implementation role|"
+    r"^The exact MyHOME_Suite templates|^The MyHOME_Suite labels distinguish)",
+    re.IGNORECASE,
+)
+WHO17_IMPLEMENTATION = {f"ownkb:claim:c{number:06d}" for number in range(2181, 2193)}
+WHO4_IMPLEMENTATION = {f"ownkb:claim:c{number:06d}" for number in range(3210, 3229)}
+ADDRESS_IMPLEMENTATION = {
+    "ownkb:claim:c000225", "ownkb:claim:c000265", "ownkb:claim:c000266",
+    "ownkb:claim:c000267", "ownkb:claim:c000268", "ownkb:claim:c000269",
+}
+FIRMWARE_157 = {f"ownkb:claim:c{number:06d}" for number in range(5724, 5730)}
+NEGATED_POLICY = {"ownkb:claim:c006494", "ownkb:claim:c006495"}
+EPISTEMIC_META_REVIEW = {
+    "ownkb:claim:c006460", "ownkb:claim:c006494", "ownkb:claim:c006633",
+    "ownkb:claim:c006900", "ownkb:claim:c007081", "ownkb:claim:c007420",
+}
+GENUINE_INFERENCES = {
+    "ownkb:claim:c000230", "ownkb:claim:c006339", "ownkb:claim:c006827",
+}
+EVIDENCE_LABELS = {f"ownkb:claim:c{number:06d}" for number in range(7417, 7421)}
+
+
+def validate_claim_context(seed: dict, source_id: str) -> None:
+    """Fail closed on the context and provenance boundaries repaired in Phase 16."""
+    identity, statement = seed["id"], seed["statement"].strip()
+    if statement in {"Do not:", "This section uses:"} or DEICTIC_FRAGMENT.search(statement):
+        raise ValueError(f"claim is not standalone and context-preserving: {identity}")
+    if seed["epistemic_status"] == "inferred" and EPISTEMIC_META.search(statement):
+        raise ValueError(f"epistemic keyword leaked into claim classification: {identity}")
+    if seed["evidence_class"] == "official_specification" and DIRECT_IMPLEMENTATION_ASSERTION.search(statement):
+        raise ValueError(f"implementation assertion uses official-spec provenance: {identity}")
+
+    if identity in WHO17_IMPLEMENTATION | WHO4_IMPLEMENTATION | ADDRESS_IMPLEMENTATION:
+        version = seed["applicability"]["version"]
+        if (seed["evidence_class"], source_id, seed["applicability"]["domain"],
+                version.get("expression"), version["state"]) not in {
+                    ("public_database", "ownkb:source:s000125", "implementation", "3.5.38", "specified"),
+                    ("public_database", "ownkb:source:s000126", "implementation", "3.5.38", "specified"),
+                }:
+            raise ValueError(f"curated implementation provenance regressed: {identity}")
+    if identity in FIRMWARE_157:
+        version = seed["applicability"]["version"]
+        if version != {"expression": "157", "state": "specified"}:
+            raise ValueError(f"firmware example scope regressed: {identity}")
+    if identity in NEGATED_POLICY and not re.match(r"^Do not\b", statement, re.IGNORECASE):
+        raise ValueError(f"governing list negation was lost: {identity}")
+    if identity in EPISTEMIC_META_REVIEW and seed["epistemic_status"] == "inferred":
+        raise ValueError(f"reviewed epistemic meta-claim regressed: {identity}")
+    if identity in GENUINE_INFERENCES and seed["epistemic_status"] != "inferred":
+        raise ValueError(f"reviewed genuine inference regressed: {identity}")
+    if identity in EVIDENCE_LABELS and seed["evidence_class"] != "canonical_documentation":
+        raise ValueError(f"evidence-label vocabulary provenance regressed: {identity}")
+
+
 def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
     seeds = json.loads(seed_path.read_text(encoding="utf-8"))
     if set(seeds) != {"claims"} or not isinstance(seeds["claims"], list):
@@ -47,6 +108,7 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         source_id = seed.get("source_id", sources[doc["id"]])
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
+        validate_claim_context(seed, source_id)
         if seed["evidence_class"] == "canonical_documentation" and source_id != sources[doc["id"]]:
             raise ValueError(f"canonical source does not match section: {identity}")
         for field, kind in (("cautions", "caution"), ("questions", "question")):
