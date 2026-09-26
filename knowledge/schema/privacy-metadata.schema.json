@@ -17,6 +17,7 @@
         "enum": [
           "network_address",
           "hardware_id",
+          "device_id",
           "credential",
           "person_identifier",
           "other"
