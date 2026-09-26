@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7342)
+        self.assertEqual(len(claims), 7354)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -108,7 +108,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7342, metrics["records"])
+        self.assertEqual(7354, metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 96, "sections_with_claims": 86},
@@ -120,7 +120,7 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
-            {"claims": 922, "documents": 12, "reviewed_nonclaim_sections": 1,
+            {"claims": 924, "documents": 12, "reviewed_nonclaim_sections": 1,
              "sections": 101, "sections_with_claims": 100},
             metrics["bounded_domains"]["diagnostics"],
         )
@@ -130,7 +130,7 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 876, "documents": 8, "reviewed_nonclaim_sections": 11,
+            {"claims": 886, "documents": 8, "reviewed_nonclaim_sections": 11,
              "sections": 121, "sections_with_claims": 110},
             metrics["bounded_domains"]["device-model"],
         )
@@ -154,7 +154,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         phase11 = [record for record in claims
                    if int(record["id"].rsplit("c", 1)[1]) >= 6296]
-        self.assertEqual(1125, len(phase11))
+        self.assertEqual(1137, len(phase11))
         self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
                             for record in phase11))
         rejected = [record for record in phase11 if record["epistemic_status"] == "rejected"]
@@ -199,6 +199,21 @@ class ClaimFrameworkTests(unittest.TestCase):
         self.assertEqual("Step Receive one ID: *#1001*10*13*[DEVICE_ID]##.",
                          next(record["statement"] for record in claims
                               if record["id"] == "ownkb:claim:c003898"))
+
+    def test_phase16b_promoted_configuration_facts_are_bounded(self):
+        by_id = {record["id"]: record for record in self.render()}
+        expected = {
+            "ownkb:claim:c007421": "Object 406 defines PPT_CEN_LOW at EN_CONF.idx 0.",
+            "ownkb:claim:c007424": "Object 406 defines BUTTON_2 at EN_CONF.idx 3.",
+            "ownkb:claim:c007428": "Object 416 has no BUTTON_2 definition in the inspected MyHOME Suite 3.5.38 catalogue.",
+            "ownkb:claim:c007429": "Object 8 defines G1 through G10 at consecutive EN_CONF.idx values 240 through 249.",
+        }
+        for identity, statement in expected.items():
+            self.assertEqual(statement, by_id[identity]["statement"])
+            self.assertEqual("public_database", by_id[identity]["provenance"][0]["evidence_class"])
+            self.assertEqual("3.5.38", by_id[identity]["applicability"]["version"]["expression"])
+        self.assertEqual("inferred", by_id["ownkb:claim:c007431"]["epistemic_status"])
+        self.assertIn("only when", by_id["ownkb:claim:c007431"]["statement"])
 
     def test_phase16_context_and_scope_repairs_are_preserved(self):
         by_id = {record["id"]: record for record in self.render()}

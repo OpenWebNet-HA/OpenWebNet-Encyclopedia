@@ -30,7 +30,7 @@ class Phase12ConsistencyTests(unittest.TestCase):
         manifest = json.loads((ROOT / "knowledge/manifest.json").read_text())
         report = CONSISTENCY.validate_cross_artifact(ROOT, ROOT, manifest)
         self.assertEqual(134, report["canonical"]["documents"])
-        self.assertEqual(7342, report["claims"]["records"])
+        self.assertEqual(7354, report["claims"]["records"])
         self.assertEqual(1149, report["retrieval"]["chunks"])
         self.assertEqual(manifest["coverage"]["references"]["records"], report["references"]["records"])
         self.assertEqual(651, report["claims"]["domains"]["protocol"]["claims"])
