@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "knowledge/tools"))
 from build_ir import build as build_ir  # noqa: E402
+from claim_context import atomicity_reasons, best_block_indexes  # noqa: E402
 from render_claims import claim_coverage_metrics, claim_records, validate_claim_context  # noqa: E402
 from render_references import reference_records  # noqa: E402
 
@@ -24,10 +25,28 @@ class ClaimFrameworkTests(unittest.TestCase):
         cls.sample_seeds = {"claims": cls.seeds["claims"][:8]}
 
     def render(self, seeds=None, ir=None):
+        if seeds is None and ir is None and hasattr(type(self), "_rendered_claims"):
+            return type(self)._rendered_claims
+        selected_seeds = seeds if seeds is not None else self.seeds
+        selected_ir = ir if ir is not None else self.ir
+        sections = {section["id"]: section for document in selected_ir["documents"]
+                    for section in document["sections"]}
+        context = {"format_version": "0.1.0", "claims": []}
+        for seed in selected_seeds["claims"]:
+            reasons = atomicity_reasons(seed["statement"])
+            context["claims"].append({"id": seed["id"], "atomicity": {
+                "block_indexes": best_block_indexes(seed["statement"], sections[seed["section_id"]]),
+                "mode": "materialized" if reasons else "self_contained",
+                "review_status": "reviewed-phase16b",
+            }})
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "claims.json"
-            path.write_text(json.dumps(seeds if seeds is not None else self.seeds))
-            return claim_records(ir if ir is not None else self.ir, self.refs, path)
+            path.write_text(json.dumps(selected_seeds))
+            path.with_name("claim-context.json").write_text(json.dumps(context))
+            result = claim_records(selected_ir, self.refs, path)
+            if seeds is None and ir is None:
+                type(self)._rendered_claims = result
+            return result
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
@@ -230,7 +249,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "not standalone"):
             validate_claim_context(base, "ownkb:source:s000125")
         base["id"] = "ownkb:claim:c005725"
-        base["statement"] = "slot 1: Light actuator."
+        base["statement"] = "For firmware 157, slot 1 offers the Light actuator Object."
         base["applicability"]["version"] = {"state": "unknown"}
         with self.assertRaisesRegex(ValueError, "firmware example scope"):
             validate_claim_context(base, "ownkb:source:s000003")
