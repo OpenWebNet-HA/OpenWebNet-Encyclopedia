@@ -17,7 +17,7 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 | 10 | Initial claim population, batch 2 | **Complete** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with targeted high-risk semantic, privacy, coverage, and integrity checks |
 | 11 | Initial claim population, batch 3 | **Complete** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with explicit implementation scope, rejected relationships, inferred relationships, open questions, and guide-only documentation defects |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | **Complete** - deterministic cross-artifact coverage validation is integrated into `check.py`; `diff_impact.py` maps Git changes to stable dependent records and explicitly escalates structural/build/schema changes to full review |
-| 13 | Full CI, contributor workflow, release machinery | Pending - initial privacy CI already present |
+| 13 | Full CI, contributor workflow, release machinery | **Complete** - operational CI, contributor workflow, release checklist, and versioning/consumer guidance |
 | 14 | Full candidate generation and mechanical cleanup | Pending |
 | 15 | Independent factual and epistemic certification of the candidate | Pending |
 | 16 | Remediate findings, rerun gates, release and merge when explicitly authorized | Pending |
@@ -104,6 +104,12 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 - Kept implementation and database evidence scoped to MyHOME Suite 3.5.38. Implementation observations remain `observed`, inferred relationships remain `inferred`, all 47 registered rejected relationships remain `rejected` with their rejecting evidence, and open-question assertions remain `unresolved` with question references. The established `DIMENSION 32.SYS` and gateway `N_CONF` questions are reused rather than resolved by generation.
 - Kept all Practical Guides outside the IR and claim inputs. Review identified two guide-only documentation defects: the Object-scoped Scheduled scenario PLUS CEN property layout and qualified low/high combination rule belong in `device-model/configuration.md` and `diagnostics/dim35-configuration.md`; the Object-scoped `G1` through `G10` index series belongs in `device-model/configuration.md`. Neither entered claims.
 - Verified: `python build.py`; `python check.py`; both unittest suites; ECV/ESG objective checks; privacy scan; targeted preservation and Phase 11 coverage assertions; `git diff --check`.
+
+## Phase 13 verification
+
+- Added operational Machine KB CI for unit tests, schema fixtures, non-committing freshness, and the single deterministic check gate.
+- Documented edit, build, inspect, check, impact-review, and joint-commit contributor workflow.
+- Finalized pre-release consumer, versioning, and release-maintenance guidance.
 
 ## Next session
 

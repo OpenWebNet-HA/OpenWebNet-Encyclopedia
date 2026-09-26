@@ -80,3 +80,7 @@ The [version policy](schema-versioning.md) states compatibility guarantees and l
 | Private source is accidentally included | Source exclusion before IR, restricted schema, final scan and release gate | Existing scanner alone cannot prove safety; block release until Phase 3 |
 
 Phase 2 must test these cases against real schemas. Any resulting contract change before the first release must be recorded here and in [decisions](decisions.md); after release it follows semantic compatibility rules.
+
+## Contributor and CI enforcement
+
+Machine KB validation runs on pull requests and pushes to main and machine-knowledge-base. It runs unit tests, schema fixtures, build freshness, and python check.py. CI may rebuild to verify freshness but never commits generated output. Contributors follow [the normal workflow](maintenance.md#normal-contributor-workflow): edit, build, inspect, check, review impact, and commit documentation with generated projections.

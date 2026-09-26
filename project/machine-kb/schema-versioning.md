@@ -18,3 +18,7 @@ Within a major line, canonical IDs and published aliases remain resolvable; IDs 
 Privacy or licensing withdrawals can override normal retention: remove exposed content immediately, record a non-sensitive withdrawal/tombstone where safe, publish corrected release notes and invalidate compromised release artifacts. Do not retain a private value to honor ID stability; never expose an old ID derived from one. A contract guarantee applies only to publishable data.
 
 Before v1, the contract and schemas may change with reviewed decision-log entries; versions described here are a planned policy, not a claim that a stable v1 already exists. A release must include migration notes for any breaking change and pass the [release gates](release.md).
+
+## Release implementation rule
+
+Before tagging a release candidate, run python check.py from the reviewed candidate revision. CI runs the same deterministic validation without altering or committing the published revision. Release notes identify contract and artifact-format versions, migration impact, and any privacy withdrawal.
