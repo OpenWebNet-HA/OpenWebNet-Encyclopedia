@@ -1,0 +1,1123 @@
+{
+  "base_commit": "f3f31d71842cdafedab1a68402fb44c8f7805742",
+  "r03": {
+    "aliases": 0,
+    "aliases_required": 0,
+    "emitted_ids": 11173,
+    "finding": "Current emitted IDs exactly match the curated live registry. No earlier Machine KB release exists, so there is no published lifecycle history to migrate; the first release becomes the compatibility baseline.",
+    "live_ids": 11173,
+    "registry_entries": 11173,
+    "retired_ids": 0,
+    "status": "resolved-for-initial-v1-release",
+    "tombstones_required": 0
+  },
+  "r06": {
+    "finding": "All current guide-remediation hints were individually adjudicated. No remaining hint requires a new canonical promotion. Operational repetition remains guide-only; factual semantics are canonical-covered or qualified. The bounded group/CEN gaps previously found in this guide family were promoted under R10/R11 and recertified.",
+    "guide_files_reviewed": 10,
+    "heuristic_hints_reviewed": 183,
+    "items": [
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 1,
+        "line": 5,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 2,
+        "line": 9,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 3,
+        "line": 11,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 4,
+        "line": 22,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 5,
+        "line": 27,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 6,
+        "line": 31,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 7,
+        "line": 33,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 8,
+        "line": 35,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 9,
+        "line": 48,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 10,
+        "line": 61,
+        "path": "guides/README.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 11,
+        "line": 5,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 12,
+        "line": 7,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 13,
+        "line": 38,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 14,
+        "line": 48,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 15,
+        "line": 72,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 16,
+        "line": 100,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 17,
+        "line": 101,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 18,
+        "line": 105,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 19,
+        "line": 131,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 20,
+        "line": 160,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 21,
+        "line": 195,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 22,
+        "line": 196,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 23,
+        "line": 214,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 24,
+        "line": 216,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 25,
+        "line": 237,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 26,
+        "line": 241,
+        "path": "guides/discover-devices.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 27,
+        "line": 7,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 28,
+        "line": 9,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 29,
+        "line": 16,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 30,
+        "line": 18,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 31,
+        "line": 24,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 32,
+        "line": 28,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 33,
+        "line": 30,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 34,
+        "line": 31,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 35,
+        "line": 32,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 36,
+        "line": 34,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 37,
+        "line": 45,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 38,
+        "line": 59,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 39,
+        "line": 80,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 40,
+        "line": 84,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 41,
+        "line": 95,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 42,
+        "line": 101,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 43,
+        "line": 122,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 44,
+        "line": 124,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 45,
+        "line": 135,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 46,
+        "line": 179,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 47,
+        "line": 183,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 48,
+        "line": 209,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 49,
+        "line": 223,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 50,
+        "line": 248,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 51,
+        "line": 273,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 52,
+        "line": 322,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 53,
+        "line": 357,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 54,
+        "line": 359,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 55,
+        "line": 360,
+        "path": "guides/identify-openwebnet-gateway.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 56,
+        "line": 33,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 57,
+        "line": 47,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 58,
+        "line": 59,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 59,
+        "line": 71,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 60,
+        "line": 143,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 61,
+        "line": 159,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 62,
+        "line": 161,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 63,
+        "line": 163,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 64,
+        "line": 181,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 65,
+        "line": 202,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 66,
+        "line": 203,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 67,
+        "line": 205,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 68,
+        "line": 215,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 69,
+        "line": 227,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 70,
+        "line": 249,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 71,
+        "line": 263,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 72,
+        "line": 272,
+        "path": "guides/program-device.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 73,
+        "line": 12,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 74,
+        "line": 13,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 75,
+        "line": 55,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 76,
+        "line": 69,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 77,
+        "line": 71,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 78,
+        "line": 75,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 79,
+        "line": 81,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 80,
+        "line": 85,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 81,
+        "line": 100,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 82,
+        "line": 111,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 83,
+        "line": 127,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 84,
+        "line": 145,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 85,
+        "line": 149,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 86,
+        "line": 153,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 87,
+        "line": 159,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 88,
+        "line": 176,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 89,
+        "line": 236,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 90,
+        "line": 242,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 91,
+        "line": 276,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 92,
+        "line": 280,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 93,
+        "line": 292,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 94,
+        "line": 313,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 95,
+        "line": 314,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 96,
+        "line": 403,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 97,
+        "line": 428,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 98,
+        "line": 432,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 99,
+        "line": 457,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 100,
+        "line": 482,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 101,
+        "line": 492,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 102,
+        "line": 528,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 103,
+        "line": 548,
+        "path": "guides/read-device-configuration.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 104,
+        "line": 7,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 105,
+        "line": 17,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 106,
+        "line": 29,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 107,
+        "line": 31,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 108,
+        "line": 44,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 109,
+        "line": 66,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 110,
+        "line": 74,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 111,
+        "line": 83,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 112,
+        "line": 94,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 113,
+        "line": 168,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 114,
+        "line": 179,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 115,
+        "line": 181,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 116,
+        "line": 194,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 117,
+        "line": 204,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 118,
+        "line": 230,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 119,
+        "line": 244,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 120,
+        "line": 252,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 121,
+        "line": 254,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 122,
+        "line": 277,
+        "path": "guides/retrieve-actuator-group-memberships.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 123,
+        "line": 5,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 124,
+        "line": 7,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 125,
+        "line": 17,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 126,
+        "line": 29,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 127,
+        "line": 31,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 128,
+        "line": 44,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 129,
+        "line": 58,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 130,
+        "line": 67,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 131,
+        "line": 122,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 132,
+        "line": 158,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 133,
+        "line": 171,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 134,
+        "line": 175,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 135,
+        "line": 179,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 136,
+        "line": 189,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 137,
+        "line": 200,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 138,
+        "line": 209,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 139,
+        "line": 212,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 140,
+        "line": 236,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 141,
+        "line": 288,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 142,
+        "line": 289,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 143,
+        "line": 304,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 144,
+        "line": 307,
+        "path": "guides/retrieve-configured-cen-buttons.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 145,
+        "line": 14,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 146,
+        "line": 41,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 147,
+        "line": 43,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 148,
+        "line": 51,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 149,
+        "line": 113,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 150,
+        "line": 134,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 151,
+        "line": 191,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 152,
+        "line": 255,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 153,
+        "line": 273,
+        "path": "guides/troubleshoot-diagnostics.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 154,
+        "line": 5,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 155,
+        "line": 27,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 156,
+        "line": 41,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 157,
+        "line": 47,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 158,
+        "line": 68,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 159,
+        "line": 104,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 160,
+        "line": 112,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 161,
+        "line": 238,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 162,
+        "line": 257,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 163,
+        "line": 285,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 164,
+        "line": 289,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 165,
+        "line": 300,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 166,
+        "line": 308,
+        "path": "guides/validate-configuration-value.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 167,
+        "line": 5,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 168,
+        "line": 7,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 169,
+        "line": 18,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 170,
+        "line": 26,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 171,
+        "line": 55,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 172,
+        "line": 63,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 173,
+        "line": 126,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 174,
+        "line": 143,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 175,
+        "line": 158,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 176,
+        "line": 171,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 177,
+        "line": 184,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 178,
+        "line": 208,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 179,
+        "line": 222,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 180,
+        "line": 223,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 181,
+        "line": 230,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 182,
+        "line": 237,
+        "path": "guides/verify-programming.md"
+      },
+      {
+        "disposition": "no-unpromoted-canonical-fact",
+        "hint": 183,
+        "line": 238,
+        "path": "guides/verify-programming.md"
+      }
+    ],
+    "new_promotions_required": 0,
+    "status": "resolved"
+  },
+  "release_state": "pre-v1-unreleased",
+  "review_date": "2026-09-26"
+}

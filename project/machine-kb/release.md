@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Pre-release, independently certified candidate. The earlier Phase 14 candidate at `95c1b034104512462551adefe87c6a7c468c56f0` failed certification and remains recorded as failed. After Phase 16/16b remediation, independent Phase 15 recertification passed on 2026-09-26 for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. MKB-R03, MKB-R06, and the remaining release checklist still block publication; no merge, tag, release, or v1 interface is implied by certification.
+**Status:** Pre-release, independently certified candidate with MKB-R03 and MKB-R06 resolved. Independent Phase 15 recertification passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`; the subsequent release-readiness review closed the ID-lifecycle and Practical Guide remediation obligations. The final release checklist and explicit merge authorization remain; no merge, tag, release, or v1 interface is implied.
 
 ## Intended consumer contract
 
