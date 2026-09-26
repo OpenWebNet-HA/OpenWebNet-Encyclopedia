@@ -27,6 +27,10 @@ The shared “kconf index” terminology and observed behavior strongly support 
 
 `INDEX` is not globally unique. The same number can name different properties for different Objects or firmware definitions.
 
+For Object `406` in the canonical MyHOME Suite 3.5.38 catalogue, indices `0`, `1`, `2`, and `3` resolve respectively to `PPT_CEN_LOW`, `PPT_CEN_HIG`, `BUTTON_1`, and `BUTTON_2`. Object `416` resolves indices `0`, `1`, and `2` to the first three of those symbols and has no `BUTTON_2` definition in the inspected revision. These mappings are Object-scoped and must not be inferred from the index alone.
+
+The `LOW` and `HIG` names and their catalogue ranges support interpreting the two components as bytes. Decode a combined value as `LOW + 256 × HIG` only when that combination rule is independently established for the applicable Device family; otherwise retain both raw components and label the combined number as an inference rather than a universal protocol rule.
+
 `EN_CONF` uses two mutually exclusive scopes in the canonical catalogue:
 
 | Scope | Catalogue discriminator |

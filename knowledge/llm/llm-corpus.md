@@ -224,6 +224,9 @@ This is a discriminator pattern, not two mandatory foreign keys. Treating both c
 
 Section ID: `ownkb:section:d000002:s000005`
 
+Applicability cues: `revision`
+Provenance cues: `catalogue`
+
 Object-scoped definitions describe reusable properties of a logical function. Examples include:
 
 - Function type
@@ -234,6 +237,19 @@ Object-scoped definitions describe reusable properties of a logical function. Ex
 - setpoints
 - scenario numbers
 - button assignments.
+
+In the canonical MyHOME Suite 3.5.38 catalogue, Object `406` (“Scheduled scenario PLUS”) defines this Object-scoped property layout:
+
+| Object | Symbol | `EN_CONF.idx` | Bounded meaning |
+| --- | --- | --- | --- |
+| `406` | `PPT_CEN_LOW` | `0` | low component of the Scheduled scenario PLUS/CEN number |
+| `406` | `PPT_CEN_HIG` | `1` | high component of the Scheduled scenario PLUS/CEN number |
+| `406` | `BUTTON_1` | `2` | upper button assignment |
+| `406` | `BUTTON_2` | `3` | lower button assignment |
+
+Object `416`, another “Scheduled scenario PLUS” variant in the inspected catalogue, defines `PPT_CEN_LOW` at index `0`, `PPT_CEN_HIG` at index `1`, and `BUTTON_1` at index `2`; it has no `BUTTON_2` definition in that revision. This absence is bounded to the inspected Object and catalogue revision, not a universal rule for CEN-capable Objects.
+
+Object `8` defines the ten group-membership symbols `G1` through `G10` at consecutive indices `240` through `249`. This series is Object-scoped, not global: another Object can define `G1` differently, so an indexed diagnostic value must be resolved through the installed Object before it is interpreted as a group position.
 
 #### Firmware-scoped configuration
 
@@ -3030,7 +3046,7 @@ Both `#` separators are significant parts of the canonical template.
 
 Section ID: `ownkb:section:d000017:s000003`
 
-Applicability cues: `firmware`
+Applicability cues: `firmware`, `revision`
 Cautions: `must not`
 Provenance cues: `catalogue`
 
@@ -3044,6 +3060,10 @@ The shared “kconf index” terminology and observed behavior strongly support 
 - raw `VAL_PAR`.
 
 `INDEX` is not globally unique. The same number can name different properties for different Objects or firmware definitions.
+
+For Object `406` in the canonical MyHOME Suite 3.5.38 catalogue, indices `0`, `1`, `2`, and `3` resolve respectively to `PPT_CEN_LOW`, `PPT_CEN_HIG`, `BUTTON_1`, and `BUTTON_2`. Object `416` resolves indices `0`, `1`, and `2` to the first three of those symbols and has no `BUTTON_2` definition in the inspected revision. These mappings are Object-scoped and must not be inferred from the index alone.
+
+The `LOW` and `HIG` names and their catalogue ranges support interpreting the two components as bytes. Decode a combined value as `LOW + 256 × HIG` only when that combination rule is independently established for the applicable Device family; otherwise retain both raw components and label the combined number as an inference rather than a universal protocol rule.
 
 `EN_CONF` uses two mutually exclusive scopes in the canonical catalogue:
 
