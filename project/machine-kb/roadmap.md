@@ -145,4 +145,17 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-Independent Phase 15 recertification passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The next work is the final release checklist against the intended release revision; explicit authorization remains required for merge, tag, or publication.
+Independent Phase 15 recertification passed for candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The final release checklist has now passed for release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9; explicit authorization remains required for merge, tag, GitHub Release, publication, or any released-v1 declaration.
+
+## Final release-readiness verification
+
+The final release checklist passed on 2026-09-26 for release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9.
+
+- The independently certified semantic candidate remains 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
+- The intervening commits contain certification and release-readiness control documentation only. diff_impact.py reports no generated-output change, no full-review requirement, and zero affected claim, chunk, or reference IDs.
+- The complete 51-test Machine KB suite, schema golden/fixture tests, check.py, cross-artifact consistency, final privacy validation, ESG, ECV, build freshness, and git diff --check pass.
+- The manifest inventory, hashes, counts, format/schema compatibility versions, generator version, and input-content digest match the deterministic generated artifacts.
+- The current ID registry has 11,173 live IDs, zero aliases, and zero retired IDs; no earlier public release creates migration obligations.
+- Repository licensing, planned release notes, and the documented golden consumer serialization vector are present and consistent with the consumer contract.
+- The Machine KB project README, architecture status, roadmap, release checklist, and review ledger now describe the same pre-release state.
+- No merge, tag, GitHub Release, publication, or released-v1 declaration is authorized by this verification.
