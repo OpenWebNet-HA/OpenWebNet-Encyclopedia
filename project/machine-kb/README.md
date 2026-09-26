@@ -1,20 +1,21 @@
 # Machine KB Project Control
 
-This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; `knowledge/` is its public machine projection.
+This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation or release session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; knowledge/ is its public machine projection.
 
-**Current state (2026-09-25): Phases 0 through 11 complete.** The `machine-knowledge-base` branch has the privacy-gated shared IR, deterministic build/check infrastructure, generated LLM corpus and retrieval chunks, canonical reference registries, the atomic-claim framework, and bounded initial claim populations for every canonical documentation area. The [consumer contract](consumer-contract.md) and [version policy](schema-versioning.md) define the intended interface, but no public dataset has been certified or released. See the [roadmap](roadmap.md) and [review ledger](review-ledger.md) for exact counts, remaining domains, drift/CI work, and certification gates.
+**Current state (2026-09-26): implementation, remediation, independent recertification, and the final release checklist are complete.** The independently certified semantic candidate is 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50; the final checklist verified release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9 and found no generated or semantic corpus changes after certification. The branch remains pre-release and has not been merged, tagged, published, or declared as a released v1 interface.
 
 | File | Use |
 | --- | --- |
-| [Architecture](architecture.md) | Authority, boundaries, source flow, invariants, planned artifacts |
+| [Architecture](architecture.md) | Authority, boundaries, source flow, invariants, and implemented artifact flow |
 | [Consumer Contract](consumer-contract.md) | Stable IDs, identity lifecycle, knowledge states, ordering, bytes, ownership, and compatibility boundaries |
-| [Schema Versioning](schema-versioning.md) | Compatibility and release version policy |
+| [Schema Versioning](schema-versioning.md) | Compatibility, migration, and release version policy |
 | [Roadmap](roadmap.md) | Phase gates and verified completion status |
-| [Decisions](decisions.md) | Durable decisions and questions still to resolve |
+| [Decisions](decisions.md) | Durable implementation and policy decisions |
 | [Maintenance](maintenance.md) | Change and review workflow |
-| [Release and Consumer Contract](release.md) | Planned public interface and release gates; no v1 contract is published yet |
-| [Review Ledger](review-ledger.md) | Findings, gaps, and certification state |
+| [Release Gates and Consumer Contract Status](release.md) | Verified final release checklist and authorization boundary |
+| [Planned Initial Release Notes](release-notes.md) | Candidate identity, versions, migration state, privacy, consumer use, and licensing |
+| [Review Ledger](review-ledger.md) | Findings, gaps, certification state, and final release-readiness disposition |
 
-The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. These project-control pages describe the planned implementation and do not themselves constitute released schemas or generated data.
+The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. These project-control pages describe the pre-release candidate and do not themselves constitute a published dataset.
 
-**Next:** Phase 12 adds cross-artifact consistency, drift, and change-impact checks. Guide documentation defects, full release CI, and independent certification remain open.
+**Next:** wait for explicit authorization before any merge to main, tag creation, GitHub Release, publication, or released-v1 declaration.
