@@ -1,26 +1,26 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
+Snapshot: 2026-09-26, branch `machine-knowledge-base`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
 | 0 | Persist architecture, decisions, maintenance, release gates, review state; verify and commit | **Complete** - this project-control area; no generator delivered |
 | 1 | Public consumer contract, IDs, aliases, deterministic serialization, compatibility and versioning | **Complete** - contract and policy reviewed against long-term change cases; no v1 data released |
 | 2 | Common schemas and ECV-aligned controlled vocabularies with invalid-case tests | **Complete** - curated schemas, valid/invalid fixtures, offline validator, golden JSONL; no dataset generated |
-| 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete** - closed source-manifest and prepared-source schemas, deterministic local source gate, sanitization, source exclusion, schema tests, and retained final scanner |
+| 3 | Source classification and pre-extraction privacy pipeline; positive and negative fixtures | **Complete, remediated in Phase 16** - contextual installed-Device-ID sanitization, closed `device_id` removal metadata, source reclassification, synthetic positive/negative fixtures, and 19-surface final scanning |
 | 4 | Canonical Markdown parser and shared semantic IR; exclude guides and prohibited inputs | **Complete** - closed canonical input manifest, curated identities, shared structural IR, guide remediation hints, full-tree integration and tests |
 | 5 | Build manifest, deterministic rebuild comparison, and common build/check commands | **Complete** - top-level build/check entry points, canonical serialization, committed manifest and schema, clean double-build gate, and temporary-output support |
 | 6 | Generated LLM corpus and retrieval chunks from the shared IR | **Complete** - deterministic full corpus, coherent section chunks, closed retrieval schema, manifest inventory and coverage, freshness and privacy validation |
 | 7 | Generated reference registries: namespaces, glossary, sources, entities, relationships, cautions, questions | **Complete** - curated semantic seeds and generated canonical-source records, shared-IR provenance, chunk references, cross-file integrity, high-risk boundary tests |
-| 8 | Reviewed atomic claim framework and representative fixtures | **Complete** - eight curated assertions, shared-IR join, source-section review pins, typed claim links, schema and integrity checks |
-| 9 | Initial claim population, batch 1 | **Complete** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, source/evidence classifications, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
-| 10 | Initial claim population, batch 2 | **Complete** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with targeted high-risk semantic, privacy, coverage, and integrity checks |
-| 11 | Initial claim population, batch 3 | **Complete** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with explicit implementation scope, rejected relationships, inferred relationships, open questions, and guide-only documentation defects |
+| 8 | Reviewed atomic claim framework and representative fixtures | **Complete, remediated in Phase 16** - source pins plus fail-closed guards for governed negation, deictic fragments, firmware/version examples, epistemic meta-labels, and curated implementation provenance |
+| 9 | Initial claim population, batch 1 | **Complete, bounded Phase 16 review applied** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, corrected mixed-source implementation assertions, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
+| 10 | Initial claim population, batch 2 | **Complete, bounded Phase 16 review applied** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with installed-ID privacy remediation, governed-list repair, example/table scope repair, and high-risk integrity checks |
+| 11 | Initial claim population, batch 3 | **Complete, bounded Phase 16 review applied** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with corrected policy-list context, epistemic meta-labels, implementation scope, rejected relationships, open questions, and guide-only documentation defects |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | **Complete** - deterministic cross-artifact coverage validation is integrated into `check.py`; `diff_impact.py` maps Git changes to stable dependent records and explicitly escalates structural/build/schema changes to full review |
 | 13 | Full CI, contributor workflow, release machinery | **Complete** - operational CI, contributor workflow, release checklist, and versioning/consumer guidance |
-| 14 | Full candidate generation and mechanical cleanup | **Complete** - full deterministic candidate regenerated with zero artifact drift; build/check/schema/privacy/reference/consistency/ECV/ESG gates passed; no semantic cleanup was required |
-| 15 | Independent factual and epistemic certification of the candidate | Pending |
-| 16 | Remediate findings, rerun gates, release and merge when explicitly authorized | Pending |
+| 14 | Full candidate generation and mechanical cleanup | **New candidate generated by Phase 16** - the earlier candidate at `95c1b034104512462551adefe87c6a7c468c56f0` failed certification; the remediated candidate is mechanically regenerated for independent recertification |
+| 15 | Independent factual and epistemic certification of the candidate | **Not certified** - the prior candidate failed; a new independent certification of the Phase 16 candidate is required |
+| 16 | Remediate failed-certification findings and prepare a new candidate | **Complete (remediation only)** - systemic findings, bounded same-method defects, and control drift repaired; deterministic gates pass; no merge, tag, release, or certification is implied |
 
 ## Phase 0 verification
 
@@ -119,6 +119,17 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 - `python3 diff_impact.py --base 12d5958657207c115bf2d35031df5569d131e324 --head WORKTREE` reported zero changed paths, zero affected chunk/claim/reference IDs, no generated-output changes, and no full review requirement.
 - No mechanical defect required correction, and no factual, epistemic, namespace, applicability, stable-ID, or other semantic content was changed during Phase 14. The candidate is ready for independent Phase 15 certification.
 
+That readiness statement describes the historical Phase 14 handoff only. Independent Phase 15 subsequently returned **NOT CERTIFIED** for candidate `95c1b034104512462551adefe87c6a7c468c56f0`; it must not be treated as the current candidate.
+
+## Phase 16 verification
+
+- Reopened privacy preparation/classification and every generated projection. Four affected canonical sources changed from `publishable` to `sanitize`; six sources are now sanitized in total. Contextual Device-ID detection handles prose, Markdown, equivalent wording, and plural lists while negative controls preserve public protocol, catalogue, firmware, source, and hash values. Final privacy validation scans 19 generated and metadata surfaces and checks exact removed values without printing them.
+- Preserved all 7,342 stable claim IDs while correcting continuous semantic units. Known claim ranges `c006493`–`c006495`, `c005724`–`c005729`, and `c002181`–`c002192` now retain governing prohibition, firmware-157 example scope, and MyHOME Suite 3.5.38 public-database provenance/applicability respectively.
+- Bounded same-method review adjudicated 11 governed-list sections (3 defective, 8 retained), 6 numeric/version-scope sections (5 defective, 1 retained), 7 high-signal deictic claims (all corrected), 37 mixed official/implementation keyword candidates (25 corrected, 12 comparison/negative statements retained), and 9 epistemic-keyword candidates (6 corrected, 3 genuine inferences retained). No public-database claim remains without explicit MyHOME Suite 3.5.38 applicability.
+- The complete build, deterministic check, all Machine KB integration tests, all schema tests, privacy, reference integrity, consistency, ECV, ESG, and diff hygiene pass. Consistency remains 134 documents, 1,181 sections, 7,342 claims, 1,387 reference records, 1,149 chunks, 32 empty sections, ten excluded guides, and 183 guide-remediation hints.
+- `diff_impact.py` against the Phase 16 start SHA reports generated-output changes and requires full review because source topology, privacy schema, and build semantics changed. Stable record IDs remain unchanged.
+- MKB-R03, MKB-R06, MKB-R10, and MKB-R11 remain open. Green CI is retained as mechanical evidence only. A new independent Phase 15 certification is required.
+
 ## Next session
 
-Phase 15 is next. Independently certify the Phase 14 candidate for factual and epistemic correctness without modifying the candidate during the audit. Preserve qualified conflicts, unresolved questions, applicability/version scope, namespace context, implementation-versus-protocol boundaries, and privacy constraints. Record findings precisely for Phase 16 remediation; the contract remains pre-release.
+A new independent Phase 15 certification is next. Certify the Phase 16 candidate without modifying it during the audit. Preserve qualified conflicts, unresolved questions, applicability/version scope, namespace context, implementation-versus-protocol boundaries, and privacy constraints. The contract remains pre-release.
