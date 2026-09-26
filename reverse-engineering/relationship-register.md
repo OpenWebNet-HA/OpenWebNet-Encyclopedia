@@ -70,6 +70,9 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Device, firmware, Module, Object, and ownership scope | strongly corroborated |
 | diagnostic outer `WHERE` | configured address of `slot` `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
 | `DIMENSION 32.SYS` | `MHCatalogue.db.EN_SYSTEM.sys_modobj` | resolved Object/system context | strongly inferred; needs discriminating non-Lighting capture |
+| `WHO 16` `WHERE` `1ES` | environment `E` listening to source `S` | F441M installations; `E` in `1..9`; `10S` excluded as a source address | corroborated on two plants; not published in `WHO 16` |
+| `WHO 16` amplifier `WHERE` `EA` | environment `E`, amplifier `A` | two-digit addresses; single-digit form untested | corroborated by `WHO 22` counterparts and F441M documentation |
+| `WHO 16` sound events | `WHO 22` counterpart frames | one MH200N; area/point and source/area fields written out | established for that Device; origin and generality open |
 
 ## Across database models
 
@@ -105,6 +108,8 @@ Sentinel meaning is local to the field. This table does not authorize interpreti
 | catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
 | gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
 | firmware selection precedence | exact, wildcard, default, missing, multiple-build patterns | controlled loader/UI observation |
+| `WHO 16` directed source selection provenance | `1ES` observed on two plants; specification defines cycling only | a published specification, application note, or stored frame template naming the address |
+| `WHO 16` routing under the `#E` environment form and base band | all observations use point-to-point amplifiers and `WHAT 3` | a capture from a base-band plant or one whose controls use environment power commands |
 | ScenarioDevices matching IDs | stable local fields and semantic hierarchy | runtime matcher trace or application code |
 | ScenarioDevices source precedence | two revisions in different installation locations | file-open/update trace |
 | scenario-instance persistence | capability stores lack graph structure | controlled save diff and file trace |
