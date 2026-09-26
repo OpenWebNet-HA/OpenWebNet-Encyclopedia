@@ -20,3 +20,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [ ] The [review ledger](review-ledger.md) is current; the roadmap records exact completion and remaining gaps.
 
 Run `python check.py` for the current deterministic build, schema, referential-integrity, freshness, and privacy gates. It is not yet a release certification: the remaining roadmap phases and independent review must pass before publication or merge, and merge still requires explicit user authorization.
+
+## Operational maintenance machinery
+
+Phase 13 provides dedicated Machine KB validation CI: unit tests, schema fixtures, a non-committing build-freshness check, and python check.py. The [maintenance workflow](maintenance.md#normal-contributor-workflow) and release checklist remain mandatory before v1 publication.
