@@ -1,8 +1,8 @@
 {"classification":"publishable","source_id":"ownkb:source:s000001","source_path":"device-model/README.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000002","source_path":"device-model/configuration.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000003","source_path":"device-model/firmware.md","source_type":"canonical_documentation"}
-{"classification":"publishable","source_id":"ownkb:source:s000004","source_path":"device-model/modules.md","source_type":"canonical_documentation"}
-{"classification":"publishable","source_id":"ownkb:source:s000005","source_path":"device-model/objects.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000004","source_path":"device-model/modules.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000005","source_path":"device-model/objects.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000006","source_path":"device-model/physical-devices.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000007","source_path":"device-model/sources-and-identifiers.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000008","source_path":"device-model/virgin-objects.md","source_type":"canonical_documentation"}
@@ -12,8 +12,8 @@
 {"classification":"publishable","source_id":"ownkb:source:s000012","source_path":"diagnostics/device-discovery.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000013","source_path":"diagnostics/device-interview.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000014","source_path":"diagnostics/dim1-device-identity.md","source_type":"canonical_documentation"}
-{"classification":"publishable","source_id":"ownkb:source:s000015","source_path":"diagnostics/dim30-modules.md","source_type":"canonical_documentation"}
-{"classification":"publishable","source_id":"ownkb:source:s000016","source_path":"diagnostics/dim32-addressing.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000015","source_path":"diagnostics/dim30-modules.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000016","source_path":"diagnostics/dim32-addressing.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000017","source_path":"diagnostics/dim35-configuration.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000018","source_path":"diagnostics/dimension-reference.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000019","source_path":"diagnostics/temperature-control-faults.md","source_type":"canonical_documentation"}

@@ -77,6 +77,53 @@ class PrivacyPipelineTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "classify it sanitize"):
                 self.pipeline.prepare(manifest, root)
 
+    def test_installed_device_id_forms_are_sanitized_before_ir(self):
+        tick = chr(96)
+        examples = (
+            "Device A1B2C3D4 demonstrated a behavior.",
+            f"Device {tick}1A2B3C4D{tick} demonstrated a behavior.",
+            f"Observed device: {tick}2B3C4D5E{tick}.",
+            "Device identifier 3C4D5E6F was recorded.",
+            "Installed unit ID 4D5E6F7A was recorded.",
+        )
+        for source in examples:
+            with self.subTest(source=source):
+                text, removed = self.pipeline.sanitize(source)
+                self.assertEqual(["device_id"], removed)
+                self.assertIn("[DEVICE_ID]", text)
+                self.assertNotRegex(text, r"(?i)\b[0-9a-f]{8}\b")
+
+    def test_installed_device_id_lists_are_fully_sanitized(self):
+        tick = chr(96)
+        source = (
+            f"The observed Devices {tick}6F7A8B9C{tick}, "
+            f"{tick}7A8B9C0D{tick}, and {tick}8B9C0D1E{tick} showed the same behavior."
+        )
+        text, removed = self.pipeline.sanitize(source)
+        self.assertEqual(["device_id"], removed)
+        self.assertEqual(3, text.count("[DEVICE_ID]"))
+        self.assertNotRegex(text, r"(?i)\b[0-9a-f]{8}\b")
+
+    def test_device_id_false_positive_controls_remain_public(self):
+        source = (
+            "Catalogue identifier A1B2C3D4; SHA-256 prefix 1A2B3C4D; "
+            "public protocol value 2B3C4D5E; source identifier 3C4D5E6F; "
+            "Device type 4D5E6F7A."
+        )
+        text, removed = self.pipeline.sanitize(source)
+        self.assertEqual(source, text)
+        self.assertEqual([], removed)
+
+    def test_real_sanitized_source_declares_removed_device_ids(self):
+        records = self.pipeline.prepare(
+            ROOT / "knowledge/inputs/canonical-sources.jsonl", ROOT
+        )
+        record = next(item for item in records if item["source_path"] == "diagnostics/dim30-modules.md")
+        self.assertEqual("sanitized", record["privacy"]["classification"])
+        self.assertIn("device_id", record["privacy"]["removed_value_classes"])
+        self.assertNotRegex(record["text"], self.pipeline.DEVICE_ID_PATTERN)
+        self.assertNotRegex(record["text"], self.pipeline.DEVICE_ID_LIST_PATTERN)
+
     def test_safe_protocol_placeholders_remain_public(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -93,6 +140,20 @@ class PrivacyPipelineTests(unittest.TestCase):
             result = subprocess.run([sys.executable, str(SCANNER)], cwd=ROOT, capture_output=True, text=True, check=False)
             self.assertNotEqual(0, result.returncode)
             self.assertIn("IPv4 address", result.stderr)
+        finally:
+            output.unlink(missing_ok=True)
+
+    def test_final_scanner_rejects_contextual_device_id_markdown(self):
+        output = ROOT / "knowledge/retrieval/test-private-device-shape.jsonl"
+        tick = chr(96)
+        try:
+            output.write_text(
+                '{"text":"Observed Device ' + tick + '5E6F7A8B' + tick + '"}\n',
+                encoding="utf-8",
+            )
+            result = subprocess.run([sys.executable, str(SCANNER)], cwd=ROOT, capture_output=True, text=True, check=False)
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn("concrete Device ID", result.stderr)
         finally:
             output.unlink(missing_ok=True)
 

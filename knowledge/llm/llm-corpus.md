@@ -923,7 +923,7 @@ These states are distinct:
 
 For `DIMENSION 30`, a captured `STATE` value establishes enabled versus disabled under the corrected polarity, but it does not establish the other UI distinctions in this table.
 
-For example, Device `007B269D` was observed with `slot` `1` disabled, `slot` `2` absent from the UI, and `slot` positions `3` and `4` displayed under shifted UI numbering. This demonstrates that UI position and `slot` cannot be assumed identical.
+For example, Device `[DEVICE_ID]` was observed with `slot` `1` disabled, `slot` `2` absent from the UI, and `slot` positions `3` and `4` displayed under shifted UI numbering. This demonstrates that UI position and `slot` cannot be assumed identical.
 
 ### Hardware-backed and logical Modules
 
@@ -954,7 +954,7 @@ Provenance cues: `catalogue`
 
 Some firmware definitions expose repeated Modules with the same Object vocabulary. Repetition does not make the Modules interchangeable at runtime: each `slot` can have its own Object selection, address, groups, and parameters.
 
-The IP55 PIR sensor observed as Device `08CF44BF` illustrates a large Module set: one sensor Module plus optional IR scenario-control Modules across later slots. The catalogue’s maximum observed `first_slot` of `17` is consistent with this class of Device.
+The IP55 PIR sensor observed as Device `[DEVICE_ID]` illustrates a large Module set: one sensor Module plus optional IR scenario-control Modules across later slots. The catalogue’s maximum observed `first_slot` of `17` is consistent with this class of Device.
 
 ### Conditions attached to slots
 
@@ -1206,7 +1206,7 @@ Section ID: `ownkb:section:d000005:s000013`
 
 Cautions: `must not`
 
-The observed Devices `00C44420`, `00C443B9`, `00C4442E`, `00C44456`, `00C4445F`, and `00C4446E` expose Light control functionality without light-actuator hardware.
+The observed Devices `[DEVICE_ID]`, `[DEVICE_ID]`, `[DEVICE_ID]`, `[DEVICE_ID]`, `[DEVICE_ID]`, and `[DEVICE_ID]` expose Light control functionality without light-actuator hardware.
 
 For these Devices, a Light control Object is their actual command hardware function. It must not be described as an alternate configuration of a light actuator merely because actuator and command Objects participate in the same functional `WHO`.
 
@@ -2678,7 +2678,7 @@ Section ID: `ownkb:section:d000014:s000005`
 Applicability cues: `firmware`
 Provenance cues: `catalogue`
 
-The observed Device `00C58E91` (`12947089` decimal) reported model value `107`. In the canonical catalogue:
+The observed Device `[DEVICE_ID]` (`12947089` decimal) reported model value `107`. In the canonical catalogue:
 
 - `AS_ITEM_SYSTEM.modobj = 107` resolves to item `1184`;
 - `EN_ITEM.descr` is “Flush mounted actuator and free control”;
@@ -2855,9 +2855,9 @@ Applicability cues: `revision`
 Cautions: `do not`, `must not`
 Provenance cues: `catalogue`
 
-- Device `007B269D` demonstrated that `slot` numbering and UI-visible Module numbering can differ: `slot` `2` was absent from the UI while later slots were renumbered for display.
-- Device `08CF44BF` demonstrated a large layout with `slot` positions through `17`, consistent with the maximum `EN_SLOTS.first_slot` observed in this catalogue revision.
-- Light-control-only Device `00C44420` exposed command Modules as its actual hardware function; those Objects must not be interpreted as alternate actuator modes.
+- Device `[DEVICE_ID]` demonstrated that `slot` numbering and UI-visible Module numbering can differ: `slot` `2` was absent from the UI while later slots were renumbered for display.
+- Device `[DEVICE_ID]` demonstrated a large layout with `slot` positions through `17`, consistent with the maximum `EN_SLOTS.first_slot` observed in this catalogue revision.
+- Light-control-only Device `[DEVICE_ID]` exposed command Modules as its actual hardware function; those Objects must not be interpreted as alternate actuator modes.
 
 These observations constrain interpretation but do not prove that every Device returns `DIMENSION 30` or uses the same optional response set.
 
@@ -2963,7 +2963,7 @@ Other physical positions such as `M`, `TYPE`, `PRE`, or `G1` are not encoded as 
 
 See [Physical configuration and configuration modes](../device-model/configuration.md#physical-configuration-and-configuration-modes) for the shared evidence rules.
 
-Observed sensor Device `08CF44BF` used diagnostic `WHERE 0015`, interpreted as `A = 0`, `PL = 15`. Retaining the raw field is important because padding and family-specific formatting can be lost by integer-only storage.
+Observed sensor Device `[DEVICE_ID]` used diagnostic `WHERE 0015`, interpreted as `A = 0`, `PL = 15`. Retaining the raw field is important because padding and family-specific formatting can be lost by integer-only storage.
 
 ### Other systems
 
