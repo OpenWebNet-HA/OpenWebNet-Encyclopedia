@@ -176,12 +176,20 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_phase16_context_and_scope_repairs_are_preserved(self):
         by_id = {record["id"]: record for record in self.render()}
-        for number in range(5724, 5730):
+        expected_scopes = {
+            **{number: "192" for number in range(4270, 4285)},
+            **{number: "157" for number in range(5724, 5730)},
+            **{number: "157" for number in range(5801, 5811)},
+            **{number: "157" for number in range(6078, 6085)},
+            **{number: "157" for number in range(6252, 6258)},
+        }
+        for number, expression in expected_scopes.items():
             claim = by_id[f"ownkb:claim:c{number:06d}"]
-            self.assertEqual({"expression": "157", "state": "specified"},
+            self.assertEqual({"expression": expression, "state": "specified"},
                              claim["applicability"]["version"])
-        self.assertTrue(by_id["ownkb:claim:c006494"]["statement"].startswith("Do not "))
-        self.assertTrue(by_id["ownkb:claim:c006495"]["statement"].startswith("Do not "))
+        negated = {*range(4733, 4738), *range(6004, 6008), 6494, 6495}
+        self.assertTrue(all(by_id[f"ownkb:claim:c{number:06d}"]["statement"].startswith("Do not ")
+                            for number in negated))
         self.assertFalse(by_id["ownkb:claim:c006493"]["statement"].endswith(":"))
         for number in range(2181, 2193):
             claim = by_id[f"ownkb:claim:c{number:06d}"]
@@ -196,6 +204,9 @@ class ClaimFrameworkTests(unittest.TestCase):
                             r"^(?:These|Those|They|This|It)\b")
         self.assertNotRegex(by_id["ownkb:claim:c002184"]["statement"],
                             r"^(?:These|Those|They|This|It)\b")
+        self.assertTrue(all(not re.match(r"^(?:These include|These definitions|They should)\b",
+                                         claim["statement"], re.IGNORECASE)
+                            for claim in by_id.values()))
 
     def test_phase16_epistemic_keyword_review_is_preserved(self):
         by_id = {record["id"]: record for record in self.render()}

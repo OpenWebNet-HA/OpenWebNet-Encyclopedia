@@ -34,8 +34,19 @@ ADDRESS_IMPLEMENTATION = {
     "ownkb:claim:c000225", "ownkb:claim:c000265", "ownkb:claim:c000266",
     "ownkb:claim:c000267", "ownkb:claim:c000268", "ownkb:claim:c000269",
 }
-FIRMWARE_157 = {f"ownkb:claim:c{number:06d}" for number in range(5724, 5730)}
-NEGATED_POLICY = {"ownkb:claim:c006494", "ownkb:claim:c006495"}
+EXAMPLE_SCOPES = {
+    **{f"ownkb:claim:c{number:06d}": "192" for number in range(4270, 4285)},
+    **{f"ownkb:claim:c{number:06d}": "157" for number in range(5724, 5730)},
+    **{f"ownkb:claim:c{number:06d}": "157" for number in range(5801, 5811)},
+    **{f"ownkb:claim:c{number:06d}": "157" for number in range(6078, 6085)},
+    **{f"ownkb:claim:c{number:06d}": "157" for number in range(6252, 6258)},
+}
+NEGATED_POLICY = {
+    "ownkb:claim:c004733", "ownkb:claim:c004734", "ownkb:claim:c004735",
+    "ownkb:claim:c004736", "ownkb:claim:c004737",
+    "ownkb:claim:c006004", "ownkb:claim:c006005", "ownkb:claim:c006006",
+    "ownkb:claim:c006007", "ownkb:claim:c006494", "ownkb:claim:c006495",
+}
 EPISTEMIC_META_REVIEW = {
     "ownkb:claim:c006460", "ownkb:claim:c006494", "ownkb:claim:c006633",
     "ownkb:claim:c006900", "ownkb:claim:c007081", "ownkb:claim:c007420",
@@ -44,6 +55,22 @@ GENUINE_INFERENCES = {
     "ownkb:claim:c000230", "ownkb:claim:c006339", "ownkb:claim:c006827",
 }
 EVIDENCE_LABELS = {f"ownkb:claim:c{number:06d}" for number in range(7417, 7421)}
+DIRECT_IMPLEMENTATION_SOURCES = {
+    "ownkb:claim:c001338": "ownkb:source:s000125",
+    "ownkb:claim:c001339": "ownkb:source:s000124",
+    "ownkb:claim:c001558": "ownkb:source:s000125",
+    "ownkb:claim:c001566": "ownkb:source:s000125",
+    "ownkb:claim:c001571": "ownkb:source:s000125",
+    "ownkb:claim:c002195": "ownkb:source:s000126",
+    "ownkb:claim:c002542": "ownkb:source:s000125",
+    "ownkb:claim:c002579": "ownkb:source:s000125",
+    "ownkb:claim:c002611": "ownkb:source:s000125",
+    "ownkb:claim:c003193": "ownkb:source:s000126",
+    "ownkb:claim:c003233": "ownkb:source:s000126",
+    "ownkb:claim:c003261": "ownkb:source:s000126",
+    "ownkb:claim:c003278": "ownkb:source:s000125",
+    "ownkb:claim:c003314": "ownkb:source:s000126",
+}
 
 
 def validate_claim_context(seed: dict, source_id: str) -> None:
@@ -64,9 +91,9 @@ def validate_claim_context(seed: dict, source_id: str) -> None:
                     ("public_database", "ownkb:source:s000126", "implementation", "3.5.38", "specified"),
                 }:
             raise ValueError(f"curated implementation provenance regressed: {identity}")
-    if identity in FIRMWARE_157:
+    if identity in EXAMPLE_SCOPES:
         version = seed["applicability"]["version"]
-        if version != {"expression": "157", "state": "specified"}:
+        if version != {"expression": EXAMPLE_SCOPES[identity], "state": "specified"}:
             raise ValueError(f"firmware example scope regressed: {identity}")
     if identity in NEGATED_POLICY and not re.match(r"^Do not\b", statement, re.IGNORECASE):
         raise ValueError(f"governing list negation was lost: {identity}")
@@ -76,6 +103,12 @@ def validate_claim_context(seed: dict, source_id: str) -> None:
         raise ValueError(f"reviewed genuine inference regressed: {identity}")
     if identity in EVIDENCE_LABELS and seed["evidence_class"] != "canonical_documentation":
         raise ValueError(f"evidence-label vocabulary provenance regressed: {identity}")
+    if identity in DIRECT_IMPLEMENTATION_SOURCES:
+        version = seed["applicability"]["version"]
+        if (seed["evidence_class"], source_id, seed["applicability"]["domain"], version) != (
+                "public_database", DIRECT_IMPLEMENTATION_SOURCES[identity], "implementation",
+                {"expression": "3.5.38", "state": "specified"}):
+            raise ValueError(f"direct implementation provenance regressed: {identity}")
 
 
 def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
