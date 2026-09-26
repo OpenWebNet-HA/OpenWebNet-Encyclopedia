@@ -11,7 +11,6 @@
   "properties": {
     "ids": {
       "type": "array",
-      "uniqueItems": true,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -45,7 +44,6 @@
           },
           "replaced_by": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "$ref": "common.schema.json#/$defs/id"
             }
@@ -95,7 +93,6 @@
     },
     "aliases": {
       "type": "array",
-      "uniqueItems": true,
       "items": {
         "type": "object",
         "additionalProperties": false,
