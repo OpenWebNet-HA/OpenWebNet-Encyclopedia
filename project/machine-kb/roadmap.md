@@ -18,7 +18,7 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 | 11 | Initial claim population, batch 3 | **Complete** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with explicit implementation scope, rejected relationships, inferred relationships, open questions, and guide-only documentation defects |
 | 12 | Cross-artifact consistency, drift, and change-impact checks | **Complete** - deterministic cross-artifact coverage validation is integrated into `check.py`; `diff_impact.py` maps Git changes to stable dependent records and explicitly escalates structural/build/schema changes to full review |
 | 13 | Full CI, contributor workflow, release machinery | **Complete** - operational CI, contributor workflow, release checklist, and versioning/consumer guidance |
-| 14 | Full candidate generation and mechanical cleanup | Pending |
+| 14 | Full candidate generation and mechanical cleanup | **Complete** - full deterministic candidate regenerated with zero artifact drift; build/check/schema/privacy/reference/consistency/ECV/ESG gates passed; no semantic cleanup was required |
 | 15 | Independent factual and epistemic certification of the candidate | Pending |
 | 16 | Remediate findings, rerun gates, release and merge when explicitly authorized | Pending |
 
@@ -111,6 +111,14 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 - Documented edit, build, inspect, check, impact-review, and joint-commit contributor workflow.
 - Finalized pre-release consumer, versioning, and release-maintenance guidance.
 
+## Phase 14 verification
+
+- Regenerated the complete Machine KB candidate from the Phase 13 base commit `12d5958657207c115bf2d35031df5569d131e324`; the build produced no generated-artifact diff.
+- `python3 check.py` passed deterministic rebuild, manifest/schema, cross-artifact consistency, reference-integrity, freshness, and privacy gates. `python3 knowledge/tools/validate_consistency.py --report` confirmed 134 canonical documents, 1,181 sections, 7,342 claims, 1,387 reference records, 1,149 retrieval chunks, 32 empty sections, ten excluded Practical Guides, and 183 retained guide-remediation hints.
+- All 35 Machine KB integration tests and seven schema tests passed. ECV and ESG deterministic checks reported zero objective failures. `git diff --check` passed.
+- `python3 diff_impact.py --base 12d5958657207c115bf2d35031df5569d131e324 --head WORKTREE` reported zero changed paths, zero affected chunk/claim/reference IDs, no generated-output changes, and no full review requirement.
+- No mechanical defect required correction, and no factual, epistemic, namespace, applicability, stable-ID, or other semantic content was changed during Phase 14. The candidate is ready for independent Phase 15 certification.
+
 ## Next session
 
-Read the architecture, consumer contract, privacy policy, schemas, IR specification, reference and claim inputs, and these decisions. Continue Phase 12 with cross-artifact consistency, drift, and change-impact checks. Keep source-section review pins current only after adjudicating changed assertions and preserve qualified conflicts. The contract remains pre-release.
+Phase 15 is next. Independently certify the Phase 14 candidate for factual and epistemic correctness without modifying the candidate during the audit. Preserve qualified conflicts, unresolved questions, applicability/version scope, namespace context, implementation-versus-protocol boundaries, and privacy constraints. Record findings precisely for Phase 16 remediation; the contract remains pre-release.
