@@ -2678,7 +2678,7 @@ Section ID: `ownkb:section:d000014:s000005`
 Applicability cues: `firmware`
 Provenance cues: `catalogue`
 
-The observed Device `[DEVICE_ID]` (`12947089` decimal) reported model value `107`. In the canonical catalogue:
+The observed Device `[DEVICE_ID]` (`[DEVICE_ID]` decimal) reported model value `107`. In the canonical catalogue:
 
 - `AS_ITEM_SYSTEM.modobj = 107` resolves to item `1184`;
 - `EN_ITEM.descr` is “Flush mounted actuator and free control”;

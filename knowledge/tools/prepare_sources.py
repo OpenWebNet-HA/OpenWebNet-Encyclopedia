@@ -36,50 +36,16 @@ PROHIBITED_PATH_WORDS = {
     "configuration", "configurations", "screenshot", "screenshots", "export", "exports",
 }
 
-OCTET = r"(?:25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})"
-DEVICE_ID_PATTERN = re.compile(
-    r"(?ix)"
-    r"(?P<prefix>\b(?:"
-    r"(?:(?:installed|observed|physical|scanned|test|light-control-only)\s+)?"
-    r"device(?:\s+(?:id|identifier))?"
-    r"|(?:installed|observed|scanned|test)\s+unit(?:\s+(?:id|identifier))?"
-    r")\b"
-    r"(?!\s+(?:type|model|class|family|firmware|catalog(?:ue)?|code))"
-    r"[^0-9a-f\n]{0,24}[\x60'\"\[]?)"
-    r"(?P<value>[0-9a-f]{8})"
-    r"(?P<suffix>[\x60'\"\]]?)"
-)
-HEX8_PATTERN = re.compile(r"(?i)\b[0-9a-f]{8}\b")
-DEVICE_ID_LIST_PATTERN = re.compile(
-    r"(?ix)\b(?:observed|installed|scanned|test)\s+devices\b"
-    r"(?!\s+(?:types|models|classes|families|firmware|catalog(?:ue)?|codes))"
-    r"[^.\n]{0,320}\b[0-9a-f]{8}\b[^.\n]{0,320}\."
+from privacy_detection import (
+    DEVICE_ID_LIST_PATTERN,
+    DEVICE_ID_PATTERN,
+    device_id_values,
+    sanitize_privacy_text,
 )
 
 
-def redact_device_id_list(match: re.Match[str]) -> str:
-    return HEX8_PATTERN.sub("[DEVICE_ID]", match.group(0))
-
-
-def device_id_values(text: str) -> set[str]:
-    values = {match.group("value") for match in DEVICE_ID_PATTERN.finditer(text)}
-    for match in DEVICE_ID_LIST_PATTERN.finditer(text):
-        values.update(HEX8_PATTERN.findall(match.group(0)))
-    return values
-
-
-TRANSFORMS = (
-    ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
-    ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\*{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
-    ("network_address", re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"), "[NETWORK_ADDRESS]"),
-    ("hardware_id", re.compile(r"(?i)(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])"), "[MAC_ADDRESS]"),
-    ("hardware_id", re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"), "[INSTANCE_IDENTIFIER]"),
-    ("device_id", DEVICE_ID_PATTERN, r"\g<prefix>[DEVICE_ID]\g<suffix>"),
-    ("device_id", DEVICE_ID_LIST_PATTERN, redact_device_id_list),
-    ("person_identifier", re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"), "[PERSONAL_IDENTIFIER]"),
-    ("other", re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"), "[LOCAL_PATH]"),
-    ("credential", re.compile(r"(?i)\b(password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*[\"']?[^\s\"'<>]{4,}"), r"\1=[REDACTED]"),
-)
+def sanitize(text: str) -> tuple[str, list[str]]:
+    return sanitize_privacy_text(text)
 
 
 def read_manifest(path: Path) -> list[dict[str, object]]:
@@ -115,15 +81,6 @@ def validate_manifest_record(record: dict[str, object], label: str) -> None:
         raise ValueError(f"{label}: private-source form must be classified prohibited")
     if record["classification"] == "prohibited" and str(record["source_type"]) not in PROHIBITED_TYPES:
         raise ValueError(f"{label}: prohibited classification requires a prohibited source type")
-
-
-def sanitize(text: str) -> tuple[str, list[str]]:
-    removed: list[str] = []
-    for value_class, pattern, replacement in TRANSFORMS:
-        text, count = pattern.subn(replacement, text)
-        if count and value_class not in removed:
-            removed.append(value_class)
-    return text, sorted(removed)
 
 
 def safe_source_file(source_root: Path, source_path: str) -> Path:
