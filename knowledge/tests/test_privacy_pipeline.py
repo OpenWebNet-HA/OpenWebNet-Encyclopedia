@@ -18,6 +18,7 @@ FIXTURES = ROOT / "knowledge/tests/fixtures"
 
 
 def load_prepare_module():
+    sys.path.insert(0, str(PREPARE.parent))
     spec = importlib.util.spec_from_file_location("prepare_sources", PREPARE)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -170,6 +171,71 @@ class PrivacyPipelineTests(unittest.TestCase):
         record = {"source_id": "ownkb:source:observations", "source_path": "logs/session.txt", "source_type": "log", "classification": "publishable", "note": "unreviewed"}
         with self.assertRaisesRegex(ValueError, "manifest fields"):
             self.pipeline.validate_manifest_record(record, "test")
+
+
+    def test_contextual_device_identifier_variants_are_punctuation_independent(self):
+        tick = chr(96)
+        examples = (
+            "Device IDs: A0B1C2D3, B1C2D3E4",
+            "Installed device identifiers A1C2E3F4 and B2D3F4A5",
+            "Observed Devices: C3D4E5F6, D4E5F6A7",
+            "Devices\n- E5F6A7B8\n- F6A7B8C9",
+            "The **Device IDs** are " + tick + "A7B8C9D0" + tick + ", B8C9D0E1",
+            "Mixed text before; scanned Device identifier C9D0E1F2 and text after",
+        )
+        for source in examples:
+            with self.subTest(source=source):
+                sanitized, removed = self.pipeline.sanitize(source)
+                self.assertEqual(["device_id"], removed)
+                self.assertNotRegex(sanitized, r"(?i)(?<![0-9a-f])[0-9a-f]{8}(?![0-9a-f])")
+
+    def test_contextual_detector_preserves_public_hex_controls(self):
+        controls = (
+            "Protocol constant A0B1C2D3 and frame field B1C2D3E4.",
+            "Catalogue ID C3D4E5F6; firmware ID D4E5F6A7.",
+            "Source hash prefix E5F6A7B8 and SHA-256 F6A7B8C9.",
+            "Device type A7B8C9D0 and Device model B8C9D0E1.",
+        )
+        for source in controls:
+            with self.subTest(source=source):
+                self.assertEqual((source, []), self.pipeline.sanitize(source))
+
+    def test_end_to_end_plural_device_ids_prepare_and_final_scan(self):
+        tools = ROOT / "knowledge/tools"
+        sys.path.insert(0, str(tools))
+        import validate_privacy as scanner
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "docs").mkdir()
+            (root / "docs/example.md").write_text(
+                "Installed Device IDs:\n- A2B3C4D5\n- B3C4D5E6", encoding="utf-8"
+            )
+            manifest = self.write_manifest(root, [{
+                "source_id": "ownkb:source:synthetic",
+                "source_path": "docs/example.md",
+                "source_type": "canonical_documentation",
+                "classification": "sanitize",
+            }])
+            record = self.pipeline.prepare(manifest, root)[0]
+            self.assertEqual(["device_id"], record["privacy"]["removed_value_classes"])
+            artifact = root / "artifact.jsonl"
+            artifact.write_text(json.dumps(record, sort_keys=True) + "\n", encoding="utf-8")
+            generated_manifest = root / "knowledge-manifest.json"
+            generated_manifest.write_text(json.dumps({"artifacts": []}), encoding="utf-8")
+            old = (scanner.ROOT, scanner.KNOWLEDGE_ROOT, scanner.MANIFEST,
+                   scanner.SOURCE_MANIFEST, scanner.GENERATED_ROOTS)
+            try:
+                scanner.ROOT = root
+                scanner.KNOWLEDGE_ROOT = root
+                scanner.MANIFEST = generated_manifest
+                scanner.SOURCE_MANIFEST = manifest
+                scanner.GENERATED_ROOTS = (root,)
+                self.assertEqual(0, scanner.main())
+                artifact.write_text('{"text":"Device IDs: A2B3C4D5, B3C4D5E6"}\n', encoding="utf-8")
+                self.assertEqual(1, scanner.main())
+            finally:
+                (scanner.ROOT, scanner.KNOWLEDGE_ROOT, scanner.MANIFEST,
+                 scanner.SOURCE_MANIFEST, scanner.GENERATED_ROOTS) = old
 
 
 if __name__ == "__main__":
