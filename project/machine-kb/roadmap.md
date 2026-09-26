@@ -145,4 +145,4 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-Independent Phase 15 recertification has passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. The next work is release readiness: close or explicitly adjudicate MKB-R03 and MKB-R06, complete the release checklist against the intended release revision, and retain explicit user authorization as the gate for any merge to `main`, tag, or publication. The contract remains pre-release.
+Independent Phase 15 recertification passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The next work is the final release checklist against the intended release revision; explicit authorization remains required for merge, tag, or publication.
