@@ -1,0 +1,813 @@
+{
+  "candidate_generation": "mixed-evidence IR sections plus explicit source-qualified section boundaries",
+  "candidate_sections": 365,
+  "claims_inspected": 2998,
+  "corrected_claims": [
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001372"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001373"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001374"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000126"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001435"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000126"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001436"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001437"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001438"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000126"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 1",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000132"
+      },
+      "id": "ownkb:claim:c001446"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001560"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001561"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001562"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001563"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001564"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001565"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 13",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000134"
+      },
+      "id": "ownkb:claim:c001567"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003159"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003160"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003161"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003162"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003163"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "medium",
+        "epistemic_status": "corroborated_interpretation",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003164"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000126"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003195"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003230"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003231"
+    },
+    {
+      "after": {
+        "applicability": {
+          "domain": "implementation",
+          "state": "applies",
+          "target": "MyHOME Suite evidence",
+          "version": {
+            "expression": "3.5.38",
+            "state": "specified"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "observed",
+        "evidence_class": "public_database",
+        "source_id": "ownkb:source:s000125"
+      },
+      "before": {
+        "applicability": {
+          "domain": "protocol",
+          "state": "applies",
+          "target": "OpenWebNet WHO 4",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "confidence": "high",
+        "epistemic_status": "specified",
+        "evidence_class": "official_specification",
+        "source_id": "ownkb:source:s000138"
+      },
+      "id": "ownkb:claim:c003232"
+    }
+  ],
+  "corrections": 25,
+  "defects_found": 25,
+  "retained_claims": 2973,
+  "reviewed_widening_overrides": 149,
+  "unresolved_evidence_gaps": 0,
+  "widening_rule": "Evidence/applicability must equal the reviewed block context; broader scope requires a reason and supporting source IDs."
+}
