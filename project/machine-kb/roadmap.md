@@ -16,7 +16,7 @@ Snapshot: 2026-09-25, branch `machine-knowledge-base`. A phase is complete only 
 | 9 | Initial claim population, batch 1 | **Complete** - reviewed `protocol/` and `functional/` claims, exact WHO contexts, source/evidence classifications, preserved conflicts, bounded coverage ledger and duplicate/integrity gates |
 | 10 | Initial claim population, batch 2 | **Complete** - reviewed `diagnostics/`, `programming/`, and `device-model/` claims with targeted high-risk semantic, privacy, coverage, and integrity checks |
 | 11 | Initial claim population, batch 3 | **Complete** - reviewed `internals/`, `reverse-engineering/`, and `scenario-engine/` claims with explicit implementation scope, rejected relationships, inferred relationships, open questions, and guide-only documentation defects |
-| 12 | Cross-artifact consistency, drift, and change-impact checks | Pending |
+| 12 | Cross-artifact consistency, drift, and change-impact checks | **Complete** - deterministic cross-artifact coverage validation is integrated into `check.py`; `diff_impact.py` maps Git changes to stable dependent records and explicitly escalates structural/build/schema changes to full review |
 | 13 | Full CI, contributor workflow, release machinery | Pending - initial privacy CI already present |
 | 14 | Full candidate generation and mechanical cleanup | Pending |
 | 15 | Independent factual and epistemic certification of the candidate | Pending |

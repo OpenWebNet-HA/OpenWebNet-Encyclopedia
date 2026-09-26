@@ -17,6 +17,7 @@ from referencing import Registry, Resource
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "knowledge" / "tools"))
 from serialization import json_bytes, jsonl_bytes  # noqa: E402
+from validate_consistency import validate_cross_artifact  # noqa: E402
 from validate_references import REFERENCE_FILES, validate_integrity  # noqa: E402
 from validate_schema import validate_jsonl  # noqa: E402
 
@@ -173,15 +174,18 @@ def main() -> int:
             manifest = validate_manifest(first / "knowledge/manifest.json")
             compare_outputs(first, second, manifest)
             validate_artifacts(manifest, first)
+            validate_cross_artifact(ROOT, first, manifest)
             committed = ROOT / "knowledge/manifest.json"
             if not committed.is_file() or committed.read_bytes() != (first / "knowledge/manifest.json").read_bytes():
                 raise ValueError("committed manifest is missing or stale; run python build.py")
-            validate_artifacts(validate_manifest(committed), ROOT)
+            committed_manifest = validate_manifest(committed)
+            validate_artifacts(committed_manifest, ROOT)
+            validate_cross_artifact(ROOT, ROOT, committed_manifest)
         privacy = subprocess.run([sys.executable, str(ROOT / "knowledge/tools/validate_privacy.py")], cwd=ROOT,
                                  text=True, capture_output=True, check=False)
         if privacy.returncode:
             raise ValueError(privacy.stderr.strip() or "privacy validation failed")
-        print("Machine KB check passed: deterministic artifacts, manifest, schemas, references, and privacy gate")
+        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, and privacy gate")
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"Machine KB check failed: {error}", file=sys.stderr)
         return 1
