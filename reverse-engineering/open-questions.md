@@ -33,7 +33,7 @@ The remaining questions are narrower:
 - whether the reported F414/MH200 DIM4 timeout/NACK can be reproduced in a preserved raw capture;
 - how other gateways choose the response dimension for an OFF-state `DIMENSION 1` request.
 
-See [WHO 1 Dimmer DIMENSION 1 and 4 Observations](who1-dimmer-dimensions.md).
+See the canonical [WHO 1 DIMENSION Reference](../functional/who-1-lighting/dimensions.md) and the [Relationship Register](relationship-register.md).
 
 ## Diagnostic and programming fields
 
