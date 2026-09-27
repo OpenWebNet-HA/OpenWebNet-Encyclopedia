@@ -49,13 +49,13 @@ class BuildInfrastructureTests(unittest.TestCase):
             self.assertTrue(all(len(entry["sha256"]) == 64 for entry in manifest["artifacts"]))
             self.assertNotIn("guides/", first.read_text())
             self.assertEqual(135, manifest["coverage"]["canonical"]["documents"])
-            self.assertEqual(1169, manifest["coverage"]["retrieval"]["emitted_chunks"])
-            self.assertEqual(7415, manifest["coverage"]["claims"]["records"])
+            self.assertEqual(1173, manifest["coverage"]["retrieval"]["emitted_chunks"])
+            self.assertEqual(7427, manifest["coverage"]["claims"]["records"])
             self.assertEqual(651, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
-            self.assertEqual(2890, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
+            self.assertEqual(2898, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
             self.assertEqual(924, manifest["coverage"]["claims"]["bounded_domains"]["diagnostics"]["claims"])
             self.assertEqual(891, manifest["coverage"]["claims"]["bounded_domains"]["programming"]["claims"])
-            self.assertEqual(886, manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
+            self.assertEqual(890, manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
 
     def test_rendered_artifacts_preserve_context_and_exclude_guides(self):
         with tempfile.TemporaryDirectory() as temporary:
