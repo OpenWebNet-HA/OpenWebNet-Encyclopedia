@@ -61,8 +61,6 @@ This is not a scalar property response and should be modeled as a query producin
 
 The canonical `DIMENSION` table names `4` as 100-level dimmer status with ON/OFF speed, but the document does not provide a detailed request/write flow for it. Do not invent its payload from `DIMENSION 1` merely because their descriptions overlap.
 
-### Observed SCS behavior
-
 Controlled first-hand captures on one F418U2 establish that `DIMENSION 1` and `DIMENSION 4` are distinct runtime state surfaces, even when they report the same `LEVEL100`. At `LEVEL100 = 130`, the same actuator emitted `DIMENSION 1` with a trailing value of `5` and `DIMENSION 4` with a trailing value of `2`. The published names therefore correspond to distinct secondary state on this Device; the observations do not establish the physical-time mapping or complete semantics of the `DIMENSION 4` trailing value.
 
 Gateway handling is not uniform:
