@@ -151,7 +151,7 @@ One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200
 
 ## Evidence priorities
 
-WHO 1 dimmer `DIMENSION 4` is now runtime-established on the tested F418U2 through MH202 and F454, but its trailing `ON/OFFspeed` encoding remains unresolved. It is also still unknown whether the sampled F454 DIM4 write failure is systematic, how other gateways choose the response dimension for an OFF-state DIM1 request, and whether the tester-reported F414/MH200 DIM4 timeout/NACK can be reproduced in a preserved raw capture.
+WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.
 The highest-value next observations are:
 
 1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
