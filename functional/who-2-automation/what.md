@@ -14,13 +14,13 @@ Collective commands can expand into events for the addressed scope and the indiv
 
 ## Advanced commands
 
-| Leading `WHAT` | Function | Parameters |
+| Leading `WHAT` | Function | Command parameters |
 | ---: | --- | --- |
-| `10` | Advanced Stop | priority; set/clear selector |
-| `11` | Advanced Up | optional step; priority; set/clear selector |
-| `12` | Advanced Down | optional step; priority; set/clear selector |
+| `10` | Advanced Stop | priority |
+| `11` | Advanced Up | optional step; priority |
+| `12` | Advanced Down | optional step; priority |
 
-The exact `#`-parameterized form is part of `WHAT`; parsing only the leading number loses the requested step and priority operation.
+Event-session forms append the set/clear selector described below. The exact `#`-parameterized form is part of `WHAT`; parsing only the leading number loses the requested step and priority operation.
 
 ### Step
 
@@ -60,7 +60,7 @@ Where `SELECTOR`:
 Command-translation reports (`WHAT 1000`) for point targets wrap this event structure: `*2*1000#11#PRIORITY#SELECTOR*WHERE##`.
 
 **Observed physical transmitter frames**:
-Physical centralized transmitters broadcasting to the General scope (`WHERE = 0`) emit the event-style multi-parameter form with `SELECTOR = 1` (Set priority) directly onto the SCS bus:
+In the referenced MyHomeServer1/LN4660M2 captures, the physical centralized controller broadcasting to the General scope (`WHERE = 0`) emitted the event-style multi-parameter form with `SELECTOR = 1` (Set priority) directly onto the SCS bus:
 - Up: `*2*11#100#001#1*0##`
 - Down: `*2*12#100#001#1*0##`
 - Stop: `*2*10#001#1*0##`
@@ -70,7 +70,7 @@ This on-wire behavior is corroborated by authentic bus monitor traces captured o
 ### Physical transmitter STOP / PRESET behavior
 
 Advanced physical shutter controls (such as `LN4660M2`, `H4660M2`, `AM5860M2`) feature a dual-function middle button:
-- When shutters are **in motion**: pressing the button emits the Advanced Stop command (`*2*10#001#1*WHERE##`), stopping movement immediately across the addressed scope.
+- When shutters are **in motion**: pressing the button invokes Advanced Stop. In the referenced LN4660M2 capture, this appeared on the bus as the event-style frame `*2*10#001#1*0##`.
 - When shutters are **stationary**: pressing the button triggers the **PRESET** function, recalling a pre-configured intermediate position stored within the actuators.
 
 ## Command-translation reports - `WHAT 1000`
