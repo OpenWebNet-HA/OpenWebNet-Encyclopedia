@@ -14,6 +14,7 @@ It is a reproducible research record, not a second protocol reference. Stable op
 | Consolidated established, inferred, open, and sentinel-dependent relationships | [Relationship Register](relationship-register.md) |
 | Safely connecting wire values, catalogue capability, validation, and scenario models | [Cross-Database Correlation](cross-database-correlation.md) |
 | Capturing, segmenting, correlating, and publishing runtime traffic | [Capture Analysis](capture-analysis.md) |
+| Cross-gateway/runtime evidence for WHO 1 dimmer `DIMENSION 1` and `4` | [WHO 1 Dimmer DIMENSION 1 and 4 Observations](who1-dimmer-dimensions.md) |
 | Recovering the undocumented `WHO 16` matrix routing address from captures | [Sound Matrix Source Routing](sound-matrix-routing.md) |
 | Designing controlled tests that distinguish competing explanations | [Hypothesis Testing](hypothesis-testing.md) |
 | Rejected relationships, interpretations, and recurring analytical shortcuts | [Rejected Relationships](rejected-relationships.md) |
