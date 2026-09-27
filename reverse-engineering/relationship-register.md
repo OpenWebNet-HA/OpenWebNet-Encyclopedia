@@ -74,6 +74,16 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `WHO 16` amplifier `WHERE` `EA` | environment `E`, amplifier `A` | two-digit addresses; single-digit form untested | corroborated by `WHO 22` counterparts and F441M documentation |
 | `WHO 16` sound events | `WHO 22` counterpart frames | one MH200N; area/point and source/area fields written out | established for that Device; origin and generality open |
 
+## Functional runtime relationships
+
+| Source | Target / behavior | Conditions/evidence | Status |
+| --- | --- | --- | --- |
+| WHO 1 `DIMENSION 1` secondary value | transition-speed state distinct from WHO 1 `DIMENSION 4` secondary value | same F418U2 and `LEVEL100 = 130` emitted `DIMENSION 1 ...*5##` and `DIMENSION 4 ...*2##` across controlled gateway captures | corroborated for the tested F418U2; exact DIM4 numeric semantics open |
+| F454/F418U2 OFF-state `DIMENSION 1` request | `DIMENSION 4` response | same actuator returns `DIMENSION 1` to the equivalent request through MH202 | established for the tested F454/F418U2 combination; gateway generality open |
+| MH202/F418U2 positive `DIMENSION 4` write | subsequent DIM4 state at the requested positive level | `#4*130*0` followed by `4*130*2` in the preserved capture | established for the tested combination |
+| F454/F418U2 positive `DIMENSION 4` write | no corresponding state change in sampled run | connection remained healthy; immediately following DIM1 write succeeded | bounded negative observation; universal F454 rejection not established |
+| F414/MH200 `DIMENSION 4` support | tester reports timeout and `NACK` on DIM4 request | DIM1 read/write is capture-established; raw DIM4 timeout exchange is not in the preserved capture | reported observation; direct capture still required |
+
 ## Across database models
 
 | Source | Target | Conditions/evidence | Status |
