@@ -78,7 +78,7 @@ These observations have two implementation consequences:
 1. do not collapse the secondary values of `DIMENSION 1` and `DIMENSION 4` into one field;
 2. do not require a response to use the same `DIMENSION` identifier as the request, because the observed F454/F418U2 OFF-state query is a counterexample.
 
-Device and gateway applicability remain part of capability handling. See [WHO 1 Dimmer DIMENSION 1 and 4 Observations](../../reverse-engineering/who1-dimmer-dimensions.md) for the redacted evidence and confidence boundaries.
+Device and gateway applicability remain part of capability handling. The cross-gateway evidence status and remaining unknowns are tracked in the [Relationship Register](../../reverse-engineering/relationship-register.md) and [Open Questions](../../reverse-engineering/open-questions.md).
 
 ## `DIMENSION 8` - working time
 
