@@ -159,3 +159,18 @@ The final release checklist passed on 2026-09-26 for release-content revision b1
 - Repository licensing, planned release notes, and the documented golden consumer serialization vector are present and consistent with the consumer contract.
 - The Machine KB project README, architecture status, roadmap, release checklist, and review ledger now describe the same pre-release state.
 - No merge, tag, GitHub Release, publication, or released-v1 declaration is authorized by this verification.
+
+## Current-main reconciliation - 2026-09-27
+
+After the earlier release-ready candidate 45bdf82b9697a254229fb7c4511cfb1f920ba457, authoritative Encyclopedia main advanced to 2833269fdb09bb6abf2c8bafc43d9105f97861b6. The Machine KB branch incorporated that upstream state through merge d16ca82bf199a4ad0beace1efb3f96edfa1e4a7b and produced reconciled semantic/content candidate 888706f39f4c3f5dba2a49db628b09011714084b.
+
+- Drift was material but bounded to sound-system routing evidence and related reverse-engineering/reference updates.
+- Impact analysis reports 30 changed paths, 402 affected claims, 77 affected chunks, and 96 affected references, with full review required because source topology, identities, and privacy-build semantics changed.
+- The semantic delta is 61 added claims, 0 removed claims, and 0 semantic modifications to existing claims; 88 existing claims changed only in source-section hashes. Five open questions and 19 section-topic entities were added.
+- Lifecycle reconciliation added 127 live IDs with zero stale IDs, bringing the live registry to 11,300 IDs.
+- Bounded recertification reviewed the new claims, affected relationships/open questions, direct dependencies and adjacent unchanged boundaries. Observed and corroborated routing remains installation/Device-scoped; unobserved routing forms and dual-dialect origin remain explicitly unresolved.
+- Privacy handling was narrowly adjusted so public OpenWebNet numeric frames are not mistaken for star-separated network addresses while genuine star-separated IPv4 payloads remain sanitized and rejected by the publication scanner.
+- Validation passed: 54 Machine KB unit tests, 7 schema tests, deterministic check.py, consistency, privacy across 20 generated/metadata surfaces, ESG with 0 objective failures, ECV with 0 objective failures, and git diff --check.
+- Current corpus: 135 canonical documents, 1,203 sections, 7,415 claims, 1,412 references, 1,169 retrieval chunks, and 11,300 live IDs.
+
+This reconciliation supersedes 45bdf82b9697a254229fb7c4511cfb1f920ba457 as the future merge-candidate lineage. It does not authorize merge to main, tag creation, GitHub Release creation, publication, or a released-v1 declaration.
