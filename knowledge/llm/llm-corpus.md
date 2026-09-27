@@ -4390,7 +4390,9 @@ Cautions: `must not`
 
 Section ID: `ownkb:section:d000028:s000003`
 
-Provenance cues: `documentation`, `source`
+Applicability cues: `firmware`
+Cautions: `must not`
+Provenance cues: `documentation`, `evidence`, `source`
 
 Write:
 
@@ -4406,6 +4408,10 @@ Request and response/report:
 ```
 
 The PDF prints one write example without the `*` before `#1`; this conflicts with its common write grammar and the otherwise consistent frame family. This documentation uses the structurally consistent form above and records the source inconsistency rather than treating the missing separator as a new syntax.
+
+A 27 September 2026 [public MH200/F418U2 trace](https://github.com/GreenGrassBlueOcean/MyHOME/blob/d7471368e04cbf311ea82668306d926baef4b178/tests/fixtures/traces/issue_466/myhome_trace_MH200_f418u2_dimmer_2026-09-27T12-15-00.json) through an MH200 running firmware 2.1.0 adds first-hand runtime evidence for the F418U2. Positive `DIMENSION 1` writes were accepted: a write to `LEVEL100 = 150` with `SPEED = 0` was followed immediately by a `DIMENSION 1` report with `LEVEL100 = 150` and trailing value `5`, while a later direct read at the same level returned trailing value `2`. A write to `LEVEL100 = 200` likewise produced an immediate trailing value `5`. Therefore, the written `SPEED` value must not be assumed to be echoed unchanged in the following report.
+
+The same MH200/F418U2 trace also observed coarse `WHAT` commands and subsequent fine-level reads: `WHAT 3 -> LEVEL100 110`, `WHAT 5 -> LEVEL100 130`, `WHAT 7 -> LEVEL100 150`, and `WHAT 10 -> LEVEL100 200`. These are Device-path observations, not a replacement for the published `WHAT` table; the exact relationship between the coarse command labels and the F418U2 fine-level state remains implementation evidence rather than a universal encoding rule.
 
 ### `DIMENSION 2` - temporization
 
@@ -4434,7 +4440,7 @@ This is not a scalar property response and should be modeled as a query producin
 Section ID: `ownkb:section:d000028:s000006`
 
 Applicability cues: `firmware`, `gateway`
-Cautions: `do not`
+Cautions: `do not`, `limitation`
 Provenance cues: `capture`, `evidence`
 
 The canonical `DIMENSION` table names `4` as 100-level dimmer status with ON/OFF speed, but the document does not provide a detailed request/write flow for it. Do not invent its payload from `DIMENSION 1` merely because their descriptions overlap.
@@ -4445,14 +4451,16 @@ Gateway handling is not uniform:
 
 - through an MH202, explicit `DIMENSION 1` and `DIMENSION 4` reads preserved the requested dimension. In the sampled states, direct reads returned a trailing `0`, while subsequent actuator reports exposed nonzero values such as `5` for `DIMENSION 1` and `2` for `DIMENSION 4`;
 - through an F454, direct reads returned the nonzero values in the sampled states, and a `DIMENSION 1` request while the actuator was OFF was answered with a `DIMENSION 4` frame instead;
-- a positive-level `DIMENSION 4` write was observed to succeed through the MH202. The equivalent write through the F454 did not produce the expected state change in the sampled run, while the immediately following `DIMENSION 1` write succeeded. This is a bounded negative observation, not proof that every F454 firmware universally rejects `DIMENSION 4` writes.
+- through an MH200 running firmware 2.1.0, the [public MH200/F418U2 trace](https://github.com/GreenGrassBlueOcean/MyHOME/blob/d7471368e04cbf311ea82668306d926baef4b178/tests/fixtures/traces/issue_466/myhome_trace_MH200_f418u2_dimmer_2026-09-27T12-15-00.json) shows `DIMENSION 1` reads and writes working while explicit `DIMENSION 4` requests receive no response in the captured windows. A positive `DIMENSION 4` write to `LEVEL100 = 130` was followed by a `DIMENSION 1` read still reporting `LEVEL100 = 150`, so the requested state change did not occur on that tested path. When the actuator was OFF, a `DIMENSION 1` request remained a `DIMENSION 1` response and returned `LEVEL100 = 100` with trailing value `2`;
+- a positive-level `DIMENSION 4` write was observed to succeed through the MH202. The equivalent write through the F454 did not produce the expected state change in the sampled run, while the immediately following `DIMENSION 1` write succeeded. The MH200 trace independently shows another path on which the sampled positive `DIMENSION 4` write did not change state. These are bounded observations, not proof of a universal gateway-family rule.
 
-A classic F414 observed through an MH200 supports `DIMENSION 1` reads and writes with the same `LEVEL100 + SPEED` structure. A companion tester report states that a `DIMENSION 4` request to that F414 timed out and ended in `NACK`; the raw DIM4 exchange is not present in the preserved capture, so that absence remains reported rather than capture-established evidence.
+A classic F414 observed through an MH200 supports `DIMENSION 1` reads and writes with the same `LEVEL100 + SPEED` structure. A companion tester report states that a `DIMENSION 4` request to that F414 timed out and ended in `NACK`; the raw DIM4 exchange is not present in the preserved capture. The new F418U2/MH200 trace independently shows no DIM4 response on the same gateway model, making an MH200-path limitation more plausible, but it does not by itself establish whether the cause is gateway-wide, firmware-specific, or interaction-specific.
 
-These observations have two implementation consequences:
+These observations have three implementation consequences:
 
 1. do not collapse the secondary values of `DIMENSION 1` and `DIMENSION 4` into one field;
-2. do not require a response to use the same `DIMENSION` identifier as the request, because the observed F454/F418U2 OFF-state query is a counterexample.
+2. do not require a response to use the same `DIMENSION` identifier as the request, because the observed F454/F418U2 OFF-state query is a counterexample;
+3. treat `DIMENSION 4` availability and write behavior as gateway/Device-path capability. The tested MH200/F418U2 path did not expose DIM4 read/write behavior that was available through the tested MH202 path.
 
 Device and gateway applicability remain part of capability handling. The cross-gateway evidence status and remaining unknowns are tracked in the [Relationship Register](../../reverse-engineering/relationship-register.md) and [Open Questions](../../reverse-engineering/open-questions.md).
 
@@ -16544,10 +16552,9 @@ One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200
 Section ID: `ownkb:section:d000121:s000019`
 
 Applicability cues: `firmware`, `gateway`, `revision`, `version`
-Uncertainty: `unknown`, `unresolved`
 Provenance cues: `capture`, `database`
 
-WHO 1 dimmer `DIMENSION 4` is now runtime-established on the tested F418U2 through MH202 and F454, but its trailing `ON/OFFspeed` encoding remains unresolved. It is also still unknown whether the sampled F454 DIM4 write failure is systematic, how other gateways choose the response dimension for an OFF-state DIM1 request, and whether the tester-reported F414/MH200 DIM4 timeout/NACK can be reproduced in a preserved raw capture.
+WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.
 The highest-value next observations are:
 
 1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
@@ -16866,7 +16873,8 @@ Provenance cues: `capture`, `catalogue`, `evidence`, `source`, `specification`
 | `DIMENSION 4`/`5` catalogue correlation | `C1..C12` transport fields and `0..255` ranges are established; `ConfConfigurators` is labelled virtual configuration | controlled Device-family correlation between `C1..C12` and firmware-specific `EN_CONF` symbols/positions |
 | WHO 1 functional `DIMENSION 4` trailing value | F418U2 reports a secondary value distinct from DIM1 at the same `LEVEL100`; public terminology calls it ON/OFF speed | controlled fade-setting change or authoritative value mapping that establishes units/enumeration |
 | F454/F418U2 positive functional DIM4 write | one controlled write produced no matching state change while the following DIM1 write succeeded | repeat across F454 firmware/state to distinguish systematic gateway behavior from conditional failure |
-| F414/MH200 functional DIM4 support | tester reports DIM4 request timeout followed by `NACK`; preserved capture independently establishes DIM1 support | raw preserved DIM4 request/timeout/NACK exchange |
+| MH200/F418U2 functional DIM4 availability | immutable public trace shows explicit DIM4 requests with no response in the captured windows; a positive DIM4 write did not change the subsequent DIM1 level, while DIM1 read/write remained functional | repeat on another MH200/F418U2 and across MH200 firmware to distinguish gateway-wide behavior from interaction-specific behavior |
+| F414/MH200 functional DIM4 support | tester reports DIM4 request timeout followed by `NACK`; preserved capture independently establishes DIM1 support; the public F418U2/MH200 trace independently shows DIM4 non-response on the same gateway model | raw preserved F414 DIM4 request/timeout/NACK exchange and cross-firmware MH200 comparison |
 | generic `DIMENSION 310.VAL_PAR` meaning | Object-specific response without generic index metadata | Object-specific captures and decoder behavior |
 | catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
 | gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
