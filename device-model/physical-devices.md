@@ -96,6 +96,7 @@ The interpretation is supported by Devices whose physical configuration layouts 
 | --- | ---: | --- |
 | `F420` | `2` | 2 |
 | `F429` | `3` | 3 (`A`, `G`, `M`) |
+| `LN4660M2` | `6` (corroborated) | 6 (`A`, `PL`, `Ar`, `PLr`, `M`, `Pre`) |
 | `H4652/3` | `7` | 7 |
 
 The correspondence across Devices with different values argues against interpreting ordinary addressed-form `N_CONF` as a Module count or general Device classification. In that corroborated scope, it describes the size of the Device's physical configurator interface.
@@ -148,6 +149,12 @@ SKU `F418U2` resolves to item `2065`, “2x1,6A universal dimmer, 4DIN”, and f
 ### `3476` and `3477`
 
 SKU `3476` is a one-slot Basic control actuator. SKU `3477` is a two-slot Basic contacts interface whose Modules can expose contact-state and command functions. Similar physical installation style therefore does not imply the same logical composition.
+
+### `LN4660M2`, `H4660M2`, `AM5860M2`, and `067558`
+
+These four SKUs (Livinglight `LN4660M2`, Axolute `H4660M2`, Matix `AM5860M2`, and Céliane `067558`) share item `1579`, “Shutter control bus”, item model `46`, and firmware `205`. The firmware exposes a single slot containing Object `529` (“Shutter control”), belonging to family `1` (Control).
+
+The hardware interface provides six physical configurator positions (`A`, `PL`, `Ar`, `PLr`, `M`, and `Pre`), corroborating `N_CONF = 6` for this device family from independent installation documentation rather than directly observed on-wire diagnostic responses. When configured with `A=GEN`, the device acts as a centralized automation control broadcasting Advanced Automation commands to the General scope (`WHERE = 0`). The `Ar` and `PLr` sockets assign a reference actuator for state synchronization and preset management, while `M` sets operation modality and `Pre` selects the preset index. No actuator output is exposed by this item.
 
 ## Dependent Devices and interfaces
 

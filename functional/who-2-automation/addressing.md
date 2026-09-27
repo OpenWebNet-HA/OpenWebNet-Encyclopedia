@@ -31,4 +31,10 @@ Commands addressed to a group, environment, or the general scope can produce eve
 
 The MyHOME_Suite `OPEN.db` address-rule definitions represent the same `A`/`PL` address family through system-specific point-to-point, environment, and advanced rules.
 
+## Centralized transmitters and General scope
+
+Centralized control devices configured with `A=GEN` broadcast movement commands targeting the General scope (`WHERE = 0`), for example `*2*11#100#001#1*0##`.
+
+Because OpenWebNet command frames carry only the target address rather than the originator address, frames with `WHERE = 0` do not identify which physical transmitter generated the command. Actuators configured to participate in the general scope execute the movement and subsequently emit individual point-to-point status reports (`DIMENSION 10`) on their respective `A`/`PL` addresses. This multi-actuator telemetry burst following centralized control was observed directly in the [public MyHomeServer1/LN4660M2 traces](https://github.com/OpenWebNet-HA/MyHOME/tree/198a848e73edd2a887b993b98beffa98f3f20e36/tests/fixtures/traces/issue_445).
+
 See [`WHAT` Reference](what.md) for movement commands, [`DIMENSION` Reference](dimensions.md) for advanced shutter state/position data, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.

@@ -1390,6 +1390,7 @@ The interpretation is supported by Devices whose physical configuration layouts 
 | --- | --- | --- |
 | `F420` | `2` | 2 |
 | `F429` | `3` | 3 (`A`, `G`, `M`) |
+| `LN4660M2` | `6` (corroborated) | 6 (`A`, `PL`, `Ar`, `PLr`, `M`, `Pre`) |
 | `H4652/3` | `7` | 7 |
 
 The correspondence across Devices with different values argues against interpreting ordinary addressed-form `N_CONF` as a Module count or general Device classification. In that corroborated scope, it describes the size of the Device's physical configurator interface.
@@ -1464,6 +1465,17 @@ SKU `F418U2` resolves to item `2065`, “2x1,6A universal dimmer, 4DIN”, and f
 Section ID: `ownkb:section:d000006:s000015`
 
 SKU `3476` is a one-slot Basic control actuator. SKU `3477` is a two-slot Basic contacts interface whose Modules can expose contact-state and command functions. Similar physical installation style therefore does not imply the same logical composition.
+
+#### `LN4660M2`, `H4660M2`, `AM5860M2`, and `067558`
+
+Section ID: `ownkb:section:d000006:s000019`
+
+Applicability cues: `firmware`
+Provenance cues: `documentation`
+
+These four SKUs (Livinglight `LN4660M2`, Axolute `H4660M2`, Matix `AM5860M2`, and Céliane `067558`) share item `1579`, “Shutter control bus”, item model `46`, and firmware `205`. The firmware exposes a single slot containing Object `529` (“Shutter control”), belonging to family `1` (Control).
+
+The hardware interface provides six physical configurator positions (`A`, `PL`, `Ar`, `PLr`, `M`, and `Pre`), corroborating `N_CONF = 6` for this device family from independent installation documentation rather than directly observed on-wire diagnostic responses. When configured with `A=GEN`, the device acts as a centralized automation control broadcasting Advanced Automation commands to the General scope (`WHERE = 0`). The `Ar` and `PLr` sockets assign a reference actuator for state synchronization and preset management, while `M` sets operation modality and `Pre` selects the preset index. No actuator output is exposed by this item.
 
 ### Dependent Devices and interfaces
 
@@ -7079,6 +7091,16 @@ Commands addressed to a group, environment, or the general scope can produce eve
 
 The MyHOME_Suite `OPEN.db` address-rule definitions represent the same `A`/`PL` address family through system-specific point-to-point, environment, and advanced rules.
 
+### Centralized transmitters and General scope
+
+Section ID: `ownkb:section:d000049:s000005`
+
+Cautions: `do not`
+
+Centralized control devices configured with `A=GEN` broadcast movement commands targeting the General scope (`WHERE = 0`), for example `*2*11#100#001#1*0##`.
+
+Because OpenWebNet command frames carry only the target address rather than the originator address, frames with `WHERE = 0` do not identify which physical transmitter generated the command. Actuators configured to participate in the general scope execute the movement and subsequently emit individual point-to-point status reports (`DIMENSION 10`) on their respective `A`/`PL` addresses. This multi-actuator telemetry burst following centralized control was observed directly in the [public MyHomeServer1/LN4660M2 traces](https://github.com/OpenWebNet-HA/MyHOME/tree/198a848e73edd2a887b993b98beffa98f3f20e36/tests/fixtures/traces/issue_445).
+
 See [`WHAT` Reference](what.md) for movement commands, [`DIMENSION` Reference](dimensions.md) for advanced shutter state/position data, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.
 
 # Document: ownkb:document:d000050
@@ -7241,6 +7263,62 @@ Section ID: `ownkb:section:d000051:s000004`
 Section ID: `ownkb:section:d000051:s000005`
 
 The priority payload contains a set/clear selector and Safety, High, and Medium flags. A zero flag leaves that priority unchanged. This is a bit-selection operation, not a single ordinal priority number.
+
+#### Parameter format
+
+Section ID: `ownkb:section:d000051:s000009`
+
+Applicability cues: `gateway`, `scs`
+Provenance cues: `specification`
+
+The published [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf) defines separate parameter structures for command sessions and event sessions:
+
+**Published command session grammar** (client to server):
+
+```text
+*2*10#PRIORITY*WHERE##                 (Advanced Stop)
+*2*11#STEP#PRIORITY*WHERE##            (Advanced Up)
+*2*12#STEP#PRIORITY*WHERE##            (Advanced Down)
+```
+
+Where:
+
+- `STEP`: `1..99` specifies a relative step percentage; `100` (or omitted/null) requests movement to the physical endpoint (full open or full close).
+- `PRIORITY`: 3-digit bitfield (`p1 p2 p3`) representing Safety (`p1`), High (`p2`), and Medium (`p3`) priority levels (for example, `001` sets standard medium priority).
+
+**Published event session grammar** (server to client):
+In event sessions and status reports, the server appends a selector flag (`<shutterType>`):
+
+```text
+*2*10#PRIORITY#SELECTOR*WHERE##        (Advanced Stop event)
+*2*11#STEP#PRIORITY#SELECTOR*WHERE##   (Advanced Up event)
+*2*12#STEP#PRIORITY#SELECTOR*WHERE##   (Advanced Down event)
+```
+
+Where `SELECTOR`:
+
+- `0`: Clear priority.
+- `1`: Set priority.
+
+Command-translation reports (`WHAT 1000`) for point targets wrap this event structure: `*2*1000#11#PRIORITY#SELECTOR*WHERE##`.
+
+**Observed physical transmitter frames**:
+Physical centralized transmitters broadcasting to the General scope (`WHERE = 0`) emit the event-style multi-parameter form with `SELECTOR = 1` (Set priority) directly onto the SCS bus:
+
+- Up: `*2*11#100#001#1*0##`
+- Down: `*2*12#100#001#1*0##`
+- Stop: `*2*10#001#1*0##`
+
+This on-wire behavior is corroborated by authentic bus monitor traces captured on a physical MyHomeServer1 gateway with an `LN4660M2` centralized controller ([public MyHomeServer1/LN4660M2 traces](https://github.com/OpenWebNet-HA/MyHOME/tree/198a848e73edd2a887b993b98beffa98f3f20e36/tests/fixtures/traces/issue_445), contributed by Francesco Montorsi on [MyHOME issue #445](https://github.com/OpenWebNet-HA/MyHOME/issues/445) and [#466 (comment 5853591733)](https://github.com/OpenWebNet-HA/MyHOME/issues/466#issuecomment-5853591733)).
+
+#### Physical transmitter STOP / PRESET behavior
+
+Section ID: `ownkb:section:d000051:s000010`
+
+Advanced physical shutter controls (such as `LN4660M2`, `H4660M2`, `AM5860M2`) feature a dual-function middle button:
+
+- When shutters are **in motion**: pressing the button emits the Advanced Stop command (`*2*10#001#1*WHERE##`), stopping movement immediately across the addressed scope.
+- When shutters are **stationary**: pressing the button triggers the **PRESET** function, recalling a pre-configured intermediate position stored within the actuators.
 
 ### Command-translation reports - `WHAT 1000`
 
