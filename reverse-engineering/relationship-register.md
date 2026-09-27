@@ -74,16 +74,6 @@ See [Database Relationship Reconstruction](database-relationship-reconstruction.
 | `WHO 16` amplifier `WHERE` `EA` | environment `E`, amplifier `A` | two-digit addresses; single-digit form untested | corroborated by `WHO 22` counterparts and F441M documentation |
 | `WHO 16` sound events | `WHO 22` counterpart frames | one MH200N; area/point and source/area fields written out | established for that Device; origin and generality open |
 
-## Functional runtime relationships
-
-| Source | Target / behavior | Conditions/evidence | Status |
-| --- | --- | --- | --- |
-| WHO 1 `DIMENSION 1` secondary value | transition-speed state distinct from WHO 1 `DIMENSION 4` secondary value | same F418U2 and `LEVEL100 = 130` emitted `DIMENSION 1 ...*5##` and `DIMENSION 4 ...*2##` across controlled gateway captures | corroborated for the tested F418U2; exact DIM4 numeric semantics open |
-| F454/F418U2 OFF-state `DIMENSION 1` request | `DIMENSION 4` response | same actuator returns `DIMENSION 1` to the equivalent request through MH202 | established for the tested F454/F418U2 combination; gateway generality open |
-| MH202/F418U2 positive `DIMENSION 4` write | subsequent DIM4 state at the requested positive level | `#4*130*0` followed by `4*130*2` in the preserved capture | established for the tested combination |
-| F454/F418U2 positive `DIMENSION 4` write | no corresponding state change in sampled run | connection remained healthy; immediately following DIM1 write succeeded | bounded negative observation; universal F454 rejection not established |
-| F414/MH200 `DIMENSION 4` support | tester reports timeout and `NACK` on DIM4 request | DIM1 read/write is capture-established; raw DIM4 timeout exchange is not in the preserved capture | reported observation; direct capture still required |
-
 ## Across database models
 
 | Source | Target | Conditions/evidence | Status |
@@ -114,6 +104,9 @@ Sentinel meaning is local to the field. This table does not authorize interpreti
 | Question | Leading evidence | Decisive evidence needed |
 | --- | --- | --- |
 | `DIMENSION 4`/`5` catalogue correlation | `C1..C12` transport fields and `0..255` ranges are established; `ConfConfigurators` is labelled virtual configuration | controlled Device-family correlation between `C1..C12` and firmware-specific `EN_CONF` symbols/positions |
+| WHO 1 functional `DIMENSION 4` trailing value | F418U2 reports a secondary value distinct from DIM1 at the same `LEVEL100`; public terminology calls it ON/OFF speed | controlled fade-setting change or authoritative value mapping that establishes units/enumeration |
+| F454/F418U2 positive functional DIM4 write | one controlled write produced no matching state change while the following DIM1 write succeeded | repeat across F454 firmware/state to distinguish systematic gateway behavior from conditional failure |
+| F414/MH200 functional DIM4 support | tester reports DIM4 request timeout followed by `NACK`; preserved capture independently establishes DIM1 support | raw preserved DIM4 request/timeout/NACK exchange |
 | generic `DIMENSION 310.VAL_PAR` meaning | Object-specific response without generic index metadata | Object-specific captures and decoder behavior |
 | catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
 | gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
