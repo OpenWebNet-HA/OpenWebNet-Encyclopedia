@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7415)
+        self.assertEqual(len(claims), 7427)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -108,15 +108,15 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7415, metrics["records"])
+        self.assertEqual(7427, metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 96, "sections_with_claims": 86},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2890, "documents": 60, "reviewed_nonclaim_sections": 26,
-             "sections": 424, "sections_with_claims": 398},
+            {"claims": 2898, "documents": 60, "reviewed_nonclaim_sections": 26,
+             "sections": 427, "sections_with_claims": 401},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -130,8 +130,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 886, "documents": 8, "reviewed_nonclaim_sections": 11,
-             "sections": 121, "sections_with_claims": 110},
+            {"claims": 890, "documents": 8, "reviewed_nonclaim_sections": 11,
+             "sections": 122, "sections_with_claims": 111},
             metrics["bounded_domains"]["device-model"],
         )
         self.assertEqual(
@@ -154,7 +154,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         phase11 = [record for record in claims
                    if int(record["id"].rsplit("c", 1)[1]) >= 6296]
-        self.assertEqual(1198, len(phase11))
+        self.assertEqual(1210, len(phase11))
         self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
                             for record in phase11))
         rejected = [record for record in phase11 if record["epistemic_status"] == "rejected"]
