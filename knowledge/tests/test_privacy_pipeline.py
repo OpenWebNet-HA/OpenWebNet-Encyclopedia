@@ -134,6 +134,19 @@ class PrivacyPipelineTests(unittest.TestCase):
             record = self.pipeline.prepare(manifest, root)[0]
             self.assertEqual({"classification": "public", "removed_value_classes": []}, record["privacy"])
 
+    def test_openwebnet_numeric_frames_remain_public(self):
+        source = (
+            "Observed public frame forms *#22*3#1#1*12*1*4## and "
+            "*#16*11*1*17## are protocol data, not network addresses."
+        )
+        self.assertEqual((source, []), self.pipeline.sanitize(source))
+
+    def test_star_separated_network_payload_is_still_sanitized(self):
+        address = "*".join(("203", "0", "113", "26"))
+        text, removed = self.pipeline.sanitize(f"Endpoint payload {address} is illustrative.")
+        self.assertEqual(["network_address"], removed)
+        self.assertIn("[NETWORK_ADDRESS]", text)
+
     def test_final_scanner_rejects_synthetic_protocol_shape(self):
         output = ROOT / "knowledge/retrieval/test-private-shape.jsonl"
         try:
@@ -141,6 +154,16 @@ class PrivacyPipelineTests(unittest.TestCase):
             result = subprocess.run([sys.executable, str(SCANNER)], cwd=ROOT, capture_output=True, text=True, check=False)
             self.assertNotEqual(0, result.returncode)
             self.assertIn("IPv4 address", result.stderr)
+        finally:
+            output.unlink(missing_ok=True)
+
+    def test_final_scanner_rejects_star_separated_network_payload(self):
+        output = ROOT / "knowledge/retrieval/test-private-star-shape.jsonl"
+        try:
+            output.write_text('{"text":"' + "*".join(("203", "0", "113", "27")) + '"}\n', encoding="utf-8")
+            result = subprocess.run([sys.executable, str(SCANNER)], cwd=ROOT, capture_output=True, text=True, check=False)
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn("IPv4 protocol payload", result.stderr)
         finally:
             output.unlink(missing_ok=True)
 

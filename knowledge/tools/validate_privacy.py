@@ -26,7 +26,7 @@ GENERATED_NAMES = {"llm-corpus.md"}
 OCTET = r"(?:25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})"
 PATTERNS = {
     "IPv4 address": re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"),
-    "IPv4 protocol payload": re.compile(rf"(?<![0-9]){OCTET}(?:\*{OCTET}){{3}}(?![0-9])"),
+    "IPv4 protocol payload": re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"),
     "IPv6 address": re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"),
     "MAC address": re.compile(r"(?i)(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])"),
     "email address": re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"),

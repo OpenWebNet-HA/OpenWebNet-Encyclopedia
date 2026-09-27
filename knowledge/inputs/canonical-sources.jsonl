@@ -121,6 +121,7 @@
 {"classification":"publishable","source_id":"ownkb:source:s000121","source_path":"reverse-engineering/open-questions.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000122","source_path":"reverse-engineering/rejected-relationships.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000123","source_path":"reverse-engineering/relationship-register.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000160","source_path":"reverse-engineering/sound-matrix-routing.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000149","source_path":"scenario-engine/README.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000150","source_path":"scenario-engine/capability-coverage.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000151","source_path":"scenario-engine/capability-resolution.md","source_type":"canonical_documentation"}
