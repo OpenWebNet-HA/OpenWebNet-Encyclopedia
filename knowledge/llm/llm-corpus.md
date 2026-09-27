@@ -5929,6 +5929,49 @@ Provenance cues: `source`
 
 Amplifier and source targets share the namespace but have different ranges. Preserve leading zeroes on amplifier addresses.
 
+### Amplifier address structure
+
+Section ID: `ownkb:section:d000040:s000011`
+
+Applicability cues: `gateway`
+Uncertainty: `appears`
+Provenance cues: `documentation`, `source`, `specification`
+
+A two-digit amplifier `WHERE` `EA` carries an environment digit followed by the amplifier number within that environment: `23` is amplifier 3 in environment 2. The F441M multichannel matrix ties environments to its outputs one to one: its documentation requires amplifiers on output `n` to be configured with room address `A = n`.
+
+This decomposition is corroborated rather than published: the `WHO 22` counterparts emitted by one gateway write the same addresses as `3#AREA#POINT`, so `11` appears there as area 1, point 1. See [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
+
+Single-digit amplifier addresses are admitted by the specification. Their environment is ambiguous and has not been observed on hardware.
+
+### Matrix source routing
+
+Section ID: `ownkb:section:d000040:s000012`
+
+Provenance cues: `evidence`, `source`, `specification`
+
+The specification defines no message that assigns a source to an amplifier. Source **cycling** is specified (`WHAT 20` / `23` on `WHERE 100`); directed selection is not.
+
+Implementations perform directed selection with a three-digit `WHERE` outside both the amplifier and the source ranges:
+
+```text
+*16*3*10S##     activate source device S
+*16*3*1ES##     route the amplifiers of environment E to source S
+```
+
+`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Environment `0` does not occur in this form, because `10S` is a source device address.
+
+| Frame | Effect |
+| --- | --- |
+| `*16*3*112##` | environment 1 listens to source 2 |
+| `*16*3*121##` | environment 2 listens to source 1 |
+| `*16*3*181##` | environment 8 listens to source 1 |
+
+Routing is announced per environment, so every amplifier sharing an environment follows the change. Two amplifiers in one environment cannot listen to different sources.
+
+Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
+
+**Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](../../sources/openwebnet-public/pdf/WHO_16.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+
 ### `DIMENSION` values
 
 Section ID: `ownkb:section:d000040:s000004`
@@ -6004,16 +6047,21 @@ Support is target-dependent: amplifier addresses accept amplifier operations; so
 Section ID: `ownkb:section:d000040:s000009`
 
 Cautions: `must not`
+Provenance cues: `source`
 
 `WHO 16` and [`WHO 22`](../who-22-sound-diffusion/) encode similar concepts using different commands, addresses, and properties. They are separate dialects and must not be translated by numeric coincidence.
+
+One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound event it reported, including amplifier power, volume, source power, routing and RDS. That correspondence is established for that Device and was used to corroborate the addressing above; it does not establish a general mapping, and an MH200 on another plant emitted no `WHO 22` frames at all. The observed pairs are tabulated in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
 
 ### Evidence basis
 
 Section ID: `ownkb:section:d000040:s000010`
 
-Provenance cues: `specification`
+Provenance cues: `source`, `specification`
 
 Tables, ranges, and flows come from [`WHO 16` specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
+
+The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -7501,9 +7549,24 @@ The same namespace includes tuner, media-track, presets, RDS, and equalization. 
 
 Section ID: `ownkb:section:d000053:s000010`
 
+Applicability cues: `gateway`
 Cautions: `do not`
+Provenance cues: `source`
 
 [`WHO 16`](../who-16-sound-system/) represents a different sound dialect. Similar terms do not imply compatible numeric values, address forms, or parameter layouts.
+
+One MH200N was observed reporting every sound event in both dialects. In those captures the `WHO 22` frame states as separate fields what `WHO 16` packs into one address:
+
+| `WHO 16` | `WHO 22` counterpart | `WHO 22` fields |
+| --- | --- | --- |
+| `*16*3*11##` | `*#22*3#1#1*12*1*4##` | speaker area 1, point 1; state ON, stereo |
+| `*16*3*12##` | `*#22*3#1#2*12*1*4##` | speaker area 1, point 2 |
+| `*#16*11*1*17##` | `*#22*3#1#1*1*17##` | volume 17, same `0..31` scale |
+| `*16*3*101##` | `*#22*2#1*12*1*4##` | source 1 active |
+| `*16*3*112##` | `*22*2#4#1*5#2#2##` | area 1 selecting source 2 |
+| `*#16*101*8*…##` | `*#22*5#2#1*10*…##` | RDS text, `DIMENSION 8` against `DIMENSION 10` |
+
+This is **established for that Device** and was used to corroborate the `WHO 16` amplifier and routing addressing. It does not establish a general translation between the dialects: the value ranges, `WHAT` numbering and dimension indices differ, an MH200 on another plant emitted no `WHO 22` frames, and these captures cannot show whether the second dialect originates in the gateway or in another bus device. The claim record is in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
 
 ### Evidence basis
 
@@ -14318,6 +14381,7 @@ Provenance cues: `capture`, `catalogue`, `database`, `evidence`, `source`
 | Consolidated established, inferred, open, and sentinel-dependent relationships | [Relationship Register](relationship-register.md) |
 | Safely connecting wire values, catalogue capability, validation, and scenario models | [Cross-Database Correlation](cross-database-correlation.md) |
 | Capturing, segmenting, correlating, and publishing runtime traffic | [Capture Analysis](capture-analysis.md) |
+| Recovering the undocumented `WHO 16` matrix routing address from captures | [Sound Matrix Source Routing](sound-matrix-routing.md) |
 | Designing controlled tests that distinguish competing explanations | [Hypothesis Testing](hypothesis-testing.md) |
 | Rejected relationships, interpretations, and recurring analytical shortcuts | [Rejected Relationships](rejected-relationships.md) |
 | Audited questions that still require evidence | [Open Questions](open-questions.md) |
@@ -16409,12 +16473,59 @@ The remaining questions are:
 - Which resources and application components resolve stored localization keys?
 - What locale-selection, fallback, missing-key, and composed-label rules are applied?
 
+### Sound matrix routing
+
+Section ID: `ownkb:section:d000121:s000020`
+
+Provenance cues: `source`
+
+The routing address `1ES` and the amplifier decomposition `EA` are corroborated on two F441M installations and recorded in [Sound Matrix Source Routing](sound-matrix-routing.md). These remain open:
+
+#### Specified form of directed source selection
+
+Section ID: `ownkb:section:d000121:s000021`
+
+Uncertainty: `may`
+Provenance cues: `source`, `specification`
+
+`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form may be a private mechanism or a published one that has not been located. No examined source contains it. A specification, a Legrand application note, or a stored frame template naming this address would settle its provenance.
+
+#### Environment form `#E` in routing
+
+Section ID: `ownkb:section:d000121:s000022`
+
+Provenance cues: `capture`, `source`
+
+`WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and how it would coexist with `10S` source addresses, is untested; neither plant used it. A capture from an installation whose controls use environment power commands would resolve it.
+
+#### Base band against stereo channel
+
+Section ID: `ownkb:section:d000121:s000023`
+
+Every observed routing frame uses `WHAT 3`. Whether base-band installations require `WHAT 0` on the same address, or a different address entirely, has no observation either way.
+
+#### Sources above 4 and single-digit amplifiers
+
+Section ID: `ownkb:section:d000121:s000024`
+
+Provenance cues: `specification`
+
+Both observed plants have four-input matrices and two-digit amplifier addresses. The specification admits sources `101`-`109` and amplifiers `01`-`99`, including single-digit forms whose environment is ambiguous.
+
+#### Origin of the second dialect
+
+Section ID: `ownkb:section:d000121:s000025`
+
+Applicability cues: `gateway`
+
+One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only.
+
 ### Evidence priorities
 
 Section ID: `ownkb:section:d000121:s000019`
 
 Applicability cues: `firmware`, `gateway`, `revision`, `version`
-Provenance cues: `database`
+Provenance cues: `capture`, `database`
 
 The highest-value next observations are:
 
@@ -16424,7 +16535,8 @@ The highest-value next observations are:
 4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
 5. file-access, database-statement, and save-operation traces while creating one minimal scenario;
 6. a runtime trace of address-rule selection for a system with both general and family-qualified rules;
-7. hardware and microcontroller version observations across known revisions of the same product.
+7. hardware and microcontroller version observations across known revisions of the same product;
+8. a `WHO 16` routing capture from a base-band installation, from a plant using the `#E` environment form, or from a matrix with single-digit amplifier addresses.
 
 Each result should update the [Relationship Register](relationship-register.md) and then the appropriate reference section.
 
@@ -16663,7 +16775,7 @@ Section ID: `ownkb:section:d000123:s000005`
 
 Applicability cues: `firmware`, `gateway`
 Uncertainty: `unresolved`
-Provenance cues: `capture`, `catalogue`, `database`, `evidence`, `source`
+Provenance cues: `capture`, `catalogue`, `database`, `documentation`, `evidence`, `source`
 
 | Source | Target | Required context | Status |
 | --- | --- | --- | --- |
@@ -16680,6 +16792,9 @@ Provenance cues: `capture`, `catalogue`, `database`, `evidence`, `source`
 | `DIMENSION 35.INDEX` | `EN_CONF.idx` | Device, firmware, Module, Object, and ownership scope | strongly corroborated |
 | diagnostic outer `WHERE` | configured address of `slot` `1` | repeated `WHO 1001` observations | strongly inferred; alternate layouts open |
 | `DIMENSION 32.SYS` | `MHCatalogue.db.EN_SYSTEM.sys_modobj` | resolved Object/system context | strongly inferred; needs discriminating non-Lighting capture |
+| `WHO 16` `WHERE` `1ES` | environment `E` listening to source `S` | F441M installations; `E` in `1..9`; `10S` excluded as a source address | corroborated on two plants; not published in `WHO 16` |
+| `WHO 16` amplifier `WHERE` `EA` | environment `E`, amplifier `A` | two-digit addresses; single-digit form untested | corroborated by `WHO 22` counterparts and F441M documentation |
+| `WHO 16` sound events | `WHO 22` counterpart frames | one MH200N; area/point and source/area fields written out | established for that Device; origin and generality open |
 
 ### Across database models
 
@@ -16723,7 +16838,7 @@ Section ID: `ownkb:section:d000123:s000008`
 
 Applicability cues: `firmware`, `gateway`
 Uncertainty: `hypothesis`
-Provenance cues: `catalogue`, `evidence`, `source`
+Provenance cues: `capture`, `catalogue`, `evidence`, `source`, `specification`
 
 | Question | Leading evidence | Decisive evidence needed |
 | --- | --- | --- |
@@ -16732,6 +16847,8 @@ Provenance cues: `catalogue`, `evidence`, `source`
 | catalogue-wide addressed-form `N_CONF` field-count equivalence | diagrams, captures, and resolved firmware fields agree in tested addressed Devices | systematic conditional-field audit across firmware |
 | gateway `N_CONF = 15` meaning | MH202 and F454 gateway captures both return out-of-range `15`; `15 = 0xF` is compatible with a sentinel | an applicable implementation decoder, authoritative definition, or discriminating gateway/firmware observations that establish the encoded meaning |
 | firmware selection precedence | exact, wildcard, default, missing, multiple-build patterns | controlled loader/UI observation |
+| `WHO 16` directed source selection provenance | `1ES` observed on two plants; specification defines cycling only | a published specification, application note, or stored frame template naming the address |
+| `WHO 16` routing under the `#E` environment form and base band | all observations use point-to-point amplifiers and `WHAT 3` | a capture from a base-band plant or one whose controls use environment power commands |
 | ScenarioDevices matching IDs | stable local fields and semantic hierarchy | runtime matcher trace or application code |
 | ScenarioDevices source precedence | two revisions in different installation locations | file-open/update trace |
 | scenario-instance persistence | capability stores lack graph structure | controlled save diff and file trace |
@@ -18470,3 +18587,205 @@ This section uses:
 - **implementation-derived** for stable meaning recovered from resource keys and stored frames;
 - **inferred** for the best explanation of a complete observed pattern without a direct declaration;
 - **unknown** where competing explanations remain.
+
+# Document: ownkb:document:d000135
+
+Source path: `reverse-engineering/sound-matrix-routing.md`
+Namespace context: `contextual`
+Area: `reverse-engineering`
+
+## Sound Matrix Source Routing
+
+Section ID: `ownkb:section:d000135:s000001`
+
+Provenance cues: `evidence`, `source`, `specification`
+
+`WHO 16` switches which source an amplifier listens to through a three-digit `WHERE` that no published specification describes. This page records how that address was recovered, what each claim rests on, and where the boundary of the evidence lies. The operational result is on the [`WHO 16` reference](../functional/who-16-sound-system/).
+
+### Why the published specification is insufficient
+
+Section ID: `ownkb:section:d000135:s000002`
+
+Provenance cues: `source`
+
+[`WHO 16`](../sources/openwebnet-public/pdf/WHO_16.pdf) documents amplifier and source power, volume, tone, sleep, Follow Me, tuner frequency, stored stations, and RDS. Its `WHERE` table admits `0`, `#0`-`#9`, `01`-`99`, `100`, and `101`-`109`. It contains no message that assigns a source to an amplifier.
+
+The document does describe a source **cycle** command (`*16*20*100##` / `*16*23*100##`) whose monitor flow emits `WHAT` `0`/`3` for the newly activated source and `10`/`13` for the previous one. Cycling is therefore specified; directed selection is not.
+
+Implementations nonetheless perform directed selection, and the frames they use are the subject of this page.
+
+### The observed address
+
+Section ID: `ownkb:section:d000135:s000003`
+
+Provenance cues: `source`
+
+Two installations emit three-digit `WHERE` values in the `1xx` range that are neither amplifiers (`01`-`99`) nor sources (`101`-`109`):
+
+| `WHERE` | Emitted when |
+| --- | --- |
+| `111`, `112` | a room listening to source 1, then to source 2 |
+| `121`, `122` | a different room, same two sources |
+| `131`, `141`, `151`, `161`, `171`, `181` | a general power-on, one frame per room |
+
+The contest is between two readings of the middle and last digits: `1` + source + environment, or `1` + environment + source.
+
+### Discriminating observations
+
+Section ID: `ownkb:section:d000135:s000004`
+
+#### 1. One amplifier, two sources
+
+Section ID: `ownkb:section:d000135:s000005`
+
+Provenance cues: `evidence`, `source`
+
+Plant B switched amplifier `11` between its two sources and emitted `*16*3*112##` and `*16*3*111##`. The middle digit did not move; the last digit followed the source. Under the competing reading the middle digit would have moved with the source and the last digit would have identified the amplifier's room, which did not happen.
+
+*Evidence class: controlled Device change, scoped to plant B.*
+
+#### 2. Eight rooms, one source
+
+Section ID: `ownkb:section:d000135:s000006`
+
+Provenance cues: `evidence`, `source`
+
+Plant B's general power-on emitted `111`, `121`, `131`, `141`, `151`, `161`, `171`, `181` in sequence, each preceded by a `WHO 22` frame addressing a different area. Reading the middle digit as the source would require eight sources on a matrix with four inputs.
+
+*Evidence class: observed traffic, scoped to plant B.*
+
+#### 3. The matrix answers for the addressed environment
+
+Section ID: `ownkb:section:d000135:s000007`
+
+Provenance cues: `evidence`
+
+On plant A, `*16*3*121##` and `*16*3*122##` were each answered with `*#16*23*1*<volume>##`, the volume of amplifier `23`. Amplifier `23` belongs to environment 2, not environment 1 or 3. A routing frame therefore reaches the amplifiers whose **first** address digit equals the frame's middle digit.
+
+*Evidence class: controlled Device change, scoped to plant A.*
+
+#### 4. The other dialect writes the fields out
+
+Section ID: `ownkb:section:d000135:s000008`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `evidence`, `source`
+
+Plant B's gateway announces every `WHO 16` sound event a second time in the [`WHO 22`](../functional/who-22-sound-diffusion/) dialect, which uses separator-delimited fields rather than a packed address:
+
+| `WHO 16` | `WHO 22` counterpart | `WHO 22` fields |
+| --- | --- | --- |
+| `*16*3*111##` | `*22*2#4#1*5#2#1##` | area `1`, source `1` |
+| `*16*3*112##` | `*22*2#4#1*5#2#2##` | area `1`, source `2` |
+| `*16*3*121##` | `*22*2#4#2*5#2#1##` | area `2`, source `1` |
+| `*16*3*181##` | `*22*2#4#8*5#2#1##` | area `8`, source `1` |
+| `*16*3*11##` | `*#22*3#1#1*12*1*4##` | area `1`, point `1` |
+| `*16*3*12##` | `*#22*3#1#2*12*1*4##` | area `1`, point `2` |
+| `*#16*11*1*17##` | `*#22*3#1#1*1*17##` | area `1`, point `1`, volume `17` |
+| `*#16*101*8*…##` | `*#22*5#2#1*10*…##` | source `1`, RDS text |
+
+`WHO 22` carries the area in `WHAT` (`WHAT#MULTIMEDIA_TYPE#AREA`) and the source in `WHERE` (`5#2#SOURCE_ID`). Between the first two rows only the source field changes; between the first and third only the area field changes.
+
+This is the strongest single observation, because it is not an inference about a packed address: the same device states the same fact twice, once packed and once labelled.
+
+*Evidence class: observed traffic on one Device emitting two dialects, scoped to plant B's MH200N firmware.*
+
+### Claim records
+
+Section ID: `ownkb:section:d000135:s000009`
+
+#### Claim 1: routing address form
+
+Section ID: `ownkb:section:d000135:s000010`
+
+Applicability cues: `firmware`, `gateway`, `revision`
+Provenance cues: `evidence`, `source`
+
+| Field | Content |
+| --- | --- |
+| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with `E` in `1..9` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
+| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B |
+| Revision | Plant A: gateway model MH200. Plant B: gateway model MH200N. Firmware not recorded on either |
+| Namespace | `E` is the environment digit shared with amplifier addressing; `S` is the source identifier used by `101`-`109` |
+| Conditions | `E` = `0` does not occur: `10S` is a source device address |
+| Cardinality | one environment to one source; an environment's amplifiers cannot differ |
+| Coverage | environments 1, 2, 3 and 8 observed; sources 1 and 2 observed |
+| Supporting evidence | observations 1-4 above |
+| Counterevidence | none observed |
+| Alternatives | `1` + source + environment, rejected by observations 1, 2 and 4 |
+| Confidence | **Corroborated**, from independent evidence classes (controlled change, observed traffic, cross-dialect correspondence) on two Devices |
+| Falsifier | a plant in which `1ES` reaches amplifiers whose first address digit differs from `E`, or a `WHO 22` counterpart naming a different area |
+| Destination | [`WHO 16` reference](../functional/who-16-sound-system/) |
+
+#### Claim 2: amplifier address decomposition
+
+Section ID: `ownkb:section:d000135:s000011`
+
+Applicability cues: `revision`
+Provenance cues: `documentation`, `evidence`, `source`
+
+| Field | Content |
+| --- | --- |
+| Claim | A two-digit `WHO 16` amplifier `WHERE` `EA` decomposes into environment `E` and amplifier `A` within that environment |
+| Source | `WHO 22` counterpart frames (`3#AREA#POINT`); F441M product documentation; plant A and plant B captures |
+| Revision | as above; product documentation for F441M |
+| Namespace | the same `E` used by claim 1 |
+| Conditions | single-digit addresses are ambiguous and are treated as their own environment; not observed on either plant |
+| Cardinality | one environment to many amplifiers; plant A has three amplifiers in environment 2, plant B two in environment 1 |
+| Coverage | `11`, `12`, `21`, `31`, `41` on plant B; `14`, `17`, `18`, `21`, `22`, `23`, `35`, `36` on plant A |
+| Supporting evidence | `11` ↔ `3#1#1`, `12` ↔ `3#1#2`, `31` ↔ `3#3#1`; F441M documentation requires amplifiers on output `n` to carry room address `A = n` |
+| Counterevidence | none observed |
+| Alternatives | a flat two-digit identifier with no internal structure, rejected by the `WHO 22` counterparts |
+| Confidence | **Corroborated** |
+| Falsifier | an amplifier whose `WHO 22` counterpart names an area other than its first address digit |
+| Destination | [`WHO 16` reference](../functional/who-16-sound-system/) |
+
+#### Claim 3: dual-dialect emission
+
+Section ID: `ownkb:section:d000135:s000012`
+
+Applicability cues: `firmware`, `gateway`, `revision`
+Cautions: `do not`
+Uncertainty: `unknown`
+Provenance cues: `capture`, `evidence`, `source`
+
+| Field | Content |
+| --- | --- |
+| Claim | One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event it reports |
+| Source | five plant B captures covering amplifier power, volume, source power, routing and RDS |
+| Revision | plant B's MH200N; firmware not recorded |
+| Coverage | every `WHO 16` frame in those captures has a `WHO 22` neighbour; no unpaired `WHO 16` frame observed |
+| Supporting evidence | the correspondence table above |
+| Counterevidence | plant A's MH200 emits no `WHO 22` frames at all, so the behaviour is not universal |
+| Alternatives | the two dialects originate in different devices on the same bus rather than in the gateway, which these captures do not distinguish |
+| Confidence | **Established for that Device**; **Unknown** whether it is a gateway behaviour, a matrix behaviour, or a firmware option |
+| Falsifier | an MH200N that emits only one dialect, or a capture locating the second dialect at a different bus device |
+| Destination | [`WHO 22` reference](../functional/who-22-sound-diffusion/) |
+
+### What remains unknown
+
+Section ID: `ownkb:section:d000135:s000013`
+
+Uncertainty: `may`
+Provenance cues: `capture`, `source`, `specification`
+
+- **Whether directed selection has a specified form.** The captured address may be a documented private mechanism rather than an undocumented one; no published source examined so far contains it.
+- **Environment `0` and the `#E` form.** `WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and what `10S` would mean under it, is untested. No capture uses it.
+- **Base band.** Every routing frame observed uses `WHAT 3` (stereo channel). Whether base-band installations require `WHAT 0` for the same address is untested.
+- **Sources above 4.** `101`-`109` is the specified range; both plants have four-input matrices.
+- **Single-digit amplifier addresses.** Admitted by the specification, absent from both plants.
+
+These are recorded in [Open Questions](open-questions.md).
+
+### Related pages
+
+Section ID: `ownkb:section:d000135:s000014`
+
+Provenance cues: `capture`, `evidence`
+
+| Subject | Page |
+| --- | --- |
+| Operational `WHO 16` reference | [`WHO 16` Sound System](../functional/who-16-sound-system/) |
+| The dialect used for corroboration | [`WHO 22` Sound Diffusion](../functional/who-22-sound-diffusion/) |
+| Evidence classes and confidence vocabulary | [Evidence and Confidence](evidence-and-confidence.md) |
+| Capture handling and publication rules | [Capture Analysis](capture-analysis.md) |
