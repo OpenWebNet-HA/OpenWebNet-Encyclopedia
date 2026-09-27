@@ -20,21 +20,6 @@ What remains unresolved is the meaning of the two returned values, whether eithe
 
 The ZigBee specification's `DIMENSION 17` hardware-version definition is not part of this open question: that meaning is established for the ZigBee `WHO 13` variant. What remains unestablished is whether any classic SCS/TCP implementation reuses numeric `17` with the same semantics.
 
-## WHO 1 dimmer `DIMENSION 4`
-
-Runtime existence and some applicability are now established more strongly than the public specification alone provides. On one F418U2, `DIMENSION 4` was read through both MH202 and F454, and a positive-level `DIMENSION 4` write succeeded through the MH202. The same actuator reported different secondary values for `DIMENSION 1` and `DIMENSION 4` at the same `LEVEL100`, establishing that the two fields must not be collapsed.
-
-The remaining questions are narrower:
-
-- what physical quantity, unit, or enumeration the `DIMENSION 4` trailing `ON/OFFspeed` value uses;
-- whether MH202 direct-read value `0` has any formal relationship to the published `DIMENSION 1 SPEED = 0` meaning;
-- whether the failed positive `DIMENSION 4` write through the tested F454 is systematic for that model/firmware or state-dependent;
-- which dimmer generations implement `DIMENSION 4`;
-- whether the reported F414/MH200 DIM4 timeout/NACK can be reproduced in a preserved raw capture;
-- how other gateways choose the response dimension for an OFF-state `DIMENSION 1` request.
-
-See the canonical [WHO 1 DIMENSION Reference](../functional/who-1-lighting/dimensions.md) and the [Relationship Register](relationship-register.md).
-
 ## Diagnostic and programming fields
 
 ### `DIMENSION 32.SYS`
@@ -166,6 +151,7 @@ One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200
 
 ## Evidence priorities
 
+WHO 1 dimmer `DIMENSION 4` is now runtime-established on the tested F418U2 through MH202 and F454, but its trailing `ON/OFFspeed` encoding remains unresolved. It is also still unknown whether the sampled F454 DIM4 write failure is systematic, how other gateways choose the response dimension for an OFF-state DIM1 request, and whether the tester-reported F414/MH200 DIM4 timeout/NACK can be reproduced in a preserved raw capture.
 The highest-value next observations are:
 
 1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
