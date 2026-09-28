@@ -1,13 +1,17 @@
 # Planned Initial Machine KB Release Notes
 
-**State:** Release-ready candidate documentation only. These notes do not announce a release, assign a release tag, or declare a v1 interface. Publication still requires explicit authorization.
+**State:** Current-main initial-release candidate documentation only. The Machine KB is already integrated into main. These notes do not announce a formal release, assign a release tag, create a GitHub Release, publish externally, or declare a released v1 interface.
 
 ## Candidate identity
 
-- Independently certified semantic candidate: 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
-- Release-content revision verified by the final checklist: b1560324c0b5733614e8eb90cd4f9d04b96edfa9.
-- The commits after the certified semantic candidate contain certification and release-readiness control documentation only. No generated Machine KB artifact, claim, chunk, reference record, schema, canonical source, or semantic corpus content changed.
-- diff_impact.py reports no generated-output change, no full semantic review requirement, and zero affected claim, chunk, and reference IDs.
+- Historical independently certified semantic candidate: 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
+- Previous reconciled semantic/content candidate: 888706f39f4c3f5dba2a49db628b09011714084b.
+- Previous readiness/control commit: d4757986f8b35bcb7bb997a3fae9ef074bf437ec.
+- Starting merged main for the bounded current-main verification: 29cd92f68f78a34155848a42b9626ff311d41b6d.
+- Current reviewed semantic/content candidate: a819104eed5d8431478ef933235a616cde71a092.
+- From d4757986f8b35bcb7bb997a3fae9ef074bf437ec through the current semantic/content candidate, the bounded delta adds 34 claims, 4 retrieval chunks, 11 reference records, and 53 live IDs. It removes no claims, references, chunks, or IDs.
+- Of 111 changed existing claim records, 102 are source-section-hash-only changes, six retain the same atomic assertion while generated surrounding context expands, and three correct WHO 2 command-parameter wording by separating the event-session selector from command parameters.
+- Current corpus: 7,449 claims, 1,423 reference records, 1,173 retrieval chunks, and 11,353 live IDs.
 
 ## Interface and artifact versions
 
@@ -15,13 +19,13 @@ The current manifest declares manifest format version 0.1.0, schema compatibilit
 
 ## Initial compatibility baseline
 
-There is no earlier public Machine KB release to migrate from. The current registry contains 11,173 live IDs with zero aliases and zero retired IDs. The first authorized publication will establish the compatibility baseline. Later identity-preserving renames use aliases; retired IDs remain tombstones; breaking contract changes require the migration behavior described in the [schema versioning policy](schema-versioning.md).
+There is no earlier public Machine KB release to migrate from. The current registry contains 11,353 live IDs with zero aliases and zero retired IDs. The first authorized publication will establish the compatibility baseline. Later identity-preserving renames use aliases; retired IDs remain tombstones; breaking contract changes require the migration behavior described in the [schema versioning policy](schema-versioning.md).
 
 ## Content and qualification
 
 The candidate contains the generated LLM corpus, retrieval chunks, atomic claims, ID registry, seven reference registries, and the public schemas listed in knowledge/manifest.json. Epistemic status, applicability/version scope, source provenance, cautions, contradictions, and unresolved questions remain explicit data rather than being collapsed into unqualified facts.
 
-Independent Phase 15 recertification passed after the Phase 16/16b remediation. Subsequent release-readiness work did not alter certified semantic content.
+Independent Phase 15 recertification remains historical evidence for the earlier certified candidate. Subsequent current-main changes were reviewed as a bounded post-readiness delta covering WHO 1 dimmer and MH200/F418U2 evidence, WHO 2/LN4660M2 centralized-control evidence, related provenance and identity updates, and corresponding Machine KB claims and references. The complete current-main mechanical, privacy, consistency, ESG, and ECV gates passed after that bounded review.
 
 ## Privacy and source handling
 
@@ -39,4 +43,4 @@ Repository-authored documentation is licensed under GNU GPL v3 as stated in the 
 
 ## Release boundary
 
-No merge, tag, GitHub Release, publication, or released-v1 declaration is performed by these notes. Those actions require explicit user authorization after this release-readiness checklist.
+The Machine KB is already integrated into main. No Git tag, GitHub Release, external publication, or released-v1 declaration is performed by these notes. Those remaining release actions require explicit user authorization.

@@ -1,6 +1,6 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-26, branch `machine-knowledge-base`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
+Snapshot: 2026-09-28, integrated on main. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
@@ -145,7 +145,7 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-Independent Phase 15 recertification passed for candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The final release checklist has now passed for release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9; explicit authorization remains required for merge, tag, GitHub Release, publication, or any released-v1 declaration.
+Independent Phase 15 recertification passed for candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The final release checklist has now passed for release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9; explicit authorization remains required for tag creation, GitHub Release creation, external publication, or any released-v1 declaration.
 
 ## Final release-readiness verification
 
@@ -173,4 +173,19 @@ After the earlier release-ready candidate 45bdf82b9697a254229fb7c4511cfb1f920ba4
 - Validation passed: 54 Machine KB unit tests, 7 schema tests, deterministic check.py, consistency, privacy across 20 generated/metadata surfaces, ESG with 0 objective failures, ECV with 0 objective failures, and git diff --check.
 - Current corpus: 135 canonical documents, 1,203 sections, 7,415 claims, 1,412 references, 1,169 retrieval chunks, and 11,300 live IDs.
 
-This reconciliation supersedes 45bdf82b9697a254229fb7c4511cfb1f920ba457 as the future merge-candidate lineage. It does not authorize merge to main, tag creation, GitHub Release creation, publication, or a released-v1 declaration.
+This reconciliation superseded 45bdf82b9697a254229fb7c4511cfb1f920ba457 in the historical merge-candidate lineage and was subsequently integrated into main. It did not itself create a Git tag, GitHub Release, publication, or released-v1 declaration.
+
+## Bounded current-main verification - 2026-09-28
+
+The Machine KB is integrated into main; the former machine-knowledge-base branch/worktree is no longer active. Verification started at 29cd92f68f78a34155848a42b9626ff311d41b6d and reviewed the complete delta from previous readiness/control commit d4757986f8b35bcb7bb997a3fae9ef074bf437ec.
+
+- Historical independently certified semantic candidate: 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
+- Previous reconciled semantic/content candidate: 888706f39f4c3f5dba2a49db628b09011714084b.
+- Current reviewed semantic/content candidate: a819104eed5d8431478ef933235a616cde71a092.
+- The starting post-readiness Git delta contained 29 commits covering WHO 1 dimmer findings, MH200/F418U2 evidence, WHO 2/LN4660M2 centralized control and advanced automation evidence, provenance corrections, regenerated Machine KB artifacts, identity inputs, and related tests.
+- Bounded remediation materialized missing WHO 1/MH200 claims and references, narrowed two implementation-guidance claims from protocol applicability to implementation applicability, and updated the external-source registry test for the legitimate LN4660M2 public-trace source.
+- Final delta from d4757986f8b35bcb7bb997a3fae9ef074bf437ec: 34 claims added, 0 removed; 4 chunks added, 0 removed; 11 references added, 0 removed; 53 live IDs added, 0 removed or repurposed.
+- Three existing atomic claims changed semantically, all to correct WHO 2 command grammar by removing the event-session selector from command parameters; six other statement records retained the same atomic assertion while generated context expanded; 102 additional existing claims changed only their source-section hash.
+- Final corpus: 135 canonical documents, 1,207 sections, 7,449 claims, 1,423 references, 1,173 retrieval chunks, 34 empty sections, 10 excluded guides, 183 guide-remediation hints, and 11,353 live IDs with zero aliases or retired IDs.
+- Validation passed: 54 Machine KB unit tests, 7 schema tests, deterministic double-build and freshness checks, manifest/reference/lifecycle checks, cross-artifact consistency, privacy across 20 generated and metadata surfaces, ESG with 0 objective failures, ECV with 0 objective failures, and git diff --check.
+- No Git tag, GitHub Release, external publication, or released-v1 declaration has been created. Those remaining formal-release actions require explicit authorization.

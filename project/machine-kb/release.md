@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Current-main reconciliation passed for semantic/content candidate 888706f39f4c3f5dba2a49db628b09011714084b. It incorporates authoritative main 2833269fdb09bb6abf2c8bafc43d9105f97861b6 through merge commit d16ca82bf199a4ad0beace1efb3f96edfa1e4a7b, superseding previous release-ready candidate 45bdf82b9697a254229fb7c4511cfb1f920ba457 as the future merge candidate. The independently certified pre-reconciliation semantic candidate remains 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50 as historical evidence; the new upstream semantic delta received bounded recertification and the full release-validation suite passed. The branch remains pre-release: no merge, tag, GitHub Release, publication, or released v1 interface is implied.
+**Status:** Bounded current-main initial-release verification passed on 2026-09-28 for semantic/content candidate a819104eed5d8431478ef933235a616cde71a092. The Machine KB is already integrated into main. Historical lineage remains explicit: independently certified candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50, previous reconciled candidate 888706f39f4c3f5dba2a49db628b09011714084b, and previous readiness/control commit d4757986f8b35bcb7bb997a3fae9ef074bf437ec. The post-readiness WHO 1 dimmer/MH200 and WHO 2/LN4660M2 changes were reviewed with bounded remediation and the complete release-validation suite passed. No Git tag, GitHub Release, external publication, or released v1 interface has been created.
 
 ## Intended consumer contract
 
@@ -15,20 +15,23 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [x] Build verified offline and model-free from a clean revision; repeated builds are byte-identical and committed generated artifacts are fresh.
 - [x] Schemas, vocabularies, IDs and aliases, namespaces, provenance, references, claims, and cross-artifact consistency pass validation.
 - [x] Privacy classifications are valid and every generated output passes the final privacy scan; installed Device IDs and other prohibited private values remain blocked by pre-IR and final-scan controls.
-- [x] Independent Phase 15 factual and epistemic certification remains applicable; the certified-candidate-to-release diff changes only project control documentation and has zero affected claim, chunk, or reference IDs.
+- [x] Historical independent Phase 15 certification remains recorded for its exact candidate; the later post-readiness semantic delta received bounded current-main review with explicit provenance, applicability, epistemic, identity, and unresolved-state checks.
 - [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, planned release notes, and consumer-facing golden examples were checked against the intended release revision.
 - [x] The [review ledger](review-ledger.md), [roadmap](roadmap.md), and project control status are current; no remaining release blocker is hidden in Machine KB project documentation.
 
 ## Verified release-candidate relationship
 
-- Independently certified semantic candidate: 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
-- Intended release-content revision verified by this checklist: b1560324c0b5733614e8eb90cd4f9d04b96edfa9.
-- Changes between those revisions: certification and release-readiness control documentation only; diff_impact.py reports full_review_required false, generated_outputs_changed false, and zero affected claim, chunk, and reference IDs.
+- Historical independently certified semantic candidate: 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50.
+- Previous reconciled semantic/content candidate: 888706f39f4c3f5dba2a49db628b09011714084b.
+- Previous readiness/control commit: d4757986f8b35bcb7bb997a3fae9ef074bf437ec.
+- Starting merged main for this bounded verification: 29cd92f68f78a34155848a42b9626ff311d41b6d.
+- Current reviewed semantic/content candidate: a819104eed5d8431478ef933235a616cde71a092.
 - Current public artifact/schema format version: 0.1.0.
 - Current schema compatibility version: 0.1.0.
 - Generator version: ownkb-build-0.8.0.
-- ID lifecycle state: 11,173 live IDs, 0 aliases, 0 retired IDs. With no earlier public Machine KB release, this initial publication will establish the compatibility baseline.
-- The dedicated final release-readiness completion commit is documentation/control state only and is reported after it is created and pushed; it does not change the verified Machine KB artifacts.
+- Current corpus: 7,449 claims, 1,423 references, 1,173 retrieval chunks, and 11,353 live IDs.
+- ID lifecycle state: 11,353 live IDs, 0 aliases, 0 retired IDs. No existing stable ID was removed or repurposed; 53 deterministic new live IDs were added after d4757986f8b35bcb7bb997a3fae9ef074bf437ec.
+- The dedicated final release-readiness documentation/control commit is reported after it is created and pushed; it does not alter the verified semantic/content candidate.
 
 ## Distribution readiness
 
@@ -44,7 +47,7 @@ The build and CI remain offline and model-free. Green mechanical validation is s
 
 ## Release boundary
 
-This checklist authorizes no release action by itself. Explicit user authorization is still required before merging machine-knowledge-base into main, creating a tag, creating a GitHub Release, publishing the Machine KB, or declaring a released v1 interface.
+This checklist authorizes no formal release action by itself. The Machine KB is already integrated into main. Explicit user authorization is still required before creating a Git tag, creating a GitHub Release, publishing externally, or declaring a released v1 interface.
 
 ## Current-main reconciliation - 2026-09-27
 
@@ -70,4 +73,32 @@ Final validation for 888706f39f4c3f5dba2a49db628b09011714084b passed:
 - ECV objective failures: 0.
 - git diff --check: clean.
 
-This reconciliation supersedes 45bdf82b9697a254229fb7c4511cfb1f920ba457 as the future authorized-merge candidate lineage. It does not authorize merging machine-knowledge-base into main, tagging, creating a GitHub Release, publishing, or declaring a released v1 interface.
+This reconciliation superseded 45bdf82b9697a254229fb7c4511cfb1f920ba457 in the historical authorized-merge candidate lineage and was subsequently integrated into main. It did not itself create a tag, GitHub Release, publication, or released v1 interface.
+
+## Bounded current-main initial-release verification - 2026-09-28
+
+Verification started from merged main at 29cd92f68f78a34155848a42b9626ff311d41b6d and reviewed the complete delta from previous readiness/control commit d4757986f8b35bcb7bb997a3fae9ef074bf437ec. The former machine-knowledge-base branch/worktree had already been safely pruned and was not recreated.
+
+The starting Git delta contained 29 commits and six changed canonical Encyclopedia files. Semantic scope was bounded to WHO 1 dimmer behavior, MH200/F418U2 evidence, WHO 2/LN4660M2 centralized-control and advanced-automation behavior, related provenance corrections, identities, generated artifacts, and regression tests. No schema/build/privacy machinery changed in that starting delta.
+
+Bounded Machine KB remediation added the missing WHO 1/MH200 representation, including 22 claims, one public-trace source, four unresolved questions, and one topic entity; two observation-derived implementation-guidance claims were tightened from protocol applicability to implementation applicability. A stale regression guard was corrected from 26 to 27 external sources and now explicitly checks the legitimate LN4660M2 public-trace source ownkb:source:s000161.
+
+Against d4757986f8b35bcb7bb997a3fae9ef074bf437ec, semantic/content candidate a819104eed5d8431478ef933235a616cde71a092 has:
+- 34 added claims, 0 removed claims;
+- 111 changed existing claim records, of which 102 are source-section-hash-only, six keep the same atomic assertion while generated context expands, and three make genuine semantic corrections to WHO 2 command grammar by separating the event-session selector from command parameters;
+- 4 added retrieval chunks and 7 changed existing chunks;
+- 11 added reference records, 0 removed or modified existing references;
+- 53 added live IDs, 0 removed or repurposed IDs, 0 aliases, and 0 retired IDs.
+
+Final validation passed:
+- 54 Machine KB unit tests and 7 schema/golden-fixture tests;
+- deterministic clean double-build and byte-identical reproducibility;
+- manifest hash/count/freshness validation;
+- ID lifecycle and reference-integrity validation;
+- cross-artifact consistency: 135 documents, 1,207 sections, 7,449 claims, 1,423 references, 1,173 chunks, 34 empty sections, 10 excluded guides, and 183 guide-remediation hints;
+- privacy validation across 20 generated artifacts and metadata surfaces;
+- ESG objective failures: 0;
+- ECV objective failures: 0;
+- git diff --check: clean.
+
+The Machine KB is ready for the initial formal release operation, but no Git tag, GitHub Release, external publication, or released-v1 declaration is created by this verification.
