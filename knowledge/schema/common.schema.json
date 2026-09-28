@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/common.schema.json",
-  "title": "Machine KB common types (pre-release)",
+  "title": "Machine KB common types",
   "$defs": {
     "id": {"type": "string", "maxLength": 255, "pattern": "^ownkb:(document|section|namespace|entity|source|claim|chunk|relationship|caution|question|term):(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*(?::(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*)*$"},
     "idSet": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},

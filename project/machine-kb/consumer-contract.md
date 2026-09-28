@@ -1,10 +1,10 @@
 # Machine KB Consumer Contract
 
-**Design status:** Implemented and integrated into main; no formal initial Machine KB release has occurred. Bounded current-main verification passed for semantic/content candidate a819104eed5d8431478ef933235a616cde71a092. The first formal release must satisfy this contract and its concrete schemas before consumers rely on it as a released interface. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
+**Release status:** Implemented, integrated into `main`, and prepared as Machine KB 0.1.0 with intended tag `machine-kb-v0.1.0`. Bounded semantic verification passed for candidate `a819104eed5d8431478ef933235a616cde71a092`. This contract and the concrete 0.1.0 schemas define the initial public interface once the validated revision is formally tagged. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
 
 ## Publication surface
 
-A release publishes `knowledge/manifest.json` as the inventory and version entry point. It lists each public artifact by repository-relative path, artifact format version, SHA-256 of its exact bytes, and record count where applicable. Its own hash is not included in itself. The initial artifact families are `knowledge/llm/llm-corpus.md`, `knowledge/retrieval/chunks.jsonl`, `knowledge/claims/claims.jsonl`, and the reference registries under `knowledge/reference/` (entities, namespaces, glossary, public sources, relationships, cautions, and open questions). The manifest enumerates actual files; an empty directory or README is not an artifact. Exact reference registry file names and record schemas are fixed in Phase 2 before the first release. Schema files under `knowledge/schema/` are also inventoried. Only listed artifacts and schema files constitute the versioned public interface; tools and project-control Markdown are not machine data.
+A release publishes `knowledge/manifest.json` as the inventory and version entry point. It lists each public artifact by repository-relative path, artifact format version, SHA-256 of its exact bytes, and record count where applicable. Its own hash is not included in itself. The initial artifact families are `knowledge/llm/llm-corpus.md`, `knowledge/retrieval/chunks.jsonl`, `knowledge/claims/claims.jsonl`, and the reference registries under `knowledge/reference/` (entities, namespaces, glossary, public sources, relationships, cautions, and open questions). The manifest enumerates actual files; an empty directory or README is not an artifact. The reference registry file names and record schemas are fixed by the 0.1.0 contract. Schema files under `knowledge/schema/` are also inventoried. Only listed artifacts and schema files constitute the versioned public interface; tools and project-control Markdown are not machine data.
 
 All records must carry the schema-defined stable ID, namespace/context, source provenance, evidence/epistemic qualification, applicability/version scope, privacy classification, and relevant relationships or cautions. Source locations use public repository-relative paths and section IDs, never private evidence paths. The manifest contains an input-content digest, generator version, schema compatibility version, and artifact hashes; it contains no nondeterministic timestamp or circular digest of its own bytes. The public source license remains applicable; generated material does not acquire rights to underlying publisher sources.
 
@@ -22,7 +22,7 @@ kind     = "document" / "section" / "namespace" / "entity" /
            "caution" / "question" / "term"
 ```
 
-Keys must begin with a letter, end with a letter or digit, contain no adjacent hyphens, and be at most 63 characters each. An ID is at most 255 ASCII bytes. The kind and keys are case-sensitive; an ID with other spelling is invalid, not an alternate match. This grammar defines syntax, not automatic allocation. A curated ID registry and validator will guard uniqueness, aliases, retirement, and reuse before public records exist.
+Keys must begin with a letter, end with a letter or digit, contain no adjacent hyphens, and be at most 63 characters each. An ID is at most 255 ASCII bytes. The kind and keys are case-sensitive; an ID with other spelling is invalid, not an alternate match. This grammar defines syntax, not automatic allocation. The curated ID registry and validator guard uniqueness, aliases, retirement, and reuse.
 
 Allocation rules:
 
@@ -42,7 +42,7 @@ Deprecation marks a live ID as discouraged and supplies a reason and optional re
 
 ## Meaning of incomplete or conflicting knowledge
 
-Separate three axes. A record's `epistemic_status` describes the evidence-backed standing of its assertion; a value's `value_state` describes whether a value is supplied; `applicability.state` describes whether a proposition applies in its explicitly identified scope. Exact enum sets and shapes are defined in Phase 2, but these semantics are binding:
+Separate three axes. A record's `epistemic_status` describes the evidence-backed standing of its assertion; a value's `value_state` describes whether a value is supplied; `applicability.state` describes whether a proposition applies in its explicitly identified scope. Exact enum sets and shapes are defined by the 0.1.0 schemas, and these semantics are binding:
 
 | Situation | Required representation | Consumer interpretation |
 | --- | --- | --- |
@@ -53,21 +53,21 @@ Separate three axes. A record's `epistemic_status` describes the evidence-backed
 | Contradictory evidence | Distinct attributable statements linked by an explicit contradiction relationship and scope, with an open resolution if needed | Do not collapse them into an unconditional merged fact |
 | Rejected or superseded interpretation | Explicit epistemic history and links to supporting correction | Do not treat a historical claim as current fact |
 
-Missing mandatory fields are invalid. JSON `null`, absent fields, empty strings, and empty arrays do not silently mean unknown, not applicable, or contradicted. Phase 2 schemas may permit optional fields where they have a documented meaning. A missing *record* means no published assertion; it must not be read as a negative assertion. Consumers must retain evidence class, cautions, transport/device/version limits, and namespace context when presenting or transforming records.
+Missing mandatory fields are invalid. JSON `null`, absent fields, empty strings, and empty arrays do not silently mean unknown, not applicable, or contradicted. Schemas may permit optional fields only where they have a documented meaning. A missing *record* means no published assertion; it must not be read as a negative assertion. Consumers must retain evidence class, cautions, transport/device/version limits, and namespace context when presenting or transforming records.
 
 ## Ordering and bytes
 
 All generated text is UTF-8 without BOM, Unicode NFC, LF line endings, and exactly one trailing LF for nonempty files. Empty JSONL files are zero bytes. JSONL has one compact JSON object per line, no blank lines, sorted by canonical ID in ASCII byte order. Within objects, field names are ASCII and sorted in byte order. No insignificant JSON whitespace or escaped printable Unicode/slashes; use standard escapes for quote, backslash, and controls (`\b`, `\f`, `\n`, `\r`, `\t`, otherwise lowercase `\u00xx`). No floating-point JSON numbers: exact decimal quantities use schema-defined strings, and integers must lie within the exact interoperable range `[-9007199254740991, 9007199254740991]`. Duplicate object keys and non-NFC strings are invalid. Arrays representing sets sort by canonical ID or schema-defined key and contain no duplicates; ordered semantic sequences retain their explicit order. The standalone manifest uses the same compact JSON rules and one trailing LF. The corpus Markdown uses UTF-8/NFC/LF and a fixed source/section order defined by its format version in Phase 6; no traversal-order or current-time dependence.
 
-Record order is for reproducibility, not semantic ranking. Same canonical inputs, curated inputs, schemas, and generator version must yield byte-for-byte identical artifacts. No network or LLM call is permitted during a build or CI. The initial generator must publish golden serialization examples before release so independent implementations can verify exact bytes.
+Record order is for reproducibility, not semantic ranking. Same canonical inputs, curated inputs, schemas, and generator version must yield byte-for-byte identical artifacts. No network or LLM call is permitted during a build or CI. The initial release includes golden serialization examples so independent implementations can verify exact bytes.
 
 ## Ownership and compatibility
 
-Canonical Encyclopedia Markdown and public provenance are edited by authors. ID/alias registry and reviewed structured claim inputs are curated in Git and checked against canonical prose. All manifest, LLM corpus, retrieval, reference, and claim outputs are generated from one normalized IR; do not hand-edit them. A reviewed claim input enters the same IR and must not override its source. Generated schema files, if any, must declare their ownership; Phase 2 schemas are curated source contracts unless explicitly marked generated.
+Canonical Encyclopedia Markdown and public provenance are edited by authors. ID/alias registry and reviewed structured claim inputs are curated in Git and checked against canonical prose. All manifest, LLM corpus, retrieval, reference, and claim outputs are generated from one normalized IR; do not hand-edit them. A reviewed claim input enters the same IR and must not override its source. Generated schema files, if any, must declare their ownership; the public schemas are curated source contracts unless explicitly marked generated.
 
 The [version policy](schema-versioning.md) states compatibility guarantees and limits. Consumers can rely on published IDs, manifest inventory, schemas, documented semantics, and versioned file formats within a compatibility line. They cannot rely on a fixed record count, ordering as priority, unchanged wording, unchanged source paths, completeness of all real-world behavior, or an unqualified meaning for numeric values. This contract does not prescribe APIs, embeddings, tokenization, programming-language objects, or a server.
 
-## Stability challenge before v1
+## Stability challenge and compatibility rules
 
 | Change pressure | Decision that prevents avoidable breakage | Residual risk / release check |
 | --- | --- | --- |
@@ -79,8 +79,8 @@ The [version policy](schema-versioning.md) states compatibility guarantees and l
 | Consumer written in another language | Restricted numeric model and specified bytes | Publish golden vectors and independent round-trip test |
 | Private source is accidentally included | Source exclusion before IR, restricted schema, final scan and release gate | Existing scanner alone cannot prove safety; block release until Phase 3 |
 
-Phase 2 must test these cases against real schemas. Any resulting contract change before the first release must be recorded here and in [decisions](decisions.md); after release it follows semantic compatibility rules.
+These cases are covered by the schema, golden-byte, privacy, lifecycle, and review gates. Changes after Machine KB 0.1.0 follow the [versioning policy](schema-versioning.md) and must preserve the published ID lifecycle guarantees.
 
 ## Contributor and CI enforcement
 
-Machine KB validation runs on pull requests and pushes to main and machine-knowledge-base. It runs unit tests, schema fixtures, build freshness, and python check.py. CI may rebuild to verify freshness but never commits generated output. Contributors follow [the normal workflow](maintenance.md#normal-contributor-workflow): edit, build, inspect, check, review impact, and commit documentation with generated projections.
+Machine KB validation runs on pull requests and pushes to `main`. It runs unit tests, schema fixtures, build freshness, and python check.py. CI may rebuild to verify freshness but never commits generated output. Contributors follow [the normal workflow](maintenance.md#normal-contributor-workflow): edit, build, inspect, check, review impact, and commit documentation with generated projections.

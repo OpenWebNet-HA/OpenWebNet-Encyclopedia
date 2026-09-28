@@ -1,6 +1,6 @@
 # Machine KB Schemas and Controlled Vocabulary
 
-**Current schema contract: `0.1.0`.** The generated initial-release candidate and its manifest are present in the repository, but no formal Machine KB release has yet been tagged. These curated JSON Schema Draft 2020-12 files define the public record and artifact formats. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
+**Machine KB 0.1.0 schema contract.** These curated JSON Schema Draft 2020-12 files define the initial public record and artifact formats used by `machine-kb-v0.1.0`. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
 
 | Schema | Applies to |
 | --- | --- |

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/manifest.schema.json",
-  "title": "Machine KB manifest (pre-release)",
+  "title": "Machine KB manifest",
   "type": "object",
   "additionalProperties": false,
   "required": ["artifacts", "coverage", "format_version", "generator_version", "input_content_sha256", "schema_compatibility_version"],
