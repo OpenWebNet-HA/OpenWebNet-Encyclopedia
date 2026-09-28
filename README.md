@@ -35,4 +35,4 @@ See [Source Manifest](sources/manifest.yaml) for machine-readable provenance and
 
 ## License
 
-Repository-authored documentation is licensed under the GNU General Public License v3.0. Canonical source materials under `sources/` retain the rights and licensing terms of their respective publishers and authors.
+Repository-authored content is licensed under the Apache License 2.0. Canonical source materials under `sources/` and vendored third-party materials retain the rights and licensing terms of their respective publishers and authors.
