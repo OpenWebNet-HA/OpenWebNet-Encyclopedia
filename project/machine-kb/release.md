@@ -35,7 +35,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 
 ## Distribution readiness
 
-Repository-authored documentation is covered by the repository's GNU GPL v3 license; source materials under sources/ retain the rights and licensing terms of their publishers and authors. The [planned initial release notes](release-notes.md) record this boundary, actual manifest versions, migration state, certified-candidate relationship, and consumer requirements.
+Repository-authored content is covered by the repository's Apache License 2.0; source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their publishers and authors. The [planned initial release notes](release-notes.md) record this boundary, actual manifest versions, migration state, certified-candidate relationship, and consumer requirements.
 
 The static [golden JSONL serialization vector](../../knowledge/schema/fixtures/valid/golden.jsonl) is documented in the [schema and controlled-vocabulary guide](../../knowledge/schema/README.md) and validated by the schema test suite. It is usable as data without MCP, FastMCP, an LLM, Python, or network access. Python tooling described in contributor documentation is optional validation/build machinery, not a consumer requirement.
 

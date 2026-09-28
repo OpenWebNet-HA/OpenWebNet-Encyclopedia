@@ -39,7 +39,7 @@ The [schema guide](../../knowledge/schema/README.md) documents an exact two-reco
 
 ## Licensing
 
-Repository-authored documentation is licensed under GNU GPL v3 as stated in the root LICENSE and repository README. Canonical source materials under sources/ retain the rights and licensing terms of their respective publishers and authors. Generated records retain provenance so consumers can identify underlying source attribution and rights boundaries.
+Repository-authored content is licensed under the Apache License 2.0 as stated in the root LICENSE and repository README. Canonical source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their respective publishers and authors. Generated records retain provenance so consumers can identify underlying source attribution and rights boundaries.
 
 ## Release boundary
 
