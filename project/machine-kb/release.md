@@ -16,7 +16,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [x] Schemas, vocabularies, IDs and aliases, namespaces, provenance, references, claims, and cross-artifact consistency pass validation.
 - [x] Privacy classifications are valid and every generated output passes the final privacy scan; installed Device IDs and other prohibited private values remain blocked by pre-IR and final-scan controls.
 - [x] Historical independent Phase 15 certification remains recorded for its exact candidate; the later post-readiness semantic delta received bounded current-main review with explicit provenance, applicability, epistemic, identity, and unresolved-state checks.
-- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, planned release notes, and consumer-facing golden examples were checked against the intended release revision.
+- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, planned release notes, the consumer ingestion guide, and consumer-facing golden examples were checked against the intended release revision.
 - [x] The [review ledger](review-ledger.md), [roadmap](roadmap.md), and project control status are current; no remaining release blocker is hidden in Machine KB project documentation.
 
 ## Verified release-candidate relationship

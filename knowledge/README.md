@@ -2,7 +2,9 @@
 
 This directory contains deterministic exports of the OpenWebNet documentation for ingestion by large language models and other machine processes. It supports complete-context loading, retrieval-augmented generation, claim-level reasoning, automated validation, and structured downstream processing.
 
-The repository's human-readable Markdown pages remain authoritative. Generated records must identify their source page and preserve provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions. A machine consumer must be able to distinguish a published protocol fact from implementation evidence, a corroborated interpretation, and an open question.
+The repository's human-readable Markdown pages remain authoritative. Generated records identify their source page and preserve provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions. A machine consumer must be able to distinguish a published protocol fact from implementation evidence, a corroborated interpretation, and an open question.
+
+For practical integration patterns, start with [Consuming the Machine KB](CONSUMING.md). It covers direct LLM context, RAG/indexed retrieval, atomic-claim use, reference resolution, MCP adapters, and release/update handling without prescribing a particular framework or provider.
 
 ## Machine-ingestion hierarchy
 
@@ -33,14 +35,14 @@ Every applicable record must preserve:
 - outbound relationships and identifiers;
 - sufficient text or structured fields to interpret the record without guessing its namespace.
 
-The generators must produce stable ordering and byte-for-byte repeatable output from the same repository revision. Validation must reject missing provenance, invalid references, namespace leakage, and incompatible duplicate claims.
+The generators produce stable ordering and byte-for-byte repeatable output from the same repository revision. Validation rejects missing provenance, invalid references, namespace leakage, and incompatible duplicate claims.
 
 ## Privacy boundary
 
-Every artifact in this directory is public and intended for broad automated distribution. The [Machine Knowledge Privacy Policy](policy/privacy.md) therefore applies before extraction, during normalization, and after generation. Concrete IP addresses, MAC addresses, installed Device IDs, credentials, private capture contents, installation topology, user identifiers, and similar private values must never enter an artifact. Protocol field names and placeholder grammars may be retained without their observed values.
+Every generated artifact in this directory is public and intended for broad automated distribution. The [Machine Knowledge Privacy Policy](policy/privacy.md) therefore applies before extraction, during normalization, and after generation. Concrete IP addresses, MAC addresses, installed Device IDs, credentials, private capture contents, installation topology, user identifiers, and similar private values must never enter an artifact. Protocol field names and placeholder grammars may be retained without their observed values.
 
 Generation fails closed when a value cannot be classified safely. Redaction occurs before chunking and claim extraction so private text cannot survive in embeddings, metadata, identifiers, logs, or derived records.
 
 ## Build and verification
 
-Run `python build.py` to generate the committed manifest, or pass `--output-root PATH` to write only build output beneath a clean temporary directory. Run `python check.py` to verify fresh canonical output, byte-for-byte double-build determinism, manifest schema and serialization, and the privacy publication gate.
+Run `python build.py` to regenerate the committed machine artifacts and manifest, or pass `--output-root PATH` to write build output beneath a clean temporary directory. Run `python check.py` to verify fresh canonical output, byte-for-byte double-build determinism, manifest schema and serialization, cross-artifact integrity, and the privacy publication gate.

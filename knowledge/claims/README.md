@@ -1,11 +1,19 @@
 # Atomic Claims
 
-`claims.jsonl` is generated from the reviewed `knowledge/inputs/claim-records.json` joined to the privacy-gated shared IR. It contains the Phase 8 framework claims plus bounded Phase 9–11 populations for `protocol/`, `functional/`, `diagnostics/`, `programming/`, `device-model/`, `internals/`, `reverse-engineering/`, and `scenario-engine/`. The manifest reports these domains separately: 134 documents, 1,181 reviewed sections, 1,087 sections with claims, 94 reviewed non-claim sections, and 7,342 claims. This completes initial canonical-domain claim population; later phases still must perform cross-artifact drift checks and independent certification.
+[`claims.jsonl`](claims.jsonl) is generated from the reviewed [`knowledge/inputs/claim-records.json`](../inputs/claim-records.json) joined to the privacy-gated shared IR.
 
-Each claim must retain provenance, evidence class, confidence, namespace, scope, cautions, and relationships. Contradictory source statements and unresolved interpretations remain separate qualified records; generation must not silently select or synthesize a resolution.
+The current initial-release candidate contains 7,449 claims across all eight canonical domains. The bounded claim ledger covers 135 canonical documents and 1,207 sections: 1,111 sections contain one or more reviewed claims and 96 are explicitly reviewed non-claim sections.
 
-`subject_id` refers to one canonical entity. `claim_links` explicitly names claims that support, qualify, or contradict another assertion; a contradiction is reciprocal, shares subject and namespace, and carries an open question on both sides. A reported raw value and its possible interpretation are separate claims. Provenance names a public source and the canonical document and section where its interpretation was reviewed. The `source_section_sha256` hashes that *prepared IR section*, not a private raw source; the curated input pins it. Any change to that section blocks the build until a reviewer revisits every dependent claim and updates the pinned digest, even when the claim still reads correctly. This deliberately conservative Phase 8 change gate is not the full Phase 12 cross-artifact drift analysis.
+Each claim retains provenance, evidence class, confidence, namespace, scope, cautions, questions, relationships, and epistemic status. Contradictory source statements and unresolved interpretations remain separate qualified records; generation does not silently select or synthesize a resolution.
 
-`knowledge/inputs/claim-coverage.json` accounts for every section in the bounded Phase 9–11 domains. `claimed` means that the section has at least one reviewed atomic assertion; `nonclaim` is limited to empty structural, navigation, reference-list, procedural, or non-assertive sections and records a reason. It is invalid for the ledger count to disagree with generated claims. Exact WHO, diagnostic, Device Model, implementation, research, and ScenarioDevices namespaces and section-topic subject entities preserve context without treating equal values in different systems as identical.
+`subject_id` refers to one canonical entity. `claim_links` explicitly names claims that support, qualify, or contradict another assertion. A contradiction is reciprocal, shares subject and namespace, and carries an open question on both sides. A reported raw value and its possible interpretation are separate claims.
+
+Provenance names a public source where required and the canonical document and section where its interpretation was reviewed. `source_section_sha256` hashes that prepared IR section, not a private raw source. The curated input pins it. Any change to that section blocks the build until a reviewer revisits every dependent claim and updates the pinned digest.
+
+[`knowledge/inputs/claim-coverage.json`](../inputs/claim-coverage.json) accounts for every section in the bounded canonical domains. `claimed` means that the section has at least one reviewed atomic assertion. `nonclaim` is limited to reviewed structural, navigation, reference-list, procedural, or non-assertive sections and records a reason. It is invalid for the ledger count to disagree with generated claims.
+
+Exact WHO, diagnostic, Device Model, implementation, research, and ScenarioDevices namespaces and section-topic subject entities preserve context without treating equal values in different systems as identical.
 
 Practical Guides remain excluded. Guide-only factual material is a documentation defect until it is promoted into an appropriate canonical section and reviewed there.
+
+For consumer-side use of claims and their reference records, see [Consuming the Machine KB](../CONSUMING.md).
