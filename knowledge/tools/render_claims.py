@@ -20,6 +20,8 @@ def section_digest(section: dict) -> str:
 
 
 DEICTIC_FRAGMENT = re.compile(r"^(?:These include|These definitions|They should be interpreted)\b", re.IGNORECASE)
+INTERNAL_MARKDOWN_AST_REPR = re.compile(r"(?:\{'text':\s*|'inline':\s*\[)")
+
 EPISTEMIC_META = re.compile(
     r"^(?:(?:Level|Outcome|Status)\b.*\binferred\b|Do not\b.*\binferred\b|"
     r"The inferred evidence label\b)",
@@ -157,6 +159,8 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
         published_statement = validate_claim_context(seed, source_id, section, contexts[identity]["atomicity"])
+        if INTERNAL_MARKDOWN_AST_REPR.search(published_statement):
+            raise ValueError(f"internal Markdown AST leaked into claim statement: {identity}")
         validate_evidence_review(seed, section, contexts[identity]["evidence"], source_id, doc["path"])
         if seed["evidence_class"] == "canonical_documentation" and source_id != sources[doc["id"]]:
             raise ValueError(f"canonical source does not match section: {identity}")

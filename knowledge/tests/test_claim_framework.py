@@ -76,6 +76,17 @@ class ClaimFrameworkTests(unittest.TestCase):
         self.assertIn("30 seconds", left["statement"])
         self.assertIn("30 minutes", right["statement"])
 
+    def test_materialized_table_context_uses_plain_cell_text(self):
+        claims = self.render()
+        by_id = {record["id"]: record for record in claims}
+        statement = by_id["ownkb:claim:c000185"]["statement"]
+        self.assertIn("Scope | `WHERE` syntax | Valid values", statement)
+        self.assertNotIn("{'text':", statement)
+        self.assertNotIn("'inline':", statement)
+        self.assertTrue(all("{'text':" not in record["statement"] and
+                            "'inline':" not in record["statement"]
+                            for record in claims))
+
     def test_changed_source_section_requires_review(self):
         ir = copy.deepcopy(self.ir)
         section = next(s for d in ir["documents"] for s in d["sections"]
