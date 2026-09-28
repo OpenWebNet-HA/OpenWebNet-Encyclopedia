@@ -18,8 +18,9 @@ from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
 from validate_schema import validate_registry  # noqa: E402
+from validate_text_hygiene import validate_generated_text  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.8.1"
+GENERATOR_VERSION = "ownkb-build-0.8.2"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
@@ -124,8 +125,9 @@ def build(root: Path, output_root: Path) -> Path:
     for kind, filename in REFERENCE_FILES.items():
         write_bytes(output_root / "knowledge/reference" / filename, jsonl_bytes(references[kind]))
     target_manifest = output_root / "knowledge/manifest.json"
-    write_bytes(target_manifest, json_bytes(manifest(ir, output_root, root, metrics, references,
-                                                     claims, claim_metrics, lifecycle)))
+    manifest_value = manifest(ir, output_root, root, metrics, references, claims, claim_metrics, lifecycle)
+    write_bytes(target_manifest, json_bytes(manifest_value))
+    validate_generated_text(output_root, manifest_value)
     return target_manifest
 
 

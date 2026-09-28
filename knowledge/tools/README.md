@@ -8,6 +8,8 @@ Tooling reads the authoritative documentation and curated source metadata, produ
 
 Privacy validation is mandatory and fail-closed. Run `python knowledge/tools/validate_privacy.py` after generation and before publication. The generator sanitizes sensitive source values before constructing chunks, claims, identifiers, or metadata; the final scan is an additional release gate.
 
+Generated-text hygiene is also mandatory and fail-closed. The validate_text_hygiene.py tool scans every string in the published JSON/JSONL surfaces plus the LLM corpus for high-confidence parser/AST serialization, runtime object representations, tracebacks, JavaScript object coercion, and other internal execution artefacts. The rules intentionally preserve legitimate OpenWebNet frames, JSON/code examples, SQL, hexadecimal values, and other technical notation. The same gate runs inside both build.py and check.py.
+
 The repository build uses the curated source classification in `knowledge/inputs/canonical-sources.jsonl`. For standalone source-gate testing, run:
 
 ```text
