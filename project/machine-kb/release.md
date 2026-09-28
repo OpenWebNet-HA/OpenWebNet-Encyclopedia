@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Bounded current-main initial-release verification passed on 2026-09-28 for semantic/content candidate a819104eed5d8431478ef933235a616cde71a092. The Machine KB is already integrated into main. Historical lineage remains explicit: independently certified candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50, previous reconciled candidate 888706f39f4c3f5dba2a49db628b09011714084b, and previous readiness/control commit d4757986f8b35bcb7bb997a3fae9ef074bf437ec. The post-readiness WHO 1 dimmer/MH200 and WHO 2/LN4660M2 changes were reviewed with bounded remediation and the complete release-validation suite passed. No Git tag, GitHub Release, external publication, or released v1 interface has been created.
+**Status:** Machine KB 0.1.0 release preparation is complete in `main`, targeting `machine-kb-v0.1.0`. Bounded current-main semantic verification passed on 2026-09-28 for candidate `a819104eed5d8431478ef933235a616cde71a092`. Historical lineage remains explicit: independently certified candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`, previous reconciled candidate `888706f39f4c3f5dba2a49db628b09011714084b`, and previous readiness/control commit `d4757986f8b35bcb7bb997a3fae9ef074bf437ec`. Subsequent licensing and consumer/release-documentation work changes no Machine KB factual content. Creating the tag or GitHub Release remains a separate explicitly authorized action.
 
 ## Intended consumer contract
 
@@ -16,7 +16,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [x] Schemas, vocabularies, IDs and aliases, namespaces, provenance, references, claims, and cross-artifact consistency pass validation.
 - [x] Privacy classifications are valid and every generated output passes the final privacy scan; installed Device IDs and other prohibited private values remain blocked by pre-IR and final-scan controls.
 - [x] Historical independent Phase 15 certification remains recorded for its exact candidate; the later post-readiness semantic delta received bounded current-main review with explicit provenance, applicability, epistemic, identity, and unresolved-state checks.
-- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, planned release notes, the consumer ingestion guide, and consumer-facing golden examples were checked against the intended release revision.
+- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, 0.1.0 release notes, the consumer ingestion guide, and consumer-facing golden examples are aligned with the intended release revision.
 - [x] The [review ledger](review-ledger.md), [roadmap](roadmap.md), and project control status are current; no remaining release blocker is hidden in Machine KB project documentation.
 
 ## Verified release-candidate relationship
@@ -31,11 +31,11 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - Generator version: ownkb-build-0.8.0.
 - Current corpus: 7,449 claims, 1,423 references, 1,173 retrieval chunks, and 11,353 live IDs.
 - ID lifecycle state: 11,353 live IDs, 0 aliases, 0 retired IDs. No existing stable ID was removed or repurposed; 53 deterministic new live IDs were added after d4757986f8b35bcb7bb997a3fae9ef074bf437ec.
-- The dedicated final release-readiness documentation/control commit is reported after it is created and pushed; it does not alter the verified semantic/content candidate.
+- Release preparation targets `machine-kb-v0.1.0` at the exact revision that passes the final release suite; no intervening commit may be inserted between validation and tagging.
 
 ## Distribution readiness
 
-Repository-authored content is covered by the repository's Apache License 2.0; source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their publishers and authors. The [planned initial release notes](release-notes.md) record this boundary, actual manifest versions, migration state, certified-candidate relationship, and consumer requirements.
+Repository-authored content is covered by the repository's Apache License 2.0; source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their publishers and authors. The [Machine KB 0.1.0 release notes](release-notes.md) record this boundary, actual manifest versions, compatibility baseline, certified-candidate relationship, and consumer requirements.
 
 The static [golden JSONL serialization vector](../../knowledge/schema/fixtures/valid/golden.jsonl) is documented in the [schema and controlled-vocabulary guide](../../knowledge/schema/README.md) and validated by the schema test suite. It is usable as data without MCP, FastMCP, an LLM, Python, or network access. Python tooling described in contributor documentation is optional validation/build machinery, not a consumer requirement.
 
@@ -47,7 +47,7 @@ The build and CI remain offline and model-free. Green mechanical validation is s
 
 ## Release boundary
 
-This checklist authorizes no formal release action by itself. The Machine KB is already integrated into main. Explicit user authorization is still required before creating a Git tag, creating a GitHub Release, publishing externally, or declaring a released v1 interface.
+This checklist and release preparation authorize no formal release action by themselves. The intended tag is `machine-kb-v0.1.0`. Explicit user authorization is still required before creating that tag, creating the GitHub Release, or publishing externally.
 
 ## Current-main reconciliation - 2026-09-27
 
@@ -102,3 +102,13 @@ Final validation passed:
 - git diff --check: clean.
 
 The Machine KB is ready for the initial formal release operation, but no Git tag, GitHub Release, external publication, or released-v1 declaration is created by this verification.
+
+## Machine KB 0.1.0 release preparation - 2026-09-28
+
+The initial public release identity is fixed as Machine KB `0.1.0` with intended Git tag `machine-kb-v0.1.0`.
+
+Release preparation after semantic candidate `a819104eed5d8431478ef933235a616cde71a092` is bounded to licensing, consumer/support documentation, release-control metadata, and removal of the `(pre-release)` label from schema titles. The schema title change is metadata-only: schema `$id`, required fields, properties, enums, constraints, compatibility version, record semantics, and generator behavior are unchanged.
+
+`knowledge/manifest.json` is regenerated so its schema hashes match the prepared release files. All non-schema machine artifacts must remain byte-identical to the reviewed semantic candidate, and manifest corpus counts plus the input-content digest must remain unchanged.
+
+The release operation may proceed only if the exact preparation revision passes the complete validation suite and `machine-kb-v0.1.0` does not already exist locally or on `origin`.

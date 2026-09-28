@@ -1,6 +1,6 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-28, integrated on main. A phase is complete only after its acceptance work and checks pass and its state is recorded here. The prior `knowledge/` skeleton predates Phase 0 and is preserved. This table describes implementation state, not the maturity of the human Encyclopedia.
+Snapshot: 2026-09-28, integrated on `main` and prepared for Machine KB 0.1.0 under intended tag `machine-kb-v0.1.0`. A phase is complete only after its acceptance work and checks pass and its state is recorded here. Historical phase notes are retained as implementation history.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ Snapshot: 2026-09-28, integrated on main. A phase is complete only after its acc
 
 ## Phase 1 verification
 
-- Reviewed page/heading moves, section splits and rechunking, evidence revisions, namespace collisions, multi-target retirement, cross-language serialization, and privacy withdrawal. Contract rules and remaining implementation checks are recorded in [Consumer Contract](consumer-contract.md#stability-challenge-before-v1).
+- Reviewed page/heading moves, section splits and rechunking, evidence revisions, namespace collisions, multi-target retirement, cross-language serialization, and privacy withdrawal. Contract rules and remaining implementation checks are recorded in [Consumer Contract](consumer-contract.md#stability-challenge-and-compatibility-rules).
 - Defined ID syntax and lifecycle, manifest discovery, deterministic bytes, ownership, knowledge-state semantics, and compatibility policy. Concrete schemas, registry, golden vectors, and all generated records remain Phase 2 onward.
 - Verified: `git diff --check`; `python project/review/checks/check_esg.py .` (0 objective failures); `python project/review/checks/check_ecv.py .` (0 objective failures); relative-link existence across `project/machine-kb/*.md`; `python knowledge/tools/validate_privacy.py` (passed, **0 generated artifacts scanned**). These checks verify the Phase 1 documentation and existing mechanical gates, not an unreleased dataset.
 
@@ -145,7 +145,14 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-Independent Phase 15 recertification passed for candidate 5e5dda65b6ba8d5f4da2ec69126d4a9452455c50. Release-readiness review subsequently closed MKB-R03 and MKB-R06: 11,173 emitted IDs exactly match the curated live registry, and all 183 Practical Guide hints were adjudicated with no additional canonical promotion required. The final release checklist has now passed for release-content revision b1560324c0b5733614e8eb90cd4f9d04b96edfa9; explicit authorization remains required for tag creation, GitHub Release creation, external publication, or any released-v1 declaration.
+The implementation, semantic certification, current-main reconciliation, licensing transition, consumer-ingestion documentation, and release metadata are complete for Machine KB 0.1.0. After the exact release-preparation commit passes the complete validation suite, the only remaining formal actions are:
+
+1. obtain explicit authorization to release;
+2. create `machine-kb-v0.1.0` on the unchanged validated revision;
+3. create the matching GitHub Release;
+4. treat that published snapshot as the initial compatibility baseline.
+
+Do not introduce another commit between final validation and tag creation.
 
 ## Final release-readiness verification
 

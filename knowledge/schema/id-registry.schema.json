@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/id-registry.schema.json",
-  "title": "Curated ID lifecycle registry (pre-release)",
+  "title": "Curated ID lifecycle registry",
   "type": "object",
   "additionalProperties": false,
   "required": [
