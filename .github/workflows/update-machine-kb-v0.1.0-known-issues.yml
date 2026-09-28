@@ -27,23 +27,36 @@ jobs:
           test "$(gh release view machine-kb-v0.1.0 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Add known issues
-        shell: bash
+        shell: python
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          set -euo pipefail
-          TAG=machine-kb-v0.1.0
-          NOTES=/tmp/release-notes.md
-          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > "$NOTES"
-          if grep -q '^## Known issues$' "$NOTES"; then
-            echo "Known issues section already exists; refusing to duplicate it."
-            exit 1
-          fi
-          cat >> "$NOTES" <<'EOF'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
 
-## Known issues
+          repo = os.environ["GITHUB_REPOSITORY"]
+          tag = "machine-kb-v0.1.0"
+          raw = subprocess.run(
+              ["gh", "release", "view", tag, "--repo", repo, "--json", "body"],
+              check=True, capture_output=True, text=True,
+          ).stdout
+          body = json.loads(raw)["body"]
+          if "## Known issues" in body:
+              raise SystemExit("Known issues section already exists; refusing to duplicate it.")
 
-- **Generated claim statement rendering:** 1,120 of 7,449 claim statements can contain leaked internal Markdown parser representation when materialized source context crosses a table. The affected text is limited to `claims.jsonl` statements; retrieval chunks and reference registries are unaffected. Consumers should prefer the corresponding retrieval chunk for an affected claim until this is corrected. Tracked in #37.
-- **Schema vocabulary documentation:** `knowledge/schema/README.md` omits the `exposes`, `identifies`, and `distinct_from` relationship predicates, as well as the schema's `entity_type` vocabulary. The JSON Schema itself is correct. Tracked in #38.
-EOF
-          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --notes-file "$NOTES"
+          known = (
+              "\n\n## Known issues\n\n"
+              "- **Generated claim statement rendering:** 1,120 of 7,449 claim statements can contain leaked internal Markdown parser representation when materialized source context crosses a table. "
+              "The affected text is limited to `claims.jsonl` statements; retrieval chunks and reference registries are unaffected. "
+              "Consumers should prefer the corresponding retrieval chunk for an affected claim until this is corrected. Tracked in #37.\n"
+              "- **Schema vocabulary documentation:** `knowledge/schema/README.md` omits the `exposes`, `identifies`, and `distinct_from` relationship predicates, "
+              "as well as the schema's `entity_type` vocabulary. The JSON Schema itself is correct. Tracked in #38.\n"
+          )
+          notes = Path("/tmp/release-notes.md")
+          notes.write_text(body.rstrip() + known, encoding="utf-8")
+          subprocess.run(
+              ["gh", "release", "edit", tag, "--repo", repo, "--notes-file", str(notes)],
+              check=True,
+          )
