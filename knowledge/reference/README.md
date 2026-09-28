@@ -6,6 +6,6 @@ Canonical definitions live only in the glossary. Entity records identify referen
 
 The semantic records are generated from [`../inputs/reference-records.json`](../inputs/reference-records.json) after its section IDs are joined to the shared IR. Canonical-document source records are generated directly from that IR. Reference records provide the stable identifiers used by retrieval chunks and atomic claims.
 
-Consumers should resolve stable `reference_ids`, claim cautions/questions/relationships, and provenance through these registries rather than interpreting IDs by spelling. See [Consuming the Machine KB](../CONSUMING.md).
+Consumers should resolve stable `reference_ids`, claim cautions/questions/relationships, and provenance through these registries rather than interpreting IDs by spelling. See [Consuming the OpenWebNet Machine KB](../CONSUMING.md).
 
 `python check.py` validates schema, provenance, registry kinds, cross-references, manifest counts and hashes, deterministic bytes, freshness, and privacy.

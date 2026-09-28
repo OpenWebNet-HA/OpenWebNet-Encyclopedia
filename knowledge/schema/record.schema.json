@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/record.schema.json",
-  "title": "Machine KB records",
+  "title": "OpenWebNet Machine KB records",
   "$ref": "#/$defs/record",
   "$defs": {
     "record": {

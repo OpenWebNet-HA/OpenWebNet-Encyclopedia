@@ -1,4 +1,4 @@
-# Knowledge-Base Generation and Validation Tools
+# OpenWebNet Machine KB Generation and Validation Tools
 
 This directory contains deterministic generators, linters, validators, and consistency checks for the machine-readable knowledge base.
 

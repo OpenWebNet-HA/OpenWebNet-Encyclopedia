@@ -16,4 +16,4 @@ Exact WHO, diagnostic, Device Model, implementation, research, and ScenarioDevic
 
 Practical Guides remain excluded. Guide-only factual material is a documentation defect until it is promoted into an appropriate canonical section and reviewed there.
 
-For consumer-side use of claims and their reference records, see [Consuming the Machine KB](../CONSUMING.md).
+For consumer-side use of claims and their reference records, see [Consuming the OpenWebNet Machine KB](../CONSUMING.md).

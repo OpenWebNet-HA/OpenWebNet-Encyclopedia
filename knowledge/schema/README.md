@@ -1,6 +1,6 @@
-# Machine KB Schemas and Controlled Vocabulary
+# OpenWebNet Machine KB Schemas and Controlled Vocabulary
 
-**Machine KB 0.1.0 schema contract.** These curated JSON Schema Draft 2020-12 files define the initial public record and artifact formats used by `machine-kb-v0.1.0`. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
+**OpenWebNet Machine KB 0.1.0 schema contract.** These curated JSON Schema Draft 2020-12 files define the initial public record and artifact formats used by `machine-kb-v0.1.0`. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
 
 | Schema | Applies to |
 | --- | --- |
