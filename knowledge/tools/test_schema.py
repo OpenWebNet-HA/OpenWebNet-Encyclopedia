@@ -2,6 +2,7 @@
 
 import copy
 import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -75,6 +76,25 @@ class SchemaTests(unittest.TestCase):
         value["relationships"] = ["ownkb:relationship:x000001"]
         value["questions"] = ["ownkb:question:q000001"]
         validate_record(value)
+
+    def test_documented_record_vocabularies_match_schema(self):
+        readme = (Path(__file__).resolve().parents[1] / "schema" / "README.md").read_text()
+
+        def documented_values(name: str) -> list[str]:
+            marker = chr(96)
+            prefix = f"| {marker}{name}{marker} |"
+            rows = [line for line in readme.splitlines() if line.startswith(prefix)]
+            self.assertEqual(1, len(rows), f"expected exactly one README vocabulary row for {name}")
+            value_cell = rows[0][len(prefix):].split("|", 1)[0]
+            return re.findall(r"`([^`]+)`", value_cell)
+
+        expected = {
+            "entity_type": RECORD["$defs"]["entity"]["properties"]["entity_type"]["enum"],
+            "predicate": RECORD["$defs"]["relationship"]["properties"]["predicate"]["enum"],
+        }
+        for name, schema_values in expected.items():
+            with self.subTest(vocabulary=name):
+                self.assertEqual(schema_values, documented_values(name))
 
     def test_provenance_scope_and_id_boundaries(self):
         obj = _parse((FIXTURES / "valid" / "entity.json").read_text())

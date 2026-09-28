@@ -27,7 +27,8 @@ Three independent axes must be retained. `epistemic_status` describes the claim'
 | `confidence` | `high`, `medium`, `low`, `undetermined`; independent of evidence class and coverage. |
 | `evidence_class` | `official_specification`, `official_catalogue`, `public_database`, `public_capture`, `public_experiment`, `configuration_software`, `implementation_artifact`, `firmware_interface`, `prior_validated_research`, `canonical_documentation`. Each provenance item identifies a canonical public page and section; a required `source_id` attributes every external evidence class; canonical documentation may omit it. |
 | `applicability.state` | `applies`, `unknown`, `not_applicable`. The `domain`, `target`, and version `state` (`specified` with expression, `unknown`, or `not_versioned`) narrow the assertion. |
-| `predicate` | `part_of`, `has_part`, `documents`, `evidenced_by`, `applies_to`, `defined_in`, `related_to`, `contradicts`, `supersedes`, `replaces`, `qualifies`. |
+| `entity_type` | `physical_product`, `physical_device`, `firmware`, `module`, `object`, `configuration`, `address`, `protocol_identity`, `database_record`, `protocol_value`, `other`. Classifies the kind of domain entity represented by an entity record. |
+| `predicate` | `part_of`, `has_part`, `documents`, `evidenced_by`, `applies_to`, `defined_in`, `related_to`, `contradicts`, `supersedes`, `replaces`, `qualifies`, `exposes`, `identifies`, `distinct_from`. |
 | `privacy.classification` | `public` with no removed classes; `sanitized` with at least one controlled removed-value class. Neither allows private values in content. |
 
 `context.namespace_id` is explicit even for source and question records. `context.description` disambiguates uses within a namespace; protocol numbers alone do not establish relationships. `relationships`, `cautions`, and `questions` are required set arrays and may be empty when none are known.
