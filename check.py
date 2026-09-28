@@ -21,6 +21,7 @@ from validate_consistency import validate_cross_artifact  # noqa: E402
 from validate_references import REFERENCE_FILES, validate_integrity  # noqa: E402
 from validate_schema import validate_jsonl, validate_registry  # noqa: E402
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
+from validate_text_hygiene import validate_generated_text  # noqa: E402
 
 
 def reject_duplicate_keys(pairs):
@@ -84,6 +85,7 @@ def artifact_path(entry: dict, output_root: Path) -> Path:
 
 
 def validate_artifacts(manifest: dict, output_root: Path) -> None:
+    validate_generated_text(output_root, manifest)
     for entry in manifest["artifacts"]:
         path = artifact_path(entry, output_root)
         if not path.is_file():
@@ -198,7 +200,7 @@ def main() -> int:
                                  text=True, capture_output=True, check=False)
         if privacy.returncode:
             raise ValueError(privacy.stderr.strip() or "privacy validation failed")
-        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, and privacy gate")
+        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, and privacy gates")
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"Machine KB check failed: {error}", file=sys.stderr)
         return 1
