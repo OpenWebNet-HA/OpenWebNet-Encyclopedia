@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/retrieval-chunks.schema.json",
-  "title": "Machine KB retrieval chunk records",
+  "title": "OpenWebNet Machine KB retrieval chunk records",
   "type": "object",
   "additionalProperties": false,
   "required": ["document_id", "format_version", "id", "kind", "label", "namespace_context", "privacy", "provenance", "qualification_cues", "reference_ids", "section_id", "section_path", "source_path", "text"],

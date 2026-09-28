@@ -1,6 +1,6 @@
-# Machine KB Consumer Contract
+# OpenWebNet Machine KB Consumer Contract
 
-**Release status:** Implemented, integrated into `main`, and prepared as Machine KB 0.1.0 with intended tag `machine-kb-v0.1.0`. Bounded semantic verification passed for candidate `a819104eed5d8431478ef933235a616cde71a092`. This contract and the concrete 0.1.0 schemas define the initial public interface once the validated revision is formally tagged. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
+**Release status:** Implemented, integrated into `main`, and prepared as OpenWebNet Machine KB 0.1.0 with intended tag `machine-kb-v0.1.0`. Bounded semantic verification passed for candidate `a819104eed5d8431478ef933235a616cde71a092`. This contract and the concrete 0.1.0 schemas define the initial public interface once the validated revision is formally tagged. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
 
 ## Publication surface
 

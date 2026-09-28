@@ -1,4 +1,4 @@
-# Machine KB 0.1.0 Release Notes
+# OpenWebNet Machine KB 0.1.0 Release Notes
 
 **Release identity:** OpenWebNet Machine KB 0.1.0, intended Git tag `machine-kb-v0.1.0`.
 

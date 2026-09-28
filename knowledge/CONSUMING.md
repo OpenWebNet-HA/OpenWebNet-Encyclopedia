@@ -1,6 +1,6 @@
-# Consuming the Machine KB
+# Consuming the OpenWebNet Machine KB
 
-The Machine KB is a static, deterministic, consumer-neutral dataset. It does not require an LLM, an MCP server, Python, a vector database, embeddings, or network access. Those are optional consumer choices.
+The **OpenWebNet Machine KB** (shortened to **Machine KB** where the context is clear) is a static, deterministic, consumer-neutral dataset. It does not require an LLM, an MCP server, Python, a vector database, embeddings, or network access. Those are optional consumer choices.
 
 Start with [`manifest.json`](manifest.json). It is the inventory and version entry point for the public machine artifacts. Only manifest-listed artifacts and schemas are part of the versioned machine interface.
 

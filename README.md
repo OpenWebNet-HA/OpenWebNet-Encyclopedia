@@ -18,12 +18,12 @@ The encyclopedia covers SCS, ZigBee-backed systems, catalogue data, configuratio
 | [MyHOME Suite Internals](internals/) | MyHOME Suite implementation details relevant to the protocol |
 | [Reverse Engineering](reverse-engineering/) | Methodology, correlations, inferred relationships, and unresolved questions |
 | [Sources](sources/) | Canonical source material and provenance records |
-| [Machine-Readable Knowledge Base for LLMs and Automated Tools](knowledge/) | Generated corpora, retrieval chunks, atomic claims, controlled reference data, schemas, and generation tools for machine ingestion |
+| [OpenWebNet Machine KB](knowledge/) | Generated corpora, retrieval chunks, atomic claims, controlled reference data, schemas, and generation tools for machine ingestion |
 | [Project Standards](project/) | Encyclopedia Core Values and human-facing Encyclopedia Style Guide |
 
 ## LLM and machine ingestion
 
-The [Machine-Readable Knowledge Base for LLMs and Automated Tools](knowledge/) is the entry point for language models, retrieval systems, indexers, validators, code generators, and other automated consumers. Its directory names distinguish complete LLM context, retrieval units, atomic claims, controlled reference data, schemas, and generation tooling. See [Consuming the Machine KB](knowledge/CONSUMING.md) for direct LLM, RAG/indexed, and MCP-adapter ingestion patterns.
+The [OpenWebNet Machine KB](knowledge/) is the entry point for language models, retrieval systems, indexers, validators, code generators, and other automated consumers. Its directory names distinguish complete LLM context, retrieval units, atomic claims, controlled reference data, schemas, and generation tooling. See [Consuming the OpenWebNet Machine KB](knowledge/CONSUMING.md) for direct LLM, RAG/indexed, and MCP-adapter ingestion patterns.
 
 The human-readable Markdown documentation remains authoritative. Machine artifacts are deterministic derivatives that retain source paths, provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions. They must also pass the [Machine Knowledge Privacy Policy](knowledge/policy/privacy.md): concrete network addresses, installed Physical Device identifiers, credentials, private capture contents, and other private or installation-specific data are prohibited.
 

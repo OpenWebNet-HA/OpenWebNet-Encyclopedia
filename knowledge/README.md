@@ -1,10 +1,10 @@
-# Machine-Readable Knowledge Base for LLMs and Automated Tools
+# OpenWebNet Machine KB
 
-This directory contains deterministic exports of the OpenWebNet documentation for ingestion by large language models and other machine processes. It supports complete-context loading, retrieval-augmented generation, claim-level reasoning, automated validation, and structured downstream processing.
+The **OpenWebNet Machine KB** is the deterministic, machine-readable knowledge base derived from the OpenWebNet Encyclopedia for ingestion by large language models and other machine processes. **Machine KB**, **OWN KB**, and **KB** are acceptable shorthand in project and implementation discussions. It supports complete-context loading, retrieval-augmented generation, claim-level reasoning, automated validation, and structured downstream processing.
 
 The repository's human-readable Markdown pages remain authoritative. Generated records identify their source page and preserve provenance, evidence status, version scope, protocol namespace, cautions, relationships, and unresolved questions. A machine consumer must be able to distinguish a published protocol fact from implementation evidence, a corroborated interpretation, and an open question.
 
-For practical integration patterns, start with [Consuming the Machine KB](CONSUMING.md). It covers direct LLM context, RAG/indexed retrieval, atomic-claim use, reference resolution, MCP adapters, and release/update handling without prescribing a particular framework or provider.
+For practical integration patterns, start with [Consuming the OpenWebNet Machine KB](CONSUMING.md). It covers direct LLM context, RAG/indexed retrieval, atomic-claim use, reference resolution, MCP adapters, and release/update handling without prescribing a particular framework or provider.
 
 ## Machine-ingestion hierarchy
 
