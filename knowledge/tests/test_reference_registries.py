@@ -43,9 +43,10 @@ class ReferenceRegistryTests(unittest.TestCase):
         external = [record for record in self.registries["source"]
                     if record["source_type"] != "canonical_documentation"]
         self.assertEqual(135, len(canonical))
-        self.assertEqual(26, len(external))
+        self.assertEqual(27, len(external))
         self.assertIn("ownkb:source:s000136", self.by_id)
         self.assertIn("ownkb:source:s000148", self.by_id)
+        self.assertIn("ownkb:source:s000161", self.by_id)
         self.assertEqual({chunk["document_id"] for chunk in self.chunks},
                          {record["provenance"][0]["location"]["document_id"]
                           for record in canonical})
