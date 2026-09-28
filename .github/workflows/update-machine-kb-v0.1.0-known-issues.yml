@@ -1,0 +1,49 @@
+name: Update Machine KB 0.1.0 known issues
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/update-machine-kb-v0.1.0-known-issues.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify release target
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch --tags --force
+          test "$(git rev-list -n1 machine-kb-v0.1.0)" = "0b6651604581e428b58a071a96bd76c2ba2ba179"
+          test "$(gh release view machine-kb-v0.1.0 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+
+      - name: Add known issues
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=machine-kb-v0.1.0
+          NOTES=/tmp/release-notes.md
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > "$NOTES"
+          if grep -q '^## Known issues$' "$NOTES"; then
+            echo "Known issues section already exists; refusing to duplicate it."
+            exit 1
+          fi
+          cat >> "$NOTES" <<'EOF'
+
+## Known issues
+
+- **Generated claim statement rendering:** 1,120 of 7,449 claim statements can contain leaked internal Markdown parser representation when materialized source context crosses a table. The affected text is limited to `claims.jsonl` statements; retrieval chunks and reference registries are unaffected. Consumers should prefer the corresponding retrieval chunk for an affected claim until this is corrected. Tracked in #37.
+- **Schema vocabulary documentation:** `knowledge/schema/README.md` omits the `exposes`, `identifies`, and `distinct_from` relationship predicates, as well as the schema's `entity_type` vocabulary. The JSON Schema itself is correct. Tracked in #38.
+EOF
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --notes-file "$NOTES"
