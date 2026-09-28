@@ -1,6 +1,6 @@
 # Machine KB Consumer Contract
 
-**Design status:** Phase 1 contract, approved for implementation on `machine-knowledge-base`; no dataset or schema has been released. The first release must satisfy this contract and its concrete schemas before consumers rely on it. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
+**Design status:** Implemented and integrated into main; no formal initial Machine KB release has occurred. Bounded current-main verification passed for semantic/content candidate a819104eed5d8431478ef933235a616cde71a092. The first formal release must satisfy this contract and its concrete schemas before consumers rely on it as a released interface. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
 
 ## Publication surface
 
