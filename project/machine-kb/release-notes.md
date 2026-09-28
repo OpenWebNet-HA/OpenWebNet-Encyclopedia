@@ -33,7 +33,7 @@ Private captures, logs, inventories, configuration exports, screenshots, and pri
 
 ## Consumer use
 
-Published Machine KB artifacts are static, deterministic files intended for independent offline consumption. A consumer does not need Python, an LLM, MCP, FastMCP, or network access. Those technologies may be used by an external consumer implementation, but they are not part of the Encyclopedia or Machine KB deliverable.
+Published Machine KB artifacts are static, deterministic files intended for independent offline consumption. A consumer does not need Python, an LLM, MCP, FastMCP, or network access. Those technologies may be used by an external consumer implementation, but they are not part of the Encyclopedia or Machine KB deliverable. The [consumer ingestion guide](../../knowledge/CONSUMING.md) documents direct LLM, RAG/indexed, claims/reference, and MCP-adapter patterns.
 
 The [schema guide](../../knowledge/schema/README.md) documents an exact two-record [golden JSONL serialization vector](../../knowledge/schema/fixtures/valid/golden.jsonl) for independent byte-level implementation checks.
 
