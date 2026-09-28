@@ -39,7 +39,18 @@ def block_text(block: dict) -> str:
         return str(block.get("text", "")).strip()
     if kind == "table":
         rows = [block.get("header", [])] + list(block.get("rows", []))
-        return "; ".join(" | ".join(str(cell).strip() for cell in row) for row in rows if row)
+
+        def cell_text(cell: object) -> str:
+            if isinstance(cell, dict):
+                text = cell.get("text")
+                if not isinstance(text, str):
+                    raise ValueError("table cell lacks textual content")
+                return text.strip()
+            if isinstance(cell, str):
+                return cell.strip()
+            raise ValueError("unsupported table cell representation")
+
+        return "; ".join(" | ".join(cell_text(cell) for cell in row) for row in rows if row)
     if kind == "list":
         values = []
         for item in block.get("items", []):

@@ -19,7 +19,7 @@ from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
 from validate_schema import validate_registry  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.8.0"
+GENERATOR_VERSION = "ownkb-build-0.8.1"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
