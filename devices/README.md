@@ -37,7 +37,7 @@ devices/
 ├── coverage.md
 ├── definitions/
 │   ├── README.md
-│   └── odl-0042-two-channel-din-lighting-actuator.md
+│   └── own-dev-0042-two-channel-din-lighting-actuator.md
 ├── categories/
 │   └── README.md
 └── contributing/
