@@ -811,14 +811,14 @@ items:
       commercial_identities: partial
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: pending
+      documentation_archive: complete
       definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
     notes:
     - 19-record Basic control cluster; MQ00286-d-EN directly corroborates four commercial references.
-    - Official English PDF fingerprinted; binary not redistributed pending rights review.
+    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
   '291':
     state: unreviewed
     priority: normal
@@ -1678,14 +1678,14 @@ items:
       commercial_identities: partial
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: pending
+      documentation_archive: complete
       definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
     notes:
     - 13-record Special control cluster; MQ00285-d-EN directly corroborates four commercial references.
-    - Official English PDF fingerprinted; binary not redistributed pending rights review.
+    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
   '1525':
     state: unreviewed
     priority: normal
@@ -2517,19 +2517,24 @@ items:
     blockers: []
     notes: []
   '2180':
-    state: triaged
+    state: definition-in-progress
     priority: high
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0006
     review:
-      commercial_identities: pending
-      database_extraction: partial
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - Seven-record zero-crossing actuator/control cluster is directly covered by ST-00000898-EN/FR.
+    - English/French technical sheets and BTicino/Legrand instruction sheets archived byte-for-byte.
   '2193':
     state: unreviewed
     priority: normal

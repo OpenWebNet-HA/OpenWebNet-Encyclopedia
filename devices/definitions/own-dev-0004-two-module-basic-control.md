@@ -43,7 +43,7 @@ Sharing one `EN_ITEM` establishes a common catalogue capability core. It does no
 
 | Document | Type | Revision / date | Coverage | Status | Source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00286-d-EN` - Basic control for 2 independent loads | Technical sheet | 20/01/2014 | `067552`, `H4652/2`, `L4652/2`, `AM5832/2` | Official source identified; archival copy pending | [Official PDF](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00286-d-en.pdf) |
+| `MQ00286-d-EN` - Basic control for 2 independent loads | Technical sheet | 20/01/2014 | `067552`, `H4652/2`, `L4652/2`, `AM5832/2` | [Archived original](../../sources/devices/documents/device-doc-basic-control-mq00286-d-en/MQ00286-d-EN.pdf) | [Official PDF](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00286-d-en.pdf) |
 
 Additional language revisions and product-range-specific sheets should be collected rather than treating this one document as exhaustive.
 
