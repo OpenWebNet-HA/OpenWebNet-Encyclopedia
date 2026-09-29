@@ -7,9 +7,9 @@
 | State | Items |
 | --- | ---: |
 | unreviewed | 202 |
-| triaged | 3 |
+| triaged | 2 |
 | research | 0 |
-| definition-in-progress | 5 |
+| definition-in-progress | 6 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -21,12 +21,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- |
-| high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | triaged | - | pending | pending | pending | - |
 | high | 4 | Basic control | 6 | triaged | - | pending | pending | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | triaged | - | pending | pending | pending | - |
-| high | 281 | Basic control | 19 | definition-in-progress | OWN-DEV-0004 | partial | pending | pending | - |
-| high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | pending | pending | - |
+| high | 281 | Basic control | 19 | definition-in-progress | OWN-DEV-0004 | partial | complete | pending | - |
+| high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | complete | pending | - |
 | high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | pending | - |
+| high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | - |
 | normal | 1376 | Touch control multifunction | 15 | unreviewed | - | pending | pending | pending | - |
