@@ -1338,19 +1338,23 @@ items:
     blockers: []
     notes: []
   '1376':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0009
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - 15-record touch-control cluster; Arteor technical sheet and Céliane compatibility evidence archived.
   '1423':
     state: unreviewed
     priority: normal
@@ -1739,19 +1743,23 @@ items:
     blockers: []
     notes: []
   '1559':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0010
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - 12-record PIR+US cluster; current official sheet directly names all commercial records, with older 2014 revision retained.
   '1563':
     state: unreviewed
     priority: normal

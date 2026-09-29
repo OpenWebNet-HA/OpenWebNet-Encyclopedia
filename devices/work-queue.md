@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 202 |
+| unreviewed | 200 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 8 |
+| definition-in-progress | 10 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -22,15 +22,15 @@ Database extraction is mechanically available for every cluster in this catalogu
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- |
 | high | 281 | Basic control | 19 | definition-in-progress | OWN-DEV-0004 | partial | complete | pending | - |
+| high | 1376 | Touch control multifunction | 15 | definition-in-progress | OWN-DEV-0009 | partial | complete | pending | - |
 | high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | complete | pending | - |
+| high | 1559 | PIR+US flush mounted sensor | 12 | definition-in-progress | OWN-DEV-0010 | complete | complete | pending | - |
 | high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | pending | - |
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | pending | - |
 | high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | - |
-| normal | 1376 | Touch control multifunction | 15 | unreviewed | - | pending | pending | pending | - |
-| normal | 1559 | PIR+US flush mounted sensor | 12 | unreviewed | - | pending | pending | pending | - |
 | normal | 402 | Scenario control | 10 | unreviewed | - | pending | pending | pending | - |
 | normal | 37 | IR receiver | 8 | unreviewed | - | pending | pending | pending | - |
 | normal | 1076 | Video Display | 8 | unreviewed | - | pending | pending | pending | - |
