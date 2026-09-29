@@ -2,189 +2,330 @@
 
 ## Summary
 
-| Field | Value |
-| --- | --- |
-| Device ID | `OWN-DEV-0003` |
-| Technical description | Flush-mounted two-relay actuator and free control |
-| Categories | Actuator, Command, Multifunction, Lighting, Automation |
-| Documentation status | Partial |
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0003` | Project identity |
+| Technical description | Flush-mounted two-relay actuator with integrated/free command functions | Catalogue + vendor catalogue |
+| Commercial identities | Arnould Espace Evolution `64391`, `64191`, `64192` | Catalogue + vendor catalogue |
+| Catalogue item | `1184` - “Flush mounted actuator and free control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `107` | Implementation evidence |
+| Catalogue brand / line | Arnould `BRAND = 6`; Espace Evolution `LINE = 8` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified (`EN_FIRMWARE 157`) | Implementation evidence |
+| Declared Modules | 4 | Implementation evidence |
+| Categories | Actuator, Command, Multifunction, Lighting, Automation, Scenario | Capability model |
 
-Arnould (LegrandGroup) 64391 is a combined Device: it contains actuator capability and independently configurable command/scenario capability in one Physical Device.
+This Device is deliberately modelled as a multifunction Physical Device rather than as one actuator address. Its firmware can expose actuator functions on slots `1..2` and command/scenario functions on slots `3..4`, with the active Object set selected by configuration.
 
-The canonical MyHOME Suite catalogue resolves SKU `64391` to shared item `1184`, “Flush mounted actuator and free control”, item model `107`, and firmware definition `157`.
+## Commercial identities and package variants
 
-## Commercial identities
+The canonical catalogue maps `64391`, `64191`, and `64192` to the same item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation presents them in the same two-relay actuator/control product family with different supplied rocker/configurator presentations.
 
-| Brand | SKU / reference | Region / line | Relationship | Evidence |
-| --- | --- | --- | --- | --- |
-| Arnould (LegrandGroup) | 64391 | Espace Evolution | Established identity | Canonical catalogue and MyHOME Suite product/function documentation |
+| Brand / line | Reference | Relationship to technical definition | Evidence |
+| --- | --- | --- | --- |
+| Arnould Espace Evolution | `64391` | base actuator/control reference | Catalogue + vendor catalogue |
+| Arnould Espace Evolution | `64191` | commercial/package variant using same technical capability item | Catalogue + vendor catalogue |
+| Arnould Espace Evolution | `64192` | commercial/package variant using same technical capability item | Catalogue + vendor catalogue |
 
-### Related catalogue records
-
-Catalogue SKUs `64191` and `64192` share item `1184`, item model `107`, firmware `157`, and therefore the same firmware/Module/Object/configuration capability core.
-
-That shared capability model is not, by itself, treated here as proof that `64191`, `64192`, and `64391` are fully synonymous commercial identities. Their exact product/line differences should be established from product documentation before merging them into one technical Device definition.
+The technical Device ID does not privilege one of these references. Packaging, rocker, and supplied-configurator differences remain commercial-identity metadata.
 
 ## Documentation
 
-A canonical publisher-hosted PDF specifically for 64391 has not yet been archived. Historical Espace Evolution material places the reference under Arnould within LegrandGroup; the page therefore preserves that commercial branding instead of flattening it to the parent group name. The following source leads are already useful.
-
-| Document / source | Type | Revision / date | Language | Archived original | Source |
-| --- | --- | --- | --- | --- | --- |
-| MyHOME Suite function documentation - lighting actuator modes | Vendor implementation documentation | MyHOME Suite 03.04-era web help | EN | External only | [BTicino MyHOME Suite documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html) |
-| MyHOME Suite function documentation - automation actuator modes | Vendor implementation documentation | MyHOME Suite 03.04-era web help | EN | External only | [BTicino MyHOME Suite documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) |
-| Arnould / BTicino Espace Evolution general catalogue | Historical product catalogue lead | Historical | FR | Pending verification | Secondary archival lead located; canonical publisher copy still sought |
-
-The project should continue looking for the original Legrand/Arnould product sheet, installation sheet, and historical catalogue revisions.
-
-## Identification
-
-| Evidence | Value | Status | Source |
+| Document / source | Type | Status | Source |
 | --- | --- | --- | --- |
-| Catalogue SKU | `64391` | Implementation evidence | [Physical Devices](../../device-model/physical-devices.md#64391-64191-and-64192) |
-| Catalogue item | `1184` | Implementation evidence | [Physical Devices](../../device-model/physical-devices.md#64391-64191-and-64192) |
-| Item description | `Flush mounted actuator and free control` | Implementation evidence | [Physical Devices](../../device-model/physical-devices.md#64391-64191-and-64192) |
-| `modobj` / item model | `107` | Implementation evidence | [DIMENSION 1 Device Identity](../../diagnostics/dim1-device-identity.md) |
-| Firmware definition | `157` | Implementation evidence | [Firmware](../../device-model/firmware.md#firmware-example) |
-| Installed `WHO 1001 DIMENSION 1` tuple | Not yet curated on this page | Incomplete | - |
+| Arnould Espace Evolution catalogue | Historical product catalogue | Official publisher PDF identified, archival copy pending | [PDF](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
+| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html) |
+| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) |
 
-`OBJECT_MODEL = 107` identifies the shared item/capability model, not SKU `64391` uniquely. Catalogue brand/line or other product evidence is required to narrow the marketed Device record.
+Additional installation sheets and catalogue revisions should be collected rather than treating this list as exhaustive.
 
-## Firmware and hardware
+## Physical characteristics and marketed capability
 
-Firmware `157` declares four `slot` positions and eleven slot/Object alternatives.
+The historical Arnould catalogue describes `64391` as a two-independent-relay actuator with integrated control, physically or virtually configurable, occupying two modules.
 
-| `slot` | Designated Object | Additional Objects |
-| ---: | --- | --- |
-| `1` | Light actuator (`6`) | Automation actuator (`7`) |
-| `2` | Light actuator (`6`) | - |
-| `3` | Light control (`400`) | Automation control (`401`); Scheduled scenario (`404`); Scheduled scenario PLUS (`406`) |
-| `4` | Light control (`400`) | Automation control (`401`); Scheduled scenario (`404`); Scheduled scenario PLUS (`406`) |
+It documents use for simple or double loads, two lighting circuits or a motor, logical relay interlocking by configuration, and the ability to manage a remote bus actuator. The same catalogue presents the related `64191` / `64192` package references with preassembled rockers/configurators for particular uses.
 
-The Device therefore has four Modules. Eleven catalogue rows represent Object alternatives across those Modules, not eleven Modules.
+Electrical ratings should remain tied to the exact archived catalogue revision because OCR and catalogue typography can make unit/value extraction fragile; the original PDF is the canonical evidence.
 
-## Functional profile
+## Identity
 
-| Module / `slot` | Capability | Typical role | Functional system |
-| ---: | --- | --- | --- |
-| `1` | Light actuator or Automation actuator | Actuator | Lighting or Automation |
-| `2` | Light actuator | Actuator | Lighting |
-| `3` | Light control, Automation control, Scheduled scenario, or Scheduled scenario PLUS | Command / scenario | Configuration-dependent |
-| `4` | Light control, Automation control, Scheduled scenario, or Scheduled scenario PLUS | Command / scenario | Configuration-dependent |
+| Field | Value | Evidence state |
+| --- | --- | --- |
+| `EN_DEVICE.code` | `64391` | Implementation evidence |
+| sibling Device records | `64191`, `64192` | Implementation evidence |
+| `EN_ITEM.id_item` | `1184` | Implementation evidence |
+| `EN_ITEM.descr` | “Flush mounted actuator and free control” | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `107` | Implementation evidence |
+| `EN_BRAND.brand_name` / `brand_modobj` | Arnould / `6` | Implementation evidence |
+| `EN_LINE.line_name` / `line_modobj` | Espace Evolution / `8` | Implementation evidence |
+| catalogue system | Lighting / Automation, `sys_modobj = 1` | Implementation evidence |
 
-This is precisely why Device category is many-to-many: `64391` is simultaneously an actuator, a command Device, and a multifunction Device.
+For an installed ordinary addressed Device, the identity fields should be obtained through [`DIMENSION 1` Device Identity](../../diagnostics/dim1-device-identity.md). `OBJECT_MODEL = 107` alone identifies the shared technical item, not one commercial package reference.
 
-## Diagnostic observations
+## Firmware
 
-The canonical diagnostic model can expose the installed Module/Object projection through `DIMENSION 30`.
+Firmware `157` is stored as:
 
-For this Device, the catalogue establishes the candidate Object set above. The active Object at each `slot` must still be derived from the installed configuration or diagnostic observation rather than assumed from the SKU alone.
+| Component | Value |
+| --- | ---: |
+| version | `-1` |
+| revision | `-1` |
+| build | `-1` |
+| slots | `4` |
+| default | yes |
 
-A complete first-hand fingerprint for a known 64391 is not yet incorporated into this page.
+The established catalogue convention treats explicit `-1` components as wildcard/unspecified applicability, not as a literal physical firmware version. See [Firmware](../../device-model/firmware.md).
 
-## Addressing and memberships
+## Configuration modes
 
-Actuator and command Modules can have distinct functional addressing roles. Do not reduce the Physical Device to one OpenWebNet address.
-
-Installed A/PL values, group memberships, scenario bindings, and other concrete configuration are local installation state.
-
-## Configuration
-
-### Configuration methods
-
-Firmware `157` is associated with:
+Firmware `157` supports all three catalogue modes:
 
 - Physical configuration
 - Virtual Configuration
 - Advanced Configuration
 
-### Physical configuration
+## Module and Object model
 
-The relevant firmware-scoped physical definitions are:
+### Catalogue Object alternatives
 
-| Position | Legal physical domain |
-| --- | --- |
-| `A1` | `0..9` |
-| `PL1` | `0..9` |
-| `M1` | `0..8`; `9 = O/I`; `10 = OFF`; `12 = UP/DOWN`; `13 = UP/DOWN monostable`; `14 = CEN`; `15 = PUL` |
-| `A2` | `0..9` |
-| `PL2` | `0..9` |
-| `M2` | Same stored domain as `M1` |
+| Object | Description | Available slot(s) | Designation |
+| ---: | --- | --- | --- |
+| `6` | Light actuator | `1`, `2` | fixed/designated Light actuator |
+| `7` | Automation actuator | `1` | alternative |
+| `400` | Light control | `3`, `4` | fixed/designated Light control |
+| `401` | Automation control | `3`, `4` | alternative |
+| `404` | Scheduled scenario | `3`, `4` | alternative |
+| `406` | Scheduled scenario PLUS | `3`, `4` | alternative |
 
-Firmware `157` also owns `AID` at `progressive = 0`; that is an ID field and is not one of the six physical configurator positions above.
+The four Modules must not be confused with the eleven slot/Object association rows in the database.
 
-### Condition-dependent topology
+### Virgin Objects
 
-The selected Objects depend on configuration conditions.
+| Virgin Object | Description | Slots | Permitted Objects |
+| ---: | --- | --- | --- |
+| `500` | Automation double command virgin | `3`, `4` | `400` Light control; `401` Automation control; `404` Scheduled scenario; `406` Scheduled scenario PLUS; `407` AUX control |
+| `510` | Automation relay virgin | `1`, `2` | `1` Blind actuator; `6` Light actuator; `7` Automation actuator |
 
-For the representative physical configuration:
+Object `1` and Object `407` are permitted through the Virgin Object definitions even though they do not appear as direct firmware/Object rows in the extracted `AS_OBJECT_FIRMWARE` set. Preserve that distinction.
+
+Installed Module state is read through [`DIMENSION 30`](../../diagnostics/dim30-modules.md).
+
+## Firmware-scoped physical configuration
+
+The complete firmware-scoped field set is:
+
+| Field | Progressive | Type | Domain | Default / notes |
+| --- | ---: | --- | --- | --- |
+| `AID` | 0 | user value | Device ID field | not a physical configurator |
+| `A1` | 1 | area | `0..9` | default `0` |
+| `PL1` | 2 | point | `0..9` | default `0` |
+| `M1` | 3 | mode | `0..8`, `9=O/I`, `10=OFF`, `12=UP/DOWN`, `13=UP/DOWN monostable`, `14=CEN`, `15=PUL` | default `0` |
+| `A2` | 4 | area | `0..9` | default `0` |
+| `PL2` | 5 | point | `0..9` | default `0` |
+| `M2` | 6 | mode | same stored domain as `M1` | default `0` |
+
+The six fields `A1/PL1/M1/A2/PL2/M2` are the Device's physical configurator surface in the canonical catalogue. `AID` is an identity field and is not counted as a physical configurator position.
+
+## Condition-selected topology
+
+The catalogue contains a substantial condition matrix selecting Object alternatives. The meaningful Device-level branches can be summarized without duplicating the generic condition-engine implementation:
+
+| Module | Selected Object | Stored physical conditions | Conversion rule(s) |
+| ---: | --- | --- | --- |
+| `1` | Light actuator `6` | `M1=0..4`, `M1=O/I`, `M1=PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `20`, `25` |
+| `1` | Automation actuator `7` | `M1=5..8,OFF,UP/DOWN,UP/DOWN monostable` | `26` |
+| `2` | Light actuator `6` | `M1=CEN` with `M2=0..4,O/I,PUL` | `25` |
+| `3` | Light control `400` | `M1=0..4,O/I,PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `4` |
+| `3` | Automation control `401` | `M1=5..8,OFF` and `M1=UP/DOWN,UP/DOWN monostable` | `4`, `550` |
+| `3` | Scheduled scenario `404` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
+| `3` | Scheduled scenario PLUS `406` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
+| `4` | Light control `400` | branches across `M2=0,O/I,OFF,ON,PUL`, `M1=CEN`, and stored `A2` scope selectors | `4`, `95`, `96`, `97` |
+| `4` | Automation control `401` | `M2=UP/DOWN` or `UP/DOWN monostable` with stored `A2` scope selectors | `4`, `95`, `96`, `97` |
+| `4` | Scheduled scenario `404` | `M1<>CEN; M2=CEN` | `4` |
+| `4` | Scheduled scenario PLUS `406` | stored `M1<>CEN; M2=FAKE` branch | no rule |
+
+The raw catalogue also contains branches whose values are not reachable from firmware `157`'s declared `A2` domain, including `A2=AMB`, `GR`, `GEN` and `AUX`, plus malformed/truncated condition text in a small number of rows and a stored `M2=ON` branch although `ON` is absent from the firmware `M2` enum. These are source facts, not instructions to silently broaden the legal physical domain.
+
+The canonical handling of these irregularities and conversion-rule evaluation is documented in [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157).
+
+### Worked configuration
+
+For the physically reachable example:
 
 ```text
 M1=CEN
 M2=O/I
 ```
 
-the canonical catalogue branches resolve the four slots to:
+the selected topology is:
 
-| `slot` | Selected Object |
+| Slot | Object |
 | ---: | --- |
-| `1` | Light actuator (`6`) |
-| `2` | Light actuator (`6`) |
-| `3` | Light control (`400`) |
-| `4` | Light control (`400`) |
+| `1` | `6` Light actuator |
+| `2` | `6` Light actuator |
+| `3` | `400` Light control |
+| `4` | `400` Light control |
 
-This `[6, 6, 400, 400]` topology is an example produced by the generic resolver. It must not be stored as the unconditional topology of every 64391.
+This `[6, 6, 400, 400]` result is configuration-dependent, not the unconditional Device topology.
 
-The catalogue also contains unreachable or textually irregular stored branches for this firmware. See [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157) before implementing configuration generation from these rules.
+## Object configuration surfaces
+
+The tables below preserve the complete reusable Object parameter surfaces referenced by firmware `157`. They are candidate configuration capabilities; firmware conditions, filters, and conversion rules determine the reachable subset for a concrete 64391 configuration.
+
+### Object `6` - Light actuator
+
+| Parameter | Domain |
+| --- | --- |
+| `A` | `0..10` |
+| `PL` | `0..15` |
+| `M` | `0=Master`, `11=Slave`, `15=Master PUL`, `16=Slave and PUL` |
+| `LOCAL_BUTTON` | `0=Toggle`, `1=ON/OFF`, `9=ON-OFF`, `15=Pushbutton`, `18=Timed ON` |
+| `DELAYED_OFF` | `0..255 s` |
+| `STATE_RESET` | `0=Restore last value`, `1=Closed`, `2=Open` |
+| `LOAD_CONTROL_MODE` | `0=With zero crossing`, `1=Without zero crossing` |
+| `HOURS` / `MINUTES` / `SECONDS` | `0..255` / `0..59` / `0..59` |
+| `SUBTYPE` | Actuator, Lamp, Valve, Differential restart, Fan, Watering, Controlled socket, Lock |
+| `G1..G10` | each `0..255`, where `0` means no group |
+
+### Object `7` - Automation actuator
+
+| Parameter | Domain |
+| --- | --- |
+| `A` | `0..10` |
+| `PL` | `0..15` |
+| `M` | `0=Master`, `11=Slave`, `15=Master PUL`, `16=Slave and PUL` |
+| `LOCAL_BUTTON` | `12=Bistable`, `13=Monostable`, `14=Bistable and blades` |
+| `STOP_TIME` | Infinite; `1..17 s`; `19..60 s`; `2..10 min` through stored values `62..70` |
+| `SUBTYPE` | Actuator, Shutter, Curtain, Gate, Garage door, Differential restart |
+| `G1..G10` | each `0..255`, where `0` means no group |
+
+The stored `STOP_TIME` enum notably has no `18 s` entry. Preserve the database domain exactly.
+
+### Object `400` - Light control
+
+| Parameter | Domain |
+| --- | --- |
+| `M` | Toggle, timed ON, dimmer variants, ON/OFF variants, OFF, ON, PUL, blinking `0.5..8 s`, fixed dimmer levels `10..90%`, and customized modes `128..134` |
+| `ADDR_TYPE` | `0=Point to point`, `1=Area`, `2=Group`, `3=General` |
+| `A` | `0..10` |
+| `PL` | `0..15` |
+| `G` | `1..255` |
+| `INST_LEV` | Private riser, Local bus `1..15`, Standard |
+| `DEST_LEV` | Private riser, Local bus `1..15`, All systems |
+| `A_R` | `0..10`; `0` means no reference |
+| `PL_R` | `0..15`; `0` means no reference |
+| `HOURS` / `MINUTES` / `SECONDS` | custom timed-ON components |
+| `LEVEL` | `0..100` for customized modes |
+| `START_S` / `STOP_S` / `DIMMING_S` | `0..255` for customized modes |
+| `T_TIME` | stored timed presets: 1,2,3,4,5,6,15 minutes; 30 seconds; 0.5 seconds; 2 seconds; 10 minutes |
+| `IN_AUX_CHANNEL` | `0..15` |
+
+### Object `401` - Automation control
+
+| Parameter | Domain |
+| --- | --- |
+| `M` | `12=Bistable`, `13=Monostable`, `14=Blades control and bistable` |
+| `ADDR_TYPE` | Point to point, Area, Group, General |
+| `A` | `0..10` |
+| `PL` | `0..15` |
+| `G` | `1..255` |
+| `INST_LEV` | Private riser, Local bus `1..15`, Standard |
+| `DEST_LEV` | Private riser, Local bus `1..15`, All systems |
+| `A_R` | `0..10` |
+| `PL_R` | `0..15` |
+| `IN_AUX_CHANNEL` | `0..15` |
+
+### Object `404` - Scheduled scenario
+
+| Parameter | Domain |
+| --- | --- |
+| `A` | `0..10` |
+| `PL` | `0..15` |
+| `BUTTON_1` | `0..31`, default `1` |
+| `BUTTON_2` | `0..31`, default `2` |
+| `IN_AUX_CHANNEL` | `0..15` |
+| `START_DELAY` | `0..255 s`, default `10` |
+
+### Object `406` - Scheduled scenario PLUS
+
+| Parameter | Domain |
+| --- | --- |
+| `PPT_CEN_LOW` | `0..255`, default `1` |
+| `PPT_CEN_HIG` | `0..7`, default `0` |
+| `BUTTON_1` | `0..31`, default `1` |
+| `BUTTON_2` | `0..31`, default `2` |
+
+Virgin Object `500` additionally permits AUX control Object `407`; its reusable Object parameters should be incorporated when a reachable 64391 configuration or authoritative product source establishes that capability for this Device.
+
+## Conversion rules
+
+The condition matrix references conversion rules `4`, `20`, `25`, `26`, `95`, `96`, `97`, and `550`, with additional jump rules in the stored rule graph.
+
+These rules translate physical item fields into selected Object configuration values. Their generic evaluation semantics and known textual irregularities are canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md). Device-specific rule applicability is retained here through the condition table and rule IDs rather than copying hundreds of generic conversion rows verbatim.
+
+A future machine-readable Device Library build should preserve the complete applicable rule graph, including jump targets and raw strings, from the canonical structured source.
+
+## Diagnostic applicability
+
+| Diagnostic surface | 64391-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve item model `107`, brand `6`, line `8`, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | installed firmware observation, despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` / `6` / `13` | hardware, microcontroller, and Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine active Object at each of four Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine per-Module configured system/address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values and physical-configurability flags | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+No generic diagnostic frame is duplicated here.
+
+## Functional applicability
+
+Depending on selected Objects, the Device can participate in:
+
+- [WHO 1 - Lighting](../../functional/who-1-lighting/) through Light actuator / Light control Objects;
+- [WHO 2 - Automation](../../functional/who-2-automation/) through Automation actuator / Automation control Objects;
+- scenario/CEN behavior through Scheduled scenario and Scheduled scenario PLUS Objects.
+
+The Device page establishes **which functions can exist on this hardware**. The linked functional sections remain authoritative for command syntax and general runtime semantics.
 
 ## Programming
 
-The Device is a strong test case for future programming support because one physical configuration can select several Object roles across four Modules.
+This Device is a strong validation case because physical fields can change the active Object topology.
 
-Programming logic must resolve:
+A correct programmer must:
 
-1. the legal firmware-specific configuration domain;
-2. the condition-selected Object for each Module;
-3. applicable Object and firmware configuration definitions;
-4. conversion rules;
-5. the resulting OpenWebNet programming representation.
+1. resolve the legal firmware-scoped physical domain;
+2. evaluate reachable slot conditions;
+3. select the resulting Object per Module;
+4. apply the relevant conversion-rule graph;
+5. validate Object-scoped configuration values;
+6. write/verify through the canonical programming workflow.
 
-It must not hard-code `64391 -> four fixed Objects`.
+See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
 
-## Observed behavior
+## Corroboration status and open work
 
-No complete first-hand runtime capture tied to a known physical 64391 has yet been incorporated into this page.
+The current dossier is substantially complete for the canonical MyHOME Suite 3.5.38 database representation, but physical-hardware corroboration is still missing.
 
-The existing page is therefore intentionally stronger on catalogue/configuration evidence than on installed runtime evidence.
+Priority evidence:
 
-## Evidence
+- a sanitized fingerprint from a known physical 64391/64191/64192;
+- observed `DIMENSION 1` identity tuple and firmware/hardware versions;
+- observed `DIMENSION 30` topology under several physical configurations;
+- `DIMENSION 32` and `35` snapshots tied to those configurations;
+- authoritative installation sheets documenting the physical configurator layout and package variants;
+- confirmation of whether AUX control Object `407` is reachable on this firmware despite appearing only through Virgin Object `500`;
+- controlled validation of the catalogue branches whose stored conditions use values outside the declared physical domains.
 
-- **Implementation evidence** - canonical `MHCatalogue.db` establishes item `1184`, `modobj = 107`, firmware `157`, four Modules, Object alternatives, configuration domains, conditions, and conversion rules.
-- **Implementation documentation** - MyHOME Suite function documentation explicitly includes 64391 among flush-mounted actuator/free-control products and exposes lighting, automation, scenario, and other command functions.
-- **Observed behavior** - not yet sufficient for a complete 64391 fingerprint.
-
-## Evidence limits
-
-- Commercial equivalence with `64191` or `64192` is not yet asserted despite their shared capability core.
-- A known-physical-64391 fingerprint is still needed.
-- Original device-specific Legrand/Arnould PDFs remain to be located and archived.
-- Catalogue condition data for firmware `157` contains unreachable and textually irregular branches; do not silently normalize them.
-- The complete virtual/advanced configuration constraint set is not yet normalized into this page.
+When these observations arrive, they should be added as corroborating evidence to the existing database-derived facts rather than replacing them.
 
 ## Sources
 
+- [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Physical Devices](../../device-model/physical-devices.md#64391-64191-and-64192)
 - [Firmware](../../device-model/firmware.md#firmware-example)
 - [Modules](../../device-model/modules.md#combined-device-example)
 - [Objects](../../device-model/objects.md#device-and-object-descriptions)
+- [Virgin Objects](../../device-model/virgin-objects.md)
 - [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157)
-- [Device Sources](../../sources/devices/)
-
-## Related material
-
-- [Device Model](../../device-model/)
-- [Diagnostics](../../diagnostics/)
-- [Programming](../../programming/)
-- [Lighting - WHO 1](../../functional/who-1-lighting/)
-- [Automation - WHO 2](../../functional/who-2-automation/)

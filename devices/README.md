@@ -14,6 +14,26 @@ It complements the [Device Model](../device-model/), which defines the abstract 
 | [Categories](categories/) | Many-to-many browsing by functional category |
 | [Device Page Template](contributing/device-page-template.md) | Starting structure for new Device definitions |
 
+## Completion policy
+
+Device definitions are completion-oriented archival dossiers.
+
+When a canonical implementation database, official document, or publishable observation contains Device-specific information that can be associated reliably with a Device definition, the default is to preserve that information rather than wait for independent confirmation.
+
+Evidence status remains explicit:
+
+- implementation-derived facts are documented as implementation evidence;
+- official-document facts retain their document provenance and revision;
+- observed facts link to the applicable capture or experiment;
+- later corroboration adds provenance to an existing fact rather than replacing its earlier source;
+- unresolved or contradictory source material is preserved visibly instead of normalized away.
+
+“Complete” is always scoped to the source revisions examined. A later catalogue, document revision, firmware, or capture may extend the dossier.
+
+Do not turn Device pages into copies of generic protocol reference material. Device pages document **applicability, Device-specific values, capabilities, constraints, exceptions, and evidence**. Generic frame grammar and field semantics remain canonical under [Functional Protocol](../functional/), [Diagnostics](../diagnostics/), and [Programming](../programming/).
+
+A raw frame belongs on a Device page when it is direct evidence, demonstrates a Device-specific irregularity, or materially improves a Device-specific worked example. Otherwise link to the canonical reference.
+
 ## Canonical Device identity
 
 A canonical Device page represents one **technical Device definition**, not one preferred commercial SKU.
@@ -22,7 +42,7 @@ One technical Device may have several commercial identities across brands, produ
 
 Each Device definition receives a stable project-assigned Device ID. The Device ID is an Encyclopedia identity used to keep references stable; it does not claim vendor authority.
 
-Commercial identity equivalence must be evidence-backed. Relevant evidence may include shared `modobj`, Firmware, Physical Device structure, Modules, Objects, configuration model, programming behavior, and observed hardware behavior.
+Commercial identity equivalence must be evidence-backed. Relevant evidence may include shared `modobj`, Firmware, Physical Device structure, Modules, Objects, configuration model, programming behavior, official product documentation, and observed hardware behavior.
 
 If later evidence shows that two commercial identities previously treated as equivalent are technically distinct in an OpenWebNet-relevant way, split them into separate Device definitions while preserving the history and provenance of the earlier relationship.
 
@@ -58,23 +78,20 @@ Every known brand / SKU combination gets its own searchable row, even when sever
 
 Categories are navigation views, not canonical ownership.
 
-A Device can belong to several categories at once, for example **Command**, **Multifunction**, **Lighting**, and **Automation**. Categories may evolve as Device knowledge improves without moving or renaming the canonical Device page.
-
-Likely categories include actuators, commands, multifunction Devices, sensors, thermoregulation, burglar alarm, gateways and interfaces, energy management, scenarios, and audio/video.
+A Device can belong to several categories at once. Categories may evolve as Device knowledge improves without moving or renaming the canonical Device page.
 
 ## Device page scope
 
-A Device definition should gather the product-specific knowledge needed to answer questions such as:
+A Device definition should exhaust the available Device-specific knowledge needed to answer questions such as:
 
 - Which commercial identities refer to this Device?
 - How can it be identified from OpenWebNet diagnostics or implementation data?
 - Which Firmware versions and hardware variants are known?
-- Which Modules, Objects, functional systems, and `WHO` values can it expose?
-- Which diagnostic dimensions and values have been observed?
-- How can it be configured physically or virtually?
-- Which configuration values and constraints apply?
-- Which behaviors are documented, implementation-derived, observed, inferred, or unresolved?
-- Which archived official documents apply to it?
+- Which Modules, Objects, Virgin Objects, and functional systems can it expose?
+- Which configuration modes, parameters, legal values, filters, conditions, and conversion constraints apply?
+- Which diagnostic surfaces are applicable and what Device-specific results are expected?
+- Which observed behaviors corroborate or contradict source-derived knowledge?
+- Which archived official documents and revisions apply?
 
 Unknown and unresolved observations must be preserved rather than forced into the current interpretation.
 

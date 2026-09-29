@@ -10,23 +10,23 @@ Coverage is tracked by technical Device definition rather than by choosing one c
 
 | Field | Meaning |
 | --- | --- |
-| Device page | A technical Device definition page exists |
-| Commercial identities | Known brand / SKU identities and synonym relationships are documented |
+| Database extraction | Device-specific identity, firmware, Module/Object, configuration, conditions, and constraints available from canonical implementation sources have been curated |
+| Commercial identities | Known brand / SKU identities and package/synonym relationships are documented |
 | Official sources | Authoritative product documents are inventoried and archived where appropriate |
-| Identity | The Device can be tied to protocol or implementation identity evidence |
+| Identity | Protocol/catalogue identity mapping is documented |
 | Hardware evidence | At least one observation from known physical hardware exists |
-| Functions | Modules, Objects, roles, and relevant `WHO` values are documented |
-| Configuration | Supported configuration methods and parameters are documented |
-| Constraints | Material configuration ranges, conditions, and cross-parameter constraints are documented |
+| Functions | Modules, Objects, roles, and relevant functional systems are documented |
+| Configuration | Supported configuration methods and parameter domains are documented |
+| Constraints | Material configuration ranges, conditions, conversion constraints, and source irregularities are documented |
 
 Use **Complete**, **Partial**, **Unknown**, or **Not applicable** where a simple yes/no would hide important gaps.
 
 ## Device definitions
 
-| Device ID | Description | Commercial identities | Device page | Official sources | Identity | Hardware evidence | Functions | Configuration | Constraints |
+| Device ID | Description | Database extraction | Commercial identities | Official sources | Identity | Hardware evidence | Functions | Configuration | Constraints |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `OWN-DEV-0001` | Two-channel universal dimmer | BTicino F418U2 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
-| `OWN-DEV-0002` | Audio/video web server and OpenWebNet gateway | BTicino F454 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
-| `OWN-DEV-0003` | Flush-mounted two-relay actuator and free control | Arnould (LegrandGroup) 64391 | Complete | Partial | Partial | Unknown | Partial | Partial | Partial |
+| `OWN-DEV-0001` | Two-channel universal dimmer | Complete for current canonical catalogue | Complete for known F418U2 / 003651 mapping | Partial - archive pending | Complete at catalogue level | Partial - runtime behavior observed, full fingerprint pending | Complete for current sources | Substantially complete | Partial - firmware-specific filters/corroboration remain |
+| `OWN-DEV-0002` | Audio/video web server and OpenWebNet gateway | Complete for current canonical catalogue | Complete for known F454 / 003598 mapping | Partial - archive pending | Corroborated by capture | Partial - identity/gateway behavior observed | Complete for current sources | Complete for current catalogue fields | Partial - gateway unknowns remain |
+| `OWN-DEV-0003` | Flush-mounted two-relay actuator and free control | Substantially complete for current canonical catalogue | Complete for known 64391 / 64191 / 64192 mapping | Partial - archive pending | Complete at catalogue level | Unknown - fingerprint pending | Complete for current catalogue | Substantially complete | Partial - irregular/unreachable condition branches need experimental validation |
 
-These first definitions are intentionally incomplete worked examples. Their gaps are retained visibly so that the structure can be evaluated before large-scale Device ingestion.
+“Complete” is always scoped to the named source revision. New database revisions, documents, firmware, or observations may add knowledge without making the earlier extraction incorrect.
