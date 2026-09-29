@@ -4,137 +4,87 @@
 
 ## Summary
 
-| Field | Value |
-| --- | --- |
-| Device ID | `OWN-DEV-xxxx` |
-| Technical description | |
-| Categories | |
-| Documentation status | |
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-xxxx` | Project identity |
+| Technical description | | |
+| Commercial identities | | |
+| Catalogue item / model | | |
+| Firmware applicability | | |
+| Categories | | |
 
-Provide a concise description of the physical product and its OpenWebNet-visible purpose.
+Provide a concise description of the Physical Device and its OpenWebNet-visible purpose.
 
 ## Commercial identities
 
 List every established or candidate commercial identity for this technical Device. No SKU is canonical merely because it appears first.
 
-| Brand | SKU / reference | Region / line | Relationship | Evidence |
-| --- | --- | --- | --- | --- |
-| | | | | |
-
-Use relationship states such as **Established identity**, **Equivalent commercial identity**, **Candidate equivalent**, or **Distinct variant** where appropriate.
+| Brand / line | SKU / reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| | | | |
 
 ## Documentation
 
-Link directly to every applicable archived document under [Device Sources](../../sources/devices/) when the original file is retained. Preserve historical revisions and language variants when they are distinct source documents.
+Inventory every known applicable official document revision. Link to the archived original under [Device Sources](../../sources/devices/) when retained.
 
-| Document | Type | Revision / date | Language | Archived original | Source record |
-| --- | --- | --- | --- | --- | --- |
-| | | | | | |
+| Document | Type | Revision / date | Status | Source |
+| --- | --- | --- | --- | --- |
+| | | | | |
 
-Do not replace an older document link merely because a newer revision exists.
+## Physical and electrical characteristics
 
-## Identification
+Extract product-specific specifications from official documentation. Keep revision-specific differences visible.
 
-Document every established or candidate mechanism that can tie an observed Physical Device to this technical Device definition.
+## Identity
 
-| Evidence | Value | Status | Source |
-| --- | --- | --- | --- |
-| Catalogue / item identity | | | |
-| `modobj` / system identity | | | |
-| `WHO 1001` identity | | | |
-| `DIMENSION 1` identity | | | |
-| `N_CONF` | | | |
-| Brand / line | | | |
-| Other signature | | | |
+Record all implementation and protocol identity facts, including item/model, `modobj`, brand, line, and known diagnostic observations.
 
-Keep exact protocol and implementation values unchanged. Distinguish direct product identification from values that only narrow the candidate set.
+Do not repeat generic diagnostic frame grammar. Link to [Diagnostics](../../diagnostics/) and retain raw frames only when they are evidence for this Device.
 
 ## Firmware and hardware
 
-Document known Firmware, build, hardware, and microcontroller versions and any applicability differences.
+Record every firmware definition/build and known hardware/microcontroller variant. Distinguish catalogue applicability from observed installed versions.
 
-| Version / variant | Evidence | Notes |
-| --- | --- | --- |
-| | | |
+## Module, Object, and Virgin Object model
 
-Do not assume that a version present in implementation data has been observed on physical hardware.
+Exhaust the Device-specific capability topology from canonical implementation sources. Preserve fixed Objects, alternatives, slot positions, Virgin Objects, and permitted Objects.
 
-## Functional profile
+## Configuration modes
 
-Describe the functions the Device can expose.
+Record every supported configuration mode and connection/programming modality.
 
-| Function / Object | Role | `WHO` | Module / `slot` | Notes |
-| --- | --- | --- | --- | --- |
-| | | | | |
+## Firmware-scoped configuration
 
-A Physical Device may expose multiple Modules and Objects with different roles and functional systems. Do not reduce the Device to one address, one Object, or one `WHO`.
+Extract the complete Device/firmware parameter set, legal values/ranges, defaults, conditions, and known source irregularities.
 
-## Diagnostic observations
+## Object configuration surfaces
 
-Record product-specific diagnostic behavior, including values needed for identification and fingerprinting.
+Extract the reusable Object configuration fields applicable to the Device, while distinguishing candidate reusable Object values from Device-specific applicability.
 
-| Dimension | Parameters | Values / semantics | Status | Evidence |
-| --- | --- | --- | --- | --- |
-| | | | | |
+## Conditions, filters, and conversions
 
-Previously undocumented dimensions or values should be retained as observations even when their semantics are unknown.
+Preserve Device-specific conditions, filters, conversion-rule applicability, and irregularities. Link generic evaluation semantics to the appropriate [Device Model](../../device-model/), [Programming](../../programming/), or [MyHOME Suite Internals](../../internals/) reference instead of copying generic algorithms.
 
-## Addressing and memberships
+## Diagnostic applicability
 
-Document supported addressing forms, group membership, area or environment participation, and any product-specific constraints.
+Use a Device-specific applicability table linking each relevant diagnostic surface to its canonical reference.
 
-Keep installed-state examples separate from product capabilities.
+## Functional applicability
 
-## Configuration
+Describe which functional systems/WHOs can be exposed by this Device and link to their canonical reference pages.
 
-### Configuration methods
+## Observed behavior and corroboration
 
-Document the configuration methods supported by the Device, such as physical configurators, virtual configuration, or software-only configuration.
-
-### Physical configuration
-
-| Position / marking | Meaning | Allowed values | Constraints |
-| --- | --- | --- | --- |
-| | | | |
-
-### Virtual configuration
-
-| Parameter | Scope | Allowed values | Conditions / constraints |
-| --- | --- | --- | --- |
-| | | | |
-
-Configuration constraints should be recorded precisely enough to support future machine validation. Preserve the source representation where it is necessary to understand a rule.
+Link observations to the facts they corroborate or challenge. A capture adds evidence; it does not erase implementation/document provenance.
 
 ## Programming
 
-Document Device-specific programming behavior only where it differs from or constrains the canonical [Programming](../../programming/) workflows.
+Document Device-specific validation requirements, topology effects, and constraints. Generic frame grammar and session mechanics belong under [Programming](../../programming/).
 
-## Observed behavior
+## Evidence limits and open work
 
-Record Device-specific runtime behavior supported by captures or controlled experiments.
-
-Do not generalize an observation to every Firmware or hardware revision without evidence.
-
-## Evidence
-
-Summarize the evidence supporting the page and the role of each source.
-
-Use the standard evidence vocabulary:
-
-- **Published protocol**
-- **Implementation evidence**
-- **Observed behavior**
-- **Inferred**
-- **Unresolved**
-
-## Evidence limits
-
-State material gaps, unverified implementation mappings, unsupported variants, conflicting evidence, or other limits that affect interpretation.
+List missing documents, unobserved variants, unresolved source conflicts, and experiments needed to increase confidence.
 
 ## Sources
 
-Link to the relevant canonical entries under [Sources](../../sources/) and to official documents inventoried under [Device Sources](../../sources/devices/).
-
-## Related material
-
-Link to the relevant Device Model, Diagnostics, Programming, Functional Protocol, Reverse Engineering, or Practical Guide pages.
+Link the canonical source set, archived Device documents, and relevant Encyclopedia reference pages.
