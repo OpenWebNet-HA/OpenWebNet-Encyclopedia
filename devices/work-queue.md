@@ -7,25 +7,25 @@
 | State | Items |
 | --- | ---: |
 | unreviewed | 202 |
-| triaged | 5 |
+| triaged | 3 |
 | research | 0 |
-| definition-in-progress | 3 |
+| definition-in-progress | 5 |
 | review-ready | 0 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
 
-Database extraction is mechanically complete for every cluster in this catalogue revision. The queue tracks the human work required to turn those source records into reviewed Device definitions.
+Database extraction is mechanically available for every cluster in this catalogue revision. The queue tracks when that source material has actually been reviewed and integrated into a Device definition.
 
 ## Next work
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- |
-| high | 281 | Basic control | 19 | triaged | - | pending | pending | pending | - |
-| high | 1524 | Special control | 13 | triaged | - | pending | pending | pending | - |
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | triaged | - | pending | pending | pending | - |
 | high | 4 | Basic control | 6 | triaged | - | pending | pending | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | triaged | - | pending | pending | pending | - |
+| high | 281 | Basic control | 19 | definition-in-progress | OWN-DEV-0004 | partial | pending | pending | - |
+| high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | pending | pending | - |
 | high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | - |
