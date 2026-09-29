@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0003` | Project identity |
 | Technical description | Flush-mounted two-relay actuator with integrated/free command functions | Catalogue + vendor catalogue |
-| Commercial identities | Arnould Espace Evolution `64391`, `64191`, `64192` | Catalogue + vendor catalogue |
+| Commercial identities | 9 catalogue records across Arnould, BTicino, and Legrand ranges | Implementation evidence; Arnould subset also vendor-catalogue documented |
 | Catalogue item | `1184` - “Flush mounted actuator and free control” | Implementation evidence |
 | Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
 | Item model / `modobj` | `107` | Implementation evidence |
@@ -19,15 +19,21 @@ This Device is deliberately modelled as a multifunction Physical Device rather t
 
 ## Commercial identities and package variants
 
-The canonical catalogue maps `64391`, `64191`, and `64192` to the same item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation presents them in the same two-relay actuator/control product family with different supplied rocker/configurator presentations.
+The canonical catalogue maps nine commercial Device records to item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation independently groups `64391`, `64191`, and `64192` in the same two-relay actuator/control family. The remaining six records share the technical capability item in MyHOME Suite but still need individual product-document review.
 
 | Brand / line | Reference | Relationship to technical definition | Evidence |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution | `64391` | base actuator/control reference | Catalogue + vendor catalogue |
-| Arnould Espace Evolution | `64191` | commercial/package variant using same technical capability item | Catalogue + vendor catalogue |
-| Arnould Espace Evolution | `64192` | commercial/package variant using same technical capability item | Catalogue + vendor catalogue |
+| Arnould Espace Evolution | `64391` | documented commercial reference | Catalogue + vendor catalogue |
+| Arnould Espace Evolution | `64191` | documented commercial/package variant | Catalogue + vendor catalogue |
+| Arnould Espace Evolution | `64192` | documented commercial/package variant | Catalogue + vendor catalogue |
+| BTicino Axolute | `H4671M2` | shared technical item | Implementation evidence; product-document review pending |
+| BTicino L/N/NT | `LN4671M2` | shared technical item | Implementation evidence; product-document review pending |
+| BTicino Matix | `AM5851M2` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand Arteor | `573961` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand Céliane | `067249` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand Céliane | `067556` | shared technical item | Implementation evidence; product-document review pending |
 
-The technical Device ID does not privilege one of these references. Packaging, rocker, and supplied-configurator differences remain commercial-identity metadata.
+The technical Device ID does not privilege one of these references. Shared-item membership establishes the common catalogue capability core but does not erase possible package, finish, regional, or hardware differences.
 
 ## Documentation
 
@@ -52,7 +58,7 @@ Electrical ratings should remain tied to the exact archived catalogue revision b
 | Field | Value | Evidence state |
 | --- | --- | --- |
 | `EN_DEVICE.code` | `64391` | Implementation evidence |
-| sibling Device records | `64191`, `64192` | Implementation evidence |
+| sibling Device records | `64191`, `64192`, `H4671M2`, `LN4671M2`, `AM5851M2`, `573961`, `067249`, `067556` | Implementation evidence |
 | `EN_ITEM.id_item` | `1184` | Implementation evidence |
 | `EN_ITEM.descr` | “Flush mounted actuator and free control” | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `107` | Implementation evidence |
