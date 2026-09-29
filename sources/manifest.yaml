@@ -232,3 +232,63 @@ source_sets:
       publisher: Legrand
       language: Multilingual
       publication_date: unknown
+    - id: device-doc-basic-control-3-mq00290-c-en
+      path: devices/documents/device-doc-basic-control-3-mq00290-c-en/MQ00290_c_EN.pdf
+      original_filename: MQ00290_c_EN.pdf
+      type: pdf
+      size: 298493
+      sha256: 213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85
+      source_url: https://dar.bticino.com/asset/Documents/MQ00290_c_EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2013-08-01'
+    - id: device-doc-basic-control-3-mq00290-c-fr
+      path: devices/documents/device-doc-basic-control-3-mq00290-c-fr/MQ00290-c-FR.pdf
+      original_filename: MQ00290-c-FR.pdf
+      type: pdf
+      size: 300551
+      sha256: 48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: unknown
+    - id: device-doc-basic-control-3-t9807j
+      path: devices/documents/device-doc-basic-control-3-t9807j/T9807J.pdf
+      original_filename: T9807J.pdf
+      type: pdf
+      size: 883489
+      sha256: 3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5
+      source_url: https://dar.bticino.com/asset/Documents/T9807J.pdf
+      publisher: BTicino
+      language: Multilingual
+      publication_date: unknown
+    - id: device-doc-basic-control-3-le05420aa
+      path: devices/documents/device-doc-basic-control-3-le05420aa/LE05420AA.pdf
+      original_filename: LE05420AA.pdf
+      type: pdf
+      size: 600383
+      sha256: c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf
+      publisher: Legrand
+      language: Multilingual
+      publication_date: unknown
+    - id: device-doc-one-relay-mq00072-e-fr
+      path: devices/documents/device-doc-one-relay-mq00072-e-fr/MQ00072-e-FR.pdf
+      original_filename: MQ00072-e-FR.pdf
+      type: pdf
+      size: 147180
+      sha256: b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0
+      source_url: https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00072-e-fr.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: '2014-04-29'
+    - id: device-doc-one-relay-pep-l4671-1-en
+      path: devices/documents/device-doc-one-relay-pep-l4671-1-en/BT-L4671_1-EN.pdf
+      original_filename: BT-L4671_1-EN.pdf
+      type: pdf
+      size: 1068346
+      sha256: 853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27
+      source_url: https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
