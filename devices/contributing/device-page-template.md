@@ -1,23 +1,41 @@
-# Manufacturer SKU - Product name
+# Technical Device description
 
-> This page is a template. Remove this note when creating a Device page.
+> This page is a template. Remove this note when creating a Device definition.
 
 ## Summary
 
 | Field | Value |
 | --- | --- |
-| Manufacturer | |
-| SKU | |
-| Product name | |
-| Product family / line | |
-| Category | |
-| Status | |
+| Device ID | `ODL-xxxx` |
+| Technical description | |
+| Categories | |
+| Documentation status | |
 
 Provide a concise description of the physical product and its OpenWebNet-visible purpose.
 
+## Commercial identities
+
+List every established or candidate commercial identity for this technical Device. No SKU is canonical merely because it appears first.
+
+| Brand | SKU / reference | Region / line | Relationship | Evidence |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+Use relationship states such as **Established identity**, **Equivalent commercial identity**, **Candidate equivalent**, or **Distinct variant** where appropriate.
+
+## Documentation
+
+Link directly to every applicable archived document under [Device Sources](../../sources/devices/) when the original file is retained. Preserve historical revisions and language variants when they are distinct source documents.
+
+| Document | Type | Revision / date | Language | Archived original | Source record |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
+Do not replace an older document link merely because a newer revision exists.
+
 ## Identification
 
-Document every established or candidate mechanism that can tie an observed Physical Device to this product.
+Document every established or candidate mechanism that can tie an observed Physical Device to this technical Device definition.
 
 | Evidence | Value | Status | Source |
 | --- | --- | --- | --- |
@@ -43,7 +61,7 @@ Do not assume that a version present in implementation data has been observed on
 
 ## Functional profile
 
-Describe the functions the product can expose.
+Describe the functions the Device can expose.
 
 | Function / Object | Role | `WHO` | Module / `slot` | Notes |
 | --- | --- | --- | --- | --- |
@@ -71,7 +89,7 @@ Keep installed-state examples separate from product capabilities.
 
 ### Configuration methods
 
-Document the configuration methods supported by the product, such as physical configurators, virtual configuration, or software-only configuration.
+Document the configuration methods supported by the Device, such as physical configurators, virtual configuration, or software-only configuration.
 
 ### Physical configuration
 
@@ -89,11 +107,11 @@ Configuration constraints should be recorded precisely enough to support future 
 
 ## Programming
 
-Document product-specific programming behavior only where it differs from or constrains the canonical [Programming](../programming/) workflows.
+Document Device-specific programming behavior only where it differs from or constrains the canonical [Programming](../../programming/) workflows.
 
 ## Observed behavior
 
-Record product-specific runtime behavior supported by captures or controlled experiments.
+Record Device-specific runtime behavior supported by captures or controlled experiments.
 
 Do not generalize an observation to every Firmware or hardware revision without evidence.
 
@@ -115,7 +133,7 @@ State material gaps, unverified implementation mappings, unsupported variants, c
 
 ## Sources
 
-Link to the relevant canonical entries under [Sources](../sources/) and to official documents inventoried under [Device Sources](../sources/devices/).
+Link to the relevant canonical entries under [Sources](../../sources/) and to official documents inventoried under [Device Sources](../../sources/devices/).
 
 ## Related material
 
