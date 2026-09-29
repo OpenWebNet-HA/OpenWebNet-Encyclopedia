@@ -4,12 +4,12 @@ This directory contains the canonical technical Device pages.
 
 ## Identity and filenames
 
-Each Device definition receives a stable project-assigned Device ID, for example `ODL-0042`.
+Each Device definition receives a stable project-assigned Device ID, for example `OWN-DEV-0042`.
 
 Use that ID plus a concise technical descriptor in the filename:
 
 ```text
-odl-0042-two-channel-din-lighting-actuator.md
+own-dev-0042-two-channel-din-lighting-actuator.md
 ```
 
 The stable ID is the canonical Encyclopedia identity. The descriptive suffix exists only to keep directory listings and repository searches understandable.
