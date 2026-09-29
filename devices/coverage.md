@@ -25,5 +25,8 @@ Use **Complete**, **Partial**, **Unknown**, or **Not applicable** where a simple
 
 | Device ID | Description | Commercial identities | Device page | Official sources | Identity | Hardware evidence | Functions | Configuration | Constraints |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `OWN-DEV-0001` | Two-channel universal dimmer | BTicino F418U2 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
+| `OWN-DEV-0002` | Audio/video web server and OpenWebNet gateway | BTicino F454 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
+| `OWN-DEV-0003` | Flush-mounted two-relay actuator and free control | Legrand 64391 | Complete | Partial | Partial | Unknown | Partial | Partial | Partial |
 
-Add a Device definition as soon as there is enough evidence to establish a distinct technical identity or a concrete need for investigation. A page does not need to be complete before it appears here.
+These first definitions are intentionally incomplete worked examples. Their gaps are retained visibly so that the structure can be evaluated before large-scale Device ingestion.
