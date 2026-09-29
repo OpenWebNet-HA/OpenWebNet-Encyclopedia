@@ -1,0 +1,223 @@
+# Two-module special control
+
+## Summary
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0005` | Project identity |
+| Technical description | Two-module configurable special-function SCS control | Catalogue + official technical sheet |
+| Catalogue item | `1524` - “Special control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `16` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `146` | Implementation evidence |
+| Declared Modules | 2 | Implementation evidence |
+| Categories | Command, Multifunction, Lighting, Automation, Scenario, Audio / Video | Capability model |
+
+This technical definition covers the shared catalogue capability core used by 13 commercial Device records. The official `MQ00285-d-EN` technical sheet directly covers `067553`, `H4651M2`, `L4651M2`, and `AM5831M2`. The other records remain catalogue-correlated commercial identities pending individual document review.
+
+## Commercial identities
+
+### Directly documented references
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino Axolute | `H4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino L/N/NT | `L4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino Matix | `AM5831M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| Legrand Céliane | `067553` | Established identity | Catalogue + `MQ00285-d-EN` |
+
+### Additional commercial records sharing item 1524
+
+| Brand / line | References | Status |
+| --- | --- | --- |
+| Arnould Espace Evolution | `64162`, `64362` | Shared technical item; individual product-document review pending |
+| Legrand Arteor | `571849`, `573987` | Shared technical item; individual product-document review pending |
+| Legrand Céliane | `067242` | Shared technical item; individual product-document review pending |
+| Legrand Mosaic | `078472`, `078475`, `079172`, `079175` | Shared technical item; individual product-document review pending |
+
+## Documentation
+
+| Document | Type | Revision / date | Coverage | Status | Source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00285-d-EN` - Special control | Technical sheet | 09/06/2014 | `067553`, `H4651M2`, `L4651M2`, `AM5831M2` | Official source identified; archival copy pending | [Official PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00285-d-EN.pdf) |
+
+The nine-page sheet is unusually valuable because it documents several otherwise unrelated functional systems exposed by the same configurable control.
+
+## Physical characteristics
+
+For the four named references, the official sheet establishes:
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting size | 2 flush-mounted modules | Official technical sheet |
+| Controls | 4 buttons | Official technical sheet |
+| Indicators | two-colour LEDs with local brightness/off adjustment | Official technical sheet |
+| SCS nominal supply | `27 Vdc` | Official technical sheet |
+| SCS operating supply | `18..27 Vdc` | Official technical sheet |
+| Maximum LED-brightness current | `6 mA` H4651M2; `7.5 mA` 067553; `8.5 mA` L4651M2 and AM5831M2 | Official technical sheet |
+| Operating temperature | `5..35 °C` | Official technical sheet |
+| Physical configurator positions | `A`, `PL/PF`, `M`, `LIV1/AUX`, `LIV2`, `SPE`, `I` | Official technical sheet |
+
+The seven documented configurator positions strongly support the ordinary diagnostic interpretation `N_CONF = 7`, but a known-hardware observation is still required before marking that value as corroborated.
+
+## Identity and firmware
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1524` | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `16` | Implementation evidence |
+| System | Lighting / Automation | Implementation evidence |
+| Firmware | `146` | Implementation evidence |
+| Firmware version | `-1.-1.-1` | Implementation evidence |
+| Firmware slots | `2` | Implementation evidence |
+
+Commercial brand/line values vary across the 13 records, so `modobj = 16` identifies the shared item rather than one SKU.
+
+## Module and Object model
+
+Firmware `146` exposes two configurable Modules and a broad set of Object alternatives.
+
+| Object | Description | Slots |
+| ---: | --- | --- |
+| `400` | Light control | `1`, `2` |
+| `401` | Automation control | `1`, `2` |
+| `402` | Lock/unlock actuator control | `1`, `2` |
+| `403` | Scenario module control | `1`, `2` |
+| `404` | Scheduled scenario | `1`, `2` |
+| `405` | Scenario PLUS Lighting Management | `1`, `2` |
+| `406` | Scheduled scenario PLUS | `1`, `2` |
+| `408` | Open lock control | `1`, `2` |
+| `409` | Sound diffusion control | `1` |
+| `427` | Floor call control | `1`, `2` |
+| `430` | Staircase light control | `1`, `2` |
+
+Virgin Object `501`, **Special double command virgin**, applies to both slots and permits all Objects above plus Object `407` AUX control.
+
+The broad Object set explains why this Device belongs to several functional categories despite being one Physical Device.
+
+## Configuration modes
+
+The catalogue declares:
+
+- Physical configuration
+- Virtual Configuration
+- Advanced Configuration
+
+The official sheet independently documents physical configuration and MyHOME Suite virtual configuration.
+
+## Firmware-scoped configuration
+
+| Field | Catalogue domain | Purpose |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A` | `0..9`, `GEN=12`, `GR=13`, `AMB=14`, `AUX=15` | environment/address scope |
+| `PL/PF` | `0..9` | lighting/audio point |
+| `M` | `0..8`, `O/I=9`, `OFF=10`, `ON=11`, `UP/DOWN=12`, `UP/DOWN monostable=13`, `CEN=14`, `PUL=15`, plus a second stored literal `9` entry | base mode |
+| `LIV1/AUX` | `0..9` | level / AUX physical field |
+| `LIV2` | `0..9` | second level field |
+| `SPE` | `0,1,2,3,6,8,9,ON(11)` | special-function selector |
+| `I` | `0..9` | automation interface address |
+
+The duplicate stored `M` value `9` - one row labelled `O/I` and another labelled `9` - is retained as a canonical database irregularity. It must not be silently deduplicated without context.
+
+The official sheet uses `A=1..9` and `PL=1..9` for ordinary physical point-to-point addressing while virtual configuration extends the logical ranges.
+
+## Device-specific function selection
+
+The condition matrix is substantially richer than for the basic control. Major selection families include:
+
+| Selector family | Resulting Object/function |
+| --- | --- |
+| `SPE=0` with ordinary lighting modes | `400` Light control |
+| `UP/DOWN` / monostable automation modes | `401` Automation control |
+| `SPE=1` with specific `M` values | `402` Lock/unlock actuator control and timed/special lighting variants |
+| `SPE=4` or `6` branches | `403` Scenario module control |
+| `M=CEN` | `404` Scheduled scenario |
+| stored `FAKE` branch | `405` / `406` PLUS scenario alternatives |
+| `SPE=7` branches | `408` Open lock, `427` Floor call, or `430` Staircase light control according to mode |
+| `SPE=8` | `409` Sound diffusion control |
+| AUX capability | `407` AUX control through Virgin Object `501` |
+
+The raw matrix also contains implementation condition strings with trailing separators and selectors that exist only in the conversion model. Preserve them as source data. Generic condition and conversion evaluation belongs in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+## Reusable Object configuration surfaces
+
+The reachable Objects expose the following major reusable parameter groups:
+
+| Object | Principal configuration surface |
+| ---: | --- |
+| `400` Light control | mode; point/area/group/general address; installation/destination level; reference address; timed/dimmer parameters; AUX input |
+| `401` Automation control | bistable/monostable/blades mode; address scope; installation/destination level; reference address; AUX input |
+| `402` Lock/unlock actuator control | disable/enable mode; address scope; installation/destination level; AUX input |
+| `403` Scenario module control | activation/edit mode and encoded scenario-module address |
+| `404` Scheduled scenario | `A`, `PL`, button `0..31`, AUX input, restart delay |
+| `405` Scenario PLUS Lighting Management | two scenario/delay fields, regulation type, per-button delay values |
+| `406` Scheduled scenario PLUS | scenario number low/high fields and two button numbers |
+| `407` AUX control | command mode, AUX output `1..15`, AUX input `0..15` |
+| `408` Open lock control | external-unit address `0..95`, segment, AUX input |
+| `409` Sound diffusion control | point/area/general address, audio point, follow-me, source, AUX input |
+| `427` Floor call control | point/general call type, internal-unit address, segment, AUX input |
+| `430` Staircase light control | internal-unit address, segment, AUX input |
+
+Large enumerations such as encoded scenario addresses and delay tables remain machine-extractable from the canonical database. The Device page records their complete semantic domains without duplicating hundreds of mechanically repetitive rows.
+
+## Published function details
+
+The official sheet independently documents the Device as supporting:
+
+- lighting control, including timed and dimming variants;
+- automation control;
+- Device locking/unlocking;
+- scenario module control;
+- programmed scenarios;
+- PLUS programmed scenarios;
+- video door-entry functions;
+- sound-system control.
+
+It also documents use across SCS/SCS interfaces, distinguishing installation and destination levels. Those concepts correspond to reusable Object fields such as `INST_LEV` and `DEST_LEV`.
+
+Generic frame syntax belongs in the relevant functional sections rather than here.
+
+## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 16`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe physical firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3`, `6`, `13` | hardware, microcontroller, Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine selected Objects on the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+## Functional applicability
+
+Depending on configuration, this Device crosses multiple OpenWebNet domains. The Device definition establishes that those roles can exist on this hardware; the linked functional references remain authoritative for wire semantics.
+
+- [WHO 1 - Lighting](../../functional/who-1-lighting/)
+- [WHO 2 - Automation](../../functional/who-2-automation/)
+- scenario/CEN behavior
+- sound diffusion
+- video door-entry related control
+- AUX/transversal control
+
+## Programming
+
+A correct programmer must evaluate `SPE`, `M`, address-scope fields, level/interface fields, and the associated condition/conversion graph before selecting an Object. It must not treat “Special control” as one fixed Object.
+
+See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
+
+## Corroboration status and open work
+
+- Archive and hash `MQ00285-d-EN`, language variants, and any earlier/later revisions.
+- Locate authoritative product sheets for the other nine records sharing item `1524`.
+- Capture known hardware to corroborate `modobj`, expected physical configurator count, firmware, Object projection, addressing, and configuration.
+- Review every condition/conversion branch against the published function tables, preserving mismatches or implementation-only branches.
+- Determine the exact commercial/package relationships across Arnould, BTicino, Legrand Arteor, Céliane, and Mosaic records.
+
+## Sources
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
