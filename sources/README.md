@@ -11,9 +11,9 @@ Files under `sources/` are preserved as original evidence. They must not be modi
 ## Source sets
 
 - `myhome-suite/3.5.38/` - files copied unmodified from MyHOME Suite 3.5.38.
-- `openwebnet-public/` - publicly distributed OpenWebNet protocol documentation.
+- `openwebnet-public/` - publicly distributed OpenWebNet protocol documentation.\n- `devices/` - inventory and, where appropriate, canonical copies of device-specific official documentation.
 
-The MyHOME Suite installer is fingerprinted in the manifest for provenance but is not redistributed in this repository.
+The MyHOME Suite installer is fingerprinted in the manifest for provenance but is not redistributed in this repository. Device documents whose redistribution status is uncertain may likewise be inventoried without committing the original binary; see [Device Sources](devices/).
 
 ## Private evidence
 

@@ -12,7 +12,7 @@ The encyclopedia covers SCS, ZigBee-backed systems, catalogue data, configuratio
 | [Functional Protocol](functional/) | Functional OpenWebNet systems organized by `WHO` |
 | [Diagnostics](diagnostics/) | Physical Device discovery, interview, diagnostic operations, and diagnostic `DIMENSION` values |
 | [Programming](programming/) | Physical Device and Object configuration and programming workflows |
-| [Device Model](device-model/) | Physical Device → Firmware → Module → Object → Configuration model |
+| [Device Model](device-model/) | Physical Device → Firmware → Module → Object → Configuration model |\n| [Devices](devices/) | Product-specific identity, firmware, functions, configuration, constraints, and evidence |
 | [Practical Guides](guides/) | Practical guides providing complete paths from raw frames and high-level goals to presentable data, validated programming, and verification |
 | [Scenario Engine](scenario-engine/) | MyHOME Suite scenario capability and execution model |
 | [MyHOME Suite Internals](internals/) | MyHOME Suite implementation details relevant to the protocol |
