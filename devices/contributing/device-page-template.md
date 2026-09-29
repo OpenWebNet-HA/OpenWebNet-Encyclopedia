@@ -6,7 +6,7 @@
 
 | Field | Value |
 | --- | --- |
-| Device ID | `ODL-xxxx` |
+| Device ID | `OWN-DEV-xxxx` |
 | Technical description | |
 | Categories | |
 | Documentation status | |
