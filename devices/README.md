@@ -10,6 +10,7 @@ It complements the [Device Model](../device-model/), which defines the abstract 
 | --- | --- |
 | [Complete Device Index](index.md) | Ctrl-F-friendly lookup of every known brand / SKU identity and synonym |
 | [Database Inventory](inventory/) | Mechanically extracted catalogue backlog: all commercial records and shared technical-item clusters |
+| [Work Queue](work-queue.md) | Curated review state and next actions for the 210 technical-item clusters |
 | [Device Coverage](coverage.md) | Documentation and research completeness across known Device definitions |
 | [Device Definitions](definitions/) | Canonical technical Device pages |
 | [Categories](categories/) | Many-to-many browsing by functional category |

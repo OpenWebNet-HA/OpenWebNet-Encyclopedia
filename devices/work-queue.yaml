@@ -1,0 +1,2956 @@
+version: 1
+source:
+  mhcatalogue_sha256: f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
+items:
+  '1':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '3':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '4':
+    state: triaged
+    priority: high
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '12':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '17':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '20':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '23':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '25':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '28':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '31':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '33':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '34':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '35':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '37':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '39':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '40':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '45':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '47':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '48':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '49':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '50':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '51':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '52':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '53':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '54':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '55':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '56':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '57':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '58':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '59':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '60':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '61':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '63':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '66':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '71':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '79':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '80':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '81':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '84':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '85':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '86':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '88':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '89':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '90':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '94':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '98':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '128':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '130':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '134':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '137':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '139':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '140':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '141':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '160':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '168':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '207':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '281':
+    state: triaged
+    priority: high
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '291':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '402':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '912':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '913':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '914':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '916':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '925':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '975':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1031':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1076':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1078':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1104':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1121':
+    state: triaged
+    priority: high
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1122':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1123':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1130':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1147':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1156':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1160':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1162':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1163':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1164':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1165':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1169':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1171':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1175':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1177':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1178':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1180':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1184':
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0003
+    review:
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: pending
+      definition: partial
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes:
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+  '1190':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1191':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1195':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1311':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1331':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1340':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1376':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1423':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1440':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1455':
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0002
+    review:
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: pending
+      definition: complete
+      hardware_corroboration: partial
+      final_review: pending
+    blockers: []
+    notes:
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+  '1459':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1460':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1461':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1463':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1465':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1469':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1470':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1471':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1475':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1487':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1488':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1489':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1493':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1509':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1510':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1511':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1512':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1515':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1516':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1520':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1524':
+    state: triaged
+    priority: high
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1525':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1554':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1556':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1559':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1563':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1566':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1570':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1571':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1579':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1582':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1586':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1593':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1594':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1595':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1596':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1597':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1599':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1602':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1657':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1672':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1678':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1679':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1680':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1681':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1683':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1684':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1685':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1686':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1689':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1690':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1691':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1698':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1768':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1771':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1804':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1809':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1812':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1814':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1819':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1834':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1847':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1852':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1854':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1856':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1859':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1862':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1864':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1872':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1884':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1885':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1898':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '1902':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2064':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2065':
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0001
+    review:
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: pending
+      definition: complete
+      hardware_corroboration: partial
+      final_review: pending
+    blockers: []
+    notes:
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+  '2115':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2131':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2134':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2147':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2162':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2180':
+    state: triaged
+    priority: high
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2193':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2198':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2205':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2208':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2214':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2233':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2237':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2242':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2243':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2245':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2247':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2248':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2266':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2268':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2269':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2272':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2273':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2275':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2276':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2279':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2283':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2288':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2293':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2301':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2307':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2309':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2310':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2311':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2321':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2335':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
+  '2341':
+    state: unreviewed
+    priority: normal
+    outcome: null
+    review:
+      commercial_identities: pending
+      database_extraction: complete
+      documentation_discovery: pending
+      documentation_archive: pending
+      definition: pending
+      hardware_corroboration: pending
+      final_review: pending
+    blockers: []
+    notes: []
