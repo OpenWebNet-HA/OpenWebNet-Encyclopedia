@@ -2,7 +2,7 @@
 
 The MyHOME device model describes how one physical product exposes configurable functions to MyHOME_Suite and to the diagnostic, programming, and functional protocols.
 
-It is the canonical owner of entity definitions and catalogue relationships. Product-specific application of this model belongs in [Devices](../devices/). The cross-area distinction between catalogue capability, installed state, runtime control, and programming is defined in [OpenWebNet Scope and Architecture](../protocol/scope-and-architecture.md).
+It is the canonical owner of entity definitions and catalogue relationships. The cross-area distinction between catalogue capability, installed state, runtime control, and programming is defined in [OpenWebNet Scope and Architecture](../protocol/scope-and-architecture.md).
 
 The canonical hierarchy used throughout this documentation is:
 

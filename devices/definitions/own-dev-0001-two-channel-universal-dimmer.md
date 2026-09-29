@@ -61,6 +61,16 @@ The 2018 technical sheet establishes the following product-specific characterist
 
 The current BTicino product page also lists the Device as a 4-module, 27 Vdc MyHOME dimmer with an 18 mA bus current. Historical and current documents should both be preserved because product-sheet wording and supported-load guidance can change between revisions.
 
+### Revision-specific hardware evidence
+
+Later instruction sheet `LE07383AD` introduces material that must remain revision-scoped:
+
+- Devices from production batch `23W16` use a revised light-level adjustment and may produce different brightness levels from earlier production batches at the same nominal setting.
+- Its load table differs from the older 2018 `MQ01019_a_EN` technical sheet, including lower printed per-channel wattage/VA figures for the shown supply cases.
+- The current BTicino catalogue page contains structured metadata that can conflict with its own narrative description, so generic catalogue fields must not override Device-specific technical documentation.
+
+These differences are archival evidence that F418U2 documentation and product behavior changed over time. Do not collapse the revisions into one timeless specification.
+
 ## Identity
 
 ### Catalogue identity
