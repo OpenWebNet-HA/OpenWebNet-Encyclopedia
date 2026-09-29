@@ -34,8 +34,8 @@ The source archive should retain every distinct revision found for this Device. 
 | --- | --- | --- | --- | --- |
 | `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
 | `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
-| `LE07383AC` | Instruction sheet | Historical revision | Official source identified, archival copy pending | Device source inventory |
-| `LE07383AD` | Instruction sheet | 07/23 | Official source identified, archival copy pending | Device source inventory |
+| `LE07383AC` | Instruction sheet | Historical revision | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
+| `LE07383AD` | Instruction sheet | 07/23 | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
 | `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 | `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 
