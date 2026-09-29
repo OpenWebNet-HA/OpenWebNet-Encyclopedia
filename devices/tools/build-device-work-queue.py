@@ -37,7 +37,7 @@ def fresh_entry():
       "state":"unreviewed","priority":"normal","outcome":None,
       "review":{
         "commercial_identities":"pending",
-        "database_extraction":"complete",
+        "database_extraction":"pending",
         "documentation_discovery":"pending",
         "documentation_archive":"pending",
         "definition":"pending",
@@ -123,7 +123,7 @@ def dashboard(data):
         lines.append(f"| {state} | {counts[state]} |")
     lines += [
       "",f"Total: **{len(data['items'])}** technical-item clusters.","",
-      "Database extraction is mechanically complete for every cluster in this catalogue revision. The queue tracks the human work required to turn those source records into reviewed Device definitions.","",
+      "Database extraction is mechanically available for every cluster in this catalogue revision. The queue tracks when that source material has actually been reviewed and integrated into a Device definition.","",
       "## Next work","",
       "| Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Hardware | Blockers |",
       "| --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- |"
