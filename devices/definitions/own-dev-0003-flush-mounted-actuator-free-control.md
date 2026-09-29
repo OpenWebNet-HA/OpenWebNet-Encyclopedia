@@ -9,7 +9,7 @@
 | Categories | Actuator, Command, Multifunction, Lighting, Automation |
 | Documentation status | Partial |
 
-Legrand 64391 is a combined Device: it contains actuator capability and independently configurable command/scenario capability in one Physical Device.
+Arnould (LegrandGroup) 64391 is a combined Device: it contains actuator capability and independently configurable command/scenario capability in one Physical Device.
 
 The canonical MyHOME Suite catalogue resolves SKU `64391` to shared item `1184`, “Flush mounted actuator and free control”, item model `107`, and firmware definition `157`.
 
@@ -17,7 +17,7 @@ The canonical MyHOME Suite catalogue resolves SKU `64391` to shared item `1184`,
 
 | Brand | SKU / reference | Region / line | Relationship | Evidence |
 | --- | --- | --- | --- | --- |
-| Legrand | 64391 | Espace Evo | Established identity | Canonical catalogue and MyHOME Suite product/function documentation |
+| Arnould (LegrandGroup) | 64391 | Espace Evolution | Established identity | Canonical catalogue and MyHOME Suite product/function documentation |
 
 ### Related catalogue records
 
@@ -27,7 +27,7 @@ That shared capability model is not, by itself, treated here as proof that `6419
 
 ## Documentation
 
-A canonical publisher-hosted PDF specifically for 64391 has not yet been archived. The following source leads are already useful.
+A canonical publisher-hosted PDF specifically for 64391 has not yet been archived. Historical Espace Evolution material places the reference under Arnould within LegrandGroup; the page therefore preserves that commercial branding instead of flattening it to the parent group name. The following source leads are already useful.
 
 | Document / source | Type | Revision / date | Language | Archived original | Source |
 | --- | --- | --- | --- | --- | --- |

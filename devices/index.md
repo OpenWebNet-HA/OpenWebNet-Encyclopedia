@@ -19,7 +19,7 @@ Use Ctrl-F to search for the exact brand, SKU, catalogue number, or commercial r
 | --- | --- | --- | --- | --- | --- |
 | BTicino | F418U2 | MyHOME | Established identity | [OWN-DEV-0001 - Two-channel universal dimmer](definitions/own-dev-0001-two-channel-universal-dimmer.md) | Two-channel DIN dimmer |
 | BTicino | F454 | MyHOME | Established identity | [OWN-DEV-0002 - Audio/video web server and OpenWebNet gateway](definitions/own-dev-0002-audio-video-web-server-gateway.md) | Gateway identity observed directly |
-| Legrand | 64391 | Espace Evo | Established identity | [OWN-DEV-0003 - Flush-mounted two-relay actuator and free control](definitions/own-dev-0003-flush-mounted-actuator-free-control.md) | Combined actuator + command Device |
+| Arnould (LegrandGroup) | 64391 | Espace Evolution | Established identity | [OWN-DEV-0003 - Flush-mounted two-relay actuator and free control](definitions/own-dev-0003-flush-mounted-actuator-free-control.md) | Combined actuator + command Device |
 
 The **Relationship** column describes the status of the commercial identity with respect to the linked technical Device definition, for example **Established identity**, **Equivalent commercial identity**, **Candidate equivalent**, or **Distinct variant**.
 

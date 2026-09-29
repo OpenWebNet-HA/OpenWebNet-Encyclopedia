@@ -27,6 +27,6 @@ Use **Complete**, **Partial**, **Unknown**, or **Not applicable** where a simple
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `OWN-DEV-0001` | Two-channel universal dimmer | BTicino F418U2 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
 | `OWN-DEV-0002` | Audio/video web server and OpenWebNet gateway | BTicino F454 | Complete | Partial | Partial | Partial | Partial | Partial | Partial |
-| `OWN-DEV-0003` | Flush-mounted two-relay actuator and free control | Legrand 64391 | Complete | Partial | Partial | Unknown | Partial | Partial | Partial |
+| `OWN-DEV-0003` | Flush-mounted two-relay actuator and free control | Arnould (LegrandGroup) 64391 | Complete | Partial | Partial | Unknown | Partial | Partial | Partial |
 
 These first definitions are intentionally incomplete worked examples. Their gaps are retained visibly so that the structure can be evaluated before large-scale Device ingestion.
