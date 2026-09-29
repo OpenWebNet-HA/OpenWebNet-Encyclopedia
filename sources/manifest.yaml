@@ -292,3 +292,93 @@ source_sets:
       publisher: BTicino
       language: EN
       publication_date: unknown
+    - id: device-doc-touch-multifunction-lg00045-b-uk
+      path: devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf
+      original_filename: LG00045_b_UK.pdf
+      type: pdf
+      size: 352173
+      sha256: 9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf
+      publisher: Legrand
+      language: EN
+      publication_date: unknown
+    - id: device-doc-touch-multifunction-u3300b
+      path: devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf
+      original_filename: U3300B.pdf
+      type: pdf
+      size: 1382421
+      sha256: bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf
+      publisher: Legrand
+      language: Multilingual
+      publication_date: unknown
+    - id: device-doc-myhome-catalogue-hpml0714
+      path: devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf
+      original_filename: BR-MyHOME-HPML0714.pdf
+      type: pdf
+      size: 7211688
+      sha256: 138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5
+      source_url: https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf
+      publisher: Legrand
+      language: EN
+      publication_date: '2014'
+    - id: device-doc-myhomeserver1-compatible-st00001031-en
+      path: devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf
+      original_filename: ST-00001031-EN.pdf
+      type: pdf
+      size: 176262
+      sha256: 14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf
+      publisher: Legrand
+      language: EN
+      publication_date: unknown
+    - id: device-doc-pirus-mq00473-f-en
+      path: devices/documents/device-doc-pirus-mq00473-f-en/MQ00473-f-EN.pdf
+      original_filename: MQ00473-f-EN.pdf
+      type: pdf
+      size: 319403
+      sha256: 9c4fc06a61797a3cd4f1b16ad4254b419d6e1adaf51e28c374a2bd793af4b748
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2014-06-09'
+    - id: device-doc-pirus-mq00473-f-fr
+      path: devices/documents/device-doc-pirus-mq00473-f-fr/MQ00473-f-FR.pdf
+      original_filename: MQ00473-f-FR.pdf
+      type: pdf
+      size: 323333
+      sha256: d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: '2014-04-22'
+    - id: device-doc-pirus-st00001844-en
+      path: devices/documents/device-doc-pirus-st00001844-en/ST-00001844-EN.pdf
+      original_filename: ST-00001844-EN.pdf
+      type: pdf
+      size: 390169
+      sha256: ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2024-08-12'
+    - id: device-doc-pirus-st00001844-fr
+      path: devices/documents/device-doc-pirus-st00001844-fr/ST-00001844-FR.pdf
+      original_filename: ST-00001844-FR.pdf
+      type: pdf
+      size: 394089
+      sha256: 1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: '2024-08-12'
+    - id: device-doc-pirus-le15098aa
+      path: devices/documents/device-doc-pirus-le15098aa/LE15098AA.pdf
+      original_filename: LE15098AA.pdf
+      type: pdf
+      size: 296332
+      sha256: 8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf
+      publisher: Legrand
+      language: Multilingual
+      publication_date: unknown

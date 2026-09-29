@@ -11,6 +11,7 @@ A Device may appear in several categories at the same time.
 | Actuators | [Actuators](actuators.md) |
 | Commands | [Commands](commands.md) |
 | Multifunction Devices | [Multifunction Devices](multifunction-devices.md) |
+| Sensors | [Sensors](sensors.md) |
 | Gateways and Interfaces | [Gateways and Interfaces](gateways-and-interfaces.md) |
 
 Additional likely categories include Sensors, Thermoregulation, Burglar Alarm, Energy Management, Scenarios, and Audio / Video.
