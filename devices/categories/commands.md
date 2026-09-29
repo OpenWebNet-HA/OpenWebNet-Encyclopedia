@@ -8,3 +8,5 @@
 | [OWN-DEV-0006](../definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md) | 7-record zero-crossing actuator/control family | Two-module zero-crossing actuator and control | Local and remote lighting/automation/scenario command roles |
 | [OWN-DEV-0007](../definitions/own-dev-0007-three-module-basic-control.md) | 6-record three-module Basic control family | Three-module basic control | Three independently addressed lighting/automation/scenario command Modules |
 | [OWN-DEV-0009](../definitions/own-dev-0009-four-zone-touch-multifunction-control.md) | 15-record Touch control family | Four-zone touch multifunction control | Four configurable command Modules plus UI settings |
+| [OWN-DEV-0011](../definitions/own-dev-0011-scenario-control.md) | 10-record Scenario control cluster | Scenario control | Scenario module, CEN and PLUS scenario commands |
+| [OWN-DEV-0012](../definitions/own-dev-0012-four-channel-ir-receiver.md) | 8-record IR receiver cluster | Four-channel IR receiver | Four IR command channels with mode-dependent functions |
