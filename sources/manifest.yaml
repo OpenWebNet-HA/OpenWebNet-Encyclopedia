@@ -382,3 +382,63 @@ source_sets:
       publisher: Legrand
       language: Multilingual
       publication_date: unknown
+    - id: device-doc-scenario-control-mq00288-c-en
+      path: devices/documents/device-doc-scenario-control-mq00288-c-en/MQ00288-c-EN.pdf
+      original_filename: MQ00288-c-EN.pdf
+      type: pdf
+      size: 305744
+      sha256: 303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2014-06-09'
+    - id: device-doc-scenario-control-mq00288-c-fr
+      path: devices/documents/device-doc-scenario-control-mq00288-c-fr/MQ00288-c-FR.pdf
+      original_filename: MQ00288-c-FR.pdf
+      type: pdf
+      size: 308619
+      sha256: 6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: unknown
+    - id: device-doc-scenario-control-u3327b
+      path: devices/documents/device-doc-scenario-control-u3327b/U3327B.pdf
+      original_filename: U3327B.pdf
+      type: pdf
+      size: 3981103
+      sha256: 3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf
+      publisher: Legrand
+      language: Multilingual
+      publication_date: unknown
+    - id: device-doc-ir-receiver-mq00071-d-en
+      path: devices/documents/device-doc-ir-receiver-mq00071-d-en/MQ00071-d-EN.pdf
+      original_filename: MQ00071-d-EN.pdf
+      type: pdf
+      size: 82318
+      sha256: 2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2014-06-05'
+    - id: device-doc-ir-receiver-mq00071-d-fr
+      path: devices/documents/device-doc-ir-receiver-mq00071-d-fr/MQ00071-d-FR.pdf
+      original_filename: MQ00071-d-FR.pdf
+      type: pdf
+      size: 84586
+      sha256: 583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: unknown
+    - id: device-doc-ir-receiver-mq00071-d-it
+      path: devices/documents/device-doc-ir-receiver-mq00071-d-it/MQ00071-d-IT.pdf
+      original_filename: MQ00071-d-IT.pdf
+      type: pdf
+      size: 82636
+      sha256: ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf
+      publisher: Legrand / BTicino
+      language: IT
+      publication_date: unknown

@@ -103,4 +103,30 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 | Legrand | 078486 | Documented commercial reference | [OWN-DEV-0010 - PIR+US daylight and presence sensor](definitions/own-dev-0010-pir-us-daylight-presence-sensor.md) | Covered by ST-00001844-EN |
 | Legrand | 574048 | Documented commercial reference | [OWN-DEV-0010 - PIR+US daylight and presence sensor](definitions/own-dev-0010-pir-us-daylight-presence-sensor.md) | Covered by ST-00001844-EN |
 | Legrand | 574098 | Documented commercial reference | [OWN-DEV-0010 - PIR+US daylight and presence sensor](definitions/own-dev-0010-pir-us-daylight-presence-sensor.md) | Covered by ST-00001844-EN |
+| BTicino Axolute | HC4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| BTicino Axolute | HS4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| BTicino Axolute | HD4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| BTicino L/N/NT | L4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| BTicino L/N/NT | N4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| BTicino L/N/NT | NT4680 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Arteor | 573902 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Arteor | 573903 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Arteor | 574503 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Arteor | 574504 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Céliane | 067217 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Céliane | 067218 | Established identity | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Named by MQ00288-c-EN |
+| Legrand Mosaic | 078478 | Shared technical item; product-document review pending | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Item 402 |
+| Legrand Mosaic | 079178 | Shared technical item; product-document review pending | [OWN-DEV-0011 - Scenario control](definitions/own-dev-0011-scenario-control.md) | Item 402 |
+| BTicino Axolute | HC4654 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino Axolute | HS4654 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino Axolute | HD4654 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino L/N/NT | L4654N | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino L/N/NT | N4654N | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino L/N/NT | NT4654N | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| BTicino Matix | AM5834 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| Legrand Arteor | 573900 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| Legrand Arteor | 573901 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| Legrand Céliane | 067216 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
+| Legrand Mosaic | 078465 | Shared technical item; product-document review pending | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Item 37 |
+| Legrand Mosaic | 079265 | Shared technical item; product-document review pending | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Item 37 |
 The **Relationship** column describes how a commercial reference maps onto the technical Device definition. It does not select one SKU as authoritative. “Shared technical item” is catalogue evidence and remains weaker than a direct product-document or hardware equivalence.
