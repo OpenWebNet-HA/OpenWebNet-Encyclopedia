@@ -9,8 +9,8 @@
 | Catalogue item | `1469` - “MyHOME_Screen 3.5” | Implementation evidence |
 | Main catalogue system | Integration functions | Implementation evidence |
 | Item model / `modobj` | `30` | Implementation evidence |
-| Firmware families | `1.0.17`, `2.0.3`, `3.0.8/9/10`, `4.0.0` | Implementation evidence |
-| Declared Modules | 1 | Implementation evidence |
+| Firmware definition | `1.0.17`, `2.0.3`, `3.0.8/9/10`, `4.0.0` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Configuration mode | Product Programming | Implementation evidence |
 | Programming connections | Ethernet, USB | Implementation evidence |
 | Categories | User Interface, Integration, Multifunction | Product and capability model |
@@ -34,43 +34,37 @@ The archived technical sheet contains an internal reference discrepancy: its hea
 
 ## Documentation
 
-| Document | Type | Coverage | Archived original |
-| --- | --- | --- | --- |
-| `BT00518_a_EN` | Technical sheet | BTicino MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-bt00518-a-en/BT00518_a_EN.pdf) |
-| `RA00107AC_U_EN` | User guide | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-u-en/RA00107AC_U_EN.pdf) |
-| `RA00107AC_S_FR` | Software manual | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-s-fr/RA00107AC_S_FR.pdf) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `BT00518_a_EN` | Technical sheet | revision/date not yet pinned | BTicino MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-bt00518-a-en/BT00518_a_EN.pdf) | publisher source not currently retained |
+| `RA00107AC_U_EN` | User guide | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-u-en/RA00107AC_U_EN.pdf) | publisher source not currently retained |
+| `RA00107AC_S_FR` | Software manual | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-s-fr/RA00107AC_S_FR.pdf) | publisher source not currently retained |
 
 Direct product sheets for the Legrand commercial variants and additional language revisions remain desirable archival sources.
 
-## Physical and product characteristics
+## Physical and electrical characteristics
 
-The archived technical sheet documents a 3.5-inch touch LCD interface capable of managing multiple MyHOME applications, including:
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Display | 3.5-inch touch LCD | `BT00518_a_EN` |
+| Mounting | documented `3+3` module arrangement | `BT00518_a_EN` + Source reconciliation |
+| SCS nominal supply | `27 Vdc` | `BT00518_a_EN` |
+| SCS operating supply | `18..27 Vdc` | `BT00518_a_EN` |
+| Current draw | approximately `80 mA` | `BT00518_a_EN` |
+| Operating temperature | `0..40 °C` | `BT00518_a_EN` |
+| Interfaces | SCS bus, USB and Ethernet | `BT00518_a_EN` |
 
-- automation;
-- lighting;
-- temperature control;
-- sound diffusion;
-- burglar alarm;
-- energy management;
-- scenarios.
+Programming/configuration is performed with dedicated PC software over the supported local interfaces.
 
-The sheet describes up to 20 actuations per application. It also documents nominal `27 Vdc` SCS supply, an `18..27 Vdc` operating range, approximately `80 mA` absorption, `0..40 °C` operating temperature, USB and Ethernet interfaces, and SCS bus connection.
+## Identity
 
-Programming/configuration is performed with the dedicated PC software over supported local interfaces.
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1469` | Implementation evidence |
+| Main system | Integration functions | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `30` | Implementation evidence |
 
-## Identity and firmware
-
-| Field | Value |
-| --- | --- |
-| `EN_ITEM.id_item` | `1469` |
-| system | Integration functions |
-| `AS_ITEM_SYSTEM.modobj` | `30` |
-| slot count | 1 |
-| Object | `32` Colors Touch Screen |
-| configuration mode | Product Programming |
-| connection modalities | Ethernet, USB |
-
-### Catalogue firmware applicability
+## Firmware and hardware
 
 | Catalogue firmware | Version | Builds | Localization level | Default |
 | --- | --- | --- | ---: | ---: |
@@ -81,26 +75,81 @@ Programming/configuration is performed with the dedicated PC software over suppo
 
 All four firmware definitions expose the same one-Object topology and the same catalogue configuration surface.
 
-## Module and Object model
+Catalogue applicability does not prove the firmware installed on every commercial variant.
 
-Slot `1` is fixed to Object `32`, **Colors Touch Screen**.
+## Module, Object, and Virgin Object model
 
-There are no Virgin Objects and no slot-condition rows.
+| Slot | Object | Description | Relationship |
+| ---: | ---: | --- | --- |
+| `1` | `32` | Colors Touch Screen | fixed |
 
-## Configuration surface
+There is no Virgin Object and no slot-condition row.
 
-Every firmware definition contains the following firmware-scoped fields:
+## Configuration modes
 
-| Field | Stored form | Meaning |
+| Mode / modality | Evidence |
+| --- | --- |
+| Product Programming | implementation evidence + product software documentation |
+| Ethernet programming connection | implementation evidence |
+| USB programming connection | implementation evidence |
+
+## Firmware-scoped configuration
+
+| Field | Domain / stored form | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | identity value | - | implementation Device identity |
+| `LAN_IP_ADDRESS` | IPv4-shaped user value | - | local network address |
+| `FW_VER` | six-character firmware-version value | - | firmware information |
+| `SYSADDRESS` | six-character Univocal code | - | product/system identifier |
+
+Actual IP addresses and installation identifiers are private installation state and must not be copied into the public Device Library from research captures.
+
+## Object configuration surfaces
+
+The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+
+### Object `32` - catalogue configuration
+
+| Surface | Fields | Meaning |
 | --- | --- | --- |
-| `AID` | identity value | implementation Device identity |
-| `LAN_IP_ADDRESS` | IPv4-shaped user value | local network address |
+| Addressing | `LAN_IP_ADDRESS`, `SYSADDRESS` | Local IP address; Univocal code |
+| Object-specific | `FW_VER` | Firmware version |
+
+### Additional Device-specific interpretation
+
+| Field | Domain / stored form | Meaning |
+| --- | --- | --- |
+| `LAN_IP_ADDRESS` | IPv4-shaped user value | network address |
 | `FW_VER` | six-character firmware-version value | firmware information |
-| `SYSADDRESS` | six-character “Univocal code” | product/system identifier |
+| `SYSADDRESS` | six-character Univocal code | product/system identifier |
 
-Object `32` exposes the same network address, firmware-version and univocal-code fields.
+Object `32` exposes the same product-programming identity/network surface except for the firmware-level `AID` identity token.
 
-These fields describe the reusable product-programming model. Actual IP addresses and installation identifiers are private installation state and must not be copied into the public Device Library from research captures.
+## Conditions, filters, and conversions
+
+| Surface | Status | Evidence |
+| --- | --- | --- |
+| Slot conditions | none across the fixed topology | implementation evidence |
+| Virgin Object | none | implementation evidence |
+| Object selection | slot `1` fixed to Object `32` | implementation evidence |
+
+### Catalogue filter references
+
+No filter rows are associated with this Device firmware in the canonical catalogue.
+
+### Catalogue slot-condition references
+
+No slot-condition rows are associated with this Device firmware in the canonical catalogue.
+
+## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | identify item model `30`, brand and line | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe actual installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate one fixed Colors Touch Screen Object | [Modules](../../diagnostics/dim30-modules.md) |
+
+Other diagnostic/programming surfaces should only be claimed after hardware observation or explicit implementation evidence.
 
 ## Functional applicability
 
@@ -108,15 +157,9 @@ The user interface can orchestrate several MyHOME functional systems, but the ca
 
 Generic WHO semantics remain under [Functional Protocol](../../functional/).
 
-## Diagnostic applicability
+## Observed behavior and corroboration
 
-| Surface | Device-specific use | Reference |
-| --- | --- | --- |
-| `DIMENSION 1` | identify item model `30`, brand and line | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | observe actual installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate one fixed Colors Touch Screen Object | [Modules](../../diagnostics/dim30-modules.md) |
-
-Other diagnostic/programming surfaces should only be claimed after hardware observation or explicit implementation evidence.
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
 
 ## Programming
 
@@ -135,7 +178,7 @@ The MyHOME_Screen 3.5 technical/user/software documents establish product detail
 
 The remaining completeness issues concern direct Legrand-variant documentation, the `AM4890`/`AM5890` source discrepancy and hardware fingerprints.
 
-## Corroboration status and open work
+## Evidence limits and open work
 
 - Add sanitized hardware fingerprints across more than one product line.
 - Correlate observed installed firmware with the four catalogue firmware families.

@@ -198,7 +198,7 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
         strict_device_definition = False
         if is_device_definition:
             match = re.match(r"own-dev-(\d{4})-", rel.name)
-            strict_device_definition = bool(match and int(match.group(1)) >= 21)
+            strict_device_definition = bool(match and int(match.group(1)) >= 11)
         if is_device_definition:
             if "## Source reconciliation" not in text:
                 objective.append(f"DEVICE_SOURCE_RECONCILIATION {rel}: missing ## Source reconciliation")

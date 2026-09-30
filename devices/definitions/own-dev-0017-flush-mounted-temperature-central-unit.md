@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0017` | Project identity |
 | Technical description | Flush-mounted four-zone temperature-control central unit | Catalogue + official documentation |
-| Catalogue item | 168 - Flush mounted temperature central unit | Implementation evidence |
+| Catalogue item | `168` - Flush mounted temperature central unit | Implementation evidence |
 | Main catalogue system | Temperature control | Implementation evidence |
 | Item model / `modobj` | `48` | Implementation evidence |
 | Firmware definition | `1.0 build 35` | Implementation evidence |
@@ -33,31 +33,36 @@ Shared item membership establishes the common catalogue capability core. It does
 
 ## Documentation
 
-| Document | Coverage | Status |
-| --- | --- | --- |
-| `U1809F_U_EN` | 4695 user operation and temperature-control behavior | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf) |
-| `U1809C_Installatore_UK` | 4695 installation and commissioning | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf) |
-| `U1809B_Software_GB` | TiThermoBasic programming / firmware workflow | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf) |
-| MyHOME catalogue `HPML0714` | System-level temperature-control context only; the `4695` family is not named. Related Arteor central units `573918` / `573919` occur on printed pp. 16, 24, 32 / PDF pp. 16, 24, 32 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `U1809F_U_EN` | User guide | revision/date not yet pinned | 4695 user operation and temperature-control behavior | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf) | publisher source not currently retained |
+| `U1809C_Installatore_UK` | Installation / commissioning manual | revision/date not yet pinned | 4695 installation and commissioning | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf) | publisher source not currently retained |
+| `U1809B_Software_GB` | Software manual | revision/date not yet pinned | TiThermoBasic programming / firmware workflow | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf) | publisher source not currently retained |
+| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | System-level temperature-control context only; the `4695` family is not named. Related Arteor central units `573918` / `573919` occur on printed pp. 16, 24, 32 / PDF pp. 16, 24, 32 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | publisher source not currently retained |
 
 The 4695 documentation describes management of a temperature-control system with up to four zones and PC programming through TiThermoBasic. Where an official PDF could not be fetched by the archival runner, the official publisher URL is retained rather than substituting an unofficial mirror.
 
-## Physical and product characteristics
+## Physical and electrical characteristics
 
-The documented 4695 implementation is a three-module flush-mounted user interface for a four-zone temperature-control installation. The front panel provides local display and control while schedules and temperature-control parameters are managed at product level. These user-facing functions are broader than the single catalogue Object: the Object model below records the OpenWebNet capability projection, not every menu or display function.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 3 flush-mounted modules | 4695 installation documentation |
+| User interface | local display and front-panel control | 4695 user / installation documentation |
+| Managed installation | temperature-control system with up to 4 zones | 4695 user / installation documentation |
+| Product programming | TiThermoBasic PC workflow | 4695 software documentation |
+
+The product-level scheduling and zone-management interface is broader than the single fixed OpenWebNet Object.
 
 ## Identity
 
 | Field | Value | Evidence |
 | --- | --- | --- |
 | `EN_ITEM.id_item` | `168` | Implementation evidence |
-| main system | thermoregulation / Temperature control | Implementation evidence |
+| Main system | thermoregulation / Temperature control | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `48` | Implementation evidence |
-| family | `11` | Implementation evidence |
+| Family | `11` | Implementation evidence |
 
-Installed identity should be corroborated with the canonical [Device Identity](../../diagnostics/dim1-device-identity.md) workflow on a known unit.
-
-## Firmware and build applicability
+## Firmware and hardware
 
 The current catalogue has one applicable firmware definition:
 
@@ -67,7 +72,7 @@ The current catalogue has one applicable firmware definition:
 
 Catalogue applicability is not a claim that every surviving commercial variant reports this exact installed build. `DIMENSION 2` remains the authoritative installed-firmware observation when the Device exposes it.
 
-## Module and Object model
+## Module, Object, and Virgin Object model
 
 | Slot | Object | Description | Relationship |
 | ---: | ---: | --- | --- |
@@ -77,35 +82,69 @@ There is no Virgin Object for this firmware. The slot carries condition record `
 
 ## Configuration modes
 
-The catalogue declares all three relevant configuration paths: Physical configuration, Virtual Configuration, and Product Programming. It also declares a Serial programming connection. The product documentation independently establishes the TiThermoBasic product-programming workflow; the catalogue connection label is preserved as implementation terminology rather than expanded into an unsupported connector claim.
+| Mode / modality | Evidence |
+| --- | --- |
+| Physical configuration | catalogue + product documentation |
+| Virtual Configuration | catalogue |
+| Product Programming | catalogue + TiThermoBasic documentation |
+| Serial programming connection | catalogue terminology |
 
 ## Firmware-scoped configuration
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | Device identity field |
-| `ZA` | `0..9` | 0 | first thermoregulation zone digit |
-| `ZB` | `0..9` | 1 | second thermoregulation zone digit |
-| `SLA` | `0..8` | 0 | thermoregulation slave-probe selection |
+| `ZA` | `0..9` | `0` | first thermoregulation zone digit |
+| `ZB` | `0..9` | `1` | second thermoregulation zone digit |
+| `SLA` | `0..8` | `0` | thermoregulation slave-probe selection |
 
 The pair `ZA` / `ZB` is represented separately at firmware level. The reusable control-unit Object exposes the combined two-digit zone as `ZAZB`.
 
-## Reusable Object configuration
+## Object configuration surfaces
+
+The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+
+### Object `90` - catalogue configuration
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ZAZB` | Zone |
+| Sensing / regulation | `WARM`, `COLD` | Winter mode; Summer mode |
+| Object-specific | `SLA` | Slave number |
+
+### Additional Device-specific interpretation
 
 Object `90` exposes:
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `ZAZB` | `00..99` | 01 | zone |
-| `WARM` | `0` Disable / `1` Enable | 0 | winter modality |
-| `COLD` | `0` Disable / `1` Enable | 0 | summer modality |
-| `SLA` | `0..8` | 0 | slave number |
+| `ZAZB` | `00..99` | `01` | zone |
+| `WARM` | `0` Disable / `1` Enable | `0` | winter modality |
+| `COLD` | `0` Disable / `1` Enable | `0` | summer modality |
+| `SLA` | `0..8` | `0` | slave number |
 
 These are catalogue validation domains. They should not be widened from product UI behavior or narrowed from one observed installation without evidence.
 
+## Conditions, filters, and conversions
+
+| Surface | Condition / reference | Interpretation |
+| --- | --- | --- |
+| Slot `1` | condition record `4163` with empty condition | no Device-specific predicate expressed |
+| Conversion | reference `1000` | implementation reference remains unresolved unless matching rule is recovered |
+
+### Catalogue filter references
+
+No filter rows are associated with this Device firmware in the canonical catalogue.
+
+### Catalogue slot-condition references
+
+| Condition | Slot | Object | Predicate | Conversion reference |
+| --- | --- | --- | --- | --- |
+| `4163` | `1` | `90` | empty source condition | `1000` |
+
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
 | `DIMENSION 1` | identify item model / brand / line where exposed | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware instead of assuming catalogue `1.0.35` | [Dimension Reference](../../diagnostics/dimension-reference.md) |
@@ -116,6 +155,10 @@ These are catalogue validation domains. They should not be widened from product 
 ## Functional applicability
 
 The Device belongs to the temperature-control system. The catalogue and product documentation agree on a four-zone control-unit role. Generic `WHO 4` frame grammar belongs in the Functional Protocol section; this page records that the role and configuration surface apply to this Device.
+
+## Observed behavior and corroboration
+
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
 
 ## Programming
 
