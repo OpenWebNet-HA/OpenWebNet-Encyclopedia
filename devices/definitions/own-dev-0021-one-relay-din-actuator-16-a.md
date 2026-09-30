@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0021` | Project identity |
-| Technical description | DIN-rail one-relay lighting actuator with local load control | Catalogue + official automation documentation |
-| Catalogue item / model | `1` / `modobj 137` | Implementation evidence |
-| Firmware applicability | firmware `166`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | DIN-rail one-relay lighting actuator with local load control | Catalogue + official documentation |
 | Commercial identities | `F411/1N`, `003841` | Catalogue |
+| Catalogue item | `1` - “1 relay DIN actuator 16 A” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `137` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `166` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Actuator, Lighting | Capability model |
 
 The shared technical item covers BTicino `F411/1N` and Legrand `003841`.
@@ -24,16 +27,27 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MQ00274-e-EN | Technical sheet | 2014-06-07 | Whole document | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf) |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | F411 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `MQ00274-e-EN` | Technical sheet | 2014-06-07 | `F411/1N` family | [Archived PDF](../../sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00274_e_EN.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-The official guide describes a 2-DIN actuator with one changeover relay and local load-control pushbutton. Its later load table gives `10 A` resistive / `2300 W` at 230 Vac, `500 W` LED, `4 A` linear-fluorescent/electronic-transformer and `4 A cosφ 0.5` ferromagnetic-transformer capability. Older catalogues use the family label 16 A and contain revision-dependent load figures, so load-specific limits are retained instead of treating 16 A as universal. Fluorescent-load guidance requires at least `3 m` between actuator and load.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 DIN modules | `MQ00274-e-EN` / publisher automation documentation |
+| Outputs | 1 changeover relay | Publisher technical documentation |
+| Local interface | load-control pushbutton | Publisher technical documentation |
+| Resistive load at 230 Vac | `10 A` / `2300 W` | Later publisher load table |
+| LED load | `500 W` | Later publisher load table |
+| Linear fluorescent / electronic transformer | `4 A` | Later publisher load table |
+| Ferromagnetic transformer | `4 A`, cos φ `0.5` | Later publisher load table |
+| Fluorescent-load wiring guidance | minimum `3 m` between actuator and load | Publisher technical documentation |
+
+The catalogue/family name retains “16 A”, while later publisher load tables give load-specific limits. The dossier therefore keeps the name and the electrical limits source-scoped instead of treating `16 A` as a universal switching rating.
 
 ## Identity
 
@@ -143,15 +157,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 137`, commercial identity and installed configurator count | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Light-actuator Module/Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured lighting address for the actuator | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M`, `G1`, `G2`, `G3` and reusable Light-actuator configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

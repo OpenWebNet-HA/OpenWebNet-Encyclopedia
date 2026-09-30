@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0022` | Project identity |
 | Technical description | Two-independent-relay DIN actuator for lighting, automation and paired motor loads | Catalogue + official documentation |
-| Catalogue item / model | `2` / `modobj 129` | Implementation evidence |
-| Firmware applicability | firmware `132`, `-1.-1.-1`, two slots | Implementation evidence |
 | Commercial identities | `F411/2`, `003842` | Catalogue |
+| Catalogue item | `2` - “2 relays DIN actuator 10 A” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `129` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `132` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
 | Categories | Actuator, Lighting, Automation, Shutter | Capability model |
 
 ## Commercial identities
@@ -22,16 +25,32 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | F411/2 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
-| BTicino F411/2 | Current product record | current | Whole product page | External official source | [Official source](https://www.bticino.com/products/bt-f411-2) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/2 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| BTicino `F411/2` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-f411-2) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-F411/2 is a 2-DIN, two-relay actuator with local/manual control and LED indication. Current BTicino data gives `27 Vdc`, `28 mA`, `1380 W` maximum switching power, two contacts and `18..27 V` operating voltage. Current product text gives `10 A` resistive, `6 A` filament, `500 W` motor reducers, `2 A cosφ 0.5` ferromagnetic transformers and `250 W` fluorescent loads. Older guides contain lower values for some load classes and remain revision-scoped. The relays can be logically interlocked for motor/shutter use.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 DIN modules | Current BTicino product record |
+| Outputs | 2 relay contacts | Current BTicino product record |
+| Local interface | manual controls with LED indication | Current BTicino product record |
+| SCS nominal supply | `27 Vdc` | Current BTicino product record |
+| SCS operating range | `18..27 Vdc` | Current BTicino product record |
+| Current draw | `28 mA` | Current BTicino product record |
+| Maximum switching power | `1380 W` | Current BTicino product record |
+| Resistive load | `10 A` | Current BTicino product text |
+| Filament load | `6 A` | Current BTicino product text |
+| Motor reducers | `500 W` | Current BTicino product text |
+| Ferromagnetic transformer | `2 A`, cos φ `0.5` | Current BTicino product text |
+| Fluorescent load | `250 W` | Current BTicino product text |
+| Paired motor/shutter use | relay pair can be logically interlocked | Publisher automation documentation |
+
+Historical guides publish lower limits for some load classes; those values remain revision-scoped rather than being silently normalized to the current product record.
 
 ## Identity
 
@@ -158,15 +177,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 129` and the `F411/2` / `003842` family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | enumerate the two relay positions and resolve any Automation/Blind role selection | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the two configured output addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect shared `A` / `M`, `PL1` / `PL2`, interlock-related role selection and Object configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

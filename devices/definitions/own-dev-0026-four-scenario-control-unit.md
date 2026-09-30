@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0026` | Project identity |
-| Technical description | Flush-mounted four-scenario control and storage unit | Catalogue + official automation guide |
-| Catalogue item / model | `20` / `modobj 4` | Implementation evidence |
-| Firmware applicability | firmware `223`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | Flush-mounted four-scenario control and storage unit | Catalogue + official documentation |
 | Commercial identities | `N4681` | Catalogue |
+| Catalogue item | `20` - “Scenario control unit” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `4` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `223` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Scenario control, Automation | Capability model |
 
 ## Commercial identities
@@ -21,15 +24,22 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | N4681 scenario-unit sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | N4681 scenario-unit sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
-## Physical and functional characteristics
+## Physical and electrical characteristics
 
-N4681 exposes four scenario keys with indicator LEDs. The official guide states that previously stored command sequences are activated from those keys and may address actuators outside the unit's own room. Stored scenarios can be modified or deleted.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 wiring-device modules | Publisher `AUTOMATISME.pdf` |
+| Local controls | 4 scenario recall buttons | Publisher `AUTOMATISME.pdf` |
+| Indicators | 4 scenario LEDs | Publisher `AUTOMATISME.pdf` |
+| Physical configurator positions | `A`, `PL`, `M` | Publisher `AUTOMATISME.pdf` |
+
+The guide also documents master/slave scenario-unit behavior through `M`; that is configuration semantics rather than an additional physical characteristic.
 
 ## Identity
 
@@ -125,15 +135,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 4` and the N4681 scenario-unit identity | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single four-scenario control Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured scenario-unit address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL` and the `SCE1` through `SCE4` scenario assignments | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

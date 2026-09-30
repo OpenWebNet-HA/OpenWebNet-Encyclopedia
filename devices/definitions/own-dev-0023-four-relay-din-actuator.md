@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0023` | Project identity |
 | Technical description | Four-independent-relay 2-DIN actuator for lighting and paired automation/motor loads | Catalogue + official documentation |
-| Catalogue item / model | `3` / `modobj 130` | Implementation evidence |
-| Firmware applicability | firmware `142`, `-1.-1.-1`, four slots | Implementation evidence |
 | Commercial identities | `F411/4`, `003844` | Catalogue |
+| Catalogue item | `3` - “4 relay actuator 2 modules DIN bus” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `130` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `142` | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
 | Categories | Actuator, Lighting, Automation, Shutter | Capability model |
 
 ## Commercial identities
@@ -22,16 +25,30 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| ST-00000896-EN | Technical sheet | 2021-03-23 | PDF pp. 1-4 | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-f411-4-st00000896-en/ST-00000896-EN.pdf) |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | F411/4 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `ST-00000896-EN` | Technical sheet | 2021-03-23 | whole document / PDF pp. 1-4 | [Archived PDF](../../sources/devices/documents/device-doc-f411-4-st00000896-en/ST-00000896-EN.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/ST-00000896-EN.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/4 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-Current product data describes four independent relays in two DIN modules, local/manual operation, LED indication, `27 Vdc` nominal supply, `40 mA` input current and `18..27 V` operation. Current load data includes `2 A` rated switching, `500 W` motor reducers, `2 A cosφ 0.5` ferromagnetic transformers and `70 W` fluorescent loads. The technical sheet shows a `10 A` protective breaker for its lighting example and paired motor/shutter wiring. Relays can be logically interlocked.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 DIN modules | `ST-00000896-EN` / current product data |
+| Outputs | 4 independent relays | `ST-00000896-EN` |
+| Local interface | manual operation with LED indication | `ST-00000896-EN` |
+| SCS nominal supply | `27 Vdc` | Current product data |
+| SCS operating range | `18..27 Vdc` | Current product data |
+| Current draw | `40 mA` | Current product data |
+| Rated switching current | `2 A` | Current product data |
+| Motor reducers | `500 W` | Current product data |
+| Ferromagnetic transformer | `2 A`, cos φ `0.5` | Current product data |
+| Fluorescent load | `70 W` | Current product data |
+| Paired motor/shutter use | relay pairs can be logically interlocked | `ST-00000896-EN` |
+
+The technical sheet shows a `10 A` protective breaker in a lighting wiring example; that example is not treated as the relay switching rating.
 
 ## Identity
 
@@ -182,15 +199,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 130` and the `F411/4` / `003844` family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | enumerate all four relay positions and resolve conditional Light/Automation/Blind Objects | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the four configured output addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `M`, `PL1` through `PL4` and the slot conditions that select the active Objects | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

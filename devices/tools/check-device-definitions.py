@@ -18,6 +18,7 @@ BT = chr(96)
 REQUIRED_TABLE_SECTIONS = (
     "Commercial identities",
     "Documentation",
+    "Physical and electrical characteristics",
     "Identity",
     "Firmware and hardware",
     "Module, Object, and Virgin Object model",
@@ -90,6 +91,60 @@ def main() -> int:
 
             if table_blocks(text) < 8:
                 errors.append(f"{prefix}: only {table_blocks(text)} table blocks; completed definitions require at least 8")
+
+            summary_body = section(text, "Summary")
+            for label in (
+                "Catalogue item",
+                "Main catalogue system",
+                "Item model / `modobj`",
+                "Firmware definition",
+                "Declared Modules",
+                "Categories",
+            ):
+                if f"| {label} |" not in summary_body:
+                    errors.append(f"{prefix}: Summary is missing baseline field {label}")
+
+            documentation_body = section(text, "Documentation")
+            expected_doc_header = (
+                "| Document | Type | Revision / date | Coverage | "
+                "Archived original | Publisher source |"
+            )
+            if expected_doc_header not in documentation_body:
+                errors.append(
+                    f"{prefix}: Documentation must separate archived originals from publisher sources"
+                )
+
+            physical_body = section(text, "Physical and electrical characteristics")
+            if "| Property | Value | Evidence |" not in physical_body:
+                errors.append(
+                    f"{prefix}: Physical and electrical characteristics must use a Property/Value/Evidence table"
+                )
+            physical_rows = [
+                line for line in physical_body.splitlines()
+                if line.startswith("|")
+                and "---" not in line
+                and not line.startswith("| Property |")
+            ]
+            if len(physical_rows) < 3:
+                errors.append(
+                    f"{prefix}: Physical and electrical characteristics has only {len(physical_rows)} fact rows"
+                )
+
+            diagnostic_body = section(text, "Diagnostic applicability")
+            if "| Diagnostic surface | Device-specific use | Canonical reference |" not in diagnostic_body:
+                errors.append(
+                    f"{prefix}: Diagnostic applicability must use the Device-specific baseline table"
+                )
+            for generic in (
+                "Identify the Device model/family and compare it with catalogue identity.",
+                "Resolve Module/Object topology, especially when candidates share a slot.",
+                "Inspect addressing for the resolved Module/Object when exposed.",
+                "Corroborate firmware/Object configuration and physical/software relationships.",
+            ):
+                if generic in diagnostic_body:
+                    errors.append(
+                        f"{prefix}: Diagnostic applicability still contains generic boilerplate: {generic}"
+                    )
 
             for name in REQUIRED_TABLE_SECTIONS:
                 body = section(text, name)

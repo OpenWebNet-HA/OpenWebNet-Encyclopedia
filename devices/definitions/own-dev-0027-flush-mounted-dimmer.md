@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0027` | Project identity |
-| Technical description | Flush-mounted SCS dimmer actuator | Catalogue + official automation documentation |
-| Catalogue item / model | `23` / `modobj 5` | Implementation evidence |
-| Firmware applicability | firmware `198`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | Flush-mounted SCS dimmer actuator | Catalogue + official documentation |
 | Commercial identities | `H4674`, `L/N/NT4674` | Catalogue |
+| Catalogue item | `23` - “Flush mounted dimmer” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `5` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `198` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Dimmer, Lighting | Capability model |
 
 ## Commercial identities
@@ -22,11 +25,25 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | 4674 dimmer-family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4674 dimmer-actuator sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 wiring-device modules | Publisher `AUTOMATISME.pdf` |
+| SCS supply | `27 Vdc` | Publisher `AUTOMATISME.pdf` |
+| Maximum current draw | `5 mA` | Publisher `AUTOMATISME.pdf` |
+| Local interface | upper/lower pushbuttons with indicator LED | Publisher `AUTOMATISME.pdf` |
+| Supported slave dimmers | up to 3 `L/N/NT4416` units | Publisher `AUTOMATISME.pdf` |
+| Associated published load range | `60..500 W` through the slave-dimmer arrangement | Publisher `AUTOMATISME.pdf` |
+| Physical configurator positions | `A`, `PL`, `M`, `G` | Publisher `AUTOMATISME.pdf` |
+
+The 4674 is the BUS actuator/controller for the slave-dimmer arrangement; the published load is handled through the associated slave dimmer rather than as a stand-alone internal power stage.
 
 ## Identity
 
@@ -131,15 +148,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 5` and the 4674 dimmer-actuator family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single dimmer Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured dimmer address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M`, `G1` and reusable dimmer parameters without confusing them with the slave power stage | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

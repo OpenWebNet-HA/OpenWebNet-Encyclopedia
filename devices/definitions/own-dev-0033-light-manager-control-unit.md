@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0033` | Project identity |
 | Technical description | Lighting Management control unit, Ethernet interface, scenario scheduler and Open/SCS gateway | Catalogue + official documentation |
-| Catalogue item / model | `35` / `modobj 35` | Implementation evidence |
-| Firmware applicability | firmware `126`, version `2.0`, build `1`, three slots | Implementation evidence |
 | Commercial identities | `BMNE500` | Catalogue |
+| Catalogue item | `35` - “Light manager control unit” | Implementation evidence |
+| Main catalogue system | Integration functions (`id_system = 26`) | Implementation evidence |
+| Item model / `modobj` | `35` | Implementation evidence |
+| Firmware definition | firmware `126`, version `2.0`, build `1` | Implementation evidence |
+| Declared Modules | `3` | Implementation evidence |
 | Categories | Gateway, Lighting management, Scenario scheduler, Integration | Capability model |
 
 ## Commercial identities
@@ -21,16 +24,19 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| U4554C_S4_EN | TiBMNE500 software manual | publisher revision as archived | Whole manual | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf) |
-| BMNE500 catalogue record | Current product record | current | Whole product record | External official source | [Official source](https://catalogue.bticino.com/pdf/scheda-prodotto/BTI-BMNE500) |
-
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+| `U4554C_S4_EN` | TiBMNE500 software manual | publisher revision as archived | whole manual | [Archived PDF](../../sources/devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/U4554C_S4_EN.pdf) |
+| BTicino `BMNE500` catalogue record | Current product record | current | whole product record | - | [Publisher record](https://catalogue.bticino.com/pdf/scheda-prodotto/BTI-BMNE500) |
 
 ## Physical and electrical characteristics
 
-Current publisher data gives `12..27 V` supply, BUS maximum consumption 8 mA and a six-DIN-module enclosure.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply range | `12..27 V` | Current publisher product data |
+| SCS BUS maximum current draw | `8 mA` | Current publisher product data |
+| Mounting | 6 DIN modules | Current publisher product data |
+| Network interface | Ethernet / IP interface used by the software-configured gateway functions | Publisher product data + TiBMNE500 manual |
 
 ## Identity
 
@@ -151,15 +157,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 35` and `BMNE500` identity | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | corroborate installed firmware against catalogue version `2.0` build `1` | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the three fixed Objects: Lighting manager, Scenario scheduler and Open/SCS gateway | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | inspect any exposed system/network addressing for the three fixed roles | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `SYSADDRESS`, gateway/network fields and software-programmed configuration without collapsing the three Objects | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

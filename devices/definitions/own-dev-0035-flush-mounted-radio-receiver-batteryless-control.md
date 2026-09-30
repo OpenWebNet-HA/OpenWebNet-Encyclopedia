@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0035` | Project identity |
 | Technical description | Four-slot SCS radio receiver for batteryless flat controls | Catalogue + official documentation |
-| Catalogue item / model | `40` / `modobj 19` | Implementation evidence |
-| Firmware applicability | firmware `218`, `-1.-1.-1`, four slots | Implementation evidence |
 | Commercial identities | `HC/HS/HD4575SB`, `L/N/NT4575SB` | Catalogue |
+| Catalogue item | `40` - “Flush mounted radio receiver for HA/HB4572SB” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `19` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `218` | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
 | Categories | Radio interface, Lighting control, Automation control, Scenario control | Capability model |
 
 ## Commercial identities
@@ -22,15 +25,24 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | 4575SB interface sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4575SB receiver sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4575SB electrical/radio data; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-Official automation documentation describes a 27 Vdc BUS-powered two-module receiver. Historical technical material specifies 868 MHz radio operation; exact range and current figures remain source-revision scoped.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `27 Vdc` | Publisher automation documentation |
+| Mounting | 2 wiring-device modules | Publisher automation documentation |
+| Radio frequency | `868 MHz` | `mh_diff-sonore2008.pdf` |
+| Published current draw | `33 mA` for the documented `L/N/NT4575SB` variant | `mh_diff-sonore2008.pdf` |
+| Radio role | receiver for the batteryless flat-control family | Publisher automation documentation |
+
+Where package variants are not covered by the same electrical table, current/range figures remain explicitly source-revision and variant scoped.
 
 ## Identity
 
@@ -181,15 +193,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 19` and the 4575SB receiver family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware rather than assuming wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | enumerate four fixed Light-control positions and resolve optional Automation/Scenario candidates | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured addresses for the active slot roles | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL1`, `M1`, `PL2`, `M2`, `SPE` and the Scenario installation-level restriction | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 
