@@ -26,7 +26,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | complete | complete | pending | - |
 | high | 1559 | PIR+US flush mounted sensor | 12 | definition-in-progress | OWN-DEV-0010 | complete | complete | complete | pending | - |
 | high | 402 | Scenario control | 10 | definition-in-progress | OWN-DEV-0011 | partial | complete | complete | pending | - |
-| high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | partial | pending | - |
+| high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | complete | pending | - |
 | high | 37 | IR receiver | 8 | definition-in-progress | OWN-DEV-0012 | partial | complete | complete | pending | - |
 | high | 1076 | Video Display | 8 | definition-in-progress | OWN-DEV-0013 | partial | complete | complete | pending | - |
 | high | 1104 | Extended control item | 8 | definition-in-progress | OWN-DEV-0014 | partial | complete | complete | pending | - |
@@ -35,8 +35,8 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | complete | pending | - |
 | high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | complete | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | complete | pending | - |
-| high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | partial | - |
-| high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | partial | - |
+| high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | complete | partial | - |
+| high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | complete | partial | - |
 | normal | 1563 | Key card switch | 6 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1657 | Local Display 1.2" bus | 6 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1854 | Probe with regulation | 6 | unreviewed | - | pending | pending | pending | pending | - |
