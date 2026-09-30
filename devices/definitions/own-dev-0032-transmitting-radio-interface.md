@@ -84,28 +84,28 @@ The catalogue declares configuration modes 1 and 3.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | M | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
+| `M` | 0 / 1 | 0 | operating / function mode |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-Firmware fields are A, PL, M and AID. Firmware 215 narrows M to modes 0/1, while the reusable Object 172 surface lists the wider generic mode family 0,1,6,7,8,CEN. Device programming must use the firmware-applicable subset.
+Firmware 215 narrows M to 0/1. The reusable transmitter Object has a wider generic mode family, which must not be projected back onto this Device.
 
 ## Object configuration surfaces
 
 ### Object `172` - Radio Interface Transmitter
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | Light point | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | Modality | Enum | range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`0` - None - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | 0..9 | 0 | Area |
+| `PL` | 0..9 | 0 | Light point |
+| `M` | 1 / 6 / 7 / 8 / CEN / None | 0 | Modality |
 
-Object 172 provides A, PL and M for one transmitting interface endpoint. Generic Object capabilities are not evidence that every later radio-interface mode is enabled by firmware 215.
+**Firmware relationship.** catalogue irregularity: `TYPE_CONTACT` (filter `1631`) is not present in this reusable Object schema.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

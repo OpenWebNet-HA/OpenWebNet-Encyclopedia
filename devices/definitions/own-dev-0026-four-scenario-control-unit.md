@@ -82,32 +82,30 @@ The catalogue declares Physical Configuration and Virtual Configuration.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0 | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-The firmware exposes `A`, `PL` and `AID`. The Object surface adds `SCE1` through `SCE4` for the four scenario definitions.
-
-The official guide documents two physical addressing modes. With only `PL = 1..9`, the number identifies the scenario unit and activation does not first send OFF commands. With `A` and `PL` populated, they form the unit address; scenario activation first resets actuators in the configured room before applying the scenario.
+The firmware exposes only A, PL and AID. Scenario contents SCE1..SCE4 belong to Object 2, not to the physical firmware configurator set.
 
 ## Object configuration surfaces
 
 ### Object `2` - 4 scenarios control unit
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | Light point | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `SCE1` | Scenario 1 | Fixed_Value | `_` - SCE1 - range -..- - step `1` - default marker `_` | visible=1, hidden=0, read-only=, type-id= |
-| `SCE2` | Scenario 2 | Fixed_Value | `_` - SCE2 - range -..- - step `1` - default marker `_` | visible=1, hidden=0, read-only=, type-id= |
-| `SCE3` | Scenario 3 | Fixed_Value | `_` - SCE3 - range -..- - step `1` - default marker `_` | visible=1, hidden=0, read-only=, type-id= |
-| `SCE4` | Scenario 4 | Fixed_Value | `_` - SCE4 - range -..- - step `1` - default marker `_` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | 0..9 | 0 | Area |
+| `PL` | 0..9 | 0 | Light point |
+| `SCE1` | SCE1 | _ | Scenario 1 |
+| `SCE2` | SCE2 | _ | Scenario 2 |
+| `SCE3` | SCE3 | _ | Scenario 3 |
+| `SCE4` | SCE4 | _ | Scenario 4 |
 
-Object `2` owns the four scenario fields. The scenario payload semantics belong to the reusable scenario-control Object rather than four independent Modules.
+**Firmware relationship.** catalogue irregularity: `TYPE_CONTACT` (filter `1630`) is not present in this reusable Object schema.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

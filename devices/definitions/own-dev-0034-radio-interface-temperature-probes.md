@@ -87,31 +87,31 @@ The catalogue declares configuration modes 1 and 3.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL1/N1` | PL1/N1 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `M1` | M1 | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `A2/-` | A2/- | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL2/N2` | PL2/N2 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `M2` | M2 | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 | 0 | area / environment configurator |
+| `PL1/N1` | 0..9 | 0 | channel 1 point / zone selector |
+| `M1` | 0 / 1 / 6 | 0 | channel 1 operating mode |
+| `A2/-` | 0..9 | 0 | channel 2 area selector / disabled position |
+| `PL2/N2` | 0..9 | 0 | channel 2 point / zone selector |
+| `M2` | 0 / 1 / 6 | 0 | channel 2 operating mode |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-Firmware fields are A, PL1/N1, M1, A2/-, PL2/N2, M2 and AID. For each channel, `M` value 0 means not configured, `M` value 1 temperature sensor and `M` value 6 lighting sensor. The reusable Object 124 exposes A, PL_N and M.
+For each channel, `M=0` means not configured, `M=1` selects a temperature sensor and `M=6` selects a lighting sensor. The latter is retained as implementation evidence despite the product name.
 
 ## Object configuration surfaces
 
 ### Object `124` - Radio interface for sensors (measurer T)
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL_N` | Light point N | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `M` | Modality | Boolean | range -..- - step `1` - default marker `1`<br>`0` - None - range -..- - step `1`<br>`1` - 1 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | 0 | 0 | Area |
+| `PL_N` | 0..9 | 0 | Light point N |
+| `M` | 1 / None | 1 | Modality |
 
-Each fixed slot uses the temperature-sensor radio-interface Object. The firmware's paired PL/N and M fields distinguish the two configured channels; they must not be flattened into a single probe address.
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

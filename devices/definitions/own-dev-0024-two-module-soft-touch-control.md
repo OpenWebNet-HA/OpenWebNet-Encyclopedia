@@ -106,169 +106,157 @@ Physical configuration, Virtual Configuration and Advanced Configuration.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`5` - 5 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`9` - 9 - range -..- - step `1`<br>`12` - GEN - range -..- - step `1`<br>`13` - GR - range -..- - step `1`<br>`14` - AMB - range -..- - step `1`<br>`15` - AUX - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `M` | M | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`5` - 5 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`9` - 9 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`10` - OFF - range -..- - step `1`<br>`11` - ON - range -..- - step `1`<br>`15` - PUL - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `M2` | M2 | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`5` - 5 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`9` - 9 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `SPE` | SPE | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`9` - 9 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `INT` | INT | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`10` - OFF - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 / GEN / GR / AMB / AUX | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
+| `M` | 0..9 / CEN / OFF / ON / PUL | 0 | operating / function mode |
+| `M2` | 0..9 | 0 | channel 2 operating mode |
+| `SPE` | 0 / 1 / 2 / 3 / 4 / 6 / 7 / 8 / 9 | 0 | special-function selector |
+| `INT` | 0 / 1 / OFF | 0 | interface-function selector |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-`A` supports `0..9`, `GEN`, `GR`, `AMB`, `AUX`; `PL` is `0..9`; `M` supports `0..9`, `OFF`, `ON`, `CEN`, `PUL`; `M2` is `0..9`; `SPE` supports default and `0,1,2,3,4,6,7,8,9`; `INT` supports default, `0`, `1`, `OFF`; `AID` is the identity field.
+These are the Soft Touch device configurators. Their values select among the candidate control Objects; the much larger reusable Object schemas are summarized separately rather than flattened into this table.
 
 ## Object configuration surfaces
 
 ### Object `410` - Light control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - Toggle - range -..- - step `1`<br>`1` - Timed ON - range -..- - step `1`<br>`2` - Toggle dimmer - range -..- - step `1`<br>`4` - Toggle ON/OFF - range -..- - step `1`<br>`10` - OFF - range -..- - step `1`<br>`11` - ON - range -..- - step `1`<br>`15` - PUL - range -..- - step `1`<br>`20` - ON and point to point dimmer - range -..- - step `1`<br>`21` - OFF and point to point dimmer - range -..- - step `1`<br>`22` - ON and Dimmer - range -..- - step `1`<br>`23` - OFF and Dimmer - range -..- - step `1`<br>`32` - Blinking 0.5 s - range -..- - step `1`<br>`33` - Blinking 1 s - range -..- - step `1`<br>`34` - Blinking 1.5 s - range -..- - step `1`<br>`35` - Blinking 2 s - range -..- - step `1`<br>`36` - Blinking 2.5 s - range -..- - step `1`<br>`37` - Blinking 3 s - range -..- - step `1`<br>`38` - Blinking 3.5 s - range -..- - step `1`<br>`39` - Blinking 4 s - range -..- - step `1`<br>`40` - Blinking 4.5 s - range -..- - step `1`<br>`41` - Blinking 5 s - range -..- - step `1`<br>`42` - Blinking 5.5 s - range -..- - step `1`<br>`43` - Blinking 6 s - range -..- - step `1`<br>`44` - Blinking 6.5 s - range -..- - step `1`<br>`45` - Blinking 7 s - range -..- - step `1`<br>`46` - Blinking 7.5 s - range -..- - step `1`<br>`47` - Blinking 8 s - range -..- - step `1`<br>`49` - ON dimmer 10% - range -..- - step `1`<br>`50` - ON dimmer 20% - range -..- - step `1`<br>`51` - ON dimmer 30% - range -..- - step `1`<br>`52` - ON dimmer 40% - range -..- - step `1`<br>`53` - ON dimmer 50% - range -..- - step `1`<br>`54` - ON dimmer 60% - range -..- - step `1`<br>`55` - ON dimmer 70% - range -..- - step `1`<br>`56` - ON dimmer 80% - range -..- - step `1`<br>`57` - ON dimmer 90% - range -..- - step `1`<br>`128` - Customized timed ON - range -..- - step `1`<br>`129` - Customized toggle and point to point dimmer - range -..- - step `1`<br>`131` - Customized toggle dimmer - range -..- - step `1`<br>`133` - Customized toggle dimmer without regulation - range -..- - step `1`<br>`135` - Customized ON and dimmer without regulation - range -..- - step `1`<br>`136` - Customized OFF and dimmer without regulation - range -..- - step `1`<br>`137` - Customized ON and dimmer with regulation - range -..- - step `1`<br>`138` - Customized OFF and dimmer with regulation - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `ADDR_TYPE` | Addressing type | Enum | range -..- - step `1`<br>`0` - Point to point - range -..- - step `1`<br>`1` - Area - range -..- - step `1`<br>`2` - Group - range -..- - step `1`<br>`3` - General - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `G` | Group | Range | range `1`..`255` - step `1` - default marker `1` | visible=1, hidden=1, read-only=, type-id=3 |
-| `INST_LEV` | Installation level | Enum | range -..- - step `1` - default marker `16`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - Standard - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEST_LEV` | Destination level | Enum | range -..- - step `1`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - All systems - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A_R` | Area of reference actuator | Range | range `0`..`10` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `PL_R` | Light point of reference actuator | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `HOURS` | Hours | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `MINUTES` | Minutes | Range | range `0`..`59` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `SECONDS` | Seconds | Range | range `0`..`59` - step `1` - default marker `30` | visible=1, hidden=1, read-only=, type-id=0 |
-| `LEVEL` | Level | Range | range `0`..`100` - step `1` - default marker `100` | visible=1, hidden=1, read-only=, type-id= |
-| `START_S` | Soft start speed | Range | range `0`..`255` - step `1` - default marker `255` | visible=1, hidden=1, read-only=, type-id=0 |
-| `STOP_S` | Soft stop speed | Range | range `0`..`255` - step `1` - default marker `255` | visible=1, hidden=1, read-only=, type-id=0 |
-| `DIMMING_S` | Dimming speed | Range | range `0`..`255` - step `1` - default marker `255` | visible=1, hidden=1, read-only=, type-id=0 |
-| `T_TIME` | Tabled time | Enum | range -..- - step `1` - default marker `1`<br>`1` - 1 min - range -..- - step `1`<br>`2` - 2 min - range -..- - step `1`<br>`3` - 3 min - range -..- - step `1`<br>`4` - 4 min - range -..- - step `1`<br>`5` - 5 min - range -..- - step `1`<br>`6` - 15 min - range -..- - step `1`<br>`7` - 30 s - range -..- - step `1`<br>`8` - 0.5 s - range -..- - step `1`<br>`9` - 2 s - range -..- - step `1`<br>`10` - 10 min - range -..- - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R` | target, group, installation-level or network addressing |
+| Mode and behavior | `M`, `TYPE_CONTACT` | operating mode and behavior selectors |
+| Timing and levels | `HOURS`, `MINUTES`, `SECONDS`, `LEVEL`, `START_S`, `STOP_S`, `DIMMING_S`, `T_TIME` | timers, delays, levels and transition parameters |
+| Object-specific | `INST_LEV`, `DEST_LEV` | additional reusable fields defined by this Object |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
 
 ### Object `411` - Automation control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - UP bistable control - range -..- - step `1`<br>`1` - DOWN bistable control - range -..- - step `1`<br>`2` - UP monostable control - range -..- - step `1`<br>`3` - DOWN monostable control - range -..- - step `1`<br>`4` - UP monostable and bistable control - range -..- - step `1`<br>`5` - DOWN monostable and bistable control - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `ADDR_TYPE` | Addressing type | Enum | range -..- - step `1`<br>`0` - Point to point - range -..- - step `1`<br>`1` - Area - range -..- - step `1`<br>`2` - Group - range -..- - step `1`<br>`3` - General - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `G` | Group | Range | range `1`..`255` - step `1` - default marker `1` | visible=1, hidden=1, read-only=, type-id=3 |
-| `INST_LEV` | Installation level | Enum | range -..- - step `1` - default marker `16`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - Standard - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEST_LEV` | Destination level | Enum | range -..- - step `1`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - All systems - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A_R` | Area of reference actuator | Range | range `0`..`10` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `PL_R` | Light point of reference actuator | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R` | target, group, installation-level or network addressing |
+| Mode and behavior | `M`, `TYPE_CONTACT` | operating mode and behavior selectors |
+| Object-specific | `INST_LEV`, `DEST_LEV` | additional reusable fields defined by this Object |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`. The catalogue relation restricts `M`: UP mono+bistable control (4), DOWN mono+bistable control (5).
 
 ### Object `412` - Lock/unlock actuator control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1` - default marker `1`<br>`1` - Disable - range -..- - step `1`<br>`2` - Enable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `ADDR_TYPE` | Addressing type | Enum | range -..- - step `1`<br>`0` - Point to point - range -..- - step `1`<br>`1` - Area - range -..- - step `1`<br>`2` - Group - range -..- - step `1`<br>`3` - General - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `G` | Group | Range | range `1`..`255` - step `1` - default marker `1` | visible=1, hidden=1, read-only=, type-id=3 |
-| `INST_LEV` | Installation level | Enum | range -..- - step `1` - default marker `16`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - Standard - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEST_LEV` | Destination level | Enum | range -..- - step `1`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - All systems - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | Disable / Enable | 1 | Modality |
+| `ADDR_TYPE` | point-to-point / area / group / general | 0 | Addressing type |
+| `A` | 0..10 | 0 | Area |
+| `PL` | 0..15 | 0 | Light point |
+| `G` | 1..255 | 1 | Group |
+| `INST_LEV` | private riser / local bus 1..15 / standard | 16 | Installation level |
+| `DEST_LEV` | private riser / local bus 1..15 / all systems | 0 | Destination level |
+| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
 
 ### Object `413` - Scenario module control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - Scenario activation and modification - range -..- - step `1`<br>`1` - Scenario activation - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `APL` | Scenario module address | Enum | range -..- - step `1`<br>`0` - `A=0 PL=0` - range -..- - step `1`<br>`1` - `A=0 PL=1` - range -..- - step `1`<br>`2` - `A=0 PL=2` - range -..- - step `1`<br>`3` - `A=0 PL=3` - range -..- - step `1`<br>`4` - `A=0 PL=4` - range -..- - step `1`<br>`5` - `A=0 PL=5` - range -..- - step `1`<br>`6` - `A=0 PL=6` - range -..- - step `1`<br>`7` - `A=0 PL=7` - range -..- - step `1`<br>`8` - `A=0 PL=8` - range -..- - step `1`<br>`9` - `A=0 PL=9` - range -..- - step `1`<br>`10` - `A=0 PL=10` - range -..- - step `1`<br>`11` - `A=0 PL=11` - range -..- - step `1`<br>`12` - `A=0 PL=12` - range -..- - step `1`<br>`13` - `A=0 PL=13` - range -..- - step `1`<br>`14` - `A=0 PL=14` - range -..- - step `1`<br>`15` - `A=0 PL=15` - range -..- - step `1`<br>`16` - `A=1 PL=0` - range -..- - step `1`<br>`17` - `A=1 PL=1` - range -..- - step `1`<br>`18` - `A=1 PL=2` - range -..- - step `1`<br>`19` - `A=1 PL=3` - range -..- - step `1`<br>`20` - `A=1 PL=4` - range -..- - step `1`<br>`21` - `A=1 PL=5` - range -..- - step `1`<br>`22` - `A=1 PL=6` - range -..- - step `1`<br>`23` - `A=1 PL=7` - range -..- - step `1`<br>`24` - `A=1 PL=8` - range -..- - step `1`<br>`25` - `A=1 PL=9` - range -..- - step `1`<br>`26` - `A=1 PL=10` - range -..- - step `1`<br>`27` - `A=1 PL=11` - range -..- - step `1`<br>`28` - `A=1 PL=12` - range -..- - step `1`<br>`29` - `A=1 PL=13` - range -..- - step `1`<br>`30` - `A=1 PL=14` - range -..- - step `1`<br>`31` - `A=1 PL=15` - range -..- - step `1`<br>`32` - `A=2 PL=0` - range -..- - step `1`<br>`33` - `A=2 PL=1` - range -..- - step `1`<br>`34` - `A=2 PL=2` - range -..- - step `1`<br>`35` - `A=2 PL=3` - range -..- - step `1`<br>`36` - `A=2 PL=4` - range -..- - step `1`<br>`37` - `A=2 PL=5` - range -..- - step `1`<br>`38` - `A=2 PL=6` - range -..- - step `1`<br>`39` - `A=2 PL=7` - range -..- - step `1`<br>`40` - `A=2 PL=8` - range -..- - step `1`<br>`41` - `A=2 PL=9` - range -..- - step `1`<br>`42` - `A=2 PL=10` - range -..- - step `1`<br>`43` - `A=2 PL=11` - range -..- - step `1`<br>`44` - `A=2 PL=12` - range -..- - step `1`<br>`45` - `A=2 PL=13` - range -..- - step `1`<br>`46` - `A=2 PL=14` - range -..- - step `1`<br>`47` - `A=2 PL=15` - range -..- - step `1`<br>`48` - `A=3 PL=0` - range -..- - step `1`<br>`49` - `A=3 PL=1` - range -..- - step `1`<br>`50` - `A=3 PL=2` - range -..- - step `1`<br>`51` - `A=3 PL=3` - range -..- - step `1`<br>`52` - `A=3 PL=4` - range -..- - step `1`<br>`53` - `A=3 PL=5` - range -..- - step `1`<br>`54` - `A=3 PL=6` - range -..- - step `1`<br>`55` - `A=3 PL=7` - range -..- - step `1`<br>`56` - `A=3 PL=8` - range -..- - step `1`<br>`57` - `A=3 PL=9` - range -..- - step `1`<br>`58` - `A=3 PL=10` - range -..- - step `1`<br>`59` - `A=3 PL=11` - range -..- - step `1`<br>`60` - `A=3 PL=12` - range -..- - step `1`<br>`61` - `A=3 PL=13` - range -..- - step `1`<br>`62` - `A=3 PL=14` - range -..- - step `1`<br>`63` - `A=3 PL=15` - range -..- - step `1`<br>`64` - `A=4 PL=0` - range -..- - step `1`<br>`65` - `A=4 PL=1` - range -..- - step `1`<br>`66` - `A=4 PL=2` - range -..- - step `1`<br>`67` - `A=4 PL=3` - range -..- - step `1`<br>`68` - `A=4 PL=4` - range -..- - step `1`<br>`69` - `A=4 PL=5` - range -..- - step `1`<br>`70` - `A=4 PL=6` - range -..- - step `1`<br>`71` - `A=4 PL=7` - range -..- - step `1`<br>`72` - `A=4 PL=8` - range -..- - step `1`<br>`73` - `A=4 PL=9` - range -..- - step `1`<br>`74` - `A=4 PL=10` - range -..- - step `1`<br>`75` - `A=4 PL=11` - range -..- - step `1`<br>`76` - `A=4 PL=12` - range -..- - step `1`<br>`77` - `A=4 PL=13` - range -..- - step `1`<br>`78` - `A=4 PL=14` - range -..- - step `1`<br>`79` - `A=4 PL=15` - range -..- - step `1`<br>`80` - `A=5 PL=0` - range -..- - step `1`<br>`81` - `A=5 PL=1` - range -..- - step `1`<br>`82` - `A=5 PL=2` - range -..- - step `1`<br>`83` - `A=5 PL=3` - range -..- - step `1`<br>`84` - `A=5 PL=4` - range -..- - step `1`<br>`85` - `A=5 PL=5` - range -..- - step `1`<br>`86` - `A=5 PL=6` - range -..- - step `1`<br>`87` - `A=5 PL=7` - range -..- - step `1`<br>`88` - `A=5 PL=8` - range -..- - step `1`<br>`89` - `A=5 PL=9` - range -..- - step `1`<br>`90` - `A=5 PL=10` - range -..- - step `1`<br>`91` - `A=5 PL=11` - range -..- - step `1`<br>`92` - `A=5 PL=12` - range -..- - step `1`<br>`93` - `A=5 PL=13` - range -..- - step `1`<br>`94` - `A=5 PL=14` - range -..- - step `1`<br>`95` - `A=5 PL=15` - range -..- - step `1`<br>`96` - `A=6 PL=0` - range -..- - step `1`<br>`97` - `A=6 PL=1` - range -..- - step `1`<br>`98` - `A=6 PL=2` - range -..- - step `1`<br>`99` - `A=6 PL=3` - range -..- - step `1`<br>`100` - `A=6 PL=4` - range -..- - step `1`<br>`101` - `A=6 PL=5` - range -..- - step `1`<br>`102` - `A=6 PL=6` - range -..- - step `1`<br>`103` - `A=6 PL=7` - range -..- - step `1`<br>`104` - `A=6 PL=8` - range -..- - step `1`<br>`105` - `A=6 PL=9` - range -..- - step `1`<br>`106` - `A=6 PL=10` - range -..- - step `1`<br>`107` - `A=6 PL=11` - range -..- - step `1`<br>`108` - `A=6 PL=12` - range -..- - step `1`<br>`109` - `A=6 PL=13` - range -..- - step `1`<br>`110` - `A=6 PL=14` - range -..- - step `1`<br>`111` - `A=6 PL=15` - range -..- - step `1`<br>`112` - `A=7 PL=0` - range -..- - step `1`<br>`113` - `A=7 PL=1` - range -..- - step `1`<br>`114` - `A=7 PL=2` - range -..- - step `1`<br>`115` - `A=7 PL=3` - range -..- - step `1`<br>`116` - `A=7 PL=4` - range -..- - step `1`<br>`117` - `A=7 PL=5` - range -..- - step `1`<br>`118` - `A=7 PL=6` - range -..- - step `1`<br>`119` - `A=7 PL=7` - range -..- - step `1`<br>`120` - `A=7 PL=8` - range -..- - step `1`<br>`121` - `A=7 PL=9` - range -..- - step `1`<br>`122` - `A=7 PL=10` - range -..- - step `1`<br>`123` - `A=7 PL=11` - range -..- - step `1`<br>`124` - `A=7 PL=12` - range -..- - step `1`<br>`125` - `A=7 PL=13` - range -..- - step `1`<br>`126` - `A=7 PL=14` - range -..- - step `1`<br>`127` - `A=7 PL=15` - range -..- - step `1`<br>`128` - `A=8 PL=0` - range -..- - step `1`<br>`129` - `A=8 PL=1` - range -..- - step `1`<br>`130` - `A=8 PL=2` - range -..- - step `1`<br>`131` - `A=8 PL=3` - range -..- - step `1`<br>`132` - `A=8 PL=4` - range -..- - step `1`<br>`133` - `A=8 PL=5` - range -..- - step `1`<br>`134` - `A=8 PL=6` - range -..- - step `1`<br>`135` - `A=8 PL=7` - range -..- - step `1`<br>`136` - `A=8 PL=8` - range -..- - step `1`<br>`137` - `A=8 PL=9` - range -..- - step `1`<br>`138` - `A=8 PL=10` - range -..- - step `1`<br>`139` - `A=8 PL=11` - range -..- - step `1`<br>`140` - `A=8 PL=12` - range -..- - step `1`<br>`141` - `A=8 PL=13` - range -..- - step `1`<br>`142` - `A=8 PL=14` - range -..- - step `1`<br>`143` - `A=8 PL=15` - range -..- - step `1`<br>`144` - `A=9 PL=0` - range -..- - step `1`<br>`145` - `A=9 PL=1` - range -..- - step `1`<br>`146` - `A=9 PL=2` - range -..- - step `1`<br>`147` - `A=9 PL=3` - range -..- - step `1`<br>`148` - `A=9 PL=4` - range -..- - step `1`<br>`149` - `A=9 PL=5` - range -..- - step `1`<br>`150` - `A=9 PL=6` - range -..- - step `1`<br>`151` - `A=9 PL=7` - range -..- - step `1`<br>`152` - `A=9 PL=8` - range -..- - step `1`<br>`153` - `A=9 PL=9` - range -..- - step `1`<br>`154` - `A=9 PL=10` - range -..- - step `1`<br>`155` - `A=9 PL=11` - range -..- - step `1`<br>`156` - `A=9 PL=12` - range -..- - step `1`<br>`157` - `A=9 PL=13` - range -..- - step `1`<br>`158` - `A=9 PL=14` - range -..- - step `1`<br>`159` - `A=9 PL=15` - range -..- - step `1`<br>`160` - `A=10 PL=0` - range -..- - step `1`<br>`161` - `A=10 PL=1` - range -..- - step `1`<br>`162` - `A=10 PL=2` - range -..- - step `1`<br>`163` - `A=10 PL=3` - range -..- - step `1`<br>`164` - `A=10 PL=4` - range -..- - step `1`<br>`165` - `A=10 PL=5` - range -..- - step `1`<br>`166` - `A=10 PL=6` - range -..- - step `1`<br>`167` - `A=10 PL=7` - range -..- - step `1`<br>`168` - `A=10 PL=8` - range -..- - step `1`<br>`169` - `A=10 PL=9` - range -..- - step `1`<br>`170` - `A=10 PL=10` - range -..- - step `1`<br>`171` - `A=10 PL=11` - range -..- - step `1`<br>`172` - `A=10 PL=12` - range -..- - step `1`<br>`173` - `A=10 PL=13` - range -..- - step `1`<br>`174` - `A=10 PL=14` - range -..- - step `1`<br>`175` - `A=10 PL=15` - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `INST_LEV` | Installation level | Enum | range -..- - step `1` - default marker `16`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1`<br>`16` - Standard - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEST_LEV` | Destination level | Enum | range -..- - step `1`<br>`0` - Private riser - range -..- - step `1`<br>`1` - Local bus 1 - range -..- - step `1`<br>`2` - Local bus 2 - range -..- - step `1`<br>`3` - Local bus 3 - range -..- - step `1`<br>`4` - Local bus 4 - range -..- - step `1`<br>`5` - Local bus 5 - range -..- - step `1`<br>`6` - Local bus 6 - range -..- - step `1`<br>`7` - Local bus 7 - range -..- - step `1`<br>`8` - Local bus 8 - range -..- - step `1`<br>`9` - Local bus 9 - range -..- - step `1`<br>`10` - Local bus 10 - range -..- - step `1`<br>`11` - Local bus 11 - range -..- - step `1`<br>`12` - Local bus 12 - range -..- - step `1`<br>`13` - Local bus 13 - range -..- - step `1`<br>`14` - Local bus 14 - range -..- - step `1`<br>`15` - Local bus 15 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `SCE_BUTT_1` | Scenario number | Range | range `1`..`16` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEL_BUTTON_1` | Activation delay of scenario number | Enum | range -..- - step `1`<br>`0` - None - range -..- - step `1`<br>`1` - 1 s - range -..- - step `1`<br>`2` - 2 s - range -..- - step `1`<br>`3` - 3 s - range -..- - step `1`<br>`4` - 4 s - range -..- - step `1`<br>`5` - 5 s - range -..- - step `1`<br>`6` - 6 s - range -..- - step `1`<br>`7` - 7 s - range -..- - step `1`<br>`8` - 8 s - range -..- - step `1`<br>`9` - 9 s - range -..- - step `1`<br>`10` - 10 s - range -..- - step `1`<br>`11` - 11 s - range -..- - step `1`<br>`12` - 12 s - range -..- - step `1`<br>`13` - 13 s - range -..- - step `1`<br>`14` - 14 s - range -..- - step `1`<br>`15` - 15 s - range -..- - step `1`<br>`16` - 16 s - range -..- - step `1`<br>`17` - 17 s - range -..- - step `1`<br>`18` - 18 s - range -..- - step `1`<br>`19` - 19 s - range -..- - step `1`<br>`20` - 20 s - range -..- - step `1`<br>`21` - 21 s - range -..- - step `1`<br>`22` - 22 s - range -..- - step `1`<br>`23` - 23 s - range -..- - step `1`<br>`24` - 24 s - range -..- - step `1`<br>`25` - 25 s - range -..- - step `1`<br>`26` - 26 s - range -..- - step `1`<br>`27` - 27 s - range -..- - step `1`<br>`28` - 28 s - range -..- - step `1`<br>`29` - 29 s - range -..- - step `1`<br>`30` - 30 s - range -..- - step `1`<br>`31` - 31 s - range -..- - step `1`<br>`32` - 32 s - range -..- - step `1`<br>`33` - 33 s - range -..- - step `1`<br>`34` - 34 s - range -..- - step `1`<br>`35` - 35 s - range -..- - step `1`<br>`36` - 36 s - range -..- - step `1`<br>`37` - 37 s - range -..- - step `1`<br>`38` - 38 s - range -..- - step `1`<br>`39` - 39 s - range -..- - step `1`<br>`40` - 40 s - range -..- - step `1`<br>`41` - 41 s - range -..- - step `1`<br>`42` - 42 s - range -..- - step `1`<br>`43` - 43 s - range -..- - step `1`<br>`44` - 44 s - range -..- - step `1`<br>`45` - 45 s - range -..- - step `1`<br>`46` - 46 s - range -..- - step `1`<br>`47` - 47 s - range -..- - step `1`<br>`48` - 48 s - range -..- - step `1`<br>`49` - 49 s - range -..- - step `1`<br>`50` - 50 s - range -..- - step `1`<br>`51` - 51 s - range -..- - step `1`<br>`52` - 52 s - range -..- - step `1`<br>`53` - 53 s - range -..- - step `1`<br>`54` - 54 s - range -..- - step `1`<br>`55` - 55 s - range -..- - step `1`<br>`56` - 56 s - range -..- - step `1`<br>`57` - 57 s - range -..- - step `1`<br>`58` - 58 s - range -..- - step `1`<br>`59` - 59 s - range -..- - step `1`<br>`60` - 60 s - range -..- - step `1`<br>`61` - 1 min 30 s - range -..- - step `1`<br>`62` - 2 min - range -..- - step `1`<br>`63` - 3 min - range -..- - step `1`<br>`64` - 4 min - range -..- - step `1`<br>`65` - 5 min - range -..- - step `1`<br>`66` - 6 min - range -..- - step `1`<br>`67` - 7 min - range -..- - step `1`<br>`68` - 8 min - range -..- - step `1`<br>`69` - 9 min - range -..- - step `1`<br>`70` - 10 min - range -..- - step `1`<br>`71` - 15 min - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | Scenario activation and modification / Scenario activation | 0 | Modality |
+| `APL` | A 0..10 with PL 0..15 (catalogue-composed address) | 0 | Scenario module address |
+| `INST_LEV` | private riser / local bus 1..15 / standard | 16 | Installation level |
+| `DEST_LEV` | private riser / local bus 1..15 / all systems | 0 | Destination level |
+| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+| `SCE_BUTT_1` | 1..16 | 1 | Scenario number |
+| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay of scenario number |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
 
 ### Object `414` - Scheduled scenario
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `CEN_BUTT_1` | Button | Range | range `0`..`31` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `MODE` | Modality | Enum | range -..- - step `1`<br>`0` - Press/release only - range -..- - step `1`<br>`1` - Press/hold/release - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | 0..10 | 0 | Area |
+| `PL` | 0..15 | 0 | Light point |
+| `CEN_BUTT_1` | 0..31 | 1 | Button |
+| `MODE` | Press/release only / Press/hold/release | 0 | Modality |
+| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
 
 ### Object `415` - Scenario PLUS Lighting Management
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - ON - range -..- - step `1`<br>`1` - OFF - range -..- - step `1`<br>`2` - ON with regulation - range -..- - step `1`<br>`3` - OFF with regulation - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `PPT_SCE_1` | Upper button scenario | Range | range `0`..`255` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `TYPE_OF_REGULATION` | Regulation type | Enum | range -..- - step `1`<br>`0` - Regulate all - range -..- - step `1`<br>`1` - Lights only - range -..- - step `1`<br>`2` - Shutters only - range -..- - step `1`<br>`3` - Stereo amplifiers only - range -..- - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DEL_BUTTON_1` | Activation delay for upper button | Enum | range -..- - step `1`<br>`0` - None - range -..- - step `1`<br>`1` - 1 s - range -..- - step `1`<br>`2` - 2 s - range -..- - step `1`<br>`3` - 3 s - range -..- - step `1`<br>`4` - 4 s - range -..- - step `1`<br>`5` - 5 s - range -..- - step `1`<br>`6` - 6 s - range -..- - step `1`<br>`7` - 7 s - range -..- - step `1`<br>`8` - 8 s - range -..- - step `1`<br>`9` - 9 s - range -..- - step `1`<br>`10` - 10 s - range -..- - step `1`<br>`11` - 11 s - range -..- - step `1`<br>`12` - 12 s - range -..- - step `1`<br>`13` - 13 s - range -..- - step `1`<br>`14` - 14 s - range -..- - step `1`<br>`15` - 15 s - range -..- - step `1`<br>`16` - 16 s - range -..- - step `1`<br>`17` - 17 s - range -..- - step `1`<br>`18` - 18 s - range -..- - step `1`<br>`19` - 19 s - range -..- - step `1`<br>`20` - 20 s - range -..- - step `1`<br>`21` - 21 s - range -..- - step `1`<br>`22` - 22 s - range -..- - step `1`<br>`23` - 23 s - range -..- - step `1`<br>`24` - 24 s - range -..- - step `1`<br>`25` - 25 s - range -..- - step `1`<br>`26` - 26 s - range -..- - step `1`<br>`27` - 27 s - range -..- - step `1`<br>`28` - 28 s - range -..- - step `1`<br>`29` - 29 s - range -..- - step `1`<br>`30` - 30 s - range -..- - step `1`<br>`31` - 31 s - range -..- - step `1`<br>`32` - 32 s - range -..- - step `1`<br>`33` - 33 s - range -..- - step `1`<br>`34` - 34 s - range -..- - step `1`<br>`35` - 35 s - range -..- - step `1`<br>`36` - 36 s - range -..- - step `1`<br>`37` - 37 s - range -..- - step `1`<br>`38` - 38 s - range -..- - step `1`<br>`39` - 39 s - range -..- - step `1`<br>`40` - 40 s - range -..- - step `1`<br>`41` - 41 s - range -..- - step `1`<br>`42` - 42 s - range -..- - step `1`<br>`43` - 43 s - range -..- - step `1`<br>`44` - 44 s - range -..- - step `1`<br>`45` - 45 s - range -..- - step `1`<br>`46` - 46 s - range -..- - step `1`<br>`47` - 47 s - range -..- - step `1`<br>`48` - 48 s - range -..- - step `1`<br>`49` - 49 s - range -..- - step `1`<br>`50` - 50 s - range -..- - step `1`<br>`51` - 51 s - range -..- - step `1`<br>`52` - 52 s - range -..- - step `1`<br>`53` - 53 s - range -..- - step `1`<br>`54` - 54 s - range -..- - step `1`<br>`55` - 55 s - range -..- - step `1`<br>`56` - 56 s - range -..- - step `1`<br>`57` - 57 s - range -..- - step `1`<br>`58` - 58 s - range -..- - step `1`<br>`59` - 59 s - range -..- - step `1`<br>`60` - 60 s - range -..- - step `1`<br>`61` - 1 min 30 s - range -..- - step `1`<br>`62` - 2 min - range -..- - step `1`<br>`63` - 3 min - range -..- - step `1`<br>`64` - 4 min - range -..- - step `1`<br>`65` - 5 min - range -..- - step `1`<br>`66` - 6 min - range -..- - step `1`<br>`67` - 7 min - range -..- - step `1`<br>`68` - 8 min - range -..- - step `1`<br>`69` - 9 min - range -..- - step `1`<br>`70` - 10 min - range -..- - step `1`<br>`71` - 15 min - range -..- - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | ON / OFF / ON with regulation / OFF with regulation | 0 | Modality |
+| `PPT_SCE_1` | 0..255 | 1 | Upper button scenario |
+| `TYPE_OF_REGULATION` | Regulate all / Lights only / Shutters only / Stereo amplifiers only | 0 | Regulation type |
+| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay for upper button |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`, `M`, `TYPE_OF_REGULATION`.
 
 ### Object `416` - Scheduled scenario PLUS
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `PPT_CEN_LOW` | Scheduled scenario PLUS number | Range | range `0`..`255` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PPT_CEN_HIG` | Scheduled scenario PLUS number | Range | range `0`..`7` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `BUTTON_1` | Button | Range | range `0`..`31` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `MODE` | Modality | Enum | range -..- - step `1`<br>`0` - Press/release only - range -..- - step `1`<br>`1` - Press/hold/release - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | 0..255 | 1 | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | 0..7 | 0 | Scheduled scenario PLUS number |
+| `BUTTON_1` | 0..31 | 1 | Button |
+| `MODE` | Press/release only / Press/hold/release | 0 | Modality |
+| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
 
 ### Object `418` - Open lock control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `P` | External unit address | Range | range `0`..`95` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `SEG_LEV` | Level | Enum | range -..- - step `1`<br>`0` - Same level - range -..- - step `1`<br>`1` - Riser - range -..- - step `1`<br>`2` - Building - range -..- - step `1`<br>`3` - Backbone - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `P` | 0..95 | 0 | External unit address |
+| `SEG_LEV` | Same level / Riser / Building / Backbone | 0 | Level |
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
 ### Object `419` - Sound diffusion control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - ON/volume + - range -..- - step `1`<br>`1` - OFF/volume - - range -..- - step `1`<br>`2` - Change track - range -..- - step `1`<br>`3` - Switch source - range -..- - step `1`<br>`4` - Toggle ON/OFF - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `ADDR_TYPE` | Addressing type | Enum | range -..- - step `1`<br>`0` - Point to point - range -..- - step `1`<br>`1` - Area - range -..- - step `1`<br>`3` - General - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `PF` | Audio point | Range | range `0`..`9` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `TYPE_CONTACT` | Contact type | Enum | range -..- - step `1`<br>`0` - Normally open - range -..- - step `1`<br>`1` - Normally closed - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `IS_FOLLOW_ME` | Follow me | Enum | range -..- - step `1` - default marker `1`<br>`0` - No - range -..- - step `1`<br>`1` - Yes - range -..- - step `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `SOURCE` | Source | Range | range `1`..`9` - step `1` - default marker `1` | visible=1, hidden=1, read-only=, type-id=0 |
-| `SUB_SOURCE` | Sub source | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `CHANNEL` | Channel (BB-Stereo) | Enum | range -..- - step `1` - default marker `3`<br>`0` - Base Band - range -..- - step `1`<br>`1` - Left - range -..- - step `1`<br>`2` - Right - range -..- - step `1`<br>`3` - Stereo - range -..- - step `1`<br>`8` - Base Band and Video - range -..- - step `1`<br>`9` - Left and video - range -..- - step `1`<br>`10` - Right and video - range -..- - step `1`<br>`11` - Left and video - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PF` | target, group, installation-level or network addressing |
+| Mode and behavior | `M`, `TYPE_CONTACT`, `IS_FOLLOW_ME` | operating mode and behavior selectors |
+| Object-specific | `SOURCE`, `SUB_SOURCE`, `CHANNEL` | additional reusable fields defined by this Object |
 
-### Object `426` - Staircase light control
-
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `N1` | Internal unit address | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `N2` | Internal unit address | Range | range `0`..`15` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SEG_LEV` | Segment | Enum | range -..- - step `1`<br>`0` - Same - range -..- - step `1`<br>`1` - Riser - range -..- - step `1`<br>`2` - Building - range -..- - step `1`<br>`3` - Backbone - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`, `SUB_SOURCE`, `CHANNEL`.
 
 ### Object `427` - Floor call control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `TO_ALL` | Type of call | Enum | range -..- - step `1` - default marker `1`<br>`0` - Point to point - range -..- - step `1`<br>`1` - General - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `N1` | Internal unit address | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `N2` | Internal unit address | Range | range `0`..`15` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `SEGMENT` | Segment | Enum | range -..- - step `1`<br>`0` - The same - range -..- - step `1`<br>`1` - Riser - range -..- - step `1`<br>`2` - Building - range -..- - step `1`<br>`3` - Backbone - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `IN_AUX_CHANNEL` | Input AUX channel | Range | range `0`..`15` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | Point to point / General | 1 | Type of call |
+| `N1` | 0..255 | 0 | Internal unit address |
+| `N2` | 0..15 | 0 | Internal unit address |
+| `SEGMENT` | The same / Riser / Building / Backbone | 0 | Segment |
+| `IN_AUX_CHANNEL` | 0..15 | 0 | Input AUX channel |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `IN_AUX_CHANNEL`, `SEGMENT`. The catalogue relation restricts `TO_ALL`: General (1).
+
+### Object `426` - Staircase light control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | 0..255 | 0 | Internal unit address |
+| `N2` | 0..15 | 0 | Internal unit address |
+| `SEG_LEV` | Same / Riser / Building / Backbone | 0 | Segment |
+
+**Firmware relationship.** The catalogue relation explicitly exposes `SEG_LEV`. The catalogue relation restricts `N1`: 100..255.
 
 ### Object `480` - User interface settings
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `STATE_OF_UNUSED_BUTTON` | State of unused button | Enum | range -..- - step `1` - default marker `1`<br>`0` - ON - range -..- - step `1`<br>`1` - OFF - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `STATE_UPDATE` | Feedback update | Enum | range -..- - step `1` - default marker `1`<br>`0` - No - range -..- - step `1`<br>`1` - Yes - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `LED_LEVEL` | LED intensity level | Range | range `0`..`10` - step `1` - default marker `6` | visible=1, hidden=0, read-only=, type-id=0 |
-| `LED_FADE` | LED fading | Range | range `0`..`10` - step `1` - default marker `5` | visible=1, hidden=0, read-only=, type-id=0 |
-| `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | Backlight intensity stand by level | Enum | range -..- - step `1` - default marker `1`<br>`0` - OFF - range -..- - step `1`<br>`1` - Level1 - range -..- - step `1`<br>`2` - Level2 - range -..- - step `1`<br>`3` - Level3 - range -..- - step `1`<br>`4` - Level4 - range -..- - step `1`<br>`5` - Level5 - range -..- - step `1`<br>`6` - Level6 - range -..- - step `1`<br>`7` - Level7 - range -..- - step `1`<br>`8` - Level8 - range -..- - step `1`<br>`9` - Level9 - range -..- - step `1`<br>`10` - Level10 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is OFF, only one led can be used for the standby. | Enum | range -..- - step `1` - default marker `1`<br>`0` - OFF - range -..- - step `1`<br>`1` - Level1 - range -..- - step `1`<br>`2` - Level2 - range -..- - step `1`<br>`3` - Level3 - range -..- - step `1`<br>`4` - Level4 - range -..- - step `1`<br>`5` - Level5 - range -..- - step `1`<br>`6` - Level6 - range -..- - step `1`<br>`7` - Level7 - range -..- - step `1`<br>`8` - Level8 - range -..- - step `1`<br>`9` - Level9 - range -..- - step `1`<br>`10` - Level10 - range -..- - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `BACKLIGHT_DELAY` | Delay time (seconds) | Range | range `0`..`255` - step `1` - default marker `15` | visible=1, hidden=0, read-only=, type-id= |
-| `PROXIMITY_ENABLE` | Proximity Activation | Boolean | range -..- - step `1` - default marker `1`<br>`0` - Disable - range -..- - step `1`<br>`1` - Enable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SIGNBOARD` | Signboard activation type | Enum | range -..- - step `1` - default marker `2`<br>`0` - Off - range -..- - step `1`<br>`1` - Fixe - range -..- - step `1`<br>`2` - Chase - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Timing and levels | `LED_LEVEL`, `LED_FADE`, `BACKLIGHT_INTENSITY_STANDBY_LEVEL`, `SINGLE_LED_INTENSITY_STANDBY_LEVEL`, `BACKLIGHT_DELAY` | timers, delays, levels and transition parameters |
+| Scenario / UI | `STATE_OF_UNUSED_BUTTON`, `STATE_UPDATE`, `PROXIMITY_ENABLE`, `SIGNBOARD` | scenario assignment and user-interface behavior |
 
-The active slot-1 Object determines the functional configuration surface. Object `130` carries UI settings and must remain separate from the command Object.
+**Firmware relationship.** The catalogue relation explicitly exposes `STATE_OF_UNUSED_BUTTON`, `BACKLIGHT_INTENSITY_STANDBY_LEVEL`, `PROXIMITY_ENABLE`, `SIGNBOARD`, `SINGLE_LED_INTENSITY_STANDBY_LEVEL`, `BACKLIGHT_DELAY`.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

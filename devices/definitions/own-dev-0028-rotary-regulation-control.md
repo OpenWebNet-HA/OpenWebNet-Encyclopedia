@@ -79,36 +79,36 @@ Physical Configuration and Virtual Configuration are declared.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `M` | M | Enum | range -..- - step `1`<br>`9` - O/I - range -..- - step `1`<br>`10` - OFF - range -..- - step `1`<br>`11` - ON - range -..- - step `1`<br>`12` - UP/DOWN - range -..- - step `1`<br>`13` - UP/DOWN monostable - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`15` - PUL - range -..- - step `1`<br>`0` - 0 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `LIV1` | LIV1 | Range | range `0`..`99` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `LIV2` | LIV2 | Range | range `0`..`99` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SPE` | SPE | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `I` | I | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
+| `M` | 0 / O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL | 0 | operating / function mode |
+| `LIV1` | 0..99 | 1 | first regulation level |
+| `LIV2` | 0..99 | 1 | second regulation level |
+| `SPE` | 0..9 | 0 | special-function selector |
+| `I` | 0 / CEN | 0 | additional function selector |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-The firmware exposes `A`, `PL`, `M`, `LIV1`, `LIV2`, `SPE`, `I` and `AID`. The catalogue describes `M` as command mode with `O/I`, `OFF`, `ON`, `PUL`, `SU_GIU` and `SU_GIU_M` alternatives. `LIV1` and `LIV2` are level configurators; `SPE` selects a special command function; `I` is an additional configurator.
+LIV1/LIV2 are the two regulation-level fields. SPE and I are additional command selectors whose semantics depend on the selected operating mode.
 
 ## Object configuration surfaces
 
 ### Object `451` - Knob control
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `PL` | Light point | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `M` | Modality | Enum | range -..- - step `1`<br>`9` - O/I - range -..- - step `1`<br>`10` - OFF - range -..- - step `1`<br>`11` - ON - range -..- - step `1`<br>`12` - UP/DOWN - range -..- - step `1`<br>`13` - UP/DOWN monostable - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`15` - PUL - range -..- - step `1`<br>`0` - None - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `LIV1` | Configurator LIV1 | Range | range `0`..`99` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `LIV2` | Configurator LIV2 | Range | range `0`..`99` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SPE` | Special function command control (0-9) | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `I` | Configurator I | Enum | range -..- - step `1`<br>`0` - None - range -..- - step `1`<br>`14` - CEN - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | 0..9 | 0 | Area |
+| `PL` | 0..9 | 0 | Light point |
+| `M` | O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL / None | 0 | Modality |
+| `LIV1` | 0..99 | 1 | Configurator LIV1 |
+| `LIV2` | 0..99 | 1 | Configurator LIV2 |
+| `SPE` | 0..9 | 0 | Special function command control (0-9) |
+| `I` | None / CEN | 0 | Configurator I |
 
-Object `451` mirrors the firmware's address, command-mode, level and special-function controls. These fields describe one rotary-control Module, not multiple independent channels.
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

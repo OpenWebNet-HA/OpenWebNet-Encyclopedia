@@ -87,49 +87,32 @@ Physical configuration, Virtual Configuration and Advanced Configuration are dec
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | M | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`11` - SLA - range -..- - step `1`<br>`15` - PUL - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `G1` | G1 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G2` | G2 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G3` | G3 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
+| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
+| `G1` | 0..9 | 0 | group configurator 1 |
+| `G2` | 0..9 | 0 | group configurator 2 |
+| `G3` | 0..9 | 0 | group configurator 3 |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-`A` and `PL` are `0..9`; `M` permits default/`0..4`/`SLA`/`PUL`; `G1`, `G2`, `G3` are `0..9`; `AID` is the implementation identity field. MyHOME Suite documents Master, delayed Slave, Master PUL and Slave PUL behavior.
+The firmware-level table describes the product configurators. The reusable Light actuator Object below has a wider software configuration surface; that wider surface is not itself a statement about physical configurator positions.
 
 ## Object configuration surfaces
 
 ### Object `6` - Light actuator
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - Master - range -..- - step `1`<br>`11` - Slave - range -..- - step `1`<br>`15` - Master PUL - range -..- - step `1`<br>`16` - Slave and PUL - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `LOCAL_BUTTON` | Local button modality | Enum | range -..- - step `1`<br>`0` - Toggle - range -..- - step `1`<br>`1` - ON/OFF - range -..- - step `1`<br>`9` - ON - OFF - range -..- - step `1`<br>`15` - Pushbutton - range -..- - step `1`<br>`18` - Timed ON - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `DELAYED_OFF` | Delayed OFF for Slave (s) | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `STATE_RESET` | Relay state on device reset | Enum | range -..- - step `1`<br>`0` - Restore last value - range -..- - step `1`<br>`1` - Closed - range -..- - step `1`<br>`2` - Open - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `LOAD_CONTROL_MODE` | Load control mode | Enum | range -..- - step `1`<br>`0` - With zero crossing - range -..- - step `1`<br>`1` - Without zero crossing - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `HOURS` | Hours | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `MINUTES` | Minutes | Range | range `0`..`59` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `SECONDS` | Seconds | Range | range `0`..`59` - step `1` - default marker `30` | visible=1, hidden=1, read-only=, type-id= |
-| `SUBTYPE` | Type of load | Enum | range -..- - step `1` - default marker `11`<br>`11` - Actuator - range -..- - step `1`<br>`1` - Lamp - range -..- - step `1`<br>`10` - Valve - range -..- - step `1`<br>`15` - Differential restart - range -..- - step `1`<br>`6` - Fan - range -..- - step `1`<br>`7` - Watering - range -..- - step `1`<br>`8` - Controlled socket - range -..- - step `1`<br>`9` - Lock - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `G1` | Group 1 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G2` | Group 2 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G3` | Group 3 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G4` | Group 4 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G5` | Group 5 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G6` | Group 6 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G7` | Group 7 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G8` | Group 8 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G9` | Group 9 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G10` | Group 10 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL` | target, group, installation-level or network addressing |
+| Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_RESET`, `LOAD_CONTROL_MODE`, `SUBTYPE` | operating mode and behavior selectors |
+| Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
 
-Object `6` supplies the reusable Light-actuator configuration surface. Device programming must preserve all three physical group positions.
+**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `STATE_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `LOAD_CONTROL_MODE`.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 
