@@ -213,50 +213,62 @@ items:
     notes:
     - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '33':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0031
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - BMSE1001/048833 definition created and source-reconciled; official technical sheet identified, archive and hardware corroboration remain.
   '34':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0032
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - 4576 transmitter definition created and reconciled with the archived automation guide; exact variant documentation and hardware corroboration remain.
   '35':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0033
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - BMNE500 definition created and source-reconciled; current product/manual sources identified, archival endpoint and hardware corroboration remain.
   '37':
     state: definition-in-progress
     priority: high
@@ -277,35 +289,43 @@ items:
     notes:
     - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references remain direct-documentation gaps.
   '39':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0034
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - 4577 temperature-probe radio interface definition created and source-reconciled; dedicated technical sheet identified, archive and hardware corroboration remain.
   '40':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0035
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - 4575SB batteryless-control receiver definition created and source-reconciled with the archived automation guide; hardware corroboration remains.
   '45':
     state: unreviewed
     priority: normal
