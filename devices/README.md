@@ -14,7 +14,8 @@ It complements the [Device Model](../device-model/), which defines the abstract 
 | [Device Coverage](coverage.md) | Documentation and research completeness across known Device definitions |
 | [Device Definitions](definitions/) | Canonical technical Device pages |
 | [Categories](categories/) | Many-to-many browsing by functional category |
-| [Device Page Template](contributing/device-page-template.md) | Starting structure for new Device definitions |
+| [Device Definition Presentation Profile](contributing/device-definition-presentation-profile.md) | Normative presentation and information architecture for Device definitions |
+| [Device Page Template](contributing/device-page-template.md) | Starting structure implementing the Device presentation profile |
 
 ## Completion policy
 
@@ -99,7 +100,7 @@ A Device definition should exhaust the available Device-specific knowledge neede
 
 Unknown and unresolved observations must be preserved rather than forced into the current interpretation.
 
-Use the [Device Page Template](contributing/device-page-template.md) as the starting point for new definitions.
+Device definitions must follow the [Device Definition Presentation Profile](contributing/device-definition-presentation-profile.md). Use the [Device Page Template](contributing/device-page-template.md) as the starting structure for new definitions.
 
 ## Documentation and archival sources
 

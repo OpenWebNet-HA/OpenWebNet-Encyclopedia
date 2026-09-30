@@ -1,6 +1,8 @@
 # Technical Device description
 
 > This page is a template. Remove this note when creating a Device definition.
+>
+> This template implements the [Device Definition Presentation Profile](device-definition-presentation-profile.md). Follow that profile when deciding whether information belongs in tables or prose.
 
 ## Summary
 
@@ -9,88 +11,167 @@
 | Device ID | `OWN-DEV-xxxx` | Project identity |
 | Technical description | | |
 | Commercial identities | | |
-| Catalogue item / model | | |
-| Firmware applicability | | |
+| Catalogue item | | |
+| Main catalogue system | | |
+| Item model / `modobj` | | |
+| Firmware definition | | |
+| Declared Modules | | |
 | Categories | | |
 
-Provide a concise description of the Physical Device and its OpenWebNet-visible purpose.
+Keep only supported rows. Add Device-specific identity rows when they materially improve identification. Follow with concise explanatory prose when useful.
 
 ## Commercial identities
 
-List every established or candidate commercial identity for this technical Device. No SKU is canonical merely because it appears first.
-
-| Brand / line | SKU / reference | Relationship | Evidence |
+| Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
 | | | | |
 
+List every established or candidate identity. Use prose for package distinctions, source-version naming differences, or unresolved equivalence.
+
 ## Documentation
 
-Inventory every known applicable official document revision. Link to the archived original under [Device Sources](../../sources/devices/) when retained.
-
-For a multi-product PDF such as a catalogue, compatibility table, or system/product guide, record the exact Device location using both the printed page number and the 1-based PDF page number. Keep both even when they are identical; if the document has no printed pagination, say so explicitly.
-
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
+For multi-product PDFs, record both printed and 1-based PDF pages in Coverage. Link the archived original when retained and keep publisher provenance separately visible.
+
 ## Physical and electrical characteristics
 
-Extract product-specific specifications from official documentation. Keep revision-specific differences visible.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| | | |
+
+Use this table when multiple comparable specifications are known. Keep revision/variant differences visible. Use prose for interpretation or an isolated fact that would not benefit from a table.
 
 ## Identity
 
-Record all implementation and protocol identity facts, including item/model, `modobj`, brand, line, and known diagnostic observations.
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | | Implementation evidence |
+| Technical item description | | Implementation evidence |
+| Item family | | Implementation evidence |
+| Main system | | Implementation evidence |
+| Item model / `modobj` | | Implementation evidence |
 
-Do not repeat generic diagnostic frame grammar. Link to [Diagnostics](../../diagnostics/) and retain raw frames only when they are evidence for this Device.
+Adapt rows to actual evidence. Do not repeat generic diagnostic frame grammar.
 
 ## Firmware and hardware
 
-Record every firmware definition/build and known hardware/microcontroller variant. Distinguish catalogue applicability from observed installed versions.
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
+
+Remove unsupported columns and add hardware/microcontroller columns where relevant. Distinguish catalogue applicability from observed installed versions.
 
 ## Module, Object, and Virgin Object model
 
-Exhaust the Device-specific capability topology from canonical implementation sources. Preserve fixed Objects, alternatives, slot positions, Virgin Objects, and permitted Objects.
+### Objects
+
+| Firmware | Relation | Object | Description |
+| --- | --- | --- | --- |
+| | | | |
+
+### Module / slot relationships
+
+| Slot | Object | Relationship | Description |
+| --- | --- | --- | --- |
+| | | | |
+
+### Virgin Objects
+
+| Firmware | Relation | Virgin Object | Description | Associated Objects |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+Adapt columns when keys, conditions, candidates, or slot relationships matter. Remove empty subsections that do not apply.
 
 ## Configuration modes
 
-Record every supported configuration mode and connection/programming modality.
+| Firmware | Mode | Catalogue mode | Description |
+| --- | --- | --- | --- |
+| | | | |
+
+Use prose to reconcile implementation labels with official terminology. Do not infer programming modality solely from numeric IDs.
 
 ## Firmware-scoped configuration
 
-Extract the complete Device/firmware parameter set, legal values/ranges, defaults, conditions, and known source irregularities.
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| | | | |
+
+Add Evidence, Source, or Applicability when needed. Preserve complete legal values, defaults, conditions, and irregularities. Do not expose raw serialization.
 
 ## Object configuration surfaces
 
-Extract the reusable Object configuration fields applicable to the Device, while distinguishing candidate reusable Object values from Device-specific applicability.
+For a small Object:
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| | | | |
+
+For a larger Object:
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | | |
+| Mode and behavior | | |
+| Timing and levels | | |
+| Scenario / UI | | |
+| Sensing / regulation | | |
+| Group membership | | |
+| Object-specific | | |
+
+Use whichever representation best preserves semantics. State Device/firmware restrictions separately from generic Object capability.
 
 ## Conditions, filters, and conversions
 
-Preserve Device-specific conditions, filters, conversion-rule applicability, and irregularities. Link generic evaluation semantics to the appropriate [Device Model](../../device-model/), [Programming](../../programming/), or [MyHOME Suite Internals](../../internals/) reference instead of copying generic algorithms.
+### Conditions and conversions
+
+| Slot | Object | Condition | Conversion rule |
+| --- | --- | --- | --- |
+| | | | |
+
+### Filters
+
+| Object | Field | Filter / allowed subset | Evidence |
+| --- | --- | --- | --- |
+| | | | |
+
+Remove tables that do not apply. Link generic evaluation semantics to their canonical reference.
 
 ## Diagnostic applicability
 
-Use a Device-specific applicability table linking each relevant diagnostic surface to its canonical reference.
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+Keep only applicable surfaces and add others when Device-specific evidence makes them relevant.
 
 ## Functional applicability
 
-Describe which functional systems/WHOs can be exposed by this Device and link to their canonical reference pages.
+Describe applicable functional systems or `WHO` families and the conditions under which they apply. Link canonical functional references rather than copying generic protocol semantics.
 
 ## Observed behavior and corroboration
 
-Link observations to the facts they corroborate or challenge. A capture adds evidence; it does not erase implementation/document provenance.
+Document publishable captures, experiments, and hardware observations that corroborate or challenge source-derived knowledge. Link each observation to the facts it affects.
 
 ## Programming
 
-Document Device-specific validation requirements, topology effects, and constraints. Generic frame grammar and session mechanics belong under [Programming](../../programming/).
+Document Device-specific validation requirements, topology effects, constraints, and programming consequences. Keep generic frame grammar, session mechanics, and algorithms under [Programming](../../programming/).
 
 ## Source reconciliation
 
-For every known applicable source revision, record the Device-specific facts that were incorporated and any material discrepancies or questions it raised. A source listed under Documentation is not considered processed until this reconciliation is complete.
+Reconcile every known applicable source revision. Explain agreements, revision differences, database/document mismatches, commercial relationships, capability/runtime distinctions, unresolved contradictions, and source limitations. Do not silently normalize conflicts.
 
 ## Evidence limits and open work
 
-List missing documents, unobserved variants, unresolved source conflicts, and experiments needed to increase confidence.
+List concrete missing documents, unobserved variants, unresolved conflicts, uncorroborated diagnostics, and experiments still needed. Do not use this as a generic disclaimer.
 
 ## Sources
 
-Link the canonical source set, archived Device documents, and relevant Encyclopedia reference pages.
+Link canonical implementation sources, archived Device documents, observations, and relevant Encyclopedia references. Do not merely duplicate the Documentation table.
