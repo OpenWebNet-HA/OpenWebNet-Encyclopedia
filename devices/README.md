@@ -107,6 +107,8 @@ Device-specific official documentation is inventoried and, where appropriate, ar
 
 Each Device page should link directly to every applicable archived PDF or other retained original document. Preserve distinct revisions rather than replacing older documents when a newer version appears.
 
+When a Device is only one entry within a multi-product PDF - for example a catalogue, compatibility table, or system/product guide - the Device page must identify the relevant printed page or pages and the 1-based PDF page or pages. Record both forms of pagination even when they are the same, so a reader can navigate either the printed document or a PDF viewer unambiguously.
+
 Implementation artifacts such as `MHCatalogue.db`, `OPEN.db`, and rules databases may establish product identity, capability, or configuration facts. Those facts belong on Device pages with their evidence status and provenance; the original artifacts remain under [Sources](../sources/).
 
 ## OWN Device Library

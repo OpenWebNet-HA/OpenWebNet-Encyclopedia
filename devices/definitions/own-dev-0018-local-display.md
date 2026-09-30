@@ -35,9 +35,9 @@ All six records share catalogue item `1147` and `modobj` 64. Direct variant-spec
 | Document | Coverage | Status |
 | --- | --- | --- |
 | `U1063B` | 4685 Local Display family instruction sheet | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
-| MyHOME catalogue `HPML0714` | Local Display product context and family functions | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | Generic “Local display - Sound distribution” context on printed p. 5 / PDF p. 5; the `4685` family is not named | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
-The former official `U1063B` publisher URL currently returns an access/error response and the current Legrand document CDN does not expose that filename. An external reference copy of the same `U1063B` revision has therefore been used only to recover Device facts, while older official catalogue material corroborates the Local Display roles. The external copy is not archived or represented as an official original; byte-for-byte publisher evidence is still required.
+The former official `U1063B` publisher URL currently returns an access/error response and the current Legrand document CDN does not expose that filename. An external reference copy of the same `U1063B` revision has therefore been used only to recover Device facts. The older MyHOME catalogue provides only generic Local Display / sound-distribution context and does not identify the `4685` family or corroborate its complete role set. The external copy is not archived or represented as an official original; byte-for-byte publisher evidence is still required.
 
 ## Product role
 

@@ -39,7 +39,7 @@ The technical Device ID does not privilege one of these references. Shared-item 
 
 | Document / source | Type | Status | Source |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution catalogue | Historical product catalogue | [Archived original](../../sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
+| Arnould Espace Evolution catalogue | Historical product catalogue | [Archived original](../../sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 31 / PDF pp. 27, 32 | [Official source](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
 | MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html) |
 | MyHOME Suite automation actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) |
 

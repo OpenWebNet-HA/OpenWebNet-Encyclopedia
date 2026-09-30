@@ -27,9 +27,11 @@ List every established or candidate commercial identity for this technical Devic
 
 Inventory every known applicable official document revision. Link to the archived original under [Device Sources](../../sources/devices/) when retained.
 
-| Document | Type | Revision / date | Status | Source |
-| --- | --- | --- | --- | --- |
-| | | | | |
+For a multi-product PDF such as a catalogue, compatibility table, or system/product guide, record the exact Device location using both the printed page number and the 1-based PDF page number. Keep both even when they are identical; if the document has no printed pagination, say so explicitly.
+
+| Document | Type | Revision / date | Relevant pages | Status | Source |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
 
 ## Physical and electrical characteristics
 
