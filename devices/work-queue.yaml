@@ -14,7 +14,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -33,7 +33,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -52,7 +52,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -90,8 +90,8 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: complete
-      source_reconciliation: complete
+      documentation_archive: partial
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -110,7 +110,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -129,7 +129,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -147,8 +147,8 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: complete
-      source_reconciliation: complete
+      documentation_archive: partial
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -166,8 +166,8 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: complete
-      source_reconciliation: complete
+      documentation_archive: partial
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -186,7 +186,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -204,8 +204,8 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: complete
-      source_reconciliation: complete
+      documentation_archive: partial
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -223,7 +223,7 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
@@ -242,8 +242,8 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: complete
-      source_reconciliation: complete
+      documentation_archive: partial
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending
@@ -299,7 +299,7 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
@@ -319,7 +319,7 @@ items:
       database_extraction: complete
       documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: complete
+      source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
       final_review: pending

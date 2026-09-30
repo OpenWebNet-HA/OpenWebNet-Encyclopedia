@@ -200,7 +200,12 @@ def main() -> int:
                                  text=True, capture_output=True, check=False)
         if privacy.returncode:
             raise ValueError(privacy.stderr.strip() or "privacy validation failed")
-        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, and privacy gates")
+        devices = subprocess.run(
+            [sys.executable, str(ROOT / "devices/tools/check-device-definitions.py")],
+            cwd=ROOT, text=True, capture_output=True, check=False)
+        if devices.returncode:
+            raise ValueError(devices.stderr.strip() or "Device definition completeness check failed")
+        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, privacy gates, and Device definition completeness")
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"Machine KB check failed: {error}", file=sys.stderr)
         return 1

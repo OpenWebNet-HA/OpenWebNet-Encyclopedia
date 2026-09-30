@@ -13,11 +13,21 @@
 
 ## Commercial identities
 
-The canonical catalogue groups the Axolute and Living/Light/Light Tech 4575 receiver references under technical item `28`.
+| Brand / line | Reference | Catalogue record | Relationship | Evidence |
+| --- | --- | ---: | --- | --- |
+| BTicino / Axolute | `HC/HS/HD4575` | `28` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino / L/N/NT | `L/N/NT4575` | `1839` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino / L/N/NT | `L/N/NT4575N` | `1840` | Commercial identity of this Technical Device | Canonical catalogue |
+
+All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
 
 ## Documentation
 
-An official Legrand/BTicino technical guide for the radio-wired interface is archived in Device Sources. It explicitly covers `HC/HS4575` and `L/N/NT4575N`; the catalogue additionally groups `HD4575` and `L/N/NT4575` with the same technical item.
+| Document | Type | Revision / date | Relevant pages | Status | Source |
+| --- | --- | --- | --- | --- | --- |
+| mh_diff-sonore2008.pdf | Radio-wired interface technical guide | historical publisher guide | 4575 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) |
+
+Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
 
 ## Physical and electrical characteristics
 
@@ -25,35 +35,99 @@ The official guide specifies 27 Vdc BUS supply, 868 MHz reception, 2 mA consumpt
 
 ## Identity
 
-Catalogue item `28` maps to Automation `modobj = 20`.
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `28` | Canonical catalogue |
+| Technical item description | Receiving radio interface | Canonical catalogue |
+| Item family | `27` - Radio device | Canonical catalogue |
+| Main system | `1` - lighting_automation; `modobj` `20` | AS_ITEM_SYSTEM |
+| Commercial records | `3` | EN_DEVICE |
 
 ## Firmware and hardware
+
+| Firmware ID | Version | Revision | Declared slots | Default | Status |
+| ---: | ---: | ---: | ---: | --- | --- |
+| `214` | `-1` | `-1` | `1` | `1` | `0` |
 
 Firmware `214` is wildcard `-1.-1.-1` and declares one Module.
 
 ## Module, Object, and Virgin Object model
 
+### Firmware Object relations
+
+| Firmware | Relation | Object | Key | Description |
+| ---: | ---: | ---: | ---: | --- |
+| `214` | `607` | `27` | `27` | Radio receiver |
+
+### Slot applicability
+
+| Slot row | Slot | Object | Relationship | Description |
+| ---: | ---: | ---: | --- | --- |
+| `1010` | `1` | `27` | fixed | Radio receiver |
+
+### Virgin Object reachability
+
+| Firmware | Relation | Virgin Object | Key | Description | Associated Objects | Slot rows |
+| ---: | ---: | ---: | ---: | --- | --- | --- |
+| - | - | - | - | No firmware-scoped Virgin Object | - | - |
+
 The single Module resolves to Object `27`, **Radio receiver**. No Virgin Object is declared for this firmware.
 
 ## Configuration modes
+
+| Firmware | Mode ID | Catalogue mode | Description |
+| ---: | ---: | ---: | --- |
+| `214` | `1` | `1` | Virtual Configuration |
+| `214` | `3` | `0` | Physical configuration |
 
 Physical Configuration and Virtual Configuration are declared.
 
 ## Firmware-scoped configuration
 
+| Field | Description | Data type | Catalogue range rows | Flags |
+| --- | --- | --- | --- | --- |
+| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
+| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
+| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
+| `M` | M | Enum | range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`0` - 0 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
+
+Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
+
 The firmware exposes `A`, `PL`, `M` and `AID`. Its `M` description permits `0`, `1`, `6`, `7`, `8` and `CEN`. The reusable Object uses the corresponding `MOD` concept.
 
 ## Object configuration surfaces
+
+### Object `27` - Radio receiver
+
+| Field | Description | Data type | Catalogue range rows | Flags |
+| --- | --- | --- | --- | --- |
+| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| `PL` | Light point | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| `MOD` | Modality | Enum | range -..- - step `1` - default marker `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
 
 Object `27` represents the radio receiver as one SCS endpoint. Radio transmitters paired to it are not additional Device Modules in this catalogue model.
 
 ## Conditions, filters, and conversions
 
-The technical inventory records no Device-specific conditions, filters or conversions.
+| Surface | Catalogue rows | Interpretation |
+| --- | ---: | --- |
+| Slot conditions | `0` | Device/Firmware topology conditions |
+| Object/Firmware filters | `0` | Conditional Object configuration exposure |
+| Referenced conversion rules | `0` | None |
+
+Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
 
 ## Diagnostic applicability
 
-Use standard Device identity, firmware, Object, address and configuration diagnostics.
+| Surface | Device-specific use | Reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+Catalogue applicability is not itself an observed runtime result.
 
 ## Functional applicability
 
@@ -76,8 +150,10 @@ The canonical database and publisher technical guide agree on a one-Module radio
 - Add sanitized hardware and pairing traces.
 - Recover dedicated documentation for the catalogue-only `HD4575` and `L/N/NT4575` forms if distinct publisher sheets exist.
 - Map each `M/MOD` value to verified emitted OpenWebNet behavior.
+- Pin exact printed and 1-based PDF page locations for each applicable multi-product guide citation.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
+- [mh_diff-sonore2008.pdf](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf)
