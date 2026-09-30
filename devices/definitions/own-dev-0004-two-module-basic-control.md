@@ -156,7 +156,7 @@ For the four references named by `MQ00286-d-EN`, the sheet documents:
 - PLUS scenario number `1..2047` and button number `0..31` through virtual configuration;
 - Lighting Management virtual functions including dual light, CEN, CEN PLUS, and AUX control.
 
-The exact generic functional frame grammar remains canonical under [WHO 1 - Lighting](../../functional/who-1-lighting/) and [WHO 2 - Automation](../../functional/who-2-automation/).
+The exact generic functional frame grammar remains canonical under [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
 
 ## Diagnostic applicability
 

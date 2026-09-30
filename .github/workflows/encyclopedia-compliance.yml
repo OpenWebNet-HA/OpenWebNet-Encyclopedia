@@ -5,10 +5,12 @@ on:
     branches:
       - main
       - machine-knowledge-base
+      - docs/devices-foundation
   push:
     branches:
       - main
       - machine-knowledge-base
+      - docs/devices-foundation
   workflow_dispatch:
 
 permissions:

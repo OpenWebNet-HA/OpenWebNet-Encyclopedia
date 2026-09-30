@@ -161,7 +161,7 @@ For lighting, physical modes include cyclic ON/OFF, separate ON/OFF, slave opera
 
 The remote-control side supports point-to-point, room, group, and general addressing plus lighting, automation, and programmed-scenario functions. Virtual configuration exposes a broader parameter surface than physical configurators.
 
-Generic WHO frame grammar remains canonical under [WHO 1 - Lighting](../../functional/who-1-lighting/) and [WHO 2 - Automation](../../functional/who-2-automation/).
+Generic WHO frame grammar remains canonical under [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
 
 ## Reusable Object configuration surfaces
 

@@ -102,10 +102,10 @@ The technical sheet documents:
 
 | `M` | Physical keys activate |
 | ---: | --- |
-| `1` | scenarios 1..4 |
-| `2` | scenarios 5..8 |
-| `3` | scenarios 9..12 |
-| `4` | scenarios 13..16 |
+| `1` | scenarios `1..4` |
+| `2` | scenarios `5..8` |
+| `3` | scenarios `9..12` |
+| `4` | scenarios `13..16` |
 | `CEN` | CEN/programmed scenario mode |
 
 With no CEN selector, the catalogue selects Scenario module Object `403`; with `M=CEN`, it selects Scheduled scenario Object `404`.
@@ -144,8 +144,8 @@ Implementation-only `M=FAKE` conditions expose PLUS Objects `405` and `406`; `FA
 | 2 | `403` Scenario module control | `M<>CEN` | `13` |
 | 1 | `404` Scheduled scenario | `M=CEN` | `65` |
 | 2 | `404` Scheduled scenario | `M=CEN` | `66` |
-| 1..2 | `405` Scenario PLUS Lighting Management | `M=FAKE` | none |
-| 1..2 | `406` Scheduled scenario PLUS | `M=FAKE` | none |
+| `1..2` | `405` Scenario PLUS Lighting Management | `M=FAKE` | none |
+| `1..2` | `406` Scheduled scenario PLUS | `M=FAKE` | none |
 
 Generic conversion-rule evaluation belongs in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
@@ -155,8 +155,8 @@ Generic conversion-rule evaluation belongs in [Catalogue Resolution](../../inter
 
 - mode: scenario activation+modification or activation-only;
 - encoded A/PL target covering `A=0..10`, `PL=0..15`;
-- installation level: private riser, local buses 1..15, standard;
-- destination level: private riser or local buses 1..15;
+- installation level: private riser, local buses `1..15`, standard;
+- destination level: private riser or local buses `1..15`;
 - scenario buttons 1 and 2: `1..16`;
 - independent delay tables for the two button positions.
 

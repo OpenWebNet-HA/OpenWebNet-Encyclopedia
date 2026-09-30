@@ -20,6 +20,7 @@ HUMAN_ROOTS = (
     "README.md",
     "device-model",
     "diagnostics",
+    "devices",
     "functional",
     "guides",
     "internals",
@@ -193,6 +194,37 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                 )
 
         plain = mask_code(text)
+        is_device_definition = rel.parts[:2] == ("devices", "definitions")
+        if is_device_definition:
+            for pattern, code in (
+                (r"(?<![\w\x60])OWN-DEV-[0-9]{4}\b", "DEVICE_BARE_IDENTIFIER"),
+                (r"(?<![\w\x60])(WHO|WHAT|WHERE|DIMENSION)\s+[0-9]+\b", "DEVICE_BARE_PROTOCOL_LITERAL"),
+                (r"\b(?:EN|AS|CONF)_[A-Z0-9_]+\.[A-Za-z0-9_]+\b", "DEVICE_BARE_DATABASE_LITERAL"),
+                (r"(?<![.\x60\d])\d+\.\.\d+(?![.\x60\d])", "DEVICE_BARE_RANGE_LITERAL"),
+                (r"(?<![\w\x60])[A-Z][A-Z0-9_]*(?:=|<>)[A-Za-z0-9_/-]+(?![\w\x60])", "DEVICE_BARE_ASSIGNMENT_LITERAL"),
+            ):
+                for match in re.finditer(pattern, plain):
+                    objective.append(
+                        f"{code} {rel}:{line_number(plain, match.start())}: {match.group(0)}"
+                    )
+
+            current_heading = ""
+            for number, line in enumerate(text.splitlines(), 1):
+                heading = re.match(r"^#{2,3}\s+(.+?)\s*$", line)
+                if heading:
+                    current_heading = re.sub(r"\x60", "", heading.group(1)).lower()
+                    continue
+                if "configuration" not in current_heading or not line.startswith("|"):
+                    continue
+                cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                if not cells:
+                    continue
+                first = cells[0]
+                if re.fullmatch(r"[A-Z][A-Z0-9_]{0,63}", first):
+                    objective.append(
+                        f"DEVICE_BARE_FIELD_LITERAL {rel}:{number}: {first}"
+                    )
+
         if path in human:
             for pattern, code in (
                 (r"\binternal[ -]slot(?:s)?\b", "OBSOLETE_INTERNAL_SLOT"),

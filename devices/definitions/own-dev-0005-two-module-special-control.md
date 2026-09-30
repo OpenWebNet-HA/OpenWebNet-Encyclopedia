@@ -193,8 +193,8 @@ Generic frame syntax belongs in the relevant functional sections rather than her
 
 Depending on configuration, this Device crosses multiple OpenWebNet domains. The Device definition establishes that those roles can exist on this hardware; the linked functional references remain authoritative for wire semantics.
 
-- [WHO 1 - Lighting](../../functional/who-1-lighting/)
-- [WHO 2 - Automation](../../functional/who-2-automation/)
+- [`WHO 1` - Lighting](../../functional/who-1-lighting/)
+- [`WHO 2` - Automation](../../functional/who-2-automation/)
 - scenario/CEN behavior
 - sound diffusion
 - video door-entry related control

@@ -54,8 +54,8 @@ The 2018 technical sheet establishes the following product-specific characterist
 | Device consumption | max. `5 W` | Vendor technical sheet |
 | Operating temperature | `0..40 °C` | Vendor technical sheet |
 | Channels | 2, with parallel operation supported by the product documentation | Vendor technical sheet |
-| Nominal channel load at 220..240 V | up to `300 W` per channel | Vendor technical sheet |
-| Parallel load at 220..240 V | up to `600 W` | Vendor technical sheet |
+| Nominal channel load at `220..240 V` | up to `300 W` per channel | Vendor technical sheet |
+| Parallel load at `220..240 V` | up to `600 W` | Vendor technical sheet |
 | Load families | dimmable LED, dimmable CFL, halogen, electronic transformers | Vendor technical sheet |
 | Local operation | local channel pushbuttons | Vendor technical sheet |
 
@@ -231,7 +231,7 @@ First-hand evidence already adds several Device-specific observations:
 - through F454, an OFF-state `DIMENSION 1` request was observed to return a `DIMENSION 4` frame;
 - through an MH200 running firmware 2.1.0, the preserved public trace shows working `DIMENSION 1` reads/writes while explicit `DIMENSION 4` requests received no response in the captured windows.
 
-These observations corroborate runtime behavior but do not change the canonical generic frame definitions. See [WHO 1 Dimensions](../../functional/who-1-lighting/dimensions.md) and the [Open Questions](../../reverse-engineering/open-questions.md).
+These observations corroborate runtime behavior but do not change the canonical generic frame definitions. See [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md) and the [Open Questions](../../reverse-engineering/open-questions.md).
 
 ## Programming
 
@@ -260,4 +260,4 @@ Generic `DIMENSION` write syntax and validation sequencing belong in [Configurat
 - [Physical Devices](../../device-model/physical-devices.md#f418u2)
 - [Firmware](../../device-model/firmware.md)
 - [Virgin Objects](../../device-model/virgin-objects.md#dimmer-actuator-virgin)
-- [WHO 1 Dimensions](../../functional/who-1-lighting/dimensions.md)
+- [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md)
