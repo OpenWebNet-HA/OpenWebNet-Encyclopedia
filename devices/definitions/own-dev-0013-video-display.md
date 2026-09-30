@@ -9,8 +9,8 @@
 | Catalogue item | `1076` - “Video Display” | Implementation evidence |
 | Main catalogue system | Video door entry system | Implementation evidence |
 | Item model / `modobj` | `145` | Implementation evidence |
-| Firmware definitions | `5.0.0` and `6.0.1` | Implementation evidence |
-| Declared Modules | 5 | Implementation evidence |
+| Firmware definition | `5.0.0` and `6.0.1` | Implementation evidence |
+| Declared Modules | `5` | Implementation evidence |
 | Configuration mode | Product Programming | Implementation evidence |
 | Programming connection | USB | Implementation evidence |
 | Categories | Audio / Video, User Interface, Multifunction | Product and capability model |
@@ -34,34 +34,38 @@ Shared item membership establishes the common catalogue capability core. It does
 
 ## Documentation
 
-| Document | Type | Coverage | Archived original |
-| --- | --- | --- | --- |
-| `O1421A_I_EN` | Installation manual | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf) |
-| `O1421A_U_EN` | User guide | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf) |
-| `O1421A_S_EN` | TiLivingLightDisplay software manual | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf) |
-| MyHOME Automation guide | System / product guide | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `O1421A_I_EN` | Installation manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf) | publisher source not currently retained |
+| `O1421A_U_EN` | User guide | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf) | publisher source not currently retained |
+| `O1421A_S_EN` | TiLivingLightDisplay software manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf) | publisher source not currently retained |
+| MyHOME Automation guide | System / product guide | revision/date not yet pinned | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) | publisher source not currently retained |
 
 All retained files are byte-for-byte originals registered in the source manifest.
 
-## Physical and product characteristics
+## Physical and electrical characteristics
 
-The archived installation manual documents the `344400/344401` implementation as a flush-mounted Video Display with a 2.5-inch LCD, local navigation and function keys, SCS connection, and mini-USB connection for advanced programming and firmware-related operations.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | flush-mounted Video Display | `O1421A_I_EN` |
+| Display | 2.5-inch LCD | `O1421A_I_EN` |
+| Local interface | navigation and function keys | `O1421A_I_EN` |
+| SCS interface | SCS connection | `O1421A_I_EN` |
+| Programming interface | mini-USB for advanced programming and firmware-related operations | `O1421A_I_EN` |
 
-The user-facing function set includes video-door-entry functions together with configurable access to intercom/camera activation, scenarios, alarms, sound, temperature-control and multimedia functions. These are product-level functions; the five catalogue Modules below describe the fixed OpenWebNet-facing capability projection rather than the complete UI menu.
+The user-facing function set is broader than the five catalogue Modules. Product UI functions do not imply one OpenWebNet Module per menu entry.
 
 ## Identity
 
 | Field | Value | Evidence |
 | --- | --- | --- |
 | `EN_ITEM.id_item` | `1076` | Implementation evidence |
-| main system | Video door entry system | Implementation evidence |
+| Main system | Video door entry system | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `145` | Implementation evidence |
-| BTicino brand / line values | brand `1`; L/N/NT line `1`; Axolute line `3` | Implementation evidence |
-| Legrand Arteor values | brand `2`; line `2` | Implementation evidence |
+| BTicino brand / line | brand `1`; L/N/NT line `1`; Axolute line `3` | Implementation evidence |
+| Legrand Arteor | brand `2`; line `2` | Implementation evidence |
 
-Installed identity values should be corroborated through the canonical [Device Identity](../../diagnostics/dim1-device-identity.md) workflow when a known physical unit is available.
-
-## Firmware
+## Firmware and hardware
 
 The current canonical catalogue has two firmware capability definitions:
 
@@ -74,7 +78,7 @@ Both definitions expose the same five fixed Objects, Product Programming mode, U
 
 Catalogue applicability does not prove the firmware installed on every commercial variant.
 
-## Module and Object model
+## Module, Object, and Virgin Object model
 
 | Slot | Object | Description | Relationship |
 | ---: | ---: | --- | --- |
@@ -86,21 +90,78 @@ Catalogue applicability does not prove the firmware installed on every commercia
 
 There are no Virgin Objects and no slot-condition rows for either firmware definition.
 
+## Configuration modes
+
+| Mode / modality | Evidence |
+| --- | --- |
+| Product Programming | implementation evidence; TiLivingLightDisplay workflow |
+| USB programming connection | implementation evidence + installation/software documentation |
+
 ## Firmware-scoped configuration
 
-| Field | Stored domain | Meaning |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | Device identity | - | implementation identity field |
+| `N_1` | `0..9` | - | first digit of physical `N` address |
+| `N_2` | `0..9` | - | second digit of physical `N` address |
+| `P` | `0..9` | - | associated entrance-panel / external-unit configurator |
+| `M` | `0..6` | - | physical operating / menu mode selector |
+
+Physical quick configuration is a two-digit `N` plus `P` and `M`. Advanced configuration is performed with the PC software.
+
+## Object configuration surfaces
+
+The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+
+### Object `154` - catalogue configuration
+
+| Surface | Fields | Meaning |
 | --- | --- | --- |
-| `AID` | Device identity | implementation identity field |
-| `N_1` | `0..9` | first digit of physical `N` address |
-| `N_2` | `0..9` | second digit of physical `N` address |
-| `P` | `0..9` | associated entrance-panel / external-unit configurator |
-| `M` | `0..6` | physical operating / menu mode selector |
+| Addressing | `N`, `P` | Address; Associated external unit |
+| Mode / behavior | `HAND_FREE`, `PRO_STUDIO`, `DOOR_STATE`, `IS_SLAVE` | HAND_FREE; Professional Studio; Door state display; Slave |
+| Object-specific | `PEOPLE_S`, `ASS_SWITCH`, `DOSA_CALL` | PeopleSearching; AssociatedSwitchboard; Forward incoming call to ethernet |
+| User interface | `MENU_PRE`, `BEEP` | MenuPreset; BEEP |
+| Timing | `RING_T_OUT`, `CALL_T_OUT`, `PE_T_OUT`, `PI_T_OUT`, `TEL_T_OUT` | RingTimeOut; Call timeout; EUConnectionTimeOut; IUConnectionTimeOut; TelConnectionTimeout |
 
-The installation manual presents the physical quick-configuration surface as a two-digit `N` plus `P` and `M`. It also states that a physically configured unit cannot edit the corresponding configuration through the display menu, while advanced configuration is performed with the PC software.
+### Object `418` - catalogue configuration
 
-## Reusable Object configuration
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `P` | External unit address |
+| Object-specific | `SEG_LEV` | Level |
 
-### Object `154` - Internal Unit
+### Object `422` - catalogue configuration
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `P` | External unit address |
+| Object-specific | `SEG_LEV` | Segment |
+
+### Object `426` - catalogue configuration
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `N1`, `N2` | Internal unit address |
+| Object-specific | `SEG_LEV` | Segment |
+
+### Object `429` - catalogue configuration
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Object-specific | `M` | mode(Base,Advanced) |
+| Addressing | `AMPL_AREA`, `AMPL_UNIT`, `ADDR_TYPE` | Amplifier area; Amplifier unit; Addressing type |
+
+### Additional Device-specific interpretation
+
+| Object | Role | Principal configuration |
+| --- | --- | --- |
+| `154` | Internal Unit | N/P addressing, flags, menu preset, timeouts, switchboard |
+| `418` | Open lock control | external-unit `P` and segment level |
+| `422` | Addressed autoswitch control | external-unit `P` and segment level |
+| `426` | Staircase light control | `N1`/`N2` and segment |
+| `429` | Paging button | mode, amplifier area/unit and addressing type |
+
+#### Object `154` - Internal Unit
 
 The reusable Internal Unit model exposes:
 
@@ -117,31 +178,52 @@ The reusable Internal Unit model exposes:
 
 The source contains two unresolved labels for `PEOPLE_S` values `1` and `2`; preserve them as unknown rather than inventing names.
 
-### Object `418` - Open lock control
+#### Object `418` - Open lock control
 
 - external-unit address `P=0..95`;
 - segment level: same level, riser, building, or backbone.
 
-### Object `422` - Addressed autoswitch control
+#### Object `422` - Addressed autoswitch control
 
 - external-unit address `P=0..95`;
 - segment level: same, riser, building, or backbone.
 
-### Object `426` - Staircase light control
+#### Object `426` - Staircase light control
 
 - internal-unit address split across `N1=0..255` and `N2=0..15`;
 - segment: same, riser, building, or backbone.
 
-### Object `429` - Paging button
+#### Object `429` - Paging button
 
 - mode `1=Base`, `2=Advanced`;
 - amplifier area `0..99`;
 - amplifier unit `0..39`;
 - addressing type: General, Ambient, or Point-to-point.
 
+## Conditions, filters, and conversions
+
+| Surface | Status | Evidence |
+| --- | --- | --- |
+| Slot conditions | none for either catalogue firmware | implementation evidence |
+| Virgin Object | none | implementation evidence |
+| Topology | five fixed Objects for both catalogue firmware definitions | implementation evidence |
+
+### Catalogue filter references
+
+| Filter | Object | Field | Source note |
+| --- | --- | --- | --- |
+| `2003` | `154` | `DOSA_CALL` | Forward incoming call to ethernet |
+| `2019` | `154` | `DOSA_CALL` | Forward incoming call to ethernet |
+| `4110` | `426` | `N1` | Internal unit address |
+| `4111` | `426` | `N1` | Internal unit address |
+
+### Catalogue slot-condition references
+
+No slot-condition rows are associated with this Device firmware in the canonical catalogue.
+
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
 | `DIMENSION 1` | identify item model `145`, brand and line | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware rather than assume catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
@@ -150,6 +232,14 @@ The source contains two unresolved labels for `PEOPLE_S` values `1` and `2`; pre
 | `DIMENSION 35` | inspect configuration values where exposed | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 Generic diagnostic frame grammar belongs in the linked references.
+
+## Functional applicability
+
+The primary role is video door entry. The product UI can also expose intercom/camera activation, scenarios, alarms, sound, temperature-control and multimedia functions without creating one firmware Module per UI function.
+
+## Observed behavior and corroboration
+
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
 
 ## Programming
 
@@ -171,7 +261,7 @@ The archived Video Display installation, user and TiLivingLightDisplay manuals a
 
 The dossier now treats the five Objects as the OpenWebNet projection of a richer video-door-entry user interface rather than as the whole product.
 
-## Corroboration status and open work
+## Evidence limits and open work
 
 - Obtain sanitized fingerprints for at least one `344400/344401` unit and one Axolute/Arteor variant.
 - Locate direct official documentation for `349313`, `349340`, `573950` and `573951`.
