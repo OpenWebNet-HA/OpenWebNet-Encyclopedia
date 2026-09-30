@@ -1,6 +1,6 @@
 # OpenWebNet Machine KB 0.1.1 Release Notes
 
-**Release identity:** OpenWebNet Machine KB 0.1.1, intended Git tag `machine-kb-v0.1.1`.
+**Release identity:** OpenWebNet Machine KB 0.1.1, Git tag `machine-kb-v0.1.1`.
 
 This patch release corrects consumer-facing defects discovered after 0.1.0 while preserving the published 0.1.0 schema and artifact compatibility contract.
 
@@ -52,4 +52,4 @@ The exact release revision must pass:
 
 The machine artifacts remain offline-consumable and model-free. Repository-authored content remains under Apache License 2.0; source and vendored third-party materials retain their respective rights and provenance boundaries.
 
-The formal tag and GitHub Release must point to the exact validated revision without intervening changes.
+The tag and GitHub Release point to the validated revision `40db576cae95fa3483121bab3bfdb68ea5e3c706`.

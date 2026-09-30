@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** OpenWebNet Machine KB 0.1.0 is published at `machine-kb-v0.1.0`. The 0.1.1 corrective patch release is prepared from current `main`, targeting `machine-kb-v0.1.1`. It repairs the 1,120 released claim statements affected by table-context parser leakage, aligns schema vocabulary documentation, adds fail-closed generated-text hygiene validation, and standardizes the formal public name. Schema compatibility and artifact format versions remain 0.1.0, and the 11,353-ID compatibility baseline is unchanged. User authorization to perform the 0.1.1 release was given on 2026-09-30; the exact revision must still pass the full release suite before tagging and publication.
+**Status:** OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1` at validated release commit `40db576cae95fa3483121bab3bfdb68ea5e3c706`. It repairs the 1,120 released 0.1.0 claim statements affected by table-context parser leakage, aligns schema vocabulary documentation, adds fail-closed generated-text hygiene validation, and standardizes the formal public name. Schema compatibility and artifact format versions remain 0.1.0, and the 11,353-ID compatibility baseline is unchanged.
 
 ## Intended consumer contract
 
@@ -47,7 +47,7 @@ The build and CI remain offline and model-free. Green mechanical validation is s
 
 ## Release boundary
 
-Machine KB 0.1.0 is already published. For the corrective patch, the intended tag is `machine-kb-v0.1.1`. Explicit user authorization for this release was provided on 2026-09-30. Tagging and publication remain contingent on the exact release-preparation revision passing the complete validation suite with no intervening commit.
+Machine KB 0.1.0 and corrective patch 0.1.1 are published. Tag `machine-kb-v0.1.1` points to exact validated revision `40db576cae95fa3483121bab3bfdb68ea5e3c706`; the matching immutable GitHub Release was published on 2026-09-30.
 
 ## Current-main reconciliation - 2026-09-27
 
@@ -127,3 +127,18 @@ The post-0.1.0 delta is intentionally bounded to corrective generator, validatio
 - schema compatibility, artifact format versions, corpus counts, and the 11,353 live-ID baseline remain unchanged.
 
 This is a patch release under the published 0.1.0 compatibility contract. No consumer migration is required. The exact preparation revision must pass the complete release validation and then be tagged as `machine-kb-v0.1.1` without an intervening commit.
+
+## Machine KB 0.1.1 publication - 2026-09-30
+
+The complete exact-commit release suite passed on `40db576cae95fa3483121bab3bfdb68ea5e3c706` before tagging.
+
+- 59 Machine KB unit tests passed.
+- 8 schema/golden-fixture tests passed.
+- Deterministic build freshness and `check.py` passed.
+- Cross-artifact consistency remained 135 canonical documents, 1,207 sections, 7,449 claims, 1,423 references, 1,173 retrieval chunks, and 11,353 live IDs.
+- Privacy validation passed across 20 generated artifacts and metadata surfaces.
+- ESG and ECV deterministic checks reported zero objective failures.
+- Direct comparison with `machine-kb-v0.1.0` found exactly 1,120 changed claim records, with every change confined to the `statement` field; the stable ID registry and unaffected public corpus/retrieval/reference artifacts remained byte-identical.
+- Annotated tag `machine-kb-v0.1.1` resolves to `40db576cae95fa3483121bab3bfdb68ea5e3c706`.
+- The immutable, non-prerelease GitHub Release was published successfully.
+- Issue #37 was closed after publication verification.

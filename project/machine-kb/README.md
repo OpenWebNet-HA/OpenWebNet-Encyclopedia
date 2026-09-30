@@ -2,7 +2,7 @@
 
 This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation or release session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; knowledge/ is its public machine projection.
 
-**Current state (2026-09-30): OpenWebNet Machine KB 0.1.0 is published, and `main` is prepared for the corrective 0.1.1 patch release under intended tag `machine-kb-v0.1.1`.** The patch repairs the released table-context claim rendering defect, aligns schema vocabulary documentation, adds a generated-text hygiene gate, and formalizes the public product name while preserving the 0.1.0 schema/artifact compatibility contract and stable-ID inventory.
+**Current state (2026-09-30): OpenWebNet Machine KB 0.1.1 is published under tag `machine-kb-v0.1.1` at validated release commit `40db576cae95fa3483121bab3bfdb68ea5e3c706`.** It is a compatible corrective patch over the 0.1.0 baseline: the released table-context claim rendering defect is repaired, schema vocabulary documentation is aligned, generated-text hygiene is fail-closed, and the formal public name is standardized without changing the 0.1.0 schema/artifact compatibility contract or stable-ID inventory.
 
 | File | Use |
 | --- | --- |

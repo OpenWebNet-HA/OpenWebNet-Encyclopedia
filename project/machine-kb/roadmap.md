@@ -1,6 +1,6 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-30. OpenWebNet Machine KB 0.1.0 is published. Current `main` is prepared for the corrective 0.1.1 patch release under intended tag `machine-kb-v0.1.1`; the 0.1.0 compatibility contract remains unchanged. A phase is complete only after its acceptance work and checks pass and its state is recorded here. Historical phase notes are retained as implementation history.
+Snapshot: 2026-09-30. OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1`; the 0.1.0 compatibility contract remains unchanged. A phase is complete only after its acceptance work and checks pass and its state is recorded here. Historical phase notes are retained as implementation history.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
@@ -145,11 +145,7 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-OpenWebNet Machine KB 0.1.0 is published and is the compatibility baseline. The corrective 0.1.1 patch is prepared on `main`; user authorization to release was provided on 2026-09-30. After the exact release-preparation commit passes the complete validation suite, the remaining formal actions are:
-
-1. create `machine-kb-v0.1.1` on the unchanged validated revision;
-2. create the matching GitHub Release;
-3. close the 0.1.0 claim-rendering issue once publication is verified.
+OpenWebNet Machine KB 0.1.1 is published and the 0.1.0 claim-rendering issue is closed. Preserve `machine-kb-v0.1.1` as the immutable corrective snapshot while normal Encyclopedia and Machine KB maintenance continues. The completionist Device Library work can be incorporated into a later release once it reaches its intended coverage milestone.
 
 Do not introduce another commit between final validation and tag creation.
 
