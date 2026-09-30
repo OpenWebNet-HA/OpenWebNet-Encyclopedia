@@ -7,9 +7,9 @@
   "confidence": "high",
   "evidence_class": "public_experiment",
   "recorded_at": "2026-09-26T19:58:35.649Z",
-  "installation_id": "872e3977-0010-5d91-bdbc-d64be886af4c",
-  "bus_id": "ba4c92c7-b7b7-5a17-b539-c9a034892062",
-  "gateway_id": "3effc5e8-fc45-56c5-9dcd-0de119513a43",
+  "installation_id": "58964012-179b-5120-bfb6-b511ee2bcd0f",
+  "bus_id": "44420761-807c-5d98-a745-f3c794d37f30",
+  "gateway_id": "c9c79529-1399-5c4f-ac30-ec3bc466b291",
   "environment": {
     "gateway_model": "MH200",
     "gateway_firmware": "2.1.0",
@@ -20,13 +20,34 @@
     "sku": "BTicino F414",
     "description": "Classic 10-level incandescent/ferromagnetic modular dimmer",
     "configured_where": "99",
-    "pseudonym_device_id": "27FED9D7"
+    "pseudonym_device_id": "64144391"
   },
-  "summary": "Empirical evidence that classic 10-level F414 dimmers on an MH200 utilize Dimension 1 for status queries (*#1*99*1## -> *#1*99*1*200*2##) and discrete Level 1..10 commands (*1*9*99##), but ignore Dimension 4 writes.",
+  "summary": "Empirical evidence that classic 10-level F414 dimmers on an MH200 utilize Dimension 1 for status queries (*#1*99*1## -> *#1*99*1*200*2##), accept fine-grained Dimension 1 writes (*#1*99*#1*150*0## -> *#1*99*1*150*5##), and report discrete level changes that internally map to Dimension 1 levels (Level 10->200, Level 9->174, Level 8->163, 50%->WHAT 7). Dimension 4 is neither sent nor tested; open question q000025 remains open.",
+  "test_recipe": [
+    "1. Send Dimension 1 status request *#1*99*1## to establish baseline (returns *#1*99*1*200*2##, 100%).",
+    "2. Send discrete Level 9 command *1*9*99## and confirm echo (*1*9*99##).",
+    "3. Query Dimension 1 level *#1*99*1## to observe internal mapping (*#1*99*1*174*2##, 74%).",
+    "4. Send discrete Level 8 command *1*8*99## and confirm echo (*1*8*99##).",
+    "5. Query Dimension 1 level *#1*99*1## to observe internal mapping (*#1*99*1*163*2##, 63%).",
+    "6. Send fine Dimension 1 write *#1*99*#1*150*0## (50% brightness).",
+    "7. Confirm dimmer accepts write and emits *#1*99*1*150*5## (active transition speed 5).",
+    "8. Query standard status *#1*99## to observe coarse mapping (*1*7*99##, level 7).",
+    "9. Restore dimmer to discrete Level 10 *1*10*99## and verify Dimension 1 restoration to 200 (*#1*99*1*200*2##)."
+  ],
   "claims_supported": [
     "claim.who1.dimmer.f414.uses_dimension_1",
-    "claim.who1.dimmer.f414.ignores_dimension_4",
-    "claim.who1.dimmer.f414.discrete_levels"
+    "claim.who1.dimmer.f414.accepts_dimension_1_fine_writes",
+    "claim.who1.dimmer.f414.discrete_to_dimension_1_mapping"
+  ],
+  "machine_kb_claims": [
+    "ownkb:claim:c007514"
+  ],
+  "related_questions": [
+    "ownkb:question:q000025"
+  ],
+  "related_documents": [
+    "functional/who-1-lighting/dimensions.md",
+    "reverse-engineering/open-questions.md"
   ],
   "frame_count": 18
 }
