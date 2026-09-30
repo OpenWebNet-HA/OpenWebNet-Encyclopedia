@@ -288,8 +288,8 @@ No generic diagnostic frame is duplicated here.
 
 Depending on selected Objects, the Device can participate in:
 
-- [WHO 1 - Lighting](../../functional/who-1-lighting/) through Light actuator / Light control Objects;
-- [WHO 2 - Automation](../../functional/who-2-automation/) through Automation actuator / Automation control Objects;
+- [`WHO 1` - Lighting](../../functional/who-1-lighting/) through Light actuator / Light control Objects;
+- [`WHO 2` - Automation](../../functional/who-2-automation/) through Automation actuator / Automation control Objects;
 - scenario/CEN behavior through Scheduled scenario and Scheduled scenario PLUS Objects.
 
 The Device page establishes **which functions can exist on this hardware**. The linked functional sections remain authoritative for command syntax and general runtime semantics.

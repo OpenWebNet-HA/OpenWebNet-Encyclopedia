@@ -101,7 +101,7 @@ The firmware offers these sensor Objects on slot `1`:
 
 Objects without physical condition rows remain valid catalogue alternatives for virtual/advanced configuration; they must not be declared unreachable solely because the physical-condition table does not select them.
 
-### Slots 2..17 - IR scenario controls
+### Slots `2..17` - IR scenario controls
 
 Object `431`, **IR scenario control**, is fixed on slots `2..17`, producing sixteen scenario-control Modules.
 

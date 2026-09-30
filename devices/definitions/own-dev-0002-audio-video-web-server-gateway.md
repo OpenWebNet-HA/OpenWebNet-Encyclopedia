@@ -160,9 +160,9 @@ The two catalogue firmware definitions expose the same field names and domains. 
 | `FW_VER` | firmware-version user value | `3.0.0` | `2.0.0` | Implementation evidence |
 | `VCD_PORT` | 5-digit user value | `10000` | `10000` | Implementation evidence |
 | `CMD_PORT` | 5-digit user value | `20000` | `20000` | Implementation evidence |
-| `LAN_IP_ADDRESS` | IPv4-shaped user value | `192.168.1.35` | `192.168.1.35` | Implementation evidence |
+| `LAN_IP_ADDRESS` | IPv4 template user value | `192.168.1.35` | `192.168.1.35` | Implementation evidence |
 | `LAN_IP_ADDR_TYPE` | `0=Static IP`, `1=Dynamic IP (DHCP)` | `0` | `0` | Implementation evidence |
-| `IP_ADDRESS` | IPv4-shaped user value | `192.168.1.35` | `192.168.1.35` | Implementation evidence |
+| `IP_ADDRESS` | IPv4 template user value | `192.168.1.35` | `192.168.1.35` | Implementation evidence |
 | `CONNECTION_METHOD` | `0=Dynamic IP (DHCP)`, `1=Static IP`, `2=Web active connections` | stored enum | stored enum | Implementation evidence |
 | `S_VCT` | `0=Disable`, `1=Enable` | `0` | `0` | Implementation evidence |
 
@@ -215,7 +215,7 @@ The observed F454 identity tuple independently corroborates the database mapping
 
 A first-hand F454 gateway-information capture also establishes readable `WHO 13 DIMENSION 40 = 4*0`. Its two returned values remain semantically unknown.
 
-F454 has additionally been part of controlled F418U2 tests in which gateway-dependent handling of functional dimmer dimensions was observed. Those results belong primarily to the F418U2 / gateway-path evidence and are linked from [WHO 1 Dimensions](../../functional/who-1-lighting/dimensions.md).
+F454 has additionally been part of controlled F418U2 tests in which gateway-dependent handling of functional dimmer dimensions was observed. Those results belong primarily to the F418U2 / gateway-path evidence and are linked from [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md).
 
 ## Programming
 

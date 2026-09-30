@@ -134,7 +134,7 @@ Firmware `186` exposes `G1` and `G2` directly as physical fields, while the reus
 
 ## Functional behavior
 
-The Device participates in [WHO 1 - Lighting](../../functional/who-1-lighting/). General lighting command syntax remains canonical there.
+The Device participates in [`WHO 1` - Lighting](../../functional/who-1-lighting/). General lighting command syntax remains canonical there.
 
 The product-specific dossier establishes which actuator modes, load ratings, physical configuration fields, and product identities apply.
 

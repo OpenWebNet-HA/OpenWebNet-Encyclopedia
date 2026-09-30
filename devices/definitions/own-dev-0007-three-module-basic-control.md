@@ -127,7 +127,7 @@ Each of the three Modules has its own address pair:
 
 For physical configuration, the front button pairs correspond left-to-right to those three controls. Virtual configuration supports richer room/group/general addressing and reference-address behavior.
 
-The generic command frame grammar belongs to [WHO 1 - Lighting](../../functional/who-1-lighting/) and [WHO 2 - Automation](../../functional/who-2-automation/).
+The generic command frame grammar belongs to [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
 
 ## Reusable Object configuration surfaces
 
