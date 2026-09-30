@@ -39,7 +39,7 @@ The technical Device ID does not privilege one of these references. Shared-item 
 
 | Document / source | Type | Status | Source |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution catalogue | Historical product catalogue | Official publisher PDF identified, archival copy pending | [PDF](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
+| Arnould Espace Evolution catalogue | Historical product catalogue | [Archived original](../../sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
 | MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html) |
 | MyHOME Suite automation actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) |
 
@@ -47,11 +47,11 @@ Additional installation sheets and catalogue revisions should be collected rathe
 
 ## Physical characteristics and marketed capability
 
-The historical Arnould catalogue describes `64391` as a two-independent-relay actuator with integrated control, physically or virtually configurable, occupying two modules.
+The archived historical Arnould catalogue describes `64391` as a two-independent-relay actuator with integrated control, physically or virtually configurable, occupying two modules. It documents simple or double loads, two lighting circuits or a motor, logical relay interlocking by configuration, and control of a remote BUS actuator.
 
-It documents use for simple or double loads, two lighting circuits or a motor, logical relay interlocking by configuration, and the ability to manage a remote bus actuator. The same catalogue presents the related `64191` / `64192` package references with preassembled rockers/configurators for particular uses.
+The same source makes the package distinctions explicit: `64391` is supplied without a rocker and accepts either one two-module rocker or two one-module rockers; `64191` is the lighting package, preassembled with two unmarked one-module rocker controls and supplied with blue `0/1` and `CEN` configurators; `64192` is the motor package, preassembled with one two-module Up/Down rocker, supplied with the matching Up/Down configurator, and documented for a motor up to `500 W`.
 
-Electrical ratings should remain tied to the exact archived catalogue revision because OCR and catalogue typography can make unit/value extraction fragile; the original PDF is the canonical evidence.
+For the base actuator the catalogue clearly prints `2 A` incandescent/halogen capability, `2 A cosφ 0.5` for ferromagnetic transformers, `70 W` for fluorescent/electronic-transformer loads, and a maximum of two compact-fluorescent/LED lamps. A neighbouring motor figure is typographically ambiguous in extracted text, so this dossier does not normalize that value beyond the unambiguous `64192` `500 W` package statement without page-image verification.
 
 ## Identity
 
@@ -318,7 +318,7 @@ The historical Arnould material and MyHOME Suite implementation help establish m
 - the integrated controls can operate the local relays or be assigned to remote bus functions, so the four-Module model is intentional rather than an artefact of the catalogue;
 - the lighting and automation implementation help supplies the product-specific Master/Slave/PUL and actuator-mode interpretation used by the condition/conversion model.
 
-The exact historical electrical ratings and package contents remain revision-sensitive. The official Arnould catalogue has been identified but not yet archived in this branch, so those values are not promoted as timeless specifications and source reconciliation remains partial.
+The historical Arnould catalogue is now archived byte-for-byte and its Device/package facts are reconciled above. Its electrical ratings remain revision-scoped rather than timeless specifications. The MyHOME Suite lighting and automation help remain official external implementation sources and are already represented in the configuration/Object interpretation. Source reconciliation is complete for the currently identified `64391`/`64191`/`64192` source set; direct documentation for the six other commercial records remains a commercial-identity discovery gap.
 
 ## Corroboration status and open work
 

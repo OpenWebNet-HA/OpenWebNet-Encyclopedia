@@ -32,11 +32,11 @@ The source archive should retain every distinct revision found for this Device. 
 
 | Document | Type | Revision / date | Status | Source |
 | --- | --- | --- | --- | --- |
-| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
-| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
-| `LE07383AC` | Instruction sheet | Historical revision | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
-| `LE07383AD` | Instruction sheet | 07/23 | Official source identified, archival copy pending | [PDF](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
-| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
+| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | [Archived original](../../sources/devices/documents/device-doc-f418u2-mq01019-en/MQ01019_a_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
+| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ab/LE07383AB.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
+| `LE07383AC` | Instruction sheet | Historical revision | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ac/LE07383AC.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
+| `LE07383AD` | Instruction sheet | 07/23 | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ad/LE07383AD.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
+| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | [Archived original](../../sources/devices/documents/device-doc-f418u2-st00001620-en/ST-00001620-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
 | `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 
 See the [Device Source Index](../../sources/devices/index.md) for archival status and provenance.
@@ -255,11 +255,11 @@ Known F418U2 product documentation and runtime research have been reconciled as 
 - later instruction material warns against mixing incompatible load technologies and keeps minimum-level/load-type behavior revision-scoped;
 - the runtime `DIMENSION 4` evidence remains Device-specific and unresolved in four places: the exact `ON/OFFspeed` encoding, whether the observed F454 positive write failure is systematic, whether MH200 non-response is gateway/firmware-wide or interaction-specific, and whether the reported F414/MH200 timeout followed by `NACK` can be reproduced from a preserved raw exchange.
 
-The currently identified official F418U2 revisions are not yet all archived in the repository. Source reconciliation therefore remains partial even though their known Device-level findings are represented here.
+Five identified F418U2-specific official PDFs are now archived byte-for-byte and reconciled here: `MQ01019_a_EN`, `LE07383AB`, `LE07383AC`, `LE07383AD`, and `ST-00001620-EN`. The separately listed `GUI-MHOME` is a system-wide MyHOME installation guide rather than a Device-specific F418U2 revision; its exact publisher binary remains unresolved, but no additional F418U2-specific fact has been identified that is absent from the archived Device sheets. Source reconciliation is therefore complete for the currently identified Device-specific PDF set while generic-guide archival remains open.
 
 ## Evidence limits and open work
 
-- Obtain and archive every known official PDF revision and compute source hashes.
+- Recover and archive the exact `GUI-MHOME` publisher binary if its download endpoint becomes available; treat it as generic system documentation unless it adds F418U2-specific facts.
 - Add a sanitized fingerprint capture from a known physical F418U2 so installed identity, firmware, hardware, Module/Object state, addresses, and configuration can be tied to one evidence record.
 - Resolve the source-level `A` / `PL1` physical-domain difference between catalogue data and the 2018 technical sheet.
 - Preserve production-batch-specific behavior from later instruction sheets as revision-scoped product evidence rather than generalizing it backwards.

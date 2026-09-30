@@ -1362,7 +1362,7 @@ items:
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: pending
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: partial
       hardware_corroboration: pending
       final_review: pending
@@ -1526,7 +1526,7 @@ items:
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: pending
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: partial
       final_review: pending
@@ -2678,7 +2678,7 @@ items:
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: pending
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: partial
       final_review: pending

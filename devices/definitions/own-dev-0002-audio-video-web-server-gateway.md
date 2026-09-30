@@ -32,11 +32,14 @@ The historical vendor archive currently exposes a useful set of original F454 ma
 
 | Document / artifact | Type | Status | Source |
 | --- | --- | --- | --- |
-| `MQ00519-c-EN` | Technical sheet | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
-| `O1755J_U_EN` | User manual | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
-| `O1755H_S_EN` | Software manual | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
-| `O1754E` | Instruction sheet | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
-| `Version_History_F454_20170508` | Firmware version history | Official source identified, archival copy pending | [PDF](https://www.homesystems-legrandgroup.com/documents/2416083/2422856/Version_History_F454_20170508.pdf/1f3644de-73a3-5332-3ff3-b12596cc53df?t=1595605650159) |
+| `MQ00519-c-EN` | Technical sheet | [Archived original](../../sources/devices/documents/device-doc-f454-mq00519-en/MQ00519-c-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00519-c-EN.pdf) |
+| `O1755J_U_EN` | User manual | [Archived original](../../sources/devices/documents/device-doc-f454-o1755j-u-en/O1755J_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755J_U_EN.pdf) |
+| `O1755H_S_EN` | Software manual | [Archived original](../../sources/devices/documents/device-doc-f454-o1755h-s-en/O1755H_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755H_S_EN.pdf) |
+| `O1754E` | Instruction sheet | [Archived original](../../sources/devices/documents/device-doc-f454-o1754e/O1754E.pdf) | [Official source](https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=O1754E.pdf&fileId=58107.23188.62294.22284) |
+| `Version_History_F454_20170508` | Firmware version history | [Archived original](../../sources/devices/documents/device-doc-f454-version-history-20170508/Version_History_F454_20170508.pdf) | [Official source](https://www.homesystems-legrandgroup.com/documents/2416083/2422856/Version_History_F454_20170508.pdf/1f3644de-73a3-5332-3ff3-b12596cc53df?t=1595605650159) |
+| `O1755G_U_EN` | Earlier English user manual revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-u-en/O1755G_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_U_EN.pdf) |
+| `O1755G_S_EN` | Earlier English software manual revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-s-en/O1755G_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_S_EN.pdf) |
+| `O1754C` | Additional instruction-sheet revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1754c/O1754C.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1754C.pdf) |
 | `F454_020051.fwz` | Firmware package | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
 
 Language variants should be retained separately when their bytes or content differ.
@@ -58,6 +61,21 @@ Vendor technical documentation establishes:
 | Configuration | MyHOME Suite product programming | Vendor documentation + catalogue |
 
 The catalogue independently associates both firmware definitions with Ethernet and USB connection modalities.
+
+## Web application and product-programming surfaces
+
+The archived English user and software manuals establish the product-level application surface that sits above the two catalogue Modules.
+
+- The web interface exposes Lighting, Automation, Temperature control, Video door entry, Burglar alarm, Energy Management and Scenarios, plus rooms/favourites and user settings.
+- Video-door-entry support includes camera/video functions and the associated answering-machine workflow where configured.
+- The web server supports both local and remote connection modes. MyHOME_Web configuration distinguishes fixed IP, dynamic IP and active Web Server connection (`WAC`) modes.
+- Administrative functions include user/profile management, e-mail/notification settings, IP-range controls, video-streaming settings and Device diagnostics.
+- OPEN authentication can use the numeric OPEN password or HMAC authentication. The manuals explicitly warn that some older clients may not support HMAC, and dynamic-IP MyHOME_Web operation uses OPEN-password authentication.
+- Product programming can send/receive the project, update Firmware and request Device information over mini-USB or Ethernet while the F454 is powered from the SCS bus.
+- LAN configuration includes static/DHCP addressing, router and DNS settings needed by outgoing services such as e-mail.
+- Remote access can itself be enabled/disabled through a configured AUX channel, optionally with an Automation actuator used as a status indication.
+
+These are F454 application/configuration capabilities, not extra OpenWebNet Modules. The two catalogue Objects remain the implementation projection used by MyHOME Suite.
 
 ## Identity
 
@@ -234,11 +252,11 @@ The known F454 vendor material and first-hand gateway captures add Device-specif
 - prior research also encountered a possible `WHO 13 DIMENSION 20` property, but the preserved F454/MH202 captures and canonical registries currently examined do not establish it. It remains a research question and must not be represented as an F454 capability;
 - F454-dependent F418U2 behavior, including the observed OFF-state `DIMENSION 1` request returning a `DIMENSION 4` frame and one non-effective positive `DIMENSION 4` write, is gateway-path evidence rather than a generic dimmer rule.
 
-The identified F454 manuals, instruction sheet, firmware package and history file are still not fully archived/reconciled byte-for-byte, so source reconciliation remains partial.
+The identified English F454 PDF set is now archived byte-for-byte and reconciled, including current/earlier user and software manuals, the technical sheet, two instruction-sheet revisions and the firmware history. The separate `F454_020051.fwz` firmware package remains a non-PDF archival task; it does not block reconciliation of the PDF documentation.
 
 ## Evidence limits and open work
 
-- Archive all known F454 manuals, technical sheets, instruction sheets, language variants, firmware packages, and version-history revisions.
+- Archive the `2.0.51` firmware package and retain non-English manual variants separately when they provide content beyond translation of the reconciled English revisions.
 - Add hashes and supersession relationships to the source manifest.
 - Preserve observed firmware/hardware values from sanitized captures and associate them with the matching vendor release record where justified.
 - Resolve the exact semantics of gateway `N_CONF = 15`.

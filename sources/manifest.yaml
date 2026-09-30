@@ -592,3 +592,143 @@ source_sets:
       publisher: Legrand / BTicino
       language: EN
       publication_date: unknown
+    - id: device-doc-f418u2-mq01019-en
+      path: devices/documents/device-doc-f418u2-mq01019-en/MQ01019_a_EN.pdf
+      original_filename: MQ01019_a_EN.pdf
+      type: pdf
+      size: 553605
+      sha256: 2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e
+      source_url: "https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2018-09-20"
+    - id: device-doc-f418u2-le07383ab
+      path: devices/documents/device-doc-f418u2-le07383ab/LE07383AB.pdf
+      original_filename: LE07383AB.pdf
+      type: pdf
+      size: 715645
+      sha256: 3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf"
+      publisher: "BTicino / Legrand"
+      language: "Multilingual"
+      publication_date: "unknown"
+    - id: device-doc-f418u2-le07383ac
+      path: devices/documents/device-doc-f418u2-le07383ac/LE07383AC.pdf
+      original_filename: LE07383AC.pdf
+      type: pdf
+      size: 715816
+      sha256: 2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c
+      source_url: "https://dar.bticino.com/asset/Documents/LE07383AC.pdf"
+      publisher: "BTicino"
+      language: "Multilingual"
+      publication_date: "unknown"
+    - id: device-doc-f418u2-le07383ad
+      path: devices/documents/device-doc-f418u2-le07383ad/LE07383AD.pdf
+      original_filename: LE07383AD.pdf
+      type: pdf
+      size: 354895
+      sha256: 2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe
+      source_url: "https://dar.bticino.com/asset/Documents/LE07383AD.pdf"
+      publisher: "BTicino"
+      language: "Multilingual"
+      publication_date: "2023-07"
+    - id: device-doc-f418u2-st00001620-en
+      path: devices/documents/device-doc-f418u2-st00001620-en/ST-00001620-EN.pdf
+      original_filename: ST-00001620-EN.pdf
+      type: pdf
+      size: 512046
+      sha256: 107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-f454-mq00519-en
+      path: devices/documents/device-doc-f454-mq00519-en/MQ00519-c-EN.pdf
+      original_filename: MQ00519-c-EN.pdf
+      type: pdf
+      size: 98618
+      sha256: 5f36d8d5985f516f393c19ed4fbacdf2c40ca40c08cf023d08fd45baf36fe8f6
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/MQ00519-c-EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2015-05-06"
+    - id: device-doc-f454-o1755j-u-en
+      path: devices/documents/device-doc-f454-o1755j-u-en/O1755J_U_EN.pdf
+      original_filename: O1755J_U_EN.pdf
+      type: pdf
+      size: 18277849
+      sha256: 3417dbd9acbff4c2feb329a722e8e24cc2c313ad3af85e1ea30b8ff44343cd08
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/O1755J_U_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-f454-o1755h-s-en
+      path: devices/documents/device-doc-f454-o1755h-s-en/O1755H_S_EN.pdf
+      original_filename: O1755H_S_EN.pdf
+      type: pdf
+      size: 15609631
+      sha256: 418cd9a3e38720b4c5660e07a8f24970253ace23a4a825d597c4489b6c8282f5
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/O1755H_S_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-f454-o1755g-u-en
+      path: devices/documents/device-doc-f454-o1755g-u-en/O1755G_U_EN.pdf
+      original_filename: O1755G_U_EN.pdf
+      type: pdf
+      size: 5838611
+      sha256: f1d437d369f5a217c4094128c8841f3d2171381ba0f321f0dfa52e30177e2460
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/O1755G_U_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-f454-o1755g-s-en
+      path: devices/documents/device-doc-f454-o1755g-s-en/O1755G_S_EN.pdf
+      original_filename: O1755G_S_EN.pdf
+      type: pdf
+      size: 14637252
+      sha256: bcd66d983153fc8911022f52c6dd78605fb9533846e5bca05b46c4ac118a8bea
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/O1755G_S_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-f454-o1754c
+      path: devices/documents/device-doc-f454-o1754c/O1754C.pdf
+      original_filename: O1754C.pdf
+      type: pdf
+      size: 853110
+      sha256: 8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/O1754C.pdf"
+      publisher: "BTicino / Legrand"
+      language: "Multilingual"
+      publication_date: "unknown"
+    - id: device-doc-f454-o1754e
+      path: devices/documents/device-doc-f454-o1754e/O1754E.pdf
+      original_filename: O1754E.pdf
+      type: pdf
+      size: 682009
+      sha256: d47faf013abb6f55e08f149365f3b98d86240b34b30f24c9eeea1de1505e3ff6
+      source_url: "https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=O1754E.pdf&fileId=58107.23188.62294.22284"
+      publisher: "BTicino"
+      language: "Multilingual"
+      publication_date: "unknown"
+    - id: device-doc-f454-version-history-20170508
+      path: devices/documents/device-doc-f454-version-history-20170508/Version_History_F454_20170508.pdf
+      original_filename: Version_History_F454_20170508.pdf
+      type: pdf
+      size: 219436
+      sha256: c960937a4d19e52342c1af618782e715e75e1e181a7804d012096afec99834a3
+      source_url: "https://www.homesystems-legrandgroup.com/documents/2416083/2422856/Version_History_F454_20170508.pdf/1f3644de-73a3-5332-3ff3-b12596cc53df?t=1595605650159"
+      publisher: "BTicino"
+      language: "EN"
+      publication_date: "2017-05-08"
+    - id: device-doc-64391-espace-evolution-catalogue
+      path: devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf
+      original_filename: Espace-Evolution-catalogue.pdf
+      type: pdf
+      size: 15496486
+      sha256: 98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a
+      source_url: "https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf"
+      publisher: "Arnould / Legrand"
+      language: "FR"
+      publication_date: "unknown"
