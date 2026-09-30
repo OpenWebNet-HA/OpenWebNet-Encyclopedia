@@ -148,6 +148,14 @@ Programming should preserve the distinction between:
 
 See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The archived product sheet has been reconciled with the database discrepancy around `M=2`.
+
+The delayed-Slave modes `M=1..4` are product behaviors, not merely enum labels: a Master command can turn linked loads on together while a subsequent Master OFF leaves the Slave output active for the configured delay. The documentation uses this for arrangements such as a light with delayed ventilation. `M=2` is therefore a genuine published physical mode despite its absence from firmware `186`'s stored enum.
+
+The remaining completeness gap is commercial documentation/hardware corroboration, not the physical `M=2` semantics.
+
 ## Corroboration status and open work
 
 - Locate authoritative product documentation for `64190` and `067559`.

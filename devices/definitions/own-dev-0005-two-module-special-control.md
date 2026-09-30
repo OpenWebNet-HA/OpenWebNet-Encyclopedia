@@ -206,6 +206,19 @@ A correct programmer must evaluate `SPE`, `M`, address-scope fields, level/inter
 
 See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The nine-page `MQ00285-d-EN` sheet has been reconciled as a Device-specific function map rather than only as a list of reusable Objects:
+
+- lighting functions include simple, timed, dimming and special light-control variants selected through `M`, `SPE` and the level fields;
+- `LIV1` / `LIV2` participate in published dimming/special-function selection and must not be treated as generic numeric fields without the surrounding mode;
+- automation, Device lock/unlock, scenario-module, programmed-scenario, PLUS-scenario, video-door-entry, staircase/floor-call, sound-system and AUX roles share the same Physical Device but use different button/address semantics;
+- the sheet documents programming/editing behavior for scenario functions, including product-level activation/programming distinctions that are not visible from Object identity alone;
+- operation across SCS/SCS interfaces uses installation/destination-level concepts that correspond to reusable `INST_LEV` / `DEST_LEV` fields;
+- audio/video and sound roles reuse `PL/PF`, level and special-function fields contextually, so a validator must interpret them only after resolving the selected function family.
+
+This source is now represented as a product-specific selector/function model. Remaining gaps are commercial variants, exact package relationships and hardware corroboration, not omission of the principal published function families.
+
 ## Corroboration status and open work
 
 - Archive and hash `MQ00285-d-EN`, language variants, and any earlier/later revisions.

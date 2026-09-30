@@ -147,6 +147,17 @@ A correct programmer must resolve the selected Object per Module before validati
 
 See [Object Programming](../../programming/object-programming.md), [Configuration Programming](../../programming/configuration-programming.md), and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The archived MyHOME automation guide materially narrows the Extended control interpretation:
+
+- physical configurator `I` selects the installation level: `1..9` address another logical-expansion bus, `0` selects the local section, and `CEN` selects the main riser in the documented architecture;
+- the published architecture uses this mechanism to extend addressable automation/light-control scope across interfaces;
+- `LIV1` / `LIV2` participate in the published extended dimmer/control functions and therefore require the selected function context;
+- importantly, the product guide describes Extended control as providing the Special-control functions **except** video-door-entry and AUX functions.
+
+That last point conflicts with the broader reusable/Virgin-Object candidate surface in the implementation database. The Device page therefore treats AUX and video-door-entry-related Virgin-only candidates as implementation evidence requiring independent reachability proof, not as established published product capabilities.
+
 ## Corroboration status and open work
 
 - Locate official product sheets for all six Mosaic references.

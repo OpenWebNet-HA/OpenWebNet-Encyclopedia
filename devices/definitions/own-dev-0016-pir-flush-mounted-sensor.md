@@ -183,6 +183,14 @@ Each of the sixteen fixed IR Modules exposes:
 
 Programming must treat the slot-1 Object as configuration-dependent and slots `2..17` as distinct fixed IR scenario-control Modules. It must also preserve the source-level domain differences above instead of coercing the database to the PDF or vice versa.
 
+## Source reconciliation
+
+The PIR-only sensor documentation has been reconciled beyond the physical `M/S/T/D` selectors.
+
+Product-level settings include Walkthrough and Eco/manual-on behavior, detection-stage choices, switch-off warning, brightness calibration/adjustment, natural-light contribution, software/remote configuration and reset/learning workflows. These settings explain behavior available through the sensor Object configuration surface that is not representable by the six physical sockets alone.
+
+The known source discrepancy in the physical sensitivity domain remains visible, and Objects without explicit physical condition rows remain alternatives requiring configuration/hardware corroboration rather than guessed mappings.
+
 ## Corroboration status and open work
 
 - Obtain a sanitized fingerprint from at least one legacy reference and one K4659.

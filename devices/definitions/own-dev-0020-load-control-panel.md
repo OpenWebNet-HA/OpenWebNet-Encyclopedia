@@ -110,7 +110,7 @@ Object `492` exposes:
 | `PRIORITY` | `0..63` | 1 | load-control priority represented by the Module |
 | `PHASE` | `0` Single/undefined, `1` Phase 1/R, `2` Phase 2/S, `3` Phase 3/T | 0 | electrical phase association |
 
-The source-level `PRIORITY` domain is wider than the physical `P1` / `P2` configurator digits. The missing conversion records are therefore material: a consumer should use an already resolved Object value when available and must not guess how `P1` / `P2` compose into 0..63.
+The product documentation defines the physical priority as decimal composition of the applicable `P1` tens component and `P2` units component, up to priority `63`. The missing catalogue conversion records are still material to reproducing MyHOME Suite's internal rule graph, but they no longer make the product-level `P1` / `P2` mapping unknown.
 
 ## Diagnostic applicability
 
@@ -130,11 +130,24 @@ The panel belongs to load / energy management. Product documentation establishes
 
 Normal physical configuration uses `P1AB` / `P1CD` plus the per-position `P2` configurators. `M=1` selects self-learning only when all `P1` / `P2` fields are zero, exactly matching the explicit catalogue condition. Virtual and Advanced configuration are also declared. Software should represent self-learning as a product-level configuration mode, not as a fifth Module.
 
+## Source reconciliation
+
+`MQ00709_c_EN` directly resolves the physical priority encoding that was previously left as an open conversion question:
+
+- `P1AB` / `P1CD` provide the tens component for their respective button pairs;
+- each `P2A` / `P2B` / `P2C` / `P2D` provides the units component for that position;
+- the resulting published priority domain reaches `63`, matching Object `492`'s `PRIORITY` domain;
+- the product sheet gives worked examples including priorities `5`, `6`, `12` and `13`, demonstrating that the mapping is decimal composition rather than an unknown opaque encoding;
+- front LEDs distinguish load state and programming/self-learning states, and the self-learning workflow associates a panel position with a controlled load;
+- the documented user override temporarily re-enables a shed load for four hours.
+
+The unresolved implementation question is now narrower: why the catalogue condition rows reference conversion IDs `421`, `431`, `441` and `451` when corresponding `EN_CONV_RULE` rows are absent. The physical `P1/P2 -> PRIORITY` semantics themselves are documented and must not be described as unknown.
+
 ## Evidence limits and open work
 
 - Obtain a sanitized four-slot `DIMENSION 30` / `DIMENSION 35` fingerprint from a known panel.
 - Recover or independently establish the missing conversion logic referenced as `421` / `431` / `441` / `451`.
-- Verify how `PRIORITY` `0..63` maps to physical `P1` / `P2` values before implementing a converter.
+- Reconcile the documented decimal `P1` / `P2` priority composition with the missing catalogue conversion-rule records before implementing a database-driven converter.
 - Correlate wildcard firmware applicability with observed firmware versions.
 - Check whether phase configuration is surfaced consistently across all six commercial identities.
 

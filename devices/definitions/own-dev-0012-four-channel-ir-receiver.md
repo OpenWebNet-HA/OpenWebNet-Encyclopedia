@@ -142,6 +142,19 @@ A programmer must interpret each `PLn/PFn` value in the context of the shared `M
 
 See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The IR-receiver technical sheets have been reconciled into concrete Device behavior:
+
+- `M=1..4` select remote-control channel blocks; multiple receivers can be arranged to provide up to sixteen distinct remote commands;
+- shutter/automation assignments use paired UP/DOWN semantics rather than four unrelated light-point values;
+- `M=CEN` selects programmed-scenario/CEN use, while the unconfigured/self-learning mode has its own learn/delete workflow;
+- `M=6` is the published scenario-module mode and `M=9` is the published sound-diffusion mode;
+- each physical `PLn/PFn` socket is contextual: the same configurator position can mean a light point, automation function, scenario selection or audio point depending on `M`;
+- the product includes a programming/lock control whose state affects learning/configuration behavior but is not an OpenWebNet Module.
+
+These facts are the Device-specific interpretation layer above the four fixed Object `34` instances.
+
 ## Corroboration status and open work
 
 - Locate direct product documentation for Mosaic `078465` and `079265`.

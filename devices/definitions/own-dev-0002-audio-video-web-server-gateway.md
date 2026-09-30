@@ -223,6 +223,19 @@ F454 uses Product Programming rather than ordinary physical/virtual Object progr
 
 A future OWN Device Library representation should keep network configuration fields but must never populate them with installation-specific values from research captures.
 
+## Source reconciliation
+
+The known F454 vendor material and first-hand gateway captures add Device-specific behavior beyond the catalogue fields:
+
+- the physical interface includes RESET and front status indicators for speed/link/system state; those indicators describe the gateway appliance and are not additional OpenWebNet Objects;
+- firmware release history is a product release history and must remain separate from the two MyHOME Suite capability records;
+- gateway identity `N_CONF = 15` remains an observed out-of-range gateway value with unresolved semantics;
+- `WHO 13 DIMENSION 40` is first-hand observed on F454 as `4*0`, with semantics still unresolved;
+- prior research also encountered a possible `WHO 13 DIMENSION 20` property, but the preserved F454/MH202 captures and canonical registries currently examined do not establish it. It remains a research question and must not be represented as an F454 capability;
+- F454-dependent F418U2 behavior, including the observed OFF-state `DIMENSION 1` request returning a `DIMENSION 4` frame and one non-effective positive `DIMENSION 4` write, is gateway-path evidence rather than a generic dimmer rule.
+
+The identified F454 manuals, instruction sheet, firmware package and history file are still not fully archived/reconciled byte-for-byte, so source reconciliation remains partial.
+
 ## Evidence limits and open work
 
 - Archive all known F454 manuals, technical sheets, instruction sheets, language variants, firmware packages, and version-history revisions.

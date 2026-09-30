@@ -226,6 +226,22 @@ The published 2024 sheet independently documents remote-control adjustment of de
 | `DIMENSION 32` | resolve sensor/scenario addressing | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/virtual/advanced configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
+## Source reconciliation
+
+The archived 2014/2024 PIR+US material has been reconciled beyond the basic `M/S/T/D` configurator table.
+
+The product-level configuration surface additionally includes:
+
+- Auto and Walkthrough occupancy behaviors;
+- Eco/manual-on behavior and switch-off warning;
+- Initial, Holding and Retrigger detection-stage choices;
+- brightness calibration/adjustment and natural-light contribution;
+- software/remote configuration paths in addition to physical configurators;
+- product reset and learning/programming workflows;
+- revision-dependent software tooling, including the transition from MyHOME Suite-era configuration to Home + Project while retaining physical setup.
+
+These settings explain why reusable sensor Objects expose more behavior than the six physical sockets alone. They remain product-level semantics and should not be collapsed into one generic presence-sensor mode.
+
 ## Corroboration status and open work
 
 - Obtain a sanitized fingerprint from known hardware and verify the unusual 17-Module projection.

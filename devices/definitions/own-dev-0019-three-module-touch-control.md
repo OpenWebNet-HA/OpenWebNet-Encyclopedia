@@ -151,6 +151,19 @@ The catalogue declares Advanced Configuration, Physical configuration and Virtua
 
 Depending on selected Object, individual buttons can participate in lighting, automation, scenario, AUX, sound and video-door-entry functions. The official sheet corroborates this multifunction character. Generic `WHO` frame semantics remain canonical in Functional Protocol.
 
+## Source reconciliation
+
+`MQ00110_f_EN` has been reconciled into the six-command-slot plus UI-settings model:
+
+- self-learning and cyclic self-learning have explicit product programming/deletion procedures and are not merely generic Object alternatives;
+- F420/scenario and CEN/MH200N-style functions have product-specific button/address mappings;
+- the touch UI supports Device-level LED/status behavior selected by `SET=0..7`, including different feedback/fade/standby arrangements;
+- the product provides a temporary cleaning/command-inhibit behavior for the touch surface;
+- after installation/power-up the Device performs an automatic calibration interval of roughly two minutes, during which commands/feedback must not be interpreted as normal steady-state behavior;
+- installation/destination-level semantics remain part of the selected function family when the Device works across interfaces.
+
+The empty catalogue condition rows remain source artifacts requiring runtime clarification, but the principal published touch-control behavior is now explicit on the Device page.
+
 ## Evidence limits and open work
 
 - Obtain a sanitized fingerprint showing all six button slots plus UI slot `7`.

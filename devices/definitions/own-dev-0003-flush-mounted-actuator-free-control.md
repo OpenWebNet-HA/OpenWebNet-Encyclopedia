@@ -309,6 +309,17 @@ A correct programmer must:
 
 See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The historical Arnould material and MyHOME Suite implementation help establish more product detail than the shared technical-item mapping alone:
+
+- `64391` is the two-relay actuator/control base product; `64191` and `64192` are package/use variants in the same documented family rather than independent OpenWebNet capability definitions;
+- the marketed product supports simple or double loads, two lighting circuits or one motor, with relay interlocking selected by configuration;
+- the integrated controls can operate the local relays or be assigned to remote bus functions, so the four-Module model is intentional rather than an artefact of the catalogue;
+- the lighting and automation implementation help supplies the product-specific Master/Slave/PUL and actuator-mode interpretation used by the condition/conversion model.
+
+The exact historical electrical ratings and package contents remain revision-sensitive. The official Arnould catalogue has been identified but not yet archived in this branch, so those values are not promoted as timeless specifications and source reconciliation remains partial.
+
 ## Corroboration status and open work
 
 The current dossier is substantially complete for the canonical MyHOME Suite 3.5.38 database representation, but physical-hardware corroboration is still missing.

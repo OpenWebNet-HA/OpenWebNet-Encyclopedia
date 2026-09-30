@@ -193,6 +193,18 @@ Together the low/high scenario fields support the published PLUS scenario-number
 | `DIMENSION 32` | obtain configured addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
+## Source reconciliation
+
+The scenario-control documentation has been reconciled with the two-Module catalogue model:
+
+- the four physical buttons map to scenario groups selected by `M`, while the two catalogue Modules represent paired command positions rather than four independent Modules;
+- F420-style scenario operation includes explicit scenario programming and deletion workflows with product feedback states;
+- CEN/programmed-scenario use is distinct from local scenario-module use and must preserve the installation/destination-level context;
+- Lighting Management software configuration can represent double-scenario, double-CEN and PLUS forms beyond the physical `M` selector;
+- `N` and `DEL` are product delay selectors and are already mapped above, but their effect is tied to selected physical buttons rather than to a generic timer Object.
+
+The remaining source gaps concern Mosaic variants and hardware corroboration.
+
 ## Corroboration status and open work
 
 - Locate direct product documentation for Mosaic `078478` and `079178`.

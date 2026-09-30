@@ -155,6 +155,19 @@ Programming must preserve three independent Module addresses while applying the 
 
 See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The archived `MQ00290` and installation sheets add Device-specific behavior to the three independent command Modules:
+
+- the shared physical `M` selector changes the function family of all three A/PL pairs and therefore cannot be interpreted independently per Module;
+- physical and virtual configuration cover point-to-point, room, group and general lighting scopes, programmed scenarios, CEN/CEN PLUS behavior and automation control;
+- software configuration can associate return-of-load status with a reference actuator address for non-point-to-point commands;
+- CEN-only use has product-level constraints on address positions that are not used by the CEN function;
+- the published PLUS scenario representation uses the wider software scenario domain rather than only the physical selector values;
+- LED/mechanical behavior remains a commercial/package concern and should not be inferred solely from the shared item.
+
+The current source set is reconciled for the core product family; direct documentation for `573975` and `687378` remains outstanding.
+
 ## Corroboration status and open work
 
 - Locate product-specific documentation for `573975` and `687378`.

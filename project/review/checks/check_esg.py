@@ -194,8 +194,10 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                 )
 
         plain = mask_code(text)
-        is_device_definition = rel.parts[:2] == ("devices", "definitions")
+        is_device_definition = rel.parts[:2] == ("devices", "definitions") and rel.name.startswith("own-dev-")
         if is_device_definition:
+            if "## Source reconciliation" not in text:
+                objective.append(f"DEVICE_SOURCE_RECONCILIATION {rel}: missing ## Source reconciliation")
             for pattern, code in (
                 (r"(?<![\\w\\x60])OWN-DEV-[0-9]{4}\\b", "DEVICE_BARE_IDENTIFIER"),
                 (r"(?<![\\w\\x60])(WHO|WHAT|WHERE|DIMENSION)\\s+[0-9]+\\b", "DEVICE_BARE_PROTOCOL_LITERAL"),

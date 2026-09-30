@@ -196,6 +196,18 @@ A programmer must resolve local actuator topology and front/remote command topol
 
 See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+The archived zero-crossing technical and instruction sheets establish additional product constraints:
+
+- the Device has four documented operating arrangements: one local lighting/shutter load, two local lighting loads, one local lighting load plus remote/scenario control, and one local shutter load plus remote/scenario control;
+- software configuration can expose four independent logical addresses - two actuator addresses and two front-control addresses - even though the physical configurator surface is shared;
+- delayed-OFF lighting behavior is explicitly suitable for linked loads such as light/fan arrangements and must remain tied to the selected mode;
+- operation without a connected neutral is supported only under documented load and production constraints, with reduced load limits and an explicit product procedure for that operating arrangement;
+- the front control and contact portions are separable, and range-specific LED/current behavior is product hardware metadata rather than OpenWebNet topology.
+
+These facts supplement the four-Module catalogue topology and are constraints on a future configurator/validator.
+
 ## Corroboration status and open work
 
 - Add sanitized hardware fingerprints for at least one commercial variant.
