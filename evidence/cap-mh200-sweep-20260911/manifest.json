@@ -1,0 +1,27 @@
+{
+  "evidence_id": "EVID-MH200-SWEEP-001",
+  "capture_id": "cap-mh200-sweep-20260911",
+  "title": "BTicino MH200 Complete Plant Diagnostic Baseline Sweep",
+  "capture_kind": "fingerprint",
+  "epistemic_status": "observed",
+  "confidence": "high",
+  "evidence_class": "public_capture",
+  "recorded_at": "2026-09-11T18:13:39Z",
+  "installation_id": "872e3977-0010-5d91-bdbc-d64be886af4c",
+  "bus_id": "ba4c92c7-b7b7-5a17-b539-c9a034892062",
+  "gateway_id": "3effc5e8-fc45-56c5-9dcd-0de119513a43",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.0.0",
+    "who13_device_type": 4,
+    "bus_topology": "Main SCS bus with F422 interface 02"
+  },
+  "summary": "Complete authentic baseline diagnostic sweep of a physical MH200 installation, interrogating gateway clock (WHO 13 DIM 0), model (WHO 13 DIM 15), firmware (WHO 13 DIM 16), lighting actuators (WHO 1), automation covers (WHO 2), thermoregulation (WHO 4), burglar alarm (WHO 5), and sound diffusion (WHO 16).",
+  "claims_supported": [
+    "claim.who13.mh200.device_type_4",
+    "claim.who13.mh200.clock_dimension_0",
+    "claim.who1.status_sweep_reply",
+    "claim.who2.status_sweep_reply"
+  ],
+  "frame_count": 133
+}

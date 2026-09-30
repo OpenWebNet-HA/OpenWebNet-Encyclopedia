@@ -1,0 +1,33 @@
+{
+  "evidence_id": "EVID-MH200-F418U2-DIM1",
+  "capture_id": "cap-mh200-f418u2-dimmer-20260927",
+  "title": "Universal F418U2 2-Channel Dimmer on BTicino MH200 Gateway",
+  "capture_kind": "controlled_experiment",
+  "epistemic_status": "experimentally_confirmed",
+  "confidence": "high",
+  "evidence_class": "public_experiment",
+  "recorded_at": "2026-09-27T10:11:55.659Z",
+  "installation_id": "872e3977-0010-5d91-bdbc-d64be886af4c",
+  "bus_id": "ba4c92c7-b7b7-5a17-b539-c9a034892062",
+  "gateway_id": "3effc5e8-fc45-56c5-9dcd-0de119513a43",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "who13_device_type": 4,
+    "bus_topology": "Main SCS bus"
+  },
+  "device_under_test": {
+    "sku": "BTicino F418U2",
+    "description": "Universal 2-channel modular dimmer (300 VA)",
+    "configured_where": "62",
+    "pseudonym_device_id": "8D8D209E"
+  },
+  "summary": "Empirical evidence that the F418U2 dimmer on older MH200 firmware accepts fine Dimension 1 writes (*#1*62*#1*150*0## -> *#1*62*1*150*5##), follows non-linear WHAT-to-percentage dimming curves (Level 5 -> 30%), responds to Dimension 1 queries when OFF (*#1*62*1## -> *#1*62*1*100*2##), and ignores Dimension 4 writes.",
+  "claims_supported": [
+    "claim.who1.dimmer.f418u2.dimension_1_fine_writes",
+    "claim.who1.dimmer.f418u2.dimming_curve_nonlinear",
+    "claim.who1.dimmer.f418u2.dimension_1_query_when_off",
+    "claim.who1.dimmer.f418u2.ignores_dimension_4"
+  ],
+  "frame_count": 30
+}

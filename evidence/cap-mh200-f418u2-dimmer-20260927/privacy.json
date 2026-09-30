@@ -1,0 +1,9 @@
+{
+  "classification": "sanitized",
+  "removed_value_classes": [
+    "network_address",
+    "hardware_id",
+    "device_id",
+    "credential"
+  ]
+}

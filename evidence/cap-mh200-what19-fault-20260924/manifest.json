@@ -1,0 +1,29 @@
+{
+  "evidence_id": "EVID-MH200-WHAT19-FAULT",
+  "capture_id": "cap-mh200-what19-fault-20260924",
+  "title": "Lighting WHAT 19 Autodiagnostic Fault State on BTicino MH200",
+  "capture_kind": "controlled_experiment",
+  "epistemic_status": "observed",
+  "confidence": "high",
+  "evidence_class": "public_capture",
+  "recorded_at": "2026-09-24T17:02:52Z",
+  "installation_id": "872e3977-0010-5d91-bdbc-d64be886af4c",
+  "bus_id": "ba4c92c7-b7b7-5a17-b539-c9a034892062",
+  "gateway_id": "3effc5e8-fc45-56c5-9dcd-0de119513a43",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "bus_topology": "Main SCS bus"
+  },
+  "device_under_test": {
+    "sku": "BTicino Lighting Actuator",
+    "configured_where": "74",
+    "pseudonym_device_id": "FE29FBA6"
+  },
+  "summary": "Empirical observation that when a lighting actuator suffers an internal autodiagnostic fault, querying its state (*#1*74##) elicits *1*19*74## immediately followed by a WHO 1001 autodiagnostic bitmask (*#1001*74*11*111110111111111111110111##). Proves that WHAT 19 is an unmapped fault status rather than 'ON'.",
+  "claims_supported": [
+    "claim.who1.what.19_fault_state",
+    "claim.who1001.dimension.11_autodiagnostic_mask"
+  ],
+  "frame_count": 3
+}

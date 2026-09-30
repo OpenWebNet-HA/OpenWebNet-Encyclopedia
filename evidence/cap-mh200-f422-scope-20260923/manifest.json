@@ -1,0 +1,31 @@
+{
+  "evidence_id": "EVID-MH200-F422-SCOPE",
+  "capture_id": "cap-mh200-f422-scope-20260923",
+  "title": "F422 Private Bus Router Scope Command Boundaries on MH200",
+  "capture_kind": "controlled_experiment",
+  "epistemic_status": "experimentally_confirmed",
+  "confidence": "high",
+  "evidence_class": "public_experiment",
+  "recorded_at": "2026-09-23T14:30:00Z",
+  "installation_id": "872e3977-0010-5d91-bdbc-d64be886af4c",
+  "bus_id": "ba4c92c7-b7b7-5a17-b539-c9a034892062",
+  "sub_bus_id": "cd9b605a-968c-574c-a022-da5517ab9797",
+  "gateway_id": "3effc5e8-fc45-56c5-9dcd-0de119513a43",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "bus_topology": "Main SCS bus with F422 interface router on domain 02"
+  },
+  "device_under_test": {
+    "sku": "BTicino F422",
+    "description": "SCS bus interface router (configured as private interface 02)",
+    "configured_where": "#4#02"
+  },
+  "summary": "Empirical evidence that general and area scope automation commands (*2*1*1#4#02##) do NOT cross the F422 bus interface router despite syntactically valid OpenWebNet grammar. Only point commands (*2*1*11#4#02##) cross to the private bus. Conversely, area status requests (*#2*1#4#02##) are forwarded and answered with per-object frames.",
+  "claims_supported": [
+    "claim.who2.f422.scope_commands_blocked",
+    "claim.who2.f422.point_commands_allowed",
+    "claim.who2.f422.scope_status_request_per_object_reply"
+  ],
+  "frame_count": 9
+}
