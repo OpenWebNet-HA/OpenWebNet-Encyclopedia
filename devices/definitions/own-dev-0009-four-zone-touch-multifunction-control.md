@@ -34,8 +34,8 @@ The older technical sheet directly names only the four Arteor references. Shared
 | --- | --- | --- | --- | --- |
 | `LG00045-b-UK` | Technical sheet | `573904..573907` | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
 | `U3300B` | Instruction sheet | `573904..573907` family | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
-| MyHOME residential automation catalogue | Product catalogue | includes `573904..573907` | [Archived PDF](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
-| `ST-00001031-EN` | Compatibility table | includes `067243..067245` | [Archived PDF](../../sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
+| MyHOME residential automation catalogue | Product catalogue | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| `ST-00001031-EN` | Compatibility table | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](../../sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
 
 ## Physical and user-interface characteristics
 

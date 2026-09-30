@@ -39,7 +39,7 @@ Shared item membership establishes the common catalogue capability core. It does
 | `O1421A_I_EN` | Installation manual | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf) |
 | `O1421A_U_EN` | User guide | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf) |
 | `O1421A_S_EN` | TiLivingLightDisplay software manual | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf) |
-| MyHOME Automation guide | System / product guide | Includes Axolute Video Display references `349311` and `349312` | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) |
+| MyHOME Automation guide | System / product guide | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) |
 
 All retained files are byte-for-byte originals registered in the source manifest.
 

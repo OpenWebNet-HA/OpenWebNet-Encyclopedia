@@ -35,7 +35,7 @@ The technical sheet names the corresponding 4673, `067206`/`067207` and `573985`
 | Document | Coverage | Status |
 | --- | --- | --- |
 | `MQ00709_c_EN` | Four-channel load-control panel family | [Archived original](../../sources/devices/documents/device-doc-load-control-mq00709-c-en/MQ00709_c_EN.pdf) |
-| MyHOME catalogue `HPML0714` | Load-control system context | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | Load-control panel references `573985` / `573991` occur on printed p. 26 / PDF p. 26 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
 ## Physical and functional characteristics
 

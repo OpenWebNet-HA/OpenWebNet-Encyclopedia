@@ -38,7 +38,7 @@ These documents collectively cover every commercial record in the canonical item
 | --- | --- | --- | --- |
 | `MQ00474-e-FR` | Historical technical sheet | legacy PIR Green Switch family | [Archived PDF](../../sources/devices/documents/device-doc-pir-mq00474-e-fr/MQ00474-e-FR.pdf) |
 | `ST_00000220_EN` | Current-generation technical sheet | `K4659` and PIR flush-mounted sensor | [Archived PDF](../../sources/devices/documents/device-doc-pir-st00000220-en/ST_00000220_EN.pdf) |
-| `ST-00002122-EN` | Compatibility table | current server compatibility across legacy references | [Archived PDF](../../sources/devices/documents/device-doc-myhome-compatibility-st00002122-en/ST-00002122-EN.pdf) |
+| `ST-00002122-EN` | Compatibility table | PIR family references occur on printed pp. 8, 11 / PDF pp. 8, 11 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-compatibility-st00002122-en/ST-00002122-EN.pdf) |
 
 Historical and current sheets should remain separate evidence because product ranges, software requirements and presentation evolved.
 

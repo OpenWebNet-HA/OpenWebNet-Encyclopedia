@@ -198,6 +198,34 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
         if is_device_definition:
             if "## Source reconciliation" not in text:
                 objective.append(f"DEVICE_SOURCE_RECONCILIATION {rel}: missing ## Source reconciliation")
+
+            documentation = re.search(r"(?ms)^## Documentation\s*$\n(.*?)(?=^## |\\Z)", text)
+            if documentation:
+                start_line = line_number(text, documentation.start(1))
+                for number, line in enumerate(documentation.group(1).splitlines(), start_line):
+                    if not line.startswith("|") or "---" in line:
+                        continue
+                    cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                    if not cells or cells[0].lower() in {"document", "document / source"}:
+                        continue
+                    doc_name = re.sub(r"\x60", "", cells[0]).lower()
+                    normalized_cells = {re.sub(r"\x60", "", cell).lower() for cell in cells}
+                    multi_product = (
+                        "catalogue" in doc_name
+                        or bool(normalized_cells & {
+                            "product catalogue",
+                            "historical product catalogue",
+                            "compatibility table",
+                            "system / product guide",
+                        })
+                    )
+                    if multi_product and ".pdf)" in line.lower():
+                        if "printed p" not in line.lower() or "pdf p" not in line.lower():
+                            objective.append(
+                                f"DEVICE_SOURCE_PAGE_LOCATION {rel}:{number}: "
+                                "multi-product PDF row lacks printed/PDF page location"
+                            )
+
             for pattern, code in (
                 (r"(?<![\\w\\x60])OWN-DEV-[0-9]{4}\\b", "DEVICE_BARE_IDENTIFIER"),
                 (r"(?<![\\w\\x60])(WHO|WHAT|WHERE|DIMENSION)\\s+[0-9]+\\b", "DEVICE_BARE_PROTOCOL_LITERAL"),

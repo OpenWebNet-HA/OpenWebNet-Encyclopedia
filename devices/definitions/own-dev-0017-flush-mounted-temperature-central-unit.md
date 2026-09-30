@@ -38,7 +38,7 @@ Shared item membership establishes the common catalogue capability core. It does
 | `U1809F_U_EN` | 4695 user operation and temperature-control behavior | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf) |
 | `U1809C_Installatore_UK` | 4695 installation and commissioning | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf) |
 | `U1809B_Software_GB` | TiThermoBasic programming / firmware workflow | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf) |
-| MyHOME catalogue `HPML0714` | Family-level product context and catalogue corroboration | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | System-level temperature-control context only; the `4695` family is not named. Related Arteor central units `573918` / `573919` occur on printed pp. 16, 24, 32 / PDF pp. 16, 24, 32 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
 The 4695 documentation describes management of a temperature-control system with up to four zones and PC programming through TiThermoBasic. Where an official PDF could not be fetched by the archival runner, the official publisher URL is retained rather than substituting an unofficial mirror.
 
