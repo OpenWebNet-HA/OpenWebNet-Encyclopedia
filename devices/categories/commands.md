@@ -10,3 +10,4 @@
 | [OWN-DEV-0009](../definitions/own-dev-0009-four-zone-touch-multifunction-control.md) | 15-record Touch control family | Four-zone touch multifunction control | Four configurable command Modules plus UI settings |
 | [OWN-DEV-0011](../definitions/own-dev-0011-scenario-control.md) | 10-record Scenario control cluster | Scenario control | Scenario module, CEN and PLUS scenario commands |
 | [OWN-DEV-0012](../definitions/own-dev-0012-four-channel-ir-receiver.md) | 8-record IR receiver cluster | Four-channel IR receiver | Four IR command channels with mode-dependent functions |
+| [OWN-DEV-0014](../definitions/own-dev-0014-extended-control.md) | 8-record Extended control family | Extended control | Lighting, automation, locking, scenario, AUX, sound and door-entry command roles |

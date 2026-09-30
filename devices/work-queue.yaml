@@ -959,19 +959,23 @@ items:
     blockers: []
     notes: []
   '1076':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0013
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - Video Display cluster extracted; installation/user/software manuals and MyHOME guide archived. Four commercial variants still need direct product documents.
   '1078':
     state: unreviewed
     priority: normal
@@ -987,19 +991,23 @@ items:
     blockers: []
     notes: []
   '1104':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0014
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME guide. Mosaic references and AUX condition semantics remain gaps.
   '1121':
     state: definition-in-progress
     priority: high
@@ -1480,19 +1488,23 @@ items:
     blockers: []
     notes: []
   '1469':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0015
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
   '1470':
     state: unreviewed
     priority: normal
@@ -1783,19 +1795,23 @@ items:
     blockers: []
     notes: []
   '1566':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0016
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility table collectively document the current commercial cluster. Hardware corroboration remains pending.
   '1570':
     state: unreviewed
     priority: normal
