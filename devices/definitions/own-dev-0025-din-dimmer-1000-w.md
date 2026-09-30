@@ -85,50 +85,30 @@ Physical configuration, Virtual Configuration and Advanced Configuration.
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | M | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`2` - 2 - range -..- - step `1`<br>`3` - 3 - range -..- - step `1`<br>`4` - 4 - range -..- - step `1`<br>`11` - SLA - range -..- - step `1`<br>`15` - PUL - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `G1` | G1 | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `A` | 0..9 | 0 | area / environment configurator |
+| `PL` | 0..9 | 0 | light-point configurator |
+| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
+| `G1` | 0..9 | 0 | group configurator 1 |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-`A`, `PL`, and `G1` are `0..9`; `M` permits default/`0..4`/`SLA`/`PUL`; `AID` is the identity field. MyHOME Suite identifies F414 as an inductive/halogen-capable dimmer with Master, delayed Slave, Master PUL and Slave PUL modes.
+These are F414 device configurators. Advanced dimmer characteristics such as load type and minimum level belong to the reusable Dimmer Object and are shown separately.
 
 ## Object configuration surfaces
 
 ### Object `8` - Dimmer actuator
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `A` | Area | Range | range `0`..`10` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
-| `PL` | Light point | Range | range `0`..`15` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
-| `M` | Modality | Enum | range -..- - step `1`<br>`0` - Master - range -..- - step `1`<br>`11` - Slave - range -..- - step `1`<br>`15` - Master PUL - range -..- - step `1`<br>`16` - Slave and PUL - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
-| `LOCAL_BUTTON` | Local button modality | Enum | range -..- - step `1`<br>`0` - Toggle - range -..- - step `1`<br>`9` - ON - OFF - range -..- - step `1`<br>`15` - Pushbutton - range -..- - step `1`<br>`18` - Timed ON - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `DELAYED_OFF` | Delayed OFF for Slave (s) | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `STATE_SAVING_ON_RESET` | State saving on reset | Boolean | range -..- - step `1`<br>`0` - Disabled - range -..- - step `1`<br>`1` - Enabled - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `HOURS` | Hours | Range | range `0`..`255` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `MINUTES` | Minutes | Range | range `0`..`59` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `SECONDS` | Seconds | Range | range `0`..`59` - step `1` - default marker `30` | visible=1, hidden=1, read-only=, type-id= |
-| `MIN_LEVEL` | Minimum level | Range | range `1`..`100` - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `TYPE_LOAD` | Type of load | Enum | range -..- - step `1`<br>`0` - Auto detect capacitive - range -..- - step `1`<br>`1` - Auto detect inductive - range -..- - step `1`<br>`2` - Forced capacitive - range -..- - step `1`<br>`3` - Forced inductive - range -..- - step `1`<br>`5` - Fluorescent lamps - range -..- - step `1`<br>`6` - Led lamps - range -..- - step `1`<br>`7` - Discharge lamps - range -..- - step `1`<br>`8` - Dali standard - range -..- - step `1`<br>`9` - DSI - range -..- - step `1`<br>`10` - Halogen lamp - range -..- - step `1`<br>`11` - LED trailing edge / electronic transformers - range -..- - step `1`<br>`12` - LED leading edge - range -..- - step `1`<br>`13` - CFL trailing edge - range -..- - step `1`<br>`14` - CFL leading edge - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `TYPE_STANDARD` | Voltage standard | Enum | range -..- - step `1`<br>`0` - 1-10V standard - range -..- - step `1`<br>`1` - 0-10V standard - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `MIN_LEVEL_ADV` | Minimum level advanced | Range | range `1`..`100` - step `1` | visible=1, hidden=1, read-only=, type-id= |
-| `MIN_AUTO` | Enable / Disable minimum level | Boolean | range -..- - step `1`<br>`0` - Minimum not editable - range -..- - step `1`<br>`1` - Minimum editable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `G1` | Group 1 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G2` | Group 2 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G3` | Group 3 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G4` | Group 4 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G5` | Group 5 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G6` | Group 6 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G7` | Group 7 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G8` | Group 8 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G9` | Group 9 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
-| `G10` | Group 10 | Range | range `0`..`255` - step `1` | visible=1, hidden=0, read-only=, type-id=3 |
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL` | target, group, installation-level or network addressing |
+| Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_SAVING_ON_RESET`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_AUTO` | operating mode and behavior selectors |
+| Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `MIN_LEVEL_ADV` | timers, delays, levels and transition parameters |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
 
-Object `8` supplies the reusable Dimmer-actuator model. Device-specific applicability is restricted by the documented load technology; F414 is not a generic modern multi-load dimmer.
+**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation marks these unavailable here: `HOURS`, `MINUTES`, `SECONDS`.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 

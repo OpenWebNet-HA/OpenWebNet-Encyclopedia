@@ -124,6 +124,13 @@ def main() -> int:
 
             placeholders = ",".join("?" * len(fids))
             firmware_body = section(text, "Firmware-scoped configuration")
+            for raw_marker in ("Catalogue range rows", "| Flags |", "visible=", "type-id=", "range -..-"):
+                if raw_marker in firmware_body:
+                    errors.append(f"{prefix}: Firmware-scoped configuration contains raw catalogue serialization marker {raw_marker!r}")
+            object_human_body = section(text, "Object configuration surfaces")
+            for raw_marker in ("Catalogue range rows", "| Flags |", "visible=", "type-id=", "range -..-"):
+                if raw_marker in object_human_body:
+                    errors.append(f"{prefix}: Object configuration surfaces contains raw catalogue serialization marker {raw_marker!r}")
             for row in con.execute(
                 f"""select distinct conf_name from EN_CONF
                     where id_firmware in ({placeholders}) and id_firmware<>0 and conf_name is not null

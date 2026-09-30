@@ -86,54 +86,58 @@ The catalogue lists configuration mode 4 only. Publisher documentation independe
 
 ## Firmware-scoped configuration
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
-| `IS_GATEWAY` | Gateway | Boolean | range -..- - step `1`<br>`0` - Disable - range -..- - step `1`<br>`1` - Enable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SYSADDRESS` | Univocal code | user_value | `######` - Univocal code - range -..- - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-| `FW_VER` | Firmware version | user_value | `######` - Firmware version - range -..- - step `1` - default marker `3.0.0` | visible=1, hidden=0, read-only=, type-id= |
-| `CMD_PORT` | Commands port | user_value | `#####` - Commands port - range -..- - step `1` - default marker `20000` | visible=1, hidden=0, read-only=, type-id= |
-| `LAN_IP_ADDRESS` | Local IP address | user_value | `###.###.###.###` - Local IP address - range -..- - step `1` - default marker `192.168.1.35 (catalogue default/example, not observed)` | visible=1, hidden=0, read-only=, type-id= |
-| `LAN_IP_ADDR_TYPE` | Local IP dynamicity | Enum | range -..- - step `1`<br>`0` - Static IP - range -..- - step `1`<br>`1` - Dynamic IP (DHCP) - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `CONNECTION_METHOD` | Public IP dynamicity | Enum | range -..- - step `1`<br>`0` - Dynamic IP (DHCP) - range -..- - step `1`<br>`1` - Static IP - range -..- - step `1`<br>`2` - Web active connections - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
+| `IS_GATEWAY` | Disable / Enable | 0 | gateway enable flag |
+| `SYSADDRESS` | catalogue user value | 1 | system / univocal address |
+| `FW_VER` | version string | 3.0.0 | firmware-version field used by the software model |
+| `CMD_PORT` | TCP port | 20000 | OpenWebNet command port |
+| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | local IP address |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | static / DHCP selection |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | network connection method |
 
-Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
-
-Firmware fields include AID, IS_GATEWAY, SYSADDRESS, FW_VER, CMD_PORT, LAN_IP_ADDRESS, LAN_IP_ADDR_TYPE and CONNECTION_METHOD. The three Objects add their own network/gateway and scenario-scheduler configuration surfaces.
+These are software/network fields, not physical configurators. Defaults shown here are catalogue defaults or examples; private-address examples are intentionally not reproduced, and none of these values are observations from a deployed BMNE500.
 
 ## Object configuration surfaces
 
-### Object `61` - Scenario scheduler
-
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | Local IP address | user_value | `###.###.###.###` - Local IP address - range -..- - step `1` - default marker `192.168.1.35 (catalogue default/example, not observed)` | visible=1, hidden=0, read-only=, type-id= |
-| `LAN_IP_ADDR_TYPE` | Local IP dynamicity | Enum | range -..- - step `1`<br>`0` - Static IP - range -..- - step `1`<br>`1` - Dynamic IP (DHCP) - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `CONNECTION_METHOD` | Public IP dynamicity | Enum | range -..- - step `1`<br>`0` - Dynamic IP (DHCP) - range -..- - step `1`<br>`1` - Static IP - range -..- - step `1`<br>`2` - Web active connections - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `IP_ADDRESS` | Public IP address | user_value | `###.###.###.###` - Public IP address - range -..- - step `1` - default marker `192.168.1.35 (catalogue default/example, not observed)` | visible=1, hidden=0, read-only=, type-id= |
-| `CMD_PORT` | Commands port | user_value | `#####` - Commands port - range -..- - step `1` - default marker `20000` | visible=1, hidden=0, read-only=, type-id= |
-| `IS_GATEWAY` | Gateway | Boolean | range -..- - step `1`<br>`0` - Disable - range -..- - step `1`<br>`1` - Enable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SYSADDRESS` | Univocal code | user_value | `######` - Univocal code - range -..- - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
-
 ### Object `127` - Lighting manager
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | Local IP address | user_value | `###.###.###.###` - Local IP address - range -..- - step `1` - default marker `192.168.1.35 (catalogue default/example, not observed)` | visible=1, hidden=0, read-only=, type-id= |
-| `CONNECTION_METHOD` | Public IP dynamicity | Enum | range -..- - step `1`<br>`0` - Dynamic IP (DHCP) - range -..- - step `1`<br>`1` - Static IP - range -..- - step `1`<br>`2` - Web active connections - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `LAN_IP_ADDR_TYPE` | Local IP dynamicity | Enum | range -..- - step `1`<br>`0` - Static IP - range -..- - step `1`<br>`1` - Dynamic IP (DHCP) - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id= |
-| `SYSADDRESS` | Univocal code | user_value | `######` - Univocal code - range -..- - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id= |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | Public IP dynamicity |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
+| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+### Object `61` - Scenario scheduler
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | Public IP dynamicity |
+| `IP_ADDRESS` | IPv4 address | catalogue example | Public IP address |
+| `CMD_PORT` | TCP port | 20000 | Commands port |
+| `IS_GATEWAY` | Disable / Enable | 0 | Gateway |
+| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
 ### Object `150` - Gateway Open SCS
 
-| Field | Description | Data type | Catalogue range rows | Flags |
-| --- | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | Local IP address | user_value | `###.###.###.###` - Local IP address - range -..- - step `1` - default marker `192.168.1.35 (catalogue default/example, not observed)` | visible=1, hidden=0, read-only=, type-id=0 |
-| `LAN_IP_ADDR_TYPE` | Local IP dynamicity | Enum | range -..- - step `1`<br>`0` - Static IP - range -..- - step `1`<br>`1` - Dynamic IP (DHCP) - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `IS_GATEWAY` | Gateway | Boolean | range -..- - step `1`<br>`0` - Disable - range -..- - step `1`<br>`1` - Enable - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=0 |
-| `SYSADDRESS` | Univocal code | user_value | `######` - Univocal code - range -..- - step `1` - default marker `1` | visible=1, hidden=0, read-only=, type-id=0 |
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
+| `IS_GATEWAY` | Disable / Enable | 0 | Gateway |
+| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
 
-Object 127 owns Lighting Manager network settings, Object 61 owns scheduler/network fields, and Object 150 represents the Open/SCS gateway. These are three fixed functional Modules of one Physical Device, not three separate products.
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
 
 ## Conditions, filters, and conversions
 
