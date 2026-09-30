@@ -732,3 +732,33 @@ source_sets:
       publisher: "Arnould / Legrand"
       language: "FR"
       publication_date: "unknown"
+    - id: device-doc-automation-guide
+      path: devices/documents/device-doc-automation-guide/AUTOMATISME.pdf
+      original_filename: AUTOMATISME.pdf
+      type: pdf
+      size: 17512691
+      sha256: dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-f414-mq00278-e-en
+      path: devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf
+      original_filename: MQ00278_e_EN.pdf
+      type: pdf
+      size: 220085
+      sha256: d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273
+      source_url: https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf
+      publisher: BTicino / Legrand
+      language: EN
+      publication_date: unknown
+    - id: device-doc-hrm-scs-guide
+      path: devices/documents/device-doc-hrm-scs-guide/HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf
+      original_filename: HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf
+      type: pdf
+      size: 29603627
+      sha256: 2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40
+      source_url: https://www.bticino.com/sites/default/files/2024-02/HRM_SCS_Guide%20AD_EXOD18SAG_GB.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
