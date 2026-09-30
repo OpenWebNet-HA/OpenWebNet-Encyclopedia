@@ -1,0 +1,73 @@
+name: Publish OpenWebNet Machine KB 0.1.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-machine-kb-v0.1.1.yml
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: machine-kb-v0.1.1
+          fetch-depth: 0
+
+      - name: Verify release target
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "40db576cae95fa3483121bab3bfdb68ea5e3c706"
+          test "$(git rev-list -n1 machine-kb-v0.1.1)" = "40db576cae95fa3483121bab3bfdb68ea5e3c706"
+
+      - name: Prepare public release notes
+        shell: python
+        run: |
+          from pathlib import Path
+
+          source = Path("project/machine-kb/release-notes.md").read_text(encoding="utf-8")
+          source = source.replace(
+              "**Release identity:** OpenWebNet Machine KB 0.1.1, intended Git tag `machine-kb-v0.1.1`.",
+              "**Release identity:** OpenWebNet Machine KB 0.1.1, Git tag `machine-kb-v0.1.1`.",
+          )
+          source = source.replace(
+              "The formal tag and GitHub Release must point to the exact validated revision without intervening changes.",
+              "The tag and GitHub Release point to the validated revision `40db576cae95fa3483121bab3bfdb68ea5e3c706`.",
+          )
+          Path("/tmp/machine-kb-v0.1.1-release-notes.md").write_text(source, encoding="utf-8")
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view machine-kb-v0.1.1 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists; refusing to overwrite."
+            exit 1
+          fi
+          gh release create machine-kb-v0.1.1 \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "OpenWebNet Machine KB 0.1.1" \
+            --notes-file /tmp/machine-kb-v0.1.1-release-notes.md \
+            --verify-tag \
+            --latest
+
+      - name: Close repaired 0.1.0 claim-rendering issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$(gh issue view 37 --repo "$GITHUB_REPOSITORY" --json state --jq .state)"
+          if [ "$state" = "OPEN" ]; then
+            gh issue comment 37 --repo "$GITHUB_REPOSITORY" \
+              --body "Published in OpenWebNet Machine KB 0.1.1 (`machine-kb-v0.1.1`). The corrective patch contains the reviewed statement-rendering fix and generated-text hygiene guard."
+            gh issue close 37 --repo "$GITHUB_REPOSITORY"
+          fi
