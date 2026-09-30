@@ -1,0 +1,163 @@
+# Extended control
+
+## Summary
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0014` | Project identity |
+| Technical description | Two-module extended configurable command | Catalogue + official MyHOME documentation |
+| Catalogue item | `1104` - “Extended control item” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `9` | Implementation evidence |
+| Firmware definition | wildcard `-1.-1.-1`, firmware `153` | Implementation evidence |
+| Declared Modules | 2 | Implementation evidence |
+| Configuration modes | Physical, Virtual | Implementation evidence |
+| Categories | Command, Multifunction | Capability model |
+
+The Extended control is a two-Module configurable command whose catalogue capability model spans lighting, automation, locking, scenario, AUX, video-door-entry and sound-diffusion roles. It is therefore best treated as a multifunction command platform rather than as one fixed functional button.
+
+## Commercial identities
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino Axolute | `H4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| BTicino L/N/NT | `L4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| Legrand Mosaic | `078466` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand Mosaic | `078467` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand Mosaic | `078469` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand Mosaic | `079266` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand Mosaic | `079267` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand Mosaic | `079269` | Shared technical item | Implementation evidence; direct product document pending |
+
+The archived MyHOME Automation guide also associates the extended-control function with historical catalogue references used in older ranges. Those references should be added to the commercial index only after the exact printed-reference relationship has been checked against the corresponding catalogue revision.
+
+## Documentation
+
+| Document | Type | Coverage | Archived original |
+| --- | --- | --- | --- |
+| MyHOME Automation guide | System / product guide | H4655, L4655 and extended-control behavior | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) |
+
+The guide documents cross-bus / extended-control use cases. Direct sheets for the six Mosaic references remain a documentation gap.
+
+## Identity and firmware
+
+| Field | Value |
+| --- | --- |
+| `EN_ITEM.id_item` | `1104` |
+| `AS_ITEM_SYSTEM.modobj` | `9` |
+| catalogue system | Lighting / Automation |
+| firmware | `153` |
+| firmware applicability | `-1.-1.-1` wildcard / unspecified |
+| slots | `2` |
+| modes | Physical Configuration, Virtual Configuration |
+
+The wildcard firmware tuple is an applicability sentinel, not a physical firmware version.
+
+## Module and Object model
+
+The firmware provides two configurable Modules. Direct firmware/Object associations are:
+
+| Object | Description | Slots | Stored selection condition |
+| ---: | --- | --- | --- |
+| `400` | Light control | 1, 2 | blank/default association |
+| `401` | Automation control | 1, 2 | `M=SU_GIU;SPE=0;AUX=0` |
+| `402` | Lock/unlock actuator control | 1, 2 | `M<>0;SPE=1;AUX=0` |
+| `403` | Scenario module control | 1, 2 | `M<>0;SPE=4;AUX=0` |
+| `404` | Scheduled scenario | 1, 2 | `M<>0;SPE=6;AUX=0` |
+| `407` | AUX control | 1, 2 | `M=0;SPE=0;AUX<>0` |
+| `408` | Open lock control | 1, 2 | `M<>0;SPE=8;AUX=0` |
+| `409` | Sound diffusion control | 1 only | `M<>0;SPE=9;AUX=0` |
+
+Virgin Object `501`, **Special double command virgin**, applies to both slots and permits the direct Objects above plus:
+
+- `405` Scenario PLUS Lighting Management;
+- `406` Scheduled scenario PLUS;
+- `427` Floor call control;
+- `430` Staircase light control.
+
+This gives 12 candidate Object roles across the two Modules.
+
+## Firmware-scoped physical configuration
+
+| Field | Domain | Notes |
+| --- | --- | --- |
+| `AID` | identity field | not a physical configurator |
+| `A` | `0..9`, `GEN`, `GR`, `AMB` | stored values `12..14` for symbolic scopes |
+| `PL` | `0..9` | point / function target |
+| `M` | `0..8`, `O/I`, `OFF`, `ON`, `UP/DOWN`, `UP/DOWN monostable`, `CEN`, `PUL` | multifunction mode |
+| `LIV1` | `0..99` | level/configuration field |
+| `LIV2` | `0..9` | level/configuration field |
+| `SPE` | `0..9` | special-function selector |
+| `I` | `0..9`, `CEN` | interface / destination-related selector |
+
+### Source-model irregularity: `AUX`
+
+Several slot-condition rows explicitly reference an `AUX` variable, but firmware `153` contains no firmware-scoped configuration field named `AUX`.
+
+This must remain an unresolved source-model fact. Do not silently map `AUX` to `I`, an Object AUX channel, or another field without independent evidence.
+
+## Reusable Object configuration surfaces
+
+The complete candidate surface is large because the firmware reuses generic command Objects. The Device-specific dossier preserves the reachable Object set while the detailed reusable parameter semantics remain canonical in the Device Model and programming material.
+
+### Lighting and automation
+
+Object `400` exposes 42 stored command modes including toggle, timed ON, dimming, blinking, fixed-level and customized command forms; point/area/group/general addressing; installation/destination levels; referent address; timing components; level/ramp parameters; and AUX input.
+
+Object `401` exposes bistable, monostable and blades-control modes with point/area/group/general addressing, installation/destination levels, referent address and AUX input.
+
+### Lock, AUX and door-entry roles
+
+- Object `402`: disable/enable lock modes, broad address scopes and AUX input.
+- Object `407`: AUX command mode, output AUX channel `1..15`, input AUX channel `0..15`.
+- Object `408`: external-unit address `0..95`, segment scope and AUX input.
+- Object `427`: point-to-point/general floor call, internal-unit address split across `N1/N2`, segment scope and AUX input.
+- Object `430`: staircase-light control with internal-unit address, segment scope and AUX input.
+
+### Scenario roles
+
+Object `403` provides scenario activation / modification, full A/PL scenario-module target encoding, installation/destination levels, two scenario-button selections and independent delay tables.
+
+Object `404` provides A/PL, two button numbers, AUX input and start delay.
+
+Virgin-only Object `405` provides two scenario numbers, regulation target and independent button delays. Object `406` provides the split low/high PLUS scenario number and two button fields.
+
+### Sound diffusion
+
+Object `409` provides point/area/general addressing, area and audio point, source selection, follow-me flag and AUX input.
+
+## Functional applicability
+
+Depending on selected Object, this Device can participate in lighting, automation, scenario, AUX, video-door-entry and sound-diffusion functions.
+
+The Device page establishes the available hardware/Object projection. Generic WHO command syntax belongs under [Functional Protocol](../../functional/).
+
+## Diagnostic applicability
+
+| Surface | Device-specific use | Reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve item model `9`, brand/line and installed configurator count | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 30` | determine active Object for each of the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine configured system/address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration and physical-configurability information | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+## Programming
+
+A correct programmer must resolve the selected Object per Module before validating Object-scoped parameters. It must also preserve the unresolved `AUX` condition variable rather than inventing a conversion.
+
+See [Object Programming](../../programming/object-programming.md), [Configuration Programming](../../programming/configuration-programming.md), and [Programming Validation](../../programming/validation.md).
+
+## Corroboration status and open work
+
+- Locate official product sheets for all six Mosaic references.
+- Obtain a sanitized H4655 or L4655 hardware fingerprint.
+- Determine the runtime/physical meaning of the condition variable `AUX`.
+- Establish whether Virgin-only Objects `405`, `406`, `427` and `430` are reachable through current physical or virtual configuration on this firmware.
+- Archive additional language/revision variants of the extended-control documentation.
+
+## Sources
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)

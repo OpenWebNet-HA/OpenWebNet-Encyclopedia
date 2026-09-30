@@ -14,8 +14,10 @@ A Device may appear in several categories at the same time.
 | Sensors | [Sensors](sensors.md) |
 | Scenarios | [Scenarios](scenarios.md) |
 | Gateways and Interfaces | [Gateways and Interfaces](gateways-and-interfaces.md) |
+| Audio / Video | [Audio / Video](audio-video.md) |
+| User Interfaces | [User Interfaces](user-interfaces.md) |
 
-Additional likely categories include Sensors, Thermoregulation, Burglar Alarm, Energy Management, Scenarios, and Audio / Video.
+Additional likely categories include Thermoregulation, Burglar Alarm and Energy Management.
 
 The taxonomy may evolve as the documented Device set expands.
 

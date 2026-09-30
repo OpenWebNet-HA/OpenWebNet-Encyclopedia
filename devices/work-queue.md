@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 198 |
+| unreviewed | 194 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 12 |
+| definition-in-progress | 16 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -28,15 +28,15 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 402 | Scenario control | 10 | definition-in-progress | OWN-DEV-0011 | partial | complete | pending | - |
 | high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | pending | - |
 | high | 37 | IR receiver | 8 | definition-in-progress | OWN-DEV-0012 | partial | complete | pending | - |
+| high | 1076 | Video Display | 8 | definition-in-progress | OWN-DEV-0013 | partial | complete | pending | - |
+| high | 1104 | Extended control item | 8 | definition-in-progress | OWN-DEV-0014 | partial | complete | pending | - |
+| high | 1469 | MyHOME_Screen 3.5 | 8 | definition-in-progress | OWN-DEV-0015 | partial | complete | pending | - |
+| high | 1566 | PIR flush mounted sensor | 8 | definition-in-progress | OWN-DEV-0016 | complete | complete | pending | - |
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | pending | - |
 | high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | - |
-| normal | 1076 | Video Display | 8 | unreviewed | - | pending | pending | pending | - |
-| normal | 1104 | Extended control item | 8 | unreviewed | - | pending | pending | pending | - |
-| normal | 1469 | MyHOME_Screen 3.5 | 8 | unreviewed | - | pending | pending | pending | - |
-| normal | 1566 | PIR flush mounted sensor | 8 | unreviewed | - | pending | pending | pending | - |
 | normal | 168 | Flush mounted temperature central unit | 7 | unreviewed | - | pending | pending | pending | - |
 | normal | 1147 | Local Display | 6 | unreviewed | - | pending | pending | pending | - |
 | normal | 1190 | Touch control | 6 | unreviewed | - | pending | pending | pending | - |

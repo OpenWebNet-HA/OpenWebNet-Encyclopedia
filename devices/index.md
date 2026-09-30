@@ -129,4 +129,36 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 | Legrand Céliane | 067216 | Established identity | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Named by MQ00071-d-EN |
 | Legrand Mosaic | 078465 | Shared technical item; product-document review pending | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Item 37 |
 | Legrand Mosaic | 079265 | Shared technical item; product-document review pending | [OWN-DEV-0012 - Four-channel IR receiver](definitions/own-dev-0012-four-channel-ir-receiver.md) | Item 37 |
+| BTicino L/N/NT | 344400 | Documented commercial identity | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Archived Video Display manuals |
+| BTicino L/N/NT | 344401 | Documented commercial identity | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Archived Video Display manuals |
+| BTicino Axolute | 349311 | Documented commercial identity | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Archived MyHOME Automation guide |
+| BTicino Axolute | 349312 | Documented commercial identity | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Archived MyHOME Automation guide |
+| BTicino Axolute | 349313 | Shared technical item; product-document review pending | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Item 1076 |
+| BTicino Axolute | 349340 | Shared technical item; product-document review pending | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Item 1076 |
+| Legrand Arteor | 573950 | Shared technical item; product-document review pending | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Item 1076 |
+| Legrand Arteor | 573951 | Shared technical item; product-document review pending | [OWN-DEV-0013 - Video Display](definitions/own-dev-0013-video-display.md) | Item 1076 |
+| BTicino Axolute | H4655 | Documented commercial identity | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Archived MyHOME Automation guide |
+| BTicino L/N/NT | L4655 | Documented commercial identity | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Archived MyHOME Automation guide |
+| Legrand Mosaic | 078466 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| Legrand Mosaic | 078467 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| Legrand Mosaic | 078469 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| Legrand Mosaic | 079266 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| Legrand Mosaic | 079267 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| Legrand Mosaic | 079269 | Shared technical item; product-document review pending | [OWN-DEV-0014 - Extended control](definitions/own-dev-0014-extended-control.md) | Item 1104 |
+| BTicino Axolute | H4890 | Documented commercial identity | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Archived technical sheet |
+| BTicino L/N/NT | LN4890 | Documented commercial identity | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Archived technical sheet |
+| BTicino Air | LN4890A | Documented commercial identity | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Archived technical sheet |
+| BTicino Eteris | HW4890 | Documented commercial identity | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Archived technical sheet |
+| BTicino Matix | AM4890 | Documented identity; source-label discrepancy retained | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Technical-sheet heading says AM5890 while body/catalogue use AM4890 |
+| Legrand Arteor | 573958 | Shared technical item; direct product document pending | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Item 1469 |
+| Legrand Céliane | 067292 | Shared technical item; direct product document pending | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Item 1469 |
+| Legrand Mosaic | 078479 | Shared technical item; direct product document pending | [OWN-DEV-0015 - MyHOME_Screen 3.5](definitions/own-dev-0015-myhome-screen-3-5.md) | Item 1469 |
+| BTicino Axolute | HC4659 / HS4659 / HD4659 | Documented commercial identities | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
+| BTicino L/N/NT | L4659N / N4659N / NT4659N | Documented commercial identities | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
+| BTicino Matix | AM5659 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet |
+| BTicino Living Now | K4659 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Current technical sheet |
+| Legrand Arteor | 574046 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
+| Legrand Arteor | 574096 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
+| Legrand Céliane | 067225 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
+| Legrand Mosaic | 078485 | Compatibility-documented identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Archived compatibility table |
 The **Relationship** column describes how a commercial reference maps onto the technical Device definition. It does not select one SKU as authoritative. “Shared technical item” is catalogue evidence and remains weaker than a direct product-document or hardware equivalence.

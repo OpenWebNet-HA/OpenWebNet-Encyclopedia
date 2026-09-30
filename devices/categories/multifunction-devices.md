@@ -9,3 +9,5 @@
 | [OWN-DEV-0007](../definitions/own-dev-0007-three-module-basic-control.md) | 6-record three-module Basic control family | Three-module basic control | Configurable lighting, automation, scenario and AUX command roles |
 | [OWN-DEV-0009](../definitions/own-dev-0009-four-zone-touch-multifunction-control.md) | 15-record Touch control family | Four-zone touch multifunction control | Lighting, automation, scenario, AUX, sound and video-door-entry roles |
 | [OWN-DEV-0012](../definitions/own-dev-0012-four-channel-ir-receiver.md) | 8-record IR receiver cluster | Four-channel IR receiver | Lighting, automation, scenario, sound and video-door-entry remote functions |
+| [OWN-DEV-0014](../definitions/own-dev-0014-extended-control.md) | 8-record Extended control family | Extended control | Twelve candidate configurable command Objects across two Modules |
+| [OWN-DEV-0016](../definitions/own-dev-0016-pir-flush-mounted-sensor.md) | 8-record PIR sensor family | PIR daylight and presence sensor | Configuration-selected sensor role plus sixteen IR scenario-control Modules |
