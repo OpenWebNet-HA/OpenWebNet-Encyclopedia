@@ -3,50 +3,62 @@ source:
   mhcatalogue_sha256: f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
 items:
   '1':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0021
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0021 created and source-reconciled; hardware corroboration remains pending.
   '2':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0022
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0022 created and source-reconciled; hardware corroboration remains pending.
   '3':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0023
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0023 created and source-reconciled; hardware corroboration remains pending.
   '4':
     state: definition-in-progress
     priority: high
@@ -68,35 +80,43 @@ items:
     - Six-record three-module Basic control cluster; MQ00290-c-EN directly covers four references.
     - Currently discovered official PDF sources archived byte-for-byte and registered in the source manifest.
   '12':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0024
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0024 created and source-reconciled; hardware corroboration remains pending.
   '17':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0025
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0025 created and source-reconciled; hardware corroboration remains pending.
   '20':
     state: unreviewed
     priority: normal
