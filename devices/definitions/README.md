@@ -30,4 +30,6 @@ If two previously separate definitions are established to describe the same tech
 
 ## Page structure
 
-Start new definitions from the [Device Page Template](../contributing/device-page-template.md).
+Device definitions must follow the [Device Definition Presentation Profile](../contributing/device-definition-presentation-profile.md), which specializes the Encyclopedia Style Guide for this page class and designates the mature Device exemplars.
+
+Start new definitions from the [Device Page Template](../contributing/device-page-template.md), which implements that profile.
