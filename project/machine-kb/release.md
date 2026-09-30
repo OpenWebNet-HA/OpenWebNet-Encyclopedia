@@ -1,6 +1,6 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** Machine KB 0.1.0 release preparation is complete in `main`, targeting `machine-kb-v0.1.0`. Bounded current-main semantic verification passed on 2026-09-28 for candidate `a819104eed5d8431478ef933235a616cde71a092`. Historical lineage remains explicit: independently certified candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`, previous reconciled candidate `888706f39f4c3f5dba2a49db628b09011714084b`, and previous readiness/control commit `d4757986f8b35bcb7bb997a3fae9ef074bf437ec`. Subsequent licensing and consumer/release-documentation work changes no Machine KB factual content. Creating the tag or GitHub Release remains a separate explicitly authorized action.
+**Status:** OpenWebNet Machine KB 0.1.0 is published at `machine-kb-v0.1.0`. The 0.1.1 corrective patch release is prepared from current `main`, targeting `machine-kb-v0.1.1`. It repairs the 1,120 released claim statements affected by table-context parser leakage, aligns schema vocabulary documentation, adds fail-closed generated-text hygiene validation, and standardizes the formal public name. Schema compatibility and artifact format versions remain 0.1.0, and the 11,353-ID compatibility baseline is unchanged. User authorization to perform the 0.1.1 release was given on 2026-09-30; the exact revision must still pass the full release suite before tagging and publication.
 
 ## Intended consumer contract
 
@@ -16,7 +16,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 - [x] Schemas, vocabularies, IDs and aliases, namespaces, provenance, references, claims, and cross-artifact consistency pass validation.
 - [x] Privacy classifications are valid and every generated output passes the final privacy scan; installed Device IDs and other prohibited private values remain blocked by pre-IR and final-scan controls.
 - [x] Historical independent Phase 15 certification remains recorded for its exact candidate; the later post-readiness semantic delta received bounded current-main review with explicit provenance, applicability, epistemic, identity, and unresolved-state checks.
-- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, 0.1.0 release notes, the consumer ingestion guide, and consumer-facing golden examples are aligned with the intended release revision.
+- [x] Manifest hashes and counts, artifact/schema versions, input-content digest, licensing, 0.1.1 patch release notes, the consumer ingestion guide, and consumer-facing golden examples are aligned with the intended release revision.
 - [x] The [review ledger](review-ledger.md), [roadmap](roadmap.md), and project control status are current; no remaining release blocker is hidden in Machine KB project documentation.
 
 ## Verified release-candidate relationship
@@ -47,7 +47,7 @@ The build and CI remain offline and model-free. Green mechanical validation is s
 
 ## Release boundary
 
-This checklist and release preparation authorize no formal release action by themselves. The intended tag is `machine-kb-v0.1.0`. Explicit user authorization is still required before creating that tag, creating the GitHub Release, or publishing externally.
+Machine KB 0.1.0 is already published. For the corrective patch, the intended tag is `machine-kb-v0.1.1`. Explicit user authorization for this release was provided on 2026-09-30. Tagging and publication remain contingent on the exact release-preparation revision passing the complete validation suite with no intervening commit.
 
 ## Current-main reconciliation - 2026-09-27
 
@@ -112,3 +112,18 @@ Release preparation after semantic candidate `a819104eed5d8431478ef933235a616cde
 `knowledge/manifest.json` is regenerated so its schema hashes match the prepared release files. All non-schema machine artifacts must remain byte-identical to the reviewed semantic candidate, and manifest corpus counts plus the input-content digest must remain unchanged.
 
 The release operation may proceed only if the exact preparation revision passes the complete validation suite and `machine-kb-v0.1.0` does not already exist locally or on `origin`.
+
+## Machine KB 0.1.1 patch release preparation - 2026-09-30
+
+The patch baseline is published tag `machine-kb-v0.1.0` at `0b6651604581e428b58a071a96bd76c2ba2ba179`. The pre-preparation current-main revision is `7e68fc842b2898df499a9385de39471f307ef91e`.
+
+The post-0.1.0 delta is intentionally bounded to corrective generator, validation, schema-documentation, naming, and supporting documentation work:
+
+- 1,120 released claim statements with leaked internal Markdown table representations are repaired with no stable-ID or non-text semantic change;
+- generated text now has a fail-closed hygiene gate and regression tests;
+- public schema vocabulary documentation is synchronized with the schemas;
+- the formal public name is standardized as OpenWebNet Machine KB while technical identifiers remain stable;
+- generator version advances to `ownkb-build-0.8.2`;
+- schema compatibility, artifact format versions, corpus counts, and the 11,353 live-ID baseline remain unchanged.
+
+This is a patch release under the published 0.1.0 compatibility contract. No consumer migration is required. The exact preparation revision must pass the complete release validation and then be tagged as `machine-kb-v0.1.1` without an intervening commit.
