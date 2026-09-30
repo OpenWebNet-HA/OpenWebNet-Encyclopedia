@@ -7,8 +7,8 @@
 | Device ID | `OWN-DEV-0032` | Project identity |
 | Technical description | SCS-powered radio transmitting interface | Catalogue + official documentation |
 | Catalogue item / model | `34` / `modobj 21` | Implementation evidence |
-| Firmware applicability | 215, wildcard -1.-1.-1, one slot | Implementation evidence |
-| Commercial identities | HC/HS4576; HD4576; L/N/NT4576 | Catalogue |
+| Firmware applicability | firmware `215`, `-1.-1.-1`, one slot | Implementation evidence |
+| Commercial identities | `HC/HS4576`, `HD4576`, `L/N/NT4576` | Catalogue |
 | Categories | Radio interface, Control bridge, Lighting / Automation | Capability model |
 
 ## Commercial identities
@@ -71,7 +71,7 @@ Firmware 215 has wildcard version/revision/build applicability and one Module sl
 | ---: | ---: | ---: | ---: | --- | --- | --- |
 | - | - | - | - | No firmware-scoped Virgin Object | - | - |
 
-Slot 1 is fixed Object 172, Radio Interface Transmitter.
+Slot `1` is fixed Object `172`, Radio Interface Transmitter.
 
 ## Configuration modes
 
@@ -87,11 +87,11 @@ The catalogue declares configuration modes 1 and 3.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0 / 1 | 0 | operating / function mode |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0` / `1` | `0` | operating / function mode |
 
-Firmware 215 narrows M to 0/1. The reusable transmitter Object has a wider generic mode family, which must not be projected back onto this Device.
+Firmware `215` narrows `M` to `0` / `1`. The reusable transmitter Object has a wider generic mode family, which must not be projected back onto this Device.
 
 ## Object configuration surfaces
 
@@ -99,13 +99,13 @@ Firmware 215 narrows M to 0/1. The reusable transmitter Object has a wider gener
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..9 | 0 | Area |
-| `PL` | 0..9 | 0 | Light point |
-| `M` | 1 / 6 / 7 / 8 / CEN / None | 0 | Modality |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `M` | `1` / `6` / `7` / `8` / `CEN` / `None` | `0` | Modality |
 
 **Firmware relationship.** catalogue irregularity: `TYPE_CONTACT` (filter `1631`) is not present in this reusable Object schema.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

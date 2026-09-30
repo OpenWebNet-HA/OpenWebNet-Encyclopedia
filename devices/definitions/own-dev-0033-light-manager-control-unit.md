@@ -7,8 +7,8 @@
 | Device ID | `OWN-DEV-0033` | Project identity |
 | Technical description | Lighting Management control unit, Ethernet interface, scenario scheduler and Open/SCS gateway | Catalogue + official documentation |
 | Catalogue item / model | `35` / `modobj 35` | Implementation evidence |
-| Firmware applicability | 126, version 2.0 build 1, three slots | Implementation evidence |
-| Commercial identities | BMNE500 | Catalogue |
+| Firmware applicability | firmware `126`, version `2.0`, build `1`, three slots | Implementation evidence |
+| Commercial identities | `BMNE500` | Catalogue |
 | Categories | Gateway, Lighting management, Scenario scheduler, Integration | Capability model |
 
 ## Commercial identities
@@ -30,7 +30,7 @@ Multi-product guides retain an explicit page-location limitation until both prin
 
 ## Physical and electrical characteristics
 
-Current publisher data gives 12..27 V supply, BUS maximum consumption 8 mA and a six-DIN-module enclosure.
+Current publisher data gives `12..27 V` supply, BUS maximum consumption 8 mA and a six-DIN-module enclosure.
 
 ## Identity
 
@@ -74,7 +74,7 @@ Firmware 126 is version 2.0 build 1 and declares three Module slots.
 | ---: | ---: | ---: | ---: | --- | --- | --- |
 | - | - | - | - | No firmware-scoped Virgin Object | - | - |
 
-The topology is explicit and fixed: slot 1 is Object 127 Lighting manager; slot 2 is Object 61 Scenario scheduler; slot 3 is Object 150 Gateway Open SCS.
+The topology is explicit and fixed: slot `1` is Object `127` Lighting manager; slot `2` is Object `61` Scenario scheduler; slot `3` is Object `150` Gateway Open SCS.
 
 ## Configuration modes
 
@@ -89,13 +89,13 @@ The catalogue lists configuration mode 4 only. Publisher documentation independe
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `IS_GATEWAY` | Disable / Enable | 0 | gateway enable flag |
-| `SYSADDRESS` | catalogue user value | 1 | system / univocal address |
-| `FW_VER` | version string | 3.0.0 | firmware-version field used by the software model |
-| `CMD_PORT` | TCP port | 20000 | OpenWebNet command port |
+| `IS_GATEWAY` | Disable / Enable | `0` | gateway enable flag |
+| `SYSADDRESS` | catalogue user value | `1` | system / univocal address |
+| `FW_VER` | version string | `3.0.0` | firmware-version field used by the software model |
+| `CMD_PORT` | TCP port | `20000` | OpenWebNet command port |
 | `LAN_IP_ADDRESS` | IPv4 address | catalogue example | local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | static / DHCP selection |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | network connection method |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | static / DHCP selection |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | network connection method |
 
 These are software/network fields, not physical configurators. Defaults shown here are catalogue defaults or examples; private-address examples are intentionally not reproduced, and none of these values are observations from a deployed BMNE500.
 
@@ -106,9 +106,9 @@ These are software/network fields, not physical configurators. Defaults shown he
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | Public IP dynamicity |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
-| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | Public IP dynamicity |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -117,12 +117,12 @@ These are software/network fields, not physical configurators. Defaults shown he
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | 0 | Public IP dynamicity |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | Public IP dynamicity |
 | `IP_ADDRESS` | IPv4 address | catalogue example | Public IP address |
-| `CMD_PORT` | TCP port | 20000 | Commands port |
-| `IS_GATEWAY` | Disable / Enable | 0 | Gateway |
-| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
+| `CMD_PORT` | TCP port | `20000` | Commands port |
+| `IS_GATEWAY` | Disable / Enable | `0` | Gateway |
+| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -131,13 +131,13 @@ These are software/network fields, not physical configurators. Defaults shown he
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | 0 | Local IP dynamicity |
-| `IS_GATEWAY` | Disable / Enable | 0 | Gateway |
-| `SYSADDRESS` | catalogue user value | 1 | Univocal code |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `IS_GATEWAY` | Disable / Enable | `0` | Gateway |
+| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
@@ -181,7 +181,7 @@ The canonical database and current publisher material agree that BMNE500 is a so
 
 - Archive a stable publisher-generated BMNE500 product-sheet PDF if one becomes available; the TiBMNE500 manual is archived.
 - Add a sanitized BMNE500 hardware fingerprint and gateway-session observations.
-- Corroborate firmware 2.0 build 1 against observed DIM2/DIM3/DIM6 diagnostics.
+- Corroborate firmware `2.0` build `1` against observed `DIMENSION 2` / `DIMENSION 3` / `DIMENSION 6` diagnostics.
 
 ## Sources
 

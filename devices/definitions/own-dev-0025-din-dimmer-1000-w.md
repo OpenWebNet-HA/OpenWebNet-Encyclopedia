@@ -88,10 +88,10 @@ Physical configuration, Virtual Configuration and Advanced Configuration.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
-| `G1` | 0..9 | 0 | group configurator 1 |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0..4` / `SLA` / `PUL` | `0` | operating / function mode |
+| `G1` | `0..9` | `0` | group configurator 1 |
 
 These are F414 device configurators. Advanced dimmer characteristics such as load type and minimum level belong to the reusable Dimmer Object and are shown separately.
 
@@ -104,11 +104,11 @@ These are F414 device configurators. Advanced dimmer characteristics such as loa
 | Addressing | `A`, `PL` | target, group, installation-level or network addressing |
 | Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_SAVING_ON_RESET`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_AUTO` | operating mode and behavior selectors |
 | Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `MIN_LEVEL_ADV` | timers, delays, levels and transition parameters |
-| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; `0` means no group |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation marks these unavailable here: `HOURS`, `MINUTES`, `SECONDS`.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
@@ -132,7 +132,7 @@ The tables above account for the reusable Object fields without reproducing data
 | `8` | `404` | `HOURS` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Hours) | `1` | - |
 | `8` | `405` | `MINUTES` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Minutes) | `1` | - |
 | `8` | `406` | `SECONDS` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Seconds) | `1` | - |
-| `8` | `407` | `TYPE_LOAD` | TYPE_LOAD | `1` | - |
+| `8` | `407` | `TYPE_LOAD` | `TYPE_LOAD` | `1` | - |
 | `8` | `408` | `TYPE_STANDARD` | Definizione range voltaggio utile | `1` | - |
 | `8` | `409` | `MIN_LEVEL_ADV` | Minimum level advanced | `1` | - |
 | `8` | `410` | `MIN_AUTO` | enable disable minimum level | `1` | - |

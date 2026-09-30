@@ -109,12 +109,12 @@ Physical configuration, Virtual Configuration and Advanced Configuration.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 / GEN / GR / AMB / AUX | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0..9 / CEN / OFF / ON / PUL | 0 | operating / function mode |
-| `M2` | 0..9 | 0 | channel 2 operating mode |
-| `SPE` | 0 / 1 / 2 / 3 / 4 / 6 / 7 / 8 / 9 | 0 | special-function selector |
-| `INT` | 0 / 1 / OFF | 0 | interface-function selector |
+| `A` | `0..9` / `GEN` / `GR` / `AMB` / `AUX` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0..9` / `CEN` / `OFF` / `ON` / `PUL` | `0` | operating / function mode |
+| `M2` | `0..9` | `0` | channel 2 operating mode |
+| `SPE` | `0` / `1` / `2` / `3` / `4` / `6` / `7` / `8` / `9` | `0` | special-function selector |
+| `INT` | `0` / `1` / `OFF` | `0` | interface-function selector |
 
 These are the Soft Touch device configurators. Their values select among the candidate control Objects; the much larger reusable Object schemas are summarized separately rather than flattened into this table.
 
@@ -139,20 +139,20 @@ These are the Soft Touch device configurators. Their values select among the can
 | Mode and behavior | `M`, `TYPE_CONTACT` | operating mode and behavior selectors |
 | Object-specific | `INST_LEV`, `DEST_LEV` | additional reusable fields defined by this Object |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`. The catalogue relation restricts `M`: UP mono+bistable control (4), DOWN mono+bistable control (5).
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`. The catalogue relation restricts `M`: UP mono+bistable control (`4`), DOWN mono+bistable control (`5`).
 
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `M` | Disable / Enable | 1 | Modality |
-| `ADDR_TYPE` | point-to-point / area / group / general | 0 | Addressing type |
-| `A` | 0..10 | 0 | Area |
-| `PL` | 0..15 | 0 | Light point |
-| `G` | 1..255 | 1 | Group |
-| `INST_LEV` | private riser / local bus 1..15 / standard | 16 | Installation level |
-| `DEST_LEV` | private riser / local bus 1..15 / all systems | 0 | Destination level |
-| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+| `M` | Disable / Enable | `1` | Modality |
+| `ADDR_TYPE` | point-to-point / area / group / general | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | private riser / local bus `1..15` / standard | `16` | Installation level |
+| `DEST_LEV` | private riser / local bus `1..15` / all systems | `0` | Destination level |
+| `TYPE_CONTACT` | Normally open / Normally closed | `0` | Contact type |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
 
@@ -160,13 +160,13 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `M` | Scenario activation and modification / Scenario activation | 0 | Modality |
-| `APL` | A 0..10 with PL 0..15 (catalogue-composed address) | 0 | Scenario module address |
-| `INST_LEV` | private riser / local bus 1..15 / standard | 16 | Installation level |
-| `DEST_LEV` | private riser / local bus 1..15 / all systems | 0 | Destination level |
-| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
-| `SCE_BUTT_1` | 1..16 | 1 | Scenario number |
-| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay of scenario number |
+| `M` | Scenario activation and modification / Scenario activation | `0` | Modality |
+| `APL` | `A`: `0..10`; `PL`: `0..15` (catalogue-composed address) | `0` | Scenario module address |
+| `INST_LEV` | private riser / local bus `1..15` / standard | `16` | Installation level |
+| `DEST_LEV` | private riser / local bus `1..15` / all systems | `0` | Destination level |
+| `TYPE_CONTACT` | Normally open / Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | `0` | Activation delay of scenario number |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
 
@@ -174,11 +174,11 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..10 | 0 | Area |
-| `PL` | 0..15 | 0 | Light point |
-| `CEN_BUTT_1` | 0..31 | 1 | Button |
-| `MODE` | Press/release only / Press/hold/release | 0 | Modality |
-| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | Press/release only / Press/hold/release | `0` | Modality |
+| `TYPE_CONTACT` | Normally open / Normally closed | `0` | Contact type |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
 
@@ -186,11 +186,11 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `M` | ON / OFF / ON with regulation / OFF with regulation | 0 | Modality |
-| `PPT_SCE_1` | 0..255 | 1 | Upper button scenario |
-| `TYPE_OF_REGULATION` | Regulate all / Lights only / Shutters only / Stereo amplifiers only | 0 | Regulation type |
-| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
-| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay for upper button |
+| `M` | `ON` / `OFF` / `ON` with regulation / `OFF` with regulation | `0` | Modality |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | Regulate all / Lights only / Shutters only / Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | Normally open / Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | `0` | Activation delay for upper button |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`, `M`, `TYPE_OF_REGULATION`.
 
@@ -198,11 +198,11 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `PPT_CEN_LOW` | 0..255 | 1 | Scheduled scenario PLUS number |
-| `PPT_CEN_HIG` | 0..7 | 0 | Scheduled scenario PLUS number |
-| `BUTTON_1` | 0..31 | 1 | Button |
-| `MODE` | Press/release only / Press/hold/release | 0 | Modality |
-| `TYPE_CONTACT` | Normally open / Normally closed | 0 | Contact type |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Button |
+| `MODE` | Press/release only / Press/hold/release | `0` | Modality |
+| `TYPE_CONTACT` | Normally open / Normally closed | `0` | Contact type |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
 
@@ -210,8 +210,8 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `P` | 0..95 | 0 | External unit address |
-| `SEG_LEV` | Same level / Riser / Building / Backbone | 0 | Level |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | Same level / Riser / Building / Backbone | `0` | Level |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -229,23 +229,23 @@ These are the Soft Touch device configurators. Their values select among the can
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `TO_ALL` | Point to point / General | 1 | Type of call |
-| `N1` | 0..255 | 0 | Internal unit address |
-| `N2` | 0..15 | 0 | Internal unit address |
-| `SEGMENT` | The same / Riser / Building / Backbone | 0 | Segment |
-| `IN_AUX_CHANNEL` | 0..15 | 0 | Input AUX channel |
+| `TO_ALL` | Point to point / General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | The same / Riser / Building / Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `IN_AUX_CHANNEL`, `SEGMENT`. The catalogue relation restricts `TO_ALL`: General (1).
+**Firmware relationship.** The catalogue relation explicitly exposes `IN_AUX_CHANNEL`, `SEGMENT`. The catalogue relation restricts `TO_ALL`: General (`1`).
 
 ### Object `426` - Staircase light control
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `N1` | 0..255 | 0 | Internal unit address |
-| `N2` | 0..15 | 0 | Internal unit address |
-| `SEG_LEV` | Same / Riser / Building / Backbone | 0 | Segment |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | Same / Riser / Building / Backbone | `0` | Segment |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `SEG_LEV`. The catalogue relation restricts `N1`: 100..255.
+**Firmware relationship.** The catalogue relation explicitly exposes `SEG_LEV`. The catalogue relation restricts `N1` to `100..255`.
 
 ### Object `480` - User interface settings
 
@@ -256,7 +256,7 @@ These are the Soft Touch device configurators. Their values select among the can
 
 **Firmware relationship.** The catalogue relation explicitly exposes `STATE_OF_UNUSED_BUTTON`, `BACKLIGHT_INTENSITY_STANDBY_LEVEL`, `PROXIMITY_ENABLE`, `SIGNBOARD`, `SINGLE_LED_INTENSITY_STANDBY_LEVEL`, `BACKLIGHT_DELAY`.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
@@ -283,7 +283,7 @@ The tables above account for the reusable Object fields without reproducing data
 | `416` | `321` | `MODE` | Mode for CEN command | `1` | - |
 | `416` | `322` | `TYPE_CONTACT` | Contact type | `1` | - |
 | `419` | `323` | `TYPE_CONTACT` | Contact type | `1` | - |
-| `419` | `324` | `SUB_SOURCE` | SUB_SOURCE | `1` | - |
+| `419` | `324` | `SUB_SOURCE` | `SUB_SOURCE` | `1` | - |
 | `419` | `325` | `CHANNEL` | Channel (BB-Stereo) | `1` | - |
 | `426` | `329` | `SEG_LEV` | Segment | `1` | - |
 | `426` | `4101` | `N1` | Internal unit address | `0` | `100`<br>`101`<br>`102`<br>`103`<br>`104`<br>`105`<br>`106`<br>`107`<br>`108`<br>`109`<br>`110`<br>`111`<br>`112`<br>`113`<br>`114`<br>`115`<br>`116`<br>`117`<br>`118`<br>`119`<br>`120`<br>`121`<br>`122`<br>`123`<br>`124`<br>`125`<br>`126`<br>`127`<br>`128`<br>`129`<br>`130`<br>`131`<br>`132`<br>`133`<br>`134`<br>`135`<br>`136`<br>`137`<br>`138`<br>`139`<br>`140`<br>`141`<br>`142`<br>`143`<br>`144`<br>`145`<br>`146`<br>`147`<br>`148`<br>`149`<br>`150`<br>`151`<br>`152`<br>`153`<br>`154`<br>`155`<br>`156`<br>`157`<br>`158`<br>`159`<br>`160`<br>`161`<br>`162`<br>`163`<br>`164`<br>`165`<br>`166`<br>`167`<br>`168`<br>`169`<br>`170`<br>`171`<br>`172`<br>`173`<br>`174`<br>`175`<br>`176`<br>`177`<br>`178`<br>`179`<br>`180`<br>`181`<br>`182`<br>`183`<br>`184`<br>`185`<br>`186`<br>`187`<br>`188`<br>`189`<br>`190`<br>`191`<br>`192`<br>`193`<br>`194`<br>`195`<br>`196`<br>`197`<br>`198`<br>`199`<br>`200`<br>`201`<br>`202`<br>`203`<br>`204`<br>`205`<br>`206`<br>`207`<br>`208`<br>`209`<br>`210`<br>`211`<br>`212`<br>`213`<br>`214`<br>`215`<br>`216`<br>`217`<br>`218`<br>`219`<br>`220`<br>`221`<br>`222`<br>`223`<br>`224`<br>`225`<br>`226`<br>`227`<br>`228`<br>`229`<br>`230`<br>`231`<br>`232`<br>`233`<br>`234`<br>`235`<br>`236`<br>`237`<br>`238`<br>`239`<br>`240`<br>`241`<br>`242`<br>`243`<br>`244`<br>`245`<br>`246`<br>`247`<br>`248`<br>`249`<br>`250`<br>`251`<br>`252`<br>`253`<br>`254`<br>`255` |
@@ -294,7 +294,7 @@ The tables above account for the reusable Object fields without reproducing data
 | `480` | `3110` | `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | Backlight intensity stand by level | `1` | - |
 | `480` | `3117` | `PROXIMITY_ENABLE` | Proximity Activation | `1` | - |
 | `480` | `3124` | `SIGNBOARD` | Signboard activation type | `1` | - |
-| `480` | `3132` | `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is OFF, only one led can be used for the standby. | `1` | - |
+| `480` | `3132` | `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | when `BACKLIGHT_INTENSITY_STANDBY_LEVEL` is `OFF`, only one LED can be used for standby. | `1` | - |
 | `480` | `3155` | `BACKLIGHT_DELAY` | Delay time (seconds) | `1` | - |
 
 Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.

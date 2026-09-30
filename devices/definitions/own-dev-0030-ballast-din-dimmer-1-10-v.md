@@ -82,10 +82,10 @@ Advanced Configuration, Physical Configuration and Virtual Configuration are dec
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
-| `G1` | 0..9 | 0 | group configurator 1 |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0..4` / `SLA` / `PUL` | `0` | operating / function mode |
+| `G1` | `0..9` | `0` | group configurator 1 |
 
 Firmware 174 exposes the physical addressing/mode/group fields. Generic Dimmer Object capabilities are kept separate below.
 
@@ -98,11 +98,11 @@ Firmware 174 exposes the physical addressing/mode/group fields. Generic Dimmer O
 | Addressing | `A`, `PL` | target, group, installation-level or network addressing |
 | Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_SAVING_ON_RESET`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_AUTO` | operating mode and behavior selectors |
 | Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `MIN_LEVEL_ADV` | timers, delays, levels and transition parameters |
-| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; `0` means no group |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation restricts `TYPE_LOAD`: Auto detect capacitive (0), Auto detect inductive (1), Alogen lamp (10), LED trailing edge / electronic transformers (11), LED leading edge (12), CFL trailing edge (13), CFL leading edge (14), Forced capacitive (2), Forced inductive (3), Discharge lamps (7), Dali standard (8), DSI (9).
+**Firmware relationship.** The catalogue relation explicitly exposes `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation restricts `TYPE_LOAD`: Auto detect capacitive (`0`), Auto detect inductive (`1`), Alogen lamp (`10`), LED trailing edge / electronic transformers (`11`), LED leading edge (`12`), CFL trailing edge (`13`), CFL leading edge (`14`), Forced capacitive (`2`), Forced inductive (`3`), Discharge lamps (`7`), Dali standard (`8`), DSI (`9`).
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

@@ -7,8 +7,8 @@
 | Device ID | `OWN-DEV-0034` | Project identity |
 | Technical description | Two-channel radio receiving interface for wireless temperature probes | Catalogue + official documentation |
 | Catalogue item / model | `39` / `modobj 23` | Implementation evidence |
-| Firmware applicability | 239, wildcard -1.-1.-1, two slots | Implementation evidence |
-| Commercial identities | HC/HS/HD4577; L/N/NT4577 | Catalogue |
+| Firmware applicability | firmware `239`, `-1.-1.-1`, two slots | Implementation evidence |
+| Commercial identities | `HC/HS/HD4577`, `L/N/NT4577` | Catalogue |
 | Categories | Radio interface, Temperature control, Sensor bridge | Capability model |
 
 ## Commercial identities
@@ -74,7 +74,7 @@ Firmware 239 has wildcard version/revision/build applicability and two Module sl
 | ---: | ---: | ---: | ---: | --- | --- | --- |
 | - | - | - | - | No firmware-scoped Virgin Object | - | - |
 
-Slots 1 and 2 are both fixed Object 124, Radio interface for sensors (measurer T). This is a two-slot instance of the same temperature-sensor-interface Object.
+Slots `1` and `2` are both fixed Object `124`, Radio interface for sensors (measurer T). This is a two-slot instance of the same temperature-sensor-interface Object.
 
 ## Configuration modes
 
@@ -90,12 +90,12 @@ The catalogue declares configuration modes 1 and 3.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL1/N1` | 0..9 | 0 | channel 1 point / zone selector |
-| `M1` | 0 / 1 / 6 | 0 | channel 1 operating mode |
-| `A2/-` | 0..9 | 0 | channel 2 area selector / disabled position |
-| `PL2/N2` | 0..9 | 0 | channel 2 point / zone selector |
-| `M2` | 0 / 1 / 6 | 0 | channel 2 operating mode |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL1/N1` | `0..9` | `0` | channel 1 point / zone selector |
+| `M1` | `0` / `1` / `6` | `0` | channel 1 operating mode |
+| `A2/-` | `0..9` | `0` | channel 2 area selector / disabled position |
+| `PL2/N2` | `0..9` | `0` | channel 2 point / zone selector |
+| `M2` | `0` / `1` / `6` | `0` | channel 2 operating mode |
 
 For each channel, `M=0` means not configured, `M=1` selects a temperature sensor and `M=6` selects a lighting sensor. The latter is retained as implementation evidence despite the product name.
 
@@ -105,13 +105,13 @@ For each channel, `M=0` means not configured, `M=1` selects a temperature sensor
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0 | 0 | Area |
-| `PL_N` | 0..9 | 0 | Light point N |
-| `M` | 1 / None | 1 | Modality |
+| `A` | `0` | `0` | Area |
+| `PL_N` | `0..9` | `0` | Light point N |
+| `M` | `1` / `None` | `1` | Modality |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

@@ -7,8 +7,8 @@
 | Device ID | `OWN-DEV-0031` | Project identity |
 | Technical description | Ceiling-mounted PIR / daylight sensor with stand-alone and scenario-oriented roles | Catalogue + official documentation |
 | Catalogue item / model | `33` / `modobj 18` | Implementation evidence |
-| Firmware applicability | 130, wildcard -1.-1.-1, one slot | Implementation evidence |
-| Commercial identities | BMSE1001; 048833 | Catalogue |
+| Firmware applicability | firmware `130`, `-1.-1.-1`, one slot | Implementation evidence |
+| Commercial identities | `BMSE1001`, `048833` | Catalogue |
 | Categories | Sensor, Presence, Daylight, Lighting | Capability model |
 
 ## Commercial identities
@@ -80,7 +80,7 @@ Firmware 130 has wildcard version/revision/build applicability and one Module sl
 | ---: | ---: | ---: | ---: | --- | --- | --- |
 | `130` | `3` | `515` | `515` | Daylight and motion sensor virgin | `119`, `128`, `164`, `165`, `166`, `168` | `1` |
 
-Slot 1 has six firmware candidate Objects: 119 Stand alone presence sensor, 164 Scenarios daylight sensor, 165 Scenarios presence sensor, 166 Stand alone daylight sensor, 168 Stand alone daylight and presence sensor, and 128 Scenarios daylight and presence sensor. Catalogue slot metadata marks Object 128 fixed and the other five non-fixed candidates. Shared Virgin Object families 515/516 are associated with these sensor Objects; candidate ordering is not an active-role selection rule.
+Slot `1` has six firmware candidate Objects: `119` Stand alone presence sensor, `164` Scenarios daylight sensor, `165` Scenarios presence sensor, `166` Stand alone daylight sensor, `168` Stand alone daylight and presence sensor, and `128` Scenarios daylight and presence sensor. Catalogue slot metadata marks Object `128` fixed and the other five non-fixed candidates. Shared Virgin Object families `515` / `516` are associated with these sensor Objects; candidate ordering is not an active-role selection rule.
 
 ## Configuration modes
 
@@ -97,13 +97,13 @@ The catalogue declares configuration modes 1, 2 and 3. The official sheet explic
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0..8 | 0 | operating / function mode |
-| `S` | 0..4 | 0 | sensor sensitivity selector |
-| `T` | 0..9 | 0 | time-delay selector |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0..8` | `0` | operating / function mode |
+| `S` | `0..4` | `0` | sensor sensitivity selector |
+| `T` | `0..9` | `0` | time-delay selector |
 
-The catalogue software domain is broader than the printed physical table: database M is 0..8 and S is 0..4, while the 048833 sheet gives physical M 0..4 and S 0..3. The sheet also forbids `A=0` together with `PL=0`. Both scopes are preserved.
+The catalogue software domain is broader than the printed physical table: database `M` is `0..8` and `S` is `0..4`, while the 048833 sheet gives physical `M` as `0..4` and `S` as `0..3`. The sheet also forbids `A=0` together with `PL=0`. Both scopes are preserved.
 
 ## Object configuration surfaces
 
@@ -115,16 +115,16 @@ The catalogue software domain is broader than the printed physical table: databa
 | Mode and behavior | `FUNC_MODE` | operating mode and behavior selectors |
 | Timing and levels | `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
 | Sensing / regulation | `PIR`, `US`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`, `ALERT`, `ENABLE_LOAD_CONTROL` | sensor, occupancy and daylight/regulation parameters |
-| Group membership | `G1`, `G2` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2` | reusable group memberships; `0` means no group |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `US`, `ALERT`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`. The catalogue relation restricts `FUNC_MODE`: 2. Catalogue irregularity: `GD` (filter `78`) is not present in this reusable Object schema; `TYPE_LOOP` (filter `81`) is not present in this reusable Object schema; `INITIAL_OCC` (filter `84`) is not present in this reusable Object schema; `MAINTAIN_OCC` (filter `85`) is not present in this reusable Object schema; `RE-TRIGGER` (filter `86`) is not present in this reusable Object schema.
+**Firmware relationship.** The catalogue relation explicitly exposes `US`, `ALERT`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`. The catalogue relation restricts `FUNC_MODE`: `2`. Catalogue irregularity: `GD` (filter `78`) is not present in this reusable Object schema; `TYPE_LOOP` (filter `81`) is not present in this reusable Object schema; `INITIAL_OCC` (filter `84`) is not present in this reusable Object schema; `MAINTAIN_OCC` (filter `85`) is not present in this reusable Object schema; `RE-TRIGGER` (filter `86`) is not present in this reusable Object schema.
 
 ### Object `164` - Scenarios daylight sensor
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..10 | 0 | Area |
-| `PL` | 0..15 | 0 | Light point |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -132,16 +132,16 @@ The catalogue software domain is broader than the printed physical table: databa
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..10 | 0 | Area |
-| `PL` | 0..15 | 0 | Light point |
-| `HOURS` | 0..255 | 0 | Time delay - Hours |
-| `MINUTES` | 0..59 | 15 | Time delay - Minutes |
-| `SECONDS` | 0..59 | 0 | Time delay - Seconds |
-| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | 4 | Detection scheme |
-| `PIR` | Low / Medium / High / Maximum | 3 | PIR sensitivity |
-| `US` | Low / Medium / High / Maximum | 2 | US sensitivity |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | `4` | Detection scheme |
+| `PIR` | Low / Medium / High / Maximum | `3` | PIR sensitivity |
+| `US` | Low / Medium / High / Maximum | `2` | US sensitivity |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA`: US only (2), PIR and US (3), PIR or US (4).
+**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA` to US only (`2`), PIR and US (`3`), or PIR or US (`4`).
 
 ### Object `166` - Stand alone daylight sensor
 
@@ -161,26 +161,26 @@ The catalogue software domain is broader than the printed physical table: databa
 | Mode and behavior | `FUNC_MODE` | operating mode and behavior selectors |
 | Timing and levels | `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
 | Sensing / regulation | `TYPE_LOOP`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | sensor, occupancy and daylight/regulation parameters |
-| Group membership | `G1`, `G2` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2` | reusable group memberships; `0` means no group |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `GD`, `US`, `TYPE_LOOP`, `NATURAL_LIGHT_FACTOR`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`. The catalogue relation restricts `FUNC_MODE`: 2.
+**Firmware relationship.** The catalogue relation explicitly exposes `GD`, `US`, `TYPE_LOOP`, `NATURAL_LIGHT_FACTOR`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`. The catalogue relation restricts `FUNC_MODE`: `2`.
 
 ### Object `128` - Scenarios daylight and presence sensor
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..10 | 0 | Area |
-| `PL` | 0..15 | 0 | Light point |
-| `HOURS` | 0..255 | 0 | Time delay - Hours |
-| `MINUTES` | 0..59 | 15 | Time delay - Minutes |
-| `SECONDS` | 0..59 | 0 | Time delay - Seconds |
-| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | 4 | Detection scheme |
-| `PIR` | Low / Medium / High / Maximum | 3 | PIR sensitivity |
-| `US` | Low / Medium / High / Maximum | 2 | US sensitivity |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | `4` | Detection scheme |
+| `PIR` | Low / Medium / High / Maximum | `3` | PIR sensitivity |
+| `US` | Low / Medium / High / Maximum | `2` | US sensitivity |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA`: US only (2), PIR and US (3), PIR or US (4).
+**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA` to US only (`2`), PIR and US (`3`), or PIR or US (`4`).
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
@@ -268,16 +268,16 @@ No sanitized hardware fingerprint for this exact technical item is currently ret
 
 ## Programming
 
-Resolve the active slot Object before exposing configuration. Keep the official physical A/PL/M/S/T limits distinct from the wider software/database domains.
+Resolve the active slot Object before exposing configuration. Keep the official physical `A` / `PL` / `M` / `S` / `T` limits distinct from the wider software/database domains.
 
 ## Source reconciliation
 
-Database and official documentation agree on the BMSE1001/048833 ceiling sensor identity and on A/PL/M/S/T as the physical configuration family. The material discrepancy is S: the database domain reaches 4 while the official physical sheet prints 0..3; M is likewise broader in the database than the printed 0..4 physical table. Both scopes are preserved.
+Database and official documentation agree on the BMSE1001/048833 ceiling sensor identity and on `A` / `PL` / `M` / `S` / `T` as the physical configuration family. The material discrepancy is `S`: the database domain reaches 4 while the official physical sheet prints `0..3`; `M` is likewise broader in the database than the printed `0..4` physical table. Both scopes are preserved.
 
 ## Evidence limits and open work
 
 - Hardware-corroborate the resolved Object for representative physical and virtual configurations.
-- Preserve the S and M domain discrepancy until firmware/runtime evidence establishes the exact software-only cases.
+- Preserve the `S` and `M` domain discrepancy until firmware/runtime evidence establishes the exact software-only cases.
 
 ## Sources
 

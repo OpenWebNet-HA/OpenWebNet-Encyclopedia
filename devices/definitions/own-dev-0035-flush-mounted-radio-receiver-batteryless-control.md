@@ -7,8 +7,8 @@
 | Device ID | `OWN-DEV-0035` | Project identity |
 | Technical description | Four-slot SCS radio receiver for batteryless flat controls | Catalogue + official documentation |
 | Catalogue item / model | `40` / `modobj 19` | Implementation evidence |
-| Firmware applicability | 218, wildcard -1.-1.-1, four slots | Implementation evidence |
-| Commercial identities | HC/HS/HD4575SB; L/N/NT4575SB | Catalogue |
+| Firmware applicability | firmware `218`, `-1.-1.-1`, four slots | Implementation evidence |
+| Commercial identities | `HC/HS/HD4575SB`, `L/N/NT4575SB` | Catalogue |
 | Categories | Radio interface, Lighting control, Automation control, Scenario control | Capability model |
 
 ## Commercial identities
@@ -81,7 +81,7 @@ Firmware 218 has wildcard version/revision/build applicability and four Module s
 | ---: | ---: | ---: | ---: | --- | --- | --- |
 | - | - | - | - | No firmware-scoped Virgin Object | - | - |
 
-Object 400 Light control is fixed on slots 1,2,3,4. Object 403 Scenario module control is a non-fixed candidate on all four slots. Object 401 Automation control is a non-fixed candidate on slots 1 and 3. Shared Virgin Object families 500/501/502 cover the corresponding Light, Automation and Scenario control Objects.
+Object `400` Light control is fixed on slots `1`, `2`, `3` and `4`. Object `403` Scenario module control is a non-fixed candidate on all four slots. Object `401` Automation control is a non-fixed candidate on slots `1` and `3`. Shared Virgin Object families `500` / `501` / `502` cover the corresponding Light, Automation and Scenario control Objects.
 
 ## Configuration modes
 
@@ -97,14 +97,14 @@ The catalogue declares configuration modes 1 and 3.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL1` | 0..9 | 0 | output 1 light-point configurator |
-| `M1` | 0..8 / O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL | 0 | channel 1 operating mode |
-| `PL2` | 0..9 | 0 | output 2 light-point configurator |
-| `M2` | 0..8 / O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL | 0 | channel 2 operating mode |
-| `SPE` | 0 / 1 / 6 | 0 | special-function selector |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL1` | `0..9` | `0` | output 1 light-point configurator |
+| `M1` | `0..8` / `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` | `0` | channel 1 operating mode |
+| `PL2` | `0..9` | `0` | output 2 light-point configurator |
+| `M2` | `0..8` / `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` | `0` | channel 2 operating mode |
+| `SPE` | `0` / `1` / `6` | `0` | special-function selector |
 
-M1/M2 select the command behavior for the two control positions; SPE is the special-function selector. Slot/Object conditions further constrain which reusable control Object is active.
+`M1` / `M2` select the command behavior for the two control positions; `SPE` is the special-function selector. Slot/Object conditions further constrain which reusable control Object is active.
 
 ## Object configuration surfaces
 
@@ -123,16 +123,16 @@ M1/M2 select the command behavior for the two control positions; SPE is the spec
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `M` | Scenario activation and modification / Scenario activation | 0 | Modality |
-| `APL` | A 0..10 with PL 0..15 (catalogue-composed address) | 0 | Scenario module address |
-| `INST_LEV` | private riser / local bus 1..15 / standard | 16 | Installation level |
-| `DEST_LEV` | private riser / local bus 1..15 / all systems | 0 | Destination level |
-| `SCE_BUTT_1` | 1..16 | 1 | Upper button scenario |
-| `SCE_BUTT_2` | 1..16 | 2 | Lower button scenario |
-| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay for upper button |
-| `DEL_BUTTON_2` | none / catalogue delay scale from seconds to minutes | 0 | Activation delay for lower button |
+| `M` | Scenario activation and modification / Scenario activation | `0` | Modality |
+| `APL` | `A`: `0..10`; `PL`: `0..15` (catalogue-composed address) | `0` | Scenario module address |
+| `INST_LEV` | private riser / local bus `1..15` / standard | `16` | Installation level |
+| `DEST_LEV` | private riser / local bus `1..15` / all systems | `0` | Destination level |
+| `SCE_BUTT_1` | `1..16` | `1` | Upper button scenario |
+| `SCE_BUTT_2` | `1..16` | `2` | Lower button scenario |
+| `DEL_BUTTON_1` | none / catalogue delay scale from seconds to minutes | `0` | Activation delay for upper button |
+| `DEL_BUTTON_2` | none / catalogue delay scale from seconds to minutes | `0` | Activation delay for lower button |
 
-**Firmware relationship.** The catalogue relation restricts `INST_LEV` to encoded value `8` (catalogue label "Level 4 #8").
+**Firmware relationship.** The catalogue relation restricts `INST_LEV` to encoded value `8` (catalogue label `Level 4 #8`).
 
 ### Object `401` - Automation control
 
@@ -144,7 +144,7 @@ M1/M2 select the command behavior for the two control positions; SPE is the spec
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
@@ -201,16 +201,16 @@ No sanitized hardware fingerprint for this exact technical item is currently ret
 
 ## Programming
 
-Preserve slot-by-slot Object selection and the complete M/SPE mode set. Do not model the receiver as a single generic pushbutton or as four unconditional Light controls.
+Preserve slot-by-slot Object selection and the complete `M` / `SPE` mode set. Do not model the receiver as a single generic pushbutton or as four unconditional Light controls.
 
 ## Source reconciliation
 
-Publisher documentation establishes the 4575SB batteryless-radio receiver family and SCS BUS role. The canonical database explains its richer software topology: four fixed Light-control slot positions with optional Automation and Scenario Objects, plus the firmware-level PL/M/SPE configuration.
+Publisher documentation establishes the 4575SB batteryless-radio receiver family and SCS BUS role. The canonical database explains its richer software topology: four fixed Light-control slot positions with optional Automation and Scenario Objects, plus the firmware-level `PL` / `M` / `SPE` configuration.
 
 ## Evidence limits and open work
 
 - Add sanitized pairing and button-action captures for representative 4572SB controls.
-- Corroborate optional Automation/Scenario Object resolution by DIM30 on hardware.
+- Corroborate optional Automation/Scenario Object resolution by `DIMENSION 30` on hardware.
 - Document the Installation level filter for Scenario module control in human-readable form.
 - Pin exact printed and 1-based PDF page locations for each applicable multi-product guide citation.
 
