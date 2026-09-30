@@ -772,3 +772,63 @@ source_sets:
       publisher: Legrand / BTicino
       language: FR
       publication_date: unknown
+    - id: device-doc-f411-1n-mq00274-e-en
+      path: devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf
+      original_filename: MQ00274-e-EN.pdf
+      type: pdf
+      size: 241675
+      sha256: 4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d
+      source_url: "https://dar.bticino.com/asset/Documents/MQ00274_e_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2014-06-07"
+    - id: device-doc-f411-4-st00000896-en
+      path: devices/documents/device-doc-f411-4-st00000896-en/ST-00000896-EN.pdf
+      original_filename: ST-00000896-EN.pdf
+      type: pdf
+      size: 213142
+      sha256: f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/ST-00000896-EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2021-03-23"
+    - id: device-doc-bmse1001-048833
+      path: devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf
+      original_filename: fiche-technique-048833.pdf
+      type: pdf
+      size: 1222983
+      sha256: 96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f
+      source_url: "https://assets.legrand.com/general/legrand-fr/pfat/gm/fiche%20technique%20048833.pdf"
+      publisher: "Legrand / BTicino"
+      language: "FR"
+      publication_date: "unknown"
+    - id: device-doc-bmne500-u4554c-s4-en
+      path: devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf
+      original_filename: U4554C_S4_EN.pdf
+      type: pdf
+      size: 14020295
+      sha256: e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c
+      source_url: "https://dar.bticino.com/asset/Documents/U4554C_S4_EN.pdf"
+      publisher: "BTicino"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-4577-mq00183-c-en
+      path: devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf
+      original_filename: MQ00183-c-EN.pdf
+      type: pdf
+      size: 70757
+      sha256: 2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-4577-u1870c
+      path: devices/documents/device-doc-4577-u1870c/U1870C.pdf
+      original_filename: U1870C.pdf
+      type: pdf
+      size: 239613
+      sha256: a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c
+      source_url: "https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf"
+      publisher: "BTicino / Legrand"
+      language: "IT / EN"
+      publication_date: "unknown"
