@@ -442,3 +442,103 @@ source_sets:
       publisher: Legrand / BTicino
       language: IT
       publication_date: unknown
+    - id: device-doc-video-display-o1421a-i-en
+      path: devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf
+      original_filename: O1421A_I_EN.pdf
+      type: pdf
+      size: 7456795
+      sha256: 39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4
+      source_url: https://dar.bticino.com/asset/Documents/O1421A_I_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: 2011-03
+    - id: device-doc-video-display-o1421a-u-en
+      path: devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf
+      original_filename: O1421A_U_EN.pdf
+      type: pdf
+      size: 7602400
+      sha256: 343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27
+      source_url: https://dar.bticino.com/asset/Documents/O1421A_U_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: 2011-03
+    - id: device-doc-video-display-o1421a-s-en
+      path: devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf
+      original_filename: O1421A_S_EN.pdf
+      type: pdf
+      size: 2864208
+      sha256: 32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771
+      source_url: https://dar.bticino.com/asset/Documents/O1421A_S_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: 2011-03
+    - id: device-doc-myhome-automation-guide
+      path: devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf
+      original_filename: MH_Guide_Automatisme.pdf
+      type: pdf
+      size: 30060835
+      sha256: 806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MH_Guide_Automatisme.pdf
+      publisher: BTicino / Legrand
+      language: FR
+      publication_date: unknown
+    - id: device-doc-myhome-screen-bt00518-a-en
+      path: devices/documents/device-doc-myhome-screen-bt00518-a-en/BT00518_a_EN.pdf
+      original_filename: BT00518_a_EN.pdf
+      type: pdf
+      size: 661734
+      sha256: 4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9
+      source_url: https://dar.bticino.com/asset/Documents/BT00518_a_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-myhome-screen-ra00107ac-u-en
+      path: devices/documents/device-doc-myhome-screen-ra00107ac-u-en/RA00107AC_U_EN.pdf
+      original_filename: RA00107AC_U_EN.pdf
+      type: pdf
+      size: 15375907
+      sha256: 2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23
+      source_url: https://dar.bticino.com/asset/Documents/RA00107AC_U_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-myhome-screen-ra00107ac-s-fr
+      path: devices/documents/device-doc-myhome-screen-ra00107ac-s-fr/RA00107AC_S_FR.pdf
+      original_filename: RA00107AC_S_FR.pdf
+      type: pdf
+      size: 16866508
+      sha256: 06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00107AC_S_FR.pdf
+      publisher: BTicino / Legrand
+      language: FR
+      publication_date: unknown
+    - id: device-doc-pir-mq00474-e-fr
+      path: devices/documents/device-doc-pir-mq00474-e-fr/MQ00474-e-FR.pdf
+      original_filename: MQ00474-e-FR.pdf
+      type: pdf
+      size: 322512
+      sha256: 35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00474-e-FR.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: '2014-04-22'
+    - id: device-doc-pir-st00000220-en
+      path: devices/documents/device-doc-pir-st00000220-en/ST_00000220_EN.pdf
+      original_filename: ST_00000220_EN.pdf
+      type: pdf
+      size: 604773
+      sha256: 0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e
+      source_url: https://dar.bticino.com/asset/Documents/ST_00000220_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: '2019-04-24'
+    - id: device-doc-myhome-compatibility-st00002122-en
+      path: devices/documents/device-doc-myhome-compatibility-st00002122-en/ST-00002122-EN.pdf
+      original_filename: ST-00002122-EN.pdf
+      type: pdf
+      size: 11149596
+      sha256: e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d
+      source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002122-EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: '2024-10-21'
