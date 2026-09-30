@@ -38,7 +38,7 @@ Shared item membership establishes the common catalogue capability core. It does
 | `U1809F_U_EN` | 4695 user operation and temperature-control behavior | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf) |
 | `U1809C_Installatore_UK` | 4695 installation and commissioning | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf) |
 | `U1809B_Software_GB` | TiThermoBasic programming / firmware workflow | [Archived original](../../sources/devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf) |
-| MyHOME catalogue HPML0714 | Family-level product context and catalogue corroboration | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | Family-level product context and catalogue corroboration | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
 The 4695 documentation describes management of a temperature-control system with up to four zones and PC programming through TiThermoBasic. Where an official PDF could not be fetched by the archival runner, the official publisher URL is retained rather than substituting an unofficial mirror.
 
@@ -97,8 +97,8 @@ Object `90` exposes:
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `ZAZB` | `00..99` | 01 | zone |
-| `WARM` | 0 Disable / 1 Enable | 0 | winter modality |
-| `COLD` | 0 Disable / 1 Enable | 0 | summer modality |
+| `WARM` | `0` Disable / `1` Enable | 0 | winter modality |
+| `COLD` | `0` Disable / `1` Enable | 0 | summer modality |
 | `SLA` | `0..8` | 0 | slave number |
 
 These are catalogue validation domains. They should not be widened from product UI behavior or narrowed from one observed installation without evidence.
@@ -111,7 +111,7 @@ These are catalogue validation domains. They should not be widened from product 
 | `DIMENSION 2` | observe installed firmware instead of assuming catalogue `1.0.35` | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | corroborate the single fixed control-unit Module | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | inspect the configured thermoregulation address when exposed | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect `ZA` / `ZB`/`SLA` and Object configuration where exposed | [Configuration](../../diagnostics/dim35-configuration.md) |
+| `DIMENSION 35` | inspect `ZA` / `ZB` / `SLA` and Object configuration where exposed | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 
