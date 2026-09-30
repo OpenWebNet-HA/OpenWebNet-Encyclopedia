@@ -782,19 +782,25 @@ items:
     blockers: []
     notes: []
   '168':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0017
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
-    blockers: []
-    notes: []
+    blockers:
+    - Sanitized hardware fingerprint pending
+    notes:
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '207':
     state: unreviewed
     priority: normal
@@ -1070,19 +1076,25 @@ items:
     blockers: []
     notes: []
   '1147':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0018
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
-    blockers: []
-    notes: []
+    blockers:
+    - Sanitized hardware fingerprint pending
+    notes:
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1156':
     state: unreviewed
     priority: normal
@@ -1270,19 +1282,25 @@ items:
     notes:
     - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
   '1190':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0019
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
-    blockers: []
-    notes: []
+    blockers:
+    - Sanitized hardware fingerprint pending
+    notes:
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1191':
     state: unreviewed
     priority: normal
@@ -1474,19 +1492,25 @@ items:
     blockers: []
     notes: []
   '1465':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0020
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
-    blockers: []
-    notes: []
+    blockers:
+    - Sanitized hardware fingerprint pending
+    notes:
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1469':
     state: definition-in-progress
     priority: high
