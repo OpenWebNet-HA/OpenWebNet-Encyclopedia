@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 185 |
+| unreviewed | 180 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 25 |
+| definition-in-progress | 30 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -35,13 +35,18 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | complete | pending | - |
 | high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | complete | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | complete | pending | - |
+| high | 28 | Receiving radio interface | 3 | definition-in-progress | OWN-DEV-0029 | complete | complete | complete | pending | - |
 | high | 1 | 1 relay DIN actuator 16 A | 2 | definition-in-progress | OWN-DEV-0021 | complete | complete | complete | pending | - |
 | high | 2 | 2 relays DIN actuator 10 A | 2 | definition-in-progress | OWN-DEV-0022 | complete | complete | complete | pending | - |
 | high | 3 | 4 relay actuator 2 modules DIN bus | 2 | definition-in-progress | OWN-DEV-0023 | complete | complete | complete | pending | - |
 | high | 12 | Soft touch control | 2 | definition-in-progress | OWN-DEV-0024 | complete | complete | complete | pending | - |
 | high | 17 | DIN dimmer 1000 W | 2 | definition-in-progress | OWN-DEV-0025 | complete | complete | complete | pending | - |
+| high | 23 | Flush mounted dimmer | 2 | definition-in-progress | OWN-DEV-0027 | partial | complete | complete | pending | - |
+| high | 25 | Regulation rotative control | 2 | definition-in-progress | OWN-DEV-0028 | partial | complete | complete | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | complete | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | complete | partial | - |
+| high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | complete | pending | - |
+| high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | complete | complete | pending | - |
 | normal | 1563 | Key card switch | 6 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1657 | Local Display 1.2" bus | 6 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1854 | Probe with regulation | 6 | unreviewed | - | pending | pending | pending | pending | - |
@@ -57,7 +62,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1884 | Energy display 2 modules | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2321 | Classe 300X | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 28 | Receiving radio interface | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 34 | Transmitting radio interface | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 81 | Basic contacts interface | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -79,8 +83,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 23 | Flush mounted dimmer | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 25 | Regulation rotative control | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 33 | PIR surface ceiling mounted sensor | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 39 | Radio interface for temperature probes | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 40 | Flush mounted radio receiver for HA/HB4572SB | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -161,8 +163,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 20 | Scenario control unit | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 31 | Ballast DIN dimmer 1-10 V | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 35 | Light manager control unit | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 54 | Basic actuator | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 55 | Basic control actuator | 1 | unreviewed | - | pending | pending | pending | pending | - |

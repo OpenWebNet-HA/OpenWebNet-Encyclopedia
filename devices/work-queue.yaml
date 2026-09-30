@@ -118,80 +118,100 @@ items:
     notes:
     - OWN-DEV-0025 created and source-reconciled; hardware corroboration remains pending.
   '20':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0026
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0026 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '23':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0027
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0027 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '25':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0028
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0028 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '28':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0029
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0029 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '31':
-    state: unreviewed
-    priority: normal
-    outcome: null
+    state: definition-in-progress
+    priority: high
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0030
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
   '33':
     state: unreviewed
     priority: normal

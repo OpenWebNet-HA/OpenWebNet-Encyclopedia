@@ -762,3 +762,13 @@ source_sets:
       publisher: BTicino
       language: EN
       publication_date: unknown
+    - id: device-doc-radio-wired-interface-sound-guide
+      path: devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf
+      original_filename: mh_diff-sonore2008.pdf
+      type: pdf
+      size: 12471624
+      sha256: f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd
+      source_url: https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf
+      publisher: Legrand / BTicino
+      language: FR
+      publication_date: unknown
