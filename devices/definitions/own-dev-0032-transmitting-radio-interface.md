@@ -13,11 +13,21 @@
 
 ## Commercial identities
 
-The canonical catalogue groups HD4576, HC/HS4576 and L/N/NT4576 under technical item 34. Official historical automation guides directly print HC4576/HS4576 and the Living/Light/Light Tech 4576N forms; the database's grouped L/N/NT4576 spelling is therefore kept as catalogue identity rather than silently rewritten.
+| Brand / line | Reference | Catalogue record | Relationship | Evidence |
+| --- | --- | ---: | --- | --- |
+| BTicino / Axolute | `HC/HS4576` | `34` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino / Axolute | `L/N/NT4576` | `1828` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino / Axolute | `HD4576` | `1829` | Commercial identity of this Technical Device | Canonical catalogue |
+
+All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
 
 ## Documentation
 
-The already archived official MyHOME Automation guide describes the 4576 family as a radio transmitting interface, powered from the 27 Vdc BUS and occupying two wiring-device modules.
+| Document | Type | Revision / date | Relevant pages | Status | Source |
+| --- | --- | --- | --- | --- | --- |
+| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | 4576 radio-transmitter sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+
+Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
 
 ## Physical and electrical characteristics
 
@@ -25,35 +35,105 @@ Publisher documentation identifies the interface as a 27 Vdc BUS-powered, two-mo
 
 ## Identity
 
-Catalogue item `34` maps to `modobj = 21`.
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `34` | Canonical catalogue |
+| Technical item description | Transmitting radio interface | Canonical catalogue |
+| Item family | `27` - Radio device | Canonical catalogue |
+| Main system | `1` - lighting_automation; `modobj` `21` | AS_ITEM_SYSTEM |
+| Commercial records | `3` | EN_DEVICE |
 
 ## Firmware and hardware
+
+| Firmware ID | Version | Revision | Declared slots | Default | Status |
+| ---: | ---: | ---: | ---: | --- | --- |
+| `215` | `-1` | `-1` | `1` | `1` | `0` |
 
 Firmware 215 has wildcard version/revision/build applicability and one Module slot.
 
 ## Module, Object, and Virgin Object model
 
+### Firmware Object relations
+
+| Firmware | Relation | Object | Key | Description |
+| ---: | ---: | ---: | ---: | --- |
+| `215` | `754` | `172` | `172` | Radio Interface Transmitter |
+
+### Slot applicability
+
+| Slot row | Slot | Object | Relationship | Description |
+| ---: | ---: | ---: | --- | --- |
+| `1506` | `1` | `172` | fixed | Radio Interface Transmitter |
+
+### Virgin Object reachability
+
+| Firmware | Relation | Virgin Object | Key | Description | Associated Objects | Slot rows |
+| ---: | ---: | ---: | ---: | --- | --- | --- |
+| - | - | - | - | No firmware-scoped Virgin Object | - | - |
+
 Slot 1 is fixed Object 172, Radio Interface Transmitter.
 
 ## Configuration modes
+
+| Firmware | Mode ID | Catalogue mode | Description |
+| ---: | ---: | ---: | --- |
+| `215` | `1` | `1` | Virtual Configuration |
+| `215` | `3` | `0` | Physical configuration |
 
 The catalogue declares configuration modes 1 and 3.
 
 ## Firmware-scoped configuration
 
+| Field | Description | Data type | Catalogue range rows | Flags |
+| --- | --- | --- | --- | --- |
+| `AID` | ID | user_value | `********` - AID - range `0`..`0` - step `1` | visible=1, hidden=0, read-only=0, type-id=0 |
+| `A` | A | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
+| `PL` | PL | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
+| `M` | M | Enum | range -..- - step `1`<br>`0` - 0 - range -..- - step `1`<br>`1` - 1 - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
+
+Catalogue range rows are preserved directly; product-document physical configurator limits remain a distinct evidence layer.
+
 Firmware fields are A, PL, M and AID. Firmware 215 narrows M to modes 0/1, while the reusable Object 172 surface lists the wider generic mode family 0,1,6,7,8,CEN. Device programming must use the firmware-applicable subset.
 
 ## Object configuration surfaces
+
+### Object `172` - Radio Interface Transmitter
+
+| Field | Description | Data type | Catalogue range rows | Flags |
+| --- | --- | --- | --- | --- |
+| `A` | Area | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=1 |
+| `PL` | Light point | Range | range `0`..`9` - step `1` | visible=1, hidden=0, read-only=, type-id=2 |
+| `M` | Modality | Enum | range -..- - step `1`<br>`1` - 1 - range -..- - step `1`<br>`6` - 6 - range -..- - step `1`<br>`7` - 7 - range -..- - step `1`<br>`8` - 8 - range -..- - step `1`<br>`14` - CEN - range -..- - step `1`<br>`0` - None - range -..- - step `1` | visible=1, hidden=0, read-only=, type-id=4 |
 
 Object 172 provides A, PL and M for one transmitting interface endpoint. Generic Object capabilities are not evidence that every later radio-interface mode is enabled by firmware 215.
 
 ## Conditions, filters, and conversions
 
-Object/Firmware filter 1631 constrains a Contact type configuration field associated with this firmware/Object relation. The field should remain conditionally exposed rather than inferred from the short physical M domain.
+| Surface | Catalogue rows | Interpretation |
+| --- | ---: | --- |
+| Slot conditions | `0` | Device/Firmware topology conditions |
+| Object/Firmware filters | `1` | Conditional Object configuration exposure |
+| Referenced conversion rules | `0` | None |
+
+### Object/Firmware filters
+
+| Object | Filter ID | Field | Note | Whole range | Filter ranges |
+| ---: | ---: | --- | --- | --- | --- |
+| `172` | `1631` | `TYPE_CONTACT` | Contact type | `1` | - |
+
+Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
 
 ## Diagnostic applicability
 
-Use the standard Device identity, firmware, Object, address and configuration diagnostics in [Diagnostics](../../diagnostics/). `DIMENSION 30` is particularly important where one slot has multiple candidate Objects.
+| Surface | Device-specific use | Reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+Catalogue applicability is not itself an observed runtime result.
 
 ## Functional applicability
 
@@ -76,9 +156,10 @@ The canonical catalogue establishes the one-slot Radio Interface Transmitter mod
 - Recover a dedicated publisher technical sheet for the exact database-listed 4576 variants if one exists.
 - Hardware-corroborate firmware identity and transmitted command behavior.
 - Resolve the Contact type filter into a human-readable Device-specific rule.
+- Pin exact printed and 1-based PDF page locations for each applicable multi-product guide citation.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf)
+- [AUTOMATISME.pdf](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
