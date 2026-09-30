@@ -170,7 +170,7 @@ source_sets:
     product: OpenWebNet / MyHOME Device documentation
     publisher: Legrand / BTicino
     provenance: Original device documents downloaded byte-for-byte from official publisher URLs and retained as archival evidence.
-    retrieval_date: '2026-09-29'
+    retrieval_date: '2026-09-30'
     files:
     - id: device-doc-basic-control-mq00286-d-en
       path: devices/documents/device-doc-basic-control-mq00286-d-en/MQ00286-d-EN.pdf
@@ -542,3 +542,53 @@ source_sets:
       publisher: Legrand / BTicino
       language: EN
       publication_date: '2024-10-21'
+    - id: device-doc-temp-control-u1809f-u-en
+      path: devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf
+      original_filename: U1809F_U_EN.pdf
+      type: pdf
+      size: 12734330
+      sha256: f90c3dad042158152e3607dd461b143ea5c18d0dec917f9f411405f30a92d8b4
+      source_url: https://dar.bticino.com/asset/Documents/U1809F_U_EN.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-temp-control-u1809c-installatore-uk
+      path: devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf
+      original_filename: U1809C_Installatore_UK.pdf
+      type: pdf
+      size: 5419239
+      sha256: c4461318739c49ab58078d75876aef57bff823dcaf7f964714a60f154f489dee
+      source_url: https://dar.bticino.com/asset/Documents/U1809C_Installatore_UK.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-temp-control-u1809b-software-gb
+      path: devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf
+      original_filename: U1809B_Software_GB.pdf
+      type: pdf
+      size: 7552855
+      sha256: 3d1072e42a34c621e60cc455b94985116d4bc475ecfaca52df4de3bfe05f277e
+      source_url: https://dar.bticino.com/asset/Documents/U1809B_Software_GB.pdf
+      publisher: BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-touch-control-mq00110-f-en
+      path: devices/documents/device-doc-touch-control-mq00110-f-en/MQ00110_f_EN.pdf
+      original_filename: MQ00110_f_EN.pdf
+      type: pdf
+      size: 306043
+      sha256: fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea
+      source_url: https://dar.bticino.com/asset/Documents/MQ00110_f_EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: unknown
+    - id: device-doc-load-control-mq00709-c-en
+      path: devices/documents/device-doc-load-control-mq00709-c-en/MQ00709_c_EN.pdf
+      original_filename: MQ00709_c_EN.pdf
+      type: pdf
+      size: 101292
+      sha256: 652c9942739c968ead3ea7f2a2096d9b06a7f002ee9a014d4c93daaa7ef7193a
+      source_url: https://dar.bticino.com/asset/Documents/MQ00709_c_EN.pdf
+      publisher: Legrand / BTicino
+      language: EN
+      publication_date: unknown

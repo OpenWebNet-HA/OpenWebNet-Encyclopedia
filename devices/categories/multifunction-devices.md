@@ -11,3 +11,5 @@
 | [OWN-DEV-0012](../definitions/own-dev-0012-four-channel-ir-receiver.md) | 8-record IR receiver cluster | Four-channel IR receiver | Lighting, automation, scenario, sound and video-door-entry remote functions |
 | [OWN-DEV-0014](../definitions/own-dev-0014-extended-control.md) | 8-record Extended control family | Extended control | Twelve candidate configurable command Objects across two Modules |
 | [OWN-DEV-0016](../definitions/own-dev-0016-pir-flush-mounted-sensor.md) | 8-record PIR sensor family | PIR daylight and presence sensor | Configuration-selected sensor role plus sixteen IR scenario-control Modules |
+| [OWN-DEV-0018](../definitions/own-dev-0018-local-display.md) | 6-record Local Display family | Local Display | Conditional scenario, sound-diffusion and temperature-probe roles |
+| [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Lighting, automation, scenario, AUX, sound and door-entry command roles |

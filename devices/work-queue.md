@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 194 |
+| unreviewed | 190 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 16 |
+| definition-in-progress | 20 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -37,10 +37,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | pending | - |
 | high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | partial | - |
 | high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | partial | - |
-| normal | 168 | Flush mounted temperature central unit | 7 | unreviewed | - | pending | pending | pending | - |
-| normal | 1147 | Local Display | 6 | unreviewed | - | pending | pending | pending | - |
-| normal | 1190 | Touch control | 6 | unreviewed | - | pending | pending | pending | - |
-| normal | 1465 | Load Control Panel bus | 6 | unreviewed | - | pending | pending | pending | - |
 | normal | 1563 | Key card switch | 6 | unreviewed | - | pending | pending | pending | - |
 | normal | 1657 | Local Display 1.2" bus | 6 | unreviewed | - | pending | pending | pending | - |
 | normal | 1854 | Probe with regulation | 6 | unreviewed | - | pending | pending | pending | - |
@@ -231,6 +227,10 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2293 | F461 | 1 | unreviewed | - | pending | pending | pending | - |
 | normal | 2335 | Driver Manager HVAC | 1 | unreviewed | - | pending | pending | pending | - |
 | normal | 2341 | Linea 5000 | 1 | unreviewed | - | pending | pending | pending | - |
+| normal | 168 | Flush mounted temperature central unit | 7 | definition-in-progress | OWN-DEV-0017 | complete | partial | pending | Sanitized hardware fingerprint pending |
+| normal | 1147 | Local Display | 6 | definition-in-progress | OWN-DEV-0018 | complete | partial | pending | Sanitized hardware fingerprint pending |
+| normal | 1190 | Touch control | 6 | definition-in-progress | OWN-DEV-0019 | complete | partial | pending | Sanitized hardware fingerprint pending |
+| normal | 1465 | Load Control Panel bus | 6 | definition-in-progress | OWN-DEV-0020 | complete | partial | pending | Sanitized hardware fingerprint pending |
 
 ## Reviewed
 

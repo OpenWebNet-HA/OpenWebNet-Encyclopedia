@@ -16,8 +16,10 @@ A Device may appear in several categories at the same time.
 | Gateways and Interfaces | [Gateways and Interfaces](gateways-and-interfaces.md) |
 | Audio / Video | [Audio / Video](audio-video.md) |
 | User Interfaces | [User Interfaces](user-interfaces.md) |
+| Thermoregulation | [Thermoregulation](thermoregulation.md) |
+| Energy Management | [Energy Management](energy-management.md) |
 
-Additional likely categories include Thermoregulation, Burglar Alarm and Energy Management.
+An additional likely category is Burglar Alarm.
 
 The taxonomy may evolve as the documented Device set expands.
 

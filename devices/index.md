@@ -162,3 +162,29 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 | Legrand Céliane | 067225 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
 | Legrand Mosaic | 078485 | Compatibility-documented identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Archived compatibility table |
 The **Relationship** column describes how a commercial reference maps onto the technical Device definition. It does not select one SKU as authoritative. “Shared technical item” is catalogue evidence and remains weaker than a direct product-document or hardware equivalence.
+
+| BTicino Axolute | HC/HS4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| BTicino Axolute | HD4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| BTicino L/N/NT | L/N/NT4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| BTicino Matix | AM5875 | Shared technical item; direct product-document review pending | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| Legrand Vela | 683090 | Shared technical item; direct product-document review pending | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| Legrand Vela | 687390 | Shared technical item; direct product-document review pending | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| Legrand Vela | 687890 | Shared technical item; direct product-document review pending | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
+| BTicino Axolute | HC/HS/HD4685 | Documented 4685 family identity | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| BTicino L/N/NT | L/N/NT4685 | Documented 4685 family identity | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| Legrand Arteor | 573916 | Shared technical item; direct product-document review pending | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| Legrand Arteor | 573917 | Shared technical item; direct product-document review pending | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| Legrand Céliane | 067281 | Shared technical item; direct product-document review pending | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| Legrand Céliane | 067282 | Shared technical item; direct product-document review pending | [OWN-DEV-0018 - Local Display](definitions/own-dev-0018-local-display.md) | Item 1147 |
+| BTicino Axolute | HC/HS4657M3 | Documented commercial identity | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190; MQ00110 |
+| BTicino Axolute | HD4657M3 | Documented commercial identity | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190; MQ00110 |
+| Legrand Arteor | 573912 | Documented commercial identity | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190; MQ00110 |
+| Legrand Arteor | 573913 | Documented commercial identity | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190; MQ00110 |
+| Legrand Arteor | 574091 | Shared technical item; direct product-document review pending | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190 |
+| Legrand Arteor | 574591 | Shared technical item; direct product-document review pending | [OWN-DEV-0019 - Three-module touch control](definitions/own-dev-0019-three-module-touch-control.md) | Item 1190 |
+| BTicino Axolute | HC/HS/HD4673 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
+| BTicino L/N/NT | L/N/NT4673 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
+| Legrand Arteor | 573985 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
+| Legrand Arteor | 573991 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
+| Legrand Céliane | 067206 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
+| Legrand Céliane | 067207 | Documented commercial identity | [OWN-DEV-0020 - Load Control Panel bus](definitions/own-dev-0020-load-control-panel.md) | Item 1465; MQ00709 |
