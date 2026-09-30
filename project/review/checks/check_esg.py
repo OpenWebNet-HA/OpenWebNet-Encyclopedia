@@ -195,6 +195,10 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
 
         plain = mask_code(text)
         is_device_definition = rel.parts[:2] == ("devices", "definitions") and rel.name.startswith("own-dev-")
+        strict_device_definition = False
+        if is_device_definition:
+            match = re.match(r"own-dev-(\d{4})-", rel.name)
+            strict_device_definition = bool(match and int(match.group(1)) >= 21)
         if is_device_definition:
             if "## Source reconciliation" not in text:
                 objective.append(f"DEVICE_SOURCE_RECONCILIATION {rel}: missing ## Source reconciliation")
@@ -227,35 +231,41 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                             )
 
             for pattern, code in (
-                (r"(?<![\\w\\x60])OWN-DEV-[0-9]{4}\\b", "DEVICE_BARE_IDENTIFIER"),
-                (r"(?<![\\w\\x60])(WHO|WHAT|WHERE|DIMENSION)\\s+[0-9]+\\b", "DEVICE_BARE_PROTOCOL_LITERAL"),
-                (r"\\b(?:EN|AS|CONF)_[A-Z0-9_]+\\.[A-Za-z0-9_]+\\b", "DEVICE_BARE_DATABASE_LITERAL"),
-                (r"(?<![.\\x60\\d])\\d+\\.\\.\\d+(?![.\\x60\\d])", "DEVICE_BARE_RANGE_LITERAL"),
-                (r"(?<![\\w\\x60])[A-Z][A-Z0-9_]*(?:=|<>)[A-Za-z0-9_/-]+(?![\\w\\x60])", "DEVICE_BARE_ASSIGNMENT_LITERAL"),
+                (r"(?<![\w`])OWN-DEV-[0-9]{4}\b", "DEVICE_BARE_IDENTIFIER"),
+                (r"(?<![\w`])(WHO|WHAT|WHERE|DIMENSION)\s+[0-9]+\b", "DEVICE_BARE_PROTOCOL_LITERAL"),
+                (r"\b(?:EN|AS|CONF)_[A-Z0-9_]+\.[A-Za-z0-9_]+\b", "DEVICE_BARE_DATABASE_LITERAL"),
+                (r"(?<![.`\d])\d+\.\.\d+(?![.`\d])", "DEVICE_BARE_RANGE_LITERAL"),
+                (r"(?<![\w`])[A-Z][A-Z0-9_]*(?:=|<>)[A-Za-z0-9_/-]+(?![\w`])", "DEVICE_BARE_ASSIGNMENT_LITERAL"),
             ):
                 for match in re.finditer(pattern, plain):
                     objective.append(
                         f"{code} {rel}:{line_number(plain, match.start())}: {match.group(0)}"
                     )
 
-            for match in re.finditer(r"(?<![\\w\\x60])DIM(?:1|2|3|6|30|32|35|38|310)\\b", plain):
+            for match in re.finditer(r"(?<![\w`])DIM(?:1|2|3|6|30|32|35|38|310)\b", plain):
                 objective.append(
                     f"DEVICE_DIM_SHORTHAND {rel}:{line_number(plain, match.start())}: {match.group(0)}"
                 )
 
             for match in re.finditer(
-                r"(?i)\\b(?:Object|firmware id|condition record|conversion(?:-rule)? reference)\\s+([0-9]+)\\b",
+                r"(?i)\b(?:Object|firmware id|condition record|conversion(?:-rule)? reference)\s+([0-9]+)\b",
                 plain,
             ):
                 objective.append(
                     f"DEVICE_BARE_NUMERIC_REFERENCE {rel}:{line_number(plain, match.start(1))}: {match.group(1)}"
                 )
 
+            current_h2 = ""
             current_heading = ""
             for number, line in enumerate(text.splitlines(), 1):
-                heading = re.match(r"^#{2,3}\\s+(.+?)\\s*$", line)
-                if heading:
-                    current_heading = re.sub(r"\\x60", "", heading.group(1)).lower()
+                h2 = re.match(r"^##\s+(.+?)\s*$", line)
+                if h2:
+                    current_h2 = h2.group(1).replace("`", "").lower()
+                    current_heading = current_h2
+                    continue
+                h3 = re.match(r"^###\s+(.+?)\s*$", line)
+                if h3:
+                    current_heading = h3.group(1).replace("`", "").lower()
                     continue
                 if not line.startswith("|"):
                     continue
@@ -263,7 +273,7 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                 if not cells:
                     continue
 
-                if current_heading == "summary" and len(cells) >= 2:
+                if strict_device_definition and current_h2 == "summary" and len(cells) >= 2:
                     field, value = cells[0], cells[1]
                     if field in {
                         "Device ID", "Catalogue item", "Item model / modobj",
@@ -273,31 +283,54 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                         objective.append(
                             f"DEVICE_SUMMARY_LITERAL {rel}:{number}: {field} -> {value}"
                         )
+                    if field == "Firmware applicability" and value not in {"Value", "---"}:
+                        remainder = re.sub(r"`[^`]*`", "", value)
+                        if re.search(r"\d", remainder):
+                            objective.append(
+                                f"DEVICE_SUMMARY_FIRMWARE_LITERAL {rel}:{number}: {value}"
+                            )
+                    if field == "Commercial identities" and value not in {"Value", "---"}:
+                        remainder = re.sub(r"`[^`]*`", "", value)
+                        if re.sub(r"[\s,;/]+", "", remainder):
+                            objective.append(
+                                f"DEVICE_SUMMARY_COMMERCIAL_LITERAL {rel}:{number}: {value}"
+                            )
 
-                if current_heading == "diagnostic applicability":
+                if current_h2 == "diagnostic applicability":
                     first = cells[0]
-                    if re.fullmatch(r"DIMENSION\\s+[0-9]+", first):
+                    if re.fullmatch(r"DIMENSION\s+[0-9]+", first):
                         objective.append(
                             f"DEVICE_BARE_DIAGNOSTIC_SURFACE {rel}:{number}: {first}"
                         )
 
-                if "configuration" in current_heading:
+                if strict_device_definition and current_h2 in {"firmware-scoped configuration", "object configuration surfaces"}:
                     first = cells[0]
                     if re.fullmatch(r"[A-Z][A-Z0-9_]{0,63}", first):
                         objective.append(
                             f"DEVICE_BARE_FIELD_LITERAL {rel}:{number}: {first}"
                         )
                     header = [x.lower() for x in cells]
-                    if "field" not in header and "---" not in cells and len(cells) >= 3:
+                    if "field" not in header and "---" not in cells and len(cells) >= 3 and first.startswith("`"):
                         domain = cells[1]
                         default = cells[2]
                         plain_domain = mask_code(domain).strip()
                         plain_default = mask_code(default).strip()
-                        if re.fullmatch(r"\\d+(?:\\.\\.\\d+)?", plain_domain):
+                        if re.search(r"(?<![.\d])\d+\.\.\d+(?![.\d])", plain_domain):
                             objective.append(
                                 f"DEVICE_BARE_CONFIG_DOMAIN {rel}:{number}: {domain}"
                             )
-                        if re.fullmatch(r"\\d+", plain_default):
+                        if re.search(
+                            r"(?<![\w])(?:SLA|PUL|CEN|GEN|GR|AMB|AUX|OFF|ON|O/I|UP/DOWN)(?![\w])",
+                            plain_domain,
+                        ):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_ENUM {rel}:{number}: {domain}"
+                            )
+                        if re.fullmatch(r"\s*\d+(?:\s*/\s*\d+)*\s*", plain_domain):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_DOMAIN {rel}:{number}: {domain}"
+                            )
+                        if re.fullmatch(r"(?:\d+(?:\.\d+)+|\d+|_)", plain_default):
                             objective.append(
                                 f"DEVICE_BARE_CONFIG_DEFAULT {rel}:{number}: {default}"
                             )

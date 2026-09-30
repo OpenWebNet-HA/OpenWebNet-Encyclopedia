@@ -82,15 +82,15 @@ Physical Configuration and Virtual Configuration are declared.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0 / O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL | 0 | operating / function mode |
-| `LIV1` | 0..99 | 1 | first regulation level |
-| `LIV2` | 0..99 | 1 | second regulation level |
-| `SPE` | 0..9 | 0 | special-function selector |
-| `I` | 0 / CEN | 0 | additional function selector |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0` / `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` | `0` | operating / function mode |
+| `LIV1` | `0..99` | `1` | first regulation level |
+| `LIV2` | `0..99` | `1` | second regulation level |
+| `SPE` | `0..9` | `0` | special-function selector |
+| `I` | `0` / `CEN` | `0` | additional function selector |
 
-LIV1/LIV2 are the two regulation-level fields. SPE and I are additional command selectors whose semantics depend on the selected operating mode.
+`LIV1` / `LIV2` are the two regulation-level fields. `SPE` and `I` are additional command selectors whose semantics depend on the selected operating mode.
 
 ## Object configuration surfaces
 
@@ -98,17 +98,17 @@ LIV1/LIV2 are the two regulation-level fields. SPE and I are additional command 
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..9 | 0 | Area |
-| `PL` | 0..9 | 0 | Light point |
-| `M` | O/I / OFF / ON / UP/DOWN / UP/DOWN monostable / CEN / PUL / None | 0 | Modality |
-| `LIV1` | 0..99 | 1 | Configurator LIV1 |
-| `LIV2` | 0..99 | 1 | Configurator LIV2 |
-| `SPE` | 0..9 | 0 | Special function command control (0-9) |
-| `I` | None / CEN | 0 | Configurator I |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `M` | `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` / `None` | `0` | Modality |
+| `LIV1` | `0..99` | `1` | Configurator `LIV1` |
+| `LIV2` | `0..99` | `1` | Configurator `LIV2` |
+| `SPE` | `0..9` | `0` | Special function command control (`0..9`) |
+| `I` | `None` / `CEN` | `0` | Configurator `I` |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

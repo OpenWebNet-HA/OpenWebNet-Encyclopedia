@@ -87,11 +87,11 @@ Physical Configuration and Virtual Configuration are declared.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0 / 1 / 6 / 7 / 8 / CEN | 0 | operating / function mode |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0` / `1` / `6` / `7` / `8` / `CEN` | `0` | operating / function mode |
 
-The firmware exposes only A, PL, M and AID. The reusable radio-receiver Object uses the corresponding MOD concept.
+The firmware exposes only `A`, `PL`, `M` and `AID`. The reusable radio-receiver Object uses the corresponding `MOD` concept.
 
 ## Object configuration surfaces
 
@@ -99,13 +99,13 @@ The firmware exposes only A, PL, M and AID. The reusable radio-receiver Object u
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..9 | 0 | Area |
-| `PL` | 0..9 | 0 | Light point |
-| `MOD` | 1 / 6 / 7 / 8 / CEN | 1 | Modality |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `MOD` | `1` / `6` / `7` / `8` / `CEN` | `1` | Modality |
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

@@ -85,10 +85,10 @@ The catalogue declares Physical Configuration and Virtual Configuration.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
+| `A` | `0` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
 
-The firmware exposes only A, PL and AID. Scenario contents SCE1..SCE4 belong to Object 2, not to the physical firmware configurator set.
+The firmware exposes only `A`, `PL` and `AID`. Scenario contents `SCE1` through `SCE4` belong to Object `2`, not to the physical firmware configurator set.
 
 ## Object configuration surfaces
 
@@ -96,16 +96,16 @@ The firmware exposes only A, PL and AID. Scenario contents SCE1..SCE4 belong to 
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
-| `A` | 0..9 | 0 | Area |
-| `PL` | 0..9 | 0 | Light point |
-| `SCE1` | SCE1 | _ | Scenario 1 |
-| `SCE2` | SCE2 | _ | Scenario 2 |
-| `SCE3` | SCE3 | _ | Scenario 3 |
-| `SCE4` | SCE4 | _ | Scenario 4 |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `SCE1` | `SCE1` | `_` | Scenario 1 |
+| `SCE2` | `SCE2` | `_` | Scenario 2 |
+| `SCE3` | `SCE3` | `_` | Scenario 3 |
+| `SCE4` | `SCE4` | `_` | Scenario 4 |
 
 **Firmware relationship.** catalogue irregularity: `TYPE_CONTACT` (filter `1630`) is not present in this reusable Object schema.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

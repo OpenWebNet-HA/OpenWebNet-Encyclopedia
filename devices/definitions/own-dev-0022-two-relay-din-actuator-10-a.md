@@ -91,13 +91,13 @@ Physical configuration, Virtual Configuration and Advanced Configuration.
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL1` | 0..9 | 0 | output 1 light-point configurator |
-| `PL2` | 0..9 | 0 | output 2 light-point configurator |
-| `G1` | 0..9 | 0 | group configurator 1 |
-| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL1` | `0..9` | `0` | output 1 light-point configurator |
+| `PL2` | `0..9` | `0` | output 2 light-point configurator |
+| `G1` | `0..9` | `0` | group configurator 1 |
+| `M` | `0..4` / `SLA` / `PUL` | `0` | operating / function mode |
 
-The shared area plus separate PL1/PL2 fields address the two outputs. Object selection and interlock topology are resolved separately from these firmware configurators.
+The shared area plus separate `PL1` / `PL2` fields address the two outputs. Object selection and interlock topology are resolved separately from these firmware configurators.
 
 ## Object configuration surfaces
 
@@ -108,9 +108,9 @@ The shared area plus separate PL1/PL2 fields address the two outputs. Object sel
 | Addressing | `A`, `PL` | target, group, installation-level or network addressing |
 | Mode and behavior | `M`, `LOCAL_BUTTON`, `SUBTYPE` | operating mode and behavior selectors |
 | Timing and levels | `STOP_TIME` | timers, delays, levels and transition parameters |
-| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; `0` means no group |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`. The catalogue relation restricts `SUBTYPE`: Differential restart (15).
+**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`. The catalogue relation restricts `SUBTYPE`: Differential restart (`15`).
 
 ### Object `6` - Light actuator
 
@@ -119,11 +119,11 @@ The shared area plus separate PL1/PL2 fields address the two outputs. Object sel
 | Addressing | `A`, `PL` | target, group, installation-level or network addressing |
 | Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_RESET`, `LOAD_CONTROL_MODE`, `SUBTYPE` | operating mode and behavior selectors |
 | Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
-| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; `0` means no group |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `MINUTES`, `HOURS`, `STATE_RESET`, `SECONDS`, `LOAD_CONTROL_MODE`.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 

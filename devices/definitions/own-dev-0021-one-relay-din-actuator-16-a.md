@@ -90,12 +90,12 @@ Physical configuration, Virtual Configuration and Advanced Configuration are dec
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | 0..9 | 0 | area / environment configurator |
-| `PL` | 0..9 | 0 | light-point configurator |
-| `M` | 0..4 / SLA / PUL | 0 | operating / function mode |
-| `G1` | 0..9 | 0 | group configurator 1 |
-| `G2` | 0..9 | 0 | group configurator 2 |
-| `G3` | 0..9 | 0 | group configurator 3 |
+| `A` | `0..9` | `0` | area / environment configurator |
+| `PL` | `0..9` | `0` | light-point configurator |
+| `M` | `0..4` / `SLA` / `PUL` | `0` | operating / function mode |
+| `G1` | `0..9` | `0` | group configurator 1 |
+| `G2` | `0..9` | `0` | group configurator 2 |
+| `G3` | `0..9` | `0` | group configurator 3 |
 
 The firmware-level table describes the product configurators. The reusable Light actuator Object below has a wider software configuration surface; that wider surface is not itself a statement about physical configurator positions.
 
@@ -108,11 +108,11 @@ The firmware-level table describes the product configurators. The reusable Light
 | Addressing | `A`, `PL` | target, group, installation-level or network addressing |
 | Mode and behavior | `M`, `LOCAL_BUTTON`, `STATE_RESET`, `LOAD_CONTROL_MODE`, `SUBTYPE` | operating mode and behavior selectors |
 | Timing and levels | `DELAYED_OFF`, `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
-| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; 0 means no group |
+| Group membership | `G1`, `G2`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | reusable group memberships; `0` means no group |
 
 **Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `STATE_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `LOAD_CONTROL_MODE`.
 
-The tables above account for the reusable Object fields without reproducing database serialization metadata. Generic Object capability is kept distinct from the Device/firmware relationship and from physical configurator positions.
+These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
 
 ## Conditions, filters, and conversions
 
