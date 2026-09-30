@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0031` | Project identity |
 | Technical description | Ceiling-mounted PIR / daylight sensor with stand-alone and scenario-oriented roles | Catalogue + official documentation |
-| Catalogue item / model | `33` / `modobj 18` | Implementation evidence |
-| Firmware applicability | firmware `130`, `-1.-1.-1`, one slot | Implementation evidence |
 | Commercial identities | `BMSE1001`, `048833` | Catalogue |
+| Catalogue item | `33` - “PIR surface ceiling mounted sensor” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `18` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `130` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Sensor, Presence, Daylight, Lighting | Capability model |
 
 ## Commercial identities
@@ -22,15 +25,19 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| fiche technique 048833 | Technical sheet | LG00295-a-FR | printed pp. 464-467 / PDF pp. 1-4 | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf) |
-
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+| `fiche technique 048833` | Technical sheet | `LG00295-a-FR` | printed pp. 464-467 / PDF pp. 1-4 | [Archived PDF](../../sources/devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf) | [Publisher PDF](https://assets.legrand.com/general/legrand-fr/pfat/gm/fiche%20technique%20048833.pdf) |
 
 ## Physical and electrical characteristics
 
-The publisher sheet describes a ceiling-mounted passive infrared detector. At 2.5 m installation height its maximum-sensitivity coverage is approximately 6 m diameter / 28 m². It is intended to combine occupancy and ambient-light information for lighting control.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Sensor technology | passive infrared (PIR) with ambient-light information for lighting control | `fiche technique 048833` |
+| Mounting | surface ceiling mounted | `fiche technique 048833` |
+| Reference installation height | `2.5 m` | `fiche technique 048833` |
+| Maximum-sensitivity coverage diameter | approximately `6 m` | `fiche technique 048833` |
+| Maximum-sensitivity coverage area | approximately `28 m²` | `fiche technique 048833` |
 
 ## Identity
 
@@ -248,15 +255,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 18`, `BMSE1001` / `048833` and installed identity fields | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware rather than assuming wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | identify which of the six candidate sensor Objects is active in the single Module position | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the address appropriate to the resolved sensor/scenario role | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | correlate physical `A` / `PL` / `M` / `S` / `T` with role-specific presence/daylight configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

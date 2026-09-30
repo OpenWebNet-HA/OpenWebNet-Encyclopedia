@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0025` | Project identity |
 | Technical description | One-channel DIN SCS dimmer for resistive and ferromagnetic-transformer loads | Catalogue + official technical sheet |
-| Catalogue item / model | `17` / `modobj 133` | Implementation evidence |
-| Firmware applicability | firmware `176`, `-1.-1.-1`, one slot | Implementation evidence |
 | Commercial identities | `F414`, `003652` | Catalogue |
+| Catalogue item | `17` - “DIN dimmer 1000 W” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `133` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `176` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Actuator, Dimmer, Lighting | Capability model |
 
 ## Commercial identities
@@ -22,16 +25,27 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MQ00278_e_EN | Technical sheet | revision/date as printed | Whole document | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf) |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | F414 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `MQ00278_e_EN` | Technical sheet | revision/date as printed | whole document | [Archived PDF](../../sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F414 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-The official sheet establishes a one-output, 4-DIN dimmer for resistive loads and ferromagnetic transformers. Short control presses switch the load; long presses adjust brightness. The actuator can report load faults such as lamp failure and has a replaceable fuse. SCS nominal supply is `27 Vdc`, operating supply `18..27 Vdc`, current draw `9 mA`, and published F414 load range `0.25..4.3 A`, `60..1000 VA`.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 4 DIN modules | `MQ00278_e_EN` |
+| Outputs | 1 dimmed output | `MQ00278_e_EN` |
+| Load families | resistive loads and ferromagnetic transformers | `MQ00278_e_EN` |
+| SCS nominal supply | `27 Vdc` | `MQ00278_e_EN` |
+| SCS operating range | `18..27 Vdc` | `MQ00278_e_EN` |
+| Current draw | `9 mA` | `MQ00278_e_EN` |
+| Published load current range | `0.25..4.3 A` | `MQ00278_e_EN` |
+| Published load power range | `60..1000 VA` | `MQ00278_e_EN` |
+| Local operation | short press switches; long press regulates brightness | `MQ00278_e_EN` |
+| Protection / service | replaceable fuse; load-fault reporting including lamp failure | `MQ00278_e_EN` |
 
 ## Identity
 
@@ -142,15 +156,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 133` and the `F414` / `003652` family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Dimmer Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured dimmer address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M`, `G1` and the Device-specific load/minimum-level settings | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

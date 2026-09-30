@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0032` | Project identity |
 | Technical description | SCS-powered radio transmitting interface | Catalogue + official documentation |
-| Catalogue item / model | `34` / `modobj 21` | Implementation evidence |
-| Firmware applicability | firmware `215`, `-1.-1.-1`, one slot | Implementation evidence |
 | Commercial identities | `HC/HS4576`, `HD4576`, `L/N/NT4576` | Catalogue |
+| Catalogue item | `34` - “Transmitting radio interface” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `21` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `215` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Radio interface, Control bridge, Lighting / Automation | Capability model |
 
 ## Commercial identities
@@ -23,15 +26,21 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | 4576 radio-transmitter sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4576 radio-transmitter sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-Publisher documentation identifies the interface as a 27 Vdc BUS-powered, two-module radio transmitter. Exact suffix/aesthetic variants differ by product line.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `27 Vdc` | Publisher `AUTOMATISME.pdf` |
+| Mounting | 2 wiring-device modules | Publisher `AUTOMATISME.pdf` |
+| Radio role | transmitting interface from SCS controls to the supported radio side | Publisher `AUTOMATISME.pdf` |
+
+Commercial suffixes and aesthetic variants differ by product line; the shared Device definition covers the common SCS/radio implementation role.
 
 ## Identity
 
@@ -125,15 +134,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 21` and the 4576 transmitter family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware rather than assuming wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm fixed Object `172`, Radio Interface Transmitter | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured SCS-side address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M` and the Device-specific contact-type restriction | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

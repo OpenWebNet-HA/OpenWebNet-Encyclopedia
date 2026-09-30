@@ -6,9 +6,13 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0034` | Project identity |
 | Technical description | Two-channel radio receiving interface for wireless temperature probes | Catalogue + official documentation |
-| Catalogue item / model | `39` / `modobj 23` | Implementation evidence |
-| Firmware applicability | firmware `239`, `-1.-1.-1`, two slots | Implementation evidence |
 | Commercial identities | `HC/HS/HD4577`, `L/N/NT4577` | Catalogue |
+| Catalogue item | `39` - “Radio interface for temperature probes” | Implementation evidence |
+| Main catalogue system | Thermoregulation / Temperature control (`id_system = 2`) | Implementation evidence |
+| Additional catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `23` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `239` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
 | Categories | Radio interface, Temperature control, Sensor bridge | Capability model |
 
 ## Commercial identities
@@ -22,17 +26,21 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MQ00183-c-EN | Technical sheet | publisher revision as archived | Whole document | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf) |
-| U1870C | Instruction sheet | publisher revision as archived | Whole document | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-4577-u1870c/U1870C.pdf) |
-| BTicino L4577 | Current product record | current | Whole product page | External official source | [Official source](https://www.bticino.com/products/bt-l4577) |
-
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+| `MQ00183-c-EN` | Technical sheet | publisher revision as archived | whole document | [Archived PDF](../../sources/devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
+| `U1870C` | Instruction sheet | publisher revision as archived | whole document | [Archived PDF](../../sources/devices/documents/device-doc-4577-u1870c/U1870C.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
+| BTicino `L4577` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-l4577) |
 
 ## Physical and electrical characteristics
 
-Current publisher data for the Livinglight form gives 27 Vdc supply, 33 mA input current, 868 MHz radio and a two-module flush-mounted enclosure.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `27 Vdc` | `MQ00183-c-EN` / current publisher product data |
+| Current draw | `33 mA` | Current publisher product data |
+| Radio frequency | `868 MHz` | Current publisher product data |
+| Mounting | 2 flush-mounted modules | Current publisher product data |
+| Probe channels | 2 configured channel positions | Catalogue topology + publisher family documentation |
 
 ## Identity
 
@@ -125,15 +133,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 23`, commercial family and dual-system mapping | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware rather than assuming wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the two fixed Object `124` sensor-interface Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the two configured channel addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect channel `A` / `PL` / `M` selectors and preserve temperature-versus-lighting-sensor mode semantics | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

@@ -6,9 +6,12 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0024` | Project identity |
 | Technical description | Two-module capacitive Soft Touch SCS command with configurable function and UI settings | Catalogue + official documentation |
-| Catalogue item / model | `12` / `modobj 8` | Implementation evidence |
-| Firmware applicability | firmware `149`, `-1.-1.-1`, two slots | Implementation evidence |
 | Commercial identities | `HC/HS4653/2`, `HD4653M2` | Catalogue |
+| Catalogue item | `12` - “Soft touch control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `8` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `149` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
 | Categories | Command, Lighting, Automation, Scenario, Sound, Access | Capability model |
 
 ## Commercial identities
@@ -22,15 +25,23 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | Soft Touch / 4653 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | Soft Touch / 4653 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-Published data gives SCS nominal `27 Vdc`, operating `18..27 Vdc`, maximum consumption `18 mA`, operating temperature `5..35 °C`, and a two-module flush-mounted form for HC/HS4653/2. LED intensity is adjustable.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | Publisher automation documentation |
+| SCS nominal supply | `27 Vdc` | Publisher data |
+| SCS operating range | `18..27 Vdc` | Publisher data |
+| Maximum current draw | `18 mA` | Publisher data |
+| Operating temperature | `5..35 °C` | Publisher data |
+| User interface | capacitive Soft Touch surface | Publisher automation documentation |
+| LED indication | intensity adjustable | Publisher automation documentation |
 
 ## Identity
 
@@ -301,15 +312,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 8` and the Soft Touch commercial family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | resolve the configurable command Object plus the separate UI-settings Module | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the address of the resolved command role | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M`, `M2`, `SPE`, `INT` plus Device-specific UI/backlight settings | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

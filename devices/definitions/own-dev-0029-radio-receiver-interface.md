@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0029` | Project identity |
-| Technical description | Flush-mounted 868 MHz radio-to-SCS receiving interface | Catalogue + official technical documentation |
-| Catalogue item / model | `28` / `modobj 20` | Implementation evidence |
-| Firmware applicability | firmware `214`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | Flush-mounted 868 MHz radio-to-SCS receiving interface | Catalogue + official documentation |
 | Commercial identities | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Catalogue |
+| Catalogue item | `28` - “Receiving radio interface” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `20` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `214` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Radio interface, Control bridge | Capability model |
 
 ## Commercial identities
@@ -23,15 +26,23 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| mh_diff-sonore2008.pdf | Radio-wired interface technical guide | historical publisher guide | 4575 family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) |
+| `mh_diff-sonore2008.pdf` | Radio/wired interface and sound-system technical guide | historical publisher guide | 4575 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
 ## Physical and electrical characteristics
 
-The official guide specifies 27 Vdc BUS supply, 868 MHz reception, 2 mA consumption for `L/N/NT4575N` and `HC/HS4575`, two wiring-device modules, and +5 °C to +35 °C operating temperature. It identifies a status LED, programming micro-button, physical configurator positions and the SCS BUS connector.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `27 Vdc` | `mh_diff-sonore2008.pdf` |
+| Radio frequency | `868 MHz` | `mh_diff-sonore2008.pdf` |
+| Published current draw | `2 mA` for the documented `L/N/NT4575N` and `HC/HS4575` variants | `mh_diff-sonore2008.pdf` |
+| Mounting | 2 wiring-device modules | `mh_diff-sonore2008.pdf` |
+| Operating temperature | `5..35 °C` | `mh_diff-sonore2008.pdf` |
+| Service interface | status LED and programming micro-button | `mh_diff-sonore2008.pdf` |
+| Bus connection | SCS BUS connector | `mh_diff-sonore2008.pdf` |
 
 ## Identity
 
@@ -119,15 +130,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 20` and the 4575 radio-interface family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Radio-receiver Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured SCS-side address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M` and Device-specific radio/contact configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

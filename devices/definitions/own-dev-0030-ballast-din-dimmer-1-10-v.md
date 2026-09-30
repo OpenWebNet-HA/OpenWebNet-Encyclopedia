@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0030` | Project identity |
-| Technical description | DIN-rail 1-10 V ballast dimmer | Catalogue + official family documentation |
-| Catalogue item / model | `31` / `modobj 7` | Implementation evidence |
-| Firmware applicability | firmware `174`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | DIN-rail 1-10 V ballast dimmer | Catalogue + official documentation |
 | Commercial identities | `F413` | Catalogue |
+| Catalogue item | `31` - “Ballast DIN dimmer 1-10 V” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `7` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `174` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Dimmer, Lighting | Capability model |
 
 ## Commercial identities
@@ -21,11 +24,25 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | F413 ballast-dimmer sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F413 ballast-dimmer technical-data and configuration sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 DIN modules | Publisher `AUTOMATISME.pdf` |
+| SCS supply | `27 Vdc` | Publisher `AUTOMATISME.pdf` |
+| Maximum current draw | `30 mA` | Publisher `AUTOMATISME.pdf` |
+| Control output | `1..10 V` ballast-control signal | Publisher `AUTOMATISME.pdf` |
+| Maximum connected ballasts | `4` | Publisher `AUTOMATISME.pdf` |
+| Published ballast families | T8, T5 and energy-saving ballast types | Publisher `AUTOMATISME.pdf` |
+| Local interface | load-control pushbutton and status LED | Publisher `AUTOMATISME.pdf` |
+
+The publisher guide requires the controlled ballasts to be earthed; absence of the earth connection is documented as a possible cause of malfunction.
 
 ## Identity
 
@@ -131,15 +148,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 7` and the F413 ballast-dimmer family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Dimmer Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured ballast-dimmer address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `A`, `PL`, `M`, `G1` and load/minimum-level configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 

@@ -5,10 +5,13 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0028` | Project identity |
-| Technical description | Flush-mounted rotary SCS control | Catalogue + implementation evidence |
-| Catalogue item / model | `25` / `modobj 11` | Implementation evidence |
-| Firmware applicability | firmware `213`, `-1.-1.-1`, one slot | Implementation evidence |
+| Technical description | Flush-mounted rotary SCS control | Catalogue + official documentation |
 | Commercial identities | `HC/HS/HD4563`, `L/N/NT4563` | Catalogue |
+| Catalogue item | `25` - “Regulation rotative control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `11` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `213` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
 | Categories | Control, Lighting/Automation command | Capability model |
 
 ## Commercial identities
@@ -22,11 +25,23 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Documentation
 
-| Document | Type | Revision / date | Relevant pages | Status | Source |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME.pdf | MyHOME automation guide | historical publisher guide | 4563 control-family sections; exact printed/PDF locator pending | Archived original | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) |
+| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4563 rotary-control technical-data section; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4563 control-family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Multi-product guides retain an explicit page-location limitation until both printed and 1-based PDF page numbers are pinned.
+Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 wiring-device modules | `mh_diff-sonore2008.pdf` |
+| SCS operating supply | `18..27 Vdc` | `mh_diff-sonore2008.pdf` |
+| Maximum current draw | `5 mA` | `mh_diff-sonore2008.pdf` |
+| Operating temperature | `5..35 °C` | `mh_diff-sonore2008.pdf` |
+| Local interface | central pushbutton plus rotary knob | `mh_diff-sonore2008.pdf` |
+| Published local actions | ON/OFF, programmed radio-station or track change, and volume adjustment | `mh_diff-sonore2008.pdf` |
 
 ## Identity
 
@@ -122,15 +137,13 @@ Generic condition/conversion evaluation remains canonical in [Catalogue Resoluti
 
 ## Diagnostic applicability
 
-| Surface | Device-specific use | Reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | Identify the Device model/family and compare it with catalogue identity. | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | Record installed firmware instead of treating wildcard catalogue applicability as an observed version. | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | Resolve Module/Object topology, especially when candidates share a slot. | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | Inspect addressing for the resolved Module/Object when exposed. | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | Corroborate firmware/Object configuration and physical/software relationships. | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-Catalogue applicability is not itself an observed runtime result.
+| `DIMENSION 1` | resolve `modobj = 11` and the 4563 rotary-control family | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | record installed firmware rather than assuming wildcard applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Knob-control Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | read the configured control address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect `M`, `LIV1`, `LIV2`, `SPE` and `I` together with the address fields | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 ## Functional applicability
 
