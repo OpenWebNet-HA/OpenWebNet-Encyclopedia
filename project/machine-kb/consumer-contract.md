@@ -1,6 +1,6 @@
 # OpenWebNet Machine KB Consumer Contract
 
-**Release status:** OpenWebNet Machine KB 0.1.0 is published and establishes the compatibility baseline. Current `main` is prepared for patch release 0.1.1 under intended tag `machine-kb-v0.1.1`. The patch keeps the same concrete 0.1.0 schema and artifact contract while correcting generated claim text and supporting documentation. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
+**Release status:** OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1`. The 0.1.0 release remains the compatibility baseline; 0.1.1 keeps the same concrete 0.1.0 schema and artifact contract while correcting generated claim text and supporting documentation. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
 
 ## Publication surface
 
