@@ -120,12 +120,25 @@ Depending on `FUN`, the Device participates in scenario, sound-diffusion or temp
 
 The catalogue presents this Device as product-programmed over USB. Configuration tooling should preserve `FUN` as a topology selector: changing it can change which reusable Object model is applicable, not merely a value inside one unchanged Object.
 
+## Source reconciliation
+
+The `U1063B` Local Display documentation clarifies the conditional roles represented by `FUN`:
+
+- `FUN=1` is the scenario-oriented display role;
+- `FUN=2` is the sound-diffusion display/control role;
+- `FUN=3` uses the Local Display with an external temperature probe;
+- `FUN=4` associates the Local Display with a thermoregulation probe/zone role rather than merely duplicating `FUN=3`.
+
+The same documentation describes a short display wake/active interval after user interaction, product programming through the documented local programming connection, and use with external probe reference `3457` in the applicable temperature role.
+
+Because the publisher endpoint for `U1063B` still prevents repository archival in this environment, these meanings are recorded as document-derived findings pending byte-for-byte archival verification. The earlier open question about the distinction between `FUN=3` and `FUN=4` is therefore narrowed to verification/correlation with the catalogue topology rather than basic semantic naming.
+
 ## Evidence limits and open work
 
 - Obtain sanitized fingerprints for at least one BTicino 4685 and one Legrand commercial variant.
 - Archive the official `U1063B` revision when the publisher endpoint permits automated retrieval.
 - Find direct official sheets for `573916`/`573917` and `067281`/`067282`.
-- Establish the vendor-facing names for `M=3..8` and the distinction between `FUN=3` and `FUN=4` without guessing.
+- Establish vendor-facing names for `M=3..8` and verify the documented `FUN=3` / `FUN=4` distinction against an archived `U1063B` original and real hardware.
 - Check whether firmware later than catalogue `1.3.7` changes role selection or slot anchoring.
 
 ## Sources

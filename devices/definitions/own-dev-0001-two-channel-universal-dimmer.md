@@ -245,6 +245,18 @@ F418U2 programming should use the canonical [Programming](../../programming/) wo
 
 Generic `DIMENSION` write syntax and validation sequencing belong in [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
 
+## Source reconciliation
+
+Known F418U2 product documentation and runtime research have been reconciled as follows:
+
+- the local channel pushbuttons are Device controls, not additional OpenWebNet Modules; their status/fault indication belongs to the product-level behavior of the two dimmer channels;
+- vendor documentation distinguishes normal status from load/fault and configuration indications on the front LEDs and documents a Device-level two-channel setup path in the MyHOME Server tooling;
+- group configuration is not a legal physical interpretation of Slave operation, and the second channel inherits product constraints from the selected channel/load arrangement rather than being an unconstrained duplicate;
+- later instruction material warns against mixing incompatible load technologies and keeps minimum-level/load-type behavior revision-scoped;
+- the runtime `DIMENSION 4` evidence remains Device-specific and unresolved in four places: the exact `ON/OFFspeed` encoding, whether the observed F454 positive write failure is systematic, whether MH200 non-response is gateway/firmware-wide or interaction-specific, and whether the reported F414/MH200 timeout followed by `NACK` can be reproduced from a preserved raw exchange.
+
+The currently identified official F418U2 revisions are not yet all archived in the repository. Source reconciliation therefore remains partial even though their known Device-level findings are represented here.
+
 ## Evidence limits and open work
 
 - Obtain and archive every known official PDF revision and compute source hashes.

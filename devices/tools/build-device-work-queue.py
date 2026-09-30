@@ -14,7 +14,8 @@ STATES = ["unreviewed","triaged","research","definition-in-progress","review-rea
 REVIEW_VALUES = ["pending","partial","complete","not-applicable"]
 REVIEW_KEYS = [
     "commercial_identities","database_extraction","documentation_discovery",
-    "documentation_archive","definition","hardware_corroboration","final_review",
+    "documentation_archive","source_reconciliation","definition",
+    "hardware_corroboration","final_review",
 ]
 PRIORITIES = ["high","normal","low"]
 
@@ -40,6 +41,7 @@ def fresh_entry():
         "database_extraction":"pending",
         "documentation_discovery":"pending",
         "documentation_archive":"pending",
+        "source_reconciliation":"pending",
         "definition":"pending",
         "hardware_corroboration":"pending",
         "final_review":"pending",
@@ -103,7 +105,7 @@ def validate(data):
                 if not definition_exists(did):
                     raise SystemExit(f"{item_id}: missing definition for {did}")
         if e["state"]=="reviewed":
-            for k in ["commercial_identities","database_extraction","documentation_discovery","definition","final_review"]:
+            for k in ["commercial_identities","database_extraction","documentation_discovery","source_reconciliation","definition","final_review"]:
                 if review[k] not in ["complete","not-applicable"]:
                     raise SystemExit(f"{item_id}: reviewed but {k}={review[k]}")
 
@@ -125,8 +127,8 @@ def dashboard(data):
       "",f"Total: **{len(data['items'])}** technical-item clusters.","",
       "Database extraction is mechanically available for every cluster in this catalogue revision. The queue tracks when that source material has actually been reviewed and integrated into a Device definition.","",
       "## Next work","",
-      "| Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Hardware | Blockers |",
-      "| --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- |"
+      "| Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |",
+      "| --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |"
     ]
     rank={v:i for i,v in enumerate(PRIORITIES)}
     state_rank={v:i for i,v in enumerate(STATES)}
@@ -137,7 +139,7 @@ def dashboard(data):
         blockers="; ".join(e.get("blockers",[]) or []) or "-"
         desc=str(c["descr"]).replace("|","\\|")
         blockers=blockers.replace("|","\\|")
-        lines.append(f"| {e['priority']} | {item_id} | {desc} | {c['commercial_records']} | {e['state']} | {did} | {e['review']['documentation_discovery']} | {e['review']['documentation_archive']} | {e['review']['hardware_corroboration']} | {blockers} |")
+        lines.append(f"| {e['priority']} | {item_id} | {desc} | {c['commercial_records']} | {e['state']} | {did} | {e['review']['documentation_discovery']} | {e['review']['documentation_archive']} | {e['review']['source_reconciliation']} | {e['review']['hardware_corroboration']} | {blockers} |")
     lines += ["","## Reviewed","",
               "| Item | Description | Outcome |","| ---: | --- | --- |"]
     reviewed=[(k,e) for k,e in data["items"].items() if e["state"]=="reviewed"]

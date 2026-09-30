@@ -81,6 +81,10 @@ Link observations to the facts they corroborate or challenge. A capture adds evi
 
 Document Device-specific validation requirements, topology effects, and constraints. Generic frame grammar and session mechanics belong under [Programming](../../programming/).
 
+## Source reconciliation
+
+For every known applicable source revision, record the Device-specific facts that were incorporated and any material discrepancies or questions it raised. A source listed under Documentation is not considered processed until this reconciliation is complete.
+
 ## Evidence limits and open work
 
 List missing documents, unobserved variants, unresolved source conflicts, and experiments needed to increase confidence.

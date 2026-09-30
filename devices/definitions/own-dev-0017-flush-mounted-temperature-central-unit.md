@@ -121,6 +121,20 @@ The Device belongs to the temperature-control system. The catalogue and product 
 
 Physical configuration, virtual configuration, and product programming are all catalogue-supported. TiThermoBasic is the documented PC workflow for the 4695 family. Firmware update and project-transfer details belong to the software manual; the Device-specific invariant here is that product programming exists in addition to ordinary configurator-based setup.
 
+## Source reconciliation
+
+The three archived `4695` manuals establish that the single OpenWebNet control-unit Object represents a much richer four-zone thermoregulation product:
+
+- the central unit manages heating and cooling operation for up to four zones, including the locally controlled zone;
+- product programming provides multiple weekly programs and daily zone profiles rather than only a current setpoint;
+- user operating states include Manual, Holiday/Holidays, Timed, OFF and the heating/cooling protection modes such as antifreeze or thermal protection;
+- timed operation supports a finite duration up to the documented day-scale limit, while local operation also supports temperature offset/override behavior;
+- fan-coil installations are explicitly supported by the product workflow;
+- installation/setup includes zone association, probe configuration, system diagnostics/test procedures and total-reset behavior;
+- TiThermoBasic handles project transfer and product programming in addition to ordinary configurator-based setup.
+
+These are Device-level capabilities of the 4695 family. They do not create additional catalogue Modules, but they must be retained so Object `90` is not misread as the entirety of the product behavior.
+
 ## Evidence limits and open work
 
 - Obtain a sanitized `DIMENSION 1` / `DIMENSION 2` / `DIMENSION 30` / `DIMENSION 32` / `DIMENSION 35` fingerprint from a known 4695-family unit.

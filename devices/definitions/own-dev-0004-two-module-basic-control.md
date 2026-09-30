@@ -173,6 +173,18 @@ The exact generic functional frame grammar remains canonical under [`WHO 1` - Li
 
 A programmer should resolve each Module independently from the physical/virtual configuration, then apply the selected Object configuration and conversion rules. Generic write/read-back mechanics remain in [Programming](../../programming/).
 
+## Source reconciliation
+
+`MQ00286-d-EN` has been reconciled beyond the high-level Object list:
+
+- physical and virtual configuration both support point-to-point, room, group and general lighting control, but the published physical ranges and the reusable Object ranges are not identical;
+- the Device supports timed-ON and dimming variants in addition to simple cyclic/ON/OFF/pushbutton behavior;
+- load-status feedback for room/group/general commands is tied to a reference actuator address in software configuration rather than being implied by the command address alone;
+- CEN-only use has a product-level configuration constraint: secondary address positions that are not part of the CEN function must remain unconfigured rather than being treated as independent command channels;
+- local LED behavior and brightness adjustment are part of the Device user interface and remain distinct from the OpenWebNet command Modules.
+
+The archived technical sheet has therefore been reconciled into both the physical configuration model and the reusable Object model; remaining incompleteness concerns other commercial variants and hardware corroboration.
+
 ## Corroboration status and open work
 
 - Archive and hash `MQ00286-d-EN`, its language variants, and older/newer revisions.

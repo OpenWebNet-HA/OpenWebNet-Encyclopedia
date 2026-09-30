@@ -30,6 +30,8 @@ Evidence status remains explicit:
 - later corroboration adds provenance to an existing fact rather than replacing its earlier source;
 - unresolved or contradictory source material is preserved visibly instead of normalized away.
 
+A known source is not considered processed merely because it appears in the Documentation table or archive. Before a Device definition can be treated as complete for that source revision, the source must be reconciled against the dossier: Device-specific identity, configuration, operating modes, programming workflow, status/diagnostic behavior, revision constraints, contradictions, and open questions must either be incorporated or explicitly judged non-material to the Device page.
+
 “Complete” is always scoped to the source revisions examined. A later catalogue, document revision, firmware, or capture may extend the dossier.
 
 Do not turn Device pages into copies of generic protocol reference material. Device pages document **applicability, Device-specific values, capabilities, constraints, exceptions, and evidence**. Generic frame grammar and field semantics remain canonical under [Functional Protocol](../functional/), [Diagnostics](../diagnostics/), and [Programming](../programming/).

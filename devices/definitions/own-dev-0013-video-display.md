@@ -157,6 +157,20 @@ This Device uses Product Programming rather than ordinary physical/virtual Objec
 
 A future Device Library representation should keep the five-Module topology, both catalogue firmware applicability definitions and the reusable Object parameter domains, while keeping installation-specific addresses private.
 
+## Source reconciliation
+
+The archived Video Display installation, user and TiLivingLightDisplay manuals add substantial product behavior beyond the five fixed catalogue Objects:
+
+- physical configuration exposes predefined `M=0..6` menu/application arrangements rather than one generic configuration;
+- the `P` address participates in camera/activation behavior relative to the entrance-panel address and must be interpreted in the video-door-entry context;
+- the product has a line-termination control and documented auxiliary-supply wiring options that affect installation but not the OpenWebNet Module count;
+- quick/physical configuration has documented restrictions in systems using interface `346850`;
+- software configuration can add/arrange applications and transfer projects/firmware through the product tooling rather than only setting the catalogue Object parameters;
+- Master/Slave and menu/application limitations are product-level constraints and must remain distinct from generic WHO semantics;
+- reset and user-menu behavior are part of the Device operational model, not additional Objects.
+
+The dossier now treats the five Objects as the OpenWebNet projection of a richer video-door-entry user interface rather than as the whole product.
+
 ## Corroboration status and open work
 
 - Obtain sanitized fingerprints for at least one `344400/344401` unit and one Axolute/Arteor variant.

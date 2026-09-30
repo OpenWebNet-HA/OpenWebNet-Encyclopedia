@@ -169,6 +169,19 @@ The command Objects preserve their complete reusable parameter models in the can
 | `DIMENSION 32` | determine configured functional addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
 
+## Source reconciliation
+
+The archived touch-control sources establish user/programming behavior in addition to the catalogue Object set:
+
+- the four capacitive zones can be temporarily disabled for cleaning, with the product restoring normal touch operation after the documented cleaning interval;
+- self-learning can operate in cyclic and non-cyclic forms and includes explicit learn/delete procedures rather than being a generic “scenario” capability;
+- scenario-module and CEN/programmed-scenario operation have distinct product programming workflows and button/address interpretations;
+- sound-system operation assigns the touch zones to product-specific audio controls rather than treating them as ordinary lighting keys;
+- front LED behavior, standby/active intensity and programming feedback are product functions of the fixed UI settings Module;
+- after installation the Device performs an automatic calibration interval during which touch behavior must not be treated as normal steady-state operation.
+
+These behaviors do not resolve the implementation `SPE` versus `SET` mapping; that source-model boundary remains explicit.
+
 ## Corroboration status and open work
 
 - Locate direct product sheets for the Céliane `067273..067295` variants and Arteor `574089/574589`.

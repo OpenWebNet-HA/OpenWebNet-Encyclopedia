@@ -12,7 +12,7 @@ Coverage is tracked by technical Device definition rather than by choosing one c
 | --- | --- |
 | Database extraction | Device-specific identity, firmware, Module/Object, configuration, conditions, and constraints available from canonical implementation sources have been curated |
 | Commercial identities | Known brand / SKU identities and package/synonym relationships are documented |
-| Official sources | Authoritative product documents are inventoried and archived where appropriate |
+| Official sources | Authoritative product documents are inventoried, archived where appropriate, and reconciled into the Device dossier; unreconciled known sources keep this field Partial |
 | Identity | Protocol/catalogue identity mapping is documented |
 | Hardware evidence | At least one observation from known physical hardware exists |
 | Functions | Modules, Objects, roles, and relevant functional systems are documented |

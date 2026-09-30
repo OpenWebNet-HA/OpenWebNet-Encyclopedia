@@ -124,6 +124,17 @@ The catalogue declares Product Programming over Ethernet and USB. Device-specifi
 
 The much broader MyHOME application configuration presented in the user/software manuals belongs to product programming and UI configuration rather than to the ordinary Object configuration model.
 
+## Source reconciliation
+
+The MyHOME_Screen 3.5 technical/user/software documents establish product details beyond its fixed catalogue role:
+
+- the product occupies a `3+3` module mounting arrangement and uses different installation accessories/boxes depending on the variant, including the documented `506E` versus `528W` context;
+- PC programming/transfer paths include the documented RS232 lead `335919`, USB accessory `3559`, or Ethernet depending on the commercial variant;
+- TiTouchScreen project configuration includes conditional scenarios, date/time presentation, password protection and configurable graphical/icon content;
+- these user-interface/project functions are product-programming capabilities and must not be mistaken for extra OpenWebNet Modules.
+
+The remaining completeness issues concern direct Legrand-variant documentation, the `AM4890`/`AM5890` source discrepancy and hardware fingerprints.
+
 ## Corroboration status and open work
 
 - Add sanitized hardware fingerprints across more than one product line.
