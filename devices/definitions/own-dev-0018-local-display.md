@@ -37,11 +37,19 @@ All six records share catalogue item `1147` and `modobj` 64. Direct variant-spec
 | `U1063B` | 4685 Local Display family instruction sheet | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
 | MyHOME catalogue `HPML0714` | Local Display product context and family functions | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
-The official `U1063B` publisher endpoint currently rejects automated archival retrieval in this environment. The dossier retains the official URL and does not replace it with a mirror.
+The former official `U1063B` publisher URL currently returns an access/error response and the current Legrand document CDN does not expose that filename. An external reference copy of the same `U1063B` revision has therefore been used only to recover Device facts, while older official catalogue material corroborates the Local Display roles. The external copy is not archived or represented as an official original; byte-for-byte publisher evidence is still required.
 
 ## Product role
 
 Period product material describes an OLED local touch display used as a compact MyHOME interface. Its relevant systems include scenario control, sound diffusion and temperature regulation. The implementation database adds the exact conditional Object topology and the programming/configuration fields needed to represent those roles deterministically.
+
+## Physical and product characteristics
+
+The `U1063B` reference copy identifies the Local Display as an OLED touch-screen Device with physical configurator seats, BUS/SCS, a serial programming connector and an external-probe connector.
+
+For the applicable thermoregulation role it identifies external probe `3457`, with a `10 kΩ` resistance at `25 °C`, `BETA = 3435`, and a maximum documented probe connection length of `10 m`. The same revision prints an SCS supply of `18..27 Vdc`, approximately `20 mA` maximum standby consumption, approximately `60 mA` maximum operating consumption, and an operating-temperature range of `5..35 °C`.
+
+These values are useful product evidence but remain provisional until the exact official `U1063B` bytes are recovered; they are not used to override the canonical catalogue topology.
 
 ## Identity
 
@@ -129,7 +137,7 @@ The `U1063B` Local Display documentation clarifies the conditional roles represe
 - `FUN=3` uses the Local Display with an external temperature probe;
 - `FUN=4` associates the Local Display with a thermoregulation probe/zone role rather than merely duplicating `FUN=3`.
 
-The same documentation describes a short display wake/active interval after user interaction, product programming through the documented local programming connection, and use with external probe reference `3457` in the applicable temperature role.
+The same documentation describes a short display wake/active interval after user interaction, product programming through the documented local programming connection, and use with external probe reference `3457` in the applicable temperature role. It also supplies the external-probe and electrical/temperature data recorded above.
 
 Because the publisher endpoint for `U1063B` still prevents repository archival in this environment, these meanings are recorded as document-derived findings pending byte-for-byte archival verification. The earlier open question about the distinction between `FUN=3` and `FUN=4` is therefore narrowed to verification/correlation with the catalogue topology rather than basic semantic naming.
 
