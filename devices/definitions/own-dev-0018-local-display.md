@@ -35,7 +35,7 @@ All six records share catalogue item `1147` and `modobj` 64. Direct variant-spec
 | Document | Coverage | Status |
 | --- | --- | --- |
 | `U1063B` | 4685 Local Display family instruction sheet | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
-| MyHOME catalogue HPML0714 | Local Display product context and family functions | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | Local Display product context and family functions | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
 The official `U1063B` publisher endpoint currently rejects automated archival retrieval in this environment. The dossier retains the official URL and does not replace it with a mirror.
 
@@ -50,7 +50,7 @@ Period product material describes an OLED local touch display used as a compact 
 | `EN_ITEM.id_item` | `1147` | Implementation evidence |
 | main system | thermoregulation / Temperature control | Implementation evidence |
 | additional system | lighting_automation / Automation | Implementation evidence |
-| `modobj` | 64 in both system mappings | Implementation evidence |
+| `modobj` | `64` in both system mappings | Implementation evidence |
 | family | `1` | Implementation evidence |
 
 ## Firmware and programming applicability
@@ -81,8 +81,8 @@ There is no Virgin Object. Conditions `FUN=1`, `FUN=2`, `FUN=3` and `FUN=4` are 
 | `AID` | implementation identity token | - | Device identity field |
 | `ZA` | `0..9` | 0 | first thermoregulation zone digit |
 | `ZB` | `0..9` | 1 | second thermoregulation zone digit |
-| `M` | 0, 3, 4, 5, 6, 7, 8 | 0 | product mode configurator domain |
-| `FUN` | 0, 1, 2, 3, 4 | 0 | function selector that controls Object applicability |
+| `M` | `0`, `3`, `4`, `5`, `6`, `7`, `8` | 0 | product mode configurator domain |
+| `FUN` | `0`, `1`, `2`, `3`, `4` | 0 | function selector that controls Object applicability |
 
 The database labels `M=0` and `FUN=0` as None. Numeric M values `3..8` and `FUN` values `1..4` are preserved as raw catalogue values unless a product document supplies stronger names.
 
@@ -94,7 +94,7 @@ The reusable probe exposes `ZAZB` zone, `SLA` slave number, `COLD` summer enable
 
 ### Object `413` - Scenario module control
 
-The scenario role exposes modality, scenario-module address, installation/destination levels, contact type, scenario number and activation delay. The reusable scenario address spans the standard A/PL combinations represented by the catalogue; scenario number is `1..16` and contact type can be normally open or normally closed.
+The scenario role exposes modality, scenario-module address, installation/destination levels, contact type, scenario number and activation delay. The reusable scenario address spans the standard `A` / `PL` combinations represented by the catalogue; scenario number is `1..16` and contact type can be normally open or normally closed.
 
 ### Object `419` - Sound diffusion control
 
@@ -108,9 +108,9 @@ The sound role exposes modality (including `VOL` / `ON_OFF`), addressing type, a
 | `DIMENSION 2` | confirm installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | observe which conditional Modules are exposed | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | inspect addresses for the selected role | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | correlate `FUN`/M and role-specific configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
+| `DIMENSION 35` | correlate `FUN` / `M` and role-specific configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
-A hardware fingerprint is especially valuable here because DIM30 can test whether runtime exposure follows the source-level `FUN` conditions exactly.
+A hardware fingerprint is especially valuable here because `DIMENSION 30` can test whether runtime exposure follows the source-level `FUN` conditions exactly.
 
 ## Functional applicability
 
@@ -125,7 +125,7 @@ The catalogue presents this Device as product-programmed over USB. Configuration
 - Obtain sanitized fingerprints for at least one BTicino 4685 and one Legrand commercial variant.
 - Archive the official `U1063B` revision when the publisher endpoint permits automated retrieval.
 - Find direct official sheets for `573916`/`573917` and `067281`/`067282`.
-- Establish the vendor-facing names for M=`3..8` and the distinction between `FUN=3` and `FUN=4` without guessing.
+- Establish the vendor-facing names for `M=3..8` and the distinction between `FUN=3` and `FUN=4` without guessing.
 - Check whether firmware later than catalogue `1.3.7` changes role selection or slot anchoring.
 
 ## Sources

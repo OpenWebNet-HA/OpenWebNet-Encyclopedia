@@ -12,8 +12,8 @@
 | Firmware definition | wildcard `-1.-1` | Implementation evidence |
 | Declared slots | `7` | Implementation evidence |
 | Configuration modes | Advanced, Physical, Virtual | Implementation evidence |
-| Direct / candidate Objects | 12 / 15 | Implementation evidence |
-| Virgin Object | Soft-Touch command virgin (521) | Implementation evidence |
+| Direct / candidate Objects | `12` / `15` | Implementation evidence |
+| Virgin Object | Soft-Touch command virgin (`521`) | Implementation evidence |
 | Categories | Commands, Multifunction, User Interface, Scenarios | Product and capability model |
 
 This definition covers the three-module touch-control cluster, not the four-module sibling. The product has six capacitive command zones plus a separate user-interface-settings slot. Each command zone can take one of a broad set of command roles; the catalogue models that flexibility through direct reusable Objects plus a Soft-Touch Virgin Object candidate set.
@@ -22,10 +22,10 @@ This definition covers the three-module touch-control cluster, not the four-modu
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS4657M3` | Documented commercial identity | Catalogue + MQ00110 technical sheet |
-| BTicino Axolute | `HD4657M3` | Documented commercial identity | Catalogue + MQ00110 technical sheet |
-| Legrand Arteor | `573912` | Documented commercial identity | Catalogue + MQ00110 technical sheet |
-| Legrand Arteor | `573913` | Documented commercial identity | Catalogue + MQ00110 technical sheet |
+| BTicino Axolute | `HC/HS4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| BTicino Axolute | `HD4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| Legrand Arteor | `573912` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| Legrand Arteor | `573913` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
 | Legrand Arteor | `574091` | Shared technical item | Implementation evidence; direct sheet correlation pending |
 | Legrand Arteor | `574591` | Shared technical item | Implementation evidence; direct sheet correlation pending |
 
@@ -34,13 +34,13 @@ This definition covers the three-module touch-control cluster, not the four-modu
 | Document | Coverage | Status |
 | --- | --- | --- |
 | `MQ00110_f_EN` | 4657M3/M4 and Arteor touch-control family | [Archived original](../../sources/devices/documents/device-doc-touch-control-mq00110-f-en/MQ00110_f_EN.pdf) |
-| MyHOME catalogue HPML0714 | MyHOME touch-control context | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
+| MyHOME catalogue `HPML0714` | MyHOME touch-control context | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) |
 
 The technical sheet distinguishes the three-module version by its six capacitive buttons. It documents physical and MyHOME_Suite configuration and a multifunction command set spanning lighting, automation, locking, scenarios, video-door-entry and sound functions.
 
 ## Physical and electrical characteristics
 
-For the three-module family, MQ00110 documents six capacitive buttons with blue indication. The BTicino HC/HS/`HD4657M3` variants are specified at a lower maximum SCS current than the `573912`/`573913` Arteor variants in the same sheet. These product-level electrical differences do not change the shared catalogue item but are a reminder that shared OpenWebNet capability does not imply identical hardware construction.
+For the three-module family, `MQ00110` documents six capacitive buttons with blue indication. The BTicino HC/HS/`HD4657M3` variants are specified at a lower maximum SCS current than the `573912`/`573913` Arteor variants in the same sheet. These product-level electrical differences do not change the shared catalogue item but are a reminder that shared OpenWebNet capability does not imply identical hardware construction.
 
 ## Identity
 
@@ -55,7 +55,7 @@ For the three-module family, MQ00110 documents six capacitive buttons with blue 
 
 The catalogue uses wildcard firmware version/revision `-1.-1` for firmware id `154` and declares seven slots. Wildcard means applicability is not constrained to one concrete reported version; it must not be rendered as a literal installed firmware version.
 
-Slots `1..6` correspond to the six command positions. Slot 7 is the fixed User interface settings Object (480).
+Slots `1..6` correspond to the six command positions. Slot `7` is the fixed User interface settings Object (`480`).
 
 ## Direct Objects and Virgin Object candidates
 
@@ -107,7 +107,7 @@ Combining the direct set with Virgin-only roles yields 15 distinct candidate Obj
 | `M` | `0`, `1`, `3`, `4`, `6`, `O/I`, `SU_GIU`, `SU_GIU_M`, `CEN` | physical mode selector |
 | `SET` | `0..7` | user-interface settings configurator |
 
-The physical sheet and catalogue agree that the Device can be configured physically or through software. Software configuration should preserve the richer reusable Object model rather than reducing every button to the physical `A` / `PL`/M shorthand.
+The physical sheet and catalogue agree that the Device can be configured physically or through software. Software configuration should preserve the richer reusable Object model rather than reducing every button to the physical `A` / `PL` / `M` shorthand.
 
 ## Reusable Object configuration surfaces
 
@@ -135,7 +135,7 @@ The Light-control address type explicitly supports address `01..175`, area `00..
 
 ## Configuration modes and programming
 
-The catalogue declares Advanced Configuration, Physical configuration and Virtual Configuration. MQ00110 documents physical configuration and MyHOME_Suite configuration. It also describes self-learning/scenario-oriented behavior at product level. The important representation rule is that one Physical Device owns six independently configurable command slots plus one UI-settings slot.
+The catalogue declares Advanced Configuration, Physical configuration and Virtual Configuration. `MQ00110` documents physical configuration and MyHOME_Suite configuration. It also describes self-learning/scenario-oriented behavior at product level. The important representation rule is that one Physical Device owns six independently configurable command slots plus one UI-settings slot.
 
 ## Diagnostic applicability
 
@@ -149,12 +149,12 @@ The catalogue declares Advanced Configuration, Physical configuration and Virtua
 
 ## Functional applicability
 
-Depending on selected Object, individual buttons can participate in lighting, automation, scenario, AUX, sound and video-door-entry functions. The official sheet corroborates this multifunction character. Generic WHO frame semantics remain canonical in Functional Protocol.
+Depending on selected Object, individual buttons can participate in lighting, automation, scenario, AUX, sound and video-door-entry functions. The official sheet corroborates this multifunction character. Generic `WHO` frame semantics remain canonical in Functional Protocol.
 
 ## Evidence limits and open work
 
-- Obtain a sanitized fingerprint showing all six button slots plus UI slot 7.
-- Correlate DIM30 Virgin-Object identifiers with software-selected roles on real hardware.
+- Obtain a sanitized fingerprint showing all six button slots plus UI slot `7`.
+- Correlate `DIMENSION 30` Virgin-Object identifiers with software-selected roles on real hardware.
 - Locate direct official documentation for `574091` and `574591`.
 - Determine whether the empty condition 4145 rows have any runtime significance.
 - Correlate wildcard catalogue applicability with observed firmware versions.
