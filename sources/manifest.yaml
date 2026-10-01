@@ -15,7 +15,9 @@ source_sets:
     build_evidence_date: 2026-06-18
     installer:
       filename: MyHOME_Suite_030538.exe
-      repository_status: not_redistributed
+      repository_status: metadata_only
+      storage: private-r2
+      object_key: sha256/70/7d/707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b
       size: 599437936
       sha256: 707D8A43A5296A1EA87C33F111E9269C8BBD0FE524AC5EFE87BDEDE8B6EB311B
       authenticode_status: Valid

@@ -1,0 +1,2468 @@
+schema_version: 1
+fingerprint_algorithm: SHA-256
+purpose: Authoritative inventory of vendor-origin artifacts stored outside Git.
+policy:
+  git: Git stores project-authored analysis and artifact provenance/metadata, not vendor-origin binary artifacts.
+  documents: Public publisher documentation is stored in openwebnet-documents and may have a public archive URL.
+  data: Canonical vendor databases and support data are stored privately in openwebnet-data.
+  software: Installers and firmware are stored privately in openwebnet-software.
+  language: Documentation artifacts always carry a language list. ISO 639-1 codes are used where established; und means undetermined.
+storage:
+  openwebnet-documents:
+    visibility: public
+    object_layout: sha256/<first-2>/<next-2>/<sha256>.pdf
+  openwebnet-data:
+    visibility: private
+    object_layout: sha256/<first-2>/<next-2>/<sha256>
+  openwebnet-software:
+    visibility: private
+    object_layout: sha256/<first-2>/<next-2>/<sha256>
+artifacts:
+- id: document-sha256-00649f4d577863ea
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: TiMH200_FR.pdf
+  size: 2072008
+  sha256: 00649f4d577863eab8a6366529468044a7fdce4d2b868cdcd09b8f4f634a01ea
+  former_paths:
+  - sources/devices/documents/device-doc-mh200-timh200-fr/TiMH200_FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/00/64/00649f4d577863eab8a6366529468044a7fdce4d2b868cdcd09b8f4f634a01ea.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/00/64/00649f4d577863eab8a6366529468044a7fdce4d2b868cdcd09b8f4f634a01ea.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-03f5093d833c675a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00285-d-EN.pdf
+  size: 371300
+  sha256: 03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab
+  former_paths:
+  - sources/devices/documents/device-doc-special-control-mq00285-d-en/MQ00285-d-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/03/f5/03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/03/f5/03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-05d165146138f9a0
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00181-c-EN.pdf
+  size: 219613
+  sha256: 05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc
+  former_paths:
+  - sources/devices/documents/device-doc-fancoil-probe-mq00181-c-en/MQ00181-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-06556aebd384e635
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O2189D_U_EN.pdf
+  size: 920171
+  sha256: 06556aebd384e635cdc57be4eb608cc4ea280c25aeccf435f743df353d8a4524
+  former_paths:
+  - sources/devices/documents/device-doc-local-display-12-o2189d-u-en/O2189D_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/55/06556aebd384e635cdc57be4eb608cc4ea280c25aeccf435f743df353d8a4524.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/55/06556aebd384e635cdc57be4eb608cc4ea280c25aeccf435f743df353d8a4524.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-06fd9db38da00c9f
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: RA00107AC_S_FR.pdf
+  size: 16866508
+  sha256: 06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-screen-ra00107ac-s-fr/RA00107AC_S_FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-0706a1ea9eb36461
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_16.pdf
+  size: 618488
+  sha256: 0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_16.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-0898672f2b160b86
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00179-c-EN.pdf
+  size: 283964
+  sha256: 0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9
+  former_paths:
+  - sources/devices/documents/device-doc-probe-regulation-mq00179-c-en/MQ00179-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/08/98/0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/08/98/0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-0d11c78827815fcb
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST_00000220_EN.pdf
+  size: 604773
+  sha256: 0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e
+  former_paths:
+  - sources/devices/documents/device-doc-pir-st00000220-en/ST_00000220_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0d/11/0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0d/11/0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-0f28345d89b8cecc
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00281-b-UK.pdf
+  size: 339274
+  sha256: 0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c
+  former_paths:
+  - sources/devices/documents/device-doc-f425-mq00281-b-uk/MQ00281-b-UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-1057c84858e3c3c6
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00001844-FR.pdf
+  size: 394089
+  sha256: 1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e
+  former_paths:
+  - sources/devices/documents/device-doc-pirus-st00001844-fr/ST-00001844-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/10/57/1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/10/57/1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-107a108bd89755bf
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00001620-EN.pdf
+  size: 512046
+  sha256: 107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004
+  former_paths:
+  - sources/devices/documents/device-doc-f418u2-st00001620-en/ST-00001620-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-122d9c1a43e1610a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_25.pdf
+  size: 425272
+  sha256: 122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_25.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-138d9031cd6d7069
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_22.pdf
+  size: 348003
+  sha256: 138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_22.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-138e7a234fe24fb0
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BR-MyHOME-HPML0714.pdf
+  size: 7211688
+  sha256: 138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-14971697bfbdbb33
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00001031-EN.pdf
+  size: 176262
+  sha256: 14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7
+  former_paths:
+  - sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-16ddee94af03d514
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00280_f_EN.pdf
+  size: 810290
+  sha256: 16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e
+  former_paths:
+  - sources/devices/documents/device-doc-f422-mq00280-f-en/MQ00280_f_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-20dbec24c5201aea
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_5.pdf
+  size: 817591
+  sha256: 20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_5.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/20/db/20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/20/db/20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-213cc3f253156d5e
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00290_c_EN.pdf
+  size: 298493
+  sha256: 213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85
+  former_paths:
+  - sources/devices/documents/device-doc-basic-control-3-mq00290-c-en/MQ00290_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/21/3c/213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/21/3c/213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-2377847553a0c471
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00071-d-EN.pdf
+  size: 82318
+  sha256: 2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe
+  former_paths:
+  - sources/devices/documents/device-doc-ir-receiver-mq00071-d-en/MQ00071-d-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-23aed16981142cc8
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: FIS_C300X_1.pdf
+  size: 4984088
+  sha256: 23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6
+  former_paths:
+  - sources/devices/documents/device-doc-classe300x-fis-c300x-1/FIS_C300X_1.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-246cd0df8b37b4cb
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_0.pdf
+  size: 312343
+  sha256: 246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_0.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/24/6c/246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/24/6c/246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-2833c50e275c2381
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: RA00107AC_U_EN.pdf
+  size: 15375907
+  sha256: 2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-screen-ra00107ac-u-en/RA00107AC_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-29fca41204b17293
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE04971AA.pdf
+  size: 480249
+  sha256: 29fca41204b17293d96222e64a4015e111de5477eda1e2ef439a33d19cf53021
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-le04971aa/LE04971AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/29/fc/29fca41204b17293d96222e64a4015e111de5477eda1e2ef439a33d19cf53021.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/29/fc/29fca41204b17293d96222e64a4015e111de5477eda1e2ef439a33d19cf53021.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-2b0656aa8623d733
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00296_c_EN.pdf
+  size: 1446048
+  sha256: 2b0656aa8623d733caa7c863b25a05bde17d3fc5d29b11cec1048907b0a33eda
+  former_paths:
+  - sources/devices/documents/device-doc-bmse2001-mm00296-c-en/MM00296_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2b/06/2b0656aa8623d733caa7c863b25a05bde17d3fc5d29b11cec1048907b0a33eda.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2b/06/2b0656aa8623d733caa7c863b25a05bde17d3fc5d29b11cec1048907b0a33eda.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-2ce6014a32c37525
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE07383AC.pdf
+  size: 715816
+  sha256: 2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c
+  former_paths:
+  - sources/devices/documents/device-doc-f418u2-le07383ac/LE07383AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-2d34fb8c90385159
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00183-c-EN.pdf
+  size: 70757
+  sha256: 2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c
+  former_paths:
+  - sources/devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-2db6bcdc199da839
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ01019_a_EN.pdf
+  size: 553605
+  sha256: 2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e
+  former_paths:
+  - sources/devices/documents/device-doc-f418u2-mq01019-en/MQ01019_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2d/b6/2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2d/b6/2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-2e8b52836a644b67
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf
+  size: 29603627
+  sha256: 2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40
+  former_paths:
+  - sources/devices/documents/device-doc-hotel-room-management-guide/HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf
+  - sources/devices/documents/device-doc-hrm-scs-guide/HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2e/8b/2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2e/8b/2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-2f4daed6f567b8fc
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE07383AD.pdf
+  size: 354895
+  sha256: 2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe
+  former_paths:
+  - sources/devices/documents/device-doc-f418u2-le07383ad/LE07383AD.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-303432cca6900f18
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00288-c-EN.pdf
+  size: 305744
+  sha256: 303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751
+  former_paths:
+  - sources/devices/documents/device-doc-scenario-control-mq00288-c-en/MQ00288-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-32767ea509c1d8d4
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1421A_S_EN.pdf
+  size: 2864208
+  sha256: 32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771
+  former_paths:
+  - sources/devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-3417dbd9acbff4c2
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1755J_U_EN.pdf
+  size: 18277849
+  sha256: 3417dbd9acbff4c2feb329a722e8e24cc2c313ad3af85e1ea30b8ff44343cd08
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1755j-u-en/O1755J_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/34/17/3417dbd9acbff4c2feb329a722e8e24cc2c313ad3af85e1ea30b8ff44343cd08.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/34/17/3417dbd9acbff4c2feb329a722e8e24cc2c313ad3af85e1ea30b8ff44343cd08.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-343bd9b36ddc4360
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1421A_U_EN.pdf
+  size: 7602400
+  sha256: 343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27
+  former_paths:
+  - sources/devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-35685145d0db92e2
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_4.pdf
+  size: 1128550
+  sha256: 35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_4.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-35a9f4316e1e9d12
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00474-e-FR.pdf
+  size: 322512
+  sha256: 35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4
+  former_paths:
+  - sources/devices/documents/device-doc-pir-mq00474-e-fr/MQ00474-e-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/35/a9/35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/35/a9/35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-3626218267f68090
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BMDI3002-product-sheet.pdf
+  size: 13328
+  sha256: 3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64
+  former_paths:
+  - sources/devices/documents/device-doc-bmdi3002-catalogue/BMDI3002-product-sheet.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/26/3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/26/3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-366400ace2185045
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00286-d-EN.pdf
+  size: 191638
+  sha256: 366400ace218504580a0ec2a88e13e7676ace5ed97cdbe9fc34e33441bfb0ff6
+  former_paths:
+  - sources/devices/documents/device-doc-basic-control-mq00286-d-en/MQ00286-d-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/64/366400ace218504580a0ec2a88e13e7676ace5ed97cdbe9fc34e33441bfb0ff6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/64/366400ace218504580a0ec2a88e13e7676ace5ed97cdbe9fc34e33441bfb0ff6.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-39ab54625c817d9c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1421A_I_EN.pdf
+  size: 7456795
+  sha256: 39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4
+  former_paths:
+  - sources/devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-3ccd34b5b6adf495
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U3327B.pdf
+  size: 3981103
+  sha256: 3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc
+  former_paths:
+  - sources/devices/documents/device-doc-scenario-control-u3327b/U3327B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-3d1072e42a34c621
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U1809B_Software_GB.pdf
+  size: 7552855
+  sha256: 3d1072e42a34c621e60cc455b94985116d4bc475ecfaca52df4de3bfe05f277e
+  former_paths:
+  - sources/devices/documents/device-doc-temp-control-u1809b-software-gb/U1809B_Software_GB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3d/10/3d1072e42a34c621e60cc455b94985116d4bc475ecfaca52df4de3bfe05f277e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3d/10/3d1072e42a34c621e60cc455b94985116d4bc475ecfaca52df4de3bfe05f277e.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-3e59e4fbc2a4cbfb
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: T9807J.pdf
+  size: 883489
+  sha256: 3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5
+  former_paths:
+  - sources/devices/documents/device-doc-basic-control-3-t9807j/T9807J.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-3eeee15691e13bdd
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE07383AB.pdf
+  size: 715645
+  sha256: 3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf
+  former_paths:
+  - sources/devices/documents/device-doc-f418u2-le07383ab/LE07383AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-418cd9a3e38720b4
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1755H_S_EN.pdf
+  size: 15609631
+  sha256: 418cd9a3e38720b4c5660e07a8f24970253ace23a4a825d597c4489b6c8282f5
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1755h-s-en/O1755H_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/41/8c/418cd9a3e38720b4c5660e07a8f24970253ace23a4a825d597c4489b6c8282f5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/41/8c/418cd9a3e38720b4c5660e07a8f24970253ace23a4a825d597c4489b6c8282f5.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-4361119dc3e9e028
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BT00518_a_EN.pdf
+  size: 661734
+  sha256: 4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-screen-bt00518-a-en/BT00518_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/43/61/4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/43/61/4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-449ddd64558f8355
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE06750AA.pdf
+  size: 503669
+  sha256: 449ddd64558f8355f70f2f78374ca3fdba0db3965f1e8287d8ebc4fec8e5d33a
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-rfid-le06750aa/LE06750AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/44/9d/449ddd64558f8355f70f2f78374ca3fdba0db3965f1e8287d8ebc4fec8e5d33a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/44/9d/449ddd64558f8355f70f2f78374ca3fdba0db3965f1e8287d8ebc4fec8e5d33a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-47959cd888b93d2c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BMDI3001-product-sheet.pdf
+  size: 14040
+  sha256: 47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d
+  former_paths:
+  - sources/devices/documents/device-doc-bmdi3001-catalogue/BMDI3001-product-sheet.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/47/95/47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/47/95/47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-4854112b1d66d371
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: le10699aa-fr.pdf
+  size: 22711995
+  sha256: 4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30
+  former_paths:
+  - sources/devices/documents/device-doc-scs-sensor-guide-le10699aa-fr/le10699aa-fr.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-48794f03e6d3bc4b
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00290-c-FR.pdf
+  size: 300551
+  sha256: 48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e
+  former_paths:
+  - sources/devices/documents/device-doc-basic-control-3-mq00290-c-fr/MQ00290-c-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-48d55d6d02b70b73
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LG00223-a-UK.pdf
+  size: 430431
+  sha256: 48d55d6d02b70b7314ed83a1c534cd86b85a241ed5371b24bd2574e8f1c2182a
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-lg00223-a-uk/LG00223-a-UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/48/d5/48d55d6d02b70b7314ed83a1c534cd86b85a241ed5371b24bd2574e8f1c2182a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/48/d5/48d55d6d02b70b7314ed83a1c534cd86b85a241ed5371b24bd2574e8f1c2182a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-4b79903469f72ff4
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00274-e-EN.pdf
+  size: 241675
+  sha256: 4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d
+  former_paths:
+  - sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4b/79/4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4b/79/4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-4c5f4f373b8baee5
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_24.pdf
+  size: 689678
+  sha256: 4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_24.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-4e7b78e4a7051d0e
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00000898-EN.pdf
+  size: 659494
+  sha256: 4e7b78e4a7051d0e1c634dd8a412e4f429be925de5801a40b7781fdc441f3896
+  former_paths:
+  - sources/devices/documents/device-doc-zero-crossing-st00000898-en/ST-00000898-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4e/7b/4e7b78e4a7051d0e1c634dd8a412e4f429be925de5801a40b7781fdc441f3896.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4e/7b/4e7b78e4a7051d0e1c634dd8a412e4f429be925de5801a40b7781fdc441f3896.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-4f685a6ee3b16e6a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_3.pdf
+  size: 239458
+  sha256: 4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_3.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4f/68/4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4f/68/4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-519f564bf48c1d58
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_6_L4686SDK.pdf
+  size: 96584
+  sha256: 519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-583ecd811160edb5
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00071-d-FR.pdf
+  size: 84586
+  sha256: 583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78
+  former_paths:
+  - sources/devices/documents/device-doc-ir-receiver-mq00071-d-fr/MQ00071-d-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-58d01ff170ae5bb9
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_17.pdf
+  size: 225080
+  sha256: 58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_17.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/58/d0/58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/58/d0/58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-5b2e917fc18fd096
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE04110AB.pdf
+  size: 981928
+  sha256: 5b2e917fc18fd0960da488c7d0f209795d10bee903ab1dcdb21be9c0a6acdc4c
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-common-le04110ab/LE04110AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5b/2e/5b2e917fc18fd0960da488c7d0f209795d10bee903ab1dcdb21be9c0a6acdc4c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5b/2e/5b2e917fc18fd0960da488c7d0f209795d10bee903ab1dcdb21be9c0a6acdc4c.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-5d86ca223ed7002c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00316_e_EN.pdf
+  size: 797102
+  sha256: 5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75
+  former_paths:
+  - sources/devices/documents/device-doc-f417u2-mq00316-e-en/MQ00316_e_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5d/86/5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5d/86/5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-5f36d8d5985f516f
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00519-c-EN.pdf
+  size: 98618
+  sha256: 5f36d8d5985f516f393c19ed4fbacdf2c40ca40c08cf023d08fd45baf36fe8f6
+  former_paths:
+  - sources/devices/documents/device-doc-f454-mq00519-en/MQ00519-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5f/36/5f36d8d5985f516f393c19ed4fbacdf2c40ca40c08cf023d08fd45baf36fe8f6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5f/36/5f36d8d5985f516f393c19ed4fbacdf2c40ca40c08cf023d08fd45baf36fe8f6.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-652c9942739c968e
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00709_c_EN.pdf
+  size: 101292
+  sha256: 652c9942739c968ead3ea7f2a2096d9b06a7f002ee9a014d4c93daaa7ef7193a
+  former_paths:
+  - sources/devices/documents/device-doc-load-control-mq00709-c-en/MQ00709_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/65/2c/652c9942739c968ead3ea7f2a2096d9b06a7f002ee9a014d4c93daaa7ef7193a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/65/2c/652c9942739c968ead3ea7f2a2096d9b06a7f002ee9a014d4c93daaa7ef7193a.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-68e473ba614f1a24
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00002001-EN.pdf
+  size: 297127
+  sha256: 68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf
+  former_paths:
+  - sources/devices/documents/device-doc-f428-st00002001-en/ST-00002001-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-6df709af3becb513
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00288-c-FR.pdf
+  size: 308619
+  sha256: 6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0
+  former_paths:
+  - sources/devices/documents/device-doc-scenario-control-mq00288-c-fr/MQ00288-c-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-6e8e29681ebb902d
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST_00000915_EN.pdf
+  size: 183794
+  sha256: 6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6
+  former_paths:
+  - sources/devices/documents/device-doc-3476-st00000915-en/ST_00000915_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6e/8e/6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6e/8e/6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-702fba1a08b42af5
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_7.pdf
+  size: 338944
+  sha256: 702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_7.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-7248bde719c44406
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE02817AD.pdf
+  size: 1298406
+  sha256: 7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4
+  former_paths:
+  - sources/devices/documents/device-doc-ceiling-sensors-le02817ad/LE02817AD.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-7858fdb08933d8e3
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BT00299_c_IT.pdf
+  size: 1008108
+  sha256: 7858fdb08933d8e3842b2855333bc7285225b8f1100f3a050052ff4c0650d144
+  former_paths:
+  - sources/devices/documents/device-doc-bmse2004-bt00299-c-it/BT00299_c_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/58/7858fdb08933d8e3842b2855333bc7285225b8f1100f3a050052ff4c0650d144.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/58/7858fdb08933d8e3842b2855333bc7285225b8f1100f3a050052ff4c0650d144.pdf
+  language:
+  - it
+  language_evidence: filename
+- id: document-sha256-787dfb3a0a00f000
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Hmac.pdf
+  size: 289323
+  sha256: 787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680
+  former_paths:
+  - sources/openwebnet-public/pdf/Hmac.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-7902811439501a40
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00315_e_EN.pdf
+  size: 690960
+  sha256: 7902811439501a406f3d69bf8b95b22705610fe25cc0912a1fc2bc29d157d76e
+  former_paths:
+  - sources/devices/documents/device-doc-f416u1-mq00315-e-en/MQ00315_e_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/79/02/7902811439501a406f3d69bf8b95b22705610fe25cc0912a1fc2bc29d157d76e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/79/02/7902811439501a406f3d69bf8b95b22705610fe25cc0912a1fc2bc29d157d76e.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-806a55bffb924f5e
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MH_Guide_Automatisme.pdf
+  size: 30060835
+  sha256: 806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-849fecce315893ce
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00272_c_EN.pdf
+  size: 149150
+  sha256: 849fecce315893cec920898f9492f474fd2e477f2d6375af65b4c50d580c641b
+  former_paths:
+  - sources/devices/documents/device-doc-3477-mq00272-c-en/MQ00272_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/84/9f/849fecce315893cec920898f9492f474fd2e477f2d6375af65b4c50d580c641b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/84/9f/849fecce315893cec920898f9492f474fd2e477f2d6375af65b4c50d580c641b.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-853429f229cda561
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BT-L4671_1-EN.pdf
+  size: 1068346
+  sha256: 853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27
+  former_paths:
+  - sources/devices/documents/device-doc-one-relay-pep-l4671-1-en/BT-L4671_1-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-888012e06924ff32
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U2068C.pdf
+  size: 1452459
+  sha256: 888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a
+  former_paths:
+  - sources/devices/documents/device-doc-f429-u2068c/U2068C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/88/80/888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/88/80/888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-8adafaaeac5e07a5
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_1.pdf
+  size: 318496
+  sha256: 8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_1.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-8b36e76ccaef5d10
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00314-f-FR.pdf
+  size: 861740
+  sha256: 8b36e76ccaef5d1099d03f0a8fce88d37221f3d3c9c0658f2bba75d4f9fd6c4f
+  former_paths:
+  - sources/devices/documents/device-doc-ballast-dimmer-mq00314-f-fr/MQ00314-f-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8b/36/8b36e76ccaef5d1099d03f0a8fce88d37221f3d3c9c0658f2bba75d4f9fd6c4f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8b/36/8b36e76ccaef5d1099d03f0a8fce88d37221f3d3c9c0658f2bba75d4f9fd6c4f.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-8be3d653dbd0cf01
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1754C.pdf
+  size: 853110
+  sha256: 8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1754c/O1754C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8b/e3/8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8b/e3/8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-8bf06ff1394615db
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_15-25.pdf
+  size: 931576
+  sha256: 8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_15-25.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-8de1235d87a640ef
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE15098AA.pdf
+  size: 296332
+  sha256: 8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920
+  former_paths:
+  - sources/devices/documents/device-doc-pirus-le15098aa/LE15098AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-92c7042e277e5f93
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00313_e_EN.pdf
+  size: 206639
+  sha256: 92c7042e277e5f93890757663ad30837292b357744988a96fb0e864d3fd018aa
+  former_paths:
+  - sources/devices/documents/device-doc-bmsw1003-mq00313-e-en/MQ00313_e_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/92/c7/92c7042e277e5f93890757663ad30837292b357744988a96fb0e864d3fd018aa.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/92/c7/92c7042e277e5f93890757663ad30837292b357744988a96fb0e864d3fd018aa.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-96b2d164e69405d1
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: fiche-technique-048833.pdf
+  size: 1222983
+  sha256: 96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f
+  former_paths:
+  - sources/devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/96/b2/96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/96/b2/96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-97d43e6493ff0dbc
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: OWN_Intro_ENG.pdf
+  size: 475501
+  sha256: 97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2
+  former_paths:
+  - sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-98e446ba788aba89
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Espace-Evolution-catalogue.pdf
+  size: 15496486
+  sha256: 98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a
+  former_paths:
+  - sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-99301d84e7779b5b
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Version_History_MyHOME_Suite_20150114.pdf
+  size: 348358
+  sha256: 99301d84e7779b5b516d492f24828f618c1b78a0c977ef0660b8aad6d4cc340a
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-myhome-suite-version-history/Version_History_MyHOME_Suite_20150114.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/99/30/99301d84e7779b5b516d492f24828f618c1b78a0c977ef0660b8aad6d4cc340a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/99/30/99301d84e7779b5b516d492f24828f618c1b78a0c977ef0660b8aad6d4cc340a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-9b7ed9908e60dba3
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_18.pdf
+  size: 675526
+  sha256: 9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_18.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9b/7e/9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9b/7e/9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-9c4fc06a61797a3c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00473-f-EN.pdf
+  size: 319403
+  sha256: 9c4fc06a61797a3cd4f1b16ad4254b419d6e1adaf51e28c374a2bd793af4b748
+  former_paths:
+  - sources/devices/documents/device-doc-pirus-mq00473-f-en/MQ00473-f-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/4f/9c4fc06a61797a3cd4f1b16ad4254b419d6e1adaf51e28c374a2bd793af4b748.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/4f/9c4fc06a61797a3cd4f1b16ad4254b419d6e1adaf51e28c374a2bd793af4b748.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-9e18cf6694d6fcb4
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LG00045_b_UK.pdf
+  size: 352173
+  sha256: 9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422
+  former_paths:
+  - sources/devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-9f7d430ced634a33
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: OpenWebNet_Zigbee.pdf
+  size: 929707
+  sha256: 9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776
+  former_paths:
+  - sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-9fb9cdac69b9bf97
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00000898-FR.pdf
+  size: 663612
+  sha256: 9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9
+  former_paths:
+  - sources/devices/documents/device-doc-zero-crossing-st00000898-fr/ST-00000898-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/b9/9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/b9/9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-9fe511c3ac12d861
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ch_de_katalog_wohnbau.pdf
+  size: 62214244
+  sha256: 9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed
+  former_paths:
+  - sources/devices/documents/device-doc-bticino-ch-residential-catalogue/ch_de_katalog_wohnbau.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf
+  language:
+  - de
+  language_evidence: filename
+- id: document-sha256-a3ac229039a7d503
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE09285AB.pdf
+  size: 883803
+  sha256: a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a
+  former_paths:
+  - sources/devices/documents/device-doc-zero-crossing-le09285ab/LE09285AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-a610f6d8fd4aa811
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U1870C.pdf
+  size: 239613
+  sha256: a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c
+  former_paths:
+  - sources/devices/documents/device-doc-4577-u1870c/U1870C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-a93b06343116dda6
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00067_d_EN.pdf
+  size: 69692
+  sha256: a93b06343116dda6e4db771a72ab51ac2822748f79ba8eababe1b2a3f453a007
+  former_paths:
+  - sources/devices/documents/device-doc-f420-mq00067-d-en/MQ00067_d_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a9/3b/a93b06343116dda6e4db771a72ab51ac2822748f79ba8eababe1b2a3f453a007.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a9/3b/a93b06343116dda6e4db771a72ab51ac2822748f79ba8eababe1b2a3f453a007.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-aa8de3012f081bb6
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_13.pdf
+  size: 231472
+  sha256: aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_13.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/aa/8d/aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/aa/8d/aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-b63971b46893557a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00072-e-FR.pdf
+  size: 147180
+  sha256: b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0
+  former_paths:
+  - sources/devices/documents/device-doc-one-relay-mq00072-e-fr/MQ00072-e-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b6/39/b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b6/39/b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-b856e489d0b6da84
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00692-b-EN.pdf
+  size: 247184
+  sha256: b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6
+  former_paths:
+  - sources/devices/documents/device-doc-local-display-12-mq00692-b-en/MQ00692-b-EN.pdf
+  - sources/devices/documents/device-doc-local-display-mq00692-b-en/MQ00692-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-b9baa0fea2deb196
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: RA00079AC_S_EN.pdf
+  size: 21774148
+  sha256: b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-screen10-ra00079ac-s-en/RA00079AC_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b9/ba/b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b9/ba/b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-ba24bdc0f0bf1f92
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00001844-EN.pdf
+  size: 390169
+  sha256: ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9
+  former_paths:
+  - sources/devices/documents/device-doc-pirus-st00001844-en/ST-00001844-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ba/24/ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ba/24/ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-bcd66d983153fc89
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1755G_S_EN.pdf
+  size: 14637252
+  sha256: bcd66d983153fc8911022f52c6dd78605fb9533846e5bca05b46c4ac118a8bea
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1755g-s-en/O1755G_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bc/d6/bcd66d983153fc8911022f52c6dd78605fb9533846e5bca05b46c4ac118a8bea.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bc/d6/bcd66d983153fc8911022f52c6dd78605fb9533846e5bca05b46c4ac118a8bea.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-bd3a2ab2b7836067
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00297_c_EN.pdf
+  size: 1291865
+  sha256: bd3a2ab2b78360677424609bbd4fbeca5ca2e9f4c6692eec614a1f84f1559d66
+  former_paths:
+  - sources/devices/documents/device-doc-bmse2002-mm00297-c-en/MM00297_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bd/3a/bd3a2ab2b78360677424609bbd4fbeca5ca2e9f4c6692eec614a1f84f1559d66.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bd/3a/bd3a2ab2b78360677424609bbd4fbeca5ca2e9f4c6692eec614a1f84f1559d66.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-bf19dc9f2f7d44ed
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U3300B.pdf
+  size: 1382421
+  sha256: bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd
+  former_paths:
+  - sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-c4461318739c49ab
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U1809C_Installatore_UK.pdf
+  size: 5419239
+  sha256: c4461318739c49ab58078d75876aef57bff823dcaf7f964714a60f154f489dee
+  former_paths:
+  - sources/devices/documents/device-doc-temp-control-u1809c-installatore-uk/U1809C_Installatore_UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c4/46/c4461318739c49ab58078d75876aef57bff823dcaf7f964714a60f154f489dee.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c4/46/c4461318739c49ab58078d75876aef57bff823dcaf7f964714a60f154f489dee.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-c5f96fb6a845ad7c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE05420AA.pdf
+  size: 600383
+  sha256: c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17
+  former_paths:
+  - sources/devices/documents/device-doc-basic-control-3-le05420aa/LE05420AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-c78272e5498b209f
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ01014_a_EN.pdf
+  size: 12262093
+  sha256: c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c
+  former_paths:
+  - sources/devices/documents/device-doc-energy-display-mq01014-a-en/MQ01014_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-c960937a4d19e523
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Version_History_F454_20170508.pdf
+  size: 219436
+  sha256: c960937a4d19e52342c1af618782e715e75e1e181a7804d012096afec99834a3
+  former_paths:
+  - sources/devices/documents/device-doc-f454-version-history-20170508/Version_History_F454_20170508.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c9/60/c960937a4d19e52342c1af618782e715e75e1e181a7804d012096afec99834a3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c9/60/c960937a4d19e52342c1af618782e715e75e1e181a7804d012096afec99834a3.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-ca32b5195c5464a2
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: le10699ac-en.pdf
+  size: 56214696
+  sha256: ca32b5195c5464a2cab873ef38a7216001ab37bbd8ebf77260a1d22575d70184
+  former_paths:
+  - sources/devices/documents/device-doc-hotel-rooms-le10699ac-en/le10699ac-en.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/32/ca32b5195c5464a2cab873ef38a7216001ab37bbd8ebf77260a1d22575d70184.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/32/ca32b5195c5464a2cab873ef38a7216001ab37bbd8ebf77260a1d22575d70184.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-cdc467fa6408908a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Version_History_MyHOME_Suite_20150320.pdf
+  size: 359535
+  sha256: cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-suite-version-history-20150320/Version_History_MyHOME_Suite_20150320.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-d17c79d0a00ce590
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: BMSW3003-product-sheet.pdf
+  size: 14304
+  sha256: d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593
+  former_paths:
+  - sources/devices/documents/device-doc-bmsw3003-catalogue/BMSW3003-product-sheet.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-d271cc73c58bd735
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00771-a-EN.pdf
+  size: 879767
+  sha256: d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-d2a45bbcd72baa0b
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: RA00224AA_EN.pdf
+  size: 44324781
+  sha256: d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d
+  former_paths:
+  - sources/devices/documents/device-doc-f460-f461-ra00224aa-en/RA00224AA_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-d2a68430ce079fdc
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00473-f-FR.pdf
+  size: 323333
+  sha256: d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2
+  former_paths:
+  - sources/devices/documents/device-doc-pirus-mq00473-f-fr/MQ00473-f-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d2/a6/d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d2/a6/d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2.pdf
+  language:
+  - fr
+  language_evidence: filename
+- id: document-sha256-d47faf013abb6f55
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1754E.pdf
+  size: 682009
+  sha256: d47faf013abb6f55e08f149365f3b98d86240b34b30f24c9eeea1de1505e3ff6
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1754e/O1754E.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d4/7f/d47faf013abb6f55e08f149365f3b98d86240b34b30f24c9eeea1de1505e3ff6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d4/7f/d47faf013abb6f55e08f149365f3b98d86240b34b30f24c9eeea1de1505e3ff6.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-d6cafa21923a3de3
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00278_e_EN.pdf
+  size: 220085
+  sha256: d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273
+  former_paths:
+  - sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-dc0ab523bbdba359
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: AUTOMATISME.pdf
+  size: 17512691
+  sha256: dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092
+  former_paths:
+  - sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-e1a8da77199296d9
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00002122-EN.pdf
+  size: 11149596
+  sha256: e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-compatibility-st00002122-en/ST-00002122-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-e5d235a413023e1e
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U4554C_S4_EN.pdf
+  size: 14020295
+  sha256: e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c
+  former_paths:
+  - sources/devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e5/d2/e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e5/d2/e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-e726832434d35825
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_2.pdf
+  size: 189823
+  sha256: e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88
+  former_paths:
+  - sources/openwebnet-public/pdf/WHO_2.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf
+  language:
+  - en
+  language_evidence: known-corpus
+- id: document-sha256-ea4c1d9873c01cb2
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: Version_History_MH4892_20150326.pdf
+  size: 299473
+  sha256: ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea
+  former_paths:
+  - sources/devices/documents/device-doc-myhome-screen10-version-history-20150326/Version_History_MH4892_20150326.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ea/4c/ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ea/4c/ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-ecdf700916a50941
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00071-d-IT.pdf
+  size: 82636
+  sha256: ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13
+  former_paths:
+  - sources/devices/documents/device-doc-ir-receiver-mq00071-d-it/MQ00071-d-IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf
+  language:
+  - it
+  language_evidence: filename
+- id: document-sha256-eead45860c389c7b
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00789_b_EN.pdf
+  size: 180919
+  sha256: eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108
+  former_paths:
+  - sources/devices/documents/device-doc-display-thermostat-mm00789-b-en/MM00789_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-f1d437d369f5a217
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: O1755G_U_EN.pdf
+  size: 5838611
+  sha256: f1d437d369f5a217c4094128c8841f3d2171381ba0f321f0dfa52e30177e2460
+  former_paths:
+  - sources/devices/documents/device-doc-f454-o1755g-u-en/O1755G_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f1/d4/f1d437d369f5a217c4094128c8841f3d2171381ba0f321f0dfa52e30177e2460.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f1/d4/f1d437d369f5a217c4094128c8841f3d2171381ba0f321f0dfa52e30177e2460.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-f31ca3b29c75fc69
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00000896-EN.pdf
+  size: 213142
+  sha256: f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def
+  former_paths:
+  - sources/devices/documents/device-doc-f411-4-st00000896-en/ST-00000896-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f3/1c/f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f3/1c/f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-f3886a858806692c
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00076-d-UK.pdf
+  size: 109116
+  sha256: f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574
+  former_paths:
+  - sources/devices/documents/device-doc-3475-mq00076-d-uk/MQ00076-d-UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f3/88/f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f3/88/f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-f3e5c1d33d683b8a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00300_c_EN.pdf
+  size: 1447735
+  sha256: f3e5c1d33d683b8ab75492adbde79665299ff0c0140e27c717defc1e9ae89311
+  former_paths:
+  - sources/devices/documents/device-doc-bmse2005-mm00300-c-en/MM00300_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f3/e5/f3e5c1d33d683b8ab75492adbde79665299ff0c0140e27c717defc1e9ae89311.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f3/e5/f3e5c1d33d683b8ab75492adbde79665299ff0c0140e27c717defc1e9ae89311.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-f496f09437506574
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: mh_diff-sonore2008.pdf
+  size: 12471624
+  sha256: f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd
+  former_paths:
+  - sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: document-sha256-f50c64daa65dd92a
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: ST-00002362-EN.pdf
+  size: 11533282
+  sha256: f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21
+  former_paths:
+  - sources/devices/documents/device-doc-classe300x-st00002362-en/ST-00002362-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f5/0c/f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f5/0c/f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-f90c3dad04215815
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U1809F_U_EN.pdf
+  size: 12734330
+  sha256: f90c3dad042158152e3607dd461b143ea5c18d0dec917f9f411405f30a92d8b4
+  former_paths:
+  - sources/devices/documents/device-doc-temp-control-u1809f-u-en/U1809F_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f9/0c/f90c3dad042158152e3607dd461b143ea5c18d0dec917f9f411405f30a92d8b4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f9/0c/f90c3dad042158152e3607dd461b143ea5c18d0dec917f9f411405f30a92d8b4.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-fb9888607c897255
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MQ00110_f_EN.pdf
+  size: 306043
+  sha256: fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea
+  former_paths:
+  - sources/devices/documents/device-doc-touch-control-mq00110-f-en/MQ00110_f_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-fbb66b8f4b3aebc5
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: MM00496-b-EN.pdf
+  size: 993550
+  sha256: fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f
+  former_paths:
+  - sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf
+  language:
+  - en
+  language_evidence: filename
+- id: document-sha256-fdd9607fac4470e3
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: LE09287AB.pdf
+  size: 535316
+  sha256: fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04
+  former_paths:
+  - sources/devices/documents/device-doc-zero-crossing-le09287ab/LE09287AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf
+  language:
+  - und
+  language_evidence: undetermined
+- id: firmware-f450-020010
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F450
+  filename: F450_020010.fwz
+  version_label: '020010'
+  size: 13265378
+  sha256: 9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da
+  source_page: https://www.bticino.com/products/bt-f450
+  source_url: https://assets.legrand.com/pim/AUTRE/F450_020010.fwz
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/9e/62/9e625012d3e8629bea15d608f7c1de160e971499a39f3fd86f0c68103da8b9da
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f450-020010-prod
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F450
+  filename: F450_020010-PROD.fwz
+  version_label: 020010-PROD
+  size: 13444140
+  sha256: 27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f
+  source_page: https://www.bticino.com/products/bt-f450
+  source_url: https://assets.legrand.com/pim/AUTRE/F450_020010-PROD.fwz
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/27/c5/27c5640916f980be2c16fd14ed7818d8b361e69b439e7a774bd4e90e57b9b96f
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f453av-030014
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F453AV
+  filename: WS_10DIN_030014.fwz
+  version_label: 3.0.14
+  size: 16243980
+  sha256: 673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2703539
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=WS_10DIN_030014.fwz&fileId=58107.23188.12526.34836
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/67/3d/673d7ab2802fc324802bb8f59c50e018850e8c724e923e0bd7cbc8b5cca86d4a
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f454-020051
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F454
+  filename: F454_020051.fwz
+  version_label: 2.0.51
+  size: 74448014
+  sha256: 15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=F454_020051.fwz&fileId=58107.23188.40907.34137
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/15/f8/15f80bc673e53fa105a68725b5a6d3ccf06767d1bae0e6139803de34e485f0f3
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f455-1-1-2
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F455
+  filename: F455_1_1_2.fwz
+  version_label: 1.1.2
+  size: 180196
+  sha256: cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2481871
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=F455_1_1_2.fwz&fileId=58107.23188.54160.27595
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/cd/99/cd99299fc729679b4eade46acda7bd4f5e619a0a9eac34a1f6a3b73b625a18f9
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f459-020105
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F459
+  filename: F459_020105.fwz
+  version_label: '020105'
+  size: 114774253
+  sha256: 1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3
+  source_page: https://www.bticino.com/products/bt-f459
+  source_url: https://assets.legrand.com/pim/AUTRE/F459_020105.fwz
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/1d/95/1d9539d6a9e500032438936d1ce28e7cbddef9788c5712d50c9a60586718f6d3
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f460-020012
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F460
+  filename: F460_020012.fwz
+  version_label: '020012'
+  size: 158564663
+  sha256: b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26
+  source_page: https://www.bticino.com/products/bt-f460
+  source_url: https://assets.legrand.com/pim/AUTRE/F460_020012.fwz
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/b5/a5/b5a50d606578f47ecbf0d327d7078b1357abb78425ea821ce743cd486b801b26
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-f461-020011
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: F461
+  filename: F461_020011.fwz
+  version_label: '020011'
+  size: 138644991
+  sha256: cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b
+  source_page: https://www.bticino.com/products/bt-f461
+  source_url: https://assets.legrand.com/pim/AUTRE/F461_020011.fwz
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/cb/6f/cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-mh202-010024
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: MH202
+  filename: MH202_010024.fwz
+  version_label: 1.0.24
+  size: 37111681
+  sha256: bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2482873
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=MH202_010024.fwz&fileId=58107.23188.27731.56506
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/bb/56/bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
+    visibility: private
+  redistribution_status: private-archive-only
+- id: myhome-suite-3.5.38-mhcatalogue
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: MHCatalogue.db
+  original_path: C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_MHCatalogue\MHCatalogue.db
+  media_type: application/vnd.sqlite3
+  size: 2625536
+  sha256: f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/f0/c9/f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
+- id: myhome-suite-3.5.38-open
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: OPEN.db
+  original_path: C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OPEN.db
+  media_type: application/vnd.sqlite3
+  size: 80896
+  sha256: d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/d8/64/d864a4946b47c3671a74a6844cec4da605cf20b33ac14f49959785778f104051
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
+- id: myhome-suite-3.5.38-scenario-devices-program-files
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: ScenarioDevices.sqlite
+  original_path: C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\ScenarioDevices.sqlite
+  media_type: application/vnd.sqlite3
+  size: 35840
+  sha256: 2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/2c/e7/2ce7ffe1286c3246271aed160116fe664407d9e8ff43595f50192e7d2ac85569
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
+  notes:
+  - Distinct from the ProgramData copy.
+- id: myhome-suite-3.5.38-scenario-devices-programdata
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: ScenarioDevices.sqlite
+  original_path: C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_ScenarioDevices\ScenarioDevices.sqlite
+  media_type: application/vnd.sqlite3
+  size: 34816
+  sha256: cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/cd/3b/cd3b9b67160f468cdbd30134357b8733c696aacd5d625129240dff6b79224fc3
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
+  notes:
+  - Distinct from the Program Files copy.
+- id: myhome-suite-3.5.38-thermo-rules
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: rules.db3
+  original_path: C:\ProgramData\LegrandGroup\MyHOME_Suite_0305\Shared\Db_KeyOThermoValidator\rules.db3
+  media_type: application/vnd.sqlite3
+  size: 36864
+  sha256: 23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/23/b6/23b62e3bb7a11ede3f91561b63a1aaf39449da47025626a2c477e9833347cb06
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
+- id: myhome-suite-3.5.38-installer
+  kind: software-installer
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: MyHOME_Suite_030538.exe
+  size: 599437936
+  sha256: 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  authenticode:
+    status: Valid
+    signer: BTICINO S.P.A.
+    authenticated_timestamp: 2026-06-19 11:01
+  media_type: application/octet-stream
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/70/7d/707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b
+    visibility: private
+  redistribution_status: private-archive-only
+- id: myhome-suite-3.5.38-open-query
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  product_version: 3.5.38
+  filename: OpenQuery.txt
+  original_path: C:\Program Files (x86)\LegrandGroup\MyHOME_Suite_0305\db\OpenQuery.txt
+  media_type: text/plain
+  size: 3661
+  sha256: 104bc9fcd780799f3b6bb85f2510b1b0424747c30c315f0a04c93e88f4163c10
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/10/4b/104bc9fcd780799f3b6bb85f2510b1b0424747c30c315f0a04c93e88f4163c10
+    visibility: private
+  provenance:
+    source: installed MyHOME Suite 3.5.38
+    build_evidence_date: '2026-06-18'
