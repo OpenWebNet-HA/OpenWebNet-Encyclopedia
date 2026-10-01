@@ -1,64 +1,109 @@
 schema_version: 1
 records:
-  - id: lostref-sc25-wg1-n1633
-    title: "Information technology - Home electronic system (HES) architecture - Part x-y: Communication layers - OPEN Web Net - application layer for network enhanced control devices of HES Class 1"
-    issuer: "ISO/IEC JTC 1/SC 25/WG 1"
-    document_number: "SC25 WG1 N1633"
-    date: "2013"
-    status: "working-draft"
-    draft_marking: "14543-x-y WD ISO/IEC:2013"
-    language: [en]
-    discovery:
-      mirror_url: "https://studylib.net/doc/10063379/open-web-net-server---iso-iec-jtc-1-sc-25-wg-1-home-page"
-      download_url: "https://studylib.net/download/10063379"
-      download_state: "blocked-403"
-      rendered_preview_state: "first-page-recovered"
-      rendered_preview_url: "https://s2.studylib.net/store/data/010063379_1-17d67fa6b8cca8970e37aff73b34a541-768x994.png"
-      rendered_preview_sha256: "9f75709dbcac66d32f10ce4d67659c89322050e33d96e65ed2626ce9ac353cc9"
-      rendered_preview_size: 184746
-    archival_state: "identified-not-byte-recovered"
-    authenticity:
-      confidence: high
-      basis:
-        - "Mirror reproduces SC25 WG1 N1633 identifier and ISO/IEC working-draft markings throughout."
-        - "Document structure includes ISO/IEC foreword, scope, normative reference, clauses, tables, and Annex A bibliography."
-    notable_content:
-      - "Table 4 identifies WHO 1 WHAT 19 as 'NO Load (only for dimmer)'."
-      - "Annex A cites the former MyOpen OpenWebNet specification URL."
-      - "Draft describes OpenWebNet command/event sessions, frame syntax, scene management, Lighting, and Automation."
-    former_source_urls:
-      - "http://www.myopen-legrandgroup.com/resources/own_protocol/default.aspx"
-    cautions:
-      - "Working Draft, not a published International Standard."
-      - "Original downloadable source bytes have not yet been recovered; do not add a fabricated PDF to the artifact manifest."
-
-  - id: lead-tomasina-openwebnet-comparison-20140225
-    title: "OpenWebNet - comparison"
-    author: "S. Tomasina"
-    date: "2014-02-25"
-    status: "lead"
-    language: [en]
-    discovery:
-      mirror_url: "https://studylib.net/doc/7175780/openwebnet-%E2%80%93-comparison-s.tomasina-25-02-14-series-iso-iec"
-    archival_state: "discovered-not-retrieved"
-    notable_content:
-      - "Describes Proposal 1 as ISO/IEC 18012 Part 3-3: OpenWebNet application model for home control."
-      - "Describes Proposal 2 as ISO/IEC 14543-6: application layer for HES."
-      - "Names HomeLab and IGNES as OpenWebNet interoperability/standardization projects."
-    next_search_pivots:
-      - "ISO/IEC 18012 Part 3-3 OpenWebNet"
-      - "ISO/IEC 14543-6 OpenWebNet"
-      - "S. Tomasina OpenWebNet SC25 WG1"
-      - "HomeLab OpenWebNet ISO/IEC 18012"
-      - "IGNES OpenWebNet CENELEC"
-
-  - id: lead-myopen-own-protocol-tree
-    title: "MyOpen OpenWebNet protocol resource tree"
-    status: "lead"
-    archival_state: "dead-origin-searching-mirrors"
-    former_source_urls:
-      - "http://www.myopen-legrandgroup.com/resources/own_protocol/default.aspx"
-    next_search_pivots:
-      - "Wayback snapshots of /resources/own_protocol/"
-      - "filenames linked from archived MyOpen protocol index pages"
-      - "mirrors quoting exact MyOpen protocol page titles"
+- id: lostref-sc25-wg1-n1633
+  title: 'Information technology - Home electronic system (HES) architecture - Part x-y: Communication layers - OPEN Web Net
+    - application layer for network enhanced control devices of HES Class 1'
+  issuer: ISO/IEC JTC 1/SC 25/WG 1
+  document_number: SC25 WG1 N1633
+  date: '2013'
+  status: working-draft
+  draft_marking: 14543-x-y WD ISO/IEC:2013
+  language:
+  - en
+  discovery:
+    mirror_url: https://studylib.net/doc/10063379/open-web-net-server---iso-iec-jtc-1-sc-25-wg-1-home-page
+    download_url: https://studylib.net/download/10063379
+    download_state: recovered-via-user-assisted-studylib-download
+    rendered_preview_state: first-page-recovered
+    rendered_preview_url: https://s2.studylib.net/store/data/010063379_1-17d67fa6b8cca8970e37aff73b34a541-768x994.png
+    rendered_preview_sha256: 9f75709dbcac66d32f10ce4d67659c89322050e33d96e65ed2626ce9ac353cc9
+    rendered_preview_size: 184746
+  archival_state: original-bytes-recovered-private
+  authenticity:
+    confidence: high
+    basis:
+    - Mirror reproduces SC25 WG1 N1633 identifier and ISO/IEC working-draft markings throughout.
+    - Document structure includes ISO/IEC foreword, scope, normative reference, clauses, tables, and Annex A bibliography.
+  notable_content:
+  - Table 4 identifies WHO 1 WHAT 19 as 'NO Load (only for dimmer)'.
+  - Annex A cites the former MyOpen OpenWebNet specification URL.
+  - Draft describes OpenWebNet command/event sessions, frame syntax, scene management, Lighting, and Automation.
+  former_source_urls:
+  - http://www.myopen-legrandgroup.com/resources/own_protocol/default.aspx
+  cautions:
+  - Working Draft, not a published International Standard.
+  - Original downloadable source bytes have not yet been recovered; do not add a fabricated PDF to the artifact manifest.
+  artifact:
+    filename: 10063379.pdf
+    sha256: 5ecf6a8a7d588901a9bb9202543116b8a2dc66c981da00d389a4f5b5b0ff0bbf
+    size: 822663
+    media_type: application/pdf
+    storage:
+      bucket: openwebnet-references
+      object_key: sha256/5e/cf/5ecf6a8a7d588901a9bb9202543116b8a2dc66c981da00d389a4f5b5b0ff0bbf
+      visibility: private
+- id: lead-tomasina-openwebnet-comparison-20140225
+  title: OpenWebNet - comparison
+  author: S. Tomasina
+  date: '2014-02-25'
+  status: lead
+  language:
+  - en
+  discovery:
+    mirror_url: https://studylib.net/doc/7175780/openwebnet-%E2%80%93-comparison-s.tomasina-25-02-14-series-iso-iec
+    download_state: recovered-via-user-assisted-studylib-download
+  archival_state: original-bytes-recovered-private
+  notable_content:
+  - 'Describes Proposal 1 as ISO/IEC 18012 Part 3-3: OpenWebNet application model for home control.'
+  - 'Describes Proposal 2 as ISO/IEC 14543-6: application layer for HES.'
+  - Names HomeLab and IGNES as OpenWebNet interoperability/standardization projects.
+  next_search_pivots:
+  - ISO/IEC 18012 Part 3-3 OpenWebNet
+  - ISO/IEC 14543-6 OpenWebNet
+  - S. Tomasina OpenWebNet SC25 WG1
+  - HomeLab OpenWebNet ISO/IEC 18012
+  - IGNES OpenWebNet CENELEC
+  artifact:
+    filename: 7175780.pdf
+    sha256: 7aaf6b2a6880e5e9fc94127b74cf8c42566299bbffe96210b00bc8d84eb6699e
+    size: 360478
+    media_type: application/pdf
+    storage:
+      bucket: openwebnet-references
+      object_key: sha256/7a/af/7aaf6b2a6880e5e9fc94127b74cf8c42566299bbffe96210b00bc8d84eb6699e
+      visibility: private
+- id: lead-myopen-own-protocol-tree
+  title: MyOpen OpenWebNet protocol resource tree
+  status: lead
+  archival_state: dead-origin-searching-mirrors
+  former_source_urls:
+  - http://www.myopen-legrandgroup.com/resources/own_protocol/default.aspx
+  next_search_pivots:
+  - Wayback snapshots of /resources/own_protocol/
+  - filenames linked from archived MyOpen protocol index pages
+  - mirrors quoting exact MyOpen protocol page titles
+- id: lostref-sc25-wg1-n952
+  title: Information technology - Interconnection of information technology equipment - Home electronic system - Guidelines
+    for product interoperability - Project outline
+  issuer: ISO/IEC JTC 1/SC 25/WG 1
+  document_number: SC25 WG1 N952
+  date: '2001-01-24'
+  status: working-document
+  language:
+  - en
+  archival_state: original-bytes-recovered-private
+  artifact:
+    filename: 7766748.pdf
+    sha256: 8471d2f14777e18ec74952aed04f49be960ee23bd96fc4652b0cea251015f3d0
+    size: 208643
+    media_type: application/pdf
+    storage:
+      bucket: openwebnet-references
+      object_key: sha256/84/71/8471d2f14777e18ec74952aed04f49be960ee23bd96fc4652b0cea251015f3d0
+      visibility: private
+  discovery:
+    mirror_url: https://studylib.net/doc/7766748/project-outline---iso-iec-jtc-1-sc-25-wg-1-home-page
+    download_state: recovered-via-user-assisted-studylib-download
+  notable_content:
+  - Project outline for HES interoperability work covering requirements, taxonomy/lexicon, and application models.
+  - Establishes earlier WG1 lineage for Part 3 application-model work.
