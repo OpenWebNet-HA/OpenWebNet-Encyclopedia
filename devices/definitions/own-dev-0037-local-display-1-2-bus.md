@@ -30,7 +30,7 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00692-b-EN` | Technical sheet | revision b / 2014-04-17 | all six current catalogue identity groups; hardware, configuration and available functions | [Archived original](../../sources/devices/documents/device-doc-local-display-mq00692-b-en/MQ00692-b-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00692_b_EN.pdf) |
+| `MQ00692-b-EN` | Technical sheet | revision b / 2014-04-17 | all six current catalogue identity groups; hardware, configuration and available functions | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00692_b_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -197,4 +197,4 @@ Two implementation tensions remain explicit: the database names the physical add
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
-- [`MQ00692-b-EN` archived original](../../sources/devices/documents/device-doc-local-display-mq00692-b-en/MQ00692-b-EN.pdf)
+- [`MQ00692-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf)

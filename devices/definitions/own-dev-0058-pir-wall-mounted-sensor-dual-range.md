@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| BTicino/Legrand residential catalogue | product catalogue | historical publisher catalogue | `BMSE2003` wall-mounted PIR family and dimensional context; printed p. 159 / PDF p. 159 | [Archived original](../../sources/devices/documents/device-doc-bticino-ch-residential-catalogue/ch_de_katalog_wohnbau.pdf) | [Official source](https://assets.legrand.com/webf/ch/ch_de_katalog_wohnbau.pdf) |
+| BTicino/Legrand residential catalogue | product catalogue | historical publisher catalogue | `BMSE2003` wall-mounted PIR family and dimensional context; printed p. 159 / PDF p. 159 | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | [Official source](https://assets.legrand.com/webf/ch/ch_de_katalog_wohnbau.pdf) |
 
 ## Physical and electrical characteristics
 

@@ -28,7 +28,7 @@ Temperature-control central unit and supervisory programmer.
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| BR-MyHOME-HPML0714 | product catalogue | 2014 | 573918 / 573919 temperature-control context: printed pp. 16, 24, 32 / PDF pp. 16, 24, 32 | [Archived original](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| BR-MyHOME-HPML0714 | product catalogue | 2014 | 573918 / 573919 temperature-control context: printed pp. 16, 24, 32 / PDF pp. 16, 24, 32 | [Archived original](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
 | U0256E_U_EN | user manual | publisher revision not pinned | 3550 operation, diagnostics, local probe and programming | - | [Official source](https://dar.bticino.com/asset/Documents/U0256E_U_EN.pdf) |
 
 ## Physical and electrical characteristics
@@ -149,4 +149,4 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
-- [Archived original](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf)
+- [Archived original](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf)

@@ -2,7 +2,7 @@
 
 The Legrand ZigBee OpenWebNet specification version 4.0 defines a ZigBee-specific binding family under `WHO 25`. These OpenWebNet operations expose the host-visible binding lifecycle while leaving the underlying ZigBee binding tables, radio association mechanisms, and other ZigBee-internal procedures outside the encyclopedia boundary.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The semantics below are **specification evidence** for that interface revision. They do not establish support by every gateway, product, or firmware revision.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. The semantics below are **specification evidence** for that interface revision. They do not establish support by every gateway, product, or firmware revision.
 
 ## `WHAT` reference
 

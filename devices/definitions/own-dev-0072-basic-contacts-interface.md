@@ -26,8 +26,8 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00272-c-EN` | technical sheet | 2013-08-01 | `3477` basic two-input contact interface characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-3477-mq00272-c-en/MQ00272_c_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00272_c_EN.pdf) |
-| MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `3477` / `573996` commercial pairing; PDF p. 7 | [Archived original](../../sources/devices/documents/device-doc-f460-f461-ra00224aa-en/RA00224AA_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
+| `MQ00272-c-EN` | technical sheet | 2013-08-01 | `3477` basic two-input contact interface characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/84/9f/849fecce315893cec920898f9492f474fd2e477f2d6375af65b4c50d580c641b.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00272_c_EN.pdf) |
+| MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `3477` / `573996` commercial pairing; PDF p. 7 | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
 
 ## Physical and electrical characteristics
 

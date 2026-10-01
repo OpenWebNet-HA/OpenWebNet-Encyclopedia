@@ -35,10 +35,10 @@ Shared item membership establishes the common catalogue capability core. It does
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `O1421A_I_EN` | Installation manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-i-en/O1421A_I_EN.pdf) | publisher source not currently retained |
-| `O1421A_U_EN` | User guide | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-u-en/O1421A_U_EN.pdf) | publisher source not currently retained |
-| `O1421A_S_EN` | TiLivingLightDisplay software manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](../../sources/devices/documents/device-doc-video-display-o1421a-s-en/O1421A_S_EN.pdf) | publisher source not currently retained |
-| MyHOME Automation guide | System / product guide | revision/date not yet pinned | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) | publisher source not currently retained |
+| `O1421A_I_EN` | Installation manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf) | publisher source not currently retained |
+| `O1421A_U_EN` | User guide | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf) | publisher source not currently retained |
+| `O1421A_S_EN` | TiLivingLightDisplay software manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf) | publisher source not currently retained |
+| MyHOME Automation guide | System / product guide | revision/date not yet pinned | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | publisher source not currently retained |
 
 All retained files are byte-for-byte originals registered in the source manifest.
 

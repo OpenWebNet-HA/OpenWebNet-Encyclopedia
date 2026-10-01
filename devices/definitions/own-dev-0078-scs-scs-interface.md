@@ -25,8 +25,8 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00280-f-EN` | technical sheet | publisher technical sheet | `F422` SCS/SCS interface electrical data and six operating modes | [Archived original](../../sources/devices/documents/device-doc-f422-mq00280-f-en/MQ00280_f_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) |
-| MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `F422` / `003562` pairing; PDF p. 7 | [Archived original](../../sources/devices/documents/device-doc-f460-f461-ra00224aa-en/RA00224AA_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
+| `MQ00280-f-EN` | technical sheet | publisher technical sheet | `F422` SCS/SCS interface electrical data and six operating modes | [Archived original](https://archive.openwebnet-ha.org/sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) |
+| MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `F422` / `003562` pairing; PDF p. 7 | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
 
 ## Physical and electrical characteristics
 

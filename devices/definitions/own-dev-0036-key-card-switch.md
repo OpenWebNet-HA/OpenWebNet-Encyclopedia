@@ -32,8 +32,8 @@ No commercial identity is treated as canonical. The `572736` conflict is materia
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | `H4649`, `LN4649`, `0 675 65`, `5 727 35`, `5 722 35` | [Archived original](../../sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
-| `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | cross-family evidence for the disputed `5 727 36` identity | [Archived original](../../sources/devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
+| `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | `H4649`, `LN4649`, `0 675 65`, `5 727 35`, `5 722 35` | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
+| `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | cross-family evidence for the disputed `5 727 36` identity | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -186,5 +186,5 @@ Two source conflicts remain explicit. First, firmware `161` stores `DEL1`/`DEL2`
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
-- [`MM00496-b-EN` archived original](../../sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf)
-- [`MM00771-a-EN` archived original](../../sources/devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf)
+- [`MM00496-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf)
+- [`MM00771-a-EN` archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf)

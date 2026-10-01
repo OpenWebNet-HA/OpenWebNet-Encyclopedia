@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00067-d-EN` | technical sheet | 2014-06-05 | `F420` scenario capacity, electrical data and configuration | [Archived original](../../sources/devices/documents/device-doc-f420-mq00067-d-en/MQ00067_d_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00067_d_EN.pdf) |
+| `MQ00067-d-EN` | technical sheet | 2014-06-05 | `F420` scenario capacity, electrical data and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/a9/3b/a93b06343116dda6e4db771a72ab51ac2822748f79ba8eababe1b2a3f453a007.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00067_d_EN.pdf) |
 
 ## Physical and electrical characteristics
 

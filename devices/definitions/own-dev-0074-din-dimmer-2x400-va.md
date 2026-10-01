@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00316-e-EN` | technical sheet | 2014-06-09 | `F417U2` / `002622` dual-channel SCS dimmer characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-f417u2-mq00316-e-en/MQ00316_e_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00316_e_EN.pdf) |
+| `MQ00316-e-EN` | technical sheet | 2014-06-09 | `F417U2` / `002622` dual-channel SCS dimmer characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/5d/86/5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00316_e_EN.pdf) |
 
 ## Physical and electrical characteristics
 

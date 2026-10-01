@@ -24,7 +24,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00076-d-UK` | technical sheet | publisher sheet | `3475` Basic actuator electrical characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-3475-mq00076-d-uk/MQ00076-d-UK.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00076-d-UK.pdf) |
+| `MQ00076-d-UK` | technical sheet | publisher sheet | `3475` Basic actuator electrical characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/88/f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00076-d-UK.pdf) |
 
 ## Physical and electrical characteristics
 

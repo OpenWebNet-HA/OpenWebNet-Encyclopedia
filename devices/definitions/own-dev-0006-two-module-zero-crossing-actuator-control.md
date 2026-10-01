@@ -36,10 +36,10 @@ Shared item membership and the common technical sheet jointly establish this com
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00000898-EN` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](../../sources/devices/documents/device-doc-zero-crossing-st00000898-en/ST-00000898-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-EN.pdf) |
-| `ST-00000898-FR` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](../../sources/devices/documents/device-doc-zero-crossing-st00000898-fr/ST-00000898-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-FR.pdf) |
-| `LE09285AB` | Instruction sheet | 03/21 | `AM5852M2`, `H4672M2`, `LN4672M2` | [Archived PDF](../../sources/devices/documents/device-doc-zero-crossing-le09285ab/LE09285AB.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE09285AB.pdf) |
-| `LE09287AB` | Instruction sheet | revision not yet decoded | `067561` | [Archived PDF](../../sources/devices/documents/device-doc-zero-crossing-le09287ab/LE09287AB.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE09287AB.pdf) |
+| `ST-00000898-EN` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/4e/7b/4e7b78e4a7051d0e1c634dd8a412e4f429be925de5801a40b7781fdc441f3896.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-EN.pdf) |
+| `ST-00000898-FR` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9f/b9/9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-FR.pdf) |
+| `LE09285AB` | Instruction sheet | 03/21 | `AM5852M2`, `H4672M2`, `LN4672M2` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE09285AB.pdf) |
+| `LE09287AB` | Instruction sheet | revision not yet decoded | `067561` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE09287AB.pdf) |
 
 The English and French technical sheets are distinct archived byte streams and therefore remain separate source revisions/language variants.
 

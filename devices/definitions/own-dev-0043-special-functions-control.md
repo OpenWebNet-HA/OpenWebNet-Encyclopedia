@@ -28,7 +28,7 @@ Two-module automation control exposing special-function Object alternatives.
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME | technical/system documentation | revision/date as printed | MyHOME automation control model; exact four identities still need direct-sheet reconciliation | [Archived original](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| AUTOMATISME | technical/system documentation | revision/date as printed | MyHOME automation control model; exact four identities still need direct-sheet reconciliation | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -233,4 +233,4 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
-- [Archived original](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

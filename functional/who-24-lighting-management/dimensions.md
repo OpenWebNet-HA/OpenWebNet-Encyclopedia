@@ -73,4 +73,4 @@ Capability support is device-specific. The namespace-level table defines availab
 
 ## Evidence basis
 
-Domains and frame variants come from the [Lighting Management Specification](../../sources/openwebnet-public/pdf/WHO_24.pdf), pages 6–41. The discrepancies above are retained because they affect safe encoding and request/response matching.
+Domains and frame variants come from the [Lighting Management Specification](https://archive.openwebnet-ha.org/sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf), pages 6–41. The discrepancies above are retained because they affect safe encoding and request/response matching.

@@ -26,7 +26,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `fiche technique 048833` | Technical sheet | `LG00295-a-FR` | printed pp. 464-467 / PDF pp. 1-4 | [Archived PDF](../../sources/devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf) | [Publisher PDF](https://assets.legrand.com/general/legrand-fr/pfat/gm/fiche%20technique%20048833.pdf) |
+| `fiche technique 048833` | Technical sheet | `LG00295-a-FR` | printed pp. 464-467 / PDF pp. 1-4 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/96/b2/96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f.pdf) | [Publisher PDF](https://assets.legrand.com/general/legrand-fr/pfat/gm/fiche%20technique%20048833.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -287,4 +287,4 @@ Database and official documentation agree on the BMSE1001/048833 ceiling sensor 
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [fiche technique 048833](../../sources/devices/documents/device-doc-bmse1001-048833/fiche-technique-048833.pdf)
+- [fiche technique 048833](https://archive.openwebnet-ha.org/sha256/96/b2/96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f.pdf)

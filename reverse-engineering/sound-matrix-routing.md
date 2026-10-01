@@ -4,7 +4,7 @@
 
 ## Why the published specification is insufficient
 
-[`WHO 16`](../sources/openwebnet-public/pdf/WHO_16.pdf) documents amplifier and source power, volume, tone, sleep, Follow Me, tuner frequency, stored stations, and RDS. Its `WHERE` table admits `0`, `#0`-`#9`, `01`-`99`, `100`, and `101`-`109`. It contains no message that assigns a source to an amplifier.
+[`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf) documents amplifier and source power, volume, tone, sleep, Follow Me, tuner frequency, stored stations, and RDS. Its `WHERE` table admits `0`, `#0`-`#9`, `01`-`99`, `100`, and `101`-`109`. It contains no message that assigns a source to an amplifier.
 
 The document does describe a source **cycle** command (`*16*20*100##` / `*16*23*100##`) whose monitor flow emits `WHAT` `0`/`3` for the newly activated source and `10`/`13` for the previous one. Cycling is therefore specified; directed selection is not.
 

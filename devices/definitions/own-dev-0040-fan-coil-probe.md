@@ -29,7 +29,7 @@ The Device is a master temperature probe specialized for fan-coil installations.
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00181-c-EN` | Technical sheet | revision c / 2014-04-29 | all five current identity groups; fan-coil operation and configuration | [Archived original](../../sources/devices/documents/device-doc-fancoil-probe-mq00181-c-en/MQ00181-c-EN.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00181-c-en.pdf) |
+| `MQ00181-c-EN` | Technical sheet | revision c / 2014-04-29 | all five current identity groups; fan-coil operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00181-c-en.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -164,4 +164,4 @@ As with the non-fan probe, `SLA` differs by firmware: `0..8` on firmware `261` a
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
-- [`MQ00181-c-EN` archived original](../../sources/devices/documents/device-doc-fancoil-probe-mq00181-c-en/MQ00181-c-EN.pdf)
+- [`MQ00181-c-EN` archived original](https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf)

@@ -36,11 +36,11 @@ The current product page markets AC5220MB/MW under Arteor Advance, while MyHOME 
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00473-f-EN` | official source | 09/06/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-en/MQ00473-f-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-EN.pdf) |
-| `MQ00473-f-FR` | official source | 22/04/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-fr/MQ00473-f-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf) |
-| `ST-00001844-EN` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-en/ST-00001844-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf) |
-| `ST-00001844-FR` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-fr/ST-00001844-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf) |
-| `LE15098AA` | official source | revision to verify | current family | [Archived PDF](../../sources/devices/documents/device-doc-pirus-le15098aa/LE15098AA.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
+| `MQ00473-f-EN` | official source | 09/06/2014 | six earlier references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9c/4f/9c4fc06a61797a3cd4f1b16ad4254b419d6e1adaf51e28c374a2bd793af4b748.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-EN.pdf) |
+| `MQ00473-f-FR` | official source | 22/04/2014 | six earlier references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/d2/a6/d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf) |
+| `ST-00001844-EN` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ba/24/ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf) |
+| `ST-00001844-FR` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/10/57/1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf) |
+| `LE15098AA` | official source | revision to verify | current family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
 
 ### Material revision difference
 
