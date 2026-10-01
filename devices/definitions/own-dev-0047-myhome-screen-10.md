@@ -27,19 +27,19 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| RA00079AC_S_EN | software manual | publisher copy | MyHOME_Screen10 and MyHOME_Screen10 C configuration, system functions and programming workflow | - | https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf |
-| BTicino MH4892 catalogue page | product page | current catalogue | MH4892 product characteristics and integration role | - | https://catalogo.bticino.it/prodotto/soluzioni-per-la-smart-home/my-home---sistema-domotico/integrazione-e-controllo/BTI-MH4892-IT |
-| MH4892 version history | firmware history | through 2015-03-26 in identified copy | Historical MH4892 / MH4893 / 067267 / 067268 firmware lineage | - | https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MH4892_20150326.pdf |
+| `RA00079AC_S_EN` | software manual | publisher copy | MyHOME_Screen10 and MyHOME_Screen10 C configuration, system functions and programming workflow | [Archived original](../../sources/devices/documents/device-doc-myhome-screen10-ra00079ac-s-en/RA00079AC_S_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf) |
+| BTicino `MH4892` catalogue page | product page | current catalogue | `MH4892` product characteristics and integration role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-la-smart-home/my-home---sistema-domotico/integrazione-e-controllo/BTI-MH4892-IT) |
+| `MH4892` version history | firmware history | through 2015-03-26 in identified copy | Historical `MH4892` / `MH4893` / `067267` / `067268` firmware lineage | [Archived original](../../sources/devices/documents/device-doc-myhome-screen10-version-history-20150326/Version_History_MH4892_20150326.pdf) | [Official source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MH4892_20150326.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Display | 10 inch 16:9 LCD touchscreen | Current MH4892/MH4893 catalogue |
-| Supply | 27 Vdc | Current BTicino catalogue |
-| Dimensions | 315 x 200 x 24 mm | Current BTicino catalogue |
-| Mounting | Wall mounted with 506E flush-mounted box | Current BTicino catalogue |
-| Managed functions | MyHOME, video door entry and multimedia functions with Ethernet/USB/SD/IP content support | Current catalogue and RA00079AC_S_EN |
+| Display | `10 inch` 16:9 LCD touchscreen | Current `MH4892` / `MH4893` catalogue |
+| Supply | `27 Vdc` | Current BTicino catalogue |
+| Dimensions | `315 x 200 x 24 mm` | Current BTicino catalogue |
+| Mounting | Wall mounted with `506E` flush-mounted box | Current BTicino catalogue |
+| Managed functions | MyHOME, video door entry and multimedia functions with Ethernet/USB/SD/IP content support | Current catalogue and `RA00079AC_S_EN` |
 
 ## Identity
 

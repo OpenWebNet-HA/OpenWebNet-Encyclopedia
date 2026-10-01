@@ -81,6 +81,8 @@ Typical properties include mounting, dimensions, supply, current draw, power con
 
 Do not replace a multi-property specification inventory with a paragraph merely because the values can be written in prose. Keep revision-specific and commercial-variant differences visible.
 
+Format exact technical literals in the Value and Evidence cells as inline code when they function as reference data rather than prose. This includes measured values with units (for example `27 Vdc`, `30 mA`, `868 MHz`, `0..40 °C`), exact dimensions/ranges, product/document identifiers, firmware/configuration tokens, and similar machine-like values. Descriptive quantities such as “2 wiring-device modules” may remain prose when the number is part of an ordinary physical description rather than a literal lookup value.
+
 ## Identity
 
 Present multiple implementation or protocol identity facts as `Field | Value | Evidence`. Relevant facts can include `EN_ITEM.id_item`, item description/family, system mappings, `modobj`, brand/line data, commercial record counts, and Device-specific diagnostic observations. Implementation identities are not interchangeable with the project Device ID.

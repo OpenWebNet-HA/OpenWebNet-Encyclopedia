@@ -27,18 +27,18 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MM00789_b_EN | technical sheet | revision b; date not confirmed in retained metadata | H4691 / LN4691 / 067459 / 64170 thermostat functions and installation characteristics | - | https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf |
-| BTicino H4691 catalogue page | product page | current catalogue | Current H4691 electrical characteristics and product role | - | https://catalogo.bticino.it/BTI-H4691-IT |
+| `MM00789_b_EN` | technical sheet | revision b; date not confirmed in retained metadata | `H4691` / `LN4691` / `067459` / `64170` thermostat functions and installation characteristics | [Archived original](../../sources/devices/documents/device-doc-display-thermostat-mm00789-b-en/MM00789_b_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
+| BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | 27 Vdc | Current BTicino H4691 catalogue |
-| Input current | 30 mA | Current BTicino H4691 catalogue |
-| Width | 2 modules | MM00789_b_EN / current catalogue |
-| Local interfaces | Temperature probe, display, four keys, rear contact input | MM00789_b_EN |
-| HVAC role | Probe, hotel thermostat, or residential thermostat; fan-coil speed management when applicable | MM00789_b_EN |
+| Supply | `27 Vdc` | Current BTicino `H4691` catalogue |
+| Input current | `30 mA` | Current BTicino `H4691` catalogue |
+| Width | 2 wiring-device modules | `MM00789_b_EN` / current catalogue |
+| Local interfaces | Temperature probe, display, four keys, rear contact input | `MM00789_b_EN` |
+| HVAC role | Probe, hotel thermostat, or residential thermostat; fan-coil speed management when applicable | `MM00789_b_EN` |
 
 ## Identity
 

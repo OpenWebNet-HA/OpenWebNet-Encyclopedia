@@ -27,18 +27,18 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MQ01014_a_EN | technical sheet | revision a | Energy display functions, pages and measuring/load-management relationships | - | https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf |
-| BTicino H4710 catalogue page | product page | current catalogue | Current H4710 electrical characteristics and product role | - | https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN |
+| `MQ01014_a_EN` | technical sheet | revision a | Energy display functions, pages and measuring/load-management relationships | [Archived original](../../sources/devices/documents/device-doc-energy-display-mq01014-a-en/MQ01014_a_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf) |
+| BTicino `H4710` catalogue page | product page | current catalogue | Current `H4710` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Display | 1.6 inch consumption/load-control display | MQ01014_a_EN / current catalogue |
-| Supply | 27 Vdc | Current BTicino H4710 catalogue |
-| Input current | 33 mA | Current BTicino H4710 catalogue |
-| Width | 2 modules | Current BTicino H4710 catalogue |
-| System role | Displays energy data and can control load-management actuators | MQ01014_a_EN / current catalogue |
+| Display | `1.6 inch` consumption/load-control display | `MQ01014_a_EN` / current catalogue |
+| Supply | `27 Vdc` | Current BTicino `H4710` catalogue |
+| Input current | `33 mA` | Current BTicino `H4710` catalogue |
+| Width | 2 wiring-device modules | Current BTicino `H4710` catalogue |
+| System role | Displays energy data and can control load-management actuators | `MQ01014_a_EN` / current catalogue |
 
 ## Identity
 

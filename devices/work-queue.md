@@ -226,11 +226,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1525 | Special functions | 4 | definition-in-progress | OWN-DEV-0043 | partial | complete | partial | pending | - |
 | normal | 1579 | Shutter control bus | 4 | definition-in-progress | OWN-DEV-0044 | complete | complete | complete | pending | - |
 | normal | 1586 | Shutter actuator bus | 4 | definition-in-progress | OWN-DEV-0045 | partial | partial | partial | pending | - |
-| normal | 1686 | Display thermostat 2 modules | 4 | definition-in-progress | OWN-DEV-0046 | complete | partial | partial | pending | - |
-| normal | 1768 | MyHOME_Screen 10 | 4 | definition-in-progress | OWN-DEV-0047 | complete | partial | partial | pending | - |
-| normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | partial | partial | pending | - |
-| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | partial | partial | pending | - |
-| normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | partial | partial | pending | - |
+| normal | 1686 | Display thermostat 2 modules | 4 | definition-in-progress | OWN-DEV-0046 | complete | complete | partial | pending | - |
+| normal | 1768 | MyHOME_Screen 10 | 4 | definition-in-progress | OWN-DEV-0047 | complete | complete | partial | pending | - |
+| normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | complete | partial | pending | - |
+| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | complete | partial | pending | - |
+| normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | complete | partial | pending | - |
 
 ## Reviewed
 
