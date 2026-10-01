@@ -10,8 +10,8 @@ It is distinct from:
 
 The canonical sources for this section are the two ScenarioDevices databases preserved under [`sources/`](../sources/myhome-suite/3.5.38/databases/):
 
-- [`ScenarioDevices-program-files.sqlite`](../sources/myhome-suite/3.5.38/databases/ScenarioDevices-program-files.sqlite);
-- [`ScenarioDevices-programdata.sqlite`](../sources/myhome-suite/3.5.38/databases/ScenarioDevices-programdata.sqlite).
+- [`ScenarioDevices-program-files.sqlite`](../sources/myhome-suite/3.5.38/databases/);
+- [`ScenarioDevices-programdata.sqlite`](../sources/myhome-suite/3.5.38/databases/).
 
 ## Reference
 
