@@ -24,7 +24,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MH_Guide_Automatisme.pdf` | technical/system guide | historical publisher guide | `L/N/NT4688` contact-interface construction and traditional-device integration; printed p. 168 | [Archived original](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MH_Guide_Automatisme.pdf) |
+| `MH_Guide_Automatisme.pdf` | technical/system guide | historical publisher guide | `L/N/NT4688` contact-interface construction and traditional-device integration; printed p. 168 | [Archived original](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MH_Guide_Automatisme.pdf) |
 
 ## Physical and electrical characteristics
 

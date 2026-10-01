@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00315-e-EN` | technical sheet | 2014-06-09 | `F416U1` / `002621` 1-channel SCS dimmer characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-f416u1-mq00315-e-en/MQ00315_e_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00315_e_EN.pdf) |
+| `MQ00315-e-EN` | technical sheet | 2014-06-09 | `F416U1` / `002621` 1-channel SCS dimmer characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/79/02/7902811439501a406f3d69bf8b95b22705610fe25cc0912a1fc2bc29d157d76e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00315_e_EN.pdf) |
 
 ## Physical and electrical characteristics
 

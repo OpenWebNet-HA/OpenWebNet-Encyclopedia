@@ -6,7 +6,7 @@ The review is governed by the [Encyclopedia Core Values](../encyclopedia-core-va
 
 ## Evidence basis and applicability
 
-Primary source: `sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf`, ZigBee OpenWebNet version 4.0, 22 November 2016.
+Primary source: `https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf`, ZigBee OpenWebNet version 4.0, 22 November 2016.
 
 The inspected source carries Confidential footers and its public-release provenance remains unresolved. Claims from it are therefore described as **specification evidence**, not as independently established public-protocol or interoperability evidence.
 

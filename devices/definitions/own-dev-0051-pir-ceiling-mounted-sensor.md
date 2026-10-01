@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE10699AA-FR` | technical/system guide | publisher guide | `048820` / `BMSE3001` physical characteristics and detection coverage | [Archived original](../../sources/devices/documents/device-doc-scs-sensor-guide-le10699aa-fr/le10699aa-fr.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
+| `LE10699AA-FR` | technical/system guide | publisher guide | `048820` / `BMSE3001` physical characteristics and detection coverage | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
 
 ## Physical and electrical characteristics
 

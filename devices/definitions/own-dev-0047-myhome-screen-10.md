@@ -26,9 +26,9 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `RA00079AC_S_EN` | software manual | publisher copy | MyHOME_Screen10 and MyHOME_Screen10 C configuration, system functions and programming workflow | [Archived original](../../sources/devices/documents/device-doc-myhome-screen10-ra00079ac-s-en/RA00079AC_S_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf) |
+| `RA00079AC_S_EN` | software manual | publisher copy | MyHOME_Screen10 and MyHOME_Screen10 C configuration, system functions and programming workflow | [Archived original](https://archive.openwebnet-ha.org/sha256/b9/ba/b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf) |
 | BTicino `MH4892` catalogue page | product page | current catalogue | `MH4892` product characteristics and integration role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-la-smart-home/my-home---sistema-domotico/integrazione-e-controllo/BTI-MH4892-IT) |
-| `MH4892` version history | firmware history | through 2015-03-26 in identified copy | Historical `MH4892` / `MH4893` / `067267` / `067268` firmware lineage | [Archived original](../../sources/devices/documents/device-doc-myhome-screen10-version-history-20150326/Version_History_MH4892_20150326.pdf) | [Official source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MH4892_20150326.pdf) |
+| `MH4892` version history | firmware history | through 2015-03-26 in identified copy | Historical `MH4892` / `MH4893` / `067267` / `067268` firmware lineage | [Archived original](https://archive.openwebnet-ha.org/sha256/ea/4c/ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea.pdf) | [Official source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MH4892_20150326.pdf) |
 
 ## Physical and electrical characteristics
 

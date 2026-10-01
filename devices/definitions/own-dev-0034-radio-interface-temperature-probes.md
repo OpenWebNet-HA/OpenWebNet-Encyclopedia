@@ -27,8 +27,8 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00183-c-EN` | Technical sheet | publisher revision as archived | whole document | [Archived PDF](../../sources/devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
-| `U1870C` | Instruction sheet | publisher revision as archived | whole document | [Archived PDF](../../sources/devices/documents/device-doc-4577-u1870c/U1870C.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
+| `MQ00183-c-EN` | Technical sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
+| `U1870C` | Instruction sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
 | BTicino `L4577` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-l4577) |
 
 ## Physical and electrical characteristics
@@ -165,6 +165,6 @@ Official product documentation corroborates the 4577/3455 radio-temperature role
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [MQ00183-c-EN](../../sources/devices/documents/device-doc-4577-mq00183-c-en/MQ00183-c-EN.pdf)
-- [U1870C](../../sources/devices/documents/device-doc-4577-u1870c/U1870C.pdf)
+- [MQ00183-c-EN](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf)
+- [U1870C](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf)
 - [BTicino L4577](https://www.bticino.com/products/bt-l4577)

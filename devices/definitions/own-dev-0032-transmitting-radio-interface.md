@@ -27,7 +27,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4576 radio-transmitter sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4576 radio-transmitter sections; exact page locator pending | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
 
@@ -168,4 +168,4 @@ The canonical catalogue establishes the one-slot Radio Interface Transmitter mod
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [AUTOMATISME.pdf](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

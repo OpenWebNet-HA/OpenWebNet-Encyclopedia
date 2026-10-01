@@ -27,8 +27,8 @@
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino `344742` product page | product page | current product family | Current Classe 300X connected indoor-unit functions and documentation links | Not applicable - web page | [Official product page](https://www.bticino.com/products/bt-344742) |
-| `FIS_C300X_1` | technical data sheet | current publisher copy | `344742` / `344743` / `344745` / `344746` supply, Wi-Fi and teleloop electrical data | [Archived original](../../sources/devices/documents/device-doc-classe300x-fis-c300x-1/FIS_C300X_1.pdf) | [Official source](https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf) |
-| `ST-00002362-EN` | technical sheet | current publisher copy | `344745` / `344746` connected video internal units with inductive loop | [Archived original](../../sources/devices/documents/device-doc-classe300x-st00002362-en/ST-00002362-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf) |
+| `FIS_C300X_1` | technical data sheet | current publisher copy | `344742` / `344743` / `344745` / `344746` supply, Wi-Fi and teleloop electrical data | [Archived original](https://archive.openwebnet-ha.org/sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf) | [Official source](https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf) |
+| `ST-00002362-EN` | technical sheet | current publisher copy | `344745` / `344746` connected video internal units with inductive loop | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/0c/f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf) |
 
 ## Physical and electrical characteristics
 

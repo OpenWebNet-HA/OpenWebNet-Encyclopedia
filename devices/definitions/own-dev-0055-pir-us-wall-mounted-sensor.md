@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00300_c_EN` | technical sheet | 2013-02-04 | `BMSE2005` double-technology wall/ceiling sensor characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-bmse2005-mm00300-c-en/MM00300_c_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00300_c_EN.pdf) |
+| `MM00300_c_EN` | technical sheet | 2013-02-04 | `BMSE2005` double-technology wall/ceiling sensor characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/e5/f3e5c1d33d683b8ab75492adbde79665299ff0c0140e27c717defc1e9ae89311.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00300_c_EN.pdf) |
 
 ## Physical and electrical characteristics
 

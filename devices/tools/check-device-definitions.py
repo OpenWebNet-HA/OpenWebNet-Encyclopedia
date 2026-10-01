@@ -246,8 +246,15 @@ def main() -> int:
 
             documentation = section(text, "Documentation")
             if review.get("documentation_archive") == "complete":
-                if "sources/devices/documents/" not in documentation:
-                    errors.append(f"{prefix}: archive is marked complete but Documentation has no direct archived file link")
+                archive_link = re.search(
+                    r"https://archive\.openwebnet-ha\.org/"
+                    r"sha256/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]{64}\.pdf",
+                    documentation,
+                )
+                if not archive_link:
+                    errors.append(
+                        f"{prefix}: archive is marked complete but Documentation has no canonical R2 archived file link"
+                    )
 
             identity = section(text, "Identity")
             expected_item = int(item_id)

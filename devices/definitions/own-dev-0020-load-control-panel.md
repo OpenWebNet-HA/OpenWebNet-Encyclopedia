@@ -33,8 +33,8 @@ The technical sheet names the corresponding 4673, `067206`/`067207` and `573985`
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00709_c_EN` | Technical sheet | revision/date not yet pinned | Four-channel load-control panel family | [Archived original](../../sources/devices/documents/device-doc-load-control-mq00709-c-en/MQ00709_c_EN.pdf) | publisher source not currently retained |
-| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | Load-control panel references `573985` / `573991` occur on printed p. 26 / PDF p. 26 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | publisher source not currently retained |
+| `MQ00709_c_EN` | Technical sheet | revision/date not yet pinned | Four-channel load-control panel family | [Archived original](https://archive.openwebnet-ha.org/sha256/65/2c/652c9942739c968ead3ea7f2a2096d9b06a7f002ee9a014d4c93daaa7ef7193a.pdf) | publisher source not currently retained |
+| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | Load-control panel references `573985` / `573991` occur on printed p. 26 / PDF p. 26 | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
 
 ## Physical and electrical characteristics
 

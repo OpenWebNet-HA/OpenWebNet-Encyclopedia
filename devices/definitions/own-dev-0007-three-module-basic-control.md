@@ -33,10 +33,10 @@ The current Legrand web catalogue describes reference `067554` with “Arteor”
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00290-c-EN` | Technical sheet | 01/08/2013 | `067554`, `H4652/3`, `L4652/3`, `AM5832/3` | [Archived PDF](../../sources/devices/documents/device-doc-basic-control-3-mq00290-c-en/MQ00290_c_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00290_c_EN.pdf) |
-| `MQ00290-c-FR` | Technical sheet | revision date to verify | same family | [Archived PDF](../../sources/devices/documents/device-doc-basic-control-3-mq00290-c-fr/MQ00290-c-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
-| `T9807J` | Instruction sheet | revision to verify | L4652/3 family | [Archived PDF](../../sources/devices/documents/device-doc-basic-control-3-t9807j/T9807J.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
-| `LE05420AA` | Instruction sheet | revision to verify | `067554` | [Archived PDF](../../sources/devices/documents/device-doc-basic-control-3-le05420aa/LE05420AA.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
+| `MQ00290-c-EN` | Technical sheet | 01/08/2013 | `067554`, `H4652/3`, `L4652/3`, `AM5832/3` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/21/3c/213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00290_c_EN.pdf) |
+| `MQ00290-c-FR` | Technical sheet | revision date to verify | same family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
+| `T9807J` | Instruction sheet | revision to verify | L4652/3 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
+| `LE05420AA` | Instruction sheet | revision to verify | `067554` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
 
 ## Physical and electrical characteristics
 

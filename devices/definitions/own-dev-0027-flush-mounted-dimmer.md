@@ -26,7 +26,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4674 dimmer-actuator sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4674 dimmer-actuator sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -182,4 +182,4 @@ The catalogue establishes one Dimmer actuator Module and the two commercial iden
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [AUTOMATISME.pdf](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

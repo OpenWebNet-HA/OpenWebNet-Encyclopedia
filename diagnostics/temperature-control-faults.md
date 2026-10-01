@@ -58,4 +58,4 @@ An empty or failed collective request does not prove a healthy installation. Pre
 
 ## Evidence basis
 
-The [Temperature Control Specification](../sources/openwebnet-public/pdf/WHO_4.pdf), version 2.0.0, pages 69–74, defines these targets, sequences, counts, bit labels, and polarity. See [Diagnostic Architecture](architecture.md) for the separate MyHOME Suite management model and [Temperature Control Properties](../functional/who-4-temperature-control/dimensions.md) for functional properties.
+The [Temperature Control Specification](https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf), version 2.0.0, pages 69–74, defines these targets, sequences, counts, bit labels, and polarity. See [Diagnostic Architecture](architecture.md) for the separate MyHOME Suite management model and [Temperature Control Properties](../functional/who-4-temperature-control/dimensions.md) for functional properties.

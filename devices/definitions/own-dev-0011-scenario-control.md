@@ -41,9 +41,9 @@ The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00288-c-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane identities | [Archived PDF](../../sources/devices/documents/device-doc-scenario-control-mq00288-c-en/MQ00288-c-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
-| `MQ00288-c-FR` | Technical sheet | revision/date not yet pinned | scenario-control family | [Archived PDF](../../sources/devices/documents/device-doc-scenario-control-mq00288-c-fr/MQ00288-c-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
-| `U3327B` | Installation/use instructions | revision/date not yet pinned | scenario-control family | [Archived PDF](../../sources/devices/documents/device-doc-scenario-control-u3327b/U3327B.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
+| `MQ00288-c-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane identities | [Archived PDF](https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
+| `MQ00288-c-FR` | Technical sheet | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
+| `U3327B` | Installation/use instructions | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
 
 ## Physical and electrical characteristics
 

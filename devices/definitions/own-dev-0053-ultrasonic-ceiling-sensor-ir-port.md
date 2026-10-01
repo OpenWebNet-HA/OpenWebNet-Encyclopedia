@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE02817AD` | instruction sheet | publisher revision AD | `048820` / `048821` / `048822` installation and sensor-type characteristics | [Archived original](../../sources/devices/documents/device-doc-ceiling-sensors-le02817ad/LE02817AD.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
+| `LE02817AD` | instruction sheet | publisher revision AD | `048820` / `048821` / `048822` installation and sensor-type characteristics | [Archived original](https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
 
 ## Physical and electrical characteristics
 

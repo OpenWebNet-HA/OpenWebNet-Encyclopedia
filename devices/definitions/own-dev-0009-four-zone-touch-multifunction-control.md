@@ -34,10 +34,10 @@ The older technical sheet directly names only the four Arteor references. Shared
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LG00045-b-UK` | Technical sheet | not stated in retained row | `573904..573907` | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
-| `U3300B` | Instruction sheet | not stated in retained row | `573904..573907` family | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
-| MyHOME residential automation catalogue | Product catalogue | not stated in retained row | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
-| `ST-00001031-EN` | Compatibility table | not stated in retained row | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](../../sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
+| `LG00045-b-UK` | Technical sheet | not stated in retained row | `573904..573907` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
+| `U3300B` | Instruction sheet | not stated in retained row | `573904..573907` family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
+| MyHOME residential automation catalogue | Product catalogue | not stated in retained row | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| `ST-00001031-EN` | Compatibility table | not stated in retained row | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
 
 ## Physical and electrical characteristics
 

@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `BT00299_c_IT` | technical sheet | 2013-11-20 | `BMSE2004` long-range PIR wall/ceiling sensor characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-bmse2004-bt00299-c-it/BT00299_c_IT.pdf) | [Official source](https://dar.bticino.it/asset/Documents/BT00299_c_IT.pdf) |
+| `BT00299_c_IT` | technical sheet | 2013-11-20 | `BMSE2004` long-range PIR wall/ceiling sensor characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/78/58/7858fdb08933d8e3842b2855333bc7285225b8f1100f3a050052ff4c0650d144.pdf) | [Official source](https://dar.bticino.it/asset/Documents/BT00299_c_IT.pdf) |
 
 ## Physical and electrical characteristics
 

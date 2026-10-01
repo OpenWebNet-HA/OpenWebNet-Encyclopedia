@@ -25,7 +25,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `U4554C_S4_EN` | TiBMNE500 software manual | publisher revision as archived | whole manual | [Archived PDF](../../sources/devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/U4554C_S4_EN.pdf) |
+| `U4554C_S4_EN` | TiBMNE500 software manual | publisher revision as archived | whole manual | [Archived PDF](https://archive.openwebnet-ha.org/sha256/e5/d2/e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/U4554C_S4_EN.pdf) |
 | BTicino `BMNE500` catalogue record | Current product record | current | whole product record | - | [Publisher record](https://catalogue.bticino.com/pdf/scheda-prodotto/BTI-BMNE500) |
 
 ## Physical and electrical characteristics
@@ -190,5 +190,5 @@ The canonical database and current publisher material agree that BMNE500 is a so
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [U4554C_S4_EN](../../sources/devices/documents/device-doc-bmne500-u4554c-s4-en/U4554C_S4_EN.pdf)
+- [U4554C_S4_EN](https://archive.openwebnet-ha.org/sha256/e5/d2/e5d235a413023e1e004380ffc74c3e69c5589a474249b09f4a7892374c83a62c.pdf)
 - [BMNE500 catalogue record](https://catalogue.bticino.com/pdf/scheda-prodotto/BTI-BMNE500)

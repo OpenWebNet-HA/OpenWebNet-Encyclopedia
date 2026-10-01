@@ -26,7 +26,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00789_b_EN` | technical sheet | revision b; date not confirmed in retained metadata | `H4691` / `LN4691` / `067459` / `64170` thermostat functions and installation characteristics | [Archived original](../../sources/devices/documents/device-doc-display-thermostat-mm00789-b-en/MM00789_b_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
+| `MM00789_b_EN` | technical sheet | revision b; date not confirmed in retained metadata | `H4691` / `LN4691` / `067459` / `64170` thermostat functions and installation characteristics | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
 | BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
 
 ## Physical and electrical characteristics

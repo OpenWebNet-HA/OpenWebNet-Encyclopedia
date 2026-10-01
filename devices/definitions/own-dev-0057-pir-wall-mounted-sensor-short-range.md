@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00297_c_EN` | technical sheet | 2013-02-01 | `BMSE2002` narrow-beam PIR wall/ceiling sensor characteristics and MY HOME configuration | [Archived original](../../sources/devices/documents/device-doc-bmse2002-mm00297-c-en/MM00297_c_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00297_c_EN.pdf) |
+| `MM00297_c_EN` | technical sheet | 2013-02-01 | `BMSE2002` narrow-beam PIR wall/ceiling sensor characteristics and MY HOME configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/bd/3a/bd3a2ab2b78360677424609bbd4fbeca5ca2e9f4c6692eec614a1f84f1559d66.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00297_c_EN.pdf) |
 
 ## Physical and electrical characteristics
 

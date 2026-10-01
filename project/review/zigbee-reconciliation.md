@@ -6,7 +6,7 @@ This record preserves the evidence decisions used to reconcile the historical `z
 
 The reconciliation started from `main` commit `7cd8ace8865b910ee1957c5db209fba7d568dfa6` and applies the [Encyclopedia Core Values](../encyclopedia-core-values.md) and [Encyclopedia Style Guide](../encyclopedia-style-guide.md).
 
-The primary source is `sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf`, ZigBee OpenWebNet version 4.0 dated 22 November 2016. The reviewed uploaded copy is byte-identical to the repository object: size `929707` bytes and Git blob SHA `773288d33cc55b2a9ecf74e9e9bd886736edab9b`. Its SHA-256 is `9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776`.
+The primary source is `https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf`, ZigBee OpenWebNet version 4.0 dated 22 November 2016. The reviewed uploaded copy is byte-identical to the repository object: size `929707` bytes and Git blob SHA `773288d33cc55b2a9ecf74e9e9bd886736edab9b`. Its SHA-256 is `9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776`.
 
 The source carries Confidential footers. This review treats it as available specification evidence while preserving the unresolved publication-provenance qualification already recorded in the [Phase 3 Source-Coverage Audit](phase-3-source-coverage.md).
 

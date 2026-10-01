@@ -40,7 +40,7 @@ This technical definition covers the shared catalogue capability core used by 13
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00285-d-EN` - Special control | Technical sheet | 09/06/2014 | `067553`, `H4651M2`, `L4651M2`, `AM5831M2` | [Archived original](../../sources/devices/documents/device-doc-special-control-mq00285-d-en/MQ00285-d-EN.pdf) | [Official PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00285-d-EN.pdf) |
+| `MQ00285-d-EN` - Special control | Technical sheet | 09/06/2014 | `067553`, `H4651M2`, `L4651M2`, `AM5831M2` | [Archived original](https://archive.openwebnet-ha.org/sha256/03/f5/03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab.pdf) | [Official PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00285-d-EN.pdf) |
 
 The nine-page sheet is unusually valuable because it documents several otherwise unrelated functional systems exposed by the same configurable control.
 

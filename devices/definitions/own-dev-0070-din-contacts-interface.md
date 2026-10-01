@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00002001-EN` | technical sheet | 2024-11-13 | `F428` two-contact DIN interface characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-f428-st00002001-en/ST-00002001-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST-00002001-EN.pdf) |
+| `ST-00002001-EN` | technical sheet | 2024-11-13 | `F428` two-contact DIN interface characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST-00002001-EN.pdf) |
 
 ## Physical and electrical characteristics
 
