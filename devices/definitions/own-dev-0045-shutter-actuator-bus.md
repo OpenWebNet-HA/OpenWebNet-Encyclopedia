@@ -84,9 +84,7 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | `192` | `A` | catalogue-defined domain | catalogue-scoped | Enviroment |
 | `192` | `PL` | catalogue-defined domain | catalogue-scoped | Light Point |
 | `192` | `M` | catalogue-defined domain | catalogue-scoped | Mode (SU_GIU, Su_GIU_M, 1,2, PUL, SLA) |
-| `192` | `TYPE` | catalogue-defined domain | catalogue-scoped | Shutter type
- Standard - Value : 1
- Pulse - Value : 2 |
+| `192` | `TYPE` | catalogue-defined domain | catalogue-scoped | Shutter type Standard - Value : 1 Pulse - Value : 2 |
 | `192` | `PRE` | catalogue-defined domain | catalogue-scoped | Shutter management preset number |
 | `192` | `G1` | catalogue-defined domain | catalogue-scoped | Group 1 |
 

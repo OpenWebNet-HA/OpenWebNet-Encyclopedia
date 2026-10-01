@@ -35,6 +35,32 @@ def section(text: str, name: str) -> str:
     return match.group(1) if match else ""
 
 
+
+def broken_table_rows(text: str) -> list[int]:
+    """Return line numbers where a Markdown table row starts but is not terminated on that line."""
+    bad = []
+    for lineno, line in enumerate(text.splitlines(), 1):
+        if line.startswith("|") and not line.rstrip().endswith("|"):
+            bad.append(lineno)
+    return bad
+
+def blank_table_continuations(text: str) -> list[int]:
+    """Return blank line numbers that split what Markdown would otherwise treat as one table."""
+    lines = text.splitlines()
+    bad = []
+    for i, line in enumerate(lines):
+        if line.strip():
+            continue
+        j = i - 1
+        while j >= 0 and not lines[j].strip():
+            j -= 1
+        k = i + 1
+        while k < len(lines) and not lines[k].strip():
+            k += 1
+        if j >= 0 and k < len(lines) and lines[j].startswith("|") and lines[k].startswith("|"):
+            bad.append(i + 1)
+    return bad
+
 def table_blocks(text: str) -> int:
     blocks = 0
     in_table = False
@@ -106,6 +132,10 @@ def main() -> int:
 
             if table_blocks(text) < 8:
                 errors.append(f"{prefix}: only {table_blocks(text)} table blocks; completed definitions require at least 8")
+            for lineno in broken_table_rows(text):
+                errors.append(f"{prefix}:{lineno}: Markdown table row is split or unterminated")
+            for lineno in broken_table_rows(text):
+                errors.append(f"{prefix}:{lineno}: Markdown table row is split or unterminated")
 
             summary_body = section(text, "Summary")
             for label in (
@@ -292,6 +322,14 @@ def main() -> int:
                             errors.append(f"{prefix}: slot condition {row['id_condition']} is not accounted for")
 
     con.close()
+    for rel in ("devices/index.md", "devices/coverage.md"):
+        index_path = ROOT / rel
+        index_text = index_path.read_text(encoding="utf-8")
+        for lineno in blank_table_continuations(index_text):
+            errors.append(f"{rel}:{lineno}: blank line splits a Markdown table")
+        for lineno in broken_table_rows(index_text):
+            errors.append(f"{rel}:{lineno}: Markdown table row is split or unterminated")
+
     if errors:
         return fail(errors)
     print(f"Device definition completeness check passed ({checked} completed definitions from OWN-DEV-0001 onward)")
