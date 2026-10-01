@@ -27,10 +27,10 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/2 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/2 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | BTicino `F411/2` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-f411-2) |
 
-For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -64,11 +64,11 @@ Historical guides publish lower limits for some load classes; those values remai
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `132` | `-1` | `-1` | `2` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `132` | `-1` | `-1` | `-1` | `2` | not stated | wildcard applicability |
 
-Firmware `132` is wildcard `-1.-1.-1` and declares two Module slots.
+Firmware `132` is wildcard `-1.-1.-1` and declares two Modules.
 
 ## Module, Object, and Virgin Object model
 
@@ -170,7 +170,7 @@ These are reusable Object fields; Device applicability remains governed by the f
 | `6` | `76` | `STATE_RESET` | Relay state on device reset | `1` | - |
 | `6` | `77` | `SECONDS` | Seconds | `1` | - |
 | `6` | `1856` | `LOAD_CONTROL_MODE` | Load_control_mode | `1` | - |
-| `7` | `66` | `LOCAL_BUTTON` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di pulsante locale ridotta (Local button mode) | `1` | - |
+| `7` | `66` | `LOCAL_BUTTON` | Reduced local-button functionality (Local button mode) | `1` | - |
 | `7` | `67` | `SUBTYPE` | subtype(ASTCBR) | `0` | `15` - Differential restart |
 
 Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.

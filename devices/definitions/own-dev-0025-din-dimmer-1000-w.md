@@ -28,9 +28,9 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00278_e_EN` | Technical sheet | revision/date as printed | whole document | [Archived PDF](../../sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F414 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F414 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -59,9 +59,9 @@ For the multi-product guide, exact printed and 1-based PDF page locations remain
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `176` | `-1` | `-1` | `1` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `176` | `-1` | `-1` | `-1` | `1` | not stated | wildcard applicability |
 
 Firmware `176` is wildcard `-1.-1.-1` and declares one Module. Current F460/F461 compatibility documentation maps Legrand `003652` from production batch `09W50` and BTicino `F414` from `09W29`; MyHOME_Up documentation independently gives F414 `09W29`.
 
@@ -142,10 +142,10 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 | Object | Filter ID | Field | Note | Whole range | Filter ranges |
 | ---: | ---: | --- | --- | --- | --- |
-| `8` | `403` | `LOCAL_BUTTON` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di pulsante locale ridotta (Local button mode) | `1` | - |
-| `8` | `404` | `HOURS` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Hours) | `1` | - |
-| `8` | `405` | `MINUTES` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Minutes) | `1` | - |
-| `8` | `406` | `SECONDS` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di temporizzazione non presente (Seconds) | `1` | - |
+| `8` | `403` | `LOCAL_BUTTON` | Reduced local-button functionality (Local button mode) | `1` | - |
+| `8` | `404` | `HOURS` | Timing functionality not present (Hours) | `1` | - |
+| `8` | `405` | `MINUTES` | Timing functionality not present (Minutes) | `1` | - |
+| `8` | `406` | `SECONDS` | Timing functionality not present (Seconds) | `1` | - |
 | `8` | `407` | `TYPE_LOAD` | `TYPE_LOAD` | `1` | - |
 | `8` | `408` | `TYPE_STANDARD` | Definizione range voltaggio utile | `1` | - |
 | `8` | `409` | `MIN_LEVEL_ADV` | Minimum level advanced | `1` | - |
