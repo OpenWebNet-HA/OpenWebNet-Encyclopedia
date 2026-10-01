@@ -61,6 +61,33 @@ def blank_table_continuations(text: str) -> list[int]:
             bad.append(i + 1)
     return bad
 
+
+def markdown_table_blocks_with_columns(text: str):
+    """Return contiguous Markdown table blocks as (start_line, end_line, column_counts)."""
+    lines = text.splitlines()
+    blocks = []
+    i = 0
+    while i < len(lines):
+        if not lines[i].startswith("|"):
+            i += 1
+            continue
+        start = i + 1
+        counts = []
+        while i < len(lines) and lines[i].startswith("|"):
+            counts.append(len(lines[i].strip("|").split("|")))
+            i += 1
+        blocks.append((start, i, counts))
+    return blocks
+
+def section_body(text: str, heading: str) -> str:
+    marker = f"## {heading}\n"
+    pos = text.find(marker)
+    if pos < 0:
+        return ""
+    start = pos + len(marker)
+    next_pos = text.find("\n## ", start)
+    return text[start:] if next_pos < 0 else text[start:next_pos]
+
 def table_blocks(text: str) -> int:
     blocks = 0
     in_table = False
@@ -329,6 +356,26 @@ def main() -> int:
             errors.append(f"{rel}:{lineno}: blank line splits a Markdown table")
         for lineno in broken_table_rows(index_text):
             errors.append(f"{rel}:{lineno}: Markdown table row is split or unterminated")
+
+    index_text = (ROOT / "devices/index.md").read_text(encoding="utf-8")
+    index_body = section_body(index_text, "Devices")
+    index_blocks = markdown_table_blocks_with_columns(index_body)
+    if len(index_blocks) != 1:
+        errors.append(f"devices/index.md: Devices section must contain exactly one continuous table; found {len(index_blocks)}")
+    elif len(set(index_blocks[0][2])) != 1 or index_blocks[0][2][0] != 5:
+        errors.append("devices/index.md: Devices table must have exactly 5 columns on every row")
+
+    coverage_text = (ROOT / "devices/coverage.md").read_text(encoding="utf-8")
+    coverage_body = section_body(coverage_text, "Device definitions")
+    coverage_blocks = markdown_table_blocks_with_columns(coverage_body)
+    if len(coverage_blocks) != 1:
+        errors.append(f"devices/coverage.md: Device definitions section must contain exactly one table followed only by prose; found {len(coverage_blocks)} table blocks")
+    elif len(set(coverage_blocks[0][2])) != 1 or coverage_blocks[0][2][0] != 10:
+        errors.append("devices/coverage.md: Device definitions table must have exactly 10 columns on every row")
+    lines = coverage_body.splitlines()
+    table_end = coverage_blocks[0][1] if coverage_blocks else 0
+    if table_end < len(lines) and table_end > 0 and lines[table_end].strip():
+        errors.append("devices/coverage.md: prose after Device definitions table must be separated by a blank line")
 
     if errors:
         return fail(errors)
