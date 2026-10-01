@@ -30,7 +30,7 @@ jobs:
 
       - name: Compile validation scripts
         run: |
-          python -m py_compile             project/review/checks/check_esg.py             project/review/checks/check_ecv.py             project/review/checks/audit_epistemic_drift.py             project/review/checks/audit_source_coverage.py
+          python -m py_compile             project/review/checks/check_esg.py             project/review/checks/check_ecv.py             project/review/checks/audit_epistemic_drift.py             project/review/checks/audit_source_coverage.py             project/review/checks/check_artifact_manifest.py
 
       - name: Enforce Encyclopedia Style Guide
         run: python project/review/checks/check_esg.py .
@@ -62,6 +62,9 @@ jobs:
 
       - name: Install source-audit dependency
         run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Verify external artifact manifest
+        run: python project/review/checks/check_artifact_manifest.py
 
       - name: Verify canonical sources
         run: |
