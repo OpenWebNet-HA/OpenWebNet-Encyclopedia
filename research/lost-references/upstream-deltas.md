@@ -13,3 +13,14 @@ Legrand's current Local Interoperability page serves `WHO_1.pdf` version 1.2 dat
 ## Official Open Web Net test clients
 
 Legrand's current Local Interoperability page still distributes Windows and macOS Open Web Net Client packages. Both were recovered from the live publisher URLs and archived privately in `openwebnet-software`.
+
+## First-party integration manuals recovered
+
+The recovery pass also preserved first-party BTicino/Legrand software manuals that expose practical OPEN/OpenWebNet configuration behavior beyond the standalone WHO PDFs:
+
+- MHVISUAL installation manual - guided and raw OPEN command construction, including controlled loads, video door entry, sound, temperature control, and custom frames.
+- Legrand Scheduler Config manual - OPEN command blocking and scenario-programmer integration.
+- TiF453 software manual - gateway configuration and OPEN command filtering.
+- TiMH200N software manual - OPEN command filtering and multi-system/interface configuration.
+
+These manuals are supporting implementation evidence. They do not replace the dedicated functional specifications.

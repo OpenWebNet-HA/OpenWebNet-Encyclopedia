@@ -6,8 +6,8 @@ policy:
   documents: Public publisher documentation is stored in openwebnet-documents and may have a public archive URL.
   data: Canonical vendor databases and support data are stored privately in openwebnet-data.
   software: Installers and firmware are stored privately in openwebnet-software.
-  language: Documentation artifacts always carry a language list. ISO 639-1 codes are used for established single languages.
-    ISO 639 special codes mul and und denote multilingual and undetermined content.
+  language: Documentation artifacts always carry a language list. ISO 639-1 codes are used for established single languages. ISO 639 special codes
+    mul and und denote multilingual and undetermined content.
 storage:
   openwebnet-documents:
     visibility: public
@@ -2692,6 +2692,74 @@ artifacts:
     object_key: sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-672ef527f7327797
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MHVISUAL installation manual
+  media_type: application/pdf
+  filename: T8854H_I_EN.pdf
+  size: 6006637
+  sha256: 672ef527f732779785cab806073d849fc79176e2b7cab3ee16125432e29e7abd
+  source_url: https://dar.bticino.it/asset/Documents/T8854H_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/67/2e/672ef527f732779785cab806073d849fc79176e2b7cab3ee16125432e29e7abd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/67/2e/672ef527f732779785cab806073d849fc79176e2b7cab3ee16125432e29e7abd.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-6a93c3c954274036
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Legrand Scheduler Config software manual
+  media_type: application/pdf
+  filename: u1569b_s_uk.pdf
+  size: 13549686
+  sha256: 6a93c3c9542740361bcc7bd85760810afd44d86bfdbc8b6e09b8ecc84c7e70ea
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u1569b_s_uk.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6a/93/6a93c3c9542740361bcc7bd85760810afd44d86bfdbc8b6e09b8ecc84c7e70ea.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6a/93/6a93c3c9542740361bcc7bd85760810afd44d86bfdbc8b6e09b8ecc84c7e70ea.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-d8d2f35392942dde
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: TiF453 software manual
+  media_type: application/pdf
+  filename: Software_Manual_F453_EN.pdf
+  size: 14615188
+  sha256: d8d2f35392942dde7a011224789de79c6981b5c34826d55db72c717e75c7ac44
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/Tif453/TiF453%20Version2_0_07/Software_Manual_F453_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d8/d2/d8d2f35392942dde7a011224789de79c6981b5c34826d55db72c717e75c7ac44.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d8/d2/d8d2f35392942dde7a011224789de79c6981b5c34826d55db72c717e75c7ac44.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-724cc849e6e54db5
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: TiMH200N software manual
+  media_type: application/pdf
+  filename: SOFTWARE_MANUAL_MH200N_UK.pdf
+  size: 12879120
+  sha256: 724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MH200N/SOFTWARE%20MANUAL_UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/4c/724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/4c/724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44.pdf
   language:
   - en
   language_evidence: document-language
