@@ -107,3 +107,26 @@ records:
   notable_content:
   - Project outline for HES interoperability work covering requirements, taxonomy/lexicon, and application models.
   - Establishes earlier WG1 lineage for Part 3 application-model work.
+- id: lead-openwebnet-training-india-2009
+  title: OpenWebNet Training India, March 2009
+  author: Lorenzo Pini
+  date: 2009-03
+  status: training-presentation-mirror
+  language:
+  - en
+  archival_state: mirror-transcript-identified-original-bytes-not-recovered
+  discovery:
+    mirror_url: https://slideplayer.com/slide/8178934/
+  notable_content:
+  - Historical OpenWebNet WHO namespace table including WHO 10, 11, 14, 19, 21, 23, 24, 99, 1001, 1004, and 1013.
+  - WHO 1 WHAT 19 labelled no load.
+  - WHO 1 dimensions 5 sensitivity, 6 lux, 7 presence granularity, and 9 maximum lamp life.
+  - 'Local-bus WHERE routing examples using #3 and #4#interface forms.'
+  - Practical gateway behavior notes for dimmers, CEN, F420, thermoregulation, alarm, and door-entry systems.
+  cautions:
+  - Only a third-party mirrored transcript/rendering is currently available; original presentation bytes have not been recovered.
+  - Treat as historical training material, not a current protocol specification.
+  search_pivots:
+  - OpenWebNet Training India March 2009 Lorenzo Pini
+  - OpenWebNet for Dummy Lorenzo Pini
+  - OpenWebNet Protocol Tabel WHO

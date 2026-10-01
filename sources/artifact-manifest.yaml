@@ -2663,3 +2663,35 @@ artifacts:
     object_key: sha256/45/38/4538fa6db1472b17ffc4d6dff24c49cb22d4f0302cf7031ae23e46ff6e23deab
     visibility: private
   redistribution_status: private-archive-only
+- id: document-sha256-407e5481847fadc8
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U3887A.pdf
+  size: 4628582
+  sha256: 407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983
+  source_url: https://assets.legrand.com/general/mediagrp/np-ft-gt/u3887a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-a375768955e0bd9d
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: U3500A.pdf
+  size: 2200200
+  sha256: a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3500a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+  language:
+  - en
+  language_evidence: document-language
