@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 175 |
+| unreviewed | 170 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 35 |
+| definition-in-progress | 40 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -35,6 +35,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | complete | pending | - |
 | high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | complete | pending | - |
 | high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | complete | pending | - |
+| high | 1563 | Key card switch | 6 | definition-in-progress | OWN-DEV-0036 | complete | complete | complete | pending | - |
+| high | 1657 | Local Display 1.2" bus | 6 | definition-in-progress | OWN-DEV-0037 | complete | complete | complete | pending | - |
+| high | 1854 | Probe with regulation | 6 | definition-in-progress | OWN-DEV-0038 | complete | complete | complete | pending | - |
+| high | 1847 | Key card switch RFID | 5 | definition-in-progress | OWN-DEV-0039 | partial | complete | complete | pending | - |
+| high | 1856 | Fan-coil probe | 5 | definition-in-progress | OWN-DEV-0040 | complete | complete | complete | pending | - |
 | high | 28 | Receiving radio interface | 3 | definition-in-progress | OWN-DEV-0029 | complete | complete | partial | pending | - |
 | high | 34 | Transmitting radio interface | 3 | definition-in-progress | OWN-DEV-0032 | partial | partial | partial | pending | - |
 | high | 1 | 1 relay DIN actuator 16 A | 2 | definition-in-progress | OWN-DEV-0021 | complete | complete | partial | pending | - |
@@ -52,11 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
-| normal | 1563 | Key card switch | 6 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1657 | Local Display 1.2" bus | 6 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1854 | Probe with regulation | 6 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1847 | Key card switch RFID | 5 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1856 | Fan-coil probe | 5 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1862 | Basic probe | 5 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 291 | Temperature central unit | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1525 | Special functions | 4 | unreviewed | - | pending | pending | pending | pending | - |
