@@ -26,9 +26,9 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | N4681 scenario-unit sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | N4681 scenario-unit sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -53,11 +53,11 @@ The guide also documents master/slave scenario-unit behavior through `M`; that i
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `223` | `-1` | `-1` | `1` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `223` | `-1` | `-1` | `-1` | `1` | not stated | wildcard applicability |
 
-Firmware `223` has wildcard applicability `-1.-1.-1` and one Module slot. A sanitized hardware fingerprint remains pending.
+Firmware `223` has wildcard applicability `-1.-1.-1` and one Module. A sanitized hardware fingerprint remains pending.
 
 ## Module, Object, and Virgin Object model
 

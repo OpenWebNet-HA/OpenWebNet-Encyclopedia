@@ -89,6 +89,21 @@ def main() -> int:
             checked += 1
             prefix = path.name
 
+            for marker in ("Ã", "Â", "â€", "�"):
+                if marker in text:
+                    errors.append(f"{prefix}: apparent text-encoding corruption marker {marker!r}")
+
+            firmware_hardware = section(text, "Firmware and hardware")
+            if int(match.group(1)) <= 30:
+                if "Declared slots" in firmware_hardware:
+                    errors.append(
+                        f"{prefix}: Firmware and hardware exposes implementation slots instead of formal Declared Modules"
+                    )
+                if re.search(r"(?m)^\|.*\|\s*`[01]`\s*\|\s*`[01]`\s*\|\s*$", firmware_hardware):
+                    errors.append(
+                        f"{prefix}: Firmware and hardware exposes raw catalogue default/status flags"
+                    )
+
             if table_blocks(text) < 8:
                 errors.append(f"{prefix}: only {table_blocks(text)} table blocks; completed definitions require at least 8")
 

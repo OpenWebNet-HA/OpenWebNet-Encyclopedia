@@ -30,9 +30,9 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00274-e-EN` | Technical sheet | 2014-06-07 | `F411/1N` family | [Archived PDF](../../sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00274_e_EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -61,9 +61,9 @@ The catalogue/family name retains “16 A”, while later publisher load tables 
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `166` | `-1` | `-1` | `1` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `166` | `-1` | `-1` | `-1` | `1` | not stated | wildcard applicability |
 
 Firmware `166` has wildcard applicability `-1.-1.-1` and declares one Module. Installed firmware/hardware remains to be corroborated.
 

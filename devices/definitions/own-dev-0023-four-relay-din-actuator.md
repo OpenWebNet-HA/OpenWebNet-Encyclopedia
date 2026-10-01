@@ -28,9 +28,9 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST-00000896-EN` | Technical sheet | 2021-03-23 | whole document / PDF pp. 1-4 | [Archived PDF](../../sources/devices/documents/device-doc-f411-4-st00000896-en/ST-00000896-EN.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/ST-00000896-EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/4 family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/4 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-For the multi-product guide, exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -62,9 +62,9 @@ The technical sheet shows a `10 A` protective breaker in a lighting wiring examp
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `142` | `-1` | `-1` | `4` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `142` | `-1` | `-1` | `-1` | `4` | not stated | wildcard applicability |
 
 Firmware `142` is wildcard `-1.-1.-1` and declares four Modules.
 
@@ -185,7 +185,7 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 | Object | Filter ID | Field | Note | Whole range | Filter ranges |
 | ---: | ---: | --- | --- | --- | --- |
-| `1` | `207` | `LOCAL_BUTTON` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di pulsante locale ridotta (Local button mode) | `1` | - |
+| `1` | `207` | `LOCAL_BUTTON` | Reduced local-button functionality (Local button mode) | `1` | - |
 | `1` | `208` | `LOCAL_BUTTON` | Local button mode shutter (bi or mono) | `1` | - |
 | `6` | `224` | `LOCAL_BUTTON` | Local button modality | `1` | - |
 | `6` | `225` | `HOURS` | Hours | `1` | - |
@@ -193,7 +193,7 @@ These are reusable Object fields; Device applicability remains governed by the f
 | `6` | `227` | `STATE_RESET` | Relay state on device reset | `1` | - |
 | `6` | `228` | `SECONDS` | Seconds | `1` | - |
 | `6` | `1857` | `LOAD_CONTROL_MODE` | Load_control_mode | `1` | - |
-| `7` | `233` | `LOCAL_BUTTON` | FunzionalitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â di pulsante locale ridotta (Local button mode) | `1` | - |
+| `7` | `233` | `LOCAL_BUTTON` | Reduced local-button functionality (Local button mode) | `1` | - |
 
 Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
 

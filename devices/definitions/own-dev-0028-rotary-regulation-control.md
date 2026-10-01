@@ -27,10 +27,10 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4563 rotary-control technical-data section; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4563 control-family sections; exact page locator pending | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4563 rotary-control technical-data section; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4563 control-family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
-Exact printed and 1-based PDF page locations remain an explicit reconciliation item until pinned.
+The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
 ## Physical and electrical characteristics
 
@@ -55,9 +55,9 @@ Exact printed and 1-based PDF page locations remain an explicit reconciliation i
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `213` | `-1` | `-1` | `1` | `1` | `0` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `213` | `-1` | `-1` | `-1` | `1` | not stated | wildcard applicability |
 
 Firmware `213` is wildcard `-1.-1.-1` with one Module.
 
