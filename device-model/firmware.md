@@ -135,6 +135,6 @@ Firmware `157`, used by `64391`, `64191`, and `64192`, declares four `slot` posi
 
 ## Sources
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.

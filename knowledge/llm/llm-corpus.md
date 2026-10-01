@@ -58,7 +58,7 @@ Provenance cues: `catalogue`, `source`
 | Virgin Object | A template constraining which Objects a configurable Module can become | `EN_VIRGIN_OBJECT` and association tables |
 | Configuration | Object- or firmware-scoped properties and their allowed values | `EN_CONF`, ranges, filters, conditions, and conversion rules |
 
-The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
+The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
 
 ### End-to-end catalogue path
 
@@ -88,7 +88,7 @@ Applicability cues: `firmware`, `version`
 Cautions: `do not`
 Provenance cues: `catalogue`
 
-The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) projects parts of the model onto diagnostic and programming frames:
+The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/) projects parts of the model onto diagnostic and programming frames:
 
 | Operation | Model level exposed |
 | --- | --- |
@@ -443,7 +443,7 @@ Section ID: `ownkb:section:d000002:s000016`
 
 Provenance cues: `catalogue`, `database`
 
-[`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) adds cross-property validation and linked-parameter disabling for three Object numbers:
+[`rules.db3`](../sources/myhome-suite/3.5.38/databases/) adds cross-property validation and linked-parameter disabling for three Object numbers:
 
 | Object | Catalogue description | Validation rows |
 | --- | --- | --- |
@@ -537,7 +537,7 @@ Section ID: `ownkb:section:d000002:s000022`
 
 Provenance cues: `catalogue`, `evidence`, `source`
 
-Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
+Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
 
@@ -740,7 +740,7 @@ Section ID: `ownkb:section:d000003:s000011`
 Applicability cues: `firmware`, `version`
 Provenance cues: `source`
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines Firmware capabilities. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the diagnostic firmware-version response; observed traffic supplies the version returned by an installed Device. These values are correlated only when the selection is corroborated.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
 
@@ -988,7 +988,7 @@ Section ID: `ownkb:section:d000004:s000016`
 
 Provenance cues: `source`
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines declared slots, Object alternatives, and slot conditions. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the `DIMENSION 30`, `32`, and `35` wire structures. Observed traffic and MyHOME_Suite behavior establish the Modules actually reported, displayed, and editable.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines declared slots, Object alternatives, and slot conditions. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the `DIMENSION 30`, `32`, and `35` wire structures. Observed traffic and MyHOME_Suite behavior establish the Modules actually reported, displayed, and editable.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
 
@@ -1242,7 +1242,7 @@ Section ID: `ownkb:section:d000005:s000015`
 
 Provenance cues: `catalogue`, `source`
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines catalogue Object identity and availability. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic Object projection. ScenarioDevices and the [public OpenWebNet documents](../sources/openwebnet-public/) describe adjacent scenario and functional semantics.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines catalogue Object identity and availability. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the diagnostic Object projection. ScenarioDevices and the [public OpenWebNet documents](../sources/openwebnet-public/) describe adjacent scenario and functional semantics.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
 
@@ -1515,7 +1515,7 @@ Section ID: `ownkb:section:d000006:s000018`
 
 Provenance cues: `evidence`, `source`
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines Device, item, brand, line, dependency, and bus records. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines Device-identity frames and parameter ranges. Observed traffic and MyHOME_Suite behavior establish installed-instance values and displayed Device descriptions. Product configuration diagrams provide independent evidence for the physical configurator layouts used to interpret ordinary addressed-form `N_CONF`.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines Device, item, brand, line, dependency, and bus records. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines Device-identity frames and parameter ranges. Observed traffic and MyHOME_Suite behavior establish installed-instance values and displayed Device descriptions. Product configuration diagrams provide independent evidence for the physical configurator layouts used to interpret ordinary addressed-form `N_CONF`.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy and [`sources/manifest.yaml`](../sources/manifest.yaml) for provenance.
 
@@ -1552,11 +1552,11 @@ Provenance cues: `catalogue`, `evidence`, `source`
 
 | Source | Strongest evidence | Does not independently establish |
 | --- | --- | --- |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Product catalogue, firmware capabilities, `slot` positions, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | Systems, diagnostic families, frame templates, parameters, address rules, sequences, and timeouts | Complete Device catalogue or complete functional command vocabulary |
-| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | Queries used by MyHOME_Suite to assemble `OPEN.db` frames, sequences, address rules, and timeouts | Additional semantics absent from the queried tables |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Product catalogue, firmware capabilities, `slot` positions, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | Systems, diagnostic families, frame templates, parameters, address rules, sequences, and timeouts | Complete Device catalogue or complete functional command vocabulary |
+| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/) | Queries used by MyHOME_Suite to assemble `OPEN.db` frames, sequences, address rules, and timeouts | Additional semantics absent from the queried tables |
 | [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/) | Scenario-engine Object systems, actions, triggers, conditions, frames, and parameter limits | Physical Device, firmware, Module, or catalogue Object identity |
-| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) | Cross-property validation for selected Temperature Control Objects | General Object registry or functional `WHO` mapping |
+| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) | Cross-property validation for selected Temperature Control Objects | General Object registry or functional `WHO` mapping |
 | [public OpenWebNet documents](../sources/openwebnet-public/) | Published frame syntax and functional behavior | MyHOME_Suite catalogue hierarchy or unpublished diagnostic semantics |
 | Observed traffic | Actual values, ordering, repetition, and Device behavior | Universal support outside the observed Devices and versions |
 | MyHOME_Suite UI | Display labels, field visibility, editability, and product-specific behavior | Wire encoding unless correlated with traffic or implementation data |
@@ -1949,7 +1949,7 @@ Section ID: `ownkb:section:d000008:s000015`
 
 Provenance cues: `catalogue`, `source`
 
-Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies the `KEYO` and binary `STATE` fields; controlled diagnostic/programming experiments correlated with MyHOME_Suite UI behavior establish the polarity, while catalogue resolution corroborates the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
+Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/). `OPEN.db` supplies the `KEYO` and binary `STATE` fields; controlled diagnostic/programming experiments correlated with MyHOME_Suite UI behavior establish the polarity, while catalogue resolution corroborates the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
 
@@ -2041,12 +2041,12 @@ Provenance cues: `database`, `source`
 
 | Source | Role in this section |
 | --- | --- |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | diagnostic systems, frame templates, parameter types and ranges, address rules, sequences, repetition flags, and timeouts |
-| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | the queries MyHOME_Suite uses to assemble systems, frames, sequences, address rules, and timeout behavior from `OPEN.db` |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Physical Device, firmware, Module, Object, Virgin Object, and configuration interpretation |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | diagnostic systems, frame templates, parameter types and ranges, address rules, sequences, repetition flags, and timeouts |
+| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/) | the queries MyHOME_Suite uses to assemble systems, frames, sequences, address rules, and timeout behavior from `OPEN.db` |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Physical Device, firmware, Module, Object, Virgin Object, and configuration interpretation |
 | [Public OpenWebNet documents](../sources/openwebnet-public/) | common frame syntax and functional `WHO` behavior; they do not define the MyHOME_Suite diagnostic state machines documented here |
 | ScenarioDevices databases | adjacent functional/scenario behavior; not diagnostic Object or configuration identity |
-| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) | selected Temperature Control configuration constraints; not a diagnostic frame registry |
+| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) | selected Temperature Control configuration constraints; not a diagnostic frame registry |
 | Observed traffic | actual ordering, repetition, values, termination, and Device-specific support |
 | MyHOME_Suite UI | displayed Device descriptions, Module visibility/numbering, configuration labels, and editability |
 
@@ -18629,8 +18629,8 @@ Provenance cues: `database`, `source`
 | Source | What it establishes | What it does not establish alone |
 | --- | --- | --- |
 | ScenarioDevices files | editor capability hierarchy, resource keys, local IDs, categories, matching IDs, templates, and Parameter metadata | installed Device support, complete runtime graph, or public protocol semantics for frame-absent rows |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Physical Device, firmware, Module, Object, and configuration capability | ScenarioDevices ID equivalence |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | systems, address rules, management frames, diagnostic/programming sequences, and timeouts | Scenario Engine graph or ScenarioDevices row mapping |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Physical Device, firmware, Module, Object, and configuration capability | ScenarioDevices ID equivalence |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | systems, address rules, management frames, diagnostic/programming sequences, and timeouts | Scenario Engine graph or ScenarioDevices row mapping |
 | [Functional reference](../functional/) | functional `WHO`, `WHAT`, `WHERE`, and `DIMENSION` semantics | MyHOME_Suite editor coverage by itself |
 | [Cross-database functional coverage](../functional/cross-database-coverage.md) | corroborated intersections among implementation databases and functional frames | undeclared numeric joins |
 | observed application/runtime behavior | UI labels, filtering, persistence, matching, and execution behavior | universal support beyond observed versions and Devices |

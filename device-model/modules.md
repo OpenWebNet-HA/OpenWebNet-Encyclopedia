@@ -171,6 +171,6 @@ Conditions can restrict whether a slot/Object association is applicable. `EN_CON
 
 ## Sources
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines declared slots, Object alternatives, and slot conditions. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the `DIMENSION 30`, `32`, and `35` wire structures. Observed traffic and MyHOME_Suite behavior establish the Modules actually reported, displayed, and editable.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines declared slots, Object alternatives, and slot conditions. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the `DIMENSION 30`, `32`, and `35` wire structures. Observed traffic and MyHOME_Suite behavior establish the Modules actually reported, displayed, and editable.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.

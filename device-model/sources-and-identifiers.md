@@ -14,11 +14,11 @@ Private packet captures are intentionally excluded from the repository. Findings
 
 | Source | Strongest evidence | Does not independently establish |
 | --- | --- | --- |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Product catalogue, firmware capabilities, `slot` positions, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | Systems, diagnostic families, frame templates, parameters, address rules, sequences, and timeouts | Complete Device catalogue or complete functional command vocabulary |
-| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | Queries used by MyHOME_Suite to assemble `OPEN.db` frames, sequences, address rules, and timeouts | Additional semantics absent from the queried tables |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Product catalogue, firmware capabilities, `slot` positions, Objects, Virgin Objects, configuration definitions and constraints | Exact runtime frame order or complete functional protocol |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | Systems, diagnostic families, frame templates, parameters, address rules, sequences, and timeouts | Complete Device catalogue or complete functional command vocabulary |
+| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/) | Queries used by MyHOME_Suite to assemble `OPEN.db` frames, sequences, address rules, and timeouts | Additional semantics absent from the queried tables |
 | [ScenarioDevices databases](../sources/myhome-suite/3.5.38/databases/) | Scenario-engine Object systems, actions, triggers, conditions, frames, and parameter limits | Physical Device, firmware, Module, or catalogue Object identity |
-| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) | Cross-property validation for selected Temperature Control Objects | General Object registry or functional `WHO` mapping |
+| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) | Cross-property validation for selected Temperature Control Objects | General Object registry or functional `WHO` mapping |
 | [public OpenWebNet documents](../sources/openwebnet-public/) | Published frame syntax and functional behavior | MyHOME_Suite catalogue hierarchy or unpublished diagnostic semantics |
 | Observed traffic | Actual values, ordering, repetition, and Device behavior | Universal support outside the observed Devices and versions |
 | MyHOME_Suite UI | Display labels, field visibility, editability, and product-specific behavior | Wire encoding unless correlated with traffic or implementation data |
