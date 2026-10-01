@@ -4,11 +4,11 @@ This profile defines how the [Encyclopedia Style Guide](../../project/encycloped
 
 Device definitions should conform to this profile unless the documented Device provides a substantive reason to differ. A deviation should improve comprehension without discarding structure, provenance, applicability, or uncertainty.
 
-## Normative exemplars
+## Normative presentation baseline
 
-[`OWN-DEV-0001`](../definitions/own-dev-0001-two-channel-universal-dimmer.md) through [`OWN-DEV-0010`](../definitions/own-dev-0010-pir-us-daylight-presence-sensor.md) are the mature presentation exemplars from which this profile is derived.
+This written profile and the [Device Page Template](device-page-template.md) are the normative presentation baseline for every completed canonical Device definition, including the earliest `OWN-DEV` pages.
 
-The written profile takes precedence over incidental historical inconsistencies in those pages. Exemplars illustrate presentation; they are not templates to copy mechanically and do not provide evidence for another Device.
+Existing Device pages are examples, not authorities. A historical page does not create an exemption from the current profile, and no Device page provides evidence for another Device.
 
 ## Core presentation rule
 

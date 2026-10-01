@@ -2,6 +2,7 @@
 
 ## Summary
 
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0003` | Project identity |
@@ -12,12 +13,13 @@
 | Item model / `modobj` | `107` | Implementation evidence |
 | Catalogue brand / line | Arnould `BRAND = 6`; Espace Evolution `LINE = 8` | Implementation evidence |
 | Firmware definition | `-1.-1.-1` wildcard / unspecified (`EN_FIRMWARE 157`) | Implementation evidence |
-| Declared Modules | 4 | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
 | Categories | Actuator, Command, Multifunction, Lighting, Automation, Scenario | Capability model |
 
 This Device is deliberately modelled as a multifunction Physical Device rather than as one actuator address. Its firmware can expose actuator functions on slots `1..2` and command/scenario functions on slots `3..4`, with the active Object set selected by configuration.
 
-## Commercial identities and package variants
+## Commercial identities
+
 
 The canonical catalogue maps nine commercial Device records to item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation independently groups `64391`, `64191`, and `64192` in the same two-relay actuator/control family. The remaining six records share the technical capability item in MyHOME Suite but still need individual product-document review.
 
@@ -37,15 +39,21 @@ The technical Device ID does not privilege one of these references. Shared-item 
 
 ## Documentation
 
-| Document / source | Type | Status | Source |
-| --- | --- | --- | --- |
-| Arnould Espace Evolution catalogue | Historical product catalogue | [Archived original](../../sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 31 / PDF pp. 27, 32 | [Official source](https://assets.legrand.com/general/legrand-fr/ar/doc_ac/clip%20it-catalogue_230x300mm_bd.pdf) |
-| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html) |
-| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | Official web source identified | [Vendor documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| Arnould Espace Evolution catalogue | Historical product catalogue | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-64391-espace-evolution-catalogue/Espace-Evolution-catalogue.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 31 / PDF pp. 27, 32 | Arnould Espace Evolution catalogue |
+| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | not stated in retained row | Device/family coverage described by retained source | - | MyHOME Suite lighting actuator function documentation |
+| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | not stated in retained row | Device/family coverage described by retained source | - | MyHOME Suite automation actuator function documentation |
 
 Additional installation sheets and catalogue revisions should be collected rather than treating this list as exhaustive.
 
-## Physical characteristics and marketed capability
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Product-specific characteristics | See retained source-derived notes below | Retained publisher evidence |
+| Hardware corroboration | Pending unless explicitly observed | Observation status |
+| Commercial/package variation | Preserved where documented | Source reconciliation |
 
 The archived historical Arnould catalogue describes `64391` as a two-independent-relay actuator with integrated control, physically or virtually configurable, occupying two modules. It documents simple or double loads, two lighting circuits or a motor, logical relay interlocking by configuration, and control of a remote BUS actuator.
 
@@ -55,42 +63,42 @@ For the base actuator the catalogue clearly prints `2 A` incandescent/halogen ca
 
 ## Identity
 
-| Field | Value | Evidence state |
+| Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_DEVICE.code` | `64391` | Implementation evidence |
-| sibling Device records | `64191`, `64192`, `H4671M2`, `LN4671M2`, `AM5851M2`, `573961`, `067249`, `067556` | Implementation evidence |
-| `EN_ITEM.id_item` | `1184` | Implementation evidence |
-| `EN_ITEM.descr` | “Flush mounted actuator and free control” | Implementation evidence |
-| `AS_ITEM_SYSTEM.modobj` | `107` | Implementation evidence |
-| `EN_BRAND.brand_name` / `brand_modobj` | Arnould / `6` | Implementation evidence |
-| `EN_LINE.line_name` / `line_modobj` | Espace Evolution / `8` | Implementation evidence |
-| catalogue system | Lighting / Automation, `sys_modobj = 1` | Implementation evidence |
+| `EN_ITEM.id_item` | `1184` | Canonical catalogue |
+| Item model / `modobj` | `107` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation (`id_system = 1`) | Canonical catalogue / retained definition |
 
-For an installed ordinary addressed Device, the identity fields should be obtained through [`DIMENSION 1` Device Identity](../../diagnostics/dim1-device-identity.md). `OBJECT_MODEL = 107` alone identifies the shared technical item, not one commercial package reference.
+## Firmware and hardware
 
-## Firmware
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `157` | `-1` | `-1` | `-1` | `4` | catalogue default | wildcard / unspecified applicability |
 
-Firmware `157` is stored as:
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
 
-| Component | Value |
-| --- | ---: |
-| version | `-1` |
-| revision | `-1` |
-| build | `-1` |
-| slots | `4` |
-| default | yes |
+## Module, Object, and Virgin Object model
 
-The established catalogue convention treats explicit `-1` components as wildcard/unspecified applicability, not as a literal physical firmware version. See [Firmware](../../device-model/firmware.md).
+### Objects
 
-## Configuration modes
+| Firmware | Object | Description | Relationship |
+| --- | --- | --- | --- |
+| `157` | `6` | Light actuator | catalogue firmware/Object relation |
+| `157` | `400` | Light control | catalogue firmware/Object relation |
+| `157` | `7` | Automation actuator | catalogue firmware/Object relation |
+| `157` | `401` | Automation control | catalogue firmware/Object relation |
+| `157` | `404` | Scheduled scenario | catalogue firmware/Object relation |
+| `157` | `406` | Scheduled scenario PLUS | catalogue firmware/Object relation |
 
-Firmware `157` supports all three catalogue modes:
+### Virgin Objects
 
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
+| Firmware | Virgin Object | Relationship |
+| --- | --- | --- |
+| `157` | `500` | catalogue candidate/template association |
+| `157` | `510` | catalogue candidate/template association |
 
-## Module and Object model
+### Reconciled topology notes
+
 
 ### Catalogue Object alternatives
 
@@ -116,7 +124,35 @@ Object `1` and Object `407` are permitted through the Virgin Object definitions 
 
 Installed Module state is read through [`DIMENSION 30`](../../diagnostics/dim30-modules.md).
 
-## Firmware-scoped physical configuration
+## Configuration modes
+
+| Firmware | Mode | Catalogue interpretation |
+| --- | --- | --- |
+| `157` | Physical configuration | retained Device-specific configuration modality |
+| `157` | Virtual Configuration | retained Device-specific configuration modality |
+| `157` | Advanced Configuration | retained Device-specific configuration modality |
+
+
+Firmware `157` supports all three catalogue modes:
+
+- Physical configuration
+- Virtual Configuration
+- Advanced Configuration
+
+## Firmware-scoped configuration
+
+| Firmware | Field | Domain | Default | Meaning |
+| --- | --- | --- | --- | --- |
+| `157` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `A1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `PL1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `M1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `A2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `PL2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `157` | `M2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+
+### Published and reconciled details
+
 
 The complete firmware-scoped field set is:
 
@@ -132,49 +168,115 @@ The complete firmware-scoped field set is:
 
 The six fields `A1/PL1/M1/A2/PL2/M2` are the Device's physical configurator surface in the canonical catalogue. `AID` is an identity field and is not counted as a physical configurator position.
 
-## Condition-selected topology
-
-The catalogue contains a substantial condition matrix selecting Object alternatives. The meaningful Device-level branches can be summarized without duplicating the generic condition-engine implementation:
-
-| Module | Selected Object | Stored physical conditions | Conversion rule(s) |
-| ---: | --- | --- | --- |
-| `1` | Light actuator `6` | `M1=0..4`, `M1=O/I`, `M1=PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `20`, `25` |
-| `1` | Automation actuator `7` | `M1=5..8,OFF,UP/DOWN,UP/DOWN monostable` | `26` |
-| `2` | Light actuator `6` | `M1=CEN` with `M2=0..4,O/I,PUL` | `25` |
-| `3` | Light control `400` | `M1=0..4,O/I,PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `4` |
-| `3` | Automation control `401` | `M1=5..8,OFF` and `M1=UP/DOWN,UP/DOWN monostable` | `4`, `550` |
-| `3` | Scheduled scenario `404` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
-| `3` | Scheduled scenario PLUS `406` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
-| `4` | Light control `400` | branches across `M2=0,O/I,OFF,ON,PUL`, `M1=CEN`, and stored `A2` scope selectors | `4`, `95`, `96`, `97` |
-| `4` | Automation control `401` | `M2=UP/DOWN` or `UP/DOWN monostable` with stored `A2` scope selectors | `4`, `95`, `96`, `97` |
-| `4` | Scheduled scenario `404` | `M1<>CEN; M2=CEN` | `4` |
-| `4` | Scheduled scenario PLUS `406` | stored `M1<>CEN; M2=FAKE` branch | no rule |
-
-The raw catalogue also contains branches whose values are not reachable from firmware `157`'s declared `A2` domain, including `A2=AMB`, `GR`, `GEN` and `AUX`, plus malformed/truncated condition text in a small number of rows and a stored `M2=ON` branch although `ON` is absent from the firmware `M2` enum. These are source facts, not instructions to silently broaden the legal physical domain.
-
-The canonical handling of these irregularities and conversion-rule evaluation is documented in [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157).
-
-### Worked configuration
-
-For the physically reachable example:
-
-```text
-M1=CEN
-M2=O/I
-```
-
-the selected topology is:
-
-| Slot | Object |
-| ---: | --- |
-| `1` | `6` Light actuator |
-| `2` | `6` Light actuator |
-| `3` | `400` Light control |
-| `4` | `400` Light control |
-
-This `[6, 6, 400, 400]` result is configuration-dependent, not the unconditional Device topology.
-
 ## Object configuration surfaces
+
+### Object `6` - Light actuator
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DELAYED_OFF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STATE_RESET` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOAD_CONTROL_MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SUBTYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `7` - Automation actuator
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STOP_TIME` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SUBTYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `400` - Light control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `START_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STOP_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DIMMING_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `T_TIME` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `401` - Automation control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `404` - Scheduled scenario
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BUTTON_2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `START_DELAY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `406` - Scheduled scenario PLUS
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PPT_CEN_HIG` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BUTTON_2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Reconciled Object notes
+
 
 The tables below preserve the complete reusable Object parameter surfaces referenced by firmware `157`. They are candidate configuration capabilities; firmware conditions, filters, and conversion rules determine the reachable subset for a concrete 64391 configuration.
 
@@ -263,7 +365,65 @@ The stored `STOP_TIME` enum notably has no `18 s` entry. Preserve the database d
 
 Virgin Object `500` additionally permits AUX control Object `407`; its reusable Object parameters should be incorporated when a reachable 64391 configuration or authoritative product source establishes that capability for this Device.
 
-## Conversion rules
+## Conditions, filters, and conversions
+
+### Relation filters
+
+| Scope | Filter IDs | Interpretation |
+| --- | --- | --- |
+| Device/Object relations | `1167`, `1168`, `1169`, `1170`, `1172`, `1184`, `1185`, `1186`, `1187`, `1188`, `1189`, `1190`, `1191`, `1192`, `1193`, `1194`, `1195`, `1196`, `1200`, `1201`, `1202`, `1203`, `1204`, `1205`, `1704`, `1873` | apply before exposing reusable Object values |
+
+### Slot conditions and conversions
+
+| Scope | Condition IDs | Conversion treatment |
+| --- | --- | --- |
+| Device slots | `4145`, `4194`, `4195`, `4197`, `4198`, `4199`, `4200`, `4201`, `4202`, `4204`, `4205`, `4206`, `4207`, `4209`, `4210`, `4211`, `4212`, `4214`, `4215`, `4216`, `4217`, `4219`, `4220`, `4222`, `4224`, `4225`, `4227`, `4229`, `4230`, `4231`, `4232`, `4238`, `4239`, `4240`, `4241`, `4242`, `4243`, `4244`, `4245`, `4246`, `4247`, `4248`, `4249`, `4250`, `4251`, `4252`, `4253`, `4255`, `4256`, `4257`, `4258`, `4259`, `4260`, `4261`, `4262`, `4263`, `4264`, `4265`, `4266`, `4267`, `4268`, `4272`, `4273`, `4279`, `4280`, `4291`, `4292`, `4298`, `4299`, `4306`, `4307`, `4908`, `4909`, `4910` | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+
+### Condition-selected topology
+
+
+The catalogue contains a substantial condition matrix selecting Object alternatives. The meaningful Device-level branches can be summarized without duplicating the generic condition-engine implementation:
+
+| Module | Selected Object | Stored physical conditions | Conversion rule(s) |
+| ---: | --- | --- | --- |
+| `1` | Light actuator `6` | `M1=0..4`, `M1=O/I`, `M1=PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `20`, `25` |
+| `1` | Automation actuator `7` | `M1=5..8,OFF,UP/DOWN,UP/DOWN monostable` | `26` |
+| `2` | Light actuator `6` | `M1=CEN` with `M2=0..4,O/I,PUL` | `25` |
+| `3` | Light control `400` | `M1=0..4,O/I,PUL`; also `M1=CEN` with `M2=0..4,O/I,PUL` | `4` |
+| `3` | Automation control `401` | `M1=5..8,OFF` and `M1=UP/DOWN,UP/DOWN monostable` | `4`, `550` |
+| `3` | Scheduled scenario `404` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
+| `3` | Scheduled scenario PLUS `406` | catalogue slot alternative; no physical condition row attached to its slot-3 association | - |
+| `4` | Light control `400` | branches across `M2=0,O/I,OFF,ON,PUL`, `M1=CEN`, and stored `A2` scope selectors | `4`, `95`, `96`, `97` |
+| `4` | Automation control `401` | `M2=UP/DOWN` or `UP/DOWN monostable` with stored `A2` scope selectors | `4`, `95`, `96`, `97` |
+| `4` | Scheduled scenario `404` | `M1<>CEN; M2=CEN` | `4` |
+| `4` | Scheduled scenario PLUS `406` | stored `M1<>CEN; M2=FAKE` branch | no rule |
+
+The raw catalogue also contains branches whose values are not reachable from firmware `157`'s declared `A2` domain, including `A2=AMB`, `GR`, `GEN` and `AUX`, plus malformed/truncated condition text in a small number of rows and a stored `M2=ON` branch although `ON` is absent from the firmware `M2` enum. These are source facts, not instructions to silently broaden the legal physical domain.
+
+The canonical handling of these irregularities and conversion-rule evaluation is documented in [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157).
+
+### Worked configuration
+
+For the physically reachable example:
+
+```text
+M1=CEN
+M2=O/I
+```
+
+the selected topology is:
+
+| Slot | Object |
+| ---: | --- |
+| `1` | `6` Light actuator |
+| `2` | `6` Light actuator |
+| `3` | `400` Light control |
+| `4` | `400` Light control |
+
+This `[6, 6, 400, 400]` result is configuration-dependent, not the unconditional Device topology.
+
+### Conversion rules
+
 
 The condition matrix references conversion rules `4`, `20`, `25`, `26`, `95`, `96`, `97`, and `550`, with additional jump rules in the stored rule graph.
 
@@ -272,6 +432,17 @@ These rules translate physical item fields into selected Object configuration va
 A future machine-readable Device Library build should preserve the complete applicable rule graph, including jump targets and raw strings, from the canonical structured source.
 
 ## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1184` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`6`, `7`, `400`, `401`, `404`, `406`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Existing Device-specific diagnostic notes
+
 
 | Diagnostic surface | 64391-specific use | Canonical reference |
 | --- | --- | --- |
@@ -286,6 +457,7 @@ No generic diagnostic frame is duplicated here.
 
 ## Functional applicability
 
+
 Depending on selected Objects, the Device can participate in:
 
 - [`WHO 1` - Lighting](../../functional/who-1-lighting/) through Light actuator / Light control Objects;
@@ -294,7 +466,12 @@ Depending on selected Objects, the Device can participate in:
 
 The Device page establishes **which functions can exist on this hardware**. The linked functional sections remain authoritative for command syntax and general runtime semantics.
 
+## Observed behavior and corroboration
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
 ## Programming
+
 
 This Device is a strong validation case because physical fields can change the active Object topology.
 
@@ -311,6 +488,7 @@ See [Configuration Programming](../../programming/configuration-programming.md),
 
 ## Source reconciliation
 
+
 The historical Arnould material and MyHOME Suite implementation help establish more product detail than the shared technical-item mapping alone:
 
 - `64391` is the two-relay actuator/control base product; `64191` and `64192` are package/use variants in the same documented family rather than independent OpenWebNet capability definitions;
@@ -320,7 +498,8 @@ The historical Arnould material and MyHOME Suite implementation help establish m
 
 The historical Arnould catalogue is now archived byte-for-byte and its Device/package facts are reconciled above. Its electrical ratings remain revision-scoped rather than timeless specifications. The MyHOME Suite lighting and automation help remain official external implementation sources and are already represented in the configuration/Object interpretation. Source reconciliation is complete for the currently identified `64391`/`64191`/`64192` source set; direct documentation for the six other commercial records remains a commercial-identity discovery gap.
 
-## Corroboration status and open work
+## Evidence limits and open work
+
 
 The current dossier is substantially complete for the canonical MyHOME Suite 3.5.38 database representation, but physical-hardware corroboration is still missing.
 
@@ -337,6 +516,7 @@ Priority evidence:
 When these observations arrive, they should be added as corroborating evidence to the existing database-derived facts rather than replacing them.
 
 ## Sources
+
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)

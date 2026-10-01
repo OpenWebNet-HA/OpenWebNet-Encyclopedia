@@ -2,6 +2,7 @@
 
 ## Summary
 
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0002` | Project identity |
@@ -11,13 +12,14 @@
 | Main catalogue system | Integration functions (`id_system = 26`) | Implementation evidence |
 | Item model / `modobj` | `51` | Implementation evidence |
 | Catalogue brand / line | `BRAND = 5`; `LINE = 0` | Implementation evidence |
-| Catalogue firmware definitions | `1.0.37`, `2.0.1` | Implementation evidence |
-| Declared Modules | 2 | Implementation evidence |
+| Firmware definition | `1.0.37`, `2.0.1` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
 | Categories | Gateway, Interface, Audio / Video | Catalogue + vendor documentation |
 
 The F454 is a MyHOME audio/video Web Server and integration gateway. BTicino's firmware-history document explicitly identifies the product as “F454 - 003598”, so those commercial references belong to the same technical Device definition.
 
 ## Commercial identities
+
 
 | Brand / range | SKU / reference | Relationship | Evidence |
 | --- | --- | --- | --- |
@@ -26,27 +28,26 @@ The F454 is a MyHOME audio/video Web Server and integration gateway. BTicino's f
 
 F453 and F453AV are predecessor products named by vendor documentation. They are not synonyms and remain separate technical Devices.
 
-## Documentation and firmware archive
+## Documentation
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00519-c-EN` | Technical sheet | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-mq00519-en/MQ00519-c-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00519-c-EN.pdf) |
+| `O1755J_U_EN` | User manual | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1755j-u-en/O1755J_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755J_U_EN.pdf) |
+| `O1755H_S_EN` | Software manual | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1755h-s-en/O1755H_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755H_S_EN.pdf) |
+| `O1754E` | Instruction sheet | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1754e/O1754E.pdf) | [Official source](https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=O1754E.pdf&fileId=58107.23188.62294.22284) |
+| `Version_History_F454_20170508` | Firmware version history | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-version-history-20170508/Version_History_F454_20170508.pdf) | [Official source](https://www.homesystems-legrandgroup.com/documents/2416083/2422856/Version_History_F454_20170508.pdf/1f3644de-73a3-5332-3ff3-b12596cc53df?t=1595605650159) |
+| `O1755G_U_EN` | Earlier English user manual revision | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-u-en/O1755G_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_U_EN.pdf) |
+| `O1755G_S_EN` | Earlier English software manual revision | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-s-en/O1755G_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_S_EN.pdf) |
+| `O1754C` | Additional instruction-sheet revision | not stated in retained row | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f454-o1754c/O1754C.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1754C.pdf) |
+| `F454_020051.fwz` | Firmware package | not stated in retained row | Device/family coverage described by retained source | - | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
 
 The historical vendor archive currently exposes a useful set of original F454 material:
 
-| Document / artifact | Type | Status | Source |
-| --- | --- | --- | --- |
-| `MQ00519-c-EN` | Technical sheet | [Archived original](../../sources/devices/documents/device-doc-f454-mq00519-en/MQ00519-c-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00519-c-EN.pdf) |
-| `O1755J_U_EN` | User manual | [Archived original](../../sources/devices/documents/device-doc-f454-o1755j-u-en/O1755J_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755J_U_EN.pdf) |
-| `O1755H_S_EN` | Software manual | [Archived original](../../sources/devices/documents/device-doc-f454-o1755h-s-en/O1755H_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755H_S_EN.pdf) |
-| `O1754E` | Instruction sheet | [Archived original](../../sources/devices/documents/device-doc-f454-o1754e/O1754E.pdf) | [Official source](https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=O1754E.pdf&fileId=58107.23188.62294.22284) |
-| `Version_History_F454_20170508` | Firmware version history | [Archived original](../../sources/devices/documents/device-doc-f454-version-history-20170508/Version_History_F454_20170508.pdf) | [Official source](https://www.homesystems-legrandgroup.com/documents/2416083/2422856/Version_History_F454_20170508.pdf/1f3644de-73a3-5332-3ff3-b12596cc53df?t=1595605650159) |
-| `O1755G_U_EN` | Earlier English user manual revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-u-en/O1755G_U_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_U_EN.pdf) |
-| `O1755G_S_EN` | Earlier English software manual revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1755g-s-en/O1755G_S_EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1755G_S_EN.pdf) |
-| `O1754C` | Additional instruction-sheet revision | [Archived original](../../sources/devices/documents/device-doc-f454-o1754c/O1754C.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/O1754C.pdf) |
-| `F454_020051.fwz` | Firmware package | Official source identified, archival copy pending | [Vendor archive](https://www.homesystems-legrandgroup.com/home/-/productsheets/2463476) |
 
 Language variants should be retained separately when their bytes or content differ.
 
-## Physical and connection characteristics
-
-Vendor technical documentation establishes:
+## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
@@ -60,95 +61,47 @@ Vendor technical documentation establishes:
 | SCS | Audio/Video and Automation/Integration bus connections documented | Vendor technical sheet |
 | Configuration | MyHOME Suite product programming | Vendor documentation + catalogue |
 
+Vendor technical documentation establishes:
+
+
 The catalogue independently associates both firmware definitions with Ethernet and USB connection modalities.
-
-## Web application and product-programming surfaces
-
-The archived English user and software manuals establish the product-level application surface that sits above the two catalogue Modules.
-
-- The web interface exposes Lighting, Automation, Temperature control, Video door entry, Burglar alarm, Energy Management and Scenarios, plus rooms/favourites and user settings.
-- Video-door-entry support includes camera/video functions and the associated answering-machine workflow where configured.
-- The web server supports both local and remote connection modes. MyHOME_Web configuration distinguishes fixed IP, dynamic IP and active Web Server connection (`WAC`) modes.
-- Administrative functions include user/profile management, e-mail/notification settings, IP-range controls, video-streaming settings and Device diagnostics.
-- OPEN authentication can use the numeric OPEN password or HMAC authentication. The manuals explicitly warn that some older clients may not support HMAC, and dynamic-IP MyHOME_Web operation uses OPEN-password authentication.
-- Product programming can send/receive the project, update Firmware and request Device information over mini-USB or Ethernet while the F454 is powered from the SCS bus.
-- LAN configuration includes static/DHCP addressing, router and DNS settings needed by outgoing services such as e-mail.
-- Remote access can itself be enabled/disabled through a configured AUX channel, optionally with an Automation actuator used as a status indication.
-
-These are F454 application/configuration capabilities, not extra OpenWebNet Modules. The two catalogue Objects remain the implementation projection used by MyHOME Suite.
 
 ## Identity
 
-### Catalogue identity
-
-| Field | Value | Evidence state |
+| Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_DEVICE.code` | `F454` / sibling `003598` | Implementation evidence |
-| `EN_ITEM.id_item` | `1455` | Implementation evidence |
-| `EN_ITEM.descr` | “Web Server A/V Bus” | Implementation evidence |
-| `AS_ITEM_SYSTEM.modobj` | `51` | Implementation evidence |
-| `EN_BRAND.brand_modobj` | `5` | Implementation evidence |
-| `EN_LINE.line_modobj` | `0` | Implementation evidence |
-| `is_gateway` | `1` | Implementation evidence |
+| `EN_ITEM.id_item` | `1455` | Canonical catalogue |
+| Item model / `modobj` | `51` | Canonical catalogue / retained definition |
+| Main system | Integration functions (`id_system = 26`) | Canonical catalogue / retained definition |
 
-### Observed gateway identity
+## Firmware and hardware
 
-A first-hand F454 capture establishes the gateway-specific identity path:
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `6` | `1` | `0` | `37` | `2` | non-default | catalogue applicability |
+| `101` | `2` | `0` | `1` | `2` | catalogue default | catalogue applicability |
 
-```text
-Client -> Gateway: *#13**15##
-Gateway -> Client: *#13**15*200##
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
 
-Client -> Gateway: *#1013**1##
-Gateway -> Client: *#1013**1*51*15*5*0##
-```
+## Module, Object, and Virgin Object model
 
-The observed diagnostic tuple is:
+### Objects
 
-| Field | Value | Status |
-| --- | ---: | --- |
-| `OBJECT_MODEL` | `51` | observed and catalogue-correlated |
-| gateway `N_CONF` | `15` | observed; exact semantics unresolved |
-| `BRAND` | `5` | observed and catalogue-correlated |
-| `LINE` | `0` | observed and catalogue-correlated |
-| functional `WHO 13 DIMENSION 15.MODEL` | `200` | observed; not unique to F454 |
+| Firmware | Object | Description | Relationship |
+| --- | --- | --- | --- |
+| `6` | `150` | Gateway Open SCS | catalogue firmware/Object relation |
+| `6` | `512` | Enhanced Web Server Audio/Video 2 Wires (F454) | catalogue firmware/Object relation |
+| `101` | `150` | Gateway Open SCS | catalogue firmware/Object relation |
+| `101` | `512` | Enhanced Web Server Audio/Video 2 Wires (F454) | catalogue firmware/Object relation |
 
-The `51*15*5*0` tuple corroborates the catalogue identity. The same functional model code `200` has also been observed on MH202, so it must not be used as a unique product discriminator.
+### Virgin Objects
 
-See [Identify an OpenWebNet Gateway](../../guides/identify-openwebnet-gateway.md) and [`DIMENSION 1` Device Identity](../../diagnostics/dim1-device-identity.md) for the generic identification procedure.
-
-## Firmware
-
-### Catalogue firmware definitions
-
-| Catalogue firmware | Version | Build | Slots | Default | Evidence |
-| --- | --- | --- | ---: | ---: | --- |
-| `6` | `1.0` | `37` | 2 | 0 | `MHCatalogue.db` |
-| `101` | `2.0` | `1` | 2 | 1 | `MHCatalogue.db` |
-
-These are MyHOME Suite capability-selection definitions, not an exhaustive firmware release history.
-
-### Vendor firmware history
-
-The official F454 history currently preserved by the vendor lists:
-
-| Firmware | Printed date | Vendor note summary |
+| Firmware | Virgin Object | Relationship |
 | --- | --- | --- |
-| `1.0.26` | 29 February 2012 | first release |
-| `1.0.32` | 30 July 2012 | security improvement and burglar-alarm fixes |
-| `1.0.45` | 12 February 2013 | translations, video streaming, minor fixes |
-| `1.0.37` | 17 June 2013 | virtual-configuration performance and optimizations |
-| `1.0.51` | 18 November 2014 | MyHome portal improvements |
-| `2.0.46` | 28 October 2015 | new web/profile UI, MyHome_Web App, burglar-alarm control, HMAC option and other improvements |
-| `2.0.48` | 26 January 2016 | optimization and minor fixes |
-| `2.0.50` | 16 May 2016 | real-time image fix and optimizations |
-| `2.0.51` | 8 May 2017 | thermoregulation probe web-page fix |
+| all | - | no Virgin Object association in selected firmware rows |
 
-The vendor document prints `1.0.45` with a February 2013 date and `1.0.37` with a June 2013 date. Preserve that source ordering/data as published rather than silently “fixing” it.
+### Reconciled topology notes
 
-The archive also exposes firmware package `2.0.51`.
-
-## Module and Object model
 
 Both catalogue firmware definitions expose the same two fixed Modules:
 
@@ -159,7 +112,13 @@ Both catalogue firmware definitions expose the same two fixed Modules:
 
 This two-Module catalogue model is separate from the gateway's network interfaces and from ordinary addressed actuator Modules.
 
-## Configuration mode and connection modalities
+## Configuration modes
+
+| Firmware | Mode | Catalogue interpretation |
+| --- | --- | --- |
+| `6` | Product Programming | retained Device-specific configuration modality |
+| `101` | Product Programming | retained Device-specific configuration modality |
+
 
 Both firmware definitions declare:
 
@@ -168,6 +127,32 @@ Both firmware definitions declare:
 - **USB** connection.
 
 ## Firmware-scoped configuration
+
+| Firmware | Field | Domain | Default | Meaning |
+| --- | --- | --- | --- | --- |
+| `6` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `IS_GATEWAY` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `FW_VER` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `VCD_PORT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `CMD_PORT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `LAN_IP_ADDRESS` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `LAN_IP_ADDR_TYPE` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `IP_ADDRESS` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `CONNECTION_METHOD` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `6` | `S_VCT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `IS_GATEWAY` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `FW_VER` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `VCD_PORT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `CMD_PORT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `LAN_IP_ADDRESS` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `LAN_IP_ADDR_TYPE` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `IP_ADDRESS` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `CONNECTION_METHOD` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `101` | `S_VCT` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+
+### Published and reconciled details
+
 
 The two catalogue firmware definitions expose the same field names and domains. Defaults that differ between records are preserved rather than normalized.
 
@@ -186,7 +171,34 @@ The two catalogue firmware definitions expose the same field names and domains. 
 
 The `FW_VER` defaults are configuration-template data and do not correspond cleanly to the enclosing catalogue firmware definitions. In particular, the `1.0.37` capability record contains a `FW_VER` default of `3.0.0`. Preserve this implementation irregularity and do not reinterpret it as a literal firmware applicability statement.
 
-## Object configuration surface
+## Object configuration surfaces
+
+### Object `150` - Gateway Open SCS
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LAN_IP_ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IS_GATEWAY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SYSADDRESS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `512` - Enhanced Web Server Audio/Video 2 Wires (F454)
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `IS_GATEWAY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LAN_IP_ADDRESS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LAN_IP_ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IP_ADDRESS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `CONNECTION_METHOD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `CMD_PORT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `VCD_PORT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `FW_VER` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `S_VCT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SYSADDRESS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Reconciled Object notes
+
 
 ### Object `150` - Gateway Open SCS
 
@@ -214,7 +226,32 @@ The `FW_VER` defaults are configuration-template data and do not correspond clea
 
 These are catalogue configuration fields. Actual IP addresses, ports, credentials, and installation identifiers belong to private installation state, not to the public Device definition.
 
-## Functional and diagnostic applicability
+## Conditions, filters, and conversions
+
+### Relation filters
+
+| Scope | Filter IDs | Interpretation |
+| --- | --- | --- |
+| Device/Object relations | none | apply before exposing reusable Object values |
+
+### Slot conditions and conversions
+
+| Scope | Condition IDs | Conversion treatment |
+| --- | --- | --- |
+| Device slots | none | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+
+## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1455` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`150`, `512`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Existing Device-specific diagnostic notes
+
 
 | Surface | F454-specific knowledge | Canonical reference |
 | --- | --- | --- |
@@ -227,7 +264,24 @@ These are catalogue configuration fields. Actual IP addresses, ports, credential
 
 Generic gateway frame grammar stays in the linked references. The raw identity exchange is retained above because it is direct evidence for this product.
 
+## Functional applicability
+
+
+The archived English user and software manuals establish the product-level application surface that sits above the two catalogue Modules.
+
+- The web interface exposes Lighting, Automation, Temperature control, Video door entry, Burglar alarm, Energy Management and Scenarios, plus rooms/favourites and user settings.
+- Video-door-entry support includes camera/video functions and the associated answering-machine workflow where configured.
+- The web server supports both local and remote connection modes. MyHOME_Web configuration distinguishes fixed IP, dynamic IP and active Web Server connection (`WAC`) modes.
+- Administrative functions include user/profile management, e-mail/notification settings, IP-range controls, video-streaming settings and Device diagnostics.
+- OPEN authentication can use the numeric OPEN password or HMAC authentication. The manuals explicitly warn that some older clients may not support HMAC, and dynamic-IP MyHOME_Web operation uses OPEN-password authentication.
+- Product programming can send/receive the project, update Firmware and request Device information over mini-USB or Ethernet while the F454 is powered from the SCS bus.
+- LAN configuration includes static/DHCP addressing, router and DNS settings needed by outgoing services such as e-mail.
+- Remote access can itself be enabled/disabled through a configured AUX channel, optionally with an Automation actuator used as a status indication.
+
+These are F454 application/configuration capabilities, not extra OpenWebNet Modules. The two catalogue Objects remain the implementation projection used by MyHOME Suite.
+
 ## Observed behavior and corroboration
+
 
 The observed F454 identity tuple independently corroborates the database mapping `modobj = 51`, `BRAND = 5`, `LINE = 0`.
 
@@ -237,11 +291,13 @@ F454 has additionally been part of controlled F418U2 tests in which gateway-depe
 
 ## Programming
 
+
 F454 uses Product Programming rather than ordinary physical/virtual Object programming. Generic programming-session mechanics belong in [Programming](../../programming/). Device-specific fields and their catalogue domains are preserved above.
 
 A future OWN Device Library representation should keep network configuration fields but must never populate them with installation-specific values from research captures.
 
 ## Source reconciliation
+
 
 The known F454 vendor material and first-hand gateway captures add Device-specific behavior beyond the catalogue fields:
 
@@ -256,6 +312,7 @@ The identified English F454 PDF set is now archived byte-for-byte and reconciled
 
 ## Evidence limits and open work
 
+
 - Archive the `2.0.51` firmware package and retain non-English manual variants separately when they provide content beyond translation of the reconciled English revisions.
 - Add hashes and supersession relationships to the source manifest.
 - Preserve observed firmware/hardware values from sanitized captures and associate them with the matching vendor release record where justified.
@@ -264,6 +321,7 @@ The identified English F454 PDF set is now archived byte-for-byte and reconciled
 - Determine how MyHOME Suite chooses between the two catalogue capability records and firmware versions outside `1.0.37` / `2.0.1`.
 
 ## Sources
+
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
