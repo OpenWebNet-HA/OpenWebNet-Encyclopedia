@@ -1,6 +1,6 @@
 # ZigBee OpenWebNet Interface
 
-This page records the interface-specific boundary established by the supplied Legrand [ZigBee OpenWebNet Specification](../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0, 22 November 2016. It is specification evidence, not a tested interoperability claim. The document carries Confidential footers; its public-release provenance remains unresolved as recorded in the [Source-Coverage Audit](../project/review/phase-3-source-coverage.md).
+This page records the interface-specific boundary established by the supplied Legrand [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0, 22 November 2016. It is specification evidence, not a tested interoperability claim. The document carries Confidential footers; its public-release provenance remains unresolved as recorded in the [Source-Coverage Audit](../project/review/phase-3-source-coverage.md).
 
 ## Transport and addressing
 

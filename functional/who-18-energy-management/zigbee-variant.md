@@ -2,7 +2,7 @@
 
 The ZigBee OpenWebNet version 4.0 specification defines an interface-specific `WHO 18` Energy Management surface for ZigBee products. Its command and `DIMENSION` vocabulary differs materially from the SCS-oriented `WHO 18` reference, despite sharing the same namespace number.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
 
 The source section heading says "Automation WHO = 18", while its prose and operation labels describe Energy Management parameters. The encyclopedia preserves that editorial inconsistency in the reconciliation record rather than treating "Automation" as a second functional meaning.
 

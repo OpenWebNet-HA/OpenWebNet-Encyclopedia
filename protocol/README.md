@@ -81,4 +81,4 @@ This directory contains mechanics shared across systems. [Scope and Architecture
 
 ## Evidence basis
 
-The common syntax and TCP session model are grounded in [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). HMAC behavior is grounded in [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf). System-specific semantics come from the corresponding public `WHO` document, MyHOME Suite implementation data, or explicitly identified observed traffic; those evidence classes are not treated as interchangeable.
+The common syntax and TCP session model are grounded in [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). HMAC behavior is grounded in [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf). System-specific semantics come from the corresponding public `WHO` document, MyHOME Suite implementation data, or explicitly identified observed traffic; those evidence classes are not treated as interchangeable.

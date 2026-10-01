@@ -505,7 +505,7 @@ Every record carries the fields required for later phases. Evidence not inspecte
 - **Finding ID:** `P1-GAP-002`
 - **Status:** Verified
 - **Severity:** Substantive
-- **Path:** `sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf`, `sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf`
+- **Path:** `https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf`, `https://archive.openwebnet-ha.org/sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf`
 - **Claim/issue:** Both PDFs are present and fingerprinted in the authoritative repository but are not materialized in the local review workspace.
 - **ECV/ESG rule:** ECV 5, 6, 7, 8, 12, 20
 - **Evidence inspected:** Manifest entries, authoritative Git tree entries, functional source-coverage page, prior review record

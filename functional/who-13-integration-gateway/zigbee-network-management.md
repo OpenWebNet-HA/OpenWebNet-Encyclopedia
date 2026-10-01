@@ -4,7 +4,7 @@ The Legrand ZigBee OpenWebNet specification version 4.0 defines an interface-spe
 
 This page documents only behavior represented through OpenWebNet. ZigBee radio commissioning, routing, security, and other radio-internal mechanisms are outside the encyclopedia boundary except where an OpenWebNet field exposes their result.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **specification evidence** for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **specification evidence** for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
 
 ## `WHAT` reference
 

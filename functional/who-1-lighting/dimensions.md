@@ -109,6 +109,6 @@ The global `WHO 1` vocabulary does not imply that every Lighting Object implemen
 
 ## Evidence basis
 
-Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
+Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
 
 See [`WHAT` Reference](what.md), [Addressing](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).

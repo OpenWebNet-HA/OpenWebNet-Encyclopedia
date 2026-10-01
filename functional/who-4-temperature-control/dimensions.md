@@ -185,4 +185,4 @@ See [Addressing](addressing.md) for zone/probe/actuator forms, [`WHAT` Reference
 
 ## Evidence basis
 
-Published payloads and page references above come from the [Temperature Control Specification](../../sources/openwebnet-public/pdf/WHO_4.pdf), version 2.0.0. ScenarioDevices extensions and reported later-device behavior remain separately identified. The same PDF also defines [Temperature Control Fault Diagnostics](../../diagnostics/temperature-control-faults.md) under `WHO 1004`; those are not functional `WHO 4` dimensions.
+Published payloads and page references above come from the [Temperature Control Specification](https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf), version 2.0.0. ScenarioDevices extensions and reported later-device behavior remain separately identified. The same PDF also defines [Temperature Control Fault Diagnostics](../../diagnostics/temperature-control-faults.md) under `WHO 1004`; those are not functional `WHO 4` dimensions.

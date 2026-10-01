@@ -2,7 +2,7 @@
 
 The ZigBee OpenWebNet version 4.0 specification defines a deliberately narrow `WHO 4` Temperature Control surface for the Legrand serial ZigBee interface. In the inspected section, `WHO 4` is used to receive temperature reports from a ZigBee probe. It does not define the broad SCS zone, central-unit, actuator, setpoint, program, or split-control model documented elsewhere in this namespace.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
 
 ## Documented surface
 

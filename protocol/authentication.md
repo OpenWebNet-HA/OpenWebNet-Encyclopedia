@@ -109,4 +109,4 @@ Do not place passwords, derived keys, nonces, proofs, or complete authentication
 
 ## Evidence basis
 
-The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf), version 1.1. The connection position and open-range exception are corroborated by [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf).
+The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf), version 1.1. The connection position and open-range exception are corroborated by [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf).

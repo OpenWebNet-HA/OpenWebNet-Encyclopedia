@@ -51,4 +51,4 @@ The gateway answers commands with `ACK` or `NACK`. Adjustment and DIAL operation
 
 ## Evidence basis
 
-Values, addresses, trailing-empty-tag frames, and command sequences come from [`WHO 7` specification](../../sources/openwebnet-public/pdf/WHO_7.pdf). The source's address-range discrepancy is retained explicitly.
+Values, addresses, trailing-empty-tag frames, and command sequences come from [`WHO 7` specification](https://archive.openwebnet-ha.org/sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf). The source's address-range discrepancy is retained explicitly.
