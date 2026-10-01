@@ -177,16 +177,17 @@ Firmware `186`'s stored `M` range omits value `2` even though the official 2014 
 
 ### Reconciled Object notes
 
+The fixed Light actuator Object `6` provides this reusable lighting-actuator parameter model:
 
-The fixed Light actuator Object `6` provides the reusable lighting-actuator parameter model, including:
-
-- `A` and `PL` address;
-- master/slave/PUL mode;
-- local-button behavior;
-- delayed-off settings;
-- reset state;
-- load-control mode and subtype;
-- group memberships.
+| Configuration family | Surface |
+| --- | --- |
+| Addressing | `A`, `PL` |
+| Actuator mode | master / slave / PUL |
+| Local control | local-button behavior |
+| Timing | delayed-off settings |
+| Restart behavior | reset state |
+| Load semantics | load-control mode and subtype |
+| Group membership | reusable Object group fields |
 
 Firmware `186` exposes `G1` and `G2` directly as physical fields, while the reusable Object model can represent a larger group-membership set under virtual configuration.
 

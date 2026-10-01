@@ -198,6 +198,14 @@ def main() -> int:
                 if raw_marker in firmware_body:
                     errors.append(f"{prefix}: Firmware-scoped configuration contains raw catalogue serialization marker {raw_marker!r}")
             object_human_body = section(text, "Object configuration surfaces")
+            reconciled_match = re.search(
+                r"(?ms)^### Reconciled Object notes\n(.*?)(?=^## |\Z)",
+                object_human_body,
+            )
+            if reconciled_match and not re.search(r"(?m)^\|.*\|$", reconciled_match.group(1)):
+                errors.append(
+                    f"{prefix}: Reconciled Object notes must structure enumerable Object facts as a table"
+                )
             for raw_marker in ("Catalogue range rows", "| Flags |", "visible=", "type-id=", "range -..-"):
                 if raw_marker in object_human_body:
                     errors.append(f"{prefix}: Object configuration surfaces contains raw catalogue serialization marker {raw_marker!r}")
