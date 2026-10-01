@@ -6,7 +6,8 @@ policy:
   documents: Public publisher documentation is stored in openwebnet-documents and may have a public archive URL.
   data: Canonical vendor databases and support data are stored privately in openwebnet-data.
   software: Installers and firmware are stored privately in openwebnet-software.
-  language: Documentation artifacts always carry a language list. ISO 639-1 codes are used where established; und means undetermined.
+  language: Documentation artifacts always carry a language list. ISO 639-1 codes are used for established single languages.
+    ISO 639 special codes mul and und denote multilingual and undetermined content.
 storage:
   openwebnet-documents:
     visibility: public
@@ -169,8 +170,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-1057c84858e3c3c6
   kind: documentation
   publisher: BTicino / Legrand
@@ -254,8 +255,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-14971697bfbdbb33
   kind: documentation
   publisher: BTicino / Legrand
@@ -356,8 +357,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-246cd0df8b37b4cb
   kind: documentation
   publisher: BTicino / Legrand
@@ -407,8 +408,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/29/fc/29fca41204b17293d96222e64a4015e111de5477eda1e2ef439a33d19cf53021.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-2b0656aa8623d733
   kind: documentation
   publisher: BTicino / Legrand
@@ -441,8 +442,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-2d34fb8c90385159
   kind: documentation
   publisher: BTicino / Legrand
@@ -493,8 +494,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/2e/8b/2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-2f4daed6f567b8fc
   kind: documentation
   publisher: BTicino / Legrand
@@ -510,8 +511,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-303432cca6900f18
   kind: documentation
   publisher: BTicino / Legrand
@@ -629,8 +630,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/36/26/3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-366400ace2185045
   kind: documentation
   publisher: BTicino / Legrand
@@ -680,8 +681,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-3d1072e42a34c621
   kind: documentation
   publisher: BTicino / Legrand
@@ -697,8 +698,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/3d/10/3d1072e42a34c621e60cc455b94985116d4bc475ecfaca52df4de3bfe05f277e.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-3e59e4fbc2a4cbfb
   kind: documentation
   publisher: BTicino / Legrand
@@ -714,8 +715,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-3eeee15691e13bdd
   kind: documentation
   publisher: BTicino / Legrand
@@ -731,8 +732,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-418cd9a3e38720b4
   kind: documentation
   publisher: BTicino / Legrand
@@ -782,8 +783,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/44/9d/449ddd64558f8355f70f2f78374ca3fdba0db3965f1e8287d8ebc4fec8e5d33a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-47959cd888b93d2c
   kind: documentation
   publisher: BTicino / Legrand
@@ -799,8 +800,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/47/95/47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-4854112b1d66d371
   kind: documentation
   publisher: BTicino / Legrand
@@ -850,8 +851,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/48/d5/48d55d6d02b70b7314ed83a1c534cd86b85a241ed5371b24bd2574e8f1c2182a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-4b79903469f72ff4
   kind: documentation
   publisher: BTicino / Legrand
@@ -986,8 +987,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/5b/2e/5b2e917fc18fd0960da488c7d0f209795d10bee903ab1dcdb21be9c0a6acdc4c.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-5d86ca223ed7002c
   kind: documentation
   publisher: BTicino / Legrand
@@ -1122,8 +1123,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-7858fdb08933d8e3
   kind: documentation
   publisher: BTicino / Legrand
@@ -1190,8 +1191,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - fr
+  language_evidence: publisher-title-or-filename
 - id: document-sha256-849fecce315893ce
   kind: documentation
   publisher: BTicino / Legrand
@@ -1241,8 +1242,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/88/80/888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-8adafaaeac5e07a5
   kind: documentation
   publisher: BTicino / Legrand
@@ -1292,8 +1293,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/8b/e3/8be3d653dbd0cf01cb4ac1de7976100c355719a5851cc6e0ed03c07d4a6856ff.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-8bf06ff1394615db
   kind: documentation
   publisher: BTicino / Legrand
@@ -1326,8 +1327,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-92c7042e277e5f93
   kind: documentation
   publisher: BTicino / Legrand
@@ -1360,8 +1361,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/96/b2/96b2d164e69405d1c7f3a1b52e3eea061ad02c1fee528c16f35971255406232f.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - fr
+  language_evidence: publisher-title-or-filename
 - id: document-sha256-97d43e6493ff0dbc
   kind: documentation
   publisher: BTicino / Legrand
@@ -1394,8 +1395,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - fr
+  language_evidence: publisher-title-or-filename
 - id: document-sha256-99301d84e7779b5b
   kind: documentation
   publisher: BTicino / Legrand
@@ -1411,8 +1412,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/99/30/99301d84e7779b5b516d492f24828f618c1b78a0c977ef0660b8aad6d4cc340a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-9b7ed9908e60dba3
   kind: documentation
   publisher: BTicino / Legrand
@@ -1462,8 +1463,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-9f7d430ced634a33
   kind: documentation
   publisher: BTicino / Legrand
@@ -1530,8 +1531,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-a610f6d8fd4aa811
   kind: documentation
   publisher: BTicino / Legrand
@@ -1547,8 +1548,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-a93b06343116dda6
   kind: documentation
   publisher: BTicino / Legrand
@@ -1701,8 +1702,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-c4461318739c49ab
   kind: documentation
   publisher: BTicino / Legrand
@@ -1718,8 +1719,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/c4/46/c4461318739c49ab58078d75876aef57bff823dcaf7f964714a60f154f489dee.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-c5f96fb6a845ad7c
   kind: documentation
   publisher: BTicino / Legrand
@@ -1735,8 +1736,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-c78272e5498b209f
   kind: documentation
   publisher: BTicino / Legrand
@@ -1769,8 +1770,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/c9/60/c960937a4d19e52342c1af618782e715e75e1e181a7804d012096afec99834a3.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-ca32b5195c5464a2
   kind: documentation
   publisher: BTicino / Legrand
@@ -1803,8 +1804,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-d17c79d0a00ce590
   kind: documentation
   publisher: BTicino / Legrand
@@ -1820,8 +1821,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-d271cc73c58bd735
   kind: documentation
   publisher: BTicino / Legrand
@@ -1888,8 +1889,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/d4/7f/d47faf013abb6f55e08f149365f3b98d86240b34b30f24c9eeea1de1505e3ff6.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: document-sha256-d6cafa21923a3de3
   kind: documentation
   publisher: BTicino / Legrand
@@ -1922,8 +1923,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - fr
+  language_evidence: publisher-title-or-filename
 - id: document-sha256-e1a8da77199296d9
   kind: documentation
   publisher: BTicino / Legrand
@@ -1990,8 +1991,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/ea/4c/ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-ecdf700916a50941
   kind: documentation
   publisher: BTicino / Legrand
@@ -2075,8 +2076,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/f3/88/f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - en
+  language_evidence: explicit-locale-or-publisher-metadata
 - id: document-sha256-f3e5c1d33d683b8a
   kind: documentation
   publisher: BTicino / Legrand
@@ -2109,8 +2110,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - fr
+  language_evidence: publisher-title-or-filename
 - id: document-sha256-f50c64daa65dd92a
   kind: documentation
   publisher: BTicino / Legrand
@@ -2194,8 +2195,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf
   language:
-  - und
-  language_evidence: undetermined
+  - mul
+  language_evidence: publisher-shared-multilocale
 - id: firmware-f450-020010
   kind: firmware
   publisher: BTicino / Legrand
