@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 160 |
+| unreviewed | 155 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 50 |
+| definition-in-progress | 55 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -77,11 +77,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 45 | PIR ceiling mounted sensor | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 47 | Ballast DIN dimmer 0-10 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 49 | PIR+US ceiling mounted sensor | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 50 | PIR+US wall mounted sensor | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 51 | PIR wall mounted sensor, straight range | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 52 | PIR wall mounted sensor, short range | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 53 | PIR wall mounted sensor, dual range | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -231,6 +226,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | complete | partial | pending | - |
 | normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | complete | partial | pending | - |
 | normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | complete | partial | pending | - |
+| normal | 45 | PIR ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0051 | complete | complete | complete | pending | - |
+| normal | 47 | Ballast DIN dimmer 0-10 V | 2 | definition-in-progress | OWN-DEV-0052 | complete | complete | complete | pending | - |
+| normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | definition-in-progress | OWN-DEV-0053 | complete | complete | complete | pending | - |
+| normal | 49 | PIR+US ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0054 | complete | complete | complete | pending | - |
+| normal | 50 | PIR+US wall mounted sensor | 2 | definition-in-progress | OWN-DEV-0055 | complete | complete | complete | pending | - |
 
 ## Reviewed
 

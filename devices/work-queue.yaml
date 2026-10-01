@@ -340,80 +340,105 @@ items:
     - 4575SB batteryless-control receiver definition created and source-reconciled
       with the archived automation guide; hardware corroboration remains.
   '45':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0051
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0051 created from the canonical catalogue and archived publisher sources;
+      hardware corroboration remains explicit.
   '47':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0052
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0052 created from the canonical catalogue and archived publisher sources;
+      hardware corroboration remains explicit.
   '48':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0053
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0053 created from the canonical catalogue and archived publisher sources;
+      hardware corroboration remains explicit.
   '49':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0054
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0054 created from the canonical catalogue and archived publisher sources;
+      hardware corroboration remains explicit.
   '50':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0055
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0055 created from the canonical catalogue and archived publisher sources;
+      hardware corroboration remains explicit.
   '51':
     state: unreviewed
     priority: normal
