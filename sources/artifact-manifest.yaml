@@ -2613,3 +2613,53 @@ artifacts:
   repository_history:
     former_paths:
     - sources/myhome-suite/3.5.38/support/OpenQuery.txt
+- id: document-sha256-662ad5bd8817c573
+  kind: documentation
+  publisher: BTicino / Legrand
+  media_type: application/pdf
+  filename: WHO_1.pdf
+  size: 540057
+  sha256: 662ad5bd8817c5732afc1ce0cca17436d47d44fcb422cb2fcb28ee1208de12c5
+  source_url: https://static.developer.legrand.com/files/2024/05/WHO_1.pdf
+  source_version: '1.2'
+  source_date: '2024-06-01'
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/66/2a/662ad5bd8817c5732afc1ce0cca17436d47d44fcb422cb2fcb28ee1208de12c5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/66/2a/662ad5bd8817c5732afc1ce0cca17436d47d44fcb422cb2fcb28ee1208de12c5.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: openwebnet-client-macos-64bit
+  kind: software-installer
+  publisher: BTicino / Legrand
+  product: Open Web Net Client
+  platform: macOS 64-bit
+  filename: OpenWebNet_Client_mac_64bit.zip
+  size: 9888345
+  sha256: 92134849324c2fd972aa6b658244141f69f5999c04ec2212a4bc616405b9cc63
+  source_page: https://developer.legrand.com/local-interoperability/
+  source_url: https://developer.legrand.com/uploads/2019/12/OpenWebNet_Client_mac_64bit.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/92/13/92134849324c2fd972aa6b658244141f69f5999c04ec2212a4bc616405b9cc63
+    visibility: private
+  redistribution_status: private-archive-only
+- id: openwebnet-client-windows-32bit
+  kind: software-installer
+  publisher: BTicino / Legrand
+  product: Open Web Net Client
+  platform: Windows 32-bit
+  filename: OpenWebNet_Client_windows_32bit.zip
+  size: 18622035
+  sha256: 4538fa6db1472b17ffc4d6dff24c49cb22d4f0302cf7031ae23e46ff6e23deab
+  source_page: https://developer.legrand.com/local-interoperability/
+  source_url: https://developer.legrand.com/uploads/2019/12/OpenWebNet_Client_windows_32bit.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/45/38/4538fa6db1472b17ffc4d6dff24c49cb22d4f0302cf7031ae23e46ff6e23deab
+    visibility: private
+  redistribution_status: private-archive-only
