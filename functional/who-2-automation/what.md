@@ -32,7 +32,7 @@ The priority payload contains a set/clear selector and Safety, High, and Medium 
 
 ### Parameter format
 
-The published [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf) defines separate parameter structures for command sessions and event sessions:
+The published [`WHO 2` specification](https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf) defines separate parameter structures for command sessions and event sessions:
 
 **Published command session grammar** (client to server):
 ~~~text
@@ -91,6 +91,6 @@ Values `10..14` also appear as `DIMENSION 10` shutter-state values: Stop, Up, Do
 
 ## Evidence basis
 
-The command table, step and priority model, collective event behavior, and translation frames come from [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
+The command table, step and priority model, collective event behavior, and translation frames come from [`WHO 2` specification](https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
 
 See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and the common [`WHAT` model](../../protocol/what.md).

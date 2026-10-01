@@ -138,6 +138,6 @@ The intersection step prevents a global Virgin Object vocabulary from being appl
 
 ## Sources
 
-Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db). `OPEN.db` supplies the `KEYO` and binary `STATE` fields; controlled diagnostic/programming experiments correlated with MyHOME_Suite UI behavior establish the polarity, while catalogue resolution corroborates the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
+Virgin Object identity and compatibility are defined by [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/). `OPEN.db` supplies the `KEYO` and binary `STATE` fields; controlled diagnostic/programming experiments correlated with MyHOME_Suite UI behavior establish the polarity, while catalogue resolution corroborates the state-dependent Object/Virgin-Object namespaces. ScenarioDevices is not a Virgin Object registry.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.
