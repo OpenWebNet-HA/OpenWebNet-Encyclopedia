@@ -1,0 +1,159 @@
+{
+  "archive_base_url": "https://archive.openwebnet-ha.org",
+  "documents": [
+    {
+      "filename": "Hmac.pdf",
+      "former_path": "sources/openwebnet-public/pdf/Hmac.pdf",
+      "object_key": "sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf",
+      "sha256": "787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680",
+      "size": 289323
+    },
+    {
+      "filename": "OWN_Intro_ENG.pdf",
+      "former_path": "sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf",
+      "object_key": "sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf",
+      "sha256": "97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2",
+      "size": 475501
+    },
+    {
+      "filename": "OpenWebNet_Zigbee.pdf",
+      "former_path": "sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf",
+      "object_key": "sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf",
+      "sha256": "9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776",
+      "size": 929707
+    },
+    {
+      "filename": "WHO_0.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_0.pdf",
+      "object_key": "sha256/24/6c/246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/24/6c/246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8.pdf",
+      "sha256": "246cd0df8b37b4cb9ff31899e4ac6864b5c963a0a10d3d17ad68c028e18e4dd8",
+      "size": 312343
+    },
+    {
+      "filename": "WHO_1.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_1.pdf",
+      "object_key": "sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf",
+      "sha256": "8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a",
+      "size": 318496
+    },
+    {
+      "filename": "WHO_13.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_13.pdf",
+      "object_key": "sha256/aa/8d/aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/aa/8d/aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798.pdf",
+      "sha256": "aa8de3012f081bb66eca5f93b42c6029486f3256f8322e8e091010de6eecd798",
+      "size": 231472
+    },
+    {
+      "filename": "WHO_15-25.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_15-25.pdf",
+      "object_key": "sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf",
+      "sha256": "8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21",
+      "size": 931576
+    },
+    {
+      "filename": "WHO_16.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_16.pdf",
+      "object_key": "sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf",
+      "sha256": "0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6",
+      "size": 618488
+    },
+    {
+      "filename": "WHO_17.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_17.pdf",
+      "object_key": "sha256/58/d0/58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/58/d0/58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753.pdf",
+      "sha256": "58d01ff170ae5bb9efbcb4f968f9f0027d5b6a668b65f20a88857383b17ff753",
+      "size": 225080
+    },
+    {
+      "filename": "WHO_18.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_18.pdf",
+      "object_key": "sha256/9b/7e/9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/9b/7e/9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e.pdf",
+      "sha256": "9b7ed9908e60dba320fdeb5dc11559c181fc114198d1af88fa44028c6217d60e",
+      "size": 675526
+    },
+    {
+      "filename": "WHO_2.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_2.pdf",
+      "object_key": "sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf",
+      "sha256": "e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88",
+      "size": 189823
+    },
+    {
+      "filename": "WHO_22.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_22.pdf",
+      "object_key": "sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf",
+      "sha256": "138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0",
+      "size": 348003
+    },
+    {
+      "filename": "WHO_24.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_24.pdf",
+      "object_key": "sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf",
+      "sha256": "4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298",
+      "size": 689678
+    },
+    {
+      "filename": "WHO_25.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_25.pdf",
+      "object_key": "sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf",
+      "sha256": "122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927",
+      "size": 425272
+    },
+    {
+      "filename": "WHO_3.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_3.pdf",
+      "object_key": "sha256/4f/68/4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/4f/68/4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1.pdf",
+      "sha256": "4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1",
+      "size": 239458
+    },
+    {
+      "filename": "WHO_4.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_4.pdf",
+      "object_key": "sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf",
+      "sha256": "35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89",
+      "size": 1128550
+    },
+    {
+      "filename": "WHO_5.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_5.pdf",
+      "object_key": "sha256/20/db/20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/20/db/20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d.pdf",
+      "sha256": "20dbec24c5201aea34633fd39294c25b2932b2deccb70c61777fac6bd4571c8d",
+      "size": 817591
+    },
+    {
+      "filename": "WHO_6_L4686SDK.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf",
+      "object_key": "sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf",
+      "sha256": "519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b",
+      "size": 96584
+    },
+    {
+      "filename": "WHO_7.pdf",
+      "former_path": "sources/openwebnet-public/pdf/WHO_7.pdf",
+      "object_key": "sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf",
+      "public_url": "https://archive.openwebnet-ha.org/sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf",
+      "sha256": "702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83",
+      "size": 338944
+    }
+  ],
+  "object_layout": "sha256/<first-2>/<next-2>/<sha256>.pdf",
+  "version": 1
+}

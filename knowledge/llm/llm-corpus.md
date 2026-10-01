@@ -3452,7 +3452,7 @@ Section ID: `ownkb:section:d000019:s000006`
 Applicability cues: `version`
 Provenance cues: `specification`
 
-The [Temperature Control Specification](../sources/openwebnet-public/pdf/WHO_4.pdf), version 2.0.0, pages 69–74, defines these targets, sequences, counts, bit labels, and polarity. See [Diagnostic Architecture](architecture.md) for the separate MyHOME Suite management model and [Temperature Control Properties](../functional/who-4-temperature-control/dimensions.md) for functional properties.
+The [Temperature Control Specification](https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf), version 2.0.0, pages 69–74, defines these targets, sequences, counts, bit labels, and polarity. See [Diagnostic Architecture](architecture.md) for the separate MyHOME Suite management model and [Temperature Control Properties](../functional/who-4-temperature-control/dimensions.md) for functional properties.
 
 # Document: ownkb:document:d000020
 
@@ -4100,7 +4100,7 @@ Provenance cues: `documentation`, `evidence`, `source`, `specification`
 
 The corpus contains no dedicated public functional specification for `WHO 8`, `9`, `10`, `11`, `12`, `14`, `19`, `23`, `26`, `27`, or `99`. Their pages must therefore distinguish namespace identity and narrow implementation evidence from a complete grammar.
 
-The [ZigBee Interface Specification](../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0, is also relevant to Protocol, Diagnostics, Programming boundaries, and functional `WHO 1`, `2`, `4`, `13`, `18`, and `25`. It describes a particular Legrand serial interface, not a universal replacement for the SCS-oriented references. The [ZigBee Interface](../protocol/zigbee-interface.md) owns cross-cutting transport, addressing, acknowledgement, and applicability. Operation-level ZigBee references are integrated for [Lighting](who-1-lighting/zigbee-variant.md), [Automation](who-2-automation/zigbee-variant.md), [Temperature Control](who-4-temperature-control/zigbee-variant.md), [Network Management](who-13-integration-gateway/zigbee-network-management.md), [Energy Management](who-18-energy-management/zigbee-variant.md), and [Binding](who-25-transversal/zigbee-binding.md). These pages are source-bounded to the version 4.0 specification and do not establish universal product support. The source's publication status also requires the [Source Provenance Qualification](../sources/openwebnet-public/README.md). `WHO 1000 DIMENSION 81` discovery and the sections 5-6 product-inventory flows are reconciled in the [ZigBee Discovery and Inventory Reconciliation](../project/review/zigbee-discovery-inventory-reconciliation.md). The final source-to-documentation audit is recorded in the [ZigBee Final Source Completeness Certification](../project/review/zigbee-final-source-completeness-certification.md). See the [Phase 3 Source-Coverage Audit](../project/review/phase-3-source-coverage.md), [ZigBee Reconciliation Review](../project/review/zigbee-reconciliation.md), [ZigBee Functional Reconciliation](../project/review/zigbee-functional-reconciliation.md), and the Step 2 review for inspection scope, source conflicts, and rejected or unresolved claims.
+The [ZigBee Interface Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0, is also relevant to Protocol, Diagnostics, Programming boundaries, and functional `WHO 1`, `2`, `4`, `13`, `18`, and `25`. It describes a particular Legrand serial interface, not a universal replacement for the SCS-oriented references. The [ZigBee Interface](../protocol/zigbee-interface.md) owns cross-cutting transport, addressing, acknowledgement, and applicability. Operation-level ZigBee references are integrated for [Lighting](who-1-lighting/zigbee-variant.md), [Automation](who-2-automation/zigbee-variant.md), [Temperature Control](who-4-temperature-control/zigbee-variant.md), [Network Management](who-13-integration-gateway/zigbee-network-management.md), [Energy Management](who-18-energy-management/zigbee-variant.md), and [Binding](who-25-transversal/zigbee-binding.md). These pages are source-bounded to the version 4.0 specification and do not establish universal product support. The source's publication status also requires the [Source Provenance Qualification](../sources/openwebnet-public/README.md). `WHO 1000 DIMENSION 81` discovery and the sections 5-6 product-inventory flows are reconciled in the [ZigBee Discovery and Inventory Reconciliation](../project/review/zigbee-discovery-inventory-reconciliation.md). The final source-to-documentation audit is recorded in the [ZigBee Final Source Completeness Certification](../project/review/zigbee-final-source-completeness-certification.md). See the [Phase 3 Source-Coverage Audit](../project/review/phase-3-source-coverage.md), [ZigBee Reconciliation Review](../project/review/zigbee-reconciliation.md), [ZigBee Functional Reconciliation](../project/review/zigbee-functional-reconciliation.md), and the Step 2 review for inspection scope, source conflicts, and rejected or unresolved claims.
 
 ### Implementation-only enrichment
 
@@ -4514,7 +4514,7 @@ Section ID: `ownkb:section:d000028:s000010`
 
 Provenance cues: `specification`
 
-Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
+Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.
 
 See [`WHAT` Reference](what.md), [Addressing](addressing.md), and the common [`DIMENSION` model](../../protocol/dimensions.md).
 
@@ -4615,7 +4615,7 @@ Section ID: `ownkb:section:d000029:s000008`
 
 Provenance cues: `database`, `specification`
 
-The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [`WHO 1` specification](../../sources/openwebnet-public/pdf/WHO_1.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
+The complete value table, parameterized switching/step forms, speed values, timed and blinking operations, and `WHAT 1000` wrapper come from [`WHO 1` specification](https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf). The door-lock label and scenario coverage come from the ScenarioDevices databases and are implementation-specific enrichment.
 
 See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and [Cross-database functional coverage](../cross-database-coverage.md).
 
@@ -4635,7 +4635,7 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The ZigBee OpenWebNet version 4.0 specification defines a `WHO 1` Lighting variant for the Legrand serial ZigBee interface. It reuses several familiar Lighting `WHAT` values but uses the [ZigBee product-and-Unit `WHERE` grammar](../../protocol/zigbee-interface.md#transport-and-addressing), a smaller documented command set, ZigBee-specific event values, and a variant-specific `DIMENSION 1` payload.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**, not a tested-interoperability claim or a universal `WHO 1` definition.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**, not a tested-interoperability claim or a universal `WHO 1` definition.
 
 ### Command surface
 
@@ -5372,7 +5372,7 @@ The Legrand ZigBee OpenWebNet specification version 4.0 defines an interface-spe
 
 This page documents only behavior represented through OpenWebNet. ZigBee radio commissioning, routing, security, and other radio-internal mechanisms are outside the encyclopedia boundary except where an OpenWebNet field exposes their result.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **specification evidence** for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. The document carries Confidential footers, so its publication provenance remains qualified as recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The semantics below are **specification evidence** for this interface revision; they are not a claim of support by every ZigBee gateway, product, or firmware revision.
 
 ### `WHAT` reference
 
@@ -6009,7 +6009,7 @@ Routing is announced per environment, so every amplifier sharing an environment 
 
 Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
 
-**Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](../../sources/openwebnet-public/pdf/WHO_16.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+**Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
 
 ### `DIMENSION` values
 
@@ -6098,7 +6098,7 @@ Section ID: `ownkb:section:d000040:s000010`
 
 Provenance cues: `source`, `specification`
 
-Tables, ranges, and flows come from [`WHO 16` specification](../../sources/openwebnet-public/pdf/WHO_16.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
+Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
 The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
 
@@ -6834,7 +6834,7 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The ZigBee OpenWebNet version 4.0 specification defines an interface-specific `WHO 18` Energy Management surface for ZigBee products. Its command and `DIMENSION` vocabulary differs materially from the SCS-oriented `WHO 18` reference, despite sharing the same namespace number.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
 
 The source section heading says "Automation WHO = 18", while its prose and operation labels describe Energy Management parameters. The encyclopedia preserves that editorial inconsistency in the reconciliation record rather than treating "Automation" as a second functional meaning.
 
@@ -7272,7 +7272,7 @@ Section ID: `ownkb:section:d000051:s000009`
 Applicability cues: `gateway`, `scs`
 Provenance cues: `specification`
 
-The published [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf) defines separate parameter structures for command sessions and event sessions:
+The published [`WHO 2` specification](https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf) defines separate parameter structures for command sessions and event sessions:
 
 **Published command session grammar** (client to server):
 
@@ -7355,7 +7355,7 @@ Section ID: `ownkb:section:d000051:s000008`
 
 Provenance cues: `specification`
 
-The command table, step and priority model, collective event behavior, and translation frames come from [`WHO 2` specification](../../sources/openwebnet-public/pdf/WHO_2.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
+The command table, step and priority model, collective event behavior, and translation frames come from [`WHO 2` specification](https://archive.openwebnet-ha.org/sha256/e7/26/e726832434d35825a2d7a18c2581701f997f2783e2e5ab54a03185a90da95e88.pdf). MyHOME Suite ScenarioDevices corroborates ordinary movement and absolute-position capability but does not redefine the published wire grammar.
 
 See [`DIMENSION` Reference](dimensions.md), [Addressing](addressing.md), and the common [`WHAT` model](../../protocol/what.md).
 
@@ -7375,7 +7375,7 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The ZigBee OpenWebNet version 4.0 specification defines a `WHO 2` Automation variant for shutter products on the Legrand serial ZigBee interface. The variant reuses the base Stop/Up/Down command family but uses the [ZigBee product-and-Unit `WHERE` grammar](../../protocol/zigbee-interface.md#transport-and-addressing) and defines narrower `DIMENSION 10` and `11` payloads than the SCS-oriented Automation reference.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
 
 ### Base commands and source conflict
 
@@ -7682,7 +7682,7 @@ Section ID: `ownkb:section:d000053:s000011`
 
 Provenance cues: `specification`
 
-Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](../../sources/openwebnet-public/pdf/WHO_22.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -7843,7 +7843,7 @@ Section ID: `ownkb:section:d000056:s000006`
 
 Provenance cues: `specification`
 
-The [Lighting Management Specification](../../sources/openwebnet-public/pdf/WHO_24.pdf), pages 4–5, gives the notation and concrete two-endpoint examples.
+The [Lighting Management Specification](https://archive.openwebnet-ha.org/sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf), pages 4–5, gives the notation and concrete two-endpoint examples.
 
 # Document: ownkb:document:d000057
 
@@ -7958,7 +7958,7 @@ Section ID: `ownkb:section:d000057:s000009`
 
 Provenance cues: `specification`
 
-Domains and frame variants come from the [Lighting Management Specification](../../sources/openwebnet-public/pdf/WHO_24.pdf), pages 6–41. The discrepancies above are retained because they affect safe encoding and request/response matching.
+Domains and frame variants come from the [Lighting Management Specification](https://archive.openwebnet-ha.org/sha256/4c/5f/4c5f4f373b8baee54ab934711c1ddbc88120727ab8e1729fdceddec6c3616298.pdf), pages 6–41. The discrepancies above are retained because they affect safe encoding and request/response matching.
 
 # Document: ownkb:document:d000058
 
@@ -8320,7 +8320,7 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The Legrand ZigBee OpenWebNet specification version 4.0 defines a ZigBee-specific binding family under `WHO 25`. These OpenWebNet operations expose the host-visible binding lifecycle while leaving the underlying ZigBee binding tables, radio association mechanisms, and other ZigBee-internal procedures outside the encyclopedia boundary.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. The semantics below are **specification evidence** for that interface revision. They do not establish support by every gateway, product, or firmware revision.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. The semantics below are **specification evidence** for that interface revision. They do not establish support by every gateway, product, or firmware revision.
 
 ### `WHAT` reference
 
@@ -8639,7 +8639,7 @@ Section ID: `ownkb:section:d000066:s000008`
 Applicability cues: `revision`, `version`
 Provenance cues: `specification`
 
-The value tables and frame flows come from [`WHO 3` specification](../../sources/openwebnet-public/pdf/WHO_3.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
+The value tables and frame flows come from [`WHO 3` specification](https://archive.openwebnet-ha.org/sha256/4f/68/4f685a6ee3b16e6a7994a338186687bcea1dabba74dc5d24d22a07becb24dea1.pdf), version 1.0.0. The PDF's embedded text encoding is damaged, so this page was checked against rendered pages as well as extracted text. Ambiguous typography has not been used to invent additional ranges or units.
 
 MyHOME Suite `OPEN.db` confirms the namespace name but does not associate a concrete functional operation set with it in this revision.
 
@@ -8991,7 +8991,7 @@ Section ID: `ownkb:section:d000069:s000017`
 Applicability cues: `version`
 Provenance cues: `specification`
 
-Published payloads and page references above come from the [Temperature Control Specification](../../sources/openwebnet-public/pdf/WHO_4.pdf), version 2.0.0. ScenarioDevices extensions and reported later-device behavior remain separately identified. The same PDF also defines [Temperature Control Fault Diagnostics](../../diagnostics/temperature-control-faults.md) under `WHO 1004`; those are not functional `WHO 4` dimensions.
+Published payloads and page references above come from the [Temperature Control Specification](https://archive.openwebnet-ha.org/sha256/35/68/35685145d0db92e2f45bea1e45bf878b06927cfe5756aeb774436cf7bdc16d89.pdf), version 2.0.0. ScenarioDevices extensions and reported later-device behavior remain separately identified. The same PDF also defines [Temperature Control Fault Diagnostics](../../diagnostics/temperature-control-faults.md) under `WHO 1004`; those are not functional `WHO 4` dimensions.
 
 # Document: ownkb:document:d000070
 
@@ -9118,7 +9118,7 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The ZigBee OpenWebNet version 4.0 specification defines a deliberately narrow `WHO 4` Temperature Control surface for the Legrand serial ZigBee interface. In the inspected section, `WHO 4` is used to receive temperature reports from a ZigBee probe. It does not define the broad SCS zone, central-unit, actuator, setpoint, program, or split-control model documented elsewhere in this namespace.
 
-The source is [ZigBee OpenWebNet Specification](../../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
+The source is [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0 dated 22 November 2016. Its Confidential footer and unresolved public-release provenance remain recorded in the [Source-Coverage Audit](../../project/review/phase-3-source-coverage.md). The material below is **specification evidence for this interface revision**.
 
 ### Documented surface
 
@@ -9364,7 +9364,7 @@ Applicability cues: `version`
 Cautions: `must not`
 Provenance cues: `evidence`, `source`, `specification`
 
-The corpus includes the [L4686SDK Specification](../../sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf), version 1.0.0 dated 11 February 2009. Its eight pages contain `WHO 6` command/address tables and send/receive flows for cameras, calls, locks, and stair lighting. This is product-specific published evidence, not merely a namespace record and not a complete generic Video Door Entry specification.
+The corpus includes the [L4686SDK Specification](https://archive.openwebnet-ha.org/sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf), version 1.0.0 dated 11 February 2009. Its eight pages contain `WHO 6` command/address tables and send/receive flows for cameras, calls, locks, and stair lighting. This is product-specific published evidence, not merely a namespace record and not a complete generic Video Door Entry specification.
 
 The reference below preserves the source's product scope. Values from adjacent Video Door Entry systems must not be substituted for the L4686SDK evidence.
 
@@ -9494,7 +9494,7 @@ Section ID: `ownkb:section:d000077:s000007`
 
 Provenance cues: `source`, `specification`
 
-Values, addresses, trailing-empty-tag frames, and command sequences come from [`WHO 7` specification](../../sources/openwebnet-public/pdf/WHO_7.pdf). The source's address-range discrepancy is retained explicitly.
+Values, addresses, trailing-empty-tag frames, and command sequences come from [`WHO 7` specification](https://archive.openwebnet-ha.org/sha256/70/2f/702fba1a08b42af57cd66523196bdadef516e045636ef46528b173c150318b83.pdf). The source's address-range discrepancy is retained explicitly.
 
 # Document: ownkb:document:d000078
 
@@ -9646,7 +9646,7 @@ Section ID: `ownkb:section:d000080:s000005`
 
 Provenance cues: `specification`
 
-The selector frames and order come from [OpenWebNet Introduction specification](../../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The Service Identification label and absence of an associated concrete operation come from `OPEN.db`; see [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md).
+The selector frames and order come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). The Service Identification label and absence of an associated concrete operation come from `OPEN.db`; see [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md).
 
 # Document: ownkb:document:d000081
 
@@ -13103,7 +13103,7 @@ Section ID: `ownkb:section:d000102:s000008`
 Applicability cues: `tcp`
 Provenance cues: `evidence`, `specification`
 
-The common syntax and TCP session model are grounded in [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). HMAC behavior is grounded in [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf). System-specific semantics come from the corresponding public `WHO` document, MyHOME Suite implementation data, or explicitly identified observed traffic; those evidence classes are not treated as interchangeable.
+The common syntax and TCP session model are grounded in [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). HMAC behavior is grounded in [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf). System-specific semantics come from the corresponding public `WHO` document, MyHOME Suite implementation data, or explicitly identified observed traffic; those evidence classes are not treated as interchangeable.
 
 # Document: ownkb:document:d000103
 
@@ -13190,7 +13190,7 @@ Section ID: `ownkb:section:d000103:s000006`
 
 Provenance cues: `specification`
 
-The frame values, acceptance semantics, and end-of-sequence behavior come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), particularly “Particular Open Messages” and the status/`DIMENSION` request sequences. Session-specific authentication behavior is refined by [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf).
+The frame values, acceptance semantics, and end-of-sequence behavior come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf), particularly “Particular Open Messages” and the status/`DIMENSION` request sequences. Session-specific authentication behavior is refined by [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf).
 
 # Document: ownkb:document:d000104
 
@@ -13554,7 +13554,7 @@ Section ID: `ownkb:section:d000105:s000009`
 Applicability cues: `version`
 Provenance cues: `specification`
 
-The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf), version 1.1. The connection position and open-range exception are corroborated by [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf).
+The HMAC algorithm, declaration frames, value encoding, password format, and failure behavior come from [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf), version 1.1. The connection position and open-range exception are corroborated by [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf).
 
 # Document: ownkb:document:d000106
 
@@ -13791,7 +13791,7 @@ Section ID: `ownkb:section:d000106:s000014`
 
 Provenance cues: `specification`
 
-Flat request, response, and write forms come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
+Flat request, response, and write forms come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
 
 See [Frame Syntax](frame-syntax.md), [Stream Parsing](stream-parsing.md), [Addressing](addressing.md), the relevant functional `WHO` page, and the [Diagnostic `DIMENSION` Reference](../diagnostics/dimension-reference.md).
 
@@ -13910,7 +13910,7 @@ Section ID: `ownkb:section:d000107:s000009`
 
 Provenance cues: `database`, `source`, `specification`
 
-The common frame forms, alphabet, empty-tag rule, request/response direction, and acknowledgement-terminated sequences come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). System-specific extensions are documented only where the relevant `WHO` source, implementation database, or observed workflow establishes them.
+The common frame forms, alphabet, empty-tag rule, request/response direction, and acknowledgement-terminated sequences come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). System-specific extensions are documented only where the relevant `WHO` source, implementation database, or observed workflow establishes them.
 
 # Document: ownkb:document:d000108
 
@@ -14111,7 +14111,7 @@ Section ID: `ownkb:section:d000109:s000008`
 Applicability cues: `gateway`, `tcp`
 Provenance cues: `specification`
 
-The session selectors, TCP port, and basic sequences come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf), pages 6–10. HMAC negotiation is specified separately in [Hmac specification](../sources/openwebnet-public/pdf/Hmac.pdf). Observed gateway behavior can refine compatibility handling, but should not silently replace these published sequences.
+The session selectors, TCP port, and basic sequences come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf), pages 6–10. HMAC negotiation is specified separately in [Hmac specification](https://archive.openwebnet-ha.org/sha256/78/7d/787dfb3a0a00f000666241b2011982636313a98944bb6032b19eaf8d12f98680.pdf). Observed gateway behavior can refine compatibility handling, but should not silently replace these published sequences.
 
 # Document: ownkb:document:d000110
 
@@ -14222,7 +14222,7 @@ Section ID: `ownkb:section:d000110:s000010`
 Applicability cues: `tcp`
 Provenance cues: `specification`
 
-The character set, delimiters, empty-tag rule, and common frame families come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). The incremental transport guidance is an implementation consequence of delimiter-framed messages over TCP; it is identified as parser guidance rather than a quoted protocol guarantee.
+The character set, delimiters, empty-tag rule, and common frame families come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). The incremental transport guidance is an implementation consequence of delimiter-framed messages over TCP; it is identified as parser guidance rather than a quoted protocol guarantee.
 
 # Document: ownkb:document:d000111
 
@@ -14282,7 +14282,7 @@ Applicability cues: `version`, `zigbee`
 Uncertainty: `unresolved`
 Provenance cues: `evidence`, `source`, `specification`
 
-This page records the interface-specific boundary established by the supplied Legrand [ZigBee OpenWebNet Specification](../sources/openwebnet-public/pdf/OpenWebNet_Zigbee.pdf), version 4.0, 22 November 2016. It is specification evidence, not a tested interoperability claim. The document carries Confidential footers; its public-release provenance remains unresolved as recorded in the [Source-Coverage Audit](../project/review/phase-3-source-coverage.md).
+This page records the interface-specific boundary established by the supplied Legrand [ZigBee OpenWebNet Specification](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d430ced634a333b598f99c165efa3c71f226f7397b950407f601f597c5776.pdf), version 4.0, 22 November 2016. It is specification evidence, not a tested interoperability claim. The document carries Confidential footers; its public-release provenance remains unresolved as recorded in the [Source-Coverage Audit](../project/review/phase-3-source-coverage.md).
 
 ### Transport and addressing
 
@@ -18721,7 +18721,7 @@ Section ID: `ownkb:section:d000135:s000002`
 
 Provenance cues: `source`
 
-[`WHO 16`](../sources/openwebnet-public/pdf/WHO_16.pdf) documents amplifier and source power, volume, tone, sleep, Follow Me, tuner frequency, stored stations, and RDS. Its `WHERE` table admits `0`, `#0`-`#9`, `01`-`99`, `100`, and `101`-`109`. It contains no message that assigns a source to an amplifier.
+[`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf) documents amplifier and source power, volume, tone, sleep, Follow Me, tuner frequency, stored stations, and RDS. Its `WHERE` table admits `0`, `#0`-`#9`, `01`-`99`, `100`, and `101`-`109`. It contains no message that assigns a source to an amplifier.
 
 The document does describe a source **cycle** command (`*16*20*100##` / `*16*23*100##`) whose monitor flow emits `WHAT` `0`/`3` for the newly activated source and `10`/`13` for the previous one. Cycling is therefore specified; directed selection is not.
 

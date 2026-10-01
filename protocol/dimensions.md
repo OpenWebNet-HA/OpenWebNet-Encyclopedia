@@ -186,6 +186,6 @@ Do not globally split the entire frame on both `*` and `#`; doing so erases the 
 
 ## Evidence basis
 
-Flat request, response, and write forms come from [OpenWebNet Introduction specification](../sources/openwebnet-public/pdf/OWN_Intro_ENG.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
+Flat request, response, and write forms come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). Parameterized selectors are established by the dedicated functional specifications and the MyHOME Suite diagnostic/programming templates, including advanced Automation `DIMENSION 11` and diagnostic slot-qualified selectors.
 
 See [Frame Syntax](frame-syntax.md), [Stream Parsing](stream-parsing.md), [Addressing](addressing.md), the relevant functional `WHO` page, and the [Diagnostic `DIMENSION` Reference](../diagnostics/dimension-reference.md).
