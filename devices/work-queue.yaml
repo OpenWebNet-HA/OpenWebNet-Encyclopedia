@@ -2403,20 +2403,25 @@ items:
     blockers: []
     notes: []
   '1686':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0046
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0046 created from the canonical catalogue and exact/current publisher
+      sources; unarchived documents and hardware corroboration remain explicit.
   '1689':
     state: unreviewed
     priority: normal
@@ -2478,20 +2483,25 @@ items:
     blockers: []
     notes: []
   '1768':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0047
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0047 created from the canonical catalogue and exact/current publisher
+      sources; unarchived documents and hardware corroboration remain explicit.
   '1771':
     state: unreviewed
     priority: normal
@@ -2738,20 +2748,25 @@ items:
     blockers: []
     notes: []
   '1884':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0048
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0048 created from the canonical catalogue and exact/current publisher
+      sources; unarchived documents and hardware corroboration remain explicit.
   '1885':
     state: unreviewed
     priority: normal
@@ -2768,20 +2783,25 @@ items:
     blockers: []
     notes: []
   '1898':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0049
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0049 created from the canonical catalogue and exact/current publisher
+      sources; unarchived documents and hardware corroboration remain explicit.
   '1902':
     state: unreviewed
     priority: normal
@@ -3349,20 +3369,25 @@ items:
     blockers: []
     notes: []
   '2321':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0050
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0050 created from the canonical catalogue and exact/current publisher
+      sources; unarchived documents and hardware corroboration remain explicit.
   '2335':
     state: unreviewed
     priority: normal

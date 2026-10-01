@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 165 |
+| unreviewed | 160 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 45 |
+| definition-in-progress | 50 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -57,11 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
-| normal | 1686 | Display thermostat 2 modules | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1768 | MyHOME_Screen 10 | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1884 | Energy display 2 modules | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2321 | Classe 300X | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 81 | Basic contacts interface | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -231,6 +226,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1525 | Special functions | 4 | definition-in-progress | OWN-DEV-0043 | partial | complete | partial | pending | - |
 | normal | 1579 | Shutter control bus | 4 | definition-in-progress | OWN-DEV-0044 | complete | complete | complete | pending | - |
 | normal | 1586 | Shutter actuator bus | 4 | definition-in-progress | OWN-DEV-0045 | partial | partial | partial | pending | - |
+| normal | 1686 | Display thermostat 2 modules | 4 | definition-in-progress | OWN-DEV-0046 | complete | partial | partial | pending | - |
+| normal | 1768 | MyHOME_Screen 10 | 4 | definition-in-progress | OWN-DEV-0047 | complete | partial | partial | pending | - |
+| normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | partial | partial | pending | - |
+| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | partial | partial | pending | - |
+| normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | partial | partial | pending | - |
 
 ## Reviewed
 
