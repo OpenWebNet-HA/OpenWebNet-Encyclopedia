@@ -77,8 +77,10 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Six-record three-module Basic control cluster; MQ00290-c-EN directly covers four references.
-    - Currently discovered official PDF sources archived byte-for-byte and registered in the source manifest.
+    - Six-record three-module Basic control cluster; MQ00290-c-EN directly covers
+      four references.
+    - Currently discovered official PDF sources archived byte-for-byte and registered
+      in the source manifest.
   '12':
     state: definition-in-progress
     priority: high
@@ -135,7 +137,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - OWN-DEV-0026 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - OWN-DEV-0026 created and source-reconciled; documented source gaps and hardware
+      corroboration remain explicit in the dossier.
   '23':
     state: definition-in-progress
     priority: high
@@ -154,7 +157,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - OWN-DEV-0027 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - OWN-DEV-0027 created and source-reconciled; documented source gaps and hardware
+      corroboration remain explicit in the dossier.
   '25':
     state: definition-in-progress
     priority: high
@@ -173,7 +177,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - OWN-DEV-0028 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - OWN-DEV-0028 created and source-reconciled; documented source gaps and hardware
+      corroboration remain explicit in the dossier.
   '28':
     state: definition-in-progress
     priority: high
@@ -192,7 +197,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - OWN-DEV-0029 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - OWN-DEV-0029 created and source-reconciled; documented source gaps and hardware
+      corroboration remain explicit in the dossier.
   '31':
     state: definition-in-progress
     priority: high
@@ -211,7 +217,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware
+      corroboration remain explicit in the dossier.
   '33':
     state: definition-in-progress
     priority: high
@@ -230,7 +237,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - BMSE1001/048833 definition created and source-reconciled; official technical sheet identified, archive and hardware corroboration remain.
+    - BMSE1001/048833 definition created and source-reconciled; official technical
+      sheet identified, archive and hardware corroboration remain.
   '34':
     state: definition-in-progress
     priority: high
@@ -249,7 +257,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 4576 transmitter definition created and reconciled with the archived automation guide; exact variant documentation and hardware corroboration remain.
+    - 4576 transmitter definition created and reconciled with the archived automation
+      guide; exact variant documentation and hardware corroboration remain.
   '35':
     state: definition-in-progress
     priority: high
@@ -268,7 +277,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - BMNE500 definition created and source-reconciled; current product/manual sources identified, archival endpoint and hardware corroboration remain.
+    - BMNE500 definition created and source-reconciled; current product/manual sources
+      identified, archival endpoint and hardware corroboration remain.
   '37':
     state: definition-in-progress
     priority: high
@@ -287,7 +297,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references remain direct-documentation gaps.
+    - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references
+      remain direct-documentation gaps.
   '39':
     state: definition-in-progress
     priority: high
@@ -306,7 +317,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 4577 temperature-probe radio interface definition created and source-reconciled; dedicated technical sheet identified, archive and hardware corroboration remain.
+    - 4577 temperature-probe radio interface definition created and source-reconciled;
+      dedicated technical sheet identified, archive and hardware corroboration remain.
   '40':
     state: definition-in-progress
     priority: high
@@ -325,7 +337,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 4575SB batteryless-control receiver definition created and source-reconciled with the archived automation guide; hardware corroboration remains.
+    - 4575SB batteryless-control receiver definition created and source-reconciled
+      with the archived automation guide; hardware corroboration remains.
   '45':
     state: unreviewed
     priority: normal
@@ -915,7 +928,8 @@ items:
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available
+      official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '207':
     state: unreviewed
@@ -950,23 +964,30 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 19-record Basic control cluster; MQ00286-d-EN directly corroborates four commercial references.
-    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
+    - 19-record Basic control cluster; MQ00286-d-EN directly corroborates four commercial
+      references.
+    - Official English PDF archived byte-for-byte from publisher source and registered
+      in the source manifest.
   '291':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0042
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0042 created from canonical catalogue with publisher evidence reconciled
+      where available; remaining gaps explicit.
   '402':
     state: definition-in-progress
     priority: high
@@ -985,7 +1006,9 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Scenario-control cluster extracted; direct technical sheet covers principal BTicino, Arteor and Céliane identities; Mosaic references remain documentation gaps.
+    - Scenario-control cluster extracted; direct technical sheet covers principal
+      BTicino, Arteor and Céliane identities; Mosaic references remain documentation
+      gaps.
   '912':
     state: unreviewed
     priority: normal
@@ -1109,7 +1132,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Video Display cluster extracted; installation/user/software manuals and MyHOME guide archived. Four commercial variants still need direct product documents.
+    - Video Display cluster extracted; installation/user/software manuals and MyHOME
+      guide archived. Four commercial variants still need direct product documents.
   '1078':
     state: unreviewed
     priority: normal
@@ -1143,7 +1167,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME guide. Mosaic references and AUX condition semantics remain gaps.
+    - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME
+      guide. Mosaic references and AUX condition semantics remain gaps.
   '1121':
     state: definition-in-progress
     priority: high
@@ -1162,8 +1187,10 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Six-record flush-mounted one-relay actuator cluster; MQ00072-e-FR directly covers four references.
-    - Currently discovered official PDF sources archived byte-for-byte and registered in the source manifest.
+    - Six-record flush-mounted one-relay actuator cluster; MQ00072-e-FR directly covers
+      four references.
+    - Currently discovered official PDF sources archived byte-for-byte and registered
+      in the source manifest.
   '1122':
     state: unreviewed
     priority: normal
@@ -1228,7 +1255,8 @@ items:
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available
+      official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1156':
     state: unreviewed
@@ -1428,7 +1456,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration
+      work.
   '1190':
     state: definition-in-progress
     priority: normal
@@ -1448,7 +1477,8 @@ items:
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available
+      official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1191':
     state: unreviewed
@@ -1543,7 +1573,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 15-record touch-control cluster; Arteor technical sheet and Céliane compatibility evidence archived.
+    - 15-record touch-control cluster; Arteor technical sheet and Céliane compatibility
+      evidence archived.
   '1423':
     state: unreviewed
     priority: normal
@@ -1592,7 +1623,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration
+      work.
   '1459':
     state: unreviewed
     priority: normal
@@ -1672,7 +1704,8 @@ items:
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available
+      official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1469':
     state: definition-in-progress
@@ -1692,7 +1725,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
+    - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents
+      archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
   '1470':
     state: unreviewed
     priority: normal
@@ -1921,23 +1955,30 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 13-record Special control cluster; MQ00285-d-EN directly corroborates four commercial references.
-    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
+    - 13-record Special control cluster; MQ00285-d-EN directly corroborates four commercial
+      references.
+    - Official English PDF archived byte-for-byte from publisher source and registered
+      in the source manifest.
   '1525':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0043
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0043 created from canonical catalogue with publisher evidence reconciled
+      where available; remaining gaps explicit.
   '1554':
     state: unreviewed
     priority: normal
@@ -1986,7 +2027,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - 12-record PIR+US cluster; current official sheet directly names all commercial records, with older 2014 revision retained.
+    - 12-record PIR+US cluster; current official sheet directly names all commercial
+      records, with older 2014 revision retained.
   '1563':
     state: definition-in-progress
     priority: high
@@ -2005,7 +2047,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Key card switch definition created and source-reconciled; publisher/catalogue 572736 conflict and hardware corroboration remain.
+    - Key card switch definition created and source-reconciled; publisher/catalogue
+      572736 conflict and hardware corroboration remain.
   '1566':
     state: definition-in-progress
     priority: high
@@ -2024,7 +2067,9 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility table collectively document the current commercial cluster. Hardware corroboration remains pending.
+    - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility
+      table collectively document the current commercial cluster. Hardware corroboration
+      remains pending.
   '1570':
     state: unreviewed
     priority: normal
@@ -2056,20 +2101,25 @@ items:
     blockers: []
     notes: []
   '1579':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0044
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0044 created from canonical catalogue with publisher evidence reconciled
+      where available; remaining gaps explicit.
   '1582':
     state: unreviewed
     priority: normal
@@ -2086,20 +2136,25 @@ items:
     blockers: []
     notes: []
   '1586':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0045
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0045 created from canonical catalogue with publisher evidence reconciled
+      where available; remaining gaps explicit.
   '1593':
     state: unreviewed
     priority: normal
@@ -2223,7 +2278,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Local Display definition created and source-reconciled; FUN=5 topology inconsistency and hardware corroboration remain.
+    - Local Display definition created and source-reconciled; FUN=5 topology inconsistency
+      and hardware corroboration remain.
   '1672':
     state: unreviewed
     priority: normal
@@ -2557,7 +2613,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - RFID key card definition created and source-reconciled; Mosaic direct documentation, 572736 cross-item conflict and hardware corroboration remain.
+    - RFID key card definition created and source-reconciled; Mosaic direct documentation,
+      572736 cross-item conflict and hardware corroboration remain.
   '1852':
     state: unreviewed
     priority: normal
@@ -2591,7 +2648,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Probe with regulation definition created and source-reconciled across firmware 5.2 and 6.0; hardware corroboration remains.
+    - Probe with regulation definition created and source-reconciled across firmware
+      5.2 and 6.0; hardware corroboration remains.
   '1856':
     state: definition-in-progress
     priority: high
@@ -2610,7 +2668,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Fan-coil probe definition created and source-reconciled across firmware 5.2 and 6.0; hardware corroboration remains.
+    - Fan-coil probe definition created and source-reconciled across firmware 5.2
+      and 6.0; hardware corroboration remains.
   '1859':
     state: unreviewed
     priority: normal
@@ -2627,20 +2686,25 @@ items:
     blockers: []
     notes: []
   '1862':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0041
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: partial
+      source_reconciliation: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0041 created from canonical catalogue with publisher evidence reconciled
+      where available; remaining gaps explicit.
   '1864':
     state: unreviewed
     priority: normal
@@ -2764,7 +2828,8 @@ items:
       final_review: pending
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration
+      work.
   '2115':
     state: unreviewed
     priority: normal
@@ -2859,7 +2924,8 @@ items:
     blockers: []
     notes:
     - Seven-record zero-crossing actuator/control cluster is directly covered by ST-00000898-EN/FR.
-    - English/French technical sheets and BTicino/Legrand instruction sheets archived byte-for-byte.
+    - English/French technical sheets and BTicino/Legrand instruction sheets archived
+      byte-for-byte.
   '2193':
     state: unreviewed
     priority: normal

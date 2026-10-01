@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 170 |
+| unreviewed | 165 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 40 |
+| definition-in-progress | 45 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -57,11 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
-| normal | 1862 | Basic probe | 5 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 291 | Temperature central unit | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1525 | Special functions | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1579 | Shutter control bus | 4 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1586 | Shutter actuator bus | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1686 | Display thermostat 2 modules | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1768 | MyHOME_Screen 10 | 4 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1884 | Energy display 2 modules | 4 | unreviewed | - | pending | pending | pending | pending | - |
@@ -231,6 +226,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1147 | Local Display | 6 | definition-in-progress | OWN-DEV-0018 | complete | partial | partial | pending | Sanitized hardware fingerprint pending |
 | normal | 1190 | Touch control | 6 | definition-in-progress | OWN-DEV-0019 | complete | partial | complete | pending | Sanitized hardware fingerprint pending |
 | normal | 1465 | Load Control Panel bus | 6 | definition-in-progress | OWN-DEV-0020 | complete | partial | complete | pending | Sanitized hardware fingerprint pending |
+| normal | 1862 | Basic probe | 5 | definition-in-progress | OWN-DEV-0041 | partial | partial | partial | pending | - |
+| normal | 291 | Temperature central unit | 4 | definition-in-progress | OWN-DEV-0042 | partial | partial | partial | pending | - |
+| normal | 1525 | Special functions | 4 | definition-in-progress | OWN-DEV-0043 | partial | complete | partial | pending | - |
+| normal | 1579 | Shutter control bus | 4 | definition-in-progress | OWN-DEV-0044 | complete | complete | complete | pending | - |
+| normal | 1586 | Shutter actuator bus | 4 | definition-in-progress | OWN-DEV-0045 | partial | partial | partial | pending | - |
 
 ## Reviewed
 
