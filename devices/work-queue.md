@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 140 |
+| unreviewed | 130 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 70 |
+| definition-in-progress | 80 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -57,7 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
-| normal | 81 | Basic contacts interface | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -77,13 +76,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 84 | DIN dimmer 1000 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 85 | DIN dimmer 2 x 400 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 88 | Room Controller 2 Dim Outputs All loads 1000W | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 90 | SCS-SCS interface | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 130 | Room Controller 1 Output 16 Amps | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -137,8 +129,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 80 | Module contacts interface | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 98 | Scenes programmer | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 139 | Burglar alarm central unit with communicator | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 140 | Polyx Alarm | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 141 | GSM burglar alarm central unit | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -211,6 +201,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | complete | partial | pending | - |
 | normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | complete | partial | pending | - |
 | normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | complete | partial | pending | - |
+| normal | 81 | Basic contacts interface | 3 | definition-in-progress | OWN-DEV-0072 | complete | complete | partial | pending | - |
 | normal | 45 | PIR ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0051 | complete | complete | complete | pending | - |
 | normal | 47 | Ballast DIN dimmer 0-10 V | 2 | definition-in-progress | OWN-DEV-0052 | complete | complete | complete | pending | - |
 | normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | definition-in-progress | OWN-DEV-0053 | complete | complete | complete | pending | - |
@@ -228,9 +219,18 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0067 | complete | complete | complete | pending | - |
 | normal | 71 | SCS/DALI gateway | 2 | definition-in-progress | OWN-DEV-0069 | complete | complete | complete | pending | - |
 | normal | 79 | DIN contacts interface | 2 | definition-in-progress | OWN-DEV-0070 | complete | complete | complete | pending | - |
+| normal | 84 | DIN dimmer 1000 VA | 2 | definition-in-progress | OWN-DEV-0073 | complete | complete | complete | pending | - |
+| normal | 85 | DIN dimmer 2 x 400 VA | 2 | definition-in-progress | OWN-DEV-0074 | complete | complete | complete | pending | - |
+| normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | definition-in-progress | OWN-DEV-0075 | complete | complete | partial | pending | - |
+| normal | 88 | Room Controller 2 Dim Outputs All loads 1000W | 2 | definition-in-progress | OWN-DEV-0076 | partial | complete | partial | pending | - |
+| normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | definition-in-progress | OWN-DEV-0077 | complete | complete | partial | pending | - |
+| normal | 90 | SCS-SCS interface | 2 | definition-in-progress | OWN-DEV-0078 | complete | complete | complete | pending | - |
+| normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | definition-in-progress | OWN-DEV-0079 | complete | complete | partial | pending | - |
 | normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | definition-in-progress | OWN-DEV-0068 | complete | complete | complete | pending | - |
+| normal | 80 | Module contacts interface | 1 | definition-in-progress | OWN-DEV-0071 | complete | complete | complete | pending | - |
+| normal | 98 | Scenes programmer | 1 | definition-in-progress | OWN-DEV-0080 | complete | complete | complete | pending | - |
 
 ## Reviewed
 
