@@ -34,7 +34,7 @@ The archived MyHOME Automation guide also associates the extended-control functi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MyHOME Automation guide | System / product guide | revision/date not yet pinned | `H4655` / `L4655`: index on printed p. 2 / PDF p. 4; substantive mentions on printed pp. 36, 58, 61, 70, 87, 88, 91, 133, 160 / PDF pp. 38, 60, 63, 72, 89, 90, 93, 135, 162 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-automation-guide/MH_Guide_Automatisme.pdf) | publisher source not currently retained |
+| MyHOME Automation guide | System / product guide | revision/date not yet pinned | `H4655` / `L4655`: index on printed p. 2 / PDF p. 4; substantive mentions on printed pp. 36, 58, 61, 70, 87, 88, 91, 133, 160 / PDF pp. 38, 60, 63, 72, 89, 90, 93, 135, 162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | publisher source not currently retained |
 
 The guide documents cross-bus / extended-control use cases. Direct sheets for the six Mosaic references remain a documentation gap.
 

@@ -24,7 +24,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST_00000915_EN` | technical sheet | publisher sheet | `3476` Basic Control Actuator electrical characteristics, local input and configuration | [Archived original](../../sources/devices/documents/device-doc-3476-st00000915-en/ST_00000915_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST_00000915_EN.pdf) |
+| `ST_00000915_EN` | technical sheet | publisher sheet | `3476` Basic Control Actuator electrical characteristics, local input and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/8e/6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST_00000915_EN.pdf) |
 
 ## Physical and electrical characteristics
 

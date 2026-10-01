@@ -28,7 +28,7 @@ Flush-mounted bus shutter actuator with position and preset management.
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME | technical/system documentation | revision/date as printed | Advanced shutter actuator family and preset behavior | [Archived original](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| AUTOMATISME | technical/system documentation | revision/date as printed | Advanced shutter actuator family and preset behavior | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | ST-00000900-EN | technical sheet | 2021-03-23 | H4661M2 / LN4661M2 / 067557 / AM5861M2; addressing, motor type, calibration and modes | - | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000900-EN.pdf) |
 
 ## Physical and electrical characteristics
@@ -181,4 +181,4 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
-- [Archived original](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

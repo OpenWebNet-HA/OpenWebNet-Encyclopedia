@@ -35,9 +35,9 @@ The archived technical sheet contains an internal reference discrepancy: its hea
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `BT00518_a_EN` | Technical sheet | revision/date not yet pinned | BTicino MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-bt00518-a-en/BT00518_a_EN.pdf) | publisher source not currently retained |
-| `RA00107AC_U_EN` | User guide | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-u-en/RA00107AC_U_EN.pdf) | publisher source not currently retained |
-| `RA00107AC_S_FR` | Software manual | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](../../sources/devices/documents/device-doc-myhome-screen-ra00107ac-s-fr/RA00107AC_S_FR.pdf) | publisher source not currently retained |
+| `BT00518_a_EN` | Technical sheet | revision/date not yet pinned | BTicino MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/43/61/4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9.pdf) | publisher source not currently retained |
+| `RA00107AC_U_EN` | User guide | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf) | publisher source not currently retained |
+| `RA00107AC_S_FR` | Software manual | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf) | publisher source not currently retained |
 
 Direct product sheets for the Legrand commercial variants and additional language revisions remain desirable archival sources.
 

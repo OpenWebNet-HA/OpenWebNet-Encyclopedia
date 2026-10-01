@@ -27,7 +27,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `mh_diff-sonore2008.pdf` | Radio/wired interface and sound-system technical guide | historical publisher guide | 4575 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `mh_diff-sonore2008.pdf` | Radio/wired interface and sound-system technical guide | historical publisher guide | 4575 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
 The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -164,4 +164,4 @@ The canonical database and publisher technical guide agree on a one-Module radio
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [mh_diff-sonore2008.pdf](../../sources/devices/documents/device-doc-radio-wired-interface-sound-guide/mh_diff-sonore2008.pdf)
+- [mh_diff-sonore2008.pdf](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf)

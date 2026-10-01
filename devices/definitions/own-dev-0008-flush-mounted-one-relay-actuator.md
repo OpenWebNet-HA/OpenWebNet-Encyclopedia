@@ -33,8 +33,8 @@ The Product Environmental Profile independently identifies `L4671/1` as its refe
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00072-e-FR` | Technical sheet | 29/04/2014 | `H4671/1`, `L4671/1`, `AM5851/1`, `64390` | [Archived PDF](../../sources/devices/documents/device-doc-one-relay-mq00072-e-fr/MQ00072-e-FR.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00072-e-fr.pdf) |
-| `BT-L4671_1-EN` | Product Environmental Profile | revision/date to verify | `L4671/1`, `H4671/1`, `AM5851/1` | [Archived PDF](../../sources/devices/documents/device-doc-one-relay-pep-l4671-1-en/BT-L4671_1-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf) |
+| `MQ00072-e-FR` | Technical sheet | 29/04/2014 | `H4671/1`, `L4671/1`, `AM5851/1`, `64390` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/b6/39/b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00072-e-fr.pdf) |
+| `BT-L4671_1-EN` | Product Environmental Profile | revision/date to verify | `L4671/1`, `H4671/1`, `AM5851/1` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf) | [Official source](https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf) |
 
 The MyHOME Suite function documentation is also a vendor implementation source for the actuator modes and should remain distinct from the product PDFs.
 

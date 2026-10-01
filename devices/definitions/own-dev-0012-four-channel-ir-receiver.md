@@ -37,9 +37,9 @@ The MyHOME Suite catalogue stores some finish variants as combined codes, so one
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00071-d-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane references | [Archived PDF](../../sources/devices/documents/device-doc-ir-receiver-mq00071-d-en/MQ00071-d-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
-| `MQ00071-d-FR` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](../../sources/devices/documents/device-doc-ir-receiver-mq00071-d-fr/MQ00071-d-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
-| `MQ00071-d-IT` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](../../sources/devices/documents/device-doc-ir-receiver-mq00071-d-it/MQ00071-d-IT.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
+| `MQ00071-d-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
+| `MQ00071-d-FR` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
+| `MQ00071-d-IT` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
 
 ## Physical and electrical characteristics
 

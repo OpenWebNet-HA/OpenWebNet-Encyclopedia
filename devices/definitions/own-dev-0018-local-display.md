@@ -34,7 +34,7 @@ All six records share catalogue item `1147` and `modobj` 64. Direct variant-spec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `U1063B` | Instruction sheet | revision/date not yet pinned | 4685 Local Display family instruction sheet | not archived in repository | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
-| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | Generic “Local display - Sound distribution” context on printed p. 5 / PDF p. 5; the `4685` family is not named | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | publisher source not currently retained |
+| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | Generic “Local display - Sound distribution” context on printed p. 5 / PDF p. 5; the `4685` family is not named | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
 
 The former official `U1063B` publisher URL currently returns an access/error response and the current Legrand document CDN does not expose that filename. An external reference copy of the same `U1063B` revision has therefore been used only to recover Device facts. The older MyHOME catalogue provides only generic Local Display / sound-distribution context and does not identify the `4685` family or corroborate its complete role set. The external copy is not archived or represented as an official original; byte-for-byte publisher evidence is still required.
 

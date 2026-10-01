@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00296_c_EN` | technical sheet | 2013-02-04 | `BMSE2001` wide-band PIR wall/ceiling sensor characteristics and MY HOME configuration | [Archived original](../../sources/devices/documents/device-doc-bmse2001-mm00296-c-en/MM00296_c_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00296_c_EN.pdf) |
+| `MM00296_c_EN` | technical sheet | 2013-02-04 | `BMSE2001` wide-band PIR wall/ceiling sensor characteristics and MY HOME configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/06/2b0656aa8623d733caa7c863b25a05bde17d3fc5d29b11cec1048907b0a33eda.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00296_c_EN.pdf) |
 
 ## Physical and electrical characteristics
 

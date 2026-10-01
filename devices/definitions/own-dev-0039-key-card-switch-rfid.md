@@ -30,8 +30,8 @@ The Device detects authorized RFID card insertion/removal and maps that state in
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | `H4648`, `LN4648`, `0 675 66`, `5 727 36`, `5 722 36`; RFID and configuration behavior | [Archived original](../../sources/devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
-| `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | cross-family comparison for the non-RFID key-card switch | [Archived original](../../sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
+| `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | `H4648`, `LN4648`, `0 675 66`, `5 727 36`, `5 722 36`; RFID and configuration behavior | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
+| `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | cross-family comparison for the non-RFID key-card switch | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -184,5 +184,5 @@ The major commercial conflict is `572736`: `MM00771-a-EN` assigns printed `5 727
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
-- [`MM00771-a-EN` archived original](../../sources/devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf)
-- [`MM00496-b-EN` archived original](../../sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf)
+- [`MM00771-a-EN` archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf)
+- [`MM00496-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf)

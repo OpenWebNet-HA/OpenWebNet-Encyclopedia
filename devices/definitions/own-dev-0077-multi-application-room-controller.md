@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMSW3003` multi-application Room Controller outputs and SCS interfaces; printed p. 1 / PDF p. 1 | [Archived original](../../sources/devices/documents/device-doc-bmsw3003-catalogue/BMSW3003-product-sheet.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW3003) |
+| BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMSW3003` multi-application Room Controller outputs and SCS interfaces; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW3003) |
 
 ## Physical and electrical characteristics
 

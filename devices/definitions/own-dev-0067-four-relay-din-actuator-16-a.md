@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00313-e-EN` | technical sheet | 2014-06-09 | `BMSW1003` / `002602` four-relay actuator characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-bmsw1003-mq00313-e-en/MQ00313_e_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00313_e_EN.pdf) |
+| `MQ00313-e-EN` | technical sheet | 2014-06-09 | `BMSW1003` / `002602` four-relay actuator characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/92/c7/92c7042e277e5f93890757663ad30837292b357744988a96fb0e864d3fd018aa.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00313_e_EN.pdf) |
 
 ## Physical and electrical characteristics
 

@@ -30,7 +30,7 @@ The Device is a master zone probe whose front control adjusts the zone setpoint 
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00179-c-EN` | Technical sheet | revision c / date not pinned | current six-record probe family; physical operation and configuration | [Archived original](../../sources/devices/documents/device-doc-probe-regulation-mq00179-c-en/MQ00179-c-EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00179_c_EN.pdf) |
+| `MQ00179-c-EN` | Technical sheet | revision c / date not pinned | current six-record probe family; physical operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/08/98/0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00179_c_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -165,4 +165,4 @@ The main catalogue difference is `SLA`: firmware `260` stores `0..8` while firmw
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
-- [`MQ00179-c-EN` archived original](../../sources/devices/documents/device-doc-probe-regulation-mq00179-c-en/MQ00179-c-EN.pdf)
+- [`MQ00179-c-EN` archived original](https://archive.openwebnet-ha.org/sha256/08/98/0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9.pdf)

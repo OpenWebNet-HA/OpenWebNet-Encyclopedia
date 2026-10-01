@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00281-b-UK` | technical sheet | 2012-12-13 | `F425` blackout-memory behavior, electrical characteristics and configuration | [Archived original](../../sources/devices/documents/device-doc-f425-mq00281-b-uk/MQ00281-b-UK.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
+| `MQ00281-b-UK` | technical sheet | 2012-12-13 | `F425` blackout-memory behavior, electrical characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
 
 ## Physical and electrical characteristics
 

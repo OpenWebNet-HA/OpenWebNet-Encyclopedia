@@ -32,8 +32,8 @@ This definition covers the three-module touch-control cluster, not the four-modu
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00110_f_EN` | Technical sheet | revision/date not yet pinned | 4657M3/M4 and Arteor touch-control family | [Archived original](../../sources/devices/documents/device-doc-touch-control-mq00110-f-en/MQ00110_f_EN.pdf) | publisher source not currently retained |
-| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | `573912` / `573913` occur on printed pp. 16, 19 / PDF pp. 16, 19 | [Archived MyHOME catalogue](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | publisher source not currently retained |
+| `MQ00110_f_EN` | Technical sheet | revision/date not yet pinned | 4657M3/M4 and Arteor touch-control family | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | publisher source not currently retained |
+| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | `573912` / `573913` occur on printed pp. 16, 19 / PDF pp. 16, 19 | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
 
 The technical sheet distinguishes the three-module version by its six capacitive buttons. It documents physical and MyHOME_Suite configuration and a multifunction command set spanning lighting, automation, locking, scenarios, video-door-entry and sound functions.
 

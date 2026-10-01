@@ -37,9 +37,9 @@ These documents collectively cover every commercial record in the canonical item
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00474-e-FR` | Historical technical sheet | revision/date not yet pinned | legacy PIR Green Switch family | [Archived PDF](../../sources/devices/documents/device-doc-pir-mq00474-e-fr/MQ00474-e-FR.pdf) | publisher source not currently retained |
-| `ST_00000220_EN` | Current-generation technical sheet | revision/date not yet pinned | `K4659` and PIR flush-mounted sensor | [Archived PDF](../../sources/devices/documents/device-doc-pir-st00000220-en/ST_00000220_EN.pdf) | publisher source not currently retained |
-| `ST-00002122-EN` | Compatibility table | revision/date not yet pinned | PIR family references occur on printed pp. 8, 11 / PDF pp. 8, 11 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-compatibility-st00002122-en/ST-00002122-EN.pdf) | publisher source not currently retained |
+| `MQ00474-e-FR` | Historical technical sheet | revision/date not yet pinned | legacy PIR Green Switch family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/35/a9/35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4.pdf) | publisher source not currently retained |
+| `ST_00000220_EN` | Current-generation technical sheet | revision/date not yet pinned | `K4659` and PIR flush-mounted sensor | [Archived PDF](https://archive.openwebnet-ha.org/sha256/0d/11/0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e.pdf) | publisher source not currently retained |
+| `ST-00002122-EN` | Compatibility table | revision/date not yet pinned | PIR family references occur on printed pp. 8, 11 / PDF pp. 8, 11 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | publisher source not currently retained |
 
 Historical and current sheets should remain separate evidence because product ranges, software requirements and presentation evolved.
 

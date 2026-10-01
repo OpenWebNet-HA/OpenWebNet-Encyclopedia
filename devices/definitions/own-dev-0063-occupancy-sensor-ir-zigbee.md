@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| MyHOME Suite version history | software compatibility record | 2015-03-20 | Explicitly lists `BMSE2007` among products managed by MyHOME Suite | [Archived original](../../sources/devices/documents/device-doc-myhome-suite-version-history-20150320/Version_History_MyHOME_Suite_20150320.pdf) | [Official compatibility source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MyHOME_Suite_20150320.pdf) |
+| MyHOME Suite version history | software compatibility record | 2015-03-20 | Explicitly lists `BMSE2007` among products managed by MyHOME Suite | [Archived original](https://archive.openwebnet-ha.org/sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf) | [Official compatibility source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MyHOME_Suite_20150320.pdf) |
 
 ## Physical and electrical characteristics
 

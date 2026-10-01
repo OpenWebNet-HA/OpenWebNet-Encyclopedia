@@ -26,8 +26,8 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00278_e_EN` | Technical sheet | revision/date as printed | whole document | [Archived PDF](../../sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F414 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `MQ00278_e_EN` | Technical sheet | revision/date as printed | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F414 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -190,5 +190,5 @@ The dedicated sheet establishes load type, electrical range, local button behavi
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [MQ00278_e_EN](../../sources/devices/documents/device-doc-f414-mq00278-e-en/MQ00278_e_EN.pdf)
-- [AUTOMATISME.pdf](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [MQ00278_e_EN](https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf)
+- [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

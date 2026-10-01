@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00314-f-FR` | technical sheet | 2014-04-18 | `002611` / `BMDI1001` physical characteristics, configuration and wiring | [Archived original](../../sources/devices/documents/device-doc-ballast-dimmer-mq00314-f-fr/MQ00314-f-FR.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00314-f-fr.pdf) |
+| `MQ00314-f-FR` | technical sheet | 2014-04-18 | `002611` / `BMDI1001` physical characteristics, configuration and wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/36/8b36e76ccaef5d1099d03f0a8fce88d37221f3d3c9c0658f2bba75d4f9fd6c4f.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00314-f-fr.pdf) |
 
 ## Physical and electrical characteristics
 

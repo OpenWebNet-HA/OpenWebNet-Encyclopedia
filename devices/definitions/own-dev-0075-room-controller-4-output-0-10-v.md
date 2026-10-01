@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMDI3002` four-output 1-10 V Room Controller; printed p. 1 / PDF p. 1 | [Archived original](../../sources/devices/documents/device-doc-bmdi3002-catalogue/BMDI3002-product-sheet.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3002) |
+| BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMDI3002` four-output 1-10 V Room Controller; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/36/26/3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3002) |
 
 ## Physical and electrical characteristics
 

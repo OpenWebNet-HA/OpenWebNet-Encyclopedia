@@ -25,8 +25,8 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE10699AA-FR` | technical/system guide | publisher guide | `048822` / `BMSE3003` physical characteristics and PIR+US detection coverage | [Archived original](../../sources/devices/documents/device-doc-scs-sensor-guide-le10699aa-fr/le10699aa-fr.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
-| `LE02817AD` | instruction sheet | publisher revision AD | `048820` / `048821` / `048822` installation and sensor-type characteristics | [Archived original](../../sources/devices/documents/device-doc-ceiling-sensors-le02817ad/LE02817AD.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
+| `LE10699AA-FR` | technical/system guide | publisher guide | `048822` / `BMSE3003` physical characteristics and PIR+US detection coverage | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
+| `LE02817AD` | instruction sheet | publisher revision AD | `048820` / `048821` / `048822` installation and sensor-type characteristics | [Archived original](https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
 
 ## Physical and electrical characteristics
 

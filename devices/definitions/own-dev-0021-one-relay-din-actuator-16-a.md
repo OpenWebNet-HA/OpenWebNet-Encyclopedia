@@ -28,8 +28,8 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00274-e-EN` | Technical sheet | 2014-06-07 | `F411/1N` family | [Archived PDF](../../sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00274_e_EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `MQ00274-e-EN` | Technical sheet | 2014-06-07 | `F411/1N` family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/4b/79/4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d.pdf) | [Publisher PDF](https://dar.bticino.com/asset/Documents/MQ00274_e_EN.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -190,5 +190,5 @@ The database, official automation guide and MyHOME Suite actuator documentation 
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
-- [MQ00274-e-EN](../../sources/devices/documents/device-doc-f411-1n-mq00274-e-en/MQ00274-e-EN.pdf)
-- [AUTOMATISME.pdf](../../sources/devices/documents/device-doc-automation-guide/AUTOMATISME.pdf)
+- [MQ00274-e-EN](https://archive.openwebnet-ha.org/sha256/4b/79/4b79903469f72ff4befecc79f211d428fbbbe385ebc038d2b7b0353fce83744d.pdf)
+- [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)

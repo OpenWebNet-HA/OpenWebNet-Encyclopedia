@@ -24,7 +24,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `TiMH200_FR` | software/configuration manual | version 2.03; 06/07-01 PC | Configuration, Ethernet transfer, scenario editing and firmware update for `MH200` | [Archived original](../../sources/devices/documents/device-doc-mh200-timh200-fr/TiMH200_FR.pdf) | [Official source](https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MH200/Version%202_1_00/TiMH200_FR.pdf) |
+| `TiMH200_FR` | software/configuration manual | version 2.03; 06/07-01 PC | Configuration, Ethernet transfer, scenario editing and firmware update for `MH200` | [Archived original](https://archive.openwebnet-ha.org/sha256/00/64/00649f4d577863eab8a6366529468044a7fdce4d2b868cdcd09b8f4f634a01ea.pdf) | [Official source](https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MH200/Version%202_1_00/TiMH200_FR.pdf) |
 
 ## Physical and electrical characteristics
 

@@ -25,7 +25,7 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `U2068C` | instruction sheet | 2021-05 | `F429` SCS/DALI interface operation and configuration | [Archived original](../../sources/devices/documents/device-doc-f429-u2068c/U2068C.pdf) | [Official source](https://dar.bticino.com/asset/Documents/U2068C.pdf) |
+| `U2068C` | instruction sheet | 2021-05 | `F429` SCS/DALI interface operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/88/80/888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a.pdf) | [Official source](https://dar.bticino.com/asset/Documents/U2068C.pdf) |
 
 ## Physical and electrical characteristics
 
