@@ -119,6 +119,8 @@ Document reusable Object configuration separately from Device/firmware applicabi
 
 Reusable Object capability does not establish that every value applies to every Device/firmware relationship.
 
+When a Device page includes a `Reconciled Object notes` subsection, any enumerable Object families, fields, domains, modes, or capability groupings in that subsection must be presented as a table. Prose may introduce or qualify the table, but must not replace a structured inventory.
+
 ## Conditions, filters, and conversions
 
 Keep repeated Device-specific conditions, filters, conversion applicability, and irregularities structured. Use separate tables when conditions and filters represent different concepts. Do not reproduce generic database evaluation algorithms; link to their canonical treatment.

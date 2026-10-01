@@ -333,47 +333,13 @@ The sheets explicitly state that physical addresses `A=0` and `PL=0` do not exis
 
 ### Reconciled Object notes
 
+The reusable sensor Objects extend substantially beyond the six physical sockets.
 
-The reusable sensor Objects extend far beyond the six physical sockets.
-
-### Presence-oriented Objects `119`, `128`, `165`
-
-These expose combinations of:
-
-- point/group addressing;
-- delay as hours/minutes/seconds;
-- PIR and ultrasound sensitivity levels Low/Medium/High/Maximum;
-- detection scheme: PIR only, US only, PIR and US, PIR or US;
-- initial, maintain and retrigger detection selection where applicable;
-- automatic, walkthrough, manual-ON/auto-OFF and partial/group modes;
-- visual/acoustic alert;
-- optional load-control enablement.
-
-### Daylight Object `166`
-
-This adds:
-
-- point/group and reference-actuator addressing;
-- open/closed-loop regulation;
-- daylight cell group;
-- daylight setpoint encoded in 5-lux increments from `0..1275 lux`;
-- light contribution from Automatic through `5..1275 lux`;
-- auto/manual/partial functional modes;
-- lighting-regulation enablement;
-- read-only daylight/natural-light factors and measured daylight level.
-
-### Combined daylight/presence Object `168`
-
-This combines the daylight model with:
-
-- up to two sensor groups;
-- time delay;
-- auto ON/OFF, walkthrough, manual ON/auto OFF and partial/group modes;
-- PIR and US sensitivities;
-- initial/maintain/retrigger technology selection;
-- visual/acoustic alerts;
-- load-control and lighting-regulation settings;
-- read-only light-factor measurements.
+| Object family | Reconciled configuration surface |
+| --- | --- |
+| Presence-oriented `119`, `128`, `165` | point/group addressing; hours/minutes/seconds delay; PIR and ultrasound sensitivity; PIR/US detection scheme; initial/maintain/retrigger selection where applicable; automatic, walkthrough, manual-ON/auto-OFF and partial/group modes; visual/acoustic alert; optional load-control enablement |
+| Daylight `166` | point/group and reference-actuator addressing; open/closed-loop regulation; daylight cell group; daylight setpoint in 5-lux increments over `0..1275 lux`; light contribution from Automatic through `5..1275 lux`; auto/manual/partial modes; lighting-regulation enablement; read-only daylight/natural-light factors and measured daylight level |
+| Combined daylight/presence `168` | up to two sensor groups; time delay; auto ON/OFF, walkthrough, manual ON/auto OFF and partial/group modes; PIR/US sensitivities; initial/maintain/retrigger selection; visual/acoustic alerts; load-control and lighting-regulation settings; read-only light-factor measurements |
 
 The published 2024 sheet independently documents remote-control adjustment of delay, PIR/US detection scheme, brightness threshold, Auto/Walkthrough/Eco modes, alarm, calibration, adjustment, and contribution-of-light behavior.
 

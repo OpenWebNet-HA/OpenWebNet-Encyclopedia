@@ -206,14 +206,17 @@ The published sheet documents virtual point-to-point room `0..10`, light point `
 
 ### Reconciled Object notes
 
+The selected Objects reuse these canonical command parameter models:
 
-The selected Objects reuse the canonical command parameter models:
+| Object | Principal configuration surface |
+| --- | --- |
+| `400` Light control | command mode; point/area/group/general address; installation/destination level; reference address; timed and dimming values |
+| `401` Automation control | bistable/monostable/blades control; point/area/group/general address; installation/destination level |
+| `404` Scheduled scenario | scenario button numbering; related address fields |
+| `406` Scheduled scenario PLUS | PLUS scenario-number and button fields |
+| `407` AUX control | AUX command and channel fields when reached through the Virgin Object |
 
-- Light control `400`: command mode, point/area/group/general address, installation/destination level, reference address, timed and dimming values;
-- Automation control `401`: bistable/monostable/blades control and the same address-scope families;
-- Scheduled scenario `404`: scenario button numbering and related address fields;
-- Scheduled scenario PLUS `406`: PLUS scenario-number/button fields;
-- AUX control `407`: AUX command and channel fields when reached through the Virgin Object.
+These are reusable Object definitions; Device reachability remains governed by the firmware conditions, filters, and conversion rules documented below.
 
 ## Conditions, filters, and conversions
 

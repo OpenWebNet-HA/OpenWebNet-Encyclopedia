@@ -284,16 +284,17 @@ Preserve this as a source-model difference: the stored firmware field domain is 
 
 ### Reconciled Object notes
 
+The Device references reusable actuator/control Object families. Their principal structured surfaces are:
 
-The Device references the same reusable actuator/control Object families already documented by the Device Model:
-
-- Light actuator `6`: address, master/slave/PUL mode, local-button mode, delayed off, reset state, load-control behavior, subtype, groups;
-- Automation actuator `7`: address, actuator mode, shutter-control mode, stop time, subtype, groups;
-- Light control `400`: point/area/group/general addressing, command mode, installation/destination level, reference address, timing/dimming fields;
-- Automation control `401`: point/area/group/general addressing, bistable/monostable/blades mode, installation/destination level;
-- Scheduled scenario `404`: address, button numbers, AUX input, restart delay;
-- Scheduled scenario PLUS `406`: scenario-number and button fields;
-- AUX control `407`: AUX channel and command mode when reached through Virgin Object `500`.
+| Object | Principal configuration surface |
+| --- | --- |
+| `6` Light actuator | address; master/slave/PUL mode; local-button mode; delayed off; reset state; load-control behavior; subtype; group membership |
+| `7` Automation actuator | address; actuator mode; shutter-control mode; stop time; subtype; group membership |
+| `400` Light control | point/area/group/general addressing; command mode; installation/destination level; reference address; timing/dimming fields |
+| `401` Automation control | point/area/group/general addressing; bistable/monostable/blades mode; installation/destination level |
+| `404` Scheduled scenario | address; button numbers; AUX input; restart delay |
+| `406` Scheduled scenario PLUS | scenario-number fields; button fields |
+| `407` AUX control | AUX channel; command mode; reachable through Virgin Object `500` when conditions permit |
 
 A reusable Object parameter is a candidate capability until the firmware condition/filter model makes it reachable for this Device.
 
