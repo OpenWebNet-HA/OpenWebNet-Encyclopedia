@@ -1451,13 +1451,15 @@ items:
       documentation_discovery: partial
       documentation_archive: pending
       source_reconciliation: complete
-      definition: partial
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
     notes:
     - Initial completion-oriented dossier exists; continue archival/document and corroboration
       work.
+    - Definition normalized to the current presentation/completeness profile; remaining
+      commercial-document and hardware gaps retain their separate review states.
   '1190':
     state: definition-in-progress
     priority: normal
