@@ -2,6 +2,7 @@
 
 ## Summary
 
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0010` | Project identity |
@@ -10,12 +11,13 @@
 | Main catalogue system | Lighting / Automation | Implementation evidence |
 | Item model / `modobj` | `44` | Implementation evidence |
 | Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `220` | Implementation evidence |
-| Declared Modules | 17 | Implementation evidence |
+| Declared Modules | `17` | Implementation evidence |
 | Categories | Sensor, Lighting, Scenario | Capability model |
 
 The Device combines PIR and ultrasonic presence detection with a brightness sensor, local ON/OFF and learning controls, and an IR transmitter. The canonical firmware projects one configurable sensor Module plus sixteen fixed IR scenario-control Modules.
 
 ## Commercial identities
+
 
 The current 2024 official technical sheet directly names the complete 12-record catalogue cluster:
 
@@ -30,15 +32,15 @@ The current 2024 official technical sheet directly names the complete 12-record 
 
 The current product page markets AC5220MB/MW under Arteor Advance, while MyHOME Suite 3.5.38 assigns those records to the stored line name “Eden Park”. Preserve the source-version naming difference.
 
-## Documentation and revision history
+## Documentation
 
-| Document | Date | Coverage | Archived original | Publisher |
-| --- | --- | --- | --- | --- |
-| `MQ00473-f-EN` | 09/06/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-en/MQ00473-f-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-EN.pdf) |
-| `MQ00473-f-FR` | 22/04/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-fr/MQ00473-f-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf) |
-| `ST-00001844-EN` | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-en/ST-00001844-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf) |
-| `ST-00001844-FR` | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-fr/ST-00001844-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf) |
-| `LE15098AA` | revision to verify | current family | [Archived PDF](../../sources/devices/documents/device-doc-pirus-le15098aa/LE15098AA.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00473-f-EN` | official source | 09/06/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-en/MQ00473-f-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-EN.pdf) |
+| `MQ00473-f-FR` | official source | 22/04/2014 | six earlier references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-mq00473-f-fr/MQ00473-f-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf) |
+| `ST-00001844-EN` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-en/ST-00001844-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf) |
+| `ST-00001844-FR` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](../../sources/devices/documents/device-doc-pirus-st00001844-fr/ST-00001844-FR.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf) |
+| `LE15098AA` | official source | revision to verify | current family | [Archived PDF](../../sources/devices/documents/device-doc-pirus-le15098aa/LE15098AA.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
 
 ### Material revision difference
 
@@ -48,43 +50,70 @@ Both originals are retained because this may represent a product revision, docum
 
 The 2024 sheet also updates the software-configuration workflow from MyHOME Suite to Home + Project while explicitly retaining physical configuration.
 
-## Physical and sensing characteristics
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | Publisher documentation cited in this section |
+| Supply | `27 Vdc` | Publisher documentation cited in this section |
+| Current draw | `15 mA` in the 2024 sheet | Publisher documentation cited in this section |
+| Detection technology | PIR + ultrasound, 180° | Publisher documentation cited in this section |
+| Brightness sensor | integrated | Publisher documentation cited in this section |
+| Front controls | ON/OFF button + LEARN button / LED | Publisher documentation cited in this section |
+| IR | integrated transmitter | Publisher documentation cited in this section |
+| Flush box depth | `40 mm` | Publisher documentation cited in this section |
+| Weight | `60 g` | Publisher documentation cited in this section |
+| Impact protection | `IK04` | Publisher documentation cited in this section |
+| Ingress protection | `IP20` | Publisher documentation cited in this section |
+| Time-delay range | `5 s .. 59 min 59 s` | Publisher documentation cited in this section |
+| Brightness range | `20 .. 1275 lux` | Publisher documentation cited in this section |
+| Operating temperature | `-5 .. +45 °C` | Publisher documentation cited in this section |
+| Storage temperature | `-20 .. +70 °C` | Publisher documentation cited in this section |
+| Physical configurator sockets | `A`, `PL`, `M`, `S`, `T`, `D` | Publisher documentation cited in this section |
 
 The 2024 sheet establishes:
 
-| Property | Value |
-| --- | --- |
-| Mounting | 2 flush-mounted modules |
-| Supply | `27 Vdc` |
-| Current draw | `15 mA` in the 2024 sheet |
-| Detection technology | PIR + ultrasound, 180° |
-| Brightness sensor | integrated |
-| Front controls | ON/OFF button + LEARN button / LED |
-| IR | integrated transmitter |
-| Flush box depth | `40 mm` |
-| Weight | `60 g` |
-| Impact protection | `IK04` |
-| Ingress protection | `IP20` |
-| Time-delay range | `5 s .. 59 min 59 s` |
-| Brightness range | `20 .. 1275 lux` |
-| Operating temperature | `-5 .. +45 °C` |
-| Storage temperature | `-20 .. +70 °C` |
-| Physical configurator sockets | `A`, `PL`, `M`, `S`, `T`, `D` |
 
 The six documented sockets independently support the expected ordinary addressed-form configurator count, pending hardware corroboration.
 
-## Identity and firmware
+## Identity
 
-| Field | Value |
-| --- | --- |
-| `EN_ITEM.id_item` | `1559` |
-| `AS_ITEM_SYSTEM.modobj` | `44` |
-| Firmware | `220` |
-| Firmware applicability | `-1.-1.-1` |
-| Firmware slots | `17` |
-| Configuration modes | Physical, Virtual, Advanced |
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1559` | Canonical catalogue |
+| Item model / `modobj` | `44` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
 
-## Module and Object model
+## Firmware and hardware
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `220` | `-1` | `-1` | `-1` | `17` | catalogue default | wildcard / unspecified applicability |
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+## Module, Object, and Virgin Object model
+
+### Objects
+
+| Firmware | Object | Description | Relationship |
+| --- | --- | --- | --- |
+| `220` | `431` | IR scenario control | catalogue firmware/Object relation |
+| `220` | `119` | Stand alone presence sensor | catalogue firmware/Object relation |
+| `220` | `128` | Scenarios daylight and presence sensor | catalogue firmware/Object relation |
+| `220` | `164` | Scenarios daylight sensor | catalogue firmware/Object relation |
+| `220` | `165` | Scenarios presence sensor | catalogue firmware/Object relation |
+| `220` | `166` | Stand alone daylight sensor | catalogue firmware/Object relation |
+| `220` | `168` | Stand alone daylight and presence sensor | catalogue firmware/Object relation |
+
+### Virgin Objects
+
+| Firmware | Virgin Object | Relationship |
+| --- | --- | --- |
+| all | - | no Virgin Object association in selected firmware rows |
+
+### Reconciled topology notes
+
 
 ### Slot 1 - sensing role
 
@@ -114,7 +143,26 @@ Its reusable parameters are:
 
 This is why the Device has 17 catalogue Modules despite appearing physically as one sensor.
 
-## Firmware-scoped physical configuration
+## Configuration modes
+
+| Firmware | Mode | Catalogue interpretation |
+| --- | --- | --- |
+| `220` | Catalogue configuration route(s) described in retained notes | retained Device-specific configuration modality |
+
+## Firmware-scoped configuration
+
+| Firmware | Field | Domain | Default | Meaning |
+| --- | --- | --- | --- | --- |
+| `220` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `A` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `PL` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `M` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `S` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `T` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `220` | `D` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+
+### Published and reconciled details
+
 
 | Field | Catalogue domain | Published physical meaning |
 | --- | --- | --- |
@@ -159,19 +207,132 @@ The sheets explicitly state that physical addresses `A=0` and `PL=0` do not exis
 | `4` | 500 lux |
 | `5` | 1000 lux |
 
-## Published physical modes
+## Object configuration surfaces
 
-| `M` | Published behavior | Catalogue slot-1 Object |
-| ---: | --- | --- |
-| `0` | presence + daylight, automatic light control | `168` |
-| `1` | daylight-only automatic control | `166` |
-| `2` | report movement/brightness to scenario programmer rather than control lights directly | `128` |
-| `3` | presence + daylight with constant-light regulation | `168` |
-| `4` | daylight-only constant-light / eco behavior | `166` |
+### Object `119` - Stand alone presence sensor
 
-The PDF and database condition table therefore corroborate each other for the five physical `M` values.
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MAIN_GROUP` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `FUNC_MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PIR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `US` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INITIAL_OCCUPANCY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MAINTAIN_OCCUPANCY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `RETRIGGER` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ALERT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ENABLE_LOAD_CONTROL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
 
-## Virtual and advanced sensing configuration
+### Object `128` - Scenarios daylight and presence sensor
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SCHEMA` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PIR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `US` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `164` - Scenarios daylight sensor
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `165` - Scenarios presence sensor
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SCHEMA` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PIR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `US` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `166` - Stand alone daylight sensor
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_LOOP` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `GD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_SETPOINT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PROVISION_OF_LIGHT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `FUNC_MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LIGHTING_REGULATION` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_FACTOR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `NATURAL_LIGHT_FACTOR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `168` - Stand alone daylight and presence sensor
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MAIN_GROUP` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_LOOP` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `GD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_SETPOINT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PROVISION_OF_LIGHT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `FUNC_MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PIR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `US` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INITIAL_OCC` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MAINTAIN_OCC` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `RE-TRIGGER` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ALERT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOAD_CONTROL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LIGHTING_REGULATION` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `NATURAL_LIGHT_FACTOR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_FACTOR` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DAYLIGHT_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `431` - IR scenario control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_OF_REGULATION` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ID1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ID2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ID3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `UNIT_NUMBER` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Reconciled Object notes
+
 
 The reusable sensor Objects extend far beyond the six physical sockets.
 
@@ -216,7 +377,32 @@ This combines the daylight model with:
 
 The published 2024 sheet independently documents remote-control adjustment of delay, PIR/US detection scheme, brightness threshold, Auto/Walkthrough/Eco modes, alarm, calibration, adjustment, and contribution-of-light behavior.
 
+## Conditions, filters, and conversions
+
+### Relation filters
+
+| Scope | Filter IDs | Interpretation |
+| --- | --- | --- |
+| Device/Object relations | `2221`, `2222`, `2223`, `2224`, `2225`, `2226`, `2227`, `2374`, `2387`, `2455`, `2467` | apply before exposing reusable Object values |
+
+### Slot conditions and conversions
+
+| Scope | Condition IDs | Conversion treatment |
+| --- | --- | --- |
+| Device slots | `4439`, `4461`, `4477`, `4491`, `4505` | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+
 ## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1559` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Existing Device-specific diagnostic notes
+
 
 | Diagnostic surface | Device-specific use | Reference |
 | --- | --- | --- |
@@ -226,7 +412,20 @@ The published 2024 sheet independently documents remote-control adjustment of de
 | `DIMENSION 32` | resolve sensor/scenario addressing | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/virtual/advanced configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
 
+## Functional applicability
+
+Functional applicability follows the resolved firmware/Object topology and the documented product roles above.
+
+## Observed behavior and corroboration
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+## Programming
+
+Programming must validate firmware applicability, active Module/Object topology, relation filters, and Device-specific configuration constraints.
+
 ## Source reconciliation
+
 
 The archived 2014/2024 PIR+US material has been reconciled beyond the basic `M/S/T/D` configurator table.
 
@@ -242,7 +441,8 @@ The product-level configuration surface additionally includes:
 
 These settings explain why reusable sensor Objects expose more behavior than the six physical sockets alone. They remain product-level semantics and should not be collapsed into one generic presence-sensor mode.
 
-## Corroboration status and open work
+## Evidence limits and open work
+
 
 - Obtain a sanitized fingerprint from known hardware and verify the unusual 17-Module projection.
 - Correlate old and new production batches with the 17 mA versus 15 mA documentation difference.
@@ -251,6 +451,7 @@ These settings explain why reusable sensor Objects expose more behavior than the
 - Record real-world IR scenario Object behavior for slots `2..17`.
 
 ## Sources
+
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)

@@ -73,7 +73,7 @@ def main() -> int:
         device_ids = outcome.get("device_ids") or []
         for device_id in device_ids:
             match = re.fullmatch(r"OWN-DEV-(\d{4})", str(device_id))
-            if not match or int(match.group(1)) < 11:
+            if not match or int(match.group(1)) < 1:
                 continue
 
             candidates = []
@@ -286,7 +286,7 @@ def main() -> int:
     con.close()
     if errors:
         return fail(errors)
-    print(f"Device definition completeness check passed ({checked} completed definitions from OWN-DEV-0011 onward)")
+    print(f"Device definition completeness check passed ({checked} completed definitions from OWN-DEV-0001 onward)")
     return 0
 
 

@@ -2,6 +2,7 @@
 
 ## Summary
 
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0001` | Project identity |
@@ -12,12 +13,13 @@
 | Item model / `modobj` | `77` | Implementation evidence |
 | Catalogue brand / line | `BRAND = 5`; `LINE = 0` | Implementation evidence |
 | Firmware definition | `1.0.5` (`EN_FIRMWARE 590`) | Implementation evidence |
-| Declared Modules | 2 | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
 | Categories | Actuator, Lighting, Dimmer | Derived from capability model |
 
 The F418U2 is a two-channel SCS universal dimmer. The official technical sheet identifies `F418U2` and `0 036 51` on the same document, while MyHOME Suite stores `F418U2` and `003651` as separate Device records sharing item `2065`. They are therefore treated as commercial identities of this technical Device definition.
 
 ## Commercial identities
+
 
 | Brand / range | SKU / reference | Relationship | Evidence |
 | --- | --- | --- | --- |
@@ -28,22 +30,21 @@ No preference between these references is implied by the Device ID.
 
 ## Documentation
 
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f418u2-mq01019-en/MQ01019_a_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
+| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ab/LE07383AB.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
+| `LE07383AC` | Instruction sheet | Historical revision | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ac/LE07383AC.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
+| `LE07383AD` | Instruction sheet | 07/23 | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ad/LE07383AD.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
+| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Device/family coverage described by retained source | [Archived original](../../sources/devices/documents/device-doc-f418u2-st00001620-en/ST-00001620-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
+| `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Device/family coverage described by retained source | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
+
 The source archive should retain every distinct revision found for this Device. The following official material is currently known:
 
-| Document | Type | Revision / date | Status | Source |
-| --- | --- | --- | --- | --- |
-| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | [Archived original](../../sources/devices/documents/device-doc-f418u2-mq01019-en/MQ01019_a_EN.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
-| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ab/LE07383AB.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
-| `LE07383AC` | Instruction sheet | Historical revision | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ac/LE07383AC.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
-| `LE07383AD` | Instruction sheet | 07/23 | [Archived original](../../sources/devices/documents/device-doc-f418u2-le07383ad/LE07383AD.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
-| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | [Archived original](../../sources/devices/documents/device-doc-f418u2-st00001620-en/ST-00001620-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
-| `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Official source identified, archival copy pending | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 
 See the [Device Source Index](../../sources/devices/index.md) for archival status and provenance.
 
 ## Physical and electrical characteristics
-
-The 2018 technical sheet establishes the following product-specific characteristics:
 
 | Property | Value | Evidence |
 | --- | --- | --- |
@@ -59,6 +60,9 @@ The 2018 technical sheet establishes the following product-specific characterist
 | Load families | dimmable LED, dimmable CFL, halogen, electronic transformers | Vendor technical sheet |
 | Local operation | local channel pushbuttons | Vendor technical sheet |
 
+The 2018 technical sheet establishes the following product-specific characteristics:
+
+
 The current BTicino product page also lists the Device as a 4-module, 27 Vdc MyHOME dimmer with an 18 mA bus current. Historical and current documents should both be preserved because product-sheet wording and supported-load guidance can change between revisions.
 
 ### Revision-specific hardware evidence
@@ -73,32 +77,37 @@ These differences are archival evidence that F418U2 documentation and product be
 
 ## Identity
 
-### Catalogue identity
-
-| Field | Value | Evidence state |
+| Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_DEVICE.code` | `F418U2` / sibling `003651` | Implementation evidence |
-| `EN_ITEM.id_item` | `2065` | Implementation evidence |
-| `EN_ITEM.descr` | “2x1,6A universal dimmer, 4DIN” | Implementation evidence |
-| `AS_ITEM_SYSTEM.modobj` | `77` | Implementation evidence |
-| `EN_BRAND.brand_modobj` | `5` | Implementation evidence |
-| `EN_LINE.line_modobj` | `0` | Implementation evidence |
+| `EN_ITEM.id_item` | `2065` | Canonical catalogue |
+| Item model / `modobj` | `77` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation (`id_system = 1`) | Canonical catalogue / retained definition |
 
-For the ordinary addressed identity mechanism, these catalogue values are the product-specific values to resolve through [`DIMENSION 1` Device Identity](../../diagnostics/dim1-device-identity.md). The generic frame grammar and field ranges are intentionally not duplicated here.
+## Firmware and hardware
 
-### Firmware identity
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `590` | `1` | `0` | `5` | `2` | non-default | catalogue applicability |
 
-The canonical catalogue contains one firmware definition for item `2065`:
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
 
-| Catalogue firmware | Version | Build | Slots | Default flag | Evidence |
-| --- | --- | --- | ---: | ---: | --- |
-| `590` | `1.0` | `5` | 2 | 0 | `MHCatalogue.db` |
+## Module, Object, and Virgin Object model
 
-This is catalogue applicability data. It does not by itself prove that every physical F418U2 reports `1.0.5`.
+### Objects
 
-Firmware, hardware, microcontroller, and Device ID reads use the canonical [Diagnostic Dimension Reference](../../diagnostics/dimension-reference.md). Observed values should be added as corroborating evidence without replacing the catalogue definition.
+| Firmware | Object | Description | Relationship |
+| --- | --- | --- | --- |
+| `590` | `631` | Double Dimmer actuator | catalogue firmware/Object relation |
+| `590` | `8` | Dimmer actuator | catalogue firmware/Object relation |
 
-## Module and Object model
+### Virgin Objects
+
+| Firmware | Virgin Object | Relationship |
+| --- | --- | --- |
+| `590` | `532` | catalogue candidate/template association |
+
+### Reconciled topology notes
+
 
 Firmware `590` declares two Modules.
 
@@ -112,6 +121,13 @@ The installed Module/Object projection is obtained through [`DIMENSION 30`](../.
 
 ## Configuration modes
 
+| Firmware | Mode | Catalogue interpretation |
+| --- | --- | --- |
+| `590` | Physical configuration | retained Device-specific configuration modality |
+| `590` | Virtual Configuration | retained Device-specific configuration modality |
+| `590` | Advanced Configuration | retained Device-specific configuration modality |
+
+
 The catalogue associates firmware `590` with all three configuration modes:
 
 - Physical configuration
@@ -121,6 +137,21 @@ The catalogue associates firmware `590` with all three configuration modes:
 The vendor technical sheet independently documents physical configuration and MyHOME Suite configuration.
 
 ## Firmware-scoped configuration
+
+| Firmware | Field | Domain | Default | Meaning |
+| --- | --- | --- | --- | --- |
+| `590` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `A` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `PL1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `PL2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `M` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `G` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `TY` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `MIN1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `MIN2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+
+### Published and reconciled details
+
 
 These are the complete firmware-scoped configuration fields stored for firmware `590`, excluding only database bookkeeping columns.
 
@@ -178,7 +209,68 @@ Virtual configuration exposes the delayed-off value as a Device/Object parameter
 
 The vendor sheet makes `MIN2` conditional on the second channel configuration and parallel-channel use. Preserve those conditions when producing a future programmer or validator.
 
-## Object configuration surface
+## Object configuration surfaces
+
+### Object `8` - Dimmer actuator
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DELAYED_OFF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STATE_SAVING_ON_RESET` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_LOAD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_STANDARD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_LEVEL_ADV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_AUTO` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `631` - Double Dimmer actuator
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DELAYED_OFF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STATE_SAVING_ON_RESET` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_LOAD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_STANDARD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_LEVEL_ADV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MIN_AUTO` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Reconciled Object notes
+
 
 Objects `8` and `136` expose the same catalogue configuration surface in the canonical database. These are reusable Object definitions; the table records the complete candidate surface, while Device/firmware filters and vendor documentation determine which values are meaningful for F418U2.
 
@@ -202,7 +294,32 @@ Objects `8` and `136` expose the same catalogue configuration surface in the can
 
 The reusable `TYPE_LOAD` Object enum includes load technologies beyond those documented for F418U2. Do not promote every reusable Object value to a product capability. The F418U2 technical sheet is the stronger product-specific evidence for its supported load families.
 
+## Conditions, filters, and conversions
+
+### Relation filters
+
+| Scope | Filter IDs | Interpretation |
+| --- | --- | --- |
+| Device/Object relations | `2205`, `2206`, `2207`, `2208`, `2209`, `2210`, `2211`, `2214`, `2215`, `2216`, `2217`, `2218`, `2219`, `2220` | apply before exposing reusable Object values |
+
+### Slot conditions and conversions
+
+| Scope | Condition IDs | Conversion treatment |
+| --- | --- | --- |
+| Device slots | `4149`, `4960` | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+
 ## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `2065` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`8`, `631`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Existing Device-specific diagnostic notes
+
 
 The Device-specific knowledge above projects through the general diagnostic model:
 
@@ -219,7 +336,8 @@ The Device-specific knowledge above projects through the general diagnostic mode
 
 The table documents applicability and Device-specific expectations. Frame grammar and generic field semantics belong to the linked reference pages.
 
-## Functional behavior and corroboration
+## Functional applicability
+
 
 F418U2 is a `WHO 1` Lighting dimmer. General commands, addressing, and dimension grammar are documented under [Lighting](../../functional/who-1-lighting/).
 
@@ -233,7 +351,12 @@ First-hand evidence already adds several Device-specific observations:
 
 These observations corroborate runtime behavior but do not change the canonical generic frame definitions. See [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md) and the [Open Questions](../../reverse-engineering/open-questions.md).
 
+## Observed behavior and corroboration
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
 ## Programming
+
 
 F418U2 programming should use the canonical [Programming](../../programming/) workflow. The Device-specific data required by a validator is captured above:
 
@@ -247,6 +370,7 @@ Generic `DIMENSION` write syntax and validation sequencing belong in [Configurat
 
 ## Source reconciliation
 
+
 Known F418U2 product documentation and runtime research have been reconciled as follows:
 
 - the local channel pushbuttons are Device controls, not additional OpenWebNet Modules; their status/fault indication belongs to the product-level behavior of the two dimmer channels;
@@ -259,6 +383,7 @@ Five identified F418U2-specific official PDFs are now archived byte-for-byte and
 
 ## Evidence limits and open work
 
+
 - Recover and archive the exact `GUI-MHOME` publisher binary if its download endpoint becomes available; treat it as generic system documentation unless it adds F418U2-specific facts.
 - Add a sanitized fingerprint capture from a known physical F418U2 so installed identity, firmware, hardware, Module/Object state, addresses, and configuration can be tied to one evidence record.
 - Resolve the source-level `A` / `PL1` physical-domain difference between catalogue data and the 2018 technical sheet.
@@ -266,6 +391,7 @@ Five identified F418U2-specific official PDFs are now archived byte-for-byte and
 - Determine which reusable Object configuration values are filtered out specifically for firmware `590`.
 
 ## Sources
+
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)

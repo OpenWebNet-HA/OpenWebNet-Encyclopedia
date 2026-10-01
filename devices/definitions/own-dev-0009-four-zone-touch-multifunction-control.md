@@ -2,6 +2,7 @@
 
 ## Summary
 
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0009` | Project identity |
@@ -10,12 +11,13 @@
 | Main catalogue system | Lighting / Automation | Implementation evidence |
 | Item model / `modobj` | `17` | Implementation evidence |
 | Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `159` | Implementation evidence |
-| Declared Modules | 5 | Implementation evidence |
+| Declared Modules | `5` | Implementation evidence |
 | Categories | Command, Multifunction, Lighting, Automation, Scenario, Audio / Video | Capability model |
 
 The Device has four capacitive command zones plus a fifth fixed **User interface settings** Module. Its command Modules can be configured across lighting, automation, scenarios, AUX, sound-system, and video-door-entry-related roles.
 
 ## Commercial identities
+
 
 The canonical catalogue contains 15 commercial records for item `1376`.
 
@@ -30,44 +32,77 @@ The older technical sheet directly names only the four Arteor references. Shared
 
 ## Documentation
 
-| Document | Type | Coverage | Archived original | Publisher source |
-| --- | --- | --- | --- | --- |
-| `LG00045-b-UK` | Technical sheet | `573904..573907` | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
-| `U3300B` | Instruction sheet | `573904..573907` family | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
-| MyHOME residential automation catalogue | Product catalogue | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
-| `ST-00001031-EN` | Compatibility table | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](../../sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LG00045-b-UK` | Technical sheet | not stated in retained row | `573904..573907` | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-lg00045-b-uk/LG00045_b_UK.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
+| `U3300B` | Instruction sheet | not stated in retained row | `573904..573907` family | [Archived PDF](../../sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
+| MyHOME residential automation catalogue | Product catalogue | not stated in retained row | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](../../sources/devices/documents/device-doc-myhome-catalogue-hpml0714/BR-MyHOME-HPML0714.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| `ST-00001031-EN` | Compatibility table | not stated in retained row | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](../../sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
 
-## Physical and user-interface characteristics
+## Physical and electrical characteristics
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | Publisher documentation cited in this section |
+| User controls | 4 capacitive touch zones | Publisher documentation cited in this section |
+| Feedback | two light-blue LEDs per key zone, with adjustable intensity behavior | Publisher documentation cited in this section |
+| SCS supply | `18..27 Vdc` | Publisher documentation cited in this section |
+| Maximum consumption | `25 mA` at maximum LED level; `20 mA` medium; `17 mA` minimum | Publisher documentation cited in this section |
+| Operating temperature | `0..40 °C` | Publisher documentation cited in this section |
+| Depth | `18.3 mm` | Publisher documentation cited in this section |
+| Physical labels | `A`, `PL`, `M`, `SPE`; rear programming/LED-intensity button `P` | Publisher documentation cited in this section |
 
 For `573904..573907`, `LG00045-b-UK` establishes:
 
-| Property | Value |
-| --- | --- |
-| Mounting | 2 flush-mounted modules |
-| User controls | 4 capacitive touch zones |
-| Feedback | two light-blue LEDs per key zone, with adjustable intensity behavior |
-| SCS supply | `18..27 Vdc` |
-| Maximum consumption | `25 mA` at maximum LED level; `20 mA` medium; `17 mA` minimum |
-| Operating temperature | `0..40 °C` |
-| Depth | `18.3 mm` |
-| Physical labels | `A`, `PL`, `M`, `SPE`; rear programming/LED-intensity button `P` |
 
 The programming pushbutton `P` is a physical user/programming control, not simply another firmware configuration value.
 
-## Identity and firmware
+## Identity
 
-| Field | Value |
-| --- | --- |
-| `EN_ITEM.id_item` | `1376` |
-| `AS_ITEM_SYSTEM.modobj` | `17` |
-| Firmware | `159` |
-| Firmware applicability | `-1.-1.-1` |
-| Firmware slots | `5` |
-| Configuration modes | Physical, Virtual, Advanced |
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1376` | Canonical catalogue |
+| Item model / `modobj` | `17` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
 
-Commercial brand/line values distinguish the individual records around the shared `modobj = 17` technical core.
+## Firmware and hardware
 
-## Module and Object model
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `159` | `-1` | `-1` | `-1` | `5` | catalogue default | wildcard / unspecified applicability |
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+## Module, Object, and Virgin Object model
+
+### Objects
+
+| Firmware | Object | Description | Relationship |
+| --- | --- | --- | --- |
+| `159` | `480` | User interface settings | catalogue firmware/Object relation |
+| `159` | `410` | Light control | catalogue firmware/Object relation |
+| `159` | `411` | Automation control | catalogue firmware/Object relation |
+| `159` | `412` | Lock/unlock actuator control | catalogue firmware/Object relation |
+| `159` | `413` | Scenario module control | catalogue firmware/Object relation |
+| `159` | `414` | Scheduled scenario | catalogue firmware/Object relation |
+| `159` | `415` | Scenario PLUS Lighting Management | catalogue firmware/Object relation |
+| `159` | `416` | Scheduled scenario PLUS | catalogue firmware/Object relation |
+| `159` | `417` | AUX control | catalogue firmware/Object relation |
+| `159` | `418` | Open lock control | catalogue firmware/Object relation |
+| `159` | `419` | Sound diffusion control | catalogue firmware/Object relation |
+| `159` | `421` | Cyclic autoswitch control | catalogue firmware/Object relation |
+| `159` | `426` | Staircase light control | catalogue firmware/Object relation |
+| `159` | `427` | Floor call control | catalogue firmware/Object relation |
+| `159` | `489` | Open lock command on session | catalogue firmware/Object relation |
+
+### Virgin Objects
+
+| Firmware | Virgin Object | Relationship |
+| --- | --- | --- |
+| `159` | `521` | catalogue candidate/template association |
+
+### Reconciled topology notes
+
 
 ### Fixed UI Module
 
@@ -110,7 +145,24 @@ Slots `1..4` use Virgin Object `521`, **Soft-Touch command virgin**, and can sel
 
 Light control `410` is the designated Object on all four command slots. The canonical firmware has **no `AS_SLOT_CONDITION` rows** for these slots, so the Device page must not invent a physical-condition-to-Object mapping from the mere Object list.
 
+## Configuration modes
+
+| Firmware | Mode | Catalogue interpretation |
+| --- | --- | --- |
+| `159` | Catalogue configuration route(s) described in retained notes | retained Device-specific configuration modality |
+
 ## Firmware-scoped configuration
+
+| Firmware | Field | Domain | Default | Meaning |
+| --- | --- | --- | --- | --- |
+| `159` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `159` | `A` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `159` | `PL` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `159` | `M` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `159` | `SET` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+
+### Published and reconciled details
+
 
 The firmware-level fields are:
 
@@ -128,22 +180,177 @@ The physical technical sheet labels the configurator housing `A / PL / M / SPE` 
 
 No equivalence between database `SET` and physical `SPE` is asserted here without further implementation evidence. Preserve both source models.
 
-## Published operating modes
+## Object configuration surfaces
 
-The technical sheet documents several physical behavior families:
+### Object `410` - Light control
 
-- self-learning mode, cyclic or non-cyclic, where individual key functions can be learnt;
-- scenario-module mode for recalling/programming scenarios;
-- direct/swivelling lighting or shutter control of consecutive targets;
-- CEN mode for use with a scenario programmer;
-- sound-system mode when `SPE=1`;
-- learned functions spanning lighting, automation, locking, staircase light, door release, floor call, camera cycling, sound diffusion, and AUX control.
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `START_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STOP_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DIMMING_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `T_TIME` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
 
-It also specifies a two-minute self-calibration period after installation.
+### Object `411` - Automation control
 
-These published functions strongly corroborate the breadth of the catalogue Object set, but do not establish a one-to-one mapping between every physical mode and every database Object.
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
 
-## Reusable Object configuration surfaces
+### Object `412` - Lock/unlock actuator control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `413` - Scenario module control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `APL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SCE_BUTT_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEL_BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `414` - Scheduled scenario
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `CEN_BUTT_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `415` - Scenario PLUS Lighting Management
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PPT_SCE_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_OF_REGULATION` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `DEL_BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `416` - Scheduled scenario PLUS
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PPT_CEN_HIG` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `MODE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `417` - AUX control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `OUT_AUX_CH` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `418` - Open lock control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `P` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SEG_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `419` - Sound diffusion control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `TYPE_CONTACT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IS_FOLLOW_ME` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SOURCE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SUB_SOURCE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `421` - Cyclic autoswitch control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `P` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SEG_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `426` - Staircase light control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `N2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SEG_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `427` - Floor call control
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `N1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `N2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SEGMENT` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `480` - User interface settings
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `STATE_OF_UNUSED_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `STATE_UPDATE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LED_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `LED_FADE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `BACKLIGHT_DELAY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PROXIMITY_ENABLE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `SIGNBOARD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Object `489` - Open lock command on session
+
+| Field | Domain | Default | Meaning |
+| --- | --- | --- | --- |
+| `P` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+
+### Reconciled Object notes
+
 
 The command Objects preserve their complete reusable parameter models in the canonical database. Principal surfaces include:
 
@@ -159,7 +366,32 @@ The command Objects preserve their complete reusable parameter models in the can
 | Door-entry-related `418/421/426/427/462` | entrance/internal-unit identifiers, segment level, point/general selection as applicable |
 | Sound diffusion `419` | ON/OFF/volume/track/source modes, audio addressing, follow-me/source/channel |
 
+## Conditions, filters, and conversions
+
+### Relation filters
+
+| Scope | Filter IDs | Interpretation |
+| --- | --- | --- |
+| Device/Object relations | `1057`, `1061`, `1065`, `1069`, `1076`, `1077`, `1081`, `1088`, `1089`, `1093`, `1097`, `1101`, `1904`, `3114`, `3121`, `3128`, `3136`, `3159`, `4107` | apply before exposing reusable Object values |
+
+### Slot conditions and conversions
+
+| Scope | Condition IDs | Conversion treatment |
+| --- | --- | --- |
+| Device slots | none | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+
 ## Diagnostic applicability
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1376` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `480`, `489`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Existing Device-specific diagnostic notes
+
 
 | Diagnostic surface | Device-specific use | Reference |
 | --- | --- | --- |
@@ -169,7 +401,32 @@ The command Objects preserve their complete reusable parameter models in the can
 | `DIMENSION 32` | determine configured functional addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
 
+## Functional applicability
+
+
+The technical sheet documents several physical behavior families:
+
+- self-learning mode, cyclic or non-cyclic, where individual key functions can be learnt;
+- scenario-module mode for recalling/programming scenarios;
+- direct/swivelling lighting or shutter control of consecutive targets;
+- CEN mode for use with a scenario programmer;
+- sound-system mode when `SPE=1`;
+- learned functions spanning lighting, automation, locking, staircase light, door release, floor call, camera cycling, sound diffusion, and AUX control.
+
+It also specifies a two-minute self-calibration period after installation.
+
+These published functions strongly corroborate the breadth of the catalogue Object set, but do not establish a one-to-one mapping between every physical mode and every database Object.
+
+## Observed behavior and corroboration
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+## Programming
+
+Programming must validate firmware applicability, active Module/Object topology, relation filters, and Device-specific configuration constraints.
+
 ## Source reconciliation
+
 
 The archived touch-control sources establish user/programming behavior in addition to the catalogue Object set:
 
@@ -182,7 +439,8 @@ The archived touch-control sources establish user/programming behavior in additi
 
 These behaviors do not resolve the implementation `SPE` versus `SET` mapping; that source-model boundary remains explicit.
 
-## Corroboration status and open work
+## Evidence limits and open work
+
 
 - Locate direct product sheets for the Céliane `067273..067295` variants and Arteor `574089/574589`.
 - Determine the exact relationship between physical `SPE`, database `SET`, and Object selection.
@@ -191,6 +449,7 @@ These behaviors do not resolve the implementation `SPE` versus `SET` mapping; th
 - Preserve production-batch constraints such as the documented `13W05` minimum for `067243..067245`.
 
 ## Sources
+
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
