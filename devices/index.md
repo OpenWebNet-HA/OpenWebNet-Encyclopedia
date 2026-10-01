@@ -17,6 +17,8 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 
 ## Devices
 
+The **Relationship** column describes how a commercial reference maps onto the technical Device definition. It does not select one SKU as authoritative. “Shared technical item” is catalogue evidence and remains weaker than a direct product-document or hardware equivalence.
+
 | Brand / line | SKU / reference | Relationship | Device definition | Notes |
 | --- | --- | --- | --- | --- |
 | BTicino MyHOME | F418U2 | Established commercial identity | [OWN-DEV-0001 - Two-channel universal dimmer](definitions/own-dev-0001-two-channel-universal-dimmer.md) | Vendor sheet also identifies `0 036 51` |
@@ -160,8 +162,6 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 | Legrand Arteor | 574096 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
 | Legrand Céliane | 067225 | Documented commercial identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Historical sheet / compatibility table |
 | Legrand Mosaic | 078485 | Compatibility-documented identity | [OWN-DEV-0016 - PIR flush-mounted sensor](definitions/own-dev-0016-pir-flush-mounted-sensor.md) | Archived compatibility table |
-The **Relationship** column describes how a commercial reference maps onto the technical Device definition. It does not select one SKU as authoritative. “Shared technical item” is catalogue evidence and remains weaker than a direct product-document or hardware equivalence.
-
 | BTicino Axolute | HC/HS4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
 | BTicino Axolute | HD4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
 | BTicino L/N/NT | L/N/NT4695 | 4695 family identity | [OWN-DEV-0017 - Flush-mounted temperature central unit](definitions/own-dev-0017-flush-mounted-temperature-central-unit.md) | Item 168 |
