@@ -130,14 +130,8 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | `HEATING_REGULATION_BAND` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Heating setpoint allowance |
 | `HEATING_FAN_COIL_SPEED_2_THRESHOLD` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 2 threshold > Heating regulation band |
 | `HEATING_FAN_COIL_SPEED_3_THRESHOLD` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 3 threshold > Heating Fan coil speed 2 threshold |
-| `HEATING_CONTACT_OPENING` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If parameter "Heating contact opening" is set to 0, 4, parameter "Heating contact opening timeout" must be set to 0."
-
-
- If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact opening must be different from 5...25. |
-| `HEATING_CONTACT_CLOSING` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If parameter "Heating contact closing" is set to 0, 4, parameter "Heating contact closing timeout" must be set to 0."
-
-
- If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact closing must be different from 5...25. |
+| `HEATING_CONTACT_OPENING` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If parameter "Heating contact opening" is set to 0, 4, parameter "Heating contact opening timeout" must be set to 0." If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact opening must be different from 5...25. |
+| `HEATING_CONTACT_CLOSING` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If parameter "Heating contact closing" is set to 0, 4, parameter "Heating contact closing timeout" must be set to 0." If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact closing must be different from 5...25. |
 | `HEATING_CONTACT_OPENING_ACTIVATION_DELAY` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Activation delay for local contact opening |
 | `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Activation delay for local contact closing |
 | `HEATING_CONTACT_OPENING_TIMEOUT` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | 0 corresponds to infinite. If parameter "Heating contact opening timeout" is different from 0, "Heating contact closing timeout" must be set to 0. |
@@ -171,125 +165,26 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | `ACTUATOR_N=7_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
 | `ACTUATOR_N=8_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
 | `ACTUATOR_N=9_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
-| `ACTUATOR_N=1_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=2_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=3_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=4_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=5_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=6_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=7_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=8_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
-| `ACTUATOR_N=9_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use).
- This parameter has not to be shown.
- In the final check, this parameter must be assigned to:
- - "Heating actuator type" if "Actuator function" is set to
-   Heating only.
- - "Cooling actuator type" if "Actuator function" is set to
-   Cooling only.
- - "Heating actuator type" or "Cooling actuator type" if
-   "Actuator function" is set to Heating and cooling or
-   is set to Not installed. |
+| `ACTUATOR_N=1_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=2_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=3_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=4_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=5_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=6_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=7_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=8_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=9_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
 | `HEATING_ACTUATOR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). |
 | `COOLING_ACTUATOR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | The highlighted values must not be implemented into key object (they are dedicated to future use). |
-| `PUMP_N=1_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=2_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=3_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=4_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=5_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=6_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=7_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=8_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
-| `PUMP_N=9_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only.
- If "Heating actuator type" is set to GATEWAY, and this parameter is set  to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling".
- If "Cooling actuator type" is set to GATEWAY, and this parameter is set  to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=1_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=2_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=3_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=4_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=5_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=6_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=7_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=8_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=9_FUNCTION` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
 | `HEATING_PUMP_DELAY` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Time delay for heating pumps |
 | `COOLING_PUMP_DELAY` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Time delay for cooling pumps |
 | `NUMBER_OF_SLAVES` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Number of slave probes |

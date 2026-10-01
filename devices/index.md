@@ -64,7 +64,6 @@ The mechanically extracted [Database Inventory](inventory/) contains every catal
 | Legrand Mosaic | 078475 | Shared technical item; product-document review pending | [OWN-DEV-0005 - Two-module special control](definitions/own-dev-0005-two-module-special-control.md) | Item `1524` |
 | Legrand Mosaic | 079172 | Shared technical item; product-document review pending | [OWN-DEV-0005 - Two-module special control](definitions/own-dev-0005-two-module-special-control.md) | Item `1524` |
 | Legrand Mosaic | 079175 | Shared technical item; product-document review pending | [OWN-DEV-0005 - Two-module special control](definitions/own-dev-0005-two-module-special-control.md) | Item `1524` |
-
 | Arnould Espace Evolution | 64195 | Documented commercial reference | [OWN-DEV-0006 - Two-module zero-crossing actuator and control](definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md) | Item `2180`; covered by `ST-00000898-EN` |
 | Arnould Espace Evolution | 64196 | Documented commercial reference | [OWN-DEV-0006 - Two-module zero-crossing actuator and control](definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md) | Item `2180`; covered by `ST-00000898-EN` |
 | Arnould Espace Evolution | 64393 | Documented commercial reference | [OWN-DEV-0006 - Two-module zero-crossing actuator and control](definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md) | Item `2180`; covered by `ST-00000898-EN` |

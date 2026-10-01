@@ -121,9 +121,7 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `M` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Modality |
-| `ADDR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Address (2, range `01..175`)
- Area (2, range `00..10`)
- Group (2, range `01..255`) |
+| `ADDR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Address (2, range `01..175`) Area (2, range `00..10`) Group (2, range `01..255`) |
 | `A` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Area |
 | `PL` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Light point |
 | `G` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Group |
@@ -138,9 +136,7 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
 | `M` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Modality |
-| `ADDR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Address (2, range `01..175`)
- Area (2, range `00..10`)
- Group (2, range `01..255`) |
+| `ADDR_TYPE` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Address (2, range `01..175`) Area (2, range `00..10`) Group (2, range `01..255`) |
 | `A` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Area |
 | `PL` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Light point |
 | `G` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Group |
