@@ -27,18 +27,18 @@
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| BTicino 344742 product page | product page | current product family | Current Classe 300X connected indoor-unit functions and documentation links | - | https://www.bticino.com/products/bt-344742 |
-| FIS_C300X_1 | technical data sheet | current publisher copy | 344742 / 344743 / 344745 / 344746 supply, Wi-Fi and teleloop electrical data | - | https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf |
-| ST-00002362-EN | technical sheet | current publisher copy | 344745 / 344746 connected video internal units with inductive loop | - | https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf |
+| BTicino `344742` product page | product page | current product family | Current Classe 300X connected indoor-unit functions and documentation links | Not applicable - web page | [Official product page](https://www.bticino.com/products/bt-344742) |
+| `FIS_C300X_1` | technical data sheet | current publisher copy | `344742` / `344743` / `344745` / `344746` supply, Wi-Fi and teleloop electrical data | [Archived original](../../sources/devices/documents/device-doc-classe300x-fis-c300x-1/FIS_C300X_1.pdf) | [Official source](https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf) |
+| `ST-00002362-EN` | technical sheet | current publisher copy | `344745` / `344746` connected video internal units with inductive loop | [Archived original](../../sources/devices/documents/device-doc-classe300x-st00002362-en/ST-00002362-EN.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Display | 7 inch horizontal LCD touchscreen, 1024 x 600 | Current BTicino Classe 300X product documentation |
-| SCS supply | 20-27 Vdc; 22-27 Vdc with active inductive loop | FIS_C300X_1 |
-| Wi-Fi | 2.4 GHz and 5 GHz 802.11 b/g/n/ac/ax in current product documentation | FIS_C300X_1 |
-| Variants | 344742 light, 344743 dark, 344745 light with teleloop, 344746 dark with teleloop | Current BTicino/Legrand product documentation |
+| Display | `7 inch` horizontal LCD touchscreen, `1024 x 600` | Current BTicino Classe 300X product documentation |
+| SCS supply | `20..27 Vdc`; `22..27 Vdc` with active inductive loop | `FIS_C300X_1` |
+| Wi-Fi | `2.4 GHz` and `5 GHz`; `802.11 b/g/n/ac/ax` in current product documentation | `FIS_C300X_1` |
+| Variants | `344742` light, `344743` dark, `344745` light with teleloop, `344746` dark with teleloop | Current BTicino/Legrand product documentation |
 | System role | Connected 2-wire hands-free video internal unit with remote/app functions | Current BTicino product page |
 
 ## Identity

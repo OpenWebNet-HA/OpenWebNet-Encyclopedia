@@ -177,6 +177,16 @@ def main() -> int:
                     errors.append(f"{prefix}: Summary is missing baseline field {label}")
 
             documentation_body = section(text, "Documentation")
+            for doc_line in documentation_body.splitlines():
+                if not doc_line.startswith("|") or "---" in doc_line or doc_line.startswith("| Document |"):
+                    continue
+                cells = [cell.strip() for cell in doc_line.strip("|").split("|")]
+                if len(cells) >= 6:
+                    publisher_cell = cells[5]
+                    if re.match(r"https?://", publisher_cell):
+                        errors.append(f"{prefix}: Documentation Publisher source exposes a raw URL instead of a descriptive Markdown link")
+                    if publisher_cell not in ("-", "") and "http" in publisher_cell and not re.search(r"\[[^\]]+\]\(https?://", publisher_cell):
+                        errors.append(f"{prefix}: Documentation Publisher source must use descriptive Markdown link text")
             expected_doc_header = (
                 "| Document | Type | Revision / date | Coverage | "
                 "Archived original | Publisher source |"
@@ -191,6 +201,15 @@ def main() -> int:
                 errors.append(
                     f"{prefix}: Physical and electrical characteristics must use a Property/Value/Evidence table"
                 )
+            for physical_line in physical_body.splitlines():
+                if not physical_line.startswith("|") or "---" in physical_line or physical_line.startswith("| Property |"):
+                    continue
+                cells = [cell.strip() for cell in physical_line.strip("|").split("|")]
+                if len(cells) >= 2:
+                    value_cell = cells[1]
+                    stripped = re.sub(r"`[^`]*`", "", value_cell)
+                    if re.search(r"(?<![\w.])(?:\d+(?:\.\d+)?(?:\.\.\d+(?:\.\d+)?)?|\d+\s*x\s*\d+(?:\s*x\s*\d+)?)\s*(?:Vdc|Vac|mA|A|W|kW|Hz|kHz|MHz|GHz|mm|cm|°C|inch)\b", stripped):
+                        errors.append(f"{prefix}: Physical/electrical exact measurement literal should use inline code: {value_cell}")
             physical_rows = [
                 line for line in physical_body.splitlines()
                 if line.startswith("|")
