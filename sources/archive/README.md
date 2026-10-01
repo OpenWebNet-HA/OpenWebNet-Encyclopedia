@@ -1,9 +1,9 @@
-# PDF archive
+# External source archive
 
-The Encyclopedia's binary PDF sources are stored in the OpenWebNet-HA R2 archive rather than Git.
+Publisher PDF binaries are stored outside Git in the OpenWebNet-HA R2 document archive.
 
-- Public base URL: https://archive.openwebnet-ha.org
-- Objects are addressed by SHA-256 using sha256/<first-2>/<next-2>/<sha256>.pdf.
-- pdf-manifest.json records the former repository path, byte size, SHA-256, object key, and public URL for every migrated PDF.
-- Publisher-source URLs remain on the Encyclopedia pages where they were already recorded; the manifest does not invent missing provenance.
-- New PDFs must be ingested through the archive workflow and must not be committed to Git.
+- Public document base URL: https://archive.openwebnet-ha.org
+- PDF objects are addressed by SHA-256 as sha256/<first-2>/<next-2>/<sha256>.pdf.
+- pdf-manifest.json records the former repository path, byte size, SHA-256, object key, and public URL.
+- Publisher-source URLs and provenance remain in repository metadata and documentation.
+- MyHOME Suite canonical data artifacts are tracked separately and are not part of this public document manifest.

@@ -6,11 +6,12 @@ import re
 import sqlite3
 import sys
 from pathlib import Path
+from catalogue_source import catalogue_path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-DB = ROOT / "sources" / "myhome-suite" / "3.5.38" / "databases" / "MHCatalogue.db"
+DB = catalogue_path()
 QUEUE = ROOT / "devices" / "work-queue.yaml"
 DEFINITIONS = ROOT / "devices" / "definitions"
 BT = chr(96)

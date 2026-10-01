@@ -3,10 +3,11 @@ from __future__ import annotations
 import argparse, hashlib, sqlite3
 from collections import Counter
 from pathlib import Path
+from catalogue_source import catalogue_path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-DB = ROOT / "sources" / "myhome-suite" / "3.5.38" / "databases" / "MHCatalogue.db"
+DB = catalogue_path()
 QUEUE = ROOT / "devices" / "work-queue.yaml"
 DASH = ROOT / "devices" / "work-queue.md"
 

@@ -33,7 +33,7 @@ Firmware is an implementation layer between the product model and its exposed Mo
 | Virgin Object | A template constraining which Objects a configurable Module can become | `EN_VIRGIN_OBJECT` and association tables |
 | Configuration | Object- or firmware-scoped properties and their allowed values | `EN_CONF`, ranges, filters, conditions, and conversion rules |
 
-The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
+The [canonical `MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) contains 541 Device records, 210 item definitions, 311 firmware definitions, 158 Objects, 18 Virgin Objects, 1,725 `slot`/Object assignments, and 2,883 configuration definitions. These counts describe this source revision; they are not protocol limits.
 
 ## End-to-end catalogue path
 
@@ -52,7 +52,7 @@ The original database declares few foreign keys. The relationships above are sup
 
 ## Protocol projections
 
-The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) projects parts of the model onto diagnostic and programming frames:
+The [canonical `OPEN.db`](../sources/myhome-suite/3.5.38/databases/) projects parts of the model onto diagnostic and programming frames:
 
 | Operation | Model level exposed |
 | --- | --- |
