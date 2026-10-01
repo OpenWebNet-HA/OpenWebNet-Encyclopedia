@@ -21,23 +21,22 @@ The canonical catalogue contains ten Device records. Several database records co
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC4680` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino Axolute | `HS4680` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino Axolute | `HD4680` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `L4680` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `N4680` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `NT4680` | Established identity | Catalogue cluster + official technical sheet |
-| Legrand Arteor | `573902` | Established identity | Catalogue + official technical sheet |
-| Legrand Arteor | `573903` | Established identity | Catalogue + official technical sheet |
-| Legrand Arteor | `574503` | Established identity | Catalogue + official technical sheet |
-| Legrand Arteor | `574504` | Established identity | Catalogue + official technical sheet |
-| Legrand Céliane | `067217` | Established identity | Catalogue + official technical sheet |
-| Legrand Céliane | `067218` | Established identity | Catalogue + official technical sheet |
-| Legrand Mosaic | `078478` | Shared technical item | Implementation evidence; direct product sheet pending |
-| Legrand Mosaic | `079178` | Shared technical item | Implementation evidence; direct product sheet pending |
+| BTicino - Axolute | `HC4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HS4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HD4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `L4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `N4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `NT4680` | Established identity | Catalogue cluster + official technical sheet |
+| Legrand - Arteor | `573902` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573903` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `574503` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `574504` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067217` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067218` | Established identity | Catalogue + official technical sheet |
+| Legrand - Mosaic | `078478` | Shared technical item | Implementation evidence; direct product sheet pending |
+| Legrand - Mosaic | `079178` | Shared technical item | Implementation evidence; direct product sheet pending |
 
 The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino finish variants are collapsed into combined catalogue codes such as `HC/HS/HD4680`.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

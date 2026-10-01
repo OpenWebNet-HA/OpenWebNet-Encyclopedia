@@ -20,11 +20,10 @@ Two-module automation control exposing special-function Object alternatives.
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4651/2` | established catalogue identity for item `1525` | canonical commercial record |
-| BTicino L/N/NT | `L4651/2` | established catalogue identity for item `1525` | canonical commercial record |
-| BTicino Matix | `AM5831/2` | established catalogue identity for item `1525` | canonical commercial record |
-| Legrand Vela | `687376` | established catalogue identity for item `1525` | canonical commercial record |
-
+| BTicino - Axolute | `H4651/2` | established catalogue identity for item `1525` | canonical commercial record |
+| BTicino - LivingLight | `L4651/2` | established catalogue identity for item `1525` | canonical commercial record |
+| BTicino - Matix | `AM5831/2` | established catalogue identity for item `1525` | canonical commercial record |
+| Legrand - Vela | `687376` | established catalogue identity for item `1525` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

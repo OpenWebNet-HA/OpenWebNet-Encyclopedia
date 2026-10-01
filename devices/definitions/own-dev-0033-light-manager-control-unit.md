@@ -18,10 +18,9 @@
 
 | Brand / line | Reference | Catalogue record | Relationship | Evidence |
 | --- | --- | ---: | --- | --- |
-| BTicino / Undefined | `BMNE500` | `35` | Gateway identity | Canonical catalogue |
+| BTicino | `BMNE500` | Established identity | canonical commercial record `35`; Gateway identity | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

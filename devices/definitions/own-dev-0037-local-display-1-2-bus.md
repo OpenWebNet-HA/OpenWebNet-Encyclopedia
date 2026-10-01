@@ -20,13 +20,12 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Living / LivingLight | `L/N/NT4891` | established grouped identity | catalogue + `MQ00692-b-EN` |
-| BTicino Axolute | `HC/HS/HD4891` | established grouped identity | catalogue + `MQ00692-b-EN` |
-| Legrand Céliane | `067271` | established identity | catalogue + `MQ00692-b-EN` |
-| Legrand Céliane | `067272` | established identity | catalogue + `MQ00692-b-EN` |
-| Legrand Arteor | `573716` | established identity | catalogue + `MQ00692-b-EN` |
-| Legrand Arteor | `573717` | established identity | catalogue + `MQ00692-b-EN` |
-
+| BTicino - LivingLight | `L/N/NT4891` | established grouped identity | catalogue + `MQ00692-b-EN` |
+| BTicino - Axolute | `HC/HS/HD4891` | established grouped identity | catalogue + `MQ00692-b-EN` |
+| Legrand - Céliane | `067271` | established identity | catalogue + `MQ00692-b-EN` |
+| Legrand - Céliane | `067272` | established identity | catalogue + `MQ00692-b-EN` |
+| Legrand - Arteor | `573716` | established identity | catalogue + `MQ00692-b-EN` |
+| Legrand - Arteor | `573717` | established identity | catalogue + `MQ00692-b-EN` |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

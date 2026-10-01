@@ -21,10 +21,9 @@ Temperature-control central unit and supervisory programmer.
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
 | BTicino | `3550` | established catalogue identity for item `291` | canonical commercial record |
-| Legrand Céliane | `067456` | established catalogue identity for item `291` | canonical commercial record |
+| Legrand - Céliane | `067456` | established catalogue identity for item `291` | canonical commercial record |
 | Legrand | `573918` | established catalogue identity for item `291` | canonical commercial record |
 | Legrand | `573919` | established catalogue identity for item `291` | canonical commercial record |
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -19,21 +19,20 @@ The Device receives commands from compatible infrared remote controls and projec
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC4654` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino Axolute | `HS4654` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino Axolute | `HD4654` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `L4654N` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `N4654N` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino L/N/NT | `NT4654N` | Established identity | Catalogue cluster + official technical sheet |
-| BTicino Matix | `AM5834` | Established identity | Catalogue + official technical sheet |
-| Legrand Arteor | `573900` | Established identity | Catalogue + official technical sheet |
-| Legrand Arteor | `573901` | Established identity | Catalogue + official technical sheet |
-| Legrand Céliane | `067216` | Established identity | Catalogue + official technical sheet |
-| Legrand Mosaic | `078465` | Shared technical item | Implementation evidence; direct product sheet pending |
-| Legrand Mosaic | `079265` | Shared technical item | Implementation evidence; direct product sheet pending |
+| BTicino - Axolute | `HC4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HS4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HD4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `L4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `N4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `NT4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Matix | `AM5834` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573900` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573901` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067216` | Established identity | Catalogue + official technical sheet |
+| Legrand - Mosaic | `078465` | Shared technical item | Implementation evidence; direct product sheet pending |
+| Legrand - Mosaic | `079265` | Shared technical item | Implementation evidence; direct product sheet pending |
 
 The MyHOME Suite catalogue stores some finish variants as combined codes, so one catalogue row may represent several printed BTicino references.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

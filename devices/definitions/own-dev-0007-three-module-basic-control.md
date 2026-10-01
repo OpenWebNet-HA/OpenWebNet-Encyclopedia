@@ -21,15 +21,14 @@ This Device exposes three independently addressed command Modules under a shared
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4652/3` | Established identity | Catalogue + official technical sheet |
-| BTicino L/N/NT | `L4652/3` | Established identity | Catalogue + official technical sheet |
-| BTicino Matix | `AM5832/3` | Established identity | Catalogue + official technical sheet |
-| Legrand Céliane | `067554` | Established catalogue identity | Catalogue + official technical sheet |
-| Legrand Arteor | `573975` | Shared technical item | Implementation evidence; product-document review pending |
-| Legrand Vela | `687378` | Shared technical item | Implementation evidence; product-document review pending |
+| BTicino - Axolute | `H4652/3` | Established identity | Catalogue + official technical sheet |
+| BTicino - LivingLight | `L4652/3` | Established identity | Catalogue + official technical sheet |
+| BTicino - Matix | `AM5832/3` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067554` | Established catalogue identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573975` | Shared technical item | Implementation evidence; product-document review pending |
+| Legrand - Vela | `687378` | Shared technical item | Implementation evidence; product-document review pending |
 
 The current Legrand web catalogue describes reference `067554` with “Arteor” wording while the canonical MyHOME Suite catalogue assigns that code to the Céliane line. Preserve this as a source/catalogue metadata difference until the historical commercial relationship is resolved.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

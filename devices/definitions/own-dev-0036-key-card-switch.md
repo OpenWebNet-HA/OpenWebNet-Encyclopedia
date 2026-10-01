@@ -20,15 +20,14 @@ The Device detects card insertion/removal and maps that state to configured scen
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4649` | established identity | catalogue + `MM00496-b-EN` |
-| BTicino Living / LivingLight | `LN4649` | established identity | catalogue + `MM00496-b-EN` |
-| Legrand Arteor | `572735` | established identity; printed `5 727 35` | catalogue + `MM00496-b-EN` |
-| Legrand Arteor | `572235` | established identity; printed `5 722 35` | catalogue + `MM00496-b-EN` |
-| Legrand Céliane | `67565` | established identity; printed `0 675 65` | catalogue + `MM00496-b-EN` |
-| Legrand Arteor | `572736` | catalogue-associated identity with source conflict | catalogue; `MM00771-a-EN` assigns printed `5 727 36` to the RFID family |
+| BTicino - Axolute | `H4649` | established identity | catalogue + `MM00496-b-EN` |
+| BTicino - LivingLight | `LN4649` | established identity | catalogue + `MM00496-b-EN` |
+| Legrand - Arteor | `572735` | established identity; printed `5 727 35` | catalogue + `MM00496-b-EN` |
+| Legrand - Arteor | `572235` | established identity; printed `5 722 35` | catalogue + `MM00496-b-EN` |
+| Legrand - Céliane | `67565` | established identity; printed `0 675 65` | catalogue + `MM00496-b-EN` |
+| Legrand - Arteor | `572736` | catalogue-associated identity with source conflict | catalogue; `MM00771-a-EN` assigns printed `5 727 36` to the RFID family |
 
 No commercial identity is treated as canonical. The `572736` conflict is material because the official RFID sheet associates the same printed reference with the RFID product family documented by the [RFID key-card switch](own-dev-0039-key-card-switch-rfid.md).
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

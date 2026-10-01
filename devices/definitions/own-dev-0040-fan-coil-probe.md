@@ -20,12 +20,11 @@ The Device is a master temperature probe specialized for fan-coil installations.
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Living / LivingLight | `L/N/NT4692FAN` | established grouped identity | catalogue + `MQ00181-c-EN` |
-| BTicino Axolute | `HC/HS/HD4692FAN` | established grouped identity | catalogue + `MQ00181-c-EN` |
-| Legrand Arteor | `573924` | established identity | catalogue + `MQ00181-c-EN` |
-| Legrand Arteor | `573925` | established identity | catalogue + `MQ00181-c-EN` |
-| Legrand Céliane | `067455` | established identity | catalogue + `MQ00181-c-EN` |
-
+| BTicino - LivingLight | `L/N/NT4692FAN` | established grouped identity | catalogue + `MQ00181-c-EN` |
+| BTicino - Axolute | `HC/HS/HD4692FAN` | established grouped identity | catalogue + `MQ00181-c-EN` |
+| Legrand - Arteor | `573924` | established identity | catalogue + `MQ00181-c-EN` |
+| Legrand - Arteor | `573925` | established identity | catalogue + `MQ00181-c-EN` |
+| Legrand - Céliane | `067455` | established identity | catalogue + `MQ00181-c-EN` |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

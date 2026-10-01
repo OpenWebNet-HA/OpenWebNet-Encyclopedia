@@ -23,16 +23,15 @@ The official 2021 technical sheet directly documents all seven commercial refere
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution | `64195` | Documented commercial reference | Catalogue + official technical sheet |
-| Arnould Espace Evolution | `64196` | Documented commercial reference | Catalogue + official technical sheet |
-| Arnould Espace Evolution | `64393` | Documented commercial reference | Catalogue + official technical sheet |
-| BTicino Axolute | `H4672M2` | Documented commercial reference | Catalogue + official technical sheet |
-| BTicino L/N/NT | `LN4672M2` | Documented commercial reference | Catalogue + official technical sheet |
-| BTicino Matix | `AM5852M2` | Documented commercial reference | Catalogue + official technical sheet |
-| Legrand Céliane | `067561` / printed `0 675 61` | Documented commercial reference | Catalogue + official technical sheet |
+| Arnould - Espace Evolution | `64195` | Documented commercial reference | Catalogue + official technical sheet |
+| Arnould - Espace Evolution | `64196` | Documented commercial reference | Catalogue + official technical sheet |
+| Arnould - Espace Evolution | `64393` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - Axolute | `H4672M2` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - LivingLight | `LN4672M2` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - Matix | `AM5852M2` | Documented commercial reference | Catalogue + official technical sheet |
+| Legrand - Céliane | `067561` / printed `0 675 61` | Documented commercial reference | Catalogue + official technical sheet |
 
 Shared item membership and the common technical sheet jointly establish this commercial-identity set. Range-specific dimensions and packaging remain commercial metadata.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

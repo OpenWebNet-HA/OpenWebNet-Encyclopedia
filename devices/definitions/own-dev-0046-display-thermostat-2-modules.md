@@ -18,11 +18,10 @@
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4691` | established catalogue identity for item `1686` | canonical commercial record |
-| BTicino L/N/NT | `LN4691` | established catalogue identity for item `1686` | canonical commercial record |
-| Legrand Céliane | `067459` | established catalogue identity for item `1686` | canonical commercial record |
-| Arnould Espace Evolution | `64170` | established catalogue identity for item `1686` | canonical commercial record |
-
+| BTicino - Axolute | `H4691` | established catalogue identity for item `1686` | canonical commercial record |
+| BTicino - LivingLight | `LN4691` | established catalogue identity for item `1686` | canonical commercial record |
+| Legrand - Céliane | `067459` | established catalogue identity for item `1686` | canonical commercial record |
+| Arnould - Espace Evolution | `64170` | established catalogue identity for item `1686` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

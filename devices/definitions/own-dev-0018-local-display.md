@@ -21,15 +21,14 @@ The Local Display is a multifunction wall user interface whose catalogue topolog
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS/HD4685` | Documented 4685-family identity | Catalogue + family documentation |
-| BTicino L/N/NT | `L/N/NT4685` | Documented 4685-family identity | Catalogue + family documentation |
-| Legrand Arteor | `573916` | Shared technical item | Implementation evidence |
-| Legrand Arteor | `573917` | Shared technical item | Implementation evidence |
-| Legrand Céliane | `067281` | Shared technical item | Implementation evidence |
-| Legrand Céliane | `067282` | Shared technical item | Implementation evidence |
+| BTicino - Axolute | `HC/HS/HD4685` | Documented 4685-family identity | Catalogue + family documentation |
+| BTicino - LivingLight | `L/N/NT4685` | Documented 4685-family identity | Catalogue + family documentation |
+| Legrand - Arteor | `573916` | Shared technical item | Implementation evidence |
+| Legrand - Arteor | `573917` | Shared technical item | Implementation evidence |
+| Legrand - Céliane | `067281` | Shared technical item | Implementation evidence |
+| Legrand - Céliane | `067282` | Shared technical item | Implementation evidence |
 
 All six records share catalogue item `1147` and `modobj` 64. Direct variant-specific documentation remains desirable for the Legrand references.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

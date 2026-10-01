@@ -24,9 +24,10 @@ Keep only supported rows. Add Device-specific identity rows when they materially
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| | | | |
+| BTicino - Axolute | `...` | Established identity | ... |
+| Legrand - Céliane | `...` | Established identity | ... |
 
-List every established or candidate identity. Use prose for package distinctions, source-version naming differences, or unresolved equivalence.
+Use `Brand - Marketed line` when a meaningful marketed line is established, and the brand alone otherwise. Do not expose catalogue placeholders such as `Undefined`, internal line-group labels such as `L/N/NT`, product-family names in place of lines, or raw database IDs in Relationship. List every established or candidate identity. Use prose for package distinctions, source-version naming differences, or unresolved equivalence.
 
 ## Documentation
 

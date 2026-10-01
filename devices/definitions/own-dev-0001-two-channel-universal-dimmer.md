@@ -23,11 +23,10 @@ The F418U2 is a two-channel SCS universal dimmer. The official technical sheet i
 
 | Brand / range | SKU / reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino MyHOME | `F418U2` | Established commercial identity | Catalogue + vendor technical sheet |
+| BTicino | `F418U2` | Established commercial identity | Catalogue + vendor technical sheet |
 | Legrand | `0 036 51` / `003651` | Equivalent commercial reference | Same vendor technical sheet + same catalogue item |
 
 No preference between these references is implied by the Device ID.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -21,15 +21,14 @@ The load-control panel is a four-button SCS user interface for loads managed by 
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS/HD4673` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
-| BTicino L/N/NT | `L/N/NT4673` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
-| Legrand Arteor | `573985` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
-| Legrand Arteor | `573991` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
-| Legrand Céliane | `067206` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
-| Legrand Céliane | `067207` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| BTicino - Axolute | `HC/HS/HD4673` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| BTicino - LivingLight | `L/N/NT4673` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| Legrand - Arteor | `573985` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| Legrand - Arteor | `573991` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| Legrand - Céliane | `067206` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
+| Legrand - Céliane | `067207` | Documented commercial identity | Catalogue + `MQ00709` technical sheet |
 
 The technical sheet names the corresponding 4673, `067206`/`067207` and `573985`/`573991` families, giving unusually strong commercial corroboration for the current six-record catalogue cluster.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -18,12 +18,11 @@
 
 | Brand / line | Reference | Catalogue record | Relationship | Evidence |
 | --- | --- | ---: | --- | --- |
-| BTicino / Axolute | `HC/HS/HD4575` | `28` | Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino / L/N/NT | `L/N/NT4575` | `1839` | Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino / L/N/NT | `L/N/NT4575N` | `1840` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino - Axolute | `HC/HS/HD4575` | Established identity | canonical commercial record `28`; Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino - LivingLight | `L/N/NT4575` | Established identity | canonical commercial record `1839`; Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino - LivingLight | `L/N/NT4575N` | Established identity | canonical commercial record `1840`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

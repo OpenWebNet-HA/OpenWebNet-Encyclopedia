@@ -22,18 +22,17 @@ The canonical catalogue groups eight Device records. Several BTicino database co
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC4659`, `HS4659`, `HD4659` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
-| BTicino L/N/NT | `L4659N`, `N4659N`, `NT4659N` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
-| BTicino Matix | `AM5659` | Documented commercial identity | Catalogue + archived historical sheet |
-| BTicino Living Now | `K4659` | Documented current commercial identity | Catalogue + archived current technical sheet |
-| Legrand Arteor | `574046`, `574096` | Documented commercial identities | Catalogue + archived historical sheet / compatibility table |
-| Legrand Céliane | `067225` | Documented commercial identity | Catalogue + archived historical sheet / compatibility table |
-| Legrand Mosaic | `078485` | Compatibility-documented identity | Catalogue + archived compatibility table |
-| BTicino Axolute catalogue combined code | `HC/HS/HD4659` | Catalogue combined identity | Implementation evidence |
-| BTicino L/N/NT catalogue combined code | `L/N/NT4659N` | Catalogue combined identity | Implementation evidence |
+| BTicino - Axolute | `HC4659`, `HS4659`, `HD4659` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
+| BTicino - LivingLight | `L4659N`, `N4659N`, `NT4659N` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
+| BTicino - Matix | `AM5659` | Documented commercial identity | Catalogue + archived historical sheet |
+| BTicino - Living Now | `K4659` | Documented current commercial identity | Catalogue + archived current technical sheet |
+| Legrand - Arteor | `574046`, `574096` | Documented commercial identities | Catalogue + archived historical sheet / compatibility table |
+| Legrand - Céliane | `067225` | Documented commercial identity | Catalogue + archived historical sheet / compatibility table |
+| Legrand - Mosaic | `078485` | Compatibility-documented identity | Catalogue + archived compatibility table |
+| BTicino - Axolute | `HC/HS/HD4659` | Catalogue combined identity | Implementation evidence |
+| BTicino - LivingLight | `L/N/NT4659N` | Catalogue combined identity | Implementation evidence |
 
 These documents collectively cover every commercial record in the canonical item cluster.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
