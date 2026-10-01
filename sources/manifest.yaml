@@ -832,3 +832,53 @@ source_sets:
       publisher: "BTicino / Legrand"
       language: "IT / EN"
       publication_date: "unknown"
+    - id: device-doc-key-card-mm00496-b-en
+      path: devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf
+      original_filename: MM00496-b-EN.pdf
+      type: pdf
+      size: 993550
+      sha256: fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f
+      source_url: "https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2013-12-02"
+    - id: device-doc-key-card-rfid-mm00771-a-en
+      path: devices/documents/device-doc-key-card-rfid-mm00771-a-en/MM00771-a-EN.pdf
+      original_filename: MM00771-a-EN.pdf
+      type: pdf
+      size: 879767
+      sha256: d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449
+      source_url: "https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2013-12-02"
+    - id: device-doc-local-display-mq00692-b-en
+      path: devices/documents/device-doc-local-display-mq00692-b-en/MQ00692-b-EN.pdf
+      original_filename: MQ00692-b-EN.pdf
+      type: pdf
+      size: 247184
+      sha256: b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6
+      source_url: "https://dar.bticino.com/asset/Documents/MQ00692_b_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2014-04-17"
+    - id: device-doc-probe-regulation-mq00179-c-en
+      path: devices/documents/device-doc-probe-regulation-mq00179-c-en/MQ00179-c-EN.pdf
+      original_filename: MQ00179-c-EN.pdf
+      type: pdf
+      size: 283964
+      sha256: 0898672f2b160b86e4c760bb696f5bda73be69ea59fc9cf33ed7694d62dd83d9
+      source_url: "https://dar.bticino.com/asset/Documents/MQ00179_c_EN.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "unknown"
+    - id: device-doc-fancoil-probe-mq00181-c-en
+      path: devices/documents/device-doc-fancoil-probe-mq00181-c-en/MQ00181-c-EN.pdf
+      original_filename: MQ00181-c-EN.pdf
+      type: pdf
+      size: 219613
+      sha256: 05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc
+      source_url: "https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00181-c-en.pdf"
+      publisher: "BTicino / Legrand"
+      language: "EN"
+      publication_date: "2014-04-29"
