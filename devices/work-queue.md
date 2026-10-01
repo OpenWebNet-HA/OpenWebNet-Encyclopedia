@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 150 |
+| unreviewed | 140 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 60 |
+| definition-in-progress | 70 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -77,15 +77,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 56 | PIR wall maunted sensor, long range | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 58 | Sensor occupancy + IR + ZigBee | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 60 | Memory module | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 61 | Scenario module | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 71 | SCS/DALI gateway | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 79 | DIN contacts interface | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 84 | DIN dimmer 1000 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 85 | DIN dimmer 2 x 400 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -146,7 +137,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 66 | Actuator 1 module 1 relay | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 80 | Module contacts interface | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 98 | Scenes programmer | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 139 | Burglar alarm central unit with communicator | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -229,8 +219,18 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 51 | PIR wall mounted sensor, straight range | 2 | definition-in-progress | OWN-DEV-0056 | complete | complete | complete | pending | - |
 | normal | 52 | PIR wall mounted sensor, short range | 2 | definition-in-progress | OWN-DEV-0057 | complete | complete | complete | pending | - |
 | normal | 53 | PIR wall mounted sensor, dual range | 2 | definition-in-progress | OWN-DEV-0058 | complete | complete | complete | pending | - |
+| normal | 56 | PIR wall maunted sensor, long range | 2 | definition-in-progress | OWN-DEV-0061 | complete | complete | partial | pending | - |
+| normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | definition-in-progress | OWN-DEV-0062 | partial | complete | partial | pending | - |
+| normal | 58 | Sensor occupancy + IR + ZigBee | 2 | definition-in-progress | OWN-DEV-0063 | partial | complete | partial | pending | - |
+| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | definition-in-progress | OWN-DEV-0064 | complete | partial | partial | pending | - |
+| normal | 60 | Memory module | 2 | definition-in-progress | OWN-DEV-0065 | complete | complete | complete | pending | - |
+| normal | 61 | Scenario module | 2 | definition-in-progress | OWN-DEV-0066 | complete | complete | complete | pending | - |
+| normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0067 | complete | complete | complete | pending | - |
+| normal | 71 | SCS/DALI gateway | 2 | definition-in-progress | OWN-DEV-0069 | complete | complete | complete | pending | - |
+| normal | 79 | DIN contacts interface | 2 | definition-in-progress | OWN-DEV-0070 | complete | complete | complete | pending | - |
 | normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
+| normal | 66 | Actuator 1 module 1 relay | 1 | definition-in-progress | OWN-DEV-0068 | complete | complete | complete | pending | - |
 
 ## Reviewed
 
