@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 155 |
+| unreviewed | 150 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 55 |
+| definition-in-progress | 60 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -77,9 +77,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 51 | PIR wall mounted sensor, straight range | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 52 | PIR wall mounted sensor, short range | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 53 | PIR wall mounted sensor, dual range | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 56 | PIR wall maunted sensor, long range | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 58 | Sensor occupancy + IR + ZigBee | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -149,8 +146,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 54 | Basic actuator | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 55 | Basic control actuator | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 80 | Module contacts interface | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 98 | Scenes programmer | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -231,6 +226,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | definition-in-progress | OWN-DEV-0053 | complete | complete | complete | pending | - |
 | normal | 49 | PIR+US ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0054 | complete | complete | complete | pending | - |
 | normal | 50 | PIR+US wall mounted sensor | 2 | definition-in-progress | OWN-DEV-0055 | complete | complete | complete | pending | - |
+| normal | 51 | PIR wall mounted sensor, straight range | 2 | definition-in-progress | OWN-DEV-0056 | complete | complete | complete | pending | - |
+| normal | 52 | PIR wall mounted sensor, short range | 2 | definition-in-progress | OWN-DEV-0057 | complete | complete | complete | pending | - |
+| normal | 53 | PIR wall mounted sensor, dual range | 2 | definition-in-progress | OWN-DEV-0058 | complete | complete | complete | pending | - |
+| normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
+| normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
 
 ## Reviewed
 
