@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 130 |
+| unreviewed | 110 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 80 |
+| definition-in-progress | 100 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -57,7 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
-| normal | 1122 | Shutter flush mounted actuator | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -76,16 +75,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 130 | Room Controller 1 Output 16 Amps | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 137 | IP55 PIR wall mounted sensor | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 160 | Flush mounted alarm central unit | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 975 | Burglar alarm central unit with communicator | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1031 | Pulses counter interface | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1078 | Video Station | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1130 | Stereo control | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1162 | Load management central unit | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -129,15 +118,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 139 | Burglar alarm central unit with communicator | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 140 | Polyx Alarm | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 141 | GSM burglar alarm central unit | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 207 | Webserver Audio/Video DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 912 | Enhanced Webserver | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 913 | Stop&Go | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 914 | Stop&Go Btest | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 916 | Stop&Go Plus | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 925 | Touch control | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1177 | IP interface (2Wire/IP) | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1178 | IP interface (D45/IP)  | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1191 | Touch control | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -202,6 +182,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | complete | partial | pending | - |
 | normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | complete | partial | pending | - |
 | normal | 81 | Basic contacts interface | 3 | definition-in-progress | OWN-DEV-0072 | complete | complete | partial | pending | - |
+| normal | 1122 | Shutter flush mounted actuator | 3 | definition-in-progress | OWN-DEV-0098 | partial | partial | partial | pending | - |
 | normal | 45 | PIR ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0051 | complete | complete | complete | pending | - |
 | normal | 47 | Ballast DIN dimmer 0-10 V | 2 | definition-in-progress | OWN-DEV-0052 | complete | complete | complete | pending | - |
 | normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | definition-in-progress | OWN-DEV-0053 | complete | complete | complete | pending | - |
@@ -226,11 +207,30 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | definition-in-progress | OWN-DEV-0077 | complete | complete | partial | pending | - |
 | normal | 90 | SCS-SCS interface | 2 | definition-in-progress | OWN-DEV-0078 | complete | complete | complete | pending | - |
 | normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | definition-in-progress | OWN-DEV-0079 | complete | complete | partial | pending | - |
+| normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0081 | partial | partial | partial | pending | - |
+| normal | 130 | Room Controller 1 Output 16 Amps | 2 | definition-in-progress | OWN-DEV-0082 | partial | partial | partial | pending | - |
+| normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0083 | partial | partial | partial | pending | - |
+| normal | 137 | IP55 PIR wall mounted sensor | 2 | definition-in-progress | OWN-DEV-0084 | partial | partial | partial | pending | - |
+| normal | 160 | Flush mounted alarm central unit | 2 | definition-in-progress | OWN-DEV-0088 | partial | partial | partial | pending | - |
+| normal | 975 | Burglar alarm central unit with communicator | 2 | definition-in-progress | OWN-DEV-0095 | partial | partial | partial | pending | - |
+| normal | 1031 | Pulses counter interface | 2 | definition-in-progress | OWN-DEV-0096 | partial | partial | partial | pending | - |
+| normal | 1078 | Video Station | 2 | definition-in-progress | OWN-DEV-0097 | partial | partial | partial | pending | - |
+| normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | definition-in-progress | OWN-DEV-0099 | partial | partial | partial | pending | - |
+| normal | 1130 | Stereo control | 2 | definition-in-progress | OWN-DEV-0100 | partial | partial | partial | pending | - |
 | normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | definition-in-progress | OWN-DEV-0068 | complete | complete | complete | pending | - |
 | normal | 80 | Module contacts interface | 1 | definition-in-progress | OWN-DEV-0071 | complete | complete | complete | pending | - |
 | normal | 98 | Scenes programmer | 1 | definition-in-progress | OWN-DEV-0080 | complete | complete | complete | pending | - |
+| normal | 139 | Burglar alarm central unit with communicator | 1 | definition-in-progress | OWN-DEV-0085 | partial | partial | partial | pending | - |
+| normal | 140 | Polyx Alarm | 1 | definition-in-progress | OWN-DEV-0086 | partial | partial | partial | pending | - |
+| normal | 141 | GSM burglar alarm central unit | 1 | definition-in-progress | OWN-DEV-0087 | partial | partial | partial | pending | - |
+| normal | 207 | Webserver Audio/Video DIN | 1 | definition-in-progress | OWN-DEV-0089 | partial | partial | partial | pending | - |
+| normal | 912 | Enhanced Webserver | 1 | definition-in-progress | OWN-DEV-0090 | partial | partial | partial | pending | - |
+| normal | 913 | Stop&Go | 1 | definition-in-progress | OWN-DEV-0091 | partial | partial | partial | pending | - |
+| normal | 914 | Stop&Go Btest | 1 | definition-in-progress | OWN-DEV-0092 | partial | partial | partial | pending | - |
+| normal | 916 | Stop&Go Plus | 1 | definition-in-progress | OWN-DEV-0093 | partial | partial | partial | pending | - |
+| normal | 925 | Touch control | 1 | definition-in-progress | OWN-DEV-0094 | partial | partial | partial | pending | - |
 
 ## Reviewed
 
