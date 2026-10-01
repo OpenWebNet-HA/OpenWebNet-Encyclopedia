@@ -18,8 +18,8 @@ The fingerprints match [`sources/manifest.yaml`](../sources/manifest.yaml). The 
 | Source | What it establishes | What it does not establish alone |
 | --- | --- | --- |
 | ScenarioDevices files | editor capability hierarchy, resource keys, local IDs, categories, matching IDs, templates, and Parameter metadata | installed Device support, complete runtime graph, or public protocol semantics for frame-absent rows |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Physical Device, firmware, Module, Object, and configuration capability | ScenarioDevices ID equivalence |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | systems, address rules, management frames, diagnostic/programming sequences, and timeouts | Scenario Engine graph or ScenarioDevices row mapping |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Physical Device, firmware, Module, Object, and configuration capability | ScenarioDevices ID equivalence |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | systems, address rules, management frames, diagnostic/programming sequences, and timeouts | Scenario Engine graph or ScenarioDevices row mapping |
 | [Functional reference](../functional/) | functional `WHO`, `WHAT`, `WHERE`, and `DIMENSION` semantics | MyHOME_Suite editor coverage by itself |
 | [Cross-database functional coverage](../functional/cross-database-coverage.md) | corroborated intersections among implementation databases and functional frames | undeclared numeric joins |
 | observed application/runtime behavior | UI labels, filtering, persistence, matching, and execution behavior | universal support beyond observed versions and Devices |

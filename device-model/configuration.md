@@ -215,7 +215,7 @@ The catalogue contains:
 
 ## Additional Temperature Control rules
 
-[`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) adds cross-property validation and linked-parameter disabling for three Object numbers:
+[`rules.db3`](../sources/myhome-suite/3.5.38/databases/) adds cross-property validation and linked-parameter disabling for three Object numbers:
 
 | Object | Catalogue description | Validation rows |
 | ---: | --- | ---: |
@@ -285,6 +285,6 @@ A mapping between a UI field, catalogue definition, and protocol value requires 
 
 ## Sources
 
-Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
+Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.

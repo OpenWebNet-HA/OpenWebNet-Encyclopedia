@@ -4,7 +4,7 @@
 
 ## Corpus status
 
-The corpus includes the [L4686SDK Specification](../../sources/openwebnet-public/pdf/WHO_6_L4686SDK.pdf), version 1.0.0 dated 11 February 2009. Its eight pages contain `WHO 6` command/address tables and send/receive flows for cameras, calls, locks, and stair lighting. This is product-specific published evidence, not merely a namespace record and not a complete generic Video Door Entry specification.
+The corpus includes the [L4686SDK Specification](https://archive.openwebnet-ha.org/sha256/51/9f/519f564bf48c1d5870250269bcc4927a747a33424974e951a61db324d98ad95b.pdf), version 1.0.0 dated 11 February 2009. Its eight pages contain `WHO 6` command/address tables and send/receive flows for cameras, calls, locks, and stair lighting. This is product-specific published evidence, not merely a namespace record and not a complete generic Video Door Entry specification.
 
 The reference below preserves the source's product scope. Values from adjacent Video Door Entry systems must not be substituted for the L4686SDK evidence.
 

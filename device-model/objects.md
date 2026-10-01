@@ -182,6 +182,6 @@ Its catalogue presence establishes that the Module can expose that logical funct
 
 ## Sources
 
-[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) defines catalogue Object identity and availability. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) defines the diagnostic Object projection. ScenarioDevices and the [public OpenWebNet documents](../sources/openwebnet-public/) describe adjacent scenario and functional semantics.
+[`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) defines catalogue Object identity and availability. [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) defines the diagnostic Object projection. ScenarioDevices and the [public OpenWebNet documents](../sources/openwebnet-public/) describe adjacent scenario and functional semantics.
 
 See [Sources and Identifier Boundaries](sources-and-identifiers.md) for the cross-source policy.

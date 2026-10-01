@@ -58,12 +58,12 @@ Never infer the diagnostic family by arithmetically transforming a functional `W
 
 | Source | Role in this section |
 | --- | --- |
-| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/OPEN.db) | diagnostic systems, frame templates, parameter types and ranges, address rules, sequences, repetition flags, and timeouts |
-| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/OpenQuery.txt) | the queries MyHOME_Suite uses to assemble systems, frames, sequences, address rules, and timeout behavior from `OPEN.db` |
-| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/MHCatalogue.db) | Physical Device, firmware, Module, Object, Virgin Object, and configuration interpretation |
+| [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) | diagnostic systems, frame templates, parameter types and ranges, address rules, sequences, repetition flags, and timeouts |
+| [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/) | the queries MyHOME_Suite uses to assemble systems, frames, sequences, address rules, and timeout behavior from `OPEN.db` |
+| [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/) | Physical Device, firmware, Module, Object, Virgin Object, and configuration interpretation |
 | [Public OpenWebNet documents](../sources/openwebnet-public/) | common frame syntax and functional `WHO` behavior; they do not define the MyHOME_Suite diagnostic state machines documented here |
 | ScenarioDevices databases | adjacent functional/scenario behavior; not diagnostic Object or configuration identity |
-| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/rules.db3) | selected Temperature Control configuration constraints; not a diagnostic frame registry |
+| [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) | selected Temperature Control configuration constraints; not a diagnostic frame registry |
 | Observed traffic | actual ordering, repetition, values, termination, and Device-specific support |
 | MyHOME_Suite UI | displayed Device descriptions, Module visibility/numbering, configuration labels, and editability |
 
