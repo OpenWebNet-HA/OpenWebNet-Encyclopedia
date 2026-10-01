@@ -21,16 +21,15 @@ This Device is the four-zone MyHOME temperature-control central unit sold under 
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
-| BTicino Axolute | `HD4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
-| BTicino L/N/NT | `L/N/NT4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
-| BTicino Matix | `AM5875` | Shared technical item | Implementation evidence; direct product sheet still desirable |
-| Legrand Vela | `683090` | Shared technical item | Implementation evidence; direct product sheet still desirable |
-| Legrand Vela | `687390` | Shared technical item | Implementation evidence; direct product sheet still desirable |
-| Legrand Vela | `687890` | Shared technical item | Implementation evidence; direct product sheet still desirable |
+| BTicino - Axolute | `HC/HS4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
+| BTicino - Axolute | `HD4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
+| BTicino - LivingLight | `L/N/NT4695` | Shared technical item; 4695 family documentation applies | Catalogue + official 4695 documentation |
+| BTicino - Matix | `AM5875` | Shared technical item | Implementation evidence; direct product sheet still desirable |
+| Legrand - Vela | `683090` | Shared technical item | Implementation evidence; direct product sheet still desirable |
+| Legrand - Vela | `687390` | Shared technical item | Implementation evidence; direct product sheet still desirable |
+| Legrand - Vela | `687890` | Shared technical item | Implementation evidence; direct product sheet still desirable |
 
 Shared item membership establishes the common catalogue capability core. It does not prove that faceplate, market, hardware revision, or packaging is identical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

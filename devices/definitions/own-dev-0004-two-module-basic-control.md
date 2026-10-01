@@ -23,10 +23,10 @@ This technical definition covers the shared catalogue capability core used by 19
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
-| BTicino L/N/NT | `L4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
-| BTicino Matix | `AM5832/2` | Established identity | Catalogue + `MQ00286-d-EN` |
-| Legrand Céliane | `067552` | Established identity | Catalogue + `MQ00286-d-EN` |
+| BTicino - Axolute | `H4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| BTicino - LivingLight | `L4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| BTicino - Matix | `AM5832/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| Legrand - Céliane | `067552` | Established identity | Catalogue + `MQ00286-d-EN` |
 
 ### Additional commercial records sharing item 281
 
@@ -40,7 +40,6 @@ This technical definition covers the shared catalogue capability core used by 19
 | Legrand Vela | `687377` | Shared technical item; individual product-document review pending |
 
 Sharing one `EN_ITEM` establishes a common catalogue capability core. It does not by itself prove that every commercial package is physically identical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

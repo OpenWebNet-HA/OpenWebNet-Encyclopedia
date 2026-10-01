@@ -25,18 +25,17 @@ The canonical catalogue maps nine commercial Device records to item `1184`, item
 
 | Brand / line | Reference | Relationship to technical definition | Evidence |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution | `64391` | documented commercial reference | Catalogue + vendor catalogue |
-| Arnould Espace Evolution | `64191` | documented commercial/package variant | Catalogue + vendor catalogue |
-| Arnould Espace Evolution | `64192` | documented commercial/package variant | Catalogue + vendor catalogue |
-| BTicino Axolute | `H4671M2` | shared technical item | Implementation evidence; product-document review pending |
-| BTicino L/N/NT | `LN4671M2` | shared technical item | Implementation evidence; product-document review pending |
-| BTicino Matix | `AM5851M2` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand Arteor | `573961` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand Céliane | `067249` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand Céliane | `067556` | shared technical item | Implementation evidence; product-document review pending |
+| Arnould - Espace Evolution | `64391` | documented commercial reference | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64191` | documented commercial/package variant | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64192` | documented commercial/package variant | Catalogue + vendor catalogue |
+| BTicino - Axolute | `H4671M2` | shared technical item | Implementation evidence; product-document review pending |
+| BTicino - LivingLight | `LN4671M2` | shared technical item | Implementation evidence; product-document review pending |
+| BTicino - Matix | `AM5851M2` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand - Arteor | `573961` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand - Céliane | `067249` | shared technical item | Implementation evidence; product-document review pending |
+| Legrand - Céliane | `067556` | shared technical item | Implementation evidence; product-document review pending |
 
 The technical Device ID does not privilege one of these references. Shared-item membership establishes the common catalogue capability core but does not erase possible package, finish, regional, or hardware differences.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

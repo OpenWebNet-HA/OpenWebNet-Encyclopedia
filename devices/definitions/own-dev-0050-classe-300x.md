@@ -18,11 +18,10 @@
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Classe 300X | `344742` | established catalogue identity for item `2321` | canonical commercial record |
-| BTicino Classe 300X | `344743` | established catalogue identity for item `2321` | canonical commercial record |
-| BTicino Classe 300X | `344745` | established catalogue identity for item `2321` | canonical commercial record |
-| BTicino Classe 300X | `344746` | established catalogue identity for item `2321` | canonical commercial record |
-
+| BTicino | `344742` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344743` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344745` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344746` | established catalogue identity for item `2321` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

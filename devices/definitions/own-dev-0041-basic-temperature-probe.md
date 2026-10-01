@@ -20,12 +20,11 @@ SCS basic temperature probe for zone sensing.
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS/HD4693` | established catalogue identity for item `1862` | canonical commercial record |
-| BTicino L/N/NT | `L/N/NT4693` | established catalogue identity for item `1862` | canonical commercial record |
-| Legrand Arteor | `573920` | established catalogue identity for item `1862` | canonical commercial record |
-| Legrand Arteor | `573921` | established catalogue identity for item `1862` | canonical commercial record |
-| Legrand Céliane | `067458` | established catalogue identity for item `1862` | canonical commercial record |
-
+| BTicino - Axolute | `HC/HS/HD4693` | established catalogue identity for item `1862` | canonical commercial record |
+| BTicino - LivingLight | `L/N/NT4693` | established catalogue identity for item `1862` | canonical commercial record |
+| Legrand - Arteor | `573920` | established catalogue identity for item `1862` | canonical commercial record |
+| Legrand - Arteor | `573921` | established catalogue identity for item `1862` | canonical commercial record |
+| Legrand - Céliane | `067458` | established catalogue identity for item `1862` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

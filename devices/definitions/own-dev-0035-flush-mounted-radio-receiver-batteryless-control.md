@@ -18,11 +18,10 @@
 
 | Brand / line | Reference | Catalogue record | Relationship | Evidence |
 | --- | --- | ---: | --- | --- |
-| BTicino / Axolute | `HC/HS/HD4575SB` | `40` | Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino / Axolute | `L/N/NT4575SB` | `1841` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino - Axolute | `HC/HS/HD4575SB` | Established identity | canonical commercial record `40`; Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino - Axolute | `L/N/NT4575SB` | Established identity | canonical commercial record `1841`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

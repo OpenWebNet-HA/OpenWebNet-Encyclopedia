@@ -20,13 +20,12 @@ The Device detects authorized RFID card insertion/removal and maps that state in
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4648` | established identity | catalogue + `MM00771-a-EN` |
-| BTicino Living / LivingLight | `LN4648` | established identity | catalogue + `MM00771-a-EN` |
-| Legrand Céliane | `067566` | established identity | catalogue + `MM00771-a-EN` |
-| Legrand Mosaic | `078480` | established catalogue identity | implementation evidence; not printed in the retained core sheet |
-| Legrand Arteor | `572236` | established identity; printed `5 722 36` | catalogue + `MM00771-a-EN` |
-| Legrand Arteor | `572736` | publisher-documented family identity; catalogue conflict | `MM00771-a-EN`; current catalogue assigns `572736` to item `1563` |
-
+| BTicino - Axolute | `H4648` | established identity | catalogue + `MM00771-a-EN` |
+| BTicino - LivingLight | `LN4648` | established identity | catalogue + `MM00771-a-EN` |
+| Legrand - Céliane | `067566` | established identity | catalogue + `MM00771-a-EN` |
+| Legrand - Mosaic | `078480` | established catalogue identity | implementation evidence; not printed in the retained core sheet |
+| Legrand - Arteor | `572236` | established identity; printed `5 722 36` | catalogue + `MM00771-a-EN` |
+| Legrand - Arteor | `572736` | publisher-documented family identity; catalogue conflict | `MM00771-a-EN`; current catalogue assigns `572736` to item `1563` |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

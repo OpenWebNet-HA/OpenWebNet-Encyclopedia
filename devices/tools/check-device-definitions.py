@@ -255,6 +255,18 @@ def main() -> int:
                 errors.append(f"{prefix}: Identity does not account for catalogue item {expected_item}")
 
             identities = section(text, "Commercial identities")
+            for commercial_line in identities.splitlines():
+                if not commercial_line.startswith("|") or "---" in commercial_line or commercial_line.startswith("| Brand"):
+                    continue
+                cells = [cell.strip() for cell in commercial_line.strip("|").split("|")]
+                if len(cells) >= 4:
+                    brand_line, relationship = cells[0], cells[2]
+                    if " / " in brand_line or "Undefined" in brand_line or "catalogue combined code" in brand_line:
+                        errors.append(f"{prefix}: Commercial Brand / line uses catalogue/presentation metadata instead of normalized human-facing vocabulary: {brand_line}")
+                    if re.search(r"\b(?:MyHOME|Classe 300X|L/N/NT)\b", brand_line):
+                        errors.append(f"{prefix}: Commercial Brand / line uses a system/family or internal catalogue grouping instead of a marketed line: {brand_line}")
+                    if re.fullmatch(r"`?\d+`?", relationship):
+                        errors.append(f"{prefix}: Commercial Relationship must be semantic prose, not a raw implementation ID: {relationship}")
             if review.get("commercial_identities") == "complete":
                 for row in con.execute("select code from EN_DEVICE where id_item=? order by id_device", (expected_item,)):
                     if row["code"] and token(row["code"]) not in identities:

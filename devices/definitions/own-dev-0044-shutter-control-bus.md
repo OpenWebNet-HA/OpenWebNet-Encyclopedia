@@ -20,11 +20,10 @@ Dedicated advanced shutter control with preset and reference-actuator support.
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4660M2` | established catalogue identity for item `1579` | canonical commercial record |
-| BTicino L/N/NT | `LN4660M2` | established catalogue identity for item `1579` | canonical commercial record |
-| BTicino Matix | `AM5860M2` | established catalogue identity for item `1579` | canonical commercial record |
-| Legrand Céliane | `067558` | established catalogue identity for item `1579` | canonical commercial record |
-
+| BTicino - Axolute | `H4660M2` | established catalogue identity for item `1579` | canonical commercial record |
+| BTicino - LivingLight | `LN4660M2` | established catalogue identity for item `1579` | canonical commercial record |
+| BTicino - Matix | `AM5860M2` | established catalogue identity for item `1579` | canonical commercial record |
+| Legrand - Céliane | `067558` | established catalogue identity for item `1579` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

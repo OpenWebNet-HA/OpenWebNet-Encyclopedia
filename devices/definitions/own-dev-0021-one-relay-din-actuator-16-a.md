@@ -20,11 +20,10 @@ The shared technical item covers BTicino `F411/1N` and Legrand `003841`.
 
 | Brand / line | Reference | Catalogue record | Relationship | Evidence |
 | --- | --- | ---: | --- | --- |
-| BTicino / Undefined | `F411/1N` | `1` | Commercial identity of this Technical Device | Canonical catalogue |
-| Legrand / Undefined | `003841` | `1706` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino | `F411/1N` | Established identity | canonical commercial record `1`; Commercial identity of this Technical Device | Canonical catalogue |
+| Legrand | `003841` | Established identity | canonical commercial record `1706`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -23,10 +23,10 @@ This technical definition covers the shared catalogue capability core used by 13
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
-| BTicino L/N/NT | `L4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
-| BTicino Matix | `AM5831M2` | Established identity | Catalogue + `MQ00285-d-EN` |
-| Legrand Céliane | `067553` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino - Axolute | `H4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino - LivingLight | `L4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino - Matix | `AM5831M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| Legrand - Céliane | `067553` | Established identity | Catalogue + `MQ00285-d-EN` |
 
 ### Additional commercial records sharing item 1524
 
@@ -36,7 +36,6 @@ This technical definition covers the shared catalogue capability core used by 13
 | Legrand Arteor | `571849`, `573987` | Shared technical item; individual product-document review pending |
 | Legrand Céliane | `067242` | Shared technical item; individual product-document review pending |
 | Legrand Mosaic | `078472`, `078475`, `079172`, `079175` | Shared technical item; individual product-document review pending |
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -20,17 +20,16 @@ The Extended control is a two-Module configurable command whose catalogue capabi
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| BTicino L/N/NT | `L4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| Legrand Mosaic | `078466` | Shared technical item | Implementation evidence; direct product document pending |
-| Legrand Mosaic | `078467` | Shared technical item | Implementation evidence; direct product document pending |
-| Legrand Mosaic | `078469` | Shared technical item | Implementation evidence; direct product document pending |
-| Legrand Mosaic | `079266` | Shared technical item | Implementation evidence; direct product document pending |
-| Legrand Mosaic | `079267` | Shared technical item | Implementation evidence; direct product document pending |
-| Legrand Mosaic | `079269` | Shared technical item | Implementation evidence; direct product document pending |
+| BTicino - Axolute | `H4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| BTicino - LivingLight | `L4655` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| Legrand - Mosaic | `078466` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand - Mosaic | `078467` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand - Mosaic | `078469` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand - Mosaic | `079266` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand - Mosaic | `079267` | Shared technical item | Implementation evidence; direct product document pending |
+| Legrand - Mosaic | `079269` | Shared technical item | Implementation evidence; direct product document pending |
 
 The archived MyHOME Automation guide also associates the extended-control function with historical catalogue references used in older ranges. Those references should be added to the commercial index only after the exact printed-reference relationship has been checked against the corresponding catalogue revision.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

@@ -22,13 +22,12 @@ This definition covers the three-module touch-control cluster, not the four-modu
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `HC/HS4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| BTicino Axolute | `HD4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand Arteor | `573912` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand Arteor | `573913` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand Arteor | `574091` | Shared technical item | Implementation evidence; direct sheet correlation pending |
-| Legrand Arteor | `574591` | Shared technical item | Implementation evidence; direct sheet correlation pending |
-
+| BTicino - Axolute | `HC/HS4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| BTicino - Axolute | `HD4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `573912` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `573913` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `574091` | Shared technical item | Implementation evidence; direct sheet correlation pending |
+| Legrand - Arteor | `574591` | Shared technical item | Implementation evidence; direct sheet correlation pending |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

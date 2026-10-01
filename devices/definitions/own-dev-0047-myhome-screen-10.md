@@ -18,11 +18,10 @@
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino MyHOME | `MH4892` | established catalogue identity for item `1768` | canonical commercial record |
-| BTicino MyHOME | `MH4893` | established catalogue identity for item `1768` | canonical commercial record |
-| Legrand MyHOME | `067267` | established catalogue identity for item `1768` | canonical commercial record |
-| Legrand MyHOME | `067268` | established catalogue identity for item `1768` | canonical commercial record |
-
+| BTicino | `MH4892` | established catalogue identity for item `1768` | canonical commercial record |
+| BTicino | `MH4893` | established catalogue identity for item `1768` | canonical commercial record |
+| Legrand | `067267` | established catalogue identity for item `1768` | canonical commercial record |
+| Legrand | `067268` | established catalogue identity for item `1768` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

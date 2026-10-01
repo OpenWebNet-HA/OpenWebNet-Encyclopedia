@@ -21,17 +21,16 @@ MyHOME_Screen 3.5 is a touchscreen user interface for multiple MyHOME systems. T
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino L/N/NT | `LN4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino Air | `LN4890A` | Documented identity | Catalogue + archived technical sheet |
-| BTicino Eteris | `HW4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino Matix | `AM4890` | Documented identity with source-label inconsistency | Catalogue + installation text in archived technical sheet |
-| Legrand Arteor | `573958` | Shared technical item / software-catalogue identity | Implementation evidence |
-| Legrand Céliane | `067292` | Shared technical item / software-catalogue identity | Implementation evidence |
-| Legrand Mosaic | `078479` | Shared technical item / software-catalogue identity | Implementation evidence |
+| BTicino - Axolute | `H4890` | Documented identity | Catalogue + archived technical sheet |
+| BTicino - LivingLight | `LN4890` | Documented identity | Catalogue + archived technical sheet |
+| BTicino - Air | `LN4890A` | Documented identity | Catalogue + archived technical sheet |
+| BTicino - Eteris | `HW4890` | Documented identity | Catalogue + archived technical sheet |
+| BTicino - Matix | `AM4890` | Documented identity with source-label inconsistency | Catalogue + installation text in archived technical sheet |
+| Legrand - Arteor | `573958` | Shared technical item / software-catalogue identity | Implementation evidence |
+| Legrand - Céliane | `067292` | Shared technical item / software-catalogue identity | Implementation evidence |
+| Legrand - Mosaic | `078479` | Shared technical item / software-catalogue identity | Implementation evidence |
 
 The archived technical sheet contains an internal reference discrepancy: its heading lists `AM5890`, while the installation/reference text uses `AM4890`, matching the canonical catalogue. Preserve the source discrepancy rather than silently rewriting the PDF.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

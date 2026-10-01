@@ -21,15 +21,14 @@ This Device is a single-Module lighting actuator with one electromechanical rela
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| Arnould Espace Evolution | `64390` | Established identity | Catalogue + official technical sheet |
-| BTicino Axolute | `H4671/1` | Established identity | Catalogue + official technical sheet |
-| BTicino L/N/NT | `L4671/1` | Established identity | Catalogue + official technical sheet + PEP |
-| BTicino Matix | `AM5851/1` | Established identity | Catalogue + official technical sheet + PEP |
-| Arnould Espace Evolution | `64190` | Shared technical item | Implementation evidence; package/product-document review pending |
-| Legrand Céliane | `067559` | Shared technical item | Implementation evidence; product-document review pending |
+| Arnould - Espace Evolution | `64390` | Established identity | Catalogue + official technical sheet |
+| BTicino - Axolute | `H4671/1` | Established identity | Catalogue + official technical sheet |
+| BTicino - LivingLight | `L4671/1` | Established identity | Catalogue + official technical sheet + PEP |
+| BTicino - Matix | `AM5851/1` | Established identity | Catalogue + official technical sheet + PEP |
+| Arnould - Espace Evolution | `64190` | Shared technical item | Implementation evidence; package/product-document review pending |
+| Legrand - Céliane | `067559` | Shared technical item | Implementation evidence; product-document review pending |
 
 The Product Environmental Profile independently identifies `L4671/1` as its reference product and states that the environmental data also represents `H4671/1` and `AM5851/1`.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

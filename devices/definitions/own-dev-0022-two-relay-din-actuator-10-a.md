@@ -18,11 +18,10 @@
 
 | Brand / line | Reference | Catalogue record | Relationship | Evidence |
 | --- | --- | ---: | --- | --- |
-| BTicino / Undefined | `F411/2` | `2` | Commercial identity of this Technical Device | Canonical catalogue |
-| Legrand / Undefined | `003842` | `1708` | Commercial identity of this Technical Device | Canonical catalogue |
+| BTicino | `F411/2` | Established identity | canonical commercial record `2`; Commercial identity of this Technical Device | Canonical catalogue |
+| Legrand | `003842` | Established identity | canonical commercial record `1708`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

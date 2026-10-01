@@ -59,6 +59,18 @@ Account for every established or candidate commercial identity. Prefer:
 
 A plural `References` column is acceptable when several references share one relationship and evidence state. No SKU is canonical merely because it appears first. Use prose for commercial/package distinctions and unresolved equivalence.
 
+### Commercial brand and line vocabulary
+
+The `Brand / line` column is human-facing commercial identity, not raw catalogue metadata.
+
+- Use `Brand - Marketed line` when a meaningful marketed line is established, for example `BTicino - Axolute`, `BTicino - LivingLight`, `BTicino - Matix`, `BTicino - Living Now`, `Legrand - Arteor`, `Legrand - Céliane`, `Legrand - Mosaic`, or `Arnould - Espace Evolution`.
+- Use the brand alone when no meaningful marketed line is established. Never expose placeholders such as `Undefined`.
+- Prefer the marketed line over internal catalogue group labels. Catalogue groupings such as `L/N/NT` belong in Evidence or Source reconciliation when relevant; use `BTicino - LivingLight` when that mapping is established.
+- Do not use product systems or product families such as `MyHOME` or `Classe 300X` as the line unless a source establishes them as the marketed line.
+- Do not put reference-shape qualifiers or reconciliation notes such as “catalogue combined code” in the line field. Put them in Relationship, Evidence, or Source reconciliation.
+- When publisher terminology conflicts with the catalogue line, show the best-supported marketed line and preserve the conflicting label in Evidence or Source reconciliation.
+- `Relationship` must be semantic prose such as `Established identity`, `Established commercial variant`, `Shared technical-item identity`, `Candidate identity`, or `Historical identity`. Raw implementation/database IDs belong in Evidence when useful for provenance.
+
 ## Documentation
 
 Inventory every known applicable official revision and keep archival and publisher provenance separately visible. Prefer:

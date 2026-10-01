@@ -20,13 +20,12 @@ The Device is a master zone probe whose front control adjusts the zone setpoint 
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Living / LivingLight | `L/N/NT4692` | established grouped identity | catalogue + `MQ00179-c-EN` |
-| BTicino Matix | `AM5872` | established identity | catalogue + `MQ00179-c-EN` |
-| BTicino Axolute | `HC/HS/HD4692` | established grouped identity | catalogue + `MQ00179-c-EN` |
-| Legrand Arteor | `573922` | established identity | catalogue + `MQ00179-c-EN` |
-| Legrand Arteor | `573923` | established identity | catalogue + `MQ00179-c-EN` |
-| Legrand Céliane | `067457` | established identity | catalogue + `MQ00179-c-EN` |
-
+| BTicino - LivingLight | `L/N/NT4692` | established grouped identity | catalogue + `MQ00179-c-EN` |
+| BTicino - Matix | `AM5872` | established identity | catalogue + `MQ00179-c-EN` |
+| BTicino - Axolute | `HC/HS/HD4692` | established grouped identity | catalogue + `MQ00179-c-EN` |
+| Legrand - Arteor | `573922` | established identity | catalogue + `MQ00179-c-EN` |
+| Legrand - Arteor | `573923` | established identity | catalogue + `MQ00179-c-EN` |
+| Legrand - Céliane | `067457` | established identity | catalogue + `MQ00179-c-EN` |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

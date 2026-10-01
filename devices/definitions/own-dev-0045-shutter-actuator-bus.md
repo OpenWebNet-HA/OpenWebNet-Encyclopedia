@@ -20,11 +20,10 @@ Flush-mounted bus shutter actuator with position and preset management.
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino Axolute | `H4661M2` | established catalogue identity for item `1586` | canonical commercial record |
-| BTicino L/N/NT | `LN4661M2` | established catalogue identity for item `1586` | canonical commercial record |
-| BTicino Matix | `AM5861M2` | established catalogue identity for item `1586` | canonical commercial record |
-| Legrand Céliane | `067557` | established catalogue identity for item `1586` | canonical commercial record |
-
+| BTicino - Axolute | `H4661M2` | established catalogue identity for item `1586` | canonical commercial record |
+| BTicino - LivingLight | `LN4661M2` | established catalogue identity for item `1586` | canonical commercial record |
+| BTicino - Matix | `AM5861M2` | established catalogue identity for item `1586` | canonical commercial record |
+| Legrand - Céliane | `067557` | established catalogue identity for item `1586` | canonical commercial record |
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

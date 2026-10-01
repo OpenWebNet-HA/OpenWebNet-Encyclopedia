@@ -21,17 +21,16 @@ The Video Display is a MyHOME video-door-entry internal unit that combines the p
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino L/N/NT | `344400` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
-| BTicino L/N/NT | `344401` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
-| BTicino Axolute | `349311` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| BTicino Axolute | `349312` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| BTicino Axolute | `349313` | Shared technical item | Implementation evidence; direct product-document review pending |
-| BTicino Axolute | `349340` | Shared technical item | Implementation evidence; direct product-document review pending |
-| Legrand Arteor | `573950` | Shared technical item | Implementation evidence; direct product-document review pending |
-| Legrand Arteor | `573951` | Shared technical item | Implementation evidence; direct product-document review pending |
+| BTicino - LivingLight | `344400` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
+| BTicino - LivingLight | `344401` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
+| BTicino - Axolute | `349311` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| BTicino - Axolute | `349312` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
+| BTicino - Axolute | `349313` | Shared technical item | Implementation evidence; direct product-document review pending |
+| BTicino - Axolute | `349340` | Shared technical item | Implementation evidence; direct product-document review pending |
+| Legrand - Arteor | `573950` | Shared technical item | Implementation evidence; direct product-document review pending |
+| Legrand - Arteor | `573951` | Shared technical item | Implementation evidence; direct product-document review pending |
 
 Shared item membership establishes the common catalogue capability core. It does not erase possible finish, package, market, or hardware differences between commercial references.
-
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
