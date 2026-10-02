@@ -2981,3 +2981,119 @@ artifacts:
   language:
   - fr
   language_evidence: document-language
+- id: software-timh200n-1-0-26
+  kind: software-installer
+  publisher: BTicino
+  product: TiMH200N
+  product_version: '1.0.26'
+  filename: TiMH200N_010026.exe
+  size: 26960056
+  sha256: 6daa7b1daa393fff51bf30c4f533e521fe40df3d70cdc709028c9c497569d170
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2469209
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=TiMH200N_010026.exe&fileId=58107.23188.4905.41134
+  media_type: application/vnd.microsoft.portable-executable
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/6d/aa/6daa7b1daa393fff51bf30c4f533e521fe40df3d70cdc709028c9c497569d170
+    visibility: private
+  redistribution_status: private-archive-only
+- id: firmware-mh200n-010108
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: MH200N
+  product_version: '1.1.8'
+  filename: scheduler_010108.fwz
+  size: 10064107
+  sha256: e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2469209
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=scheduler_010108.fwz&fileId=58107.23188.30636.49392
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/e3/2d/e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3
+    visibility: private
+  redistribution_status: private-archive-only
+- id: software-mhvisual-8-1-21
+  kind: software-installer
+  publisher: BTicino
+  product: MHVisual
+  product_version: '8.1.21'
+  filename: MHVisual_080121.exe
+  size: 48253048
+  sha256: ad28c418f29b68fddd8d8443303e233e3a55aee4aaac6cdb8e6a367cbab1cf3a
+  source_page: https://www.homesystems-legrandgroup.com/product-detail/-/asset_publisher/X3IM65oMk1p1/content/myhome_supervision-software
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=MHVisual_080121.exe&fileId=58107.23188.3886.39217
+  media_type: application/vnd.microsoft.portable-executable
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/ad/28/ad28c418f29b68fddd8d8443303e233e3a55aee4aaac6cdb8e6a367cbab1cf3a
+    visibility: private
+  redistribution_status: private-archive-only
+- id: software-tif454-1-0-64
+  kind: software-installer
+  publisher: BTicino
+  product: TiF454
+  product_version: '1.0.64'
+  filename: tif454_vers1_0_64.zip
+  size: 18609830
+  sha256: aca967ef0a33bc50ad63af45fd270317bcffe494e89c299e76af61680093b9d0
+  source_page: https://tif454.software.informer.com/download/
+  source_url: third-party mirror: Software Informer
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/ac/a9/aca967ef0a33bc50ad63af45fd270317bcffe494e89c299e76af61680093b9d0
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Recovered from Software Informer; publisher/version independently corroborated by Legrand lifecycle metadata.
+- id: software-tif453-2-0-30
+  kind: software-installer
+  publisher: BTicino Spa
+  product: TiF453
+  product_version: '2.0.30'
+  filename: tif453vers2030.zip
+  size: 31927472
+  sha256: 9ed15785b75d0645076a1c22ccd623b0e62cec1edcc55df73dca0cf7b7a0c1c4
+  source_page: https://tif453.software.informer.com/download/
+  source_url: third-party mirror: Software Informer
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/9e/d1/9ed15785b75d0645076a1c22ccd623b0e62cec1edcc55df73dca0cf7b7a0c1c4
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Recovered from Software Informer; the mirror identifies filename/version and BTicino as developer. This is not the final 2.0.33 release.
+- id: software-virtualconfigurator-2-1-33
+  kind: software-installer
+  publisher: BTicino S.p.A.
+  product: VirtualConfigurator
+  product_version: '2.1.33'
+  filename: virtualconfigurator_vers_2133.zip
+  size: 17699129
+  sha256: 5aedcc2d68df4fe5cc1f745fcefb7bddc6601297cd85bfc6bf4a2c3ea9e8eb7b
+  source_page: https://virtualconfigurator.software.informer.com/download/
+  source_url: third-party mirror: Software Informer
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/5a/ed/5aedcc2d68df4fe5cc1f745fcefb7bddc6601297cd85bfc6bf4a2c3ea9e8eb7b
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Recovered from Software Informer; archive contains VirtualConfigurator21.exe dated 2010-07-13.
+- id: software-virtualconfigurator-2-3-13
+  kind: software-installer
+  publisher: BTicino S.p.A.
+  product: VirtualConfigurator
+  product_version: '2.3.13'
+  filename: virtualconfigurator_vers_2313.zip
+  size: 15593404
+  sha256: 34c0d338f661962dcc5c42a24d3269dcf1590412ff1df56bdba3792c66acbe36
+  source_page: https://virtualconfigurator.software.informer.com/download/
+  source_url: third-party mirror: Software Informer
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/34/c0/34c0d338f661962dcc5c42a24d3269dcf1590412ff1df56bdba3792c66acbe36
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Recovered independently twice; both copies were byte-identical. Legrand lifecycle metadata identifies 2.3.13 as the final BTicino release.
