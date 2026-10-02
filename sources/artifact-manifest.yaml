@@ -3392,13 +3392,13 @@ artifacts:
 - id: document-sha256-7b14c55a4d808fc5
   kind: documentation
   publisher: BTicino / Legrand
-  author: Ernesto Santini
-  title: Innovation, italians do it better
+  title: Innovation conference proceedings containing Ernesto Santini presentation
   media_type: application/pdf
-  filename: Innovation_italians_do_it_better_Santini.pdf
+  filename: innovation-conference-proceedings-santini-content.pdf
   size: 19512843
   sha256: 7b14c55a4d808fc547c8e8aca8ec185bc53ec6425d7801da53a8cdd4369ce97b
   source_url: https://s3.amazonaws.com/iprs/files/attachments/20192/6b2ee697-6bdf-4b94-aaee-7bdec338c508__O.pdf
+  provenance_note: Source URL resolves to a 260-page proceedings volume containing Ernesto Santini material; not a standalone Santini deck.
   storage:
     bucket: openwebnet-documents
     object_key: sha256/7b/14/7b14c55a4d808fc547c8e8aca8ec185bc53ec6425d7801da53a8cdd4369ce97b.pdf
@@ -3407,3 +3407,20 @@ artifacts:
   language:
   - en
   language_evidence: document-language
+- id: document-sha256-6d5f2aa56dd67df6
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: TiOpenBacnet Software Manual
+  media_type: application/pdf
+  filename: RA00058AC_S_EN.pdf
+  size: 6622053
+  sha256: 6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00058AC_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6d/5f/6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6d/5f/6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08.pdf
+  language:
+  - en
+  language_evidence: filename
