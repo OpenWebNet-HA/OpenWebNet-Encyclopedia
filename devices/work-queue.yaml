@@ -1509,20 +1509,26 @@ items:
       official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
   '1156':
-    state: unreviewed
+    state: definition-in-progress
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0101
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
       final_review: pending
     blockers: []
-    notes: []
+    notes:
+    - OWN-DEV-0101 created from canonical catalogue and reconciled official source dossier.
+    - Publisher contact-type conflict (bistable vs normally-open monostable) is preserved
+      on the Device page; hardware corroboration remains pending.
   '1160':
     state: unreviewed
     priority: normal

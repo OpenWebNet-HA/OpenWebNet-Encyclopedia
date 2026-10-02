@@ -6,10 +6,10 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 110 |
+| unreviewed | 109 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 100 |
+| definition-in-progress | 101 |
 | review-ready | 0 |
 | reviewed | 0 |
 
@@ -75,7 +75,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1162 | Load management central unit | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1163 | Actuator 16A with current sensor - 1 DIN | 2 | unreviewed | - | pending | pending | pending | pending | - |
@@ -217,6 +216,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1078 | Video Station | 2 | definition-in-progress | OWN-DEV-0097 | partial | partial | partial | pending | - |
 | normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | definition-in-progress | OWN-DEV-0099 | partial | partial | partial | pending | - |
 | normal | 1130 | Stereo control | 2 | definition-in-progress | OWN-DEV-0100 | partial | partial | partial | pending | - |
+| normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | definition-in-progress | OWN-DEV-0101 | complete | complete | complete | pending | - |
 | normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | definition-in-progress | OWN-DEV-0068 | complete | complete | complete | pending | - |
