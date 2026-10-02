@@ -212,29 +212,17 @@ No publishable Device-specific hardware capture is currently retained for this e
 
 ## Programming
 
-| Route / topic | Device-specific behavior | Evidence |
-| --- | --- | --- |
-| Physical configuration | Uses `A`, `G`, and `M`; there is no `PL` configurator on this product. The eight output addresses increment from the configured base. | `F01132FR-03`, `F01132EN-04` |
-| Physical operating mode | Standard and timed modes are selected by codes `0..4`; `PUL` selects pushbutton behavior and `SLA` selects slave operation. | dedicated technical sheets |
-| Virtual configuration | Each of the eight outputs is configured separately with Area, Light point, modality, delayed slave switch-off, load type, and group memberships. | `F01132EN-04`; `le10699AA/AD` |
-| Addressing | Software exposes Area `0..10` and Light point `0..15`; channel applicability still follows the eight fixed catalogue slots. | `F01132EN-04`; canonical catalogue |
-| Groups | Up to ten group memberships are exposed per output. | `F01132EN-04`; Object `6` surface |
-| Push'n Learn | The 2013 sheet and 2014 EN/FR guides document the LEADER/MEMBER association workflow. The 2017 English sheet no longer lists it under parameter setting. | `F01132FR-03`, `LE04385AB_EN/FR`, `F01132EN-04` |
+Programming must preserve the eight fixed Light actuator channels and the distinction between physical, virtual, and advanced configuration. Physical configuration uses `A`, `G`, and `M`, derives the eight output addresses from the configured base, and does not use a separate `PL` configurator per channel. Software programming should resolve each output through its catalogue slot/Object relationship and Device-specific filters rather than treating reusable Object `6` as an unconstrained Light actuator surface.
+
+Push'n Learn is documented by the earlier Lighting Management material but is omitted from the parameter-setting section of the 2017 English technical sheet, so it should be treated as revision-dependent rather than universally available.
 
 ## Source reconciliation
 
-| Topic | Sources | Reconciliation |
-| --- | --- | --- |
-| Commercial identity | canonical catalogue; `le10699AA/AD`; 2025 MyHOME guide | `002604 / 0 026 04` and `BMSW1005` are the same technical actuator. |
-| Core hardware | `F01132FR-03`, `F01132EN-04`, MyHOME guide | Sources agree on eight outputs, `100..240 Vac`, `50/60 Hz`, `10` DIN modules, RJ45 BUS/SCS, local controls, zero-current switching, and principal load ratings. |
-| Push'n Learn | `F01132FR-03`, `LE04385AB_EN/FR`, `F01132EN-04` | Earlier material documents the manual association workflow; the 2017 English sheet omits it from parameter setting. This is retained as a revision/workflow distinction. |
-| Relay terminology | `F01132FR/EN` vs `le10699AA/AD` | Dedicated sheets say “bistable relay”; later BUS/SCS guides say normally-open monostable relay while also documenting status memory. The conflict remains unresolved. |
-| Status memory | `le10699AA/AD`; canonical `STATE_RESET` surface | Later guides explicitly describe status memory; the catalogue exposes reset-state configuration. This does not resolve the mechanical relay terminology conflict. |
-| Mislinked document | current `002604` product page; `LE04280AA` | The publisher page links `LE04280AA`, but the PDF itself is for `0 026 02` / four outputs. It is archived for provenance and excluded from Device facts. |
-| Mass | dedicated technical sheets; PEP | `310 g` is product mass; `457 g` is packaged mass. The values have different scopes and are not contradictory. |
-| Current continuity | 2025 MyHOME guide | `BMSW1005` remains listed as an eight-output, `16 A` zero-crossing actuator with the same principal `230 V` load table. |
+The canonical catalogue, dedicated technical sheets, later BUS/SCS guides, and current MyHOME guide agree that `002604 / 0 026 04` and `BMSW1005` are the same eight-output actuator and agree on the principal supply, form factor, BUS connection, zero-current switching, local controls, and load ratings. The `310 g` product mass in the technical sheets and the `457 g` packaged mass in the PEP have different scopes and are not contradictory.
 
-The unresolved relay-description conflict is intentionally visible rather than normalized to one publisher wording.
+The main revision difference concerns programming: the 2013 French sheet and 2014 EN/FR Push'n Learn guides document the manual association workflow, while the 2017 English sheet omits Push'n Learn from parameter setting. A separate publisher conflict remains unresolved: the dedicated `F01132` sheets describe a bistable relay, while the later `le10699AA/AD` guides describe a normally-open monostable relay and also document status memory. The catalogue's `STATE_RESET` surface supports configurable reset-state behavior but does not resolve the mechanical relay terminology.
+
+`LE04280AA.pdf` is linked from the current `002604` product page but its content is for `0 026 02` / four outputs. It is retained in the archive for provenance and excluded from this Device's electrical and topology facts.
 
 ## Evidence limits and open work
 
