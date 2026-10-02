@@ -2779,3 +2779,26 @@ artifacts:
     object_key: sha256/28/ed/28ed89f68b32eddb00df4d5463a98cc7dab451876e64c2380ddf5d7261788980
     visibility: private
   redistribution_status: private-archive-only
+- id: document-sha256-3a0311a75aa55069
+  kind: documentation
+  publisher: BTicino / Legrand - My Open Staff
+  title: Tutorial Trusted IP Range
+  media_type: application/pdf
+  filename: Tutorial_Trusted_ip_range.pdf
+  size: 1303079
+  sha256: 3a0311a75aa550691da4fc46435d6f3730688a7b7266bd69a7ffb261f298204b
+  source_url: http://www.sdomotica.com/xbmc/Tutorial_Trusted_ip_range.pdf
+  source_version: 1.0.0
+  source_date: '2010-10-01'
+  acquisition:
+    source_class: third-party-mirror
+    issuer_original_byte_identity: unverified
+    tls_note: HTTPS mirror certificate expired; recovered over HTTP. Future archival retrievals may bypass TLS verification where necessary.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/03/3a0311a75aa550691da4fc46435d6f3730688a7b7266bd69a7ffb261f298204b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/03/3a0311a75aa550691da4fc46435d6f3730688a7b7266bd69a7ffb261f298204b.pdf
+  language:
+  - en
+  language_evidence: document-language
