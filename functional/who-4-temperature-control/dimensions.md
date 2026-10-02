@@ -72,6 +72,10 @@ A measured-temperature request uses `*#4*WHERE*0##`; the response carries the te
 
 Published measured/status temperature fields use four decimal digits and can represent `0000..0500` (`0.0..50.0` °C) with 0.1 °C resolution in the documented zone-status exchanges. This representation is distinct from setpoint-writing constraints.
 
+### Historical signed-temperature interpretation
+
+The touchscreen probe objects interpret raw `1010` as `-10` tenths of °C (-1.0 °C); exact tests cover both controlled and external probe objects. The shared converter subtracts `1000` and negates values at or above `1000`, while nonnegative tenths remain unchanged. This is implementation evidence for signed probe readings, not an expansion of the published status range above or permission to send negative setpoints through every thermal operation. See [Signed-temperature evidence](../../project/review/myopencommunity-reassessment.md#hvac-values-and-partial-records).
+
 ## `DIMENSION 11` - fan-coil speed
 
 `DIMENSION 11` reports fan-coil speed in the published status model. ScenarioDevices additionally defines the write template `*#4*ZAZB*#11*val##`, establishing a MyHOME_Suite scenario action for fan-coil speed.
@@ -193,7 +197,18 @@ The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following rec
 
 Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
 
-The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. The remaining enum domains are:
+
+| Field | Historical BACnet values |
+| --- | --- |
+| Fan speed, dimensions `51` / `52` | `0` automatic; `1` slow; `2` normal; `3` fast; `4` silent |
+| Air direction, dimension `51` | `0` automatic; `1` forward; `2` backward; `3` random; `4` slow cycling; `5` cycling; `6` fast cycling; `7` stop |
+
+A filter-reset write supplies `0` in the sixth value of dimension `51`: `*#4*WHERE*#51******0##`. The report decoder instead reads that position as a boolean filter flag. Write intent and report state therefore differ.
+
+The report tests also distinguish a missing trailing field from an empty field already present: absent numeric fields can retain an internal unset sentinel, while present empty positions are converted to zero. The decoder does not treat an empty report position as an instruction to preserve cached state. This behavior must not be imported into the partial-write semantics.
+
+These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
 
 See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 

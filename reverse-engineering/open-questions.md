@@ -149,6 +149,12 @@ Both observed plants have four-input matrices and two-digit amplifier addresses.
 
 One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only. Historical BTouch source proves that clients themselves could emit both dialects by operation, but does not identify the origin of these paired reports.
 
+## Historical implementation discrepancies
+
+The preserved touchscreen product configuration uses a Stop&Go address prefix `2`, while the published Energy Management reference specifies `1N`. The library emits configured addresses unchanged; no recovered capture or gateway mapping explains the difference. Which Device/Firmware or local-server path accepts the historical forms, and are they translated before reaching the physical bus? See [Energy Management Addressing](../functional/who-18-energy-management/addressing.md#historical-stopgo-address-discrepancy).
+
+Local touchscreen channel `*99*0##`, supervisor channel `*99*10##`, and multimedia XML transport likewise require endpoint-specific compatibility evidence before use on external gateways. Their implementation roles are documented under [Connection and Sessions](../protocol/sessions.md#historical-local-touchscreen-channels) and [Stream Parsing](../protocol/stream-parsing.md#separate-multimedia-xml-transport).
+
 ## Evidence priorities
 
 WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.

@@ -111,6 +111,12 @@ The value is expressed in hours. Read and write support still depends on the tar
 
 The global `WHO 1` vocabulary does not imply that every Lighting Object implements every operation. Validate Device/firmware/Object applicability through the catalogue model where available.
 
+### Historical collective-command state handling
+
+The touchscreen's Lighting/Automation state manager compares a collective command with a later point report to classify whether an endpoint follows that command. Exact tests distinguish a light remaining OFF after general ON from one reporting ON. Point reports alone do not establish that classification, and an unsupported advanced command can leave it unresolved.
+
+This is a client capability-detection strategy, not a complete physical pull-actuator specification. Collective traffic must not automatically overwrite every point's observed state. Its polling delays and classification names are application policy. See [Collective-command evidence](../../project/review/myopencommunity-reassessment.md#lighting-and-automation-state).
+
 ## Evidence basis
 
 Identifiers, ranges, direction, and frame flows come from [`WHO 1` specification](https://archive.openwebnet-ha.org/sha256/8a/da/8adafaaeac5e07a5eee247792f70b659e4ea9d99b45fffbd415f94a49976fb4a.pdf). MyHOME Suite ScenarioDevices corroborates functional level-control use but does not replace the published field encodings.

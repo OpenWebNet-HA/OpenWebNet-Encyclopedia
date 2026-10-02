@@ -31,6 +31,12 @@ The address table labels `4001` as endpoint 2 even though the adjacent entries s
 
 Several response/receive rows print arrows inconsistent with their section headings and descriptions. The table above reports the sending/receiving section roles, not a repaired observed transcript. Exact direction and error-code behavior require product evidence. Camera OFF's short form and broadcast-call sentinel must not be normalized into the ordinary three-field command grammar.
 
+## Historical camera simulator
+
+The VDK 2.0 camera model activates configured camera `N` when it receives `*6*0*WHERE##` with numeric `WHERE = 4000 + N`. Its manual tests demonstrate switching between `4001` and `4002`; the previously active model deactivates when another camera is selected. A local 60-second timer also deactivates it. Images are served from configured JPEG files through the simulator gateway, not produced by physical camera hardware.
+
+The simulator exposes camera indices `0..99`, broader than the published L4686SDK `4000..4095` range. It neither corroborates the full L4686SDK operation set nor establishes a physical Device timeout. Its test document contains malformed ACK spellings, so the canonical ACK syntax remains that in [Acknowledgements](../../protocol/acknowledgements.md). See [Camera simulator evidence](../../project/review/myopencommunity-reassessment.md#simulator-and-fixture-boundaries).
+
 ## Protocol boundary
 
 `WHO 6`, [`WHO 7`](../who-7-multimedia-video/), and [`WHO 8`](../who-8-video-door-entry-telephony/) are related by application domain but are independent protocol namespaces. A camera/video operation documented for `WHO 7`, for example, is not automatically valid under `WHO 6`.

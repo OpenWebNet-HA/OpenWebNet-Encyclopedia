@@ -4531,6 +4531,18 @@ Provenance cues: `catalogue`
 
 The global `WHO 1` vocabulary does not imply that every Lighting Object implements every operation. Validate Device/firmware/Object applicability through the catalogue model where available.
 
+#### Historical collective-command state handling
+
+Section ID: `ownkb:section:d000028:s000012`
+
+Cautions: `do not`, `must not`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `specification`
+
+The touchscreen's Lighting/Automation state manager compares a collective command with a later point report to classify whether an endpoint follows that command. Exact tests distinguish a light remaining OFF after general ON from one reporting ON. Point reports alone do not establish that classification, and an unsupported advanced command can leave it unresolved.
+
+This is a client capability-detection strategy, not a complete physical pull-actuator specification. Collective traffic must not automatically overwrite every point's observed state. Its polling delays and classification names are application policy. See [Collective-command evidence](../../project/review/myopencommunity-reassessment.md#lighting-and-automation-state).
+
 ### Evidence basis
 
 Section ID: `ownkb:section:d000028:s000010`
@@ -6438,6 +6450,18 @@ The address prefix is not merely routing metadata. It constrains the operation s
 
 A decoder should therefore resolve the `WHERE` family before interpreting the complete operation.
 
+### Historical Stop&Go address discrepancy
+
+Section ID: `ownkb:section:d000043:s000006`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+The `TS10_1_0_23` product configurations use instance addresses `22`, `23`, and `25` for Stop&Go, Plus, and BTest respectively. A February 2013 correction explicitly adds prefix `2` to those fixtures. The configuration parser passes each instance's complete `where` to the device class, which emits it unchanged.
+
+This conflicts with the published `1N` family. The source establishes a historical product configuration choice, but does not identify a gateway translation, applicable Firmware, complete `2N` domain, or physical Device acceptance. Preserve the configured address when investigating that product; do not replace the published family or infer interchangeability. See [Stop&Go address evidence](../../project/review/myopencommunity-reassessment.md#stopgo-address-discrepancy).
+
 ### Actuator suffix
 
 Section ID: `ownkb:section:d000043:s000004`
@@ -7221,6 +7245,16 @@ Automation uses the SCS `A`/`PL` addressing family also used by Lighting, but th
 
 For the common OpenWebNet frame language, see [Protocol](../../protocol/). For the Device → Module → Object → Configuration model used to describe physical Automation devices, see [Device Model](../../device-model/).
 
+### Historical product labels
+
+Section ID: `ownkb:section:d000048:s000004`
+
+Provenance cues: `evidence`
+
+The touchscreen product's Automation section includes two-state Objects implemented through [`WHO 1` Lighting](../who-1-lighting/), contacts through [`WHO 25`](../who-25-transversal/dry-contact-ir.md), and door-entry controls through [`WHO 8`](../who-8-video-door-entry-telephony/). Its three-state movement Objects use `WHO 2`. A product category or UI label therefore does not determine the wire namespace.
+
+Its configured Automation groups can also contain lists of Objects whose commands are sent individually. That application grouping is distinct from the published `#GR` collective address. See [Product namespace evidence](../../project/review/myopencommunity-reassessment.md#product-model-boundaries).
+
 # Document: ownkb:document:d000049
 
 Source path: `functional/who-2-automation/addressing.md`
@@ -7867,6 +7901,12 @@ Section ID: `ownkb:section:d000053:s000014`
 | Preset `16..25` | custom application indices `10..19` |
 
 Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+#### Virtual-amplifier temporary-off events
+
+Section ID: `ownkb:section:d000053:s000016`
+
+The historical virtual amplifier treats `*22*0#4#AREA*6##` and `*22*22#4#AREA*5#3#AREA#POINT##` as temporary-off events. Its tests show that the second form is matched by area rather than the final point: multichannel mode ignores another area's event, while monochannel mode accepts it. The class describes a one-second local interruption without changing its persistent ON/OFF state. This is touchscreen amplifier behavior, not a universal mute duration or a complete domain for `WHAT 22`.
 
 #### Local multimedia initialization
 
@@ -9123,6 +9163,14 @@ A measured-temperature request uses `*#4*WHERE*0##`; the response carries the te
 
 Published measured/status temperature fields use four decimal digits and can represent `0000..0500` (`0.0..50.0` °C) with 0.1 °C resolution in the documented zone-status exchanges. This representation is distinct from setpoint-writing constraints.
 
+#### Historical signed-temperature interpretation
+
+Section ID: `ownkb:section:d000069:s000022`
+
+Provenance cues: `evidence`
+
+The touchscreen probe objects interpret raw `1010` as `-10` tenths of °C (-1.0 °C); exact tests cover both controlled and external probe objects. The shared converter subtracts `1000` and negates values at or above `1000`, while nonnegative tenths remain unchanged. This is implementation evidence for signed probe readings, not an expansion of the published status range above or permission to send negative setpoints through every thermal operation. See [Signed-temperature evidence](../../project/review/myopencommunity-reassessment.md#hvac-values-and-partial-records).
+
 ### `DIMENSION 11` - fan-coil speed
 
 Section ID: `ownkb:section:d000069:s000008`
@@ -9275,6 +9323,7 @@ The four-zone touchscreen class sets timed manual operation in two steps: `*4*31
 
 Section ID: `ownkb:section:d000069:s000021`
 
+Cautions: `must not`
 Provenance cues: `evidence`
 
 The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following records under `WHO 4`. They are implementation extensions, not part of the public functional registry above. A read uses `*#4*WHERE*DIMENSION##`; a write uses `*#4*WHERE*#DIMENSION*VALUES##`.
@@ -9288,7 +9337,18 @@ The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following rec
 
 Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
 
-The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. The remaining enum domains are:
+
+| Field | Historical BACnet values |
+| --- | --- |
+| Fan speed, dimensions `51` / `52` | `0` automatic; `1` slow; `2` normal; `3` fast; `4` silent |
+| Air direction, dimension `51` | `0` automatic; `1` forward; `2` backward; `3` random; `4` slow cycling; `5` cycling; `6` fast cycling; `7` stop |
+
+A filter-reset write supplies `0` in the sixth value of dimension `51`: `*#4*WHERE*#51******0##`. The report decoder instead reads that position as a boolean filter flag. Write intent and report state therefore differ.
+
+The report tests also distinguish a missing trailing field from an empty field already present: absent numeric fields can retain an internal unset sentinel, while present empty positions are converted to zero. The decoder does not treat an empty report position as an instruction to preserve cached state. This behavior must not be imported into the partial-write semantics.
+
+These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
 
 See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 
@@ -9770,6 +9830,17 @@ Provenance cues: `evidence`
 The address table labels `4001` as endpoint 2 even though the adjacent entries suggest a different arithmetic correspondence. Preserve `4000..4095` as the stated wire range; do not infer an endpoint-number conversion from this inconsistent label.
 
 Several response/receive rows print arrows inconsistent with their section headings and descriptions. The table above reports the sending/receiving section roles, not a repaired observed transcript. Exact direction and error-code behavior require product evidence. Camera OFF's short form and broadcast-call sentinel must not be normalized into the ordinary three-field command grammar.
+
+### Historical camera simulator
+
+Section ID: `ownkb:section:d000076:s000006`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`
+
+The VDK 2.0 camera model activates configured camera `N` when it receives `*6*0*WHERE##` with numeric `WHERE = 4000 + N`. Its manual tests demonstrate switching between `4001` and `4002`; the previously active model deactivates when another camera is selected. A local 60-second timer also deactivates it. Images are served from configured JPEG files through the simulator gateway, not produced by physical camera hardware.
+
+The simulator exposes camera indices `0..99`, broader than the published L4686SDK `4000..4095` range. It neither corroborates the full L4686SDK operation set nor establishes a physical Device timeout. Its test document contains malformed ACK spellings, so the canonical ACK syntax remains that in [Acknowledgements](../../protocol/acknowledgements.md). See [Camera simulator evidence](../../project/review/myopencommunity-reassessment.md#simulator-and-fixture-boundaries).
 
 ### Protocol boundary
 
@@ -13634,6 +13705,14 @@ Provenance cues: `evidence`
 
 Request ordering on one connection does not order operations on another. Historical BTicino clients explicitly handle this: LAN writes are sent immediately and followed by a delayed status read, while energy graph requests are directed through one connection. These are application strategies against observed ordering problems, not protocol timing constants. See [Platform and ordering evidence](../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
 
+#### Historical client correlation and replay
+
+Section ID: `ownkb:section:d000103:s000009`
+
+The touchscreen writer associates each ACK/NACK with the oldest pending frame on that connection, then notifies subscribers for the original frame's `WHO`. Two initial acknowledgement positions are reserved for connection and channel setup. Exact tests cover mixed namespaces and multiple subscribers; the ACK itself still carries no namespace or request identifier.
+
+Within one queued send batch, this writer removes byte-identical duplicates. On its proactive inactivity reconnect, it requeues frames whose acknowledgements remain outstanding before newly queued traffic. This is client behavior, not a delivery guarantee: absence of an ACK does not prove that an operation had no effect, and replay is not inherently safe for non-idempotent commands. See [Writer tests and implementation](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
+
 #### Simulator fallback acknowledgements
 
 Section ID: `ownkb:section:d000103:s000008`
@@ -13840,6 +13919,28 @@ Provenance cues: `documentation`, `evidence`
 The VDK 2.0 F422 model corroborates local-bus qualification for non-general targets: it matches `BASE#4#I3I4`, removes the qualifier when forwarding onto the subordinate bus, and appends it to returned non-general traffic. ACK/NACK feedback is forwarded without address rewriting.
 
 This model is incomplete: it forwards qualified general target `0` before checking the routing level or interface, and its empty-component splitting does not preserve every group form. Those shortcuts do not establish physical F422 routing behavior or new legal `WHO 2` collective forms. Its configurable interface range is also narrower than the product documentation. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
+#### Historical touchscreen address matching
+
+Section ID: `ownkb:section:d000104:s000015`
+
+Provenance cues: `evidence`
+
+The `TS10_1_0_23` Lighting/Automation matcher distinguishes an unqualified general target from a general target on one routing level. Its exact tests include:
+
+| Incoming `WHERE` | Configured target | Matcher result |
+| --- | --- | --- |
+| `0` | `0312#4#12` | General match across levels |
+| `0#3` | `0312#4#12` | No match |
+| `0#3` | `01` | General match on the unqualified level |
+| `0#4#12` | `0312#4#12` | General match through interface `12` |
+| `0#4#01` | `0312#4#12` | No match |
+| `00#4#12` | `0015#4#12` | Environment `00` match |
+| `100` | `1001` | Environment `10` match |
+| `3#3` | `0313` | Environment `03` match |
+| `3` | `0313#4#12` | No match |
+
+The matcher treats incoming `#3` as the unqualified level and compares local-bus qualifiers as strings. Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
 
 ### Parsing rules
 
@@ -14562,6 +14663,27 @@ This is a specialized gateway session. It is distinct from functional scenario a
 
 The public source gives the session boundary and selector but not a general-purpose programming API. The functional F420 frames are documented under [`WHO 0`](../functional/who-0-scenarios/).
 
+### Historical local touchscreen channels
+
+Section ID: `ownkb:section:d000109:s000009`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen client at `TS10_1_0_23` uses four channels to its local OpenWebNet server:
+
+| Client role | Selector |
+| --- | --- |
+| Monitor | `*99*1##` |
+| Supervisor | `*99*10##` |
+| Command writer | `*99*9##` |
+| Request writer | `*99*0##` |
+
+The request writer sends status and dimension requests; the supervisor uses the reader interface. This local use of selector `0` differs from the published scenario-programming role above and does not establish a general external-gateway request session. Likewise, the local supervisor selector is implementation evidence rather than an addition to the published gateway session table.
+
+The VDK 2.0 simulator recognizes the same four selectors, but names `0` command and `9` request. Its labels do not change the published commands/actions selector. Neither implementation establishes external-gateway authentication behavior. See [Local channel evidence](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
+
 ### Authentication branch
 
 Section ID: `ownkb:section:d000109:s000006`
@@ -14711,7 +14833,20 @@ Provenance cues: `evidence`
 
 The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
 
+The touchscreen reader also explicitly ignores status-request frames received on the monitor channel, following a historical multi-touchscreen failure. That filtering is client policy; a bus-event parser should still recognize the request family rather than assume that all incoming traffic is a state report.
+
 The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
+
+#### Separate multimedia XML transport
+
+Section ID: `ownkb:section:d000110:s000012`
+
+Applicability cues: `tcp`
+Provenance cues: `evidence`, `source`
+
+The touchscreen common library also implements a UTF-8 TCP transport framed by `<OWNxml ...>` and `</OWNxml>`, with namespace `http://www.bticino.it/xopen/v1`. Tests establish extraction of consecutive XML messages and messages surrounded by unrelated text. Its envelope contains `Hdr/MsgID` (`SID`, `PID`), `Dst/IP`, `Src/IP`, and a `Cmd` element.
+
+These are XML transport fields, not transaction identifiers in ordinary `*...##` frames. Media-server browsing and track-selection operations use this separate interface; the source does not establish their numeric mapping to [`WHO 26`](../functional/who-26-upnp-multimedia/). XML acknowledgements and session identifiers must therefore remain distinct from [OpenWebNet acknowledgements](acknowledgements.md). See [Multimedia transport evidence](../project/review/myopencommunity-reassessment.md#multimedia-xml-boundary).
 
 ### Evidence basis
 
@@ -17127,6 +17262,17 @@ Provenance cues: `source`
 
 One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only. Historical BTouch source proves that clients themselves could emit both dialects by operation, but does not identify the origin of these paired reports.
 
+### Historical implementation discrepancies
+
+Section ID: `ownkb:section:d000121:s000026`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `capture`, `evidence`
+
+The preserved touchscreen product configuration uses a Stop&Go address prefix `2`, while the published Energy Management reference specifies `1N`. The library emits configured addresses unchanged; no recovered capture or gateway mapping explains the difference. Which Device/Firmware or local-server path accepts the historical forms, and are they translated before reaching the physical bus? See [Energy Management Addressing](../functional/who-18-energy-management/addressing.md#historical-stopgo-address-discrepancy).
+
+Local touchscreen channel `*99*0##`, supervisor channel `*99*10##`, and multimedia XML transport likewise require endpoint-specific compatibility evidence before use on external gateways. Their implementation roles are documented under [Connection and Sessions](../protocol/sessions.md#historical-local-touchscreen-channels) and [Stream Parsing](../protocol/stream-parsing.md#separate-multimedia-xml-transport).
+
 ### Evidence priorities
 
 Section ID: `ownkb:section:d000121:s000019`
@@ -18491,7 +18637,11 @@ Provenance cues: `evidence`
 
 The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event. Saving a changed condition re-requests Device state; the evaluator adjusts initialization according to whether the old condition was already satisfied.
 
-This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation).
+Initialization is condition-specific: the Auxiliary test permits the first matching `WHO 9` state to fire, then suppresses repeats. Other tested predicates include inclusive dimmer/volume ranges and a temperature band of ±10 stored tenths around the selected threshold. In Celsius mode that is ±1.0 °C. Amplifier volume conditions wait for ON status followed by volume rather than triggering from ON alone.
+
+The product's advanced-scenario tests also establish enable and weekday gating. With both time and Device conditions, a Device transition alone does not start the action: the time event checks the current Device condition. Without a time condition, the Device event can start the action. The action sends its configured literal frame through the command writer.
+
+This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
 
 ### Relationship to `OPEN.db`
 

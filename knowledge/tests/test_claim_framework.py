@@ -121,13 +121,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
         self.assertEqual(7449, metrics["records"])
         self.assertEqual(
-            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 14,
-             "sections": 100, "sections_with_claims": 86},
+            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 18,
+             "sections": 104, "sections_with_claims": 86},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 54,
-             "sections": 455, "sections_with_claims": 401},
+            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 60,
+             "sections": 461, "sections_with_claims": 401},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -151,8 +151,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["internals"],
         )
         self.assertEqual(
-            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 17,
-             "sections": 150, "sections_with_claims": 133},
+            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 18,
+             "sections": 151, "sections_with_claims": 133},
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(

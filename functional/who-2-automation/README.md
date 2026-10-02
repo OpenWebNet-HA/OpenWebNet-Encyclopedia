@@ -24,3 +24,9 @@ Ordinary movement commands use `*2*WHAT*WHERE##`. Advanced shutter state and abs
 Automation uses the SCS `A`/`PL` addressing family also used by Lighting, but the protocol semantics remain scoped to `WHO 2`. MyHOME_Suite represents the corresponding point-to-point, environment, and advanced address forms through its `OPEN.db` address-rule definitions.
 
 For the common OpenWebNet frame language, see [Protocol](../../protocol/). For the Device → Module → Object → Configuration model used to describe physical Automation devices, see [Device Model](../../device-model/).
+
+## Historical product labels
+
+The touchscreen product's Automation section includes two-state Objects implemented through [`WHO 1` Lighting](../who-1-lighting/), contacts through [`WHO 25`](../who-25-transversal/dry-contact-ir.md), and door-entry controls through [`WHO 8`](../who-8-video-door-entry-telephony/). Its three-state movement Objects use `WHO 2`. A product category or UI label therefore does not determine the wire namespace.
+
+Its configured Automation groups can also contain lists of Objects whose commands are sent individually. That application grouping is distinct from the published `#GR` collective address. See [Product namespace evidence](../../project/review/myopencommunity-reassessment.md#product-model-boundaries).

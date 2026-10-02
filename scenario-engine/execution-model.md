@@ -104,7 +104,11 @@ An acknowledgement and an observed state change answer different questions and s
 
 The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event. Saving a changed condition re-requests Device state; the evaluator adjusts initialization according to whether the old condition was already satisfied.
 
-This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation).
+Initialization is condition-specific: the Auxiliary test permits the first matching `WHO 9` state to fire, then suppresses repeats. Other tested predicates include inclusive dimmer/volume ranges and a temperature band of ±10 stored tenths around the selected threshold. In Celsius mode that is ±1.0 °C. Amplifier volume conditions wait for ON status followed by volume rather than triggering from ON alone.
+
+The product's advanced-scenario tests also establish enable and weekday gating. With both time and Device conditions, a Device transition alone does not start the action: the time event checks the current Device condition. Without a time condition, the Device event can start the action. The action sends its configured literal frame through the command writer.
+
+This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
 
 ## Relationship to `OPEN.db`
 

@@ -69,7 +69,15 @@ Only the system-specific decoder should expose typed integers, temperatures, dur
 
 The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
 
+The touchscreen reader also explicitly ignores status-request frames received on the monitor channel, following a historical multi-touchscreen failure. That filtering is client policy; a bus-event parser should still recognize the request family rather than assume that all incoming traffic is a state report.
+
 The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
+
+### Separate multimedia XML transport
+
+The touchscreen common library also implements a UTF-8 TCP transport framed by `<OWNxml ...>` and `</OWNxml>`, with namespace `http://www.bticino.it/xopen/v1`. Tests establish extraction of consecutive XML messages and messages surrounded by unrelated text. Its envelope contains `Hdr/MsgID` (`SID`, `PID`), `Dst/IP`, `Src/IP`, and a `Cmd` element.
+
+These are XML transport fields, not transaction identifiers in ordinary `*...##` frames. Media-server browsing and track-selection operations use this separate interface; the source does not establish their numeric mapping to [`WHO 26`](../functional/who-26-upnp-multimedia/). XML acknowledgements and session identifiers must therefore remain distinct from [OpenWebNet acknowledgements](acknowledgements.md). See [Multimedia transport evidence](../project/review/myopencommunity-reassessment.md#multimedia-xml-boundary).
 
 ## Evidence basis
 

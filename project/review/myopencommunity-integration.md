@@ -4,6 +4,8 @@ This record traces documentation additions to the preserved MyOpenCommunity repo
 
 Branch: `docs/myopencommunity-integration`. Starting revision: `ded12800d30f5d7dbf743b3d8c53750202a577f7`. No source archive or synced `sources/` file was changed.
 
+The subsequent [Source Reassessment](myopencommunity-reassessment.md) expands coverage from the four source trees independently of the conversation findings, records a complete tracked-file inventory, and integrates additional omissions and contradictions. This first-pass record is not an assertion of exhaustive repository-history review.
+
 ## Evidence scope
 
 | Preserved repository | Inspected revision | Role |

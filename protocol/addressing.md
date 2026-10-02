@@ -119,6 +119,24 @@ The VDK 2.0 F422 model corroborates local-bus qualification for non-general targ
 
 This model is incomplete: it forwards qualified general target `0` before checking the routing level or interface, and its empty-component splitting does not preserve every group form. Those shortcuts do not establish physical F422 routing behavior or new legal `WHO 2` collective forms. Its configurable interface range is also narrower than the product documentation. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
 
+### Historical touchscreen address matching
+
+The `TS10_1_0_23` Lighting/Automation matcher distinguishes an unqualified general target from a general target on one routing level. Its exact tests include:
+
+| Incoming `WHERE` | Configured target | Matcher result |
+| --- | --- | --- |
+| `0` | `0312#4#12` | General match across levels |
+| `0#3` | `0312#4#12` | No match |
+| `0#3` | `01` | General match on the unqualified level |
+| `0#4#12` | `0312#4#12` | General match through interface `12` |
+| `0#4#01` | `0312#4#12` | No match |
+| `00#4#12` | `0015#4#12` | Environment `00` match |
+| `100` | `1001` | Environment `10` match |
+| `3#3` | `0313` | Environment `03` match |
+| `3` | `0313#4#12` | No match |
+
+The matcher treats incoming `#3` as the unqualified level and compares local-bus qualifiers as strings. Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
+
 ## Parsing rules
 
 An implementation should preserve the raw `WHERE` string and classify it using the grammar for the selected `WHO`. Resolve the functional system first, recognize structural markers such as `#` before numeric conversion, preserve leading zeroes, validate the complete syntactic form and its ranges, and only then expose structured components such as `A`, `PL`, group, or interface.

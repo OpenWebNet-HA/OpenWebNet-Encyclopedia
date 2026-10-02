@@ -419,6 +419,7 @@
       "dimension-9-maximum-working-time-1": "ownkb:section:d000028:s000008",
       "dimension-reference-1": "ownkb:section:d000028:s000001",
       "evidence-basis-1": "ownkb:section:d000028:s000010",
+      "historical-collective-command-state-handling-1": "ownkb:section:d000028:s000012",
       "historical-timer-handling-1": "ownkb:section:d000028:s000011",
       "value-fields-1": "ownkb:section:d000028:s000002"
     }
@@ -626,6 +627,7 @@
       "addressing-1": "ownkb:section:d000043:s000001",
       "discovery-1": "ownkb:section:d000043:s000005",
       "family-specific-operations-1": "ownkb:section:d000043:s000003",
+      "historical-stop-go-address-discrepancy-1": "ownkb:section:d000043:s000006",
       "published-where-forms-1": "ownkb:section:d000043:s000002"
     }
   },
@@ -707,6 +709,7 @@
     "id": "ownkb:document:d000048",
     "sections": {
       "functional-model-1": "ownkb:section:d000048:s000003",
+      "historical-product-labels-1": "ownkb:section:d000048:s000004",
       "reference-1": "ownkb:section:d000048:s000002",
       "who-2-automation-1": "ownkb:section:d000048:s000001"
     }
@@ -777,6 +780,7 @@
       "source-activity-and-rds-1": "ownkb:section:d000053:s000013",
       "source-and-speaker-semantics-1": "ownkb:section:d000053:s000009",
       "tone-balance-and-presets-1": "ownkb:section:d000053:s000014",
+      "virtual-amplifier-temporary-off-events-1": "ownkb:section:d000053:s000016",
       "what-1": "ownkb:section:d000053:s000003",
       "where-1": "ownkb:section:d000053:s000005",
       "who-22-sound-diffusion-1": "ownkb:section:d000053:s000001"
@@ -963,6 +967,7 @@
       "historical-bacnet-hvac-dimensions-1": "ownkb:section:d000069:s000021",
       "historical-external-probe-dimension-15-1": "ownkb:section:d000069:s000018",
       "historical-partial-split-writes-1": "ownkb:section:d000069:s000019",
+      "historical-signed-temperature-interpretation-1": "ownkb:section:d000069:s000022",
       "historical-timed-manual-dimension-32-1": "ownkb:section:d000069:s000020",
       "myhome-suite-dimension-7-action-model-1": "ownkb:section:d000069:s000003",
       "myhome-suite-local-control-and-fan-coil-writes-1": "ownkb:section:d000069:s000006",
@@ -1030,6 +1035,7 @@
     "id": "ownkb:document:d000076",
     "sections": {
       "corpus-status-1": "ownkb:section:d000076:s000002",
+      "historical-camera-simulator-1": "ownkb:section:d000076:s000006",
       "l4686sdk-reference-1": "ownkb:section:d000076:s000003",
       "protocol-boundary-1": "ownkb:section:d000076:s000005",
       "source-limits-1": "ownkb:section:d000076:s000004",
@@ -1415,6 +1421,7 @@
       "correlation-1": "ownkb:section:d000103:s000004",
       "error-handling-1": "ownkb:section:d000103:s000005",
       "evidence-basis-1": "ownkb:section:d000103:s000006",
+      "historical-client-correlation-and-replay-1": "ownkb:section:d000103:s000009",
       "ordering-across-connections-1": "ownkb:section:d000103:s000007",
       "roles-of-ack-1": "ownkb:section:d000103:s000002",
       "roles-of-nack-1": "ownkb:section:d000103:s000003",
@@ -1430,6 +1437,7 @@
       "common-private-riser-forms-1": "ownkb:section:d000104:s000004",
       "cross-source-interpretation-1": "ownkb:section:d000104:s000012",
       "f422-simulator-boundary-behavior-1": "ownkb:section:d000104:s000014",
+      "historical-touchscreen-address-matching-1": "ownkb:section:d000104:s000015",
       "interface-address-components-i3-and-i4-1": "ownkb:section:d000104:s000010",
       "level-3-riser-1": "ownkb:section:d000104:s000008",
       "level-4-local-bus-1": "ownkb:section:d000104:s000009",
@@ -1505,6 +1513,7 @@
       "connection-and-sessions-1": "ownkb:section:d000109:s000001",
       "events-session-1": "ownkb:section:d000109:s000004",
       "evidence-basis-1": "ownkb:section:d000109:s000008",
+      "historical-local-touchscreen-channels-1": "ownkb:section:d000109:s000009",
       "initial-server-acknowledgement-1": "ownkb:section:d000109:s000002",
       "programmed-scenario-session-1": "ownkb:section:d000109:s000005",
       "state-machine-requirements-1": "ownkb:section:d000109:s000007"
@@ -1523,6 +1532,7 @@
       "parameter-separators-1": "ownkb:section:d000110:s000006",
       "parsing-layers-1": "ownkb:section:d000110:s000004",
       "request-correlation-1": "ownkb:section:d000110:s000007",
+      "separate-multimedia-xml-transport-1": "ownkb:section:d000110:s000012",
       "stream-parsing-1": "ownkb:section:d000110:s000001"
     }
   },
@@ -1702,6 +1712,7 @@
       "firmware-selection-1": "ownkb:section:d000121:s000012",
       "gateway-n-conf-15-1": "ownkb:section:d000121:s000016",
       "hardware-and-microcontroller-versions-1": "ownkb:section:d000121:s000009",
+      "historical-implementation-discrepancies-1": "ownkb:section:d000121:s000026",
       "object-replacement-1": "ownkb:section:d000121:s000013",
       "open-questions-1": "ownkb:section:d000121:s000001",
       "origin-of-the-second-dialect-1": "ownkb:section:d000121:s000025",

@@ -39,6 +39,12 @@ On a command session, keep at most one unresolved request unless the specific ga
 
 Request ordering on one connection does not order operations on another. Historical BTicino clients explicitly handle this: LAN writes are sent immediately and followed by a delayed status read, while energy graph requests are directed through one connection. These are application strategies against observed ordering problems, not protocol timing constants. See [Platform and ordering evidence](../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
 
+### Historical client correlation and replay
+
+The touchscreen writer associates each ACK/NACK with the oldest pending frame on that connection, then notifies subscribers for the original frame's `WHO`. Two initial acknowledgement positions are reserved for connection and channel setup. Exact tests cover mixed namespaces and multiple subscribers; the ACK itself still carries no namespace or request identifier.
+
+Within one queued send batch, this writer removes byte-identical duplicates. On its proactive inactivity reconnect, it requeues frames whose acknowledgements remain outstanding before newly queued traffic. This is client behavior, not a delivery guarantee: absence of an ACK does not prove that an operation had no effect, and replay is not inherently safe for non-idempotent commands. See [Writer tests and implementation](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
+
 ### Simulator fallback acknowledgements
 
 The VDK 2.0 F454 model returns a fallback ACK after a 500 ms timeout for a pending status request, even when no Device result arrived; other unhandled TCP operations receive NACK. Its internal plant-message identifiers are not fields in the wire ACK. This is simulator behavior, not evidence that physical F454 Firmware uses that deadline or acceptance policy. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).

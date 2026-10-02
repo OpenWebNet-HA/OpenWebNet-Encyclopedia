@@ -154,6 +154,10 @@ The library requests active areas with `*#22*2#SOURCE*13##`. A tested response a
 
 Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
 
+### Virtual-amplifier temporary-off events
+
+The historical virtual amplifier treats `*22*0#4#AREA*6##` and `*22*22#4#AREA*5#3#AREA#POINT##` as temporary-off events. Its tests show that the second form is matched by area rather than the final point: multichannel mode ignores another area's event, while monochannel mode accepts it. The class describes a one-second local interruption without changing its persistent ON/OFF state. This is touchscreen amplifier behavior, not a universal mute duration or a complete domain for `WHAT 22`.
+
 ### Local multimedia initialization
 
 The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION = #15`:
