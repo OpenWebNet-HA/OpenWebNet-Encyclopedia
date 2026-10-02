@@ -1,0 +1,7 @@
+source_base=https://ethernet716.rssing.com/chan-61296265/
+capture_type=third-party-rssing-myopen-archive
+captured_at=2026-10-02T07:58:45Z
+discovered_url_count=1
+downloaded_page_count=0
+latest_sha256=e5955b93101afb46c156b4e4be6b63db58ecfdb56a7d9ebcc108bd2e318eb153
+index_latest_sha256=e5955b93101afb46c156b4e4be6b63db58ecfdb56a7d9ebcc108bd2e318eb153
