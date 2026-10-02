@@ -3516,3 +3516,37 @@ artifacts:
   language:
   - en
   language_evidence: document-language
+- id: document-sha256-78ded6d8dcb9009c
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: H/L 4684 - AM 5864 Colour Touch Screen User Manual
+  media_type: application/pdf
+  filename: U0156M_Utente_EN.pdf
+  size: 7329181
+  sha256: 78ded6d8dcb9009c6c16f7406f03c0f9cd1694f068ebd9c9c7657e9668f3ee33
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U0156M_Utente_EN.pdf&fileId=58107.23188.59318.13243
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/de/78ded6d8dcb9009c6c16f7406f03c0f9cd1694f068ebd9c9c7657e9668f3ee33.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/de/78ded6d8dcb9009c6c16f7406f03c0f9cd1694f068ebd9c9c7657e9668f3ee33.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-20315182f949ce1a
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: H/L 4684 Colour Touch Screen Technical Sheet
+  media_type: application/pdf
+  filename: BT00287-a-EN.pdf
+  size: 661610
+  sha256: 20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=BT00287-a-EN.pdf&fileId=58107.23188.48069.54823
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/20/31/20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/20/31/20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a.pdf
+  language:
+  - en
+  language_evidence: document-language
