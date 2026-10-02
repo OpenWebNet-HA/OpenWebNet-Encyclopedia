@@ -2824,3 +2824,37 @@ artifacts:
   language:
   - it
   language_evidence: document-language
+- id: document-sha256-5cf5493496f59ca1
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F459 Driver Manager technical sheet
+  media_type: application/pdf
+  filename: MM00883-a-EN.pdf
+  size: 168950
+  sha256: 5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676
+  source_url: https://dar.bticino.com/asset/Documents/MM00883_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5c/f5/5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5c/f5/5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-e9c6759990488cbc
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F459 / 003549 Installation Manual
+  media_type: application/pdf
+  filename: RA00147AA_I_EN.pdf
+  size: 12180499
+  sha256: e9c6759990488cbc2c5923bded48f71ea196657a87b358b17e8d080964abfa9b
+  source_url: https://dar.bticino.com/asset/Documents/RA00147AA_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e9/c6/e9c6759990488cbc2c5923bded48f71ea196657a87b358b17e8d080964abfa9b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e9/c6/e9c6759990488cbc2c5923bded48f71ea196657a87b358b17e8d080964abfa9b.pdf
+  language:
+  - en
+  language_evidence: document-language

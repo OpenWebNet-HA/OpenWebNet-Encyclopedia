@@ -24,3 +24,13 @@ The recovery pass also preserved first-party BTicino/Legrand software manuals th
 - TiMH200N software manual - OPEN command filtering and multi-system/interface configuration.
 
 These manuals are supporting implementation evidence. They do not replace the dedicated functional specifications.
+
+
+## F459 Driver Manager OpenWebNet configuration
+
+Two first-party F459 documents were recovered from BTicino and archived:
+
+- `MM00883-a-EN.pdf` - product technical sheet.
+- `RA00147AA_I_EN.pdf` - 48-page F459 / 003549 Installation Manual.
+
+The installation manual explicitly documents the OPEN password, optional HMAC authentication, trusted-IP ranges, and MyHOME/SCS integration. It is supporting gateway/configuration evidence rather than a replacement for the protocol specifications.
