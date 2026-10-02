@@ -1,6 +1,6 @@
 # Manual recovery queue
 
-Items that still need manual investigation because we do not currently have a verified byte-perfect original, a complete archival capture, or an accepted upload path.
+Items that still need manual investigation because we do not currently have a byte-perfect recoverable copy, a complete archival capture, or an accepted upload path. Third-party origin is not a blocker.
 
 | Item | Current evidence / surviving source | What is missing | Manual action |
 |---|---|---|---|
@@ -16,6 +16,6 @@ Items that still need manual investigation because we do not currently have a ve
 | Virtual Configurator 2.3.13 - virtualconfigurator_vers_2313.zip | Exact recovered ZIP is safe locally; SHA-256 34c0d338f661962dcc5c42a24d3269dcf1590412ff1df56bdba3792c66acbe36 | Accepted archival upload path to private software storage | Upload manually to the software bucket if the automated uploader remains unsuitable |
 
 Notes:
-- This queue is for unresolved/manual work only. Verified byte-perfect artifacts already archived in the manifest should not be listed here.
+- This queue is for unresolved/manual work only. Byte-perfect artifacts already safely preserved should not remain here merely because they came from a third-party source.
 - Third-party captures (SlideShare/RSSing) must remain clearly distinguished from issuer-original BTicino/Legrand files.
 - When a byte-perfect original is recovered or a complete capture is safely archived, remove or mark the corresponding row resolved.
