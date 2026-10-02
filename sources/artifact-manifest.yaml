@@ -3462,3 +3462,21 @@ artifacts:
   language:
   - fr
   language_evidence: document-language
+- id: document-sha256-ff4b9b12387a9dc3
+  kind: documentation
+  publisher: BTicino
+  title: SwitchboardConfigurator Software Manual
+  media_type: application/pdf
+  filename: U1949E_I_EN.pdf
+  size: 15842056
+  sha256: ff4b9b12387a9dc3d0d15ba3a035d8a60337a394c6a28fa6ab4015d96c61797f
+  source_url: https://dar.bticino.com/asset/Documents/U1949E_I_EN.pdf
+  provenance_note: First-party manual documenting SwitchboardSuite installation and the SoftSwitchboard, CommunicationFramework, SwitchboardConfigurator and TiContacts components.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ff/4b/ff4b9b12387a9dc3d0d15ba3a035d8a60337a394c6a28fa6ab4015d96c61797f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ff/4b/ff4b9b12387a9dc3d0d15ba3a035d8a60337a394c6a28fa6ab4015d96c61797f.pdf
+  language:
+  - en
+  language_evidence: document-language

@@ -19,3 +19,8 @@ Source origin is not a blocker. Preserve any recoverable byte-perfect copy with 
 | ManagementUtilities | 1.0.49 / final 2.0.17 | Advanced Uninstaller / lifecycle | binary still sought |
 | SCSAction | 2.0.1 | Legrand lifecycle | binary still sought |
 | SCSActionServer | 2.0.6 | Legrand lifecycle | binary still sought |
+| SwitchboardSuite / SoftSwitchboard | historical suite; exact version still to establish | First-party U1949E manual; 346300 product family | installer/CD still sought; component names: SoftSwitchboard, CommunicationFramework, SwitchboardConfigurator, TiContacts |
+| BMView | 2.1.21 | Legrand lifecycle + Lighting Management catalogues | binary still sought; historically downloadable 30-day trial |
+| BMVisual | 2.1.21 | Legrand lifecycle | binary still sought |
+
+Regional BTicino support-tree probe (2026-10-02): no live matches were found for explicit filename/version candidates for TiServer 1.0.11, TiWeb 3.0.22, VirtualSwitch 3.0.20, Visual SCS 2.0.1, SCSAction 2.0.1, or SCSActionServer 2.0.6. Do not repeat the same path-guess matrix unchanged.

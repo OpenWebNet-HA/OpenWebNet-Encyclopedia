@@ -18,3 +18,6 @@ Notes:
 - This queue is for unresolved/manual work only. Byte-perfect artifacts already safely preserved should not remain here merely because they came from a third-party source.
 - Third-party captures (SlideShare/RSSing) must remain clearly distinguished from issuer-original BTicino/Legrand files.
 - When a byte-perfect original is recovered or a complete capture is safely archived, remove or mark the corresponding row resolved.
+| L4686SDK U1206A instruction sheet | Complete text survives through manual mirrors | Original PDF bytes and historical USB driver | Recover original PDF/driver if a surviving mirror or archive copy appears |
+| L4686SDK U1206C instruction sheet | Full transcript/provenance survives at Manualzz | Original PDF/page images and historical USB driver | Recover original PDF/driver; this revision points to myopen-legrandgroup.com |
+| L4686SDK firmware | Firmware 1.10.1 documented in 2009 Pini training; 1.20.0+ required by later integrations | Firmware update package(s) | Search mirrors, old MyOpen downloads and product-service archives for exact firmware bytes |
