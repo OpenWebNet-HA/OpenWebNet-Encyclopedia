@@ -2453,6 +2453,25 @@ artifacts:
     object_key: sha256/cb/6f/cb6f3e9d875c14f74a0791d7f3f420ce9d4babadb4459c1250c6cba7e741af2b
     visibility: private
   redistribution_status: private-archive-only
+- id: firmware-mh200n-010108
+  kind: firmware
+  publisher: BTicino / Legrand
+  product: MH200N
+  filename: scheduler_010108.fwz
+  version_label: 1.1.8
+  size: 10064107
+  sha256: e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2469209
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=scheduler_010108.fwz&fileId=58107.23188.30636.49392
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/e3/2d/e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - The legacy Legrand software index identifies the MH200N distribution as FW_MH200N_vers_010108.
+  - The official FWZ contains Info.txt and scheduler_rel_1_1_8.zip; the embedded scheduler payload is 10063605 bytes.
 - id: firmware-mh202-010024
   kind: firmware
   publisher: BTicino / Legrand
