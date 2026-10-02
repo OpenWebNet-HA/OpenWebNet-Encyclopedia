@@ -41,3 +41,17 @@ This file tracks people-linked discovery pivots only when they lead to OpenWebNe
 - Domo Innovation's surviving materials expose OpenWebNet-specific discovery and integration behavior.
 - The `Bticino MyHOME Discovery Tool` page identifies V1R6 dated 2016-03-11 and states the tool was published in the old BTicino MyOpen App Gallery.
 - Direct binary recovery remains unresolved because the current WordPress download endpoint returns HTML instead of the package.
+
+
+## Enrico Valtolina
+
+- BTicino/Legrand engineer and named inventor, with Danilo Bernasconi and Laura Perron, on BTicino's 2005/2006 virtual-configurator patent family.
+- A 2012 Legrand presentation under his name, `How Legrand is engaging its partners and customers to build the best products`, contains dedicated sections on MyHOME, OpenWebNet, and the MyOpen community.
+- The presentation states that the first MyOpen site (June 2006 to June 2010) was primarily an R&D experiment intended to publish OpenWebNet, provide forum support, and connect integrators/installers/users.
+- Only a Slideshare rendering/transcript is currently recoverable; original PPT/PPTX bytes have not been recovered.
+
+## Danilo Bernasconi / Laura Perron
+
+- Named with Enrico Valtolina as inventors on BTicino's `Configuration method for devices with virtual configurators` patent family, priority 2005-11-28.
+- The patented workflow covers device discovery, PC/PDA virtual configuration, reconfiguration, diagnostics, and installation scanning, directly matching the historical Virtual Configurator product family.
+- No separate OpenWebNet/MyHOME authored document has yet been recovered under either name.
