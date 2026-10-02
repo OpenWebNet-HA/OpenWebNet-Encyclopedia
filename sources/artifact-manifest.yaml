@@ -2877,3 +2877,21 @@ artifacts:
   language:
   - fr
   language_evidence: filename-and-document-language
+- id: document-sha256-bd530942ea64272f
+  kind: documentation
+  publisher: BTicino
+  title: TiF453AV user manual
+  media_type: application/pdf
+  filename: Software_Manual_F453AV_FR.pdf
+  size: 10466850
+  sha256: bd530942ea64272f2293dc87eacb8acd576bb72739e1a8f92f8f8e6b6904d2f8
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/Version%203_0_64/Software_Manual_F453AV_FR.pdf
+  source_date: '2010-01-29'
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bd/53/bd530942ea64272f2293dc87eacb8acd576bb72739e1a8f92f8f8e6b6904d2f8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bd/53/bd530942ea64272f2293dc87eacb8acd576bb72739e1a8f92f8f8e6b6904d2f8.pdf
+  language:
+  - fr
+  language_evidence: filename-and-document-language

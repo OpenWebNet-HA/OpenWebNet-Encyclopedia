@@ -41,3 +41,10 @@ The installation manual explicitly documents the OPEN password, optional HMAC au
 `TiMH200_FR_STAMPA.pdf` version 1.0 (2005) was recovered from BTicino's support archive and preserved. The later version 2.0 bytes were already present in the artifact corpus as `TiMH200_FR.pdf`.
 
 Version 1 documents the early MH200 Scenario Scheduler configuration workflow and firmware-update tooling. Version 2 later added Ethernet/remote configuration and OPEN-password related controls, so retaining both revisions is useful for historical implementation comparison.
+
+
+## TiF453AV OPEN configuration
+
+`Software_Manual_F453AV_FR.pdf` was recovered from BTicino's support archive. It documents OPEN-password based remote access, IP-range validation, and remote-command blocking defined using the Open Web Net protocol.
+
+The manual is supporting gateway/configuration evidence and is distinct from the standalone protocol specifications.
