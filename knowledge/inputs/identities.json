@@ -381,6 +381,7 @@
       "erase-operations-what-42-1": "ownkb:section:d000025:s000008",
       "event-model-1": "ownkb:section:d000025:s000010",
       "f420-programming-connection-1": "ownkb:section:d000025:s000005",
+      "historical-touchscreen-behavior-1": "ownkb:section:d000025:s000012",
       "lock-and-unlock-what-43-44-1": "ownkb:section:d000025:s000009",
       "relationship-to-who-17-1": "ownkb:section:d000025:s000011",
       "scenario-activation-1": "ownkb:section:d000025:s000003",
@@ -430,6 +431,7 @@
       "blinking-operations-1": "ownkb:section:d000029:s000005",
       "command-translation-what-1000-1": "ownkb:section:d000029:s000006",
       "evidence-basis-1": "ownkb:section:d000029:s000008",
+      "historical-client-level-conversion-1": "ownkb:section:d000029:s000009",
       "scenariodevices-coverage-1": "ownkb:section:d000029:s000007",
       "switching-and-levels-1": "ownkb:section:d000029:s000002",
       "target-dependent-myhome-suite-label-for-what-17-1": "ownkb:section:d000029:s000004",
@@ -904,6 +906,7 @@
     "id": "ownkb:document:d000064",
     "sections": {
       "corpus-status-1": "ownkb:section:d000064:s000003",
+      "historical-openxml-client-1": "ownkb:section:d000064:s000004",
       "protocol-position-1": "ownkb:section:d000064:s000002",
       "who-26-upnp-multimedia-1": "ownkb:section:d000064:s000001"
     }

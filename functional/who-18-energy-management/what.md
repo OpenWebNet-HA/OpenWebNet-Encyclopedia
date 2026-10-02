@@ -81,6 +81,8 @@ The touchscreen library selects request syntax independently of the returned gra
 
 Thus a newer daily graph can be requested as `*18*57#M#D*WHERE##` or, in old-PIC compatibility mode, `*#18*WHERE*511#M#D##`. These are historical implementation variants, not a rule that every Device accepts both forms. The PIC cutoff is a library policy; graph capability is detected separately.
 
+The library can also force the read forms regardless of the reported PIC version. That option changes request syntax without forcing older graph decoding. It was introduced to avoid command traffic interrupting graph replies; the source does not identify the affected Device/Firmware combinations. See [graph-request history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
+
 The client sends graph requests through one connection to retain ordering and places the monthly graph request last because source comments report transmit/receive problems in some PIC versions. The affected Firmware versions are unspecified. Its assumption of ordered, uninterrupted graph packets is not a protocol-wide delivery guarantee. See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
 
 ## Actuator commands

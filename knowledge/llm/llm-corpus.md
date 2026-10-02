@@ -4269,6 +4269,17 @@ Cautions: `must not`
 
 `WHO 0` operates scenario modules and stored scenario memories. [`WHO 17`](../who-17-scenario-management/) addresses scenario execution on scenario-programmer/gateway devices using Start, Stop, Enable and Disable operations. The two namespaces are related functionally but have different `WHAT` and `WHERE` models and must not be merged.
 
+### Historical touchscreen behavior
+
+Section ID: `ownkb:section:d000025:s000012`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino client at `TS10_1_0_23` also accepts unparameterized `*0*40*WHERE##` and `*0*41*WHERE##` as programming-state indications without a selected scenario. Only the unparameterized start indication bypasses the client's module-address check, allowing another module's programming event to affect its cached state. This is client behavior, not proof that every physical module starts recording together.
+
+Its basic IR air-conditioning control sends configured actions through `WHO 0`; its advanced split control instead uses [`WHO 4`, `DIMENSION 22`](../who-4-temperature-control/dimensions.md#dimension-22---split-control). The UI category does not determine the wire namespace or a universal OFF command. The scenario library's `1..31` API assertions likewise do not extend the published F420 or 3456 capacities. See [historical client evidence](../../project/review/myopencommunity-coverage-audit.md#scenario-and-basic-ir-controls).
+
 See the [functional overview](../) for navigation by `WHO` and by function, [Scenario Engine](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [Protocol](../../protocol/) for common frame/session syntax.
 
 # Document: ownkb:document:d000026
@@ -4582,6 +4593,14 @@ Cautions: `must not`
 The parameterized forms `0#SPEED` and `1#SPEED` switch OFF or ON using the requested transition speed. `30#LEVELS#SPEED` and `31#LEVELS#SPEED` change several levels at the specified speed. These forms must not be reduced to their leading numeric `WHAT`.
 
 For the published speed field, `0` means the last speed used, `1..254` are explicit speeds, and `255` selects the default speed.
+
+#### Historical client level conversion
+
+Section ID: `ownkb:section:d000029:s000009`
+
+Provenance cues: `evidence`
+
+The touchscreen library converts coarse `WHAT 2..10` into cached fine levels `1, 10, 20, 30, 40, 50, 60, 75, 100` respectively. Its exact tests include `WHAT 9` becoming cached level `75`. This is the client's conversion table, distinct from the published percentage labels above; it does not prove a physical output curve. Compare the [observed F418U2 coarse/fine relationship](dimensions.md#dimension-1---level-and-speed) and [conversion evidence](../../project/review/myopencommunity-coverage-audit.md#coarse-lighting-levels).
 
 ### Timed operations
 
@@ -6641,13 +6660,16 @@ This operation couples the accumulated value with the timestamp of its reset bou
 
 Section ID: `ownkb:section:d000044:s000012`
 
-Provenance cues: `specification`
+Cautions: `warning`
+Provenance cues: `evidence`, `specification`
 
 Request: `*#18*WHERE*73##`
 
 Response/event: `*#18*WHERE*73*level##`
 
-The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level, so those meanings remain unspecified.
+The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level.
+
+The historical touchscreen library labels `1` OK, `2` warning and `3` critical; its product tests preserve that ordering. These are the client's load-level classifications. The recovered implementation does not establish numerical differential-current thresholds or hardware trip guarantees. See [load-level evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
 
 ### Stop&Go status
 
@@ -6823,7 +6845,7 @@ The client falls back to 10-second polling until automatic-update support is det
 
 Section ID: `ownkb:section:d000044:s000026`
 
-Provenance cues: `source`
+Provenance cues: `evidence`, `source`
 
 | Operation | Implemented form / payload |
 | --- | --- |
@@ -6834,6 +6856,8 @@ Provenance cues: `source`
 | Write threshold `N` | `*#18*WHERE*#517#N*VALUE##` |
 
 `N` is `1` or `2`; the library's zero-based index is converted before transmission. A disabled threshold takes precedence over its exceeded flag in the application's displayed state. The source does not establish a general threshold-value range or physical unit for every target.
+
+The touchscreen application disables a threshold by writing value `0`, then restores its last nonzero value when re-enabled. A zero report updates the current value without clearing that remembered value; enabled state comes from `516`. This cache behavior is an application choice, not a guarantee that every Device accepts zero as a disable command. See [threshold evidence](../../project/review/myopencommunity-coverage-audit.md#threshold-enable-state).
 
 #### Legacy graph values and unavailable data
 
@@ -6859,6 +6883,8 @@ Cautions: `limitation`, `not evidence`
 Provenance cues: `evidence`
 
 The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`, `58`, `59`, and `510` command/report mappings above. Its `511` daily read also returns tagged samples. `72` totalizer and `75` reset handlers are explicitly unimplemented in this model; that absence does not establish a limitation of physical F520 hardware.
+
+The simulator's `113` read emits the active-power report through its monitor path without sending the same report to the originating request socket. This is a model limitation, not a channel rule for physical F520 devices. See [simulator dispatch evidence](../../project/review/myopencommunity-coverage-audit.md#simulator-dispatch).
 
 The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).
 
@@ -6961,6 +6987,7 @@ Section ID: `ownkb:section:d000045:s000008`
 Section ID: `ownkb:section:d000045:s000016`
 
 Applicability cues: `firmware`, `gateway`, `version`
+Cautions: `avoid`
 Provenance cues: `evidence`, `source`
 
 The touchscreen library selects request syntax independently of the returned graph encoding. Its compatibility mode treats the first [PIC version value](../who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties) `<= 22` as old PIC. Exact tests establish this matrix:
@@ -6975,6 +7002,8 @@ The touchscreen library selects request syntax independently of the returned gra
 | Newer monthly graph | `59#M` | `513#M` | `513` |
 
 Thus a newer daily graph can be requested as `*18*57#M#D*WHERE##` or, in old-PIC compatibility mode, `*#18*WHERE*511#M#D##`. These are historical implementation variants, not a rule that every Device accepts both forms. The PIC cutoff is a library policy; graph capability is detected separately.
+
+The library can also force the read forms regardless of the reported PIC version. That option changes request syntax without forcing older graph decoding. It was introduced to avoid command traffic interrupting graph replies; the source does not identify the affected Device/Firmware combinations. See [graph-request history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
 The client sends graph requests through one connection to retain ordering and places the monthly graph request last because source comments report transmit/receive problems in some PIC versions. The affected Firmware versions are unspecified. Its assumption of ordered, uninterrupted graph packets is not a protocol-wide delivery guarantee. See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
 
@@ -8777,7 +8806,27 @@ The current implementation corpus establishes the namespace but does not yet sup
 
 Parsers should therefore preserve `WHO 26` traffic losslessly and expose unknown fields as raw values. Semantics from `WHO 7`, `16`, or `22` must not be copied into this namespace without direct evidence.
 
-This page intentionally records the strongest established model rather than filling the missing vocabulary by analogy.
+### Historical OpenXml client
+
+Section ID: `ownkb:section:d000064:s000004`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen library at `TS10_1_0_23` implements a separate local OpenXml media service. Its [UTF-8 envelope and framing](../../protocol/stream-parsing.md#separate-multimedia-xml-transport) are distinct from numeric OpenWebNet frames. The following XML tags are verified in its serializers and response tests; they do not establish corresponding numeric `WHAT` values or support by external gateways.
+
+| XML request | Arguments | Response tag and decoded content |
+| --- | --- | --- |
+| `RW26C1` | None | `AW26C1`: `server/name` list |
+| `RW26C2` | `id` | `AW26C2`: selected `current_server`, directory `status_browse`, or selected track's `DIDL-Lite` metadata |
+| `CW26C7` | None | `AW26C7`: parent-directory browsing result |
+| `CW26C10` / `CW26C11` | None | `AW26C10` / `AW26C11`: next / previous track metadata |
+| `RW26C15` | `rank`, `delta` | `AW26C15`: `total`, `rank`, directory names and track records |
+| `CW26C16` | `server`, slash-joined `path` | `AW26C16`: navigation-context result |
+
+Selection uses the same `id` argument for a server, directory or file. Tested browsing outcomes include `browse_okay`, `empty_directory`, `already_at_root` and `no_such_directory`, depending on the operation. Track records contain a resource URL and, for audio, title, artist, album and duration. XML error text is mapped into local application errors; those enum numbers are not wire return codes.
+
+See [OpenXml service evidence](../../project/review/myopencommunity-coverage-audit.md#openxml-media-vocabulary).
 
 # Document: ownkb:document:d000065
 
@@ -9188,10 +9237,13 @@ Read and write forms should therefore be distinguished by frame direction and op
 Section ID: `ownkb:section:d000069:s000009`
 
 Cautions: `do not`
+Provenance cues: `evidence`
 
 `DIMENSION 12` returns the complete probe state, combining the zone's target/status information with its operating context. It is the appropriate operation when a client needs more than the scalar measured temperature returned by `DIMENSION 0`.
 
 The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges over `0020..0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
+
+The historical touchscreen client reconstructs its cached base setpoint by subtracting the known local offset from `T` while the knob is in its normal adjustment state. Its exact test combines offset `03` with `T=0250` and expects `0220` internally. The wire value remains 25.0 °C; the cached base value is 22.0 °C. See [probe-state evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
 
 ### `DIMENSION 13` - local set offset
 
@@ -10004,7 +10056,7 @@ Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also 
 
 The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
 
-Pager call/answer uses broadcast `WHERE = 4` and includes the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. The library's connected/disconnected state controls which answer/end reports it accepts; those guards are client behavior.
+The pager call/answer writers use broadcast `WHERE = 4` and include the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. Exact receive tests also accept a pager call addressed to the local endpoint and an answer with a non-broadcast `WHERE`. The client waits for the answer event when initiating a pager conversation; it does not derive SCS caller-address state from that answer alone. Its call-state guards are client behavior, not a universal broadcast-only receive rule. See [pager history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
 #### Teleloop and local multimedia events
 

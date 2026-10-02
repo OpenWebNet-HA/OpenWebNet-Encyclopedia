@@ -16,6 +16,10 @@ The parameterized forms `0#SPEED` and `1#SPEED` switch OFF or ON using the reque
 
 For the published speed field, `0` means the last speed used, `1..254` are explicit speeds, and `255` selects the default speed.
 
+### Historical client level conversion
+
+The touchscreen library converts coarse `WHAT 2..10` into cached fine levels `1, 10, 20, 30, 40, 50, 60, 75, 100` respectively. Its exact tests include `WHAT 9` becoming cached level `75`. This is the client's conversion table, distinct from the published percentage labels above; it does not prove a physical output curve. Compare the [observed F418U2 coarse/fine relationship](dimensions.md#dimension-1---level-and-speed) and [conversion evidence](../../project/review/myopencommunity-coverage-audit.md#coarse-lighting-levels).
+
 ## Timed operations
 
 | `WHAT` | ON duration |

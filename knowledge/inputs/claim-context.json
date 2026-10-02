@@ -82392,33 +82392,6 @@
     {
       "atomicity": {
         "block_indexes": [
-          2
-        ],
-        "mode": "materialized",
-        "review_status": "reviewed-phase16b"
-      },
-      "evidence": {
-        "applicability": {
-          "domain": "protocol",
-          "state": "applies",
-          "target": "OpenWebNet WHO 26",
-          "version": {
-            "state": "unknown"
-          }
-        },
-        "block_indexes": [
-          2
-        ],
-        "evidence_class": "canonical_documentation",
-        "resolved_source_id": "ownkb:source:s000064",
-        "review_status": "reviewed-phase16b",
-        "widening_override": null
-      },
-      "id": "ownkb:claim:c003080"
-    },
-    {
-      "atomicity": {
-        "block_indexes": [
           0
         ],
         "mode": "self_contained",

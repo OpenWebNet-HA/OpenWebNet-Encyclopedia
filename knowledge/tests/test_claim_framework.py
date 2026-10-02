@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7449)
+        self.assertEqual(len(claims), 7448)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -119,15 +119,15 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7449, metrics["records"])
+        self.assertEqual(7448, metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 18,
              "sections": 104, "sections_with_claims": 86},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 60,
-             "sections": 461, "sections_with_claims": 401},
+            {"claims": 2909, "documents": 60, "reviewed_nonclaim_sections": 63,
+             "sections": 464, "sections_with_claims": 401},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(

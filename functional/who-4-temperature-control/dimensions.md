@@ -90,6 +90,8 @@ Read and write forms should therefore be distinguished by frame direction and op
 
 The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges over `0020..0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
 
+The historical touchscreen client reconstructs its cached base setpoint by subtracting the known local offset from `T` while the knob is in its normal adjustment state. Its exact test combines offset `03` with `T=0250` and expects `0220` internally. The wire value remains 25.0 °C; the cached base value is 22.0 °C. See [probe-state evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
+
 ## `DIMENSION 13` - local set offset
 
 `DIMENSION 13` reports the local setpoint offset applied at the probe. Local offset is separate from the central target temperature: a zone can therefore have a central setpoint and a probe-local adjustment simultaneously.

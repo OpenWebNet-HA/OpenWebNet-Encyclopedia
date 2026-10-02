@@ -46,7 +46,7 @@ Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also 
 
 The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
 
-Pager call/answer uses broadcast `WHERE = 4` and includes the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. The library's connected/disconnected state controls which answer/end reports it accepts; those guards are client behavior.
+The pager call/answer writers use broadcast `WHERE = 4` and include the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. Exact receive tests also accept a pager call addressed to the local endpoint and an answer with a non-broadcast `WHERE`. The client waits for the answer event when initiating a pager conversation; it does not derive SCS caller-address state from that answer alone. Its call-state guards are client behavior, not a universal broadcast-only receive rule. See [pager history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
 ### Teleloop and local multimedia events
 

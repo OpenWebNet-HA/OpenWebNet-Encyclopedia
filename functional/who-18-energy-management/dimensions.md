@@ -127,7 +127,9 @@ Request: `*#18*WHERE*73##`
 
 Response/event: `*#18*WHERE*73*level##`
 
-The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level, so those meanings remain unspecified.
+The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level.
+
+The historical touchscreen library labels `1` OK, `2` warning and `3` critical; its product tests preserve that ordering. These are the client's load-level classifications. The recovered implementation does not establish numerical differential-current thresholds or hardware trip guarantees. See [load-level evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
 
 ## Stop&Go status
 
@@ -275,6 +277,8 @@ The client falls back to 10-second polling until automatic-update support is det
 
 `N` is `1` or `2`; the library's zero-based index is converted before transmission. A disabled threshold takes precedence over its exceeded flag in the application's displayed state. The source does not establish a general threshold-value range or physical unit for every target.
 
+The touchscreen application disables a threshold by writing value `0`, then restores its last nonzero value when re-enabled. A zero report updates the current value without clearing that remembered value; enabled state comes from `516`. This cache behavior is an application choice, not a guarantee that every Device accepts zero as a disable command. See [threshold evidence](../../project/review/myopencommunity-coverage-audit.md#threshold-enable-state).
+
 ### Legacy graph values and unavailable data
 
 Older graph reports under `56`, `57`, and `510` contain packet numbers and byte-valued samples, including values assembled across packet boundaries. In the older daily graph, a single sample `255` is replaced with zero. In paired decoding, the value is `high*256 + low`, with only the complete pair `255*255` replaced with zero; `(3,255)` is explicitly tested as valid. For electricity the library multiplies older graph values by 100; the other application modes use a factor of 1. This follows executable behavior rather than the source's broader scaling comment. Newer `511..514` reports use tagged scalar samples as described above.
@@ -288,5 +292,7 @@ See [Energy evidence](../../project/review/myopencommunity-integration.md#energy
 ## F520 simulator scope
 
 The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`, `58`, `59`, and `510` command/report mappings above. Its `511` daily read also returns tagged samples. `72` totalizer and `75` reset handlers are explicitly unimplemented in this model; that absence does not establish a limitation of physical F520 hardware.
+
+The simulator's `113` read emits the active-power report through its monitor path without sending the same report to the originating request socket. This is a model limitation, not a channel rule for physical F520 devices. See [simulator dispatch evidence](../../project/review/myopencommunity-coverage-audit.md#simulator-dispatch).
 
 The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).

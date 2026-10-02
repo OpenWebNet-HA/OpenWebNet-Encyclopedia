@@ -86,4 +86,10 @@ A receiver should therefore distinguish three categories inside `WHO 0`:
 
 `WHO 0` operates scenario modules and stored scenario memories. [`WHO 17`](../who-17-scenario-management/) addresses scenario execution on scenario-programmer/gateway devices using Start, Stop, Enable and Disable operations. The two namespaces are related functionally but have different `WHAT` and `WHERE` models and must not be merged.
 
+## Historical touchscreen behavior
+
+The BTicino client at `TS10_1_0_23` also accepts unparameterized `*0*40*WHERE##` and `*0*41*WHERE##` as programming-state indications without a selected scenario. Only the unparameterized start indication bypasses the client's module-address check, allowing another module's programming event to affect its cached state. This is client behavior, not proof that every physical module starts recording together.
+
+Its basic IR air-conditioning control sends configured actions through `WHO 0`; its advanced split control instead uses [`WHO 4`, `DIMENSION 22`](../who-4-temperature-control/dimensions.md#dimension-22---split-control). The UI category does not determine the wire namespace or a universal OFF command. The scenario library's `1..31` API assertions likewise do not extend the published F420 or 3456 capacities. See [historical client evidence](../../project/review/myopencommunity-coverage-audit.md#scenario-and-basic-ir-controls).
+
 See the [functional overview](../) for navigation by `WHO` and by function, [Scenario Engine](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [Protocol](../../protocol/) for common frame/session syntax.
