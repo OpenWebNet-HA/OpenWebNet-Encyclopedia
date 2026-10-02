@@ -131,7 +131,7 @@ The 2013 French sheet also documents Push'n Learn as a Lighting Management assoc
 | --- | --- | --- | --- |
 | `A` (configuration `2018`) | physical documentation: `1..9`; software uses Area `0..10` | catalogue-scoped | area / zone base |
 | `G` (configuration `4065`) | physical documentation: `1..9` | catalogue-scoped | physical group number |
-| `M` (configuration `2027`) | physical documentation: `0..4`, `PUL`, `SLA`; software exposes Master/Slave and PUL variants | catalogue-scoped | operating modality |
+| `M` (configuration `2027`) | codes `0..4` select the documented standard/timed modes; `PUL` selects pushbutton behavior and `SLA` selects slave operation | catalogue-scoped | operating modality |
 | `AID` (configuration `5441`) | catalogue-defined | catalogue-scoped | implementation ID |
 
 Physical configuration has no `PL` configurator for this product. The published rule is that the eight actuator addresses are derived by incrementing the base address across outputs 1 through 8.
@@ -144,8 +144,8 @@ Physical configuration has no `PL` configurator for this product. The published 
 | --- | --- | --- | --- |
 | `A` | software documentation: `0..10`; physical base `1..9` | catalogue-scoped | Area |
 | `PL` | software documentation: `0..15`; channel mapping must respect the eight fixed slots | catalogue-scoped | Light point |
-| `M` | Device modes include Master, Slave, Master PUL, Slave PUL and physical `0..4/PUL/SLA` forms | catalogue-scoped | Modality |
-| `LOCAL_BUTTON` | filter `1894`: values `1` ON/OFF, `9` ON-OFF, `15` Pushbutton, `18` Timed ON | catalogue-scoped | Local button modality |
+| `M` | master/slave operation with pushbutton variants; physical forms use `PUL` for pushbutton and `SLA` for slave | catalogue-scoped | Modality |
+| `LOCAL_BUTTON` | filter `1894`: `1` = `ON/OFF`; `9` = `ON-OFF`; `15` = `Pushbutton`; `18` = `Timed ON` | catalogue-scoped | Local button modality |
 | `DELAYED_OFF` | software documentation: `0..255 s` where applicable | catalogue-scoped | Delayed OFF for Slave |
 | `STATE_RESET` | filter `725`, whole reusable range retained | catalogue-scoped | Relay state on device reset / status memory |
 | `LOAD_CONTROL_MODE` | filter `1870`, whole reusable range retained | catalogue-scoped | Load control mode |
@@ -212,25 +212,29 @@ No publishable Device-specific hardware capture is currently retained for this e
 
 ## Programming
 
-Physical configuration uses `A`, `G`, and `M`; the product has no `PL` configurator and derives the eight channel addresses by incrementing from the configured base. The documented physical `M` values include normal light operation, one- through four-minute switch-off delay, `PUL`, and `SLA`.
-
-Virtual configuration exposes each output separately. The 2017 sheet documents module enable, Area `0..10`, Light point `0..15`, Master/Slave and PUL modalities, Slave delayed OFF `0..255 s`, load type, and up to ten groups per output. The later hotel/BUS-SCS guides show the software UI as eight similar per-channel configuration windows.
-
-The 2013 French sheet additionally advertises Push'n Learn. The dedicated EN/FR Push'n Learn guides define the LEADER/MEMBER association workflow and specific add/remove-output procedures. The 2017 English sheet no longer lists Push'n Learn under parameter setting, so this dossier treats it as a documented earlier Lighting Management workflow rather than an invariant of every revision.
+| Route / topic | Device-specific behavior | Evidence |
+| --- | --- | --- |
+| Physical configuration | Uses `A`, `G`, and `M`; there is no `PL` configurator on this product. The eight output addresses increment from the configured base. | `F01132FR-03`, `F01132EN-04` |
+| Physical operating mode | Standard and timed modes are selected by codes `0..4`; `PUL` selects pushbutton behavior and `SLA` selects slave operation. | dedicated technical sheets |
+| Virtual configuration | Each of the eight outputs is configured separately with Area, Light point, modality, delayed slave switch-off, load type, and group memberships. | `F01132EN-04`; `le10699AA/AD` |
+| Addressing | Software exposes Area `0..10` and Light point `0..15`; channel applicability still follows the eight fixed catalogue slots. | `F01132EN-04`; canonical catalogue |
+| Groups | Up to ten group memberships are exposed per output. | `F01132EN-04`; Object `6` surface |
+| Push'n Learn | The 2013 sheet and 2014 EN/FR guides document the LEADER/MEMBER association workflow. The 2017 English sheet no longer lists it under parameter setting. | `F01132FR-03`, `LE04385AB_EN/FR`, `F01132EN-04` |
 
 ## Source reconciliation
 
-The canonical catalogue and publisher sources agree on the two commercial identities, eight outputs, `100..240 Vac` supply, `50/60 Hz`, `10` DIN modules, RJ45 BUS/SCS connectivity, zero-current switching, local controls, and the main load ratings.
+| Topic | Sources | Reconciliation |
+| --- | --- | --- |
+| Commercial identity | canonical catalogue; `le10699AA/AD`; 2025 MyHOME guide | `002604 / 0 026 04` and `BMSW1005` are the same technical actuator. |
+| Core hardware | `F01132FR-03`, `F01132EN-04`, MyHOME guide | Sources agree on eight outputs, `100..240 Vac`, `50/60 Hz`, `10` DIN modules, RJ45 BUS/SCS, local controls, zero-current switching, and principal load ratings. |
+| Push'n Learn | `F01132FR-03`, `LE04385AB_EN/FR`, `F01132EN-04` | Earlier material documents the manual association workflow; the 2017 English sheet omits it from parameter setting. This is retained as a revision/workflow distinction. |
+| Relay terminology | `F01132FR/EN` vs `le10699AA/AD` | Dedicated sheets say “bistable relay”; later BUS/SCS guides say normally-open monostable relay while also documenting status memory. The conflict remains unresolved. |
+| Status memory | `le10699AA/AD`; canonical `STATE_RESET` surface | Later guides explicitly describe status memory; the catalogue exposes reset-state configuration. This does not resolve the mechanical relay terminology conflict. |
+| Mislinked document | current `002604` product page; `LE04280AA` | The publisher page links `LE04280AA`, but the PDF itself is for `0 026 02` / four outputs. It is archived for provenance and excluded from Device facts. |
+| Mass | dedicated technical sheets; PEP | `310 g` is product mass; `457 g` is packaged mass. The values have different scopes and are not contradictory. |
+| Current continuity | 2025 MyHOME guide | `BMSW1005` remains listed as an eight-output, `16 A` zero-crossing actuator with the same principal `230 V` load table. |
 
-The 2013 French `F01132FR-03` sheet lists manual Push'n Learn, virtual configuration, and physical configurators. The 2017 English `F01132EN-04` sheet lists virtual and physical configuration but omits Push'n Learn. The separate 2014 EN/FR Push'n Learn guides confirm the manual association method. This is retained as a revision/workflow distinction.
-
-A source conflict remains for relay terminology. The dedicated `F01132` sheets say “bistable relay”; the later `le10699AA/AD` BUS/SCS guides say normally-open monostable relay while also describing status memory. The catalogue's `STATE_RESET` surface and the later status-memory wording show that state-after-reset is configurable, but they do not by themselves resolve the mechanical relay terminology. Both descriptions are therefore retained as conflicting publisher evidence.
-
-`LE04280AA.pdf` is linked by the current `002604` publisher product page, but its own content is unmistakably for `0 026 02` with four 16 A outputs. It is archived for provenance but excluded from the Device's electrical/topology facts.
-
-The PEP gives `457 g` including unit packaging, whereas the dedicated technical sheets give `310 g` for the product itself; these values describe different scopes and are not contradictory.
-
-The 2025 MyHOME guide continues to list `BMSW1005` as an eight-output, 16 A zero-crossing actuator and reproduces the main 230 V load table, supporting continuity of the commercial identity.
+The unresolved relay-description conflict is intentionally visible rather than normalized to one publisher wording.
 
 ## Evidence limits and open work
 
