@@ -121,13 +121,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
         self.assertEqual(7449, metrics["records"])
         self.assertEqual(
-            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
-             "sections": 96, "sections_with_claims": 86},
+            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 14,
+             "sections": 100, "sections_with_claims": 86},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 26,
-             "sections": 427, "sections_with_claims": 401},
+            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 54,
+             "sections": 455, "sections_with_claims": 401},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -141,8 +141,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 890, "documents": 8, "reviewed_nonclaim_sections": 11,
-             "sections": 122, "sections_with_claims": 111},
+            {"claims": 890, "documents": 8, "reviewed_nonclaim_sections": 12,
+             "sections": 123, "sections_with_claims": 111},
             metrics["bounded_domains"]["device-model"],
         )
         self.assertEqual(
@@ -151,13 +151,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["internals"],
         )
         self.assertEqual(
-            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 16,
-             "sections": 149, "sections_with_claims": 133},
+            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 17,
+             "sections": 150, "sections_with_claims": 133},
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(
-            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 11,
-             "sections": 100, "sections_with_claims": 89},
+            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 12,
+             "sections": 101, "sections_with_claims": 89},
             metrics["bounded_domains"]["scenario-engine"],
         )
 

@@ -55,6 +55,10 @@ The same MH200/F418U2 trace also observed coarse `WHAT` commands and subsequent 
 
 This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
 
+### Historical timer handling
+
+The BTicino touchscreen library at `TS10_1_0_23` ignores the report payload `255*255*255` as unusable timer state. It retains `0*0*0` as a zero duration. This is implementation evidence for interpreting historical reports, not an extension of the published minute/second ranges. See [Lighting evidence](../../project/review/myopencommunity-integration.md#lighting-and-automation).
+
 ## `DIMENSION 3` - only Objects that are ON
 
 `*#1*WHERE*3##` is a filtered request. The server returns ordinary Lighting status frames only for addressed lights or dimmers that are ON, then terminates the sequence with `ACK`.

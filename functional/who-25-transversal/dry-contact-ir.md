@@ -29,6 +29,10 @@ Two published address forms are established:
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
 
+## Historical contact interpretation
+
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#x` as contact closed and `32#x` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
 ## Functional navigation
 
 Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.

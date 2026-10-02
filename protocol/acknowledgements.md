@@ -35,6 +35,14 @@ OpenWebNet acknowledgement frames do not carry transaction identifiers. Correlat
 
 On a command session, keep at most one unresolved request unless the specific gateway behavior proves that pipelining is supported. On an event session, do not attach an unrelated asynchronous event to a pending command merely because it arrives nearby in time.
 
+### Ordering across connections
+
+Request ordering on one connection does not order operations on another. Historical BTicino clients explicitly handle this: LAN writes are sent immediately and followed by a delayed status read, while energy graph requests are directed through one connection. These are application strategies against observed ordering problems, not protocol timing constants. See [Platform and ordering evidence](../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
+### Simulator fallback acknowledgements
+
+The VDK 2.0 F454 model returns a fallback ACK after a 500 ms timeout for a pending status request, even when no Device result arrived; other unhandled TCP operations receive NACK. Its internal plant-message identifiers are not fields in the wire ACK. This is simulator behavior, not evidence that physical F454 Firmware uses that deadline or acceptance policy. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
 ## Error handling
 
 When a `NACK` is received:

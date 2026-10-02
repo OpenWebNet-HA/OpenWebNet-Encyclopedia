@@ -38,4 +38,12 @@ Actuator-oriented `DIMENSION` operations can append an actuator selector to the 
 
 A leading `#` identifies central-unit scope in the published functional grammar. `#0` addresses the central unit itself; `#N` addresses zone `N` through the central unit. Central-unit commands include zone mode changes, setpoint changes, program/scenario selection, and holiday operations.
 
+## Historical central-unit variants
+
+The BTouch source distinguishes 3550 (99-zone) and 4695 (four-zone) central units. The mature four-zone probe implementation composes a probe/zone address with a central selector, such as `23#1`, and writes a controlled setpoint through `#23#1`. These application variants must remain distinct from ordinary `#N` central-zone addressing.
+
+For the four-zone case where probe and central share an address, the source describes a missing setpoint-change notification after entering manual mode. The client schedules a setpoint read after 10 seconds if the report has not arrived. The affected Firmware revisions are not named. This workaround is implementation evidence, not a deadline or a defect established for every 4695. Older external-probe code describes addresses `x00` with `x = 1..9`; that historical rule does not override the exact test addresses used by the later [external-temperature operation](dimensions.md#historical-external-probe-dimension-15).
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
 See [`WHAT` Reference](what.md) for central-unit commands, [`DIMENSION` Reference](dimensions.md) for operation-specific payloads, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.

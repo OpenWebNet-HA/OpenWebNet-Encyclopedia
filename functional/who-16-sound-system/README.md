@@ -58,7 +58,7 @@ Implementations perform directed selection with a three-digit `WHERE` outside bo
 *16*3*1ES##     route the amplifiers of environment E to source S
 ~~~
 
-`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Environment `0` does not occur in this form, because `10S` is a source device address.
+`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Captures and historical source demonstrate environments `1..8`; environment `9` remains unverified. Environment `0` does not occur in this form, because `10S` is a source device address.
 
 | Frame | Effect |
 | --- | --- |
@@ -71,6 +71,12 @@ Routing is announced per environment, so every amplifier sharing an environment 
 Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
 
 **Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+
+### Historical implementation corroboration
+
+The February 2008 BTouch implementation both decodes `1ES` routing and emits it when assigning an alarm-clock source to environments `1..8`. It derives `E = (WHERE - 100) / 10` and `S = WHERE - 100 - 10*E`. Its matrix model admits sources `1..4`. This independently corroborates the captured interpretation without establishing base-band `WHAT 0`, routing through `#E`, or sources `5..9`.
+
+The same matrix class requests `*#16*1000*11##` and reads eight returned values as active sources for environments `1..8`, in order. This is an implementation extension; `WHERE = 1000` is not an ordinary source address, and no corresponding write is established. See [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md#historical-implementation-evidence).
 
 ## `DIMENSION` values
 
@@ -129,10 +135,14 @@ Support is target-dependent: amplifier addresses accept amplifier operations; so
 
 One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound event it reported, including amplifier power, volume, source power, routing and RDS. That correspondence is established for that Device and was used to corroborate the addressing above; it does not establish a general mapping, and an MH200 on another plant emitted no `WHO 22` frames at all. The observed pairs are tabulated in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
 
+### Historical mixed-dialect clients
+
+BTouch migrated sound operations separately. During the 2008..2009 transition it could send `WHO 22` amplifier power or source-selection commands while retaining `WHO 16` volume, tuning, station writes, and RDS. The matrix parser briefly accepted both dialects before its September 2009 change to `WHO 22` routing reports. This proves mixed-dialect application behavior, but does not identify which bus component generated the paired MH200N reports. See [Sound implementation evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
 ## Evidence basis
 
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
-The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations, corroborated by historical product source, and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

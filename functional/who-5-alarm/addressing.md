@@ -14,3 +14,17 @@ Published `WHO 5` `WHERE` values include:
 | `#15` | Zone F / AUX F |
 
 Zone `0` is used for inputs and the three internal sirens in the published model. Alarm addressing is therefore its own `WHO 5` grammar and must not be parsed as Lighting/Automation A/PL.
+
+## Historical event validation
+
+The `TS10_1_0_23` touchscreen tests and application handlers accept these event sources:
+
+| Event | `WHAT` | Accepted `WHERE` |
+| --- | ---: | --- |
+| Engaged / partialized zone | `11` / `18` | `#1..#8` |
+| Intrusion | `15` | `#1..#8` |
+| Tamper | `16` | `#0..#15` |
+| Anti-panic | `17` | `#9` |
+| Technical alarm / reset | `12` / `13` | `#1..#15` |
+
+These are implementation validation domains, not a replacement for every published sensor address. The same implementation reports armed/disarmed state with `WHAT 8`/`9`. See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).

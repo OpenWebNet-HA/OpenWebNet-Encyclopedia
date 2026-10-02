@@ -63,19 +63,27 @@ This is the strongest single observation, because it is not an inference about a
 
 *Evidence class: observed traffic on one Device emitting two dialects, scoped to plant B's MH200N firmware.*
 
+## Historical implementation evidence
+
+The preserved BTouch snapshot of 25 February 2008 supplies independent executable evidence. Its matrix interpreter decodes `WHAT 3` and `WHERE >= 111` as environment/source selection; the alarm-clock writer activates `10S` then emits the selected source address plus `10`, `20`, through `80` for affected environments. For source 2 these are `112`, `122`, through `182`. The receive path normalizes routed addresses back to `102`.
+
+The matrix model stores eight environments with source domain `1..4`. It requests `*#16*1000*11##` and decodes eight values in environment order. That request is a historical extension, not a public-source table entry. The application formats individual amplifier addresses with two digits, including `01..09`; this does not resolve single-digit hardware behavior.
+
+Later BTouch versions mix `WHO 16` and `WHO 22` by operation. The September 2009 matrix change removes its older routing-report path; it does not invalidate the older emitted frames or prove that a gateway translates dialects. Pinned source locations and correction commits are recorded in [Sound implementation evidence](../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
 ## Claim records
 
 ### Claim 1: routing address form
 
 | Field | Content |
 | --- | --- |
-| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with `E` in `1..9` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
-| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B |
+| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with demonstrated `E` in `1..8` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
+| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B; historical BTouch emitter and decoder |
 | Revision | Plant A: gateway model MH200. Plant B: gateway model MH200N. Firmware not recorded on either |
 | Namespace | `E` is the environment digit shared with amplifier addressing; `S` is the source identifier used by `101`-`109` |
 | Conditions | `E` = `0` does not occur: `10S` is a source device address |
 | Cardinality | one environment to one source; an environment's amplifiers cannot differ |
-| Coverage | environments 1, 2, 3 and 8 observed; sources 1 and 2 observed |
+| Coverage | environments 1..8 in captures/source; sources 1 and 2 observed, 1..4 in the historical model; environment 9 unverified |
 | Supporting evidence | observations 1-4 above |
 | Counterevidence | none observed |
 | Alternatives | `1` + source + environment, rejected by observations 1, 2 and 4 |
@@ -118,7 +126,7 @@ This is the strongest single observation, because it is not an inference about a
 
 ## What remains unknown
 
-- **Whether directed selection has a specified form.** The captured address may be a documented private mechanism rather than an undocumented one; no published source examined so far contains it.
+- **Whether directed selection has a published form.** Historical product source now establishes the emitter and decoder. The public specification still does not define it; a published or private protocol specification has not been located.
 - **Environment `0` and the `#E` form.** `WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and what `10S` would mean under it, is untested. No capture uses it.
 - **Base band.** Every routing frame observed uses `WHAT 3` (stereo channel). Whether base-band installations require `WHAT 0` for the same address is untested.
 - **Sources above 4.** `101`-`109` is the specified range; both plants have four-input matrices.

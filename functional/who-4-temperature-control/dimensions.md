@@ -112,6 +112,10 @@ The MyHOME_Suite functional parameter definitions likewise represent setpoint ra
 
 The public read form is `*#4*WHERE*14##`, with response `*#4*WHERE*14*T*3##` for probe addresses `1..99`. The read table specifies 0.1 °C resolution over `0050..0400`; it does not change the 0.5 °C step specified for writes (page 18).
 
+## Historical external-probe `DIMENSION 15`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish the external-temperature query `*#4*WHERE*15#1##`. The test report `*#4*11*15*1*123*1111##` yields temperature value `123`, after the first report field `1`. The trailing `1111` is not interpreted by the probe class. Earlier request variants were corrected in the product history; they are not interchangeable read forms. See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
 ## `DIMENSION 19` - valve status
 
 `DIMENSION 19` reports cooling- and heating-valve state. Published valve/fan-coil values include OFF, ON, opened, closed, stop, and fan-coil speed states.
@@ -155,6 +159,10 @@ The source also labels each field `NULL` for current/insignificant values, witho
 
 The broad published `SP` range is an encoding range, not a claim that a particular split unit accepts every temperature.
 
+### Historical partial split writes
+
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. After a non-OFF write, the client compares only the supplied fields against the resulting report. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
 ## `DIMENSION 30` - holiday end
 
 The central unit uses separate date and time dimensions (pages 54, 57–58):
@@ -167,6 +175,27 @@ The central unit uses separate date and time dimensions (pages 54, 57–58):
 `D` is `01..31`, `M` is `01..12`, `Y` is `2000..2099`, `H` is `00..23`, and `MIN` is `00..59`. Validate the actual calendar date as well as individual field ranges.
 
 `DIMENSION 31` is omitted from the source's summary table but explicitly defined by its detailed flows. Some read examples mistakenly include the write marker; the response column and monitor forms establish the unprefixed report form. These operations set the deadline used by the [Temperature Control Commands](what.md).
+
+## Historical timed-manual `DIMENSION 32`
+
+The four-zone touchscreen class sets timed manual operation in two steps: `*4*312#0250#2*WHERE##`, then `*#4*WHERE*#32*H*MIN##` after 200 ms. The first duration is a dummy value overwritten by the second operation. The report parser consumes two values as a duration in hours and minutes, although source comments call the write an end time. Preserve this distinction rather than treating it as an absolute clock deadline. The delay and sequence are product behavior; no universal Firmware timing requirement is established.
+
+## Historical BACnet HVAC dimensions
+
+The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following records under `WHO 4`. They are implementation extensions, not part of the public functional registry above. A read uses `*#4*WHERE*DIMENSION##`; a write uses `*#4*WHERE*#DIMENSION*VALUES##`.
+
+| Dimension / class | Ordered writable fields | Additional report fields, in order |
+| --- | --- | --- |
+| `50` - underfloor heating | setpoint, status, mode | temperature, fault flag, fault description |
+| `51` - AC split with fan coil | setpoint, status, mode, fan speed, air direction, reset filter fault | temperature, fault flag, fault description |
+| `52` - air handling unit | setpoint, status, mode, humidity setpoint, airflow setpoint, minimum airflow, maximum airflow, recirculation, fan speed | temperature, fault flag, fault description, humidity, airflow, air quality, antifreeze alarm |
+| `53` - variable air volume | setpoint, status, mode, airflow setpoint | temperature, fault flag, fault description |
+
+Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
+
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 
 ## Temperature fields are operation-specific
 

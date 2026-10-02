@@ -8,9 +8,9 @@ Each entry states the known boundary before the missing evidence so that later i
 
 ### `DIMENSION 20`
 
-Prior gateway-identification research has flagged `WHO 13 DIMENSION 20` as an encountered property, but the currently preserved evidence chain does not yet establish its classic SCS/TCP semantics. The canonical classic `WHO_13.pdf` registry does not define it, the ZigBee `WHO 13` registry does not define it, canonical MyHOME Suite `OPEN.db` provides no functional `WHO 13 DIMENSION 20` template, and the preserved F454 and MH202 gateway-information captures examined in the current correction do not contain it.
+Historical BTicino touchscreen source and tests now establish `DIMENSION 20` as a PIC-version read whose first returned value is consumed by the application. The exact report `*#13**20*22*40*05##` is tested; the latter two fields are not decoded. See [Historical Platform Properties](../functional/who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties).
 
-This is a **provenance gap**, not evidence that the property does not exist. Promotion to the functional reference requires the specific canonical source or first-hand capture that establishes the request/response form and payload, followed by semantic corroboration. Do not infer a meaning from diagnostic `DIMENSION 6` microcontroller-version fields or from any numerically similar namespace.
+The remaining questions are the complete payload semantics and support across external gateway models/Firmware. The F454 and MH202 captures examined earlier do not contain it. The public classic registry still does not define it; diagnostic microcontroller-version fields and ZigBee identifiers must not be substituted by numeric analogy.
 
 ### `DIMENSION 40`
 
@@ -131,7 +131,7 @@ The routing address `1ES` and the amplifier decomposition `EA` are corroborated 
 
 ### Specified form of directed source selection
 
-`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form may be a private mechanism or a published one that has not been located. No examined source contains it. A specification, a Legrand application note, or a stored frame template naming this address would settle its provenance.
+`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form is now corroborated by a historical BTouch emitter and decoder. Its public/private specification status remains unknown. A protocol specification or application note would establish that status; source evidence currently covers environments `1..8` and four-source matrix state, leaving environment `9` unverified.
 
 ### Environment form `#E` in routing
 
@@ -147,14 +147,14 @@ Both observed plants have four-input matrices and two-digit amplifier addresses.
 
 ### Origin of the second dialect
 
-One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only.
+One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only. Historical BTouch source proves that clients themselves could emit both dialects by operation, but does not identify the origin of these paired reports.
 
 ## Evidence priorities
 
 WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.
 The highest-value next observations are:
 
-1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
+1. resolve the remaining `WHO 13 DIMENSION 20` fields and gateway applicability, and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
 2. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
 3. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
 4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;

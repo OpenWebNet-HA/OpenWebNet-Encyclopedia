@@ -44279,8 +44279,8 @@
         "block_indexes": [
           3
         ],
-        "evidence_class": "official_specification",
-        "resolved_source_id": "ownkb:source:s000134",
+        "evidence_class": "canonical_documentation",
+        "resolved_source_id": "ownkb:source:s000036",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },
@@ -46288,7 +46288,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          0
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -46303,7 +46303,7 @@
           }
         },
         "block_indexes": [
-          1
+          0
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000134",
@@ -46324,17 +46324,17 @@
         "applicability": {
           "domain": "implementation",
           "state": "applies",
-          "target": "MyHOME Suite evidence",
+          "target": "Historical BTicino touchscreen PIC-version evidence",
           "version": {
-            "expression": "3.5.38",
+            "expression": "TS10_1_0_23",
             "state": "specified"
           }
         },
         "block_indexes": [
           1
         ],
-        "evidence_class": "public_database",
-        "resolved_source_id": "ownkb:source:s000125",
+        "evidence_class": "canonical_documentation",
+        "resolved_source_id": "ownkb:source:s000036",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },
@@ -46360,8 +46360,8 @@
         "block_indexes": [
           1
         ],
-        "evidence_class": "official_specification",
-        "resolved_source_id": "ownkb:source:s000134",
+        "evidence_class": "canonical_documentation",
+        "resolved_source_id": "ownkb:source:s000036",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },
@@ -74350,8 +74350,8 @@
         "block_indexes": [
           1
         ],
-        "evidence_class": "official_specification",
-        "resolved_source_id": "ownkb:source:s000146",
+        "evidence_class": "canonical_documentation",
+        "resolved_source_id": "ownkb:source:s000053",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },
@@ -187767,7 +187767,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          0
+          1
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -187782,7 +187782,7 @@
           }
         },
         "block_indexes": [
-          0
+          1
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000121",
@@ -187794,6 +187794,33 @@
     {
       "atomicity": {
         "block_indexes": [
+          1
+        ],
+        "mode": "self_contained",
+        "review_status": "reviewed-phase16b"
+      },
+      "evidence": {
+        "applicability": {
+          "domain": "other",
+          "state": "applies",
+          "target": "OpenWebNet research method",
+          "version": {
+            "state": "unknown"
+          }
+        },
+        "block_indexes": [
+          1
+        ],
+        "evidence_class": "canonical_documentation",
+        "resolved_source_id": "ownkb:source:s000121",
+        "review_status": "reviewed-phase16b",
+        "widening_override": null
+      },
+      "id": "ownkb:claim:c006940"
+    },
+    {
+      "atomicity": {
+        "block_indexes": [
           0
         ],
         "mode": "self_contained",
@@ -187810,33 +187837,6 @@
         },
         "block_indexes": [
           0
-        ],
-        "evidence_class": "canonical_documentation",
-        "resolved_source_id": "ownkb:source:s000121",
-        "review_status": "reviewed-phase16b",
-        "widening_override": null
-      },
-      "id": "ownkb:claim:c006940"
-    },
-    {
-      "atomicity": {
-        "block_indexes": [
-          1
-        ],
-        "mode": "materialized",
-        "review_status": "reviewed-phase16b"
-      },
-      "evidence": {
-        "applicability": {
-          "domain": "other",
-          "state": "applies",
-          "target": "OpenWebNet research method",
-          "version": {
-            "state": "unknown"
-          }
-        },
-        "block_indexes": [
-          1
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000121",
@@ -201926,7 +201926,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          7
+          3
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -201935,13 +201935,13 @@
         "applicability": {
           "domain": "protocol",
           "state": "applies",
-          "target": "Observed WHO 16 F441M matrix routing on plants A and B",
+          "target": "WHO 16 F441M matrix routing in observed plants and historical BTouch source",
           "version": {
             "state": "unknown"
           }
         },
         "block_indexes": [
-          7
+          3
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000040",
@@ -202772,7 +202772,7 @@
         "applicability": {
           "domain": "protocol",
           "state": "applies",
-          "target": "Observed WHO 16 F441M matrix routing on plants A and B",
+          "target": "WHO 16 F441M matrix routing in observed plants and historical BTouch source",
           "version": {
             "state": "unknown"
           }

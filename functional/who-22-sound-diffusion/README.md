@@ -96,7 +96,7 @@ Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer report
 | `19` | `PRESET` |
 | `20` | `LOUDNESS` |
 
-The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The published source does not supply a complete RDS text encoding or band-value domain; the historical RDS decoding evidence below establishes a narrower implementation format.
 
 Examples with unambiguous separators in the detailed flows include:
 
@@ -119,7 +119,52 @@ Source dimension requests use the general-source form `5#2#SOURCE_ID` in these f
 
 The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1..4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
 
-Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+Preserve these as source discrepancies. The tested forms below resolve speaker volume writes, preset commands, power-control emissions, and RDS syntax for the historical touchscreen implementation. Other tone-response discrepancies and the meaning of the published `WHAT 21` notification remain unresolved. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+
+## Historical touchscreen syntax and extensions
+
+Exact BTicino tests at `TS10_1_0_23` resolve several malformed published examples for that implementation:
+
+| Operation | Tested emission |
+| --- | --- |
+| Speaker OFF | `*22*0#4#AREA*3#AREA#POINT##` |
+| Speaker ON using Follow Me | `*22*34#4#AREA*3#AREA#POINT##` |
+| Absolute volume | `*#22*3#AREA#POINT*#1*VOLUME##` |
+| Next / previous preset | `*22*55*3#AREA#POINT##` / `*22*56*3#AREA#POINT##` |
+| RDS start / stop | `*22*31*2#SOURCE##` / `*22*32*2#SOURCE##` |
+| Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
+| Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
+
+The application maps amplifier-area configuration `#A` to `WHERE = 4#A`, and general amplifier configuration `0` to `5#3#0#0`. Tests also recognize `*22*0#4#15*5#1#1##` as a special general-OFF notification. That recognition does not establish an arbitrary sender-address domain.
+
+### Source activity and RDS
+
+The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`; its matching `WHAT 2#4#AREA` notifications update the same source/area state. In monochannel mode the application collapses incoming areas to area `0`, an internal state-model choice.
+
+`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client's re-request of RDS after a stop report is a subscription policy, not a mandatory protocol response.
+
+### Tone, balance, and presets
+
+| Wire value | Touchscreen interpretation |
+| --- | --- |
+| High/low tone, dimensions `2` / `4` | integer `raw / 3 - 10`; tests include `0 -> -10`, `30 -> 0`, `60 -> 10` |
+| Balance, dimension `17` | leading `0` means left, otherwise right; remaining digits divided by 3 give magnitude |
+| Preset `2..11` | built-in application indices `0..9` |
+| Preset `16..25` | custom application indices `10..19` |
+
+Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+### Local multimedia initialization
+
+The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION = #15`:
+
+`*#22*7*#15*SOURCE*AREA*POINT*9*9**MATRIX_INPUT*IS_SOURCE*IS_GATEWAY*IS_AMPLIFIER*READS_SCS##`
+
+Empty source configuration becomes `0`; absent amplifier area/point remain empty. `MATRIX_INPUT` is the source address only in multichannel source mode. Flags reflect the writer's local configuration, with `IS_GATEWAY = 1` and `READS_SCS` set when a source or amplifier is configured. The two `9` fields and the empty field after them remain semantically unresolved.
+
+Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel source 3 and `*#22*7*#15*0*2*8*9*9***0*1*1*1##` for amplifier 28. This establishes product initialization traffic, not a general readable multimedia property. Earlier source emitted a different payload layout.
+
+See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
 
 ## Source and speaker semantics
 

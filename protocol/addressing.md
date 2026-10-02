@@ -113,6 +113,12 @@ The source documents differ in the range they state for the interface field: the
 
 Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
 
+### F422 simulator boundary behavior
+
+The VDK 2.0 F422 model corroborates local-bus qualification for non-general targets: it matches `BASE#4#I3I4`, removes the qualifier when forwarding onto the subordinate bus, and appends it to returned non-general traffic. ACK/NACK feedback is forwarded without address rewriting.
+
+This model is incomplete: it forwards qualified general target `0` before checking the routing level or interface, and its empty-component splitting does not preserve every group form. Those shortcuts do not establish physical F422 routing behavior or new legal `WHO 2` collective forms. Its configurable interface range is also narrower than the product documentation. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
 ## Parsing rules
 
 An implementation should preserve the raw `WHERE` string and classify it using the grammar for the selected `WHO`. Resolve the functional system first, recognize structural markers such as `#` before numeric conversion, preserve leading zeroes, validate the complete syntactic form and its ranges, and only then expose structured components such as `A`, `PL`, group, or interface.

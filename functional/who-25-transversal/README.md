@@ -12,6 +12,20 @@ The [ZigBee Interface](../../protocol/zigbee-interface.md) also exposes a distin
 | Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31..32`; state/event parameter `0`/`1` |
 | ZigBee binding | [ZigBee Binding](zigbee-binding.md) | `WHAT 33..37`; ZigBee product-and-Unit `WHERE` |
 
+## Historical ScenarioPlus controls
+
+The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:
+
+| Operation | Implemented frame |
+| --- | --- |
+| ON | `*25*11#0*WHERE##` |
+| OFF | `*25*12*WHERE##` |
+| Increase | `*25*13#0#5*WHERE##` |
+| Decrease | `*25*14#0#5*WHERE##` |
+| Stop | `*25*15*WHERE##` |
+
+These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
 ## Function selection
 
 A parser should resolve the OpenWebNet interface variant, `WHO 25`, and then the `WHAT` family before decoding the remaining fields. CEN+ interprets the `WHAT` parameter as a virtual pushbutton and uses a `2`-prefixed virtual Object `WHERE`. Dry-contact/IR operations instead use the parameter to distinguish requested state from event/action context and use Device-family-specific `WHERE` ranges. ZigBee binding uses the radio product-and-Unit `WHERE` grammar with family suffix `#9`.

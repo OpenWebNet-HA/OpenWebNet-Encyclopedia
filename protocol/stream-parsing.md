@@ -65,6 +65,12 @@ Keep protocol values as strings until their field grammar has been identified. T
 
 Only the system-specific decoder should expose typed integers, temperatures, durations, masks, or identifiers.
 
+## Historical implementation limits
+
+The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
+
+The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
+
 ## Evidence basis
 
 The character set, delimiters, empty-tag rule, and common frame families come from [OpenWebNet Introduction specification](https://archive.openwebnet-ha.org/sha256/97/d4/97d43e6493ff0dbc4a4dbecdff894b7ce4e2334873b4edfcbc6ad54fe1ef0be2.pdf). The incremental transport guidance is an implementation consequence of delimiter-framed messages over TCP; it is identified as parser guidance rather than a quoted protocol guarantee.

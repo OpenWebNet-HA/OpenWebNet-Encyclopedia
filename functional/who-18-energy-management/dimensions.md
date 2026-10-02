@@ -238,3 +238,55 @@ A significant part of `WHO 18` uses the same `DIMENSION` payload for direct resp
 Parsers should decode these frames by `WHO`, `WHERE`, `DIMENSION` and payload shape rather than assuming that a given payload can only appear immediately after a request.
 
 See [`WHAT` Reference](what.md) for command-driven historical transmission and actuator control, and [Addressing](addressing.md) for the device-family address grammar.
+
+## Historical touchscreen extensions
+
+The following operations and decoding choices are implementation evidence from the BTicino library at `TS10_1_0_23`. They do not establish support by every `WHO 18` Device or by the ZigBee variant.
+
+### Stop&Go self-test interval
+
+`DIMENSION 212` is read with `*#18*WHERE*212##` and written with `*#18*WHERE*#212*DAYS##`. The library defines `DAYS = 1..180`. Its tests independently verify all thirteen bits of `DIMENSION 250`, confirming the published `b13` through `b1` wire order, with opened state at the rightmost bit. See [Stop&Go evidence](../../project/review/myopencommunity-integration.md#stopgo).
+
+### Measurement families and automatic updates
+
+Configuration modes in this application differ from the `Type` selector on the wire:
+
+| Application mode | Measurement family | Current-value `DIMENSION` | Update `Type` |
+| ---: | --- | ---: | ---: |
+| `1` | Electricity | `113` | `1` |
+| `2` | Water | `1134` | `4` |
+| `3` | Gas | `1130` | `2` |
+| `4` | Hot water | `1134` | `4` |
+| `5` | Heating/conditioning | `1132` | `3` |
+
+Current-value reads use `*#18*WHERE*DIMENSION##` and reports carry a scalar value. The application requests automatic updates with `*#18*WHERE*#1200#Type*255##` and stops them with `*#18*WHERE*#1200#Type*0##`. Hot water shares the water selector. These additional selectors extend the published active-power-only description for this implementation.
+
+The client falls back to 10-second polling until automatic-update support is detected. An update-control report can switch the client to newer graph handling; a received stop while updates are still wanted causes it to request updates again. Neither the polling interval nor that capability heuristic defines a Device's physical sampling interval.
+
+### Electricity thresholds
+
+| Operation | Implemented form / payload |
+| --- | --- |
+| Read threshold state | `*#18*WHERE*516##` |
+| Threshold-state report | `*#18*WHERE*516*EXCEEDED1*ENABLED1*EXCEEDED2*ENABLED2##` |
+| Read threshold `N` | `*#18*WHERE*517#N##` |
+| Threshold-value report | `*#18*WHERE*517#N*VALUE##` |
+| Write threshold `N` | `*#18*WHERE*#517#N*VALUE##` |
+
+`N` is `1` or `2`; the library's zero-based index is converted before transmission. A disabled threshold takes precedence over its exceeded flag in the application's displayed state. The source does not establish a general threshold-value range or physical unit for every target.
+
+### Legacy graph values and unavailable data
+
+Older graph reports under `56`, `57`, and `510` contain packet numbers and byte-valued samples, including values assembled across packet boundaries. In the older daily graph, a single sample `255` is replaced with zero. In paired decoding, the value is `high*256 + low`, with only the complete pair `255*255` replaced with zero; `(3,255)` is explicitly tested as valid. For electricity the library multiplies older graph values by 100; the other application modes use a factor of 1. This follows executable behavior rather than the source's broader scaling comment. Newer `511..514` reports use tagged scalar samples as described above.
+
+The same library converts raw scalar measurement/totalizer value `4294967295` to zero, including actuator `DIMENSION 72`. Preserve the raw value when retaining evidence: this normalization cannot distinguish unavailable data from actual zero consumption and is not a universal protocol sentinel definition. `DIMENSION 51` remains the all-time totalizer; the application's yearly graph is assembled from monthly totals, not by redefining `51` as a calendar-year value.
+
+Source comments label electricity as watt, water as litres, gas as dm³, and hot-water/heating quantities as calories. These are historical application unit labels; they do not resolve the published energy/power terminology or establish physical measurement units across all Devices. On detecting newer graph support, the library resubmits its pending graph request using the newer form.
+
+See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
+
+## F520 simulator scope
+
+The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`, `58`, `59`, and `510` command/report mappings above. Its `511` daily read also returns tagged samples. `72` totalizer and `75` reset handlers are explicitly unimplemented in this model; that absence does not establish a limitation of physical F520 hardware.
+
+The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).

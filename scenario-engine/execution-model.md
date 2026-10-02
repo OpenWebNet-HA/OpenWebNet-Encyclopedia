@@ -100,6 +100,12 @@ Do not generalize this action algorithm to triggers, conditions, symbolic frames
 
 An acknowledgement and an observed state change answer different questions and should not be collapsed into one success flag.
 
+## Historical touchscreen condition evaluation
+
+The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event. Saving a changed condition re-requests Device state; the evaluator adjusts initialization according to whether the old condition was already satisfied.
+
+This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation).
+
 ## Relationship to `OPEN.db`
 
 `OPEN.db` describes MyHOME_Suite communication scenarios for diagnostics and Device programming. It does not define the Scenario Engine graph or replace the functional meanings of ScenarioDevices action frames.

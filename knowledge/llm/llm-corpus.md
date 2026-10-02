@@ -531,6 +531,17 @@ Provenance cues: `catalogue`, `evidence`
 
 A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
 
+### F411 simulator configuration
+
+Section ID: `ownkb:section:d000002:s000023`
+
+Cautions: `must not`
+Provenance cues: `evidence`, `source`
+
+The VDK 2.0 F411 model stores `A`, `PL`, and group separately for each simulated output, with Device mode and bus selection outside those output records. A simulated local click emits `WHO 1` using the output's concatenated `A`/`PL` address. Point, area, group, and general addressing are handled against the configured outputs.
+
+In its `PUL` mode, the model suppresses general/area commands and status responses while still handling point/group targets. These are executable simulator choices; the source does not establish a complete physical F411 configuration or prove equivalence between its output records and MyHOME Suite Modules. Its simplified decoder treats any command other than `WHAT 1` as OFF, which must not be adopted as a protocol rule. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
 ### Sources
 
 Section ID: `ownkb:section:d000002:s000022`
@@ -4055,9 +4066,9 @@ Area: `functional`
 
 Section ID: `ownkb:section:d000024:s000001`
 
-Applicability cues: `firmware`, `gateway`, `version`
+Applicability cues: `firmware`, `gateway`, `revision`, `version`
 Cautions: `must not`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `evidence`, `source`, `specification`
 
 The functional reference combines several evidence classes. They answer different questions and must not be treated as interchangeable.
 
@@ -4068,6 +4079,7 @@ The functional reference combines several evidence classes. They answer differen
 | `OPEN.db` | MyHOME Suite namespace identity, diagnostic-family mapping, address rules, and associated management templates | Complete ordinary functional vocabulary |
 | ScenarioDevices databases | Functional actions exposed by the scenario engine and their concrete frames where present | Every legal command or a universal Device capability |
 | `MHCatalogue.db` | Physical Device, firmware, Module, Object, and configuration applicability | A complete functional command registry |
+| Historical source and exact tests | Implemented wire forms, decoding, product variants, and correction history at a pinned revision | Universal protocol rules or support by every Device/Firmware |
 | Observed traffic | Behavior of the captured Device/gateway/software version | Universal behavior outside the observed conditions |
 
 ### Public specification coverage
@@ -4106,7 +4118,8 @@ The [ZigBee Interface Specification](https://archive.openwebnet-ha.org/sha256/9f
 
 Section ID: `ownkb:section:d000024:s000003`
 
-Provenance cues: `evidence`
+Applicability cues: `gateway`
+Provenance cues: `evidence`, `source`
 
 Notable relationships established outside the public functional PDFs include:
 
@@ -4117,6 +4130,8 @@ Notable relationships established outside the public functional PDFs include:
 - diagnostic-family assignments such as `1001`, `1004`, `1008`, `1013`, `1018`, `1023`, and `1027`.
 
 These additions should be labelled as implementation evidence. A diagnostic-family association does not copy diagnostic `WHAT` or `DIMENSION` semantics into the functional namespace.
+
+The preserved BTicino touchscreen libraries and VDK simulator add separately scoped historical evidence for [Video Door Entry and messaging](who-8-video-door-entry-telephony/), [Alarm controls](who-5-alarm/protocol.md#historical-password-controls), [Platform properties](who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties), [Energy compatibility](who-18-energy-management/what.md#historical-graph-request-variants), [HVAC records](who-4-temperature-control/dimensions.md#historical-bacnet-hvac-dimensions), [Sound Diffusion](who-22-sound-diffusion/#historical-touchscreen-syntax-and-extensions), and [ScenarioPlus](who-25-transversal/#historical-scenarioplus-controls). Their scope, source pins, tests, exclusions, and existing-reference corroboration are recorded in the [MyOpenCommunity Integration Review](../project/review/myopencommunity-integration.md).
 
 ### Absence rules
 
@@ -4436,6 +4451,14 @@ Section ID: `ownkb:section:d000028:s000004`
 ```
 
 This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
+
+#### Historical timer handling
+
+Section ID: `ownkb:section:d000028:s000011`
+
+Provenance cues: `evidence`
+
+The BTicino touchscreen library at `TS10_1_0_23` ignores the report payload `255*255*255` as unusable timer state. It retains `0*0*0` as a zero duration. This is implementation evidence for interpreting historical reports, not an extension of the published minute/second ranges. See [Lighting evidence](../../project/review/myopencommunity-integration.md#lighting-and-automation).
 
 ### `DIMENSION 3` - only Objects that are ON
 
@@ -5126,7 +5149,7 @@ Section ID: `ownkb:section:d000036:s000001`
 
 Applicability cues: `firmware`, `gateway`, `scs`, `tcp`, `version`, `zigbee`
 Cautions: `must not`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `specification`
 
 This page records the **published SCS/TCP external-interface `WHO 13` `DIMENSION` registry** and separately scoped implementation observations. The published specification explicitly identifies whether each listed property is readable or writable; its registry must not be treated as proof that later gateway implementations expose no additional `DIMENSION` values.
 
@@ -5146,7 +5169,7 @@ The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Som
 | `23` | Kernel version | R | `V*R*B` |
 | `24` | Distribution version | R | `V*R*B` |
 
-The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations are recorded below only where first-hand evidence exists.
+The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations and historical touchscreen extensions are separately scoped below.
 
 ### Read form
 
@@ -5322,6 +5345,31 @@ Together, `DIMENSION 16`, `23`, and `24` expose three distinct software layers: 
 
 A first-hand MH202 information request returned an empty value payload for this read (`*#13**24*##`) rather than the published three-component tuple. This is implementation evidence, not a redefinition of the published schema. Parsers should preserve the raw response and tolerate a gateway that cannot supply all published version components.
 
+### Historical touchscreen platform properties
+
+Section ID: `ownkb:section:d000036:s000017`
+
+Applicability cues: `gateway`, `version`
+Cautions: `avoid`
+Uncertainty: `not established`, `unresolved`
+Provenance cues: `evidence`
+
+The BTicino `PlatformDevice` implementation and tests at `TS10_1_0_23` establish additional empty-`WHERE` properties:
+
+| `DIMENSION` | Implemented meaning | Evidence-supported access / payload |
+| --- | --- | --- |
+| `9` | LAN enabled | Read/report/write; `0` disabled, `1` enabled |
+| `20` | PIC version | Read/report; first returned value used as the PIC version |
+| `50` | Network gateway | Read/report; four decimal IPv4 octets |
+| `51` | Primary DNS | Read/report; four decimal IPv4 octets |
+| `52` | Secondary DNS | Read/report; four decimal IPv4 octets |
+
+For example, the exact test report `*#13**20*22*40*05##` yields PIC value `22`. The other two fields are not decoded by this class; their meaning remains unresolved. The [Energy Management compatibility policy](../who-18-energy-management/what.md#historical-graph-request-variants) uses that first value with a cutoff of `22`.
+
+The library emits LAN writes as `*#13**#9*STATE##`, then requests state after 1 second to avoid a request overtaking its write on another connection. Its clock writes also have specific variants: `*#13**#0*13*12*11**##` leaves the time-zone field empty and adds a trailing empty field; combined writes use `*#13**#22*H*M*S**00*D*M*Y##`. Date writes always supply weekday `00` rather than calculating it. These are client emission choices, not revisions of the published clock schema.
+
+Support by an F454, MH202, or other external gateway is not established by these touchscreen tests. See [Platform evidence](../../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
 ### Observed implementation extension: `DIMENSION 40`
 
 Section ID: `ownkb:section:d000036:s000015`
@@ -5347,13 +5395,11 @@ The evidence therefore establishes a readable gateway property with a two-value 
 Section ID: `ownkb:section:d000036:s000016`
 
 Applicability cues: `firmware`, `gateway`, `revision`, `scs`, `tcp`, `version`, `zigbee`
-Cautions: `do not`
-Uncertainty: `unresolved`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `evidence`
 
 ZigBee `WHO 13` explicitly defines `DIMENSION 17` as hardware version. That is established for the ZigBee interface revision documented in [ZigBee Network Management](zigbee-network-management.md#dimension-16-and-17---firmware-and-hardware-versions), but numeric equality does not establish the same meaning for classic SCS/TCP gateways.
 
-`DIMENSION 20` is likewise not assigned a classic SCS/TCP meaning on this page. The currently preserved canonical classic specification, ZigBee specification, MyHOME Suite `OPEN.db`, and the two gateway-information captures examined for this correction do not establish its SCS/TCP payload semantics. The unresolved provenance and required evidence are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
+`DIMENSION 20` has the separately scoped historical PIC-version interpretation above. That evidence does not establish a full version tuple or applicability to the F454/MH202 captures. The remaining questions are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
 
 # Document: ownkb:document:d000037
 
@@ -5997,7 +6043,7 @@ Implementations perform directed selection with a three-digit `WHERE` outside bo
 *16*3*1ES##     route the amplifiers of environment E to source S
 ```
 
-`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Environment `0` does not occur in this form, because `10S` is a source device address.
+`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Captures and historical source demonstrate environments `1..8`; environment `9` remains unverified. Environment `0` does not occur in this form, because `10S` is a source device address.
 
 | Frame | Effect |
 | --- | --- |
@@ -6010,6 +6056,16 @@ Routing is announced per environment, so every amplifier sharing an environment 
 Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
 
 **Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+
+#### Historical implementation corroboration
+
+Section ID: `ownkb:section:d000040:s000013`
+
+Provenance cues: `evidence`, `source`
+
+The February 2008 BTouch implementation both decodes `1ES` routing and emits it when assigning an alarm-clock source to environments `1..8`. It derives `E = (WHERE - 100) / 10` and `S = WHERE - 100 - 10*E`. Its matrix model admits sources `1..4`. This independently corroborates the captured interpretation without establishing base-band `WHAT 0`, routing through `#E`, or sources `5..9`.
+
+The same matrix class requests `*#16*1000*11##` and reads eight returned values as active sources for environments `1..8`, in order. This is an implementation extension; `WHERE = 1000` is not an ordinary source address, and no corresponding write is established. See [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md#historical-implementation-evidence).
 
 ### `DIMENSION` values
 
@@ -6092,6 +6148,14 @@ Provenance cues: `source`
 
 One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound event it reported, including amplifier power, volume, source power, routing and RDS. That correspondence is established for that Device and was used to corroborate the addressing above; it does not establish a general mapping, and an MH200 on another plant emitted no `WHO 22` frames at all. The observed pairs are tabulated in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
 
+#### Historical mixed-dialect clients
+
+Section ID: `ownkb:section:d000040:s000014`
+
+Provenance cues: `evidence`, `source`
+
+BTouch migrated sound operations separately. During the 2008..2009 transition it could send `WHO 22` amplifier power or source-selection commands while retaining `WHO 16` volume, tuning, station writes, and RDS. The matrix parser briefly accepted both dialects before its September 2009 change to `WHO 22` routing reports. This proves mixed-dialect application behavior, but does not identify which bus component generated the paired MH200N reports. See [Sound implementation evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
 ### Evidence basis
 
 Section ID: `ownkb:section:d000040:s000010`
@@ -6100,7 +6164,7 @@ Provenance cues: `source`, `specification`
 
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
-The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations, corroborated by historical product source, and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -6695,6 +6759,85 @@ Parsers should decode these frames by `WHO`, `WHERE`, `DIMENSION` and payload sh
 
 See [`WHAT` Reference](what.md) for command-driven historical transmission and actuator control, and [Addressing](addressing.md) for the device-family address grammar.
 
+### Historical touchscreen extensions
+
+Section ID: `ownkb:section:d000044:s000023`
+
+Applicability cues: `zigbee`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The following operations and decoding choices are implementation evidence from the BTicino library at `TS10_1_0_23`. They do not establish support by every `WHO 18` Device or by the ZigBee variant.
+
+#### Stop&Go self-test interval
+
+Section ID: `ownkb:section:d000044:s000024`
+
+Provenance cues: `evidence`
+
+`DIMENSION 212` is read with `*#18*WHERE*212##` and written with `*#18*WHERE*#212*DAYS##`. The library defines `DAYS = 1..180`. Its tests independently verify all thirteen bits of `DIMENSION 250`, confirming the published `b13` through `b1` wire order, with opened state at the rightmost bit. See [Stop&Go evidence](../../project/review/myopencommunity-integration.md#stopgo).
+
+#### Measurement families and automatic updates
+
+Section ID: `ownkb:section:d000044:s000025`
+
+Configuration modes in this application differ from the `Type` selector on the wire:
+
+| Application mode | Measurement family | Current-value `DIMENSION` | Update `Type` |
+| --- | --- | --- | --- |
+| `1` | Electricity | `113` | `1` |
+| `2` | Water | `1134` | `4` |
+| `3` | Gas | `1130` | `2` |
+| `4` | Hot water | `1134` | `4` |
+| `5` | Heating/conditioning | `1132` | `3` |
+
+Current-value reads use `*#18*WHERE*DIMENSION##` and reports carry a scalar value. The application requests automatic updates with `*#18*WHERE*#1200#Type*255##` and stops them with `*#18*WHERE*#1200#Type*0##`. Hot water shares the water selector. These additional selectors extend the published active-power-only description for this implementation.
+
+The client falls back to 10-second polling until automatic-update support is detected. An update-control report can switch the client to newer graph handling; a received stop while updates are still wanted causes it to request updates again. Neither the polling interval nor that capability heuristic defines a Device's physical sampling interval.
+
+#### Electricity thresholds
+
+Section ID: `ownkb:section:d000044:s000026`
+
+Provenance cues: `source`
+
+| Operation | Implemented form / payload |
+| --- | --- |
+| Read threshold state | `*#18*WHERE*516##` |
+| Threshold-state report | `*#18*WHERE*516*EXCEEDED1*ENABLED1*EXCEEDED2*ENABLED2##` |
+| Read threshold `N` | `*#18*WHERE*517#N##` |
+| Threshold-value report | `*#18*WHERE*517#N*VALUE##` |
+| Write threshold `N` | `*#18*WHERE*#517#N*VALUE##` |
+
+`N` is `1` or `2`; the library's zero-based index is converted before transmission. A disabled threshold takes precedence over its exceeded flag in the application's displayed state. The source does not establish a general threshold-value range or physical unit for every target.
+
+#### Legacy graph values and unavailable data
+
+Section ID: `ownkb:section:d000044:s000027`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+Older graph reports under `56`, `57`, and `510` contain packet numbers and byte-valued samples, including values assembled across packet boundaries. In the older daily graph, a single sample `255` is replaced with zero. In paired decoding, the value is `high*256 + low`, with only the complete pair `255*255` replaced with zero; `(3,255)` is explicitly tested as valid. For electricity the library multiplies older graph values by 100; the other application modes use a factor of 1. This follows executable behavior rather than the source's broader scaling comment. Newer `511..514` reports use tagged scalar samples as described above.
+
+The same library converts raw scalar measurement/totalizer value `4294967295` to zero, including actuator `DIMENSION 72`. Preserve the raw value when retaining evidence: this normalization cannot distinguish unavailable data from actual zero consumption and is not a universal protocol sentinel definition. `DIMENSION 51` remains the all-time totalizer; the application's yearly graph is assembled from monthly totals, not by redefining `51` as a calendar-year value.
+
+Source comments label electricity as watt, water as litres, gas as dm³, and hot-water/heating quantities as calories. These are historical application unit labels; they do not resolve the published energy/power terminology or establish physical measurement units across all Devices. On detecting newer graph support, the library resubmits its pending graph request using the newer form.
+
+See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
+
+### F520 simulator scope
+
+Section ID: `ownkb:section:d000044:s000028`
+
+Applicability cues: `firmware`
+Cautions: `limitation`, `not evidence`
+Provenance cues: `evidence`
+
+The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`, `58`, `59`, and `510` command/report mappings above. Its `511` daily read also returns tagged samples. `72` totalizer and `75` reset handlers are explicitly unimplemented in this model; that absence does not establish a limitation of physical F520 hardware.
+
+The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).
+
 # Document: ownkb:document:d000045
 
 Source path: `functional/who-18-energy-management/what.md`
@@ -6734,6 +6877,22 @@ The command forms are `*18*26*WHERE##` and `*18*27*WHERE##`. Successful command 
 
 Stop&Go status is read separately through `DIMENSION 250..263`; see [`DIMENSION` Reference](dimensions.md).
 
+#### Historical Stop&Go controls
+
+Section ID: `ownkb:section:d000045:s000015`
+
+Provenance cues: `evidence`, `source`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish additional Stop&Go commands:
+
+| `WHAT` | Implemented operation |
+| --- | --- |
+| `21` / `22` | Open / close |
+| `23` / `24` | Enable / disable differential self-test |
+| `28` / `29` | Enable / disable tracking |
+
+They use the ordinary `*18*WHAT*WHERE##` form. The library schedules a `DIMENSION 250` read after each control to reconcile state. Earlier source labels reversed `21` and `22`; a documented correction and the mature tests establish the order above. The scheduled read is a client strategy, not a required protocol sequence. See [Stop&Go evidence](../../project/review/myopencommunity-integration.md#stopgo).
+
 ### Historical-series commands
 
 Section ID: `ownkb:section:d000045:s000004`
@@ -6772,6 +6931,28 @@ Section ID: `ownkb:section:d000045:s000007`
 Section ID: `ownkb:section:d000045:s000008`
 
 `*18*510#M*WHERE##` starts transmission through `DIMENSION 514`. The tag identifies the measure/day, `1..31`.
+
+#### Historical graph request variants
+
+Section ID: `ownkb:section:d000045:s000016`
+
+Applicability cues: `firmware`, `gateway`, `version`
+Provenance cues: `evidence`, `source`
+
+The touchscreen library selects request syntax independently of the returned graph encoding. Its compatibility mode treats the first [PIC version value](../who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties) `<= 22` as old PIC. Exact tests establish this matrix:
+
+| Graph encoding / operation | Normal command `WHAT` | Old-PIC read `DIMENSION` | Report `DIMENSION` |
+| --- | --- | --- | --- |
+| Older daily graph | `52#M#D` | `56#M#D` | `56` |
+| Older monthly-average graph | `53#M` | `57#M` | `57` |
+| Older monthly graph | `56#M` | `510#M` | `510` |
+| Newer daily graph | `57#M#D` | `511#M#D` | `511` |
+| Newer monthly-average graph | `58#M` | `512#M` | `512` |
+| Newer monthly graph | `59#M` | `513#M` | `513` |
+
+Thus a newer daily graph can be requested as `*18*57#M#D*WHERE##` or, in old-PIC compatibility mode, `*#18*WHERE*511#M#D##`. These are historical implementation variants, not a rule that every Device accepts both forms. The PIC cutoff is a library policy; graph capability is detected separately.
+
+The client sends graph requests through one connection to retain ordering and places the monthly graph request last because source comments report transmit/receive problems in some PIC versions. The affected Firmware versions are unspecified. Its assumption of ordered, uninterrupted graph packets is not a protocol-wide delivery guarantee. See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
 
 ### Actuator commands
 
@@ -7598,7 +7779,7 @@ Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer report
 
 Section ID: `ownkb:section:d000053:s000007`
 
-Provenance cues: `source`
+Provenance cues: `evidence`, `source`
 
 | Dimension | Report payload following the dimension |
 | --- | --- |
@@ -7613,7 +7794,7 @@ Provenance cues: `source`
 | `19` | `PRESET` |
 | `20` | `LOUDNESS` |
 
-The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The published source does not supply a complete RDS text encoding or band-value domain; the historical RDS decoding evidence below establishes a narrower implementation format.
 
 Examples with unambiguous separators in the detailed flows include:
 
@@ -7637,11 +7818,72 @@ Source dimension requests use the general-source form `5#2#SOURCE_ID` in these f
 Section ID: `ownkb:section:d000053:s000008`
 
 Cautions: `do not`
-Provenance cues: `catalogue`, `evidence`, `source`, `specification`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`, `specification`
 
 The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1..4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
 
-Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+Preserve these as source discrepancies. The tested forms below resolve speaker volume writes, preset commands, power-control emissions, and RDS syntax for the historical touchscreen implementation. Other tone-response discrepancies and the meaning of the published `WHAT 21` notification remain unresolved. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+
+### Historical touchscreen syntax and extensions
+
+Section ID: `ownkb:section:d000053:s000012`
+
+Provenance cues: `source`
+
+Exact BTicino tests at `TS10_1_0_23` resolve several malformed published examples for that implementation:
+
+| Operation | Tested emission |
+| --- | --- |
+| Speaker OFF | `*22*0#4#AREA*3#AREA#POINT##` |
+| Speaker ON using Follow Me | `*22*34#4#AREA*3#AREA#POINT##` |
+| Absolute volume | `*#22*3#AREA#POINT*#1*VOLUME##` |
+| Next / previous preset | `*22*55*3#AREA#POINT##` / `*22*56*3#AREA#POINT##` |
+| RDS start / stop | `*22*31*2#SOURCE##` / `*22*32*2#SOURCE##` |
+| Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
+| Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
+
+The application maps amplifier-area configuration `#A` to `WHERE = 4#A`, and general amplifier configuration `0` to `5#3#0#0`. Tests also recognize `*22*0#4#15*5#1#1##` as a special general-OFF notification. That recognition does not establish an arbitrary sender-address domain.
+
+#### Source activity and RDS
+
+Section ID: `ownkb:section:d000053:s000013`
+
+Provenance cues: `source`
+
+The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`; its matching `WHAT 2#4#AREA` notifications update the same source/area state. In monochannel mode the application collapses incoming areas to area `0`, an internal state-model choice.
+
+`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client's re-request of RDS after a stop report is a subscription policy, not a mandatory protocol response.
+
+#### Tone, balance, and presets
+
+Section ID: `ownkb:section:d000053:s000014`
+
+| Wire value | Touchscreen interpretation |
+| --- | --- |
+| High/low tone, dimensions `2` / `4` | integer `raw / 3 - 10`; tests include `0 -> -10`, `30 -> 0`, `60 -> 10` |
+| Balance, dimension `17` | leading `0` means left, otherwise right; remaining digits divided by 3 give magnitude |
+| Preset `2..11` | built-in application indices `0..9` |
+| Preset `16..25` | custom application indices `10..19` |
+
+Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+#### Local multimedia initialization
+
+Section ID: `ownkb:section:d000053:s000015`
+
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION = #15`:
+
+`*#22*7*#15*SOURCE*AREA*POINT*9*9**MATRIX_INPUT*IS_SOURCE*IS_GATEWAY*IS_AMPLIFIER*READS_SCS##`
+
+Empty source configuration becomes `0`; absent amplifier area/point remain empty. `MATRIX_INPUT` is the source address only in multichannel source mode. Flags reflect the writer's local configuration, with `IS_GATEWAY = 1` and `READS_SCS` set when a source or amplifier is configured. The two `9` fields and the empty field after them remain semantically unresolved.
+
+Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel source 3 and `*#22*7*#15*0*2*8*9*9***0*1*1*1##` for amplifier 28. This establishes product initialization traffic, not a general readable multimedia property. Earlier source emitted a different payload layout.
+
+See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
 
 ### Source and speaker semantics
 
@@ -8078,6 +8320,25 @@ Applicability cues: `zigbee`
 | Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31..32`; state/event parameter `0`/`1` |
 | ZigBee binding | [ZigBee Binding](zigbee-binding.md) | `WHAT 33..37`; ZigBee product-and-Unit `WHERE` |
 
+### Historical ScenarioPlus controls
+
+Section ID: `ownkb:section:d000060:s000006`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:
+
+| Operation | Implemented frame |
+| --- | --- |
+| ON | `*25*11#0*WHERE##` |
+| OFF | `*25*12*WHERE##` |
+| Increase | `*25*13#0#5*WHERE##` |
+| Decrease | `*25*14#0#5*WHERE##` |
+| Stop | `*25*15*WHERE##` |
+
+These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
 ### Function selection
 
 Section ID: `ownkb:section:d000060:s000003`
@@ -8297,6 +8558,14 @@ Two published address forms are established:
 | `[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
+
+### Historical contact interpretation
+
+Section ID: `ownkb:section:d000062:s000005`
+
+Provenance cues: `evidence`
+
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#x` as contact closed and `32#x` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
 
 ### Functional navigation
 
@@ -8745,6 +9014,19 @@ Section ID: `ownkb:section:d000068:s000005`
 
 A leading `#` identifies central-unit scope in the published functional grammar. `#0` addresses the central unit itself; `#N` addresses zone `N` through the central unit. Central-unit commands include zone mode changes, setpoint changes, program/scenario selection, and holiday operations.
 
+### Historical central-unit variants
+
+Section ID: `ownkb:section:d000068:s000006`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+The BTouch source distinguishes 3550 (99-zone) and 4695 (four-zone) central units. The mature four-zone probe implementation composes a probe/zone address with a central selector, such as `23#1`, and writes a controlled setpoint through `#23#1`. These application variants must remain distinct from ordinary `#N` central-zone addressing.
+
+For the four-zone case where probe and central share an address, the source describes a missing setpoint-change notification after entering manual mode. The client schedules a setpoint read after 10 seconds if the report has not arrived. The affected Firmware revisions are not named. This workaround is implementation evidence, not a deadline or a defect established for every 4695. Older external-probe code describes addresses `x00` with `x = 1..9`; that historical rule does not override the exact test addresses used by the later [external-temperature operation](dimensions.md#historical-external-probe-dimension-15).
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
 See [`WHAT` Reference](what.md) for central-unit commands, [`DIMENSION` Reference](dimensions.md) for operation-specific payloads, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.
 
 # Document: ownkb:document:d000069
@@ -8893,6 +9175,14 @@ The MyHOME_Suite functional parameter definitions likewise represent setpoint ra
 
 The public read form is `*#4*WHERE*14##`, with response `*#4*WHERE*14*T*3##` for probe addresses `1..99`. The read table specifies 0.1 °C resolution over `0050..0400`; it does not change the 0.5 °C step specified for writes (page 18).
 
+### Historical external-probe `DIMENSION 15`
+
+Section ID: `ownkb:section:d000069:s000018`
+
+Provenance cues: `evidence`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish the external-temperature query `*#4*WHERE*15#1##`. The test report `*#4*11*15*1*123*1111##` yields temperature value `123`, after the first report field `1`. The trailing `1111` is not interpreted by the probe class. Earlier request variants were corrected in the product history; they are not interchangeable read forms. See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
 ### `DIMENSION 19` - valve status
 
 Section ID: `ownkb:section:d000069:s000012`
@@ -8947,6 +9237,14 @@ The source also labels each field `NULL` for current/insignificant values, witho
 
 The broad published `SP` range is an encoding range, not a claim that a particular split unit accepts every temperature.
 
+#### Historical partial split writes
+
+Section ID: `ownkb:section:d000069:s000019`
+
+Provenance cues: `evidence`
+
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. After a non-OFF write, the client compares only the supplied fields against the resulting report. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
 ### `DIMENSION 30` - holiday end
 
 Section ID: `ownkb:section:d000069:s000015`
@@ -8963,6 +9261,36 @@ The central unit uses separate date and time dimensions (pages 54, 57–58):
 `D` is `01..31`, `M` is `01..12`, `Y` is `2000..2099`, `H` is `00..23`, and `MIN` is `00..59`. Validate the actual calendar date as well as individual field ranges.
 
 `DIMENSION 31` is omitted from the source's summary table but explicitly defined by its detailed flows. Some read examples mistakenly include the write marker; the response column and monitor forms establish the unprefixed report form. These operations set the deadline used by the [Temperature Control Commands](what.md).
+
+### Historical timed-manual `DIMENSION 32`
+
+Section ID: `ownkb:section:d000069:s000020`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+The four-zone touchscreen class sets timed manual operation in two steps: `*4*312#0250#2*WHERE##`, then `*#4*WHERE*#32*H*MIN##` after 200 ms. The first duration is a dummy value overwritten by the second operation. The report parser consumes two values as a duration in hours and minutes, although source comments call the write an end time. Preserve this distinction rather than treating it as an absolute clock deadline. The delay and sequence are product behavior; no universal Firmware timing requirement is established.
+
+### Historical BACnet HVAC dimensions
+
+Section ID: `ownkb:section:d000069:s000021`
+
+Provenance cues: `evidence`
+
+The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following records under `WHO 4`. They are implementation extensions, not part of the public functional registry above. A read uses `*#4*WHERE*DIMENSION##`; a write uses `*#4*WHERE*#DIMENSION*VALUES##`.
+
+| Dimension / class | Ordered writable fields | Additional report fields, in order |
+| --- | --- | --- |
+| `50` - underfloor heating | setpoint, status, mode | temperature, fault flag, fault description |
+| `51` - AC split with fan coil | setpoint, status, mode, fan speed, air direction, reset filter fault | temperature, fault flag, fault description |
+| `52` - air handling unit | setpoint, status, mode, humidity setpoint, airflow setpoint, minimum airflow, maximum airflow, recirculation, fan speed | temperature, fault flag, fault description, humidity, airflow, air quality, antifreeze alarm |
+| `53` - variable air volume | setpoint, status, mode, airflow setpoint | temperature, fault flag, fault description |
+
+Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
+
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 
 ### Temperature fields are operation-specific
 
@@ -9245,6 +9573,24 @@ Published `WHO 5` `WHERE` values include:
 
 Zone `0` is used for inputs and the three internal sirens in the published model. Alarm addressing is therefore its own `WHO 5` grammar and must not be parsed as Lighting/Automation A/PL.
 
+### Historical event validation
+
+Section ID: `ownkb:section:d000073:s000002`
+
+Provenance cues: `evidence`
+
+The `TS10_1_0_23` touchscreen tests and application handlers accept these event sources:
+
+| Event | `WHAT` | Accepted `WHERE` |
+| --- | --- | --- |
+| Engaged / partialized zone | `11` / `18` | `#1..#8` |
+| Intrusion | `15` | `#1..#8` |
+| Tamper | `16` | `#0..#15` |
+| Anti-panic | `17` | `#9` |
+| Technical alarm / reset | `12` / `13` | `#1..#15` |
+
+These are implementation validation domains, not a replacement for every published sensor address. The same implementation reports armed/disarmed state with `WHAT 8`/`9`. See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).
+
 # Document: ownkb:document:d000074
 
 Source path: `functional/who-5-alarm/protocol.md`
@@ -9284,6 +9630,29 @@ Alarm state changes are also emitted as events. Consumers should normalize event
 Section ID: `ownkb:section:d000074:s000005`
 
 The published vocabulary includes `WHAT 26` and `27` for start/stop programming. These belong to the historical `WHO 5` functional protocol. They are not the same subsystem as the MyHOME_Suite Device/Object configuration protocol documented under [Programming](../../programming/).
+
+### Historical password controls
+
+Section ID: `ownkb:section:d000074:s000007`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `evidence`
+
+The BTicino touchscreen implementation at `TS10_1_0_23` emits the following controls. These extend the published status-oriented surface; applicability to other alarm panels or gateway Firmware is not established.
+
+| Operation | Implemented frame |
+| --- | --- |
+| Toggle armed/disarmed state using a password | `*5*36#PASSWORD*0##` |
+| Set zone partialization | `*5*50#PASSWORD#MASK*0##` |
+| Request central-unit state | `*#5*0##` |
+
+`MASK` contains eight textual bits, left to right for zones `1..8`; `1` means partialized. For example, `11000001` selects zones 1, 2, and 8. The central target `0` is the library's form, distinct from the published request above. The password's format and acceptance rules are not established by the tests; do not log password-bearing frames unredacted.
+
+When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. The application judges success from the resulting armed/zone state. These delays and the optimistic local state update are application choices, not protocol deadlines or proof that an ACK validates a password.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).
 
 ### Write support
 
@@ -9506,7 +9875,9 @@ Area: `functional`
 
 Section ID: `ownkb:section:d000078:s000001`
 
-`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. The current corpus establishes the namespace and a narrow MyHOME Suite service operation, but not a complete public functional grammar.
+Provenance cues: `specification`
+
+`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. The corpus establishes the namespace, MyHOME Suite service metadata, and historical BTicino touchscreen call and messaging behavior. It does not contain a complete public functional specification.
 
 ### Established implementation evidence
 
@@ -9524,6 +9895,92 @@ Provenance cues: `database`
 
 The template establishes that MyHOME Suite associates a service-identification operation with this system. Because the database does not enumerate the substituted `WHAT` semantics here, it does not justify a `WHAT` table.
 
+### Historical touchscreen call model
+
+Section ID: `ownkb:section:d000078:s000005`
+
+Applicability cues: `gateway`, `scs`
+Uncertainty: `not established`
+Provenance cues: `evidence`
+
+The following forms are implementation evidence from `VideoDoorEntryDevice` and its exact tests at `TS10_1_0_23`. They describe the MyHome_Screen call stack, not guaranteed capabilities of every Video Door Entry gateway. `LOCAL`, `CALLER`, and `TARGET` are addresses in that stack; their full valid domains are not established.
+
+| Operation | Implemented form |
+| --- | --- |
+| Call | `*8*1#KIND#MMTYPE#CALLER*TARGET##` |
+| Answer | `*8*2#KIND#MMTYPE*LOCAL##` |
+| End call | `*8*3#KIND#MMTYPE*4LOCAL##` |
+| Camera autoswitch | `*8*4#LOCAL*TARGET##` |
+| Cycle external units | `*8*6#LOCAL*CALLER##` |
+| Caller-address report, SCS | `*8*9#KIND#MMTYPE*CALLER##` |
+| Open / release lock | `*8*19*TARGET##` / `*8*20*TARGET##` |
+| Stair light ON / OFF | `*8*21*LOCAL##` / `*8*22*LOCAL##` |
+| Call process ready | `*8*37#MODE*LOCAL##` |
+| Re-arm session, SCS | `*8*40#KIND#MMTYPE*CALLER##` |
+| Camera up / down / left / right | `*8*59#PHASE*CALLER##` through `*8*62#PHASE*CALLER##` |
+
+The end-call writer concatenates literal `4` before the local address; it is not a `#4` routing qualifier. For call-process readiness, `MODE` is `1` SCS or `2` IP. Camera movement uses `PHASE = 1` press/start and `2` release/stop. During a call, lock operations target the current caller; otherwise the implementation uses the local address.
+
+| `KIND` base value | Implemented call kind |
+| --- | --- |
+| `1..4` | Entrance panels PE1..PE4 |
+| `5` | Camera autoswitch |
+| `6` / `7` | Internal / external intercom |
+| `13` | Floor call |
+| `14` | Pager call |
+
+Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also treats end-call `MMTYPE = 3` as a stop-video notification in SCS mode. Its fallback classification of other values as audio/video does not establish those values' protocol meanings.
+
+The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
+
+Pager call/answer uses broadcast `WHERE = 4` and includes the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. The library's connected/disconnected state controls which answer/end reports it accepts; those guards are client behavior.
+
+#### Teleloop and local multimedia events
+
+Section ID: `ownkb:section:d000078:s000006`
+
+Provenance cues: `evidence`
+
+| `WHAT` | Implementation meaning / form |
+| --- | --- |
+| `63` / `64` | Silence / restore the local multimedia amplifier; received events |
+| `76` | Start teleloop: `*8*76*LOCAL##` |
+| `77` | Associate teleloop: `*8*77#ID*LOCAL##`; received value identifies the association |
+| `78` | Teleloop timeout event |
+| `79` | Teleloop session event |
+
+The touchscreen application also uses an 11-second association timer. This is separate from receiving `WHAT 78` and does not define a wire-protocol timeout. See [Video Door Entry evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
+
+### Historical Guard Unit messaging
+
+Section ID: `ownkb:section:d000078:s000007`
+
+Uncertainty: `unknown`
+Provenance cues: `evidence`
+
+The same touchscreen stack implements Guard Unit messages under `WHO 8`. This is distinct from the [`WHO 12` Messages namespace](../who-12-messages/).
+
+| Stage | Tested or implemented form |
+| --- | --- |
+| Begin from Guard Unit | `*8*9012#ID*LOCAL#00#GUARD##` |
+| Ready / busy reply | `*8*9013*GUARD#00#LOCAL##` / `*8*9014*GUARD#00#LOCAL##` |
+| Parameter block | `*#8*LOCAL#00#GUARD*#9001*VALUES##` |
+| Message data | `*#8*LOCAL#00#GUARD*#9002*CHAR1*CHAR2*...##` |
+| Checksum | `*8*9017#CHECKSUM*LOCAL#00#GUARD##` |
+| End | `*8*9001*LOCAL#00#GUARD##` |
+| Bad checksum reply | `*8*9015#VALUE*GUARD#00#LOCAL##` |
+| Timeout reply | `*8*9016#COUNT*GUARD#00#LOCAL##` |
+
+`9001` therefore has distinct parameter-write and ordinary end-command roles. The tests preserve the `00` address component and the empty positions within parameter blocks; the complete parameter schema remains unknown.
+
+Data values are decimal 16-bit character codes appended as `QChar` values. The message parser expects U+000E, a timestamp `dd/MM/yy hh:mm`, U+000F, then text. Its test parses `08/03/10 17:32` as 8 March 2010 at 17:32. This establishes the historical application format, not an arbitrary UTF-8 text payload.
+
+The checksum helper splits each 16-bit character into high byte then low byte. For byte sequence `b[0..n-1]`, the low checksum byte is `(1 + sum(b)) mod 256`; the high byte is `(n + sum(i*b[n-i], i=1..n-1)) mod 256`. The result combines high then low byte. Its exact test vector is `Bticino` followed by U+F0E2 -> `0xE49B`. Byte signedness and modulo behavior need care when porting; the formula expresses the modulo-byte result, not a named standard CRC.
+
+Verification uses the rightmost five decimal characters of the received checksum argument. On failure, the receiver replies with that numeric value in `9015`, then clears the pending message before a later end frame can publish it. The rejection argument is therefore not necessarily the begin frame's message ID.
+
+At `TS10_1_0_23`, the receive timer is 5 seconds and a timeout reports the accumulated character count. An active receive answers another begin with busy. Older implementation revisions used a 3-second timer and optional `#8` address components; these are historical variants, not permission to normalize arbitrary addresses. See [Messaging evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
+
 ### Evidence boundary
 
 Section ID: `ownkb:section:d000078:s000003`
@@ -9539,10 +9996,11 @@ Diagnostic traffic belongs to `WHO 1008`; the numeric relationship does not make
 
 Section ID: `ownkb:section:d000078:s000004`
 
+Cautions: `do not`
 Uncertainty: `unknown`
-Provenance cues: `database`, `specification`
+Provenance cues: `specification`
 
-Recognize the namespace, preserve unknown fields losslessly, and label only the address form and generic identification operation established above. Device-specific Video Door Entry behavior requires a canonical specification, a database template with resolved parameters, or observed traffic.
+Decode the historical forms only in the applicable touchscreen context. Preserve other fields losslessly, including unknown call kinds, message parameters, and addresses. Device-specific applicability still requires a resolved implementation, specification, or observed traffic; the historical classes do not establish a universal grammar.
 
 See [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md), [`WHO 6`](../who-6-basic-video-door-entry/), and [`WHO 7`](../who-7-multimedia-video/).
 
@@ -13168,6 +13626,24 @@ OpenWebNet acknowledgement frames do not carry transaction identifiers. Correlat
 
 On a command session, keep at most one unresolved request unless the specific gateway behavior proves that pipelining is supported. On an event session, do not attach an unrelated asynchronous event to a pending command merely because it arrives nearby in time.
 
+#### Ordering across connections
+
+Section ID: `ownkb:section:d000103:s000007`
+
+Provenance cues: `evidence`
+
+Request ordering on one connection does not order operations on another. Historical BTicino clients explicitly handle this: LAN writes are sent immediately and followed by a delayed status read, while energy graph requests are directed through one connection. These are application strategies against observed ordering problems, not protocol timing constants. See [Platform and ordering evidence](../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
+#### Simulator fallback acknowledgements
+
+Section ID: `ownkb:section:d000103:s000008`
+
+Applicability cues: `firmware`, `tcp`
+Cautions: `not evidence`
+Provenance cues: `evidence`
+
+The VDK 2.0 F454 model returns a fallback ACK after a 500 ms timeout for a pending status request, even when no Device result arrived; other unhandled TCP operations receive NACK. Its internal plant-message identifiers are not fields in the wire ACK. This is simulator behavior, not evidence that physical F454 Firmware uses that deadline or acceptance policy. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
 ### Error handling
 
 Section ID: `ownkb:section:d000103:s000005`
@@ -13353,6 +13829,17 @@ The public `WHO 1` material explicitly enumerates all four forms. The public `WH
 The source documents differ in the range they state for the interface field: the Lighting document gives `01..09` and `11..15`, while the Automation document expresses it as `[0-1][1-9]` (`01..09`, `11..19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
 
 Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
+
+#### F422 simulator boundary behavior
+
+Section ID: `ownkb:section:d000104:s000014`
+
+Cautions: `do not`
+Provenance cues: `documentation`, `evidence`
+
+The VDK 2.0 F422 model corroborates local-bus qualification for non-general targets: it matches `BASE#4#I3I4`, removes the qualifier when forwarding onto the subordinate bus, and appends it to returned non-general traffic. ACK/NACK feedback is forwarded without address rewriting.
+
+This model is incomplete: it forwards qualified general target `0` before checking the routing level or interface, and its empty-component splitting does not preserve every group form. Those shortcuts do not establish physical F422 routing behavior or new legal `WHO 2` collective forms. Its configurable interface range is also narrower than the product documentation. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
 
 ### Parsing rules
 
@@ -14214,6 +14701,17 @@ Section ID: `ownkb:section:d000110:s000009`
 Keep protocol values as strings until their field grammar has been identified. This preserves leading zeroes, fixed-width Device IDs, empty fields, routing qualifiers, and encoded values that merely look decimal.
 
 Only the system-specific decoder should expose typed integers, temperatures, durations, masks, or identifiers.
+
+### Historical implementation limits
+
+Section ID: `ownkb:section:d000110:s000011`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
+
+The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
 
 ### Evidence basis
 
@@ -16392,13 +16890,13 @@ Section ID: `ownkb:section:d000121:s000002`
 
 Section ID: `ownkb:section:d000121:s000003`
 
-Applicability cues: `gateway`, `scs`, `tcp`, `version`, `zigbee`
-Cautions: `do not`, `not evidence`
-Provenance cues: `capture`, `evidence`, `source`
+Applicability cues: `firmware`, `gateway`, `version`, `zigbee`
+Cautions: `do not`, `must not`
+Provenance cues: `source`
 
-Prior gateway-identification research has flagged `WHO 13 DIMENSION 20` as an encountered property, but the currently preserved evidence chain does not yet establish its classic SCS/TCP semantics. The canonical classic `WHO_13.pdf` registry does not define it, the ZigBee `WHO 13` registry does not define it, canonical MyHOME Suite `OPEN.db` provides no functional `WHO 13 DIMENSION 20` template, and the preserved F454 and MH202 gateway-information captures examined in the current correction do not contain it.
+Historical BTicino touchscreen source and tests now establish `DIMENSION 20` as a PIC-version read whose first returned value is consumed by the application. The exact report `*#13**20*22*40*05##` is tested; the latter two fields are not decoded. See [Historical Platform Properties](../functional/who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties).
 
-This is a **provenance gap**, not evidence that the property does not exist. Promotion to the functional reference requires the specific canonical source or first-hand capture that establishes the request/response form and payload, followed by semantic corroboration. Do not infer a meaning from diagnostic `DIMENSION 6` microcontroller-version fields or from any numerically similar namespace.
+The remaining questions are the complete payload semantics and support across external gateway models/Firmware. The F454 and MH202 captures examined earlier do not contain it. The public classic registry still does not define it; diagnostic microcontroller-version fields and ZigBee identifiers must not be substituted by numeric analogy.
 
 #### `DIMENSION 40`
 
@@ -16593,10 +17091,10 @@ The routing address `1ES` and the amplifier decomposition `EA` are corroborated 
 
 Section ID: `ownkb:section:d000121:s000021`
 
-Uncertainty: `may`
-Provenance cues: `source`, `specification`
+Uncertainty: `unknown`
+Provenance cues: `evidence`, `source`, `specification`
 
-`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form may be a private mechanism or a published one that has not been located. No examined source contains it. A specification, a Legrand application note, or a stored frame template naming this address would settle its provenance.
+`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form is now corroborated by a historical BTouch emitter and decoder. Its public/private specification status remains unknown. A protocol specification or application note would establish that status; source evidence currently covers environments `1..8` and four-source matrix state, leaving environment `9` unverified.
 
 #### Environment form `#E` in routing
 
@@ -16625,8 +17123,9 @@ Both observed plants have four-input matrices and two-digit amplifier addresses.
 Section ID: `ownkb:section:d000121:s000025`
 
 Applicability cues: `gateway`
+Provenance cues: `source`
 
-One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only.
+One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only. Historical BTouch source proves that clients themselves could emit both dialects by operation, but does not identify the origin of these paired reports.
 
 ### Evidence priorities
 
@@ -16638,7 +17137,7 @@ Provenance cues: `capture`, `database`
 WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.
 The highest-value next observations are:
 
-1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
+1. resolve the remaining `WHO 13 DIMENSION 20` fields and gateway applicability, and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
 2. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
 3. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
 4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
@@ -17983,6 +18482,17 @@ Provenance cues: `evidence`
 
 An acknowledgement and an observed state change answer different questions and should not be collapsed into one success flag.
 
+### Historical touchscreen condition evaluation
+
+Section ID: `ownkb:section:d000129:s000009`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event. Saving a changed condition re-requests Device state; the evaluator adjusts initialization according to whether the old condition was already satisfied.
+
+This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation).
+
 ### Relationship to `OPEN.db`
 
 Section ID: `ownkb:section:d000129:s000008`
@@ -18803,6 +19313,19 @@ This is the strongest single observation, because it is not an inference about a
 
 *Evidence class: observed traffic on one Device emitting two dialects, scoped to plant B's MH200N firmware.*
 
+### Historical implementation evidence
+
+Section ID: `ownkb:section:d000135:s000015`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`, `source`
+
+The preserved BTouch snapshot of 25 February 2008 supplies independent executable evidence. Its matrix interpreter decodes `WHAT 3` and `WHERE >= 111` as environment/source selection; the alarm-clock writer activates `10S` then emits the selected source address plus `10`, `20`, through `80` for affected environments. For source 2 these are `112`, `122`, through `182`. The receive path normalizes routed addresses back to `102`.
+
+The matrix model stores eight environments with source domain `1..4`. It requests `*#16*1000*11##` and decodes eight values in environment order. That request is a historical extension, not a public-source table entry. The application formats individual amplifier addresses with two digits, including `01..09`; this does not resolve single-digit hardware behavior.
+
+Later BTouch versions mix `WHO 16` and `WHO 22` by operation. The September 2009 matrix change removes its older routing-report path; it does not invalidate the older emitted frames or prove that a gateway translates dialects. Pinned source locations and correction commits are recorded in [Sound implementation evidence](../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
 ### Claim records
 
 Section ID: `ownkb:section:d000135:s000009`
@@ -18816,13 +19339,13 @@ Provenance cues: `evidence`, `source`
 
 | Field | Content |
 | --- | --- |
-| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with `E` in `1..9` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
-| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B |
+| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with demonstrated `E` in `1..8` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
+| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B; historical BTouch emitter and decoder |
 | Revision | Plant A: gateway model MH200. Plant B: gateway model MH200N. Firmware not recorded on either |
 | Namespace | `E` is the environment digit shared with amplifier addressing; `S` is the source identifier used by `101`-`109` |
 | Conditions | `E` = `0` does not occur: `10S` is a source device address |
 | Cardinality | one environment to one source; an environment's amplifiers cannot differ |
-| Coverage | environments 1, 2, 3 and 8 observed; sources 1 and 2 observed |
+| Coverage | environments 1..8 in captures/source; sources 1 and 2 observed, 1..4 in the historical model; environment 9 unverified |
 | Supporting evidence | observations 1-4 above |
 | Counterevidence | none observed |
 | Alternatives | `1` + source + environment, rejected by observations 1, 2 and 4 |
@@ -18879,10 +19402,9 @@ Provenance cues: `capture`, `evidence`, `source`
 
 Section ID: `ownkb:section:d000135:s000013`
 
-Uncertainty: `may`
 Provenance cues: `capture`, `source`, `specification`
 
-- **Whether directed selection has a specified form.** The captured address may be a documented private mechanism rather than an undocumented one; no published source examined so far contains it.
+- **Whether directed selection has a published form.** Historical product source now establishes the emitter and decoder. The public specification still does not define it; a published or private protocol specification has not been located.
 - **Environment `0` and the `#E` form.** `WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and what `10S` would mean under it, is untested. No capture uses it.
 - **Base band.** Every routing frame observed uses `WHAT 3` (stereo channel). Whether base-band installations require `WHAT 0` for the same address is untested.
 - **Sources above 4.** `101`-`109` is the specified range; both plants have four-input matrices.

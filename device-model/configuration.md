@@ -283,6 +283,12 @@ For example, a preset position or load-dependent minimum level can have a value 
 
 A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
 
+## F411 simulator configuration
+
+The VDK 2.0 F411 model stores `A`, `PL`, and group separately for each simulated output, with Device mode and bus selection outside those output records. A simulated local click emits `WHO 1` using the output's concatenated `A`/`PL` address. Point, area, group, and general addressing are handled against the configured outputs.
+
+In its `PUL` mode, the model suppresses general/area commands and status responses while still handling point/group targets. These are executable simulator choices; the source does not establish a complete physical F411 configuration or prove equivalence between its output records and MyHOME Suite Modules. Its simplified decoder treats any command other than `WHAT 1` as OFF, which must not be adopted as a protocol rule. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
 ## Sources
 
 Primary configuration evidence comes from [`MHCatalogue.db`](../sources/myhome-suite/3.5.38/databases/), with protocol structure from [`OPEN.db`](../sources/myhome-suite/3.5.38/databases/) and [`OpenQuery.txt`](../sources/myhome-suite/3.5.38/support/). [`rules.db3`](../sources/myhome-suite/3.5.38/databases/) adds selected Temperature Control dependencies. ScenarioDevices and the public protocol documents describe adjacent runtime layers rather than catalogue configuration identity.
