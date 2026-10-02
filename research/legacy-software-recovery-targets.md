@@ -24,3 +24,9 @@ Source origin is not a blocker. Preserve any recoverable byte-perfect copy with 
 | BMVisual | 2.1.21 | Legrand lifecycle | binary still sought |
 
 Regional BTicino support-tree probe (2026-10-02): no live matches were found for explicit filename/version candidates for TiServer 1.0.11, TiWeb 3.0.22, VirtualSwitch 3.0.20, Visual SCS 2.0.1, SCSAction 2.0.1, or SCSActionServer 2.0.6. Do not repeat the same path-guess matrix unchanged.
+
+Recovered from the pollai.at MyHome preservation mirror on 2026-10-02:
+- `TouchScreen35_060011.fwz` - L/H4684 firmware 6.0.11.
+- `TiDisplayColorIP_060114.exe` - TiDisplayColorIP 6.1.14.
+- `MyHOME_Suite_030519.exe` - MyHOME Suite 3.5.19.
+These are preserved with third-party-mirror provenance; source origin is not a blocker under the recovery policy.

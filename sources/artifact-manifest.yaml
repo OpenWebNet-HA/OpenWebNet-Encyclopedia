@@ -3480,3 +3480,39 @@ artifacts:
   language:
   - en
   language_evidence: document-language
+- id: document-sha256-d5877a45af9e65f2
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BTicino My Home Technical Guide 2008
+  media_type: application/pdf
+  filename: Bticino_MyHome_Technical_Guide_08.pdf
+  size: 15553287
+  sha256: d5877a45af9e65f2ce1833a51f054664096837ac407168d2facfc35e4e34d4b1
+  source_url: https://www.pollai.at/download/blog/2022-12-10_BTicino_Software_Configuration/Bticino_MyHome_Technical_Guide_08.pdf
+  provenance_note: Recovered from a long-lived third-party MyHome preservation mirror; publisher attribution derives from document content.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d5/87/d5877a45af9e65f2ce1833a51f054664096837ac407168d2facfc35e4e34d4b1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d5/87/d5877a45af9e65f2ce1833a51f054664096837ac407168d2facfc35e4e34d4b1.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-913494a1bd9c5f5b
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: TiDisplayColorIP Software Manual
+  media_type: application/pdf
+  filename: Bticino_TiDisplayColorIP_Software_Manual.pdf
+  size: 25314529
+  sha256: 913494a1bd9c5f5b555d73d57a52e4b00279156912d3595b4e0efad7d99fc9cf
+  source_url: https://www.pollai.at/download/blog/2022-12-10_BTicino_Software_Configuration/Bticino_TiDisplayColorIP_Software_Manual.pdf
+  provenance_note: Recovered from a long-lived third-party MyHome preservation mirror; publisher attribution derives from document content.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/91/34/913494a1bd9c5f5b555d73d57a52e4b00279156912d3595b4e0efad7d99fc9cf.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/91/34/913494a1bd9c5f5b555d73d57a52e4b00279156912d3595b4e0efad7d99fc9cf.pdf
+  language:
+  - en
+  language_evidence: document-language
