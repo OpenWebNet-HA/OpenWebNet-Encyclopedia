@@ -2895,3 +2895,71 @@ artifacts:
   language:
   - fr
   language_evidence: filename-and-document-language
+- id: document-sha256-59fd13ecb7e2c288
+  kind: documentation
+  publisher: Legrand
+  title: Industry 4.0 and IoT: A Language for the Interoperability
+  media_type: application/pdf
+  filename: presentazione_santini.pdf
+  size: 1549532
+  sha256: 59fd13ecb7e2c28895834d809a54f89b6116e1a79df761d6f61edace2709e91d
+  source_url: https://www.confindustriavarese.it/web_v3/agenda.nsf/be0cf5e60d71717ec125717e002b2f68/3ebf9375c3794e82c1257f6f0045ae90/$FILE/presentazione_santini.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/59/fd/59fd13ecb7e2c28895834d809a54f89b6116e1a79df761d6f61edace2709e91d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/59/fd/59fd13ecb7e2c28895834d809a54f89b6116e1a79df761d6f61edace2709e91d.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-2fadfc539a7b0d75
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F459 instruction sheet
+  media_type: application/pdf
+  filename: LE08115AD.pdf
+  size: 659267
+  sha256: 2fadfc539a7b0d75f0c9ae73082333500889f01bf47cb2025088a0a6d5aea35a
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=LE08115AD.pdf&fileId=58107.23188.26056.26532
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/ad/2fadfc539a7b0d75f0c9ae73082333500889f01bf47cb2025088a0a6d5aea35a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/ad/2fadfc539a7b0d75f0c9ae73082333500889f01bf47cb2025088a0a6d5aea35a.pdf
+  language:
+  - multi
+  language_evidence: document-language
+- id: document-sha256-7a767d2e4a8cea74
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F459 / 003549 Installation Manual
+  media_type: application/pdf
+  filename: RA00147AA_I_IT.pdf
+  size: 12182263
+  sha256: 7a767d2e4a8cea7490a71cb8d70a0acd8f9f1103dee3570e4cd11f670e3b687d
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=RA00147AA_I_IT.pdf&fileId=58107.23188.16324.47989
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7a/76/7a767d2e4a8cea7490a71cb8d70a0acd8f9f1103dee3570e4cd11f670e3b687d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7a/76/7a767d2e4a8cea7490a71cb8d70a0acd8f9f1103dee3570e4cd11f670e3b687d.pdf
+  language:
+  - it
+  language_evidence: document-language
+- id: document-sha256-e9f2e0158534088a
+  kind: documentation
+  publisher: Legrand / BTicino
+  title: 3504 Kit Virtual Configurator - User guide
+  media_type: application/pdf
+  filename: O1862C.pdf
+  size: 5420181
+  sha256: e9f2e0158534088a0bf235597f7d7c00be462fb3afdc23b8df666c02efb8d880
+  source_url: https://assets.legrand.com/general/mediagrp/np-ft-gt/o1862c.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e9/f2/e9f2e0158534088a0bf235597f7d7c00be462fb3afdc23b8df666c02efb8d880.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e9/f2/e9f2e0158534088a0bf235597f7d7c00be462fb3afdc23b8df666c02efb8d880.pdf
+  language:
+  - multi
+  language_evidence: document-language
