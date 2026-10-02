@@ -4,11 +4,18 @@ This file tracks people-linked discovery pivots only when they lead to OpenWebNe
 
 ## Lorenzo Pini
 
-- BTicino/Legrand engineer; named author of the 2008 WHO 5 Burglar Alarm material.
+- BTicino/Legrand engineer; named PDF author of WHO 5 Burglar Alarm, WHO 25 Dry Contact / IR State Functions, and the L4686SDK WHO 6 document.
 - Presenter of `OpenWebNet Training India, March 2009`.
 - Federico Degrandis explicitly credits Lorenzo Pini and Alessandro Bragazzi for technical advice and review of his 2010 MyHOME/OpenWebNet article series.
 - Pini's professional history also links him to the launch/support of a third-party MyHOME integration product by Maurizio Meringolo/Sirinfo. This led to the still-published Domo Innovation MyHOME Discovery Tool and RTI Driver material.
 - High-value unresolved target: original bytes of the 2009 training presentation.
+
+## Valerio Gaffuri
+
+- Named PDF author of the 2006 legacy load-control specification preserved as `WHO_3.pdf` (`OpenWebNet_Community_6_powermanagement_v1_0_0_EN`).
+- Named PDF author of the source document behind `WHO_24.pdf` (`Who_24_eng_PUBBLIC.doc`).
+- Public BTicino project history aligns directly with those families: Scenario Scheduler (2007-2009) and Lighting Management (2009-2012).
+- High-value search pivots: legacy load-control revisions, Lighting Management protocol drafts, Scenario Scheduler / MH200 engineering material, and any MyOpen contributions under his name.
 
 ## Stefano Tomasina
 
