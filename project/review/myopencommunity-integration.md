@@ -162,7 +162,7 @@ The full impact review includes the changed documents and their transitive recor
 
 The final human-page and generated-artifact diff review checks scope, duplicate reference material, and lossless frame syntax. The new sound-dialect/decoder advisory candidates are explicitly implementation-scoped; repeated frame/range candidates retain canonical reference or corroboration context. All 64 pinned archive file/commit links resolve in the preserved Git histories; the style check verifies local destinations and heading anchors.
 
-The canonical-source audit cannot complete in this environment: `/usr/local/sbin/openwebnet-r2-data-fetch` is unavailable. It cannot retrieve the existing private-archive copies of `MHCatalogue.db`, `OPEN.db`, both ScenarioDevices databases, `rules.db3`, or `OpenQuery.txt`, so their fresh fingerprint/integrity checks remain unverified. The external artifact manifest passes its own verification. No audit rule, source fingerprint, or archive policy is changed to hide this limitation.
+The initial canonical-source audit was blocked by the unavailable `/usr/local/sbin/openwebnet-r2-data-fetch` helper. After the local archive setup was restored and its `rclone` dependency installed, the audit passed: all six private artifacts matched their recorded SHA-256 and size, all five SQLite databases returned integrity `ok`, and the evidence probes completed without failures. The completion result is recorded in the [Source Reassessment validation](myopencommunity-reassessment.md#validation). No audit rule, source fingerprint, or archive policy was changed.
 
 | Validation | Result |
 | --- | --- |
@@ -177,6 +177,6 @@ The canonical-source audit cannot complete in this environment: `/usr/local/sbin
 | Advisory epistemic review | Reviewed against baseline and source; no new unqualified protocol promotion |
 | Local links, heading anchors, pinned archive references | Pass |
 | Complete diff, stable-ID retention, and whitespace review | Pass |
-| Canonical-source audit | Incomplete/failing because the configured private-archive fetch helper is unavailable, as detailed above |
+| Canonical-source audit | Pass after local archive access was restored; six private fingerprints/sizes verified, five SQLite integrity checks `ok`, no probe failures |
 
-Historical Qt assertions were inspected as evidence, not reported as rebuilt or hardware-executed tests. The source-audit limitation remains a separate prerequisite for a fully passing source-integrity run.
+Historical Qt assertions were inspected as evidence during this first pass, not reported as rebuilt or hardware-executed tests. The subsequent Source Reassessment documents the separately executed targeted matcher harness. The source-audit prerequisite is now satisfied.
