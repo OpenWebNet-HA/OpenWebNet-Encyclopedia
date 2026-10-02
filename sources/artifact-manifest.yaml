@@ -2963,3 +2963,21 @@ artifacts:
   language:
   - multi
   language_evidence: document-language
+- id: document-sha256-165eb5c741960a8b
+  kind: documentation
+  publisher: Legrand / BTicino
+  title: Virtual Configurator software manual
+  media_type: application/pdf
+  filename: virtual_configurator-09-2011.pdf
+  size: 10613029
+  sha256: 165eb5c741960a8b304a8ceda59c2c3622734cced5a71fa64288f6e4457c2b0b
+  source_url: https://assets.legrand.com/general/mediagrp/np-ft-gt/virtual_configurator-09-2011.pdf
+  source_date: '2011-09'
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/5e/165eb5c741960a8b304a8ceda59c2c3622734cced5a71fa64288f6e4457c2b0b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/5e/165eb5c741960a8b304a8ceda59c2c3622734cced5a71fa64288f6e4457c2b0b.pdf
+  language:
+  - fr
+  language_evidence: document-language
