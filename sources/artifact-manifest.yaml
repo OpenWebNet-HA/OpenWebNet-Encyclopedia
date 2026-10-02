@@ -2858,3 +2858,22 @@ artifacts:
   language:
   - en
   language_evidence: document-language
+- id: document-sha256-048b76f7013a36ba
+  kind: documentation
+  publisher: BTicino
+  title: TiMH200 user manual - Version 1.0
+  media_type: application/pdf
+  filename: TiMH200_FR_STAMPA.pdf
+  size: 13212504
+  sha256: 048b76f7013a36ba712400527a3add992eada403d28591458c55b9b0c0b85c50
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MH200/Version%201/TiMH200_FR%20STAMPA.pdf
+  source_version: '1.0'
+  source_date: '2005'
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/04/8b/048b76f7013a36ba712400527a3add992eada403d28591458c55b9b0c0b85c50.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/04/8b/048b76f7013a36ba712400527a3add992eada403d28591458c55b9b0c0b85c50.pdf
+  language:
+  - fr
+  language_evidence: filename-and-document-language

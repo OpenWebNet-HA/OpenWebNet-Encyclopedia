@@ -34,3 +34,10 @@ Two first-party F459 documents were recovered from BTicino and archived:
 - `RA00147AA_I_EN.pdf` - 48-page F459 / 003549 Installation Manual.
 
 The installation manual explicitly documents the OPEN password, optional HMAC authentication, trusted-IP ranges, and MyHOME/SCS integration. It is supporting gateway/configuration evidence rather than a replacement for the protocol specifications.
+
+
+## Historical TiMH200 revision
+
+`TiMH200_FR_STAMPA.pdf` version 1.0 (2005) was recovered from BTicino's support archive and preserved. The later version 2.0 bytes were already present in the artifact corpus as `TiMH200_FR.pdf`.
+
+Version 1 documents the early MH200 Scenario Scheduler configuration workflow and firmware-update tooling. Version 2 later added Ethernet/remote configuration and OPEN-password related controls, so retaining both revisions is useful for historical implementation comparison.
