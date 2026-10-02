@@ -6,7 +6,7 @@ on:
     branches: [main, machine-knowledge-base]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   machine-kb:
     runs-on: ubuntu-latest
@@ -25,3 +25,50 @@ jobs:
           git diff --exit-code -- knowledge
       - name: Deterministic integrity, claims, and privacy
         run: python check.py
+
+  publish-0-1-2:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+          repo = os.environ["GITHUB_REPOSITORY"]
+          url = f"https://api.github.com/repos/{repo}/releases"
+          body = """OpenWebNet Machine KB 0.1.2 is the clean post-migration baseline.
+
+The previous 0.1.0 and 0.1.1 releases and tags were withdrawn after the documentation binaries they referenced were migrated out of Git history to the OpenWebNet archive on Cloudflare R2. Those older tags kept the migrated PDF objects reachable in the repository, preventing the repository storage cleanup from taking effect.
+
+No Machine KB content was intentionally rolled back by this cleanup. Version 0.1.2 points to the cleaned repository state, while document provenance, hashes, and archive references remain preserved in repository metadata."""
+          payload = {
+              "tag_name": "machine-kb-v0.1.2",
+              "name": "OpenWebNet Machine KB 0.1.2",
+              "body": body,
+              "draft": False,
+              "prerelease": False,
+              "make_latest": "true",
+          }
+          req = urllib.request.Request(
+              url,
+              data=json.dumps(payload).encode(),
+              method="POST",
+              headers={
+                  "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
+                  "Accept": "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+                  "Content-Type": "application/json",
+              },
+          )
+          try:
+              with urllib.request.urlopen(req) as r:
+                  print(r.read().decode())
+          except urllib.error.HTTPError as e:
+              data=e.read().decode()
+              print(data)
+              if e.code == 422 and "already_exists" in data:
+                  raise SystemExit(0)
+              raise
+          PY
