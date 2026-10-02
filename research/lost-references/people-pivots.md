@@ -9,6 +9,7 @@ This file tracks people-linked discovery pivots only when they lead to OpenWebNe
 - Federico Degrandis explicitly credits Lorenzo Pini and Alessandro Bragazzi for technical advice and review of his 2010 MyHOME/OpenWebNet article series.
 - Pini's professional history also links him to the launch/support of a third-party MyHOME integration product by Maurizio Meringolo/Sirinfo. This led to the still-published Domo Innovation MyHOME Discovery Tool and RTI Driver material.
 - High-value unresolved target: original bytes of the 2009 training presentation.
+- Recovered a second Pini-authored BTicino presentation: `1_Bticino.pdf`, 41 pages, created 2014-10-31, covering MyHOME openness, Open Web Net, MyOpen/HomeLab, and Driver Manager integration.
 
 ## Valerio Gaffuri
 

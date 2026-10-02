@@ -2802,3 +2802,25 @@ artifacts:
   language:
   - en
   language_evidence: document-language
+- id: document-sha256-3f5c3fca8bb86073
+  kind: documentation
+  publisher: BTicino
+  title: My Home - Seminari Tecnici
+  author: Lorenzo Pini
+  media_type: application/pdf
+  filename: 1_Bticino.pdf
+  size: 5057530
+  sha256: 3f5c3fca8bb860734a8df09cb1da389ac658e4f76ce44c37caefbe7854ce4a23
+  source_url: https://www.luceforum.com/fm/upload/Save14/1_Bticino.pdf
+  source_date: '2014-10-31'
+  acquisition:
+    source_class: third-party-hosted-publisher-presentation
+    issuer_original_byte_identity: unverified
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/5c/3f5c3fca8bb860734a8df09cb1da389ac658e4f76ce44c37caefbe7854ce4a23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/5c/3f5c3fca8bb860734a8df09cb1da389ac658e4f76ce44c37caefbe7854ce4a23.pdf
+  language:
+  - it
+  language_evidence: document-language
