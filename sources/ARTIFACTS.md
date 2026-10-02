@@ -35,3 +35,19 @@ Historical Git locations are recorded only when an artifact was actually tracked
 openwebnet-data and openwebnet-software remain private by default. Public metadata preserves exact identity and provenance without making OpenWebNet-HA a redistribution mirror for vendor data, installers, or firmware.
 
 Firmware version labels are retained exactly as established by publisher metadata or filenames. They are not normalized into semantic versions unless independent evidence establishes that interpretation.
+
+## Registering a newly archived artifact
+
+Artifact registration is intentionally independent of documentation and research branches. The server keeps a dedicated worktree at:
+
+    /workspace/worktrees/github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/artifact-registry
+
+That worktree tracks main. New archive metadata is registered there so the authoritative inventory does not wait for an unrelated feature branch to merge.
+
+Prepare a JSON descriptor containing one artifact record, then run:
+
+    project/tools/register_artifact_on_main.sh /path/to/artifact.json "Register <artifact>"
+
+register_artifact.py derives the content-addressed object key when omitted, rejects duplicate IDs or SHA-256 byte identities, inserts the record without reserializing the rest of the YAML document, runs the artifact-manifest validator, and checks the diff for whitespace errors. The main-worktree wrapper additionally requires a clean main, fast-forwards it from origin/main, stages only sources/artifact-manifest.yaml, commits, and pushes main.
+
+The upload helper remains responsible for proving that the exact bytes exist in the appropriate R2 bucket. Registration records that verified result; it does not upload bytes itself.
