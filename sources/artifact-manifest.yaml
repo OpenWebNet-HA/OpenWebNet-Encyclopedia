@@ -3424,3 +3424,41 @@ artifacts:
   language:
   - en
   language_evidence: filename
+- id: document-sha256-d5572cde7cf23169
+  kind: documentation
+  publisher: BTicino SpA
+  author: Laura Perron; Danilo Bernasconi; Enrico Valtolina
+  title: Configuration Method for Device with Virtual Configurators
+  media_type: application/pdf
+  filename: US20090132068A1.pdf
+  size: 404853
+  sha256: d5572cde7cf231695bd7328a5028c69f167a60479759b00197a46c93d9483cba
+  source_url: https://patentimages.storage.googleapis.com/e0/dd/0f/e1187c2495cf01/US20090132068A1.pdf
+  provenance_note: Patent publication preserved as first-party technical evidence for BTicino home-automation architecture.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d5/57/d5572cde7cf231695bd7328a5028c69f167a60479759b00197a46c93d9483cba.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d5/57/d5572cde7cf231695bd7328a5028c69f167a60479759b00197a46c93d9483cba.pdf
+  language:
+  - en
+  language_evidence: document-language
+- id: document-sha256-a32d21c226e364af
+  kind: documentation
+  publisher: BTicino SpA
+  author: Ernesto Santini
+  title: Integrated switching central comprising telephone, interphone and environment monitoring functions, in modular form
+  media_type: application/pdf
+  filename: FR2729809A3.pdf
+  size: 461058
+  sha256: a32d21c226e364af16c771582ad1aa5fd93f2432887ae99ca080e66b2319fd42
+  source_url: https://patentimages.storage.googleapis.com/67/6c/97/845fbe65030114/FR2729809A3.pdf
+  provenance_note: Patent publication preserved as first-party technical evidence for BTicino home-automation architecture.
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/2d/a32d21c226e364af16c771582ad1aa5fd93f2432887ae99ca080e66b2319fd42.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/2d/a32d21c226e364af16c771582ad1aa5fd93f2432887ae99ca080e66b2319fd42.pdf
+  language:
+  - fr
+  language_evidence: document-language
