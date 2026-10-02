@@ -3097,3 +3097,278 @@ artifacts:
     visibility: private
   redistribution_status: private-archive-only
   provenance_note: Recovered independently twice; both copies were byte-identical. Legrand lifecycle metadata identifies 2.3.13 as the final BTicino release.
+- id: software-tif453-2-0-33
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453
+  product_version: '2.0.33'
+  filename: TiF453_2_0_33.zip
+  size: 31957257
+  sha256: 51c42aa82a5841c4ae29ce98a9b7ace8996717d8e99966637dec5b5f53eca4a4
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/Tif453/TiF453_2_0_33.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/51/c4/51c42aa82a5841c4ae29ce98a9b7ace8996717d8e99966637dec5b5f53eca4a4
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Final BTicino TiF453 release per Legrand lifecycle metadata.
+- id: software-tif453av-3-0-67
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453AV
+  product_version: '3.0.67'
+  filename: TiF453AV_3_0_67.zip
+  size: 34414152
+  sha256: 32c8743d019c63eff7605e79142367342079d5e00f58386be3f851fcae7dba20
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/TiF453AV_3_0_67.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/32/c8/32c8743d019c63eff7605e79142367342079d5e00f58386be3f851fcae7dba20
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Final BTicino TiF453AV release per Legrand lifecycle metadata.
+- id: software-tif427-010034
+  kind: software-installer
+  publisher: BTicino
+  product: TiF427
+  product_version: '010034'
+  filename: TiF427_010034.zip
+  size: 8802578
+  sha256: 6fb9979388157e86da3f6ac5dd8cfb7f6f33df3dac67a4dc925e2863a03f136b
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF427/TiF427_010034.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/6f/b9/6fb9979388157e86da3f6ac5dd8cfb7f6f33df3dac67a4dc925e2863a03f136b
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy BTicino archive labels this TiF427_010034; current lifecycle table reports TiF427 latest version 1.0.21, so the numbering relationship remains unresolved.
+- id: software-supervisiongadget-win-2-0-93
+  kind: software-installer
+  publisher: BTicino
+  product: SupervisionGadget
+  product_version: '2.0.93'
+  filename: SupervisionGadget_vers_020093_WIN.zip
+  size: 36168075
+  sha256: 3c8ff9b221d09886f019aaceff5a2fb4f74a7809834efe72cb476557e550184e
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/Software-en-schemas/software-mei-2013/supervision/SupervisionGadget_vers_020093_WIN.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/3c/8f/3c8ff9b221d09886f019aaceff5a2fb4f74a7809834efe72cb476557e550184e
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Windows release; final version per Legrand lifecycle metadata.
+- id: software-supervisiongadget-mac-2-0-93
+  kind: software-installer
+  publisher: BTicino
+  product: SupervisionGadget
+  product_version: '2.0.93'
+  filename: SupervisionGadget_020093-MAC.zip
+  size: 56120070
+  sha256: b22c7881950e2a72fefabbbe8efd670bfd0f9a572df0d9928535aaf538d0ecc9
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/Software-en-schemas/software-mei-2013/supervision/SupervisionGadget_020093-MAC.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/b2/2c/b22c7881950e2a72fefabbbe8efd670bfd0f9a572df0d9928535aaf538d0ecc9
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: macOS release; final version per Legrand lifecycle metadata.
+- id: software-mhvisual-6-bundle
+  kind: software-installer
+  publisher: BTicino
+  product: MHVisual
+  product_version: '6.x'
+  filename: MHVisual_6.zip
+  size: 65457080
+  sha256: deb2867469ad5bb3c5425f39194372e9987ab04a74d86a7d9b9e868bebaba41a
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MHVisual/MHVisual%206/MHVisual%206.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/de/b2/deb2867469ad5bb3c5425f39194372e9987ab04a74d86a7d9b9e868bebaba41a
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy bundle contains MHVisual_060187.exe and MHVisual_6048.exe.
+- id: software-mhvisual-7
+  kind: software-installer
+  publisher: BTicino
+  product: MHVisual
+  product_version: '7.x'
+  filename: MHVisual_7.zip
+  size: 41600179
+  sha256: 98da3f673ce1baf0a643b4026ff5a26bd28e057e52741a870e66ac51f9aa85a1
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MHVisual/MHVisual%207/MHVisual.exe.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/98/da/98da3f673ce1baf0a643b4026ff5a26bd28e057e52741a870e66ac51f9aa85a1
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy MHVisual 7 bundle.
+- id: software-mhvisual-8-0-47
+  kind: software-installer
+  publisher: BTicino
+  product: MHVisual
+  product_version: '8.0.47'
+  filename: MHVisual_080047.zip
+  size: 48288277
+  sha256: c0fb74a7d7806eec63e0142fac4281aef3fcda5276b7434eae83f4310b30dec0
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MHVisual/MHVisual_vers_080047.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/c0/fb/c0fb74a7d7806eec63e0142fac4281aef3fcda5276b7434eae83f4310b30dec0
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Historical MHVisual 8.0.47 release.
+- id: software-virtualconfigurator-pc
+  kind: software-installer
+  publisher: BTicino
+  product: VirtualConfigurator
+  product_version: '1.x PC'
+  filename: VirtualConfiguratorPC.zip
+  size: 38240501
+  sha256: ceef10695de7d30d80b97bed0e93fc3b6baa937c07b253e820e24438bf499b23
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/Software-en-schemas/software-mei-2013/virtual%20config/VirtualConfiguratorPC.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/ce/ef/ceef10695de7d30d80b97bed0e93fc3b6baa937c07b253e820e24438bf499b23
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Archive contains VirtualConfigurator10.exe dated 2008-03-05.
+- id: software-virtualconfigurator-palmare-1-2-0
+  kind: software-installer
+  publisher: BTicino
+  product: VirtualConfigurator
+  product_version: '1.2.0 PALMARE'
+  filename: VirtualConfiguratorPALMARE.zip
+  size: 66501100
+  sha256: 608006b02304b3445ba5551bd4e2887a018d71b9609ce2652e04bf88715f26df
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/Software-en-schemas/software-mei-2013/virtual%20config/VirtualConfiguratorPALMARE.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/60/80/608006b02304b3445ba5551bd4e2887a018d71b9609ce2652e04bf88715f26df
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Archive contains VirtualConfiguratorSetup_V1_2_0_BT.exe dated 2008-04-07.
+- id: software-tif453-1-0-22
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453
+  product_version: '1.0.22'
+  filename: TiF453_1_0_22.zip
+  size: 26574225
+  sha256: 88110c366df79803d2c45184d2df26763f78b6659bb574a142adf024bbf44b9f
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/Tif453/Tif453%20v1_0_22/Version%201_0_22.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/88/11/88110c366df79803d2c45184d2df26763f78b6659bb574a142adf024bbf44b9f
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy bundle includes TiF453.exe and WS_6DIN_010004.fwz.
+- id: software-tif453-2-0-29
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453
+  product_version: '2.0.29'
+  filename: TiF453_2_0_29.zip
+  size: 43935710
+  sha256: f40d52c16668c3946d559c6bda2067398ec8f8dec46e11c05f6aeec9d651cb3f
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/Tif453/TiF453%20vers_2_0_29/Version%202_0_29.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/f4/0d/f40d52c16668c3946d559c6bda2067398ec8f8dec46e11c05f6aeec9d651cb3f
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy bundle includes TiF45320.exe and WS_6DIN_020007.fwz.
+- id: software-tif453av-1-0-32
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453AV
+  product_version: '1.0.32'
+  filename: TiF453AV_1_0_32.zip
+  size: 15122036
+  sha256: 0254b098c74dc6a9ed6c1f06d8201ae40378299fa3fdff64c0100b54e88caf77
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/Version%201_0_32/TiF453AV.exe.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/02/54/0254b098c74dc6a9ed6c1f06d8201ae40378299fa3fdff64c0100b54e88caf77
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Historical TiF453AV release.
+- id: software-tif453av-2-0-48
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453AV
+  product_version: '2.0.48'
+  filename: TiF453AV_2_0_48.zip
+  size: 27826903
+  sha256: 7f2369a13348e3b093c5deda9ce80df08d58c9e62ba73d904fa4cf9d9251fb82
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/Version%202_0_48/Version_2_0_48.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/7f/23/7f2369a13348e3b093c5deda9ce80df08d58c9e62ba73d904fa4cf9d9251fb82
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy bundle includes TiF453AV.exe and WS_10DIN_020107.fwz.
+- id: software-tif453av-3-0-62
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453AV
+  product_version: '3.0.62'
+  filename: TiF453AV_3_0_62.zip
+  size: 50603364
+  sha256: b4ff2e334c8f16928d6753bf33709ff7954c7cc6b5abd80232e747df4aa389b5
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/Version%203_0_62/Version_3_0_62.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/b4/ff/b4ff2e334c8f16928d6753bf33709ff7954c7cc6b5abd80232e747df4aa389b5
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Legacy bundle includes TiF453AV30.exe and WS_10DIN_030010.fwz.
+- id: software-tif453av-3-0-64
+  kind: software-installer
+  publisher: BTicino
+  product: TiF453AV
+  product_version: '3.0.64'
+  filename: TiF453AV_3_0_64.zip
+  size: 53041145
+  sha256: 94f2392539c9c506bcb964e29615725e25efb6f509d619d14bf20335a4b2d43c
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/My%20Home/TiF453AV/Version%203_0_64/Version_3_0_64.zip
+  media_type: application/zip
+  storage:
+    bucket: openwebnet-software
+    object_key: sha256/94/f2/94f2392539c9c506bcb964e29615725e25efb6f509d619d14bf20335a4b2d43c
+    visibility: private
+  redistribution_status: private-archive-only
+  provenance_note: Bundle includes firmware 03-00-11, English software manual, and TiF453AV 3.0.64.
+- id: document-sha256-dcb09b93d14992c2
+  kind: documentation
+  publisher: BTicino / Legrand
+  author: Enrico Valtolina
+  title: Internet of Things e Interoperabilità negli edifici
+  media_type: application/pdf
+  filename: 07_EnricoValtolina_BTicino.pdf
+  size: 1004531
+  sha256: dcb09b93d14992c2c4713f92174d0ba5c21de92a1e7a89b25bae65869ee1bc19
+  source_url: https://theinnovationgroup.it/wp-content/uploads/2015/06/07_EnricoValtolina_BTicino.pdf
+  source_date: '2015-06-11'
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/dc/b0/dcb09b93d14992c2c4713f92174d0ba5c21de92a1e7a89b25bae65869ee1bc19.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/dc/b0/dcb09b93d14992c2c4713f92174d0ba5c21de92a1e7a89b25bae65869ee1bc19.pdf
+  language:
+  - it
+  language_evidence: document-language

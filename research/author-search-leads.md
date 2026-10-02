@@ -31,3 +31,9 @@ Named first-party BTicino/Legrand authors, presenters, and closely related prese
 - Patent explicitly describes two-wire SCS, physical-versus-virtual configurator coexistence, PDA/PC configuration, device discovery, diagnostics, remote/offline reconfiguration, and an OPEN-SCS gateway.
 - Strong first-party engineering pivots for the Virtual Configurator / virtual-configuration research thread.
 
+## Enrico Valtolina - 2015 IoT/interoperability presentation
+
+- Recovered `07_EnricoValtolina_BTicino.pdf` - "Internet of Things e Interoperabilità negli edifici", 11 June 2015.
+- Presenter identified in-document as Enrico Valtolina, Innovation & System Department - Legrand Group.
+- Public archive SHA-256: `dcb09b93d14992c2c4713f92174d0ba5c21de92a1e7a89b25bae65869ee1bc19`.
+
