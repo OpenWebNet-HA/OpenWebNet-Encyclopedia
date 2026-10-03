@@ -2619,20 +2619,24 @@ items:
     notes:
     - '2026-10-03: OWN-DEV-0105 created from next priority-sorted queue cluster 1680. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 3 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1681':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0106
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0106 created from next priority queue cluster 1681. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 5 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '1683':
     state: unreviewed
     priority: normal
@@ -2811,20 +2815,24 @@ items:
     blockers: []
     notes: []
   '1809':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0107
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0107 created from next priority queue cluster 1809. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 3 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '1812':
     state: unreviewed
     priority: normal
@@ -3163,20 +3171,24 @@ items:
     blockers: []
     notes: []
   '2134':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0108
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0108 created from next priority queue cluster 2134. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 5 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '2147':
     state: unreviewed
     priority: normal
@@ -3334,35 +3346,43 @@ items:
     blockers: []
     notes: []
   '2242':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0109
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0109 created from next priority queue cluster 2242. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 7 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '2243':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0110
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0110 created from next priority queue cluster 2243. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 1 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Exact-product evidence absent for all three commercial candidates; current 67584 is an Art Epure control and is retained only as conflict evidence. Physical ratings remain unknown. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '2245':
     state: unreviewed
     priority: normal

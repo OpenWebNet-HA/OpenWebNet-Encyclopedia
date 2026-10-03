@@ -15,3 +15,5 @@
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Lighting, automation, scenario, AUX, sound and door-entry command roles |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
+| [OWN-DEV-0107](../definitions/own-dev-0107-legrand-multimedia-touch-screen.md) | `067285`, `573963`, `573962` | Legrand Multimedia Touch Screen | Multimedia, scenarios, lighting, temperature, alarm and video-entry interface |
+| [OWN-DEV-0110](../definitions/own-dev-0110-two-module-myhome-unified-control.md) | `H4652M2`, `LN4652M2`, `067584` | Two-module MYHOME unified control | Catalogue-defined two command Modules and separate UI; commercial candidates unconfirmed |

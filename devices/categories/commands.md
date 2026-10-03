@@ -14,3 +14,5 @@
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Six independently configurable multifunction command positions |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0104](../definitions/own-dev-0104-do-not-disturb-make-up-room-control.md) | `H4653`, `LN4653`, `067593` | Do Not Disturb / Make Up Room control | Inside-room DND/MUR control and local LED status/brightness |
+| [OWN-DEV-0106](../definitions/own-dev-0106-rfid-reader-and-outside-door-indicator.md) | `H4651`, `LN4651`, `067591` | RFID reader and outside-door DND/MUR indicator | RFID card access, outside-room status/doorbell and lot-scoped visual alarm |
+| [OWN-DEV-0110](../definitions/own-dev-0110-two-module-myhome-unified-control.md) | `H4652M2`, `LN4652M2`, `067584` | Two-module MYHOME unified control | Catalogue-defined two command Modules and separate UI; commercial candidates unconfirmed |

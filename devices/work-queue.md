@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 105 |
+| unreviewed | 100 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 105 |
+| review-ready | 110 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,11 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 1681 | DO NOT DISTURB-MAKE UP ROOM reader | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1809 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2134 | CLASSE300 V13E/M | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2242 | Add-on SCS thermostat | 3 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2243 | Comando unico MYHOME 2 moduli | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2245 |  Comando unico MYHOME 3 moduli | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2247 | Comando-Attuatore MYHOME Luci  | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2248 | Comando-Attuatore MYHOME Tapparelle | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -182,6 +177,11 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1678 | 8 scenarios control | 3 | review-ready | OWN-DEV-0103 | partial | complete | complete | pending | - |
 | normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | review-ready | OWN-DEV-0104 | partial | complete | complete | pending | - |
 | normal | 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | 3 | review-ready | OWN-DEV-0105 | partial | complete | complete | pending | - |
+| normal | 1681 | DO NOT DISTURB-MAKE UP ROOM reader | 3 | review-ready | OWN-DEV-0106 | partial | complete | complete | pending | - |
+| normal | 1809 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0107 | partial | complete | complete | pending | - |
+| normal | 2134 | CLASSE300 V13E/M | 3 | review-ready | OWN-DEV-0108 | partial | complete | complete | pending | - |
+| normal | 2242 | Add-on SCS thermostat | 3 | review-ready | OWN-DEV-0109 | partial | complete | complete | pending | - |
+| normal | 2243 | Comando unico MYHOME 2 moduli | 3 | review-ready | OWN-DEV-0110 | partial | complete | complete | pending | - |
 | normal | 45 | PIR ceiling mounted sensor | 2 | review-ready | OWN-DEV-0051 | complete | complete | complete | pending | - |
 | normal | 47 | Ballast DIN dimmer 0-10 V | 2 | review-ready | OWN-DEV-0052 | complete | complete | complete | pending | - |
 | normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | review-ready | OWN-DEV-0053 | complete | complete | complete | pending | - |
