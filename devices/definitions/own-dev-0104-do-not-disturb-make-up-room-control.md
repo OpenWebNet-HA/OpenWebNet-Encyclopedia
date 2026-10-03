@@ -32,7 +32,7 @@ The LED-colour legend also mentions Arteor, but supplies no Arteor commercial re
 | --- | --- | --- | --- | --- | --- |
 | `MM00775_a_EN.pdf` | English technical sheet | `MM00775-a-EN`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/64/4c/644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00775_a_EN.pdf) |
 | `MM00775-a-FR.pdf` | French technical sheet | `MM00775-a-FR`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00775-a-FR.pdf) |
-| `H4653` online catalogue | Live product page | Reviewed `2026-10-03`; no fixed revision | H4653 product characteristics and technical attributes; HTML has no printed or PDF pagination | Not retained as an original file | [Publisher product page](https://www.bticino.com/products/bt-h4653) |
+| `H4653-publisher-product-sheet.pdf` | Publisher product-sheet export | `DATASHEET`, `03.10.2026` (export date) | `H4653` only; identity/product characteristics printed p. 1 / PDF p. 1; technical attributes printed pp. 2-3 / PDF pp. 2-3; download inventory printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1679`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
 
 ## Physical and electrical characteristics
@@ -50,9 +50,9 @@ The LED-colour legend also mentions Arteor, but supplies no Arteor commercial re
 | LED intensity sequence | Hold adjustment key for more than `2 s`; `60 %` default → `30 %` → `0 %` → `100 %` → `60 %` | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
 | Physical configurator positions | `R1`, `R2`, `M` | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
 | Published standards | `EN 60669-2-1`, `EN 50090-2-2`, `EN 50090-2-3`, `EN 50428` | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
-| H4653 online dimensions / protection | `45 x 45 x 24 mm`; minimum box depth `55 mm`; `IP20` | H4653 live product page, reviewed `2026-10-03` |
-| H4653 online storage / terminals | `-10..70 °C`; `0.34..2.5 mm²`, flexible or rigid wire | H4653 live product page, reviewed `2026-10-03` |
-| H4653 online construction / interfaces | Plastic / thermoplastic, untreated, opaque; RAL-like `9011`; LED, no label area, display, temperature controller, IR sensor or RF bus | H4653 live attributes; one-button metadata discrepancy reconciled below |
+| H4653 online dimensions / protection | `45 x 45 x 24 mm`; minimum box depth `55 mm`; `IP20` | H4653 product-sheet export, printed p. 2 / PDF p. 2 |
+| H4653 online storage / terminals | `-10..70 °C`; `0.34..2.5 mm²`, flexible or rigid wire | H4653 product-sheet export, printed p. 2 / PDF p. 2 |
+| H4653 online construction / interfaces | Plastic / thermoplastic, untreated, opaque; RAL-like `9011`; LED, no label area, display, temperature controller, IR sensor or RF bus | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3; one-button metadata discrepancy reconciled below |
 
 ## Identity
 
@@ -201,16 +201,18 @@ The English and French technical sheets have the same `a`, `02/12/2013` revision
 | Source issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
 | Unprinted physical mode | Catalogue firmware M and Object `489` MODE both admit `2`; only reusable MODE names MUR-only. Technical sheets specify physical `M=0/1` only | Firmware/Object domains; both sheets p. 2 |
-| Button count | H4653 live attributes say one button/actuation point; dated sheets show two one-module DND/MUR covers at `M=0` and a two-module DND cover at `M=1.` No universal one-button count substituted | H4653 live page; both sheets pp. 1-2 |
+| Button count | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3 say one button/actuation point; dated sheets show two one-module DND/MUR covers at `M=0` and a two-module DND cover at `M=1.` No universal one-button count substituted | Retained H4653 product sheet, printed p. 2 / PDF p. 2; both sheets pp. 1-2 |
 | Room-label scope | Hotel illustration label 127 accompanies bus address 27; a room-number label is not an encoded address or new legal domain | Both sheets p. 3 |
 | Arteor colour legend | Arteor is named in LED-colour grouping but no associated SKU is established | Both sheets p. 1 |
+
+The initial dossier used live product-page attributes without retaining a file. This revision replaces those evidence entries with original manufacturer PDF exports, downloaded through the publisher’s product-sheet endpoint with technical characteristics included, uploaded and registered on `main` before incorporation. These preserve the cited ratings, dimensions, material/interface attributes and their discrepancies. Their `03.10.2026` date identifies the export, not an installed release. General bus-classification, commercial image and download-list attributes establish no additional runtime commands; the PDF’s existing document references are recorded as discovery provenance. The earlier HTML response was not archived, and no earlier byte identity is reconstructed.
 
 ## Evidence limits and open work
 
 - Establish whether and how firmware `M=2` selects MUR-only, and which key covers/software procedures apply; no physical `M=2` procedure is retained.
 - Resolve the current H4653 one-button attribute against the mode-specific cover arrangements; do not discard either source.
 - Corroborate Object `489`, room addressing, status feedback, brightness adjustment and firmware/hardware identity on the three commercial variants.
-- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it. Live product attributes have review-date provenance but no archived byte snapshot.
+- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it. Current catalogue facts are now backed by retained original publisher product-sheet exports dated `03.10.2026`.
 
 ## Sources
 

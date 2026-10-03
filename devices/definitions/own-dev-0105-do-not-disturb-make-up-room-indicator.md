@@ -257,7 +257,7 @@ The illustrated instruction revision `LE06116AC-02PC-19W15` has been incorporate
 - Obtain lot-scoped hardware evidence for the MH201 visual-alarm feature, including trigger events, indication pattern, reset/acknowledgement and accepted configuration fields.
 - Verify non-RFID applicability of reusable door opening, door timer, entrance/leaving group and generic-service fields; inspect the relevant software definitions before asserting wire encoding.
 - Corroborate Object `488`, room address, bell interlock/contact behavior and LED mapping for all three variants; exact metric dimensions, IP and MCU remain undocumented by retained indicator sheets.
-- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it. Live product attributes have review-date provenance but no archived byte snapshot.
+- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it.
 
 ## Sources
 

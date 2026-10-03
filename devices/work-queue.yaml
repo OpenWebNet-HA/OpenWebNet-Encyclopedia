@@ -2578,6 +2578,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0103 created from next priority-sorted queue cluster 1678. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 5 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-03: Replaced previously unretained live-page evidence with original publisher product-sheet PDFs for H4652, LN4652. Exact bytes uploaded and registered on main before incorporation; printed/PDF page locators and source-index entries added. Initial HTML-only review remains documented in the source history.'
   '1679':
     state: review-ready
     priority: normal
@@ -2597,6 +2598,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0104 created from next priority-sorted queue cluster 1679. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 2 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-03: Replaced previously unretained live-page evidence with original publisher product-sheet PDFs for H4653. Exact bytes uploaded and registered on main before incorporation; printed/PDF page locators and source-index entries added. Initial HTML-only review remains documented in the source history.'
   '1680':
     state: review-ready
     priority: normal

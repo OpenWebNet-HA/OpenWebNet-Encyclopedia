@@ -271,6 +271,54 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-h4652-publisher-product-sheet-20261003
+  kind: documentation
+  publisher: BTicino
+  product: H4652
+  title: H4652 official product characteristics export
+  media_type: application/pdf
+  filename: H4652-publisher-product-sheet.pdf
+  version_label: DATASHEET | 03.10.2026
+  size: 540896
+  sha256: b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb
+  source_page: https://www.bticino.com/products/bt-h4652
+  source_url: https://www.bticino.com/products/pdf?sku=BT-H4652&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf
+  language:
+  - en
+  language_evidence: English manufacturer product-sheet text and technical attributes
+  notes:
+  - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
+  - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
+  - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-h4653-publisher-product-sheet-20261003
+  kind: documentation
+  publisher: BTicino
+  product: H4653
+  title: H4653 official product characteristics export
+  media_type: application/pdf
+  filename: H4653-publisher-product-sheet.pdf
+  version_label: DATASHEET | 03.10.2026
+  size: 678913
+  sha256: 1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1
+  source_page: https://www.bticino.com/products/bt-h4653
+  source_url: https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf
+  language:
+  - en
+  language_evidence: English manufacturer product-sheet text and technical attributes
+  notes:
+  - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
+  - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
+  - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
@@ -291,6 +339,30 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-ln4652-publisher-product-sheet-20261003
+  kind: documentation
+  publisher: BTicino
+  product: LN4652
+  title: LN4652 official product characteristics export
+  media_type: application/pdf
+  filename: LN4652-publisher-product-sheet.pdf
+  version_label: DATASHEET | 03.10.2026
+  size: 491962
+  sha256: a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3
+  source_page: https://www.bticino.com/products/bt-ln4652
+  source_url: https://www.bticino.com/products/pdf?sku=BT-LN4652&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf
+  language:
+  - en
+  language_evidence: English manufacturer product-sheet text and technical attributes
+  notes:
+  - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
+  - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
+  - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
 - id: device-doc-mm00774-b-fr
   kind: documentation
   publisher: BTicino / Legrand
