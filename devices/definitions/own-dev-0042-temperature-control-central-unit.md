@@ -51,25 +51,29 @@ Temperature-control central unit and supervisory programmer.
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `24` | `3` | `0` | `0` | `1` | catalogue default | concrete catalogue applicability |
-| `25` | `2` | `0` | `15` | `1` | non-default | concrete catalogue applicability |
-| `26` | `1` | `1` | `6` | `1` | non-default | concrete catalogue applicability |
+| `24` | `3` | `0` | `0` | `1` | Catalogue default | Official |
+| `25` | `2` | `0` | `15` | `1` | Not catalogue default | Official |
+| `26` | `1` | `1` | `6` | `1` | Not catalogue default | Official |
 
-No sanitized installed-hardware firmware fingerprint is currently retained for this exact technical item.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-| Firmware | Slot(s) | Object | Relationship |
-| --- | --- | --- | --- |
-| `24` | `912` | `35` Temperature control 99 zones control unit | fixed/designated |
-| `25` | `913` | `35` Temperature control 99 zones control unit | fixed/designated |
-| `26` | `914` | `35` Temperature control 99 zones control unit | fixed/designated |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `24` | `1` | `35` Temperature control 99 zones control unit | Fixed/designated metadata | `912` | `35` | `571` |
+| `25` | `1` | `35` Temperature control 99 zones control unit | Fixed/designated metadata | `913` | `35` | `572` |
+| `26` | `1` | `35` Temperature control 99 zones control unit | Fixed/designated metadata | `914` | `35` | `573` |
 
-| Virgin Object status | Value |
-| --- | --- |
-| Associations | none for selected firmware rows |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 ## Configuration modes
 
@@ -81,34 +85,54 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `24` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `24` | `WARM` | catalogue-defined domain | catalogue-scoped | Winter mode |
-| `24` | `COLD` | catalogue-defined domain | catalogue-scoped | Summer mode |
-| `25` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `25` | `WARM` | catalogue-defined domain | catalogue-scoped | Winter mode |
-| `25` | `COLD` | catalogue-defined domain | catalogue-scoped | Summer mode |
-| `26` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `26` | `WARM` | catalogue-defined domain | catalogue-scoped | Winter mode |
-| `26` | `COLD` | catalogue-defined domain | catalogue-scoped | Summer mode |
+| `24` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `24` | `WARM` | `0` = Disable; `1` = Enable | `0` | WARM; Winter mode |
+| `24` | `COLD` | `0` = Disable; `1` = Enable | `0` | COLD; Summer mode |
+| `25` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `25` | `WARM` | `0` = Disable; `1` = Enable | `0` | WARM; Winter mode |
+| `25` | `COLD` | `0` = Disable; `1` = Enable | `0` | COLD; Summer mode |
+| `26` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `26` | `WARM` | `0` = Disable; `1` = Enable | `0` | WARM; Winter mode |
+| `26` | `COLD` | `0` = Disable; `1` = Enable | `0` | COLD; Summer mode |
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `35` - Temperature control 99 zones control unit
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `COLD` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Summer mode |
-| `WARM` | catalogue-defined; validate through ranges and relation filters | catalogue-scoped | Winter mode |
+| `COLD` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
+| `WARM` | `0` = Disable; `1` = Enable | `0` | Winter modality; Winter mode |
 
 ## Conditions, filters, and conversions
 
-| Surface | IDs / scope | Device-specific interpretation |
-| --- | --- | --- |
-| Object filters | none | relation-specific restrictions; do not widen reusable Object surfaces |
-| Slot conditions | none | resolve Object/slot applicability before programming |
-| Conversion rules | catalogue-scoped | preserve applicable physical-to-advanced conversion through canonical resolver |
+### Slot conditions
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 

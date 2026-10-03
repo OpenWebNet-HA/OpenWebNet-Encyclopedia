@@ -25,14 +25,15 @@
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| BTicino/Legrand residential catalogue | product catalogue | historical publisher catalogue | 3485 phone/Contact ID role: printed p. 187 / PDF p. 189; battery 3506 compatibility printed p. 195 / PDF p. 197; do not alias 3485STD | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | [Official source](https://assets.legrand.com/webf/ch/ch_de_katalog_wohnbau.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Catalogue product class | `Burglar alarm central unit with communicator` | canonical item description |
-| Commercial variants represented | `1` | canonical commercial records |
-| Declared Module count | `1` | canonical firmware catalogue |
+| Product description | `Burglar alarm central unit with communicator` | Catalogue item description; not a complete product specification |
+| Additional electrical/mechanical characteristics | Additional properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
+| Compatible battery | `3506`, `7.2 V` | Residential catalogue, printed p. 195 / PDF p. 197; explicitly names 3485 |
 
 ## Identity
 
@@ -46,25 +47,29 @@
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `15` | `8` | `0` | `0` | `1` | catalogue default | concrete catalogue applicability |
-| `16` | `6` | `0` | `0` | `1` | non-default | concrete catalogue applicability |
-| `17` | `7` | `0` | `0` | `1` | non-default | concrete catalogue applicability |
+| `15` | `8` | `0` | `0` | `1` | Catalogue default | Official |
+| `16` | `6` | `0` | `0` | `1` | Not catalogue default | Official |
+| `17` | `7` | `0` | `0` | `1` | Not catalogue default | Official |
 
-No sanitized installed-hardware firmware fingerprint is currently retained for this exact technical item.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-| Firmware | Slot(s) | Object | Relationship |
-| --- | --- | --- | --- |
-| `15` | `2272` | `13` AI Control Unit With Communicator Pstn | catalogue firmware/Object relation |
-| `16` | `2275` | `13` AI Control Unit With Communicator Pstn | catalogue firmware/Object relation |
-| `17` | `2274` | `13` AI Control Unit With Communicator Pstn | catalogue firmware/Object relation |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `15` | `1` | `13` AI Control Unit With Communicator Pstn | Fixed/designated metadata | `2272` | `13` | `950` |
+| `16` | `1` | `13` AI Control Unit With Communicator Pstn | Fixed/designated metadata | `2275` | `13` | `953` |
+| `17` | `1` | `13` AI Control Unit With Communicator Pstn | Fixed/designated metadata | `2274` | `13` | `952` |
 
-| Firmware | Virgin Object | Relationship |
-| --- | --- | --- |
-| all | - | no Virgin Object association in selected firmware rows |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 ## Configuration modes
 
@@ -76,29 +81,49 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `15` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `16` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `17` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
+| `15` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `16` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `17` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `13` - AI Control Unit With Communicator Pstn
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `NUM_PSTN` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Telephone number PSTN |
-| `FW_VER` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Firmware version |
-| `IS_GATEWAY` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Gateway |
+| `NUM_PSTN` | No legal values specified in source | Not specified in source | Telephone number PSTN |
+| `FW_VER` | No legal values specified in source | Not specified in source | Firmware version |
+| `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
 
 ## Conditions, filters, and conversions
 
-| Surface | IDs / scope | Device-specific interpretation |
-| --- | --- | --- |
-| Object filters | none | relation-specific restrictions; apply before exposing reusable Object values |
-| Slot conditions | none | resolve Object/slot applicability before programming |
-| Conversion rules | catalogue-scoped | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+### Slot conditions
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -112,7 +137,14 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 
 ## Functional applicability
 
-The canonical catalogue describes this technical item as Burglar alarm central unit with communicator. Its firmware exposes `1` distinct Object families across the declared Module topology. This definition records those surfaces without treating reusable Object vocabulary as proof of undocumented physical capabilities.
+| External Object | Catalogue functional role | Applicability / evidence |
+| --- | --- | --- |
+| `13` AI Control Unit With Communicator Pstn | Burglar alarm system | Firmware/Object capability association; resolve the slot and configuration first |
+| `13` AI Control Unit With Communicator Pstn | Video door entry system | Firmware/Object capability association; resolve the slot and configuration first |
+
+Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
+
+The retained residential catalogue explicitly names 3485 for bidirectional telephone interaction and Ademco Contact ID. Its adjacent product listings describe 3485STD; those variant-specific zone, sensor and scenario limits are not assigned to 3485 here.
 
 ## Observed behavior and corroboration
 
@@ -120,11 +152,15 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the named configuration-mode boundary. Product-programmed Devices must not be reduced to generic physical-configurator semantics.
+The catalogue registers Product Programming for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+
+No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite catalogue binds `3485` to technical item `139`. A dedicated retained publisher product document for this exact technical item has not yet been reconciled in the Device source archive, so external documentation discovery remains partial.
+The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. Retained publisher evidence is listed in Documentation; its exact Device coverage is stated there. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+
+The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
 
 ## Evidence limits and open work
 

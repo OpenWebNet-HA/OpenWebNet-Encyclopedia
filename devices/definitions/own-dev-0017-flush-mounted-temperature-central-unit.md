@@ -63,19 +63,27 @@ The product-level scheduling and zone-management interface is broader than the s
 
 ## Firmware and hardware
 
-The current catalogue has one applicable firmware definition:
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `23` | `1` | `0` | `35` | `1` | Catalogue default | Official |
 
-| Catalogue firmware | Version | Build | Localization | Slots | Default |
-| --- | --- | ---: | ---: | ---: | ---: |
-| `23` | `1.0` | `35` | `0` | `1` | yes |
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue applicability is not a claim that every surviving commercial variant reports this exact installed build. `DIMENSION 2` remains the authoritative installed-firmware observation when the Device exposes it.
 
 ## Module, Object, and Virgin Object model
 
-| Slot | Object | Description | Relationship |
-| ---: | ---: | --- | --- |
-| `1` | `90` | Temperature control 4 zones control unit | fixed |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `23` | `1` | `90` Temperature control 4 zones control unit | Fixed/designated metadata | `644` | `90` | `448` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 There is no Virgin Object for this firmware. The slot carries condition record `4163` with an empty condition string and conversion-rule reference `1000` in the implementation database. Because no Device-specific predicate is expressed there, this dossier does not invent one.
 
@@ -90,26 +98,40 @@ There is no Virgin Object for this firmware. The slot carries condition record `
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | implementation identity token | - | Device identity field |
-| `ZA` | `0..9` | `0` | first thermoregulation zone digit |
-| `ZB` | `0..9` | `1` | second thermoregulation zone digit |
-| `SLA` | `0..8` | `0` | thermoregulation slave-probe selection |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `23` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `23` | `ZA` | `0..9` | `0` | ZA; ZA thermo zone address |
+| `23` | `ZB` | `0..9` | `1` | ZB; ZB thermo zone address |
+| `23` | `SLA` | `0..8` | `0` | `SLA`; Thermoregulation slave probe |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `ZA` | `0..9` | first thermoregulation zone digit |
+| `ZB` | `0..9` | second thermoregulation zone digit |
+| `SLA` | `0..8` | thermoregulation slave-probe selection |
+
 
 The pair `ZA` / `ZB` is represented separately at firmware level. The reusable control-unit Object exposes the combined two-digit zone as `ZAZB`.
 
 ## Object configuration surfaces
 
-The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
-### Object `90` - catalogue configuration
+### Object `90` - Temperature control 4 zones control unit
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `ZAZB` | Zone |
-| Sensing / regulation | `WARM`, `COLD` | Winter mode; Summer mode |
-| Object-specific | `SLA` | Slave number |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `WARM` | `0` = Disable; `1` = Enable | `0` | Winter modality; Winter mode |
+| `COLD` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
+| `SLA` | `0..8` | `0` | Slave number |
+
 
 ### Additional Device-specific interpretation
 
@@ -126,20 +148,29 @@ These are catalogue validation domains. They should not be widened from product 
 
 ## Conditions, filters, and conversions
 
-| Surface | Condition / reference | Interpretation |
-| --- | --- | --- |
-| Slot `1` | condition record `4163` with empty condition | no Device-specific predicate expressed |
-| Conversion | reference `1000` | implementation reference remains unresolved unless matching rule is recovered |
+### Slot conditions
 
-### Catalogue filter references
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `23` | `1` | `90` | `4163` | No textual predicate stored | `1000` |
 
-No filter rows are associated with this Device firmware in the canonical catalogue.
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-### Catalogue slot-condition references
+### Object/Firmware restrictions
 
-| Condition | Slot | Object | Predicate | Conversion reference |
-| --- | --- | --- | --- | --- |
-| `4163` | `1` | `90` | empty source condition | `1000` |
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `1000` | `ZA=0; ZB=1..9` | `ZAZB=01..09` | Rule `1000` through branch `1001` |
+| `1000` | `ZA=1..9; ZB=0..9` | `ZAZB=10..99` | Rule `1000` through branches `1002..1010` |
+| `1000` | `ZA=0; ZB=0` | No `00` mapping stored | Do not widen the conversion from the reusable Object domain |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -169,7 +200,7 @@ The three archived `4695` manuals establish that the single OpenWebNet control-u
 
 - the central unit manages heating and cooling operation for up to four zones, including the locally controlled zone;
 - product programming provides multiple weekly programs and daily zone profiles rather than only a current setpoint;
-- user operating states include Manual, Holiday/Holidays, Timed, OFF and the heating/cooling protection modes such as antifreeze or thermal protection;
+- user operating states include Manual, Holiday/Holidays, Timed, `OFF` and the heating/cooling protection modes such as antifreeze or thermal protection;
 - timed operation supports a finite duration up to the documented day-scale limit, while local operation also supports temperature offset/override behavior;
 - fan-coil installations are explicitly supported by the product workflow;
 - installation/setup includes zone association, probe configuration, system diagnostics/test procedures and total-reset behavior;
@@ -182,7 +213,7 @@ These are Device-level capabilities of the 4695 family. They do not create addit
 - Obtain a sanitized `DIMENSION 1` / `DIMENSION 2` / `DIMENSION 30` / `DIMENSION 32` / `DIMENSION 35` fingerprint from a known 4695-family unit.
 - Locate direct official product sheets for `AM5875` and the three Vela references.
 - Correlate observed installed firmware with catalogue firmware `1.0 build 35`.
-- Clarify the implementation meaning of condition 4163 / conversion reference `1000` if a corresponding conversion record is recovered.
+- Corroborate the stored `ZA`/`ZB` → `ZAZB` conversion on installed hardware; the canonical conversion records are present.
 - Preserve later document revisions separately rather than replacing the current evidence.
 
 ## Sources

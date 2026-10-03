@@ -52,21 +52,25 @@
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `206` | `-1` | `-1` | `-1` | `1` | catalogue default | wildcard / unspecified applicability retained |
+| `206` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
-No sanitized installed-hardware firmware fingerprint is currently retained for this exact technical item.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-| Firmware | Slot(s) | Object | Relationship |
-| --- | --- | --- | --- |
-| `206` | `664` | `8` Dimmer actuator | catalogue firmware/Object relation |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `206` | `1` | `8` Dimmer actuator | Fixed/designated metadata | `664` | `8` | `460` |
 
-| Firmware | Virgin Object | Relationship |
-| --- | --- | --- |
-| all | - | no Virgin Object association in selected firmware rows |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 ## Configuration modes
 
@@ -78,54 +82,95 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `206` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `206` | `A` | catalogue-defined domain | catalogue-scoped | A |
-| `206` | `PL` | catalogue-defined domain | catalogue-scoped | PL |
-| `206` | `M` | catalogue-defined domain | catalogue-scoped | M |
-| `206` | `G1` | catalogue-defined domain | catalogue-scoped | G1 |
-| `206` | `G2` | catalogue-defined domain | catalogue-scoped | G2 |
-| `206` | `G3` | catalogue-defined domain | catalogue-scoped | G3 |
+| `206` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `206` | `A` | `0..9` | `0` | A; Environment |
+| `206` | `PL` | `0..9` | `0` | PL; Light Point |
+| `206` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (0-4, Pul, Sla) |
+| `206` | `G1` | `0..9` | `0` | G1; G1 - (0-9) |
+| `206` | `G2` | `0..9` | `0` | G2; G2 - (0-9) |
+| `206` | `G3` | `0..9` | `0` | G3; G3 - (0-9) |
+
+### Published physical selectors absent from the stored firmware field list
+
+| Selector | Physical setting | Published result | Evidence |
+| --- | --- | --- | --- |
+| `L` | `0` | Minimum output `1 V` | `MQ00314-f-FR`, printed p. 2 / PDF p. 2 |
+| `L` | `1` | Minimum output `1.5 V` | Same source |
+| `L` | `2` | Minimum output `2 V` | Same source |
+| `L` | `3` | Minimum output `0 V` | Same source |
+| `L` | `4` | Minimum output `0.5 V` | Same source |
+| `TYPE` | `0` | Fluorescent ballast; soft-start accounts for typical `1.5 s` ignition delay | Same source, note 3 |
+| `TYPE` | `1` | LED supply; immediate soft-start | Same source, note 3 |
+
+The physical `L` selector establishes support for both 1-10 V and 0-10 V control; the apparent catalogue/product naming difference is therefore not evidence of incompatible standards. `L` and `TYPE` are printed physical positions but are absent from firmware `206`'s stored field list. Do not alias those positions to similarly named reusable Object fields without an established conversion.
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `8` - Dimmer actuator
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `A` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Area |
-| `PL` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Light point |
-| `M` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Modality |
-| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Local button modality |
-| `DELAYED_OFF` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Delayed OFF for Slave (s) |
-| `STATE_SAVING_ON_RESET` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | State saving on reset |
-| `HOURS` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Hours |
-| `MINUTES` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Minutes |
-| `SECONDS` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Seconds |
-| `MIN_LEVEL` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Minimum level |
-| `TYPE_LOAD` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Type of load |
-| `TYPE_STANDARD` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Voltage standard |
-| `MIN_LEVEL_ADV` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Minimum level advanced |
-| `MIN_AUTO` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Enable / Disable minimum level |
-| `G1` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 1 |
-| `G2` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 2 |
-| `G3` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 3 |
-| `G4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 4 |
-| `G5` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 5 |
-| `G6` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 6 |
-| `G7` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 7 |
-| `G8` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 8 |
-| `G9` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 9 |
-| `G10` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Group 10 |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `MIN_LEVEL` | `1..100` | `1` | Minimum level |
+| `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI; `10` = Halogen lamp; `11` = LED trailing edge / electronic transformers; `12` = LED leading edge; `13` = CFL trailing edge; `14` = CFL leading edge | `0` | Type of load; Default value depends on device. |
+| `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard | `0` | Voltage standard |
+| `MIN_LEVEL_ADV` | `1..100` | `0` | Minimum level advanced; Default value depends on device and Type of load value |
+| `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable | `0` | Enable / Disable minimum level |
+| `G1` | `0..255` | `0` | Group 1 |
+| `G2` | `0..255` | `0` | Group 2 |
+| `G3` | `0..255` | `0` | Group 3 |
+| `G4` | `0..255` | `0` | Group 4 |
+| `G5` | `0..255` | `0` | Group 5 |
+| `G6` | `0..255` | `0` | Group 6 |
+| `G7` | `0..255` | `0` | Group 7 |
+| `G8` | `0..255` | `0` | Group 8 |
+| `G9` | `0..255` | `0` | Group 9 |
+| `G10` | `0..255` | `0` | Group 10 |
 
 ## Conditions, filters, and conversions
 
-| Surface | IDs / scope | Device-specific interpretation |
-| --- | --- | --- |
-| Object filters | `582`, `583`, `584`, `585`, `2177`, `2494`, `2495`, `2496` | relation-specific restrictions; apply before exposing reusable Object values |
-| Slot conditions | `4145` | resolve Object/slot applicability before programming |
-| Conversion rules | catalogue-scoped | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+### Slot conditions
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `206` | `1` | `8` | `4145` | No textual predicate stored | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `206` | `8` | `582` | `MIN_LEVEL_ADV` | `1..100` (entire reusable range retained) | `0` | Minimum level advanced |
+| `206` | `8` | `583` | `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable (entire reusable range retained) | `0` | enable disable minimum level |
+| `206` | `8` | `584` | `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `10` = Halogen lamp; `11` = LED trailing edge / electronic transformers; `12` = LED leading edge; `13` = CFL trailing edge; `14` = CFL leading edge; `2` = Forced capacitive; `3` = Forced inductive; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI | `0` | Type of Load |
+| `206` | `8` | `585` | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `206` | `8` | `2177` | `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled (entire reusable range retained) | `0` | State saving on reset |
+| `206` | `8` | `2494` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `206` | `8` | `2495` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `206` | `8` | `2496` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 

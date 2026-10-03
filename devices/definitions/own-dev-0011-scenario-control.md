@@ -13,7 +13,7 @@
 | Declared Modules | `2` | Implementation evidence |
 | Categories | Command, Scenario, Multifunction | Capability model |
 
-The Device is a four-button scenario control that can drive scenario modules, programmed CEN scenarios, and PLUS scenario representations. The canonical firmware models the four physical keys as two configurable command Modules.
+The Device is a four-button scenario control that can drive scenario modules, programmed `CEN` scenarios, and PLUS scenario representations. The canonical firmware models the four physical keys as two configurable command Modules.
 
 ## Commercial identities
 
@@ -68,21 +68,34 @@ The sheet also describes an installation/destination-level configurator `I` when
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `7` | `1` | `0` | `0` | `2` | not stated | catalogue applicability |
+| `7` | `1` | `0` | `0` | `2` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `7` | `1` | `403` Scenario module control | Fixed/designated metadata | `691` | `403` | `480` |
+| `7` | `1` | `404` Scheduled scenario | Candidate alternative | `693` | `404` | `481` |
+| `7` | `1` | `405` Scenario PLUS Lighting Management | Candidate alternative | `695` | `405` | `482` |
+| `7` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `697` | `406` | `483` |
+| `7` | `2` | `403` Scenario module control | Fixed/designated metadata | `692` | `403` | `480` |
+| `7` | `2` | `404` Scheduled scenario | Candidate alternative | `694` | `404` | `481` |
+| `7` | `2` | `405` Scenario PLUS Lighting Management | Candidate alternative | `696` | `405` | `482` |
+| `7` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `698` | `406` | `483` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `7` | `502` Scene double command virgin | `1`, `2` | `403`, `404`, `405`, `406` | `502` | `22` |
+
 Firmware `7` exposes two configurable Modules.
-
-| Object | Description | Slots | Relationship |
-| ---: | --- | --- | --- |
-| `403` | Scenario module control | `1`, `2` | designated Object |
-| `404` | Scheduled scenario | `1`, `2` | `M=CEN` alternative |
-| `405` | Scenario PLUS Lighting Management | `1`, `2` | implementation selector alternative |
-| `406` | Scheduled scenario PLUS | `1`, `2` | implementation selector alternative |
-
 Virgin Object `502`, **Scene double command virgin**, applies to both slots and permits Objects `403..406`.
 
 ## Configuration modes
@@ -95,12 +108,25 @@ Virgin Object `502`, **Scene double command virgin**, applies to both slots and 
 
 ## Firmware-scoped configuration
 
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `7` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `7` | `A` | `0..9` | `0` | A; Environment |
+| `7` | `PL` | `0..9` | `0` | PL; Light Point |
+| `7` | `M` | `0..4`; `14` = `CEN` | `0` | M; Mode (0-4,`CEN`) |
+| `7` | `N` | `0..5` | `0` | N; N (0-5) |
+| `7` | `DEL` | `0..9` | `0` | DEL; Configurator DEL |
+
+
+### Previously reconciled configuration scopes
+
 | Field | Domain | Published meaning |
 | --- | --- | --- |
-| `AID` | Device identity | not a physical configurator |
 | `A` | `0..9` | environment/address |
 | `PL` | `0..9` | light point / scenario-module address component |
-| `M` | `0..4`, `CEN` | physical scenario/CEN mode |
+| `M` | `0..4`, `CEN` | physical scenario/`CEN` mode |
 | `N` | `0..5` | selects which physical key delay applies to |
 | `DEL` | `0..9` | delay preset |
 
@@ -114,9 +140,9 @@ The technical sheet documents:
 | `2` | scenarios `5..8` |
 | `3` | scenarios `9..12` |
 | `4` | scenarios `13..16` |
-| `CEN` | CEN/programmed scenario mode |
+| `CEN` | `CEN`/programmed scenario mode |
 
-With no CEN selector, the catalogue selects Scenario module Object `403`; with `M=CEN`, it selects Scheduled scenario Object `404`.
+With no `CEN` selector, the catalogue selects Scenario module Object `403`; with `M=CEN`, it selects Scheduled scenario Object `404`.
 
 Implementation-only `M=FAKE` conditions expose PLUS Objects `405` and `406`; `FAKE` is not part of the physical `M` enum.
 
@@ -146,111 +172,186 @@ Implementation-only `M=FAKE` conditions expose PLUS Objects `405` and `406`; `FA
 
 ## Object configuration surfaces
 
-The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
-### Object `403` - catalogue configuration
+### Object `403` - Scenario module control
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Object-specific | `M` | Modality |
-| Addressing | `APL`, `INST_LEV`, `DEST_LEV` | Scenario module address; Installation level; Destination level |
-| Scenario / button | `SCE_BUTT_1`, `SCE_BUTT_2`, `DEL_BUTTON_1`, `DEL_BUTTON_2` | Upper button scenario; Lower button scenario; Activation delay for upper button; Activation delay for lower button |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number | `0` | Destination level |
+| `SCE_BUTT_1` | `1..16` | `1` | Upper button scenario |
+| `SCE_BUTT_2` | `1..16` | `2` | Lower button scenario |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
 
-### Object `404` - catalogue configuration
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `A`, `PL` | Area; Light point |
-| Scenario / button | `BUTTON_1`, `BUTTON_2` | Upper button; Lower button |
-| Audio / media | `IN_AUX_CHANNEL` | Input AUX channel |
-| Timing | `START_DELAY` | Time of restart device (s) |
+### Object `404` - Scheduled scenario
 
-### Object `405` - catalogue configuration
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Scenario / button | `PPT_SCE_1`, `PPT_SCE_2`, `DEL_BUTTON_1`, `DEL_BUTTON_2` | Delay (20); Delay (21); Only if Scenario1<>Scenario2 |
-| Sensing / regulation | `TYPE_OF_REGULATION` | Only if Scenario1=Scenario2 |
 
-### Object `406` - catalogue configuration
+### Object `405` - Scenario PLUS Lighting Management
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Scenario / button | `PPT_CEN_LOW`, `PPT_CEN_HIG`, `BUTTON_1`, `BUTTON_2` | Scheduled scenario PLUS number; Upper button; Lower button |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Upper button scenario; Delay (20) |
+| `PPT_SCE_2` | `1..255` | `2` | Lower button scenario; Delay (21) |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type; Only if Scenario1=Scenario2 |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
+
+
+### Object `406` - Scheduled scenario PLUS
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
 
 ### Additional Device-specific interpretation
 
 | Object | Surface | Principal fields / domains |
 | --- | --- | --- |
 | `403` | Scenario module control | `A`/`PL`, levels, scenario buttons, per-button delays |
-| `404` | Scheduled scenario | `A`/`PL`, buttons, AUX input, start delay |
+| `404` | Scheduled scenario | `A`/`PL`, buttons, `AUX` input, start delay |
 | `405` | Scenario PLUS | two scenario numbers, regulation target, per-button delays |
 | `406` | Scheduled scenario PLUS | low/high scenario fields and two button fields |
 
 #### Object `403` - Scenario module control
 
-- mode: scenario activation+modification or activation-only;
-- encoded A/PL target covering `A=0..10`, `PL=0..15`;
-- installation level: private riser, local buses `1..15`, standard;
-- destination level: private riser or local buses `1..15`;
-- scenario buttons 1 and 2: `1..16`;
-- independent delay tables for the two button positions.
+| Topic | Source-derived detail |
+| --- | --- |
+| mode | scenario activation+modification or activation-only |
+| Published fact | encoded A/PL target covering `A=0..10`, `PL=0..15` |
+| installation level | private riser, local buses `1..15`, standard |
+| destination level | private riser or local buses `1..15` |
+| scenario buttons 1 and 2 | `1..16` |
+| Published fact | independent delay tables for the two button positions. |
 
 The two delay tables are not byte-for-byte identical in the canonical database: one contains 63 stored enum rows and the other 56. Preserve the source data rather than normalizing them into a presumed common table.
 
 #### Object `404` - Scheduled scenario
 
-- `A=0..10`, `PL=0..15`;
-- buttons `0..31`, defaults 1 and 2;
-- AUX input `0..15`;
-- start delay `0..255`, default 10.
+| Topic | Source-derived detail |
+| --- | --- |
+| Published fact | `A=0..10`, `PL=0..15` |
+| Published fact | buttons `0..31`, defaults 1 and 2 |
+| Published fact | `AUX` input `0..15` |
+| Published fact | start delay `0..255`, default 10. |
 
 #### Object `405` - Scenario PLUS Lighting Management
 
-- two scenario numbers `1..255`;
-- regulation target: all, lights, shutters, or stereo amplifiers;
-- per-button delay tables.
+| Topic | Source-derived detail |
+| --- | --- |
+| Published fact | two scenario numbers `1..255` |
+| regulation target | all, lights, shutters, or stereo amplifiers |
+| Published fact | per-button delay tables. |
 
 #### Object `406` - Scheduled scenario PLUS
 
-- low scenario field `0..255`;
-- high scenario field `0..7`;
-- two button fields `0..31`.
+| Topic | Source-derived detail |
+| --- | --- |
+| Published fact | low scenario field `0..255` |
+| Published fact | high scenario field `0..7` |
+| Published fact | two button fields `0..31`. |
 
 Together the low/high scenario fields support the published PLUS scenario-number domain, which the technical sheet describes as `1..2047`.
 
 ## Conditions, filters, and conversions
 
-| Slot | Object | Condition | Conversion rule |
-| ---: | --- | --- | ---: |
-| 1 | `403` Scenario module control | `M<>CEN` | `14` |
-| 2 | `403` Scenario module control | `M<>CEN` | `13` |
-| 1 | `404` Scheduled scenario | `M=CEN` | `65` |
-| 2 | `404` Scheduled scenario | `M=CEN` | `66` |
-| `1..2` | `405` Scenario PLUS Lighting Management | `M=FAKE` | none |
-| `1..2` | `406` Scheduled scenario PLUS | `M=FAKE` | none |
+### Slot conditions
 
-Generic conversion-rule evaluation belongs in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `7` | `1` | `403` | `4145` | No textual predicate stored | None |
+| `7` | `1` | `403` | `4435` | `M<>CEN` | `14` |
+| `7` | `1` | `404` | `4590` | `M=CEN` | `65` |
+| `7` | `1` | `405` | `4594` | `M=FAKE` | None |
+| `7` | `1` | `406` | `4594` | `M=FAKE` | None |
+| `7` | `2` | `403` | `4434` | `M<>CEN` | `13` |
+| `7` | `2` | `404` | `4591` | `M=CEN` | `66` |
+| `7` | `2` | `405` | `4594` | `M=FAKE` | None |
+| `7` | `2` | `406` | `4594` | `M=FAKE` | None |
 
-### Catalogue filter references
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-| Filter | Object | Field | Source note |
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `7` | `404` | `1707` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
 | --- | --- | --- | --- |
-| `1707` | `404` | `START_DELAY` | Start delay |
+| `13` | `M=1` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `2`; `SCENARIO_BUTTON_2` = `4` | `13` |
+| `13` | `M=2` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `6`; `SCENARIO_BUTTON_2` = `8` | `13` |
+| `13` | `M=3` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `10`; `SCENARIO_BUTTON_2` = `12` | `13` |
+| `13` | `M=4` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `14`; `SCENARIO_BUTTON_2` = `16` | `13` |
+| `13` | `N=0` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=1` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=2; DEL=0` | `DELAY_BUTTON_1` = `0` | `13` → `16` |
+| `13` | `N=2; DEL=1` | `DELAY_BUTTON_1` = `60` | `13` → `16` |
+| `13` | `N=2; DEL=2` | `DELAY_BUTTON_1` = `62` | `13` → `16` |
+| `13` | `N=2; DEL=3` | `DELAY_BUTTON_1` = `63` | `13` → `16` |
+| `13` | `N=2; DEL=4` | `DELAY_BUTTON_1` = `64` | `13` → `16` |
+| `13` | `N=2; DEL=5` | `DELAY_BUTTON_1` = `65` | `13` → `16` |
+| `13` | `N=2; DEL=6` | `DELAY_BUTTON_1` = `70` | `13` → `16` |
+| `13` | `N=2; DEL=7` | `DELAY_BUTTON_1` = `71` | `13` → `16` |
+| `13` | `N=2; DEL=8` | `DELAY_BUTTON_1` = `15` | `13` → `16` |
+| `13` | `N=2; DEL=9` | `DELAY_BUTTON_1` = `30` | `13` → `16` |
+| `13` | `N=2` | `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=3` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=4` | `DELAY_BUTTON_1` = `0` | `13` |
+| `13` | `N=4; DEL=0` | `DELAY_BUTTON_2` = `0` | `13` → `19` |
+| `13` | `N=4; DEL=1` | `DELAY_BUTTON_2` = `60` | `13` → `19` |
+| `13` | `N=4; DEL=2` | `DELAY_BUTTON_2` = `62` | `13` → `19` |
+| `13` | `N=4; DEL=3` | `DELAY_BUTTON_2` = `63` | `13` → `19` |
+| `13` | `N=4; DEL=4` | `DELAY_BUTTON_2` = `64` | `13` → `19` |
+| `13` | `N=4; DEL=5` | `DELAY_BUTTON_2` = `65` | `13` → `19` |
+| `13` | `N=4; DEL=6` | `DELAY_BUTTON_2` = `70` | `13` → `19` |
+| `13` | `N=4; DEL=7` | `DELAY_BUTTON_2` = `71` | `13` → `19` |
+| `13` | `N=4; DEL=8` | `DELAY_BUTTON_2` = `15` | `13` → `19` |
+| `13` | `N=4; DEL=9` | `DELAY_BUTTON_2` = `30` | `13` → `19` |
+| `13` | `N=5; DEL=0` | `DELAY_BUTTON_1` = `0` | `13` → `16` |
+| `13` | `N=5; DEL=1` | `DELAY_BUTTON_1` = `60` | `13` → `16` |
+| `13` | `N=5; DEL=2` | `DELAY_BUTTON_1` = `62` | `13` → `16` |
+| `13` | `N=5; DEL=3` | `DELAY_BUTTON_1` = `63` | `13` → `16` |
+| `13` | `N=5; DEL=4` | `DELAY_BUTTON_1` = `64` | `13` → `16` |
+| `13` | `N=5; DEL=5` | `DELAY_BUTTON_1` = `65` | `13` → `16` |
+| `13` | `N=5; DEL=6` | `DELAY_BUTTON_1` = `70` | `13` → `16` |
+| `13` | `N=5; DEL=7` | `DELAY_BUTTON_1` = `71` | `13` → `16` |
+| `13` | `N=5; DEL=8` | `DELAY_BUTTON_1` = `15` | `13` → `16` |
+| `13` | `N=5; DEL=9` | `DELAY_BUTTON_1` = `30` | `13` → `16` |
+| `13` | `N=5; DEL=0` | `DELAY_BUTTON_2` = `0` | `13` → `19` |
+| `13` | `N=5; DEL=1` | `DELAY_BUTTON_2` = `60` | `13` → `19` |
+| `13` | `N=5; DEL=2` | `DELAY_BUTTON_2` = `62` | `13` → `19` |
+| `13` | `N=5; DEL=3` | `DELAY_BUTTON_2` = `63` | `13` → `19` |
+| `13` | `N=5; DEL=4` | `DELAY_BUTTON_2` = `64` | `13` → `19` |
+| `13` | `N=5; DEL=5` | `DELAY_BUTTON_2` = `65` | `13` → `19` |
+| `13` | `N=5; DEL=6` | `DELAY_BUTTON_2` = `70` | `13` → `19` |
+| `13` | `N=5; DEL=7` | `DELAY_BUTTON_2` = `71` | `13` → `19` |
+| `13` | `N=5; DEL=8` | `DELAY_BUTTON_2` = `15` | `13` → `19` |
+| `13` | `N=5; DEL=9` | `DELAY_BUTTON_2` = `30` | `13` → `19` |
+| `14` | No item-side predicate on this branch | Referenced conversion rule absent from source | `14` |
+| `65` | `M=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `1`; `CEN_BUTT_2` = `3` | `65` |
+| `66` | `M=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `2`; `CEN_BUTT_2` = `4` | `66` |
 
-### Catalogue slot-condition references
-
-| Condition | Slot | Object | Predicate | Conversion reference |
-| --- | --- | --- | --- | --- |
-| `4145` | `1` | `403` | empty source condition | `` |
-| `4435` | `1` | `403` | `M<>CEN` | `14` |
-| `4434` | `2` | `403` | `M<>CEN` | `13` |
-| `4590` | `1` | `404` | `M=CEN` | `65` |
-| `4591` | `2` | `404` | `M=CEN` | `66` |
-| `4594` | `1` | `405` | `M=FAKE` | `` |
-| `4594` | `2` | `405` | `M=FAKE` | `` |
-| `4594` | `1` | `406` | `M=FAKE` | `` |
-| `4594` | `2` | `406` | `M=FAKE` | `` |
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -264,7 +365,7 @@ Generic conversion-rule evaluation belongs in [Catalogue Resolution](../../inter
 
 ## Functional applicability
 
-The Device participates in scenario control. Depending on the selected Object, its Modules represent scenario-module, programmed/CEN, or PLUS scenario functions. Generic scenario protocol semantics remain canonical under Functional Protocol.
+The Device participates in scenario control. Depending on the selected Object, its Modules represent scenario-module, programmed/`CEN`, or PLUS scenario functions. Generic scenario protocol semantics remain canonical under Functional Protocol.
 
 ## Observed behavior and corroboration
 
@@ -272,7 +373,7 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-Programming must resolve the selected scenario Object per Module and preserve the contextual meaning of `M`, `N` and `DEL`. Physical CEN and PLUS representations must not be flattened into one generic scenario command.
+Programming must resolve the selected scenario Object per Module and preserve the contextual meaning of `M`, `N` and `DEL`. Physical `CEN` and PLUS representations must not be flattened into one generic scenario command.
 
 ## Source reconciliation
 
@@ -280,8 +381,8 @@ The scenario-control documentation has been reconciled with the two-Module catal
 
 - the four physical buttons map to scenario groups selected by `M`, while the two catalogue Modules represent paired command positions rather than four independent Modules;
 - F420-style scenario operation includes explicit scenario programming and deletion workflows with product feedback states;
-- CEN/programmed-scenario use is distinct from local scenario-module use and must preserve the installation/destination-level context;
-- Lighting Management software configuration can represent double-scenario, double-CEN and PLUS forms beyond the physical `M` selector;
+- `CEN`/programmed-scenario use is distinct from local scenario-module use and must preserve the installation/destination-level context;
+- Lighting Management software configuration can represent double-scenario, double-`CEN` and PLUS forms beyond the physical `M` selector;
 - `N` and `DEL` are product delay selectors and are already mapped above, but their effect is tied to selected physical buttons rather than to a generic timer Object.
 
 The remaining source gaps concern Mosaic variants and hardware corroboration.

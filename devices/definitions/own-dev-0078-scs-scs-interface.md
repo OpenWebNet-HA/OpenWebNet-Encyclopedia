@@ -51,35 +51,39 @@
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `143` | `-1` | `-1` | `-1` | `1` | catalogue default | wildcard / unspecified applicability retained |
-| `722` | `6` | `0` | `0` | `1` | non-default | concrete catalogue applicability |
+| `143` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+| `722` | `6` | `0` | `0` | `1` | Not catalogue default | Official |
 
-No sanitized installed-hardware firmware fingerprint is currently retained for this exact technical item.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-| Firmware | Slot(s) | Object | Relationship |
-| --- | --- | --- | --- |
-| `143` | `508` | `74` Interface SCS / SCS Logic | catalogue firmware/Object relation |
-| `143` | `509` | `75` Interface SCS / SCS physical | catalogue firmware/Object relation |
-| `143` | `510` | `76` Interface SCS / SCS galvanic | catalogue firmware/Object relation |
-| `143` | `511` | `77` Interface SCS / SCS burglar alarm | catalogue firmware/Object relation |
-| `143` | `512` | `78` Interface SCS / SCS public riser | catalogue firmware/Object relation |
-| `143` | `513` | `79` Interface SCS / SCS access control | catalogue firmware/Object relation |
-| `143` | `514` | `496` Interface SCS / SCS physical separation | catalogue firmware/Object relation |
-| `722` | `2637` | `74` Interface SCS / SCS Logic | catalogue firmware/Object relation |
-| `722` | `2638` | `75` Interface SCS / SCS physical | catalogue firmware/Object relation |
-| `722` | `2639` | `76` Interface SCS / SCS galvanic | catalogue firmware/Object relation |
-| `722` | `2640` | `77` Interface SCS / SCS burglar alarm | catalogue firmware/Object relation |
-| `722` | `2641` | `78` Interface SCS / SCS public riser | catalogue firmware/Object relation |
-| `722` | `2643` | `496` Interface SCS / SCS physical separation | catalogue firmware/Object relation |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `143` | `1` | `74` Interface SCS / SCS Logic | Candidate alternative | `508` | `74` | `352` |
+| `143` | `1` | `75` Interface SCS / SCS physical | Candidate alternative | `509` | `75` | `353` |
+| `143` | `1` | `76` Interface SCS / SCS galvanic | Fixed/designated metadata | `510` | `76` | `354` |
+| `143` | `1` | `77` Interface SCS / SCS burglar alarm | Candidate alternative | `511` | `77` | `355` |
+| `143` | `1` | `78` Interface SCS / SCS public riser | Candidate alternative | `512` | `78` | `356` |
+| `143` | `1` | `79` Interface SCS / SCS access control | Candidate alternative | `513` | `79` | `357` |
+| `143` | `1` | `85` Interface SCS / SCS physical separation | Candidate alternative | `514` | `496` | `358` |
+| `722` | `1` | `74` Interface SCS / SCS Logic | Candidate alternative | `2637` | `74` | `1247` |
+| `722` | `1` | `75` Interface SCS / SCS physical | Candidate alternative | `2638` | `75` | `1248` |
+| `722` | `1` | `76` Interface SCS / SCS galvanic | Fixed/designated metadata | `2639` | `76` | `1249` |
+| `722` | `1` | `77` Interface SCS / SCS burglar alarm | Candidate alternative | `2640` | `77` | `1250` |
+| `722` | `1` | `78` Interface SCS / SCS public riser | Candidate alternative | `2641` | `78` | `1251` |
+| `722` | `1` | `85` Interface SCS / SCS physical separation | Candidate alternative | `2643` | `496` | `1253` |
 
-| Firmware | Virgin Object | Relationship |
-| --- | --- | --- |
-| `143` | `524` | catalogue candidate/template association |
-| `722` | `524` | catalogue candidate/template association |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `143` | `525` Interface_SCS_SCS_virgin | `1` | `74`, `75`, `76`, `77`, `78`, `79`, `85` | `524` | `16` |
+| `722` | `525` Interface_SCS_SCS_virgin | `1` | `74`, `75`, `76`, `77`, `78`, `79`, `85` | `524` | `60` |
 
 ## Configuration modes
 
@@ -94,100 +98,144 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `143` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `143` | `I1` | catalogue-defined domain | catalogue-scoped | I1 |
-| `143` | `I2` | catalogue-defined domain | catalogue-scoped | I2 |
-| `143` | `I3` | catalogue-defined domain | catalogue-scoped | I3 |
-| `143` | `I4` | catalogue-defined domain | catalogue-scoped | I4 |
-| `143` | `MOD` | catalogue-defined domain | catalogue-scoped | MOD |
-| `722` | `AID` | catalogue-defined domain | catalogue-scoped | ID |
-| `722` | `I1` | catalogue-defined domain | catalogue-scoped | I1 |
-| `722` | `I2` | catalogue-defined domain | catalogue-scoped | I2 |
-| `722` | `I3` | catalogue-defined domain | catalogue-scoped | I3 |
-| `722` | `I4` | catalogue-defined domain | catalogue-scoped | I4 |
-| `722` | `MOD` | catalogue-defined domain | catalogue-scoped | MOD |
+| `143` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `143` | `I1` | `0..9` | `0` | I1; Automation interface address 1 |
+| `143` | `I2` | `0..9` | `0` | I2; Automation interface address 2 |
+| `143` | `I3` | `0..9` | `0` | I3; Automation interface address 3 |
+| `143` | `I4` | `0..9` | `0` | I4; Automation interface address 4 |
+| `143` | `MOD` | `0..6` | `0` | MOD; Mode 0-6 |
+| `722` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `722` | `I1` | `0..9` | `0` | I1; Automation interface address 1 |
+| `722` | `I2` | `0..9` | `0` | I2; Automation interface address 2 |
+| `722` | `I3` | `0..9` | `0` | I3; Automation interface address 3 |
+| `722` | `I4` | `0..9` | `0` | I4; Automation interface address 4 |
+| `722` | `MOD` | `0..4`; `6` | `0` | MOD |
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `74` - Interface SCS / SCS Logic
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I3` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 3 |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 4 |
+| `I3` | `0` | `0` | Automation interface address 3 |
+| `I4` | `1..15` | `1` | Automation interface address 4 |
+
 
 ### Object `75` - Interface SCS / SCS physical
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I3` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 3 |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 4 |
+| `I3` | `0..10` | `0` | Automation interface address 3 |
+| `I4` | `0..15` | `1` | Automation interface address 4 |
+
 
 ### Object `76` - Interface SCS / SCS galvanic
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address |
+| `I4` | `0..239` | `1` | Address |
+
 
 ### Object `77` - Interface SCS / SCS burglar alarm
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address |
+| `I4` | `0..15` | `0` | Address |
+
 
 ### Object `78` - Interface SCS / SCS public riser
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I1I2I3I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Internal unit address |
+| `I1I2I3I4` | `0..3999` | `0` | Internal unit address |
+
 
 ### Object `79` - Interface SCS / SCS access control
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I1` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 1 |
-| `I2` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 2 |
-| `I3` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 3 |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Automation interface address 4 |
+| `I1` | `0` | `0` | Automation interface address 1 |
+| `I2` | `0` | `0` | Automation interface address 2 |
+| `I3` | `0` | `0` | Automation interface address 3 |
+| `I4` | `0..15` | `1` | Automation interface address 4 |
 
-### Object `496` - Interface SCS / SCS physical separation
 
-| Field | Domain | Default | Meaning |
+### Object `85` - Interface SCS / SCS physical separation
+
+Catalogue Object key `496` maps to external Object `85`.
+
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `I4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address |
-| `ADDRESSES_MANAGED_1` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 1 |
-| `ADDRESSES_MANAGED_2` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 2 |
-| `ADDRESSES_MANAGED_3` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 3 |
-| `ADDRESSES_MANAGED_4` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 4 |
-| `ADDRESSES_MANAGED_5` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 5 |
-| `ADDRESSES_MANAGED_6` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 6 |
-| `ADDRESSES_MANAGED_7` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 7 |
-| `ADDRESSES_MANAGED_8` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 8 |
-| `ADDRESSES_MANAGED_9` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 9 |
-| `ADDRESSES_MANAGED_10` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 10 |
-| `ADDRESSES_MANAGED_11` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 11 |
-| `ADDRESSES_MANAGED_12` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 12 |
-| `ADDRESSES_MANAGED_13` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 13 |
-| `ADDRESSES_MANAGED_14` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 14 |
-| `ADDRESSES_MANAGED_15` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 15 |
-| `ADDRESSES_MANAGED_16` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 17 |
-| `ADDRESSES_MANAGED_17` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 17 |
-| `ADDRESSES_MANAGED_18` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 18 |
-| `ADDRESSES_MANAGED_19` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 19 |
-| `ADDRESSES_MANAGED_20` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 20 |
-| `ADDRESSES_MANAGED_22` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Address managed 22 |
-| `CENTRAL_AUTOMATION_MANAGED` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Control unit automation managed |
-| `CENTRAL_ANTINTRUSION_MANAGED` | catalogue-defined; apply Device relation filters and conditions | catalogue-scoped | Control unit burglar alarm managed |
+| `I4` | `0..239` | `0` | Address |
+| `ADDRESSES_MANAGED_1` | `0..255` | `0` | Address managed 1; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 01........f7=address 08 |
+| `ADDRESSES_MANAGED_2` | `0..255` | `0` | Address managed 2; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 09........f7=address 16 |
+| `ADDRESSES_MANAGED_3` | `0..255` | `0` | Address managed 3; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 17........f7=address 24 |
+| `ADDRESSES_MANAGED_4` | `0..255` | `0` | Address managed 4; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 25........f7=address 32 |
+| `ADDRESSES_MANAGED_5` | `0..255` | `0` | Address managed 5; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 33........f7=address 40 |
+| `ADDRESSES_MANAGED_6` | `0..255` | `0` | Address managed 6; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 41........f7=address 48 |
+| `ADDRESSES_MANAGED_7` | `0..255` | `0` | Address managed 7; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 49........f7=address 56 |
+| `ADDRESSES_MANAGED_8` | `0..255` | `0` | Address managed 8; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 57........f7=address 64 |
+| `ADDRESSES_MANAGED_9` | `0..255` | `0` | Address managed 9; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 65........f7=address 72 |
+| `ADDRESSES_MANAGED_10` | `0..255` | `0` | Address managed 10; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 73........f7=address 80 |
+| `ADDRESSES_MANAGED_11` | `0..255` | `0` | Address managed 11; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 81........f7=address 88 |
+| `ADDRESSES_MANAGED_12` | `0..255` | `0` | Address managed 12; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 89........f7=address 96 |
+| `ADDRESSES_MANAGED_13` | `0..255` | `0` | Address managed 13; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 97........f7=address 104 |
+| `ADDRESSES_MANAGED_14` | `0..255` | `0` | Address managed 14; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 105........f7=address 112 |
+| `ADDRESSES_MANAGED_15` | `0..255` | `0` | Address managed 15; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 113........f7=address 120 |
+| `ADDRESSES_MANAGED_16` | `0..255` | `0` | Address managed 17; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 121........f7=address 128 |
+| `ADDRESSES_MANAGED_17` | `0..255` | `0` | Address managed 17; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 129........f7=address 136 |
+| `ADDRESSES_MANAGED_18` | `0..255` | `0` | Address managed 18; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 137........f7=address 144 |
+| `ADDRESSES_MANAGED_19` | `0..255` | `0` | Address managed 19; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 145........f7=address 152 |
+| `ADDRESSES_MANAGED_20` | `0..255` | `0` | Address managed 20; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 153........f7=address 160 |
+| `ADDRESSES_MANAGED_22` | `0..255` | `0` | Address managed 22; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 169........f6=address 175 |
+| `CENTRAL_AUTOMATION_MANAGED` | `0` = Managed on IN side; `1` = Managed on OUT side | `0` | Control unit automation managed; 0x00 managed on IN side, 0x01 managed on OUT side |
+| `CENTRAL_ANTINTRUSION_MANAGED` | `0` = Managed on IN side; `1` = Managed on OUT side | `0` | Control unit burglar alarm managed; 0x00 managed on IN side, 0x01 managed on OUT side |
 
 ## Conditions, filters, and conversions
 
-| Surface | IDs / scope | Device-specific interpretation |
-| --- | --- | --- |
-| Object filters | `2965`, `2968`, `2970`, `2972`, `2974`, `2976`, `2980` | relation-specific restrictions; apply before exposing reusable Object values |
-| Slot conditions | `4697`, `4698`, `4699`, `4700`, `4895`, `4896` | resolve Object/slot applicability before programming |
-| Conversion rules | catalogue-scoped | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+### Slot conditions
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `143` | `1` | `74` | `4698` | `MOD=2` | None |
+| `143` | `1` | `75` | `4697` | `MOD=1` | None |
+| `143` | `1` | `77` | `4700` | `MOD=4` | None |
+| `143` | `1` | `78` | `4699` | `MOD=3` | None |
+| `143` | `1` | `79` | `4895` | `MOD=5` | None |
+| `143` | `1` | `85` | `4896` | `MOD=6` | None |
+| `722` | `1` | `74` | `4698` | `MOD=2` | None |
+| `722` | `1` | `75` | `4697` | `MOD=1` | None |
+| `722` | `1` | `77` | `4700` | `MOD=4` | None |
+| `722` | `1` | `78` | `4699` | `MOD=3` | None |
+| `722` | `1` | `85` | `4896` | `MOD=6` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `143` | `74` | `2972` | `I4` | `10`; `11`; `12`; `13`; `14`; `15` | `1` | Automation interface address 4; reusable default `1` is outside this subset; filter supplies no replacement default |
+| `143` | `75` | `2968` | `I3` | `0`; `10` | `0` | Automation interface address 3 |
+| `143` | `75` | `2970` | `I4` | `0`; `10`; `11`; `12`; `13`; `14`; `15` | `1` | Automation interface address 4; reusable default `1` is outside this subset; filter supplies no replacement default |
+| `143` | `76` | `2965` | `I4` | `10`; `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `11`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `12`; `120`; `121`; `122`; `123`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80`; `81`; `82`; `83`; `84`; `85`; `86`; `87`; `88`; `89`; `90`; `91`; `92`; `93`; `94`; `95`; `96`; `97`; `98`; `99`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239` | `1` | Automation interface address 4; reusable default `1` is outside this subset; filter supplies no replacement default |
+| `143` | `77` | `2974` | `I4` | `10`; `11`; `12`; `13`; `14`; `15` | `0` | Automation interface address 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `143` | `79` | `2976` | `I4` | `10`; `11`; `12`; `13`; `14`; `15` | `1` | Automation interface address 4; reusable default `1` is outside this subset; filter supplies no replacement default |
+| `143` | `85` | `2980` | `I4` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80`; `81`; `82`; `83`; `84`; `85`; `86`; `87`; `88`; `89`; `90`; `91`; `92`; `93`; `94`; `95`; `96`; `97`; `98`; `99`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239` | `0` | Automation interface address 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -195,7 +243,7 @@ No sanitized installed-hardware firmware fingerprint is currently retained for t
 | --- | --- | --- |
 | `DIMENSION 1` | corroborate technical identity for catalogue item `90` / `modobj = 251` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`74`, `75`, `76`, `77`, `78`, `79`, `496`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`74`, `75`, `76`, `77`, `78`, `79`, `85`) | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
 

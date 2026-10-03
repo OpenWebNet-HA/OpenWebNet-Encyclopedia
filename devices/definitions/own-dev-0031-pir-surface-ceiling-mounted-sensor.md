@@ -50,41 +50,30 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `130` | `-1` | `-1` | `1` | `1` | `-1` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `130` | `-1` | `-1` | `-1` | `1` | Catalogue default | Deprecated |
 
-Firmware 130 has wildcard version/revision/build applicability and one Module slot.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-### Firmware Object relations
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `130` | `1` | `119` Stand alone presence sensor | Candidate alternative | `277` | `119` | `276` |
+| `130` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `587` | `128` | `406` |
+| `130` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `278` | `164` | `277` |
+| `130` | `1` | `165` Scenarios presence sensor | Candidate alternative | `279` | `165` | `278` |
+| `130` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `280` | `166` | `279` |
+| `130` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `281` | `168` | `280` |
 
-| Firmware | Relation | Object | Key | Description |
-| ---: | ---: | ---: | ---: | --- |
-| `130` | `276` | `119` | `119` | Stand alone presence sensor |
-| `130` | `277` | `164` | `164` | Scenarios daylight sensor |
-| `130` | `278` | `165` | `165` | Scenarios presence sensor |
-| `130` | `279` | `166` | `166` | Stand alone daylight sensor |
-| `130` | `280` | `168` | `168` | Stand alone daylight and presence sensor |
-| `130` | `406` | `128` | `128` | Scenarios daylight and presence sensor |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
 
-### Slot applicability
+### Virgin Objects
 
-| Slot row | Slot | Object | Relationship | Description |
-| ---: | ---: | ---: | --- | --- |
-| `277` | `1` | `119` | candidate / non-fixed | Stand alone presence sensor |
-| `278` | `1` | `164` | candidate / non-fixed | Scenarios daylight sensor |
-| `279` | `1` | `165` | candidate / non-fixed | Scenarios presence sensor |
-| `280` | `1` | `166` | candidate / non-fixed | Stand alone daylight sensor |
-| `281` | `1` | `168` | candidate / non-fixed | Stand alone daylight and presence sensor |
-| `587` | `1` | `128` | fixed | Scenarios daylight and presence sensor |
-
-### Virgin Object reachability
-
-| Firmware | Relation | Virgin Object | Key | Description | Associated Objects | Slot rows |
-| ---: | ---: | ---: | ---: | --- | --- | --- |
-| `130` | `3` | `515` | `515` | Daylight and motion sensor virgin | `119`, `128`, `164`, `165`, `166`, `168` | `1` |
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `130` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `3` |
 
 Slot `1` has six firmware candidate Objects: `119` Stand alone presence sensor, `164` Scenarios daylight sensor, `165` Scenarios presence sensor, `166` Stand alone daylight sensor, `168` Stand alone daylight and presence sensor, and `128` Scenarios daylight and presence sensor. Catalogue slot metadata marks Object `128` fixed and the other five non-fixed candidates. Shared Virgin Object families `515` / `516` are associated with these sensor Objects; candidate ordering is not an active-role selection rule.
 
@@ -100,89 +89,175 @@ The catalogue declares configuration modes 1, 2 and 3. The official sheet explic
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | `0..9` | `0` | area / environment configurator |
-| `PL` | `0..9` | `0` | light-point configurator |
-| `M` | `0..8` | `0` | operating / function mode |
-| `S` | `0..4` | `0` | sensor sensitivity selector |
-| `T` | `0..9` | `0` | time-delay selector |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `130` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `130` | `A` | `0..9` | `0` | A; Environment |
+| `130` | `PL` | `0..9` | `0` | PL; Light Point |
+| `130` | `M` | `0..8` | `0` | M; Mode 0-8 |
+| `130` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `130` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `A` | `0..9` | area / environment configurator |
+| `PL` | `0..9` | light-point configurator |
+| `M` | `0..8` | operating / function mode |
+| `S` | `0..4` | sensor sensitivity selector |
+| `T` | `0..9` | time-delay selector |
+
 
 The catalogue software domain is broader than the printed physical table: database `M` is `0..8` and `S` is `0..4`, while the 048833 sheet gives physical `M` as `0..4` and `S` as `0..3`. The sheet also forbids `A=0` together with `PL=0`. Both scopes are preserved.
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `119` - Stand alone presence sensor
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `MAIN_GROUP` | target, group, installation-level or network addressing |
-| Mode and behavior | `FUNC_MODE` | operating mode and behavior selectors |
-| Timing and levels | `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
-| Sensing / regulation | `PIR`, `US`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`, `ALERT`, `ENABLE_LOAD_CONTROL` | sensor, occupancy and daylight/regulation parameters |
-| Group membership | `G1`, `G2` | reusable group memberships; `0` means no group |
-
-**Firmware relationship.** The catalogue relation explicitly exposes `US`, `ALERT`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`. The catalogue relation restricts `FUNC_MODE`: `2`. Catalogue irregularity: `GD` (filter `78`) is not present in this reusable Object schema; `TYPE_LOOP` (filter `81`) is not present in this reusable Object schema; `INITIAL_OCC` (filter `84`) is not present in this reusable Object schema; `MAINTAIN_OCC` (filter `85`) is not present in this reusable Object schema; `RE-TRIGGER` (filter `86`) is not present in this reusable Object schema.
-
-### Object `164` - Scenarios daylight sensor
-
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
 
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
-
-### Object `165` - Scenarios presence sensor
-
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `A` | `0..10` | `0` | Area |
-| `PL` | `0..15` | `0` | Light point |
-| `HOURS` | `0..255` | `0` | Time delay - Hours |
-| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
-| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
-| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | `4` | Detection scheme |
-| `PIR` | Low / Medium / High / Maximum | `3` | PIR sensitivity |
-| `US` | Low / Medium / High / Maximum | `2` | US sensitivity |
-
-**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA` to US only (`2`), PIR and US (`3`), or PIR or US (`4`).
-
-### Object `166` - Stand alone daylight sensor
-
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `GD` | target, group, installation-level or network addressing |
-| Mode and behavior | `FUNC_MODE` | operating mode and behavior selectors |
-| Sensing / regulation | `TYPE_LOOP`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `LIGHTING_REGULATION`, `DAYLIGHT_FACTOR`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_LEVEL` | sensor, occupancy and daylight/regulation parameters |
-
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_LOOP`, `DAYLIGHT_FACTOR`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `GD`.
-
-### Object `168` - Stand alone daylight and presence sensor
-
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `MAIN_GROUP`, `GD` | target, group, installation-level or network addressing |
-| Mode and behavior | `FUNC_MODE` | operating mode and behavior selectors |
-| Timing and levels | `HOURS`, `MINUTES`, `SECONDS` | timers, delays, levels and transition parameters |
-| Sensing / regulation | `TYPE_LOOP`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | sensor, occupancy and daylight/regulation parameters |
-| Group membership | `G1`, `G2` | reusable group memberships; `0` means no group |
-
-**Firmware relationship.** The catalogue relation explicitly exposes `GD`, `US`, `TYPE_LOOP`, `NATURAL_LIGHT_FACTOR`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`. The catalogue relation restricts `FUNC_MODE`: `2`.
 
 ### Object `128` - Scenarios daylight and presence sensor
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
 | `HOURS` | `0..255` | `0` | Time delay - Hours |
 | `MINUTES` | `0..59` | `15` | Time delay - Minutes |
 | `SECONDS` | `0..59` | `0` | Time delay - Seconds |
-| `SCHEMA` | PIR only / US only / PIR and US / PIR or US | `4` | Detection scheme |
-| `PIR` | Low / Medium / High / Maximum | `3` | PIR sensitivity |
-| `US` | Low / Medium / High / Maximum | `2` | US sensitivity |
+| `SCHEMA` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
+
+
+### Object `164` - Scenarios daylight sensor
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+
+### Object `165` - Scenarios presence sensor
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
+
+
+### Object `166` - Stand alone daylight sensor
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1` = 5; `2` = 10; `3` = 15; `4` = 20; `5` = 25; `6` = 30; `7` = 35; `8` = 40; `9` = 45; `10` = 50; `11` = 55; `12` = 60; `13` = 65; `14` = 70; `15` = 75; `16` = 80; `17` = 85; `18` = 90; `19` = 95; `20` = 100; `21` = 105; `22` = 110; `23` = 115; `24` = 120; `25` = 125; `26` = 130; `27` = 135; `28` = 140; `29` = 145; `30` = 150; `31` = 155; `32` = 160; `33` = 165; `34` = 170; `35` = 175; `36` = 180; `37` = 185; `38` = 190; `39` = 195; `40` = 200; `41` = 205; `42` = 210; `43` = 215; `44` = 220; `45` = 225; `46` = 230; `47` = 235; `48` = 240; `49` = 245; `50` = 250; `51` = 255; `52` = 260; `53` = 265; `54` = 270; `55` = 275; `56` = 280; `57` = 285; `58` = 290; `59` = 295; `60` = 300; `61` = 305; `62` = 310; `63` = 315; `64` = 320; `65` = 325; `66` = 330; `67` = 335; `68` = 340; `69` = 345; `70` = 350; `71` = 355; `72` = 360; `73` = 365; `74` = 370; `75` = 375; `76` = 380; `77` = 385; `78` = 390; `79` = 395; `80` = 400; `81` = 405; `82` = 410; `83` = 415; `84` = 420; `85` = 425; `86` = 430; `87` = 435; `88` = 440; `89` = 445; `90` = 450; `91` = 455; `92` = 460; `93` = 465; `94` = 470; `95` = 475; `96` = 480; `97` = 485; `98` = 490; `99` = 495; `100` = 500; `101` = 505; `102` = 510; `103` = 515; `104` = 520; `105` = 525; `106` = 530; `107` = 535; `108` = 540; `109` = 545; `110` = 550; `111` = 555; `112` = 560; `113` = 565; `114` = 570; `115` = 575; `116` = 580; `117` = 585; `118` = 590; `119` = 595; `120` = 600; `121` = 605; `122` = 610; `123` = 615; `124` = 620; `125` = 625; `126` = 630; `127` = 635; `128` = 640; `129` = 645; `130` = 650; `131` = 655; `132` = 660; `133` = 665; `134` = 670; `135` = 675; `136` = 680; `137` = 685; `138` = 690; `139` = 695; `140` = 700; `141` = 705; `142` = 710; `143` = 715; `144` = 720; `145` = 725; `146` = 730; `147` = 735; `148` = 740; `149` = 745; `150` = 750; `151` = 755; `152` = 760; `153` = 765; `154` = 770; `155` = 775; `156` = 780; `157` = 785; `158` = 790; `159` = 795; `160` = 800; `161` = 805; `162` = 810; `163` = 815; `164` = 820; `165` = 825; `166` = 830; `167` = 835; `168` = 840; `169` = 845; `170` = 850; `171` = 855; `172` = 860; `173` = 865; `174` = 870; `175` = 875; `176` = 880; `177` = 885; `178` = 890; `179` = 895; `180` = 900; `181` = 905; `182` = 910; `183` = 915; `184` = 920; `185` = 925; `186` = 930; `187` = 935; `188` = 940; `189` = 945; `190` = 950; `191` = 955; `192` = 960; `193` = 965; `194` = 970; `195` = 975; `196` = 980; `197` = 985; `198` = 990; `199` = 995; `200` = 1000; `201` = 1005; `202` = 1010; `203` = 1015; `204` = 1020; `205` = 1025; `206` = 1030; `207` = 1035; `208` = 1040; `209` = 1045; `210` = 1050; `211` = 1055; `212` = 1060; `213` = 1065; `214` = 1070; `215` = 1075; `216` = 1080; `217` = 1085; `218` = 1090; `219` = 1095; `220` = 1100; `221` = 1105; `222` = 1110; `223` = 1115; `224` = 1120; `225` = 1125; `226` = 1130; `227` = 1135; `228` = 1140; `229` = 1145; `230` = 1150; `231` = 1155; `232` = 1160; `233` = 1165; `234` = 1170; `235` = 1175; `236` = 1180; `237` = 1185; `238` = 1190; `239` = 1195; `240` = 1200; `241` = 1205; `242` = 1210; `243` = 1215; `244` = 1220; `245` = 1225; `246` = 1230; `247` = 1235; `248` = 1240; `249` = 1245; `250` = 1250; `251` = 1255; `252` = 1260; `253` = 1265; `254` = 1270; `255` = 1275 | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1` = 5; `2` = 10; `3` = 15; `4` = 20; `5` = 25; `6` = 30; `7` = 35; `8` = 40; `9` = 45; `10` = 50; `11` = 55; `12` = 60; `13` = 65; `14` = 70; `15` = 75; `16` = 80; `17` = 85; `18` = 90; `19` = 95; `20` = 100; `21` = 105; `22` = 110; `23` = 115; `24` = 120; `25` = 125; `26` = 130; `27` = 135; `28` = 140; `29` = 145; `30` = 150; `31` = 155; `32` = 160; `33` = 165; `34` = 170; `35` = 175; `36` = 180; `37` = 185; `38` = 190; `39` = 195; `40` = 200; `41` = 205; `42` = 210; `43` = 215; `44` = 220; `45` = 225; `46` = 230; `47` = 235; `48` = 240; `49` = 245; `50` = 250; `51` = 255; `52` = 260; `53` = 265; `54` = 270; `55` = 275; `56` = 280; `57` = 285; `58` = 290; `59` = 295; `60` = 300; `61` = 305; `62` = 310; `63` = 315; `64` = 320; `65` = 325; `66` = 330; `67` = 335; `68` = 340; `69` = 345; `70` = 350; `71` = 355; `72` = 360; `73` = 365; `74` = 370; `75` = 375; `76` = 380; `77` = 385; `78` = 390; `79` = 395; `80` = 400; `81` = 405; `82` = 410; `83` = 415; `84` = 420; `85` = 425; `86` = 430; `87` = 435; `88` = 440; `89` = 445; `90` = 450; `91` = 455; `92` = 460; `93` = 465; `94` = 470; `95` = 475; `96` = 480; `97` = 485; `98` = 490; `99` = 495; `100` = 500; `101` = 505; `102` = 510; `103` = 515; `104` = 520; `105` = 525; `106` = 530; `107` = 535; `108` = 540; `109` = 545; `110` = 550; `111` = 555; `112` = 560; `113` = 565; `114` = 570; `115` = 575; `116` = 580; `117` = 585; `118` = 590; `119` = 595; `120` = 600; `121` = 605; `122` = 610; `123` = 615; `124` = 620; `125` = 625; `126` = 630; `127` = 635; `128` = 640; `129` = 645; `130` = 650; `131` = 655; `132` = 660; `133` = 665; `134` = 670; `135` = 675; `136` = 680; `137` = 685; `138` = 690; `139` = 695; `140` = 700; `141` = 705; `142` = 710; `143` = 715; `144` = 720; `145` = 725; `146` = 730; `147` = 735; `148` = 740; `149` = 745; `150` = 750; `151` = 755; `152` = 760; `153` = 765; `154` = 770; `155` = 775; `156` = 780; `157` = 785; `158` = 790; `159` = 795; `160` = 800; `161` = 805; `162` = 810; `163` = 815; `164` = 820; `165` = 825; `166` = 830; `167` = 835; `168` = 840; `169` = 845; `170` = 850; `171` = 855; `172` = 860; `173` = 865; `174` = 870; `175` = 875; `176` = 880; `177` = 885; `178` = 890; `179` = 895; `180` = 900; `181` = 905; `182` = 910; `183` = 915; `184` = 920; `185` = 925; `186` = 930; `187` = 935; `188` = 940; `189` = 945; `190` = 950; `191` = 955; `192` = 960; `193` = 965; `194` = 970; `195` = 975; `196` = 980; `197` = 985; `198` = 990; `199` = 995; `200` = 1000; `201` = 1005; `202` = 1010; `203` = 1015; `204` = 1020; `205` = 1025; `206` = 1030; `207` = 1035; `208` = 1040; `209` = 1045; `210` = 1050; `211` = 1055; `212` = 1060; `213` = 1065; `214` = 1070; `215` = 1075; `216` = 1080; `217` = 1085; `218` = 1090; `219` = 1095; `220` = 1100; `221` = 1105; `222` = 1110; `223` = 1115; `224` = 1120; `225` = 1125; `226` = 1130; `227` = 1135; `228` = 1140; `229` = 1145; `230` = 1150; `231` = 1155; `232` = 1160; `233` = 1165; `234` = 1170; `235` = 1175; `236` = 1180; `237` = 1185; `238` = 1190; `239` = 1195; `240` = 1200; `241` = 1205; `242` = 1210; `243` = 1215; `244` = 1220; `245` = 1225; `246` = 1230; `247` = 1235; `248` = 1240; `249` = 1245; `250` = 1250; `251` = 1255; `252` = 1260; `253` = 1265; `254` = 1270; `255` = 1275 | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+
+### Object `168` - Stand alone daylight and presence sensor
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1` = 5; `2` = 10; `3` = 15; `4` = 20; `5` = 25; `6` = 30; `7` = 35; `8` = 40; `9` = 45; `10` = 50; `11` = 55; `12` = 60; `13` = 65; `14` = 70; `15` = 75; `16` = 80; `17` = 85; `18` = 90; `19` = 95; `20` = 100; `21` = 105; `22` = 110; `23` = 115; `24` = 120; `25` = 125; `26` = 130; `27` = 135; `28` = 140; `29` = 145; `30` = 150; `31` = 155; `32` = 160; `33` = 165; `34` = 170; `35` = 175; `36` = 180; `37` = 185; `38` = 190; `39` = 195; `40` = 200; `41` = 205; `42` = 210; `43` = 215; `44` = 220; `45` = 225; `46` = 230; `47` = 235; `48` = 240; `49` = 245; `50` = 250; `51` = 255; `52` = 260; `53` = 265; `54` = 270; `55` = 275; `56` = 280; `57` = 285; `58` = 290; `59` = 295; `60` = 300; `61` = 305; `62` = 310; `63` = 315; `64` = 320; `65` = 325; `66` = 330; `67` = 335; `68` = 340; `69` = 345; `70` = 350; `71` = 355; `72` = 360; `73` = 365; `74` = 370; `75` = 375; `76` = 380; `77` = 385; `78` = 390; `79` = 395; `80` = 400; `81` = 405; `82` = 410; `83` = 415; `84` = 420; `85` = 425; `86` = 430; `87` = 435; `88` = 440; `89` = 445; `90` = 450; `91` = 455; `92` = 460; `93` = 465; `94` = 470; `95` = 475; `96` = 480; `97` = 485; `98` = 490; `99` = 495; `100` = 500; `101` = 505; `102` = 510; `103` = 515; `104` = 520; `105` = 525; `106` = 530; `107` = 535; `108` = 540; `109` = 545; `110` = 550; `111` = 555; `112` = 560; `113` = 565; `114` = 570; `115` = 575; `116` = 580; `117` = 585; `118` = 590; `119` = 595; `120` = 600; `121` = 605; `122` = 610; `123` = 615; `124` = 620; `125` = 625; `126` = 630; `127` = 635; `128` = 640; `129` = 645; `130` = 650; `131` = 655; `132` = 660; `133` = 665; `134` = 670; `135` = 675; `136` = 680; `137` = 685; `138` = 690; `139` = 695; `140` = 700; `141` = 705; `142` = 710; `143` = 715; `144` = 720; `145` = 725; `146` = 730; `147` = 735; `148` = 740; `149` = 745; `150` = 750; `151` = 755; `152` = 760; `153` = 765; `154` = 770; `155` = 775; `156` = 780; `157` = 785; `158` = 790; `159` = 795; `160` = 800; `161` = 805; `162` = 810; `163` = 815; `164` = 820; `165` = 825; `166` = 830; `167` = 835; `168` = 840; `169` = 845; `170` = 850; `171` = 855; `172` = 860; `173` = 865; `174` = 870; `175` = 875; `176` = 880; `177` = 885; `178` = 890; `179` = 895; `180` = 900; `181` = 905; `182` = 910; `183` = 915; `184` = 920; `185` = 925; `186` = 930; `187` = 935; `188` = 940; `189` = 945; `190` = 950; `191` = 955; `192` = 960; `193` = 965; `194` = 970; `195` = 975; `196` = 980; `197` = 985; `198` = 990; `199` = 995; `200` = 1000; `201` = 1005; `202` = 1010; `203` = 1015; `204` = 1020; `205` = 1025; `206` = 1030; `207` = 1035; `208` = 1040; `209` = 1045; `210` = 1050; `211` = 1055; `212` = 1060; `213` = 1065; `214` = 1070; `215` = 1075; `216` = 1080; `217` = 1085; `218` = 1090; `219` = 1095; `220` = 1100; `221` = 1105; `222` = 1110; `223` = 1115; `224` = 1120; `225` = 1125; `226` = 1130; `227` = 1135; `228` = 1140; `229` = 1145; `230` = 1150; `231` = 1155; `232` = 1160; `233` = 1165; `234` = 1170; `235` = 1175; `236` = 1180; `237` = 1185; `238` = 1190; `239` = 1195; `240` = 1200; `241` = 1205; `242` = 1210; `243` = 1215; `244` = 1220; `245` = 1225; `246` = 1230; `247` = 1235; `248` = 1240; `249` = 1245; `250` = 1250; `251` = 1255; `252` = 1260; `253` = 1265; `254` = 1270; `255` = 1275 | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1` = 5; `2` = 10; `3` = 15; `4` = 20; `5` = 25; `6` = 30; `7` = 35; `8` = 40; `9` = 45; `10` = 50; `11` = 55; `12` = 60; `13` = 65; `14` = 70; `15` = 75; `16` = 80; `17` = 85; `18` = 90; `19` = 95; `20` = 100; `21` = 105; `22` = 110; `23` = 115; `24` = 120; `25` = 125; `26` = 130; `27` = 135; `28` = 140; `29` = 145; `30` = 150; `31` = 155; `32` = 160; `33` = 165; `34` = 170; `35` = 175; `36` = 180; `37` = 185; `38` = 190; `39` = 195; `40` = 200; `41` = 205; `42` = 210; `43` = 215; `44` = 220; `45` = 225; `46` = 230; `47` = 235; `48` = 240; `49` = 245; `50` = 250; `51` = 255; `52` = 260; `53` = 265; `54` = 270; `55` = 275; `56` = 280; `57` = 285; `58` = 290; `59` = 295; `60` = 300; `61` = 305; `62` = 310; `63` = 315; `64` = 320; `65` = 325; `66` = 330; `67` = 335; `68` = 340; `69` = 345; `70` = 350; `71` = 355; `72` = 360; `73` = 365; `74` = 370; `75` = 375; `76` = 380; `77` = 385; `78` = 390; `79` = 395; `80` = 400; `81` = 405; `82` = 410; `83` = 415; `84` = 420; `85` = 425; `86` = 430; `87` = 435; `88` = 440; `89` = 445; `90` = 450; `91` = 455; `92` = 460; `93` = 465; `94` = 470; `95` = 475; `96` = 480; `97` = 485; `98` = 490; `99` = 495; `100` = 500; `101` = 505; `102` = 510; `103` = 515; `104` = 520; `105` = 525; `106` = 530; `107` = 535; `108` = 540; `109` = 545; `110` = 550; `111` = 555; `112` = 560; `113` = 565; `114` = 570; `115` = 575; `116` = 580; `117` = 585; `118` = 590; `119` = 595; `120` = 600; `121` = 605; `122` = 610; `123` = 615; `124` = 620; `125` = 625; `126` = 630; `127` = 635; `128` = 640; `129` = 645; `130` = 650; `131` = 655; `132` = 660; `133` = 665; `134` = 670; `135` = 675; `136` = 680; `137` = 685; `138` = 690; `139` = 695; `140` = 700; `141` = 705; `142` = 710; `143` = 715; `144` = 720; `145` = 725; `146` = 730; `147` = 735; `148` = 740; `149` = 745; `150` = 750; `151` = 755; `152` = 760; `153` = 765; `154` = 770; `155` = 775; `156` = 780; `157` = 785; `158` = 790; `159` = 795; `160` = 800; `161` = 805; `162` = 810; `163` = 815; `164` = 820; `165` = 825; `166` = 830; `167` = 835; `168` = 840; `169` = 845; `170` = 850; `171` = 855; `172` = 860; `173` = 865; `174` = 870; `175` = 875; `176` = 880; `177` = 885; `178` = 890; `179` = 895; `180` = 900; `181` = 905; `182` = 910; `183` = 915; `184` = 920; `185` = 925; `186` = 930; `187` = 935; `188` = 940; `189` = 945; `190` = 950; `191` = 955; `192` = 960; `193` = 965; `194` = 970; `195` = 975; `196` = 980; `197` = 985; `198` = 990; `199` = 995; `200` = 1000; `201` = 1005; `202` = 1010; `203` = 1015; `204` = 1020; `205` = 1025; `206` = 1030; `207` = 1035; `208` = 1040; `209` = 1045; `210` = 1050; `211` = 1055; `212` = 1060; `213` = 1065; `214` = 1070; `215` = 1075; `216` = 1080; `217` = 1085; `218` = 1090; `219` = 1095; `220` = 1100; `221` = 1105; `222` = 1110; `223` = 1115; `224` = 1120; `225` = 1125; `226` = 1130; `227` = 1135; `228` = 1140; `229` = 1145; `230` = 1150; `231` = 1155; `232` = 1160; `233` = 1165; `234` = 1170; `235` = 1175; `236` = 1180; `237` = 1185; `238` = 1190; `239` = 1195; `240` = 1200; `241` = 1205; `242` = 1210; `243` = 1215; `244` = 1220; `245` = 1225; `246` = 1230; `247` = 1235; `248` = 1240; `249` = 1245; `250` = 1250; `251` = 1255; `252` = 1260; `253` = 1265; `254` = 1270; `255` = 1275 | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | US sensitivity |
+| `INITIAL_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+
+### Product interpretation and source differences
+
+**Object `119` - Stand alone presence sensor - product interpretation.**
+
+**Firmware relationship.** The catalogue relation explicitly exposes `US`, `ALERT`, `INITIAL_OCCUPANCY`, `MAINTAIN_OCCUPANCY`, `RETRIGGER`. The catalogue relation restricts `FUNC_MODE`: `2`. Catalogue irregularity: `GD` (filter `78`) is not present in this reusable Object schema; `TYPE_LOOP` (filter `81`) is not present in this reusable Object schema; `INITIAL_OCC` (filter `84`) is not present in this reusable Object schema; `MAINTAIN_OCC` (filter `85`) is not present in this reusable Object schema; `RE-TRIGGER` (filter `86`) is not present in this reusable Object schema.
+
+**Object `164` - Scenarios daylight sensor - product interpretation.**
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+**Object `165` - Scenarios presence sensor - product interpretation.**
+
+**Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA` to US only (`2`), PIR and US (`3`), or PIR or US (`4`).
+
+**Object `166` - Stand alone daylight sensor - product interpretation.**
+
+**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_LOOP`, `DAYLIGHT_FACTOR`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `GD`.
+
+**Object `168` - Stand alone daylight and presence sensor - product interpretation.**
+
+**Firmware relationship.** The catalogue relation explicitly exposes `GD`, `US`, `TYPE_LOOP`, `NATURAL_LIGHT_FACTOR`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`. The catalogue relation restricts `FUNC_MODE`: `2`.
+
+**Object `128` - Scenarios daylight and presence sensor - product interpretation.**
 
 **Firmware relationship.** The catalogue relation explicitly exposes `US`. The catalogue relation restricts `SCHEMA` to US only (`2`), PIR and US (`3`), or PIR or US (`4`).
 
@@ -190,67 +265,90 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 ## Conditions, filters, and conversions
 
-| Surface | Catalogue rows | Interpretation |
-| --- | ---: | --- |
-| Slot conditions | `9` | Device/Firmware topology conditions |
-| Object/Firmware filters | `35` | Conditional Object configuration exposure |
-| Referenced conversion rules | `1` | `6` |
-
 ### Slot conditions
 
-| Slot | Object | Condition ID | Condition expression | Conversion rule |
-| ---: | ---: | ---: | --- | ---: |
-| `1` | `128` | `4478` | `M=2` | `6` |
-| `1` | `166` | `4462` | `M=1` | `6` |
-| `1` | `166` | `4506` | `M=4` | `6` |
-| `1` | `166` | `4546` | `M=7` | `6` |
-| `1` | `166` | `4559` | `M=8` | `6` |
-| `1` | `168` | `4441` | `M=0` | `6` |
-| `1` | `168` | `4492` | `M=3` | `6` |
-| `1` | `168` | `4520` | `M=5` | `6` |
-| `1` | `168` | `4533` | `M=6` | `6` |
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `130` | `1` | `128` | `4478` | `M=2` | `6` |
+| `130` | `1` | `166` | `4462` | `M=1` | `6` |
+| `130` | `1` | `166` | `4506` | `M=4` | `6` |
+| `130` | `1` | `166` | `4546` | `M=7` | `6` |
+| `130` | `1` | `166` | `4559` | `M=8` | `6` |
+| `130` | `1` | `168` | `4441` | `M=0` | `6` |
+| `130` | `1` | `168` | `4492` | `M=3` | `6` |
+| `130` | `1` | `168` | `4520` | `M=5` | `6` |
+| `130` | `1` | `168` | `4533` | `M=6` | `6` |
 
-### Object/Firmware filters
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-| Object | Filter ID | Field | Note | Whole range | Filter ranges |
-| ---: | ---: | --- | --- | --- | --- |
-| `119` | `78` | `GD` | Daylight Sensor group | `1` | - |
-| `119` | `79` | `US` | US sensitivity | `1` | - |
-| `119` | `81` | `TYPE_LOOP` | Type loop | `1` | - |
-| `119` | `83` | `FUNC_MODE` | Functional mode | `0` | `2` |
-| `119` | `84` | `INITIAL_OCC` | Initial occupancy | `1` | - |
-| `119` | `85` | `MAINTAIN_OCC` | Mantain occupancy | `1` | - |
-| `119` | `86` | `RE-TRIGGER` | Re-trigger | `1` | - |
-| `119` | `87` | `ALERT` | Alert | `1` | - |
-| `119` | `2353` | `INITIAL_OCCUPANCY` | Initial occupancy | `1` | - |
-| `119` | `2354` | `MAINTAIN_OCCUPANCY` | Mantain occupancy | `1` | - |
-| `119` | `2355` | `RETRIGGER` | Re-trigger | `1` | - |
-| `119` | `2356` | `ALERT` | Alert | `1` | - |
-| `119` | `2357` | `US` | US sensitivity | `1` | - |
-| `128` | `351` | `US` | US sensitivity | `1` | - |
-| `128` | `352` | `SCHEMA` | Detection Schema | `0` | `2` - US only<br>`3` - PIR and US<br>`4` - PIR or US |
-| `165` | `88` | `US` | US sensitivity | `1` | - |
-| `165` | `89` | `SCHEMA` | Detection Schema | `0` | `2` - US only<br>`3` - PIR and US<br>`4` - PIR or US |
-| `166` | `92` | `TYPE_LOOP` | Type loop | `1` | - |
-| `166` | `2100` | `DAYLIGHT_FACTOR` | Daylight factor | `1` | - |
-| `166` | `2115` | `NATURAL_LIGHT_FACTOR` | Natural light factor | `1` | - |
-| `166` | `2130` | `DAYLIGHT_LEVEL` | Daylight level | `1` | - |
-| `166` | `2358` | `GD` | Daylight sensor group | `1` | - |
-| `168` | `96` | `GD` | Daylight Sensor group | `1` | - |
-| `168` | `97` | `US` | US sensitivity | `1` | - |
-| `168` | `99` | `TYPE_LOOP` | Type loop | `1` | - |
-| `168` | `100` | `NATURAL_LIGHT_FACTOR` | natula light | `1` | - |
-| `168` | `103` | `FUNC_MODE` | Functional mode | `0` | `2` |
-| `168` | `104` | `INITIAL_OCC` | Initial occupancy | `1` | - |
-| `168` | `105` | `MAINTAIN_OCC` | Mantain occupancy | `1` | - |
-| `168` | `106` | `RE-TRIGGER` | Re-trigger | `1` | - |
-| `168` | `107` | `ALERT` | Alert | `1` | - |
-| `168` | `2146` | `DAYLIGHT_FACTOR` | Daylight factor | `1` | - |
-| `168` | `2361` | `DAYLIGHT_LEVEL` | Daylight level | `1` | - |
-| `168` | `2444` | `DAYLIGHT_SETPOINT` | Daylight setpoint (Lux) | `0` | - |
-| `168` | `2456` | `PROVISION_OF_LIGHT` | Provision of light (Lux) | `0` | - |
+### Object/Firmware restrictions
 
-Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `130` | `119` | `78` | `GD` | `0..255` (entire reusable range retained) | `0` | Daylight Sensor group; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `79` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | US sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `81` | `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop (entire reusable range retained) | `0` | Type loop; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `83` | `FUNC_MODE` | `2` = Auto walkthrough | `2` | Functional mode; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `84` | `INITIAL_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `85` | `MAINTAIN_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `86` | `RE-TRIGGER` | `0` = Disabled; `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `87` | `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic (entire reusable range retained) | `0` | Alert; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `130` | `119` | `2353` | `INITIAL_OCCUPANCY` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `3` | Initial occupancy |
+| `130` | `119` | `2354` | `MAINTAIN_OCCUPANCY` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Mantain occupancy |
+| `130` | `119` | `2355` | `RETRIGGER` | `0` = Disabled; `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Re-trigger |
+| `130` | `119` | `2356` | `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic (entire reusable range retained) | `0` | Alert |
+| `130` | `119` | `2357` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | US sensitivity |
+| `130` | `128` | `351` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | US sensitivity |
+| `130` | `128` | `352` | `SCHEMA` | `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection Schema |
+| `130` | `165` | `88` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | US sensitivity |
+| `130` | `165` | `89` | `SCHEMA` | `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection Schema |
+| `130` | `166` | `92` | `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop (entire reusable range retained) | `0` | Type loop |
+| `130` | `166` | `2100` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `130` | `166` | `2115` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `130` | `166` | `2130` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `130` | `166` | `2358` | `GD` | `0..255` (entire reusable range retained) | `0` | Daylight sensor group |
+| `130` | `168` | `96` | `GD` | `0..255` (entire reusable range retained) | `0` | Daylight Sensor group |
+| `130` | `168` | `97` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | US sensitivity |
+| `130` | `168` | `99` | `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop (entire reusable range retained) | `0` | Type loop |
+| `130` | `168` | `100` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | natula light |
+| `130` | `168` | `103` | `FUNC_MODE` | `2` = Auto walkthrough | `2` | Functional mode |
+| `130` | `168` | `104` | `INITIAL_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `3` | Initial occupancy |
+| `130` | `168` | `105` | `MAINTAIN_OCC` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Mantain occupancy |
+| `130` | `168` | `106` | `RE-TRIGGER` | `0` = Disabled; `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US (entire reusable range retained) | `4` | Re-trigger |
+| `130` | `168` | `107` | `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic (entire reusable range retained) | `0` | Alert |
+| `130` | `168` | `2146` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `130` | `168` | `2361` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `130` | `168` | `2444` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `130` | `168` | `2456` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `6` | `M=3` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `6` |
+| `6` | `M=4` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `6` |
+| `6` | `M=5` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `6` |
+| `6` | `M=6` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `6` |
+| `6` | `M=7` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `6` |
+| `6` | `M=8` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `6` |
+| `6` | `S=0` | `PIR` = `0` | `6` |
+| `6` | `S=1` | `PIR` = `1` | `6` |
+| `6` | `S=2` | `PIR` = `2` | `6` |
+| `6` | `S=3` | `PIR` = `3` | `6` |
+| `6` | `T=0` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `0` | `6` |
+| `6` | `T=1` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `30` | `6` |
+| `6` | `T=2` | `HOURS` = `0`; `MINUTES` = `1`; `SECONDS` = `0` | `6` |
+| `6` | `T=3` | `HOURS` = `0`; `MINUTES` = `2`; `SECONDS` = `0` | `6` |
+| `6` | `T=4` | `HOURS` = `0`; `MINUTES` = `5`; `SECONDS` = `0` | `6` |
+| `6` | `T=5` | `HOURS` = `0`; `MINUTES` = `10`; `SECONDS` = `0` | `6` |
+| `6` | `T=6` | `HOURS` = `0`; `MINUTES` = `15`; `SECONDS` = `0` | `6` |
+| `6` | `T=7` | `HOURS` = `0`; `MINUTES` = `20`; `SECONDS` = `0` | `6` |
+| `6` | `T=8` | `HOURS` = `0`; `MINUTES` = `30`; `SECONDS` = `0` | `6` |
+| `6` | `T=9` | `HOURS` = `0`; `MINUTES` = `40`; `SECONDS` = `0` | `6` |
+| `6` | `M=0` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1` | `6` |
+| `6` | `M=1` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `0` | `6` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 

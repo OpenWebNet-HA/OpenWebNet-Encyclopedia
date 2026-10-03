@@ -31,12 +31,12 @@ No preference between these references is implied by the Device ID.
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/2d/b6/2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
-| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
-| `LE07383AC` | Instruction sheet | Historical revision | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
-| `LE07383AD` | Instruction sheet | 07/23 | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
-| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
-| `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Device/family coverage described by retained source | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
+| `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2d/b6/2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
+| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
+| `LE07383AC` | Instruction sheet | Historical revision | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
+| `LE07383AD` | Instruction sheet | 07/23 | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
+| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
+| `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Publisher listing identifies the guide; retained multi-product page coverage not established | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 
 The source archive should retain every distinct revision found for this Device. The following official material is currently known:
 
@@ -58,6 +58,12 @@ See the [Device Source Index](../../sources/devices/index.md) for archival statu
 | Parallel load at `220..240 V` | up to `600 W` | Vendor technical sheet |
 | Load families | dimmable LED, dimmable CFL, halogen, electronic transformers | Vendor technical sheet |
 | Local operation | local channel pushbuttons | Vendor technical sheet |
+| Later operating temperature | `5..40 °C` | `LE07383AD`, July 2023, PDF p. 2; earlier `MQ01019_a_EN` gives `0..40 °C` |
+| Later load-table entries at `240 Vac` | `150 W` / `150 VA` | `LE07383AD`, PDF p. 2; keep the printed load-column context separate from the older per-channel ratings |
+| Later load-table entries at `110 Vac` | `75 W` / `75 VA` | `LE07383AD`, PDF p. 2; not a timeless replacement for the 2018 matrix |
+| Fuse | `T3.15H 250 V` time-lag fuse | `LE07383AD`, PDF p. 1 |
+| Installation placement | No adjacent dimmers; no installation adjacent to a power supply | `LE07383AD`, PDF p. 2 |
+| Load combination | Mixed loads prohibited | `LE07383AD`, PDF p. 2 |
 
 The 2018 technical sheet establishes the following product-specific characteristics:
 
@@ -84,26 +90,29 @@ These differences are archival evidence that F418U2 documentation and product be
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `590` | `1` | `0` | `5` | `2` | non-default | catalogue applicability |
+| `590` | `1` | `0` | `5` | `2` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
 
 ## Module, Object, and Virgin Object model
 
-### Objects
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `590` | `1` | `8` Dimmer actuator | Fixed/designated metadata | `2592` | `8` | `1210` |
+| `590` | `1` | `136` Double Dimmer actuator | Candidate alternative | `2591` | `631` | `1209` |
+| `590` | `2` | `8` Dimmer actuator | Fixed/designated metadata | `2593` | `8` | `1210` |
 
-| Firmware | Object | Description | Relationship |
-| --- | --- | --- | --- |
-| `590` | `631` | Double Dimmer actuator | catalogue firmware/Object relation |
-| `590` | `8` | Dimmer actuator | catalogue firmware/Object relation |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
 
 ### Virgin Objects
 
-| Firmware | Virgin Object | Relationship |
-| --- | --- | --- |
-| `590` | `532` | catalogue candidate/template association |
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `590` | `528` Dimmer actuator virgin | `1`, `2` | `8`, `136` | `532` | `55` |
 
 ### Reconciled topology notes
 
@@ -137,34 +146,39 @@ The vendor technical sheet independently documents physical configuration and My
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `590` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `A` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `PL1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `PL2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `M` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `G` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `TY` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `MIN1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `590` | `MIN2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `590` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `590` | `A` | `0..9` | `0` | Area |
+| `590` | `PL1` | `0..9` | `0` | Lighting point for channel 1 |
+| `590` | `PL2` | `0..9` | `0` | Lighting point for channel 2 |
+| `590` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | Modality |
+| `590` | `G` | `0..9` | `0` | Group |
+| `590` | `TY` | `0..3` | `0` | Load type |
+| `590` | `MIN1` | `0..9` | `0` | Minimum level for channel 1 |
+| `590` | `MIN2` | `0..9` | `0` | Minimum level for channel 2 |
+
+
+
 
 ### Published and reconciled details
 
 
 These are the complete firmware-scoped configuration fields stored for firmware `590`, excluding only database bookkeeping columns.
 
-| Field | Progressive | Type | Catalogue domain | Product-document interpretation | Evidence |
-| --- | ---: | --- | --- | --- | --- |
-| `AID` | 0 | user value | Device ID field | not a physical configurator | Implementation evidence |
-| `A` | 1 | zone / room address | `0..9` | physical `A=1..9`; virtual room `0..10` | Catalogue + vendor PDF |
-| `PL1` | 2 | point-to-point address | `0..9` | physical `PL1=1..9`; virtual `0..15` | Catalogue + vendor PDF |
-| `PL2` | 3 | point-to-point address | `0..9` | physical `PL2=0..9`; virtual `0..15` | Catalogue + vendor PDF |
-| `M` | 4 | mode enum | `0,1,2,3,4,11=SLA,15=PUL` | Master, delayed ON modes, Slave, Master PUL | Catalogue + vendor PDF |
-| `G` | 5 | group | `0..9` | physical `0..9`; virtual group `0..255` | Catalogue + vendor PDF |
-| `TY` | 6 | enum | `0..3` | per-channel leading/trailing-edge load selection | Catalogue + vendor PDF |
-| `MIN1` | 7 | enum | `0..9` | channel 1 minimum level selector | Catalogue + vendor PDF |
-| `MIN2` | 8 | enum | `0..9` | channel 2 minimum level selector | Catalogue + vendor PDF |
+| Field | Catalogue domain | Product-document interpretation | Evidence |
+| --- | --- | --- | --- |
+| `AID` | Device ID field | not a physical configurator | Implementation evidence |
+| `A` | `0..9` | physical `A=1..9`; virtual room `0..10` | Catalogue + vendor PDF |
+| `PL1` | `0..9` | physical `PL1=1..9`; virtual `0..15` | Catalogue + vendor PDF |
+| `PL2` | `0..9` | physical `PL2=0..9`; virtual `0..15` | Catalogue + vendor PDF |
+| `M` | `0,1,2,3,4,11=SLA,15=PUL` | Master, delayed `OFF` modes, Slave, Master `PUL` | Catalogue + vendor PDF |
+| `G` | `0..9` | physical `0..9`; virtual group `0..255` | Catalogue + vendor PDF |
+| `TY` | `0..3` | per-channel leading/trailing-edge load selection | Catalogue + vendor PDF |
+| `MIN1` | `0..9` | channel 1 minimum level selector | Catalogue + vendor PDF |
+| `MIN2` | `0..9` | channel 2 minimum level selector | Catalogue + vendor PDF |
 
 The catalogue includes `0` in the stored physical ranges for `A` and `PL1`, while the 2018 technical sheet prints `A=1..9` and `PL1=1..9`. Preserve this as a source-level difference rather than silently reconciling the domains.
 
@@ -178,7 +192,7 @@ The catalogue includes `0` in the stored physical ranges for `A` and `PL1`, whil
 | `3` | Master with delayed switch-off, 3 minutes | Vendor PDF |
 | `4` | Master with delayed switch-off, 4 minutes | Vendor PDF |
 | `11` / `SLA` | Slave | Catalogue + vendor PDF |
-| `15` / `PUL` | Master PUL | Catalogue + vendor PDF |
+| `15` / `PUL` | Master `PUL` | Catalogue + vendor PDF |
 
 Virtual configuration exposes the delayed-off value as a Device/Object parameter rather than restricting it to the four physical presets.
 
@@ -210,63 +224,69 @@ The vendor sheet makes `MIN2` conditional on the second channel configuration an
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `8` - Dimmer actuator
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `DELAYED_OFF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `STATE_SAVING_ON_RESET` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `TYPE_LOAD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `TYPE_STANDARD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_LEVEL_ADV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_AUTO` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `MIN_LEVEL` | `1..100` | `1` | Minimum level |
+| `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI; `10` = Halogen lamp; `11` = LED trailing edge / electronic transformers; `12` = LED leading edge; `13` = CFL trailing edge; `14` = CFL leading edge | `0` | Type of load; Default value depends on device. |
+| `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard | `0` | Voltage standard |
+| `MIN_LEVEL_ADV` | `1..100` | `0` | Minimum level advanced; Default value depends on device and Type of load value |
+| `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable | `0` | Enable / Disable minimum level |
+| `G1` | `0..255` | `0` | Group 1 |
+| `G2` | `0..255` | `0` | Group 2 |
+| `G3` | `0..255` | `0` | Group 3 |
+| `G4` | `0..255` | `0` | Group 4 |
+| `G5` | `0..255` | `0` | Group 5 |
+| `G6` | `0..255` | `0` | Group 6 |
+| `G7` | `0..255` | `0` | Group 7 |
+| `G8` | `0..255` | `0` | Group 8 |
+| `G9` | `0..255` | `0` | Group 9 |
+| `G10` | `0..255` | `0` | Group 10 |
 
-### Object `631` - Double Dimmer actuator
 
-| Field | Domain | Default | Meaning |
+### Object `136` - Double Dimmer actuator
+
+Catalogue Object key `631` maps to external Object `136`.
+
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `LOCAL_BUTTON` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `DELAYED_OFF` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `STATE_SAVING_ON_RESET` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `TYPE_LOAD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `TYPE_STANDARD` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_LEVEL_ADV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MIN_AUTO` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G3` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G4` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G5` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G6` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G7` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G8` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G9` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G10` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `MIN_LEVEL` | `1..100` | `1` | Minimum level |
+| `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI; `10` = Halogen lamp; `11` = LED trailing edge / electronic transformers; `12` = LED leading edge; `13` = CFL trailing edge; `14` = CFL leading edge | `0` | Type of load; Default value depends on device. |
+| `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard | `0` | Voltage standard |
+| `MIN_LEVEL_ADV` | `1..100` | `0` | Minimum level advanced; Default value depends on device and Type of load value |
+| `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable | `0` | Enable / Disable minimum level |
+| `G1` | `0..255` | `0` | Group 1 |
+| `G2` | `0..255` | `0` | Group 2 |
+| `G3` | `0..255` | `0` | Group 3 |
+| `G4` | `0..255` | `0` | Group 4 |
+| `G5` | `0..255` | `0` | Group 5 |
+| `G6` | `0..255` | `0` | Group 6 |
+| `G7` | `0..255` | `0` | Group 7 |
+| `G8` | `0..255` | `0` | Group 8 |
+| `G9` | `0..255` | `0` | Group 9 |
+| `G10` | `0..255` | `0` | Group 10 |
+
 
 ### Reconciled Object notes
 
@@ -295,17 +315,224 @@ The reusable `TYPE_LOAD` Object enum includes load technologies beyond those doc
 
 ## Conditions, filters, and conversions
 
-### Relation filters
+### Slot conditions
 
-| Scope | Filter IDs | Interpretation |
-| --- | --- | --- |
-| Device/Object relations | `2205`, `2206`, `2207`, `2208`, `2209`, `2210`, `2211`, `2214`, `2215`, `2216`, `2217`, `2218`, `2219`, `2220` | apply before exposing reusable Object values |
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `590` | `1` | `8` | `4149` | No textual predicate stored | `3` |
+| `590` | `1` | `136` | `4960` | `PL1=PL2` | `550` |
+| `590` | `2` | `8` | `4149` | No textual predicate stored | `3` |
 
-### Slot conditions and conversions
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-| Scope | Condition IDs | Conversion treatment |
-| --- | --- | --- |
-| Device slots | `4149`, `4960` | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `590` | `8` | `2214` | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `590` | `8` | `2215` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `590` | `8` | `2216` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `590` | `8` | `2217` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `590` | `8` | `2218` | `MIN_LEVEL` | `1..100` (entire reusable range retained) | `1` | Minimum level |
+| `590` | `8` | `2219` | `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard (entire reusable range retained) | `0` | Voltage standard |
+| `590` | `8` | `2220` | `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI | `0` | Type of load |
+| `590` | `136` | `2205` | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `590` | `136` | `2206` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `590` | `136` | `2207` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `590` | `136` | `2208` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `590` | `136` | `2209` | `MIN_LEVEL` | `1..100` (entire reusable range retained) | `1` | Minimum level |
+| `590` | `136` | `2210` | `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI | `0` | Type of load |
+| `590` | `136` | `2211` | `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard (entire reusable range retained) | `0` | Voltage standard |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `3` | `M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `3` |
+| `3` | `M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `3` |
+| `3` | `M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `3` |
+| `3` | `M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `3` |
+| `3` | `M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `3` |
+| `3` | `M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `3` |
+| `3` | `M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `3` |
+| `3` | `M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `3` |
+| `550` | `M1=0` | `M` = `0` | `550` |
+| `550` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M1=O/I` | `M` = `9` | `550` |
+| `550` | `M1=OFF` | `M` = `10` | `550` |
+| `550` | `M1=ON` | `M` = `11` | `550` |
+| `550` | `M1=PUL` | `M` = `15` | `550` |
+| `550` | `M1=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M1=SU_GIU_M` | `M` = `13` | `550` |
+| `550` | `A1=1` | `A` = `1` | `550` |
+| `550` | `A1=2` | `A` = `2` | `550` |
+| `550` | `A1=3` | `A` = `3` | `550` |
+| `550` | `A1=4` | `A` = `4` | `550` |
+| `550` | `A1=5` | `A` = `5` | `550` |
+| `550` | `A1=6` | `A` = `6` | `550` |
+| `550` | `A1=7` | `A` = `7` | `550` |
+| `550` | `A1=8` | `A` = `8` | `550` |
+| `550` | `A1=9` | `A` = `9` | `550` |
+| `550` | `PL1=1` | `PL` = `1` | `550` |
+| `550` | `PL1=1; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `1` |
+| `550` | `PL1=1; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `1` |
+| `550` | `PL1=2` | `PL` = `2` | `550` |
+| `550` | `PL1=2; M=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `550` → `2` |
+| `550` | `PL1=2; M=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `550` → `2` |
+| `550` | `PL1=2; M=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `550` → `2` |
+| `550` | `PL1=2; M=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `550` → `2` |
+| `550` | `PL1=2; M=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `2` |
+| `550` | `PL1=2; M=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `550` → `2` |
+| `550` | `PL1=2; M=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `550` → `2` |
+| `550` | `PL1=2; M=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `2` |
+| `550` | `PL1=2; M=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `550` → `2` |
+| `550` | `PL1=2; M=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `2` |
+| `550` | `PL1=3` | `PL` = `3` | `550` |
+| `550` | `PL1=3; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `3` |
+| `550` | `PL1=3; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `3` |
+| `550` | `PL1=4` | `PL` = `4` | `550` |
+| `550` | `PL1=4; M1=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M1=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M1=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M1=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=4; M2=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M2=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M2=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M2=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=5` | `PL` = `5` | `550` |
+| `550` | `PL1=5; M1=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M1=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M1=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M1=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M1=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; M2=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M2=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M2=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M2=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M2=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; PL1=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL1=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL1=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL1=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL1=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL1=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL1=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL1=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL1=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL1=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=5; PL2=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL2=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL2=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL2=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL2=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL2=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL2=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL2=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL2=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL2=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=6` | `PL` = `6` | `550` |
+| `550` | `PL1=6; M=3` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=4` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=5` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=6` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=7` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=8` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=0` | `PIR` = `0` | `550` → `6` |
+| `550` | `PL1=6; S=1` | `PIR` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=2` | `PIR` = `2` | `550` → `6` |
+| `550` | `PL1=6; S=3` | `PIR` = `3` | `550` → `6` |
+| `550` | `PL1=6; T=0` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=1` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `30` | `550` → `6` |
+| `550` | `PL1=6; T=2` | `HOURS` = `0`; `MINUTES` = `1`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=3` | `HOURS` = `0`; `MINUTES` = `2`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=4` | `HOURS` = `0`; `MINUTES` = `5`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=5` | `HOURS` = `0`; `MINUTES` = `10`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=6` | `HOURS` = `0`; `MINUTES` = `15`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=7` | `HOURS` = `0`; `MINUTES` = `20`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=8` | `HOURS` = `0`; `MINUTES` = `30`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=9` | `HOURS` = `0`; `MINUTES` = `40`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=0` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=1` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=7` | `PL` = `7` | `550` |
+| `550` | `PL1=7` | Referenced conversion rule absent from source | `550` → `7` |
+| `550` | `PL1=8` | `PL` = `8` | `550` |
+| `550` | `PL1=8` | Referenced conversion rule absent from source | `550` → `8` |
+| `550` | `PL1=9` | `PL` = `9` | `550` |
+| `550` | `PL1=9; M=0` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=1` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `9` |
+| `550` | `PL1=9; M=2` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `25` | `550` → `9` |
+| `550` | `PL1=9; M=3` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `9` |
+| `550` | `PL1=9; M=PUL` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `9` |
+| `550` | `M2=0` | `M` = `0` | `550` |
+| `550` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M2=O/I` | `M` = `9` | `550` |
+| `550` | `M2=OFF` | `M` = `10` | `550` |
+| `550` | `M2=ON` | `M` = `11` | `550` |
+| `550` | `M2=PUL` | `M` = `15` | `550` |
+| `550` | `M2=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M2=SU_GIU_M` | `M` = `13` | `550` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -313,7 +540,7 @@ The reusable `TYPE_LOAD` Object enum includes load technologies beyond those doc
 | --- | --- | --- |
 | `DIMENSION 1` | corroborate technical identity for catalogue item `2065` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`8`, `631`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`8`, `136`) | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
 
@@ -345,7 +572,7 @@ First-hand evidence already adds several Device-specific observations:
 - `DIMENSION 1` and functional `DIMENSION 4` are distinct state surfaces on the tested F418U2 even when they report the same `LEVEL100`;
 - at `LEVEL100 = 130`, observed trailing values differed between those two dimensions;
 - through MH202, explicit reads of both dimensions were observed;
-- through F454, an OFF-state `DIMENSION 1` request was observed to return a `DIMENSION 4` frame;
+- through F454, an `OFF`-state `DIMENSION 1` request was observed to return a `DIMENSION 4` frame;
 - through an MH200 running firmware 2.1.0, the preserved public trace shows working `DIMENSION 1` reads/writes while explicit `DIMENSION 4` requests received no response in the captured windows.
 
 These observations corroborate runtime behavior but do not change the canonical generic frame definitions. See [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md) and the [Open Questions](../../reverse-engineering/open-questions.md).
@@ -369,7 +596,6 @@ Generic `DIMENSION` write syntax and validation sequencing belong in [Configurat
 
 ## Source reconciliation
 
-
 Known F418U2 product documentation and runtime research have been reconciled as follows:
 
 - the local channel pushbuttons are Device controls, not additional OpenWebNet Modules; their status/fault indication belongs to the product-level behavior of the two dimmer channels;
@@ -379,6 +605,8 @@ Known F418U2 product documentation and runtime research have been reconciled as 
 - the runtime `DIMENSION 4` evidence remains Device-specific and unresolved in four places: the exact `ON/OFFspeed` encoding, whether the observed F454 positive write failure is systematic, whether MH200 non-response is gateway/firmware-wide or interaction-specific, and whether the reported F414/MH200 timeout followed by `NACK` can be reproduced from a preserved raw exchange.
 
 Five identified F418U2-specific official PDFs are now archived byte-for-byte and reconciled here: `MQ01019_a_EN`, `LE07383AB`, `LE07383AC`, `LE07383AD`, and `ST-00001620-EN`. The separately listed `GUI-MHOME` is a system-wide MyHOME installation guide rather than a Device-specific F418U2 revision; its exact publisher binary remains unresolved, but no additional F418U2-specific fact has been identified that is absent from the archived Device sheets. Source reconciliation is therefore complete for the currently identified Device-specific PDF set while generic-guide archival remains open.
+
+The July 2023 `LE07383AD` instruction sheet also gives a different temperature interval and lower printed load entries than the 2018 sheet. Those values remain separate in the physical table. The 2018 `TY` parallel-mode note combines a parallel-operation description with a `PL2` condition that does not align with the equal-address parallel diagram; preserve this as a source conflict and verify the intended condition before using it as an implementation rule.
 
 ## Evidence limits and open work
 

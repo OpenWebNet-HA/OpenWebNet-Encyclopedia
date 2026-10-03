@@ -2796,3 +2796,147 @@ artifacts:
   language:
   - en
   language_evidence: filename-and-document-language
+- id: document-sha256-7277c0ed6139c8f8
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: BMSE2006-publisher-product-sheet.pdf
+  size: 12843
+  sha256: 7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/77/7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/77/7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE2006
+    retrieved_at: '2026-10-03'
+- id: document-sha256-36e2d559658eebb9
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F80_SG-publisher-product-sheet.pdf
+  size: 15917
+  sha256: 36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F80_SG
+    retrieved_at: '2026-10-03'
+- id: document-sha256-16b671b522f2d652
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: 3522-publisher-product-sheet.pdf
+  size: 15493
+  sha256: 16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3522
+    retrieved_at: '2026-10-03'
+- id: document-sha256-bf6b7ea64121d0ed
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: 349320-publisher-product-sheet.pdf
+  size: 16158
+  sha256: bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bf/6b/bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bf/6b/bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-349320
+    retrieved_at: '2026-10-03'
+- id: document-sha256-ed1fd00db6fa60bd
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: MQ00359_b_EN.pdf
+  size: 117755
+  sha256: ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf
+  language:
+  - en
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/MQ00359_b_EN.pdf
+    retrieved_at: '2026-10-03'
+- id: document-sha256-8c587b3f07620958
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U2354B_U_UK.pdf
+  size: 7531955
+  sha256: 8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8c/58/8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8c/58/8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62.pdf
+  language:
+  - en
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/U2354B_U_UK.pdf
+    retrieved_at: '2026-10-03'
+- id: document-sha256-16d6f331c180eb1f
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F4269H.pdf
+  size: 1710836
+  sha256: 16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/F4269H.pdf
+    retrieved_at: '2026-10-03'
+- id: document-sha256-860a0ce3385c46f8
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F3758D.pdf
+  size: 1542767
+  sha256: 860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/F3758D.pdf
+    retrieved_at: '2026-10-03'

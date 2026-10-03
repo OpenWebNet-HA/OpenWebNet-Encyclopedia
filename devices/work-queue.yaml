@@ -3,7 +3,7 @@ source:
   mhcatalogue_sha256: f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5
 items:
   '1':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -17,12 +17,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0021 created and source-reconciled; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '2':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -36,12 +37,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0022 created and source-reconciled; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '3':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -55,12 +57,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0023 created and source-reconciled; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '4':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -74,15 +77,14 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Six-record three-module Basic control cluster; MQ00290-c-EN directly covers
-      four references.
-    - Currently discovered official PDF sources archived byte-for-byte and registered
-      in the source manifest.
+    - Six-record three-module Basic control cluster; MQ00290-c-EN directly covers four references.
+    - Currently discovered official PDF sources archived byte-for-byte and registered in the source manifest.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '12':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -92,16 +94,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0024 created and source-reconciled; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '17':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -115,12 +118,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0025 created and source-reconciled; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '20':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -134,13 +138,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0026 created and source-reconciled; documented source gaps and hardware
-      corroboration remain explicit in the dossier.
+    - OWN-DEV-0026 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '23':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -150,17 +154,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0027 created and source-reconciled; documented source gaps and hardware
-      corroboration remain explicit in the dossier.
+    - OWN-DEV-0027 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '25':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -170,17 +174,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0028 created and source-reconciled; documented source gaps and hardware
-      corroboration remain explicit in the dossier.
+    - OWN-DEV-0028 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '28':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -194,13 +198,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0029 created and source-reconciled; documented source gaps and hardware
-      corroboration remain explicit in the dossier.
+    - OWN-DEV-0029 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '31':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -210,17 +214,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware
-      corroboration remain explicit in the dossier.
+    - OWN-DEV-0030 created and source-reconciled; documented source gaps and hardware corroboration remain explicit in the dossier.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '33':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -234,13 +238,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - BMSE1001/048833 definition created and source-reconciled; official technical
-      sheet identified, archive and hardware corroboration remain.
+    - BMSE1001/048833 definition created and source-reconciled; official technical sheet identified, archive and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '34':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -250,17 +254,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 4576 transmitter definition created and reconciled with the archived automation
-      guide; exact variant documentation and hardware corroboration remain.
+    - 4576 transmitter definition created and reconciled with the archived automation guide; exact variant documentation and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '35':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -270,17 +274,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - BMNE500 definition created and source-reconciled; current product/manual sources
-      identified, archival endpoint and hardware corroboration remain.
+    - BMNE500 definition created and source-reconciled; current product/manual sources identified, archival endpoint and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '37':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -294,13 +298,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references
-      remain direct-documentation gaps.
+    - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references remain direct-documentation gaps.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '39':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -314,13 +318,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 4577 temperature-probe radio interface definition created and source-reconciled;
-      dedicated technical sheet identified, archive and hardware corroboration remain.
+    - 4577 temperature-probe radio interface definition created and source-reconciled; dedicated technical sheet identified, archive and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '40':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -334,13 +338,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 4575SB batteryless-control receiver definition created and source-reconciled
-      with the archived automation guide; hardware corroboration remains.
+    - 4575SB batteryless-control receiver definition created and source-reconciled with the archived automation guide; hardware corroboration remains.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '45':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -354,13 +358,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0051 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0051 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '47':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -374,13 +378,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0052 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0052 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '48':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -394,13 +398,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0053 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0053 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '49':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -414,13 +418,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0054 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0054 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '50':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -434,13 +438,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0055 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0055 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '51':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -454,13 +458,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0056 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0056 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '52':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -474,13 +478,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0057 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0057 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '53':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -494,13 +498,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0058 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0058 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '54':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -514,13 +518,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0059 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0059 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '55':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -534,13 +538,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0060 created from the canonical catalogue and archived publisher sources;
-      hardware corroboration remains explicit.
+    - OWN-DEV-0060 created from the canonical catalogue and archived publisher sources; hardware corroboration remains explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '56':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -554,13 +558,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0061 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0061 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '57':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -574,13 +578,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0062 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0062 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '58':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -594,13 +598,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0063 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0063 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '59':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -614,13 +618,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0064 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0064 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '60':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -634,13 +638,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0065 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0065 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '61':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -654,13 +658,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0066 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0066 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '63':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -674,13 +678,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0067 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0067 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '66':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -694,13 +698,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0068 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0068 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '71':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -714,13 +718,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0069 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0069 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '79':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -734,13 +738,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0070 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0070 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '80':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -754,13 +758,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0071 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0071 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '81':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -774,13 +778,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0072 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0072 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '84':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -794,13 +798,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0073 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0073 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '85':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -814,13 +818,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0074 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0074 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '86':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -834,13 +838,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0075 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0075 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '88':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -854,13 +858,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0076 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0076 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '89':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -874,13 +878,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0077 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0077 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '90':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -894,13 +898,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0078 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0078 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '94':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -914,13 +918,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0079 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0079 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '98':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -934,13 +938,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0080 created from the canonical catalogue and reconciled publisher sources;
-      unresolved documentation and hardware gaps remain explicit.
+    - OWN-DEV-0080 created from the canonical catalogue and reconciled publisher sources; unresolved documentation and hardware gaps remain explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '128':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -950,17 +954,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0081 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0081 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '130':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -974,13 +978,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0082 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0082 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '134':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -990,17 +994,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0083 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0083 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '137':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1010,17 +1014,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0084 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0084 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '139':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1030,17 +1034,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0085 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0085 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '140':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1054,13 +1058,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0086 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0086 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '141':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1070,17 +1074,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0087 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0087 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '160':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1094,13 +1098,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0088 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0088 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '168':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1110,19 +1114,19 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available
-      official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '207':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1132,17 +1136,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0089 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0089 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '281':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1156,15 +1160,14 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 19-record Basic control cluster; MQ00286-d-EN directly corroborates four commercial
-      references.
-    - Official English PDF archived byte-for-byte from publisher source and registered
-      in the source manifest.
+    - 19-record Basic control cluster; MQ00286-d-EN directly corroborates four commercial references.
+    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '291':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1178,13 +1181,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0042 created from canonical catalogue with publisher evidence reconciled
-      where available; remaining gaps explicit.
+    - OWN-DEV-0042 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '402':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1198,14 +1201,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Scenario-control cluster extracted; direct technical sheet covers principal
-      BTicino, Arteor and Céliane identities; Mosaic references remain documentation
-      gaps.
+    - Scenario-control cluster extracted; direct technical sheet covers principal BTicino, Arteor and Céliane identities; Mosaic references remain documentation gaps.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '912':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1215,17 +1217,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0090 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0090 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '913':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1235,17 +1237,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0091 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0091 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '914':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1255,17 +1257,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0092 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0092 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '916':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1275,17 +1277,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0093 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0093 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '925':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1299,13 +1301,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0094 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0094 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '975':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1319,13 +1321,13 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0095 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0095 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1031':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1335,17 +1337,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0096 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0096 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1076':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1359,13 +1361,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Video Display cluster extracted; installation/user/software manuals and MyHOME
-      guide archived. Four commercial variants still need direct product documents.
+    - Video Display cluster extracted; installation/user/software manuals and MyHOME guide archived. Four commercial variants still need direct product documents.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1078':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1375,17 +1377,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0097 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0097 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1104':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1399,13 +1401,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME
-      guide. Mosaic references and AUX condition semantics remain gaps.
+    - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME guide. Mosaic references and AUX condition semantics remain gaps.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1121':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1419,15 +1421,14 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Six-record flush-mounted one-relay actuator cluster; MQ00072-e-FR directly covers
-      four references.
-    - Currently discovered official PDF sources archived byte-for-byte and registered
-      in the source manifest.
+    - Six-record flush-mounted one-relay actuator cluster; MQ00072-e-FR directly covers four references.
+    - Currently discovered official PDF sources archived byte-for-byte and registered in the source manifest.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1122':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1437,17 +1438,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0098 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0098 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1123':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1457,17 +1458,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0099 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0099 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1130':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1477,17 +1478,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0100 created from the canonical MyHOME Suite catalogue; dedicated publisher-document
-      discovery and hardware corroboration remain explicit open evidence tasks.
+    - OWN-DEV-0100 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1147':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1501,15 +1502,15 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available
-      official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1156':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1523,12 +1524,12 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - OWN-DEV-0101 created from canonical catalogue and reconciled official source dossier.
-    - Publisher contact-type conflict (bistable vs normally-open monostable) is preserved
-      on the Device page; hardware corroboration remains pending.
+    - Publisher contact-type conflict (bistable vs normally-open monostable) is preserved on the Device page; hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1160':
     state: unreviewed
     priority: normal
@@ -1695,7 +1696,7 @@ items:
     blockers: []
     notes: []
   '1184':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1705,19 +1706,18 @@ items:
       commercial_identities: partial
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: pending
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration
-      work.
-    - Definition normalized to the current presentation/completeness profile; remaining
-      commercial-document and hardware gaps retain their separate review states.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - Definition normalized to the current presentation/completeness profile; remaining commercial-document and hardware gaps retain their separate review states.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1190':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1727,17 +1727,17 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available
-      official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1191':
     state: unreviewed
     priority: normal
@@ -1814,7 +1814,7 @@ items:
     blockers: []
     notes: []
   '1376':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1828,11 +1828,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 15-record touch-control cluster; Arteor technical sheet and Céliane compatibility
-      evidence archived.
+    - 15-record touch-control cluster; Arteor technical sheet and Céliane compatibility evidence archived.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1423':
     state: unreviewed
     priority: normal
@@ -1864,7 +1864,7 @@ items:
     blockers: []
     notes: []
   '1455':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1874,15 +1874,15 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: pending
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: partial
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration
-      work.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1459':
     state: unreviewed
     priority: normal
@@ -1944,7 +1944,7 @@ items:
     blockers: []
     notes: []
   '1465':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -1954,19 +1954,19 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers:
     - Sanitized hardware fingerprint pending
     notes:
-    - Completion-oriented definition added from canonical catalogue plus available
-      official documentation.
+    - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1469':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -1980,11 +1980,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents
-      archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
+    - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1470':
     state: unreviewed
     priority: normal
@@ -2196,7 +2196,7 @@ items:
     blockers: []
     notes: []
   '1524':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2210,15 +2210,14 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 13-record Special control cluster; MQ00285-d-EN directly corroborates four commercial
-      references.
-    - Official English PDF archived byte-for-byte from publisher source and registered
-      in the source manifest.
+    - 13-record Special control cluster; MQ00285-d-EN directly corroborates four commercial references.
+    - Official English PDF archived byte-for-byte from publisher source and registered in the source manifest.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1525':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2232,11 +2231,11 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0043 created from canonical catalogue with publisher evidence reconciled
-      where available; remaining gaps explicit.
+    - OWN-DEV-0043 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1554':
     state: unreviewed
     priority: normal
@@ -2268,7 +2267,7 @@ items:
     blockers: []
     notes: []
   '1559':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2282,13 +2281,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - 12-record PIR+US cluster; current official sheet directly names all commercial
-      records, with older 2014 revision retained.
+    - 12-record PIR+US cluster; current official sheet directly names all commercial records, with older 2014 revision retained.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1563':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2302,13 +2301,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Key card switch definition created and source-reconciled; publisher/catalogue
-      572736 conflict and hardware corroboration remain.
+    - Key card switch definition created and source-reconciled; publisher/catalogue 572736 conflict and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1566':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2322,12 +2321,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility
-      table collectively document the current commercial cluster. Hardware corroboration
-      remains pending.
+    - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility table collectively document the current commercial cluster. Hardware corroboration remains pending.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1570':
     state: unreviewed
     priority: normal
@@ -2359,7 +2357,7 @@ items:
     blockers: []
     notes: []
   '1579':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2373,11 +2371,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0044 created from canonical catalogue with publisher evidence reconciled
-      where available; remaining gaps explicit.
+    - OWN-DEV-0044 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1582':
     state: unreviewed
     priority: normal
@@ -2394,7 +2392,7 @@ items:
     blockers: []
     notes: []
   '1586':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2408,11 +2406,11 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0045 created from canonical catalogue with publisher evidence reconciled
-      where available; remaining gaps explicit.
+    - OWN-DEV-0045 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1593':
     state: unreviewed
     priority: normal
@@ -2519,7 +2517,7 @@ items:
     blockers: []
     notes: []
   '1657':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2533,11 +2531,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Local Display definition created and source-reconciled; FUN=5 topology inconsistency
-      and hardware corroboration remain.
+    - Local Display definition created and source-reconciled; FUN=5 topology inconsistency and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1672':
     state: unreviewed
     priority: normal
@@ -2659,7 +2657,7 @@ items:
     blockers: []
     notes: []
   '1686':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2673,13 +2671,12 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0046 created from the canonical catalogue and exact/current publisher
-      sources; unarchived documents and hardware corroboration remain explicit.
-    - All identified publisher PDF artifacts for this review are archived byte-for-byte;
-      live product pages remain external publisher provenance.
+    - OWN-DEV-0046 created from the canonical catalogue and exact/current publisher sources; unarchived documents and hardware corroboration remain explicit.
+    - All identified publisher PDF artifacts for this review are archived byte-for-byte; live product pages remain external publisher provenance.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1689':
     state: unreviewed
     priority: normal
@@ -2741,7 +2738,7 @@ items:
     blockers: []
     notes: []
   '1768':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2755,13 +2752,12 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0047 created from the canonical catalogue and exact/current publisher
-      sources; unarchived documents and hardware corroboration remain explicit.
-    - All identified publisher PDF artifacts for this review are archived byte-for-byte;
-      live product pages remain external publisher provenance.
+    - OWN-DEV-0047 created from the canonical catalogue and exact/current publisher sources; unarchived documents and hardware corroboration remain explicit.
+    - All identified publisher PDF artifacts for this review are archived byte-for-byte; live product pages remain external publisher provenance.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1771':
     state: unreviewed
     priority: normal
@@ -2868,7 +2864,7 @@ items:
     blockers: []
     notes: []
   '1847':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2882,11 +2878,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - RFID key card definition created and source-reconciled; Mosaic direct documentation,
-      572736 cross-item conflict and hardware corroboration remain.
+    - RFID key card definition created and source-reconciled; Mosaic direct documentation, 572736 cross-item conflict and hardware corroboration remain.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1852':
     state: unreviewed
     priority: normal
@@ -2903,7 +2899,7 @@ items:
     blockers: []
     notes: []
   '1854':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2917,13 +2913,13 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Probe with regulation definition created and source-reconciled across firmware
-      5.2 and 6.0; hardware corroboration remains.
+    - Probe with regulation definition created and source-reconciled across firmware 5.2 and 6.0; hardware corroboration remains.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1856':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -2937,11 +2933,11 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Fan-coil probe definition created and source-reconciled across firmware 5.2
-      and 6.0; hardware corroboration remains.
+    - Fan-coil probe definition created and source-reconciled across firmware 5.2 and 6.0; hardware corroboration remains.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1859':
     state: unreviewed
     priority: normal
@@ -2958,7 +2954,7 @@ items:
     blockers: []
     notes: []
   '1862':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -2972,11 +2968,11 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0041 created from canonical catalogue with publisher evidence reconciled
-      where available; remaining gaps explicit.
+    - OWN-DEV-0041 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1864':
     state: unreviewed
     priority: normal
@@ -3008,7 +3004,7 @@ items:
     blockers: []
     notes: []
   '1884':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -3022,13 +3018,12 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0048 created from the canonical catalogue and exact/current publisher
-      sources; unarchived documents and hardware corroboration remain explicit.
-    - All identified publisher PDF artifacts for this review are archived byte-for-byte;
-      live product pages remain external publisher provenance.
+    - OWN-DEV-0048 created from the canonical catalogue and exact/current publisher sources; unarchived documents and hardware corroboration remain explicit.
+    - All identified publisher PDF artifacts for this review are archived byte-for-byte; live product pages remain external publisher provenance.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1885':
     state: unreviewed
     priority: normal
@@ -3045,7 +3040,7 @@ items:
     blockers: []
     notes: []
   '1898':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -3059,13 +3054,12 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0049 created from the canonical catalogue and exact/current publisher
-      sources; unarchived documents and hardware corroboration remain explicit.
-    - All identified publisher PDF artifacts for this review are archived byte-for-byte;
-      live product pages remain external publisher provenance.
+    - OWN-DEV-0049 created from the canonical catalogue and exact/current publisher sources; unarchived documents and hardware corroboration remain explicit.
+    - All identified publisher PDF artifacts for this review are archived byte-for-byte; live product pages remain external publisher provenance.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1902':
     state: unreviewed
     priority: normal
@@ -3097,7 +3091,7 @@ items:
     blockers: []
     notes: []
   '2065':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -3107,15 +3101,15 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
-      documentation_archive: pending
+      documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: partial
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - Initial completion-oriented dossier exists; continue archival/document and corroboration
-      work.
+    - Initial completion-oriented dossier exists; continue archival/document and corroboration work.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '2115':
     state: unreviewed
     priority: normal
@@ -3192,7 +3186,7 @@ items:
     blockers: []
     notes: []
   '2180':
-    state: definition-in-progress
+    state: review-ready
     priority: high
     outcome:
       type: device-definition
@@ -3206,12 +3200,12 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
     - Seven-record zero-crossing actuator/control cluster is directly covered by ST-00000898-EN/FR.
-    - English/French technical sheets and BTicino/Legrand instruction sheets archived
-      byte-for-byte.
+    - English/French technical sheets and BTicino/Legrand instruction sheets archived byte-for-byte.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '2193':
     state: unreviewed
     priority: normal
@@ -3633,7 +3627,7 @@ items:
     blockers: []
     notes: []
   '2321':
-    state: definition-in-progress
+    state: review-ready
     priority: normal
     outcome:
       type: device-definition
@@ -3647,13 +3641,12 @@ items:
       source_reconciliation: partial
       definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
     notes:
-    - OWN-DEV-0050 created from the canonical catalogue and exact/current publisher
-      sources; unarchived documents and hardware corroboration remain explicit.
-    - All identified publisher PDF artifacts for this review are archived byte-for-byte;
-      live product pages remain external publisher provenance.
+    - OWN-DEV-0050 created from the canonical catalogue and exact/current publisher sources; unarchived documents and hardware corroboration remain explicit.
+    - All identified publisher PDF artifacts for this review are archived byte-for-byte; live product pages remain external publisher provenance.
+    - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '2335':
     state: unreviewed
     priority: normal

@@ -9,8 +9,8 @@
 | unreviewed | 109 |
 | triaged | 0 |
 | research | 0 |
-| definition-in-progress | 101 |
-| review-ready | 0 |
+| definition-in-progress | 0 |
+| review-ready | 101 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -21,42 +21,42 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| high | 281 | Basic control | 19 | definition-in-progress | OWN-DEV-0004 | partial | complete | complete | pending | - |
-| high | 1376 | Touch control multifunction | 15 | definition-in-progress | OWN-DEV-0009 | partial | complete | complete | pending | - |
-| high | 1524 | Special control | 13 | definition-in-progress | OWN-DEV-0005 | partial | complete | complete | pending | - |
-| high | 1559 | PIR+US flush mounted sensor | 12 | definition-in-progress | OWN-DEV-0010 | complete | complete | complete | pending | - |
-| high | 402 | Scenario control | 10 | definition-in-progress | OWN-DEV-0011 | partial | complete | complete | pending | - |
-| high | 1184 | Flush mounted actuator and free control | 9 | definition-in-progress | OWN-DEV-0003 | partial | pending | complete | pending | - |
-| high | 37 | IR receiver | 8 | definition-in-progress | OWN-DEV-0012 | partial | complete | complete | pending | - |
-| high | 1076 | Video Display | 8 | definition-in-progress | OWN-DEV-0013 | partial | complete | complete | pending | - |
-| high | 1104 | Extended control item | 8 | definition-in-progress | OWN-DEV-0014 | partial | complete | complete | pending | - |
-| high | 1469 | MyHOME_Screen 3.5 | 8 | definition-in-progress | OWN-DEV-0015 | partial | complete | complete | pending | - |
-| high | 1566 | PIR flush mounted sensor | 8 | definition-in-progress | OWN-DEV-0016 | complete | complete | complete | pending | - |
-| high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | definition-in-progress | OWN-DEV-0006 | partial | complete | complete | pending | - |
-| high | 4 | Basic control | 6 | definition-in-progress | OWN-DEV-0007 | partial | complete | complete | pending | - |
-| high | 1121 | Flush mounted actuator 1 relay | 6 | definition-in-progress | OWN-DEV-0008 | partial | complete | complete | pending | - |
-| high | 1563 | Key card switch | 6 | definition-in-progress | OWN-DEV-0036 | complete | complete | complete | pending | - |
-| high | 1657 | Local Display 1.2" bus | 6 | definition-in-progress | OWN-DEV-0037 | complete | complete | complete | pending | - |
-| high | 1854 | Probe with regulation | 6 | definition-in-progress | OWN-DEV-0038 | complete | complete | complete | pending | - |
-| high | 1847 | Key card switch RFID | 5 | definition-in-progress | OWN-DEV-0039 | partial | complete | complete | pending | - |
-| high | 1856 | Fan-coil probe | 5 | definition-in-progress | OWN-DEV-0040 | complete | complete | complete | pending | - |
-| high | 28 | Receiving radio interface | 3 | definition-in-progress | OWN-DEV-0029 | complete | complete | partial | pending | - |
-| high | 34 | Transmitting radio interface | 3 | definition-in-progress | OWN-DEV-0032 | partial | partial | partial | pending | - |
-| high | 1 | 1 relay DIN actuator 16 A | 2 | definition-in-progress | OWN-DEV-0021 | complete | complete | partial | pending | - |
-| high | 2 | 2 relays DIN actuator 10 A | 2 | definition-in-progress | OWN-DEV-0022 | complete | complete | partial | pending | - |
-| high | 3 | 4 relay actuator 2 modules DIN bus | 2 | definition-in-progress | OWN-DEV-0023 | complete | complete | partial | pending | - |
-| high | 12 | Soft touch control | 2 | definition-in-progress | OWN-DEV-0024 | complete | partial | partial | pending | - |
-| high | 17 | DIN dimmer 1000 W | 2 | definition-in-progress | OWN-DEV-0025 | complete | complete | partial | pending | - |
-| high | 23 | Flush mounted dimmer | 2 | definition-in-progress | OWN-DEV-0027 | partial | partial | partial | pending | - |
-| high | 25 | Regulation rotative control | 2 | definition-in-progress | OWN-DEV-0028 | partial | partial | partial | pending | - |
-| high | 33 | PIR surface ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0031 | complete | complete | complete | pending | - |
-| high | 39 | Radio interface for temperature probes | 2 | definition-in-progress | OWN-DEV-0034 | complete | complete | complete | pending | - |
-| high | 40 | Flush mounted radio receiver for HA/HB4572SB | 2 | definition-in-progress | OWN-DEV-0035 | complete | complete | partial | pending | - |
-| high | 1455 | Web Server A/V Bus | 2 | definition-in-progress | OWN-DEV-0002 | partial | pending | complete | partial | - |
-| high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | definition-in-progress | OWN-DEV-0001 | partial | pending | complete | partial | - |
-| high | 20 | Scenario control unit | 1 | definition-in-progress | OWN-DEV-0026 | complete | complete | partial | pending | - |
-| high | 31 | Ballast DIN dimmer 1-10 V | 1 | definition-in-progress | OWN-DEV-0030 | partial | partial | partial | pending | - |
-| high | 35 | Light manager control unit | 1 | definition-in-progress | OWN-DEV-0033 | complete | partial | complete | pending | - |
+| high | 281 | Basic control | 19 | review-ready | OWN-DEV-0004 | partial | complete | complete | pending | - |
+| high | 1376 | Touch control multifunction | 15 | review-ready | OWN-DEV-0009 | partial | complete | complete | pending | - |
+| high | 1524 | Special control | 13 | review-ready | OWN-DEV-0005 | partial | complete | complete | pending | - |
+| high | 1559 | PIR+US flush mounted sensor | 12 | review-ready | OWN-DEV-0010 | complete | complete | complete | pending | - |
+| high | 402 | Scenario control | 10 | review-ready | OWN-DEV-0011 | partial | complete | complete | pending | - |
+| high | 1184 | Flush mounted actuator and free control | 9 | review-ready | OWN-DEV-0003 | partial | complete | complete | pending | - |
+| high | 37 | IR receiver | 8 | review-ready | OWN-DEV-0012 | partial | complete | complete | pending | - |
+| high | 1076 | Video Display | 8 | review-ready | OWN-DEV-0013 | partial | complete | complete | pending | - |
+| high | 1104 | Extended control item | 8 | review-ready | OWN-DEV-0014 | partial | complete | complete | pending | - |
+| high | 1469 | MyHOME_Screen 3.5 | 8 | review-ready | OWN-DEV-0015 | partial | complete | complete | pending | - |
+| high | 1566 | PIR flush mounted sensor | 8 | review-ready | OWN-DEV-0016 | complete | complete | complete | pending | - |
+| high | 2180 | Flush mounted actuator and free control with zero crossing | 7 | review-ready | OWN-DEV-0006 | partial | complete | complete | pending | - |
+| high | 4 | Basic control | 6 | review-ready | OWN-DEV-0007 | partial | complete | complete | pending | - |
+| high | 1121 | Flush mounted actuator 1 relay | 6 | review-ready | OWN-DEV-0008 | partial | complete | complete | pending | - |
+| high | 1563 | Key card switch | 6 | review-ready | OWN-DEV-0036 | complete | complete | complete | pending | - |
+| high | 1657 | Local Display 1.2" bus | 6 | review-ready | OWN-DEV-0037 | complete | complete | complete | pending | - |
+| high | 1854 | Probe with regulation | 6 | review-ready | OWN-DEV-0038 | complete | complete | complete | pending | - |
+| high | 1847 | Key card switch RFID | 5 | review-ready | OWN-DEV-0039 | partial | complete | complete | pending | - |
+| high | 1856 | Fan-coil probe | 5 | review-ready | OWN-DEV-0040 | complete | complete | complete | pending | - |
+| high | 28 | Receiving radio interface | 3 | review-ready | OWN-DEV-0029 | complete | complete | partial | pending | - |
+| high | 34 | Transmitting radio interface | 3 | review-ready | OWN-DEV-0032 | partial | complete | partial | pending | - |
+| high | 1 | 1 relay DIN actuator 16 A | 2 | review-ready | OWN-DEV-0021 | complete | complete | partial | pending | - |
+| high | 2 | 2 relays DIN actuator 10 A | 2 | review-ready | OWN-DEV-0022 | complete | complete | partial | pending | - |
+| high | 3 | 4 relay actuator 2 modules DIN bus | 2 | review-ready | OWN-DEV-0023 | complete | complete | partial | pending | - |
+| high | 12 | Soft touch control | 2 | review-ready | OWN-DEV-0024 | complete | complete | partial | pending | - |
+| high | 17 | DIN dimmer 1000 W | 2 | review-ready | OWN-DEV-0025 | complete | complete | partial | pending | - |
+| high | 23 | Flush mounted dimmer | 2 | review-ready | OWN-DEV-0027 | partial | complete | partial | pending | - |
+| high | 25 | Regulation rotative control | 2 | review-ready | OWN-DEV-0028 | partial | complete | partial | pending | - |
+| high | 33 | PIR surface ceiling mounted sensor | 2 | review-ready | OWN-DEV-0031 | complete | complete | complete | pending | - |
+| high | 39 | Radio interface for temperature probes | 2 | review-ready | OWN-DEV-0034 | complete | complete | complete | pending | - |
+| high | 40 | Flush mounted radio receiver for HA/HB4572SB | 2 | review-ready | OWN-DEV-0035 | complete | complete | partial | pending | - |
+| high | 1455 | Web Server A/V Bus | 2 | review-ready | OWN-DEV-0002 | partial | complete | complete | partial | - |
+| high | 2065 | 2x1,6A universal dimmer, 4DIN | 2 | review-ready | OWN-DEV-0001 | partial | complete | complete | partial | - |
+| high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
+| high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
+| high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -166,71 +166,71 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2293 | F461 | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2335 | Driver Manager HVAC | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2341 | Linea 5000 | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 168 | Flush mounted temperature central unit | 7 | definition-in-progress | OWN-DEV-0017 | complete | partial | complete | pending | Sanitized hardware fingerprint pending |
-| normal | 1147 | Local Display | 6 | definition-in-progress | OWN-DEV-0018 | complete | partial | partial | pending | Sanitized hardware fingerprint pending |
-| normal | 1190 | Touch control | 6 | definition-in-progress | OWN-DEV-0019 | complete | partial | complete | pending | Sanitized hardware fingerprint pending |
-| normal | 1465 | Load Control Panel bus | 6 | definition-in-progress | OWN-DEV-0020 | complete | partial | complete | pending | Sanitized hardware fingerprint pending |
-| normal | 1862 | Basic probe | 5 | definition-in-progress | OWN-DEV-0041 | partial | partial | partial | pending | - |
-| normal | 291 | Temperature central unit | 4 | definition-in-progress | OWN-DEV-0042 | partial | partial | partial | pending | - |
-| normal | 1525 | Special functions | 4 | definition-in-progress | OWN-DEV-0043 | partial | complete | partial | pending | - |
-| normal | 1579 | Shutter control bus | 4 | definition-in-progress | OWN-DEV-0044 | complete | complete | complete | pending | - |
-| normal | 1586 | Shutter actuator bus | 4 | definition-in-progress | OWN-DEV-0045 | partial | partial | partial | pending | - |
-| normal | 1686 | Display thermostat 2 modules | 4 | definition-in-progress | OWN-DEV-0046 | complete | complete | partial | pending | - |
-| normal | 1768 | MyHOME_Screen 10 | 4 | definition-in-progress | OWN-DEV-0047 | complete | complete | partial | pending | - |
-| normal | 1884 | Energy display 2 modules | 4 | definition-in-progress | OWN-DEV-0048 | complete | complete | partial | pending | - |
-| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | definition-in-progress | OWN-DEV-0049 | complete | complete | partial | pending | - |
-| normal | 2321 | Classe 300X | 4 | definition-in-progress | OWN-DEV-0050 | complete | complete | partial | pending | - |
-| normal | 81 | Basic contacts interface | 3 | definition-in-progress | OWN-DEV-0072 | complete | complete | partial | pending | - |
-| normal | 1122 | Shutter flush mounted actuator | 3 | definition-in-progress | OWN-DEV-0098 | partial | partial | partial | pending | - |
-| normal | 45 | PIR ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0051 | complete | complete | complete | pending | - |
-| normal | 47 | Ballast DIN dimmer 0-10 V | 2 | definition-in-progress | OWN-DEV-0052 | complete | complete | complete | pending | - |
-| normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | definition-in-progress | OWN-DEV-0053 | complete | complete | complete | pending | - |
-| normal | 49 | PIR+US ceiling mounted sensor | 2 | definition-in-progress | OWN-DEV-0054 | complete | complete | complete | pending | - |
-| normal | 50 | PIR+US wall mounted sensor | 2 | definition-in-progress | OWN-DEV-0055 | complete | complete | complete | pending | - |
-| normal | 51 | PIR wall mounted sensor, straight range | 2 | definition-in-progress | OWN-DEV-0056 | complete | complete | complete | pending | - |
-| normal | 52 | PIR wall mounted sensor, short range | 2 | definition-in-progress | OWN-DEV-0057 | complete | complete | complete | pending | - |
-| normal | 53 | PIR wall mounted sensor, dual range | 2 | definition-in-progress | OWN-DEV-0058 | complete | complete | complete | pending | - |
-| normal | 56 | PIR wall maunted sensor, long range | 2 | definition-in-progress | OWN-DEV-0061 | complete | complete | partial | pending | - |
-| normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | definition-in-progress | OWN-DEV-0062 | partial | complete | partial | pending | - |
-| normal | 58 | Sensor occupancy + IR + ZigBee | 2 | definition-in-progress | OWN-DEV-0063 | partial | complete | partial | pending | - |
-| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | definition-in-progress | OWN-DEV-0064 | complete | partial | partial | pending | - |
-| normal | 60 | Memory module | 2 | definition-in-progress | OWN-DEV-0065 | complete | complete | complete | pending | - |
-| normal | 61 | Scenario module | 2 | definition-in-progress | OWN-DEV-0066 | complete | complete | complete | pending | - |
-| normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0067 | complete | complete | complete | pending | - |
-| normal | 71 | SCS/DALI gateway | 2 | definition-in-progress | OWN-DEV-0069 | complete | complete | complete | pending | - |
-| normal | 79 | DIN contacts interface | 2 | definition-in-progress | OWN-DEV-0070 | complete | complete | complete | pending | - |
-| normal | 84 | DIN dimmer 1000 VA | 2 | definition-in-progress | OWN-DEV-0073 | complete | complete | complete | pending | - |
-| normal | 85 | DIN dimmer 2 x 400 VA | 2 | definition-in-progress | OWN-DEV-0074 | complete | complete | complete | pending | - |
-| normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | definition-in-progress | OWN-DEV-0075 | complete | complete | partial | pending | - |
-| normal | 88 | Room Controller 2 Dim Outputs All loads 1000W | 2 | definition-in-progress | OWN-DEV-0076 | partial | complete | partial | pending | - |
-| normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | definition-in-progress | OWN-DEV-0077 | complete | complete | partial | pending | - |
-| normal | 90 | SCS-SCS interface | 2 | definition-in-progress | OWN-DEV-0078 | complete | complete | complete | pending | - |
-| normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | definition-in-progress | OWN-DEV-0079 | complete | complete | partial | pending | - |
-| normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0081 | partial | partial | partial | pending | - |
-| normal | 130 | Room Controller 1 Output 16 Amps | 2 | definition-in-progress | OWN-DEV-0082 | partial | partial | partial | pending | - |
-| normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | definition-in-progress | OWN-DEV-0083 | partial | partial | partial | pending | - |
-| normal | 137 | IP55 PIR wall mounted sensor | 2 | definition-in-progress | OWN-DEV-0084 | partial | partial | partial | pending | - |
-| normal | 160 | Flush mounted alarm central unit | 2 | definition-in-progress | OWN-DEV-0088 | partial | partial | partial | pending | - |
-| normal | 975 | Burglar alarm central unit with communicator | 2 | definition-in-progress | OWN-DEV-0095 | partial | partial | partial | pending | - |
-| normal | 1031 | Pulses counter interface | 2 | definition-in-progress | OWN-DEV-0096 | partial | partial | partial | pending | - |
-| normal | 1078 | Video Station | 2 | definition-in-progress | OWN-DEV-0097 | partial | partial | partial | pending | - |
-| normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | definition-in-progress | OWN-DEV-0099 | partial | partial | partial | pending | - |
-| normal | 1130 | Stereo control | 2 | definition-in-progress | OWN-DEV-0100 | partial | partial | partial | pending | - |
-| normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | definition-in-progress | OWN-DEV-0101 | complete | complete | complete | pending | - |
-| normal | 54 | Basic actuator | 1 | definition-in-progress | OWN-DEV-0059 | complete | complete | complete | pending | - |
-| normal | 55 | Basic control actuator | 1 | definition-in-progress | OWN-DEV-0060 | complete | complete | complete | pending | - |
-| normal | 66 | Actuator 1 module 1 relay | 1 | definition-in-progress | OWN-DEV-0068 | complete | complete | complete | pending | - |
-| normal | 80 | Module contacts interface | 1 | definition-in-progress | OWN-DEV-0071 | complete | complete | complete | pending | - |
-| normal | 98 | Scenes programmer | 1 | definition-in-progress | OWN-DEV-0080 | complete | complete | complete | pending | - |
-| normal | 139 | Burglar alarm central unit with communicator | 1 | definition-in-progress | OWN-DEV-0085 | partial | partial | partial | pending | - |
-| normal | 140 | Polyx Alarm | 1 | definition-in-progress | OWN-DEV-0086 | partial | partial | partial | pending | - |
-| normal | 141 | GSM burglar alarm central unit | 1 | definition-in-progress | OWN-DEV-0087 | partial | partial | partial | pending | - |
-| normal | 207 | Webserver Audio/Video DIN | 1 | definition-in-progress | OWN-DEV-0089 | partial | partial | partial | pending | - |
-| normal | 912 | Enhanced Webserver | 1 | definition-in-progress | OWN-DEV-0090 | partial | partial | partial | pending | - |
-| normal | 913 | Stop&Go | 1 | definition-in-progress | OWN-DEV-0091 | partial | partial | partial | pending | - |
-| normal | 914 | Stop&Go Btest | 1 | definition-in-progress | OWN-DEV-0092 | partial | partial | partial | pending | - |
-| normal | 916 | Stop&Go Plus | 1 | definition-in-progress | OWN-DEV-0093 | partial | partial | partial | pending | - |
-| normal | 925 | Touch control | 1 | definition-in-progress | OWN-DEV-0094 | partial | partial | partial | pending | - |
+| normal | 168 | Flush mounted temperature central unit | 7 | review-ready | OWN-DEV-0017 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
+| normal | 1147 | Local Display | 6 | review-ready | OWN-DEV-0018 | complete | partial | partial | pending | Sanitized hardware fingerprint pending |
+| normal | 1190 | Touch control | 6 | review-ready | OWN-DEV-0019 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
+| normal | 1465 | Load Control Panel bus | 6 | review-ready | OWN-DEV-0020 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
+| normal | 1862 | Basic probe | 5 | review-ready | OWN-DEV-0041 | partial | partial | partial | pending | - |
+| normal | 291 | Temperature central unit | 4 | review-ready | OWN-DEV-0042 | partial | partial | partial | pending | - |
+| normal | 1525 | Special functions | 4 | review-ready | OWN-DEV-0043 | partial | complete | partial | pending | - |
+| normal | 1579 | Shutter control bus | 4 | review-ready | OWN-DEV-0044 | complete | complete | complete | pending | - |
+| normal | 1586 | Shutter actuator bus | 4 | review-ready | OWN-DEV-0045 | partial | partial | partial | pending | - |
+| normal | 1686 | Display thermostat 2 modules | 4 | review-ready | OWN-DEV-0046 | complete | complete | partial | pending | - |
+| normal | 1768 | MyHOME_Screen 10 | 4 | review-ready | OWN-DEV-0047 | complete | complete | partial | pending | - |
+| normal | 1884 | Energy display 2 modules | 4 | review-ready | OWN-DEV-0048 | complete | complete | partial | pending | - |
+| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | review-ready | OWN-DEV-0049 | complete | complete | partial | pending | - |
+| normal | 2321 | Classe 300X | 4 | review-ready | OWN-DEV-0050 | complete | complete | partial | pending | - |
+| normal | 81 | Basic contacts interface | 3 | review-ready | OWN-DEV-0072 | complete | complete | partial | pending | - |
+| normal | 1122 | Shutter flush mounted actuator | 3 | review-ready | OWN-DEV-0098 | partial | complete | partial | pending | - |
+| normal | 45 | PIR ceiling mounted sensor | 2 | review-ready | OWN-DEV-0051 | complete | complete | complete | pending | - |
+| normal | 47 | Ballast DIN dimmer 0-10 V | 2 | review-ready | OWN-DEV-0052 | complete | complete | complete | pending | - |
+| normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | review-ready | OWN-DEV-0053 | complete | complete | complete | pending | - |
+| normal | 49 | PIR+US ceiling mounted sensor | 2 | review-ready | OWN-DEV-0054 | complete | complete | complete | pending | - |
+| normal | 50 | PIR+US wall mounted sensor | 2 | review-ready | OWN-DEV-0055 | complete | complete | complete | pending | - |
+| normal | 51 | PIR wall mounted sensor, straight range | 2 | review-ready | OWN-DEV-0056 | complete | complete | complete | pending | - |
+| normal | 52 | PIR wall mounted sensor, short range | 2 | review-ready | OWN-DEV-0057 | complete | complete | complete | pending | - |
+| normal | 53 | PIR wall mounted sensor, dual range | 2 | review-ready | OWN-DEV-0058 | complete | complete | complete | pending | - |
+| normal | 56 | PIR wall maunted sensor, long range | 2 | review-ready | OWN-DEV-0061 | complete | complete | partial | pending | - |
+| normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | review-ready | OWN-DEV-0062 | partial | complete | partial | pending | - |
+| normal | 58 | Sensor occupancy + IR + ZigBee | 2 | review-ready | OWN-DEV-0063 | partial | complete | partial | pending | - |
+| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | review-ready | OWN-DEV-0064 | complete | partial | partial | pending | - |
+| normal | 60 | Memory module | 2 | review-ready | OWN-DEV-0065 | complete | complete | complete | pending | - |
+| normal | 61 | Scenario module | 2 | review-ready | OWN-DEV-0066 | complete | complete | complete | pending | - |
+| normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0067 | complete | complete | complete | pending | - |
+| normal | 71 | SCS/DALI gateway | 2 | review-ready | OWN-DEV-0069 | complete | complete | complete | pending | - |
+| normal | 79 | DIN contacts interface | 2 | review-ready | OWN-DEV-0070 | complete | complete | complete | pending | - |
+| normal | 84 | DIN dimmer 1000 VA | 2 | review-ready | OWN-DEV-0073 | complete | complete | complete | pending | - |
+| normal | 85 | DIN dimmer 2 x 400 VA | 2 | review-ready | OWN-DEV-0074 | complete | complete | complete | pending | - |
+| normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0075 | complete | complete | partial | pending | - |
+| normal | 88 | Room Controller 2 Dim Outputs All loads 1000W | 2 | review-ready | OWN-DEV-0076 | partial | complete | partial | pending | - |
+| normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | review-ready | OWN-DEV-0077 | complete | complete | partial | pending | - |
+| normal | 90 | SCS-SCS interface | 2 | review-ready | OWN-DEV-0078 | complete | complete | complete | pending | - |
+| normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0079 | complete | complete | partial | pending | - |
+| normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0081 | partial | complete | partial | pending | - |
+| normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | partial | partial | pending | - |
+| normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0083 | partial | complete | partial | pending | - |
+| normal | 137 | IP55 PIR wall mounted sensor | 2 | review-ready | OWN-DEV-0084 | partial | complete | partial | pending | - |
+| normal | 160 | Flush mounted alarm central unit | 2 | review-ready | OWN-DEV-0088 | partial | partial | partial | pending | - |
+| normal | 975 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0095 | partial | partial | partial | pending | - |
+| normal | 1031 | Pulses counter interface | 2 | review-ready | OWN-DEV-0096 | partial | complete | partial | pending | - |
+| normal | 1078 | Video Station | 2 | review-ready | OWN-DEV-0097 | partial | complete | partial | pending | - |
+| normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | review-ready | OWN-DEV-0099 | partial | complete | partial | pending | - |
+| normal | 1130 | Stereo control | 2 | review-ready | OWN-DEV-0100 | partial | complete | partial | pending | - |
+| normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | review-ready | OWN-DEV-0101 | complete | complete | complete | pending | - |
+| normal | 54 | Basic actuator | 1 | review-ready | OWN-DEV-0059 | complete | complete | complete | pending | - |
+| normal | 55 | Basic control actuator | 1 | review-ready | OWN-DEV-0060 | complete | complete | complete | pending | - |
+| normal | 66 | Actuator 1 module 1 relay | 1 | review-ready | OWN-DEV-0068 | complete | complete | complete | pending | - |
+| normal | 80 | Module contacts interface | 1 | review-ready | OWN-DEV-0071 | complete | complete | complete | pending | - |
+| normal | 98 | Scenes programmer | 1 | review-ready | OWN-DEV-0080 | complete | complete | complete | pending | - |
+| normal | 139 | Burglar alarm central unit with communicator | 1 | review-ready | OWN-DEV-0085 | partial | complete | partial | pending | - |
+| normal | 140 | Polyx Alarm | 1 | review-ready | OWN-DEV-0086 | partial | partial | partial | pending | - |
+| normal | 141 | GSM burglar alarm central unit | 1 | review-ready | OWN-DEV-0087 | partial | complete | partial | pending | - |
+| normal | 207 | Webserver Audio/Video DIN | 1 | review-ready | OWN-DEV-0089 | partial | complete | partial | pending | - |
+| normal | 912 | Enhanced Webserver | 1 | review-ready | OWN-DEV-0090 | partial | complete | partial | pending | - |
+| normal | 913 | Stop&Go | 1 | review-ready | OWN-DEV-0091 | partial | complete | partial | pending | - |
+| normal | 914 | Stop&Go Btest | 1 | review-ready | OWN-DEV-0092 | partial | complete | partial | pending | - |
+| normal | 916 | Stop&Go Plus | 1 | review-ready | OWN-DEV-0093 | partial | complete | partial | pending | - |
+| normal | 925 | Touch control | 1 | review-ready | OWN-DEV-0094 | partial | partial | partial | pending | - |
 
 ## Reviewed
 

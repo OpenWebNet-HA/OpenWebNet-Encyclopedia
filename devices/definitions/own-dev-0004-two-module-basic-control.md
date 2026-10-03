@@ -75,28 +75,34 @@ The six documented physical configurator positions are consistent with the ordin
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `145` | `-1` | `-1` | `-1` | `2` | catalogue default | wildcard / unspecified applicability |
+| `145` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
 
 ## Module, Object, and Virgin Object model
 
-### Objects
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `145` | `1` | `400` Light control | Fixed/designated metadata | `533` | `400` | `368` |
+| `145` | `1` | `401` Automation control | Candidate alternative | `535` | `401` | `369` |
+| `145` | `1` | `404` Scheduled scenario | Candidate alternative | `537` | `404` | `370` |
+| `145` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `539` | `406` | `371` |
+| `145` | `2` | `400` Light control | Fixed/designated metadata | `534` | `400` | `368` |
+| `145` | `2` | `401` Automation control | Candidate alternative | `536` | `401` | `369` |
+| `145` | `2` | `404` Scheduled scenario | Candidate alternative | `538` | `404` | `370` |
+| `145` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `540` | `406` | `371` |
 
-| Firmware | Object | Description | Relationship |
-| --- | --- | --- | --- |
-| `145` | `400` | Light control | catalogue firmware/Object relation |
-| `145` | `401` | Automation control | catalogue firmware/Object relation |
-| `145` | `404` | Scheduled scenario | catalogue firmware/Object relation |
-| `145` | `406` | Scheduled scenario PLUS | catalogue firmware/Object relation |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
 
 ### Virgin Objects
 
-| Firmware | Virgin Object | Relationship |
-| --- | --- | --- |
-| `145` | `500` | catalogue candidate/template association |
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `145` | `500` Automation double command virgin | `1`, `2` | `400`, `401`, `404`, `406`, `407` | `500` | `18` |
 
 ### Reconciled topology notes
 
@@ -110,7 +116,7 @@ Firmware `145` exposes two configurable Modules.
 | `404` | Scheduled scenario | `1`, `2` | alternative |
 | `406` | Scheduled scenario PLUS | `1`, `2` | alternative |
 
-Virgin Object `500`, **Automation double command virgin**, applies to slots `1` and `2` and permits Objects `400`, `401`, `404`, `406`, and `407` (AUX control).
+Virgin Object `500`, **Automation double command virgin**, applies to slots `1` and `2` and permits Objects `400`, `401`, `404`, `406`, and `407` (`AUX` control).
 
 Installed Object selection belongs to [`DIMENSION 30`](../../diagnostics/dim30-modules.md); generic frame syntax is not repeated here.
 
@@ -133,15 +139,20 @@ The official sheet independently documents physical configuration and MyHOME Sui
 
 ## Firmware-scoped configuration
 
-| Firmware | Field | Domain | Default | Meaning |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
-| `145` | `AID` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `A1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `PL1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `M1` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `A2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `PL2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
-| `145` | `M2` | catalogue-defined; preserve legal values through canonical resolver | catalogue-scoped | Device/firmware configuration field |
+| `145` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `145` | `A1` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A1; Automation A addressing space (for configurator A1) |
+| `145` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
+| `145` | `M1` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M1; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
+| `145` | `A2` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A2; Automation A addressing space (for configurator A2) |
+| `145` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `145` | `M2` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
+
+
+
 
 ### Published and reconciled details
 
@@ -159,63 +170,69 @@ The official sheet uses physical `A=1..9` and `PL=1..9` for ordinary point-to-po
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `400` - Light control
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `HOURS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `MINUTES` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `SECONDS` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `LEVEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `START_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `STOP_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `DIMMING_S` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `T_TIME` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
 
 ### Object `401` - Automation control
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `ADDR_TYPE` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `G` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `INST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `DEST_LEV` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `A_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL_R` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
 
 ### Object `404` - Scheduled scenario
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `A` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `BUTTON_2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `IN_AUX_CHANNEL` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `START_DELAY` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
 
 ### Object `406` - Scheduled scenario PLUS
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `PPT_CEN_LOW` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `PPT_CEN_HIG` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `BUTTON_1` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
-| `BUTTON_2` | catalogue-defined; apply Device relation filters | catalogue-scoped | reusable Object configuration field |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
 
 ### Reconciled Object notes
 
@@ -224,27 +241,769 @@ The Objects reachable from the Device expose these reusable configuration famili
 
 | Object | Principal configuration surface |
 | ---: | --- |
-| `400` Light control | mode; point/area/group/general address; installation/destination level; reference address; timed and dimmer parameters; AUX input |
-| `401` Automation control | bistable/monostable/blades mode; point/area/group/general address; installation/destination level; reference address; AUX input |
-| `404` Scheduled scenario | `A`, `PL`, upper/lower button `0..31`, AUX input, restart delay |
+| `400` Light control | mode; point/area/group/general address; installation/destination level; reference address; timed and dimmer parameters; `AUX` input |
+| `401` Automation control | bistable/monostable/blades mode; point/area/group/general address; installation/destination level; reference address; `AUX` input |
+| `404` Scheduled scenario | `A`, `PL`, upper/lower button `0..31`, `AUX` input, restart delay |
 | `406` Scheduled scenario PLUS | scenario number split across low/high fields; upper/lower button `0..31` |
-| `407` AUX control | toggle/ON/OFF/PUL/automation/reset/enable-disable modes; AUX output channel `1..15`; AUX input `0..15` |
+| `407` `AUX` control | toggle/`ON`/`OFF`/`PUL`/automation/reset/enable-disable modes; `AUX` output channel `1..15`; `AUX` input `0..15` |
 
 These are reusable Object definitions. A value appearing in a reusable Object enum is not automatically a physically reachable configuration of this Device; firmware conditions and conversion rules remain authoritative for reachability.
 
 ## Conditions, filters, and conversions
 
-### Relation filters
+### Slot conditions
 
-| Scope | Filter IDs | Interpretation |
-| --- | --- | --- |
-| Device/Object relations | `263`, `264`, `265`, `266`, `267`, `268`, `269`, `270`, `271`, `272`, `273`, `277`, `278`, `279`, `281`, `1701` | apply before exposing reusable Object values |
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `145` | `1` | `400` | `4165` | `A1=AMB` | `94` |
+| `145` | `1` | `400` | `4167` | `A1=GEN` | `95` |
+| `145` | `1` | `400` | `4169` | `A1=GR` | `93` |
+| `145` | `1` | `400` | `4192` | `M1<>CEN;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4233` | `M1=0;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4234` | `M1=0;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4236` | `M1=0;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4237` | `M1=0;A1=GR` | `93` |
+| `145` | `1` | `400` | `4274` | `M1=O/I;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4275` | `M1=O/I;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4277` | `M1=O/I;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4278` | `M1=O/I;A1=GR` | `93` |
+| `145` | `1` | `400` | `4281` | `M1=OFF;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4282` | `M1=OFF;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4284` | `M1=OFF;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4285` | `M1=OFF;A1=GR` | `93` |
+| `145` | `1` | `400` | `4286` | `M1=ON;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4287` | `M1=ON;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4289` | `M1=ON;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4290` | `M1=ON;A1=GR` | `93` |
+| `145` | `1` | `400` | `4293` | `M1=PUL;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4294` | `M1=PUL;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4296` | `M1=PUL;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4297` | `M1=PUL;A1=GR` | `93` |
+| `145` | `1` | `401` | `4300` | `M1=SU_GIU;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `401` | `4301` | `M1=SU_GIU;A1=AMB` | `94` |
+| `145` | `1` | `401` | `4303` | `M1=SU_GIU;A1=GEN` | `95` |
+| `145` | `1` | `401` | `4304` | `M1=SU_GIU;A1=GR` | `93` |
+| `145` | `1` | `401` | `4308` | `M1=SU_GIU_M;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `401` | `4309` | `M1=SU_GIU_M;A1=AMB` | `94` |
+| `145` | `1` | `401` | `4311` | `M1=SU_GIU_M;A1=GEN` | `95` |
+| `145` | `1` | `401` | `4312` | `M1=SU_GIU_M;A1=GR` | `93` |
+| `145` | `1` | `404` | `4254` | `M1=CEN` | `4` |
+| `145` | `1` | `404` | `4270` | `M1=M2;M2=CEN` | `17` |
+| `145` | `1` | `406` | `4269` | `M1=FAKE` | None |
+| `145` | `2` | `400` | `4171` | `A2=AMB` | `97` |
+| `145` | `2` | `400` | `4173` | `A2=GEN` | `95` |
+| `145` | `2` | `400` | `4175` | `A2=GR` | `96` |
+| `145` | `2` | `400` | `4314` | `M2<>CEN;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4315` | `M2=0;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4316` | `M2=0;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4318` | `M2=0;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4319` | `M2=0;A2=GR` | `96` |
+| `145` | `2` | `400` | `4391` | `M2=O/I;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4392` | `M2=O/I;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4394` | `M2=O/I;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4395` | `M2=O/I;A2=GR` | `96` |
+| `145` | `2` | `400` | `4396` | `M2=OFF;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4397` | `M2=OFF;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4399` | `M2=OFF;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4400` | `M2=OFF;A2=GR` | `96` |
+| `145` | `2` | `400` | `4401` | `M2=ON;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4402` | `M2=ON;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4404` | `M2=ON;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4405` | `M2=ON;A2=GR` | `96` |
+| `145` | `2` | `400` | `4406` | `M2=PUL;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4407` | `M2=PUL;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4409` | `M2=PUL;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4410` | `M2=PUL;A2=GR` | `96` |
+| `145` | `2` | `401` | `4411` | `M2=SU_GIU;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `401` | `4412` | `M2=SU_GIU;A2=AMB` | `97` |
+| `145` | `2` | `401` | `4414` | `M2=SU_GIU;A2=GEN` | `95` |
+| `145` | `2` | `401` | `4415` | `M2=SU_GIU;A2=GR` | `96` |
+| `145` | `2` | `401` | `4417` | `M2=SU_GIU_M;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `401` | `4418` | `M2=SU_GIU_M;A2=AMB` | `97` |
+| `145` | `2` | `401` | `4420` | `M2=SU_GIU_M;A2=GEN` | `95` |
+| `145` | `2` | `401` | `4421` | `M2=SU_GIU_M;A2=GR` | `96` |
+| `145` | `2` | `404` | `4271` | `M1=M2;M2=CEN` | `18` |
+| `145` | `2` | `404` | `4389` | `M2=CEN` | `4` |
+| `145` | `2` | `406` | `4390` | `M2=FAKE` | None |
 
-### Slot conditions and conversions
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-| Scope | Condition IDs | Conversion treatment |
-| --- | --- | --- |
-| Device slots | `4165`, `4167`, `4169`, `4171`, `4173`, `4175`, `4192`, `4233`, `4234`, `4236`, `4237`, `4254`, `4269`, `4270`, `4271`, `4274`, `4275`, `4277`, `4278`, `4281`, `4282`, `4284`, `4285`, `4286`, `4287`, `4289`, `4290`, `4293`, `4294`, `4296`, `4297`, `4300`, `4301`, `4303`, `4304`, `4308`, `4309`, `4311`, `4312`, `4314`, `4315`, `4316`, `4318`, `4319`, `4389`, `4390`, `4391`, `4392`, `4394`, `4395`, `4396`, `4397`, `4399`, `4400`, `4401`, `4402`, `4404`, `4405`, `4406`, `4407`, `4409`, `4410`, `4411`, `4412`, `4414`, `4415`, `4417`, `4418`, `4420`, `4421` | preserve canonical condition/conversion evaluation; do not infer unconditional capability |
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `145` | `400` | `263` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `145` | `400` | `264` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `145` | `400` | `265` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `145` | `400` | `266` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `145` | `400` | `267` | `START_S` | `0..255` (entire reusable range retained) | `255` | Soft start speed |
+| `145` | `400` | `268` | `STOP_S` | `0..255` (entire reusable range retained) | `255` | Soft stop speed |
+| `145` | `400` | `269` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `145` | `400` | `270` | `LEVEL` | `0..100` (entire reusable range retained) | `100` | Level |
+| `145` | `400` | `271` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `400` | `272` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `145` | `400` | `273` | `M` | `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `4` = Toggle `ON`/`OFF`; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `5` = `ON`/`OFF`; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90% | `0` | Modality; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `145` | `401` | `277` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `145` | `401` | `278` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `401` | `279` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `145` | `404` | `281` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `404` | `1701` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `4` | `M1=0` | `M` = `0` | `4` |
+| `4` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M1=O/I` | `M` = `9` | `4` |
+| `4` | `M1=OFF` | `M` = `10` | `4` |
+| `4` | `M1=ON` | `M` = `11` | `4` |
+| `4` | `M1=PUL` | `M` = `15` | `4` |
+| `4` | `M1=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M1=SU_GIU_M` | `M` = `13` | `4` |
+| `4` | `M2=0` | `M` = `0` | `4` |
+| `4` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M2=O/I` | `M` = `9` | `4` |
+| `4` | `M2=OFF` | `M` = `10` | `4` |
+| `4` | `M2=ON` | `M` = `11` | `4` |
+| `4` | `M2=PUL` | `M` = `15` | `4` |
+| `4` | `M2=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M2=SU_GIU_M` | `M` = `13` | `4` |
+| `17` | `M1=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `1`; `CEN_BUTT_2` = `3` | `17` |
+| `18` | `M2=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `2`; `CEN_BUTT_2` = `4` | `18` |
+| `93` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=0; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=0; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=0; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=0; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=0; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=0; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=0; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=0; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=0; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=1; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=1; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=1; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=1; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=1; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=1; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=1; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=1; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=1; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=2; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=2; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=2; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=2; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=2; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=2; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=2; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=2; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=2; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=3; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=3; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=3; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=3; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=3; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=3; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=3; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=3; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=3; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=4; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=4; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=4; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=4; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=4; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=4; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=4; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=4; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=4; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=5; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=5; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=5; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=5; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=5; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=5; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=5; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=5; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=5; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=6; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=6; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=6; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=6; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=6; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=6; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=6; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=6; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=6; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=7; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=7; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=7; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=7; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=7; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=7; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=7; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=7; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=7; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=8; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=8; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=8; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=8; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=8; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=8; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=8; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=8; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=8; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=O/I; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=O/I; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=O/I; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=O/I; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=O/I; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=O/I; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=O/I; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=O/I; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=O/I; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=OFF; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=OFF; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=OFF; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=OFF; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=OFF; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=OFF; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=OFF; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=OFF; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=OFF; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=ON; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=ON; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=ON; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=ON; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=ON; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=ON; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=ON; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=ON; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=ON; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=PUL; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=PUL; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=PUL; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=PUL; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=PUL; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=PUL; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=PUL; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=PUL; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=PUL; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=9` | `G1` = `9` | `93` → `200` |
+| `94` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=0; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=0; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=0; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=0; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=0; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=0; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=0; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=0; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=0; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=1; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=1; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=1; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=1; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=1; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=1; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=1; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=1; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=1; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=2; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=2; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=2; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=2; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=2; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=2; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=2; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=2; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=2; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=3; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=3; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=3; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=3; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=3; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=3; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=3; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=3; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=3; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=4; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=4; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=4; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=4; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=4; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=4; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=4; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=4; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=4; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=5; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=5; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=5; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=5; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=5; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=5; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=5; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=5; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=5; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=6; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=6; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=6; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=6; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=6; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=6; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=6; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=6; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=6; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=7; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=7; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=7; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=7; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=7; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=7; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=7; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=7; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=7; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=8; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=8; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=8; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=8; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=8; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=8; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=8; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=8; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=8; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=O/I; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=O/I; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=O/I; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=O/I; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=O/I; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=O/I; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=O/I; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=O/I; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=O/I; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=OFF; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=OFF; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=OFF; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=OFF; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=OFF; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=OFF; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=OFF; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=OFF; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=OFF; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=ON; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=ON; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=ON; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=ON; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=ON; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=ON; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=ON; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=ON; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=ON; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=PUL; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=PUL; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=PUL; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=PUL; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=PUL; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=PUL; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=PUL; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=PUL; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=PUL; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=9` | `A` = `9` | `94` → `201` |
+| `95` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `3` | `95` |
+| `96` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=0; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=0; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=0; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=0; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=0; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=0; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=0; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=0; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=0; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=1; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=1; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=1; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=1; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=1; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=1; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=1; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=1; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=1; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=2; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=2; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=2; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=2; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=2; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=2; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=2; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=2; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=2; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=3; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=3; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=3; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=3; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=3; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=3; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=3; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=3; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=3; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=4; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=4; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=4; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=4; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=4; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=4; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=4; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=4; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=4; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=5; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=5; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=5; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=5; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=5; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=5; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=5; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=5; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=5; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=6; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=6; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=6; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=6; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=6; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=6; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=6; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=6; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=6; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=7; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=7; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=7; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=7; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=7; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=7; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=7; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=7; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=7; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=8; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=8; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=8; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=8; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=8; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=8; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=8; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=8; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=8; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=O/I; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=O/I; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=O/I; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=O/I; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=O/I; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=O/I; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=O/I; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=O/I; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=O/I; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=OFF; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=OFF; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=OFF; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=OFF; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=OFF; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=OFF; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=OFF; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=OFF; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=OFF; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=ON; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=ON; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=ON; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=ON; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=ON; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=ON; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=ON; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=ON; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=ON; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=PUL; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=PUL; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=PUL; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=PUL; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=PUL; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=PUL; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=PUL; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=PUL; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=PUL; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=9` | `G1` = `9` | `96` → `202` |
+| `97` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=0; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=0; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=0; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=0; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=0; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=0; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=0; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=0; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=0; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=1; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=1; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=1; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=1; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=1; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=1; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=1; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=1; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=1; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=2; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=2; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=2; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=2; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=2; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=2; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=2; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=2; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=2; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=3; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=3; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=3; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=3; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=3; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=3; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=3; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=3; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=3; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=4; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=4; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=4; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=4; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=4; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=4; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=4; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=4; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=4; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=5; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=5; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=5; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=5; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=5; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=5; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=5; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=5; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=5; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=6; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=6; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=6; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=6; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=6; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=6; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=6; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=6; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=6; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=7; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=7; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=7; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=7; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=7; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=7; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=7; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=7; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=7; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=8; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=8; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=8; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=8; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=8; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=8; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=8; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=8; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=8; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=O/I; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=O/I; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=O/I; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=O/I; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=O/I; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=O/I; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=O/I; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=O/I; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=O/I; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=OFF; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=OFF; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=OFF; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=OFF; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=OFF; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=OFF; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=OFF; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=OFF; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=OFF; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=ON; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=ON; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=ON; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=ON; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=ON; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=ON; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=ON; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=ON; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=ON; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=PUL; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=PUL; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=PUL; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=PUL; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=PUL; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=PUL; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=PUL; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=PUL; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=PUL; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=9` | `A` = `9` | `97` → `203` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -274,11 +1033,11 @@ These are reusable Object definitions. A value appearing in a reusable Object en
 For the four references named by `MQ00286-d-EN`, the sheet documents:
 
 - point-to-point, room, group, and general lighting addressing;
-- lighting cyclic, ON, OFF, pushbutton, timed-ON, and dimming functions;
+- lighting cyclic, `ON`, `OFF`, pushbutton, timed-`ON`, and dimming functions;
 - automation bistable, monostable, and lath/blade control;
 - programmed scenario buttons `0..31`;
 - PLUS scenario number `1..2047` and button number `0..31` through virtual configuration;
-- Lighting Management virtual functions including dual light, CEN, CEN PLUS, and AUX control.
+- Lighting Management virtual functions including dual light, `CEN`, `CEN` PLUS, and `AUX` control.
 
 The exact generic functional frame grammar remains canonical under [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
 
@@ -297,9 +1056,9 @@ A programmer should resolve each Module independently from the physical/virtual 
 `MQ00286-d-EN` has been reconciled beyond the high-level Object list:
 
 - physical and virtual configuration both support point-to-point, room, group and general lighting control, but the published physical ranges and the reusable Object ranges are not identical;
-- the Device supports timed-ON and dimming variants in addition to simple cyclic/ON/OFF/pushbutton behavior;
+- the Device supports timed-`ON` and dimming variants in addition to simple cyclic/`ON`/`OFF`/pushbutton behavior;
 - load-status feedback for room/group/general commands is tied to a reference actuator address in software configuration rather than being implied by the command address alone;
-- CEN-only use has a product-level configuration constraint: secondary address positions that are not part of the CEN function must remain unconfigured rather than being treated as independent command channels;
+- `CEN`-only use has a product-level configuration constraint: secondary address positions that are not part of the `CEN` function must remain unconfigured rather than being treated as independent command channels;
 - local LED behavior and brightness adjustment are part of the Device user interface and remain distinct from the OpenWebNet command Modules.
 
 The archived technical sheet has therefore been reconciled into both the physical configuration model and the reusable Object model; remaining incompleteness concerns other commercial variants and hardware corroboration.

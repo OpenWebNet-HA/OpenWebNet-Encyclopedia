@@ -65,20 +65,30 @@ The six physical positions independently support the expected ordinary addressed
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `216` | `-1` | `-1` | `-1` | `4` | not stated | wildcard applicability |
+| `216` | `-1` | `-1` | `-1` | `4` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
 
 ## Module, Object, and Virgin Object model
 
-| Slot | Object | Description | Relationship |
-| ---: | ---: | --- | --- |
-| `1` | `34` | IR receiver | fixed |
-| `2` | `34` | IR receiver | fixed |
-| `3` | `34` | IR receiver | fixed |
-| `4` | `34` | IR receiver | fixed |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `216` | `1` | `34` IR receiver | Fixed/designated metadata | `1169` | `34` | `628` |
+| `216` | `2` | `34` IR receiver | Fixed/designated metadata | `1170` | `34` | `628` |
+| `216` | `3` | `34` IR receiver | Fixed/designated metadata | `1171` | `34` | `628` |
+| `216` | `4` | `34` IR receiver | Fixed/designated metadata | `1172` | `34` | `628` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 There is no Virgin Object and no slot-condition row for firmware `216`.
 
@@ -91,15 +101,30 @@ There is no Virgin Object and no slot-condition row for firmware `216`.
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | Device identity | - | implementation identity field |
-| `A` | `0..9` | - | environment / address |
-| `PL1` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | - | per-channel contextual physical selector |
-| `PL2` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | - | per-channel contextual physical selector |
-| `PL3` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | - | per-channel contextual physical selector |
-| `PL4` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | - | per-channel contextual physical selector |
-| `M` | `0..9` / `CEN` | - | shared operating-mode selector |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `216` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `216` | `A` | `0..9` | `0` | A; Environment |
+| `216` | `PL1` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL1; PL1 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL2` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL2; PL2 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL3` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL3; PL3 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL4` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL4; PL4 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `M` | `0..9`; `14` = `CEN` | `0` | M; Mode (0-9,`CEN`) |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `A` | `0..9` | environment / address |
+| `PL1` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
+| `PL2` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
+| `PL3` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
+| `PL4` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
+| `M` | `0..9` / `CEN` | shared operating-mode selector |
+
 
 The database uses `PL1`..`PL4` while the official sheet labels each socket `PLn/PFn` because its meaning depends on `M`.
 
@@ -109,7 +134,7 @@ The official sheet documents five broad modes:
 
 | Mode | Physical selection | Function |
 | --- | --- | --- |
-| Remote control | `M=1..4` | four generic ON/OFF/UP/DOWN-style remote control channels |
+| Remote control | `M=1..4` | four generic `ON`/`OFF`/`UP/DOWN`-style remote control channels |
 | Advanced scenarios | `M=CEN` | commands a scenario programmer such as MH200N |
 | Self-learning | no `M` configurator | learns functions for the remote keys |
 | Scenario module | `M=6` | activates up to 16 scenarios stored in F420-style scenario modules |
@@ -124,8 +149,8 @@ The generic functional frame grammar remains canonical under the relevant [Funct
 The Device has one environment field `A` and four per-channel physical selectors. Depending on the selected mode, a `PLn/PFn` position may identify:
 
 - a lighting point;
-- ON/OFF/general/room-style lighting scope;
-- an automation UP/DOWN function;
+- `ON`/`OFF`/general/room-style lighting scope;
+- an automation `UP/DOWN` function;
 - a scenario or programmed-scenario function;
 - an audio/sound function.
 
@@ -133,14 +158,16 @@ This contextual reuse is why the firmware parameter enum is wider than the reusa
 
 ## Object configuration surfaces
 
-The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
-### Object `34` - catalogue configuration
+### Object `34` - IR receiver
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Addressing | `A`, `PL` | Area; Light point |
-| Mode / behavior | `MOD` | Mode 0-4 |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `MOD` | `0..4` | `0` | Modality; Mode 0-4 |
+
 
 ### Additional Device-specific interpretation
 
@@ -154,19 +181,27 @@ This reusable Object surface is narrower than the contextual firmware-level `PLn
 
 ## Conditions, filters, and conversions
 
-| Surface | Status | Evidence |
-| --- | --- | --- |
-| Slot conditions | none | implementation evidence |
-| Virgin Object | none | implementation evidence |
-| Topology | four fixed Object `34` Modules | implementation evidence |
+### Slot conditions
 
-### Catalogue filter references
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
 
-No filter rows are associated with this Device firmware in the canonical catalogue.
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
 
-### Catalogue slot-condition references
+### Object/Firmware restrictions
 
-No slot-condition rows are associated with this Device firmware in the canonical catalogue.
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -197,8 +232,8 @@ See [Configuration Programming](../../programming/configuration-programming.md) 
 The IR-receiver technical sheets have been reconciled into concrete Device behavior:
 
 - `M=1..4` select remote-control channel blocks; multiple receivers can be arranged to provide up to sixteen distinct remote commands;
-- shutter/automation assignments use paired UP/DOWN semantics rather than four unrelated light-point values;
-- `M=CEN` selects programmed-scenario/CEN use, while the unconfigured/self-learning mode has its own learn/delete workflow;
+- shutter/automation assignments use paired `UP/DOWN` semantics rather than four unrelated light-point values;
+- `M=CEN` selects programmed-scenario/`CEN` use, while the unconfigured/self-learning mode has its own learn/delete workflow;
 - `M=6` is the published scenario-module mode and `M=9` is the published sound-diffusion mode;
 - each physical `PLn/PFn` socket is contextual: the same configurator position can mean a light point, automation function, scenario selection or audio point depending on `M`;
 - the product includes a programming/lock control whose state affects learning/configuration behavior but is not an OpenWebNet Module.

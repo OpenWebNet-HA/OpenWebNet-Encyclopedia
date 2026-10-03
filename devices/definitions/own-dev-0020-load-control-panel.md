@@ -61,20 +61,30 @@ The four OpenWebNet Modules represent the four panel positions, not four differe
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `232` | `-1` | `-1` | not specified | `4` | not stated | wildcard applicability |
+| `232` | `-1` | `-1` | `-1` | `4` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
 
 ## Module, Object, and Virgin Object model
 
-| Slot | Object | Relationship |
-| ---: | ---: | --- |
-| `1` | `492` | fixed |
-| `2` | `492` | fixed |
-| `3` | `492` | fixed |
-| `4` | `492` | fixed |
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `232` | `1` | `463` Load control actuator visualization | Fixed/designated metadata | `1179` | `492` | `635` |
+| `232` | `2` | `463` Load control actuator visualization | Fixed/designated metadata | `1180` | `492` | `635` |
+| `232` | `3` | `463` Load control actuator visualization | Fixed/designated metadata | `1181` | `492` | `635` |
+| `232` | `4` | `463` Load control actuator visualization | Fixed/designated metadata | `1182` | `492` | `635` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+### Virgin Objects
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 There is no Virgin Object.
 
@@ -90,32 +100,52 @@ The product also defines self-learning selected by `M=1` when the priority confi
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | implementation identity token | - | Device identity |
-| `P1AB` | `0..6` | `0` | shared priority/configurator field for positions A/B |
-| `P2A` | `0..9` or `OFF` | `0` | position A sub-priority / disable selector |
-| `P2B` | `0..9` or `OFF` | `0` | position B sub-priority / disable selector |
-| `P1CD` | `0..6` | `0` | shared priority/configurator field for positions C/D |
-| `P2C` | `0..9` or `OFF` | `0` | position C sub-priority / disable selector |
-| `P2D` | `0..9` or `OFF` | `0` | position D sub-priority / disable selector |
-| `M` | `0` Normal / `1` Self learning | `0` | operating/configuration mode |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `232` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `232` | `P1AB` | `0..6` | `0` | P1ab; Configurator P1ab |
+| `232` | `P2A` | `0..9`; `10` = `OFF` | `0` | P2a; Configurator P2a |
+| `232` | `P2B` | `0..9`; `10` = `OFF` | `0` | P2b; Configurator P2b |
+| `232` | `P1CD` | `0..6` | `0` | P1cd; Configurator P1cd |
+| `232` | `P2C` | `0..9`; `10` = `OFF` | `0` | P2c; Configurator P2c |
+| `232` | `P2D` | `0..9`; `10` = `OFF` | `0` | P2d; Configurator P2d |
+| `232` | `M` | `0..1` | `0` | M; M (Normal 0- Self learning 1) |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `P1AB` | `0..6` | shared priority/configurator field for positions A/B |
+| `P2A` | `0..9` or `OFF` | position A sub-priority / disable selector |
+| `P2B` | `0..9` or `OFF` | position B sub-priority / disable selector |
+| `P1CD` | `0..6` | shared priority/configurator field for positions C/D |
+| `P2C` | `0..9` or `OFF` | position C sub-priority / disable selector |
+| `P2D` | `0..9` or `OFF` | position D sub-priority / disable selector |
+| `M` | `0` Normal / `1` Self learning | operating/configuration mode |
+
 
 `OFF` is represented by catalogue value `10` in the `P2` fields. The dossier keeps both the encoded value and the human label distinct.
 
 ## Object configuration surfaces
 
-The following subsections account for the complete reusable Object field surface present in the canonical catalogue. They preserve field identity without reproducing database serialization. Detailed Device-specific interpretation follows where available.
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
-### Object `492` - catalogue configuration
+### Object `463` - Load control actuator visualization
 
-| Surface | Fields | Meaning |
-| --- | --- | --- |
-| Object-specific | `PRIORITY`, `PHASE` | Priority; Phase |
+Catalogue Object key `492` maps to external Object `463`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PRIORITY` | `0..63` | `1` | Priority |
+| `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
+
 
 ### Additional Device-specific interpretation
 
-Object `492` exposes:
+Object `463` exposes:
 
 | Field | Domain | Default | Meaning |
 | --- | --- | --- | --- |
@@ -125,6 +155,48 @@ Object `492` exposes:
 The product documentation defines the physical priority as decimal composition of the applicable `P1` tens component and `P2` units component, up to priority `63`. The missing catalogue conversion records are still material to reproducing MyHOME Suite's internal rule graph, but they no longer make the product-level `P1` / `P2` mapping unknown.
 
 ## Conditions, filters, and conversions
+
+### Slot conditions
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `232` | `1` | `463` | `4145` | No textual predicate stored | None |
+| `232` | `1` | `463` | `4452` | `M=0;P1ab<>0;P2a<>OFF` | `421` |
+| `232` | `1` | `463` | `4454` | `M=0;P1ab=0;P2a<>OFF;P2a<>0` | `421` |
+| `232` | `1` | `463` | `4476` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | None |
+| `232` | `2` | `463` | `4145` | No textual predicate stored | None |
+| `232` | `2` | `463` | `4453` | `M=0;P1ab<>0;P2b<>OFF` | `431` |
+| `232` | `2` | `463` | `4455` | `M=0;P1ab=0;P2b<>OFF;P2b<>0` | `431` |
+| `232` | `2` | `463` | `4476` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | None |
+| `232` | `3` | `463` | `4145` | No textual predicate stored | None |
+| `232` | `3` | `463` | `4456` | `M=0;P1cd<>0;P2c<>OFF` | `441` |
+| `232` | `3` | `463` | `4458` | `M=0;P1cd=0;P2c<>OFF;P2c<>0` | `441` |
+| `232` | `3` | `463` | `4476` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | None |
+| `232` | `4` | `463` | `4145` | No textual predicate stored | None |
+| `232` | `4` | `463` | `4457` | `M=0;P1cd<>0;P2d<>OFF` | `451` |
+| `232` | `4` | `463` | `4459` | `M=0;P1cd=0;P2d<>OFF;P2d<>0` | `451` |
+| `232` | `4` | `463` | `4476` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `421` | No item-side predicate on this branch | Referenced conversion rule absent from source | `421` |
+| `431` | No item-side predicate on this branch | Referenced conversion rule absent from source | `431` |
+| `441` | No item-side predicate on this branch | Referenced conversion rule absent from source | `441` |
+| `451` | No item-side predicate on this branch | Referenced conversion rule absent from source | `451` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Product interpretation and source differences
 
 The current catalogue uses explicit conditions for normal mode:
 
@@ -140,31 +212,6 @@ All four slots also carry the self-learning condition:
 `M=1`; P1ab=0; P2a=0; P2b=0; P1cd=0; P2c=0; P2d=0
 
 The slot-condition rows reference conversion identifiers `421`, `431`, `441` and `451`, but no matching rows were found in `EN_CONV_RULE` in the canonical catalogue copy. The references are therefore preserved as unresolved implementation evidence; this definition does not fabricate the missing arithmetic.
-
-### Catalogue filter references
-
-No filter rows are associated with this Device firmware in the canonical catalogue.
-
-### Catalogue slot-condition references
-
-| Condition | Slot | Object | Predicate | Conversion reference |
-| --- | --- | --- | --- | --- |
-| `4145` | `1` | `492` | empty source condition | `` |
-| `4452` | `1` | `492` | `M=0;P1ab<>0;P2a<>OFF` | `421` |
-| `4454` | `1` | `492` | `M=0;P1ab=0;P2a<>OFF;P2a<>0` | `421` |
-| `4476` | `1` | `492` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | `` |
-| `4145` | `2` | `492` | empty source condition | `` |
-| `4453` | `2` | `492` | `M=0;P1ab<>0;P2b<>OFF` | `431` |
-| `4455` | `2` | `492` | `M=0;P1ab=0;P2b<>OFF;P2b<>0` | `431` |
-| `4476` | `2` | `492` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | `` |
-| `4145` | `3` | `492` | empty source condition | `` |
-| `4456` | `3` | `492` | `M=0;P1cd<>0;P2c<>OFF` | `441` |
-| `4458` | `3` | `492` | `M=0;P1cd=0;P2c<>OFF;P2c<>0` | `441` |
-| `4476` | `3` | `492` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | `` |
-| `4145` | `4` | `492` | empty source condition | `` |
-| `4457` | `4` | `492` | `M=0;P1cd<>0;P2d<>OFF` | `451` |
-| `4459` | `4` | `492` | `M=0;P1cd=0;P2d<>OFF;P2d<>0` | `451` |
-| `4476` | `4` | `492` | `M=1;P1ab=0;P2a=0;P2b=0;P1cd=0;P2c=0;P2d=0` | `` |
 
 ## Diagnostic applicability
 
@@ -194,7 +241,7 @@ Normal physical configuration uses `P1AB` / `P1CD` plus the per-position `P2` co
 
 - `P1AB` / `P1CD` provide the tens component for their respective button pairs;
 - each `P2A` / `P2B` / `P2C` / `P2D` provides the units component for that position;
-- the resulting published priority domain reaches `63`, matching Object `492`'s `PRIORITY` domain;
+- the resulting published priority domain reaches `63`, matching Object `463`'s `PRIORITY` domain;
 - the product sheet gives worked examples including priorities `5`, `6`, `12` and `13`, demonstrating that the mapping is decimal composition rather than an unknown opaque encoding;
 - front LEDs distinguish load state and programming/self-learning states, and the self-learning workflow associates a panel position with a controlled load;
 - the documented user override temporarily re-enables a shed load for four hours.

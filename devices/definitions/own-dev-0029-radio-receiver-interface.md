@@ -27,7 +27,7 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `mh_diff-sonore2008.pdf` | Radio/wired interface and sound-system technical guide | historical publisher guide | 4575 family sections; printed page unresolved / 1-based PDF page unresolved | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `mh_diff-sonore2008.pdf` | Radio/wired interface and sound-system technical guide | historical publisher guide | 4575 radio/wired interface: printed p. 99 / PDF p. 99; installation/configuration context printed pp. 60-61 / PDF pp. 60-61 and 66-67 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
 The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -55,31 +55,27 @@ The printed and 1-based PDF page locators remain unresolved and are retained exp
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Build | Declared Modules | Default | Status |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `214` | `-1` | `-1` | `-1` | `1` | not stated | wildcard applicability |
+| `214` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Firmware `214` is wildcard `-1.-1.-1` and declares one Module.
 
 ## Module, Object, and Virgin Object model
 
-### Firmware Object relations
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `214` | `1` | `27` Radio receiver | Fixed/designated metadata | `1010` | `27` | `607` |
 
-| Firmware | Relation | Object | Key | Description |
-| ---: | ---: | ---: | ---: | --- |
-| `214` | `607` | `27` | `27` | Radio receiver |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
 
-### Slot applicability
+### Virgin Objects
 
-| Slot row | Slot | Object | Relationship | Description |
-| ---: | ---: | ---: | --- | --- |
-| `1010` | `1` | `27` | fixed | Radio receiver |
-
-### Virgin Object reachability
-
-| Firmware | Relation | Virgin Object | Key | Description | Associated Objects | Slot rows |
-| ---: | ---: | ---: | ---: | --- | --- | --- |
-| - | - | - | - | No firmware-scoped Virgin Object | - | - |
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 The single Module resolves to Object `27`, **Radio receiver**. No Virgin Object is declared for this firmware.
 
@@ -94,24 +90,43 @@ Physical Configuration and Virtual Configuration are declared.
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `A` | `0..9` | `0` | area / environment configurator |
-| `PL` | `0..9` | `0` | light-point configurator |
-| `M` | `0` / `1` / `6` / `7` / `8` / `CEN` | `0` | operating / function mode |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `214` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `214` | `A` | `0..9` | `0` | A; Environment |
+| `214` | `PL` | `0..9` | `0` | PL; Light Point |
+| `214` | `M` | `0..1`; `6..8`; `14` = `CEN` | `0` | M; Mode (0,1,6,7,8,`CEN`) |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `A` | `0..9` | area / environment configurator |
+| `PL` | `0..9` | light-point configurator |
+| `M` | `0` / `1` / `6` / `7` / `8` / `CEN` | operating / function mode |
+
 
 The firmware exposes only `A`, `PL`, `M` and `AID`. The reusable radio-receiver Object uses the corresponding `MOD` concept.
 
 ## Object configuration surfaces
 
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
 ### Object `27` - Radio receiver
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A` | `0..9` | `0` | Area |
 | `PL` | `0..9` | `0` | Light point |
-| `MOD` | `1` / `6` / `7` / `8` / `CEN` | `1` | Modality |
+| `MOD` | `1`; `6..8`; `14` = `CEN` | `1` | Modality; Mode (1,6,7,8,`CEN`) |
+
+
+### Product interpretation and source differences
+
+**Object `27` - Radio receiver - product interpretation.**
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -119,13 +134,27 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 ## Conditions, filters, and conversions
 
-| Surface | Catalogue rows | Interpretation |
-| --- | ---: | --- |
-| Slot conditions | `0` | Device/Firmware topology conditions |
-| Object/Firmware filters | `0` | Conditional Object configuration exposure |
-| Referenced conversion rules | `0` | None |
+### Slot conditions
 
-Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -158,7 +187,6 @@ The canonical database and publisher technical guide agree on a one-Module radio
 - Add sanitized hardware and pairing traces.
 - Recover dedicated documentation for the catalogue-only `HD4575` and `L/N/NT4575` forms if distinct publisher sheets exist.
 - Map each `M/MOD` value to verified emitted OpenWebNet behavior.
-- Pin exact printed and 1-based PDF page locations for each applicable multi-product guide citation.
 
 ## Sources
 

@@ -49,35 +49,27 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 ## Firmware and hardware
 
-| Firmware ID | Version | Revision | Declared slots | Default | Status |
-| ---: | ---: | ---: | ---: | --- | --- |
-| `126` | `2` | `0` | `3` | `1` | `-1` |
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `126` | `2` | `0` | `1` | `3` | Catalogue default | Deprecated |
 
-Firmware 126 is version 2.0 build 1 and declares three Module slots.
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 ## Module, Object, and Virgin Object model
 
-### Firmware Object relations
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `126` | `1` | `127` Lighting manager | Fixed/designated metadata | `672` | `127` | `467` |
+| `126` | `2` | `61` Scenario scheduler | Fixed/designated metadata | `673` | `61` | `468` |
+| `126` | `3` | `150` Gateway Open SCS | Fixed/designated metadata | `674` | `150` | `469` |
 
-| Firmware | Relation | Object | Key | Description |
-| ---: | ---: | ---: | ---: | --- |
-| `126` | `467` | `127` | `127` | Lighting manager |
-| `126` | `468` | `61` | `61` | Scenario scheduler |
-| `126` | `469` | `150` | `150` | Gateway Open SCS |
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
 
-### Slot applicability
+### Virgin Objects
 
-| Slot row | Slot | Object | Relationship | Description |
-| ---: | ---: | ---: | --- | --- |
-| `672` | `1` | `127` | fixed | Lighting manager |
-| `673` | `2` | `61` | fixed | Scenario scheduler |
-| `674` | `3` | `150` | fixed | Gateway Open SCS |
-
-### Virgin Object reachability
-
-| Firmware | Relation | Virgin Object | Key | Description | Associated Objects | Slot rows |
-| ---: | ---: | ---: | ---: | --- | --- | --- |
-| - | - | - | - | No firmware-scoped Virgin Object | - | - |
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
 
 The topology is explicit and fixed: slot `1` is Object `127` Lighting manager; slot `2` is Object `61` Scenario scheduler; slot `3` is Object `150` Gateway Open SCS.
 
@@ -91,54 +83,83 @@ The catalogue lists configuration mode 4 only. Publisher documentation independe
 
 ## Firmware-scoped configuration
 
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `AID` | implementation identity token | - | MyHOME Suite / catalogue identity field - not a physical configurator |
-| `IS_GATEWAY` | Disable / Enable | `0` | gateway enable flag |
-| `SYSADDRESS` | catalogue user value | `1` | system / univocal address |
-| `FW_VER` | version string | `3.0.0` | firmware-version field used by the software model |
-| `CMD_PORT` | TCP port | `20000` | OpenWebNet command port |
-| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | static / DHCP selection |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | network connection method |
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `126` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `126` | `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
+| `126` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `126` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `126` | `CMD_PORT` | `#####` = Commands port | `20000` | Commands port |
+| `126` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
+| `126` | `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity; Local Dynamic IP |
+| `126` | `CONNECTION_METHOD` | `0` = Dynamic IP (DHCP); `1` = Static IP; `2` = Web active connections | `0` | Public IP dynamicity; Public Dynamic IP |
+
+
+### Previously reconciled configuration scopes
+
+| Field | Domain | Meaning |
+| --- | --- | --- |
+| `IS_GATEWAY` | Disable / Enable | gateway enable flag |
+| `SYSADDRESS` | catalogue user value | system / univocal address |
+| `FW_VER` | version string | firmware-version field used by the software model |
+| `CMD_PORT` | TCP port | OpenWebNet command port |
+| `LAN_IP_ADDRESS` | IPv4 address | local IP address |
+| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | static / DHCP selection |
+| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | network connection method |
+
 
 These are software/network fields, not physical configurators. Defaults shown here are catalogue defaults or examples; private-address examples are intentionally not reproduced, and none of these values are observations from a deployed BMNE500.
 
 ## Object configuration surfaces
 
-### Object `127` - Lighting manager
-
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | Public IP dynamicity |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
-| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
-
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `61` - Scenario scheduler
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
-| `CONNECTION_METHOD` | Dynamic IP (DHCP) / Static IP / Web active connections | `0` | Public IP dynamicity |
-| `IP_ADDRESS` | IPv4 address | catalogue example | Public IP address |
-| `CMD_PORT` | TCP port | `20000` | Commands port |
-| `IS_GATEWAY` | Disable / Enable | `0` | Gateway |
-| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
+| `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `CONNECTION_METHOD` | `0` = Dynamic IP (DHCP); `1` = Static IP; `2` = Web active connections | `0` | Public IP dynamicity |
+| `IP_ADDRESS` | `###.###.###.###` = Public IP address | `192.168.1.35` (publisher catalogue documentation default) | Public IP address |
+| `CMD_PORT` | `#####` = Commands port | `20000` | Commands port |
+| `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+### Object `127` - Lighting manager
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
+| `CONNECTION_METHOD` | `0` = Dynamic IP (DHCP); `1` = Static IP; `2` = Web active connections | `0` | Public IP dynamicity |
+| `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
 
 ### Object `150` - Gateway Open SCS
 
-| Field | Domain | Default | Meaning |
+| Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | IPv4 address | catalogue example | Local IP address |
-| `LAN_IP_ADDR_TYPE` | Static IP / Dynamic IP (DHCP) | `0` | Local IP dynamicity |
-| `IS_GATEWAY` | Disable / Enable | `0` | Gateway |
-| `SYSADDRESS` | catalogue user value | `1` | Univocal code |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
+| `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+
+### Product interpretation and source differences
+
+**Object `127` - Lighting manager - product interpretation.**
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+**Object `61` - Scenario scheduler - product interpretation.**
+
+**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
+
+**Object `150` - Gateway Open SCS - product interpretation.**
 
 **Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
 
@@ -146,13 +167,27 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 ## Conditions, filters, and conversions
 
-| Surface | Catalogue rows | Interpretation |
-| --- | ---: | --- |
-| Slot conditions | `0` | Device/Firmware topology conditions |
-| Object/Firmware filters | `0` | Conditional Object configuration exposure |
-| Referenced conversion rules | `0` | None |
+### Slot conditions
 
-Generic condition/conversion evaluation remains canonical in [Catalogue Resolution](../../internals/catalogue-resolution.md); these tables preserve this Device's exact applicability records.
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+### Object/Firmware restrictions
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+### Device-specific conversions
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
