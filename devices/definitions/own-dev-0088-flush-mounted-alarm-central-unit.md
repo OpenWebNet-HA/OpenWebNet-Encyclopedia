@@ -5,7 +5,7 @@
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0088` | Project identity |
-| Technical description | Flush mounted alarm central unit | Canonical catalogue |
+| Technical description | Flush-mounted four-zone alarm central unit with local contact and automation relay | Canonical catalogue + `U2860B` |
 | Commercial identities | `HC/HS/HD4601`, `L/N/NT4601` | Canonical commercial records |
 | Catalogue item | `160` | Canonical catalogue |
 | Main catalogue system | Burglar alarm system | Canonical catalogue |
@@ -18,21 +18,32 @@
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - Axolute | `HC/HS/HD4601` | Established catalogue identity | canonical commercial record for item `160` |
-| BTicino | `L/N/NT4601` | Established catalogue identity | canonical commercial record for item `160` |
+| BTicino - Axolute | `HC/HS/HD4601` | Catalogue association; publisher manual names this family | Catalogue item `160`; `U2860B` cover, PDF p. 1 |
+| BTicino | `L/N/NT4601` | Catalogue association; publisher manual names this family | Catalogue item `160`; `U2860B` cover, PDF p. 1 |
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `U2860B.pdf` | installation manual | `U2860B`, `11/09-01 PC` | 4601 family on cover, PDF p. 1; English functions printed pp. 68-69 / PDF pp. 68-69; installation and programming printed pp. 70-105 / PDF pp. 70-105; update printed p. 115 / PDF p. 115; technical data printed p. 116 / PDF p. 116; Italian equivalents printed pp. 10-47, 57-58 / PDF pp. 10-47, 57-58 | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/U2860B.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Flush mounted alarm central unit` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Not established by retained product documentation | Direct product-source reconciliation remains open |
+| SCS supply | `18..28 V` | `U2860B`, printed p. 116 / PDF p. 116; Italian technical table, printed p. 58 / PDF p. 58 |
+| Current absorption | `50 mA` | `U2860B`, printed p. 116 / PDF p. 116 |
+| Operating temperature | `5..40 °C` | `U2860B`, printed p. 116 / PDF p. 116 |
+| Dimensions, HC/HS4601 | `118 x 105.5 x 31.7 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116; HD4601 dimensions not separately specified |
+| Dimensions, L/N/NT4601 | `118 x 105.5 x 33.2 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116 |
+| Protection | `IP30` | `U2860B`, printed p. 116 / PDF p. 116 |
+| Local relay contact | `12/24 V`, `1 A` | Literal source rating; voltage type not specified; `U2860B`, printed p. 116 / PDF p. 116 |
+| Installation housing | Flush-mounted box `506E` | `U2860B`, printed p. 72 / PDF p. 72 |
+| Tamper accessory | Rear device `L4630` | `U2860B`, printed p. 71 / PDF p. 71 |
+| Local hardware interfaces | Graphic display, alphanumeric/navigation keys and transponder reader | `U2860B`, printed p. 64 / PDF p. 64 |
+| Rear connections / controls | SCS BUS, local contact, relay contacts, serial `PROG` connector, `RESET` button and slide switch | `U2860B`, printed p. 70 / PDF p. 70 |
+| Backup battery | Battery supplied; capacity, chemistry and voltage not established by this manual | Italian package list, printed p. 5 / PDF p. 5; battery connection `U2860B`, printed p. 70 / PDF p. 70 |
 
 ## Identity
 
@@ -91,6 +102,19 @@ The following domains and defaults describe reusable Object definitions in the c
 | `ZONA1` | `1..4` | `1` | First zone AI |
 | `ALLARME` | `0..9` | `0` | Allarm setting |
 
+### Published product settings outside the reusable Object field list
+
+| Product setting | Published values / behavior | Evidence |
+| --- | --- | --- |
+| Local contact `MOD` | `0`: normally closed; `1`: normally closed with delay; `2`: normally open; `3`: normally open with delay | `U2860B`, printed p. 75 / PDF p. 75 |
+| Local contact `Z` / `N` | Zone and peripheral number assigned during learning; this page gives an example, not a complete legal domain | `U2860B`, printed p. 75 / PDF p. 75 |
+| Intrusion / tamper siren duration | Selectable menu values from brief to `10 min`; intermediate values are not enumerated | `U2860B`, printed p. 103 / PDF p. 103 |
+| Entry / exit delay | Selectable menu values between `0 s` and `3 min` for delay-capable devices | `U2860B`, printed p. 103 / PDF p. 103 |
+| Per-device delay | Disabling a delayed device's entry delay leaves the configured exit delay effective | `U2860B`, printed p. 103 / PDF p. 103 |
+| Clock role | Master distributes time every `10 min`; only one Master per system; others are Slaves; installer access required | `U2860B`, printed p. 96 / PDF p. 96 |
+
+These local menu settings supplement reusable Object `11`'s `ZONA1`/`ALLARME` fields. The manual supplies no mapping to those catalogue fields, to `AID`, or to diagnostic serialization.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -131,7 +155,35 @@ These maps describe stored conversion branches after Object selection. Validate 
 | --- | --- | --- |
 | `11` Burglar alarm 4 zones control unit | Burglar alarm system | Firmware/Object capability association; resolve the slot and configuration first |
 
-Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
+Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product functions below are publisher evidence; installed behavior and remote transport acceptance still require corroboration.
+
+### Published 4601 functions
+
+| Function | Published scope / limit | Evidence |
+| --- | --- | --- |
+| Zone model | Six bookkeeping zones: `0` for arming interfaces, maximum `9`; `1..4` for sensors; `5` for technical/auxiliary alarms | `U2860B`, printed p. 68 / PDF p. 68 |
+| Partition scenarios | Maximum `4`; all initially enabled with all sensor zones active; names and included zones can be changed | `U2860B`, printed p. 68 / PDF p. 68; scenario setup printed p. 80 / PDF p. 80 |
+| Sensors | Independent management and exclusion; failed communication shows an icon when disarmed and produces an alarm when armed | `U2860B`, printed p. 68 / PDF p. 68 |
+| Arming / disarming | Local keypad codes, transponder keys, supported radio remote and other documented system controls | Printed pp. 85-86, 106-107 / PDF pp. 85-86, 106-107 |
+| Radio remote prerequisite | Remote `348220` requires a `L/N/NT/HC/HS/HD4618` receiver | `U2860B`, printed p. 85 / PDF p. 85 |
+| Incorrect credentials | Three consecutive incorrect entries block further arming/disarming or menu access for `1 min` | `U2860B`, printed p. 68 / PDF p. 68; keypad access printed p. 90 / PDF p. 90 |
+| Event memory | Last `200` events with time, type and detecting sensor; installer access required to erase | `U2860B`, printed p. 95 / PDF p. 95 |
+| Local automations | `10` entries: first operates the internal relay; other `9` associate partition scenarios with arming, disarming or date/time events | `U2860B`, printed p. 97 / PDF p. 97 |
+| Alarm relay | Intrusion/tamper and battery/mains faults use positive safety with `1 s` deactivation; NC contact closes for that interval | `U2860B`, printed p. 99 / PDF p. 99 |
+| Technical-alarm relay | Positive safety enabled: NC opens at rest and closes for alarm; disabled: inverse contact behavior | `U2860B`, printed p. 99 / PDF p. 99 |
+| Technical-alarm memory | Enabled: alarm relay state persists until next arming/disarming; disabled: follows the originating alarm condition | `U2860B`, printed p. 99 / PDF p. 99 |
+| System-state relay | Relay active when armed and at rest when disarmed | `U2860B`, printed p. 99 / PDF p. 99 |
+| Event indications | Intrusion, anti-panic, tamper, technical alarms, power/battery, device communication, maintenance and key/code events | Printed pp. 113-114 / PDF pp. 113-114; user display indications, printed pp. 66-67 / PDF pp. 66-67 |
+
+### Commands entered in the product automation menu
+
+| Manual form | Documented result | Scope / evidence |
+| --- | --- | --- |
+| `*5*8#.........##` | Arm and set active zones to the listed zone numbers | `U2860B`, section 6.6, printed p. 102 / PDF p. 102; dots denote the zone list |
+| `*5*9#.........##` | Disarm and set active zones to the listed zone numbers | Same product-menu scope and source |
+| `*5*8#12##` | Published example: arm or remain armed; zones `1` and `2` active, `3` and `4` excluded | Same source; equivalent Italian example, printed p. 44 / PDF p. 44 |
+
+The manual establishes these forms as codes entered into the 4601 automation menu. It does not establish a gateway session, TCP acceptance, acknowledgement sequence or unrestricted remote alarm control. Cross-reference [`WHO 5` - Alarm](../../functional/who-5-alarm/) for the broader protocol; do not generalize the product-menu context.
 
 ## Observed behavior and corroboration
 
@@ -139,21 +191,47 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-The catalogue registers Product Programming for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+The catalogue registers Product Programming for firmware `22`. `U2860B` establishes local commissioning and PC-assisted firmware update; its menu operations are separate from OpenWebNet runtime commands.
 
-No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+### Installation and first activation
+
+| Stage | Documented procedure / prerequisite | Evidence |
+| --- | --- | --- |
+| Battery and installation | Slide switch at `OFF` while connecting the battery with the indicated polarity; protect the rear with `L4630`; switch to `ON` before final fastening in `506E` | Printed pp. 70-72 / PDF pp. 70-72 |
+| Initial learning | Choose language; run device learning; configure or skip the local input; enable the slide switch and leave Maintenance with `C` | Printed pp. 73-77 / PDF pp. 73-77 |
+| System test | Return to Maintenance and test sensor operation without raising normal alarm events | Printed pp. 78-79 / PDF pp. 78-79 |
+| Credentials and personalization | Enroll transponders, five-digit numeric codes or supported radio remotes; set date/time, names and scenarios | Printed pp. 80-89 / PDF pp. 80-89 |
+| Changed installation | Repeat learning after adding or removing devices | `U2860B`, printed p. 76 / PDF p. 76 |
+
+### Access, update and recovery
+
+| Path | Published behavior / boundary | Evidence |
+| --- | --- | --- |
+| User access | Keypad access permits normal operation and selected customization; Maintenance unavailable and automation/event-memory operations restricted | `U2860B`, printed p. 90 / PDF p. 90 |
+| Installer access | Maintenance code gives installer menus; does not arm/disarm and cannot enter menus while armed | `U2860B`, printed p. 91 / PDF p. 91; access details printed p. 105 / PDF p. 105 |
+| Factory codes | User and Maintenance share `00000` as the publisher's documented factory default; distinguish them by changing Maintenance first | Printed pp. 91, 103, 105 / PDF pp. 91, 103, 105 |
+| Leaving Maintenance | Use `C`; this menu has no automatic `30 s` inactivity exit | `U2860B`, printed p. 105 / PDF p. 105 |
+| Firmware update | Set rear slide switch to `OFF`, connect the programming cable when prompted and follow TiSecurityBasic; source names cables `3559` / `335919` | `U2860B`, printed p. 115 / PDF p. 115; Italian procedure printed p. 57 / PDF p. 57 |
+| Installer-code recovery | System must be disarmed; removal from the mounting base causes a tamper alarm; rear switch `OFF` plus `RESET` enters Maintenance to access the code | Printed pp. 105, 117 / PDF pp. 105, 117 |
+| Lost user code | Reprogram with TiSecurityBasic | `U2860B`, printed p. 117 / PDF p. 117 |
+
+The retained manual refers to the separate TiSecurityBasic manual for the complete PC workflow. Pressing `RESET` in the documented recovery context enters Maintenance; it is not evidence of a full factory erase. The manual does not identify an update package matching catalogue firmware `1.0.10`.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. No product manual is retained for this exact dossier. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+The cover of `U2860B`, revision `11/09-01 PC`, explicitly names `HC/HS/HD/L/N/NT4601`. Both language sections document flush installation and the technical appendix identifies this family. The publisher manual therefore directly supports this dossier's commercial coverage and the physical, functional and commissioning facts recorded above. The four sensor zones agree with reusable Object `11`; the manual's additional zones `0` and `5` are arming-interface and technical-alarm bookkeeping, not additional protocol Modules.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+The manual contains source irregularities. Its Italian package list identifies 4601 (printed/PDF p. 5), but the English list identifies `3485B` and a wall bracket (printed/PDF p. 63). Its test-menu text also mentions telephone calls (printed/PDF pp. 46, 104), without identifying a telephone connection in the 4601 rear-interface diagram. These statements do not establish equivalence to Device `OWN-DEV-0086`, a communicator or a telephone port. Dimension rows explicitly name HC/HS4601 and L/N/NT4601; no separate HD4601 dimension is supplied. The relay rating omits AC/DC qualification and the battery specification is incomplete, so neither is inferred.
+
+Local menu settings and automation command forms remain scoped to the published product procedure. The manual neither identifies the installed firmware tuple nor supplies a serialization mapping to the catalogue configuration fields. The catalogue remains the source of firmware `22`, Module slot `1` and external Object `11`; hardware and remote-transport corroboration remain open.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
+- Obtain the separate TiSecurityBasic manual for complete project transfer and firmware-update details.
+- Resolve the manual's package-list and telephone-call inconsistencies with further exact-product evidence; do not assign its `3485B` reference to this family.
+- Establish HD4601 dimensions, backup-battery voltage/capacity/chemistry and local relay voltage type from a directly applicable specification.
 - Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Corroborate the local-menu to catalogue/diagnostic mapping and any gateway acceptance of the published automation-menu codes on controlled hardware.
 
 ## Sources
 
@@ -162,3 +240,4 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+- [4601 installation manual, archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf)

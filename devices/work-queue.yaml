@@ -1093,9 +1093,9 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
-      documentation_archive: partial
-      source_reconciliation: partial
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
       final_review: partial
@@ -1103,6 +1103,7 @@ items:
     notes:
     - OWN-DEV-0088 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-03: U2860B 4601 installation manual archived and reconciled; technical data, zone model, local input/relay settings, first activation, access levels, automation-menu forms and PC update incorporated with printed/PDF locators. Package-list and telephone wording inconsistencies retained; separate TiSecurityBasic workflow and hardware/runtime corroboration remain open.'
   '168':
     state: review-ready
     priority: normal

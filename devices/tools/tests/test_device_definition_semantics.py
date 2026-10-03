@@ -77,6 +77,19 @@ class DeviceDefinitionSemantics(unittest.TestCase):
         self.assertEqual(self.semantic(self.text), [])
         self.assertEqual(self.values(self.text), [])
 
+    def test_cross_reference_does_not_change_page_identity(self):
+        text = """## Summary
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0088` | Project identity |
+
+## Source reconciliation
+
+A source inconsistency does not establish equivalence to `OWN-DEV-0086`.
+"""
+        self.assertEqual(checker.definition_device_ids(text), {"OWN-DEV-0088"})
+
     def test_database_row_is_not_a_module_slot(self):
         errors = self.semantic(self.text.replace('| `1` | `130` User', '| `593` | `130` User'))
         self.assertTrue(any('Module slot 1' in e for e in errors))

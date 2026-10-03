@@ -120,6 +120,16 @@ def table_rows(body: str):
             yield dict(zip(header, cells))
 
 
+def definition_device_ids(text: str) -> set[str]:
+    """Read the identity field; cross-references do not identify the containing page."""
+    return {
+        value
+        for row in table_rows(section(text, "Summary"))
+        if row.get("Field") == "Device ID"
+        for value in re.findall(r"`(OWN-DEV-\d{4})`", row.get("Value", ""))
+    }
+
+
 def catalogue_semantic_errors(text: str, con: sqlite3.Connection, fids: list[int]) -> list[str]:
     """Check the demonstrated semantic regressions, independently of token coverage."""
     errors = []
@@ -267,7 +277,7 @@ def main() -> int:
             candidates = []
             for path in DEFINITIONS.glob("own-dev-*.md"):
                 body = path.read_text(encoding="utf-8")
-                if token(device_id) in body or ("Device ID | " + token(device_id)) in body:
+                if device_id in definition_device_ids(body):
                     candidates.append((path, body))
             if len(candidates) != 1:
                 errors.append(f"{device_id}: expected exactly one definition, found {len(candidates)}")

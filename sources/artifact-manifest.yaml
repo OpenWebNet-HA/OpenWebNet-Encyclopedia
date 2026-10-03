@@ -2940,3 +2940,22 @@ artifacts:
   provenance:
     publisher_url: https://dar.bticino.com/asset/Documents/F3758D.pdf
     retrieved_at: '2026-10-03'
+- id: device-doc-4601-u2860b
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U2860B.pdf
+  size: 9112751
+  sha256: 6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf
+  language:
+  - it
+  - en
+  language_evidence: publisher cover and separate Italian/English installation sections
+  provenance:
+    publisher_url: https://dar.bticino.it/asset/Documents/U2860B.pdf
+    retrieved_at: '2026-10-03'
