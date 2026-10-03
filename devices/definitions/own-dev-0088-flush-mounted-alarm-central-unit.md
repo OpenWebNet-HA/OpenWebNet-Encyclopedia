@@ -27,18 +27,21 @@
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
 | `U2860B.pdf` | installation manual | `U2860B`, `11/09-01 PC` | 4601 family on cover, PDF p. 1; English functions printed pp. 68-69 / PDF pp. 68-69; installation and programming printed pp. 70-105 / PDF pp. 70-105; update printed p. 115 / PDF p. 115; technical data printed p. 116 / PDF p. 116; Italian equivalents printed pp. 10-47, 57-58 / PDF pp. 10-47, 57-58 | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/U2860B.pdf) |
+| `20130411_82719_2.pdf` (`4601 NL`) | Dutch installation manual | Cover `11/09-01 PC`; no part number printed | `HC/HS/HD/L/N/NT4601`; cover PDF p. 1; package printed p. 5 / PDF p. 5; functions printed pp. 10-11 / PDF pp. 10-11; installation/commissioning printed pp. 12-28 / PDF pp. 12-28; settings/functions printed pp. 32-47 / PDF pp. 32-47; update, technical data and recovery printed pp. 57-59 / PDF pp. 57-59 | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf) | [Publisher original](https://configuratoren.legrand.nl/documize/2013/4/20130411_82719_2.pdf) |
+
+`4601 NL` below denotes the Dutch file `20130411_82719_2.pdf`. Its cover revision is November 2009; the April 2013 URL path is not a publication date. It is a separately archived 62-page Dutch edition; the Italian/English `U2860B` contains 120 pages.
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `18..28 V` | `U2860B`, printed p. 116 / PDF p. 116; Italian technical table, printed p. 58 / PDF p. 58 |
-| Current absorption | `50 mA` | `U2860B`, printed p. 116 / PDF p. 116 |
-| Operating temperature | `5..40 °C` | `U2860B`, printed p. 116 / PDF p. 116 |
-| Dimensions, HC/HS4601 | `118 x 105.5 x 31.7 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116; HD4601 dimensions not separately specified |
-| Dimensions, L/N/NT4601 | `118 x 105.5 x 33.2 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116 |
-| Protection | `IP30` | `U2860B`, printed p. 116 / PDF p. 116 |
-| Local relay contact | `12/24 V`, `1 A` | Literal source rating; voltage type not specified; `U2860B`, printed p. 116 / PDF p. 116 |
+| SCS supply | `18..28 V` | `U2860B`, printed p. 116 / PDF p. 116; Italian technical table, printed p. 58 / PDF p. 58; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Current absorption | `50 mA` | `U2860B`, printed p. 116 / PDF p. 116; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Operating temperature | `5..40 °C` | `U2860B`, printed p. 116 / PDF p. 116; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Dimensions, HC/HS4601 | `118 x 105.5 x 31.7 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116; HD4601 dimensions not separately specified; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Dimensions, L/N/NT4601 | `118 x 105.5 x 33.2 mm` | Width x height x depth; `U2860B`, printed p. 116 / PDF p. 116; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Protection | `IP30` | `U2860B`, printed p. 116 / PDF p. 116; `4601 NL`, printed p. 58 / PDF p. 58 |
+| Local relay contact | `12/24 V`, `1 A` | Literal source rating; voltage type not specified; `U2860B`, printed p. 116 / PDF p. 116; `4601 NL`, printed p. 58 / PDF p. 58 |
 | Installation housing | Flush-mounted box `506E` | `U2860B`, printed p. 72 / PDF p. 72 |
 | Tamper accessory | Rear device `L4630` | `U2860B`, printed p. 71 / PDF p. 71 |
 | Local hardware interfaces | Graphic display, alphanumeric/navigation keys and transponder reader | `U2860B`, printed p. 64 / PDF p. 64 |
@@ -112,6 +115,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | Entry / exit delay | Selectable menu values between `0 s` and `3 min` for delay-capable devices | `U2860B`, printed p. 103 / PDF p. 103 |
 | Per-device delay | Disabling a delayed device's entry delay leaves the configured exit delay effective | `U2860B`, printed p. 103 / PDF p. 103 |
 | Clock role | Master distributes time every `10 min`; only one Master per system; others are Slaves; installer access required | `U2860B`, printed p. 96 / PDF p. 96 |
+| Device name | Maximum `16` characters for a peripheral's assigned name | `4601 NL`, printed p. 36 / PDF p. 36 |
+| Local presentation | Display contrast adjustable; numerical range not specified | `4601 NL`, printed p. 45 / PDF p. 45 |
+| Delay acoustic signal | Enable a sound indication on the central unit and system arming interfaces for the configured delay time, where delayed devices are present | `4601 NL`, printed p. 45 / PDF p. 45 |
+| Credential use | Transponder, remote and numeric-code entries can individually be enabled or disabled | `4601 NL`, printed p. 45 / PDF p. 45 |
+| Periodic interconnection check | Installer can enable or disable the check; disabling suppresses alarms caused by interrupted communication | `4601 NL`, printed p. 47 / PDF p. 47 |
+| External siren flash | Armed: `3` flashes; disarmed: `1` flash | `4601 NL`, printed p. 47 / PDF p. 47 |
 
 These local menu settings supplement reusable Object `11`'s `ZONA1`/`ALLARME` fields. The manual supplies no mapping to those catalogue fields, to `AID`, or to diagnostic serialization.
 
@@ -175,6 +184,15 @@ Catalogue system identifiers are not `WHO` numbers. The source establishes the r
 | System-state relay | Relay active when armed and at rest when disarmed | `U2860B`, printed p. 99 / PDF p. 99 |
 | Event indications | Intrusion, anti-panic, tamper, technical alarms, power/battery, device communication, maintenance and key/code events | Printed pp. 113-114 / PDF pp. 113-114; user display indications, printed pp. 66-67 / PDF pp. 66-67 |
 
+The Dutch manual corroborates the zone/scenario model and the three-error, one-minute access block (printed p. 10 / PDF p. 10), radio-remote prerequisite (printed p. 27 / PDF p. 27), 200-event memory (printed p. 37 / PDF p. 37), ten local automations (printed p. 39 / PDF p. 39) and relay modes (printed p. 41 / PDF p. 41).
+
+| Additional product surface | Published scope / limit | Evidence |
+| --- | --- | --- |
+| Internal-relay event selection | Alarm family: intrusion, 24-hour, panic, silent, alarm end; technical: auxiliary channels `1..9`; system fault: missing mains, low battery, mains restored; system state | `4601 NL`, printed p. 39 / PDF p. 39; illustrated event-selection tree |
+| Other automation triggers | Arming/disarming selected by zone state, arming interface or key; date/time trigger | `4601 NL`, printed p. 39 / PDF p. 39; slots `2..10` |
+| Automation management | Each configured automation can be enabled, disabled or removed; the displayed action is the available action for the current state | `4601 NL`, printed p. 44 / PDF p. 44 |
+| Peripheral deactivation | All devices initially active; deactivation affects intrusion and 24-hour functions; source says arming interfaces remain operative when zone-0 devices are deactivated | `4601 NL`, printed p. 36 / PDF p. 36; scope and exception retained |
+
 ### Commands entered in the product automation menu
 
 | Manual form | Documented result | Scope / evidence |
@@ -183,7 +201,7 @@ Catalogue system identifiers are not `WHO` numbers. The source establishes the r
 | `*5*9#.........##` | Disarm and set active zones to the listed zone numbers | Same product-menu scope and source |
 | `*5*8#12##` | Published example: arm or remain armed; zones `1` and `2` active, `3` and `4` excluded | Same source; equivalent Italian example, printed p. 44 / PDF p. 44 |
 
-The manual establishes these forms as codes entered into the 4601 automation menu. It does not establish a gateway session, TCP acceptance, acknowledgement sequence or unrestricted remote alarm control. Cross-reference [`WHO 5` - Alarm](../../functional/who-5-alarm/) for the broader protocol; do not generalize the product-menu context.
+The Dutch manual also prints the same two forms and the zone-1/2 example (printed p. 44 / PDF p. 44). The manuals establish these forms as codes entered into the 4601 automation menu. They do not establish a gateway session, TCP acceptance, acknowledgement sequence or unrestricted remote alarm control. Cross-reference [`WHO 5` - Alarm](../../functional/who-5-alarm/) for the broader protocol; do not generalize the product-menu context.
 
 ## Observed behavior and corroboration
 
@@ -212,8 +230,20 @@ The catalogue registers Product Programming for firmware `22`. `U2860B` establis
 | Factory codes | User and Maintenance share `00000` as the publisher's documented factory default; distinguish them by changing Maintenance first | Printed pp. 91, 103, 105 / PDF pp. 91, 103, 105 |
 | Leaving Maintenance | Use `C`; this menu has no automatic `30 s` inactivity exit | `U2860B`, printed p. 105 / PDF p. 105 |
 | Firmware update | Set rear slide switch to `OFF`, connect the programming cable when prompted and follow TiSecurityBasic; source names cables `3559` / `335919` | `U2860B`, printed p. 115 / PDF p. 115; Italian procedure printed p. 57 / PDF p. 57 |
-| Installer-code recovery | System must be disarmed; removal from the mounting base causes a tamper alarm; rear switch `OFF` plus `RESET` enters Maintenance to access the code | Printed pp. 105, 117 / PDF pp. 105, 117 |
+| Installer-code recovery | Italian/English procedure and Dutch troubleshooting table require disarmed state; Dutch section 6.9 instead says armed, see Source reconciliation. Removal causes a tamper alarm; rear switch `OFF` plus `RESET` enters Maintenance to access the code | `U2860B`, printed pp. 47, 105, 117 / PDF pp. 47, 105, 117; `4601 NL`, printed pp. 47, 59 / PDF pp. 47, 59 |
 | Lost user code | Reprogram with TiSecurityBasic | `U2860B`, printed p. 117 / PDF p. 117 |
+
+The Dutch edition corroborates battery polarity and switch-`OFF` connection, rear interfaces and programming cables (printed p. 12 / PDF p. 12), learning and local-contact `MOD = 0..3` (printed pp. 17-19 / PDF pp. 17-19), and the firmware-update procedure (printed p. 57 / PDF p. 57). It also specifies these credential and access details:
+
+| Path | Published behavior / boundary | Evidence |
+| --- | --- | --- |
+| Transponder enrollment | Hold key less than `1 cm` from the reader; assign a name, save and enable it; already-known keys select the existing record | `4601 NL`, printed pp. 23-24 / PDF pp. 23-24 |
+| Numeric-key enrollment | Five-digit code; already-known code selects its existing entry; name, save and enable it | `4601 NL`, printed pp. 25-26 / PDF pp. 25-26 |
+| Radio-key enrollment | Press a remote button, then name, save and enable the entry; already-known remote selects its existing record | `4601 NL`, printed pp. 27-28 / PDF pp. 27-28; receiver prerequisite above |
+| User programming | Keypad code only; scenario/key naming and enabling, numeric-code updates, automation enable/disable and event viewing permitted; event deletion unavailable | `4601 NL`, printed p. 32 / PDF p. 32 |
+| Installer programming | Keypad Maintenance code; all menus except changing the user code; cannot arm/disarm or access menus while the installation is armed | `4601 NL`, printed pp. 33, 47 / PDF pp. 33, 47 |
+| Learning options | Automatic scan configures peripherals; manual path inspects and stores connection, device type and tamper state | `4601 NL`, printed p. 46 / PDF p. 46 |
+| Key maintenance actions | New, Share (multiple installations), Update, Select (display numeric code), Delete and Delete all; source describes these as key operations, not a central-unit factory reset | `4601 NL`, printed p. 46 / PDF p. 46 |
 
 The retained manual refers to the separate TiSecurityBasic manual for the complete PC workflow. Pressing `RESET` in the documented recovery context enters Maintenance; it is not evidence of a full factory erase. The manual does not identify an update package matching catalogue firmware `1.0.10`.
 
@@ -223,12 +253,16 @@ The cover of `U2860B`, revision `11/09-01 PC`, explicitly names `HC/HS/HD/L/N/NT
 
 The manual contains source irregularities. Its Italian package list identifies 4601 (printed/PDF p. 5), but the English list identifies `3485B` and a wall bracket (printed/PDF p. 63). Its test-menu text also mentions telephone calls (printed/PDF pp. 46, 104), without identifying a telephone connection in the 4601 rear-interface diagram. These statements do not establish equivalence to Device `OWN-DEV-0086`, a communicator or a telephone port. Dimension rows explicitly name HC/HS4601 and L/N/NT4601; no separate HD4601 dimension is supplied. The relay rating omits AC/DC qualification and the battery specification is incomplete, so neither is inferred.
 
+The Dutch manual names the same commercial family on its cover and correctly identifies 4601 in its packing list (printed p. 5 / PDF p. 5), corroborating the Italian list rather than the English `3485B` label. It supplies the same technical ratings (printed p. 58 / PDF p. 58), but still omits separate HD dimensions and battery ratings. Its test-menu text also retains telephone-call wording (printed p. 46 / PDF p. 46), so this language edition does not resolve the unsupported telephone capability.
+
+Dutch section 6.9 says the installation must be `ingeschakeld` (armed) before Maintenance-code recovery (printed p. 47 / PDF p. 47), whereas its troubleshooting table says `uitgeschakeld` (disarmed) for the same procedure (printed p. 59 / PDF p. 59). The Italian and English procedures and English troubleshooting table all specify disarmed state (`U2860B`, printed pp. 47, 105, 117 / PDF pp. 47, 105, 117). The Dutch Maintenance access paragraph on p. 47 also bars access while armed. Preserve this internal translation contradiction; the dossier does not promote the armed-state variant as a verified procedure.
+
 Local menu settings and automation command forms remain scoped to the published product procedure. The manual neither identifies the installed firmware tuple nor supplies a serialization mapping to the catalogue configuration fields. The catalogue remains the source of firmware `22`, Module slot `1` and external Object `11`; hardware and remote-transport corroboration remain open.
 
 ## Evidence limits and open work
 
 - Obtain the separate TiSecurityBasic manual for complete project transfer and firmware-update details.
-- Resolve the manual's package-list and telephone-call inconsistencies with further exact-product evidence; do not assign its `3485B` reference to this family.
+- Retain the English packing-list error despite the Italian/Dutch corroboration of 4601; resolve telephone-call wording and the Dutch armed/disarmed recovery contradiction with further exact-product evidence.
 - Establish HD4601 dimensions, backup-battery voltage/capacity/chemistry and local relay voltage type from a directly applicable specification.
 - Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
 - Corroborate the local-menu to catalogue/diagnostic mapping and any gateway acceptance of the published automation-menu codes on controlled hardware.
@@ -241,3 +275,4 @@ Local menu settings and automation command forms remain scoped to the published 
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [4601 installation manual, archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf)
+- [Dutch 4601 installation manual, archived original](https://archive.openwebnet-ha.org/sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf)
