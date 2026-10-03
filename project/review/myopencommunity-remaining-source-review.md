@@ -56,6 +56,8 @@ These exclusions supplement the per-source reasons in the ledger. No raw configu
 
 The bounded deletion queue is closed. The repositories are not declared exhausted: intermediate revisions between pinned and terminal-deleted variants still need semantic comparison, and complete legacy builds require dependencies not provided by these archives. Helper checks do not settle full Qt3/Qt4 integration behavior.
 
+The subsequent [intermediate-history review](myopencommunity-intermediate-history-review.md) covers the retained `WHO 8` device/message lineage and selected teleloop application corrections. Other intermediate-history lineages remain open.
+
 Captures or hardware/product evidence remain necessary for physical volume calibration and Firmware applicability, StopGo address discrepancies, BACnet mappings/scales, PIC request compatibility, F520 reply-channel behavior and simulator timing accuracy. Earlier reviews retain the competing interpretations and product-specific limits. A UI label or fixture cannot close those questions.
 
 ## Machine KB maintenance and validation

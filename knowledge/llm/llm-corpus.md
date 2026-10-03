@@ -10052,7 +10052,7 @@ The following forms are implementation evidence from `VideoDoorEntryDevice` and 
 | Answer | `*8*2#KIND#MMTYPE*LOCAL##` |
 | End call | `*8*3#KIND#MMTYPE*4LOCAL##` |
 | Camera autoswitch | `*8*4#LOCAL*TARGET##` |
-| Cycle external units | `*8*6#LOCAL*CALLER##` |
+| Cycle external units | `*8*6#LOCAL*ORIGINAL_CALLER##` |
 | Caller-address report, SCS | `*8*9#KIND#MMTYPE*CALLER##` |
 | Open / release lock | `*8*19*TARGET##` / `*8*20*TARGET##` |
 | Stair light ON / OFF | `*8*21*LOCAL##` / `*8*22*LOCAL##` |
@@ -10074,6 +10074,10 @@ Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also 
 
 The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
 
+The client keeps the original caller separately from the currently selected camera. A `WHAT 40` re-arm report updates the current address, media type and movable-camera flag, while cycling continues to target the original caller. Lock and movement commands use the current address. The `@` prefix used in decoded autoswitch notifications is a local application marker, not a wire-address prefix.
+
+Exact tests also distinguish call state: a floor call (`KIND 13`) emits a ringtone without replacing an existing call's stored `KIND` or `MMTYPE`. Ordinary answer, end and stop-video frames are ignored while idle; pager and teleloop handling have separate guards. These are touchscreen state choices, not requirements on every decoder. See [Call-state evidence](../../project/review/myopencommunity-intermediate-history-review.md#call-address-and-state).
+
 The pager call/answer writers use broadcast `WHERE = 4` and include the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. Exact receive tests also accept a pager call addressed to the local endpoint and an answer with a non-broadcast `WHERE`. The client waits for the answer event when initiating a pager conversation; it does not derive SCS caller-address state from that answer alone. Its call-state guards are client behavior, not a universal broadcast-only receive rule. See [pager history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
 #### Teleloop and local multimedia events
@@ -10087,10 +10091,12 @@ Provenance cues: `evidence`
 | `63` / `64` | Silence / restore the local multimedia amplifier; received events |
 | `76` | Start teleloop: `*8*76*LOCAL##` |
 | `77` | Associate teleloop: `*8*77#ID*LOCAL##`; received value identifies the association |
-| `78` | Teleloop timeout event |
-| `79` | Teleloop session event |
+| `78` | Teleloop timeout event: `*8*78*LOCAL##` |
+| `79` | Tested session event: `*8*79#KIND#MMTYPE#ID*LOCAL##` |
 
-The touchscreen application also uses an 11-second association timer. This is separate from receiving `WHAT 78` and does not define a wire-protocol timeout. See [Video Door Entry evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
+The `WHAT 79` receive test establishes the field order with `KIND = 1`, `MMTYPE = 4` and `ID = 5`. The decoder emits a boolean session event during a call; it does not validate those parameters against the association. The application treats that event as a teleloop answer to a pending, unanswered call.
+
+The touchscreen application uses an 11-second association timer. It accepts the association result only while that timer is active; received `WHAT 78` and timer expiry end the pending association. Neither establishes a wire-protocol timeout. At `TS10_1_0_23`, a nonzero stored ID registers the association frame for connection initialization; changing the ID replaces that frame, and zero removes it without sending an unlink command. This supersedes an earlier delayed device-init path. See [Teleloop evidence](../../project/review/myopencommunity-intermediate-history-review.md#teleloop-association-and-session).
 
 ### Historical Guard Unit messaging
 
@@ -10116,11 +10122,13 @@ The same touchscreen stack implements Guard Unit messages under `WHO 8`. This is
 
 Data values are decimal 16-bit character codes appended as `QChar` values. The message parser expects U+000E, a timestamp `dd/MM/yy hh:mm`, U+000F, then text. Its test parses `08/03/10 17:32` as 8 March 2010 at 17:32. This establishes the historical application format, not an arbitrary UTF-8 text payload.
 
-The checksum helper splits each 16-bit character into high byte then low byte. For byte sequence `b[0..n-1]`, the low checksum byte is `(1 + sum(b)) mod 256`; the high byte is `(n + sum(i*b[n-i], i=1..n-1)) mod 256`. The result combines high then low byte. Its exact test vector is `Bticino` followed by U+F0E2 -> `0xE49B`. Byte signedness and modulo behavior need care when porting; the formula expresses the modulo-byte result, not a named standard CRC.
+The checksum helper splits each 16-bit character into high byte then low byte. For unsigned byte sequence `b[0..n-1]` with non-negative modulo reduction, the low checksum byte is `(1 + sum(b)) mod 256`; the high byte is `(n + sum(i*b[n-i], i=1..n-1)) mod 256`. Combining high then low byte reproduces the exact test vector `Bticino` followed by U+F0E2 -> `0xE49B`; this is not a named standard CRC.
+
+The archived helper uses plain `char` and C++ remainder, so this formula is not a byte-exact description for every input/build. For U+FFFF alone, the original helper returns `-1` with signed `char`, versus `511` (`0x01FF`) with unsigned `char`. Physical Guard Unit behavior for such input remains unconfirmed. See [Checksum evidence](../../project/review/myopencommunity-intermediate-history-review.md#message-checksum-and-test-limits).
 
 Verification uses the rightmost five decimal characters of the received checksum argument. On failure, the receiver replies with that numeric value in `9015`, then clears the pending message before a later end frame can publish it. The rejection argument is therefore not necessarily the begin frame's message ID.
 
-At `TS10_1_0_23`, the receive timer is 5 seconds and a timeout reports the accumulated character count. An active receive answers another begin with busy. Older implementation revisions used a 3-second timer and optional `#8` address components; these are historical variants, not permission to normalize arbitrary addresses. See [Messaging evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
+At `TS10_1_0_23`, the 5-second inactivity timer restarts after parameter/data blocks and a matching checksum. A timeout reports the accumulated UTF-16 code-unit count, not the checksum byte count. An active receive answers another begin with busy. Older implementation revisions used a 3-second timer and optional `#8` address components; these are historical variants, not permission to normalize arbitrary addresses. See [Messaging evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
 
 ### Evidence boundary
 
