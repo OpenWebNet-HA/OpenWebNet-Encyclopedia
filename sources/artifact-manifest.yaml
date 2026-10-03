@@ -157,7 +157,7 @@ artifacts:
   title: Do Not Disturb and Make Up Room control BUS SCS
   media_type: application/pdf
   filename: MM00775_a_EN.pdf
-  version_label: 05/12/2013
+  version_label: 02/12/2013
   size: 1147777
   sha256: 644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745
   source_url: https://dar.bticino.com/asset/Documents/MM00775_a_EN.pdf
@@ -177,7 +177,7 @@ artifacts:
   title: Outside-door indicator installation instructions
   media_type: application/pdf
   filename: LE06116AC.pdf
-  version_label: LE06116AC
+  version_label: LE06116AC-02PC-19W15
   size: 352646
   sha256: 1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e
   source_url: https://dar.bticino.com/asset/Documents/LE06116AC.pdf
