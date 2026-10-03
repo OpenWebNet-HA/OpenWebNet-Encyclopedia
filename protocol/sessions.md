@@ -59,6 +59,8 @@ The BTicino touchscreen client at `TS10_1_0_23` uses four channels to its local 
 
 The request writer sends status and dimension requests; the supervisor uses the reader interface. This local use of selector `0` differs from the published scenario-programming role above and does not establish a general external-gateway request session. Likewise, the local supervisor selector is implementation evidence rather than an addition to the published gateway session table.
 
+This client's connected flag and connection-up notification are set on TCP connection establishment, before sending the channel selector. They do not establish receipt of the server greeting, selector acceptance, or authentication success. Applications using this local lifecycle must not equate its connected state with the active-session state of the published gateway workflow. See [Local setup evidence](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
+
 The VDK 2.0 simulator recognizes the same four selectors, but names `0` command and `9` request. Its labels do not change the published commands/actions selector. Neither implementation establishes external-gateway authentication behavior. See [Local channel evidence](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
 
 ## Authentication branch

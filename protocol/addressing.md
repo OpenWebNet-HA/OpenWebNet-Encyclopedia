@@ -135,7 +135,9 @@ The `TS10_1_0_23` Lighting/Automation matcher distinguishes an unqualified gener
 | `3#3` | `0313` | Environment `03` match |
 | `3` | `0313#4#12` | No match |
 
-The matcher treats incoming `#3` as the unqualified level and compares local-bus qualifiers as strings. Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
+The matcher first compares complete address strings for an exact match. Incoming `#3` is then treated as the unqualified level for collective matching; the configured qualifier is not normalized. Consequently, point `12#3` does not match configured point `12`, and incoming `0#3` does not match configured `12#3`. Local-bus qualifiers are compared as strings. See [Matcher qualification evidence](../project/review/myopencommunity-transport-history-review.md#address-matcher-lineage).
+
+Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
 
 ## Parsing rules
 

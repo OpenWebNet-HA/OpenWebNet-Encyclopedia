@@ -35459,25 +35459,26 @@
     {
       "atomicity": {
         "block_indexes": [
-          0
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
       },
       "evidence": {
         "applicability": {
-          "domain": "protocol",
+          "domain": "implementation",
           "state": "applies",
-          "target": "OpenWebNet WHO 1",
+          "target": "MyHOME Suite Lighting address-rule model",
           "version": {
-            "state": "unknown"
+            "expression": "3.5.38",
+            "state": "specified"
           }
         },
         "block_indexes": [
-          0
+          2
         ],
-        "evidence_class": "official_specification",
-        "resolved_source_id": "ownkb:source:s000132",
+        "evidence_class": "public_database",
+        "resolved_source_id": "ownkb:source:s000125",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },
@@ -35488,23 +35489,24 @@
         "block_indexes": [
           0
         ],
-        "mode": "materialized",
+        "mode": "self_contained",
         "review_status": "reviewed-phase16b"
       },
       "evidence": {
         "applicability": {
-          "domain": "protocol",
+          "domain": "implementation",
           "state": "applies",
-          "target": "OpenWebNet WHO 1",
+          "target": "MyHOME Suite Lighting address-rule model",
           "version": {
-            "state": "unknown"
+            "expression": "3.5.38",
+            "state": "specified"
           }
         },
         "block_indexes": [
           0
         ],
-        "evidence_class": "official_specification",
-        "resolved_source_id": "ownkb:source:s000132",
+        "evidence_class": "public_database",
+        "resolved_source_id": "ownkb:source:s000125",
         "review_status": "reviewed-phase16b",
         "widening_override": null
       },

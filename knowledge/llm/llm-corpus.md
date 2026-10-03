@@ -4353,16 +4353,20 @@ The same broad address family is shared with Automation, but `WHERE` remains sco
 
 Section ID: `ownkb:section:d000027:s000002`
 
+Provenance cues: `evidence`
+
 | Scope | `WHERE` form | Role |
 | --- | --- | --- |
 | General | `0` | Addresses the complete Lighting system |
 | Environment / area | `A` | Addresses the Lighting Objects belonging to an environment |
 | Point to point | `APL` | Addresses an individual `A`/`PL` light point |
 | Group | `#GR` | Addresses the Lighting Objects belonging to a group |
-| Riser / level 3 | `0#3`, `A#3`, `#G#3`, or `APL#3` | Routes the corresponding scope on the riser/backbone level |
+| Riser / level 3 | `BASE#3` | Implementation model; applicability must be established for the selected operation |
 | Local bus / level 4 | `0#4#Int`, `A#4#Int`, `#G#4#Int`, or `APL#4#Int` | Routes the corresponding scope through local-bus interface `Int` |
 
-The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier: `#3` for the riser/backbone level or `#4#Int` for a local bus. The published `WHO 1` material establishes these qualifiers for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier; `#4#Int` selects a local bus. The published `WHO 1` material establishes `#4#Int` for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+
+The published `WHERE` table does not enumerate `BASE#3` variants. Level-3 qualification is an implementation model, not proof of every Lighting target/operation combination. See [Level 3 / Riser](../../protocol/addressing.md#level-3--riser) for that evidence boundary and [historical matcher behavior](../../protocol/addressing.md#historical-touchscreen-address-matching) for the narrower client rules.
 
 ### MyHOME_Suite address rules
 
@@ -13787,7 +13791,11 @@ Request ordering on one connection does not order operations on another. Histori
 
 Section ID: `ownkb:section:d000103:s000009`
 
+Cautions: `do not`
+
 The touchscreen writer associates each ACK/NACK with the oldest pending frame on that connection, then notifies subscribers for the original frame's `WHO`. Two initial acknowledgement positions are reserved for connection and channel setup. Exact tests cover mixed namespaces and multiple subscribers; the ACK itself still carries no namespace or request identifier.
+
+This writer processes only ACK/NACK input; it does not collect status or dimension result frames received on the writer connection. Functional reports are dispatched separately by the reader's `WHO` subscriptions. Its operation-ACK tests therefore do not establish complete command-session result correlation. See [Dispatch and test limits](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
 
 Within one queued send batch, this writer removes byte-identical duplicates. On its proactive inactivity reconnect, it requeues frames whose acknowledgements remain outstanding before newly queued traffic. This is client behavior, not a delivery guarantee: absence of an ACK does not prove that an operation had no effect, and replay is not inherently safe for non-idempotent commands. See [Writer tests and implementation](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
 
@@ -14018,7 +14026,9 @@ The `TS10_1_0_23` Lighting/Automation matcher distinguishes an unqualified gener
 | `3#3` | `0313` | Environment `03` match |
 | `3` | `0313#4#12` | No match |
 
-The matcher treats incoming `#3` as the unqualified level and compares local-bus qualifiers as strings. Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
+The matcher first compares complete address strings for an exact match. Incoming `#3` is then treated as the unqualified level for collective matching; the configured qualifier is not normalized. Consequently, point `12#3` does not match configured point `12`, and incoming `0#3` does not match configured `12#3`. Local-bus qualifiers are compared as strings. See [Matcher qualification evidence](../project/review/myopencommunity-transport-history-review.md#address-matcher-lineage).
+
+Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
 
 ### Parsing rules
 
@@ -14745,8 +14755,8 @@ The public source gives the session boundary and selector but not a general-purp
 
 Section ID: `ownkb:section:d000109:s000009`
 
-Applicability cues: `gateway`
-Cautions: `do not`
+Applicability cues: `gateway`, `tcp`
+Cautions: `do not`, `must not`
 Provenance cues: `evidence`
 
 The BTicino touchscreen client at `TS10_1_0_23` uses four channels to its local OpenWebNet server:
@@ -14759,6 +14769,8 @@ The BTicino touchscreen client at `TS10_1_0_23` uses four channels to its local 
 | Request writer | `*99*0##` |
 
 The request writer sends status and dimension requests; the supervisor uses the reader interface. This local use of selector `0` differs from the published scenario-programming role above and does not establish a general external-gateway request session. Likewise, the local supervisor selector is implementation evidence rather than an addition to the published gateway session table.
+
+This client's connected flag and connection-up notification are set on TCP connection establishment, before sending the channel selector. They do not establish receipt of the server greeting, selector acceptance, or authentication success. Applications using this local lifecycle must not equate its connected state with the active-session state of the published gateway workflow. See [Local setup evidence](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
 
 The VDK 2.0 simulator recognizes the same four selectors, but names `0` command and `9` request. Its labels do not change the published commands/actions selector. Neither implementation establishes external-gateway authentication behavior. See [Local channel evidence](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
 
@@ -14906,14 +14918,19 @@ Only the system-specific decoder should expose typed integers, temperatures, dur
 
 Section ID: `ownkb:section:d000110:s000011`
 
+Applicability cues: `tcp`
 Cautions: `do not`
 Provenance cues: `evidence`
 
 The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
 
+At `TS10_1_0_23`, frame-family recognition delegates to a separate OpenWebNet stack absent from the four preserved repositories. The constructors establish serialization behavior, but do not establish that stack's complete acceptance grammar. The local byte framer drains consecutive `##`-terminated chunks and retains an incomplete tail, without finding a leading `*` or enforcing a buffer limit. Its disconnect/reconnect methods also retain that tail. These implementation limits do not replace the incremental guidance above. See [Numeric framing evidence](../project/review/myopencommunity-transport-history-review.md#numeric-framing-and-classification).
+
 The touchscreen reader also explicitly ignores status-request frames received on the monitor channel, following a historical multi-touchscreen failure. That filtering is client policy; a bus-event parser should still recognize the request family rather than assume that all incoming traffic is a state report.
 
 The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
+
+That simulator parser also rejects ordinary `WHO 0` commands. Its active TCP read handler shares an incomplete-frame buffer across clients and returns after emitting the first functional frame, losing further frames already consumed in the same read. These are simulator limitations, not restrictions on [Scenarios](../functional/who-0-scenarios/) or OpenWebNet stream behavior. See [Simulator transport evidence](../project/review/myopencommunity-transport-history-review.md#simulator-parser-and-active-read-path).
 
 #### Separate multimedia XML transport
 
@@ -14923,6 +14940,8 @@ Applicability cues: `tcp`
 Provenance cues: `evidence`, `source`
 
 The touchscreen common library also implements a UTF-8 TCP transport framed by `<OWNxml ...>` and `</OWNxml>`, with namespace `http://www.bticino.it/xopen/v1`. Tests establish extraction of consecutive XML messages and messages surrounded by unrelated text. Its envelope contains `Hdr/MsgID` (`SID`, `PID`), `Dst/IP`, `Src/IP`, and a `Cmd` element.
+
+The final library preserves whitespace inside an extracted message, but converts each transport read from UTF-8 separately. A multibyte character split across reads can therefore be corrupted even when XML envelope buffering succeeds. Envelope extraction does not establish complete incremental UTF-8 decoding. See [XML buffering evidence](../project/review/myopencommunity-transport-history-review.md#xml-buffering-and-assertion-limits).
 
 These are XML transport fields, not transaction identifiers in ordinary `*...##` frames. Media-server browsing and track-selection operations use this separate interface; the source does not establish their numeric mapping to [`WHO 26`](../functional/who-26-upnp-multimedia/). XML acknowledgements and session identifiers must therefore remain distinct from [OpenWebNet acknowledgements](acknowledgements.md). See [Multimedia transport evidence](../project/review/myopencommunity-reassessment.md#multimedia-xml-boundary).
 

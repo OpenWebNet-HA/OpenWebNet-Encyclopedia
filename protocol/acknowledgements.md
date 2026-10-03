@@ -43,6 +43,8 @@ Request ordering on one connection does not order operations on another. Histori
 
 The touchscreen writer associates each ACK/NACK with the oldest pending frame on that connection, then notifies subscribers for the original frame's `WHO`. Two initial acknowledgement positions are reserved for connection and channel setup. Exact tests cover mixed namespaces and multiple subscribers; the ACK itself still carries no namespace or request identifier.
 
+This writer processes only ACK/NACK input; it does not collect status or dimension result frames received on the writer connection. Functional reports are dispatched separately by the reader's `WHO` subscriptions. Its operation-ACK tests therefore do not establish complete command-session result correlation. See [Dispatch and test limits](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
+
 Within one queued send batch, this writer removes byte-identical duplicates. On its proactive inactivity reconnect, it requeues frames whose acknowledgements remain outstanding before newly queued traffic. This is client behavior, not a delivery guarantee: absence of an ACK does not prove that an operation had no effect, and replay is not inherently safe for non-idempotent commands. See [Writer tests and implementation](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
 
 ### Simulator fallback acknowledgements

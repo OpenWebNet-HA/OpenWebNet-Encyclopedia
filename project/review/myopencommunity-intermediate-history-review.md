@@ -62,7 +62,7 @@ Final `MessageDevice` restarts its 5-second timer for parameter/data blocks and 
 | UI/plugin `enable` and `mode` as protocol fields | Local persistence/configuration selects association ID; no extra wire vocabulary |
 | Library state fixes as Firmware releases | Source dates and commits do not identify deployed product/Firmware revisions |
 
-Hardware/captures remain necessary for unusual message character/checksum behavior, complete call/teleloop address and ID domains, real association/reconnect behavior, and deployed revisions affected by historical fixes. No repository exhaustion claim follows from this bounded lineage review, endpoint reuse or helper execution. Subsequent intermediate-history work should cover transport/serializer/parser corrections and the remaining functional/device/simulator lineages.
+Hardware/captures remain necessary for unusual message character/checksum behavior, complete call/teleloop address and ID domains, real association/reconnect behavior, and deployed revisions affected by historical fixes. No repository exhaustion claim follows from this bounded lineage review, endpoint reuse or helper execution. The subsequent [transport history review](myopencommunity-transport-history-review.md) covers serializer/parser, local session and address-matcher corrections. Remaining functional/device/simulator lineages are still open.
 
 ## Machine KB maintenance and validation
 
