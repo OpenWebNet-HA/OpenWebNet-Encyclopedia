@@ -19,6 +19,28 @@ storage:
     visibility: private
     object_layout: sha256/<first-2>/<next-2>/<sha256>
 artifacts:
+- id: device-doc-4601-installation-nl-20130411-82719-2
+  kind: documentation
+  publisher: BTicino / Legrand
+  product: HC/HS/HD/L/N/NT4601
+  title: Inbraakcentrale HC/HS/HD/L/N/NT4601 - Installatiehandleiding
+  media_type: application/pdf
+  filename: 20130411_82719_2.pdf
+  version_label: 11/09-01 PC
+  size: 5143505
+  sha256: cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0
+  source_url: https://configuratoren.legrand.nl/documize/2013/4/20130411_82719_2.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf
+  language:
+  - nl
+  language_evidence: Dutch cover, contents and body text inspected
+  notes:
+  - 62-page Dutch installation manual; cover revision 11/09-01 PC. No U2860B part number printed on its cover; retain its own file identity.
+  - Publisher original retrieved on 2026-10-03 from the Legrand Netherlands configurator document service; URL path date is not treated as publication date.
 - id: device-doc-4601-u2860b
   kind: documentation
   publisher: BTicino
