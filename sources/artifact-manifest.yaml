@@ -151,6 +151,106 @@ artifacts:
   language_evidence: predominantly pictographic; French SCS connection label and English Test/Learn labels
   notes:
   - Publisher original retrieved on 2026-10-03.
+- id: device-doc-dnd-mur-control-mm00775-a-en
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Do Not Disturb and Make Up Room control BUS SCS
+  media_type: application/pdf
+  filename: MM00775_a_EN.pdf
+  version_label: 05/12/2013
+  size: 1147777
+  sha256: 644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745
+  source_url: https://dar.bticino.com/asset/Documents/MM00775_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/64/4c/644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/64/4c/644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745.pdf
+  language:
+  - en
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-dnd-mur-indicator-le06116ac
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Outside-door indicator installation instructions
+  media_type: application/pdf
+  filename: LE06116AC.pdf
+  version_label: LE06116AC
+  size: 352646
+  sha256: 1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e
+  source_url: https://dar.bticino.com/asset/Documents/LE06116AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf
+  language:
+  - mul
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-dnd-mur-indicator-mm00774-b-en
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Outside the door indicator BUS SCS
+  media_type: application/pdf
+  filename: MM00774_b_EN.pdf
+  version_label: 15/01/2015
+  size: 394911
+  sha256: 8e26a521c7eb27d3d4dfce71fceaeb87badeeda3110a8331ca6c4d08e83d5ec4
+  source_url: https://dar.bticino.com/asset/Documents/MM00774_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8e/26/8e26a521c7eb27d3d4dfce71fceaeb87badeeda3110a8331ca6c4d08e83d5ec4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8e/26/8e26a521c7eb27d3d4dfce71fceaeb87badeeda3110a8331ca6c4d08e83d5ec4.pdf
+  language:
+  - en
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-eight-key-le06019aa
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Eight-key control customizable label mounting instructions
+  media_type: application/pdf
+  filename: LE06019AA.pdf
+  version_label: LE06019AA-02PC-13W21
+  size: 694671
+  sha256: 0e8b53454dad7420f6cfb97c7fcd5d4792cec49629ba2c75207aa577ac85343c
+  source_url: https://dar.bticino.com/asset/Documents/LE06019AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0e/8b/0e8b53454dad7420f6cfb97c7fcd5d4792cec49629ba2c75207aa577ac85343c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0e/8b/0e8b53454dad7420f6cfb97c7fcd5d4792cec49629ba2c75207aa577ac85343c.pdf
+  language:
+  - en
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-eight-key-mm00778-a-en
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 8 key multifunction control BUS SCS
+  media_type: application/pdf
+  filename: MM00778_a_EN.pdf
+  version_label: 02/12/2013
+  size: 828255
+  sha256: 1985866f3b45dfdb083ce1150d8fcce44c6e6384cb05898732eb1b1692868608
+  source_url: https://dar.bticino.com/asset/Documents/MM00778_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/19/85/1985866f3b45dfdb083ce1150d8fcce44c6e6384cb05898732eb1b1692868608.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/19/85/1985866f3b45dfdb083ce1150d8fcce44c6e6384cb05898732eb1b1692868608.pdf
+  language:
+  - en
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
