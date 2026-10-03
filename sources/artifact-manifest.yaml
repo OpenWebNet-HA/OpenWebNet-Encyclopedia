@@ -251,6 +251,46 @@ artifacts:
   language_evidence: Document text, captions and diagrams inspected
   notes:
   - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-eight-key-mm00778-a-it
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Eight-key multifunction control Italian technical sheet
+  media_type: application/pdf
+  filename: MM00778_a_IT.pdf
+  version_label: 02/12/2013
+  size: 823996
+  sha256: ad05d7c531374863da1cd8a217be237ee00df442859528ee7fe657d27b5c7d3a
+  source_url: https://dar.bticino.com/asset/Documents/MM00778_a_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/05/ad05d7c531374863da1cd8a217be237ee00df442859528ee7fe657d27b5c7d3a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/05/ad05d7c531374863da1cd8a217be237ee00df442859528ee7fe657d27b5c7d3a.pdf
+  language:
+  - it
+  language_evidence: Publisher document text inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-hotel-cm220600-0982-fr
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Hotel room management French commercial catalogue page 982
+  media_type: application/pdf
+  filename: cm220600_0982.pdf
+  version_label: CM220600, page 982
+  size: 81912
+  sha256: cc9d0f49992d060e11b7692ab13867434c287ec02d881de3ed1049abbeafa340
+  source_url: https://assets.legrand.com/general/legrand-fr/pc/cm220600_0982.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/cc/9d/cc9d0f49992d060e11b7692ab13867434c287ec02d881de3ed1049abbeafa340.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/cc/9d/cc9d0f49992d060e11b7692ab13867434c287ec02d881de3ed1049abbeafa340.pdf
+  language:
+  - fr
+  language_evidence: Publisher document text inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
 - id: device-doc-mm00774-b-fr
   kind: documentation
   publisher: BTicino / Legrand
