@@ -19,6 +19,116 @@ storage:
     visibility: private
     object_layout: sha256/<first-2>/<next-2>/<sha256>
 artifacts:
+- id: device-doc-4601-u2860b
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U2860B.pdf
+  size: 9112751
+  sha256: 6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c
+  source_url: https://dar.bticino.it/asset/Documents/U2860B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf
+  language:
+  - it
+  - en
+  language_evidence: publisher cover and separate Italian/English installation sections
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: device-doc-4690-bt00635-a-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: BT00635_a_EN.pdf
+  size: 1968944
+  sha256: 1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f
+  source_url: https://dar.bticino.com/asset/Documents/BT00635_a_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1b/40/1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1b/40/1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: device-doc-4690-u3567e
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3567E.pdf
+  size: 3527959
+  sha256: fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3567E.pdf&fileId=58107.23188.9117.39299
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/2a/fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/2a/fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c.pdf
+  language:
+  - mul
+  language_evidence: multilingual installer text including English
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: device-doc-4690-u3569h-software-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3569H_Software_EN.pdf
+  size: 22004037
+  sha256: 5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3569H_Software_EN.pdf&fileId=58107.23188.9117.39299
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/51/90/5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/51/90/5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: device-doc-4690-u3569h-utente-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3569H_Utente_EN.pdf
+  size: 7282869
+  sha256: 213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3569H_Utente_EN.pdf&fileId=58107.23188.9117.39299
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/21/3d/213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/21/3d/213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: device-doc-bmsw3001-bmsw3002-u3773b
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3773B.pdf
+  size: 320289
+  sha256: 60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3
+  source_url: https://dar.bticino.com/asset/Documents/U3773B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf
+  language:
+  - fr
+  - en
+  language_evidence: predominantly pictographic; French SCS connection label and English Test/Learn labels
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
@@ -37,6 +147,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-mh200-timh200-fr/TiMH200_FR.pdf
+- id: document-sha256-02bde8a8120d34ca
+  kind: documentation
+  publisher: Legrand
+  title: BUS/SCS devices presentation and hotel configuration guide - English
+  media_type: application/pdf
+  filename: le10699ad-en.pdf
+  size: 28820819
+  sha256: 02bde8a8120d34ca8921a8ffeb82c725880b5e09b42888548561c18001d35607
+  source_url: https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699ad-en.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/02/bd/02bde8a8120d34ca8921a8ffeb82c725880b5e09b42888548561c18001d35607.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/02/bd/02bde8a8120d34ca8921a8ffeb82c725880b5e09b42888548561c18001d35607.pdf
+  language:
+  - en
+  language_evidence: filename-and-document-language
+  notes:
+  - Official BUS/SCS guide; 0 026 04 / BMSW1005 on printed/PDF page 36 and programming example on page 157.
 - id: document-sha256-03f5093d833c675a
   kind: documentation
   publisher: BTicino / Legrand
@@ -289,6 +418,42 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-myhomeserver1-compatible-st00001031-en/ST-00001031-EN.pdf
+- id: document-sha256-16b671b522f2d652
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: 3522-publisher-product-sheet.pdf
+  size: 15493
+  sha256: 16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3522
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
+- id: document-sha256-16d6f331c180eb1f
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F4269H.pdf
+  size: 1710836
+  sha256: 16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23
+  source_url: https://dar.bticino.com/asset/Documents/F4269H.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-16ddee94af03d514
   kind: documentation
   publisher: BTicino / Legrand
@@ -307,6 +472,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-f422-mq00280-f-en/MQ00280_f_EN.pdf
+- id: document-sha256-1a6dc1f2007ad55b
+  kind: documentation
+  publisher: Legrand
+  title: Push'n Learn Method - Technical Guide
+  media_type: application/pdf
+  filename: LE04385AB_EN.pdf
+  size: 7272527
+  sha256: 1a6dc1f2007ad55b85f50fdede27c0fe3024dbcb1b45773254189e9aff6d8c78
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE04385AB_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1a/6d/1a6dc1f2007ad55b85f50fdede27c0fe3024dbcb1b45773254189e9aff6d8c78.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1a/6d/1a6dc1f2007ad55b85f50fdede27c0fe3024dbcb1b45773254189e9aff6d8c78.pdf
+  language:
+  - en
+  language_evidence: filename-and-document-language
+  notes:
+  - Official English Push'n Learn technical guide used to reconcile the earlier manual association workflow for OWN-DEV-0101.
 - id: document-sha256-20dbec24c5201aea
   kind: documentation
   publisher: BTicino / Legrand
@@ -668,6 +852,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-bmdi3002-catalogue/BMDI3002-product-sheet.pdf
+- id: document-sha256-36558f262322d9a7
+  kind: documentation
+  publisher: Legrand
+  title: Product Environmental Profile - 0 026 04
+  media_type: application/pdf
+  filename: LGRP-2013-015-V1-FR.pdf
+  size: 917148
+  sha256: 36558f262322d9a75109b71193fc3f0c7a7d7addb9e24bf75045057390a6e48d
+  source_url: https://assets.legrand.com/pim/DOCUMENT/LGRP-2013-015-V1-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/55/36558f262322d9a75109b71193fc3f0c7a7d7addb9e24bf75045057390a6e48d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/55/36558f262322d9a75109b71193fc3f0c7a7d7addb9e24bf75045057390a6e48d.pdf
+  language:
+  - fr
+  language_evidence: document-language
+  notes:
+  - Official Product Environmental Profile for 0 026 04; reconciled into OWN-DEV-0101.
 - id: document-sha256-366400ace2185045
   kind: documentation
   publisher: BTicino / Legrand
@@ -686,6 +889,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-basic-control-mq00286-d-en/MQ00286-d-EN.pdf
+- id: document-sha256-36e2d559658eebb9
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F80_SG-publisher-product-sheet.pdf
+  size: 15917
+  sha256: 36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F80_SG
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-39ab54625c817d9c
   kind: documentation
   publisher: BTicino / Legrand
@@ -830,6 +1051,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-key-card-rfid-le06750aa/LE06750AA.pdf
+- id: document-sha256-44c2f82aa9be266e
+  kind: documentation
+  publisher: Legrand
+  title: Contrôleur d'éclairage on/off - 8 circuits - F01132FR/03
+  media_type: application/pdf
+  filename: F01132FR-03.pdf
+  size: 190223
+  sha256: 44c2f82aa9be266ec385f9219b996f343fac7b5c261d38fbf95287866121e667
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/F01132FR-03.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/44/c2/44c2f82aa9be266ec385f9219b996f343fac7b5c261d38fbf95287866121e667.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/44/c2/44c2f82aa9be266ec385f9219b996f343fac7b5c261d38fbf95287866121e667.pdf
+  language:
+  - fr
+  language_evidence: filename-and-document-language
+  notes:
+  - Official French technical sheet for 0 026 04 / 002604; reconciled into OWN-DEV-0101.
 - id: document-sha256-47959cd888b93d2c
   kind: documentation
   publisher: BTicino / Legrand
@@ -1100,6 +1340,26 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-load-control-mq00709-c-en/MQ00709_c_EN.pdf
+- id: document-sha256-67a04907f1904828
+  kind: documentation
+  publisher: Legrand
+  title: 0 026 04 installation and wiring sheet
+  media_type: application/pdf
+  filename: LE03171AC.pdf
+  size: 733750
+  sha256: 67a04907f1904828ce69f3599014c3a72aaeffc6a6259e9f0a158a3986567cb1
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE03171AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/67/a0/67a04907f1904828ce69f3599014c3a72aaeffc6a6259e9f0a158a3986567cb1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/67/a0/67a04907f1904828ce69f3599014c3a72aaeffc6a6259e9f0a158a3986567cb1.pdf
+  language:
+  - fr
+  - en
+  language_evidence: document-language
+  notes:
+  - Official installation and wiring sheet for 0 026 04 / 002604; reconciled into OWN-DEV-0101.
 - id: document-sha256-68e473ba614f1a24
   kind: documentation
   publisher: BTicino / Legrand
@@ -1190,6 +1450,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-ceiling-sensors-le02817ad/LE02817AD.pdf
+- id: document-sha256-7277c0ed6139c8f8
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: BMSE2006-publisher-product-sheet.pdf
+  size: 12843
+  sha256: 7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE2006
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/77/7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/77/7277c0ed6139c8f865f52093b825b6fb0eccdbe71e21b85427de8dc43ce819af.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-7858fdb08933d8e3
   kind: documentation
   publisher: BTicino / Legrand
@@ -1298,6 +1576,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-one-relay-pep-l4671-1-en/BT-L4671_1-EN.pdf
+- id: document-sha256-860a0ce3385c46f8
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: F3758D.pdf
+  size: 1542767
+  sha256: 860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23
+  source_url: https://dar.bticino.com/asset/Documents/F3758D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-888012e06924ff32
   kind: documentation
   publisher: BTicino / Legrand
@@ -1388,6 +1684,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/openwebnet-public/pdf/WHO_15-25.pdf
+- id: document-sha256-8c587b3f07620958
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U2354B_U_UK.pdf
+  size: 7531955
+  sha256: 8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62
+  source_url: https://dar.bticino.com/asset/Documents/U2354B_U_UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8c/58/8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8c/58/8c587b3f07620958efcca62e01a62f59c91d08484394754aae9f92d109658b62.pdf
+  language:
+  - en
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-8de1235d87a640ef
   kind: documentation
   publisher: BTicino / Legrand
@@ -1424,6 +1738,26 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-bmsw1003-mq00313-e-en/MQ00313_e_EN.pdf
+- id: document-sha256-947c7c7db7362968
+  kind: documentation
+  publisher: Legrand
+  title: 0 026 02 wiring sheet
+  media_type: application/pdf
+  filename: LE04280AA.pdf
+  size: 109518
+  sha256: 947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE04280AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/94/7c/947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/94/7c/947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36.pdf
+  language:
+  - fr
+  - en
+  language_evidence: document-language
+  notes:
+  - Publisher-linked from the 002604 product page, but the document itself is for 0 026 02 / four outputs; retained as provenance and explicitly excluded from OWN-DEV-0101 Device facts.
 - id: document-sha256-96b2d164e69405d1
   kind: documentation
   publisher: BTicino / Legrand
@@ -1622,6 +1956,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-zero-crossing-le09285ab/LE09285AB.pdf
+- id: document-sha256-a5c96905fdb4d86e
+  kind: documentation
+  publisher: BTicino
+  title: MyHOME Technical Guide
+  media_type: application/pdf
+  filename: MyHOME-Technical-Guide.pdf
+  size: 23769059
+  sha256: a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9
+  source_url: https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf
+  language:
+  - en
+  language_evidence: document-language
+  notes:
+  - Official MyHOME guide; OWN-DEV-0101 / BMSW1005 is on printed/PDF page 99.
 - id: document-sha256-a610f6d8fd4aa811
   kind: documentation
   publisher: BTicino / Legrand
@@ -1803,6 +2156,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-touch-multifunction-u3300b/U3300B.pdf
+- id: document-sha256-bf6b7ea64121d0ed
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: 349320-publisher-product-sheet.pdf
+  size: 16158
+  sha256: bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-349320
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bf/6b/bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bf/6b/bf6b7ea64121d0ed81b8018492887103a77e2c17c0828138de2791e07f444cc8.pdf
+  language:
+  - it
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-c4461318739c49ab
   kind: documentation
   publisher: BTicino / Legrand
@@ -2127,6 +2498,24 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-ir-receiver-mq00071-d-it/MQ00071-d-IT.pdf
+- id: document-sha256-ed1fd00db6fa60bd
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: MQ00359_b_EN.pdf
+  size: 117755
+  sha256: ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454
+  source_url: https://dar.bticino.com/asset/Documents/MQ00359_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf
+  language:
+  - en
+  language_evidence: publisher document language
+  notes:
+  - Publisher original retrieved on 2026-10-03.
 - id: document-sha256-eead45860c389c7b
   kind: documentation
   publisher: BTicino / Legrand
@@ -2145,6 +2534,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-display-thermostat-mm00789-b-en/MM00789_b_EN.pdf
+- id: document-sha256-f0c6c1e4cf149269
+  kind: documentation
+  publisher: Legrand
+  title: ON/OFF lighting controller - 8 outputs - F01132EN/04
+  media_type: application/pdf
+  filename: F01132EN-04.pdf
+  size: 280431
+  sha256: f0c6c1e4cf149269079d9b0a542d29c05fa790c9b3afe5e438697d51b456b3a2
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/F01132EN-04.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f0/c6/f0c6c1e4cf149269079d9b0a542d29c05fa790c9b3afe5e438697d51b456b3a2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f0/c6/f0c6c1e4cf149269079d9b0a542d29c05fa790c9b3afe5e438697d51b456b3a2.pdf
+  language:
+  - en
+  language_evidence: filename-and-document-language
+  notes:
+  - Official technical sheet for 0 026 04 / 002604; reconciled into OWN-DEV-0101.
 - id: document-sha256-f1d437d369f5a217
   kind: documentation
   publisher: BTicino / Legrand
@@ -2307,6 +2715,25 @@ artifacts:
   repository_history:
     former_paths:
     - sources/devices/documents/device-doc-key-card-mm00496-b-en/MM00496-b-EN.pdf
+- id: document-sha256-fbfbd3e8d941aa3d
+  kind: documentation
+  publisher: Legrand
+  title: Méthode Push'n Learn - Guide technique
+  media_type: application/pdf
+  filename: LE04385AB_FR.pdf
+  size: 10247701
+  sha256: fbfbd3e8d941aa3dd17f73097e4c4dbffbd29b8e9eb34b913ad5dffa05cb6fe9
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE04385AB_FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fb/fb/fbfbd3e8d941aa3dd17f73097e4c4dbffbd29b8e9eb34b913ad5dffa05cb6fe9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fb/fb/fbfbd3e8d941aa3dd17f73097e4c4dbffbd29b8e9eb34b913ad5dffa05cb6fe9.pdf
+  language:
+  - fr
+  language_evidence: filename-and-document-language
+  notes:
+  - Official French Push'n Learn technical guide used to reconcile the earlier manual association workflow for OWN-DEV-0101.
 - id: document-sha256-fdd9607fac4470e3
   kind: documentation
   publisher: BTicino / Legrand
