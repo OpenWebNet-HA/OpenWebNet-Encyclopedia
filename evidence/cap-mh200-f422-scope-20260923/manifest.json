@@ -1,0 +1,43 @@
+{
+  "evidence_id": "EVID-MH200-F422-SCOPE",
+  "capture_id": "cap-mh200-f422-scope-20260923",
+  "title": "F422 Interface Router Area vs Point Scope Command Behavior on MH200",
+  "capture_kind": "controlled_experiment",
+  "epistemic_status": "observed",
+  "confidence": "high",
+  "evidence_class": "public_capture",
+  "recorded_at": "2026-09-23T14:30:00Z",
+  "installation_id": "58964012-179b-5120-bfb6-b511ee2bcd0f",
+  "bus_id": "44420761-807c-5d98-a745-f3c794d37f30",
+  "sub_bus_id": "c94f215e-aeb5-5138-8f7a-a9c32bfeb4e8",
+  "gateway_id": "c9c79529-1399-5c4f-ac30-ec3bc466b291",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "bus_topology": "Main SCS bus with F422 interface router on domain 02"
+  },
+  "device_under_test": {
+    "sku": "BTicino F422",
+    "description": "SCS bus interface router (configured as private interface 02)",
+    "configured_where": "#4#02",
+    "pseudonym_device_id": "1E93D329"
+  },
+  "summary": "Empirical observation of F422 interface router behavior on an MH200 gateway. Area scope status request (*#2*1#4#02##) is forwarded and answered with individual per-point status frames for covers 11, 12, and 13. Area scope command (*2*1*1#4#02##) receives gateway socket ACK (*#*1##) but produces no cover movement or events from interface 02. In contrast, point command (*2*1*11#4#02##) is echoed and results in actuator movement ending in STOP after 60.9s run-time.",
+  "test_recipe": [
+    "1. Send area status request *#2*1#4#02## targeting area 1 behind interface 02.",
+    "2. Observe per-point RX replies for covers 11, 12, 13 (*2*0*11#4#02##, etc.).",
+    "3. Dispatch area UP command *2*1*1#4#02##; observe gateway socket ACK *#*1## with no subsequent movement events.",
+    "4. Dispatch point UP command *2*1*11#4#02## to cover 11; observe bus echo *2*1*11#4#02##.",
+    "5. Observe cover run-time completion: actuator reports STOP *2*0*11#4#02## 60.9s later."
+  ],
+  "claims_supported": [
+    "claim.who2.f422.area_command_ack_without_movement",
+    "claim.who2.f422.point_command_forwarded",
+    "claim.who2.f422.area_status_request_per_point_reply"
+  ],
+  "related_documents": [
+    "functional/who-2-automation/addressing.md",
+    "protocol/addressing.md"
+  ],
+  "frame_count": 9
+}

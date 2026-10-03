@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/evidence/schema/evidence-frame.schema.json",
+  "title": "OpenWebNet Evidence Frame Record Schema",
+  "description": "Defines the canonical structure for on-wire OpenWebNet frames in evidence package frames.jsonl.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "seq",
+    "t_rel_ms",
+    "dir",
+    "raw",
+    "who",
+    "where",
+    "what",
+    "dimension",
+    "dimension_values",
+    "annotation"
+  ],
+  "properties": {
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "t_rel_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dir": {
+      "type": "string",
+      "enum": ["tx", "rx"]
+    },
+    "raw": {
+      "type": "string",
+      "pattern": "^\\*[#*0-9]+##$"
+    },
+    "who": {
+      "type": ["integer", "null"]
+    },
+    "where": {
+      "type": ["string", "null"]
+    },
+    "what": {
+      "type": ["integer", "null"]
+    },
+    "dimension": {
+      "type": ["integer", "null"]
+    },
+    "dimension_values": {
+      "type": ["array", "null"],
+      "items": {"type": "string"}
+    },
+    "annotation": {
+      "type": "string"
+    },
+    "interface": {
+      "type": ["string", "null"]
+    },
+    "scope": {
+      "type": ["string", "null"],
+      "enum": ["point", "area", "general", null]
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/evidence/schema/evidence-manifest.schema.json",
+  "title": "OpenWebNet Field Evidence Manifest Schema",
+  "description": "Defines metadata, hardware context, test recipe, and claim mappings for empirical OpenWebNet evidence packages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "capture_id",
+    "title",
+    "capture_kind",
+    "epistemic_status",
+    "confidence",
+    "evidence_class",
+    "recorded_at",
+    "installation_id",
+    "bus_id",
+    "gateway_id",
+    "environment",
+    "device_under_test",
+    "summary",
+    "test_recipe",
+    "claims_supported",
+    "frame_count"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^EVID-[A-Z0-9]+(-[A-Z0-9]+)+$"
+    },
+    "capture_id": {
+      "type": "string",
+      "pattern": "^cap-[a-z0-9]+(-[a-z0-9]+)+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "capture_kind": {
+      "type": "string",
+      "enum": [
+        "controlled_experiment",
+        "active_observation",
+        "passive_trace",
+        "fingerprint"
+      ]
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "experimentally_confirmed",
+        "observed",
+        "hypothesized"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "undetermined"]
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": [
+        "public_experiment",
+        "public_capture"
+      ]
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "installation_id": {
+      "type": "string"
+    },
+    "bus_id": {
+      "type": "string"
+    },
+    "sub_bus_id": {
+      "type": "string"
+    },
+    "gateway_id": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object",
+      "required": ["gateway_model", "gateway_firmware", "bus_topology"],
+      "properties": {
+        "gateway_model": {"type": "string"},
+        "gateway_firmware": {"type": "string"},
+        "who13_device_type": {"type": "integer"},
+        "bus_topology": {"type": "string"}
+      }
+    },
+    "device_under_test": {
+      "type": "object",
+      "required": ["sku", "configured_where"],
+      "properties": {
+        "sku": {"type": "string"},
+        "description": {"type": "string"},
+        "configured_where": {"type": "string"},
+        "pseudonym_device_id": {"type": "string"}
+      }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "test_recipe": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 5},
+      "minItems": 1
+    },
+    "claims_supported": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "machine_kb_claims": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^ownkb:claim:[a-z0-9]+$"}
+    },
+    "related_questions": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^ownkb:question:[a-z0-9]+$"}
+    },
+    "related_documents": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "frame_count": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}
