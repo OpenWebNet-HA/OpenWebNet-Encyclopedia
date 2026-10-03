@@ -251,6 +251,66 @@ artifacts:
   language_evidence: Document text, captions and diagrams inspected
   notes:
   - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-mm00774-b-fr
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00774-b-FR French technical sheet
+  media_type: application/pdf
+  filename: MM00774-b-FR.pdf
+  version_label: 15/01/2015
+  size: 397262
+  sha256: adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MM00774-b-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/da/adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/da/adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b.pdf
+  language:
+  - fr
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-mm00775-a-fr
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00775-a-FR French technical sheet
+  media_type: application/pdf
+  filename: MM00775-a-FR.pdf
+  version_label: 02/12/2013
+  size: 1149539
+  sha256: 7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MM00775-a-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf
+  language:
+  - fr
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-mm00778-a-fr
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00778-a-FR French technical sheet
+  media_type: application/pdf
+  filename: MM00778-a-FR.pdf
+  version_label: 02/12/2013
+  size: 830924
+  sha256: fb1a47e3c4a6f25602b1c8271b72614f57df0e7bc48d9cdf35ccb4e9b5b32555
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MM00778-a-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fb/1a/fb1a47e3c4a6f25602b1c8271b72614f57df0e7bc48d9cdf35ccb4e9b5b32555.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fb/1a/fb1a47e3c4a6f25602b1c8271b72614f57df0e7bc48d9cdf35ccb4e9b5b32555.pdf
+  language:
+  - fr
+  language_evidence: Document text, captions and diagrams inspected
+  notes:
+  - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
