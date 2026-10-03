@@ -3384,50 +3384,62 @@ items:
     notes:
     - '2026-10-03: OWN-DEV-0110 created from next priority queue cluster 2243. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 1 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Exact-product evidence absent for all three commercial candidates; current 67584 is an Art Epure control and is retained only as conflict evidence. Physical ratings remain unknown. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
   '2245':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0111
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0111 created from next priority queue cluster 2245. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
   '2247':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0112
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0112 created from next priority queue cluster 2247. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
   '2248':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0113
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: partial
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0113 created from next priority queue cluster 2248. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
   '2266':
     state: unreviewed
     priority: normal
@@ -3474,35 +3486,43 @@ items:
     blockers: []
     notes: []
   '2272':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0114
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0114 created from next priority queue cluster 2272. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three exact Living Now colour variants, published control/touch/slot functions, frame/box composition, configuration methods and source-specific specifications reconciled. 7 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
   '2273':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0115
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0115 created from next priority queue cluster 2273. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three exact Living Now colour variants, published control/touch/slot functions, frame/box composition, configuration methods and source-specific specifications reconciled. 7 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
   '2275':
     state: unreviewed
     priority: normal
