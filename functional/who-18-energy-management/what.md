@@ -83,6 +83,8 @@ Thus a newer daily graph can be requested as `*18*57#M#D*WHERE##` or, in old-PIC
 
 The library can also force the read forms regardless of the reported PIC version. That option changes request syntax without forcing older graph decoding. It was introduced to avoid command traffic interrupting graph replies; the source does not identify the affected Device/Firmware combinations. See [graph-request history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
+BtExperience at `TS10_1_0_23` selects this forced-read option when constructing configured measurement objects. These objects initially use the older graph encoding and can switch to newer decoding independently; they do not consult the PIC property to choose command versus read syntax. Earlier consumers used the library's automatic PIC selection. The application's `advanced` measurement property reflects detected graph support, whereas the similarly named load Configuration flag controls the application's consumption-meter presentation. Neither establishes a physical retention period. See [Energy/PIC selection evidence](../../project/review/myopencommunity-energy-history-review.md#request-selection-and-capability-state).
+
 The client sends graph requests through one connection to retain ordering and places the monthly graph request last because source comments report transmit/receive problems in some PIC versions. The affected Firmware versions are unspecified. Its assumption of ordered, uninterrupted graph packets is not a protocol-wide delivery guarantee. See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
 
 ## Actuator commands

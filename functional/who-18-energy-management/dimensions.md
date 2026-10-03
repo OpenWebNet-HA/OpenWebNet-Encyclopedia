@@ -283,7 +283,23 @@ The touchscreen application disables a threshold by writing value `0`, then rest
 
 Older graph reports under `56`, `57`, and `510` contain packet numbers and byte-valued samples, including values assembled across packet boundaries. In the older daily graph, a single sample `255` is replaced with zero. In paired decoding, the value is `high*256 + low`, with only the complete pair `255*255` replaced with zero; `(3,255)` is explicitly tested as valid. For electricity the library multiplies older graph values by 100; the other application modes use a factor of 1. This follows executable behavior rather than the source's broader scaling comment. Newer `511..514` reports use tagged scalar samples as described above.
 
-The same library converts raw scalar measurement/totalizer value `4294967295` to zero, including actuator `DIMENSION 72`. Preserve the raw value when retaining evidence: this normalization cannot distinguish unavailable data from actual zero consumption and is not a universal protocol sentinel definition. `DIMENSION 51` remains the all-time totalizer; the application's yearly graph is assembled from monthly totals, not by redefining `51` as a calendar-year value.
+The exact tests and decoder establish these older packet layouts. Payload positions below follow the packet number:
+
+| Report selector | Packet layout used by the client |
+| --- | --- |
+| `56#M#D` | Packet `1`: ignore first payload value, take the second as hour `1`; packets `2..8`: three hourly bytes each; packet `9`: hours `23` and `24`, then the daily-total high byte; packet `10`: daily-total low byte |
+| `57#M` | Skip packet `1`; concatenate the three bytes from each packet `2..17`, then decode pairs across packet boundaries for the 24 hourly values |
+| `510#M` | Packet `1`: two bytes; subsequent packets: three bytes; concatenate and decode pairs, stopping at the calendar month's day count |
+
+For example, `*#18*WHERE*510#M*1*3*255##` produces a first daily value of `102300` in electricity mode. The skipped header values remain uninterpreted. The older monthly-average decoder divides reconstructed hourly totals by the month's day count, or completed days in the current month, with a minimum divisor of 1. Newer hourly averages are consumed directly.
+
+A trailing unpaired byte produces no value. The partial-month test establishes decoding of a truncated packet prefix, not recovery from missing interior packets or reordering. The newer client decoders also assign graph positions by arrival order rather than the received tag. BtExperience can fill absent positions with zero when expanding a current-period graph for display; a displayed zero therefore need not represent a received zero measurement. See [packet and cache evidence](../../project/review/myopencommunity-energy-history-review.md#packet-decoding-and-cache-boundaries).
+
+The same library converts raw scalar measurement/totalizer value `4294967295` to zero, including actuator `DIMENSION 72`. Its scalar test preserves `4294967294` as an unsigned value; the normalization must not be extended to all values above the signed 32-bit maximum. Preserve the raw value when retaining evidence: this normalization cannot distinguish unavailable data from actual zero consumption and is not a universal protocol sentinel definition.
+
+`DIMENSION 51` remains the all-time totalizer. The library separately assembles a rolling total for the current and previous eleven months. BtExperience instead constructs its calendar-year graph and total from January onward, waiting for all required monthly values; it also has a separate rolling twelve-month view. These are derived application values, not additional wire dimensions.
+
+Month-only graph replies carry no year field. This historical library assigns a month to the latest occurrence not later than the current month, then subtracts another year for `514`. That date reconstruction is a client policy, separate from the published current-year/previous-year descriptions. It does not establish a Device's retained-history depth. Explicit `52#Y#M` replies use `2000 + Y`. See [date and total evidence](../../project/review/myopencommunity-energy-history-review.md#dates-units-and-derived-totals).
 
 Source comments label electricity as watt, water as litres, gas as dm³, and hot-water/heating quantities as calories. These are historical application unit labels; they do not resolve the published energy/power terminology or establish physical measurement units across all Devices. On detecting newer graph support, the library resubmits its pending graph request using the newer form.
 
@@ -296,3 +312,5 @@ The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`,
 The simulator's `113` read emits the active-power report through its monitor path without sending the same report to the originating request socket. This is a model limitation, not a channel rule for physical F520 devices. See [simulator dispatch evidence](../../project/review/myopencommunity-coverage-audit.md#simulator-dispatch).
 
 The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).
+
+Its `52#Y#M` handler selects file data by month without using `Y`. For `512`, the built model computes tag `25` by dividing the sum of its 24 hourly averages by 24. A resource copy uses a different calculation and is not selected by the plugin build. Its `514` values subtract previous-year file values from current-file values. These model choices cannot establish year retention or the physical Device's historical-value calculations. See [F520 history evidence](../../project/review/myopencommunity-energy-history-review.md#f520-model-lineage).
