@@ -193,7 +193,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 56 | PIR wall maunted sensor, long range | 2 | review-ready | OWN-DEV-0061 | complete | complete | partial | pending | - |
 | normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | review-ready | OWN-DEV-0062 | partial | complete | partial | pending | - |
 | normal | 58 | Sensor occupancy + IR + ZigBee | 2 | review-ready | OWN-DEV-0063 | partial | complete | partial | pending | - |
-| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | review-ready | OWN-DEV-0064 | complete | partial | partial | pending | - |
+| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | review-ready | OWN-DEV-0064 | partial | complete | complete | pending | - |
 | normal | 60 | Memory module | 2 | review-ready | OWN-DEV-0065 | complete | complete | complete | pending | - |
 | normal | 61 | Scenario module | 2 | review-ready | OWN-DEV-0066 | complete | complete | complete | pending | - |
 | normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0067 | complete | complete | complete | pending | - |
@@ -207,7 +207,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 90 | SCS-SCS interface | 2 | review-ready | OWN-DEV-0078 | complete | complete | complete | pending | - |
 | normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0079 | complete | complete | partial | pending | - |
 | normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0081 | partial | complete | partial | pending | - |
-| normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | partial | partial | pending | - |
+| normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | complete | complete | pending | - |
 | normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0083 | partial | complete | partial | pending | - |
 | normal | 137 | IP55 PIR wall mounted sensor | 2 | review-ready | OWN-DEV-0084 | partial | complete | partial | pending | - |
 | normal | 160 | Flush mounted alarm central unit | 2 | review-ready | OWN-DEV-0088 | partial | complete | complete | pending | - |

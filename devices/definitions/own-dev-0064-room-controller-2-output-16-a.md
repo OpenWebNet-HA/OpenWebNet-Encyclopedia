@@ -18,7 +18,7 @@
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino | `BMSW3002` | Established identity | canonical commercial record for item `59` |
+| BTicino | `BMSW3002` | Established identity | Catalogue item `59`; named in `U3773B`, PDF p. 1 |
 | Legrand | `048841` | Established identity | canonical commercial record for item `59` |
 
 ## Documentation
@@ -26,17 +26,36 @@
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | catalogue product sheet | current publisher catalogue | `BMSW3002` Room Controller functional and electrical summary | Not applicable - web page | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-lefficienza-energetica/lighting-control---sistema-filare-bus-scs/attuatori/BTI-BMSW3002-IT) |
+| `U3773B.pdf` | installation instruction sheet | `U3773B01SY-09W51` | `BMSW3001` and `BMSW3002`; ratings/mounting PDF p. 1, panels 1-2; factory association/wiring/test/setup PDF p. 2, panels 3-6; no printed pagination | [Archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/U3773B.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `100..240 Vac @ 50/60 Hz` | BTicino General Catalogue product sheet |
-| Outputs | `2` independent outputs; maximum total `16 A @ 230 Vac` | BTicino General Catalogue product sheet |
-| Sensor/control BUS inputs | `2`; combined maximum supply `200 mA` | BTicino General Catalogue product sheet |
-| SCS trunk input | `1` terminal/RJ45 input | BTicino General Catalogue product sheet |
-| Protection | `IP20` | BTicino General Catalogue product sheet |
-| Installation | Ceiling / false-ceiling installation | BTicino General Catalogue product sheet |
+| Supply | `100..240 Vac`, `50..60 Hz` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Outputs | `2` independently controlled outputs; `I_L1 + I_L2 <= 16 A` total, subject to load-specific ratings | `U3773B`, PDF p. 2, panel 4; no printed pagination; catalogue item `59` |
+| Terminal conductor capacity | `2 x 2.5 mm²` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| BUS connector type | RJ45 | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Combined sensor/control-port allowance | Ports `1 + 2`: maximum `200 mA`; not the Device's own consumption | `U3773B`, PDF p. 1, panel 1; no printed pagination; port pictograms |
+| Operating temperature | `-5..45 °C` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Mounting | Two supplied fixing studs; illustrated quarter-turn locking and screw fastening to a support | `U3773B`, PDF p. 1, panel 2; no printed pagination |
+| Sensor/control wiring length | `150 m` maximum on the illustrated RJ45 branch to connected devices; not a whole-installation BUS limit | `U3773B`, PDF p. 2, panel 4; no printed pagination |
+| SCS trunk input | `1` terminal/RJ45 input | BTicino General Catalogue product sheet; `U3773B`, PDF p. 2, panel 4; no printed pagination shows RJ45 SCS BUS connection |
+| Protection | `IP20` | BTicino General Catalogue product sheet; not specified in `U3773B` |
+| Installation | Ceiling / false-ceiling installation | BTicino General Catalogue product sheet; mounting arrangements `U3773B`, PDF p. 1, panel 2; no printed pagination |
+
+### Published load ratings
+
+| Load pictogram / class | At `230 Vac` | At `110 Vac` | Published current | Evidence |
+| --- | --- | --- | --- | --- |
+| Incandescent lamp | `3680 W` | `1760 W` | `16 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Mains halogen lamps | `3680 W` | `1760 W` | `16 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Fluorescent tube | `10 x (2 x 36 W)` | `5 x (2 x 36 W)` | `4.3 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Transformer-fed lamp, first transformer pictogram | `3680 VA` | `1760 VA` | `16 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Transformer-fed lamp, second transformer pictogram | `3680 VA` | `1760 VA` | `16 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+| Compact fluorescent lamp | `1150 VA` | `550 VA` | `5 A` | `U3773B`, PDF p. 1, panel 1; no printed pagination |
+
+The sheet identifies the load classes pictorially; the two transformer columns are retained separately without inventing a transformer specification. No LED-load rating is given. The `16 A` aggregate limit applies across both `BMSW3002` outputs; the matrix does not authorize simultaneous `16 A` loads on each output.
 
 ## Identity
 
@@ -160,7 +179,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Lighting Management Room Controller with two independently controlled zero-crossing outputs and local BUS connections for sensors/commands. The canonical firmware exposes one actuator Object and one Room Controller-related Object over three declared Modules.
+Lighting Management Room Controller with two independently controlled zero-crossing outputs and local BUS connections for sensors/commands. Catalogue firmware `281` exposes external Object `6` in Module slots `1` and `2` and external Object `167` in slot `3`. Two actuator placements share the reusable Object definition; they are distinct Device-local Modules.
+
+| Published function | Scope / behavior | Evidence |
+| --- | --- | --- |
+| Factory association | Diagram associates sensor/control port `1` with `L1` and port `2` with `L2` on the illustrated two-output controller; `L2` applies to `BMSW3002` | `U3773B`, PDF p. 2, panel 3; no printed pagination |
+| Local test | Illustrated output `1` button turns `L1` on, then off on the next press; the indicator is shown lit before the second press and unlit afterwards | `U3773B`, PDF p. 2, panel 5; no printed pagination |
+| Setup interfaces | A handheld remote is directed at a sensor; controller `LEARN` control identified; no remote reference or complete sequence specified | `U3773B`, PDF p. 2, panel 6; no printed pagination |
 
 ## Observed behavior and corroboration
 
@@ -168,17 +193,29 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+The catalogue registers Advanced Configuration for this technical item and declares `3` Modules. Resolve the selected Module/Object and apply the firmware-specific fields and effective restrictions recorded above.
+
+| Product procedure | Published scope / boundary | Evidence |
+| --- | --- | --- |
+| Installation | Follow the illustrated fixing-stud arrangements and quarter-turn locking; rejected fastening positions are crossed out | `U3773B`, PDF p. 1, panel 2; no printed pagination |
+| Wiring | The two-output drawing identifies mains supply, switched loads, SCS BUS and sensor/control branches; `L2` and the summed current limit apply to `BMSW3002` | `U3773B`, PDF p. 2, panel 4; no printed pagination |
+| Output test | The illustrated output `1` button toggles the displayed load on and off; no press-duration timing is specified | `U3773B`, PDF p. 2, panel 5; no printed pagination |
+| Configuration / learning | Sensor-directed remote and controller `LEARN` control illustrated; sheet does not identify remote model, timed learning sequence or transfer procedure | `U3773B`, PDF p. 2, panel 6; no printed pagination |
+
+The installation sheet supplies no complete factory-reset, project-transfer or firmware-update procedure and no mapping from these local controls to the catalogue configuration fields or diagnostic serialization. Its numbered panels are illustration identifiers; the mounting diagram's `1/4` denotes a quarter turn, not a page reference.
 
 ## Source reconciliation
 
-The canonical catalogue binds `BMSW3002` and `048841`. The current BTicino catalogue directly documents `BMSW3002`; the Legrand `048841` identity remains catalogue-derived in this dossier.
+The canonical catalogue binds `BMSW3002` and Legrand `048841` to item `59`. `U3773B`, revision `U3773B01SY-09W51`, explicitly names `BMSW3001` and `BMSW3002` on PDF p. 1. It directly supports the BTicino reference and the shared electrical/load/mounting facts above. The Legrand reference remains catalogue-derived; the sheet does not name it. The existing BTicino catalogue summary and the retained instruction sheet agree on mains supply, the combined control-port allowance and the total two-output current limit. The sheet adds load-specific limits, temperature, mounting and illustrated commissioning controls.
+
+The `200 mA` value belongs to the combined port pictograms, not an own-consumption measurement. The `150 m` label bounds the illustrated sensor/control branch in the two-output wiring diagram; it is not a universal SCS installation length. The remote/`LEARN` illustration does not establish a complete learning workflow. The source revision does not identify an installed firmware tuple. Catalogue fields, product procedures and hardware/runtime behavior retain their separate evidence scopes.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
+- Obtain directly applicable Legrand `048841` documentation and fuller setup/reset/transfer/update instructions.
+- Establish any required own-consumption, LED-load and transformer-type specifications from directly applicable publisher evidence.
 - Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Corroborate relation filters, active topology and local-control to catalogue/diagnostic mappings on controlled hardware.
 
 ## Sources
 
@@ -187,3 +224,4 @@ The canonical catalogue binds `BMSW3002` and `048841`. The current BTicino catal
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+- [BMSW3001/BMSW3002 installation instruction sheet, archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf)

@@ -2959,3 +2959,22 @@ artifacts:
   provenance:
     publisher_url: https://dar.bticino.it/asset/Documents/U2860B.pdf
     retrieved_at: '2026-10-03'
+- id: device-doc-bmsw3001-bmsw3002-u3773b
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3773B.pdf
+  size: 320289
+  sha256: 60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf
+  language:
+  - fr
+  - en
+  language_evidence: predominantly pictographic; French SCS connection label and English Test/Learn labels
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/U3773B.pdf
+    retrieved_at: '2026-10-03'
