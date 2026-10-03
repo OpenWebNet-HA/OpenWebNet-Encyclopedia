@@ -2560,50 +2560,62 @@ items:
     blockers: []
     notes: []
   '1678':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0103
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0103 created from next priority-sorted queue cluster 1678. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 5 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1679':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0104
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0104 created from next priority-sorted queue cluster 1679. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 2 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1680':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0105
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0105 created from next priority-sorted queue cluster 1680. All three commercial identities, firmware, Module/Object/Virgin topology, complete legal domains/defaults, filters and configuration modes extracted from the registered canonical catalogue. 3 original publisher documents uploaded and immediately registered on main before incorporation; exact source revisions and Device-specific specifications, functions, procedures and discrepancies reconciled. All remaining source irregularities, further discovery and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1681':
     state: unreviewed
     priority: normal
