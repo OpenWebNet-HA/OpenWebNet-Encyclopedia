@@ -210,7 +210,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | partial | partial | pending | - |
 | normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0083 | partial | complete | partial | pending | - |
 | normal | 137 | IP55 PIR wall mounted sensor | 2 | review-ready | OWN-DEV-0084 | partial | complete | partial | pending | - |
-| normal | 160 | Flush mounted alarm central unit | 2 | review-ready | OWN-DEV-0088 | complete | complete | complete | pending | - |
+| normal | 160 | Flush mounted alarm central unit | 2 | review-ready | OWN-DEV-0088 | partial | complete | complete | pending | - |
 | normal | 975 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0095 | partial | partial | partial | pending | - |
 | normal | 1031 | Pulses counter interface | 2 | review-ready | OWN-DEV-0096 | partial | complete | partial | pending | - |
 | normal | 1078 | Video Station | 2 | review-ready | OWN-DEV-0097 | partial | complete | partial | pending | - |

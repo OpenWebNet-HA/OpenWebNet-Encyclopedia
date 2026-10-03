@@ -1093,7 +1093,7 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: complete
+      documentation_discovery: partial
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
