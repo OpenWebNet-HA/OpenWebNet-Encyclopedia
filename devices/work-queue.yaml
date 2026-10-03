@@ -1802,20 +1802,24 @@ items:
     blockers: []
     notes: []
   '1340':
-    state: unreviewed
+    state: review-ready
     priority: normal
-    outcome: null
+    outcome:
+      type: device-definition
+      device_ids:
+      - OWN-DEV-0102
     review:
-      commercial_identities: pending
-      database_extraction: pending
-      documentation_discovery: pending
-      documentation_archive: pending
-      source_reconciliation: pending
-      definition: pending
+      commercial_identities: complete
+      database_extraction: complete
+      documentation_discovery: partial
+      documentation_archive: complete
+      source_reconciliation: complete
+      definition: complete
       hardware_corroboration: pending
-      final_review: pending
+      final_review: partial
     blockers: []
-    notes: []
+    notes:
+    - '2026-10-03: OWN-DEV-0102 created for next unreviewed priority-sorted queue item 1340. All three Axolute variants, four firmware tuples, single Module/Object 32 and complete stored masks/defaults reviewed. Four official PDFs archived byte-for-byte and reconciled for physical data, applications, project settings, commissioning/transfer/update/info, and source discrepancies. Older U3567C, Italian translation, referenced payloads and hardware/runtime corroboration remain explicit open work; item 1809/model 48 remains separate.'
   '1376':
     state: review-ready
     priority: high

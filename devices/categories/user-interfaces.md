@@ -8,3 +8,4 @@
 | [OWN-DEV-0018](../definitions/own-dev-0018-local-display.md) | 6-record 4685 family | Local Display | FUN-selected scenario, sound or temperature-control interface |
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Six capacitive command positions plus UI settings |
 | [OWN-DEV-0020](../definitions/own-dev-0020-load-control-panel.md) | 6-record load-panel family | Load Control Panel bus | Four status / override buttons with LED feedback |
+| [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |

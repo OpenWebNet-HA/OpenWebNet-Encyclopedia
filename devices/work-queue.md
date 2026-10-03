@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 109 |
+| unreviewed | 108 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 101 |
+| review-ready | 102 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,7 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 1340 | Multimedia Touch Screen | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | 3 | unreviewed | - | pending | pending | pending | pending | - |
@@ -182,6 +181,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2321 | Classe 300X | 4 | review-ready | OWN-DEV-0050 | complete | complete | partial | pending | - |
 | normal | 81 | Basic contacts interface | 3 | review-ready | OWN-DEV-0072 | complete | complete | partial | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | review-ready | OWN-DEV-0098 | partial | complete | partial | pending | - |
+| normal | 1340 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0102 | partial | complete | complete | pending | - |
 | normal | 45 | PIR ceiling mounted sensor | 2 | review-ready | OWN-DEV-0051 | complete | complete | complete | pending | - |
 | normal | 47 | Ballast DIN dimmer 0-10 V | 2 | review-ready | OWN-DEV-0052 | complete | complete | complete | pending | - |
 | normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | review-ready | OWN-DEV-0053 | complete | complete | complete | pending | - |

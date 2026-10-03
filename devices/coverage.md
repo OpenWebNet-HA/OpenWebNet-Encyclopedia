@@ -18,6 +18,7 @@ Coverage is tracked by technical Device definition rather than by choosing one c
 | Functions | Modules, Objects, roles, and relevant functional systems are documented |
 | Configuration | Supported configuration methods and parameter domains are documented |
 | Constraints | Material configuration ranges, conditions, conversion constraints, and source irregularities are documented |
+| `OWN-DEV-0102` | Multimedia Touch Screen | Complete for item `1340`, model `41` | Complete for three catalogue variants and publisher manual covers | Four exact publisher PDFs archived/reconciled; older installer/translation discovery partial | Four catalogue tuples plus publisher package labels; payload compatibility pending | Unknown - fingerprint pending | Complete for catalogue topology and source-scoped project workflow; serialization pending | Complete stored masks/defaults plus published project settings | Partial - explicit source discrepancies and hardware/runtime mapping remain |
 
 Use **Complete**, **Partial**, **Unknown**, or **Not applicable** where a simple yes/no would hide important gaps.
 

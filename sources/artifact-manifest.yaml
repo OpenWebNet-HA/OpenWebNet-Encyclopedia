@@ -2978,3 +2978,75 @@ artifacts:
   provenance:
     publisher_url: https://dar.bticino.com/asset/Documents/U3773B.pdf
     retrieved_at: '2026-10-03'
+- id: device-doc-4690-bt00635-a-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: BT00635_a_EN.pdf
+  size: 1968944
+  sha256: 1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1b/40/1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1b/40/1b40e0a32a0a8de274874f966c8aa1a91674c5d2fc3af965fdc4e5a062a8242f.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  provenance:
+    publisher_url: https://dar.bticino.com/asset/Documents/BT00635_a_EN.pdf
+    retrieved_at: '2026-10-03'
+- id: device-doc-4690-u3567e
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3567E.pdf
+  size: 3527959
+  sha256: fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/2a/fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/2a/fd2a62023b9360f5f0d01232ea4a773ae75c8251111838787e195652ba24ca4c.pdf
+  language:
+  - mul
+  language_evidence: multilingual installer text including English
+  provenance:
+    publisher_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3567E.pdf&fileId=58107.23188.9117.39299
+    retrieved_at: '2026-10-03'
+- id: device-doc-4690-u3569h-software-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3569H_Software_EN.pdf
+  size: 22004037
+  sha256: 5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/51/90/5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/51/90/5190144970bca74a7b6c77cf66f53a8c07e420f8ef93c75228eb17ea337f03d3.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  provenance:
+    publisher_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3569H_Software_EN.pdf&fileId=58107.23188.9117.39299
+    retrieved_at: '2026-10-03'
+- id: device-doc-4690-u3569h-utente-en
+  kind: documentation
+  publisher: BTicino
+  media_type: application/pdf
+  filename: U3569H_Utente_EN.pdf
+  size: 7282869
+  sha256: 213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/21/3d/213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/21/3d/213d5d6d32c1f080e2b85c3a77a2c9c97876e4f0738d801e1b76e54ad1b86657.pdf
+  language:
+  - en
+  language_evidence: English publisher document
+  provenance:
+    publisher_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U3569H_Utente_EN.pdf&fileId=58107.23188.9117.39299
+    retrieved_at: '2026-10-03'
