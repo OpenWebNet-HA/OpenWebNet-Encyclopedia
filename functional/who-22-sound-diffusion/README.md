@@ -143,6 +143,19 @@ The library requests active areas with `*#22*2#SOURCE*13##`. A tested response a
 
 `DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client's re-request of RDS after a stop report is a subscription policy, not a mandatory protocol response.
 
+### Local volume and display scales
+
+The historical touchscreen implementation distinguishes local audio settings `L = 0..8` from amplifier volume `V = 0..31`:
+
+| Conversion | Implementation behavior |
+| --- | --- |
+| Local setting to amplifier volume | Round `L * 31 / 8` to the nearest integer |
+| Amplifier volume to local setting | Round `V * 8 / 31` to the nearest integer |
+| TS10 volume icon | Integer truncation of `V * 8 / 31`, giving indices `0..8` |
+| TS3.5 volume icon | Indices `1..9` for bands `0..3`, `4..7`, `8..11`, `12..14`, `15..17`, `18..20`, `21..23`, `24..27`, `28..31`, respectively |
+
+For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
+
 ### Tone, balance, and presets
 
 | Wire value | Touchscreen interpretation |

@@ -49,7 +49,7 @@ class BuildInfrastructureTests(unittest.TestCase):
             self.assertTrue(all(len(entry["sha256"]) == 64 for entry in manifest["artifacts"]))
             self.assertNotIn("guides/", first.read_text())
             self.assertEqual(135, manifest["coverage"]["canonical"]["documents"])
-            self.assertEqual(1222, manifest["coverage"]["retrieval"]["emitted_chunks"])
+            self.assertEqual(1223, manifest["coverage"]["retrieval"]["emitted_chunks"])
             self.assertEqual(7448, manifest["coverage"]["claims"]["records"])
             self.assertEqual(651, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
             self.assertEqual(2909, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
