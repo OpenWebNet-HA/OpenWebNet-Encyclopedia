@@ -1295,8 +1295,20 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/41/90/41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8.pdf
   language:
+  - it
   - en
-  language_evidence: Manufacturer original text and diagrams inspected
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - tr
+  - pl
+  - zh
+  - ar
+  language_evidence: Language headings and manufacturer instruction text inspected in the retained original.
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-le05271ab-20261004
@@ -1387,8 +1399,15 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/c6/76/c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c.pdf
   language:
+  - it
   - en
-  language_evidence: Manufacturer original text and diagrams inspected
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - ar
+  language_evidence: Language headings and manufacturer instruction text inspected in the retained original.
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-le14741aa-20261004
@@ -1897,11 +1916,7 @@ artifacts:
   language:
   - it
   - en
-  - fr
-  - de
-  - es
-  - nl
-  language_evidence: Manufacturer original text and diagrams inspected
+  language_evidence: Language headings and manufacturer instruction text inspected in the retained original.
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-o0194b-s-en-20261004
