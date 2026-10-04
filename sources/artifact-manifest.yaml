@@ -2580,6 +2580,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3499a-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u3499a manufacturer device documentation
+  media_type: application/pdf
+  filename: u3499a.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 813446
+  sha256: b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3499a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-u3500a-20261004
   kind: documentation
   publisher: BTicino / Legrand
