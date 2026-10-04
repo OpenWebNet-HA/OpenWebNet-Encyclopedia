@@ -915,7 +915,7 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/0e/7e/0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3.pdf
   language:
-  - en
+  - es
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
@@ -1295,7 +1295,18 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/ac/e5/ace54f437f59d280d26b053eb0c54c087d65c210d7fc1fa1b4b946cbe700fa63.pdf
   language:
+  - it
   - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - tr
+  - pl
+  - zh
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
@@ -1864,7 +1875,12 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/b6/1b/b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4.pdf
   language:
+  - it
   - en
+  - fr
+  - de
+  - es
+  - nl
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
@@ -2016,7 +2032,7 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/f1/02/f10259b0ed57f94f32afec0d2bde00ba022c5f3808868de7f12eab8ed2ff1e1f.pdf
   language:
-  - en
+  - fr
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
@@ -2036,7 +2052,18 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/d2/f4/d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec.pdf
   language:
+  - it
   - en
+  - fr
+  - de
+  - es
+  - el
+  - hu
+  - ru
+  - tr
+  - pl
+  - zh
+  - ar
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
@@ -2736,6 +2763,7 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf
   language:
+  - fr
   - en
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
@@ -2856,7 +2884,19 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf
   language:
+  - it
   - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - tr
+  - pl
+  - zh
+  - ar
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
