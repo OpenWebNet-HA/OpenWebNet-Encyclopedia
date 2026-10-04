@@ -198,6 +198,20 @@ For a local media source, a negative first-content callback switches the running
 
 Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
 
+At `TS10_1_0_23`, the power-amplifier client uses the following controls:
+
+| Operation | Client behavior |
+| --- | --- |
+| Initialization | Request state `12`, volume `1`, preset `19`, high/low tones `2` / `4`, balance `17` and loudness `20` |
+| Preset selection | Convert application indices `0..9` to wire values `2..11`, and `10..19` to `16..25`. The setter forwards values outside those application ranges unchanged; this is not validation of additional presets |
+| Tone and balance adjustment | Send relative commands with step `1`; the Equalizer menu selects an existing preset immediately |
+| Loudness | Write dimension `20` with `1` or `0` immediately |
+| Display state | Start with local zero/false defaults; update tone, balance, preset and loudness from reports, notifying only when a cached value changes. These controls have no Save/Reset transaction or playback confirmation |
+
+Custom preset names are application Configuration. BtExperience includes only enabled custom entries, preserving their configured IDs while appending them after the ten built-ins. Selection uses the entry ID, but the current description uses the reported application index as a list row. Those numbers can differ: the entry configured as the first custom preset has ID `11`, which the setter sends as wire preset `17`, while a report for wire preset `16` selects description row `10`. Sparse lists can display the wrong name or no name. Use the wire mapping above rather than menu IDs or labels to identify a preset.
+
+The reviewed power-amplifier client does not decode medium tones `3`, 3D `18` or equalizer-band selectors `21#1`, `21#2` or `21#3`, and its Equalizer menu supplies no band editor or custom-curve programming operation. This establishes the client's coverage, not the amplifier's capabilities. Earlier client revisions used different preset conversions and loudness-write syntax; they do not establish Firmware generations. See [Equalizer and preset evidence](../../project/review/myopencommunity-equalizer-history-review.md).
+
 Relative balance direction remains unresolved between sources: exact client tests emit `42#1` from the method labelled left and `43#1` from right, reversing the published `WHAT` labels above. The method names and their historical correction do not independently establish physical direction.
 
 ### Virtual-amplifier temporary-off events
