@@ -1070,6 +1070,32 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0196c-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0196C manufacturer device documentation
+  media_type: application/pdf
+  filename: O0196C.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 858344
+  sha256: f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O0196C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f8/8a/f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f8/8a/f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00058ac-s-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
