@@ -411,6 +411,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f450-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F450-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F450-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 555093
+  sha256: 2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F450&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2a/4e/2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2a/4e/2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-h4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
