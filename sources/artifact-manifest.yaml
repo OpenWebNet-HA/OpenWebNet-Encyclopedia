@@ -599,6 +599,26 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-hc4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: HC4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: HC4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 860462
+  sha256: fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261
+  source_url: https://www.bticino.com/products/pdf?sku=BT-HC4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/1f/fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/1f/fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
