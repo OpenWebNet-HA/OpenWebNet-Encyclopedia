@@ -391,6 +391,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00650-b-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00650_b_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00650_b_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1676680
+  sha256: 2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125
+  source_url: https://dar.bticino.com/asset/Documents/BT00650_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/19/2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/19/2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00650-b-it-20261004
   kind: documentation
   publisher: BTicino / Legrand
