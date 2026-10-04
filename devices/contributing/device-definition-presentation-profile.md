@@ -59,6 +59,10 @@ Account for every established or candidate commercial identity. Prefer:
 
 A plural `References` column is acceptable when several references share one relationship and evidence state. No SKU is canonical merely because it appears first. Use prose for commercial/package distinctions and unresolved equivalence.
 
+### Identity evidence and documentation gaps
+
+An explicit SKU-to-technical-item relationship in a manufacturer catalogue or database establishes a catalogue identity. Attribute that relationship to its source. Missing Device-specific PDFs are documentation-coverage gaps and must not, by themselves, downgrade the identity to candidate or unresolved. Track missing physical specifications and product-specific procedures separately. Reserve candidate or unresolved identity for an inferred relationship or a concrete ambiguity/contradiction about the same product reference in its applicable namespace. A document for a different product with a similar numerical reference is an excluded source match, not an identity contradiction.
+
 ### Commercial brand and line vocabulary
 
 The `Brand / line` column is human-facing commercial identity, not raw catalogue metadata.

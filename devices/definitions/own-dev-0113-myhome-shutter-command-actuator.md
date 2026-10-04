@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0113` | Project identity |
 | Technical description | MYHOME shutter command and actuator | Canonical catalogue and source-scoped manufacturer documents |
-| Commercial identities | `H4672M2S`, `LN4672M2S`, `067587` | All three catalogue commercial records; confidence scoped below |
+| Commercial identities | `H4672M2S`, `LN4672M2S`, `067587` | All three SKU-to-item mappings explicitly established by the manufacturer catalogue |
 | Catalogue item | `2248` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
 | Main catalogue system | Automation | Main system association |
 | Item model / `modobj` | `112` | Main association; independent of project ID |
@@ -14,23 +14,23 @@
 | Declared Modules | `4` | Firmware metadata |
 | Categories | Actuators, Commands, User interfaces, Multifunction devices | Source-derived roles |
 
-The catalogue defines one Shutter actuator Module, two command Modules and a separate User interface Module. Four logical Modules do not establish four physical outputs. All three commercial identities remain catalogue candidates: no retained exact-product manufacturer source corroborates their equivalence or physical specifications.
+The catalogue defines one Shutter actuator Module, two command Modules and a separate User interface Module. Four logical Modules do not establish four physical outputs. The manufacturer catalogue explicitly establishes all three SKU-to-item mappings. Exact-product PDFs have not been found; physical specifications remain a documentation gap.
 
 ## Commercial identities
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino | `H4672M2S` | Candidate identity | Catalogue record `2604`; publisher exact-product confirmation absent |
-| BTicino | `LN4672M2S` | Candidate identity | Catalogue record `2603`; publisher exact-product confirmation absent |
-| Legrand | `067587` | Candidate identity | Catalogue record `2605`; publisher exact-product confirmation absent |
+| BTicino - Axolute | `H4672M2S` | Established catalogue identity | `EN_DEVICE` record `2604` explicitly links this SKU to item `2248` |
+| BTicino | `LN4672M2S` | Established catalogue identity | `EN_DEVICE` record `2603` explicitly links this SKU to item `2248` |
+| Legrand - Céliane | `067587` | Established catalogue identity | `EN_DEVICE` record `2605` explicitly links this SKU to item `2248` |
 
-The catalogue labels `H4672M2S` Axolute, `LN4672M2S` Living (`L/N/NT`), and `067587` Céliane. These are source assignments; marketed-line confirmation for these exact candidates is absent. Online searches for both BTicino references and the Legrand reference, including manufacturer-domain searches, did not locate an exact matching product sheet. The tested manufacturer catalogue endpoints were unavailable; this is not proof that the products never existed. The archived conflict source identifies `AR-67587` as an Epure tiltable detector, which is a different role/line. Zero-padding and numerical equality do not establish equivalence. The brand-only rows keep that uncertainty visible.
+The manufacturer catalogue explicitly links all three SKUs to this technical item through `EN_DEVICE.id_item` relationships. It labels the H reference Axolute, the LN reference Living (internal `L/N/NT`), and the Legrand reference Céliane. Those catalogue identities are established independently of PDF availability. Online searches did not locate exact-product sheets; unavailable product endpoints do not invalidate the catalogue records. The retained similar-reference source describes `AR-67587` as an Epure tiltable detector. It is excluded as product evidence: reference resemblance does not establish equivalence or contradict these SKU-to-item mappings.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `F01716EN-02.pdf` | English technical sheet; commercial conflict evidence | `F01716EN/02; updated 30/03/2021, created 11/12/2015` | AR-67587 is an Epure tiltable detector, not the catalogue shutter command/actuator. Identity/range p. 1; printed/PDF pp. 1-2 coincide. No specifications transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/f9/08/f908842d39926550837120ecf15295b5fccccac08e26cb9ebb174af13365da09.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/F01716EN-02.pdf) |
+| `F01716EN-02.pdf` | English technical sheet; excluded similar-reference evidence | `F01716EN/02; updated 30/03/2021, created 11/12/2015` | AR-67587 is an Epure tiltable detector, not the catalogue shutter command/actuator. Identity/range p. 1; printed/PDF pp. 1-2 coincide. No specifications transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/f9/08/f908842d39926550837120ecf15295b5fccccac08e26cb9ebb174af13365da09.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/F01716EN-02.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2248`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -38,8 +38,7 @@ The catalogue labels `H4672M2S` Axolute, `LN4672M2S` Living (`L/N/NT`), and `067
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Catalogue-described format | Two-module reference suffix; exact physical format not independently corroborated | Canonical commercial description/reference; not a measured assembly |
-| Manufacturer reference collision | `AR-67587`: Epure tiltable detector | F01716EN/02 pp. 1-2; conflict evidence only |
-| Dimensions, supply/current, operating/storage range | Unknown for these candidate identities | No exact matching retained manufacturer specification |
+| Dimensions, supply/current, operating/storage range | Unknown for these catalogue-established identities | No exact matching retained manufacturer specification |
 | Outputs, contacts, motor/load ratings and mounting | Unknown for the physical Device | Logical actuator/command topology is not a load rating or wiring diagram |
 | Keys, covers, LEDs, sensors and configurator sockets | Unknown physical arrangement | Reusable UI/configuration fields do not prove construction |
 
@@ -400,12 +399,13 @@ Object `430` N1 is restricted to `100..255`, excluding default `0`; no replaceme
 
 ## Source reconciliation
 
-The complete canonical catalogue defines this technical item and its candidate identities, firmware, Module/Object/Virgin topology, legal fields, filters, modes and related parameter/connection/package metadata. The retained publisher source is incorporated as commercial conflict evidence only. Its dimensions, electrical ratings, functions and installation instructions describe a different product and are not attributed to this Device.
+The complete canonical catalogue defines this technical item and its catalogue-established identities, firmware, Module/Object/Virgin topology, legal fields, filters, modes and related parameter/connection/package metadata. The retained publisher source is incorporated as excluded similar-reference evidence only. Its dimensions, electrical ratings, functions and installation instructions describe a different product and are not attributed to this Device.
 
 | Issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
-| Commercial identity | Catalogue `067587` = Céliane conflicts with `AR-67587` = Epure tiltable detector; equivalence is unresolved | F01716EN/02 pp. 1-2 |
-| Similar references | H/LN variants and newer Living Now K-series references are not automatically equivalent; no product substitution | Catalogue plus exact-reference online research |
+| Catalogue identity | All three SKUs explicitly map to item `2248`; missing exact-product PDFs affect documentation coverage, not identity status | Canonical `EN_DEVICE` records |
+| Excluded source applicability | The retained similar-reference source describes a different product/line. No equivalence is established, and its specifications are not transferred; this does not invalidate the catalogue mappings | Documentation inventory and source-scoped comparison |
+| Shared item versus physical substitution | The H, LN and Legrand references share this catalogue technical item. That grouping does not establish interchangeable physical parts or equivalence to newer Living Now K-series products | Explicit catalogue mappings; physical interchangeability not documented |
 | Firmware build | Firmware `775` is `1.0` with no build row; not default. Neither catalogue status nor absent build proves a shipped release | Canonical EN_FIRMWARE / build associations |
 | Staircase-light default | Object `430` N1 effective domain `100..255` excludes default `0`; no replacement | Attached firmware filter |
 | Destination-domain hole | Object `145` DEST_LEV omits `14`; similar domains do not fill the gap | Reusable Object and firmware filter |
@@ -416,7 +416,7 @@ The complete canonical catalogue defines this technical item and its candidate i
 
 ## Evidence limits and open work
 
-- Locate exact-product sheets, instructions or packaging for `H4672M2S`, `LN4672M2S` and `067587`; resolve the manufacturer reference/line collision.
+- Locate exact-product sheets, instructions or packaging for `H4672M2S`, `LN4672M2S` and `067587` to establish physical specifications and product-specific procedures.
 - Establish physical ratings, wiring, mounting, controls and complete commissioning/reset/update procedures.
 - Inspect registered parameter payloads and corroborate accepted Object selection, Virgin transitions, multi-slot occupancy and firmware restrictions.
 - Obtain sanitized hardware evidence for installed firmware/build, hardware revision, MCU identity and functional behavior; none is retained.

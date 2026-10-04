@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0112` | Project identity |
 | Technical description | MYHOME lighting command and actuator | Canonical catalogue and source-scoped manufacturer documents |
-| Commercial identities | `H4672M2L`, `LN4672M2L`, `067586` | All three catalogue commercial records; confidence scoped below |
+| Commercial identities | `H4672M2L`, `LN4672M2L`, `067586` | All three SKU-to-item mappings explicitly established by the manufacturer catalogue |
 | Catalogue item | `2247` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
 | Main catalogue system | Automation | Main system association |
 | Item model / `modobj` | `111` | Main association; independent of project ID |
@@ -14,23 +14,23 @@
 | Declared Modules | `5` | Firmware metadata |
 | Categories | Actuators, Commands, User interfaces, Multifunction devices | Source-derived roles |
 
-The catalogue defines two Light actuator Modules, two command Modules and a separate User interface Module. Five logical Modules do not establish five physical outputs. All three commercial identities remain catalogue candidates: no retained exact-product manufacturer source corroborates their equivalence or physical specifications.
+The catalogue defines two Light actuator Modules, two command Modules and a separate User interface Module. Five logical Modules do not establish five physical outputs. The manufacturer catalogue explicitly establishes all three SKU-to-item mappings. Exact-product PDFs have not been found; physical specifications remain a documentation gap.
 
 ## Commercial identities
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino | `H4672M2L` | Candidate identity | Catalogue record `2599`; publisher exact-product confirmation absent |
-| BTicino | `LN4672M2L` | Candidate identity | Catalogue record `2600`; publisher exact-product confirmation absent |
-| Legrand | `067586` | Candidate identity | Catalogue record `2601`; publisher exact-product confirmation absent |
+| BTicino - Axolute | `H4672M2L` | Established catalogue identity | `EN_DEVICE` record `2599` explicitly links this SKU to item `2247` |
+| BTicino | `LN4672M2L` | Established catalogue identity | `EN_DEVICE` record `2600` explicitly links this SKU to item `2247` |
+| Legrand - Céliane | `067586` | Established catalogue identity | `EN_DEVICE` record `2601` explicitly links this SKU to item `2247` |
 
-The catalogue labels `H4672M2L` Axolute, `LN4672M2L` Living (`L/N/NT`), and `067586` Céliane. These are source assignments; marketed-line confirmation for these exact candidates is absent. Online searches for both BTicino references and the Legrand reference, including manufacturer-domain searches, did not locate an exact matching product sheet. The tested manufacturer catalogue endpoints were unavailable; this is not proof that the products never existed. The archived conflict source identifies `67586` as an Epure satin-steel thermostat probe, which is a different role/line. Zero-padding and numerical equality do not establish equivalence. The brand-only rows keep that uncertainty visible.
+The manufacturer catalogue explicitly links all three SKUs to this technical item through `EN_DEVICE.id_item` relationships. It labels the H reference Axolute, the LN reference Living (internal `L/N/NT`), and the Legrand reference Céliane. Those catalogue identities are established independently of PDF availability. Online searches did not locate exact-product sheets; unavailable product endpoints do not invalidate the catalogue records. The retained similar-reference source describes `67586` as an Epure satin-steel thermostat probe. It is excluded as product evidence: reference resemblance does not establish equivalence or contradict these SKU-to-item mappings.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `Arnould-historical-selection-guide.pdf` | French commercial guide; commercial conflict evidence | `No publication date established in retained original` | Printed/PDF p. 18 identifies 67586 as Epure satin-steel thermostat probe, not the catalogue lighting command/actuator. Relevant page verified visually; no specifications transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/50/44/50445914174b741659c19b5610642a52db530765041d1700c399f55c0f414bdb.pdf) | [Publisher original](https://assets.legrand.com/general/ouidoo/pdf/legrand-art-arnould-guide-de-choix.pdf) |
+| `Arnould-historical-selection-guide.pdf` | French commercial guide; excluded similar-reference evidence | `No publication date established in retained original` | Printed/PDF p. 18 identifies 67586 as Epure satin-steel thermostat probe, not the catalogue lighting command/actuator. Relevant page verified visually; no specifications transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/50/44/50445914174b741659c19b5610642a52db530765041d1700c399f55c0f414bdb.pdf) | [Publisher original](https://assets.legrand.com/general/ouidoo/pdf/legrand-art-arnould-guide-de-choix.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2247`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -38,8 +38,7 @@ The catalogue labels `H4672M2L` Axolute, `LN4672M2L` Living (`L/N/NT`), and `067
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Catalogue-described format | Two-module reference suffix; exact physical format not independently corroborated | Canonical commercial description/reference; not a measured assembly |
-| Manufacturer reference collision | `67586`: Epure satin-steel thermostat probe | Art d’Arnould historical guide printed/PDF p. 18; conflict evidence only |
-| Dimensions, supply/current, operating/storage range | Unknown for these candidate identities | No exact matching retained manufacturer specification |
+| Dimensions, supply/current, operating/storage range | Unknown for these catalogue-established identities | No exact matching retained manufacturer specification |
 | Outputs, contacts, motor/load ratings and mounting | Unknown for the physical Device | Logical actuator/command topology is not a load rating or wiring diagram |
 | Keys, covers, LEDs, sensors and configurator sockets | Unknown physical arrangement | Reusable UI/configuration fields do not prove construction |
 
@@ -375,12 +374,13 @@ Object `430` N1 is restricted to `100..255`, excluding default `0`; no replaceme
 
 ## Source reconciliation
 
-The complete canonical catalogue defines this technical item and its candidate identities, firmware, Module/Object/Virgin topology, legal fields, filters, modes and related parameter/connection/package metadata. The retained publisher source is incorporated as commercial conflict evidence only. Its dimensions, electrical ratings, functions and installation instructions describe a different product and are not attributed to this Device.
+The complete canonical catalogue defines this technical item and its catalogue-established identities, firmware, Module/Object/Virgin topology, legal fields, filters, modes and related parameter/connection/package metadata. The retained publisher source is incorporated as excluded similar-reference evidence only. Its dimensions, electrical ratings, functions and installation instructions describe a different product and are not attributed to this Device.
 
 | Issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
-| Commercial identity | Catalogue `067586` = Céliane conflicts with `67586` = Epure satin-steel thermostat probe; equivalence is unresolved | Art d’Arnould historical guide printed/PDF p. 18 |
-| Similar references | H/LN variants and newer Living Now K-series references are not automatically equivalent; no product substitution | Catalogue plus exact-reference online research |
+| Catalogue identity | All three SKUs explicitly map to item `2247`; missing exact-product PDFs affect documentation coverage, not identity status | Canonical `EN_DEVICE` records |
+| Excluded source applicability | The retained similar-reference source describes a different product/line. No equivalence is established, and its specifications are not transferred; this does not invalidate the catalogue mappings | Documentation inventory and source-scoped comparison |
+| Shared item versus physical substitution | The H, LN and Legrand references share this catalogue technical item. That grouping does not establish interchangeable physical parts or equivalence to newer Living Now K-series products | Explicit catalogue mappings; physical interchangeability not documented |
 | Firmware build | Firmware `774` is `1.0` with no build row; not default. Neither catalogue status nor absent build proves a shipped release | Canonical EN_FIRMWARE / build associations |
 | Staircase-light default | Object `430` N1 effective domain `100..255` excludes default `0`; no replacement | Attached firmware filter |
 | Destination-domain hole | Object `145` DEST_LEV omits `14`; similar domains do not fill the gap | Reusable Object and firmware filter |
@@ -390,7 +390,7 @@ The complete canonical catalogue defines this technical item and its candidate i
 
 ## Evidence limits and open work
 
-- Locate exact-product sheets, instructions or packaging for `H4672M2L`, `LN4672M2L` and `067586`; resolve the manufacturer reference/line collision.
+- Locate exact-product sheets, instructions or packaging for `H4672M2L`, `LN4672M2L` and `067586` to establish physical specifications and product-specific procedures.
 - Establish physical ratings, wiring, mounting, controls and complete commissioning/reset/update procedures.
 - Inspect registered parameter payloads and corroborate accepted Object selection, Virgin transitions, multi-slot occupancy and firmware restrictions.
 - Obtain sanitized hardware evidence for installed firmware/build, hardware revision, MCU identity and functional behavior; none is retained.

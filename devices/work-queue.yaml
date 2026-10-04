@@ -3372,7 +3372,7 @@ items:
       device_ids:
       - OWN-DEV-0110
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: complete
@@ -3383,6 +3383,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0110 created from next priority queue cluster 2243. Complete canonical catalogue identity, firmware/build, Module/Object/Virgin topology, fields/domains/defaults, filters, configuration modes, connections, parameters and packages extracted. 1 original publisher documents archived and source-scoped content reconciled; twenty new originals for this batch uploaded and immediately registered on main before incorporation. Exact-product evidence absent for all three commercial candidates; current 67584 is an Art Epure control and is retained only as conflict evidence. Physical ratings remain unknown. Further source discovery, commercial/source discrepancies and hardware/runtime evidence limits remain explicit; final evidence closure is partial.'
+    - '2026-10-04: Identity classification corrected for OWN-DEV-0110. All three SKU-to-item relationships are explicitly established in manufacturer EN_DEVICE records. This supersedes the earlier candidate-identity classification, which incorrectly treated missing exact-product PDFs as unresolved identity. Documentation discovery remains partial and physical specifications/procedures unknown. Similar-reference Arnould documents are excluded product matches, not evidence invalidating the catalogue identities.'
   '2245':
     state: review-ready
     priority: normal
@@ -3391,7 +3392,7 @@ items:
       device_ids:
       - OWN-DEV-0111
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: complete
@@ -3402,6 +3403,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0111 created from next priority queue cluster 2245. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
+    - '2026-10-04: Identity classification corrected for OWN-DEV-0111. All three SKU-to-item relationships are explicitly established in manufacturer EN_DEVICE records. This supersedes the earlier candidate-identity classification, which incorrectly treated missing exact-product PDFs as unresolved identity. Documentation discovery remains partial and physical specifications/procedures unknown. Similar-reference Arnould documents are excluded product matches, not evidence invalidating the catalogue identities.'
   '2247':
     state: review-ready
     priority: normal
@@ -3410,7 +3412,7 @@ items:
       device_ids:
       - OWN-DEV-0112
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: complete
@@ -3421,6 +3423,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0112 created from next priority queue cluster 2247. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
+    - '2026-10-04: Identity classification corrected for OWN-DEV-0112. All three SKU-to-item relationships are explicitly established in manufacturer EN_DEVICE records. This supersedes the earlier candidate-identity classification, which incorrectly treated missing exact-product PDFs as unresolved identity. Documentation discovery remains partial and physical specifications/procedures unknown. Similar-reference Arnould documents are excluded product matches, not evidence invalidating the catalogue identities.'
   '2248':
     state: review-ready
     priority: normal
@@ -3429,7 +3432,7 @@ items:
       device_ids:
       - OWN-DEV-0113
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
       documentation_discovery: partial
       documentation_archive: complete
@@ -3440,6 +3443,7 @@ items:
     blockers: []
     notes:
     - '2026-10-03: OWN-DEV-0113 created from next priority queue cluster 2248. Complete canonical identity, firmware/build, Module/Object/Virgin topology, every legal field/domain/default and attached filter, configuration modes, connection/parameter/package metadata extracted. All three commercial identities remain candidates; retained exact manufacturer conflict evidence identifies a different Legrand product. Physical specifications, wiring and exact commissioning/reset/update procedures remain unknown. 1 retained publisher originals incorporated; fourteen new original PDFs for this batch uploaded, publicly fingerprint-verified and immediately registered/pushed on main before incorporation, with one shared guide already archived. Further discovery, source/filter/default inconsistencies and hardware/runtime evidence limits remain explicit; final evidence closure remains partial.'
+    - '2026-10-04: Identity classification corrected for OWN-DEV-0113. All three SKU-to-item relationships are explicitly established in manufacturer EN_DEVICE records. This supersedes the earlier candidate-identity classification, which incorrectly treated missing exact-product PDFs as unresolved identity. Documentation discovery remains partial and physical specifications/procedures unknown. Similar-reference Arnould documents are excluded product matches, not evidence invalidating the catalogue identities.'
   '2266':
     state: unreviewed
     priority: normal

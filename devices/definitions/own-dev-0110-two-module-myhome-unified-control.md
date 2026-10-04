@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0110` | Project identity |
 | Technical description | Two-module MYHOME unified control | Canonical catalogue and source-scoped manufacturer documents |
-| Commercial identities | `H4652M2`, `LN4652M2`, `067584` | All three catalogue commercial records; confidence scoped below |
+| Commercial identities | `H4652M2`, `LN4652M2`, `067584` | All three SKU-to-item mappings explicitly established by the manufacturer catalogue |
 | Catalogue item | `2243` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
 | Main catalogue system | Automation | Main system association |
 | Item model / `modobj` | `109` | Main association; independent of project ID |
@@ -14,23 +14,23 @@
 | Declared Modules | `3` | Firmware metadata |
 | Categories | Commands, Scenarios, User interfaces, Multifunction devices | Source-derived roles |
 
-This is a canonical catalogue technical-item description. All three commercial references are candidates pending exact-product manufacturer corroboration. The firmware declares two command Modules and one User interface Module; “2 moduli” in the catalogue product title describes physical format separately.
+This is a canonical catalogue technical-item description. The manufacturer catalogue explicitly establishes all three SKU-to-item mappings. Exact-product PDFs have not been found; physical specifications remain a documentation gap. The firmware declares two command Modules and one User interface Module; “2 moduli” in the catalogue product title describes physical format separately.
 
 ## Commercial identities
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - Axolute | `H4652M2` | Candidate identity | Catalogue record `2596`; publisher exact-product confirmation absent |
-| BTicino - LivingLight | `LN4652M2` | Candidate identity | Catalogue record `2597`; publisher exact-product confirmation absent |
-| Legrand - Céliane | `067584` | Candidate identity | Catalogue record `2598`; publisher exact-product confirmation absent |
+| BTicino - Axolute | `H4652M2` | Established catalogue identity | `EN_DEVICE` record `2596` explicitly links this SKU to item `2243` |
+| BTicino | `LN4652M2` | Established catalogue identity | `EN_DEVICE` record `2597` explicitly links this SKU to item `2243` |
+| Legrand - Céliane | `067584` | Established catalogue identity | `EN_DEVICE` record `2598` explicitly links this SKU to item `2243` |
 
-The canonical catalogue assigns `H4652M2` to Axolute, `LN4652M2` to internal `L/N/NT`, and `067584` to Céliane. The LivingLight row is a candidate mapping of that catalogue grouping, not an exact-product publisher confirmation. Internet searches for both BTicino references yielded no exact manufacturer sheet; their international product endpoints returned unavailable. The retained current French commercial catalogue places `67584` in Art Epure, not Céliane. Reference zero-padding alone does not establish that product’s equivalence to this item. Similar H4652/2, K4652M2, LN4652 and Céliane 067552 products are separate and do not provide exact-product ratings here.
+The manufacturer catalogue assigns `H4652M2` to Axolute, `LN4652M2` to Living (internal `L/N/NT`), and `067584` to Céliane through explicit `EN_DEVICE.id_item` relationships. Those catalogue identities are established independently of PDF availability. Internet searches did not locate exact-product sheets; unavailable product endpoints do not invalidate the catalogue records. The retained French catalogue page describes `67584` as Art Epure and lists Céliane `067552` separately. It is excluded as product evidence: reference resemblance does not establish equivalence or contradict these SKU-to-item mappings. Similar H4652/2, K4652M2 and LN4652 products do not provide specifications for this Device.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `cm222600_0610.pdf` | French commercial catalogue extract; identity conflict evidence | `CM222600; references catalogue edition 2022; no full date printed` | Printed p. 610 / PDF p. 1: `67584` is an Art Epure shutter control; Céliane simple/double reference is 067552. Neither establishes item 2243 equivalence. | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/8b/9e8b39a676d1104c3d7a33dfa222246f088536fda96f71c48ca43d3fed119419.pdf) | [Publisher original](https://assets.legrand.com/pim/DOCUMENT/cm222600_0610.pdf) |
+| `cm222600_0610.pdf` | French commercial catalogue extract; excluded similar-reference evidence | `CM222600; references catalogue edition 2022; no full date printed` | Printed p. 610 / PDF p. 1: `67584` is an Art Epure shutter control; Céliane simple/double reference is 067552. Neither establishes item 2243 equivalence. | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/8b/9e8b39a676d1104c3d7a33dfa222246f088536fda96f71c48ca43d3fed119419.pdf) | [Publisher original](https://assets.legrand.com/pim/DOCUMENT/cm222600_0610.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2243`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -38,8 +38,7 @@ The canonical catalogue assigns `H4652M2` to Axolute, `LN4652M2` to internal `L/
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Source-described format | Two physical wiring-device modules, from catalogue title only | Item `2243`/commercial descriptions; exact published mounting not corroborated |
-| Current manufacturer reference collision | Printed `67584`: Art Epure single shutter control, satin-steel/chrome-button variant; Céliane simple/double reference is `067552` | CM222600 printed p. 610 / PDF p. 1; identity conflict evidence, not specifications of this Device |
-| Metric dimensions, supply/current and operating range | Not established for the three candidate identities by retained exact-product manufacturer evidence | No substitute ratings from similarly named controls |
+| Metric dimensions, supply/current and operating range | Not established for the three catalogue-established identities by retained exact-product manufacturer evidence | No substitute ratings from similarly named controls |
 | Local key covers/LEDs/contacts | Reusable command/UI topology is documented; physical arrangement and packaged parts uncorroborated | Catalogue topology does not establish manufactured construction |
 
 ## Identity
@@ -340,11 +339,12 @@ Object `430` N1 is restricted to `100..255`, excluding reusable default `0`; no 
 
 ## Source reconciliation
 
-The complete canonical source defines the technical item, three commercial candidates, firmware applicability, three Modules, ten Objects, Virgin `501`, seven firmware fields, every reusable field and fifteen Object/Firmware filters. No exact manufacturer document for `H4652M2`/`LN4652M2`/`067584` was found in the online research performed `2026-10-03`. The archived French catalogue page is incorporated solely as commercial conflict evidence, not used to substitute a product.
+The complete canonical source defines the technical item, three catalogue-established commercial identities, firmware applicability, three Modules, ten Objects, Virgin `501`, seven firmware fields, every reusable field and fifteen Object/Firmware filters. No exact manufacturer document for `H4652M2`/`LN4652M2`/`067584` was found in the online research performed `2026-10-03`. The archived French catalogue page is incorporated solely as excluded similar-reference evidence, not used to substitute a product.
 
 | Issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
-| Commercial collision | Current printed `67584` is Art Epure and Céliane simple/double is `067552`; catalogue `067584` = Céliane remains candidate. No silent SKU rename/line replacement | Catalogue EN_DEVICE; CM222600 printed p. 610 / PDF p. 1 |
+| Catalogue identity | All three SKUs explicitly map to item `2243`; missing exact-product PDFs affect documentation coverage, not identity status | Canonical `EN_DEVICE` records |
+| Excluded source applicability | The retained similar-reference source describes a different product/line. No equivalence is established, and its specifications are not transferred; this does not invalidate the catalogue mappings | Documentation inventory and source-scoped comparison |
 | Firmware build | Firmware `1`.0 has no build row; status Official and default flag false do not establish a shipped/installed release | Firmware `772` |
 | UI versus construction | Reusable Object `143` includes UI fields; source topology does not prove the physical buttons, sensors or LEDs | Object `143` |
 | Topology asymmetry | Virgin `501` generic membership differs from direct firmware membership; two-slot Object `145` has only one stored starting placement | Firmware/Virgin/EN_SLOTS |
@@ -353,7 +353,7 @@ The complete canonical source defines the technical item, three commercial candi
 
 ## Evidence limits and open work
 
-- Locate exact-product manufacturer documentation or packaging for `H4652M2` and `LN4652M2` and resolve the Céliane `067584` versus Art Epure `67584` reference collision.
+- Locate exact-product manufacturer documentation or packaging for `H4652M2`, `LN4652M2` and `067584` to establish physical specifications and product-specific procedures.
 - Establish physical mounting, supply/current, operating limits, key covers and controls without transferring specifications from similarly named devices.
 - Inspect exact parameter definitions and capture accepted firmware/Object/Virgin topology, including the two-slot shutter alternative and omitted `CEN` selector.
 - Corroborate all functional mappings and filter/default behavior on actual hardware; no installed firmware/build/hardware/MCU or observations are retained.
