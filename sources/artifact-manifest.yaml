@@ -1144,6 +1144,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4713a-s-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4713A_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: U4713A_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 5721220
+  sha256: 8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4713A_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
