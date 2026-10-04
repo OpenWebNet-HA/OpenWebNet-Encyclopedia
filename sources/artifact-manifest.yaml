@@ -1164,6 +1164,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-light-now-2026-2m-catalogue-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Light-Now-2026-2M-catalogue manufacturer device documentation
+  media_type: application/pdf
+  filename: Light-Now-2026-2M-catalogue.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 26408258
+  sha256: 06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9
+  source_url: https://www.bticino.com/sites/default/files/2026-02/Light%20Now%20catalogue%202%20MODULES%202026.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/86/06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/86/06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-living-now-2025-3m-catalogue-20261003
   kind: documentation
   publisher: BTicino / Legrand
