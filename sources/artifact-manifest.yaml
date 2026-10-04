@@ -920,6 +920,26 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le11578ab-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE11578AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE11578AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2485422
+  sha256: c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE11578AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c6/76/c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c6/76/c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-le14741aa-20261004
   kind: documentation
   publisher: BTicino / Legrand
