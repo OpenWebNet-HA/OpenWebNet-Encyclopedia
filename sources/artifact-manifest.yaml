@@ -2120,6 +2120,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3500a-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u3500a manufacturer device documentation
+  media_type: application/pdf
+  filename: u3500a.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2200200
+  sha256: a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3500a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-u3970a-20261003
   kind: documentation
   publisher: BTicino / Legrand
