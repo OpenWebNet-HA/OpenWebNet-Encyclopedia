@@ -1024,6 +1024,32 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0195e-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0195E manufacturer device documentation
+  media_type: application/pdf
+  filename: O0195E.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 912765
+  sha256: 67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O0195E.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/67/f4/67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/67/f4/67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00058ac-s-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
