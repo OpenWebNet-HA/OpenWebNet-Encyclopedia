@@ -879,6 +879,26 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-h4684-l4684-spanish-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: H4684-L4684-Spanish-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: H4684-L4684-Spanish-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 266537
+  sha256: 0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3
+  source_url: https://www.bticino.es/conceptbook/files/H4684_L4684.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0e/7e/0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0e/7e/0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-hc4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
