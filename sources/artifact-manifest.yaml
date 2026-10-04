@@ -471,6 +471,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f522-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F522-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F522-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 53122
+  sha256: bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F522&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-h4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
