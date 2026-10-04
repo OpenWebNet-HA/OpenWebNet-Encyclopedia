@@ -860,6 +860,32 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le14741aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14741AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14741AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2377688
+  sha256: f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14741AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f2/db/f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f2/db/f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-living-now-2025-3m-catalogue-20261003
   kind: documentation
   publisher: BTicino / Legrand
