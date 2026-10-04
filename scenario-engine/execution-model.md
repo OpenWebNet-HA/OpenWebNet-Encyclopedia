@@ -102,11 +102,26 @@ An acknowledgement and an observed state change answer different questions and s
 
 ## Historical touchscreen condition evaluation
 
-The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event. Saving a changed condition re-requests Device state; the evaluator adjusts initialization according to whether the old condition was already satisfied.
+The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event.
 
-Initialization is condition-specific: the Auxiliary test permits the first matching `WHO 9` state to fire, then suppresses repeats. Other tested predicates include inclusive dimmer/volume ranges and a temperature band of ±10 stored tenths around the selected threshold. In Celsius mode that is ±1.0 °C. Amplifier volume conditions wait for ON status followed by volume rather than triggering from ON alone.
+Saving an unchanged predicate neither re-requests state nor rearms it. For a changed predicate, the evaluator clears a previously satisfied state while preserving initialization; the next matching state can therefore fire. If the old predicate was unsatisfied, it clears initialization and suppresses the next managed state event. Unrelated values do not initialize a predicate.
+
+Initialization is condition-specific: the Auxiliary test permits the first matching `WHO 9` state to fire, then suppresses repeats. Other tested predicates include inclusive dimmer/volume ranges and a temperature band of ±10 tenths of the selected scale around the threshold, giving ±1.0 °C or ±1.0 °F. These are application operands, not Device thresholds. A bare dimmer ON value without a level substitutes local value `1`; it does not establish a measured output level. Volume evaluation uses the cached amplifier ON state; ON alone does not supply a volume operand.
 
 The product's advanced-scenario tests also establish enable and weekday gating. With both time and Device conditions, a Device transition alone does not start the action: the time event checks the current Device condition. Without a time condition, the Device event can start the action. The action sends its configured literal frame through the command writer.
+
+| Advanced-scenario control | Touchscreen behavior |
+| --- | --- |
+| Automatic trigger | Requires enabled state and the current weekday; time and Device gates apply as above |
+| Manual Start | Sends the action directly, bypassing enabled, weekday, time and Device gates |
+| Enable / disable | Changes and persists a local flag; does not send a `WHO 17` command or itself trigger the action |
+| Weekday selection | Bit `0` is Monday, bit `6` Sunday; editable weekday values also govern automatic execution before Save |
+
+Time conditions use the touchscreen's local clock and a single-shot timer, rearmed after timeout. Date/time notifications recalculate the interval from that local clock; their payload is not used as the trigger time. The implementation wraps the interval within 24 hours, without establishing calendar recurrence, daylight-saving handling or recovery of missed events. Resetting editable time values does not immediately rearm the timer.
+
+Advanced-scenario Configuration selects active time and Device conditions and a literal action frame. Action type and Command IDs supply descriptions; they do not render or select the frame's namespace. A scheduled-scenario control instead sends separately configured Start, Stop, Enable and Disable frames when present. Its label does not establish a touchscreen scheduler or execution-state feedback. Use the literal frame to distinguish [`WHO 17`](../functional/who-17-scenario-management/), [`WHO 15` CEN](../functional/who-15-cen/), and [`WHO 25` CEN+ or Scenario Plus](../functional/who-25-transversal/).
+
+Local “started” notifications follow action dispatch and do not establish acknowledgement or Device execution. See [Scenario and condition history evidence](../project/review/myopencommunity-scenario-history-review.md#conditions-and-automatic-execution) for assertion scope and historical corrections.
 
 This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
 

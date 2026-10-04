@@ -90,6 +90,20 @@ A receiver should therefore distinguish three categories inside `WHO 0`:
 
 The BTicino client at `TS10_1_0_23` also accepts unparameterized `*0*40*WHERE##` and `*0*41*WHERE##` as programming-state indications without a selected scenario. Only the unparameterized start indication bypasses the client's module-address check, allowing another module's programming event to affect its cached state. This is client behavior, not proof that every physical module starts recording together.
 
+Other programming and lock indications require an exact match of the complete configured `WHERE`, including any interface suffix. The library keeps programming status separate from its unlock cache: a start indication sets that cache without emitting an unlock value, so a following `44` can be suppressed. Repeated `43` still produces a lock value; an end indication does not update the unlock cache.
+
+The touchscreen's configured scenario entries apply a further local state model:
+
+| Received indication | Entry state before | Entry state after |
+| --- | --- | --- |
+| Start recording this scenario | Unlocked | Editing |
+| Start recording another scenario, or no selected scenario | Unlocked | Locked |
+| Start recording | Locked or Editing | Unchanged |
+| End recording, including another scenario | Any | Unlocked |
+| Lock / unlock | Any | Locked / Unlocked |
+
+These are client transitions, not guarantees about F420 recording or storage. Activation, erase, unavailable and memory-full indications are not forwarded by this library decoder. See [Programming-state evidence](../../project/review/myopencommunity-scenario-history-review.md#programming-state-and-address-matching).
+
 Its basic IR air-conditioning control sends configured actions through `WHO 0`; its advanced split control instead uses [`WHO 4`, `DIMENSION 22`](../who-4-temperature-control/dimensions.md#dimension-22---split-control). The UI category does not determine the wire namespace or a universal OFF command. The scenario library's `1..31` API assertions likewise do not extend the published F420 or 3456 capacities. See [historical client evidence](../../project/review/myopencommunity-coverage-audit.md#scenario-and-basic-ir-controls).
 
 See the [functional overview](../) for navigation by `WHO` and by function, [Scenario Engine](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [Protocol](../../protocol/) for common frame/session syntax.
