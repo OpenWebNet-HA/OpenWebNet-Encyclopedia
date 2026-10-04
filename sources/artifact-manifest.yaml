@@ -232,6 +232,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-axolute-ad-itax17c-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Axolute-AD-ITAX17C manufacturer device documentation
+  media_type: application/pdf
+  filename: Axolute-AD-ITAX17C.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 29620360
+  sha256: b95ff63d6989dc791a02d0da95575948d735fee3048c3aced5f4b432f98d5233
+  source_url: https://www.bticino.it/sites/default/files/2025-03/catalogo-Axolute_AD_ITAX17C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b9/5f/b95ff63d6989dc791a02d0da95575948d735fee3048c3aced5f4b432f98d5233.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b9/5f/b95ff63d6989dc791a02d0da95575948d735fee3048c3aced5f4b432f98d5233.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-bmdi1002-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
