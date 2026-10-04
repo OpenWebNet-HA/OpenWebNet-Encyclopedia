@@ -108,6 +108,8 @@ Request `*#4*WHERE*13##`; response/event `*#4*WHERE*13*OFFSET##` (pages 16–17)
 
 These are codes, not signed decimal temperatures.
 
+The historical touchscreen stores central operation separately from the local selector. Product tests start with a central manual mode, display OFF or protection under local override, then show manual again after normal adjustment resumes. The client displays zero offset during those overrides. This [client-state precedence](../../project/review/myopencommunity-hvac-history-review.md#probe-state-and-fan-coil-corrections) does not establish a physical reset.
+
 ## `DIMENSION 14` - setpoint temperature
 
 `DIMENSION 14` is readable and writable. A zone setpoint written through the central unit uses `*#4*#WHERE*#14*T*M##`.
@@ -167,7 +169,9 @@ The broad published `SP` range is an encoding range, not a claim that a particul
 
 ### Historical partial split writes
 
-The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. After a non-OFF write, the client compares only the supplied fields against the resulting report. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
+After a non-OFF write, the client checks the first matching `DIMENSION 22` report for the exact `WHERE`, comparing only supplied write fields whose positions are present in that report. It clears the pending check even on a mismatch or a short report, emits an error for a compared mismatch, and emits no positive confirmation. Later unsolicited reports do not repeat that comparison. This [one-report check](../../project/review/myopencommunity-hvac-history-review.md#partial-split-writes-and-report-checking) is a library policy and does not verify omitted report fields or physical attainment of the requested state.
 
 ## `DIMENSION 30` - holiday end
 

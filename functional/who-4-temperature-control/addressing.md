@@ -42,6 +42,16 @@ A leading `#` identifies central-unit scope in the published functional grammar.
 
 The BTouch source distinguishes 3550 (99-zone) and 4695 (four-zone) central units. The mature four-zone probe implementation composes a probe/zone address with a central selector, such as `23#1`, and writes a controlled setpoint through `#23#1`. These application variants must remain distinct from ordinary `#N` central-zone addressing.
 
+The touchscreen Configuration parser selects the following command targets, with `Z` the configured zone and `C` the configured four-zone central selector:
+
+| Operation | 99-zone Configuration | Four-zone Configuration |
+| --- | --- | --- |
+| Central-unit command | `#0` | `#0#C` |
+| Controlled zone command / setpoint write | `#Z` | `#Z#C` |
+| Fan-coil `DIMENSION 11` request / write | `Z` | `Z` |
+
+The fan-coil target is passed separately from the composed central-zone address. These are [verified client mappings](../../project/review/myopencommunity-hvac-history-review.md#configuration-and-address-selection), not a universal address rewrite for every `WHO 4` operation. Basic IR air-conditioning actions use the separate [`WHO 0` scenario namespace](../who-0-scenarios/README.md#historical-touchscreen-behavior).
+
 For the four-zone case where probe and central share an address, the source describes a missing setpoint-change notification after entering manual mode. The client schedules a setpoint read after 10 seconds if the report has not arrived. The affected Firmware revisions are not named. This workaround is implementation evidence, not a deadline or a defect established for every 4695. Older external-probe code describes addresses `x00` with `x = 1..9`; that historical rule does not override the exact test addresses used by the later [external-temperature operation](dimensions.md#historical-external-probe-dimension-15).
 
 See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).

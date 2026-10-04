@@ -9154,6 +9154,16 @@ Provenance cues: `evidence`, `source`
 
 The BTouch source distinguishes 3550 (99-zone) and 4695 (four-zone) central units. The mature four-zone probe implementation composes a probe/zone address with a central selector, such as `23#1`, and writes a controlled setpoint through `#23#1`. These application variants must remain distinct from ordinary `#N` central-zone addressing.
 
+The touchscreen Configuration parser selects the following command targets, with `Z` the configured zone and `C` the configured four-zone central selector:
+
+| Operation | 99-zone Configuration | Four-zone Configuration |
+| --- | --- | --- |
+| Central-unit command | `#0` | `#0#C` |
+| Controlled zone command / setpoint write | `#Z` | `#Z#C` |
+| Fan-coil `DIMENSION 11` request / write | `Z` | `Z` |
+
+The fan-coil target is passed separately from the composed central-zone address. These are [verified client mappings](../../project/review/myopencommunity-hvac-history-review.md#configuration-and-address-selection), not a universal address rewrite for every `WHO 4` operation. Basic IR air-conditioning actions use the separate [`WHO 0` scenario namespace](../who-0-scenarios/README.md#historical-touchscreen-behavior).
+
 For the four-zone case where probe and central share an address, the source describes a missing setpoint-change notification after entering manual mode. The client schedules a setpoint read after 10 seconds if the report has not arrived. The affected Firmware revisions are not named. This workaround is implementation evidence, not a deadline or a defect established for every 4695. Older external-probe code describes addresses `x00` with `x = 1..9`; that historical rule does not override the exact test addresses used by the later [external-temperature operation](dimensions.md#historical-external-probe-dimension-15).
 
 See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
@@ -9305,6 +9315,8 @@ Request `*#4*WHERE*13##`; response/event `*#4*WHERE*13*OFFSET##` (pages 16–17)
 
 These are codes, not signed decimal temperatures.
 
+The historical touchscreen stores central operation separately from the local selector. Product tests start with a central manual mode, display OFF or protection under local override, then show manual again after normal adjustment resumes. The client displays zero offset during those overrides. This [client-state precedence](../../project/review/myopencommunity-hvac-history-review.md#probe-state-and-fan-coil-corrections) does not establish a physical reset.
+
 ### `DIMENSION 14` - setpoint temperature
 
 Section ID: `ownkb:section:d000069:s000011`
@@ -9383,9 +9395,12 @@ The broad published `SP` range is an encoding range, not a claim that a particul
 
 Section ID: `ownkb:section:d000069:s000019`
 
+Cautions: `do not`
 Provenance cues: `evidence`
 
-The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. After a non-OFF write, the client compares only the supplied fields against the resulting report. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
+After a non-OFF write, the client checks the first matching `DIMENSION 22` report for the exact `WHERE`, comparing only supplied write fields whose positions are present in that report. It clears the pending check even on a mismatch or a short report, emits an error for a compared mismatch, and emits no positive confirmation. Later unsolicited reports do not repeat that comparison. This [one-report check](../../project/review/myopencommunity-hvac-history-review.md#partial-split-writes-and-report-checking) is a library policy and does not verify omitted report fields or physical attainment of the requested state.
 
 ### `DIMENSION 30` - holiday end
 
@@ -9541,6 +9556,7 @@ A zone controlled through the central unit uses central-unit addressing; for exa
 
 Section ID: `ownkb:section:d000070:s000005`
 
+Applicability cues: `firmware`
 Cautions: `do not`, `must not`
 Provenance cues: `source`
 
@@ -9562,6 +9578,8 @@ These operations target the central unit with `WHERE = #0`. The detailed flows o
 For daily holiday commands, the return-program parameter is `1101..1103` for heating, `2101..2103` for conditioning, and `3101..3103` for generic mode. The multi-day vacation commands use `3101..3103` in all three contexts. Daily-holiday event examples instead show the selected ordinal after `115#` or `215#`. Retain that command/report distinction. The deadline itself is set/read with [holiday date and time properties](dimensions.md#dimension-30---holiday-end).
 
 Example: `*4*3102*#0##` selects weekly program 2 in the current thermal context. A reply/event can use the resolved heating or conditioning program code. An acknowledgement confirms submission, not that the requested mode was physically attained.
+
+The historical touchscreen's calendar-based setters send three frames in order: select the return program, write the end date with `DIMENSION 30`, then write the end time with `DIMENSION 31`. For daily holiday mode, the first payload is `315#PROGRAM`; for vacation mode, it is `33002#PROGRAM`. The vacation setter uses two days as a dummy value before supplying the explicit deadline. This [tested client sequence](../../project/review/myopencommunity-hvac-history-review.md#calendar-mode-sequences) does not establish a two-day minimum or a Firmware timing requirement.
 
 ### Zone setup commands
 
