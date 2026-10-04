@@ -1390,6 +1390,32 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4725d-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4725D manufacturer device documentation
+  media_type: application/pdf
+  filename: U4725D.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2308116
+  sha256: 6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4725D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/63/00/6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/63/00/6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
