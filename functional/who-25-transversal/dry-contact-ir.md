@@ -31,7 +31,11 @@ The published device families include automation dry-contact interfaces such as 
 
 ## Historical contact interpretation
 
-BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#x` as contact closed and `32#x` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#0` and `31#1` as contact closed, and `32#0` and `32#1` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+The client combines replies and events into one local boolean; its `DIM_STATUS` identifier is not a wire `DIMENSION`. It compares numeric addresses and forwards repeated decoded values. That matching behavior does not establish leading-zero normalization, routed contact support or a wider address domain.
+
+BtExperience selects this `WHO 25` receiver for its Automation contact Objects, preserving the configured `WHERE`. Its displayed state starts locally as inactive and emits a change notification only when the boolean changes. The initial display therefore is not a confirmed contact reading, and the change-only notification policy does not redefine bus events. See [Contact-client evidence](../../project/review/myopencommunity-cen-history-review.md#contact-receipt-and-product-state).
 
 ## Functional navigation
 

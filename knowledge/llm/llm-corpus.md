@@ -5994,6 +5994,8 @@ The address must be parsed according to the CEN grammar. Values such as `0001`, 
 Section ID: `ownkb:section:d000039:s000008`
 
 Applicability cues: `gateway`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 A client can generate a virtual CEN interaction by writing the same functional frames on an action connection. The gateway returns `ACK` when it accepts the frame for transmission.
 
@@ -6007,6 +6009,8 @@ Published virtual operations are:
 | Extended pressure | `*15*BUTTON#3*WHERE##` |
 
 A corresponding frame is then visible to event-session clients when the CEN frame is read on the SCS bus.
+
+Historical touchscreen scenario entries can assign separate CEN button frames to enable, disable, start and stop actions. Those labels describe configured actions; the button numbers do not have universal scenario-management meanings. The configured frame is sent literally. See [Configured-action evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
 
 ### Event connection
 
@@ -8503,6 +8507,8 @@ The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` fami
 
 These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
 
+An earlier touchscreen controller sends increase/decrease on press, repeats the command using a one-second timer, and sends stop when release cancels the active timer. This is application behavior, separate from CEN+ `22..24` held-button events. The `ScenarioPlusDevice` API supplies command writers without a dedicated state decoder; sending ON/OFF does not establish an observed scenario state. See [Controller and feedback evidence](../../project/review/myopencommunity-cen-history-review.md#scenarioplus-writers-and-controller).
+
 ### Function selection
 
 Section ID: `ownkb:section:d000060:s000003`
@@ -8642,10 +8648,14 @@ These operations use the same virtual Object/pushbutton addressing model. Their 
 Section ID: `ownkb:section:d000061:s000010`
 
 Applicability cues: `gateway`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 CEN+ supports virtual actions and event reporting. For pushbutton interactions, a client sends the functional frame on an action connection and receives `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus.
 
 The same event form can therefore represent an interaction originating from a physical CEN+ command or from a virtual action submitted through a gateway. The functional frame itself identifies the interaction, pushbutton and Object rather than its origin.
+
+Historical touchscreen scenario actions send the configured frame literally. Their CEN+ description labels and internal command identifiers do not select a wire `WHAT` or synthesize an extended-pressure sequence. See [Configured-action handling](../../scenario-engine/execution-model.md#historical-touchscreen-condition-evaluation) and [CEN/CEN+ implementation evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
 
 ### CEN+ configuration model
 
@@ -8729,7 +8739,11 @@ Section ID: `ownkb:section:d000062:s000005`
 
 Provenance cues: `evidence`
 
-BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#x` as contact closed and `32#x` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#0` and `31#1` as contact closed, and `32#0` and `32#1` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+The client combines replies and events into one local boolean; its `DIM_STATUS` identifier is not a wire `DIMENSION`. It compares numeric addresses and forwards repeated decoded values. That matching behavior does not establish leading-zero normalization, routed contact support or a wider address domain.
+
+BtExperience selects this `WHO 25` receiver for its Automation contact Objects, preserving the configured `WHERE`. Its displayed state starts locally as inactive and emits a change notification only when the boolean changes. The initial display therefore is not a confirmed contact reading, and the change-only notification policy does not redefine bus events. See [Contact-client evidence](../../project/review/myopencommunity-cen-history-review.md#contact-receipt-and-product-state).
 
 ### Functional navigation
 
