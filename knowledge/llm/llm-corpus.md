@@ -6221,9 +6221,11 @@ RDS text is carried as eight separate decimal ASCII codes, not as literal charac
 Section ID: `ownkb:section:d000040:s000008`
 
 Cautions: `do not`
-Provenance cues: `source`
+Provenance cues: `evidence`, `source`
 
 Relative `WHAT` operations and absolute `DIMENSION` values are complementary. Do not reconstruct authoritative volume, tone, or frequency state solely by counting relative commands when a corresponding report is available.
+
+Some historical touchscreen decoders keep amplifier volume and ON/OFF state separately: a volume report can update the level without setting the amplifier ON. A received level alone is therefore insufficient evidence of power state for these clients.
 
 Support is target-dependent: amplifier addresses accept amplifier operations; source addresses accept source/tuner operations. A namespace-level identifier does not imply applicability to both.
 
@@ -6255,6 +6257,8 @@ Provenance cues: `source`, `specification`
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
 The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations, corroborated by historical product source, and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+
+Historical client state handling and the separately revised sound components are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md).
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -7973,6 +7977,8 @@ Preserve these as source discrepancies. The tested forms below resolve speaker v
 
 Section ID: `ownkb:section:d000053:s000012`
 
+Cautions: `do not`
+Uncertainty: `unknown`
 Provenance cues: `source`
 
 Exact BTicino tests at `TS10_1_0_23` resolve several malformed published examples for that implementation:
@@ -7986,8 +7992,15 @@ Exact BTicino tests at `TS10_1_0_23` resolve several malformed published example
 | RDS start / stop | `*22*31*2#SOURCE##` / `*22*32*2#SOURCE##` |
 | Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
 | Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
+| Select source for one area | `*22*35#4#AREA#SOURCE*3#AREA#0##` |
+| Virtual amplifier state report | `*#22*5#3#AREA#POINT*12*STATE*3##` |
+| Virtual amplifier volume report | `*#22*5#3#AREA#POINT*1*VOLUME##` |
 
 The application maps amplifier-area configuration `#A` to `WHERE = 4#A`, and general amplifier configuration `0` to `5#3#0#0`. Tests also recognize `*22*0#4#15*5#1#1##` as a special general-OFF notification. That recognition does not establish an arbitrary sender-address domain.
+
+The virtual amplifier publishes its own cached state and volume in the two report forms above, including during initialization with OFF and volume `0`. Its volume controls generate local requests; they do not by themselves confirm playback or a physical amplifier's state. Area/general controllers containing that virtual amplifier dispatch power and relative-volume operations to both the bus and the local amplifier.
+
+The radio client interprets its cached frequency in hundredths of MHz: `9800` is 98.00 MHz, and a manual step changes it by `5` (50 kHz). It wraps above 108.00 MHz to 87.50 MHz and below 87.50 MHz to 108.00 MHz. With an unknown cached frequency, manual tuning sends nothing; automatic search still sends `WHAT 5` / `6`. BtExperience schedules a frequency read after manual tuning and waits for a report after automatic search. These are client policies; they do not resolve the published step-unit discrepancy or establish every tuner's band limits.
 
 #### Source activity and RDS
 
@@ -7995,9 +8008,11 @@ Section ID: `ownkb:section:d000053:s000013`
 
 Provenance cues: `source`
 
-The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`; its matching `WHAT 2#4#AREA` notifications update the same source/area state. In monochannel mode the application collapses incoming areas to area `0`, an internal state-model choice.
+The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`, replacing that source's cached area set; its matching `WHAT 2#4#AREA` notifications add an active area. An OFF state report clears the set. Selecting another source for a cached area removes that area from the previous source. In monochannel mode its `WHAT 2` notifications use area `0`. BtExperience exposes only indices `0..8` and emits an activity change when its area set crosses between empty and nonempty. These are internal state-model choices, not revised published area domains.
 
-`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client's re-request of RDS after a stop report is a subscription policy, not a mandatory protocol response.
+The tested source-selection method with no area supplied sends eight commands, one for each area `1..8`, using the selection form above. Supplying literal area `0` instead sends one command for area `0`. Application-wide selection and an explicit zero-area request are therefore distinct; neither establishes a universal broadcast form.
+
+`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client starts RDS for its first subscriber and delays stopping after the last subscriber by 100 ms, allowing a new subscriber to cancel the pending stop. It re-requests RDS after a stop report only while updates remain enabled. This is subscription policy, not a mandatory protocol response or Device timing rule.
 
 #### Local volume and display scales
 
@@ -8012,14 +8027,21 @@ The historical touchscreen implementation distinguishes local audio settings `L 
 | --- | --- |
 | Local setting to amplifier volume | Round `L * 31 / 8` to the nearest integer |
 | Amplifier volume to local setting | Round `V * 8 / 31` to the nearest integer |
+| BtExperience percentage setting `P` to amplifier volume | Integer truncation of `P * 31 / 100` |
+| Amplifier volume to BtExperience percentage setting | Integer truncation of `V * 100 / 31` |
 | TS10 volume icon | Integer truncation of `V * 8 / 31`, giving indices `0..8` |
 | TS3.5 volume icon | Indices `1..9` for bands `0..3`, `4..7`, `8..11`, `12..14`, `15..17`, `18..20`, `21..23`, `24..27`, `28..31`, respectively |
 
 For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
 
+The separately tested BtExperience percentage API sends volume `19` for `62%` and displays `38%` for reported volume `12`. Its integer conversions are not exact inverses. Earlier application versions used raw amplifier values; this change does not identify a Firmware generation.
+
 #### Tone, balance, and presets
 
 Section ID: `ownkb:section:d000053:s000014`
+
+Cautions: `do not`
+Uncertainty: `unresolved`
 
 | Wire value | Touchscreen interpretation |
 | --- | --- |
@@ -8029,6 +8051,8 @@ Section ID: `ownkb:section:d000053:s000014`
 | Preset `16..25` | custom application indices `10..19` |
 
 Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+Relative balance direction remains unresolved between sources: exact client tests emit `42#1` from the method labelled left and `43#1` from right, reversing the published `WHAT` labels above. The method names and their historical correction do not independently establish physical direction.
 
 #### Virtual-amplifier temporary-off events
 
@@ -8040,6 +8064,7 @@ The historical virtual amplifier treats `*22*0#4#AREA*6##` and `*22*22#4#AREA*5#
 
 Section ID: `ownkb:section:d000053:s000015`
 
+Cautions: `do not`
 Uncertainty: `unresolved`
 Provenance cues: `evidence`, `source`
 
@@ -8050,6 +8075,8 @@ The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION 
 Empty source configuration becomes `0`; absent amplifier area/point remain empty. `MATRIX_INPUT` is the source address only in multichannel source mode. Flags reflect the writer's local configuration, with `IS_GATEWAY = 1` and `READS_SCS` set when a source or amplifier is configured. The two `9` fields and the empty field after them remain semantically unresolved.
 
 Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel source 3 and `*#22*7*#15*0*2*8*9*9***0*1*1*1##` for amplifier 28. This establishes product initialization traffic, not a general readable multimedia property. Earlier source emitted a different payload layout.
+
+The virtual source's next/previous methods deliver local playback requests instead of sending bus frames. Its receiver accepts `WHAT 9` / `10` addressed to that source; the area-addressed delegate additionally accepts `WHAT 9` where the source is active. These method names do not redefine the published station/track command families. Source activation requests (`WHAT 1`) remain distinct from source-activity notifications (`WHAT 2`). BtExperience pauses local playback when no area remains active. This local player integration does not establish numeric [`WHO 26` UPnP Multimedia](../who-26-upnp-multimedia/) syntax.
 
 See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
 
@@ -8090,9 +8117,13 @@ This is **established for that Device** and was used to corroborate the `WHO 16`
 
 Section ID: `ownkb:section:d000053:s000011`
 
-Provenance cues: `specification`
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `source`, `specification`
 
 Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+
+The tested client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 

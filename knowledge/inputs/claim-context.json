@@ -56824,7 +56824,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -56839,7 +56839,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000143",
@@ -56851,7 +56851,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -56866,7 +56866,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000143",

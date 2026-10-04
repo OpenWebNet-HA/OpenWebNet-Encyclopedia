@@ -127,6 +127,8 @@ RDS text is carried as eight separate decimal ASCII codes, not as literal charac
 
 Relative `WHAT` operations and absolute `DIMENSION` values are complementary. Do not reconstruct authoritative volume, tone, or frequency state solely by counting relative commands when a corresponding report is available.
 
+Some historical touchscreen decoders keep amplifier volume and ON/OFF state separately: a volume report can update the level without setting the amplifier ON. A received level alone is therefore insufficient evidence of power state for these clients.
+
 Support is target-dependent: amplifier addresses accept amplifier operations; source addresses accept source/tuner operations. A namespace-level identifier does not imply applicability to both.
 
 ## Relationship to `WHO 22`
@@ -144,5 +146,7 @@ BTouch migrated sound operations separately. During the 2008..2009 transition it
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
 The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations, corroborated by historical product source, and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+
+Historical client state handling and the separately revised sound components are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md).
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
