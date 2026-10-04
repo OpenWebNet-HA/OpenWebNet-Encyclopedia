@@ -19,6 +19,86 @@ storage:
     visibility: private
     object_layout: sha256/<first-2>/<next-2>/<sha256>
 artifacts:
+- id: device-doc-344163-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 344163-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 344163-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 16039
+  sha256: fa8943a5a431972dff0d38137669f23b7a19a58c5ce4c7263456cdcfe4402a70
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344163
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fa/89/fa8943a5a431972dff0d38137669f23b7a19a58c5ce4c7263456cdcfe4402a70.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fa/89/fa8943a5a431972dff0d38137669f23b7a19a58c5ce4c7263456cdcfe4402a70.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-345020-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 345020-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 345020-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 12657
+  sha256: 0cc339212c6450a1e7069045024634f309606c2062734ba2cfafe7b941686230
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-345020
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0c/c3/0cc339212c6450a1e7069045024634f309606c2062734ba2cfafe7b941686230.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0c/c3/0cc339212c6450a1e7069045024634f309606c2062734ba2cfafe7b941686230.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-345021-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 345021-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 345021-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 13768
+  sha256: e06864160cf7c67b074a53b8d46643790e9ff7d3d1b4c0e6f9c148c9c65790bc
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-345021
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e0/68/e06864160cf7c67b074a53b8d46643790e9ff7d3d1b4c0e6f9c148c9c65790bc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e0/68/e06864160cf7c67b074a53b8d46643790e9ff7d3d1b4c0e6f9c148c9c65790bc.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-3456-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 3456-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 3456-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 37415
+  sha256: 8d1b557543aef5e5b9c6bfc3215993e5505706a42631ba778fe322b68a226091
+  source_url: https://www.bticino.com/products/pdf?sku=BT-3456&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8d/1b/8d1b557543aef5e5b9c6bfc3215993e5505706a42631ba778fe322b68a226091.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8d/1b/8d1b557543aef5e5b9c6bfc3215993e5505706a42631ba778fe322b68a226091.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-4601-installation-nl-20130411-82719-2
   kind: documentation
   publisher: BTicino / Legrand
@@ -152,6 +232,66 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bmdi1002-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BMDI1002-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: BMDI1002-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 15762
+  sha256: bee84fb8d01855fb741c199fbd27c235e2648dcc426793b3e708dd1e0b71a173
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI1002
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/be/e8/bee84fb8d01855fb741c199fbd27c235e2648dcc426793b3e708dd1e0b71a173.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/be/e8/bee84fb8d01855fb741c199fbd27c235e2648dcc426793b3e708dd1e0b71a173.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bmdi1100-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BMDI1100-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: BMDI1100-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 15860
+  sha256: bf47b525184a52f7c34e52604d6e5fe36e549970617ebd226a3b7629b5cab352
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI1100
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bf/47/bf47b525184a52f7c34e52604d6e5fe36e549970617ebd226a3b7629b5cab352.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bf/47/bf47b525184a52f7c34e52604d6e5fe36e549970617ebd226a3b7629b5cab352.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bmdi3101-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BMDI3101-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: BMDI3101-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 14191
+  sha256: 2c3df3fabd44cb1db0fc77fb979062132475653720bb6f106a5a51f5df97a1f8
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3101
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2c/3d/2c3df3fabd44cb1db0fc77fb979062132475653720bb6f106a5a51f5df97a1f8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2c/3d/2c3df3fabd44cb1db0fc77fb979062132475653720bb6f106a5a51f5df97a1f8.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-bmsw3001-bmsw3002-u3773b
   kind: documentation
   publisher: BTicino
@@ -171,6 +311,166 @@ artifacts:
   language_evidence: predominantly pictographic; French SCS connection label and English Test/Learn labels
   notes:
   - Publisher original retrieved on 2026-10-03.
+- id: device-doc-bt00287-a-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00287-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00287-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 661610
+  sha256: 20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileId=58107.23188.48069.54823&fileName=BT00287-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/20/31/20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/20/31/20315182f949ce1ad7be68bbe4955e4189b26161fe881fab599d2cae15959f0a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00310-c-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00310_c_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00310_c_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1850412
+  sha256: c10b873bffd13fce1223fe9307318d3cebcb0bb773d6187c449674eb6e9bc988
+  source_url: https://dar.bticino.it/asset/Documents/BT00310_c_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c1/0b/c10b873bffd13fce1223fe9307318d3cebcb0bb773d6187c449674eb6e9bc988.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c1/0b/c10b873bffd13fce1223fe9307318d3cebcb0bb773d6187c449674eb6e9bc988.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00581-b-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00581_b_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00581_b_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 651636
+  sha256: c5df02a4c114b6b7b81cab54b88073cbc727958e90d0e631c2cbe36d281c5902
+  source_url: https://dar.bticino.it/asset/Documents/BT00581_b_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c5/df/c5df02a4c114b6b7b81cab54b88073cbc727958e90d0e631c2cbe36d281c5902.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c5/df/c5df02a4c114b6b7b81cab54b88073cbc727958e90d0e631c2cbe36d281c5902.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00582-b-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00582_b_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00582_b_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 710658
+  sha256: a945b86c57da65c4607849ccf577ac700cf107a065041c55fe08e59d84f70223
+  source_url: https://dar.bticino.it/asset/Documents/BT00582_b_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a9/45/a945b86c57da65c4607849ccf577ac700cf107a065041c55fe08e59d84f70223.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a9/45/a945b86c57da65c4607849ccf577ac700cf107a065041c55fe08e59d84f70223.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00639-b-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00639_b_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00639_b_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1233911
+  sha256: 5dd974342a5f115147783a53893e5b4c1d7f20e27faa5b303df2c38e2135a93b
+  source_url: https://dar.bticino.com/asset/Documents/BT00639_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5d/d9/5dd974342a5f115147783a53893e5b4c1d7f20e27faa5b303df2c38e2135a93b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5d/d9/5dd974342a5f115147783a53893e5b4c1d7f20e27faa5b303df2c38e2135a93b.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00639-b-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00639_b_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00639_b_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1986602
+  sha256: 8c884f7c09eb84648dd4efcf8e040d98800c4b730363830d8924ba140a5695b2
+  source_url: https://dar.bticino.it/asset/Documents/BT00639_b_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8c/88/8c884f7c09eb84648dd4efcf8e040d98800c4b730363830d8924ba140a5695b2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8c/88/8c884f7c09eb84648dd4efcf8e040d98800c4b730363830d8924ba140a5695b2.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00650-b-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00650_b_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00650_b_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1676680
+  sha256: 2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125
+  source_url: https://dar.bticino.com/asset/Documents/BT00650_b_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/19/2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/19/2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00650-b-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00650_b_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00650_b_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2399841
+  sha256: 5ab87783add80df4bc0d990f800b9a0297251e3f331522da35a8f7f4bde1c388
+  source_url: https://dar.bticino.it/asset/Documents/BT00650_b_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5a/b8/5ab87783add80df4bc0d990f800b9a0297251e3f331522da35a8f7f4bde1c388.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5a/b8/5ab87783add80df4bc0d990f800b9a0297251e3f331522da35a8f7f4bde1c388.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00861-b-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -391,6 +691,146 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f418-italian-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F418-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F418-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 16857
+  sha256: 628f8e289d17ee293652df5772dab21bd838b7bd06e0e4af950fde92328871c3
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/62/8f/628f8e289d17ee293652df5772dab21bd838b7bd06e0e4af950fde92328871c3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/62/8f/628f8e289d17ee293652df5772dab21bd838b7bd06e0e4af950fde92328871c3.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f450-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F450-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F450-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 555093
+  sha256: 2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F450&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2a/4e/2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2a/4e/2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f520-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F520-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F520-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 65505
+  sha256: e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F520&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e4/61/e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e4/61/e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f521-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F521-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F521-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 195167
+  sha256: 663200333ff67628f2f3cc671eaa694563ca4942344456623de1f57818fb0b3b
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F521&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/66/32/663200333ff67628f2f3cc671eaa694563ca4942344456623de1f57818fb0b3b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/66/32/663200333ff67628f2f3cc671eaa694563ca4942344456623de1f57818fb0b3b.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f522-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F522-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F522-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 53122
+  sha256: bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F522&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f523-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F523-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F523-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 196457
+  sha256: 86fb517a47b4a91ab4f3d626a2fd738bb19a25b014b32f200e321a4fe0d425e9
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F523&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/86/fb/86fb517a47b4a91ab4f3d626a2fd738bb19a25b014b32f200e321a4fe0d425e9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/86/fb/86fb517a47b4a91ab4f3d626a2fd738bb19a25b014b32f200e321a4fe0d425e9.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f524-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F524-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F524-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 204165
+  sha256: 78fc076141a2ad69164d75249a2577c63f1422990965db7d88655a3bf94e562e
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F524&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/fc/78fc076141a2ad69164d75249a2577c63f1422990965db7d88655a3bf94e562e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/fc/78fc076141a2ad69164d75249a2577c63f1422990965db7d88655a3bf94e562e.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-h4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -459,6 +899,66 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-h4684-l4684-spanish-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: H4684-L4684-Spanish-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: H4684-L4684-Spanish-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 266537
+  sha256: 0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3
+  source_url: https://www.bticino.es/conceptbook/files/H4684_L4684.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0e/7e/0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0e/7e/0e7e541678c24f2c6fb3445041664efa8ab701544e814efc31a1c5b6ac0955a3.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hc4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: HC4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: HC4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 860462
+  sha256: fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261
+  source_url: https://www.bticino.com/products/pdf?sku=BT-HC4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/1f/fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/1f/fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hd4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: HD4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: HD4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 336673
+  sha256: 6afeb3fe11ff84386d28f6ac4f29923d648fd6a0f8e027effeaf64987446dd83
+  source_url: https://www.bticino.com/products/pdf?sku=BT-HD4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6a/fe/6afeb3fe11ff84386d28f6ac4f29923d648fd6a0f8e027effeaf64987446dd83.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6a/fe/6afeb3fe11ff84386d28f6ac4f29923d648fd6a0f8e027effeaf64987446dd83.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
@@ -479,6 +979,26 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-hs4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: HS4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: HS4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 658846
+  sha256: 9c6016b50681ac83421fe5705e9902742c10101aa00833dc9ac3b3f970194a60
+  source_url: https://www.bticino.com/products/pdf?sku=BT-HS4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/60/9c6016b50681ac83421fe5705e9902742c10101aa00833dc9ac3b3f970194a60.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/60/9c6016b50681ac83421fe5705e9902742c10101aa00833dc9ac3b3f970194a60.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-kg8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -519,6 +1039,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-kg8013-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: KG8013-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: KG8013-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 592974
+  sha256: 509f6e105dfea157c23144e080d69b7a508d7ad32be99c3f92fb3ccd331e0630
+  source_url: https://www.bticino.com/products/pdf?sku=BT-KG8013&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/50/9f/509f6e105dfea157c23144e080d69b7a508d7ad32be99c3f92fb3ccd331e0630.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/50/9f/509f6e105dfea157c23144e080d69b7a508d7ad32be99c3f92fb3ccd331e0630.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-km8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -559,6 +1099,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-km8013-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: KM8013-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: KM8013-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 48836
+  sha256: 9579ce2582249a182a7da0669b58dbe30929ddd3f1aff65e2c59620472cd527e
+  source_url: https://www.bticino.com/products/pdf?sku=BT-KM8013&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/95/79/9579ce2582249a182a7da0669b58dbe30929ddd3f1aff65e2c59620472cd527e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/95/79/9579ce2582249a182a7da0669b58dbe30929ddd3f1aff65e2c59620472cd527e.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-kw4691-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -659,6 +1219,86 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-kw8013-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: KW8013-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: KW8013-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 47452
+  sha256: 017b1e0408da356d890909d6bccdeae92db34c139fe652afeda3f15b048cb9ca
+  source_url: https://www.bticino.com/products/pdf?sku=BT-KW8013&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/01/7b/017b1e0408da356d890909d6bccdeae92db34c139fe652afeda3f15b048cb9ca.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/01/7b/017b1e0408da356d890909d6bccdeae92db34c139fe652afeda3f15b048cb9ca.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-l4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: L4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: L4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 570275
+  sha256: c7693ac4e2ce1dd95f88f46b986b0593ce6616bcbd1adbfa8bea1c3e988c12b2
+  source_url: https://www.bticino.com/products/pdf?sku=BT-L4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c7/69/c7693ac4e2ce1dd95f88f46b986b0593ce6616bcbd1adbfa8bea1c3e988c12b2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c7/69/c7693ac4e2ce1dd95f88f46b986b0593ce6616bcbd1adbfa8bea1c3e988c12b2.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le05177ae-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE05177AE manufacturer device documentation
+  media_type: application/pdf
+  filename: LE05177AE.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 794050
+  sha256: 41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8
+  source_url: https://dar.bticino.it/asset/Documents/LE05177AE.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/41/90/41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/41/90/41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le05271ab-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE05271AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE05271AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 327511
+  sha256: ace54f437f59d280d26b053eb0c54c087d65c210d7fc1fa1b4b946cbe700fa63
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE05271AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ac/e5/ace54f437f59d280d26b053eb0c54c087d65c210d7fc1fa1b4b946cbe700fa63.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ac/e5/ace54f437f59d280d26b053eb0c54c087d65c210d7fc1fa1b4b946cbe700fa63.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-le07498ae-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -700,6 +1340,150 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le11578ab-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE11578AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE11578AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2485422
+  sha256: c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE11578AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c6/76/c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c6/76/c676e4a74e5f8b2da0b53bd0b47b88392f1329f2a39640a6ac45bf6635c1504c.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le14741aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14741AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14741AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2377688
+  sha256: f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14741AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f2/db/f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f2/db/f2dbdda0d2e0b50536f1ebd2b2e75299ba6b099d9dfc84daacd4f3b61556f77b.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le14822aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14822AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14822AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2950059
+  sha256: f2a67ce4704cc4ca3ca96ea6fac9885166f363db3f70e5c68ecd21df4750b669
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14822AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f2/a6/f2a67ce4704cc4ca3ca96ea6fac9885166f363db3f70e5c68ecd21df4750b669.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f2/a6/f2a67ce4704cc4ca3ca96ea6fac9885166f363db3f70e5c68ecd21df4750b669.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le14823aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14823AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14823AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2828516
+  sha256: 9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14823AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/99/35/9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/99/35/9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le14827aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14827AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14827AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2259471
+  sha256: 271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14827AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-light-now-2026-2m-catalogue-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Light-Now-2026-2M-catalogue manufacturer device documentation
+  media_type: application/pdf
+  filename: Light-Now-2026-2M-catalogue.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 26408258
+  sha256: 06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9
+  source_url: https://www.bticino.com/sites/default/files/2026-02/Light%20Now%20catalogue%202%20MODULES%202026.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/86/06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/86/06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-living-now-2025-3m-catalogue-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -864,6 +1648,518 @@ artifacts:
   language_evidence: Document text, captions and diagrams inspected
   notes:
   - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-mq00190-e-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00190_e_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00190_e_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 164638
+  sha256: 82c0464ab612fc3c8c1a118cfb7cb3e772eb90eacd9a19677bb3cb1724f54b7a
+  source_url: https://dar.bticino.com/asset/Documents/MQ00190_e_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/82/c0/82c0464ab612fc3c8c1a118cfb7cb3e772eb90eacd9a19677bb3cb1724f54b7a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/82/c0/82c0464ab612fc3c8c1a118cfb7cb3e772eb90eacd9a19677bb3cb1724f54b7a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00319-b-uk-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00319-b-UK manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00319-b-UK.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 780563
+  sha256: 93af891c3438d3e5e19643a741f4b9516af82e9598d0719769b56fbe3144d47a
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/mq00319-b-uk.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/93/af/93af891c3438d3e5e19643a741f4b9516af82e9598d0719769b56fbe3144d47a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/93/af/93af891c3438d3e5e19643a741f4b9516af82e9598d0719769b56fbe3144d47a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00357-b-uk-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00357-b-UK manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00357-b-UK.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 390828
+  sha256: 85788000ca03620c64639768465e28e7a45b4d1e92892fa64ef32c27a6ff4ba5
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00357-b-UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/85/78/85788000ca03620c64639768465e28e7a45b4d1e92892fa64ef32c27a6ff4ba5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/85/78/85788000ca03620c64639768465e28e7a45b4d1e92892fa64ef32c27a6ff4ba5.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00357-c-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00357-c-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00357-c-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 353740
+  sha256: 565c6b83a0ff7f52beb3980f5fc102e2159e45b7f363926f5ef65e9b8832336b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00357-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/56/5c/565c6b83a0ff7f52beb3980f5fc102e2159e45b7f363926f5ef65e9b8832336b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/56/5c/565c6b83a0ff7f52beb3980f5fc102e2159e45b7f363926f5ef65e9b8832336b.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00521-b-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00521-b-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00521-b-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 76512
+  sha256: f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00521-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f8/e2/f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f8/e2/f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00594-d-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00594_d_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00594_d_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 392301
+  sha256: cf0f1ea620adca98efc2cf844ed0866021e087fbcc4e0ffb88a239adfed5b873
+  source_url: https://dar.bticino.com/asset/Documents/MQ00594_d_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/cf/0f/cf0f1ea620adca98efc2cf844ed0866021e087fbcc4e0ffb88a239adfed5b873.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/cf/0f/cf0f1ea620adca98efc2cf844ed0866021e087fbcc4e0ffb88a239adfed5b873.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00594-d-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00594_d_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00594_d_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 392798
+  sha256: 758805e32270325d7905b9bce00e7f5997d37cb4997483c01c479c3a0577090c
+  source_url: https://dar.bticino.it/asset/Documents/MQ00594_d_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/75/88/758805e32270325d7905b9bce00e7f5997d37cb4997483c01c479c3a0577090c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/75/88/758805e32270325d7905b9bce00e7f5997d37cb4997483c01c479c3a0577090c.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq01008-a-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ01008-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ01008-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 128597
+  sha256: fa2f3e244efc271c815cab4db48a75609c84ea0d054e078b3d470a712987de78
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ01008-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fa/2f/fa2f3e244efc271c815cab4db48a75609c84ea0d054e078b3d470a712987de78.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fa/2f/fa2f3e244efc271c815cab4db48a75609c84ea0d054e078b3d470a712987de78.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-n4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: N4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: N4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 401960
+  sha256: 4cd51756dea94c4e5324e9858ca1db582e8b936484536fd84531e2e04e657b45
+  source_url: https://www.bticino.com/products/pdf?sku=BT-N4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4c/d5/4cd51756dea94c4e5324e9858ca1db582e8b936484536fd84531e2e04e657b45.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4c/d5/4cd51756dea94c4e5324e9858ca1db582e8b936484536fd84531e2e04e657b45.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-nt4672n-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: NT4672N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: NT4672N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1164940
+  sha256: d9882501c7d44edb7a77e3a30ec1fc4b35cd473c07a788934a8afaafbd0b174f
+  source_url: https://www.bticino.com/products/pdf?sku=BT-NT4672N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d9/88/d9882501c7d44edb7a77e3a30ec1fc4b35cd473c07a788934a8afaafbd0b174f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d9/88/d9882501c7d44edb7a77e3a30ec1fc4b35cd473c07a788934a8afaafbd0b174f.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0192b-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0192B manufacturer device documentation
+  media_type: application/pdf
+  filename: O0192B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 6022813
+  sha256: b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4
+  source_url: https://dar.bticino.it/asset/Documents/O0192B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b6/1b/b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b6/1b/b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0194b-s-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0194B_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: O0194B_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2661232
+  sha256: 0961789a7fd60a6e0672c899ca0c874e5339cf03d9141e33357f96f9c326932e
+  source_url: https://dar.bticino.com/asset/Documents/O0194B_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/09/61/0961789a7fd60a6e0672c899ca0c874e5339cf03d9141e33357f96f9c326932e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/09/61/0961789a7fd60a6e0672c899ca0c874e5339cf03d9141e33357f96f9c326932e.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0194b-s-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0194B_S_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: O0194B_S_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2697930
+  sha256: 6f13cde2fb454ef467c6a47b41392b5461a9b0c71bf4a2e910f49ef461a91514
+  source_url: https://dar.bticino.it/asset/Documents/O0194B_S_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6f/13/6f13cde2fb454ef467c6a47b41392b5461a9b0c71bf4a2e910f49ef461a91514.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6f/13/6f13cde2fb454ef467c6a47b41392b5461a9b0c71bf4a2e910f49ef461a91514.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0194b-u-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0194B_U_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: O0194B_U_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 5210714
+  sha256: 41e88517746b1039e60120ef6b3108daa52562c42a665ed6764cb1d8639f78cb
+  source_url: https://dar.bticino.com/asset/Documents/O0194B_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/41/e8/41e88517746b1039e60120ef6b3108daa52562c42a665ed6764cb1d8639f78cb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/41/e8/41e88517746b1039e60120ef6b3108daa52562c42a665ed6764cb1d8639f78cb.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0194b-u-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0194B_U_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: O0194B_U_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 5282205
+  sha256: d182d2b39101cc4f5792f1ed96b4910b528e20ab87399a600fc334114c4b6161
+  source_url: https://dar.bticino.it/asset/Documents/O0194B_U_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d1/82/d182d2b39101cc4f5792f1ed96b4910b528e20ab87399a600fc334114c4b6161.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d1/82/d182d2b39101cc4f5792f1ed96b4910b528e20ab87399a600fc334114c4b6161.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0195e-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0195E manufacturer device documentation
+  media_type: application/pdf
+  filename: O0195E.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 912765
+  sha256: 67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O0195E.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/67/f4/67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/67/f4/67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0196c-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0196C manufacturer device documentation
+  media_type: application/pdf
+  filename: O0196C.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 858344
+  sha256: f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O0196C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f8/8a/f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f8/8a/f88af6481450f685e2c46bcfbe8c254c1ac4e371097c0d3bdd8e5a389fa529d2.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o1866b-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O1866B manufacturer device documentation
+  media_type: application/pdf
+  filename: O1866B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 287127
+  sha256: f10259b0ed57f94f32afec0d2bde00ba022c5f3808868de7f12eab8ed2ff1e1f
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O1866B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f1/02/f10259b0ed57f94f32afec0d2bde00ba022c5f3808868de7f12eab8ed2ff1e1f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f1/02/f10259b0ed57f94f32afec0d2bde00ba022c5f3808868de7f12eab8ed2ff1e1f.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o2074c-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O2074C manufacturer device documentation
+  media_type: application/pdf
+  filename: O2074C.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 732550
+  sha256: d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O2074C.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d2/f4/d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d2/f4/d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00040ab-i-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00040AB_I_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00040AB_I_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 10348016
+  sha256: 32f016c987a230e14cfbec922206a62cb4d5d6d2c68add541235d7bd0f2e445b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00040AB_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/32/f0/32f016c987a230e14cfbec922206a62cb4d5d6d2c68add541235d7bd0f2e445b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/32/f0/32f016c987a230e14cfbec922206a62cb4d5d6d2c68add541235d7bd0f2e445b.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00040ac-u-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00040AC_U_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00040AC_U_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 8390788
+  sha256: 4ddf61377d61579eade05ba8958a938b426b20c1157027517de374107fb528d4
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00040AC_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4d/df/4ddf61377d61579eade05ba8958a938b426b20c1157027517de374107fb528d4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4d/df/4ddf61377d61579eade05ba8958a938b426b20c1157027517de374107fb528d4.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00040af-i-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00040AF_I_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00040AF_I_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 5794381
+  sha256: 874fb89da0129e8582e4c2c5a9a1ff9fabc513bb6870f8a0a1febf851a9d0f47
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/87/4f/874fb89da0129e8582e4c2c5a9a1ff9fabc513bb6870f8a0a1febf851a9d0f47.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/87/4f/874fb89da0129e8582e4c2c5a9a1ff9fabc513bb6870f8a0a1febf851a9d0f47.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00040af-u-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00040AF_U_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00040AF_U_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 8573229
+  sha256: ce5c45316fdf9df635d1ac94de35a1f5d44979c5dfcce7b2fc9b48dd9617fbda
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_U_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ce/5c/ce5c45316fdf9df635d1ac94de35a1f5d44979c5dfcce7b2fc9b48dd9617fbda.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ce/5c/ce5c45316fdf9df635d1ac94de35a1f5d44979c5dfcce7b2fc9b48dd9617fbda.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00058ac-s-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00058AC_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00058AC_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 6622053
+  sha256: 6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00058AC_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6d/5f/6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6d/5f/6d5f2aa56dd67df6fb78451b3194d577e51aa2492ef229572c0c5fc4dda74c08.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00058ad-s-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00058AD_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00058AD_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 4423933
+  sha256: fac205ca4b7ced796ae40b5a2c619b33df019df11298514327d348d449cecea4
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00058AD_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fa/c2/fac205ca4b7ced796ae40b5a2c619b33df019df11298514327d348d449cecea4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fa/c2/fac205ca4b7ced796ae40b5a2c619b33df019df11298514327d348d449cecea4.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00136ab-i-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -944,6 +2240,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00168aa-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00168AA_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00168AA_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 11616070
+  sha256: 3b447ddb79af394b6cbcb6e31b480ee7780284ec535957cca8c4b668666e4623
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00168AA_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3b/44/3b447ddb79af394b6cbcb6e31b480ee7780284ec535957cca8c4b668666e4623.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3b/44/3b447ddb79af394b6cbcb6e31b480ee7780284ec535957cca8c4b668666e4623.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00000215-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1024,6 +2340,146 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00001003-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST_00001003_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST_00001003_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 541497
+  sha256: c0a47e2b7d5baafcecb8ebd8073fa6e162ee85b7f1553216af1c30d2ce5a8c71
+  source_url: https://dar.bticino.com/asset/Documents/ST_00001003_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c0/a4/c0a47e2b7d5baafcecb8ebd8073fa6e162ee85b7f1553216af1c30d2ce5a8c71.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c0/a4/c0a47e2b7d5baafcecb8ebd8073fa6e162ee85b7f1553216af1c30d2ce5a8c71.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00001810-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00001810-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00001810-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 359921
+  sha256: 4b52a9d26bba3549782f9c65e41c89acaafe645b07e46054e1214a84e47ffcf1
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001810-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4b/52/4b52a9d26bba3549782f9c65e41c89acaafe645b07e46054e1214a84e47ffcf1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4b/52/4b52a9d26bba3549782f9c65e41c89acaafe645b07e46054e1214a84e47ffcf1.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00001811-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00001811-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00001811-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 236343
+  sha256: 98cd21a7039899d30aa8f309876607f44b4af3cd411144a33f2a11c86af1e0d3
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001811-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/98/cd/98cd21a7039899d30aa8f309876607f44b4af3cd411144a33f2a11c86af1e0d3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/98/cd/98cd21a7039899d30aa8f309876607f44b4af3cd411144a33f2a11c86af1e0d3.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00001840-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00001840-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00001840-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 313746
+  sha256: a6e7050d3b834f9b96673ac6659abdaf4cac66f97dee7257392d2cb7dbdb32cc
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001840-IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a6/e7/a6e7050d3b834f9b96673ac6659abdaf4cac66f97dee7257392d2cb7dbdb32cc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a6/e7/a6e7050d3b834f9b96673ac6659abdaf4cac66f97dee7257392d2cb7dbdb32cc.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00001920-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00001920-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00001920-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 257930
+  sha256: 9197f8b6d9c49a6db84136e2ee3fbfd1c98d710eb4ad7ab2c04a28eaae15494c
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00001920-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/91/97/9197f8b6d9c49a6db84136e2ee3fbfd1c98d710eb4ad7ab2c04a28eaae15494c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/91/97/9197f8b6d9c49a6db84136e2ee3fbfd1c98d710eb4ad7ab2c04a28eaae15494c.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002261-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002261-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002261-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 282994
+  sha256: 2a608ff9ffbd316c85f39b450b343b13b9c7d3b753240af3c4b1e0939bf64970
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002261-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2a/60/2a608ff9ffbd316c85f39b450b343b13b9c7d3b753240af3c4b1e0939bf64970.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2a/60/2a608ff9ffbd316c85f39b450b343b13b9c7d3b753240af3c4b1e0939bf64970.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002262-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002262-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002262-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 249190
+  sha256: 3301d110ec45cd944d9b383f5e0984317fde3b6648d8ccf29444f1a7e76d22c2
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002262-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/33/01/3301d110ec45cd944d9b383f5e0984317fde3b6648d8ccf29444f1a7e76d22c2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/33/01/3301d110ec45cd944d9b383f5e0984317fde3b6648d8ccf29444f1a7e76d22c2.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00002496-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1044,6 +2500,246 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002497-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002497-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002497-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 298810
+  sha256: b4c0468535929c919bf9b4d4ae69e0e222e60db3ac8a337c663ffcce69919c74
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002497-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b4/c0/b4c0468535929c919bf9b4d4ae69e0e222e60db3ac8a337c663ffcce69919c74.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b4/c0/b4c0468535929c919bf9b4d4ae69e0e222e60db3ac8a337c663ffcce69919c74.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002497-es-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002497-ES manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002497-ES.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 299842
+  sha256: 6816b3b9ece7c883bc9683b5551aff00a8aadb9e561e14fdc2989790cd4c7a58
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002497-ES.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/68/16/6816b3b9ece7c883bc9683b5551aff00a8aadb9e561e14fdc2989790cd4c7a58.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/68/16/6816b3b9ece7c883bc9683b5551aff00a8aadb9e561e14fdc2989790cd4c7a58.pdf
+  language:
+  - es
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002497-fr-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002497-FR manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002497-FR.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 301219
+  sha256: 3ae8608d073ec85193a98e57aa30eb08f3b9b3d749ca3a98958a7d24305b15d9
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002497-FR.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/e8/3ae8608d073ec85193a98e57aa30eb08f3b9b3d749ca3a98958a7d24305b15d9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/e8/3ae8608d073ec85193a98e57aa30eb08f3b9b3d749ca3a98958a7d24305b15d9.pdf
+  language:
+  - fr
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002497-it-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002497-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002497-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 299341
+  sha256: 5f2c22d02a7d07e975e28e6e06bf603e447c7dfd412b10af508f62be6287a67f
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002497-IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5f/2c/5f2c22d02a7d07e975e28e6e06bf603e447c7dfd412b10af508f62be6287a67f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5f/2c/5f2c22d02a7d07e975e28e6e06bf603e447c7dfd412b10af508f62be6287a67f.pdf
+  language:
+  - it
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002497-nl-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002497-NL manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002497-NL.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 299626
+  sha256: c40dd33d01442b6c32e2d2c7dc671ec5e87c305b7c4c490a3193c2c053cb7d17
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002497-NL.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c4/0d/c40dd33d01442b6c32e2d2c7dc671ec5e87c305b7c4c490a3193c2c053cb7d17.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c4/0d/c40dd33d01442b6c32e2d2c7dc671ec5e87c305b7c4c490a3193c2c053cb7d17.pdf
+  language:
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002498-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002498-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002498-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 324652
+  sha256: 0d7a5625ed5ff3e6b96a9ecf1984bc97d89fc8f4712e0a5b40e8e08822116a28
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002498-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0d/7a/0d7a5625ed5ff3e6b96a9ecf1984bc97d89fc8f4712e0a5b40e8e08822116a28.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0d/7a/0d7a5625ed5ff3e6b96a9ecf1984bc97d89fc8f4712e0a5b40e8e08822116a28.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002500-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002500-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002500-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 690377
+  sha256: 0c7dbd5028ce09a64c3c79e4d69f4f610455d142088885a847b37719b0bf8065
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002500-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0c/7d/0c7dbd5028ce09a64c3c79e4d69f4f610455d142088885a847b37719b0bf8065.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0c/7d/0c7dbd5028ce09a64c3c79e4d69f4f610455d142088885a847b37719b0bf8065.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002621-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002621-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002621-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 182273
+  sha256: adbd010d9a5c5a677433da7bd07800a8e6a8ce40b0a559888d4b1dab273d5528
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002621-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/bd/adbd010d9a5c5a677433da7bd07800a8e6a8ce40b0a559888d4b1dab273d5528.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/bd/adbd010d9a5c5a677433da7bd07800a8e6a8ce40b0a559888d4b1dab273d5528.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3499a-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u3499a manufacturer device documentation
+  media_type: application/pdf
+  filename: u3499a.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 813446
+  sha256: b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3499a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3500a-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u3500a manufacturer device documentation
+  media_type: application/pdf
+  filename: u3500a.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2200200
+  sha256: a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3500a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3501a-s-uk-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u3501a_s_uk manufacturer device documentation
+  media_type: application/pdf
+  filename: u3501a_s_uk.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 36835608
+  sha256: 7235899a2edacb9dddd4ba11aed4a033b2c2a03d7c8897bcee4ccc123ea453ac
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3501a_s_uk.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/35/7235899a2edacb9dddd4ba11aed4a033b2c2a03d7c8897bcee4ccc123ea453ac.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/35/7235899a2edacb9dddd4ba11aed4a033b2c2a03d7c8897bcee4ccc123ea453ac.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3887a-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U3887A manufacturer device documentation
+  media_type: application/pdf
+  filename: U3887A.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 4628582
+  sha256: 407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U3887A.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-u3970a-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1104,6 +2800,178 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4613b-u-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: u4613b_u_en manufacturer device documentation
+  media_type: application/pdf
+  filename: u4613b_u_en.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 8302638
+  sha256: c60eecb3f5bff48d669037942f52c68dbbde21288e424cc5970390caae19c0ca
+  source_url: https://assets.legrand.com/general/legrand-exp/np-ft-gt/u4613b_u_en.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c6/0e/c60eecb3f5bff48d669037942f52c68dbbde21288e424cc5970390caae19c0ca.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c6/0e/c60eecb3f5bff48d669037942f52c68dbbde21288e424cc5970390caae19c0ca.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4713a-s-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4713A_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: U4713A_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 5721220
+  sha256: 8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4713A_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4714b-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4714B manufacturer device documentation
+  media_type: application/pdf
+  filename: U4714B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 682341
+  sha256: 4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4714B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4724e-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4724E manufacturer device documentation
+  media_type: application/pdf
+  filename: U4724E.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2371059
+  sha256: 117e45fbbbd1c684aa08b98cba3485ac14cab079e94623f82941c321e1a06000
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4724E.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/11/7e/117e45fbbbd1c684aa08b98cba3485ac14cab079e94623f82941c321e1a06000.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/11/7e/117e45fbbbd1c684aa08b98cba3485ac14cab079e94623f82941c321e1a06000.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4725d-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4725D manufacturer device documentation
+  media_type: application/pdf
+  filename: U4725D.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2308116
+  sha256: 6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4725D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/63/00/6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/63/00/6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-y4652m2-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Y4652M2-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: Y4652M2-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1270164
+  sha256: f3813820f392cd86bb77a256d6289635f0504c5e35fb55836411c4f45e1de23a
+  source_url: https://www.bticino.com/products/pdf?sku=BT-Y4652M2&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f3/81/f3813820f392cd86bb77a256d6289635f0504c5e35fb55836411c4f45e1de23a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f3/81/f3813820f392cd86bb77a256d6289635f0504c5e35fb55836411c4f45e1de23a.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-y4652m3-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Y4652M3-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: Y4652M3-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1748784
+  sha256: 12c2927c49758f9ea1b4eee966f0f137d393e839d59c6961ceddd144e810fbec
+  source_url: https://www.bticino.com/products/pdf?sku=BT-Y4652M3&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/12/c2/12c2927c49758f9ea1b4eee966f0f137d393e839d59c6961ceddd144e810fbec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/12/c2/12c2927c49758f9ea1b4eee966f0f137d393e839d59c6961ceddd144e810fbec.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-y4672m2l-publisher-product-sheet-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Y4672M2L-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: Y4672M2L-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 1644841
+  sha256: d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957
+  source_url: https://www.bticino.com/products/pdf?sku=BT-Y4672M2L&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d3/54/d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d3/54/d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
