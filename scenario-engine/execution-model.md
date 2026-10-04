@@ -125,6 +125,22 @@ Local “started” notifications follow action dispatch and do not establish ac
 
 This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
 
+## Historical touchscreen alarm-clock scheduling
+
+BtExperience's alarm clocks at `TS10_1_0_23` use a separate local scheduler and ordinary [sound controls](../functional/who-22-sound-diffusion/#historical-alarm-clock-control).
+
+| Setting / event | Application behavior |
+| --- | --- |
+| Weekdays | Bit `6` is Monday, bit `0` Sunday, reversing the advanced-scenario order above |
+| No selected weekdays | One-shot alarm; triggering disables subsequent automatic scheduling |
+| Enabled state | Arms the automatic timer; disabling stops it. Direct calls to the trigger method do not themselves check enabled state |
+| Next trigger | Uses the local date and selected hour/minute; a time already reached schedules the following day. Selected weekdays are checked at timeout, then the timer is rearmed |
+| Editable time / weekdays | Changed values recalculate the timer before Save; Reset emits changes and recalculates it too |
+| Date/time report | Recalculates from the touchscreen clock, without using the report payload as the alarm time |
+| Snooze restart | Resets the tick counter within a nominal 30-minute window from the original start; its time-of-day comparison does not establish correct behavior across midnight or clock changes |
+
+Configuration stores volume in tens of percentage points, resolves the amplifier by an application Object reference, and selects the first configured source of the requested type. These fields are not bus addresses or a general OpenWebNet alarm schema. The scheduler does not establish missed-event recovery or duplicate-trigger suppression. Earlier implementations and corrections are scoped in [Alarm-clock history evidence](../project/review/myopencommunity-alarm-clock-history-review.md).
+
 ## Relationship to `OPEN.db`
 
 `OPEN.db` describes MyHOME_Suite communication scenarios for diagnostics and Device programming. It does not define the Scenario Engine graph or replace the functional meanings of ScenarioDevices action frames.

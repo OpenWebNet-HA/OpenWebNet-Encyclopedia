@@ -6244,9 +6244,12 @@ One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound
 
 Section ID: `ownkb:section:d000040:s000014`
 
+Applicability cues: `firmware`
 Provenance cues: `evidence`, `source`
 
 BTouch migrated sound operations separately. During the 2008..2009 transition it could send `WHO 22` amplifier power or source-selection commands while retaining `WHO 16` volume, tuning, station writes, and RDS. The matrix parser briefly accepted both dialects before its September 2009 change to `WHO 22` routing reports. This proves mixed-dialect application behavior, but does not identify which bus component generated the paired MH200N reports. See [Sound implementation evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
+Historical alarm-clock clients also combine `WHO 22` routing with `WHO 16` amplifier volume and power. Their startup and volume-ramp policies belong to the local controller; no deployed Firmware boundary is established. See [Historical alarm-clock control](../who-22-sound-diffusion/#historical-alarm-clock-control) and [Alarm-clock history evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
 
 ### Evidence basis
 
@@ -7993,6 +7996,7 @@ Exact BTicino tests at `TS10_1_0_23` resolve several malformed published example
 | Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
 | Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
 | Select source for one area | `*22*35#4#AREA#SOURCE*3#AREA#0##` |
+| Select stored station | `*#22*2#SOURCE*#6*STATION##` |
 | Virtual amplifier state report | `*#22*5#3#AREA#POINT*12*STATE*3##` |
 | Virtual amplifier volume report | `*#22*5#3#AREA#POINT*1*VOLUME##` |
 
@@ -8035,6 +8039,29 @@ The historical touchscreen implementation distinguishes local audio settings `L 
 For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
 
 The separately tested BtExperience percentage API sends volume `19` for `62%` and displays `38%` for reported volume `12`. Its integer conversions are not exact inverses. Earlier application versions used raw amplifier values; this change does not identify a Firmware generation.
+
+#### Historical alarm-clock control
+
+Section ID: `ownkb:section:d000053:s000018`
+
+Cautions: `do not`
+Uncertainty: `not established`, `not verified`
+Provenance cues: `evidence`, `source`
+
+The archived touchscreen alarm clocks are local controllers using ordinary source, station, volume and amplifier operations. Their scheduling is separate from the sound protocol; see [Touchscreen alarm-clock scheduling](../../scenario-engine/execution-model.md#historical-touchscreen-alarm-clock-scheduling).
+
+| Controller / operation | Implementation behavior |
+| --- | --- |
+| Earlier `libqtdevices` helper startup | Select source for area `0`, select a nonzero station if the source is a radio, then process selected amplifiers in address order. In multichannel mode, select that source once per selected area `1..8` before setting volume and issuing Follow Me |
+| Earlier helper initial volume | Use each stored amplifier value below `10`; start higher targets at `8`. Negative stored values exclude amplifiers. These are alarm settings, not revised volume domains |
+| BtExperience startup at `TS10_1_0_23` | Starting the timer sends no sound command. The first 3-second tick selects the source through the amplifier controller, writes volume `0`, then activates the amplifier; the exact single-amplifier test selects its area |
+| BtExperience volume ramp | Tick `t` proposes integer `t * 100 / 31` percent, writing only while this is at most the configured percentage. The amplifier's percentage conversion truncates again: the tested `25%` target sends levels `0..7`, then no further increase in the tested sequence |
+| BtExperience snooze / automatic expiry | Snooze sends amplifier OFF and waits 5 minutes before restarting the ramp. The final sound tick sends OFF and stops the timers; the nominal ringing interval is 2 minutes |
+| BtExperience explicit Stop | Stops ringing and snooze timers without an amplifier OFF command. The popup's Stop action calls this method; snooze and expiry have separate OFF behavior |
+
+The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
+
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. Reliable fallback for every USB/SD search or failed network stream is not established. See [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
 
 #### Tone, balance, and presets
 
@@ -18934,6 +18961,27 @@ Advanced-scenario Configuration selects active time and Device conditions and a 
 Local “started” notifications follow action dispatch and do not establish acknowledgement or Device execution. See [Scenario and condition history evidence](../project/review/myopencommunity-scenario-history-review.md#conditions-and-automatic-execution) for assertion scope and historical corrections.
 
 This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
+
+### Historical touchscreen alarm-clock scheduling
+
+Section ID: `ownkb:section:d000129:s000010`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+BtExperience's alarm clocks at `TS10_1_0_23` use a separate local scheduler and ordinary [sound controls](../functional/who-22-sound-diffusion/#historical-alarm-clock-control).
+
+| Setting / event | Application behavior |
+| --- | --- |
+| Weekdays | Bit `6` is Monday, bit `0` Sunday, reversing the advanced-scenario order above |
+| No selected weekdays | One-shot alarm; triggering disables subsequent automatic scheduling |
+| Enabled state | Arms the automatic timer; disabling stops it. Direct calls to the trigger method do not themselves check enabled state |
+| Next trigger | Uses the local date and selected hour/minute; a time already reached schedules the following day. Selected weekdays are checked at timeout, then the timer is rearmed |
+| Editable time / weekdays | Changed values recalculate the timer before Save; Reset emits changes and recalculates it too |
+| Date/time report | Recalculates from the touchscreen clock, without using the report payload as the alarm time |
+| Snooze restart | Resets the tick counter within a nominal 30-minute window from the original start; its time-of-day comparison does not establish correct behavior across midnight or clock changes |
+
+Configuration stores volume in tens of percentage points, resolves the amplifier by an application Object reference, and selects the first configured source of the requested type. These fields are not bus addresses or a general OpenWebNet alarm schema. The scheduler does not establish missed-event recovery or duplicate-trigger suppression. Earlier implementations and corrections are scoped in [Alarm-clock history evidence](../project/review/myopencommunity-alarm-clock-history-review.md).
 
 ### Relationship to `OPEN.db`
 

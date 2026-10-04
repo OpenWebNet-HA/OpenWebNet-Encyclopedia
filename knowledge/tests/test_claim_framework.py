@@ -126,8 +126,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2909, "documents": 60, "reviewed_nonclaim_sections": 64,
-             "sections": 465, "sections_with_claims": 401},
+            {"claims": 2909, "documents": 60, "reviewed_nonclaim_sections": 65,
+             "sections": 466, "sections_with_claims": 401},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -156,8 +156,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(
-            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 12,
-             "sections": 101, "sections_with_claims": 89},
+            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 13,
+             "sections": 102, "sections_with_claims": 89},
             metrics["bounded_domains"]["scenario-engine"],
         )
 

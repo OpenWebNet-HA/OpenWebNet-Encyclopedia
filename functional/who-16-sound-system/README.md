@@ -141,6 +141,8 @@ One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound
 
 BTouch migrated sound operations separately. During the 2008..2009 transition it could send `WHO 22` amplifier power or source-selection commands while retaining `WHO 16` volume, tuning, station writes, and RDS. The matrix parser briefly accepted both dialects before its September 2009 change to `WHO 22` routing reports. This proves mixed-dialect application behavior, but does not identify which bus component generated the paired MH200N reports. See [Sound implementation evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
 
+Historical alarm-clock clients also combine `WHO 22` routing with `WHO 16` amplifier volume and power. Their startup and volume-ramp policies belong to the local controller; no deployed Firmware boundary is established. See [Historical alarm-clock control](../who-22-sound-diffusion/#historical-alarm-clock-control) and [Alarm-clock history evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+
 ## Evidence basis
 
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.

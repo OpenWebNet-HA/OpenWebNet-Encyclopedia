@@ -135,6 +135,7 @@ Exact BTicino tests at `TS10_1_0_23` resolve several malformed published example
 | Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
 | Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
 | Select source for one area | `*22*35#4#AREA#SOURCE*3#AREA#0##` |
+| Select stored station | `*#22*2#SOURCE*#6*STATION##` |
 | Virtual amplifier state report | `*#22*5#3#AREA#POINT*12*STATE*3##` |
 | Virtual amplifier volume report | `*#22*5#3#AREA#POINT*1*VOLUME##` |
 
@@ -168,6 +169,23 @@ The historical touchscreen implementation distinguishes local audio settings `L 
 For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
 
 The separately tested BtExperience percentage API sends volume `19` for `62%` and displays `38%` for reported volume `12`. Its integer conversions are not exact inverses. Earlier application versions used raw amplifier values; this change does not identify a Firmware generation.
+
+### Historical alarm-clock control
+
+The archived touchscreen alarm clocks are local controllers using ordinary source, station, volume and amplifier operations. Their scheduling is separate from the sound protocol; see [Touchscreen alarm-clock scheduling](../../scenario-engine/execution-model.md#historical-touchscreen-alarm-clock-scheduling).
+
+| Controller / operation | Implementation behavior |
+| --- | --- |
+| Earlier `libqtdevices` helper startup | Select source for area `0`, select a nonzero station if the source is a radio, then process selected amplifiers in address order. In multichannel mode, select that source once per selected area `1..8` before setting volume and issuing Follow Me |
+| Earlier helper initial volume | Use each stored amplifier value below `10`; start higher targets at `8`. Negative stored values exclude amplifiers. These are alarm settings, not revised volume domains |
+| BtExperience startup at `TS10_1_0_23` | Starting the timer sends no sound command. The first 3-second tick selects the source through the amplifier controller, writes volume `0`, then activates the amplifier; the exact single-amplifier test selects its area |
+| BtExperience volume ramp | Tick `t` proposes integer `t * 100 / 31` percent, writing only while this is at most the configured percentage. The amplifier's percentage conversion truncates again: the tested `25%` target sends levels `0..7`, then no further increase in the tested sequence |
+| BtExperience snooze / automatic expiry | Snooze sends amplifier OFF and waits 5 minutes before restarting the ramp. The final sound tick sends OFF and stops the timers; the nominal ringing interval is 2 minutes |
+| BtExperience explicit Stop | Stops ringing and snooze timers without an amplifier OFF command. The popup's Stop action calls this method; snooze and expiry have separate OFF behavior |
+
+The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
+
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. Reliable fallback for every USB/SD search or failed network stream is not established. See [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
 
 ### Tone, balance, and presets
 
