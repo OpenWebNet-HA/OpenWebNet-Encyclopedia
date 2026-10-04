@@ -1164,6 +1164,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4714b-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4714B manufacturer device documentation
+  media_type: application/pdf
+  filename: U4714B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 682341
+  sha256: 4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U4714B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
