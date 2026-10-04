@@ -9749,9 +9749,9 @@ Zone `0` is used for inputs and the three internal sirens in the published model
 
 Section ID: `ownkb:section:d000073:s000002`
 
-Provenance cues: `evidence`
+Provenance cues: `evidence`, `source`
 
-The `TS10_1_0_23` touchscreen tests and application handlers accept these event sources:
+The `TS10_1_0_23` touchscreen library and its tests use these numeric event-source filters:
 
 | Event | `WHAT` | Accepted `WHERE` |
 | --- | --- | --- |
@@ -9761,7 +9761,20 @@ The `TS10_1_0_23` touchscreen tests and application handlers accept these event 
 | Anti-panic | `17` | `#9` |
 | Technical alarm / reset | `12` / `13` | `#1..#15` |
 
-These are implementation validation domains, not a replacement for every published sensor address. The same implementation reports armed/disarmed state with `WHAT 8`/`9`. See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).
+These are library filters, not a replacement for every published sensor address. Armed/disarmed reports (`WHAT 8`/`9`) are handled without a `WHERE` check. The parser also lacks a numeric-conversion success check for `#N`; its permissiveness does not establish additional valid addresses.
+
+BtExperience applies another filter before adding decoded events to its alarm list:
+
+| Event | Required local Configuration |
+| --- | --- |
+| Intrusion | Matching configured zone |
+| Technical alarm | Matching configured auxiliary source |
+| Tamper at source `0..8` | Matching configured zone |
+| Tamper at source `9..15`, anti-panic at `9` | No configured source required |
+
+A wire event can therefore be decoded and still omitted from the displayed list. The library handles armed/disarmed state, zone engagement/partialization and the four alarm families above; it does not forward every published maintenance, battery, mains or silent-alarm value to this product model.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events), the [Alarm history review](../../project/review/myopencommunity-alarm-history-review.md), and [Protocol](protocol.md#event-connection) for local list behavior.
 
 # Document: ownkb:document:d000074
 
@@ -9795,7 +9808,12 @@ The `#N` form is a zone selector, not a numeric point-to-point address. See [Add
 
 Section ID: `ownkb:section:d000074:s000004`
 
+Cautions: `not evidence`
+Provenance cues: `evidence`, `source`
+
 Alarm state changes are also emitted as events. Consumers should normalize events using the pair `(WHAT, WHERE)` because the same `WHAT` family can describe central-unit, zone, sensor, or auxiliary context depending on `WHERE`.
+
+The historical BtExperience client at `TS10_1_0_23` keeps a local alarm list with the [configured-source filters](addressing.md#historical-event-validation). It suppresses repeated entries with the same alarm type and source number, removes a technical entry on `WHAT 13`, and clears the list when reported state changes from disarmed to armed. Its timestamps record local receipt time. This list is not evidence of a complete panel event journal, and clearing it does not send an alarm-reset command.
 
 ### Programming values
 
@@ -9822,9 +9840,20 @@ The BTicino touchscreen implementation at `TS10_1_0_23` emits the following cont
 
 `MASK` contains eight textual bits, left to right for zones `1..8`; `1` means partialized. For example, `11000001` selects zones 1, 2, and 8. The central target `0` is the library's form, distinct from the published request above. The password's format and acceptance rules are not established by the tests; do not log password-bearing frames unredacted.
 
-When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. The application judges success from the resulting armed/zone state. These delays and the optimistic local state update are application choices, not protocol deadlines or proof that an ACK validates a password.
+When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. These delays and the optimistic local armed-state update are application choices, not protocol deadlines.
 
-See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).
+BtExperience supplies password feedback from reported state rather than a password-validation response:
+
+| Operation | Local feedback check |
+| --- | --- |
+| Toggle armed/disarmed state | While awaiting feedback after initialization, changed armed state indicates success; unchanged state indicates refusal when no partialization reports are pending |
+| Change partialization | Count reports for configured zones; after as many reports as configured zones, any observed zone-state change indicates success, otherwise refusal |
+
+The partialization check does not require distinct zone reports or verify the requested mask. Repeated reports can complete the count before every zone is confirmed. The client permits this operation only while disarmed and after local selection changes; selecting an alarm scenario edits the local zone selection before a password control is submitted. Received zone state also replaces that selection. These are client policies, not panel restrictions or `WHO 0` scenario commands.
+
+The product has a separate 10-second feedback timeout, which can expire before the library's delayed 11-second status request in the combined partialization-and-arm sequence. It also emits a timeout immediately when a partialization request cannot be submitted locally. A timeout does not establish password refusal. Neither the local feedback signals nor an ACK establish password acceptance or complete mask application.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events) and the [Alarm history review](../../project/review/myopencommunity-alarm-history-review.md).
 
 ### Write support
 

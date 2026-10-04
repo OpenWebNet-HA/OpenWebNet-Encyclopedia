@@ -18,6 +18,8 @@ The `#N` form is a zone selector, not a numeric point-to-point address. See [Add
 
 Alarm state changes are also emitted as events. Consumers should normalize events using the pair `(WHAT, WHERE)` because the same `WHAT` family can describe central-unit, zone, sensor, or auxiliary context depending on `WHERE`.
 
+The historical BtExperience client at `TS10_1_0_23` keeps a local alarm list with the [configured-source filters](addressing.md#historical-event-validation). It suppresses repeated entries with the same alarm type and source number, removes a technical entry on `WHAT 13`, and clears the list when reported state changes from disarmed to armed. Its timestamps record local receipt time. This list is not evidence of a complete panel event journal, and clearing it does not send an alarm-reset command.
+
 ## Programming values
 
 The published vocabulary includes `WHAT 26` and `27` for start/stop programming. These belong to the historical `WHO 5` functional protocol. They are not the same subsystem as the MyHOME_Suite Device/Object configuration protocol documented under [Programming](../../programming/).
@@ -34,9 +36,20 @@ The BTicino touchscreen implementation at `TS10_1_0_23` emits the following cont
 
 `MASK` contains eight textual bits, left to right for zones `1..8`; `1` means partialized. For example, `11000001` selects zones 1, 2, and 8. The central target `0` is the library's form, distinct from the published request above. The password's format and acceptance rules are not established by the tests; do not log password-bearing frames unredacted.
 
-When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. The application judges success from the resulting armed/zone state. These delays and the optimistic local state update are application choices, not protocol deadlines or proof that an ACK validates a password.
+When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. These delays and the optimistic local armed-state update are application choices, not protocol deadlines.
 
-See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events).
+BtExperience supplies password feedback from reported state rather than a password-validation response:
+
+| Operation | Local feedback check |
+| --- | --- |
+| Toggle armed/disarmed state | While awaiting feedback after initialization, changed armed state indicates success; unchanged state indicates refusal when no partialization reports are pending |
+| Change partialization | Count reports for configured zones; after as many reports as configured zones, any observed zone-state change indicates success, otherwise refusal |
+
+The partialization check does not require distinct zone reports or verify the requested mask. Repeated reports can complete the count before every zone is confirmed. The client permits this operation only while disarmed and after local selection changes; selecting an alarm scenario edits the local zone selection before a password control is submitted. Received zone state also replaces that selection. These are client policies, not panel restrictions or `WHO 0` scenario commands.
+
+The product has a separate 10-second feedback timeout, which can expire before the library's delayed 11-second status request in the combined partialization-and-arm sequence. It also emits a timeout immediately when a partialization request cannot be submitted locally. A timeout does not establish password refusal. Neither the local feedback signals nor an ACK establish password acceptance or complete mask application.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events) and the [Alarm history review](../../project/review/myopencommunity-alarm-history-review.md).
 
 ## Write support
 
