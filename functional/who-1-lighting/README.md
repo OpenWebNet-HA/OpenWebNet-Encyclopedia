@@ -26,3 +26,5 @@ Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment,
 Lighting Management is a distinct protocol namespace under [`WHO 24`](../who-24-lighting-management/). Diagnostic discovery and configuration of Lighting-capable Devices belong to the diagnostic protocol rather than to functional `WHO 1` traffic.
 
 For the Device → Module → Object → Configuration model, see [Device Model](../../device-model/).
+
+The historical touchscreen's configured Lighting groups dispatch commands to linked Objects individually, rather than constructing a `#GR` address. Its “staircase light” Object delegates to [`WHO 8` Video Door Entry](../who-8-video-door-entry-telephony/) rather than `WHO 1`. Application groups and category labels therefore do not establish a wire address or namespace. See [Product selection evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).

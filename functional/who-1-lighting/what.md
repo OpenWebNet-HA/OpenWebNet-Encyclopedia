@@ -20,6 +20,25 @@ For the published speed field, `0` means the last speed used, `1..254` are expli
 
 The touchscreen library converts coarse `WHAT 2..10` into cached fine levels `1, 10, 20, 30, 40, 50, 60, 75, 100` respectively. Its exact tests include `WHAT 9` becoming cached level `75`. This is the client's conversion table, distinct from the published percentage labels above; it does not prove a physical output curve. Compare the [observed F418U2 coarse/fine relationship](dimensions.md#dimension-1---level-and-speed) and [conversion evidence](../../project/review/myopencommunity-coverage-audit.md#coarse-lighting-levels).
 
+The inverse conversion used by the coarse dimmer setter rounds requested fine levels as follows:
+
+| Requested level | Sent `WHAT` |
+| --- | ---: |
+| `0` | `0` |
+| `1..4` | `2` |
+| `5..15` | `3` |
+| `16..25` | `4` |
+| `26..35` | `5` |
+| `36..45` | `6` |
+| `46..53` | `7` |
+| `54..67` | `8` |
+| `68..85` | `9` |
+| `86..100` | `10` |
+
+This setter ignores its speed argument. An exact test sends `*1*9*WHERE##` for requested level `75` and speed `9`; the fine-level setter instead sends `*#1*WHERE*#1*175*9##`. These are library choices, not additional protocol ranges or evidence of a physical output curve.
+
+The same library decodes `*1*19*WHERE##` as a dimmer-problem indication. The touchscreen sets a local fault flag and clears it on a decoded ON/OFF state, including OFF. This establishes historical client handling, not the fault's physical cause or a universal recovery condition. See [Lighting and Automation evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
 ## Timed operations
 
 | `WHAT` | ON duration |

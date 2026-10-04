@@ -4322,6 +4322,8 @@ Provenance cues: `evidence`
 Section ID: `ownkb:section:d000026:s000003`
 
 Applicability cues: `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*WHERE##`. `DIMENSION` operations use the common frame classes defined in [`DIMENSION`](../../protocol/dimensions.md).
 
@@ -4332,6 +4334,8 @@ Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment,
 Lighting Management is a distinct protocol namespace under [`WHO 24`](../who-24-lighting-management/). Diagnostic discovery and configuration of Lighting-capable Devices belong to the diagnostic protocol rather than to functional `WHO 1` traffic.
 
 For the Device → Module → Object → Configuration model, see [Device Model](../../device-model/).
+
+The historical touchscreen's configured Lighting groups dispatch commands to linked Objects individually, rather than constructing a `#GR` address. Its “staircase light” Object delegates to [`WHO 8` Video Door Entry](../who-8-video-door-entry-telephony/) rather than `WHO 1`. Application groups and category labels therefore do not establish a wire address or namespace. See [Product selection evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
 
 # Document: ownkb:document:d000027
 
@@ -4433,7 +4437,7 @@ Cautions: `must not`
 Section ID: `ownkb:section:d000028:s000003`
 
 Applicability cues: `firmware`
-Cautions: `must not`
+Cautions: `must not`, `not evidence`
 Provenance cues: `documentation`, `evidence`, `source`
 
 Write:
@@ -4455,6 +4459,8 @@ A 27 September 2026 [public MH200/F418U2 trace](https://github.com/GreenGrassBlu
 
 The same MH200/F418U2 trace also observed coarse `WHAT` commands and subsequent fine-level reads: `WHAT 3 -> LEVEL100 110`, `WHAT 5 -> LEVEL100 130`, `WHAT 7 -> LEVEL100 150`, and `WHAT 10 -> LEVEL100 200`. These are Device-path observations, not a replacement for the published `WHAT` table; the exact relationship between the coarse command labels and the F418U2 fine-level state remains implementation evidence rather than a universal encoding rule.
 
+At `TS10_1_0_23`, the touchscreen library treats `LEVEL100 = 100` as OFF while retaining its previously cached level. It emits no fresh level or speed from that OFF report; speed is forwarded only from a `DIMENSION 1` report while ON. A dimension write can update the local level without refreshing speed. Retained level and speed therefore need their own freshness, separate from ON/OFF state. These are decoder/cache choices, not evidence that the actuator reports its previous level while OFF. See [Client-state evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
 ### `DIMENSION 2` - temporization
 
 Section ID: `ownkb:section:d000028:s000004`
@@ -4471,9 +4477,19 @@ This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. T
 
 Section ID: `ownkb:section:d000028:s000011`
 
+Applicability cues: `gateway`
 Provenance cues: `evidence`
 
 The BTicino touchscreen library at `TS10_1_0_23` ignores the report payload `255*255*255` as unusable timer state. It retains `0*0*0` as a zero duration. This is implementation evidence for interpreting historical reports, not an extension of the published minute/second ranges. See [Lighting evidence](../../project/review/myopencommunity-integration.md#lighting-and-automation).
+
+The touchscreen's timed fine-dimmer action sends ON, with its configured transition speed when positive, followed by the fixed-duration command or `DIMENSION 2` write. Its ordinary timed-light action sends the timer operation directly. For example, a fine-dimmer action with speed `123` and duration of 15 hours, 0 minutes and 3 seconds sends:
+
+```text
+*1*1#123*WHERE##
+*#1*WHERE*#2*15*0*3##
+```
+
+Exact application tests establish this order. It is an application action sequence, not a requirement to precede every timer write with ON or evidence of gateway acceptance.
 
 ### `DIMENSION 3` - only Objects that are ON
 
@@ -4551,12 +4567,14 @@ The global `WHO 1` vocabulary does not imply that every Lighting Object implemen
 Section ID: `ownkb:section:d000028:s000012`
 
 Cautions: `do not`, `must not`
-Uncertainty: `unresolved`
+Uncertainty: `unknown`, `unresolved`
 Provenance cues: `evidence`, `specification`
 
 The touchscreen's Lighting/Automation state manager compares a collective command with a later point report to classify whether an endpoint follows that command. Exact tests distinguish a light remaining OFF after general ON from one reporting ON. Point reports alone do not establish that classification, and an unsupported advanced command can leave it unresolved.
 
 This is a client capability-detection strategy, not a complete physical pull-actuator specification. Collective traffic must not automatically overwrite every point's observed state. Its polling delays and classification names are application policy. See [Collective-command evidence](../../project/review/myopencommunity-reassessment.md#lighting-and-automation-state).
+
+In the same client's dimmer cache, a relative command while OFF turns the cached state ON without applying the step to the remembered level. While ON, coarse steps are clamped to `WHAT 2..10`, and fine steps to `1..100`. For ordinary ON/OFF frames, a collective ON schedules a delayed level query when the cached level is unknown; OFF cancels that query, while a point ON does not schedule it. These assumptions explain the client's displayed state and do not substitute for a point report.
 
 ### Evidence basis
 
@@ -4605,6 +4623,25 @@ Section ID: `ownkb:section:d000029:s000009`
 Provenance cues: `evidence`
 
 The touchscreen library converts coarse `WHAT 2..10` into cached fine levels `1, 10, 20, 30, 40, 50, 60, 75, 100` respectively. Its exact tests include `WHAT 9` becoming cached level `75`. This is the client's conversion table, distinct from the published percentage labels above; it does not prove a physical output curve. Compare the [observed F418U2 coarse/fine relationship](dimensions.md#dimension-1---level-and-speed) and [conversion evidence](../../project/review/myopencommunity-coverage-audit.md#coarse-lighting-levels).
+
+The inverse conversion used by the coarse dimmer setter rounds requested fine levels as follows:
+
+| Requested level | Sent `WHAT` |
+| --- | --- |
+| `0` | `0` |
+| `1..4` | `2` |
+| `5..15` | `3` |
+| `16..25` | `4` |
+| `26..35` | `5` |
+| `36..45` | `6` |
+| `46..53` | `7` |
+| `54..67` | `8` |
+| `68..85` | `9` |
+| `86..100` | `10` |
+
+This setter ignores its speed argument. An exact test sends `*1*9*WHERE##` for requested level `75` and speed `9`; the fine-level setter instead sends `*#1*WHERE*#1*175*9##`. These are library choices, not additional protocol ranges or evidence of a physical output curve.
+
+The same library decodes `*1*19*WHERE##` as a dimmer-problem indication. The touchscreen sets a local fault flag and clears it on a decoded ON/OFF state, including OFF. This establishes historical client handling, not the fault's physical cause or a universal recovery condition. See [Lighting and Automation evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
 
 ### Timed operations
 
@@ -7307,6 +7344,8 @@ Provenance cues: `evidence`
 The touchscreen product's Automation section includes two-state Objects implemented through [`WHO 1` Lighting](../who-1-lighting/), contacts through [`WHO 25`](../who-25-transversal/dry-contact-ir.md), and door-entry controls through [`WHO 8`](../who-8-video-door-entry-telephony/). Its three-state movement Objects use `WHO 2`. A product category or UI label therefore does not determine the wire namespace.
 
 Its configured Automation groups can also contain lists of Objects whose commands are sent individually. That application grouping is distinct from the published `#GR` collective address. See [Product namespace evidence](../../project/review/myopencommunity-reassessment.md#product-model-boundaries).
+
+The product's “safe” three-state controls send UP or DOWN on press and STOP on release, using the ordinary `WHAT 1`, `2` and `0` commands. The Configuration flag selects this control behavior; it does not select an advanced priority command or establish a physical safety guarantee. The historical Automation decoder handles those three states without implementing the published positioning dimensions. See [Control behavior evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
 
 # Document: ownkb:document:d000049
 

@@ -45,6 +45,8 @@ A 27 September 2026 [public MH200/F418U2 trace](https://github.com/GreenGrassBlu
 
 The same MH200/F418U2 trace also observed coarse `WHAT` commands and subsequent fine-level reads: `WHAT 3 -> LEVEL100 110`, `WHAT 5 -> LEVEL100 130`, `WHAT 7 -> LEVEL100 150`, and `WHAT 10 -> LEVEL100 200`. These are Device-path observations, not a replacement for the published `WHAT` table; the exact relationship between the coarse command labels and the F418U2 fine-level state remains implementation evidence rather than a universal encoding rule.
 
+At `TS10_1_0_23`, the touchscreen library treats `LEVEL100 = 100` as OFF while retaining its previously cached level. It emits no fresh level or speed from that OFF report; speed is forwarded only from a `DIMENSION 1` report while ON. A dimension write can update the local level without refreshing speed. Retained level and speed therefore need their own freshness, separate from ON/OFF state. These are decoder/cache choices, not evidence that the actuator reports its previous level while OFF. See [Client-state evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
 ## `DIMENSION 2` - temporization
 
 ~~~text
@@ -58,6 +60,15 @@ This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. T
 ### Historical timer handling
 
 The BTicino touchscreen library at `TS10_1_0_23` ignores the report payload `255*255*255` as unusable timer state. It retains `0*0*0` as a zero duration. This is implementation evidence for interpreting historical reports, not an extension of the published minute/second ranges. See [Lighting evidence](../../project/review/myopencommunity-integration.md#lighting-and-automation).
+
+The touchscreen's timed fine-dimmer action sends ON, with its configured transition speed when positive, followed by the fixed-duration command or `DIMENSION 2` write. Its ordinary timed-light action sends the timer operation directly. For example, a fine-dimmer action with speed `123` and duration of 15 hours, 0 minutes and 3 seconds sends:
+
+~~~text
+*1*1#123*WHERE##
+*#1*WHERE*#2*15*0*3##
+~~~
+
+Exact application tests establish this order. It is an application action sequence, not a requirement to precede every timer write with ON or evidence of gateway acceptance.
 
 ## `DIMENSION 3` - only Objects that are ON
 
@@ -116,6 +127,8 @@ The global `WHO 1` vocabulary does not imply that every Lighting Object implemen
 The touchscreen's Lighting/Automation state manager compares a collective command with a later point report to classify whether an endpoint follows that command. Exact tests distinguish a light remaining OFF after general ON from one reporting ON. Point reports alone do not establish that classification, and an unsupported advanced command can leave it unresolved.
 
 This is a client capability-detection strategy, not a complete physical pull-actuator specification. Collective traffic must not automatically overwrite every point's observed state. Its polling delays and classification names are application policy. See [Collective-command evidence](../../project/review/myopencommunity-reassessment.md#lighting-and-automation-state).
+
+In the same client's dimmer cache, a relative command while OFF turns the cached state ON without applying the step to the remembered level. While ON, coarse steps are clamped to `WHAT 2..10`, and fine steps to `1..100`. For ordinary ON/OFF frames, a collective ON schedules a delayed level query when the cached level is unknown; OFF cancels that query, while a point ON does not schedule it. These assumptions explain the client's displayed state and do not substitute for a point report.
 
 ## Evidence basis
 
