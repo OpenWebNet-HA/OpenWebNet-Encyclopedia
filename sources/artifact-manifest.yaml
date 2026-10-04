@@ -1688,6 +1688,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-o0192b-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O0192B manufacturer device documentation
+  media_type: application/pdf
+  filename: O0192B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 6022813
+  sha256: b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4
+  source_url: https://dar.bticino.it/asset/Documents/O0192B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b6/1b/b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b6/1b/b61b38fc3865d7fc5c261861ba18d0901920ef32d429c4510100b8af5bdb1ef4.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-o0195e-20261004
   kind: documentation
   publisher: BTicino / Legrand
