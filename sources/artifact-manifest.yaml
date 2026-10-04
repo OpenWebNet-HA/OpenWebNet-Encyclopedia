@@ -1044,6 +1044,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00521-b-en-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00521-b-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00521-b-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 76512
+  sha256: f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ00521-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f8/e2/f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f8/e2/f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044.pdf
+  language:
+  - en
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-mq01008-a-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
