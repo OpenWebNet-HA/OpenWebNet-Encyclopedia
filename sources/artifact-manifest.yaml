@@ -1046,6 +1046,32 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le14823aa-20261004
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14823AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14823AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-04
+  size: 2828516
+  sha256: 9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14823AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/99/35/9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/99/35/9935d7a2c1290879131b2ad28ccae8a35a4c5ed35525f9ba65fca52b9e0e5964.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Manufacturer original text and diagrams inspected
+  notes:
+  - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
 - id: device-doc-living-now-2025-3m-catalogue-20261003
   kind: documentation
   publisher: BTicino / Legrand
