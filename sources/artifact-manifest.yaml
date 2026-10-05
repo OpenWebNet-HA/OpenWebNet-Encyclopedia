@@ -5975,6 +5975,33 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le13692ac-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE13692AC manufacturer device documentation
+  media_type: application/pdf
+  filename: LE13692AC.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 1701155
+  sha256: aff7c4bc2ebed1405feedebdea85f99f8a901e90446b07fe8a64ae704217bea4
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE13692AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/af/f7/aff7c4bc2ebed1405feedebdea85f99f8a901e90446b07fe8a64ae704217bea4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/af/f7/aff7c4bc2ebed1405feedebdea85f99f8a901e90446b07fe8a64ae704217bea4.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - ar
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le14222ac-20261005
   kind: documentation
   publisher: BTicino / Legrand
