@@ -1271,6 +1271,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4661m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4661M2
+  title: H4661M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4661M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23829
+  sha256: dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4672m2-ean-export-20261005
   kind: documentation
   publisher: BTicino
