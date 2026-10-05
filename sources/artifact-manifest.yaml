@@ -678,6 +678,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-344642-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 344642-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 344642-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 30203
+  sha256: 9f63e38160f3d6d136aa7de7c10b353fd6fe0e89ef5c234936c2514aac1cf2d3
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344642
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/63/9f63e38160f3d6d136aa7de7c10b353fd6fe0e89ef5c234936c2514aac1cf2d3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/63/9f63e38160f3d6d136aa7de7c10b353fd6fe0e89ef5c234936c2514aac1cf2d3.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-344682-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
