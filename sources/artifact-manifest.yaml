@@ -2086,6 +2086,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f430r3v10-publisher-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F430R3V10-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F430R3V10-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 520396
+  sha256: d15bfac1531aeb6aa66688805f5eaaba9a22d87540ec980c4e73e0af36595fb8
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F430R3V10&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d1/5b/d15bfac1531aeb6aa66688805f5eaaba9a22d87540ec980c4e73e0af36595fb8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d1/5b/d15bfac1531aeb6aa66688805f5eaaba9a22d87540ec980c4e73e0af36595fb8.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f450-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
