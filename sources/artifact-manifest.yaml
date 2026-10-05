@@ -6225,6 +6225,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-mm00883-a-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00883-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MM00883-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 168950
+  sha256: 5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MM00883-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5c/f5/5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5c/f5/5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mq00184-c-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
