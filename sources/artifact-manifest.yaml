@@ -1828,6 +1828,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00603-c-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00603-c-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00603-c-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 531367
+  sha256: 7c2a8f8c9aef22a00e06dbe5dcf9627ab7c7665aa5d9ed7907fb973f0f8f82c5
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/BT00603-c-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7c/2a/7c2a8f8c9aef22a00e06dbe5dcf9627ab7c7665aa5d9ed7907fb973f0f8f82c5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7c/2a/7c2a8f8c9aef22a00e06dbe5dcf9627ab7c7665aa5d9ed7907fb973f0f8f82c5.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00639-b-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
