@@ -2509,6 +2509,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-km4691-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: KM4691
+  title: KM4691 official product export with EAN
+  media_type: application/pdf
+  filename: KM4691-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 28810
+  sha256: 42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-km8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
