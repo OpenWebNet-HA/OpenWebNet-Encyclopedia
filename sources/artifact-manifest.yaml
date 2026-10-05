@@ -5838,6 +5838,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le11056aa-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE11056AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE11056AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 731933
+  sha256: 39f075e016c36b704aa10d37a2cd9eb25905dabead71c96044a9adb3fc7a4334
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE11056AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/39/f0/39f075e016c36b704aa10d37a2cd9eb25905dabead71c96044a9adb3fc7a4334.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/39/f0/39f075e016c36b704aa10d37a2cd9eb25905dabead71c96044a9adb3fc7a4334.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11336ac-20261005
   kind: documentation
   publisher: BTicino / Legrand
