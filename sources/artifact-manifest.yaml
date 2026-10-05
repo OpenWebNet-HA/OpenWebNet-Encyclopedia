@@ -4557,6 +4557,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le14226ab-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14226AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14226AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 5036971
+  sha256: 29306e6c22c7168c71b6dbc165975dc090ecb9680b194a54c1d0aed71d82e8f7
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14226AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/29/30/29306e6c22c7168c71b6dbc165975dc090ecb9680b194a54c1d0aed71d82e8f7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/29/30/29306e6c22c7168c71b6dbc165975dc090ecb9680b194a54c1d0aed71d82e8f7.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le14741aa-20261004
   kind: documentation
   publisher: BTicino / Legrand
