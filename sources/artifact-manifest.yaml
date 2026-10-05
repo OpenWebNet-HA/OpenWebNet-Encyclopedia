@@ -2106,6 +2106,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-f430r8-publisher-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F430R8-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F430R8-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 495085
+  sha256: a01f9ea0b1c9b7bf665e6a944b829ee639bd0b08af97369eb4a57d03116234b2
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F430R8&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a0/1f/a01f9ea0b1c9b7bf665e6a944b829ee639bd0b08af97369eb4a57d03116234b2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a0/1f/a01f9ea0b1c9b7bf665e6a944b829ee639bd0b08af97369eb4a57d03116234b2.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f450-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
