@@ -5421,6 +5421,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00215ac-i-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00215AC_I_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00215AC_I_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 60732910
+  sha256: 828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00000215-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
