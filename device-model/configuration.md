@@ -84,6 +84,8 @@ A complete configuration UI may combine both scopes.
 
 The canonical catalogue represents configuration mode and physical configurator semantics separately.
 
+For the literal meanings and functions of `PUL`, `SLA`, `O/I`, collective-address plugs, arrows and system-specific positions, see [SCS Configurator Labels](configurators.md). A plug label's established meaning is distinct from its product-specific legal positions, numerical encoding and runtime behavior.
+
 `EN_CONFIG_MODE` contains distinct records for Virtual Configuration, Advanced Configuration, Physical configuration, and Product Programming. `AS_FIRMWARE_CONFIG_MODE` records which modes a firmware supports. A firmware can support both Virtual and Advanced configuration, so neither label should be used as an umbrella synonym for all non-physical configuration.
 
 Mode support is a catalogue capability. It does not establish which mode configured an installed Device or which MyHOME Suite UI label was active for a particular operation.
@@ -288,6 +290,8 @@ A mapping between a UI field, catalogue definition, and protocol value requires 
 The VDK 2.0 F411 model stores `A`, `PL`, and group separately for each simulated output, with Device mode and bus selection outside those output records. A simulated local click emits `WHO 1` using the output's concatenated `A`/`PL` address. Point, area, group, and general addressing are handled against the configured outputs.
 
 In its `PUL` mode, the model suppresses general/area commands and status responses while still handling point/group targets. These are executable simulator choices; the source does not establish a complete physical F411 configuration or prove equivalence between its output records and MyHOME Suite Modules. Its simplified decoder treats any command other than `WHAT 1` as OFF, which must not be adopted as a protocol rule. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
+Manufacturer F411-family sheets independently establish PUL exclusion of Room and General commands. The simulator's group handling and collective status suppression do not establish physical behavior; Suite help and an older manufacturer guide differ explicitly on PUL group commands. See [PUL collective commands and status](configurators.md#collective-commands-and-status) for the source scopes. PUL on a lighting command is an established momentary function, while actuator/local-control modes must be read separately.
 
 ## Sources
 

@@ -30,6 +30,8 @@ The MyHOME_Suite `OPEN.db` address-rule definitions represent Temperature Contro
 
 These implementation forms complement the public functional grammar. The selected operation determines which rule is valid; clients must not normalize all Temperature Control `WHERE` values to one integer zone identifier.
 
+The physical `ZA`/`ZB` positions identify the zone; actuator `N` and probe Slave numbering have separate roles. A numeric plug in a probe's `SLA` socket is distinct from the lettered `SLA` plug in `MOD`. See [Temperature Control configurators](../../device-model/configurators.md#temperature-control) for the manufacturer-defined count, numbering and product scopes.
+
 ## Actuator addressing
 
 Actuator-oriented `DIMENSION` operations can append an actuator selector to the zone address. This is distinct from addressing a probe in the same zone and is used by operations such as actuator state reported by read-only `DIMENSION 20`. The public forms are `Z#N` for actuator `N` (`1..9`) in zone `Z` (`0..99`), `Z#0` for all actuators of a zone, and `0#0` for all actuators. Split control uses the additional prefix `3#Z#N` under `DIMENSION 22`.

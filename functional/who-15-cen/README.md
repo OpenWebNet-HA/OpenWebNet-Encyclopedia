@@ -94,6 +94,8 @@ The published examples demonstrate normal, advanced and local-bus addresses, inc
 
 ## Device configuration modes
 
+The `CEN` plug in a supported command-mode position selects scenario-programmer interactions. The same marking in another position need not select `WHO 15`: for example, a shutter control's `I=CEN` selects the riser, and an H4691/LN4691 thermostat's `COOL=CEN` selects a shared heating/cooling load. See [SCS Configurator Labels](../../device-model/configurators.md) for product and position scope.
+
 The CEN specification distinguishes how a physical command obtains its source identity:
 
 | Configuration | Bus address behavior |

@@ -26,4 +26,6 @@ The library forwards repeated ON/OFF reports. Its scenario-condition consumer ap
 
 Alarm auxiliary-source configuration selects the separate `WHO 5` technical-alarm path; its source-number limits do not define the `WHO 9` address domain. Sound-source entries labelled AUX instead use the [`WHO 16`](../who-16-sound-system/) / [`WHO 22`](../who-22-sound-diffusion/) sound dialects. See [auxiliary implementation evidence](../../project/review/myopencommunity-auxiliary-history-review.md) for the scoped tests and historical corrections.
 
+The physical `AUX` plug, the numeric channel in an `AUX` socket and an analogue audio connector marked AUX have distinct roles. Manufacturer-defined configuration examples are maintained in [SCS Configurator Labels](../../device-model/configurators.md#positions-and-functions); neither a shared label nor a product's channel range establishes one universal auxiliary wire grammar.
+
 See [Protocol](../../protocol/) for common frame syntax and [`WHO 5` - Alarm](../who-5-alarm/) for Alarm-side AUX references.

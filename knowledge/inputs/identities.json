@@ -40,6 +40,28 @@
       "two-exclusive-configuration-scopes-1": "ownkb:section:d000002:s000004"
     }
   },
+  "device-model/configurators.md": {
+    "id": "ownkb:document:d000136",
+    "sections": {
+      "actuator-and-local-control-1": "ownkb:section:d000136:s000007",
+      "catalogue-encodings-1": "ownkb:section:d000136:s000016",
+      "collective-commands-and-status-1": "ownkb:section:d000136:s000008",
+      "command-modes-1": "ownkb:section:d000136:s000004",
+      "configuration-modes-1": "ownkb:section:d000136:s000015",
+      "energy-management-1": "ownkb:section:d000136:s000012",
+      "evidence-limits-1": "ownkb:section:d000136:s000017",
+      "lighting-command-1": "ownkb:section:d000136:s000006",
+      "plug-vocabulary-1": "ownkb:section:d000136:s000003",
+      "positions-and-functions-1": "ownkb:section:d000136:s000009",
+      "pul-behavior-1": "ownkb:section:d000136:s000005",
+      "reference-1": "ownkb:section:d000136:s000002",
+      "routing-sensors-and-alarm-1": "ownkb:section:d000136:s000013",
+      "scs-configurator-labels-1": "ownkb:section:d000136:s000001",
+      "sound-hotel-and-door-entry-systems-1": "ownkb:section:d000136:s000014",
+      "system-specific-positions-1": "ownkb:section:d000136:s000010",
+      "temperature-control-1": "ownkb:section:d000136:s000011"
+    }
+  },
   "device-model/firmware.md": {
     "id": "ownkb:document:d000003",
     "sections": {

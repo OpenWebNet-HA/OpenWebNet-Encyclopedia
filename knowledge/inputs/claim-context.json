@@ -54988,7 +54988,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          0
+          1
         ],
         "mode": "materialized",
         "review_status": "reviewed-phase16b"
@@ -55003,7 +55003,7 @@
           }
         },
         "block_indexes": [
-          0
+          1
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000142",
@@ -55015,7 +55015,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -55030,7 +55030,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000142",
@@ -55042,7 +55042,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -55057,7 +55057,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000142",
@@ -55069,7 +55069,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -55084,7 +55084,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000142",
@@ -55096,7 +55096,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          2
+          3
         ],
         "mode": "materialized",
         "review_status": "reviewed-phase16b"
@@ -55111,7 +55111,7 @@
           }
         },
         "block_indexes": [
-          2
+          3
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000142",
@@ -69487,7 +69487,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -69502,7 +69502,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000133",
@@ -69514,7 +69514,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "materialized",
         "review_status": "reviewed-phase16b"
@@ -69529,7 +69529,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "official_specification",
         "resolved_source_id": "ownkb:source:s000133",
@@ -149156,7 +149156,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -149172,7 +149172,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "public_database",
         "resolved_source_id": "ownkb:source:s000124",
@@ -149184,7 +149184,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -149199,7 +149199,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000002",
@@ -149211,7 +149211,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          1
+          2
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -149226,7 +149226,7 @@
           }
         },
         "block_indexes": [
-          1
+          2
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000002",
@@ -149238,7 +149238,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          2
+          3
         ],
         "mode": "self_contained",
         "review_status": "reviewed-phase16b"
@@ -149253,7 +149253,7 @@
           }
         },
         "block_indexes": [
-          2
+          3
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000002",
@@ -149265,7 +149265,7 @@
     {
       "atomicity": {
         "block_indexes": [
-          2
+          3
         ],
         "mode": "materialized",
         "review_status": "reviewed-phase16b"
@@ -149280,7 +149280,7 @@
           }
         },
         "block_indexes": [
-          2
+          3
         ],
         "evidence_class": "canonical_documentation",
         "resolved_source_id": "ownkb:source:s000002",

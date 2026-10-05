@@ -1,5 +1,6 @@
 {"classification":"publishable","source_id":"ownkb:source:s000001","source_path":"device-model/README.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000002","source_path":"device-model/configuration.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000163","source_path":"device-model/configurators.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000003","source_path":"device-model/firmware.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000004","source_path":"device-model/modules.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000005","source_path":"device-model/objects.md","source_type":"canonical_documentation"}

@@ -29,9 +29,9 @@ class Phase12ConsistencyTests(unittest.TestCase):
     def test_complete_cross_artifact_report_matches_current_corpus(self):
         manifest = json.loads((ROOT / "knowledge/manifest.json").read_text())
         report = CONSISTENCY.validate_cross_artifact(ROOT, ROOT, manifest)
-        self.assertEqual(135, report["canonical"]["documents"])
+        self.assertEqual(136, report["canonical"]["documents"])
         self.assertEqual(7448, report["claims"]["records"])
-        self.assertEqual(1225, report["retrieval"]["chunks"])
+        self.assertEqual(1240, report["retrieval"]["chunks"])
         self.assertEqual(manifest["coverage"]["references"]["records"], report["references"]["records"])
         self.assertEqual(651, report["claims"]["domains"]["protocol"]["claims"])
         self.assertEqual(311, report["claims"]["domains"]["scenario-engine"]["claims"])

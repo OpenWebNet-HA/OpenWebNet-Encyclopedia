@@ -85,6 +85,8 @@ One especially important exclusion is `EN_DEVICE.code`: it is a product code/SKU
 
 Physical configuration is a firmware-contextual catalogue problem. The catalogue does not provide one global table that maps a raw configurator number to a universal meaning, nor does it require a hand-maintained topology table for each firmware.
 
+The manufacturer-defined meanings of plug labels and socket names are documented in [SCS Configurator Labels](../device-model/configurators.md). Contextual numerical encoding does not make established functions such as PUL pushbutton control or SLA follower operation uncertain.
+
 ### Configuration-mode boundary
 
 `EN_CONFIG_MODE` registers four distinct modes in the canonical catalogue:
