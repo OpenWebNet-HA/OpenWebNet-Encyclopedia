@@ -42,6 +42,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-048822-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: 048822
+  title: 048822 official product record with EAN
+  media_type: text/html
+  filename: 048822-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 276356
+  sha256: ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043
+  source_url: https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-espace-de-travail
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ce/35/ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ce/35/ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-067217-ean-export-20261005
   kind: documentation
   publisher: Legrand
