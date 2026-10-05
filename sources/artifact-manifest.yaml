@@ -11295,6 +11295,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u1925d-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U1925D manufacturer device documentation
+  media_type: application/pdf
+  filename: U1925D.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 10656815
+  sha256: 6ad1f090cf2f36f59feba30ca5093ebd8f02ea62df289682940b8c4a250bfb69
+  source_url: https://dar.bticino.com/asset/Documents/U1925D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6a/d1/6ad1f090cf2f36f59feba30ca5093ebd8f02ea62df289682940b8c4a250bfb69.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6a/d1/6ad1f090cf2f36f59feba30ca5093ebd8f02ea62df289682940b8c4a250bfb69.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u2099c-20261005
   kind: documentation
   publisher: BTicino / Legrand
