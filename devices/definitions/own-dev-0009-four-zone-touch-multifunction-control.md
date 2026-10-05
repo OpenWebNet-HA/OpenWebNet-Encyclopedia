@@ -4,7 +4,6 @@
 
 This compact SCS wall control has four capacitive touch zones with adjustable blue LED feedback. Its configurable and self-learning functions cover lighting, shutters, scenarios, sound and selected door-entry actions, allowing individual touch zones to serve different purposes.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0009` | Project identity |
@@ -20,15 +19,14 @@ The Device has four capacitive command zones plus a fifth fixed **User interface
 
 ## Commercial identities
 
-
 The canonical catalogue contains 15 commercial records for item `1376`.
 
-| Brand / line | References | Evidence status |
-| --- | --- | --- |
-| Legrand Arteor | `573904`, `573905`, `573906`, `573907` | directly documented by `LG00045-b-UK` and the MyHOME catalogue |
-| Legrand Arteor | `574089`, `574589` | shared technical item; individual product-document review pending |
-| Legrand Céliane | `067243`, `067244`, `067245` | catalogue + MyHOME Server compatibility documentation; minimum compatible production batch `13W05` |
-| Legrand Céliane | `067273`, `067274`, `067275`, `067293`, `067294`, `067295` | shared technical item; individual product-document review pending |
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand - Arteor | `573904`, `573905`, `573906`, `573907` | Established catalogue identities | directly documented by `LG00045-b-UK` and the MyHOME catalogue |
+| Legrand - Arteor | `574089`, `574589` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067243`, `067244`, `067245` | Established catalogue identities | catalogue + MyHOME Server compatibility documentation; minimum compatible production batch `13W05` |
+| Legrand - Céliane | `067273`, `067274`, `067275`, `067293`, `067294`, `067295` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
 
 The older technical sheet directly names only the four Arteor references. Shared item membership establishes a common implementation capability core, not perfect physical/package synonymy.
 
@@ -36,10 +34,10 @@ The older technical sheet directly names only the four Arteor references. Shared
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LG00045-b-UK` | Technical sheet | not stated in retained row | `573904..573907` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
-| `U3300B` | Instruction sheet | not stated in retained row | `573904..573907` family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
-| MyHOME residential automation catalogue | Product catalogue | not stated in retained row | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
-| `ST-00001031-EN` | Compatibility table | not stated in retained row | `067243..067245` occur on printed p. 2 / PDF p. 2 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
+| `LG00045-b-UK` | Technical sheet | No dated imprint established in the inspected original | `573904..573907` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
+| `U3300B` | Instruction sheet | No dated imprint established in the inspected original | Multi-product touch-control manual: exact `573904..573907` on cover PDF p. 1; English printed/PDF pp. 3–8. Other key-count illustrations are not this Device topology. | [Archived PDF](https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
+| MyHOME residential automation catalogue | Product catalogue | No dated imprint established in the inspected original | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| `ST-00001031-EN` | MyHOMEServer1 technical sheet / compatibility table | 30/05/2022 | Compatibility entries on printed/PDF p. 2; `067243/067244/067245` minimum batch `13W05`, not all identities in this cluster | [Archived PDF](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -54,9 +52,6 @@ The older technical sheet directly names only the four Arteor references. Shared
 | Depth | `18.3 mm` | Publisher documentation cited in this section |
 | Physical labels | `A`, `PL`, `M`, `SPE`; rear programming/LED-intensity button `P` | Publisher documentation cited in this section |
 
-For `573904..573907`, `LG00045-b-UK` establishes:
-
-
 The programming pushbutton `P` is a physical user/programming control, not simply another firmware configuration value.
 
 ## Identity
@@ -67,6 +62,19 @@ The programming pushbutton `P` is a physical user/programming control, not simpl
 | Item model / `modobj` | `17` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `17` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -76,6 +84,12 @@ The programming pushbutton `P` is a physical user/programming control, not simpl
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -147,24 +161,9 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | `159` | `521` Soft-Touch command virgin | `1`, `2`, `3`, `4` | `410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `462` | `521` | `36` |
 
-### Reconciled topology notes
-
-
 ### Fixed UI Module
 
 Slot `5` is fixed to Object `130`, **User interface settings**.
-
-| Parameter | Domain |
-| --- | --- |
-| `STATE_OF_UNUSED_BUTTON` | `ON` / `OFF` |
-| `STATE_UPDATE` | No / Yes |
-| `LED_LEVEL` | `0..10`, default `6` |
-| `LED_FADE` | `0..10`, default `5` |
-| `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | `OFF` or levels `1..10` |
-| `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | `OFF` or levels `1..10` |
-| `BACKLIGHT_DELAY` | `0..255 s`, default `15` |
-| `PROXIMITY_ENABLE` | Disable / Enable |
-| `SIGNBOARD` | Off / Fixed / Chase |
 
 The published sheet independently documents three LED intensity pairings for active/idle states: 100%/60%, 75%/30%, and 45%/off.
 
@@ -172,30 +171,17 @@ The published sheet independently documents three LED intensity pairings for act
 
 Slots `1..4` use Virgin Object `521`, **Soft-Touch command virgin**, and can select:
 
-| Object | Role |
-| ---: | --- |
-| `410` | Light control |
-| `411` | Automation control |
-| `412` | Lock/unlock actuator control |
-| `413` | Scenario module control |
-| `414` | Scheduled scenario |
-| `415` | Scenario PLUS Lighting Management |
-| `416` | Scheduled scenario PLUS |
-| `417` | `AUX` control |
-| `418` | Open lock control |
-| `419` | Sound diffusion control |
-| `421` | Cyclic autoswitch control |
-| `426` | Staircase light control |
-| `427` | Floor call control |
-| `462` | Open lock command on session |
-
 Light control `410` is the designated Object on all four command slots. The canonical firmware has **no `AS_SLOT_CONDITION` rows** for these slots, so the Device page must not invent a physical-condition-to-Object mapping from the mere Object list.
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `159` | Catalogue configuration route(s) described in retained notes | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `159` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `159` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `159` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -209,11 +195,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `159` | `M` | `0..3`; `5..6`; `9` = `O/I`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN` | `0` | M; Mode physical configurator (0-3,5-6,`O/I`,SU_GIU,SU_GIU_M,`CEN`) |
 | `159` | `SET` | `0..7` | `0` | SET; User interface settings configurator (0-7) |
 
-
-
-
 ### Published and reconciled details
-
 
 The firmware-level fields are:
 
@@ -258,7 +240,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -274,7 +255,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -288,7 +268,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -301,7 +280,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -311,7 +289,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -323,7 +300,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -334,7 +310,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `417` - `AUX` control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -343,14 +318,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `OUT_AUX_CH` | `1..15` | `1` | `AUX` channel |
 | `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `419` - Sound diffusion control
 
@@ -366,14 +339,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `421` - Cyclic autoswitch control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `426` - Staircase light control
 
@@ -382,7 +353,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -393,7 +363,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `130` - User interface settings
 
@@ -411,7 +380,6 @@ Catalogue Object key `480` maps to external Object `130`.
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
 
-
 ### Object `462` - Open lock command on session
 
 Catalogue Object key `489` maps to external Object `462`.
@@ -420,23 +388,9 @@ Catalogue Object key `489` maps to external Object `462`.
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 
+### Applicability interpretation
 
-### Reconciled Object notes
-
-
-The command Objects preserve their complete reusable parameter models in the canonical database. Principal surfaces include:
-
-| Object family | Configuration surface |
-| --- | --- |
-| Light control `410` | 45 command-mode values; point/area/group/general address; installation/destination level; reference address; timed/dimming values |
-| Automation control `411` | six `UP/DOWN` bistable/monostable variants; point/area/group/general addressing; installation/destination level |
-| Lock/unlock `412` | enable/disable plus addressed target |
-| Scenario module `413` | activation/edit mode, encoded A/PL, installation/destination level, scenario button `1..16`, delay table |
-| Scheduled scenario `414` | A/PL, `CEN` button `0..31`, press/release mode |
-| PLUS scenario `415/416` | scenario identifiers, regulation type, delays and button fields |
-| `AUX` `417` | command mode plus `AUX` output channel `1..15` |
-| Door-entry-related `418/421/426/427/462` | entrance/internal-unit identifiers, segment level, point/general selection as applicable |
-| Sound diffusion `419` | `ON`/`OFF`/volume/track/source modes, audio addressing, follow-me/source/channel |
+The UI-settings Object is separate from the four command Modules. Physical label `SPE` and catalogue field `SET` are not silently equated; selection must follow the stored conditions and the source-specific product mode.
 
 ## Conditions, filters, and conversions
 
@@ -484,38 +438,22 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 | Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `1376` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `130`, `462`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
-| --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 17`, brand/line and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | enumerate four command Objects plus the UI-settings Module | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | determine configured functional addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
 
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Self-learning (`SPE=0`, `M=0/6`) | Learn one command per touch key; `M=6` provides non-cyclic paired behavior | `LG00045-b-UK`, pp. 2–3 |
+| Scenario-module control (`SPE=0`, `M=1/5/2/3`) | Four scenarios per control, covering respectively `1..4`, `5..8`, `9..12`, `13..16` | Same sheet, pp. 3–4 |
+| Consecutive target pairs | Two consecutive light points/shutters, rooms or groups; general mode sends the same general controls | Same sheet, p. 4 |
+| CEN programmer | Unique system A/PL address; `A=0, PL=0` explicitly excluded | Same sheet, p. 4 |
+| Sound system (`SPE=1`) | Amplifier on/off, volume, source cycling and active-source command | Same sheet, p. 5 |
 
-The technical sheet documents several physical behavior families:
-
-- self-learning mode, cyclic or non-cyclic, where individual key functions can be learnt;
-- scenario-module mode for recalling/programming scenarios;
-- direct/swivelling lighting or shutter control of consecutive targets;
-- `CEN` mode for use with a scenario programmer;
-- sound-system mode when `SPE=1`;
-- learned functions spanning lighting, automation, locking, staircase light, door release, floor call, camera cycling, sound diffusion, and `AUX` control.
-
-It also specifies a two-minute self-calibration period after installation.
-
-These published functions strongly corroborate the breadth of the catalogue Object set, but do not establish a one-to-one mapping between every physical mode and every database Object.
+The retained four-zone sheet governs `573904..573907`; catalogue sharing does not prove every Céliane/Arteor package has identical touch markings or LEDs.
 
 ## Observed behavior and corroboration
 
@@ -523,10 +461,13 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
-Programming must validate firmware applicability, active Module/Object topology, relation filters, and Device-specific configuration constraints.
+After installation, the four-zone sheet requires two minutes for self-calibration and warns that controls may be sent during that period. To teach a key, briefly press the rear programming button, select the key within 20 seconds and issue the desired system command; use the rear button or the stated timeout to exit. Self-learning needs a unique A/PL address.
+
+To delete one learned key, select it within 20 seconds and hold it for four seconds. Deleting all keys uses a second rear-button hold of ten seconds; scenario-module memory reset is a different procedure on that module, not on this control. Follow `LG00045-b-UK`, pp. 2–4, for these mode-dependent operations.
+
+For cleaning, hold diagonally opposite zones `1` and `4`; the LEDs sequence while touch operation is disabled. The four-zone technical sheet says normal operation returns after ten seconds; `U3300B` describes restoration after ten seconds without touching. Its multi-product diagrams must not be used to infer six keys for this four-zone Device. Physical `SPE` and catalogue `SET` remain differently labelled evidence surfaces.
 
 ## Source reconciliation
-
 
 The archived touch-control sources establish user/programming behavior in addition to the catalogue Object set:
 
@@ -539,20 +480,22 @@ The archived touch-control sources establish user/programming behavior in additi
 
 These behaviors do not resolve the implementation `SPE` versus `SET` mapping; that source-model boundary remains explicit.
 
-## Evidence limits and open work
+`LG00045-b-UK` describes two light-blue LEDs per key zone, while the multi-product `U3300B` introduction uses a single central blue-LED description. The product/illustration scope is kept explicit; no universal LED count for all commercial variants is inferred. `BR-MyHOME-HPML0714` is a regional range catalogue and does not replace the exact four-zone mode table. `ST-00001031-EN` is a MyHOMEServer1 compatibility source: its `13W05` entries name `067243/067244/067245`, so that requirement is not transferred to `067273..067295`, `574089/574589` or all four-zone controls. The attempted Ghana product record returned inaccessible; no EAN or additional attribute was incorporated from it.
 
+## Evidence limits and open work
 
 - Locate direct product sheets for the Céliane `067273..067295` variants and Arteor `574089/574589`.
 - Determine the exact relationship between physical `SPE`, database `SET`, and Object selection.
 - Add sanitized hardware fingerprints from at least one Arteor and one Céliane variant.
 - Corroborate the fifth UI-settings Module and four command Modules through `DIMENSION 30`.
-- Preserve production-batch constraints such as the documented `13W05` minimum for `067243..067245`.
+- Do not extend the server-compatibility `13W05` condition beyond its explicitly named references. Exact server compatibility of other cluster variants remains unestablished.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0009)

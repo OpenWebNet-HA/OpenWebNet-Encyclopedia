@@ -4,7 +4,6 @@
 
 This flush-mounted SCS actuator switches a lighting load through one integrated relay. Upper and lower pushbuttons provide local operation, with an LED for feedback; the permissible load depends on the lamp or transformer type.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0008` | Project identity |
@@ -20,25 +19,26 @@ This Device is a single-Module lighting actuator with one electromechanical rela
 
 ## Commercial identities
 
-
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
 | Arnould - Espace Evolution | `64390` | Established identity | Catalogue + official technical sheet |
 | BTicino - Axolute | `H4671/1` | Established identity | Catalogue + official technical sheet |
 | BTicino - LivingLight | `L4671/1` | Established identity | Catalogue + official technical sheet + PEP |
 | BTicino - Matix | `AM5851/1` | Established identity | Catalogue + official technical sheet + PEP |
-| Arnould - Espace Evolution | `64190` | Shared technical item | Implementation evidence; package/product-document review pending |
-| Legrand - Céliane | `067559` | Shared technical item | Implementation evidence; product-document review pending |
+| Arnould - Espace Evolution | `64190` | Established commercial variant | Canonical catalogue + Arnould catalogue printed/PDF p. 32; preassembled package |
+| Legrand - Céliane | `067559` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
 
 The Product Environmental Profile independently identifies `L4671/1` as its reference product and states that the environmental data also represents `H4671/1` and `AM5851/1`.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00072-e-FR` | Technical sheet | 29/04/2014 | `H4671/1`, `L4671/1`, `AM5851/1`, `64390` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/b6/39/b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00072-e-fr.pdf) |
-| `BT-L4671_1-EN` | Product Environmental Profile | revision/date to verify | `L4671/1`, `H4671/1`, `AM5851/1` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf) | [Official source](https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf) |
+| `BT-L4671_1-EN` | Environmental product profile (PEP) | Issue `12-2016`; `LGRP-00332-V01.01-EN` / `20 E0041B-EN`, PDF p. 4 | Reference `L4671/1`; family applicability to `H4671/1`, `AM5851/1`. Weight includes unit packaging (PDF p. 2); not an installation/firmware manual. | [Archived PDF](https://archive.openwebnet-ha.org/sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf) | [Official source](https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64390`, `64190`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
 
-The MyHOME Suite function documentation is also a vendor implementation source for the actuator modes and should remain distinct from the product PDFs.
+The identified Suite lighting-help page is a discovery lead; it is not incorporated as retained claim evidence.
 
 ## Physical and electrical characteristics
 
@@ -57,10 +57,10 @@ The MyHOME Suite function documentation is also a vendor implementation source f
 | Dissipation at maximum load | `0.9 W` | Publisher documentation cited in this section |
 | Physical configurator positions | `A`, `PL`, `M`, `G1`, `G2` | Publisher documentation cited in this section |
 
-The 2014 technical sheet establishes:
-
-
 The five printed configurator positions provide independent evidence for the expected ordinary addressed-form configurator count. Hardware observation is still required before marking `N_CONF = 5` as corroborated.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64390` / `64190` package distinction | `64390` without rocker; `64190` preassembled with one blank 2-module rocker and supplied blue `0/1` configurator | Arnould catalogue printed/PDF p. 32 |
 
 ## Identity
 
@@ -69,6 +69,19 @@ The five printed configurator positions provide independent evidence for the exp
 | `EN_ITEM.id_item` | `1121` | Canonical catalogue |
 | Item model / `modobj` | `101` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `101` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -79,6 +92,12 @@ The five printed configurator positions provide independent evidence for the exp
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -96,19 +115,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `186` | Physical configuration | retained Device-specific configuration modality |
-| `186` | Virtual Configuration | retained Device-specific configuration modality |
-| `186` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `186` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `186` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue declares:
-
-- Physical configuration
-- Virtual Configuration
-
-No Advanced Configuration association is present for firmware `186` in the canonical database.
+No Advanced Configuration association is stored for firmware `186`. The product sheet documents physical and virtual setup.
 
 ## Firmware-scoped configuration
 
@@ -123,11 +135,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `186` | `G1` | `0..9` | `0` | G1; G1 - (0-9) |
 | `186` | `G2` | `0..9` | `0` | G2; G2 - (0-9) |
 
-
-
-
 ### Published and reconciled details
-
 
 | Field | Catalogue domain | Published role |
 | --- | --- | --- |
@@ -185,22 +193,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
+### Applicability interpretation
 
-### Reconciled Object notes
-
-The fixed Light actuator Object `6` provides this reusable lighting-actuator parameter model:
-
-| Configuration family | Surface |
-| --- | --- |
-| Addressing | `A`, `PL` |
-| Actuator mode | master / slave / `PUL` |
-| Local control | local-button behavior |
-| Timing | delayed-off settings |
-| Restart behavior | reset state |
-| Load semantics | load-control mode and subtype |
-| Group membership | reusable Object group fields |
-
-Firmware `186` exposes `G1` and `G2` directly as physical fields, while the reusable Object model can represent a larger group-membership set under virtual configuration.
+Physical fields `G1` and `G2` provide two group positions. The reusable Object has a larger group-membership surface under software configuration; this does not add physical sockets.
 
 ## Conditions, filters, and conversions
 
@@ -238,25 +233,12 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 | Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `1121` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`6`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
-| --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 101`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | confirm the single Light actuator Object | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | obtain the configured lighting address | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/virtual configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
-
 
 The Device participates in [`WHO 1` - Lighting](../../functional/who-1-lighting/). General lighting command syntax remains canonical there.
 
@@ -268,7 +250,6 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
-
 Programming should preserve the distinction between:
 
 - physical `A/PL/M/G1/G2` fields;
@@ -279,24 +260,23 @@ See [Configuration Programming](../../programming/configuration-programming.md) 
 
 ## Source reconciliation
 
-
 The archived product sheet has been reconciled with the database discrepancy around `M=2`.
 
-The delayed-Slave modes `M=1..4` are product behaviors, not merely enum labels: a Master command can turn linked loads on together while a subsequent Master `OFF` leaves the Slave output active for the configured delay. The documentation uses this for arrangements such as a light with delayed ventilation. `M=2` is therefore a genuine published physical mode despite its absence from firmware `186`'s stored enum.
+The Master modes with delayed corresponding-Slave OFF, `M=1..4`, are product behaviors, not merely enum labels: a Master command can turn linked loads on together while a subsequent Master `OFF` leaves the Slave output active for the configured delay. The documentation uses this for arrangements such as a light with delayed ventilation. `M=2` is therefore a genuine published physical mode despite its absence from firmware `186`'s stored enum.
 
 The remaining completeness gap is commercial documentation/hardware corroboration, not the physical `M=2` semantics.
 
+The retained Arnould catalogue now establishes that `64190` is the preassembled rocker package for base `64390`. Its source-scoped ratings/package wording are not silently substituted for the named MQ00072 BTicino/Céliane variants. The `BT-L4671_1-EN` document is a PEP environmental profile; its `80 g` figure includes unit packaging and does not establish bare installed weight. The official Suite lighting-help page was reached but remains unregistered and is not incorporated as claim evidence.
+
 ## Evidence limits and open work
 
-
-- Locate authoritative product documentation for `64190` and `067559`.
+- `64190` base/package relationship is now documented. Retained exact electrical/installation evidence for `067559` is still absent.
 - Search for additional language/revision variants of `MQ00072`.
 - Add a sanitized hardware fingerprint to corroborate `modobj`, firmware, expected configurator count, address, and configuration.
 - Experimentally confirm the published `M=2` mode on known hardware or another independent implementation source.
-- Establish whether `64190` differs from `64390` only by supplied cover/package.
+- The Arnould source establishes a supplied-cover distinction; identical hardware across all variants is not established.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -304,3 +284,5 @@ The remaining completeness gap is commercial documentation/hardware corroboratio
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0008)

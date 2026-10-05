@@ -4,7 +4,6 @@
 
 This two-module, four-button SCS control supports a broad choice of functions, including lighting, shutters, scenarios, sound and door-entry commands. Its special-function configuration allows the same control hardware to serve different roles within the installation.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0005` | Project identity |
@@ -16,10 +15,9 @@ This two-module, four-button SCS control supports a broad choice of functions, i
 | Declared Modules | `2` | Implementation evidence |
 | Categories | Command, Multifunction, Lighting, Automation, Scenario, Audio / Video | Capability model |
 
-This technical definition covers the shared catalogue capability core used by 13 commercial Device records. The official `MQ00285-d-EN` technical sheet directly covers `067553`, `H4651M2`, `L4651M2`, and `AM5831M2`. The other records remain catalogue-correlated commercial identities pending individual document review.
+This technical definition covers the shared catalogue capability core used by 13 commercial Device records. The official `MQ00285-d-EN` technical sheet directly covers `067553`, `H4651M2`, `L4651M2`, and `AM5831M2`. The other records have established catalogue identities; retained Arnould evidence now documents `64362/64162` packaging, while further variant-specific electrical/procedure coverage remains limited.
 
 ## Commercial identities
-
 
 ### Directly documented references
 
@@ -32,12 +30,12 @@ This technical definition covers the shared catalogue capability core used by 13
 
 ### Additional commercial records sharing item 1524
 
-| Brand / line | References | Status |
-| --- | --- | --- |
-| Arnould Espace Evolution | `64162`, `64362` | Shared technical item; individual product-document review pending |
-| Legrand Arteor | `571849`, `573987` | Shared technical item; individual product-document review pending |
-| Legrand Céliane | `067242` | Shared technical item; individual product-document review pending |
-| Legrand Mosaic | `078472`, `078475`, `079172`, `079175` | Shared technical item; individual product-document review pending |
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64162`, `64362` | Established catalogue identities | Canonical catalogue; retained Arnould catalogue printed/PDF p. 32 establishes packages |
+| Legrand - Arteor | `571849`, `573987` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067242` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Mosaic | `078472`, `078475`, `079172`, `079175` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
 
 ### EAN-13 commercial identifiers
 
@@ -59,6 +57,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `L4651M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4651M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2) |
 | `AM5831M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5831M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2) |
 | `067553-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067553` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/01/53/0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-pour-fonctions-speciales-commande-de-scenario-diffusion-sonore-commande-temporisee-myhome-up-celiane) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64362`, `64162`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
 
 The nine-page sheet is unusually valuable because it documents several otherwise unrelated functional systems exposed by the same configurable control.
 
@@ -75,10 +74,10 @@ The nine-page sheet is unusually valuable because it documents several otherwise
 | Operating temperature | `5..35 °C` | Official technical sheet |
 | Physical configurator positions | `A`, `PL/PF`, `M`, `LIV1/AUX`, `LIV2`, `SPE`, `I` | Official technical sheet |
 
-For the four named references, the official sheet establishes:
-
-
 The seven documented configurator positions strongly support the ordinary diagnostic interpretation `N_CONF = 7`, but a known-hardware observation is still required before marking that value as corroborated.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64362` / `64162` package distinction | `64362` supplied without rocker; `64162` preassembled with two blank 1-module rocker controls; supplied configurators are not specified for this package | Arnould catalogue printed/PDF p. 32 |
 
 ## Identity
 
@@ -87,6 +86,19 @@ The seven documented configurator positions strongly support the ordinary diagno
 | `EN_ITEM.id_item` | `1524` | Canonical catalogue |
 | Item model / `modobj` | `16` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `16` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -97,6 +109,12 @@ The seven documented configurator positions strongly support the ordinary diagno
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -132,24 +150,7 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | `146` | `501` Special double command virgin | `1`, `2` | `400`, `401`, `402`, `403`, `404`, `405`, `406`, `407`, `408`, `409`, `427`, `430` | `501` | `19` |
 
-### Reconciled topology notes
-
-
 Firmware `146` exposes two configurable Modules and a broad set of Object alternatives.
-
-| Object | Description | Slots |
-| ---: | --- | --- |
-| `400` | Light control | `1`, `2` |
-| `401` | Automation control | `1`, `2` |
-| `402` | Lock/unlock actuator control | `1`, `2` |
-| `403` | Scenario module control | `1`, `2` |
-| `404` | Scheduled scenario | `1`, `2` |
-| `405` | Scenario PLUS Lighting Management | `1`, `2` |
-| `406` | Scheduled scenario PLUS | `1`, `2` |
-| `408` | Open lock control | `1`, `2` |
-| `409` | Sound diffusion control | `1` |
-| `427` | Floor call control | `1`, `2` |
-| `430` | Staircase light control | `1`, `2` |
 
 Virgin Object `501`, **Special double command virgin**, applies to both slots and permits all Objects above plus Object `407` `AUX` control.
 
@@ -157,20 +158,13 @@ The broad Object set explains why this Device belongs to several functional cate
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `146` | Physical configuration | retained Device-specific configuration modality |
-| `146` | Virtual Configuration | retained Device-specific configuration modality |
-| `146` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `146` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `146` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `146` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue declares:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
-
-The official sheet independently documents physical configuration and MyHOME Suite virtual configuration.
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -187,11 +181,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `146` | `SPE` | `0..3`; `6`; `8..9`; `11` = `ON` | `0` | SPE; Special function command control (0,1,2,3,6,8,9,`ON`) |
 | `146` | `I` | `0..9` | `0` | I; Automation interface address |
 
-
-
-
 ### Published and reconciled details
-
 
 | Field | Catalogue domain | Purpose |
 | --- | --- | --- |
@@ -235,7 +225,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -251,7 +240,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `402` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -264,7 +252,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `403` - Scenario module control
 
@@ -279,7 +266,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -291,7 +277,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `405` - Scenario PLUS Lighting Management
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -302,7 +287,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -312,7 +296,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
-
 ### Object `408` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -320,7 +303,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `P` | `0..95` | `0` | External unit address |
 | `SEGMENT` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `409` - Sound diffusion control
 
@@ -333,7 +315,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
 | `SOURCE` | `1..9` | `1` | Source |
 
-
 ### Object `427` - Floor call control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -344,7 +325,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `430` - Staircase light control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -354,28 +334,21 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
+### Virgin-only candidate Objects
 
-### Reconciled Object notes
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
 
+### Object `407` - AUX control (Virgin-only candidate)
 
-The reachable Objects expose the following major reusable parameter groups:
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
-| Object | Principal configuration surface |
-| ---: | --- |
-| `400` Light control | mode; point/area/group/general address; installation/destination level; reference address; timed/dimmer parameters; `AUX` input |
-| `401` Automation control | bistable/monostable/blades mode; address scope; installation/destination level; reference address; `AUX` input |
-| `402` Lock/unlock actuator control | disable/enable mode; address scope; installation/destination level; `AUX` input |
-| `403` Scenario module control | activation/edit mode and encoded scenario-module address |
-| `404` Scheduled scenario | `A`, `PL`, button `0..31`, `AUX` input, restart delay |
-| `405` Scenario PLUS Lighting Management | two scenario/delay fields, regulation type, per-button delay values |
-| `406` Scheduled scenario PLUS | scenario number low/high fields and two button numbers |
-| `407` `AUX` control | command mode, `AUX` output `1..15`, `AUX` input `0..15` |
-| `408` Open lock control | external-unit address `0..95`, segment, `AUX` input |
-| `409` Sound diffusion control | point/area/general address, audio point, follow-me, source, `AUX` input |
-| `427` Floor call control | point/general call type, internal-unit address, segment, `AUX` input |
-| `430` Staircase light control | internal-unit address, segment, `AUX` input |
+### Applicability interpretation
 
-Large enumerations such as encoded scenario addresses and delay tables remain machine-extractable from the canonical database. The Device page records their complete semantic domains without duplicating hundreds of mechanically repetitive rows.
+Encoded scenario-address and delay domains retain their complete catalogue values above. Physical presets and software values are distinct configuration scopes.
 
 ## Conditions, filters, and conversions
 
@@ -2462,35 +2435,23 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 | Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `1524` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`400`, `401`, `402`, `403`, `404`, `405`, `406`, `408`, `409`, `427`, `430`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
-| --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 16`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe physical firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 3`, `6`, `13` | hardware, microcontroller, Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | determine selected Objects on the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
 
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting | Cyclic, ON/OFF, timed ON, dimmer adjustment, preset levels and ramps; physical selector presets depend on `SPE/M` | `MQ00285-d-EN`, pp. 2–4 |
+| Automation | Monostable/bistable shutter commands and reed-control mode under the published selector/cover conditions | Same sheet, p. 5 |
+| Scenarios | F420 recall/editing; MH200N CEN; software PLUS scenario addresses `1..2047` and buttons `0..31` | Same sheet, pp. 5–6 |
+| Video door entry | Door lock, floor call and staircase light; each has a distinct address interpretation | Same sheet, pp. 7–8 |
+| Sound system | Amplifier/source selection, volume adjustment and active-source command | Same sheet, p. 9 |
 
-Depending on configuration, this Device crosses multiple OpenWebNet domains. The Device definition establishes that those roles can exist on this hardware; the linked functional references remain authoritative for wire semantics.
-
-- [`WHO 1` - Lighting](../../functional/who-1-lighting/)
-- [`WHO 2` - Automation](../../functional/who-2-automation/)
-- scenario/`CEN` behavior
-- sound diffusion
-- video door-entry related control
-- `AUX`/transversal control
+This is a multifunction command Device. The mode changes the meaning of its address/configurator positions; the function families are not simultaneous unconditional capabilities.
 
 ## Observed behavior and corroboration
 
@@ -2498,13 +2459,13 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
+Choose the target function before interpreting `A`, `PL/PF`, `LIV1/AUX`, `LIV2`, `SPE` and `I`. The same positions serve lighting levels, scenario numbers, video-door-entry addresses or sound-system targeting in different configurations.
 
-A correct programmer must evaluate `SPE`, `M`, address-scope fields, level/interface fields, and the associated condition/conversion graph before selecting an Object. It must not treat “Special control” as one fixed Object.
+For physical lighting, `SPE=0` uses `M=1..5` for 1–5 minutes, `M=6` for 15 minutes, `M=7` for 30 seconds and `M=8` for 0.5 seconds; `SPE=1` adds `M=7` at 2 seconds and `M=8` at 10 minutes. These are published presets, separate from software delay domains. Ramps use source-specific `SPE=5/9`, `LIV1/LIV2` levels and `M` ramp time; do not infer them from a generic timed-ON value.
 
-See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
+F420 scenario editing requires programming enabled at the scenario module, a 3-second control-button hold to begin learning, a brief press to save, and a 10-second hold to erase that scenario. `SPE=6` selects scenario groups while `SPE=4` provides recall without editing. CEN/PLUS target the scenario programmer and are not interchangeable with F420 storage. Follow the sheet's mode table and the stored firmware conditions; generic writes and read-back remain in [Programming Validation](../../programming/validation.md).
 
 ## Source reconciliation
-
 
 The nine-page `MQ00285-d-EN` sheet has been reconciled as a Device-specific function map rather than only as a list of reusable Objects:
 
@@ -2517,17 +2478,16 @@ The nine-page `MQ00285-d-EN` sheet has been reconciled as a Device-specific func
 
 This source is now represented as a product-specific selector/function model. Remaining gaps are commercial variants, exact package relationships and hardware corroboration, not omission of the principal published function families.
 
+`MQ00285-d-EN` is dated 9 June 2014 and is already archived. Its physical function tables were compared with the catalogue branches rather than treated as an identical numeric namespace. The Arnould catalogue now establishes `64362/64162` base/package relationships; it does not prove identical electronics across all 13 records.
+
 ## Evidence limits and open work
 
-
-- Archive and hash `MQ00285-d-EN`, language variants, and any earlier/later revisions.
-- Locate authoritative product sheets for the other nine records sharing item `1524`.
-- Capture known hardware to corroborate `modobj`, expected physical configurator count, firmware, Object projection, addressing, and configuration.
-- Review every condition/conversion branch against the published function tables, preserving mismatches or implementation-only branches.
-- Determine the exact commercial/package relationships across Arnould, BTicino, Legrand Arteor, Céliane, and Mosaic records.
+- Electrical/procedure sheets remain absent for commercial variants outside the four references named by `MQ00285-d-EN`; Arnould `64362/64162` packaging is documented separately.
+- No sanitized hardware fingerprint establishes installed firmware, diagnostic configurator count or active Object projection.
+- Stored condition/conversion branches outside declared selector domains remain implementation irregularities; their physical reachability and precedence are unresolved.
+- Earlier/later technical-sheet revisions and materially different regional evidence may add facts; no unbounded discovery-completeness claim is made.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -2540,3 +2500,5 @@ This source is now represented as a product-specific selector/function model. Re
 - `AM5831M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5831M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2); SHA-256 `894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044`.
 
 - `067553-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067553` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/01/53/0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-pour-fonctions-speciales-commande-de-scenario-diffusion-sonore-commande-temporisee-myhome-up-celiane); SHA-256 `0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0005)

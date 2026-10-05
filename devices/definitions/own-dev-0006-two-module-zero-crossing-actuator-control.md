@@ -4,7 +4,6 @@
 
 This two-module device combines two zero-crossing relay outputs with four front buttons and status LEDs. It can control one shutter or one or two lighting loads, with configurations that also reserve buttons for remote actuators or scenarios.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0006` | Project identity |
@@ -21,7 +20,6 @@ Item `2180` is the zero-crossing counterpart of the multifunction actuator/contr
 The official 2021 technical sheet directly documents all seven commercial references in the current catalogue cluster.
 
 ## Commercial identities
-
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
@@ -65,26 +63,30 @@ The English and French technical sheets are distinct archived byte streams and t
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Mounting size | 2 flush-mounted modules | Official technical sheet |
-| Front controls | 4 buttons and 4 two-colour LEDs | Official technical sheet |
-| Local outputs | 2 independent relays | Official technical sheet |
-| SCS supply | `18..27 Vdc` | Official technical sheet |
-| Current draw | `7 mA` standby; `16 mA` max with one shutter/light; `24 mA` max with two lights | Official technical sheet |
-| Operating temperature | `0..40 °C` | Official technical sheet |
-| Storage temperature | `-5..45 °C` | Official technical sheet |
-| Mains side | `110..230 Vac`, `50..60 Hz` | Official technical sheet |
-| Maximum resistive/incandescent class at 230 Vac with neutral | `1380 W / 6 A` | Official technical sheet |
-| Motor/LED-CFL class at 230 Vac with neutral | `460 W / 2 A`; `250 W / 1 A` respectively | Official technical sheet |
-| Fluorescent/electronic-transformer class at 230 Vac with neutral | `460 W / 2 A` | Official technical sheet |
-| Ferromagnetic-transformer class at 230 Vac with neutral | `460 VA / 2 A`, cos φ 0.5 | Official technical sheet |
-| Physical configurator positions | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | Official technical sheet |
-
-The 2021 technical sheet establishes:
-
+| Mounting size | 2 flush-mounted modules | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Front controls | 4 buttons and 4 two-colour LEDs | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Local outputs | 2 independent relays | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| SCS supply | `18..27 Vdc` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Current draw | `7 mA` standby; `16 mA` max with one shutter/light; `24 mA` max with two lights | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Operating temperature | `0..40 °C` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Storage temperature | `-5..45 °C` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Mains side | `110..230 Vac`, `50..60 Hz` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Physical configurator positions | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
 
 The sheet also documents reduced load limits when used without a connected neutral. Keep neutral-dependent load tables revision-scoped rather than collapsing them into one rating.
 
 The control and contact parts are physically separable and can be wired separately.
+
+### Load matrix by voltage and neutral connection
+
+| Supply / neutral | Incandescent / halogen | Motor | LED / CFL | Fluorescent / electronic transformer | Ferromagnetic transformer |
+| --- | --- | --- | --- | --- | --- |
+| `230 Vac`, with neutral | `1380 W / 6 A` | `460 W / 2 A` | `250 W / 1 A`; max 10 lamps | `460 W / 2 A` | `460 VA / 2 A`, `cosφ=0.5` |
+| `110 Vac`, with neutral | `660 W / 6 A` | `250 W / 2 A` | `110 W / 1 A`; max 10 lamps | `220 W / 2 A` | `220 VA / 2 A`, `cosφ=0.5` |
+| `230 Vac`, without neutral | `460 W / 2 A` | `460 W / 2 A` | Not specified (dash) | Not specified (dash) | `460 VA / 2 A`, `cosφ=0.5` |
+| `110 Vac`, without neutral | `220 W / 2 A` | `250 W / 2 A` | Not specified (dash) | Not specified (dash) | `220 VA / 2 A`, `cosφ=0.5` |
+
+Source: `ST-00000898-EN/FR`, printed/PDF p. 2. A dash is not converted into a positive load capability. Ratings apply to the named sheet references, not automatically to every package sharing the item.
 
 ## Identity
 
@@ -93,6 +95,19 @@ The control and contact parts are physically separable and can be wired separate
 | `EN_ITEM.id_item` | `2180` | Canonical catalogue |
 | Item model / `modobj` | `82` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `82` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -103,6 +118,12 @@ The control and contact parts are physically separable and can be wired separate
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -129,42 +150,19 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | `707` | `500` Automation double command virgin | `3`, `4` | `400`, `401`, `404`, `406`, `407` | `500` | `58` |
 | `707` | `510` Automation relay virgin | `1`, `2` | `1`, `6`, `7` | `510` | `59` |
 
-### Reconciled topology notes
-
-
-Firmware `707` declares the same four-role structural pattern as the non-zero-crossing actuator/control family, but it is a distinct technical item and firmware definition.
-
-| Object | Description | Slots | Relationship |
-| ---: | --- | --- | --- |
-| `6` | Light actuator | `1`, `2` | designated actuator Object |
-| `7` | Automation actuator | `1` | alternative |
-| `400` | Light control | `3`, `4` | designated command Object |
-| `401` | Automation control | `3`, `4` | alternative |
-| `404` | Scheduled scenario | `3`, `4` | alternative |
-| `406` | Scheduled scenario PLUS | `3`, `4` | alternative |
-
 Virgin Object `510`, **Automation relay virgin**, applies to slots `1..2` and permits Blind actuator `1`, Light actuator `6`, and Automation actuator `7`.
-
-Virgin Object `500`, **Automation double command virgin**, applies to slots `3..4` and permits Light control `400`, Automation control `401`, Scheduled scenario `404`, Scheduled scenario PLUS `406`, and `AUX` control `407`.
 
 Installed Object selection belongs to [`DIMENSION 30`](../../diagnostics/dim30-modules.md).
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `707` | Physical configuration | retained Device-specific configuration modality |
-| `707` | Virtual Configuration | retained Device-specific configuration modality |
-| `707` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `707` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `707` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `707` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue declares:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
-
-The official sheet independently documents physical configuration and MyHOME Suite configuration. In virtual configuration, front-button functions can be independent from local actuator functions, and the software exposes four independent addresses: two actuator addresses and two front-control addresses.
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -180,11 +178,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `707` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
 | `707` | `M2` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
 
-
-
-
 ### Published and reconciled details
-
 
 | Field | Catalogue domain | Role |
 | --- | --- | --- |
@@ -234,7 +228,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `7` - Automation actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -255,7 +248,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
-
 
 ### Object `400` - Light control
 
@@ -280,7 +272,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -296,7 +287,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -308,7 +298,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -318,22 +307,42 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
+### Virgin-only candidate Objects
 
-### Reconciled Object notes
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
 
-The Device references reusable actuator/control Object families. Their principal structured surfaces are:
+### Object `1` - Blind actuator (Virgin-only candidate)
 
-| Object | Principal configuration surface |
-| --- | --- |
-| `6` Light actuator | address; master/slave/`PUL` mode; local-button mode; delayed off; reset state; load-control behavior; subtype; group membership |
-| `7` Automation actuator | address; actuator mode; shutter-control mode; stop time; subtype; group membership |
-| `400` Light control | point/area/group/general addressing; command mode; installation/destination level; reference address; timing/dimming fields |
-| `401` Automation control | point/area/group/general addressing; bistable/monostable/blades mode; installation/destination level |
-| `404` Scheduled scenario | address; button numbers; `AUX` input; restart delay |
-| `406` Scheduled scenario PLUS | scenario-number fields; button fields |
-| `407` `AUX` control | `AUX` channel; command mode; reachable through Virgin Object `500` when conditions permit |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master PUL; `16` = Slave and PUL | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `21` = 21 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time; Only for Master modes |
+| `DELAY_DOORS` | `0..60` | `3` | Delay between doors |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-A reusable Object parameter is a candidate capability until the firmware condition/filter model makes it reachable for this Device.
+### Object `407` - AUX control (Virgin-only candidate)
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+### Applicability interpretation
+
+The actuator and command Object families belong to four separate catalogue Modules. Their reusable fields do not prove every value is reachable on this firmware.
 
 ## Conditions, filters, and conversions
 
@@ -1022,20 +1031,17 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+### Source irregularities affecting selection
+
+| Source entry / scope | Issue | Interpretation limit |
+| --- | --- | --- |
+| Conditions `4908`, `4909`, `4910` | Stored endings `A2<>GE`, standalone `A2`, and `A2<>` are incomplete/unresolved | Do not repair missing tokens or infer condition precedence |
+| Remote addressing condition branches | `A2=AMB/GR/GEN` is stored although firmware `A2` has only `0..9` | A stored conversion branch is not proof of a legal physical selector |
+| PLUS selector branch | `M2=FAKE` occurs as a predicate; `FAKE` is absent from the declared firmware enum | Published software PLUS capability is distinct from this unresolved stored selector |
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
-| --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `2180` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`6`, `7`, `400`, `401`, `404`, `406`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
 | --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 82`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware/build | [Dimension Reference](../../diagnostics/dimension-reference.md) |
@@ -1045,16 +1051,14 @@ These maps describe stored conversion branches after Object selection. Validate 
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 The six physical configurator positions documented by the official sheet provide independent evidence for the expected ordinary addressed-form configurator count, but an observed `DIMENSION 1` read is still required for hardware corroboration.
-
 ## Functional applicability
 
-
-The official sheet documents four major product arrangements:
-
-1. one lighting or shutter load with local control;
-2. two independent lighting loads with two local controls;
-3. one lighting load with local control plus remote-actuator/scenario control;
-4. one shutter load with local control plus remote-actuator/scenario control.
+| Published arrangement | Evidence |
+| --- | --- |
+| one lighting or shutter load with local control | `ST-00000898-EN/FR`, pp. 3–7 |
+| two independent lighting loads with two local controls | `ST-00000898-EN/FR`, pp. 3–7 |
+| one lighting load with local control plus remote-actuator/scenario control | `ST-00000898-EN/FR`, pp. 3–7 |
+| one shutter load with local control plus remote-actuator/scenario control | `ST-00000898-EN/FR`, pp. 3–7 |
 
 For lighting, physical modes include cyclic `ON`/`OFF`, separate `ON`/`OFF`, slave operation, `PUL`, and delayed-`OFF` presets. For automation, physical modes include timed `UP/DOWN`, bistable and monostable shutter control.
 
@@ -1068,13 +1072,13 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
-
 A programmer must resolve local actuator topology and front/remote command topology separately. It must evaluate the Device-specific condition/conversion graph rather than treating this as one fixed actuator Object.
 
 See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
 
-## Source reconciliation
+The 2021 sheet, p. 7, requires neutral for normal operation; missing neutral otherwise causes flashing LEDs and disabled commands. Software can explicitly configure operation without neutral, subject to the reduced load matrix. For physical configuration, its unlock procedure is three presses of the **illustrated** front key within five minutes of power-up, applicable only from production `16W09`. The key location must be read from the diagram; no arbitrary button is substituted. Its shutter diagram separately says neutral is recommended but not required. Keep these published use/production constraints visible.
 
+## Source reconciliation
 
 The archived zero-crossing technical and instruction sheets establish additional product constraints:
 
@@ -1088,7 +1092,6 @@ These facts supplement the four-Module catalogue topology and are constraints on
 
 ## Evidence limits and open work
 
-
 - Add sanitized hardware fingerprints for at least one commercial variant.
 - Corroborate installed `modobj`, firmware/build, configurator count, Module/Object topology, addresses, and configuration.
 - Continue document discovery for older revisions and range-specific sheets.
@@ -1096,7 +1099,6 @@ These facts supplement the four-Module catalogue topology and are constraints on
 - Resolve catalogue conditions that use values outside the firmware-level physical enum.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -1109,3 +1111,5 @@ These facts supplement the four-Module catalogue topology and are constraints on
 - `AM5852M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5852M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2); SHA-256 `c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315`.
 
 - `067561-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067561` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/00/ab/00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/actionneur-commande-2-relais-myhome-up-celiane); SHA-256 `00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0006)

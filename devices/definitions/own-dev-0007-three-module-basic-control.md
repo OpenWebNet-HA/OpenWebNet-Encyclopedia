@@ -4,7 +4,6 @@
 
 This three-module SCS wall control provides six pushbuttons for three independently configured loads or functions. Status LEDs give local feedback, while configuration determines how each pair of buttons operates its assigned target.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0007` | Project identity |
@@ -20,17 +19,16 @@ This Device exposes three independently addressed command Modules under a shared
 
 ## Commercial identities
 
-
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
 | BTicino - Axolute | `H4652/3` | Established identity | Catalogue + official technical sheet |
 | BTicino - LivingLight | `L4652/3` | Established identity | Catalogue + official technical sheet |
 | BTicino - Matix | `AM5832/3` | Established identity | Catalogue + official technical sheet |
 | Legrand - Céliane | `067554` | Established catalogue identity | Catalogue + official technical sheet |
-| Legrand - Arteor | `573975` | Shared technical item | Implementation evidence; product-document review pending |
-| Legrand - Vela | `687378` | Shared technical item | Implementation evidence; product-document review pending |
+| Legrand - Arteor | `573975` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Vela | `687378` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
 
-The current Legrand web catalogue describes reference `067554` with “Arteor” wording while the canonical MyHOME Suite catalogue assigns that code to the Céliane line. Preserve this as a source/catalogue metadata difference until the historical commercial relationship is resolved.
+The retained canonical catalogue assigns `067554` to Céliane. An attempted current manufacturer export was inaccessible during review, so no new marketed-line assignment is incorporated.
 
 ### EAN-13 commercial identifiers
 
@@ -47,9 +45,9 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00290-c-EN` | Technical sheet | 01/08/2013 | `067554`, `H4652/3`, `L4652/3`, `AM5832/3` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/21/3c/213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00290_c_EN.pdf) |
-| `MQ00290-c-FR` | Technical sheet | revision date to verify | same family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
-| `T9807J` | Instruction sheet | revision to verify | L4652/3 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
-| `LE05420AA` | Instruction sheet | revision to verify | `067554` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
+| `MQ00290-c-FR` | Technical sheet | 05/05/2014 | same family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
+| `T9807J` | Instruction sheet | Printed revision; date not established | L4652/3 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
+| `LE05420AA` | Instruction sheet | Printed `10/12-01 PC` | `067554` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
 | `H4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3) |
 | `L4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3) |
 | `AM5832_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5832/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3) |
@@ -65,9 +63,6 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Current draw | `9 mA` | Publisher documentation cited in this section |
 | Physical configurator positions | `A1`, `PL1`, `A2`, `PL2`, `A3`, `PL3`, `M` | Publisher documentation cited in this section |
 
-The English technical sheet establishes:
-
-
 The seven printed configurator positions independently support the expected ordinary addressed-form configurator count. An observed `DIMENSION 1` read is still required before recording `N_CONF = 7` as hardware-corroborated.
 
 ## Identity
@@ -78,6 +73,19 @@ The seven printed configurator positions independently support the expected ordi
 | Item model / `modobj` | `3` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `3` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -87,6 +95,12 @@ The seven printed configurator positions independently support the expected ordi
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -113,36 +127,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | `148` | `500` Automation double command virgin | `1`, `2`, `3` | `400`, `401`, `404`, `406`, `407` | `500` | `21` |
 
-### Reconciled topology notes
-
-
-Firmware `148` declares three command Modules.
-
-| Object | Description | Slots | Relationship |
-| ---: | --- | --- | --- |
-| `400` | Light control | `1`, `2`, `3` | designated Object |
-| `401` | Automation control | `1`, `2`, `3` | alternative |
-| `404` | Scheduled scenario | `1`, `2`, `3` | alternative |
-| `406` | Scheduled scenario PLUS | `1`, `2`, `3` | alternative |
-
-Virgin Object `500`, **Automation double command virgin**, applies to all three slots and permits Objects `400`, `401`, `404`, `406`, and `407` (`AUX` control).
-
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `148` | Physical configuration | retained Device-specific configuration modality |
-| `148` | Virtual Configuration | retained Device-specific configuration modality |
-| `148` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `148` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `148` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `148` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue declares:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
-
-The official sheet independently documents physical configuration and MyHOME Suite virtual configuration.
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -159,11 +152,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `148` | `PL3` | `0..9` | `0` | PL3; PL3 - (0-9) |
 | `148` | `M` | `0..9`; `14` = `CEN` | `0` | M; Mode (0-9,`CEN`) |
 
-
-
-
 ### Published and reconciled details
-
 
 | Field | Catalogue domain | Role |
 | --- | --- | --- |
@@ -201,7 +190,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -217,7 +205,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -229,7 +216,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -239,20 +225,21 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
+### Virgin-only candidate Objects
 
-### Reconciled Object notes
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
 
-The selected Objects reuse these canonical command parameter models:
+### Object `407` - AUX control (Virgin-only candidate)
 
-| Object | Principal configuration surface |
-| --- | --- |
-| `400` Light control | command mode; point/area/group/general address; installation/destination level; reference address; timed and dimming values |
-| `401` Automation control | bistable/monostable/blades control; point/area/group/general address; installation/destination level |
-| `404` Scheduled scenario | scenario button numbering; related address fields |
-| `406` Scheduled scenario PLUS | PLUS scenario-number and button fields |
-| `407` `AUX` control | `AUX` command and channel fields when reached through the Virgin Object |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
-These are reusable Object definitions; Device reachability remains governed by the firmware conditions, filters, and conversion rules documented below.
+### Applicability interpretation
+
+Three addressed Modules share a physical mode selector. Reusable Object membership does not permit independent physical `M` values for each pair of buttons.
 
 ## Conditions, filters, and conversions
 
@@ -502,30 +489,27 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+The stored PLUS condition `M=FAKE` uses a symbol absent from firmware `148`'s enum. The product sheet documents software PLUS activation, but does not resolve the internal `FAKE` selector or its execution precedence.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
-| --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `4` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`400`, `401`, `404`, `406`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
 | --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 3`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | obtain actual installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | determine active Object for each of the three command Modules | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | determine the three Module addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
 
-Functional applicability follows the resolved firmware/Object topology and the documented product roles above.
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting | Three A/PL pairs; cyclic ON/OFF and cover-dependent ON/OFF/adjustment, with software reference address for group/room status | `MQ00290-c-EN`, pp. 2, 4; FR pp. 2, 4 |
+| Automation | Cover-dependent bistable or monostable shutter commands under a shared `M` | Same EN/FR sheets, pp. 2–4 |
+| MH200N CEN | Six scenario buttons; physical `M=CEN` uses the first A/PL pair and leaves `A2/PL2/A3/PL3` unconfigured | Same sheets, pp. 3–4 |
+| PLUS scenarios | Software scenario address `1..2047`; button `0..31` | Same sheets, p. 3 |
+
+Three independent catalogue command Modules do not imply three independently selectable physical mode values.
 
 ## Observed behavior and corroboration
 
@@ -533,13 +517,11 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
+For ordinary addressed controls, the left, middle and right button pairs correspond to `A1/PL1`, `A2/PL2` and `A3/PL3`. `M` is shared and its physical effect depends on the fitted button covers. The published table mixes lighting and shutter functions for some covers; resolve the exact cover/function combination instead of assigning three unrelated `M` values.
 
-Programming must preserve three independent Module addresses while applying the one shared physical `M` selector to the Device topology. Do not flatten the Device into one command address.
-
-See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
+Physical CEN is different: configure only the first address pair and leave `A2/PL2/A3/PL3` empty. Software uses button identifiers `0..31` and, for PLUS scenarios, scenario address `1..2047`. Physical A/PL values `1..9` and software room `0..10` / point `0..15` remain separate from the catalogue's underlying `0..9` fields. Check the active Object projection before writing; generic sequencing stays in [Programming Validation](../../programming/validation.md).
 
 ## Source reconciliation
-
 
 The archived `MQ00290` and installation sheets add Device-specific behavior to the three independent command Modules:
 
@@ -552,17 +534,17 @@ The archived `MQ00290` and installation sheets add Device-specific behavior to t
 
 The current source set is reconciled for the core product family; direct documentation for `573975` and `687378` remains outstanding.
 
+The English sheet is dated 1 August 2013; the French revision is dated 5 May 2014. Their addressing, CEN constraints and function/cover tables agree on the reviewed facts. `T9807J` is a multi-product button-assembly instruction including `L4652/3`; `LE05420AA` (`10/12-01 PC`) is an assembly sheet. Neither supplies additional firmware or load ratings. The inaccessible current manufacturer export remains a discovery lead; an earlier unretained Arteor wording report is not used to establish a competing marketed-line identity.
+
 ## Evidence limits and open work
 
-
 - Locate product-specific documentation for `573975` and `687378`.
-- Resolve the Céliane/Arteor wording discrepancy for reference `067554`.
+- Retrieve a retained current manufacturer record for `067554` before adjudicating any reported marketed-line wording difference.
 - Add a sanitized hardware fingerprint to corroborate `modobj`, firmware, expected configurator count, Module Objects, addresses, and configuration.
 - Verify whether all package/finish variants expose identical LED and mechanical behavior.
 - Continue archival discovery for older technical-sheet revisions and language variants.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -573,3 +555,5 @@ The current source set is reconciled for the core product family; direct documen
 - `H4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3); SHA-256 `63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2`.
 - `L4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3); SHA-256 `2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6`.
 - `AM5832_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5832/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3); SHA-256 `1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0007)

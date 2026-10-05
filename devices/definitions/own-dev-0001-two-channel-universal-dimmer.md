@@ -4,7 +4,6 @@
 
 The F418U2 is a DIN-mounted, two-channel SCS dimmer for dimmable LED, compact fluorescent and other documented lamp types. Its channels can operate separately or in parallel for a larger load, and local pushbuttons provide direct control.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0001` | Project identity |
@@ -18,10 +17,7 @@ The F418U2 is a DIN-mounted, two-channel SCS dimmer for dimmable LED, compact fl
 | Declared Modules | `2` | Implementation evidence |
 | Categories | Actuator, Lighting, Dimmer | Derived from capability model |
 
-The F418U2 is a two-channel SCS universal dimmer. The official technical sheet identifies `F418U2` and `0 036 51` on the same document, while MyHOME Suite stores `F418U2` and `003651` as separate Device records sharing item `2065`. They are therefore treated as commercial identities of this technical Device definition.
-
 ## Commercial identities
-
 
 | Brand / range | SKU / reference | Relationship | Evidence |
 | --- | --- | --- | --- |
@@ -43,15 +39,13 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ01019_a_EN` - Universal dimmer 2x300W | Technical sheet | 20/09/2018 | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2d/b6/2db6bcdc199da839de2bff76bbcd7ef21afac85c8818dbd563c4dc226f66e58e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01019_a_EN.pdf) |
-| `LE07383AB` | Instruction sheet | Current BTicino catalogue listing | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
-| `LE07383AC` | Instruction sheet | Historical revision | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
+| `LE07383AB` | Instruction sheet | Printed `LE07383AB-01PC-17W18` | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/3e/ee/3eeee15691e13bddc91c9980b95553414b0418488086893f99ca2fddca509aaf.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE07383AB.pdf) |
+| `LE07383AC` | Instruction sheet | Printed revision AC; `21W40` imprint | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2c/e6/2ce6014a32c3752547d670f35bdbfdeac8c38fc56b0fd40798c33b207132134c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AC.pdf) |
 | `LE07383AD` | Instruction sheet | 07/23 | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
-| `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
-| `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Publisher listing identifies the guide; retained multi-product page coverage not established | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
+| `ST-00001620-EN` | Technical sheet | 19/07/2023 | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
+| `GUI-MHOME` | MyHOME installation guide | Publisher listing; see original imprint | Listing alias only; mapping of `GUI-MHOME` to the retained technical-guide binary is not established | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
 | `F418U2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F418U2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2) |
-
-The source archive should retain every distinct revision found for this Device. The following official material is currently known:
-
+| `MyHOME-Technical-Guide.pdf` | Multi-product MyHOME technical guide | Retained publisher guide; retrieved binary reused | F418U2: printed/PDF pp. 46, 56, 100. General role, wiring example and `230 Vac` catalogue matrix inspected; unrelated products not reviewed. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher source](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 
 See the [Device Source Index](../../sources/devices/index.md) for archival status and provenance.
 
@@ -59,17 +53,17 @@ See the [Device Source Index](../../sources/devices/index.md) for archival statu
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Width | 4 DIN modules | Vendor technical sheet |
-| SCS supply | `18..27 Vdc` | Vendor technical sheet |
-| SCS absorption | max. `18 mA` | Vendor technical sheet |
-| Mains supply | `110..127 Vac` or `220..240 Vac`, `50..60 Hz` | Vendor technical sheet |
-| Device consumption | max. `5 W` | Vendor technical sheet |
-| Operating temperature | `0..40 °C` | Vendor technical sheet |
-| Channels | 2, with parallel operation supported by the product documentation | Vendor technical sheet |
-| Nominal channel load at `220..240 V` | up to `300 W` per channel | Vendor technical sheet |
-| Parallel load at `220..240 V` | up to `600 W` | Vendor technical sheet |
-| Load families | dimmable LED, dimmable CFL, halogen, electronic transformers | Vendor technical sheet |
-| Local operation | local channel pushbuttons | Vendor technical sheet |
+| Width | 4 DIN modules | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| SCS supply | `18..27 Vdc` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| SCS absorption | max. `18 mA` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Mains supply | `110..127 Vac` or `220..240 Vac`, `50..60 Hz` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Device consumption | max. `5 W` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Operating temperature | `0..40 °C` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Channels | 2, with parallel operation supported by the product documentation | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Incandescent/halogen at `220..240 V`, separate channels | `2 × 300 W` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Incandescent/halogen at `220..240 V`, parallel channels | `600 W` | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Load families | dimmable LED, dimmable CFL, halogen, electronic transformers | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
+| Local operation | local channel pushbuttons | `MQ01019_a_EN`, printed/PDF p. 1; 2018 scope |
 | Later operating temperature | `5..40 °C` | `LE07383AD`, July 2023, PDF p. 2; earlier `MQ01019_a_EN` gives `0..40 °C` |
 | Later load-table entries at `240 Vac` | `150 W` / `150 VA` | `LE07383AD`, PDF p. 2; keep the printed load-column context separate from the older per-channel ratings |
 | Later load-table entries at `110 Vac` | `75 W` / `75 VA` | `LE07383AD`, PDF p. 2; not a timeless replacement for the 2018 matrix |
@@ -77,20 +71,14 @@ See the [Device Source Index](../../sources/devices/index.md) for archival statu
 | Installation placement | No adjacent dimmers; no installation adjacent to a power supply | `LE07383AD`, PDF p. 2 |
 | Load combination | Mixed loads prohibited | `LE07383AD`, PDF p. 2 |
 
-The 2018 technical sheet establishes the following product-specific characteristics:
-
-
-The current BTicino product page also lists the Device as a 4-module, 27 Vdc MyHOME dimmer with an 18 mA bus current. Historical and current documents should both be preserved because product-sheet wording and supported-load guidance can change between revisions.
-
-### Revision-specific hardware evidence
-
-Later instruction sheet `LE07383AD` introduces material that must remain revision-scoped:
-
-- Devices from production batch `23W16` use a revised light-level adjustment and may produce different brightness levels from earlier production batches at the same nominal setting.
-- Its load table differs from the older 2018 `MQ01019_a_EN` technical sheet, including lower printed per-channel wattage/VA figures for the shown supply cases.
-- The current BTicino catalogue page contains structured metadata that can conflict with its own narrative description, so generic catalogue fields must not override Device-specific technical documentation.
-
-These differences are archival evidence that F418U2 documentation and product behavior changed over time. Do not collapse the revisions into one timeless specification.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Incandescent/halogen at `110..127 V` | `2 × 150 W` separate; `300 W` parallel | `MQ01019_a_EN`, p. 1 |
+| Dimmable LED/CFL and documented transformer loads at `220..240 V` | `2 × 300 VA` separate; `600 VA` parallel | `MQ01019_a_EN`, p. 1 |
+| Same VA load classes at `110..127 V` | `2 × 150 VA` separate; `300 VA` parallel | `MQ01019_a_EN`, p. 1 |
+| LED/CFL explanatory approximation | `300 VA` corresponds to about `200 W` for the most common lamps, according to this source | `MQ01019_a_EN`, p. 1; not a universal VA/W conversion |
+| 2023 technical-sheet temperature and ratings | `0..40 °C`; `2 × 300 W / VA` high-voltage separate channels, `600 W / VA` parallel | `ST-00001620-EN`, pp. 1, 4 |
+| Production-batch light-level change | From `23W16`, revised relationship between nominal level and brightness | `LE07383AD`, p. 2; product documentation, not a new observation |
 
 ## Identity
 
@@ -99,6 +87,19 @@ These differences are archival evidence that F418U2 documentation and product be
 | `EN_ITEM.id_item` | `2065` | Canonical catalogue |
 | Item model / `modobj` | `77` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation (`id_system = 1`) | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `77` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -109,6 +110,12 @@ These differences are archival evidence that F418U2 documentation and product be
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -126,35 +133,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | `590` | `528` Dimmer actuator virgin | `1`, `2` | `8`, `136` | `532` | `55` |
 
-### Reconciled topology notes
-
-
-Firmware `590` declares two Modules.
-
-| Object | Description | Slots | Relationship | Evidence |
-| --- | --- | --- | --- | --- |
-| `8` | Dimmer actuator | `1`, `2` | designated / fixed Object | Implementation evidence |
-| `136` | Double Dimmer actuator | `1` | alternative Object | Implementation evidence |
-| Virgin Object `528` | Dimmer actuator virgin | `1`, `2` | permits Objects `8` and `136` | Implementation evidence |
-
 The installed Module/Object projection is obtained through [`DIMENSION 30`](../../diagnostics/dim30-modules.md). The generic `SLOT`, `KEYO`, and `STATE` frame semantics remain canonical there.
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `590` | Physical configuration | retained Device-specific configuration modality |
-| `590` | Virtual Configuration | retained Device-specific configuration modality |
-| `590` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `590` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `590` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `590` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue associates firmware `590` with all three configuration modes:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
-
-The vendor technical sheet independently documents physical configuration and MyHOME Suite configuration.
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -172,11 +161,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `590` | `MIN1` | `0..9` | `0` | Minimum level for channel 1 |
 | `590` | `MIN2` | `0..9` | `0` | Minimum level for channel 2 |
 
-
-
-
 ### Published and reconciled details
-
 
 These are the complete firmware-scoped configuration fields stored for firmware `590`, excluding only database bookkeeping columns.
 
@@ -199,14 +184,14 @@ The catalogue includes `0` in the stored physical ranges for `A` and `PL1`, whil
 | Stored value | Vendor label / effect | Evidence |
 | ---: | --- | --- |
 | `0` | Master | Catalogue + vendor PDF |
-| `1` | Master with delayed switch-off, 1 minute | Vendor PDF |
-| `2` | Master with delayed switch-off, 2 minutes | Vendor PDF |
-| `3` | Master with delayed switch-off, 3 minutes | Vendor PDF |
-| `4` | Master with delayed switch-off, 4 minutes | Vendor PDF |
+| `1` | Master: corresponding Slave switch-off delayed by 1 minute | Vendor PDF |
+| `2` | Master: corresponding Slave switch-off delayed by 2 minutes | Vendor PDF |
+| `3` | Master: corresponding Slave switch-off delayed by 3 minutes | Vendor PDF |
+| `4` | Master: corresponding Slave switch-off delayed by 4 minutes | Vendor PDF |
 | `11` / `SLA` | Slave | Catalogue + vendor PDF |
 | `15` / `PUL` | Master `PUL` | Catalogue + vendor PDF |
 
-Virtual configuration exposes the delayed-off value as a Device/Object parameter rather than restricting it to the four physical presets.
+The 2018 sheet specifies software `Delay OFF = 0..255 seconds`, versus physical `M=1..4` presets in minutes. On OFF, the Master switches off immediately and its corresponding Slave remains on for the configured delay; the note allows point-to-point or group control. Group addressing is not configurable in Slave mode.
 
 ### Physical load selector `TY`
 
@@ -232,7 +217,7 @@ Virtual configuration exposes the delayed-off value as a Device/Object parameter
 | `8` | 35% | Vendor PDF |
 | `9` | 40% | Vendor PDF |
 
-The vendor sheet makes `MIN2` conditional on the second channel configuration and parallel-channel use. Preserve those conditions when producing a future programmer or validator.
+The 2018 sheet requires `MIN2=0` when `PL2=0` or `PL2=PL1`. Channel 2 load type is separately selectable only outside parallel mode. Its `TY=2/3` note says “parallel mode” but prints `PL2≠PL1`, conflicting with the equal-address parallel diagram; that condition is unresolved and must not become an implementation rule.
 
 ## Object configuration surfaces
 
@@ -267,7 +252,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
-
 ### Object `136` - Double Dimmer actuator
 
 Catalogue Object key `631` maps to external Object `136`.
@@ -299,31 +283,9 @@ Catalogue Object key `631` maps to external Object `136`.
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
+### Applicability interpretation
 
-### Reconciled Object notes
-
-
-Objects `8` and `136` expose the same catalogue configuration surface in the canonical database. These are reusable Object definitions; the table records the complete candidate surface, while Device/firmware filters and vendor documentation determine which values are meaningful for F418U2.
-
-| Parameter | Catalogue values | Notes |
-| --- | --- | --- |
-| `A` | `0..10` | area |
-| `PL` | `0..15` | light point |
-| `M` | `0=Master`, `11=Slave`, `15=Master PUL`, `16=Slave and PUL` | actuator mode |
-| `LOCAL_BUTTON` | `0=Toggle`, `9=ON-OFF`, `15=Pushbutton`, `18=Timed ON` | local button behavior |
-| `DELAYED_OFF` | `0..255 s` | hidden implementation parameter |
-| `STATE_SAVING_ON_RESET` | `0=Disabled`, `1=Enabled` | reset behavior |
-| `HOURS` | `0..255` | hidden timed-operation component |
-| `MINUTES` | `0..59` | hidden timed-operation component |
-| `SECONDS` | `0..59`, default `30` | hidden timed-operation component |
-| `MIN_LEVEL` | `1..100`, default `1` | minimum level |
-| `TYPE_LOAD` | reusable enum values `0,1,2,3,5..14` | candidate Object-level load taxonomy |
-| `TYPE_STANDARD` | `0=1-10V`, `1=0-10V` | reusable Object-level field |
-| `MIN_LEVEL_ADV` | `1..100` | hidden advanced minimum level |
-| `MIN_AUTO` | `0=not editable`, `1=editable` | minimum-level editability |
-| `G1..G10` | each `0..255` | group memberships |
-
-The reusable `TYPE_LOAD` Object enum includes load technologies beyond those documented for F418U2. Do not promote every reusable Object value to a product capability. The F418U2 technical sheet is the stronger product-specific evidence for its supported load families.
+Objects `8` and `136` have identical reusable field surfaces in this snapshot. `TYPE_LOAD` includes technologies beyond the F418U2 product sheets; membership in that enum does not establish support on this dimmer.
 
 ## Conditions, filters, and conversions
 
@@ -548,20 +510,9 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Diagnostic applicability
 
-| Diagnostic surface | Device-specific use | Canonical reference |
-| --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `2065` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`8`, `136`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
 The Device-specific knowledge above projects through the general diagnostic model:
 
-| Diagnostic surface | F418U2-specific use | Canonical reference |
+| Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
 | `DIMENSION 1` | identify item model `77`, brand `5`, line `0`; obtain installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | obtain installed firmware version | [Dimension Reference](../../diagnostics/dimension-reference.md) |
@@ -573,11 +524,11 @@ The Device-specific knowledge above projects through the general diagnostic mode
 | `DIMENSION 35` | obtain configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 The table documents applicability and Device-specific expectations. Frame grammar and generic field semantics belong to the linked reference pages.
-
 ## Functional applicability
 
-
 F418U2 is a `WHO 1` Lighting dimmer. General commands, addressing, and dimension grammar are documented under [Lighting](../../functional/who-1-lighting/).
+
+## Observed behavior and corroboration
 
 First-hand evidence already adds several Device-specific observations:
 
@@ -589,12 +540,7 @@ First-hand evidence already adds several Device-specific observations:
 
 These observations corroborate runtime behavior but do not change the canonical generic frame definitions. See [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md) and the [Open Questions](../../reverse-engineering/open-questions.md).
 
-## Observed behavior and corroboration
-
-No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
-
 ## Programming
-
 
 F418U2 programming should use the canonical [Programming](../../programming/) workflow. The Device-specific data required by a validator is captured above:
 
@@ -616,21 +562,23 @@ Known F418U2 product documentation and runtime research have been reconciled as 
 - later instruction material warns against mixing incompatible load technologies and keeps minimum-level/load-type behavior revision-scoped;
 - the runtime `DIMENSION 4` evidence remains Device-specific and unresolved in four places: the exact `ON/OFFspeed` encoding, whether the observed F454 positive write failure is systematic, whether MH200 non-response is gateway/firmware-wide or interaction-specific, and whether the reported F414/MH200 timeout followed by `NACK` can be reproduced from a preserved raw exchange.
 
-Five identified F418U2-specific official PDFs are now archived byte-for-byte and reconciled here: `MQ01019_a_EN`, `LE07383AB`, `LE07383AC`, `LE07383AD`, and `ST-00001620-EN`. The separately listed `GUI-MHOME` is a system-wide MyHOME installation guide rather than a Device-specific F418U2 revision; its exact publisher binary remains unresolved, but no additional F418U2-specific fact has been identified that is absent from the archived Device sheets. Source reconciliation is therefore complete for the currently identified Device-specific PDF set while generic-guide archival remains open.
+The five exact-product PDFs are retained separately. `LE07383AB` (`17W18`) and `LE07383AC` (`21W40`) print `200..240 Vac` / `110..127 Vac` load-table rows with `1..300 W/VA` / `1..150 W/VA`; their wiring pictures supply the channel context. The 2018 technical sheet instead uses `220..240 Vac`. These source intervals are not silently made identical.
 
-The July 2023 `LE07383AD` instruction sheet also gives a different temperature interval and lower printed load entries than the 2018 sheet. Those values remain separate in the physical table. The 2018 `TY` parallel-mode note combines a parallel-operation description with a `PL2` condition that does not align with the equal-address parallel diagram; preserve this as a source conflict and verify the intended condition before using it as an implementation rule.
+`ST-00001620-EN` is dated 19 July 2023 and still states `0..40 °C` and the `300`-per-channel / `600`-parallel matrix. The July 2023 `LE07383AD` prints `5..40 °C` and `150 W/VA` at `240 Vac`, `75 W/VA` at `110 Vac`. The AD table does not establish that these entries mean “per channel”; the earlier page wording was too strong. The simultaneous 2023 disagreement remains unresolved, so no single replacement load rating or production-batch hardware explanation is inferred. Its explicit `23W16` light-level change is a separate documented fact.
+
+The already retained MyHOME technical guide corroborates the product role and a `230 Vac` catalogue matrix. It does not resolve the AD load conflict or prove that the product-listing alias `GUI-MHOME` names this exact binary. Unrelated guide products are outside this review scope.
+
+The `TY` note and catalogue-versus-physical address-domain differences remain explicit. Runtime claims above remain scoped to the preserved gateway paths, rather than inferred from these product revisions.
 
 ## Evidence limits and open work
 
-
-- Recover and archive the exact `GUI-MHOME` publisher binary if its download endpoint becomes available; treat it as generic system documentation unless it adds F418U2-specific facts.
+- Establish the exact `GUI-MHOME` listing-to-binary relationship; the separately retained technical guide is reviewed only at its F418U2 locations.
 - Add a sanitized fingerprint capture from a known physical F418U2 so installed identity, firmware, hardware, Module/Object state, addresses, and configuration can be tied to one evidence record.
 - Resolve the source-level `A` / `PL1` physical-domain difference between catalogue data and the 2018 technical sheet.
 - Preserve production-batch-specific behavior from later instruction sheets as revision-scoped product evidence rather than generalizing it backwards.
-- Determine which reusable Object configuration values are filtered out specifically for firmware `590`.
+- Resolve the contemporaneous 2023 rating/temperature conflict and the contradictory `TY=2/3` condition without guessing hardware applicability. The stored firmware filters are fully recorded; their physical reachability remains unobserved.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -640,3 +588,5 @@ The July 2023 `LE07383AD` instruction sheet also gives a different temperature i
 - [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md)
 
 - `F418U2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F418U2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2); SHA-256 `978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0001)

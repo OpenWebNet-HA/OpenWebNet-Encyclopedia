@@ -4,7 +4,6 @@
 
 This flush-mounted sensor combines passive infrared and ultrasonic presence detection with ambient-light measurement. It supports configured lighting automation and includes a front on/off button for local operation.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0010` | Project identity |
@@ -19,7 +18,6 @@ This flush-mounted sensor combines passive infrared and ultrasonic presence dete
 The Device combines PIR and ultrasonic presence detection with a brightness sensor, local `ON`/`OFF` and learning controls, and an IR transmitter. The canonical firmware projects one configurable sensor Module plus sixteen fixed IR scenario-control Modules.
 
 ## Commercial identities
-
 
 The current 2024 official technical sheet directly names the complete 12-record catalogue cluster:
 
@@ -61,7 +59,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `MQ00473-f-FR` | official source | 22/04/2014 | six earlier references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/d2/a6/d2a68430ce079fdc114d349efc8033881ac8b6a3ab1276262ec18108afb216b2.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00473-f-FR.pdf) |
 | `ST-00001844-EN` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ba/24/ba24bdc0f0bf1f928eb531117c566d79ef03f4f7624bc457c08a93d256375ab9.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-EN.pdf) |
 | `ST-00001844-FR` | official source | 12/08/2024 | all 12 current cluster references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/10/57/1057c84858e3c3c6df455a9899b3a044d25b9a7f4a5406e75f6ade4abedafa6e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001844-FR.pdf) |
-| `LE15098AA` | official source | revision to verify | current family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
+| `LE15098AA` | AC5220MB/MW instruction sheet | Printed revision; date not established | Printed/PDF pp. 1–2, exact `AC5220MB/MW` only; those references are named in the 2024 family sheet but are not among this historical catalogue cluster’s 12 records | [Archived PDF](https://archive.openwebnet-ha.org/sha256/8d/e1/8de1235d87a640ef54121e54709092d8a6d05e6a083c919a5b67b341dff23920.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE15098AA.pdf) |
 | `HC4658-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4658` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/aa/7f/aa7fa0b3bce43693009aea9136320416afbb4fab83d3880908021b766ccf7d45.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4658) |
 | `HS4658-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4658` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/0a/15/0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4658) |
 | `HD4658-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4658` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/64/e3/64e311e2bf7371107fef4cd3c2a33afc2ab5d40ccbeb72884bc871e5e8b93b80.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4658) |
@@ -87,27 +85,31 @@ The 2024 sheet also updates the software-configuration workflow from MyHOME Suit
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Mounting | 2 flush-mounted modules | Publisher documentation cited in this section |
-| Supply | `27 Vdc` | Publisher documentation cited in this section |
-| Current draw | `15 mA` in the 2024 sheet | Publisher documentation cited in this section |
-| Detection technology | PIR + ultrasound, 180° | Publisher documentation cited in this section |
-| Brightness sensor | integrated | Publisher documentation cited in this section |
-| Front controls | `ON`/`OFF` button + LEARN button / LED | Publisher documentation cited in this section |
-| IR | integrated transmitter | Publisher documentation cited in this section |
-| Flush box depth | `40 mm` | Publisher documentation cited in this section |
-| Weight | `60 g` | Publisher documentation cited in this section |
-| Impact protection | `IK04` | Publisher documentation cited in this section |
-| Ingress protection | `IP20` | Publisher documentation cited in this section |
-| Time-delay range | `5 s .. 59 min 59 s` | Publisher documentation cited in this section |
-| Brightness range | `20 .. 1275 lux` | Publisher documentation cited in this section |
-| Operating temperature | `-5 .. +45 °C` | Publisher documentation cited in this section |
-| Storage temperature | `-20 .. +70 °C` | Publisher documentation cited in this section |
-| Physical configurator sockets | `A`, `PL`, `M`, `S`, `T`, `D` | Publisher documentation cited in this section |
-
-The 2024 sheet establishes:
-
+| Mounting | 2 flush-mounted modules | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Supply | `27 Vdc` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Current draw | `15 mA` in the 2024 sheet | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Detection technology | PIR + ultrasound, 180° | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Brightness sensor | integrated | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Front controls | `ON`/`OFF` button + LEARN button / LED | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| IR | integrated transmitter | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Flush box depth | `40 mm` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Weight | `60 g` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Impact protection | `IK04` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Ingress protection | `IP20` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Time-delay range | `5 s .. 59 min 59 s` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Brightness range | `20 .. 1275 lux` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Operating temperature | `-5 .. +45 °C` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Storage temperature | `-20 .. +70 °C` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
+| Physical configurator sockets | `A`, `PL`, `M`, `S`, `T`, `D` | `ST-00001844-EN/FR`, 12/08/2024, p. 1 |
 
 The six documented sockets independently support the expected ordinary addressed-form configurator count, pending hardware corroboration.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| 2014 current draw | `17 mA` | `MQ00473-f-EN/FR`, p. 1; separate from 2024 `15 mA` |
+| 2024 body dimensions | `45 × 45 × 51 mm` | `ST-00001844-EN/FR`, p. 1; not the flush-box depth |
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Later AC5220MB/MW instruction values | `27 Vdc`, `20 mA`, `-5..45 °C`, threshold `300 lux`, delay `15 min`, coverage `45 m²` | `LE15098AA`, printed/PDF p. 1; exact AC5220 references only, not assigned to the historical 12-SKU cluster |
 
 ## Identity
 
@@ -116,6 +118,19 @@ The six documented sockets independently support the expected ordinary addressed
 | `EN_ITEM.id_item` | `1559` | Canonical catalogue |
 | Item model / `modobj` | `44` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `44` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -126,6 +141,12 @@ The six documented sockets independently support the expected ordinary addressed
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -162,21 +183,9 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | all | None associated | - | - | - | - |
 
-### Reconciled topology notes
-
-
 ### Slot 1 - sensing role
 
 The firmware offers these sensor Objects on slot `1`:
-
-| Object | Description | Physical-condition evidence |
-| ---: | --- | --- |
-| `119` | Stand alone presence sensor | no firmware condition row |
-| `128` | Scenarios daylight and presence sensor | `M=2` |
-| `164` | Scenarios daylight sensor | no firmware condition row |
-| `165` | Scenarios presence sensor | no firmware condition row |
-| `166` | Stand alone daylight sensor | `M=1` or `M=4` |
-| `168` | Stand alone daylight and presence sensor | `M=0` or `M=3`; designated Object |
 
 Objects without physical condition rows remain valid catalogue alternatives for virtual/advanced configuration; they must not be declared unreachable solely because the physical-condition table does not select them.
 
@@ -195,9 +204,13 @@ This is why the Device has 17 catalogue Modules despite appearing physically as 
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `220` | Catalogue configuration route(s) described in retained notes | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `220` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `220` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `220` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product documentation additionally distinguishes MyHOME configuration from Lighting Management Plug & Go / Push & Learn procedures. Those system-level procedures are not extra numeric catalogue modes.
 
 ## Firmware-scoped configuration
 
@@ -213,11 +226,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `220` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
 | `220` | `D` | `0..5` | `0` | D; (0-5) |
 
-
-
-
 ### Published and reconciled details
-
 
 | Field | Catalogue domain | Published physical meaning |
 | --- | --- | --- |
@@ -262,6 +271,23 @@ The sheets explicitly state that physical addresses `A=0` and `PL=0` do not exis
 | `4` | 500 lux |
 | `5` | 1000 lux |
 
+### Published remote-control settings
+
+| Setting | Published default | Adjustable scope | Evidence |
+| --- | --- | --- | --- |
+| Delay | `15 min` | Simplified presets `3/5/10/15/20 min`; advanced `30 s..255 h 59 min 59 s` | `ST-00001844-EN/FR`, p. 2 |
+| Sensitivity | PIR very high / US high | Low / medium / high / very high | Same source |
+| Brightness threshold | `300 lux` | Presets `20/100/300/500/1000 lux`; advanced `0..1275 lux` | Same source |
+| Occupancy modes | Walkthrough active; Auto and Eco inactive | ON/OFF | Same source |
+| Initial detection | PIR and US | PIR and/or US, PIR, US | Same source |
+| Holding / retrigger detection | PIR or US | PIR and/or US, PIR, US; retrigger also OFF | Same source |
+| Alarm | Inactive | ON/OFF; audible warnings at `1 min`, `30 s`, `10 s` before switch-off | Same source, pp. 2–3 |
+| Calibration | No numeric default specified | Advanced `0..99995 lux` | Same source, pp. 2–3 |
+| Adjustment | Inactive | ON/OFF | Same source |
+| Contribution of light | Automatic | Automatic or up to `1275 lux` | Same source |
+
+The source table assigns these capabilities to the simplified `BMSO4003/088235` and advanced `BMSO4001/088230` controls. They are not replacements for the physical `T` presets or the p. 1 headline delay range.
+
 ## Object configuration surfaces
 
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
@@ -291,7 +317,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
 | `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
 
-
 ### Object `128` - Scenarios daylight and presence sensor
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -305,14 +330,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
 | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
 
-
 ### Object `164` - Scenarios daylight sensor
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
-
 
 ### Object `165` - Scenarios presence sensor
 
@@ -326,7 +349,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCHEMA` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection scheme |
 | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
 | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
-
 
 ### Object `166` - Stand alone daylight sensor
 
@@ -347,7 +369,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
 | `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
 | `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
-
 
 ### Object `168` - Stand alone daylight and presence sensor
 
@@ -382,7 +403,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
 | `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
 
-
 ### Object `431` - IR scenario control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -394,18 +414,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `ID3` | `0..15` | `0` | ID3 |
 | `UNIT_NUMBER` | `0..15` | `0` | Push button number |
 
+### Applicability interpretation
 
-### Reconciled Object notes
-
-The reusable sensor Objects extend substantially beyond the six physical sockets.
-
-| Object family | Reconciled configuration surface |
-| --- | --- |
-| Presence-oriented `119`, `128`, `165` | point/group addressing; hours/minutes/seconds delay; PIR and ultrasound sensitivity; PIR/US detection scheme; initial/maintain/retrigger selection where applicable; automatic, walkthrough, manual-`ON`/auto-`OFF` and partial/group modes; visual/acoustic alert; optional load-control enablement |
-| Daylight `166` | point/group and reference-actuator addressing; open/closed-loop regulation; daylight cell group; daylight setpoint in 5-lux increments over `0..1275 lux`; light contribution from Automatic through `5..1275 lux`; auto/manual/partial modes; lighting-regulation enablement; read-only daylight/natural-light factors and measured daylight level |
-| Combined daylight/presence `168` | up to two sensor groups; time delay; auto `ON`/`OFF`, walkthrough, manual `ON`/auto `OFF` and partial/group modes; PIR/US sensitivities; initial/maintain/retrigger selection; visual/acoustic alerts; load-control and lighting-regulation settings; read-only light-factor measurements |
-
-The published 2024 sheet independently documents remote-control adjustment of delay, PIR/US detection scheme, brightness threshold, Auto/Walkthrough/Eco modes, alarm, calibration, adjustment, and contribution-of-light behavior.
+Sensor Object fields extend beyond the six physical sockets. Remote-control defaults and physical presets below are separate scopes from the reusable Object defaults. Catalogue membership of the 16 IR scenario slots is not a runtime observation.
 
 ## Conditions, filters, and conversions
 
@@ -449,26 +460,23 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 | Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `1559` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
-| --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 44`, commercial identity fields and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | enumerate one sensor Object plus sixteen IR scenario-control Objects | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | resolve sensor/scenario addressing | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect physical/virtual/advanced configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
 
-Functional applicability follows the resolved firmware/Object topology and the documented product roles above.
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Physical `M=0` | Presence with brightness qualification; automatic switch-on and timed absence switch-off | 2014/2024 sheets, physical mode table |
+| Physical `M=1` | Brightness-only automatic lighting; no `S/T` configurators and no GEN/AMB/GR addresses | Same sources |
+| Physical `M=2` | Send presence/brightness signals to MH200N; unique address, no `S/T` configurators or GEN/AMB/GR | Same sources |
+| Physical `M=3` | Presence plus constant-brightness regulation of a dimmer | Same sources |
+| Physical `M=4` | Manual-on brightness regulation / automatic off; no automatic turn-on from falling daylight | Same sources |
+| Software/remote occupancy | Auto, Walkthrough and Eco are distinct from physical `M` selectors; Walkthrough can shorten delay to 3 minutes for detection under 20 seconds; Eco has a 30-second retrigger window | 2014/2024 sheets, settings explanations |
+
+Slot 1 selects the sensor Object through the catalogue conditions. The 16 fixed/designated IR scenario slots are an implementation projection whose runtime operation has not been corroborated.
 
 ## Observed behavior and corroboration
 
@@ -476,10 +484,13 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
-Programming must validate firmware applicability, active Module/Object topology, relation filters, and Device-specific configuration constraints.
+Select the system context first: MyHOME physical/software configuration and Lighting Management Plug & Go / Push & Learn are different procedures. The 2024 sheet adds Home + Project, whereas the 2014 sheet refers to MyHOME Suite. Physical `A/PL=0` is explicitly excluded even though zero occurs in the catalogue; published `S` presets stop at 3 while the firmware enum includes 4.
+
+For a factory reset, the published procedure is a brief LEARN press followed by a ten-second LEARN hold until the LED flashes quickly. Configuration-remote commands are confirmed by a beep according to the sheets. Advanced brightness calibration requires a lux-meter measurement and the two source-specific artificial/natural-light stages; no measured calibration value is inferred here. For MH200N sensor signals choose physical `M=2`, rather than treating every sensor mode as a scenario input.
+
+Resolve firmware and slot-1 Object selection before applying the stored conditions/conversions. The unusual 17-Module catalogue model is not a reason to send writes to 17 assumed active hardware functions; confirm installed topology through diagnostics first.
 
 ## Source reconciliation
-
 
 The archived 2014/2024 PIR+US material has been reconciled beyond the basic `M/S/T/D` configurator table.
 
@@ -495,17 +506,20 @@ The product-level configuration surface additionally includes:
 
 These settings explain why reusable sensor Objects expose more behavior than the six physical sockets alone. They remain product-level semantics and should not be collapsed into one generic presence-sensor mode.
 
-## Evidence limits and open work
+The 2014 English (9 June) and French (22 April) sheets give `17 mA`; the August 2024 English/French sheets give `15 mA` and expanded named commercial coverage. No production cutoff or hardware equivalence is established by that difference alone. `LE15098AA` explicitly names `AC5220MB/MW` and gives `20 mA`, distinct from the 2014 `17 mA` and 2024-family `15 mA`. Those later references are listed by the 2024 family sheet but absent from the historical 12-record cluster. Their instruction values and installation diagrams are accounted for without adding an unsupported catalogue identity or treating the three current figures as one hardware revision sequence.
 
+The p. 1 delay range (`5 s..59 min 59 s`), remote-control range and physical `T` presets have different scopes. The Auto paragraph in both EN/FR revisions says switch-off when natural light is insufficient, whereas the advanced Adjustment explanation says switch-off after light exceeds the threshold. This internal wording conflict is retained; it is not silently turned into a universal switch-off algorithm. Published PIR-low physical no-configurator sensitivity also differs from the remote-settings PIR-very-high default, and is kept in its own configuration scope.
+
+## Evidence limits and open work
 
 - Obtain a sanitized fingerprint from known hardware and verify the unusual 17-Module projection.
 - Correlate old and new production batches with the 17 mA versus 15 mA documentation difference.
 - Determine whether all 12 commercial variants share identical hardware or whether the current technical sheet intentionally spans revised electronics.
 - Corroborate the six physical configurator positions and slot-1 mode selection through diagnostics.
 - Record real-world IR scenario Object behavior for slots `2..17`.
+- The `LE15098AA` `20 mA` AC5220MB/MW instruction and 2024 family-sheet `15 mA` disagree; exact production applicability and the AC5220 relationship to the historical catalogue item remain unestablished.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -526,3 +540,5 @@ These settings explain why reusable sensor Objects expose more behavior than the
 
 - `067226-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067226` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/11/9b/119bcd106a380cdd76747dc36d8b7bc668e6727c0d920bb427722264e00fd9a3.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/detecteur-de-mouvements-bus-celiane-presence-et-luminosite-pour-espace-de-travail-avec-poussoir); SHA-256 `119bcd106a380cdd76747dc36d8b7bc668e6727c0d920bb427722264e00fd9a3`.
 - `078486-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `078486` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/61/51/6151ca609a993f0b555f467f923c3194f91703896a257030019784625901b5d1.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/detecteur-de-mouvements-bus-mosaic-presence-et-luminosite-pour-espace-de-travail-avec-poussoir-blanc); SHA-256 `6151ca609a993f0b555f467f923c3194f91703896a257030019784625901b5d1`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0010)

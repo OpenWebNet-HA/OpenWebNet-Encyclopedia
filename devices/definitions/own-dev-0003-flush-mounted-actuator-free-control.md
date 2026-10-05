@@ -4,7 +4,6 @@
 
 This flush-mounted device combines two relay outputs with local controls and commands for other SCS actuators. Configuration lets it operate two lighting circuits or an interlocked motor load, while the available rocker packages adapt the front controls to the intended use.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0003` | Project identity |
@@ -22,29 +21,30 @@ This Device is deliberately modelled as a multifunction Physical Device rather t
 
 ## Commercial identities
 
-
-The canonical catalogue maps nine commercial Device records to item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation independently groups `64391`, `64191`, and `64192` in the same two-relay actuator/control family. The remaining six records share the technical capability item in MyHOME Suite but still need individual product-document review.
+The canonical catalogue maps nine commercial Device records to item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation independently groups `64391`, `64191`, and `64192` in the same two-relay actuator/control family. The Spanish manufacturer leaf directly covers the three BTicino references. The three remaining Legrand references have established catalogue identities but lack retained exact-product sheets.
 
 | Brand / line | Reference | Relationship to technical definition | Evidence |
 | --- | --- | --- | --- |
-| Arnould - Espace Evolution | `64391` | documented commercial reference | Catalogue + vendor catalogue |
-| Arnould - Espace Evolution | `64191` | documented commercial/package variant | Catalogue + vendor catalogue |
-| Arnould - Espace Evolution | `64192` | documented commercial/package variant | Catalogue + vendor catalogue |
-| BTicino - Axolute | `H4671M2` | shared technical item | Implementation evidence; product-document review pending |
-| BTicino - LivingLight | `LN4671M2` | shared technical item | Implementation evidence; product-document review pending |
-| BTicino - Matix | `AM5851M2` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand - Arteor | `573961` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand - Céliane | `067249` | shared technical item | Implementation evidence; product-document review pending |
-| Legrand - Céliane | `067556` | shared technical item | Implementation evidence; product-document review pending |
+| Arnould - Espace Evolution | `64391` | Established identity | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64191` | Established commercial variant | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64192` | Established commercial variant | Catalogue + vendor catalogue |
+| BTicino - Axolute | `H4671M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| BTicino - LivingLight | `LN4671M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| BTicino - Matix | `AM5851M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| Legrand - Arteor | `573961` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067249` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067556` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
 
 The technical Device ID does not privilege one of these references. Shared-item membership establishes the common catalogue capability core but does not erase possible package, finish, regional, or hardware differences.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| Arnould Espace Evolution catalogue | Historical product catalogue | not stated in retained row | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 31 / PDF pp. 27, 32 | Arnould Espace Evolution catalogue |
-| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | not stated in retained row | Device/family coverage described by retained source | - | MyHOME Suite lighting actuator function documentation |
-| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | not stated in retained row | Device/family coverage described by retained source | - | MyHOME Suite automation actuator function documentation |
+| Arnould Espace Evolution catalogue | Historical product catalogue | No dated imprint established in the inspected original | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 32 / PDF pp. 27, 32 | Arnould Espace Evolution catalogue |
+| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | No dated imprint established in the inspected original | Device/family coverage described by retained source | - | MyHOME Suite lighting actuator function documentation |
+| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | No dated imprint established in the inspected original | Device/family coverage described by retained source | - | MyHOME Suite automation actuator function documentation |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Multi-product technical-sheet compendium (Spanish) | Exact leaf `BT00411-b-ES`; no date established | `H4671M2`, `LN4671M2`, `AM5851M2`: printed pp. 749–753 / PDF pp. 180–184, read in full. Other products outside scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 Additional installation sheets and catalogue revisions should be collected rather than treating this list as exhaustive.
 
@@ -52,15 +52,21 @@ Additional installation sheets and catalogue revisions should be collected rathe
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product-specific characteristics | See retained source-derived notes below | Retained publisher evidence |
-| Hardware corroboration | Pending unless explicitly observed | Observation status |
-| Commercial/package variation | Preserved where documented | Source reconciliation |
-
-The archived historical Arnould catalogue describes `64391` as a two-independent-relay actuator with integrated control, physically or virtually configurable, occupying two modules. It documents simple or double loads, two lighting circuits or a motor, logical relay interlocking by configuration, and control of a remote BUS actuator.
-
-The same source makes the package distinctions explicit: `64391` is supplied without a rocker and accepts either one two-module rocker or two one-module rockers; `64191` is the lighting package, preassembled with two unmarked one-module rocker controls and supplied with blue `0/1` and `CEN` configurators; `64192` is the motor package, preassembled with one two-module Up/Down rocker, supplied with the matching Up/Down configurator, and documented for a motor up to `500 W`.
-
-For the base actuator the catalogue clearly prints `2 A` incandescent/halogen capability, `2 A cosφ 0.5` for ferromagnetic transformers, `70 W` for fluorescent/electronic-transformer loads, and a maximum of two compact-fluorescent/LED lamps. A neighbouring motor figure is typographically ambiguous in extracted text, so this dossier does not normalize that value beyond the unambiguous `64192` `500 W` package statement without page-image verification.
+| Mounting / outputs | 2 flush-mounted modules; 2 independent relays | Arnould catalogue printed/PDF p. 32; `BT00411-b-ES`, printed pp. 749–750 / PDF pp. 180–181 |
+| BTicino front controls | 4 pushbuttons, 4 two-colour LEDs; local LED adjustment/exclusion button | `BT00411-b-ES`, printed p. 749 / PDF p. 180 |
+| BTicino SCS supply | Nominal `27 Vdc`; operating `18..27 Vdc` | `BT00411-b-ES`, printed p. 750 / PDF p. 181 |
+| BTicino standby current | Maximum `14 mA` | Same exact BTicino leaf |
+| BTicino temperature rows | `0..40 °C` and `-5..45 °C`, both labelled operating temperature | Same leaf; second label is a source ambiguity, not silently relabelled storage |
+| BTicino incandescent/halogen and shutter motor at `230 Vac` | `460 W / 2 A` for each documented load class | Same leaf; not automatically transferable to Arnould packages |
+| BTicino LED/CFL | `70 W`, maximum 2 lamps | Same leaf |
+| BTicino fluorescent/electronic transformer | `70 W / 0.3 A` | Same leaf |
+| BTicino ferromagnetic transformer | `460 VA / 2 A`, `cosφ=0.5` | Same leaf |
+| Arnould base `64391` load classes | Incandescent/halogen `2 A`; ferromagnetic `2 A cosφ=0.5`; fluorescent/electronic `70 W`; maximum 2 CFL/LED lamps | Arnould catalogue printed/PDF p. 32 |
+| Arnould base motor figure | Printed `460 pour moteurs`, without a clear unit in the inspected page image | Same catalogue; not normalized to watts |
+| `64391` package | No rocker supplied; accepts one 2-module or two 1-module rockers | Same catalogue |
+| `64191` lighting package | Two blank 1-module rockers; blue `0/1` and `CEN` configurators supplied | Same catalogue |
+| `64192` motor package | One 2-module Up/Down rocker and matching configurator; motor maximum `500 W` | Same catalogue; unresolved difference from BTicino `460 W` leaf |
+| Physical sockets | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | BTicino leaf printed pp. 751–753 / PDF pp. 182–184 |
 
 ## Identity
 
@@ -69,6 +75,19 @@ For the base actuator the catalogue clearly prints `2 A` incandescent/halogen ca
 | `EN_ITEM.id_item` | `1184` | Canonical catalogue |
 | Item model / `modobj` | `107` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation (`id_system = 1`) | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `107` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -79,6 +98,12 @@ For the base actuator the catalogue clearly prints `2 A` incandescent/halogen ca
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -105,28 +130,7 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | `157` | `500` Automation double command virgin | `3`, `4` | `400`, `401`, `404`, `406`, `407` | `500` | `31` |
 | `157` | `510` Automation relay virgin | `1`, `2` | `1`, `6`, `7` | `510` | `32` |
 
-### Reconciled topology notes
-
-
-### Catalogue Object alternatives
-
-| Object | Description | Available slot(s) | Designation |
-| ---: | --- | --- | --- |
-| `6` | Light actuator | `1`, `2` | fixed/designated Light actuator |
-| `7` | Automation actuator | `1` | alternative |
-| `400` | Light control | `3`, `4` | fixed/designated Light control |
-| `401` | Automation control | `3`, `4` | alternative |
-| `404` | Scheduled scenario | `3`, `4` | alternative |
-| `406` | Scheduled scenario PLUS | `3`, `4` | alternative |
-
 The four Modules must not be confused with the eleven slot/Object association rows in the database.
-
-### Virgin Objects
-
-| Virgin Object | Description | Slots | Permitted Objects |
-| ---: | --- | --- | --- |
-| `500` | Automation double command virgin | `3`, `4` | `400` Light control; `401` Automation control; `404` Scheduled scenario; `406` Scheduled scenario PLUS; `407` `AUX` control |
-| `510` | Automation relay virgin | `1`, `2` | `1` Blind actuator; `6` Light actuator; `7` Automation actuator |
 
 Object `1` and Object `407` are permitted through the Virgin Object definitions even though they do not appear as direct firmware/Object rows in the extracted `AS_OBJECT_FIRMWARE` set. Preserve that distinction.
 
@@ -134,18 +138,13 @@ Installed Module state is read through [`DIMENSION 30`](../../diagnostics/dim30-
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `157` | Physical configuration | retained Device-specific configuration modality |
-| `157` | Virtual Configuration | retained Device-specific configuration modality |
-| `157` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `157` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `157` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `157` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-Firmware `157` supports all three catalogue modes:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
 
 ## Firmware-scoped configuration
 
@@ -161,12 +160,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `157` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
 | `157` | `M2` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
 
-
-
-
 ### Published and reconciled details
-
-
 
 The six fields `A1/PL1/M1/A2/PL2/M2` are the Device's physical configurator surface in the canonical catalogue. `AID` is an identity field and is not counted as a physical configurator position.
 
@@ -200,7 +194,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `7` - Automation actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -221,7 +214,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
-
 
 ### Object `400` - Light control
 
@@ -246,7 +238,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -262,7 +253,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -274,7 +264,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -284,96 +273,42 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
+### Virgin-only candidate Objects
 
-### Reconciled Object notes
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
 
+### Object `1` - Blind actuator (Virgin-only candidate)
 
-The tables below preserve the complete reusable Object parameter surfaces referenced by firmware `157`. They are candidate configuration capabilities; firmware conditions, filters, and conversion rules determine the reachable subset for a concrete 64391 configuration.
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master PUL; `16` = Slave and PUL | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `21` = 21 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time; Only for Master modes |
+| `DELAY_DOORS` | `0..60` | `3` | Delay between doors |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-### Object `6` - Light actuator
+### Object `407` - AUX control (Virgin-only candidate)
 
-| Parameter | Domain |
-| --- | --- |
-| `A` | `0..10` |
-| `PL` | `0..15` |
-| `M` | `0=Master`, `11=Slave`, `15=Master PUL`, `16=Slave and PUL` |
-| `LOCAL_BUTTON` | `0=Toggle`, `1=ON/OFF`, `9=ON-OFF`, `15=Pushbutton`, `18=Timed ON` |
-| `DELAYED_OFF` | `0..255 s` |
-| `STATE_RESET` | `0=Restore last value`, `1=Closed`, `2=Open` |
-| `LOAD_CONTROL_MODE` | `0=With zero crossing`, `1=Without zero crossing` |
-| `HOURS` / `MINUTES` / `SECONDS` | `0..255` / `0..59` / `0..59` |
-| `SUBTYPE` | Actuator, Lamp, Valve, Differential restart, Fan, Watering, Controlled socket, Lock |
-| `G1..G10` | each `0..255`, where `0` means no group |
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
-### Object `7` - Automation actuator
+### Applicability interpretation
 
-| Parameter | Domain |
-| --- | --- |
-| `A` | `0..10` |
-| `PL` | `0..15` |
-| `M` | `0=Master`, `11=Slave`, `15=Master PUL`, `16=Slave and PUL` |
-| `LOCAL_BUTTON` | `12=Bistable`, `13=Monostable`, `14=Bistable and blades` |
-| `STOP_TIME` | Infinite; `1..17 s`; `19..60 s`; `2..10 min` through stored values `62..70` |
-| `SUBTYPE` | Actuator, Shutter, Curtain, Gate, Garage door, Differential restart |
-| `G1..G10` | each `0..255`, where `0` means no group |
-
-The stored `STOP_TIME` enum notably has no `18 s` entry. Preserve the database domain exactly.
-
-### Object `400` - Light control
-
-| Parameter | Domain |
-| --- | --- |
-| `M` | Toggle, timed `ON`, dimmer variants, `ON`/`OFF` variants, `OFF`, `ON`, `PUL`, blinking `0.5..8 s`, fixed dimmer levels `10..90%`, and customized modes `128..134` |
-| `ADDR_TYPE` | `0=Point to point`, `1=Area`, `2=Group`, `3=General` |
-| `A` | `0..10` |
-| `PL` | `0..15` |
-| `G` | `1..255` |
-| `INST_LEV` | Private riser, Local bus `1..15`, Standard |
-| `DEST_LEV` | Private riser, Local bus `1..15`, All systems |
-| `A_R` | `0..10`; `0` means no reference |
-| `PL_R` | `0..15`; `0` means no reference |
-| `HOURS` / `MINUTES` / `SECONDS` | custom timed-`ON` components |
-| `LEVEL` | `0..100` for customized modes |
-| `START_S` / `STOP_S` / `DIMMING_S` | `0..255` for customized modes |
-| `T_TIME` | stored timed presets: 1,2,3,4,5,6,15 minutes; 30 seconds; 0.5 seconds; 2 seconds; 10 minutes |
-| `IN_AUX_CHANNEL` | `0..15` |
-
-### Object `401` - Automation control
-
-| Parameter | Domain |
-| --- | --- |
-| `M` | `12=Bistable`, `13=Monostable`, `14=Blades control and bistable` |
-| `ADDR_TYPE` | Point to point, Area, Group, General |
-| `A` | `0..10` |
-| `PL` | `0..15` |
-| `G` | `1..255` |
-| `INST_LEV` | Private riser, Local bus `1..15`, Standard |
-| `DEST_LEV` | Private riser, Local bus `1..15`, All systems |
-| `A_R` | `0..10` |
-| `PL_R` | `0..15` |
-| `IN_AUX_CHANNEL` | `0..15` |
-
-### Object `404` - Scheduled scenario
-
-| Parameter | Domain |
-| --- | --- |
-| `A` | `0..10` |
-| `PL` | `0..15` |
-| `BUTTON_1` | `0..31`, default `1` |
-| `BUTTON_2` | `0..31`, default `2` |
-| `IN_AUX_CHANNEL` | `0..15` |
-| `START_DELAY` | `0..255 s`, default `10` |
-
-### Object `406` - Scheduled scenario PLUS
-
-| Parameter | Domain |
-| --- | --- |
-| `PPT_CEN_LOW` | `0..255`, default `1` |
-| `PPT_CEN_HIG` | `0..7`, default `0` |
-| `BUTTON_1` | `0..31`, default `1` |
-| `BUTTON_2` | `0..31`, default `2` |
-
-Virgin Object `500` additionally permits `AUX` control Object `407`; its reusable Object parameters should be incorporated when a reachable 64391 configuration or authoritative product source establishes that capability for this Device.
+Object `7`'s reusable `STOP_TIME` enum lacks an `18 s` entry; the Virgin-only Blind Object `1` has a different domain. Objects `1` and `407` above are admitted by Virgin Objects only: no direct firmware/Object association or Device-specific filter establishes their reachability. Their fields are retained as candidate catalogue data, not asserted physical functions.
 
 ## Conditions, filters, and conversions
 
@@ -1064,20 +999,17 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+### Source irregularities affecting selection
+
+| Source entry / scope | Issue | Interpretation limit |
+| --- | --- | --- |
+| Conditions `4908`, `4909`, `4910` | Stored endings `A2<>GE`, standalone `A2`, and `A2<>` are incomplete/unresolved | Do not repair missing tokens or infer condition precedence |
+| Remote addressing condition branches | `A2=AMB/GR/GEN` is stored although firmware `A2` has only `0..9` | A stored conversion branch is not proof of a legal physical selector |
+| PLUS selector branch | `M2=FAKE` occurs as a predicate; `FAKE` is absent from the declared firmware enum | Published software PLUS capability is distinct from this unresolved stored selector |
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
-| --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `1184` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`6`, `7`, `400`, `401`, `404`, `406`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | 64391-specific use | Canonical reference |
 | --- | --- | --- |
 | `DIMENSION 1` | resolve item model `107`, brand `6`, line `8`, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | installed firmware observation, despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
@@ -1087,17 +1019,15 @@ These maps describe stored conversion branches after Object selection. Validate 
 | `DIMENSION 35` | inspect configuration values and physical-configurability flags | [Configuration](../../diagnostics/dim35-configuration.md) |
 
 No generic diagnostic frame is duplicated here.
-
 ## Functional applicability
 
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting actuator | One local load plus remote control, or two separately addressed lighting loads (`M1=CEN` in the published physical two-load setup) | `BT00411-b-ES`, printed pp. 749, 751–753 |
+| Automation actuator | One motor using the two relays and the corresponding shutter rocker; relay interlocking is configuration-dependent | Arnould catalogue p. 32; BTicino leaf pp. 749–751 |
+| Remote command / scenario | Right-hand control can target a remote light, automation actuator or MH200N scenarios; physical `M2=CEN` has source-specific address/cover constraints | BTicino leaf p. 752 |
 
-Depending on selected Objects, the Device can participate in:
-
-- [`WHO 1` - Lighting](../../functional/who-1-lighting/) through Light actuator / Light control Objects;
-- [`WHO 2` - Automation](../../functional/who-2-automation/) through Automation actuator / Automation control Objects;
-- scenario/`CEN` behavior through Scheduled scenario and Scheduled scenario PLUS Objects.
-
-The Device page establishes **which functions can exist on this hardware**. The linked functional sections remain authoritative for command syntax and general runtime semantics.
+Resolved light and automation Objects relate to [Lighting](../../functional/who-1-lighting/) and [Automation](../../functional/who-2-automation/). Four catalogue Modules represent a configurable projection, not four physical relays.
 
 ## Observed behavior and corroboration
 
@@ -1105,51 +1035,29 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
+Use `A1/PL1/M1` for the local actuator and `A2/PL2/M2` for the remote command, or the published two-light arrangement. The BTicino leaf gives motor stop times `M1=5 → 1 min`, `6 → 2 min`, `7 → 5 min`, `8 → until a subsequent command`; `OFF` is a two-minute PUL form, and Up/Down covers select bistable or monostable operation. Do not apply a lighting selector to a motor solely because its numeric value exists in a reusable Object.
 
-This Device is a strong validation case because physical fields can change the active Object topology.
-
-A correct programmer must:
-
-1. resolve the legal firmware-scoped physical domain;
-2. evaluate reachable slot conditions;
-3. select the resulting Object per Module;
-4. apply the relevant conversion-rule graph;
-5. validate Object-scoped configuration values;
-6. write/verify through the canonical programming workflow.
-
-See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
+For lighting `M1=1..4`, OFF switches the Master off immediately and delays the corresponding Slave by 1–4 minutes; the published note limits this to point-to-point commands. `M1=CEN` in the two-load actuator table is not the same role as `M2=CEN` in the remote scenario-control table. Resolve the firmware slot conditions before applying conversions or writing Object configuration. Generic sequencing remains in [Programming Validation](../../programming/validation.md).
 
 ## Source reconciliation
 
+The Arnould catalogue establishes base versus package relationships for `64391/64191/64192`. Its product page is printed/PDF p. 32, not printed p. 31. The page image confirms a unitless motor figure `460`; the explicitly printed `64192` package rating is `500 W`.
 
-The historical Arnould material and MyHOME Suite implementation help establish more product detail than the shared technical-item mapping alone:
+The retained Spanish `BT00411-b-ES` leaf covers `H4671M2/LN4671M2/AM5851M2`, supplies their electrical/configuration data, and gives `460 W` for a shutter motor. Catalogue membership establishes a shared technical core but does not resolve the `460` versus `500 W` commercial/revision difference. Its two temperature rows have the same operating-temperature label, so the second is not reclassified by inference.
 
-- `64391` is the two-relay actuator/control base product; `64191` and `64192` are package/use variants in the same documented family rather than independent OpenWebNet capability definitions;
-- the marketed product supports simple or double loads, two lighting circuits or one motor, with relay interlocking selected by configuration;
-- the integrated controls can operate the local relays or be assigned to remote bus functions, so the four-Module model is intentional rather than an artefact of the catalogue;
-- the lighting and automation implementation help supplies the product-specific Master/Slave/`PUL` and actuator-mode interpretation used by the condition/conversion model.
+MyHOME Suite lighting/automation help entries previously listed without retained originals are discovery leads only. The lighting page was reachable during this review, but its original could not be registered through the available task-scoped HTML archival helper; its content is not used as retained claim evidence. Guessed automation-help and English-sheet endpoints were unavailable and do not establish that such revisions do not exist. The retained BTicino leaf now supports the product modes independently.
 
-The historical Arnould catalogue is now archived byte-for-byte and its Device/package facts are reconciled above. Its electrical ratings remain revision-scoped rather than timeless specifications. The MyHOME Suite lighting and automation help remain official external implementation sources and are already represented in the configuration/Object interpretation. Source reconciliation is complete for the currently identified `64391`/`64191`/`64192` source set; direct documentation for the six other commercial records remains a commercial-identity discovery gap.
+Firmware `157`'s stored conditions, filters and conversions remain implementation evidence. Out-of-domain selector branches and Virgin-only Objects are retained without inventing precedence or declaring their physical reachability.
 
 ## Evidence limits and open work
 
-
-The current dossier is substantially complete for the canonical MyHOME Suite 3.5.38 database representation, but physical-hardware corroboration is still missing.
-
-Priority evidence:
-
-- a sanitized fingerprint from a known physical 64391/64191/64192;
-- observed `DIMENSION 1` identity tuple and firmware/hardware versions;
-- observed `DIMENSION 30` topology under several physical configurations;
-- `DIMENSION 32` and `35` snapshots tied to those configurations;
-- authoritative installation sheets documenting the physical configurator layout and package variants;
-- confirmation of whether `AUX` control Object `407` is reachable on this firmware despite appearing only through Virgin Object `500`;
-- controlled validation of the catalogue branches whose stored conditions use values outside the declared physical domains.
-
-When these observations arrive, they should be added as corroborating evidence to the existing database-derived facts rather than replacing them.
+- Retained exact-product sheets are still absent for Legrand `573961`, `067249`, `067556`; these are documentation gaps, not unresolved catalogue identities.
+- Resolve the `64192` `500 W` package rating against the base unitless `460` and the BTicino `460 W` motor rating before transferring ratings between variants.
+- Resolve the duplicate temperature label in `BT00411-b-ES`; no publication date is established for that leaf.
+- Unretained Suite help and inaccessible guessed endpoints remain discovery leads, not incorporated evidence.
+- Known-hardware identity, firmware, four-Module projection and the physical reachability of Virgin-only Objects/out-of-domain branches remain unobserved.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -1159,3 +1067,5 @@ When these observations arrive, they should be added as corroborating evidence t
 - [Objects](../../device-model/objects.md#device-and-object-descriptions)
 - [Virgin Objects](../../device-model/virgin-objects.md)
 - [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157)
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0003)

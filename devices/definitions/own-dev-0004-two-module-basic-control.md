@@ -4,7 +4,6 @@
 
 This two-module wall control uses four buttons to operate configured lights, dimmers, shutters or scenarios over the SCS bus. Its two-colour indicators provide feedback, with locally adjustable LED brightness.
 
-
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0004` | Project identity |
@@ -20,7 +19,6 @@ This technical definition covers the shared catalogue capability core used by 19
 
 ## Commercial identities
 
-
 ### Directly documented references
 
 | Brand / line | Reference | Relationship | Evidence |
@@ -32,14 +30,14 @@ This technical definition covers the shared catalogue capability core used by 19
 
 ### Additional commercial records sharing item 281
 
-| Brand / line | References | Status |
-| --- | --- | --- |
-| Arnould Espace Evolution | `64160`, `64161`, `64360` | Shared technical item; individual product-document review pending |
-| Legrand Arteor | `571848`, `573974` | Shared technical item; individual product-document review pending |
-| Legrand Matix | `078473` | Shared technical item; individual product-document review pending |
-| Legrand Mosaic | `078462`, `078463`, `078471`, `079171`, `079173`, `079262`, `079263` | Shared technical item; individual product-document review pending |
-| Legrand, catalogue line undefined | `067241` | Shared technical item; product-line/document review pending |
-| Legrand Vela | `687377` | Shared technical item; individual product-document review pending |
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64160`, `64161`, `64360` | Established catalogue identities | Canonical catalogue; retained Arnould catalogue printed/PDF p. 32 establishes packages |
+| Legrand - Arteor | `571848`, `573974` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Matix | `078473` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Mosaic | `078462`, `078463`, `078471`, `079171`, `079173`, `079262`, `079263` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand | `067241` | Established catalogue identities | Canonical catalogue; marketed line and exact-product sheet not established |
+| Legrand - Vela | `687377` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
 
 Sharing one `EN_ITEM` establishes a common catalogue capability core. It does not by itself prove that every commercial package is physically identical.
 
@@ -67,6 +65,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `067552-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067552` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-celiane-1-ou-2-fonctions-pour-lumiere-ou-volets-myhome-up) |
 | `079171-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `079171` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/11/51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-1-sortie-alu) |
 | `079173-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `079173` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-2-sorties-alu) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64360`, `64160`, `64161`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
 
 Additional language revisions and product-range-specific sheets should be collected rather than treating this one document as exhaustive.
 
@@ -82,10 +81,10 @@ Additional language revisions and product-range-specific sheets should be collec
 | Maximum LED-brightness current | `6 mA` for `H4652/2`; `8.5 mA` for `L4652/2`, `AM5832/2`, `067552` | Official technical sheet |
 | Physical configurator positions | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | Official technical sheet |
 
-The official technical sheet establishes the following for its four named references:
-
-
 The six documented physical configurator positions are consistent with the ordinary diagnostic interpretation of `N_CONF`, but an observed `DIMENSION 1` value for known hardware is still needed before recording `N_CONF = 6` as corroborated behavior.
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64360` / `64160` / `64161` package distinction | `64360` supplied without rocker; `64160` has one blank 2-module rocker and blue `0/1` configurator; `64161` has two blank 1-module rockers and blue `0/1` configurators | Arnould catalogue printed/PDF p. 32 |
 
 ## Identity
 
@@ -94,6 +93,19 @@ The six documented physical configurator positions are consistent with the ordin
 | `EN_ITEM.id_item` | `281` | Canonical catalogue |
 | Item model / `modobj` | `2` | Canonical catalogue / retained definition |
 | Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `2` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
 
 ## Firmware and hardware
 
@@ -104,6 +116,12 @@ The six documented physical configurator positions are consistent with the ordin
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+### Parameter and package associations
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -126,17 +144,7 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | --- | --- | --- | --- | --- | --- |
 | `145` | `500` Automation double command virgin | `1`, `2` | `400`, `401`, `404`, `406`, `407` | `500` | `18` |
 
-### Reconciled topology notes
-
-
 Firmware `145` exposes two configurable Modules.
-
-| Object | Description | Slots | Relationship |
-| ---: | --- | --- | --- |
-| `400` | Light control | `1`, `2` | designated Object |
-| `401` | Automation control | `1`, `2` | alternative |
-| `404` | Scheduled scenario | `1`, `2` | alternative |
-| `406` | Scheduled scenario PLUS | `1`, `2` | alternative |
 
 Virgin Object `500`, **Automation double command virgin**, applies to slots `1` and `2` and permits Objects `400`, `401`, `404`, `406`, and `407` (`AUX` control).
 
@@ -144,20 +152,13 @@ Installed Object selection belongs to [`DIMENSION 30`](../../diagnostics/dim30-m
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `145` | Physical configuration | retained Device-specific configuration modality |
-| `145` | Virtual Configuration | retained Device-specific configuration modality |
-| `145` | Advanced Configuration | retained Device-specific configuration modality |
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `145` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `145` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `145` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
 
-
-The catalogue declares all three modes:
-
-- Physical configuration
-- Virtual Configuration
-- Advanced Configuration
-
-The official sheet independently documents physical configuration and MyHOME Suite virtual configuration. It also documents Lighting Management configuration modes such as Plug&go, Push&Learn, and Project&Download for the named product variants.
+Product documentation additionally distinguishes MyHOME configuration from Lighting Management Plug & Go / Push & Learn procedures. Those system-level procedures are not extra numeric catalogue modes.
 
 ## Firmware-scoped configuration
 
@@ -173,11 +174,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `145` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
 | `145` | `M2` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
 
-
-
-
 ### Published and reconciled details
-
 
 The complete firmware-scoped configuration surface is:
 
@@ -217,7 +214,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -233,7 +229,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -245,7 +240,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -255,21 +249,21 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
+### Virgin-only candidate Objects
 
-### Reconciled Object notes
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
 
+### Object `407` - AUX control (Virgin-only candidate)
 
-The Objects reachable from the Device expose these reusable configuration families:
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
-| Object | Principal configuration surface |
-| ---: | --- |
-| `400` Light control | mode; point/area/group/general address; installation/destination level; reference address; timed and dimmer parameters; `AUX` input |
-| `401` Automation control | bistable/monostable/blades mode; point/area/group/general address; installation/destination level; reference address; `AUX` input |
-| `404` Scheduled scenario | `A`, `PL`, upper/lower button `0..31`, `AUX` input, restart delay |
-| `406` Scheduled scenario PLUS | scenario number split across low/high fields; upper/lower button `0..31` |
-| `407` `AUX` control | toggle/`ON`/`OFF`/`PUL`/automation/reset/enable-disable modes; `AUX` output channel `1..15`; `AUX` input `0..15` |
+### Applicability interpretation
 
-These are reusable Object definitions. A value appearing in a reusable Object enum is not automatically a physically reachable configuration of this Device; firmware conditions and conversion rules remain authoritative for reachability.
+Reusable Object domains do not override product-level physical address limits. Firmware conditions, filters and conversions determine which values can be selected on a particular Module.
 
 ## Conditions, filters, and conversions
 
@@ -1031,37 +1025,24 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 | Diagnostic surface | Device-specific use | Canonical reference |
 | --- | --- | --- |
-| `DIMENSION 1` | corroborate technical identity for catalogue item `281` and the installed model | [Device Identity](../../diagnostics/dim1-device-identity.md) |
-| `DIMENSION 2` | select/corroborate applicable firmware without treating wildcard sentinels as literal installed values | [Dimension Reference](../../diagnostics/dimension-reference.md) |
-| `DIMENSION 30` | corroborate declared Module/Object topology (`400`, `401`, `404`, `406`) | [Modules](../../diagnostics/dim30-modules.md) |
-| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
-| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions, and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
-
-### Existing Device-specific diagnostic notes
-
-
-| Diagnostic surface | Device-specific use | Reference |
-| --- | --- | --- |
 | `DIMENSION 1` | resolve `modobj = 2`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
 | `DIMENSION 2` | observe actual installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 3`, `6`, `13` | hardware, microcontroller, and physical Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
 | `DIMENSION 30` | determine active Objects on the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
 | `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
 | `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
-
 ## Functional applicability
 
+| Documented function | Evidence |
+| --- | --- |
+| point-to-point, room, group, and general lighting addressing | `MQ00286-d-EN`, pp. 1–4; four named references |
+| lighting cyclic, `ON`, `OFF`, pushbutton, timed-`ON`, and dimming functions | `MQ00286-d-EN`, pp. 1–4; four named references |
+| automation bistable, monostable, and lath/blade control | `MQ00286-d-EN`, pp. 1–4; four named references |
+| programmed scenario buttons `0..31` | `MQ00286-d-EN`, pp. 1–4; four named references |
+| PLUS scenario number `1..2047` and button number `0..31` through virtual configuration | `MQ00286-d-EN`, pp. 1–4; four named references |
+| Lighting Management virtual functions including dual light, `CEN`, `CEN` PLUS, and `AUX` control | `MQ00286-d-EN`, pp. 1–4; four named references |
 
-For the four references named by `MQ00286-d-EN`, the sheet documents:
-
-- point-to-point, room, group, and general lighting addressing;
-- lighting cyclic, `ON`, `OFF`, pushbutton, timed-`ON`, and dimming functions;
-- automation bistable, monostable, and lath/blade control;
-- programmed scenario buttons `0..31`;
-- PLUS scenario number `1..2047` and button number `0..31` through virtual configuration;
-- Lighting Management virtual functions including dual light, `CEN`, `CEN` PLUS, and `AUX` control.
-
-The exact generic functional frame grammar remains canonical under [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
+The exact generic functional frame grammar remains canonical under [Lighting](../../functional/who-1-lighting/) and [Automation](../../functional/who-2-automation/).
 
 ## Observed behavior and corroboration
 
@@ -1069,11 +1050,9 @@ No additional publishable runtime observation is asserted beyond observations ex
 
 ## Programming
 
-
 A programmer should resolve each Module independently from the physical/virtual configuration, then apply the selected Object configuration and conversion rules. Generic write/read-back mechanics remain in [Programming](../../programming/).
 
 ## Source reconciliation
-
 
 `MQ00286-d-EN` has been reconciled beyond the high-level Object list:
 
@@ -1085,17 +1064,16 @@ A programmer should resolve each Module independently from the physical/virtual 
 
 The archived technical sheet has therefore been reconciled into both the physical configuration model and the reusable Object model; remaining incompleteness concerns other commercial variants and hardware corroboration.
 
+The retained Arnould page adds the explicit `64360/64160/64161` rocker/package relationships. It does not transfer the four named MQ00286 references’ current-draw specifications to every commercial variant. `MQ00286-d-EN` is already archived and fingerprint-verified; archival work on that exact original is complete.
+
 ## Evidence limits and open work
 
-
-- Archive and hash `MQ00286-d-EN`, its language variants, and older/newer revisions.
-- Locate authoritative product documents for the other 15 commercial records sharing item `281`.
+- Exact-product electrical/procedure sheets remain absent for variants beyond the four MQ00286 references. Arnould `64360/64160/64161` package relationships are now documented; missing sheets do not unset established identities.
 - Capture a sanitized fingerprint from known hardware to corroborate `modobj`, `N_CONF`, firmware, Module/Object projection, addressing, and configuration.
 - Establish which commercial variants differ only in finish/package and which have material hardware differences.
 - Preserve any disagreement between product documentation and the catalogue rather than normalizing it away.
 
 ## Sources
-
 
 - [Device Sources](../../sources/devices/)
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
@@ -1110,3 +1088,5 @@ The archived technical sheet has therefore been reconciled into both the physica
 - `067552-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067552` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-celiane-1-ou-2-fonctions-pour-lumiere-ou-volets-myhome-up); SHA-256 `79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb`.
 - `079171-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `079171` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/11/51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-1-sortie-alu); SHA-256 `51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30`.
 - `079173-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `079173` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-2-sorties-alu); SHA-256 `79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0004)
