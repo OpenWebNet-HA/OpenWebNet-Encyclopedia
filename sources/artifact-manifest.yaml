@@ -946,6 +946,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-3488-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 3488-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 3488-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 21347
+  sha256: 5476372510aa149035463a0567f66726baf197e05c8c15a39d442cff4d337310
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3488
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/54/76/5476372510aa149035463a0567f66726baf197e05c8c15a39d442cff4d337310.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/54/76/5476372510aa149035463a0567f66726baf197e05c8c15a39d442cff4d337310.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-3488-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
