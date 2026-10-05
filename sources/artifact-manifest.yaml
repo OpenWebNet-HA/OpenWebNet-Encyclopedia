@@ -5963,6 +5963,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le14440ac-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE14440AC manufacturer device documentation
+  media_type: application/pdf
+  filename: LE14440AC.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 5180005
+  sha256: 4340c49157f5f7b23673e939d7af60013c5431a456406e5166266065a420b194
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE14440AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/43/40/4340c49157f5f7b23673e939d7af60013c5431a456406e5166266065a420b194.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/43/40/4340c49157f5f7b23673e939d7af60013c5431a456406e5166266065a420b194.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le14741aa-20261004
   kind: documentation
   publisher: BTicino / Legrand
