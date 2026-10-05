@@ -1661,6 +1661,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4693
+  title: HD4693 official product export with EAN
+  media_type: application/pdf
+  filename: HD4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 15052
+  sha256: e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
