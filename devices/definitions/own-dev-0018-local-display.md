@@ -2,7 +2,7 @@
 
 ## Summary
 
-Local Display is a compact OLED touch interface for MyHOME. Its selected configuration assigns it to scenario control, sound diffusion or temperature regulation, so its displayed controls follow the role chosen for the installation.
+Local Display is a compact touch interface for MyHOME. Its configured pages provide scenario, sound and temperature controls; later retained manuals also describe energy display and load management. Available controls depend on the configured applications and connected system.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -25,36 +25,33 @@ The Local Display is a multifunction wall user interface whose catalogue topolog
 | --- | --- | --- | --- |
 | BTicino - Axolute | `HC/HS/HD4685` | Documented 4685-family identity | Catalogue + family documentation |
 | BTicino - LivingLight | `L/N/NT4685` | Documented 4685-family identity | Catalogue + family documentation |
-| Legrand - Arteor | `573916` | Shared technical item | Implementation evidence |
-| Legrand - Arteor | `573917` | Shared technical item | Implementation evidence |
-| Legrand - Céliane | `067281` | Shared technical item | Implementation evidence |
-| Legrand - Céliane | `067282` | Shared technical item | Implementation evidence |
+| Legrand - Arteor | `573916` | Established catalogue identity | Implementation evidence |
+| Legrand - Arteor | `573917` | Established catalogue identity | Implementation evidence |
+| Legrand - Céliane | `067281` | Established catalogue identity | Implementation evidence |
+| Legrand - Céliane | `067282` | Established catalogue identity | Implementation evidence |
 
 All six records share catalogue item `1147` and `modobj` 64. Direct variant-specific documentation remains desirable for the Legrand references.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `U1063B` | Instruction sheet | revision/date not yet pinned | 4685 Local Display family instruction sheet | not archived in repository | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
-| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | Generic “Local display - Sound distribution” context on printed p. 5 / PDF p. 5; the `4685` family is not named | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
+| `U1063B` | Instruction sheet | No dated imprint established in inspected original | 4685 Local Display family instruction sheet | not archived in repository | [Official source](https://dar.bticino.com/asset/Documents/U1063B.pdf) |
+| MyHOME catalogue `HPML0714` | Product catalogue | No dated imprint established in inspected original | Generic “Local display - Sound distribution” context on printed p. 5 / PDF p. 5; the `4685` family is not named | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
+| `O2189D_U_EN.pdf` | Manufacturer user manual | 10/14-01 PC | Local Display: PDF pp. 6–28 inspected for scenario/sound/temperature/energy/load operation. No build cutoff established. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/55/06556aebd384e635cdc57be4eb608cc4ea280c25aeccf435f743df353d8a4524.pdf) | Publisher URL not retained in manifest |
+| `O2189C_S_EN.pdf` | Manufacturer software manual | Revision C; dated imprint not established | Local Display: complete software manual inspected, PDF pp. 4–20; project limits, USB/bus connection and application settings. | [Archived original](https://archive.openwebnet-ha.org/sha256/09/21/0921999650dac001f3e2aa6736f2d4066c4d11599711df9d68c45c245b4282a7.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/O2189C_S_EN.pdf) |
 
-The former official `U1063B` publisher URL currently returns an access/error response and the current Legrand document CDN does not expose that filename. An external reference copy of the same `U1063B` revision has therefore been used only to recover Device facts. The older MyHOME catalogue provides only generic Local Display / sound-distribution context and does not identify the `4685` family or corroborate its complete role set. The external copy is not archived or represented as an official original; byte-for-byte publisher evidence is still required.
+The U1063B manufacturer endpoint was rechecked during this review: DAR returned HTTP 403 and the assets endpoint HTTP 404. The older external reference copy is an unretained discovery lead, not a retained original or accepted technical specification. The HPML0714 catalogue provides generic Local Display context without naming this cluster. The retained O2189 user/software manuals now supply direct manufacturer application/procedure evidence; their relationship to each historical hardware/firmware variant is not fully established.
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| User interface | OLED touch display | `U1063B` reference copy |
-| Connections | BUS/SCS, serial programming connector and external-probe connector | `U1063B` reference copy |
-| Supported external probe | `3457` | `U1063B` reference copy |
-| External probe characteristic | `10 kΩ` at `25 °C`, `BETA = 3435` | `U1063B` reference copy |
-| Maximum probe connection length | `10 m` | `U1063B` reference copy |
-| SCS supply | `18..27 Vdc` | `U1063B` reference copy |
-| Maximum standby consumption | approximately `20 mA` | `U1063B` reference copy |
-| Maximum operating consumption | approximately `60 mA` | `U1063B` reference copy |
-| Operating temperature | `5..35 °C` | `U1063B` reference copy |
+| User interface | Touch display with text and icons | O2189D_U_EN, p. 6; its LCD note is source wording |
+| Programming connection | USB–miniUSB; device must be connected to the bus for communication | O2189C_S_EN, p. 4 |
+| Temperature arrangement | Configured local/slave probes; with 4/99-zone central unit or as standalone thermostat without one | O2189C_S_EN, pp. 13–14 |
 
-These values remain provisional until the exact official `U1063B` bytes are archived; they do not override the canonical implementation topology.
+Electrical ratings, external probe 3457 characteristics and historical serial connection from the unretained U1063B copy remain unverified leads under Evidence limits. The later manual’s LCD wording and the older OLED description do not establish a hardware revision boundary.
 
 ## Identity
 
@@ -66,6 +63,20 @@ These values remain provisional until the exact official `U1063B` bytes are arch
 | `AS_ITEM_SYSTEM.modobj` | `64` in both mappings | Implementation evidence |
 | Family | `1` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `64` | No | Canonical item/system relationship |
+| Temperature control | `64` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -75,6 +86,21 @@ These values remain provisional until the exact official `U1063B` bytes are arch
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 The catalogue declares Product Programming only and a USB programming connection. That is materially different from many configurable command Devices: the Local Display topology is selected through product-level configuration rather than represented as a generic Virgin Object.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `110` | `114` | BTicino (key `1`) | `0` | external software | `TiLocalDisplay_0200` |
+| `110` | `187` | Unspecified (key `0`) | `0` | external software | `TiLocalDisplay_0102` |
+| `110` | `259` | Legrand (key `2`) | `2` | external software | `LocalDisplayConfig_0102` |
+| `110` | `260` | BTicino (key `1`) | `3` | external software | `TiLocalDisplay_0102` |
+| `110` | `261` | BTicino (key `1`) | `1` | external software | `TiLocalDisplay_0102` |
+| `110` | `262` | Legrand (key `2`) | `4` | external software | `LocalDisplayConfig_0102` |
+
+All 6 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -106,10 +132,15 @@ There is no Virgin Object. Conditions `FUN=1`, `FUN=2`, `FUN=3` and `FUN=4` are 
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Product Programming | implementation evidence |
-| USB programming connection | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `110` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `110` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -122,17 +153,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `110` | `ZB` | `0..9` | `1` | ZB; ZB thermo zone address |
 | `110` | `M` | `0`; `3..8` | `0` | M; Mode (None,3,4,5,6,7,8) |
 | `110` | `FUN` | `0..4` | `0` | FUN; Configurator FUN |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `ZA` | `0..9` | first thermoregulation zone digit |
-| `ZB` | `0..9` | second thermoregulation zone digit |
-| `M` | `0`, `3`, `4`, `5`, `6`, `7`, `8` | product mode configurator domain |
-| `FUN` | `0`, `1`, `2`, `3`, `4` | function selector that controls Object applicability |
-
 
 The database labels `M=0` and `FUN=0` as None. Numeric M values `3..8` and `FUN` values `1..4` are preserved as raw catalogue values unless a product document supplies stronger names.
 
@@ -152,7 +172,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `419` - Sound diffusion control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -167,7 +186,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `191` - Local display as temperature control probe
 
 Catalogue Object key `460` maps to external Object `191`.
@@ -180,26 +198,9 @@ Catalogue Object key `460` maps to external Object `191`.
 | `WARM` | `0` = Disable; `1` = Enable | `0` | Winter modality; Winter mode |
 | `ZAZB_CENTRAL` | `1..99` | `01` | Control unit address |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Object | Role | Principal configuration |
-| --- | --- | --- |
-| `191` | Local display as temperature-control probe | `ZAZB`, `SLA`, `COLD`, `WARM`, `ZAZB_CENTRAL` |
-| `413` | Scenario module control | modality, scenario address, levels, contact type, scenario, delay |
-| `419` | Sound diffusion control | modality, addressing, area/audio point, follow-me, source, channel |
-
-#### Object `191` - Local display as temperature control probe
-
-The reusable probe exposes `ZAZB` zone, `SLA` slave number, `COLD` summer enable, `WARM` winter enable, and `ZAZB_CENTRAL` control-unit address. This is the configuration surface used when `FUN` selects the temperature-control role.
-
-#### Object `413` - Scenario module control
-
-The scenario role exposes modality, scenario-module address, installation/destination levels, contact type, scenario number and activation delay. The reusable scenario address spans the standard `A` / `PL` combinations represented by the catalogue; scenario number is `1..16` and contact type can be normally open or normally closed.
-
-#### Object `419` - Sound diffusion control
-
-The sound role exposes modality (including `VOL` / `ON_OFF`), addressing type, area, audio point, follow-me, source/sub-source, contact type and channel. These are reusable Object domains and should not be interpreted as proof that every field is visible in every product-programming screen.
+Catalogue `FUN=3` and `FUN=4` select the same external probe Object `191` (internal key 460). This is a stored relationship, not evidence of identical product wiring or firmware behavior. Later software supports energy functions not separately represented by the 1.3.7 Object inventory.
 
 ## Conditions, filters, and conversions
 
@@ -267,9 +268,16 @@ A hardware fingerprint is especially valuable here because `DIMENSION 30` can te
 
 ## Functional applicability
 
-Period product material describes an OLED local touch display used as a compact MyHOME interface. Its relevant systems include scenario control, sound diffusion and temperature regulation. The implementation database adds the exact conditional Object topology and the programming/configuration fields needed to represent those roles deterministically.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Scenario | Four displayed scenario keys; enabled module required for learning; 3-second icon hold to program, 30-second inactivity exit, 10-second hold to delete | O2189D_U_EN, pp. 8–10 |
+| Sound / alarm clock | Amplifier On/Off/volume, up to four sources, station/track controls; sound or beep alarm clock | Same source, pp. 12–15 |
+| Temperature with central unit | 4-zone local offset −3..+3 °C; 99-zone temporary setpoint in 0.5 °C steps; fan-coil auto/speeds `1..3`, protection/Off/automatic | Same source, pp. 16–18 |
+| Standalone thermostat | Without central unit, local manual/protection/Off with summer/winter choice | Same source, p. 19; software pp. 13–14 |
+| Energy display | Up to ten displayed items, consumption/production, cumulative period data, tariff evaluation and two alarm thresholds | User pp. 8, 20–24; software p. 19 |
+| Load management | Up to twenty displayed loads, shed-state display and forcing; consumption requires advanced actuators | User pp. 8, 25–26; software p. 12 |
 
-Depending on `FUN`, the Device participates in scenario, sound-diffusion or temperature-control behavior. Generic frame syntax remains canonical under Functional Protocol. This page records the Device-specific applicability and the conditional topology.
+These functions are manual-scoped. Energy and programmed-scenario UI elements in later manuals do not establish new Objects in the stored firmware-110 model.
 
 ## Observed behavior and corroboration
 
@@ -277,20 +285,15 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-The catalogue presents this Device as product-programmed over USB. Configuration tooling should preserve `FUN` as a topology selector: changing it can change which reusable Object model is applicable, not merely a value inside one unchanged Object.
+The retained software manual specifies USB–miniUSB with bus power for configuration transfer, firmware update and Device Info. Projects provide a local address and standby timeout; up to four functions can be included (pp. 4–9). Its application settings distinguish load central-unit address, load priority `1..255` and Basic/Advanced interface; zone address, local/slave probes, 4/99-zone central-unit association or thermostat actuators/pumps; amplifier A/PF and source list; F420 scenario number or CEN/CEN PLUS button/address; energy meter address `1..255`, production/consumption, two thresholds and DataLogger presence (pp. 12–20). These UI ranges are not replacements for firmware-110 fields/restrictions.
+
+Catalogue FUN conditions determine its stored Object projection. `FUN=3` and `FUN=4` both reference external Object `191`; no new distinct protocol Object is invented from the UI. The unretained older instruction copy’s serial connector and exact FUN wiring interpretation require original/revision confirmation. For scenario learning the module must itself permit programming; deleting a displayed scenario and erasing a module’s entire memory are distinct operations.
 
 ## Source reconciliation
 
-The `U1063B` Local Display documentation clarifies the conditional roles represented by `FUN`:
+O2189D’s October 2014 user manual and O2189C’s software manual document a broader Local Display interface than the original page’s three-role synopsis. The software sets a maximum of four functions, agreeing with the user introduction; the user p. 8 also says “four or five” while listing five available categories. This internal wording is preserved without adopting five simultaneous functions. Load priority and meter addresses reach 255 in the software manual, while other load products have narrower ranges; those Device-specific namespaces remain separate.
 
-- `FUN=1` is the scenario-oriented display role;
-- `FUN=2` is the sound-diffusion display/control role;
-- `FUN=3` uses the Local Display with an external temperature probe;
-- `FUN=4` associates the Local Display with a thermoregulation probe/zone role rather than merely duplicating `FUN=3`.
-
-The same documentation describes a short display wake/active interval after user interaction, product programming through the documented local programming connection, and use with external probe reference `3457` in the applicable temperature role. It also supplies the external-probe and electrical/temperature data recorded above.
-
-Because the publisher endpoint for `U1063B` still prevents repository archival in this environment, these meanings are recorded as document-derived findings pending byte-for-byte archival verification. The earlier open question about the distinction between `FUN=3` and `FUN=4` is therefore narrowed to verification/correlation with the catalogue topology rather than basic semantic naming.
+The 1.3.7 catalogue supplies four conditional slots and no Virgin Object; its temperature Object is external 191, internal key 460. It lacks separate energy/load/CEN PLUS Objects despite their later manual UI descriptions. No source establishes a firmware cutoff, an automatic topology upgrade or physical equivalence across all variants. U1063B’s alleged `FUN=3` external-probe/`FUN=4` probe-role distinction remains a provisional discovery finding requiring retained evidence, not a resolved installed behavior. Later USB/bus documentation does not establish that the historical serial wording was false.
 
 ## Evidence limits and open work
 
@@ -299,6 +302,8 @@ Because the publisher endpoint for `U1063B` still prevents repository archival i
 - Find direct official sheets for `573916`/`573917` and `067281`/`067282`.
 - Establish vendor-facing names for `M=3..8` and verify the documented `FUN=3` / `FUN=4` distinction against an archived `U1063B` original and real hardware.
 - Check whether firmware later than catalogue `1.3.7` changes role selection or slot anchoring.
+- The unretained U1063B copy previously supplied OLED, BUS/serial/probe connectors, probe 3457 (10 kΩ at 25 °C, BETA 3435), 10 m probe cable, `18..27` Vdc, approximately 20 mA standby/60 mA operation and `5..35` °C. These values are preserved here as unverified leads, not accepted ratings. Obtain the publisher bytes or a retained exact technical source before using them.
+- Establish O2189 feature-to-firmware applicability and resolve the four/five simultaneous-function wording, old OLED/later LCD note and serial/USB source scopes.
 
 ## Sources
 
@@ -306,3 +311,5 @@ Because the publisher endpoint for `U1063B` still prevents repository archival i
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0018)

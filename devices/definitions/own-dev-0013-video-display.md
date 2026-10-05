@@ -23,24 +23,27 @@ The Video Display is a MyHOME video-door-entry internal unit that combines the p
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - LivingLight | `344400` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
-| BTicino - LivingLight | `344401` | Documented commercial identity | Catalogue + archived installation/user/software manuals |
-| BTicino - Axolute | `349311` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| BTicino - Axolute | `349312` | Documented commercial identity | Catalogue + archived MyHOME Automation guide |
-| BTicino - Axolute | `349313` | Shared technical item | Implementation evidence; direct product-document review pending |
-| BTicino - Axolute | `349340` | Shared technical item | Implementation evidence; direct product-document review pending |
-| Legrand - Arteor | `573950` | Shared technical item | Implementation evidence; direct product-document review pending |
-| Legrand - Arteor | `573951` | Shared technical item | Implementation evidence; direct product-document review pending |
+| BTicino - LivingLight | `344400` | Established identity | Catalogue + archived installation/user/software manuals |
+| BTicino - LivingLight | `344401` | Established identity | Catalogue + archived installation/user/software manuals |
+| BTicino - Axolute | `349311` | Established identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349312` | Established identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349313` | Established catalogue identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349340` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
+| Legrand - Arteor | `573950` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
+| Legrand - Arteor | `573951` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
 
 Shared item membership establishes the common catalogue capability core. It does not erase possible finish, package, market, or hardware differences between commercial references.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `O1421A_I_EN` | Installation manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf) | publisher source not currently retained |
-| `O1421A_U_EN` | User guide | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf) | publisher source not currently retained |
-| `O1421A_S_EN` | TiLivingLightDisplay software manual | revision/date not yet pinned | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf) | publisher source not currently retained |
-| MyHOME Automation guide | System / product guide | revision/date not yet pinned | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | publisher source not currently retained |
+| `O1421A_I_EN` | Installation manual | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf) | publisher source not currently retained |
+| `O1421A_U_EN` | User guide | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf) | publisher source not currently retained |
+| `O1421A_S_EN` | TiLivingLightDisplay software manual | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf) | publisher source not currently retained |
+| MyHOME Automation guide | System / product guide | No dated imprint established in inspected original | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | publisher source not currently retained |
+| `BT00636_b_EN.pdf` | Exact Axolute technical sheet | 22/01/2014 | 349311/349312/349313; all two pages inspected. Electrical data and installation/programming limits are variant-scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/08/0c/080c227f7ab88a3a8aacfe631dc56567aff6515187ecc16948cf9d015cb60eff.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/BT00636_b_EN.pdf) |
+| `U1925D.pdf` | Axolute user manual | U1925D; 03/10-01 PC | 349311/349312/349313; English PDF pp. 19–34 inspected. Other language sections not independently reconciled. | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/d1/6ad1f090cf2f36f59feba30ca5093ebd8f02ea62df289682940b8c4a250bfb69.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/U1925D.pdf) |
 
 All retained files are byte-for-byte originals registered in the source manifest.
 
@@ -56,6 +59,14 @@ All retained files are byte-for-byte originals registered in the source manifest
 
 The user-facing function set is broader than the five catalogue Modules. Product UI functions do not imply one OpenWebNet Module per menu entry.
 
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Axolute named variants | 2.5-inch colour LCD; box 506E or PB526, 3+3 modules; table base 349319 | BT00636-b-EN, p. 1; 349311/349312/349313 |
+| Axolute supply/current | `18..27` Vdc; `10 mA` standby, `320 mA` maximum operating | Same source, p. 1 |
+| Axolute operating temperature | `5..40` °C | Same source, p. 1 |
+| LivingLight manual current/temperature | `8 mA` standby; `200 mA` maximum A/V; `0..40` °C | O1421A_I_EN, p. 24; separate from Axolute sheet |
+| Axolute enclosure | `105.5 × 118 mm` body; drawing depths 9.5 and `30.2 mm`; `127 × 141.5 mm` maximum cover envelope | BT00636-b-EN, p. 1; drawing dimensions, not a combined depth |
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -65,6 +76,19 @@ The user-facing function set is broader than the five catalogue Modules. Product
 | `AS_ITEM_SYSTEM.modobj` | `145` | Implementation evidence |
 | BTicino brand / line | brand `1`; L/N/NT line `1`; Axolute line `3` | Implementation evidence |
 | Legrand Arteor | brand `2`; line `2` | Implementation evidence |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `145` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -77,6 +101,21 @@ Version/revision/build `-1` retains wildcard or unspecified applicability in the
 
 Both definitions expose the same five fixed Objects, Product Programming mode, USB programming connection and firmware-scoped configuration fields.
 Catalogue applicability does not prove the firmware installed on every commercial variant.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `27` | `66` | BTicino (key `1`) | `1` | external software | `TiLivingLightDisplay_0600` |
+| `27` | `520` | BTicino (key `1`) | `3` | external software | `UNAVAILABLE_0000` |
+| `27` | `521` | Legrand (key `2`) | `2` | external software | `UNAVAILABLE_0000` |
+| `616` | `526` | BTicino (key `1`) | `1` | external software | `UNAVAILABLE_0000` |
+| `616` | `527` | Legrand (key `2`) | `2` | external software | `VideoDisplayConfig_0500` |
+| `616` | `922` | BTicino (key `1`) | `3` | external software | `TiAxoluteDisplay_0500` |
+
+All 6 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -105,10 +144,17 @@ There are no Virgin Objects and no slot-condition rows for either firmware defin
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Product Programming | implementation evidence; TiLivingLightDisplay workflow |
-| USB programming connection | implementation evidence + installation/software documentation |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `27` | Product Programming | `3` | Canonical firmware/mode association |
+| `616` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `27` | USB | Canonical firmware/connection association |
+| `616` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -126,17 +172,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `616` | `N_2` | `0..9` | `0` | N; Configurator N(0-9) |
 | `616` | `P` | `0..9` | `0` | P; Configurator P |
 | `616` | `M` | `0..6` | Not specified in source | M; (0-6) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `N_1` | `0..9` | first digit of physical `N` address |
-| `N_2` | `0..9` | second digit of physical `N` address |
-| `P` | `0..9` | associated entrance-panel / external-unit configurator |
-| `M` | `0..6` | physical operating / menu mode selector |
-
 
 Physical quick configuration is a two-digit `N` plus `P` and `M`. Advanced configuration is performed with the PC software.
 
@@ -165,14 +200,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
 | `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `422` - Addressed autoswitch control
 
@@ -181,7 +214,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 
-
 ### Object `426` - Staircase light control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -189,7 +221,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `429` - Paging button
 
@@ -200,65 +231,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
 | `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Object | Role | Principal configuration |
-| --- | --- | --- |
-| `154` | Internal Unit | N/P addressing, flags, menu preset, timeouts, switchboard |
-| `418` | Open lock control | external-unit `P` and segment level |
-| `422` | Addressed autoswitch control | external-unit `P` and segment level |
-| `426` | Staircase light control | `N1`/`N2` and segment |
-| `429` | Paging button | mode, amplifier area/unit and addressing type |
-
-#### Object `154` - Internal Unit
-
-The reusable Internal Unit model exposes:
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | `N=0..3999` |
-| Published fact | associated external unit `P=0..95` |
-| Published fact | hands-free, professional-studio, door-state, beep, slave and Ethernet-call-forwarding flags |
-| Published fact | menu preset `0..99` |
-| Published fact | ring timeout `1..30` |
-| Published fact | call timeout `10..180` |
-| Published fact | external-unit timeout `3..90` |
-| Published fact | internal-unit timeout `3..90` |
-| Published fact | telephone timeout `3..180` |
-| Published fact | associated switchboard `0..95`. |
-
-The source contains two unresolved labels for `PEOPLE_S` values `1` and `2`; preserve them as unknown rather than inventing names.
-
-#### Object `418` - Open lock control
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | external-unit address `P=0..95` |
-| segment level | same level, riser, building, or backbone. |
-
-#### Object `422` - Addressed autoswitch control
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | external-unit address `P=0..95` |
-| segment level | same, riser, building, or backbone. |
-
-#### Object `426` - Staircase light control
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | internal-unit address split across `N1=0..255` and `N2=0..15` |
-| segment | same, riser, building, or backbone. |
-
-#### Object `429` - Paging button
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | mode `1=Base`, `2=Advanced` |
-| Published fact | amplifier area `0..99` |
-| Published fact | amplifier unit `0..39` |
-| addressing type | General, Ambient, or Point-to-point. |
+Five fixed catalogue Objects are a protocol projection, not a count of available display icons or applications. `PEOPLE_S` values 1 and 2 have no stronger published meaning established in these sources. Quick hardware configuration and PC menu composition are distinct.
 
 ## Conditions, filters, and conversions
 
@@ -303,15 +278,25 @@ Generic diagnostic frame grammar belongs in the linked references.
 
 The primary role is video door entry. The product UI can also expose intercom/camera activation, scenarios, alarms, sound, temperature-control and multimedia functions without creating one firmware Module per UI function.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Scenario UI | Basic first five F420 scenarios; advanced menu can add additional scenario/communication pages | O1421A_I_EN, pp. 5, 13–15 |
+| Alarm UI | System/zone state and last three alarms; not an assertion of alarm-control authority | O1421A_U_EN, pp. 25–26 |
+| Sound / temperature / multimedia | Source and amplifier control; central/zone manual, weekly/automatic, protection and Off states; multimedia interface 3465 requires that interface | Same source, pp. 26–29 |
+| Door-entry services | Professional Studio automatically opens on a call; mutually exclusive with Door State. Hands Free enables microphone/speaker on a call | Same source, pp. 33–34 |
+| Axolute operation | Volume/display/ringtone adjustment, configured paging and Push to Talk; custom menu shows functions actually configured | U1925D, English PDF pp. 22–34 |
+
 ## Observed behavior and corroboration
 
 No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
 
 ## Programming
 
-This Device uses Product Programming rather than ordinary physical/virtual Object programming in the catalogue. The USB-connected TiLivingLightDisplay workflow and the firmware-scoped quick-configuration fields are Device-specific evidence.
+`O1421A_I_EN`, pp. 10–16, separates quick physical N/P/M setup from TiLivingLightDisplay PC composition. N is a two-digit handset address; P selects the associated entrance panel; M=`0..6` selects a predefined five-function menu plus Settings. With apartment interface 346850, advanced configuration is recommended. A physically configured device cannot have that configuration edited from its menu. For transfer/update, connect USB–miniUSB with the device powered and not physically configured; USB is presented as a virtual COM port.
 
-A future Device Library representation should keep the five-Module topology, both catalogue firmware applicability definitions and the reusable Object parameter domains, while keeping installation-specific addresses private.
+The advanced menu can contain up to thirty scenario/communication functions, six amplification points, four sound sources and ten temperature zones in the LivingLight installation manual’s scope. Those counts are application limits, not five new protocol slots. Parallel handsets with the same N are limited to three (one Master and two Slaves); the Axolute sheet qualifies its no-346850 case. The line-termination switch and auxiliary supply terminals are physical installation features, not extra catalogue configuration fields.
+
+TiLivingLightDisplay offers communication, scenario module/central-unit, scheduled-scenario Start/Stop, alarm display, single/multichannel sound, multimedia, 4/99-zone temperature and paging configuration (`O1421A_S_EN`, pp. 16–21). Advanced paging can include selected handsfree handsets; Basic paging uses sound-system speakers. Installer Reset deletes configuration; it is distinct from returning only Slave/Paging options to their defaults (`O1421A_I_EN`, pp. 19–21).
 
 ## Source reconciliation
 
@@ -327,10 +312,12 @@ The archived Video Display installation, user and TiLivingLightDisplay manuals a
 
 The dossier now treats the five Objects as the OpenWebNet projection of a richer video-door-entry user interface rather than as the whole product.
 
+The March 2011 O1421A installation, software and user originals cover LivingLight presentation; U1925D has a March 2010 imprint and directly names the three Axolute references. The January 2014 Axolute sheet gives different current and temperature figures from the LivingLight manual. These are commercial/source scopes, not proof of interchangeable hardware or a date-defined revision change. Exact electrical evidence for 349340 and Arteor 573950/573951 remains absent. The five protocol Objects do not bound the richer programmed UI, and undocumented PEOPLE_S enum meanings remain open.
+
 ## Evidence limits and open work
 
 - Obtain sanitized fingerprints for at least one `344400/344401` unit and one Axolute/Arteor variant.
-- Locate direct official documentation for `349313`, `349340`, `573950` and `573951`.
+- Exact electrical documentation remains unretained for `349340`, `573950` and `573951`; the new Axolute sheet explicitly covers `349313`.
 - Correlate observed firmware versions to catalogue firmware `5.0.0` and `6.0.1`.
 - Determine the meaning of the unresolved `PEOPLE_S` enum values.
 - Search for older and language-specific document revisions.
@@ -341,3 +328,5 @@ The dossier now treats the five Objects as the OpenWebNet projection of a richer
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0013)

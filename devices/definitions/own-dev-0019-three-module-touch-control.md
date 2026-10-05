@@ -11,7 +11,7 @@ This three-module SCS wall control has six capacitive buttons for configured lig
 | Catalogue item | `1190` - Touch control | Implementation evidence |
 | Main catalogue system | Lighting / Automation | Implementation evidence |
 | Item model / `modobj` | `27` | Implementation evidence |
-| Firmware definition | wildcard `-1.-1` | Implementation evidence |
+| Firmware definition | wildcard `-1.-1.-1` | Implementation evidence |
 | Declared Modules | `7` | Implementation evidence |
 | Configuration modes | Advanced, Physical, Virtual | Implementation evidence |
 | Direct / candidate Objects | `12` / `15` | Implementation evidence |
@@ -24,12 +24,12 @@ This definition covers the three-module touch-control cluster, not the four-modu
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - Axolute | `HC/HS4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| BTicino - Axolute | `HD4657M3` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand - Arteor | `573912` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand - Arteor | `573913` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
-| Legrand - Arteor | `574091` | Shared technical item | Implementation evidence; direct sheet correlation pending |
-| Legrand - Arteor | `574591` | Shared technical item | Implementation evidence; direct sheet correlation pending |
+| BTicino - Axolute | `HC/HS4657M3` | Established identity | Catalogue + `MQ00110` technical sheet |
+| BTicino - Axolute | `HD4657M3` | Established identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `573912` | Established identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `573913` | Established identity | Catalogue + `MQ00110` technical sheet |
+| Legrand - Arteor | `574091` | Established catalogue identity | Implementation evidence; direct sheet correlation pending |
+| Legrand - Arteor | `574591` | Established catalogue identity | Implementation evidence; direct sheet correlation pending |
 
 ### EAN-13 commercial identifiers
 
@@ -45,11 +45,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00110_f_EN` | Technical sheet | revision/date not yet pinned | 4657M3/M4 and Arteor touch-control family | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | publisher source not currently retained |
-| MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | `573912` / `573913` occur on printed pp. 16, 19 / PDF pp. 16, 19 | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
+| `MQ00110_f_EN` | Technical sheet | 7 June 2014 | 4657M3/M4 and Arteor touch-control family | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | publisher source not currently retained |
+| MyHOME catalogue `HPML0714` | Product catalogue | No dated imprint established in inspected original | `573912` / `573913` occur on printed pp. 16, 19 / PDF pp. 16, 19 | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
 | `HC4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3) |
 | `HS4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4657M3) |
 | `HD4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4657M3) |
+| `ST-00002122-EN.pdf` | Classe300EOS technical sheet / compatibility matrix | 21 October 2024 | Three-module touch controls, printed/PDF p. 8; only applicable compatibility rows incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | Publisher URL not retained in manifest |
 
 The technical sheet distinguishes the three-module version by its six capacitive buttons. It documents physical and MyHOME_Suite configuration and a multifunction command set spanning lighting, automation, locking, scenarios, video-door-entry and sound functions.
 
@@ -57,12 +58,12 @@ The technical sheet distinguishes the three-module version by its six capacitive
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Mounting | 3-module family | `MQ00110_f_EN` |
-| User controls | 6 capacitive buttons | `MQ00110_f_EN` |
-| Indication | blue indication | `MQ00110_f_EN` |
-| SCS current by commercial variant | BTicino variants are specified below the Arteor `573912`/`573913` variants; retain revision/variant scope | `MQ00110_f_EN` |
-
-The current source set establishes a commercial-variant electrical difference without a single shared current figure. Preserve that distinction rather than inventing a universal value.
+| Mounting / controls | 3 flush-mounted modules; six capacitive zones | MQ00110-f-EN, p. 1; four-module/eight-zone sibling excluded |
+| Power supply | `27 Vdc` nominal, `18..27` Vdc operating | Same source |
+| Maximum current, named BTicino M3 | `20 mA` for HD/HC/HS4657M3 | Same source; M4’s 25 mA does not apply here |
+| Maximum current, Arteor named variants | `35 mA` for 573912/573913 | Same source; no 574091/574591 equivalence inferred |
+| Operating temperature | `0..40` °C | Same source |
+| LED indication | One light-blue LED per zone; brighter on approaching touch; adjustable standby/feedback/fade | Same source, pp. 1, 6–7 |
 
 ## Identity
 
@@ -73,6 +74,19 @@ The current source set establishes a commercial-variant electrical difference wi
 | `AS_ITEM_SYSTEM.modobj` | `27` | Implementation evidence |
 | Family | `1` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `27` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -82,6 +96,12 @@ The current source set establishes a commercial-variant electrical difference wi
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -169,11 +189,14 @@ Combining the direct set with Virgin-only roles yields 15 distinct candidate Obj
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Physical configuration | `MQ00110_f_EN` + implementation evidence |
-| Virtual Configuration | `MQ00110_f_EN` + implementation evidence |
-| Advanced Configuration | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `154` | Physical configuration | `0` | Canonical firmware/mode association |
+| `154` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `154` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -187,18 +210,22 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `154` | `M` | `0..1`; `3..4`; `6`; `9` = `O/I`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN` | `0` | M; Mode physical configurator (0-1,3-4,6,`O/I`,SU_GIU,SU_GIU_M,`CEN`) |
 | `154` | `SET` | `0..7` | `0` | SET; User interface settings configurator (0-7) |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` plus `GEN` / `GR` / `AMB` forms | environment / area selector |
-| `PL` | physical light-point domain | light point |
-| `M` | `0`, `1`, `3`, `4`, `6`, `O/I`, `SU_GIU`, `SU_GIU_M`, `CEN` | physical mode selector |
-| `SET` | `0..7` | user-interface settings configurator |
-
-
 The physical sheet and catalogue agree that the Device can be configured physically or through software. Software configuration should preserve the richer reusable Object model rather than reducing every button to the physical `A` / `PL` / `M` shorthand.
+
+### Published LED setup
+
+| `SET` | Unconfigured LEDs lit | Status feedback | Fade | Evidence |
+| --- | --- | --- | --- | --- |
+| `0` | Yes | No | Yes | MQ00110-f-EN, p. 7 |
+| `1` | Yes | No | No | MQ00110-f-EN, p. 7 |
+| `2` | No | No | Yes | MQ00110-f-EN, p. 7 |
+| `3` | No | No | No | MQ00110-f-EN, p. 7 |
+| `4` | Yes | Yes | Yes | MQ00110-f-EN, p. 7 |
+| `5` | Yes | Yes | No | MQ00110-f-EN, p. 7 |
+| `6` | No | Yes | Yes | MQ00110-f-EN, p. 7 |
+| `7` | No | Yes | No | MQ00110-f-EN, p. 7 |
+
+Physical brightness cycles 25% (default), 40% and 0% while holding the rear button for over two seconds. Corresponding feedback/fade brightness is 65%, 70% and 20%; software brightness is `1..10` (`MQ00110-f-EN`, p. 6). Reusable catalogue LED domains/defaults are preserved separately and are not a percentage conversion unless independently established.
 
 ## Object configuration surfaces
 
@@ -227,12 +254,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
+| `M` | `0` = `UP` bistable control; `1` = `DOWN` bistable control; `2` = `UP` monostable control; `3` = `DOWN` monostable control; `4` = `UP` monostable and bistable control; `5` = `DOWN` monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
@@ -242,7 +268,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `412` - Lock/unlock actuator control
 
@@ -257,7 +282,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -270,7 +294,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -280,7 +303,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -292,7 +314,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -303,14 +324,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `419` - Sound diffusion control
 
@@ -326,7 +345,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `426` - Staircase light control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -334,7 +352,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -345,7 +362,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `130` - User interface settings
 
@@ -363,30 +379,36 @@ Catalogue Object key `480` maps to external Object `130`.
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
 
+### Object `417` - AUX control (Virgin-only candidate)
 
-### Additional Device-specific interpretation
+No direct firmware/Object association establishes reachability.
 
-The candidate roles expose different schemas:
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = `DOWN` Shutter bistable command; `18` = `UP` shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = `UP` shutter bistable command; `19` = `DOWN` Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
 
-| Role | Principal configuration fields |
-| --- | --- |
-| Light control | modality; addressing type; `A` / `PL` / `G`; installation/destination levels; reference actuator; contact type; optional timing, level and dimming parameters |
-| Automation control | `UP/DOWN` modality; addressing; `A` / `PL` / `G`; installation/destination levels; reference actuator; contact type |
-| Lock/unlock control | D/E modality; addressing; `A` / `PL` / `G`; installation/destination levels; contact type |
-| Scenario module control | modality; scenario-module address; installation/destination levels; contact type; scenario number; activation delay |
-| Scheduled scenario | `A` / `PL`; `CEN` button; Lighting Management mode; contact type |
-| Scenario PLUS | `ON`/`OFF` regulation mode; scenario number; regulation type; contact type; delay |
-| Scheduled scenario PLUS | low/high scenario number; button; Lighting Management mode; contact type |
-| `AUX` control | cyclic/off/on/pulse/up/down family of modes; `AUX` channel; contact type |
-| Open lock control | external-unit P; segment level |
-| Sound diffusion control | VOL/ON_OFF; addressing type; `A` / `PF`; follow-me; source/sub-source; channel; contact type |
-| Cyclic autoswitch | external-unit P; segment |
-| Staircase light | internal-unit `N1` / `N2`; segment |
-| Floor call | call type; `N1` / `N2`; segment; input `AUX` channel |
-| Open lock on session | external-unit P |
-| User interface settings | unused-button state; feedback update; LED level/fade; standby backlight; backlight delay; proximity enable; signboard behavior |
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
 
-The Light-control address type explicitly supports address `01..175`, area `00..10` and group `01..255` in the reusable catalogue Object. Other role-specific ranges remain those of their canonical reusable Objects.
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `462` - Open lock command on session (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+### Device-specific interpretation
+
+The six touch zones correspond to six command Modules plus the seventh UI-settings Module. Virgin-only scheduled/AUX candidates have complete fields below but no direct firmware association proves their activation.
 
 ## Conditions, filters, and conversions
 
@@ -466,7 +488,16 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Depending on selected Object, individual buttons can participate in lighting, automation, scenario, `AUX`, sound and video-door-entry functions. The official sheet corroborates this multifunction character. Generic `WHO` frame semantics remain canonical in Functional Protocol.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Self-learning `M=0` | Associate commands per key; physical configuration only | MQ00110-f-EN, pp. 1–3 |
+| Non-cyclic self-learning `M=6` | Paired On/increase versus Off/decrease; a lone learned function need not replace its paired key’s prior function | Same source, p. 2; paragraph heading incorrectly says Cyclic |
+| F420 scenarios | `M=1` keys `1..6` → scenarios `1..6`; `M=4` → `7..12`; `M=3` keys `1..4` → `13..16`, last two unmapped | Same source, p. 4; `M=2` table applies to four-module sibling |
+| Rocker | Three consecutive light/shutter targets (or rooms/groups), not the sibling’s four | Same source, p. 1 |
+| CEN / PLUS | `M=CEN` commands MH200N; unique A/PL distinct from actuators; software PLUS scenario `1..2047` and button `0..31` | Same source, p. 5 |
+| Software roles | Lock/unlock, lighting/automation, scenarios, door release/stair lights/floor call and sound; virtual setup assigns a specific role to each key | Same source, pp. 1–3, 5 |
+
+The six command slots are independent catalogue placements; UI Object `130` is at slot 7. Candidate AUX/Object membership is not an observed role assignment.
 
 ## Observed behavior and corroboration
 
@@ -474,7 +505,11 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-Programming must preserve six independently configurable command positions plus the fixed UI-settings slot. Physical `A`/`PL`/`M` configuration and software-selected reusable Object roles are separate layers; self-learning/scenario workflows remain product behavior.
+Wait two minutes after installation for automatic calibration; the sheet says commands may be sent during that interval. For cleaning, touch diagonally opposite end zones; LEDs sequence and normal operation returns after ten seconds without further touch (`MQ00110-f-EN`, pp. 1, 7).
+
+For physical self-learning, briefly press rear programming, select a key within twenty seconds and issue the desired system command. Repeat and use the rear button or twenty-second timeout to exit. Delete one key by entering programming, selecting it within twenty seconds and holding four seconds. Delete all learned keys with a second rear-button hold of ten seconds; use the supplied screwdriver on that button (p. 3).
+
+For F420 editing the module must be unlocked (green status LED). Enter rear-button programming, choose the scenario key, issue system actions, touch the key to finish and exit via rear button/timeout. Delete one scenario with the selected-key four-second hold; entire module memory is erased at F420 DEL for ten seconds after enabling programming (p. 4). Do not substitute the scenario-control Device 0011’s eight/ten-second key procedures here. Physical and software addressing/level setup have different limits; the sheet prints an I destination table despite listing only A/PL/M/SET sockets (pp. 1–3). That socket/table discrepancy is unresolved.
 
 ## Source reconciliation
 
@@ -489,12 +524,18 @@ Programming must preserve six independently configurable command positions plus 
 
 The empty catalogue condition rows remain source artifacts requiring runtime clarification, but the principal published touch-control behavior is now explicit on the Device page.
 
+MQ00110-f-EN is dated 7 June 2014 and covers both M3 and M4. The M3 scenario mapping uses `M=1/4/3`; the broad M=`1..4` heading does not establish a meaningful `M=2` scenario group for M3. Its `M=6` heading says cyclic, but the paragraph explicitly says the keys never work cyclically. Source-specific behavior is retained rather than repeating that misleading label. The LED technology note permits brightness/color variation even within a production batch; this does not identify electronics/firmware equivalence.
+
+The catalogue firmware has seven Modules, matching six command positions plus UI settings. Empty condition `4145` records and Virgin-only Objects 417/421/462 are preserved as irregular/candidate data, not completed by guessed reachability. The regional HPML0714 catalogue corroborates the named 573912/573913 offering, not the 574091/574591 packages.
+
+The Classe300EOS compatibility table gives minimum production batches `11W27` for 573912, `11W09` for 573913/HC4657M3, and `11W12` for HD/HS4657M3. Its p. 8 excludes physically configured Devices from Classe300EOS compatibility. These are product/system-specific thresholds, not revisions assigned to wildcard firmware 154.
+
 ## Evidence limits and open work
 
 - Obtain a sanitized fingerprint showing all six button slots plus UI slot `7`.
 - Correlate `DIMENSION 30` Virgin-Object identifiers with software-selected roles on real hardware.
 - Locate direct official documentation for `574091` and `574591`.
-- Determine whether the empty condition 4145 rows have any runtime significance.
+- Determine whether the empty condition `4145` rows have any runtime significance.
 - Correlate wildcard catalogue applicability with observed firmware versions.
 
 ## Sources
@@ -507,3 +548,5 @@ The empty catalogue condition rows remain source artifacts requiring runtime cla
 - `HC4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3); SHA-256 `6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014`.
 - `HS4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4657M3); SHA-256 `c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591`.
 - `HD4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4657M3); SHA-256 `53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0019)

@@ -35,10 +35,12 @@ The canonical catalogue contains ten Device records. Several database records co
 | Legrand - Arteor | `574504` | Established identity | Catalogue + official technical sheet |
 | Legrand - Céliane | `067217` | Established identity | Catalogue + official technical sheet |
 | Legrand - Céliane | `067218` | Established identity | Catalogue + official technical sheet |
-| Legrand - Mosaic | `078478` | Shared technical item | Implementation evidence; direct product sheet pending |
-| Legrand - Mosaic | `079178` | Shared technical item | Implementation evidence; direct product sheet pending |
+| Legrand - Mosaic | `078478` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+| Legrand - Mosaic | `079178` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
 
 The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino finish variants are collapsed into combined catalogue codes such as `HC/HS/HD4680`.
+
+The canonical `EN_DEVICE.code` uses combined `L/N/NT4680`; the named L4680, N4680 and NT4680 rows above expand that catalogue code, rather than establish additional technical items.
 
 ### EAN-13 commercial identifiers
 
@@ -59,9 +61,9 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00288-c-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane identities | [Archived PDF](https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
-| `MQ00288-c-FR` | Technical sheet | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
-| `U3327B` | Installation/use instructions | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
+| `MQ00288-c-EN` | Technical sheet | 09/06/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
+| `MQ00288-c-FR` | Technical sheet | 05/05/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
+| `U3327B` | Installation/use instructions | U3327B01PC-11W36; English PDF pp. 3–6 | 573902/573903; English operation/LED/program/delete instructions inspected; other translations not independently reconciled | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
 | `HC4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680) |
 | `HS4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680) |
 | `HD4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680) |
@@ -70,6 +72,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `NT4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680) |
 | `067217-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067217` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/83/1a/831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-blanc) |
 | `067218-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067218` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/3a/d1/3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-titane) |
+| `ST-00002122-EN.pdf` | Classe300EOS technical sheet / compatibility matrix | 21 October 2024 | Scenario controls, printed/PDF p. 7; only applicable compatibility rows incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | Publisher URL not retained in manifest |
 
 ## Physical and electrical characteristics
 
@@ -82,7 +85,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Current draw | `9 mA` | `MQ00288-c-EN` |
 | Primary physical configurators | `A`, `PL`, `M`, `N`, `DEL` | `MQ00288-c-EN` |
 
-The sheet also describes an installation/destination-level configurator `I` when the control operates across an SCS/SCS interface. Firmware-scoped configuration does not contain an `I` field; reusable Object configuration carries installation and destination level fields. Preserve this as a source-model boundary rather than inventing a firmware field.
+The sheet also describes a destination-level configurator `I` when the control operates across an SCS/SCS interface. Firmware-scoped configuration does not contain an `I` field; reusable Object configuration carries installation and destination level fields. Preserve this as a source-model boundary rather than inventing a firmware field.
 
 ## Identity
 
@@ -92,6 +95,19 @@ The sheet also describes an installation/destination-level configurator `I` when
 | Main system | Lighting / Automation | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `6` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -99,6 +115,12 @@ The sheet also describes an installation/destination-level configurator `I` when
 | `7` | `1` | `0` | `0` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -126,11 +148,14 @@ Virgin Object `502`, **Scene double command virgin**, applies to both slots and 
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Physical configuration | product documentation + implementation evidence |
-| Virtual Configuration | implementation evidence |
-| Advanced Configuration | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `7` | Physical configuration | `0` | Canonical firmware/mode association |
+| `7` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `7` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -144,17 +169,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `7` | `M` | `0..4`; `14` = `CEN` | `0` | M; Mode (0-4,`CEN`) |
 | `7` | `N` | `0..5` | `0` | N; N (0-5) |
 | `7` | `DEL` | `0..9` | `0` | DEL; Configurator DEL |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Published meaning |
-| --- | --- | --- |
-| `A` | `0..9` | environment/address |
-| `PL` | `0..9` | light point / scenario-module address component |
-| `M` | `0..4`, `CEN` | physical scenario/`CEN` mode |
-| `N` | `0..5` | selects which physical key delay applies to |
-| `DEL` | `0..9` | delay preset |
 
 ### Published `M` mapping
 
@@ -196,6 +210,12 @@ Implementation-only `M=FAKE` conditions expose PLUS Objects `405` and `406`; `FA
 | `8` | 15 s |
 | `9` | 30 s |
 
+### Published address and bus-level scopes
+
+F420 targeting uses physical `A=0..9, PL=1..9`, versus software room `0..10`, point `0..15`. For CEN the sheet gives physical `A/PL=1..9`. Physical destination `I=1..9` selects another local bus, `I=CEN` the riser and `I=0` the whole system; software local-bus destinations extend to `1..15`, and installation level is software-configured. These are the destination semantics in `MQ00288-c-EN/FR`, p. 2; they are not interchangeable with another product’s installation-level I socket.
+
+The CEN table on p. 4 prints `SPE=0, M=CEN`, although neither the principal configurator list nor firmware `7` has an SPE field. This is a source irregularity, not authority to invent another socket. Software PLUS address `1..2047` and button `0..31` are published separately from the unresolved `M=FAKE` catalogue conditions.
+
 ## Object configuration surfaces
 
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
@@ -213,7 +233,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -225,7 +244,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `405` - Scenario PLUS Lighting Management
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -236,7 +254,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
 
-
 ### Object `406` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -246,55 +263,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_1` | `0..31` | `1` | Upper button |
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Object | Surface | Principal fields / domains |
-| --- | --- | --- |
-| `403` | Scenario module control | `A`/`PL`, levels, scenario buttons, per-button delays |
-| `404` | Scheduled scenario | `A`/`PL`, buttons, `AUX` input, start delay |
-| `405` | Scenario PLUS | two scenario numbers, regulation target, per-button delays |
-| `406` | Scheduled scenario PLUS | low/high scenario fields and two button fields |
-
-#### Object `403` - Scenario module control
-
-| Topic | Source-derived detail |
-| --- | --- |
-| mode | scenario activation+modification or activation-only |
-| Published fact | encoded A/PL target covering `A=0..10`, `PL=0..15` |
-| installation level | private riser, local buses `1..15`, standard |
-| destination level | private riser or local buses `1..15` |
-| scenario buttons 1 and 2 | `1..16` |
-| Published fact | independent delay tables for the two button positions. |
-
-The two delay tables are not byte-for-byte identical in the canonical database: one contains 63 stored enum rows and the other 56. Preserve the source data rather than normalizing them into a presumed common table.
-
-#### Object `404` - Scheduled scenario
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | `A=0..10`, `PL=0..15` |
-| Published fact | buttons `0..31`, defaults 1 and 2 |
-| Published fact | `AUX` input `0..15` |
-| Published fact | start delay `0..255`, default 10. |
-
-#### Object `405` - Scenario PLUS Lighting Management
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | two scenario numbers `1..255` |
-| regulation target | all, lights, shutters, or stereo amplifiers |
-| Published fact | per-button delay tables. |
-
-#### Object `406` - Scheduled scenario PLUS
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | low scenario field `0..255` |
-| Published fact | high scenario field `0..7` |
-| Published fact | two button fields `0..31`. |
-
-Together the low/high scenario fields support the published PLUS scenario-number domain, which the technical sheet describes as `1..2047`.
+The two activation-delay enums contain different stored row counts (63 and 56); the complete reusable domains are preserved separately. PLUS predicates use `FAKE`, which is absent from the firmware enum. Physical address and software address limits differ.
 
 ## Conditions, filters, and conversions
 
@@ -399,7 +370,11 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-Programming must resolve the selected scenario Object per Module and preserve the contextual meaning of `M`, `N` and `DEL`. Physical `CEN` and PLUS representations must not be flattened into one generic scenario command.
+For the F420 procedure in `MQ00288-c-EN/FR`, p. 4, unlock the scenario module with a hold of at least 0.5 seconds (green status LED). Hold the chosen control key for four seconds, carry out the system actions, then briefly press the same key to save/exit. Repeat for other scenarios and lock the module again (red LED). Recall uses a brief key press.
+
+The 2014 technical sheets delete one scenario with a control-key hold of at least ten seconds, confirmed by rapid LED flashing for about two seconds. Entire-memory erasure uses DEL on the scenario module for ten seconds, not the control’s DEL configurator. The older exact `573902/573903` user guide `U3327B`, PDF pp. 5–6, instead says at least eight seconds for individual deletion (LED on after three seconds, off after five more) and names module `003551`. Keep these procedures scoped to their sources; no hardware revision cutoff is established.
+
+Resolve each Module’s active Object before applying M/N/DEL conversions. PLUS catalogue branches do not establish a physical FAKE configurator.
 
 ## Source reconciliation
 
@@ -413,11 +388,17 @@ The scenario-control documentation has been reconciled with the two-Module catal
 
 The remaining source gaps concern Mosaic variants and hardware corroboration.
 
+The English technical sheet is dated 9 June 2014 and French 5 May 2014; their four-key scenario groups, N/DEL presets and address/level scopes agree. `U3327B01PC-11W36` is specifically a 573902/573903 user guide, not installation evidence for every variant. Its eight-second deletion threshold differs from the ten-second technical-sheet instruction. Its LED brightness control (hold over two seconds; 0/30/60/100%, 60% marked default) is scoped to those named references. No equivalent LED feature is inferred for all finishes.
+
+The 63-row versus 56-row reusable delay domains, absent SPE field, physical/software address differences and out-of-domain FAKE branches remain explicit. Mosaic SKU identities are established by the catalogue; their missing exact technical sheets are documentation gaps.
+
+The Classe300EOS compatibility table lists 573902/573903 from production `08W51`, L/N/NT/HC/HD/HS4680 from `09W08`, and its named Mosaic/Céliane/574503/574504 codes as all batches. This is compatibility with Classe300EOS, not a general firmware equivalence. The sheet p. 8 excludes physically configured Devices from Classe300EOS compatibility.
+
 ## Evidence limits and open work
 
 - Locate direct product documentation for Mosaic `078478` and `079178`.
 - Add a sanitized hardware fingerprint and corroborate firmware, configurator count, two-Module projection, addresses and configuration.
-- Resolve the exact relationship between physical interface-level configurator `I` and reusable Object `INST_LEV/DEST_LEV` values.
+- Corroborate the product’s destination-level I mapping against installed Object values; the published level role is now explicit. Resolve the source-specific eight/ten-second deletion threshold and absent SPE socket without assuming a hardware cutoff.
 - Preserve any package/finish differences between the several printed BTicino references.
 
 ## Sources
@@ -437,3 +418,5 @@ The remaining source gaps concern Mosaic variants and hardware corroboration.
 
 - `067217-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067217` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/83/1a/831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-blanc); SHA-256 `831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7`.
 - `067218-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067218` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/3a/d1/3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-titane); SHA-256 `3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0011)

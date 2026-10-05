@@ -23,14 +23,14 @@ MyHOME_Screen 3.5 is a touchscreen user interface for multiple MyHOME systems. T
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - Axolute | `H4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino - LivingLight | `LN4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino - Air | `LN4890A` | Documented identity | Catalogue + archived technical sheet |
-| BTicino - Eteris | `HW4890` | Documented identity | Catalogue + archived technical sheet |
-| BTicino - Matix | `AM4890` | Documented identity with source-label inconsistency | Catalogue + installation text in archived technical sheet |
-| Legrand - Arteor | `573958` | Shared technical item / software-catalogue identity | Implementation evidence |
-| Legrand - Céliane | `067292` | Shared technical item / software-catalogue identity | Implementation evidence |
-| Legrand - Mosaic | `078479` | Shared technical item / software-catalogue identity | Implementation evidence |
+| BTicino - Axolute | `H4890` | Established identity | Catalogue + archived technical sheet |
+| BTicino - LivingLight | `LN4890` | Established identity | Catalogue + archived technical sheet |
+| BTicino - Air | `LN4890A` | Established identity | Catalogue + archived technical sheet |
+| BTicino - Eteris | `HW4890` | Established identity | Catalogue + archived technical sheet |
+| BTicino - Matix | `AM4890` | Established identity with source-label inconsistency | Catalogue + installation text in archived technical sheet |
+| Legrand - Arteor | `573958` | Established catalogue identity | Implementation evidence |
+| Legrand - Céliane | `067292` | Established catalogue identity | Implementation evidence |
+| Legrand - Mosaic | `078479` | Established catalogue identity | Implementation evidence |
 
 The archived technical sheet contains an internal reference discrepancy: its heading lists `AM5890`, while the installation/reference text uses `AM4890`, matching the canonical catalogue. Preserve the source discrepancy rather than silently rewriting the PDF.
 
@@ -47,9 +47,9 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `BT00518_a_EN` | Technical sheet | revision/date not yet pinned | BTicino MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/43/61/4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9.pdf) | publisher source not currently retained |
-| `RA00107AC_U_EN` | User guide | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf) | publisher source not currently retained |
-| `RA00107AC_S_FR` | Software manual | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf) | publisher source not currently retained |
+| `BT00518_a_EN` | Technical sheet | No dated imprint established in inspected original | BTicino MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/43/61/4361119dc3e9e028cacb247fcb8b8faae15acad73c0bd2fd73bcfb65b90924c9.pdf) | publisher source not currently retained |
+| `RA00107AC_U_EN` | User guide | No dated imprint established in inspected original | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf) | publisher source not currently retained |
+| `RA00107AC_S_FR` | Software manual | No dated imprint established in inspected original | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf) | publisher source not currently retained |
 | `LN4890-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4890` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890) |
 | `078479-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `078479` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-tactile-mosaic-multiscenarios-pour-eclairage-ouvrant-et-multimedias) |
 
@@ -63,11 +63,16 @@ Direct product sheets for the Legrand commercial variants and additional languag
 | Mounting | documented `3+3` module arrangement | `BT00518_a_EN` + Source reconciliation |
 | SCS nominal supply | `27 Vdc` | `BT00518_a_EN` |
 | SCS operating supply | `18..27 Vdc` | `BT00518_a_EN` |
-| Current draw | approximately `80 mA` | `BT00518_a_EN` |
+| Current draw | `80 mA` | `BT00518_a_EN` |
 | Operating temperature | `0..40 °C` | `BT00518_a_EN` |
-| Interfaces | SCS bus, USB and Ethernet | `BT00518_a_EN` |
+| Interfaces by named variant | USB-miniUSB and SCS; Ethernet illustrated for H4890/LN4890/LN4890A/AM4890, while HW4890 diagram shows USB | `BT00518_a_EN`, pp. 1–2 |
 
 Programming/configuration is performed with dedicated PC software over the supported local interfaces.
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Flush box | `506E` for AM4890/LN4890/LN4890A/H4890; `528W` for HW4890 | BT00518_a_EN, p. 1 |
+| Historical cable choices | 335919 RS232 or 3559 USB interface, or Ethernet, stated in the general TiTouchScreen paragraph | Same source, p. 2; not proof all variants have RS232/Ethernet ports |
 
 ## Identity
 
@@ -76,6 +81,22 @@ Programming/configuration is performed with dedicated PC software over the suppo
 | `EN_ITEM.id_item` | `1469` | Implementation evidence |
 | Main system | Integration functions | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `30` | Implementation evidence |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `30` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -91,6 +112,120 @@ Programming/configuration is performed with dedicated PC software over the suppo
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Catalogue applicability does not prove the firmware installed on every commercial variant.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `8` | `78` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `8` | `80` | BTicino (key `1`) | `0` | Extra | `1469_2.0_BT\xml\Extra\extra.xml` |
+| `8` | `81` | BTicino (key `1`) | `0` | Director | `1469_2.0_BT\xml\DIRECTOR\director.xml` |
+| `8` | `82` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1469_2.0_BT\xml\Protocol\protocol.xml` |
+| `8` | `132` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `8` | `134` | Legrand (key `2`) | `0` | Extra | `1469_2.0_LG\xml\Extra\extra.xml` |
+| `8` | `135` | Legrand (key `2`) | `0` | Director | `1469_2.0_LG\xml\DIRECTOR\director.xml` |
+| `8` | `136` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1469_2.0_LG\xml\Protocol\protocol.xml` |
+| `8` | `157` | BTicino (key `1`) | `0` | BS | `1469_2.0_BT\xml\BS` |
+| `8` | `158` | Legrand (key `2`) | `0` | BS | `1469_2.0_LG\xml\BS` |
+| `8` | `254` | BTicino (key `1`) | `0` | SVM | `1469_2.0_BT\xml\SVM\svm.xml` |
+| `8` | `256` | Legrand (key `2`) | `0` | SVM | `1469_2.0_LG\xml\SVM\svm.xml` |
+| `9` | `88` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `9` | `90` | BTicino (key `1`) | `0` | Extra | `1469_3.0_BT\xml\Extra\extra.xml` |
+| `9` | `91` | BTicino (key `1`) | `0` | Director | `1469_3.0_BT\xml\DIRECTOR\director.xml` |
+| `9` | `92` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1469_3.0_BT\xml\Protocol\protocol.xml` |
+| `9` | `137` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `9` | `139` | Legrand (key `2`) | `0` | Extra | `1469_3.0_LG\xml\Extra\extra.xml` |
+| `9` | `140` | Legrand (key `2`) | `0` | Director | `1469_3.0_LG\xml\DIRECTOR\director.xml` |
+| `9` | `141` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1469_3.0_LG\xml\Protocol\protocol.xml` |
+| `9` | `159` | BTicino (key `1`) | `0` | BS | `1469_3.0_BT\xml\BS` |
+| `9` | `160` | Legrand (key `2`) | `0` | BS | `1469_3.0_LG\xml\BS` |
+| `9` | `255` | BTicino (key `1`) | `0` | SVM | `1469_3.0_BT\xml\SVM\svm.xml` |
+| `9` | `257` | Legrand (key `2`) | `0` | SVM | `1469_3.0_LG\xml\SVM\svm.xml` |
+| `75` | `20` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `75` | `22` | BTicino (key `1`) | `0` | Extra | `1469_1.0_BT\xml\Extra\extra.xml` |
+| `75` | `23` | BTicino (key `1`) | `0` | Director | `1469_1.0_BT\xml\DIRECTOR\director.xml` |
+| `75` | `24` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1469_1.0_BT\xml\Protocol\protocol.xml` |
+| `75` | `127` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `75` | `129` | Legrand (key `2`) | `0` | Extra | `1469_1.0_LG\xml\Extra\extra.xml` |
+| `75` | `130` | Legrand (key `2`) | `0` | Director | `1469_1.0_LG\xml\DIRECTOR\director.xml` |
+| `75` | `131` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1469_1.0_LG\xml\Protocol\protocol.xml` |
+| `75` | `253` | BTicino (key `1`) | `0` | SVM | `1469_1.0_BT\xml\SVM\svm.xml` |
+| `75` | `258` | Legrand (key `2`) | `0` | SVM | `1469_1.0_LG\xml\SVM\svm.xml` |
+| `692` | `846` | BTicino (key `1`) | `3` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `847` | BTicino (key `1`) | `3` | SVM | `1469_4.0_BT\xml\SVM\svm.xml` |
+| `692` | `848` | BTicino (key `1`) | `3` | Extra | `1469_4.0_BT\xml\Extra\extra.xml` |
+| `692` | `849` | BTicino (key `1`) | `3` | Director | `1469_4.0_BT\xml\DIRECTOR\director.xml` |
+| `692` | `850` | BTicino (key `1`) | `3` | Protocol and other device parameters | `1469_4.0_BT\xml\Protocol\protocol.xml` |
+| `692` | `851` | BTicino (key `1`) | `3` | BS | `1469_4.0_BT\xml\BS` |
+| `692` | `852` | BTicino (key `1`) | `1` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `853` | BTicino (key `1`) | `1` | SVM | `1469_4.0_BT\xml\SVM\svm.xml` |
+| `692` | `854` | BTicino (key `1`) | `1` | Extra | `1469_4.0_BT\xml\Extra\extra.xml` |
+| `692` | `855` | BTicino (key `1`) | `1` | Director | `1469_4.0_BT\xml\DIRECTOR\director.xml` |
+| `692` | `856` | BTicino (key `1`) | `1` | Protocol and other device parameters | `1469_4.0_BT\xml\Protocol\protocol.xml` |
+| `692` | `857` | BTicino (key `1`) | `1` | BS | `1469_4.0_BT\xml\BS` |
+| `692` | `858` | BTicino (key `1`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `859` | BTicino (key `1`) | `2` | SVM | `1469_4.0_BT\xml\SVM\svm.xml` |
+| `692` | `860` | BTicino (key `1`) | `2` | Extra | `1469_4.0_BT\xml\Extra\extra.xml` |
+| `692` | `861` | BTicino (key `1`) | `2` | Director | `1469_4.0_BT\xml\DIRECTOR\director.xml` |
+| `692` | `862` | BTicino (key `1`) | `2` | Protocol and other device parameters | `1469_4.0_BT\xml\Protocol\protocol.xml` |
+| `692` | `863` | BTicino (key `1`) | `2` | BS | `1469_4.0_BT\xml\BS` |
+| `692` | `864` | Legrand (key `2`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `865` | Legrand (key `2`) | `2` | SVM | `1469_4.0_LG\xml\SVM\svm.xml` |
+| `692` | `866` | Legrand (key `2`) | `2` | Extra | `1469_4.0_LG\xml\Extra\extra.xml` |
+| `692` | `867` | Legrand (key `2`) | `2` | Director | `1469_4.0_LG\xml\DIRECTOR\director.xml` |
+| `692` | `868` | Legrand (key `2`) | `2` | Protocol and other device parameters | `1469_4.0_LG\xml\Protocol\protocol.xml` |
+| `692` | `869` | Legrand (key `2`) | `2` | BS | `1469_4.0_LG\xml\BS` |
+| `692` | `870` | Legrand (key `2`) | `4` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `871` | Legrand (key `2`) | `4` | SVM | `1469_4.0_LG\xml\SVM\svm.xml` |
+| `692` | `872` | Legrand (key `2`) | `4` | Extra | `1469_4.0_LG\xml\Extra\extra.xml` |
+| `692` | `873` | Legrand (key `2`) | `4` | Director | `1469_4.0_LG\xml\DIRECTOR\director.xml` |
+| `692` | `874` | Legrand (key `2`) | `4` | Protocol and other device parameters | `1469_4.0_LG\xml\Protocol\protocol.xml` |
+| `692` | `875` | Legrand (key `2`) | `4` | BS | `1469_4.0_LG\xml\BS` |
+| `692` | `876` | Legrand (key `2`) | `3` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `877` | Legrand (key `2`) | `3` | SVM | `1469_4.0_LG\xml\SVM\svm.xml` |
+| `692` | `878` | Legrand (key `2`) | `3` | Extra | `1469_4.0_LG\xml\Extra\extra.xml` |
+| `692` | `879` | Legrand (key `2`) | `3` | Director | `1469_4.0_LG\xml\DIRECTOR\director.xml` |
+| `692` | `880` | Legrand (key `2`) | `3` | Protocol and other device parameters | `1469_4.0_LG\xml\Protocol\protocol.xml` |
+| `692` | `881` | Legrand (key `2`) | `3` | BS | `1469_4.0_LG\xml\BS` |
+| `692` | `882` | BTicino (key `1`) | `9` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `883` | BTicino (key `1`) | `9` | SVM | `1469_4.0_BT\xml\SVM\svm.xml` |
+| `692` | `884` | BTicino (key `1`) | `9` | Extra | `1469_4.0_BT\xml\Extra\extra.xml` |
+| `692` | `885` | BTicino (key `1`) | `9` | Director | `1469_4.0_BT\xml\DIRECTOR\director.xml` |
+| `692` | `886` | BTicino (key `1`) | `9` | Protocol and other device parameters | `1469_4.0_BT\xml\Protocol\protocol.xml` |
+| `692` | `887` | BTicino (key `1`) | `9` | BS | `1469_4.0_BT\xml\BS` |
+| `692` | `888` | BTicino (key `1`) | `10` | SDC | `xml\SDC\sdc.xml` |
+| `692` | `889` | BTicino (key `1`) | `10` | SVM | `1469_4.0_BT\xml\SVM\svm.xml` |
+| `692` | `890` | BTicino (key `1`) | `10` | Extra | `1469_4.0_BT\xml\Extra\extra.xml` |
+| `692` | `891` | BTicino (key `1`) | `10` | Director | `1469_4.0_BT\xml\DIRECTOR\director.xml` |
+| `692` | `892` | BTicino (key `1`) | `10` | Protocol and other device parameters | `1469_4.0_BT\xml\Protocol\protocol.xml` |
+| `692` | `893` | BTicino (key `1`) | `10` | BS | `1469_4.0_BT\xml\BS` |
+
+All 82 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+| Firmware | GL | Version | Release | Build | Unicode set | Name | Package record |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `8` | `1` | `2` | `0` | `0` | `1` | `GL1` | `20` |
+| `8` | `21` | `2` | `0` | `0` | `2` | `GL21` | `21` |
+| `8` | `31` | `2` | `0` | `0` | `3` | `GL31` | `22` |
+| `8` | `42` | `2` | `0` | `0` | `4` | `GL42` | `23` |
+| `8` | `51` | `2` | `0` | `0` | `5` | `GL51` | `24` |
+| `9` | `1` | `3` | `0` | `0` | `1` | `GL1` | `25` |
+| `9` | `21` | `3` | `0` | `0` | `2` | `GL21` | `26` |
+| `9` | `31` | `3` | `0` | `0` | `3` | `GL31` | `27` |
+| `9` | `42` | `3` | `0` | `0` | `4` | `GL42` | `28` |
+| `9` | `51` | `3` | `0` | `0` | `5` | `GL51` | `29` |
+| `75` | `1` | `1` | `1` | `0` | `1` | `GL1` | `7` |
+| `75` | `21` | `1` | `1` | `0` | `2` | `GL21` | `8` |
+| `75` | `31` | `1` | `1` | `0` | `3` | `GL31` | `9` |
+| `75` | `42` | `1` | `1` | `0` | `4` | `GL42` | `10` |
+| `75` | `51` | `1` | `1` | `0` | `5` | `GL51` | `11` |
+| `692` | `1` | `4` | `0` | `0` | `1` | `GL1` | `39` |
+| `692` | `21` | `4` | `0` | `0` | `2` | `GL21` | `40` |
+| `692` | `31` | `4` | `0` | `0` | `3` | `GL31` | `41` |
+| `692` | `42` | `4` | `0` | `0` | `4` | `GL42` | `42` |
+| `692` | `51` | `4` | `0` | `0` | `5` | `GL51` | `43` |
+
+These are catalogue package metadata; package payloads and Unicode-set contents have not been inspected.
 
 ## Module, Object, and Virgin Object model
 
@@ -113,11 +248,25 @@ There is no Virgin Object and no slot-condition row.
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Product Programming | implementation evidence + product software documentation |
-| Ethernet programming connection | implementation evidence |
-| USB programming connection | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `8` | Product Programming | `3` | Canonical firmware/mode association |
+| `9` | Product Programming | `3` | Canonical firmware/mode association |
+| `75` | Product Programming | `3` | Canonical firmware/mode association |
+| `692` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `8` | Ethernet | Canonical firmware/connection association |
+| `8` | USB | Canonical firmware/connection association |
+| `9` | Ethernet | Canonical firmware/connection association |
+| `9` | USB | Canonical firmware/connection association |
+| `75` | Ethernet | Canonical firmware/connection association |
+| `75` | USB | Canonical firmware/connection association |
+| `692` | Ethernet | Canonical firmware/connection association |
+| `692` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -142,16 +291,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `692` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `692` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain / stored form | Meaning |
-| --- | --- | --- |
-| `LAN_IP_ADDRESS` | IPv4-shaped user value | local network address |
-| `FW_VER` | six-character firmware-version value | firmware information |
-| `SYSADDRESS` | six-character Univocal code | product/system identifier |
-
-
 Actual IP addresses and installation identifiers are private installation state and must not be copied into the public Device Library from research captures.
 
 ## Object configuration surfaces
@@ -166,16 +305,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Field | Domain / stored form | Meaning |
-| --- | --- | --- |
-| `LAN_IP_ADDRESS` | IPv4-shaped user value | network address |
-| `FW_VER` | six-character firmware-version value | firmware information |
-| `SYSADDRESS` | six-character Univocal code | product/system identifier |
-
-Object `32` exposes the same product-programming identity/network surface except for the firmware-level `AID` identity token.
+The single Colors Touch Screen Object holds product identity/network configuration, rather than enumerating all UI functions. Template `FW_VER=3.0.0` on all four firmware definitions differs from the enclosing versions and is not an installed-version observation. Physical interfaces remain commercial-variant scoped.
 
 ## Conditions, filters, and conversions
 
@@ -213,9 +345,19 @@ Other diagnostic/programming surfaces should only be claimed after hardware obse
 
 ## Functional applicability
 
-The user interface can orchestrate several MyHOME functional systems, but the catalogue Device topology itself remains one Integration-functions Object. This is an important model boundary: a screen that controls lighting, automation, temperature and scenarios is not represented as a separate firmware Module for every UI menu.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Lighting / automation | Individual/group/general commands, timed lighting, 10/100-level dimmers, PUL targets, shutter/door movement; advanced actuator position where supported | RA00107AC_S_FR, pp. 21–24; RA00107AC_U_EN, pp. 9–15 |
+| Thermoregulation | 4/99-zone central units, zone setpoints, season programs, 99-zone scenarios, fan-coil, external/measured-only probes | Software pp. 25–28; User pp. 23–42 |
+| Air conditioning / HVAC | 3456 Basic saved commands (`1..20`) or Advanced controls with feature-dependent temperature step 0.5/1 °C; F450/BACnet gateway path | Software pp. 9, 29–36 |
+| Burglar alarm | Eight-zone display and user-code-protected arming/disarming/zone exclusion where configured | Software p. 25; User pp. 43–45 |
+| Sound / multimedia | Single/multichannel sources/amplifiers, multimedia source with 3496, configured IP radio/media servers; NuVo requires that system | Software pp. 8, 38–42; User pp. 46–59 |
+| Video door entry | Configured lock/stair-light controls; depends on wiring to automation or video bus and associated handset address | Software pp. 8, 21–22, 37; User p. 60 |
+| Scenarios | F420 up to sixteen; local advanced condition/time actions; programmed CEN/CEN PLUS Start/Stop and Enable/Disable | Software pp. 43–45; User pp. 16–22 |
+| Energy / loads | Electricity/gas/water/heating/hot-water display; load priorities `1..63`; central-unit shedding differs from consumption-only control without a central unit | Software pp. 46–51; User pp. 61–73 |
+| System supervision | Configured Stop&Go address `1..127` (up to twenty devices); load earth-leakage diagnostics address `1..63` | Software pp. 47–48; User pp. 62–65 |
 
-Generic WHO semantics remain under [Functional Protocol](../../functional/).
+These application capabilities belong to the RA00107AC manual/software scope; no minimum firmware build for each feature is established. The earlier technical sheet gives up to twenty actuations per application. Neither count expands the catalogue’s single Object `32` into extra protocol Modules.
 
 ## Observed behavior and corroboration
 
@@ -223,9 +365,11 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-The catalogue declares Product Programming over Ethernet and USB. Device-specific programming data is intentionally small: network identity/address, firmware-version field and system address.
+The historical sheet names TiTouchScreen and RS232/USB/Ethernet transfer choices; the RA00107AC software manual describes USB-miniUSB or Ethernet with the Screen connected to the bus. Keep physical commercial interfaces scoped as above rather than inferring all ports from firmware connection associations.
 
-The much broader MyHOME application configuration presented in the user/software manuals belongs to product programming and UI configuration rather than to the ordinary Object configuration model.
+The software project controls clock-master role, temperature unit, automation bus level/interface, video-door-entry wiring/handset association, multimedia address, optional F450 gateway and standby landing page (pp. 8–15). Its level labels use private riser=3/local bus=4, which must not be substituted for another namespace’s encodings. Send/receive configuration and firmware update are product workflows, distinct from Object `32`’s small network/identity surface. Actual addresses, credentials and installation names remain private state.
+
+UI customization includes clean-screen inhibit 10 seconds to 1 minute, touch calibration, standby brightness/screensaver, transition effects, alarm-clock sound-system targets and Favorites (software pp. 16–20, 52–53; user pp. 74–83). The local UI password has five digits; it is separate from the OPEN remote-access password configured in software. No installation password is reproduced here.
 
 ## Source reconciliation
 
@@ -238,6 +382,10 @@ The MyHOME_Screen 3.5 technical/user/software documents establish product detail
 
 The remaining completeness issues concern direct Legrand-variant documentation, the `AM4890`/`AM5890` source discrepancy and hardware fingerprints.
 
+BT00518_a_EN is internally labelled BT00518-a-UK and has no established dated imprint. Its heading AM5890 conflicts with installation text AM4890 and the catalogue. Its general programming paragraph includes historical RS232 cables, while the connection drawings distinguish HW4890 from the Ethernet-capable illustrated variants. The RA00107AC software/user manuals describe expanded applications without mapping each to catalogue firmware/builds. Their feature availability is therefore manual-scoped, not backdated to every 1.0.17 unit.
+
+The French software Automation paragraph says Normal movement stops on release but also requires Stop; Safe mode unambiguously follows the held key. That internal wording conflict remains unresolved. The English user load-management pages state four hours for reactivation (p. 71) and 2 h 30 min in the details screen (p. 72); these are preserved as different UI/source contexts, not one normalized default. Energy tariff values are indicative, not billing measurements. The template FW_VER value and physical interface differences remain explicit.
+
 ## Evidence limits and open work
 
 - Add sanitized hardware fingerprints across more than one product line.
@@ -245,6 +393,8 @@ The remaining completeness issues concern direct Legrand-variant documentation, 
 - Locate direct official product sheets for `573958`, `067292` and `078479`.
 - Resolve the archived technical-sheet `AM5890` / `AM4890` discrepancy through additional revisions.
 - Archive English/Italian/French software and user-document revisions where distinct.
+- Establish feature-to-firmware applicability for the RA00107AC application set, including NuVo/BACnet/energy additions. Resolve the Normal-mode release/Stop wording and load-forcing UI default discrepancy.
+- Inspect the referenced parameter and package payloads before inferring content from the 82 parameter associations or package names.
 
 ## Sources
 
@@ -255,3 +405,5 @@ The remaining completeness issues concern direct Legrand-variant documentation, 
 - `LN4890-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4890` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890); SHA-256 `5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86`.
 
 - `078479-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `078479` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-tactile-mosaic-multiscenarios-pour-eclairage-ouvrant-et-multimedias); SHA-256 `783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0015)

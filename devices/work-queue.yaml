@@ -430,34 +430,35 @@ items:
     - BMNE500 definition created and source-reconciled; current product/manual sources identified, archival endpoint and hardware corroboration remain.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '37':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
       device_ids:
       - OWN-DEV-0012
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - IR-receiver cluster extracted; EN/FR/IT technical sheets archived; Mosaic references remain direct-documentation gaps.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0012. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '39':
     state: review-ready
     priority: high
@@ -1623,7 +1624,7 @@ items:
     - '2026-10-03: U2860B 4601 installation manual archived and reconciled; technical data, zone model, local input/relay settings, first activation, access levels, automation-menu forms and PC update incorporated with printed/PDF locators. Package-list and telephone wording inconsistencies retained; separate TiSecurityBasic workflow and hardware/runtime corroboration remain open.'
     - '2026-10-03: Dutch 4601 installation manual 20130411_82719_2.pdf uploaded and immediately registered on main; technical data and commissioning corroborated, additional local settings and automation triggers incorporated, and Dutch armed/disarmed recovery contradiction preserved. Separate TiSecurityBasic manual and hardware/runtime corroboration remain open.'
   '168':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1637,22 +1638,23 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
-    blockers:
-    - Sanitized hardware fingerprint pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
+    blockers: []
     notes:
     - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Hardware fingerprint remains pending; removed from acceptance blockers because current review policy explicitly does not require hardware corroboration.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0017. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '207':
     state: review-ready
     priority: normal
@@ -1743,34 +1745,35 @@ items:
     - OWN-DEV-0042 created from canonical catalogue with publisher evidence reconciled where available; remaining gaps explicit.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '402':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
       device_ids:
       - OWN-DEV-0011
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - Scenario-control cluster extracted; direct technical sheet covers principal BTicino, Arteor and Céliane identities; Mosaic references remain documentation gaps.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0011. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '912':
     state: review-ready
     priority: normal
@@ -1975,34 +1978,35 @@ items:
     - OWN-DEV-0096 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1076':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
       device_ids:
       - OWN-DEV-0013
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - Video Display cluster extracted; installation/user/software manuals and MyHOME guide archived. Four commercial variants still need direct product documents.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0013. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1078':
     state: review-ready
     priority: normal
@@ -2033,34 +2037,35 @@ items:
     - OWN-DEV-0097 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1104':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
       device_ids:
       - OWN-DEV-0014
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - Extended control cluster extracted; H4655/L4655 documented by archived MyHOME guide. Mosaic references and AUX condition semantics remain gaps.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0014. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1121':
     state: reviewed
     priority: high
@@ -2180,7 +2185,7 @@ items:
     - OWN-DEV-0100 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1147':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -2190,26 +2195,27 @@ items:
       commercial_identities: complete
       database_extraction: complete
       documentation_discovery: complete
-      documentation_archive: partial
-      source_reconciliation: partial
+      documentation_archive: complete
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
-    blockers:
-    - Sanitized hardware fingerprint pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
+    blockers: []
     notes:
     - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Hardware fingerprint remains pending; removed from acceptance blockers because current review policy explicitly does not require hardware corroboration.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0018. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1156':
     state: review-ready
     priority: normal
@@ -2580,7 +2586,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-05: Semantic review accepted after all eight checks; substantive source/catalogue corrections and validation recorded in project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0003. Explicit documentation, source-conflict and hardware limits remain within the accepted evidence scope.'
   '1190':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -2594,22 +2600,23 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
-    blockers:
-    - Sanitized hardware fingerprint pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
+    blockers: []
     notes:
     - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Hardware fingerprint remains pending; removed from acceptance blockers because current review policy explicitly does not require hardware corroboration.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0019. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1191':
     state: review-ready
     priority: normal
@@ -2979,7 +2986,7 @@ items:
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0133 created from the next priority-sorted unreviewed cluster 1463, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 1 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
   '1465':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -2993,51 +3000,53 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
-    blockers:
-    - Sanitized hardware fingerprint pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
+    blockers: []
     notes:
     - Completion-oriented definition added from canonical catalogue plus available official documentation.
     - Remaining evidence gaps are recorded in the Device definition and coverage ledger.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Hardware fingerprint remains pending; removed from acceptance blockers because current review policy explicitly does not require hardware corroboration.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0020. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1469':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
       device_ids:
       - OWN-DEV-0015
     review:
-      commercial_identities: partial
+      commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - MyHOME_Screen 3.5 cluster extracted; technical, user and software documents archived. Legrand variant sheets and AM4890/AM5890 source discrepancy remain.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0015. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1470':
     state: review-ready
     priority: normal
@@ -3606,7 +3615,7 @@ items:
     - Key card switch definition created and source-reconciled; publisher/catalogue 572736 conflict and hardware corroboration remain.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
   '1566':
-    state: review-ready
+    state: reviewed
     priority: high
     outcome:
       type: device-definition
@@ -3620,20 +3629,21 @@ items:
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - PIR flush-mounted sensor cluster extracted; legacy/current sheets and compatibility table collectively document the current commercial cluster. Hardware corroboration remains pending.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0016. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1570':
     state: review-ready
     priority: normal

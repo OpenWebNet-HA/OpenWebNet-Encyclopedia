@@ -31,10 +31,12 @@ The Device receives commands from compatible infrared remote controls and projec
 | Legrand - Arteor | `573900` | Established identity | Catalogue + official technical sheet |
 | Legrand - Arteor | `573901` | Established identity | Catalogue + official technical sheet |
 | Legrand - Céliane | `067216` | Established identity | Catalogue + official technical sheet |
-| Legrand - Mosaic | `078465` | Shared technical item | Implementation evidence; direct product sheet pending |
-| Legrand - Mosaic | `079265` | Shared technical item | Implementation evidence; direct product sheet pending |
+| Legrand - Mosaic | `078465` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+| Legrand - Mosaic | `079265` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
 
 The MyHOME Suite catalogue stores some finish variants as combined codes, so one catalogue row may represent several printed BTicino references.
+
+The canonical `EN_DEVICE.code` retains combined `HS/HD/HC4654` and `L/N/NT4654N`. The named finish references above expand those catalogue codes; their ordering does not imply a different technical item.
 
 ### EAN-13 commercial identifiers
 
@@ -53,9 +55,9 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00071-d-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
-| `MQ00071-d-FR` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
-| `MQ00071-d-IT` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
+| `MQ00071-d-EN` | Technical sheet | 05/06/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
+| `MQ00071-d-FR` | Technical sheet | 29/04/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
+| `MQ00071-d-IT` | Technical sheet | 29/04/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
 | `HC4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654) |
 | `HS4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654) |
 | `HD4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654) |
@@ -85,6 +87,19 @@ The six physical positions independently support the expected ordinary addressed
 | Main system | Lighting / Automation | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `22` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `22` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -94,6 +109,12 @@ The six physical positions independently support the expected ordinary addressed
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -116,10 +137,13 @@ There is no Virgin Object and no slot-condition row for firmware `216`.
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Physical configuration | product documentation + implementation evidence |
-| Virtual Configuration | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `216` | Physical configuration | `0` | Canonical firmware/mode association |
+| `216` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -134,19 +158,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `216` | `PL3` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL3; PL3 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
 | `216` | `PL4` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL4; PL4 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
 | `216` | `M` | `0..9`; `14` = `CEN` | `0` | M; Mode (0-9,`CEN`) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | environment / address |
-| `PL1` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
-| `PL2` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
-| `PL3` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
-| `PL4` | `0..9` / `OFF` / `ON` / `GEN` / `UP/DOWN` / `UP/DOWN monostable` / `AMB` | per-channel contextual physical selector |
-| `M` | `0..9` / `CEN` | shared operating-mode selector |
-
 
 The database uses `PL1`..`PL4` while the official sheet labels each socket `PLn/PFn` because its meaning depends on `M`.
 
@@ -190,16 +201,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL` | `0..9` | `0` | Light point |
 | `MOD` | `0..4` | `0` | Modality; Mode 0-4 |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Field | Domain | Default | Meaning |
-| --- | --- | --- | --- |
-| `A` | `0..9` | - | reusable IR receiver area / environment |
-| `PL` | `0..9` | - | reusable IR receiver point |
-| `MOD` | `0..4` | - | reusable IR receiver mode |
-
-This reusable Object surface is narrower than the contextual firmware-level `PLn/PFn` representation.
+Physical sockets are labelled `PLn/PFn` because the shared M mode changes their meaning. Four catalogue Modules do not limit self-learning to four remote keys: the product sheet allows sixteen learned commands. Numeric reusable fields do not replace the contextual physical symbols.
 
 ## Conditions, filters, and conversions
 
@@ -239,15 +243,26 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Depending on shared `M` mode and per-channel selectors, the receiver participates in lighting, automation, programmed scenarios, scenario-module control, sound diffusion, and published video-door-entry-related remote functions. Generic functional frame grammar remains canonical under Functional Protocol.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| M=`1..4` | Four fixed channel assignments per receiver; up to four receivers yield sixteen distinct commands in the room | MQ00071-d-EN, pp. 2–3 |
+| `M=0` / no configurator | Up to sixteen learned commands, including timed/flashing lighting, lock/unlock, AUX shutter/light, door-lock/stair-light and amplifier controls | Same source, p. 3 |
+| `M=6` | Up to sixteen F420 scenarios through sixteen remote channels; programming switch and F420 unlock both apply | Same source, p. 4 |
+| `M=9` | Up to four amplifiers; brief On/Off, held volume up/down, source cycling and station/track change; Follow Me | Same source, p. 4 |
+
+For sound mode A=`1..9` is the destination room and PF1..PF4=`0..9` identify amplifiers. Each PF uses four consecutive remote channels. Neither the four Module projection nor numeric PL defaults reduces these contextual functions to four ordinary lighting points.
+
 ## Observed behavior and corroboration
 
 No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
 
 ## Programming
 
-A programmer must interpret each `PLn/PFn` value in the context of the shared `M` operating mode. It must not translate all firmware enum values into ordinary lighting-point addresses.
+Interpret each PLn/PFn in the context of shared M. `MQ00071-d-EN`, p. 2, requires identical selectors in both positions of a shutter pair; the first sends Up and the second Down. `M=1/2/3/4` chooses remote channels 1–4/5–8/9–12/13–16. CEN pairs up to six 3529 buttons with MH200N scenarios in software.
 
-See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
+For self-learning (M empty/0), use `A=0` and PL=`1..9`; the sheet excludes that address from actuators. With the rear switch unlocked, hold programming for three seconds, select a remote key within twenty seconds and issue the required system command. Repeat key/command selection and press programming to exit. To erase one learned key hold programming for at least eight seconds, release within the next four seconds, then select the key within twenty seconds; rapid flashing confirms deletion. Erase all learned commands with an approximately twelve-second hold. The locked rear switch disables programming/deletion.
+
+For `M=6`, also unlock the F420 module (at least 0.5 seconds, green LED). Enter programming with the receiver’s three-second hold, select a remote key within twenty seconds, issue scenario actions and press programming to exit. Individual scenario erasure uses the eight-second receiver hold and key selection; entire scenario memory must be reset on F420. Receiver self-learning erasure and F420 memory erasure are distinct operations. See `MQ00071-d-EN`, pp. 3–4, with corresponding FR/IT sections.
 
 ## Source reconciliation
 
@@ -261,6 +276,8 @@ The IR-receiver technical sheets have been reconciled into concrete Device behav
 - the product includes a programming/lock control whose state affects learning/configuration behavior but is not an OpenWebNet Module.
 
 These facts are the Device-specific interpretation layer above the four fixed Object `34` instances.
+
+English revision d is dated 5 June 2014; French and Italian d are dated 29 April 2014. Their five mode categories and the inspected self-learning/F420 procedures agree, including three/eight/twelve-second stages and rear programming-lock behavior. The heading “none” for self-learning and the detailed `M=0` notation express the no-configurator setup, distinct from an observed installed value. Named electrical coverage excludes Mosaic 078465/079265; catalogue identities remain established, with their individual electrical/procedure evidence still a documentation gap.
 
 ## Evidence limits and open work
 
@@ -284,3 +301,5 @@ These facts are the Device-specific interpretation layer above the four fixed Ob
 - `L4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N); SHA-256 `ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10`.
 - `N4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N); SHA-256 `fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68`.
 - `NT4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N); SHA-256 `9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0012)

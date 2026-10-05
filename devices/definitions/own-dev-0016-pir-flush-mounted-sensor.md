@@ -24,13 +24,13 @@ The canonical catalogue groups eight Device records. Several BTicino database co
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| BTicino - Axolute | `HC4659`, `HS4659`, `HD4659` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
-| BTicino - LivingLight | `L4659N`, `N4659N`, `NT4659N` | Documented commercial identities | Catalogue cluster + archived historical sheet / compatibility table |
-| BTicino - Matix | `AM5659` | Documented commercial identity | Catalogue + archived historical sheet |
-| BTicino - Living Now | `K4659` | Documented current commercial identity | Catalogue + archived current technical sheet |
-| Legrand - Arteor | `574046`, `574096` | Documented commercial identities | Catalogue + archived historical sheet / compatibility table |
-| Legrand - Céliane | `067225` | Documented commercial identity | Catalogue + archived historical sheet / compatibility table |
-| Legrand - Mosaic | `078485` | Compatibility-documented identity | Catalogue + archived compatibility table |
+| BTicino - Axolute | `HC4659`, `HS4659`, `HD4659` | Established identities | Catalogue cluster + archived historical sheet / compatibility table |
+| BTicino - LivingLight | `L4659N`, `N4659N`, `NT4659N` | Established identities | Catalogue cluster + archived historical sheet / compatibility table |
+| BTicino - Matix | `AM5659` | Established identity | Catalogue + archived historical sheet |
+| BTicino - Living Now | `K4659` | Established commercial identity | Catalogue + archived current technical sheet |
+| Legrand - Arteor | `574046`, `574096` | Established identities | Catalogue + archived historical sheet / compatibility table |
+| Legrand - Céliane | `067225` | Established identity | Catalogue + archived historical sheet / compatibility table |
+| Legrand - Mosaic | `078485` | Established identity | Catalogue + archived compatibility table |
 | BTicino - Axolute | `HC/HS/HD4659` | Catalogue combined identity | Implementation evidence |
 | BTicino - LivingLight | `L/N/NT4659N` | Catalogue combined identity | Implementation evidence |
 
@@ -57,9 +57,9 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00474-e-FR` | Historical technical sheet | revision/date not yet pinned | legacy PIR Green Switch family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/35/a9/35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4.pdf) | publisher source not currently retained |
-| `ST_00000220_EN` | Current-generation technical sheet | revision/date not yet pinned | `K4659` and PIR flush-mounted sensor | [Archived PDF](https://archive.openwebnet-ha.org/sha256/0d/11/0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e.pdf) | publisher source not currently retained |
-| `ST-00002122-EN` | Compatibility table | revision/date not yet pinned | PIR family references occur on printed pp. 8, 11 / PDF pp. 8, 11 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | publisher source not currently retained |
+| `MQ00474-e-FR` | Historical technical sheet | No dated imprint established in inspected original | legacy PIR Green Switch family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/35/a9/35a9f4316e1e9d1202f6c13256f5ab87e56cb935c81674b04b3a7bf9fbcbccb4.pdf) | publisher source not currently retained |
+| `ST_00000220_EN` | Current-generation technical sheet | 24 April 2019 | `K4659` and PIR flush-mounted sensor | [Archived PDF](https://archive.openwebnet-ha.org/sha256/0d/11/0d11c78827815fcb3d783259f51760ee7e49a1ae35e1c980519a89856d79ae9e.pdf) | publisher source not currently retained |
+| `ST-00002122-EN` | Compatibility table | 21 October 2024 | PIR family references occur on printed pp. 8, 11 / PDF pp. 8, 11 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | publisher source not currently retained |
 | `HC4659-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4659` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4659) |
 | `HS4659-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4659` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/2d/df2dea652da781c312db2d963b197adc2f313f5633ec5028ba80f97a06b5deb8.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4659) |
 | `HD4659-ean-international-sheet.pdf` | English manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4659` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/26/08/2608ba817cda34281dafdd102548acb329e4be97b3ecd319b3c9b1e2197a49ac.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-HD4659&include_technical=1) |
@@ -77,11 +77,15 @@ Historical and current sheets should remain separate evidence because product ra
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Sensor functions | PIR motion/presence and ambient-daylight sensing | `MQ00474-e-FR` / `ST_00000220_EN` |
-| Mounting | flush-mounted | `MQ00474-e-FR` / `ST_00000220_EN` |
-| Configuration | physical configurators and software configuration | `MQ00474-e-FR` / `ST_00000220_EN` |
+| Sensor / width | PIR with 180° detection and brightness sensor; 2 flush-mounted modules | MQ00474-e-FR, p. 1; ST-00000220-EN, p. 1 |
+| Supply / maximum current | `27 Vdc`; `15 mA` | Same sources; named legacy variants and K4659 |
+| Dimensions / box | Legacy body `45 × 45 × 51 mm`; minimum flush-box depth `40 mm` | MQ00474-e-FR, p. 1; box depth also ST-00000220-EN, p. 1 |
+| Weight / enclosure | 60 g; IP20; IK04 | Both sheets, p. 1 |
+| Temperatures | Operating −5..+`45 °C`; storage −20..+`70 °C` | Both sheets, p. 1 |
+| Headline settings | Delay 5 s..59 min 59 s; brightness `20..1275` lux | Both sheets, p. 1; distinct from advanced remote/physical presets |
+| Detection geometry | At illustrated 1.2 m height: approximately 6 m large-movement and 3 m small-movement reach | MQ00474-e-FR, p. 3; ST-00000220-EN, p. 3; diagram scope |
 
-Historical and current sheets remain revision-scoped; contemporary software requirements must not be projected backwards onto every legacy unit.
+These electrical specifications directly name the legacy sheet references and K4659. The compatibility table supplies a relationship for 078485, but does not establish that Mosaic package’s weight or electrical equivalence.
 
 ## Identity
 
@@ -90,6 +94,19 @@ Historical and current sheets remain revision-scoped; contemporary software requ
 | `EN_ITEM.id_item` | `1566` | Implementation evidence |
 | Main system | Lighting / Automation | Implementation evidence |
 | `AS_ITEM_SYSTEM.modobj` | `43` | Implementation evidence |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `43` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -100,6 +117,12 @@ Historical and current sheets remain revision-scoped; contemporary software requ
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -143,11 +166,14 @@ There are no Virgin Objects.
 
 ## Configuration modes
 
-| Mode / modality | Evidence |
-| --- | --- |
-| Physical configuration | product documentation + implementation evidence |
-| Virtual Configuration | implementation evidence |
-| Advanced Configuration | implementation evidence |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `222` | Physical configuration | `0` | Canonical firmware/mode association |
+| `222` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `222` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -162,18 +188,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `222` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
 | `222` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
 | `222` | `D` | `0..5` | `0` | D; (0-5) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | environment/address; published physical values `1..9` |
-| `PL` | `0..9` | light point; published physical values `1..9` |
-| `M` | `0..4` | sensor operating mode |
-| `S` | `0..4` | sensitivity selector in database; published physical selector `0..3` |
-| `T` | `0..9` | time selector |
-| `D` | `0..5` | daylight threshold selector |
 
 ### Published `M` modes
 
@@ -208,6 +222,21 @@ The published physical sensitivity selector has no configurator = Low, `1=Medium
 
 The daylight selector documents no configurator = 300 lux, then approximately `20`, `100`, `300`, `500`, and `1000 lux` for `D=1..5`.
 
+### Published remote-control settings
+
+| Setting | Published default | Adjustable scope | Evidence |
+| --- | --- | --- | --- |
+| Delay | 15 min | Simplified 3/5/10/15/20 min; advanced 30 s..255 h 59 min 59 s | MQ00474-e-FR, p. 2; ST-00000220-EN, p. 2 |
+| PIR sensitivity | Very high | Low / medium / high / very high | Same sources |
+| Brightness | 300 lux | Presets 20/100/300/500/1000; advanced `0..1275` lux | Same sources |
+| Occupancy modes | Auto off, Walkthrough on, Eco off | ON/OFF | Same sources |
+| Detection stages | PIR | Initial/holding fixed PIR; retrigger PIR/OFF | Same sources |
+| Warning alarm | Off | ON/OFF; signals at 1 min, 30 s, 10 s before switch-off | Same sources, settings explanation |
+| Calibration / adjustment | No calibration value specified; adjustment off | Lux-meter calibration `0..99995` lux; adjustment ON/OFF | Same sources |
+| Contribution of light | Automatic | Automatic or up to 1275 lux | Same sources |
+
+BMSO4001/088230 is the advanced remote; BMSO4003/088235 the simplified remote. The source’s copied “PIR and US” sensitivity footnote does not establish an ultrasonic sensor in this PIR-only product.
+
 ## Object configuration surfaces
 
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
@@ -237,7 +266,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
 | `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
 
-
 ### Object `128` - Scenarios daylight and presence sensor
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -251,14 +279,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
 | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
 
-
 ### Object `164` - Scenarios daylight sensor
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
-
 
 ### Object `165` - Scenarios presence sensor
 
@@ -272,7 +298,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCHEMA` | `1` = PIR only; `2` = US only; `3` = PIR and US; `4` = PIR or US | `4` | Detection scheme |
 | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | PIR sensitivity |
 | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | US sensitivity |
-
 
 ### Object `166` - Stand alone daylight sensor
 
@@ -293,7 +318,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
 | `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
 | `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
-
 
 ### Object `168` - Stand alone daylight and presence sensor
 
@@ -328,7 +352,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
 | `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
 
-
 ### Object `431` - IR scenario control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -340,53 +363,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `ID3` | `0..15` | `0` | ID3 |
 | `UNIT_NUMBER` | `0..15` | `0` | Push button number |
 
+### Device-specific interpretation
 
-### Additional Device-specific interpretation
-
-| Object | Role | Principal configuration |
-| --- | --- | --- |
-| `119` | Stand-alone presence | addressing, referent, groups, timing, sensitivity, detection |
-| `128` | Scenario daylight + presence | `A`/`PL`, delay, detection schema, sensitivity |
-| `164` | Scenario daylight | `A`/`PL` |
-| `165` | Scenario presence | scenario presence configuration |
-| `166` | Stand-alone daylight | addressing, loop, daylight group/setpoints/factors |
-| `168` | Stand-alone daylight + presence | presence surface plus daylight regulation/factors |
-| `431` | IR scenario control | scenario number, regulation type, ID components, push-button/unit |
-
-### Presence and combined sensor roles
-
-Objects `119` and `168` expose point-to-point/group addressing, referent actuator addresses, group membership, timing, functional mode, sensitivity and detection behavior. The combined Object `168` additionally carries daylight-loop/regulation state and daylight factors.
-
-### Daylight roles
-
-Object `166` includes:
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | point-to-point/group addressing |
-| Published fact | open/closed loop |
-| Published fact | daylight group |
-| Published fact | encoded daylight setpoint `0..1275 lux` in 5-lux increments |
-| Published fact | provision-of-light value with automatic mode plus `5..1275 lux` |
-| Published fact | functional mode and lighting-regulation flag |
-| Published fact | daylight/natural-light factors and daylight level. |
-
-Object `164` is the simpler scenario daylight Object with A/PL addressing.
-
-### Scenario sensor roles
-
-Object `128` combines A/PL, delay, detection schema and sensitivity. Object `165` provides the corresponding scenario presence surface.
-
-### IR scenario Object `431`
-
-Each of the sixteen fixed IR Modules exposes:
-
-| Topic | Source-derived detail |
-| --- | --- |
-| Published fact | scenario number `1..255` |
-| regulation type | all, lights, shutters, or stereo amplifiers |
-| Published fact | three ID components |
-| Published fact | push-button/unit number. |
+Physical sensitivity allows no configurator or `1..3`; firmware S includes 4. The 16 catalogue IR scenario Modules have not been corroborated as runtime topology. Remote defaults and physical presets are separate scopes.
 
 ## Conditions, filters, and conversions
 
@@ -465,7 +444,11 @@ No publishable hardware observation has yet been incorporated as canonical corro
 
 ## Programming
 
-Programming must treat the slot-1 Object as configuration-dependent and slots `2..17` as distinct fixed IR scenario-control Modules. It must also preserve the source-level domain differences above instead of coercing the database to the PDF or vice versa.
+Choose the installation context before commissioning: Lighting Management Plug & Go/Push & Learn/Virtual Configurator and MyHOME physical/software setup are distinct procedures. The K4659 2019 sheet gives MyHOME_Up firmware after 2.1/app after 2.2 and MyHOME_Suite after 03.03.73; these requirements are source-scoped and do not supply firmware-222 applicability values.
+
+Physical A/`PL=0` are excluded by both sheets despite their presence in the catalogue. Published S ends at 3 while the firmware domain includes 4. `M=1/2` excludes S/T configurators and GEN/AMB/GR addressing; use `M=2` for MH200N sensor signals. `M=3/4` needs a dimmer for constant-brightness regulation, and `M=4` does not automatically switch on after daylight falls.
+
+Factory reset is a brief LEARN press followed by a ten-second LEARN hold until rapid flashing. Configuration-remote IR commands are acknowledged by a beep. Lux calibration needs a meter and separate artificial/natural-light stages. Walkthrough shortens detection under twenty seconds to three minutes (leaving an already shorter delay unchanged); Eco has a thirty-second retrigger interval. See the settings/configuration pages cited above. Confirm runtime Object selection before using the stored seventeen-Module model as a write target.
 
 ## Source reconciliation
 
@@ -474,6 +457,10 @@ The PIR-only sensor documentation has been reconciled beyond the physical `M/S/T
 Product-level settings include Walkthrough and Eco/manual-on behavior, detection-stage choices, switch-off warning, brightness calibration/adjustment, natural-light contribution, software/remote configuration and reset/learning workflows. These settings explain behavior available through the sensor Object configuration surface that is not representable by the six physical sockets alone.
 
 The known source discrepancy in the physical sensitivity domain remains visible, and Objects without explicit physical condition rows remain alternatives requiring configuration/hardware corroboration rather than guessed mappings.
+
+The legacy French sheet is dated 22 April 2014 and the K4659 English sheet 24 April 2019. Both specify 15 mA and the same temperature/settings ranges; the latter adds app/software requirements in its own scope. Both contain a PIR/US sensitivity footnote despite naming only PIR hardware. Their Auto paragraph says switch-off when natural light is insufficient, whereas their Adjustment explanation says switch-off after the threshold is exceeded; that internal wording conflict is not turned into a universal algorithm. Physical no-configurator sensitivity Low and remote default Very high are different setup scopes.
+
+ST-00002122-EN is a Classe 300EOS compatibility source dated 21 October 2024, not a PIR technical sheet. Its p. 8 names the legacy PIR references (including 078485) with all-production-batch entries; p. 11’s configuration-tool matrix names only L/N/NT4659N. Neither matrix establishes universal variant hardware equivalence or new firmware topology.
 
 ## Evidence limits and open work
 
@@ -501,3 +488,5 @@ The known source discrepancy in the physical sensitivity domain remains visible,
 
 - `067225-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067225` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/b6/bc/b6bc990f93ddce1dc166caf79f8a05bd2e935943aae095964a6dd5331c46cc6d.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/detecteur-de-mouvements-bus-celiane-presence-et-luminosite-pour-lieux-de-passage); SHA-256 `b6bc990f93ddce1dc166caf79f8a05bd2e935943aae095964a6dd5331c46cc6d`.
 - `078485-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `078485` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/16/ef/16ef087c09c291616f2a7238d97f37e360715677fcf1df59730b4d957bca6839.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/detecteur-de-mouvements-bus-mosaic-presence-et-luminosite-pour-lieux-de-passage-blanc); SHA-256 `16ef087c09c291616f2a7238d97f37e360715677fcf1df59730b4d957bca6839`.
+
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0016)

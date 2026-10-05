@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 200 |
-| reviewed | 10 |
+| review-ready | 190 |
+| reviewed | 20 |
 
 Total: **210** technical-item clusters.
 
@@ -21,12 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| high | 402 | Scenario control | 10 | review-ready | OWN-DEV-0011 | partial | complete | complete | pending | - |
-| high | 37 | IR receiver | 8 | review-ready | OWN-DEV-0012 | partial | complete | complete | pending | - |
-| high | 1076 | Video Display | 8 | review-ready | OWN-DEV-0013 | partial | complete | complete | pending | - |
-| high | 1104 | Extended control item | 8 | review-ready | OWN-DEV-0014 | partial | complete | complete | pending | - |
-| high | 1469 | MyHOME_Screen 3.5 | 8 | review-ready | OWN-DEV-0015 | partial | complete | complete | pending | - |
-| high | 1566 | PIR flush mounted sensor | 8 | review-ready | OWN-DEV-0016 | complete | complete | complete | pending | - |
 | high | 1563 | Key card switch | 6 | review-ready | OWN-DEV-0036 | complete | complete | complete | pending | - |
 | high | 1657 | Local Display 1.2" bus | 6 | review-ready | OWN-DEV-0037 | complete | complete | complete | pending | - |
 | high | 1854 | Probe with regulation | 6 | review-ready | OWN-DEV-0038 | complete | complete | complete | pending | - |
@@ -47,10 +41,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 168 | Flush mounted temperature central unit | 7 | review-ready | OWN-DEV-0017 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
-| normal | 1147 | Local Display | 6 | review-ready | OWN-DEV-0018 | complete | partial | partial | pending | Sanitized hardware fingerprint pending |
-| normal | 1190 | Touch control | 6 | review-ready | OWN-DEV-0019 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
-| normal | 1465 | Load Control Panel bus | 6 | review-ready | OWN-DEV-0020 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
 | normal | 1862 | Basic probe | 5 | review-ready | OWN-DEV-0041 | partial | partial | partial | pending | - |
 | normal | 291 | Temperature central unit | 4 | review-ready | OWN-DEV-0042 | partial | partial | partial | pending | - |
 | normal | 1525 | Special functions | 4 | review-ready | OWN-DEV-0043 | partial | complete | partial | pending | - |
@@ -227,13 +217,23 @@ Database extraction is mechanically available for every cluster in this catalogu
 | Item | Description | Outcome |
 | ---: | --- | --- |
 | 4 | Basic control | OWN-DEV-0007 |
+| 37 | IR receiver | OWN-DEV-0012 |
+| 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
+| 402 | Scenario control | OWN-DEV-0011 |
+| 1076 | Video Display | OWN-DEV-0013 |
+| 1104 | Extended control item | OWN-DEV-0014 |
 | 1121 | Flush mounted actuator 1 relay | OWN-DEV-0008 |
+| 1147 | Local Display | OWN-DEV-0018 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
+| 1190 | Touch control | OWN-DEV-0019 |
 | 1376 | Touch control multifunction | OWN-DEV-0009 |
 | 1455 | Web Server A/V Bus | OWN-DEV-0002 |
+| 1465 | Load Control Panel bus | OWN-DEV-0020 |
+| 1469 | MyHOME_Screen 3.5 | OWN-DEV-0015 |
 | 1524 | Special control | OWN-DEV-0005 |
 | 1559 | PIR+US flush mounted sensor | OWN-DEV-0010 |
+| 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
 
