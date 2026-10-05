@@ -7,3 +7,4 @@
 | [OWN-DEV-0120](../definitions/own-dev-0120-three-input-electricity-meter.md) | `F520`, `003555` | Three-input electricity meter | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0122](../definitions/own-dev-0122-load-actuator-current-sensor.md) | `F522`, `003558` | Load actuator with current sensor | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0150](../definitions/own-dev-0150-pulse-counter-interface.md) | `003576`, `3522N` | Pulse counter interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0197](../definitions/own-dev-0197-ip55-wall-mounted-pir-sensor.md) | `048834` | IP55 wall-mounted PIR sensor | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 30 |
+| unreviewed | 10 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 180 |
+| review-ready | 200 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,26 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 1571 | DIN dimmer 1000 VA 127 V | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1594 | Actuator with 1 relay DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1595 | Actuator 1 relay fluorescent lamps 2 DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1602 | DIN dimmer 400 VA 127 V | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1672 | Light manager control unit | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1689 | Central unit access control 1 head Vigik  | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1690 | Local portable programmer | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1691 | GPRS Interface | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1698 | IP interface (2Wire/IP) | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1771 | IP scenario module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1804 | Burglar alarm control unit with contacts | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1812 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1814 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1819 | PABX288 automatic telephone switching system | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1834 | Webserver Audio/Video DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1872 | CLASSE100 X12B | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2147 | IP55 PIR wall mounted sensor, long range | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2193 | Driver Manager | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2198 | MyHomeServer | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2205 | Comando unico Living Now 2 moduli | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2208 | Comando unico Living Now 3 moduli | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2233 | Comando-Attuatore Living Now Luci | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2237 | Comando-Attuatore Living Now Tapparelle | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -231,6 +211,26 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1515 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0178 | partial | pending | complete | pending | - |
 | normal | 1516 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0179 | partial | complete | complete | pending | - |
 | normal | 1570 | Shutter actuator DIN 1 motor bus | 1 | review-ready | OWN-DEV-0180 | partial | complete | complete | pending | - |
+| normal | 1571 | DIN dimmer 1000 VA 127 V | 1 | review-ready | OWN-DEV-0181 | partial | complete | complete | pending | - |
+| normal | 1594 | Actuator with 1 relay DIN | 1 | review-ready | OWN-DEV-0182 | partial | complete | complete | pending | - |
+| normal | 1595 | Actuator 1 relay fluorescent lamps 2 DIN | 1 | review-ready | OWN-DEV-0183 | partial | complete | complete | pending | - |
+| normal | 1602 | DIN dimmer 400 VA 127 V | 1 | review-ready | OWN-DEV-0184 | partial | complete | complete | pending | - |
+| normal | 1672 | Light manager control unit | 1 | review-ready | OWN-DEV-0185 | partial | complete | complete | pending | - |
+| normal | 1689 | Central unit access control 1 head Vigik  | 1 | review-ready | OWN-DEV-0186 | partial | complete | complete | pending | - |
+| normal | 1690 | Local portable programmer | 1 | review-ready | OWN-DEV-0187 | partial | complete | complete | pending | - |
+| normal | 1691 | GPRS Interface | 1 | review-ready | OWN-DEV-0188 | partial | complete | complete | pending | - |
+| normal | 1698 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0189 | partial | complete | complete | pending | - |
+| normal | 1771 | IP scenario module | 1 | review-ready | OWN-DEV-0190 | partial | complete | complete | pending | - |
+| normal | 1804 | Burglar alarm control unit with contacts | 1 | review-ready | OWN-DEV-0191 | partial | complete | complete | pending | - |
+| normal | 1812 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0192 | partial | pending | complete | pending | - |
+| normal | 1814 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0193 | partial | complete | complete | pending | - |
+| normal | 1819 | PABX288 automatic telephone switching system | 1 | review-ready | OWN-DEV-0194 | partial | complete | complete | pending | - |
+| normal | 1834 | Webserver Audio/Video DIN | 1 | review-ready | OWN-DEV-0195 | partial | complete | complete | pending | - |
+| normal | 1872 | CLASSE100 X12B | 1 | review-ready | OWN-DEV-0196 | partial | complete | complete | pending | - |
+| normal | 2147 | IP55 PIR wall mounted sensor, long range | 1 | review-ready | OWN-DEV-0197 | partial | complete | complete | pending | - |
+| normal | 2193 | Driver Manager | 1 | review-ready | OWN-DEV-0198 | partial | complete | complete | pending | - |
+| normal | 2198 | MyHomeServer | 1 | review-ready | OWN-DEV-0199 | partial | complete | complete | pending | - |
+| normal | 2205 | Comando unico Living Now 2 moduli | 1 | review-ready | OWN-DEV-0200 | partial | complete | complete | pending | - |
 
 ## Reviewed
 
