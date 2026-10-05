@@ -2137,6 +2137,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4692
+  title: L4692 official product export with EAN
+  media_type: application/pdf
+  filename: L4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18380
+  sha256: 43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/43/ec/43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/43/ec/43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-le05177ae-20261004
   kind: documentation
   publisher: BTicino / Legrand
