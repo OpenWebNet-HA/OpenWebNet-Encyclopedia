@@ -1171,6 +1171,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f422-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F422
+  title: F422 official product export with EAN
+  media_type: application/pdf
+  filename: F422-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14544
+  sha256: 4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f425-ean-export-20261005
   kind: documentation
   publisher: BTicino
