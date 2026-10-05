@@ -5801,6 +5801,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00138ag-u-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00138AG_U_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00138AG_U_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 22345251
+  sha256: 120432acbee20dd377b4e334dd1b0efe89be25543e5fb0b630bc5a76286d5ecd
+  source_url: https://dar.bticino.it/asset/Documents/RA00138AG_U_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/12/04/120432acbee20dd377b4e334dd1b0efe89be25543e5fb0b630bc5a76286d5ecd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/12/04/120432acbee20dd377b4e334dd1b0efe89be25543e5fb0b630bc5a76286d5ecd.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00162ae-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
