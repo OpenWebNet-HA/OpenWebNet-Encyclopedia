@@ -10214,6 +10214,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002701-rev2-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002701-REV2-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002701-REV2-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 218474
+  sha256: 78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00002701-REV2-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00002703-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
