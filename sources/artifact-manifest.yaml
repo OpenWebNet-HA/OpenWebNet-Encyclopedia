@@ -4121,6 +4121,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le06433aa-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE06433AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE06433AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 335610
+  sha256: 742573bc3915ad251a7abf01c81e8c01dba2b390f1553993c555ae8e0f4110c1
+  source_url: https://dar.bticino.it/asset/Documents/LE06433AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/74/25/742573bc3915ad251a7abf01c81e8c01dba2b390f1553993c555ae8e0f4110c1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/74/25/742573bc3915ad251a7abf01c81e8c01dba2b390f1553993c555ae8e0f4110c1.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le06852ac-20261005
   kind: documentation
   publisher: BTicino / Legrand
