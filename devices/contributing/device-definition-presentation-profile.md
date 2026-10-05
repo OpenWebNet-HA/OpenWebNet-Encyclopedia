@@ -193,6 +193,34 @@ Link canonical implementation sources, archived Device documents, observations, 
 
 When rows depend on materially different evidence classes, revisions, or applicability scopes, keep that distinction visible at row level through an Evidence, Source, Status, or Applicability column where useful. Do not mechanically add such a column when one source and scope unambiguously govern the entire table.
 
+## Review gate and state transition
+
+`review-ready` means that a Device definition exists and is ready for an explicit semantic review. It does not mean that the definition has already been accepted. `reviewed` means that the current evidence and presentation have been checked against the following gate and that any remaining evidence limits are represented accurately.
+
+The machine-readable copy of this gate lives in `devices/work-queue.yaml` under `review_policy`, with per-item results under `review.review_gate`. The gate uses only `pending` and `complete`; a check is `complete` only when the reviewer has actually performed it.
+
+| Gate check | Completion criterion |
+| --- | --- |
+| `identity_scope` | Confirm that the technical-item cluster, commercial references, aliases, variants, and Device boundary are correct. Catch accidental over-grouping, splitting, or identity conflation. |
+| `claim_evidence` | Check every material Device-specific claim against retained evidence. Direct evidence, observation, and inference remain distinguishable; unsupported plausible-sounding behavior is removed or bounded explicitly. |
+| `source_reconciliation` | Account for every known applicable source revision and reconcile agreements, differences, conflicts, terminology, and coverage gaps. Unresolved conflicts remain visible rather than being silently normalized. |
+| `information_architecture` | Confirm that the page follows the canonical section architecture where evidence supports it, keeps enumerable facts structured, keeps interpretation in prose, and does not turn raw database machinery into the reader-facing model. |
+| `reader_usefulness` | Confirm that the page explains what the Device is, what it does, its meaningful configuration/programming consequences, relevant protocol implications, and important quirks instead of merely restating catalogue fields. |
+| `evidence_limits` | Confirm that missing revisions, undocumented variants, inference boundaries, absent hardware/runtime corroboration, and open experiments are concrete and accurately scoped. Evidence gaps may remain; hidden uncertainty may not. |
+| `presentation` | Check the page against this profile, the Device Page Template, and the Encyclopedia Style Guide. Remove avoidable repetition, prose-heavy fact inventories, raw-data dumps, awkward ordering, and inconsistent terminology or links. |
+| `validation` | Regenerate/check derived Device artifacts, run the Device validation/test suite, inspect the Device diff, and require the repository checks relevant to the change to pass. Automated validation supplements rather than replaces the semantic review. |
+
+The transition rule is:
+
+1. Start from `state: review-ready` with one or more gate checks `pending`.
+2. Mark each gate check `complete` only after its criterion has been reviewed.
+3. Set `review.final_review: complete` only when all eight gate checks are `complete`. The queue validator rejects `final_review: complete` with an incomplete gate.
+4. Move the item to `state: reviewed` only after `final_review` is complete. The queue validator rejects a reviewed item with any incomplete gate.
+
+`review.hardware_corroboration` is deliberately **not** a blocking gate. A Device may be reviewed with hardware corroboration `pending`, `partial`, or `not-applicable` when the absence and its consequences are represented truthfully. Likewise, review does not assert that no future evidence can exist; it asserts that the currently available evidence has been processed correctly and that remaining limits are explicit.
+
+If later material evidence changes the Device's identity, claims, reconciliation, evidence limits, or presentation, move the item back to `review-ready` and reset every affected gate check to `pending` before accepting it again.
+
 ## Completeness and review
 
 A Device definition is not presentation-complete merely because all known facts occur somewhere on the page. Presentation completeness requires those facts to use the information architecture defined here, with structured fact inventories kept structured and explanatory material kept explanatory.
