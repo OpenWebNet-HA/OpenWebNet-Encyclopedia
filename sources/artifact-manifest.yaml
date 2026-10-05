@@ -3666,6 +3666,26 @@ artifacts:
   language_evidence: English text inspected in the retained multilingual original; additional languages present but not exhaustively enumerated
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-guide-controle-dacces-vigik-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: guide_controle_dacces_vigik manufacturer device documentation
+  media_type: application/pdf
+  filename: guide_controle_dacces_vigik.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 14121445
+  sha256: 21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563
+  source_url: https://assets.legrand.com/general/mediagrp/np-ft-gt/guide_controle_dacces_vigik.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/21/f1/21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/21/f1/21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-h4648-ean-export-20261005
   kind: documentation
   publisher: BTicino
