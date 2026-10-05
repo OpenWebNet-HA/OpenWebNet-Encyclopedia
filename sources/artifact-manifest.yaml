@@ -5641,6 +5641,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-livinglight-historical-catalogue-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: livinglight-historical-catalogue manufacturer device documentation
+  media_type: application/pdf
+  filename: livinglight-historical-catalogue.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 16632723
+  sha256: db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414
+  source_url: https://www.bticino.es/pdf/livinglight.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/db/75/db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/db/75/db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ln4648-ean-export-20261005
   kind: documentation
   publisher: BTicino
