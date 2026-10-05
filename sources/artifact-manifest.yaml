@@ -9672,6 +9672,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u2132f-u-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U2132F_U_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: U2132F_U_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 4438870
+  sha256: c9d072a0fccf2022ad1983f73adf85dda50175464b9e17a81a0dc5aa8906a721
+  source_url: https://dar.bticino.it/asset/Documents/U2132F_U_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c9/d0/c9d072a0fccf2022ad1983f73adf85dda50175464b9e17a81a0dc5aa8906a721.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c9/d0/c9d072a0fccf2022ad1983f73adf85dda50175464b9e17a81a0dc5aa8906a721.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u2701d-20261005
   kind: documentation
   publisher: BTicino / Legrand
