@@ -6870,6 +6870,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-o1224e-i-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O1224E_I_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: O1224E_I_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 11571983
+  sha256: 14360ab68ff7d3f4ec3669890ece291e0e6d683026d8bfd15e3c40ade2e9d2e2
+  source_url: https://dar.bticino.it/asset/Documents/O1224E_I_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/14/36/14360ab68ff7d3f4ec3669890ece291e0e6d683026d8bfd15e3c40ade2e9d2e2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/14/36/14360ab68ff7d3f4ec3669890ece291e0e6d683026d8bfd15e3c40ade2e9d2e2.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1224e-s-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
