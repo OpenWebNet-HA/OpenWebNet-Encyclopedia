@@ -6230,6 +6230,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-o1224e-s-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O1224E_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: O1224E_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 10030862
+  sha256: f3922fddcdaef45210ce19bbb8131133598fc10fff13fc688d25807c8dd0980b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O1224E_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f3/92/f3922fddcdaef45210ce19bbb8131133598fc10fff13fc688d25807c8dd0980b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f3/92/f3922fddcdaef45210ce19bbb8131133598fc10fff13fc688d25807c8dd0980b.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1866b-20261004
   kind: documentation
   publisher: BTicino / Legrand
