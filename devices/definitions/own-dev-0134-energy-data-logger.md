@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN energy data logger collects readings from up to ten electricity, water, gas or heat lines through compatible meters and pulse interfaces. Ethernet access, detailed electrical recording, export and microSD backup support consumption review over time.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0134` | Project identity |

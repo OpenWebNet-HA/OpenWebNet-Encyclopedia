@@ -2,6 +2,8 @@
 
 ## Summary
 
+The BMNE500 is a DIN-mounted Light Manager for lighting supervision, scheduling and scenarios. Its Ethernet interface and Open/SCS gateway functions connect the configured lighting system to software-based management and integration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0033` | Project identity |

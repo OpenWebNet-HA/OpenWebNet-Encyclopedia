@@ -2,6 +2,8 @@
 
 ## Summary
 
+The 4674 is a flush-mounted SCS controller for a slave-dimmer arrangement. Its local buttons switch and regulate lighting through up to three compatible slave dimmers, which provide the associated load-handling stage.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0027` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch colour screen and an answering-machine function. Its configurable on-screen icons provide access to the installed communication and MyHOME functions, with exact memory capacity still uncorroborated.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0129` | Project identity |

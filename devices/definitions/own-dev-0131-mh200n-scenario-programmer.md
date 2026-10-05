@@ -2,6 +2,8 @@
 
 ## Summary
 
+The MH200N is a DIN scenario programmer and OpenWebNet/SCS gateway for coordinated MyHOME actions. It stores up to 300 simple or advanced scenarios and provides Ethernet and bus connections for the configured scenario and integration functions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0131` | Project identity |

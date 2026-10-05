@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module device combines two zero-crossing relay outputs with four front buttons and status LEDs. It can control one shutter or one or two lighting loads, with configurations that also reserve buttons for remote actuators or scenarios.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact SCS relay actuator switches a configured lighting or other documented load. Its basic-module format allows installation in a flush box, junction box, shutter box or trunking, with load-specific limits governing the relay output.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0059` | Project identity |

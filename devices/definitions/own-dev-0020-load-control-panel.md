@@ -2,6 +2,8 @@
 
 ## Summary
 
+This load-control panel displays the status of managed loads and lets the user temporarily re-enable a load that the system has disconnected. Four buttons with red indicators provide access to the panel's four configured positions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0020` | Project identity |

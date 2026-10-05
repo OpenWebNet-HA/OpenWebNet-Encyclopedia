@@ -2,6 +2,8 @@
 
 ## Summary
 
+This three-module Light Now control operates configured lights, dimmers, shutters or scenarios. Its published capacity covers six lighting functions, three shutters or six scenario activations, with selectable key covers and adjustable status LEDs for the chosen arrangement.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0119` | Project identity |

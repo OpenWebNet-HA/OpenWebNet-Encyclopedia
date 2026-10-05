@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module MYHOME unified control provides configurable commands for lighting, shutters, scenarios and other supported system functions. Its catalogue-established roles allow one technical control family to serve several purposes, while the exact physical controls and electrical specifications remain documentation gaps.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0110` | Project identity |

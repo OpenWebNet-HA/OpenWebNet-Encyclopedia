@@ -2,6 +2,8 @@
 
 ## Summary
 
+This radio receiver converts compatible 868 MHz wireless controls into SCS bus actions. Configured functions include sound-system switching, volume and source selection, with other roles determined by the selected operating mode.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0029` | Project identity |

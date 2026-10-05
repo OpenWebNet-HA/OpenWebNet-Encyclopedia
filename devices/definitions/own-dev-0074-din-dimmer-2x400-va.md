@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN dimmer provides two independently addressable lighting channels for documented resistive and transformer loads. It combines separate channel control with Lighting Management procedures or MyHOME physical and software configuration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0074` | Project identity |

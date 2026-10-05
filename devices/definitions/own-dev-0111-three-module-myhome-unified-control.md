@@ -2,6 +2,8 @@
 
 ## Summary
 
+This three-module MYHOME unified control provides configurable lighting, automation, scenario and other system commands. Its catalogue-defined command positions can serve different functions, while the exact button layout and physical specifications still require product documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0111` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This one-module DIN load-management actuator switches a configured load through a bistable relay. Priority settings determine its place in the load-control system, and a local override can temporarily restore a shed load for four hours.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0123` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This one-module, flush-mounted interface brings two traditional dry-contact controls onto the SCS bus. Its two input units can operate independently or work together as a paired command for a motorized load.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0071` | Project identity |

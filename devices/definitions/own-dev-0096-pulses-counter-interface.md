@@ -2,6 +2,8 @@
 
 ## Summary
 
+This pulse-counter interface brings readings from compatible pulse-output meters into the energy-management system. It calculates instantaneous values and maintains counters and history, with system date and time required for historical archiving.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0096` | Project identity |

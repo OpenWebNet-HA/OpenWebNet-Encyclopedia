@@ -2,6 +2,8 @@
 
 ## Summary
 
+This three-module SCS wall control has six capacitive buttons for configured lighting, automation, scenarios, sound or door-entry functions. Adjustable LED feedback and a temporary cleaning inhibit make its touch interface easier to use and maintain.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0019` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact SCS wall control has four capacitive touch zones with adjustable blue LED feedback. Its configurable and self-learning functions cover lighting, shutters, scenarios, sound and selected door-entry actions, allowing individual touch zones to serve different purposes.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

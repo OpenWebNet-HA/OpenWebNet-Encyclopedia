@@ -2,6 +2,8 @@
 
 ## Summary
 
+This temperature-control central unit supervises and programmes a system of up to 99 zones. It provides central operating-mode control and zone management, bringing a larger heating and cooling installation under one control point.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0042` | Project identity |

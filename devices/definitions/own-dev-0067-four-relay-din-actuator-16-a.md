@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN-mounted actuator switches four independent lighting loads in a Lighting Management or MyHOME installation. Its RJ45 bus connection and four relay outputs provide multi-channel control; the publisher excludes interlocked shutter-motor operation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0067` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This outside-door unit combines an RFID room-access reader with Do Not Disturb, Make Up Room and presence indications. It recognizes documented Mifare cards and can operate a configured bell or door-release arrangement, with access-management functions dependent on the installed hotel system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0106` | Project identity |

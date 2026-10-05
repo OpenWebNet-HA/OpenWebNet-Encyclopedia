@@ -2,6 +2,8 @@
 
 ## Summary
 
+This ceiling-mounted bus sensor uses ultrasonic detection to sense presence around the installation point. It includes an infrared port for configuration, with adjustable light threshold and switching delay for the configured lighting-control role.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0053` | Project identity |

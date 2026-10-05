@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module thermostat combines a temperature probe, display and four keys for local room control. It can serve a residential or hotel installation, with heating, cooling, fan-coil and rear-contact functions available according to the configured role.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0046` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Room Controller switches one physical lighting output and integrates local sensors and controls over the bus. It provides a room-level lighting-control point; its separate controller role does not add a second load output.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0082` | Project identity |

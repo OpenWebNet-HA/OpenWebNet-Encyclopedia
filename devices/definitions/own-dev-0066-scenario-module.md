@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN scenario module stores up to 16 scenarios, each containing up to 100 controls. Associated wall controls recall the stored actions, while front-panel functions manage the programming lock and erase operations.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0066` | Project identity |

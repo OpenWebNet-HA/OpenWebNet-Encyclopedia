@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted load-management actuator switches a configured load through a bistable relay in a two-module wall-device format. It combines priority-based load control with a local temporary override and retains its relay state when the SCS supply is lost.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0124` | Project identity |

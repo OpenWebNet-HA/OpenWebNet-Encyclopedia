@@ -2,6 +2,8 @@
 
 ## Summary
 
+Polyx Alarm is a burglar-alarm control unit whose catalogue role covers a four-zone alarm system. It provides the system's central alarm-control endpoint; detailed local controls, construction and operating procedures remain undocumented in the retained product sources.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0086` | Project identity |

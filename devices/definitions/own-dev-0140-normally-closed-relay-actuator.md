@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN SCS actuator switches a load through a normally closed, two-way relay. Its distinctive bus-loss behaviour keeps the contact closed and the load on, with a local button and configured group assignments providing additional control.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0140` | Project identity |

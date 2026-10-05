@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Living Now wall thermostat combines a temperature display with local heating, cooling and fan controls. It supports configured residential or hotel temperature management, with enabled operating modes and remote adjustments determined by the installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0109` | Project identity |

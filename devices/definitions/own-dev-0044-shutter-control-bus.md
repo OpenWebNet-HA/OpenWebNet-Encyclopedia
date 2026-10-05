@@ -2,6 +2,8 @@
 
 ## Summary
 
+This dedicated SCS shutter control sends movement and preset commands to a separate shutter actuator. Reference-actuator synchronization lets its controls follow the configured shutter, including advanced preset-position operation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0044` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN stereo-source control connects an external stereo source to the sound-system installation. Its audio connections and infrared transmitter arrangement provide the documented source interface and remote-control path.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0100` | Project identity |

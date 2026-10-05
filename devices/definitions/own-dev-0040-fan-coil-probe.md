@@ -2,6 +2,8 @@
 
 ## Summary
 
+This room-temperature probe is designed for fan-coil zones, with local setpoint adjustment and operating-mode selection. It also lets the user choose automatic or manual fan speed, including minimum, medium and maximum settings.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0040` | Project identity |

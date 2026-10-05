@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted sensor combines passive infrared and ultrasonic presence detection with ambient-light measurement. It supports configured lighting automation and includes a front on/off button for local operation.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

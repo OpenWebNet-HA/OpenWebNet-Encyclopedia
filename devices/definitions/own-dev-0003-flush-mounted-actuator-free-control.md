@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted device combines two relay outputs with local controls and commands for other SCS actuators. Configuration lets it operate two lighting circuits or an interlocked motor load, while the available rocker packages adapt the front controls to the intended use.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

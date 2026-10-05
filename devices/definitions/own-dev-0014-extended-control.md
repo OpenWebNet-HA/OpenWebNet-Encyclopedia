@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module extended SCS control sends configured lighting, automation, scenario or sound commands. Its installation-level selectors allow commands to target the local bus, logically expanded sections or the main riser, making it useful in installations with several bus domains.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0014` | Project identity |

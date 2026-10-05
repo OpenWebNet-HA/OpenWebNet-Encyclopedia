@@ -2,6 +2,8 @@
 
 ## Summary
 
+This four-output Fil Pilote actuator sends pilot-wire operating signals to compatible heating devices. Each output can serve up to ten documented receivers within its signal-current limit, with local buttons toggling between comfort operation and off.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0133` | Project identity |

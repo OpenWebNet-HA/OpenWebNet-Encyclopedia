@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module DIN actuator provides four independent relay outputs for configured lighting loads. Relay pairs can be logically interlocked for motor or shutter use, with local controls and indicators for manual operation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0023` | Project identity |

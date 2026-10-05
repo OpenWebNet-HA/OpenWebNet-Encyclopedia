@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN contact interface converts two conventional dry-contact inputs into SCS commands. The inputs can control independent loads, form a paired command for a motorized load or trigger scenarios, depending on configuration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0070` | Project identity |

@@ -47,7 +47,9 @@ The architecture is stable, but content is evidence-driven. Do not invent data t
 
 ## Summary
 
-Use `Field | Value | Evidence`. Summarize technical identity and capability without reproducing the dossier. Typical rows include Device ID, technical description, commercial identities, catalogue item, main system, `modobj`, firmware definition, declared Modules, and categories. Follow with short explanatory prose when useful.
+Begin every Device Summary with a short prose introduction **before the table**. In two or three sentences, explain what the Device is, what it does, and the supported feature or use that distinguishes it. Prefer concrete product language over catalogue or protocol machinery. Keep configuration dependencies and material evidence limits visible; a catalogue-established role may be described as such when product documentation is incomplete. Do not infer physical construction, ratings or runtime support from reusable Object names.
+
+Follow the introduction with `Field | Value | Evidence`. Summarize technical identity and capability without reproducing the dossier. Typical rows include Device ID, technical description, commercial identities, catalogue item, main system, `modobj`, firmware definition, declared Modules, and categories. Additional prose after the table may explain identity or applicability when useful, but does not replace the introductory paragraph.
 
 ## Commercial identities
 

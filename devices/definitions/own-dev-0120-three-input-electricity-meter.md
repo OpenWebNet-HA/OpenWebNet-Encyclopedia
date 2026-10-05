@@ -2,6 +2,8 @@
 
 ## Summary
 
+This one-module DIN electricity meter measures instantaneous power and accumulated energy through three separate toroid inputs. It also stores hourly, daily and monthly consumption history, allowing several measured circuits to be monitored by the energy-management system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0120` | Project identity |

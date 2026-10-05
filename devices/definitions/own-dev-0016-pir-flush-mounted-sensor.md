@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted sensor combines passive infrared presence detection with ambient-light measurement for configured lighting control. Local operation and adjustable sensing behaviour allow it to fit the room's occupancy and daylight requirements.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0016` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module wall control provides four buttons for recalling or programming configured scenarios. Depending on the installation, it works with a scenario module or a scenario programmer to coordinate several actions from one button press.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0011` | Project identity |

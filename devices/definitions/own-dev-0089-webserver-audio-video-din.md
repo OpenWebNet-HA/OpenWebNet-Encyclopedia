@@ -2,6 +2,8 @@
 
 ## Summary
 
+The F453AV is a DIN audio/video web server and OpenWebNet/SCS gateway for remote system supervision. Publisher documentation places it in multi-channel sound installations, bringing audio/video supervision and integration into an Ethernet-connected device.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0089` | Project identity |

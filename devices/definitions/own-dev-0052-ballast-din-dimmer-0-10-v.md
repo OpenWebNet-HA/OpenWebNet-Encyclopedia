@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN-mounted lighting dimmer controls compatible 0-10 V or 1-10 V ballast loads. It provides one controlled channel, local actuation and physical or software configuration for integration into the SCS lighting system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0052` | Project identity |

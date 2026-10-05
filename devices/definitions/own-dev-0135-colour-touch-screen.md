@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted colour touchscreen brings configured lighting, automation, scenarios, temperature, sound and other MyHOME functions into one interface. Its backlit screen uses programmable icons, with TiDisplay Color software defining the controls and graphical layout.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0135` | Project identity |

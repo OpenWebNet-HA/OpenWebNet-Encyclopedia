@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Living Now LIGHT digital control operates one or two configured lighting functions from an electrified support frame. Its central or top/bottom actuation and blue status indication provide a compact local lighting interface.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0114` | Project identity |

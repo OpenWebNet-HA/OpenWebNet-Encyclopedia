@@ -2,6 +2,8 @@
 
 ## Summary
 
+Stop&Go Plus is the separately catalogued Plus member of the Stop&Go protection-control family, integrated through MyHOME energy management. Its exact additional functions and recovery sequence remain undocumented here, so the family role does not establish every variant-specific operation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0093` | Project identity |

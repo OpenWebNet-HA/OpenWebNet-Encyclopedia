@@ -2,6 +2,8 @@
 
 ## Summary
 
+This zone temperature probe measures room temperature and provides local adjustment around the central setpoint. Its controls also select normal regulation, antifreeze or off, giving the user limited local control within the configured temperature system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0038` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module, four-button SCS control supports a broad choice of functions, including lighting, shutters, scenarios, sound and door-entry commands. Its special-function configuration allows the same control hardware to serve different roles within the installation.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

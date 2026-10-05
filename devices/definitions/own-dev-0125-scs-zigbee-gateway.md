@@ -2,6 +2,8 @@
 
 ## Summary
 
+This gateway links the SCS and ZigBee sides of the automation system, as established by its manufacturer catalogue role. Exact radio compatibility, commissioning procedures and physical specifications remain documentation gaps for the established product references.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0125` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This inside-room control lets a hotel guest select Do Not Disturb or Make Up Room notifications for the corresponding outside-door indicator. Local LED feedback and adjustable illumination make the selected room request visible at the control.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0104` | Project identity |

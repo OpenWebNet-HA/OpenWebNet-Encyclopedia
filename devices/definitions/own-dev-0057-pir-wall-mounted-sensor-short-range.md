@@ -2,6 +2,8 @@
 
 ## Summary
 
+This wall or ceiling sensor combines passive infrared and daylight sensing for configured lighting control. Its documented narrow-beam detection pattern distinguishes its coverage, while configuration determines the presence, daylight or scenario role used by the system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0057` | Project identity |

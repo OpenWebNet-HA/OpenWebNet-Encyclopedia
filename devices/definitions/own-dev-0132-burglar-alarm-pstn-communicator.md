@@ -2,6 +2,8 @@
 
 ## Summary
 
+This burglar-alarm central unit combines intrusion-system management with a fixed-line telephone communicator. Its documented zone organization includes intrusion and technical alarms, with 16 partition scenarios and published OPEN-SCS functions for system interaction.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0132` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This daylight sensor measures ambient light for a Room Controller through an RJ45 connection. Its configured role supports daylight sensing and lighting regulation; occupancy detection is not established for this device.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0062` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This PIR sensor combines movement and daylight sensing for configured lighting control. Its IP55 enclosure supports the documented wall or ceiling installation, with broad 270-degree coverage and adjustable daylight and delay settings.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0084` | Project identity |

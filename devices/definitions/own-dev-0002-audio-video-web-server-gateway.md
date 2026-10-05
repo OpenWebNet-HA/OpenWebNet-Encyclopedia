@@ -2,6 +2,8 @@
 
 ## Summary
 
+The F454 is a MyHOME audio/video web server and OpenWebNet gateway. It brings configured home controls and video-door-entry functions into a web interface, with Ethernet access and separate SCS connections for automation and audio/video systems.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

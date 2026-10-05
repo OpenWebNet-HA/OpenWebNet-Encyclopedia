@@ -2,6 +2,8 @@
 
 ## Summary
 
+This room controller provides four DALI lighting channels and local SCS connections for sensors and controls. It supports room-level lighting integration in a false ceiling or suitable cable tray; the documented ballast capacity differs between sources and is reconciled below.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0128` | Project identity |

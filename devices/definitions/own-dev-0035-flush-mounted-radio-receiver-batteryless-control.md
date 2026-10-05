@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted receiver brings compatible batteryless radio controls into an SCS installation. Paired controls can operate configured lighting, automation or scenarios, providing wireless command points through the receiver's bus connection.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0035` | Project identity |

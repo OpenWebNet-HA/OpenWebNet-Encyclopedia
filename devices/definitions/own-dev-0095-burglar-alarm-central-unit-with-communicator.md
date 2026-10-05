@@ -2,6 +2,8 @@
 
 ## Summary
 
+This burglar-alarm central unit combines central alarm control with a fixed-line telephone communicator, as established by its catalogue role. Detailed zone limits, telephone workflows and local controls still require exact-product documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0095` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+The F453 Enhanced Webserver provides a network-facing supervision and OpenWebNet/SCS gateway role for MyHOME. Its documented sound-system compatibility establishes one integration context; the complete product-level control and multimedia feature set still needs exact documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0090` | Project identity |

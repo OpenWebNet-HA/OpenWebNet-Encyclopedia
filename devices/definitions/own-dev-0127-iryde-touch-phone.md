@@ -2,6 +2,8 @@
 
 ## Summary
 
+Iryde Touch Phone combines telephone and two-wire video-door-entry functions in a device with a handset and 4.3-inch touchscreen. PSTN/PABX and SCS connections bring both communication systems to the unit, with hands-free operation and dedicated entry-function keys.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0127` | Project identity |

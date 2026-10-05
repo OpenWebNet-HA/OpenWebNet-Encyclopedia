@@ -2,6 +2,8 @@
 
 ## Summary
 
+This basic-module contact interface integrates two traditional switches, pushbuttons or dry-contact inputs into an SCS installation. Its compact format is intended for installation behind conventional controls, with the emitted commands determined by configuration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0072` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This burglar-alarm central unit combines alarm-system control with fixed-line and GSM communication. The documented GSM function requires a separately supplied SIM card, giving the installation a mobile-network communication path alongside the fixed line.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0087` | Project identity |

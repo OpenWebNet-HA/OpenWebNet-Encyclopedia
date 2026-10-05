@@ -2,6 +2,8 @@
 
 ## Summary
 
+This MYHOME device combines a shutter-actuator role with configurable commands for lighting, automation and scenarios. Its catalogue identity and combined purpose are established, while the motor ratings, wiring and physical control arrangement still require exact-product documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0113` | Project identity |

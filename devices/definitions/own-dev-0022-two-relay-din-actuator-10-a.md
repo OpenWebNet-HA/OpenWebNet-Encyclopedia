@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact DIN actuator has two relays for switching lighting loads over the SCS bus. The pair can also be configured with logical interlocking for a shutter motor, and manual controls with LEDs provide local operation and feedback.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0022` | Project identity |

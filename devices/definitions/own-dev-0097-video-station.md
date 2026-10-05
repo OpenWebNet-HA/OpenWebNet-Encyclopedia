@@ -2,6 +2,8 @@
 
 ## Summary
 
+Video Station is a video-door-entry indoor unit with a display and local controls for configured entry and communication functions. USB project programming customizes its interface, while the documented multimedia arrangement requires an additional local supply.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0097` | Project identity |

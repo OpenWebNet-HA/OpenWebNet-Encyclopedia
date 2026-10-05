@@ -2,6 +2,8 @@
 
 ## Summary
 
+This RFID key-card switch uses card recognition to trigger configured scenario or group-control actions. Its 13.56 MHz reader adds an identified-card input to the card-slot workflow, with insertion and removal actions set during programming.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0039` | Project identity |

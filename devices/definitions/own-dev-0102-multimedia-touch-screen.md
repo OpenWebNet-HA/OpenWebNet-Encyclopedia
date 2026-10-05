@@ -2,6 +2,8 @@
 
 ## Summary
 
+This 10-inch multimedia touchscreen combines configured MyHOME controls with video door entry. Its programmed interface brings lighting, shutters, scenarios and other supported home functions onto one wall screen, with separate supply and multimedia connections documented for the installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0102` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+The MH200 is a programmable scenario controller that coordinates MyHOME actions in response to times or events. Projects created with TiMH200 are transferred over Ethernet and can address automation devices across documented SCS/SCS-separated installations.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0080` | Project identity |

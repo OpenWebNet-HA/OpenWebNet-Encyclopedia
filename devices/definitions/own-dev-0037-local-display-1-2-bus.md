@@ -2,6 +2,8 @@
 
 ## Summary
 
+Local Display 1.2 is a compact OLED touchscreen for configured MyHOME functions such as scenarios, temperature, sound, consumption and load management. Its software configuration can present one to four functions within a two-module wall device.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0037` | Project identity |

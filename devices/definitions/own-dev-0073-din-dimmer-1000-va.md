@@ -2,6 +2,8 @@
 
 ## Summary
 
+This single-channel DIN dimmer regulates documented resistive loads and ferromagnetic or electronic transformers. It supports both Lighting Management procedures and MyHOME physical or software configuration, allowing it to serve different SCS installation contexts.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0073` | Project identity |

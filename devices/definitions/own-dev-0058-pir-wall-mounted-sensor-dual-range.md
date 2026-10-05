@@ -2,6 +2,8 @@
 
 ## Summary
 
+This dual-range PIR sensor is intended for wall or ceiling installation in an SCS lighting-control system. Its catalogue supports configured presence and daylight roles; the exact detection pattern and other physical limits still need product-specific documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0058` | Project identity |

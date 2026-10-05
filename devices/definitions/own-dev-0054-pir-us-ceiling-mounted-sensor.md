@@ -2,6 +2,8 @@
 
 ## Summary
 
+This recessed ceiling sensor combines passive infrared and ultrasonic detection with daylight sensing. Its 360-degree detection and configurable presence, daylight or regulation roles support automated lighting from one bus-powered ceiling device.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0054` | Project identity |

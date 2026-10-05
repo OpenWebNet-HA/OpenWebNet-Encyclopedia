@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Room Controller provides four independent 1-10 V dimming outputs for compatible lighting loads. Four local SCS inputs connect room sensors and controls, while a separate trunk connection links the controller to the wider installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0075` | Project identity |

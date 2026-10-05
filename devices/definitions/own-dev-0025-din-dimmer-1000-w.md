@@ -2,6 +2,8 @@
 
 ## Summary
 
+This single-output DIN dimmer regulates documented resistive loads and ferromagnetic transformers. A short local button press switches the load and a sustained press adjusts brightness; its service features include a replaceable fuse and load-fault reporting.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0025` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+Stop&Go is a circuit-protection control and motor kit catalogued for MyHOME energy management. Its family provides protection-state supervision and automatic-reset control; the device-specific operating sequence and accepted runtime commands still require corroboration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0091` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module wall control uses four buttons to operate configured lights, dimmers, shutters or scenarios over the SCS bus. Its two-colour indicators provide feedback, with locally adjustable LED brightness.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

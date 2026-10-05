@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Living Now FULL digital control uses three capacitive touch areas with configurable LED icons. Its selected functions can include lighting, shutters, scenarios, load control or compatible audio playback, and a proximity sensor reveals the configured icons as the user approaches.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0115` | Project identity |

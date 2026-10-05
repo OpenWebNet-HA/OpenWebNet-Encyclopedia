@@ -2,6 +2,8 @@
 
 ## Summary
 
+This historical touch control sends configured lighting, automation or scheduled-scenario commands over SCS. Its catalogue includes a separate user-interface configuration role; the exact touch layout and physical specifications require documentation for this older product identity.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0094` | Project identity |

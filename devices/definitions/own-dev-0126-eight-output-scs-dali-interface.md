@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN interface brings SCS lighting control to eight independent DALI outputs. Each output supports up to 16 documented ballasts, allowing several DALI lighting groups to be controlled through one bus-connected device.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0126` | Project identity |

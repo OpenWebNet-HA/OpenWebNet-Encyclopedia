@@ -2,6 +2,8 @@
 
 ## Summary
 
+This outside-door indicator displays Do Not Disturb, Make Up Room and configured room-presence information. Its front bell button is disabled while Do Not Disturb is active, combining staff-facing status with a local call function.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0105` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN dimming interface controls four lighting channels through 1-10 V outputs. Its SCS connection brings compatible ballast-controlled loads into the lighting system, providing four channels within one centralized interface.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0130` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This four-channel infrared receiver translates commands from compatible handheld remotes into SCS actions. Each configured channel can serve lighting, automation, scenarios or other documented system functions, bringing remote operation to otherwise wired controls.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0012` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact, one-module SCS actuator switches a load through a single relay. It fits junction boxes, shutter boxes, trunking or modular boxes and includes a local micro-pushbutton and indicator for operation and checking.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0068` | Project identity |

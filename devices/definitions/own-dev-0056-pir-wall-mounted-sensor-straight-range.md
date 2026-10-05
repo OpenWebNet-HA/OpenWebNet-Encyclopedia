@@ -2,6 +2,8 @@
 
 ## Summary
 
+This wall or ceiling sensor combines passive infrared detection with daylight measurement for SCS lighting automation. The documented wide-band detection pattern, adjustable light sensitivity and physical or software configuration help adapt it to the installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0056` | Project identity |

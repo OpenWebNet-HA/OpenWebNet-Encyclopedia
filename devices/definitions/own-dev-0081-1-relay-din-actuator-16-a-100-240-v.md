@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN-mounted SCS actuator switches one lighting load through a relay. It occupies four DIN modules in the retained publisher documentation; its catalogue load class is complemented by source-specific limits rather than a universal rating for every load type.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0081` | Project identity |

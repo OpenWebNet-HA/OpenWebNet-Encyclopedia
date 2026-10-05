@@ -2,6 +2,8 @@
 
 ## Summary
 
+The F418U2 is a DIN-mounted, two-channel SCS dimmer for dimmable LED, compact fluorescent and other documented lamp types. Its channels can operate separately or in parallel for a larger load, and local pushbuttons provide direct control.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

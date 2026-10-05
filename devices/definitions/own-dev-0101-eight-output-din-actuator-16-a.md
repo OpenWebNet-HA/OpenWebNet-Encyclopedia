@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN actuator switches eight independent lighting channels through zero-crossing relay outputs. Each output has its own local control button, usable before configuration, making the device suitable for centralized control of several lighting circuits.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0101` | Project identity |

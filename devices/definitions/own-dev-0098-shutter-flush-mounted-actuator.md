@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted shutter actuator drives a motor using two interlocked relays. It combines SCS bus control with a two-module wall-device format, with the published motor-load limit applying to the documented shutter arrangement.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0098` | Project identity |

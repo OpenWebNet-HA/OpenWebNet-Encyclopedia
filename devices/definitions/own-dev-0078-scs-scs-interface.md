@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN SCS/SCS interface connects and separates two bus domains. Its configured roles include physical or logical expansion, system-to-system interfacing and riser separation, allowing larger installations to be organized into distinct sections.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0078` | Project identity |

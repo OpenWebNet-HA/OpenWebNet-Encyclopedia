@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted rotary SCS control combines a central pushbutton with a knob for adjustment. In the documented sound-system configuration, it switches the amplifier, adjusts volume and changes the selected radio station or track; the active function follows its configuration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0028` | Project identity |

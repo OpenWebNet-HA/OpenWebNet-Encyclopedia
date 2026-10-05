@@ -6,6 +6,8 @@
 
 ## Summary
 
+[Write two or three short sentences explaining what this Device is, what it does, and its supported distinguishing feature or use. Keep this introduction before the table. State configuration dependencies or material documentation limits where needed; use only evidence established in this dossier.]
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-xxxx` | Project identity |
@@ -18,7 +20,7 @@
 | Declared Modules | | |
 | Categories | | |
 
-Keep only supported rows. Add Device-specific identity rows when they materially improve identification. Follow with concise explanatory prose when useful.
+Keep only supported rows. Add Device-specific identity rows when they materially improve identification. Add explanatory identity or applicability notes after the table when useful; these do not replace the introduction above it.
 
 ## Commercial identities
 

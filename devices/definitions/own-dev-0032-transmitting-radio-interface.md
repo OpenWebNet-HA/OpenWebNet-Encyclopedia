@@ -2,6 +2,8 @@
 
 ## Summary
 
+This transmitting interface links configured SCS controls to compatible 868 MHz radio devices. It allows commands from the wired installation to reach the radio side, with the transmitted action determined by its configured role.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0032` | Project identity |

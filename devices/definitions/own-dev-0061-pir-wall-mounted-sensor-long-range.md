@@ -2,6 +2,8 @@
 
 ## Summary
 
+This long-range PIR sensor combines movement detection and daylight measurement for SCS lighting control. It supports wall or ceiling installation and an RJ45 connection, with adjustable sensitivity and timing for the configured sensing role.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0061` | Project identity |

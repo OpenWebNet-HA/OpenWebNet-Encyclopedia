@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN dimmer controls compatible lighting ballasts through a 1-10 V signal. It can serve up to four documented ballasts and includes a local pushbutton and status LED for direct operation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0030` | Project identity |

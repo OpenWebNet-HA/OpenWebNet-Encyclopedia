@@ -2,6 +2,8 @@
 
 ## Summary
 
+This recessed ceiling sensor combines 360-degree passive infrared detection with daylight sensing for configured lighting control. Its bus-powered design and ceiling installation provide a room-level sensing point, with presence, daylight and regulation roles selected through configuration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0051` | Project identity |

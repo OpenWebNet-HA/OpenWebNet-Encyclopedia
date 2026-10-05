@@ -2,6 +2,8 @@
 
 ## Summary
 
+This surface-mounted ceiling sensor uses passive infrared detection and ambient-light information for configured lighting automation. Its published coverage is approximately a six-metre diameter at the reference installation height, making mounting position part of the sensing design.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0031` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Room Controller switches two lighting outputs and provides local bus connections for sensors and controls. Its zero-crossing outputs can be controlled independently, allowing two lighting circuits to share one room-level controller within the documented combined load limit.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0064` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This three-module SCS wall control provides six pushbuttons for three independently configured loads or functions. Status LEDs give local feedback, while configuration determines how each pair of buttons operates its assigned target.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

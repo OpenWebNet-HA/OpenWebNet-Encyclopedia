@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN-mounted SCS lighting actuator switches one load through a changeover relay. A local pushbutton provides direct load control, while the supported current and power depend on the connected load type.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0021` | Project identity |

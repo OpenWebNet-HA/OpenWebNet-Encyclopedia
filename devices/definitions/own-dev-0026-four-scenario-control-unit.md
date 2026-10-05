@@ -2,6 +2,8 @@
 
 ## Summary
 
+This wall-mounted scenario control unit provides four buttons with indicator LEDs for recalling configured groups of actions. Its master/slave configuration determines how it participates in the installation's scenario system.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0026` | Project identity |

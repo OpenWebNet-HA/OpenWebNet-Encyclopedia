@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted SCS actuator switches a lighting load through one integrated relay. Upper and lower pushbuttons provide local operation, with an LED for feedback; the permissible load depends on the lamp or transformer type.
+
 
 | Field | Value | Evidence |
 | --- | --- | --- |

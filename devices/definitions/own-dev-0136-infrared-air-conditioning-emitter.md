@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact infrared emitter brings compatible air-conditioning units into the SCS control system. It can learn infrared commands or use the documented advanced control configuration, with a separate transmitter lead positioned to reach the air conditioner's receiver.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0136` | Project identity |

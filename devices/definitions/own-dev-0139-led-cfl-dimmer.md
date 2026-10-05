@@ -2,6 +2,8 @@
 
 ## Summary
 
+This single-channel DIN dimmer regulates documented dimmable LED, compact fluorescent and other compatible lighting loads. It provides local switching and brightness adjustment, with configurable load type and minimum level to suit the connected lamps.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0139` | Project identity |

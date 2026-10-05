@@ -2,6 +2,8 @@
 
 ## Summary
 
+This gateway connects SCS lighting control to DALI lighting devices through eight independently addressed outputs. Each output can serve up to 16 DALI devices; the publisher does not guarantee DALI-2 support.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0069` | Project identity |

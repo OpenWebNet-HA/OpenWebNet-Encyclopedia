@@ -2,6 +2,8 @@
 
 ## Summary
 
+This radio interface brings compatible wireless temperature probes into the SCS installation. It provides two configurable channel positions, whose selected modes can represent temperature sensing or lighting-sensor functions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0034` | Project identity |

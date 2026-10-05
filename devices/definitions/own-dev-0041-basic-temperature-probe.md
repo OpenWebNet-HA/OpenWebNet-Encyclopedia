@@ -2,6 +2,8 @@
 
 ## Summary
 
+This basic temperature probe provides room-temperature sensing for a configured zone in the SCS temperature-control system. Its heating and cooling role depends on the selected configuration; additional physical specifications remain undocumented in the retained sources.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0041` | Project identity |

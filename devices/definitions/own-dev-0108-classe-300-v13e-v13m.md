@@ -2,6 +2,8 @@
 
 ## Summary
 
+Classe 300 V13E/V13M is a hands-free video-door-entry indoor unit with a seven-inch colour touchscreen. It provides answering, door release, camera activation and configured intercom functions; additional features follow the selected variant and installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0108` | Project identity |

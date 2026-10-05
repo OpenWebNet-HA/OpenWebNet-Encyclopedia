@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Light Now device combines two independent lighting relays with local and configurable remote-control functions. It can switch one or two loads, while its front controls and status LEDs provide wall-level operation alongside SCS commands.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0118` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This four-module DIN actuator provides two relay outputs for configured SCS lighting control. Its two-output arrangement distinguishes it from the single-relay version, with electrical limits remaining specific to the documented load and product source.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0083` | Project identity |

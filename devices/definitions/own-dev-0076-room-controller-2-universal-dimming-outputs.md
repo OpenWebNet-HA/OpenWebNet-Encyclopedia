@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Room Controller provides two universal dimming outputs for configured lighting control. The catalogue establishes its two-channel role and aggregate load class; exact load compatibility, wiring and electrical limits still require the dedicated product documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0076` | Project identity |

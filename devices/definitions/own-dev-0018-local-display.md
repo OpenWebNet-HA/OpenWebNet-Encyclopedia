@@ -2,6 +2,8 @@
 
 ## Summary
 
+Local Display is a compact OLED touch interface for MyHOME. Its selected configuration assigns it to scenario control, sound diffusion or temperature regulation, so its displayed controls follow the role chosen for the installation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0018` | Project identity |

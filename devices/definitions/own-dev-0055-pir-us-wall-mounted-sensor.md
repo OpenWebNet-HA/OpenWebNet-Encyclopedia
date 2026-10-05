@@ -2,6 +2,8 @@
 
 ## Summary
 
+This surface-mounted presence sensor combines passive infrared, ultrasound and daylight sensing for configured lighting control. It supports wall installation, with adjustable light sensitivity and delay settings to suit the monitored space.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0055` | Project identity |

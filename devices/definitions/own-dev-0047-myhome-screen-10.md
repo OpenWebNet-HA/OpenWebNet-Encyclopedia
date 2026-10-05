@@ -2,6 +2,8 @@
 
 ## Summary
 
+MyHOME_Screen 10 is a wall-mounted, 10-inch touchscreen for configured home controls, video door entry and multimedia. It brings lighting, automation, temperature, scenarios, energy and sound into one programmed interface, with Ethernet, USB and SD content support.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0047` | Project identity |

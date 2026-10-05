@@ -2,6 +2,8 @@
 
 ## Summary
 
+This key-card switch turns card insertion and removal into configured SCS scenario or group-control actions. Its backlit slot accepts an ISO-format card, and separate insertion/removal programming allows arrival and departure to trigger different actions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0036` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module SCS control provides eight backlit keys for configured lighting, shutters, scenarios and other documented commands. Replaceable icons or labels identify the selected functions, allowing one compact wall control to present several distinct actions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0103` | Project identity |

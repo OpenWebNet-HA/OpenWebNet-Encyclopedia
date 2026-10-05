@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN gateway connects MyHOME OPEN functions with BACnet integration for configured heating, cooling and ventilation equipment. Its Ethernet connection and dedicated project software define the network identities and equipment mappings, with exact BACnet interoperability still requiring corroboration.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0138` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN load actuator combines a bistable switching relay with load-current measurement. It participates in priority-based load management and offers a local temporary override after shedding; the relay preserves its state if the SCS supply is lost.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0122` | Project identity |

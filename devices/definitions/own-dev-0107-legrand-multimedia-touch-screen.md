@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Legrand 10-inch multimedia touchscreen brings configured lighting, automation, scenarios, sound and video-door-entry functions into one wall interface. Its programmed menus and media connections support a shared control point, subject to the installed systems and the documented accessory limits.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0107` | Project identity |

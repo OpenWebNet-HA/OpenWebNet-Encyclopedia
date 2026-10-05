@@ -2,6 +2,8 @@
 
 ## Summary
 
+MyHOME_Screen 10 Capacitive is a 10-inch wall touchscreen for configured MyHOME, video-door-entry and multimedia functions. Its capacitive interface includes room navigation and profile customization, bringing the installation's selected controls into a personalized screen layout.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0049` | Project identity |

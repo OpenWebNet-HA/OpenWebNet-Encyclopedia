@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted alarm central unit manages a four-zone burglar-alarm installation. Its local contact input, internal relay and programmable automations allow configured alarm or system events to trigger associated actions, with stored events available for review.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0088` | Project identity |

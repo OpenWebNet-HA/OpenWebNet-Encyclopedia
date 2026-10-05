@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module special-functions control sends configured commands for lighting, automation, scenarios, door release or sound. Its selectable functions allow the same catalogue-established device to serve different control roles; exact physical specifications remain a documentation gap.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0043` | Project identity |

@@ -2,6 +2,8 @@
 
 ## Summary
 
+This occupancy sensor combines presence sensing with infrared and ZigBee interfaces, as established by its catalogue identity. The configuration selects its sensing role; detailed radio behaviour and physical specifications still need exact-product documentation.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0063` | Project identity |

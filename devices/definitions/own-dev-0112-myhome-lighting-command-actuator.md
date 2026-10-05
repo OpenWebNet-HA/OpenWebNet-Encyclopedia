@@ -2,6 +2,8 @@
 
 ## Summary
 
+This MYHOME device combines lighting-actuator functions with configurable commands for lighting, automation and scenarios. The catalogue establishes both switching and command roles; the actual relay arrangement, load limits and front-control layout remain undocumented in the retained exact-product sources.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0112` | Project identity |

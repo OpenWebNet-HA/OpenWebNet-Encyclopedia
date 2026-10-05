@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module energy display presents consumption information and provides control of configured load-management actuators. Its 1.6-inch screen gives the user a local view of energy use and a way to manage connected loads.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0048` | Project identity |

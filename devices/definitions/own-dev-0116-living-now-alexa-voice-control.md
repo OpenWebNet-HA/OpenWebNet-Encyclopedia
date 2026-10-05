@@ -2,6 +2,8 @@
 
 ## Summary
 
+This Living Now wall device combines an Alexa voice interface with two capacitive lighting keys. Microphones, a speaker and Wi-Fi support the configured voice service, while separate setup defines the local SCS touch functions and account connection.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0116` | Project identity |

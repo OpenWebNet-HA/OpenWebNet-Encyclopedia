@@ -2,6 +2,8 @@
 
 ## Summary
 
+MyHOME_Screen 3.5 is a wall touchscreen for controlling configured lighting, automation, temperature and scenarios. Its 3.5-inch display brings several MyHOME functions into one interface, programmed through dedicated PC software.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0015` | Project identity |

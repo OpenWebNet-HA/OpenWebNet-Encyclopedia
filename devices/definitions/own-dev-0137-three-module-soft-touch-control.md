@@ -2,6 +2,8 @@
 
 ## Summary
 
+This three-module Soft Touch control uses a capacitive sensitive area to send configured SCS commands. Brief proximity switches configured lights, while sustained proximity can regulate a point-to-point dimmer; its modes also provide scenario and other documented control functions.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0137` | Project identity |

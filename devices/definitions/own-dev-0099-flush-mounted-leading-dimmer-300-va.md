@@ -2,6 +2,8 @@
 
 ## Summary
 
+This flush-mounted leading-edge dimmer regulates documented resistive lighting or ferromagnetic-transformer loads. A brief local-button press switches the load and a sustained press changes brightness, alongside commands received over the SCS bus.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0099` | Project identity |

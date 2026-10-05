@@ -2,6 +2,8 @@
 
 ## Summary
 
+Video Display is a flush-mounted video-door-entry indoor unit with a 2.5-inch LCD and navigation keys. Alongside answering calls and operating entry functions, its configured menus can provide access to scenarios, sound, alarms and temperature control.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0013` | Project identity |

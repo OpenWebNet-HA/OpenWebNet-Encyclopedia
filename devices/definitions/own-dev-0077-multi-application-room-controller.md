@@ -2,6 +2,8 @@
 
 ## Summary
 
+This multi-application Room Controller provides four outputs with configurable lighting, blind or 1-10 V control roles. Its four local SCS inputs bring sensors and controls into the room-level installation, with output ratings determined by the selected application.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0077` | Project identity |

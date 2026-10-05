@@ -2,6 +2,8 @@
 
 ## Summary
 
+This SCS shutter actuator operates one motor channel and manages shutter position after endpoint acquisition. It supports calibrated position and preset operation, with configuration determining the addressing, operating mode and supported motor arrangement.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0045` | Project identity |

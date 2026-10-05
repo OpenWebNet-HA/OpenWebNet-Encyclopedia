@@ -2,6 +2,8 @@
 
 ## Summary
 
+Stop&Go Btest is the separately catalogued Btest member of the Stop&Go protection-control family, integrated through MyHOME energy management. The family supports supervision and reset control; the Btest variant's specific test and recovery behaviour remains a product-documentation gap.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0092` | Project identity |

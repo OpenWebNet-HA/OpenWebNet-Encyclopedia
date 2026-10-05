@@ -2,6 +2,8 @@
 
 ## Summary
 
+The 4695 is a temperature-control central unit for up to four zones, including its local zone. Its display provides heating and cooling management, with weekly programmes and manual, holiday or timed operating modes.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0017` | Project identity |

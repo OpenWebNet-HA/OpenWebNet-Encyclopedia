@@ -2,6 +2,8 @@
 
 ## Summary
 
+This compact SCS actuator combines one relay output with an input for a conventional normally open pushbutton. It brings bus control and a traditional local button to the same load, in a format suited to installation behind controls or in a junction box.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0060` | Project identity |

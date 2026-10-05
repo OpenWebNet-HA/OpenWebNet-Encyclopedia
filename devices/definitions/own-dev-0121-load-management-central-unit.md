@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN load-management central unit measures power and accumulated energy and coordinates configured load-control actuators. It supports up to 63 actuators per phase and stores consumption history, combining energy monitoring with central load management.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0121` | Project identity |

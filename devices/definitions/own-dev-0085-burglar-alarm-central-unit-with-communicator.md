@@ -2,6 +2,8 @@
 
 ## Summary
 
+The 3485 is a burglar-alarm central unit with a telephone communicator for alarm-system supervision. Retained publisher evidence documents bidirectional telephone interaction and Ademco Contact ID, while the precise zone and sensor limits remain product-specific documentation gaps.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0085` | Project identity |

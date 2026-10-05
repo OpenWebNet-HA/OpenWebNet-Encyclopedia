@@ -2,6 +2,8 @@
 
 ## Summary
 
+This DIN memory module records managed lighting-actuator states and restores them after a power interruption. It provides blackout recovery for the configured SCS system or power-supply domain, with separate guidance for logically expanded installations.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0065` | Project identity |

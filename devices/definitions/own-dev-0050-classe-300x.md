@@ -2,6 +2,8 @@
 
 ## Summary
 
+Classe 300X is a connected, hands-free video-door-entry indoor unit with a seven-inch touchscreen. Its SCS/2-wire connection handles the entry system, while documented Wi-Fi and app functions extend access through the configured network and service setup.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0050` | Project identity |

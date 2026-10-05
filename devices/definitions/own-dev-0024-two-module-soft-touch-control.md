@@ -2,6 +2,8 @@
 
 ## Summary
 
+This two-module Soft Touch control uses a capacitive surface to send configured SCS commands. It can serve lighting, automation, scenarios, sound or access functions, with adjustable LED indication at the wall control.
+
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0024` | Project identity |
