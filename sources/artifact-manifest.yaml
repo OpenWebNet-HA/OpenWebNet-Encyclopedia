@@ -1227,6 +1227,28 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-h4660m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4660M2
+  title: H4660M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4660M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 26514
+  sha256: 3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4660M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4672m2-ean-export-20261005
   kind: documentation
   publisher: BTicino
