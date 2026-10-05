@@ -1329,6 +1329,28 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-hs4654-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4654
+  title: HS4654 official product export with EAN
+  media_type: application/pdf
+  filename: HS4654-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 41963
+  sha256: fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hs4658-ean-export-20261005
   kind: documentation
   publisher: BTicino
