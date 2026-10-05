@@ -111,6 +111,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-067455-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: '067455'
+  title: 067455 official product record with EAN
+  media_type: text/html
+  filename: 067455-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 275674
+  sha256: 7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3
+  source_url: https://www.legrand.fr/pro/catalogue/sonde-avec-commande-pour-ventilo-convecteur-myhome-up-celiane
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7f/92/7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7f/92/7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-067457-ean-export-20261005
   kind: documentation
   publisher: Legrand
