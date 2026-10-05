@@ -23,6 +23,14 @@ This one-module DIN load-management actuator switches a configured load through 
 | BTicino | `F523` | Established catalogue identity | Manufacturer database commercial record `1164` explicitly links this SKU to item `1164` |
 | Legrand | `003559` | Established catalogue identity | Manufacturer database commercial record `1897` explicitly links this SKU to item `1164` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F523` | `8005543404317` | [Archived original](https://archive.openwebnet-ha.org/sha256/86/fb/86fb517a47b4a91ab4f3d626a2fd738bb19a25b014b32f200e321a4fe0d425e9.pdf), `F523-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -59,7 +67,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543404317` | `F523` export p. 1 |
 | Bus system KNX | `No` | `F523` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F523` export p. 2 |
 | Bus system radio frequency | `No` | `F523` export p. 2 |

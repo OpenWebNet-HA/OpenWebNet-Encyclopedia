@@ -24,6 +24,14 @@ This two-module Light Now control operates configured lights, dimmers, shutters 
 | Legrand - Céliane | `MX5222` | Established catalogue identity | Manufacturer database commercial record `2662` explicitly links this SKU to item `2307` |
 | Legrand - Arteor | `AA5222` | Established catalogue identity | Manufacturer database commercial record `2686` explicitly links this SKU to item `2307` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `Y4652M2` | `8005543762264` | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/81/f3813820f392cd86bb77a256d6289635f0504c5e35fb55836411c4f45e1de23a.pdf), `Y4652M2-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -62,7 +70,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543762264` | `Y4652M2` export p. 1 |
 | Bus system KNX | `No` | `Y4652M2` export p. 3 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `Y4652M2` export p. 3 |
 | Bus system KNX Secure | `No` | `Y4652M2` export p. 3 |

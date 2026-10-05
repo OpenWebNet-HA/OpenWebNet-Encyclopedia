@@ -24,6 +24,16 @@ This Living Now wall device combines an Alexa voice interface with two capacitiv
 | BTicino - Living Now | `KM8013` | Established catalogue identity | Manufacturer database commercial record `2636` explicitly links this SKU to item `2276` |
 | BTicino - Living Now | `KG8013` | Established catalogue identity | Manufacturer database commercial record `2637` explicitly links this SKU to item `2276` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `KG8013` | `8005543650820` | [Archived original](https://archive.openwebnet-ha.org/sha256/50/9f/509f6e105dfea157c23144e080d69b7a508d7ad32be99c3f92fb3ccd331e0630.pdf), `KG8013-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `KM8013` | `8005543650813` | [Archived original](https://archive.openwebnet-ha.org/sha256/95/79/9579ce2582249a182a7da0669b58dbe30929ddd3f1aff65e2c59620472cd527e.pdf), `KM8013-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `KW8013` | `8005543650806` | [Archived original](https://archive.openwebnet-ha.org/sha256/01/7b/017b1e0408da356d890909d6bccdeae92db34c139fe652afeda3f15b048cb9ca.pdf), `KW8013-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -57,7 +67,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543650820` | `KG8013` export p. 1 |
 | Bus system KNX | `No` | `KG8013` export p. 3; `KM8013` export p. 3; `KW8013` export p. 3 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `KG8013` export p. 3; `KM8013` export p. 3; `KW8013` export p. 3 |
 | Bus system radio frequency | `No` | `KG8013` export p. 3; `KM8013` export p. 3; `KW8013` export p. 3 |
@@ -107,13 +116,11 @@ These are the captured publisher classification values for the named variants. T
 | Connectable by Internet box | `Yes` | `KG8013` export p. 4; `KM8013` export p. 4; `KW8013` export p. 4 |
 | Product use function | `Control & command systems` | `KG8013` export p. 4; `KM8013` export p. 4; `KW8013` export p. 4 |
 | Software Update Duration (years) | `3` | `KG8013` export p. 4; `KM8013` export p. 4; `KW8013` export p. 4 |
-| EAN | `8005543650813` | `KM8013` export p. 1 |
 | Colour | `Beige` | `KM8013` export p. 3 |
 | RAL-number (similar) | `7044` | `KM8013` export p. 3 |
 | degree of impact strength (IK) | `Not applicable` | `KM8013` export p. 3 |
 | Storage temperature (Min-Max) | `-10-70 °C` | `KM8013` export p. 3 |
 | Terminal marking indication | `No` | `KM8013` export p. 3 |
-| EAN | `8005543650806` | `KW8013` export p. 1 |
 | Colour | `White` | `KW8013` export p. 3 |
 | RAL-number (similar) | `9016` | `KW8013` export p. 3 |
 

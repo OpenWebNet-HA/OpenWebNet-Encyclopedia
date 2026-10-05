@@ -23,6 +23,14 @@ This compact infrared emitter brings compatible air-conditioning units into the 
 | BTicino | `3456` | Established catalogue identity | Manufacturer database commercial record `1157` explicitly links this SKU to item `1520` |
 | Legrand | `088301` | Established catalogue identity | Manufacturer database commercial record `1728` explicitly links this SKU to item `1520` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `3456` | `8005543400944` | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/1b/8d1b557543aef5e5b9c6bfc3215993e5505706a42631ba778fe322b68a226091.pdf), `3456-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -57,7 +65,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543400944` | `3456` export p. 1 |
 | Bus system KNX | `No` | `3456` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `3456` export p. 2 |
 | Bus system radio frequency | `No` | `3456` export p. 2 |

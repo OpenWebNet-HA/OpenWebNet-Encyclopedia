@@ -23,6 +23,14 @@ This DIN gateway connects MyHOME OPEN functions with BACnet integration for conf
 | BTicino | `F450` | Established catalogue identity | Manufacturer database commercial record `1562` explicitly links this SKU to item `1556` |
 | Legrand | `003597` | Established catalogue identity | Manufacturer database commercial record `1656` explicitly links this SKU to item `1556` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F450` | `8005543488430` | [Archived original](https://archive.openwebnet-ha.org/sha256/2a/4e/2a4e430f07b33fdb901541000cc66e751fe6e99097d4b42c725ca8f4bbb1673a.pdf), `F450-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -55,7 +63,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543488430` | `F450` export p. 1 |
 | Bus system KNX | `No` | `F450` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F450` export p. 2 |
 | Bus system radio frequency | `No` | `F450` export p. 2 |

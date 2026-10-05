@@ -61,6 +61,10 @@ Account for every established or candidate commercial identity. Prefer:
 
 A plural `References` column is acceptable when several references share one relationship and evidence state. No SKU is canonical merely because it appears first. Use prose for commercial/package distinctions and unresolved equivalence.
 
+### EAN-13 commercial identifiers
+
+When EANs are available, place them in a subsection named `EAN-13 commercial identifiers` under Commercial identities, using `Reference | EAN-13 | Evidence`. Tie each identifier to its exact commercial reference and cite the retained manufacturer record and page. Keep variant-specific identifiers separate; a grouped catalogue code does not establish one EAN shared by its members. EANs identify commercial products, not installed hardware or Firmware revisions. Omit the subsection when no supported EAN is available. Keep EAN entries here rather than in physical specifications or publisher-attribute tables.
+
 ### Identity evidence and documentation gaps
 
 An explicit SKU-to-technical-item relationship in a manufacturer catalogue or database establishes a catalogue identity. Attribute that relationship to its source. Missing Device-specific PDFs are documentation-coverage gaps and must not, by themselves, downgrade the identity to candidate or unresolved. Track missing physical specifications and product-specific procedures separately. Reserve candidate or unresolved identity for an inferred relationship or a concrete ambiguity/contradiction about the same product reference in its applicable namespace. A document for a different product with a similar numerical reference is an excluded source match, not an identity contradiction.

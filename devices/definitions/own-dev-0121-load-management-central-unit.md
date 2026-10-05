@@ -23,6 +23,14 @@ This DIN load-management central unit measures power and accumulated energy and 
 | BTicino | `F521` | Established catalogue identity | Manufacturer database commercial record `1162` explicitly links this SKU to item `1162` |
 | Legrand | `003557` | Established catalogue identity | Manufacturer database commercial record `1895` explicitly links this SKU to item `1162` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F521` | `8005543402078` | [Archived original](https://archive.openwebnet-ha.org/sha256/66/32/663200333ff67628f2f3cc671eaa694563ca4942344456623de1f57818fb0b3b.pdf), `F521-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -55,7 +63,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543402078` | `F521` export p. 1 |
 | Bus system KNX | `No` | `F521` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F521` export p. 2 |
 | Bus system radio frequency | `No` | `F521` export p. 2 |

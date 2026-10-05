@@ -24,6 +24,14 @@ This Light Now device combines two independent lighting relays with local and co
 | Legrand - Céliane | `MX5230` | Established catalogue identity | Manufacturer database commercial record `2664` explicitly links this SKU to item `2309` |
 | Legrand - Arteor | `AA5230` | Established catalogue identity | Manufacturer database commercial record `2688` explicitly links this SKU to item `2309` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `Y4672M2L` | `8005543762288` | [Archived original](https://archive.openwebnet-ha.org/sha256/d3/54/d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957.pdf), `Y4672M2L-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -62,7 +70,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543762288` | `Y4672M2L` export p. 1 |
 | Bus system KNX | `No` | `Y4672M2L` export p. 3 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `Y4672M2L` export p. 3 |
 | Bus system KNX Secure | `No` | `Y4672M2L` export p. 3 |

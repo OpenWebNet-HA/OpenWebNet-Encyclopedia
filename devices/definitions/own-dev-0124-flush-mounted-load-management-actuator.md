@@ -29,6 +29,19 @@ This flush-mounted load-management actuator switches a configured load through a
 | BTicino - LivingLight | `N4672N` | Established member of grouped catalogue identity | Exact six-reference manufacturer sheet; grouped database code preserved above |
 | BTicino - LivingLight | `NT4672N` | Established member of grouped catalogue identity | Exact six-reference manufacturer sheet; grouped database code preserved above |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4672N` | `8005543404249` | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/1f/fd1ffb71674afad61d2a308248655848c86cf07a54d1a0d304321dff285c1261.pdf), `HC4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4672N` | `8005543404256` | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/fe/6afeb3fe11ff84386d28f6ac4f29923d648fd6a0f8e027effeaf64987446dd83.pdf), `HD4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4672N` | `8005543404263` | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/60/9c6016b50681ac83421fe5705e9902742c10101aa00833dc9ac3b3f970194a60.pdf), `HS4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4672N` | `8005543404270` | [Archived original](https://archive.openwebnet-ha.org/sha256/c7/69/c7693ac4e2ce1dd95f88f46b986b0593ce6616bcbd1adbfa8bea1c3e988c12b2.pdf), `L4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4672N` | `8005543404287` | [Archived original](https://archive.openwebnet-ha.org/sha256/4c/d5/4cd51756dea94c4e5324e9858ca1db582e8b936484536fd84531e2e04e657b45.pdf), `N4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4672N` | `8005543404294` | [Archived original](https://archive.openwebnet-ha.org/sha256/d9/88/d9882501c7d44edb7a77e3a30ec1fc4b35cd473c07a788934a8afaafbd0b174f.pdf), `NT4672N-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -66,7 +79,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543404249` | `HC4672N` export p. 1 |
 | Bus system KNX | `No` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
 | Bus system radio frequency | `No` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
@@ -80,11 +92,6 @@ These are the captured publisher classification values for the named variants. T
 | S0 impulse interface | `None` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
 | Tariff switch | `No` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
 | Connected object | `No` | `HC4672N` export p. 2; `HD4672N` export p. 2; `HS4672N` export p. 2; `L4672N` export p. 2; `N4672N` export p. 2; `NT4672N` export p. 2 |
-| EAN | `8005543404256` | `HD4672N` export p. 1 |
-| EAN | `8005543404263` | `HS4672N` export p. 1 |
-| EAN | `8005543404270` | `L4672N` export p. 1 |
-| EAN | `8005543404287` | `N4672N` export p. 1 |
-| EAN | `8005543404294` | `NT4672N` export p. 1 |
 
 ### Published status indicators
 

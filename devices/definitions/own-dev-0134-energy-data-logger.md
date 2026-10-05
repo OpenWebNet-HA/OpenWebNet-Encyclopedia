@@ -23,6 +23,14 @@ This DIN energy data logger collects readings from up to ten electricity, water,
 | BTicino | `F524` | Established catalogue identity | Manufacturer database commercial record `1475` explicitly links this SKU to item `1475` |
 | Legrand | `003566` | Established catalogue identity | Manufacturer database commercial record `1986` explicitly links this SKU to item `1475` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F524` | `8005543448984` | [Archived original](https://archive.openwebnet-ha.org/sha256/78/fc/78fc076141a2ad69164d75249a2577c63f1422990965db7d88655a3bf94e562e.pdf), `F524-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -60,7 +68,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543448984` | `F524` export p. 1 |
 | Bus system KNX | `No` | `F524` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F524` export p. 2 |
 | Bus system radio frequency | `No` | `F524` export p. 2 |

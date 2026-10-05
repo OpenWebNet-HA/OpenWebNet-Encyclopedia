@@ -31,6 +31,14 @@ Keep only supported rows. Add Device-specific identity rows when they materially
 
 Use `Brand - Marketed line` when a meaningful marketed line is established, and the brand alone otherwise. Do not expose catalogue placeholders such as `Undefined`, internal line-group labels such as `L/N/NT`, product-family names in place of lines, or raw database IDs in Relationship. List every established or candidate identity. Use prose for package distinctions, source-version naming differences, or unresolved equivalence.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `...` | `...` | Retained manufacturer record and page |
+
+List supported EANs here, tied to exact commercial references, and omit this subsection when none are available. Preserve variant and source differences. These identifiers do not establish installed hardware or Firmware revisions; do not repeat them in physical specifications or publisher-attribute tables.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |

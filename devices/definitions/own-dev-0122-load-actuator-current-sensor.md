@@ -23,6 +23,14 @@ This DIN load actuator combines a bistable switching relay with load-current mea
 | BTicino | `F522` | Established catalogue identity | Manufacturer database commercial record `1163` explicitly links this SKU to item `1163` |
 | Legrand | `003558` | Established catalogue identity | Manufacturer database commercial record `1896` explicitly links this SKU to item `1163` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F522` | `8005543404300` | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf), `F522-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -62,7 +70,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543404300` | `F522` export p. 1 |
 | Bus system KNX | `No` | `F522` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F522` export p. 2 |
 | Bus system radio frequency | `No` | `F522` export p. 2 |

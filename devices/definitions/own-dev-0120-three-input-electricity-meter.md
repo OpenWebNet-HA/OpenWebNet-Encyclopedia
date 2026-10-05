@@ -23,6 +23,14 @@ This one-module DIN electricity meter measures instantaneous power and accumulat
 | BTicino | `F520` | Established catalogue identity | Manufacturer database commercial record `1160` explicitly links this SKU to item `1160` |
 | Legrand | `003555` | Established catalogue identity | Manufacturer database commercial record `1894` explicitly links this SKU to item `1160` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F520` | `8005543402061` | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/61/e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8.pdf), `F520-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -55,7 +63,6 @@ These are the captured publisher classification values for the named variants. T
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| EAN | `8005543402061` | `F520` export p. 1 |
 | Bus system KNX | `No` | `F520` export p. 2 |
 | Bus system KNX-RF (Radio Frequency) | `No` | `F520` export p. 2 |
 | Bus system radio frequency | `No` | `F520` export p. 2 |
