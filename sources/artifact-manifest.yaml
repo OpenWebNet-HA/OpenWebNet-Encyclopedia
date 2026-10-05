@@ -1327,6 +1327,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hs4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4680
+  title: HS4680 official product export with EAN
+  media_type: application/pdf
+  filename: HS4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40479
+  sha256: e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-kg8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
