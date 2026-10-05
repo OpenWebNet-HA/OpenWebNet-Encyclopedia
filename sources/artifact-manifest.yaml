@@ -6590,6 +6590,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-o1688a-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: O1688A manufacturer device documentation
+  media_type: application/pdf
+  filename: O1688A.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 131675
+  sha256: e596e600c46963e74b25661c638dcf4f671c8c7e94d4e6e530159a19b1bb9904
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/O1688A.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e5/96/e596e600c46963e74b25661c638dcf4f671c8c7e94d4e6e530159a19b1bb9904.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e5/96/e596e600c46963e74b25661c638dcf4f671c8c7e94d4e6e530159a19b1bb9904.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1866b-20261004
   kind: documentation
   publisher: BTicino / Legrand
