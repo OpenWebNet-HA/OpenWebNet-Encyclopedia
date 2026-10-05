@@ -8441,6 +8441,26 @@ artifacts:
   language_evidence: English text inspected in the retained multilingual original; additional languages present but not exhaustively enumerated
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u2701d-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U2701D manufacturer device documentation
+  media_type: application/pdf
+  filename: U2701D.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 2414209
+  sha256: 252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/U2701D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/25/2d/252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/25/2d/252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u3499a-20261004
   kind: documentation
   publisher: BTicino / Legrand
