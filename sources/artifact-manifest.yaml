@@ -61,6 +61,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-344743-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '344743'
+  title: 344743 official product export with EAN
+  media_type: application/pdf
+  filename: 344743-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 27539
+  sha256: 3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-345020-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
