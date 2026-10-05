@@ -65,6 +65,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-079173-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: 079173
+  title: 079173 official product record with EAN
+  media_type: text/html
+  filename: 079173-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 263846
+  sha256: 79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5
+  source_url: https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-2-sorties-alu
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-344163-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
