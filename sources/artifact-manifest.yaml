@@ -1853,6 +1853,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-l4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4577
+  title: L4577 official product export with EAN
+  media_type: application/pdf
+  filename: L4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19103
+  sha256: 4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-l4651m2-ean-export-20261005
   kind: documentation
   publisher: BTicino
