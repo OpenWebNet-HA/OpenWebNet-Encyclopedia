@@ -5402,6 +5402,26 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le10514aa-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE10514AA manufacturer device documentation
+  media_type: application/pdf
+  filename: LE10514AA.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 2217498
+  sha256: 38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE10514AA.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/38/d2/38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/38/d2/38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le10815af-20261005
   kind: documentation
   publisher: BTicino / Legrand
