@@ -942,6 +942,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-346890-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 346890-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 346890-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 14102
+  sha256: 4cbab45d25900ff10a4ab5496727dee464db2263320e47e67c3fbd8511945fa6
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-346890
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4c/ba/4cbab45d25900ff10a4ab5496727dee464db2263320e47e67c3fbd8511945fa6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4c/ba/4cbab45d25900ff10a4ab5496727dee464db2263320e47e67c3fbd8511945fa6.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-3476-ean-export-20261005
   kind: documentation
   publisher: BTicino
