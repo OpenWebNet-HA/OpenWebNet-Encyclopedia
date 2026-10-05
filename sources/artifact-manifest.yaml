@@ -1379,6 +1379,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4710-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4710
+  title: H4710 official product export with EAN
+  media_type: application/pdf
+  filename: H4710-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19087
+  sha256: b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hc4577-ean-export-20261005
   kind: documentation
   publisher: BTicino
