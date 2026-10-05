@@ -2908,6 +2908,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-ex212001-658-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ex212001_658 manufacturer device documentation
+  media_type: application/pdf
+  filename: ex212001_658.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 54435
+  sha256: 5a75a9de89311a9e79575441f43fcf10e53dab76733a74b0f75dbafa6fd4c545
+  source_url: https://assets.legrand.com/general/legrand-exp/cexp2012-13/ex212001_658.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5a/75/5a75a9de89311a9e79575441f43fcf10e53dab76733a74b0f75dbafa6fd4c545.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5a/75/5a75a9de89311a9e79575441f43fcf10e53dab76733a74b0f75dbafa6fd4c545.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f01715en-01-20261003
   kind: documentation
   publisher: BTicino / Legrand
