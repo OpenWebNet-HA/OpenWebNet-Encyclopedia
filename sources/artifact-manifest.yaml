@@ -3366,6 +3366,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-fis-352700-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: FIS_352700 manufacturer device documentation
+  media_type: application/pdf
+  filename: FIS_352700.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 416684
+  sha256: 3df9ac25e7bad2c24dbc4c2d09805f068a96e064f9369c1ab69090cadcbe3300
+  source_url: https://dar.bticino.it/asset/Documents/FIS_352700.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3d/f9/3df9ac25e7bad2c24dbc4c2d09805f068a96e064f9369c1ab69090cadcbe3300.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3d/f9/3df9ac25e7bad2c24dbc4c2d09805f068a96e064f9369c1ab69090cadcbe3300.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-fis-le10815ag-20261005
   kind: documentation
   publisher: BTicino / Legrand
