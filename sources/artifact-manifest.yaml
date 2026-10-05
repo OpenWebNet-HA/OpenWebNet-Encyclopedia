@@ -922,6 +922,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-3454-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 3454-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 3454-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 15691
+  sha256: 74467437ccb643195355fda5156dc6b483255e40e7cf4a7f2843469d14503fde
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3454
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/74/46/74467437ccb643195355fda5156dc6b483255e40e7cf4a7f2843469d14503fde.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/74/46/74467437ccb643195355fda5156dc6b483255e40e7cf4a7f2843469d14503fde.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-3454-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
