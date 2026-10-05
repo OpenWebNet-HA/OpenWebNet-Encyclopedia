@@ -3028,6 +3028,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4710-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4710
+  title: LN4710 official product export with EAN
+  media_type: application/pdf
+  filename: LN4710-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 21421
+  sha256: 3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-ln4890-ean-export-20261005
   kind: documentation
   publisher: BTicino
