@@ -2934,6 +2934,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4692
+  title: N4692 official product export with EAN
+  media_type: application/pdf
+  filename: N4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16211
+  sha256: 3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/5d/3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/5d/3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-nt4577-ean-export-20261005
   kind: documentation
   publisher: BTicino
