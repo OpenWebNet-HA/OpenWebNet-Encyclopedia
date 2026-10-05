@@ -1149,6 +1149,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f428-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F428
+  title: F428 official product export with EAN
+  media_type: application/pdf
+  filename: F428-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 35130
+  sha256: 9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f429-ean-export-20261005
   kind: documentation
   publisher: BTicino
