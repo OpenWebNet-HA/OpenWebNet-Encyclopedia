@@ -19,6 +19,29 @@ storage:
     visibility: private
     object_layout: sha256/<first-2>/<next-2>/<sha256>
 artifacts:
+- id: device-doc-067552-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: '067552'
+  title: 067552 official product record with EAN
+  media_type: text/html
+  filename: 067552-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 287951
+  sha256: 79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb
+  source_url: https://www.legrand.fr/pro/catalogue/commande-celiane-1-ou-2-fonctions-pour-lumiere-ou-volets-myhome-up
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-344163-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
