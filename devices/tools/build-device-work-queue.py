@@ -18,6 +18,25 @@ REVIEW_KEYS = [
     "documentation_archive","source_reconciliation","definition",
     "hardware_corroboration","final_review",
 ]
+REVIEW_GATE_CHECKS = [
+    "identity_scope",
+    "claim_evidence",
+    "source_reconciliation",
+    "information_architecture",
+    "reader_usefulness",
+    "evidence_limits",
+    "presentation",
+    "validation",
+]
+REVIEW_GATE_VALUES = ["pending", "complete"]
+REVIEW_POLICY = {
+    "version": 1,
+    "transition": {"from": "review-ready", "to": "reviewed"},
+    "required_checks": list(REVIEW_GATE_CHECKS),
+    "allowed_check_values": list(REVIEW_GATE_VALUES),
+    "hardware_corroboration_required": False,
+    "final_review_requires_all_checks": True,
+}
 PRIORITIES = ["high","normal","low"]
 
 def source_sha():
@@ -46,6 +65,7 @@ def fresh_entry():
         "definition":"pending",
         "hardware_corroboration":"pending",
         "final_review":"pending",
+        "review_gate": {k: "pending" for k in REVIEW_GATE_CHECKS},
       },
       "blockers":[],"notes":[],
     }
@@ -65,9 +85,17 @@ def sync(data):
     unknown=sorted(set(items)-set(cat), key=int)
     if unknown:
         raise SystemExit("queue contains item IDs absent from canonical catalogue: "+", ".join(unknown))
-    data["version"]=1
-    data["source"]={"mhcatalogue_sha256":source_sha()}
-    data["items"]={k:items[k] for k in sorted(items,key=int)}
+    for entry in items.values():
+        review = entry.setdefault("review", {})
+        review.setdefault("review_gate", {k: "pending" for k in REVIEW_GATE_CHECKS})
+    ordered_items={k:items[k] for k in sorted(items,key=int)}
+    data.clear()
+    data.update({
+        "version": 1,
+        "source": {"mhcatalogue_sha256": source_sha()},
+        "review_policy": REVIEW_POLICY,
+        "items": ordered_items,
+    })
     return data
 
 def definition_exists(device_id):
@@ -82,6 +110,8 @@ def validate(data):
         raise SystemExit("unsupported queue version")
     if data.get("source",{}).get("mhcatalogue_sha256")!=source_sha():
         raise SystemExit("queue source SHA-256 is stale; run --sync")
+    if data.get("review_policy") != REVIEW_POLICY:
+        raise SystemExit("queue review policy is stale; run --sync")
     if set(data.get("items",{}))!=set(cat):
         raise SystemExit("queue item set differs from canonical catalogue; run --sync")
     for item_id,e in data["items"].items():
@@ -90,11 +120,20 @@ def validate(data):
         if e.get("priority") not in PRIORITIES:
             raise SystemExit(f"{item_id}: invalid priority")
         review=e.get("review",{})
-        if set(review)!=set(REVIEW_KEYS):
+        if set(review)!=set(REVIEW_KEYS) | {"review_gate"}:
             raise SystemExit(f"{item_id}: review keys incomplete")
-        for k,v in review.items():
+        for k in REVIEW_KEYS:
+            v=review[k]
             if v not in REVIEW_VALUES:
                 raise SystemExit(f"{item_id}: invalid {k}={v}")
+        gate=review["review_gate"]
+        if not isinstance(gate,dict) or set(gate)!=set(REVIEW_GATE_CHECKS):
+            raise SystemExit(f"{item_id}: review gate keys incomplete")
+        for k,v in gate.items():
+            if v not in REVIEW_GATE_VALUES:
+                raise SystemExit(f"{item_id}: invalid review gate {k}={v}")
+        if review["final_review"]=="complete" and any(gate[k]!="complete" for k in REVIEW_GATE_CHECKS):
+            raise SystemExit(f"{item_id}: final_review complete but review gate is incomplete")
         out=e.get("outcome")
         if out is not None:
             if out.get("type") not in ["device-definition","split","merged","not-applicable"]:
@@ -109,6 +148,9 @@ def validate(data):
             for k in ["commercial_identities","database_extraction","documentation_discovery","source_reconciliation","definition","final_review"]:
                 if review[k] not in ["complete","not-applicable"]:
                     raise SystemExit(f"{item_id}: reviewed but {k}={review[k]}")
+            incomplete=[k for k in REVIEW_GATE_CHECKS if gate[k]!="complete"]
+            if incomplete:
+                raise SystemExit(f"{item_id}: reviewed but review gate incomplete: {', '.join(incomplete)}")
 
 def dump(data):
     with QUEUE.open("w",encoding="utf-8") as f:
