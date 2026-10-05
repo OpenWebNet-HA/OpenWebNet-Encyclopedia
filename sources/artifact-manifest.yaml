@@ -731,6 +731,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f418u2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F418U2
+  title: F418U2 official product export with EAN
+  media_type: application/pdf
+  filename: F418U2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17336
+  sha256: 978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f450-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
