@@ -1970,6 +1970,26 @@ artifacts:
   notes:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f411-2nc-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F411-2NC-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F411-2NC-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 15448
+  sha256: a3dbc68476037873e8a4a76662b70fc4f20b035a613dac04d5e16f9c9644f44e
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_2NC
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a3/db/a3dbc68476037873e8a4a76662b70fc4f20b035a613dac04d5e16f9c9644f44e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a3/db/a3dbc68476037873e8a4a76662b70fc4f20b035a613dac04d5e16f9c9644f44e.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f411-4-ean-export-20261005
   kind: documentation
   publisher: BTicino
