@@ -1868,6 +1868,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00604-b-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00604-b-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00604-b-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 645077
+  sha256: e82ce60b2f34481b63d66fdbfef8a1d3284bddf0bdd14ee7a0a304c677768342
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/BT00604-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e8/2c/e82ce60b2f34481b63d66fdbfef8a1d3284bddf0bdd14ee7a0a304c677768342.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e8/2c/e82ce60b2f34481b63d66fdbfef8a1d3284bddf0bdd14ee7a0a304c677768342.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00639-b-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
