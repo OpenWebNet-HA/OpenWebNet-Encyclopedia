@@ -1443,6 +1443,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4692FAN
+  title: HC4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: HC4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16980
+  sha256: 770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hd4577-ean-export-20261005
   kind: documentation
   publisher: BTicino
