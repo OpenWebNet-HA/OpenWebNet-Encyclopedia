@@ -3762,6 +3762,36 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le10815ag-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE10815AG manufacturer device documentation
+  media_type: application/pdf
+  filename: LE10815AG.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 3922867
+  sha256: 10b7deb45cee0b0f84b139f4d4bb55a68eb0e35901d359fd37bab6fc27bd252a
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE10815AG.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/10/b7/10b7deb45cee0b0f84b139f4d4bb55a68eb0e35901d359fd37bab6fc27bd252a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/10/b7/10b7deb45cee0b0f84b139f4d4bb55a68eb0e35901d359fd37bab6fc27bd252a.pdf
+  language:
+  - ar
+  - de
+  - el
+  - en
+  - es
+  - fr
+  - it
+  - nl
+  - pt
+  - ru
+  - tr
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11578ab-20261004
   kind: documentation
   publisher: BTicino / Legrand
