@@ -886,6 +886,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-3522n-publisher-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 3522N-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 3522N-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 427376
+  sha256: aed7724590d5350341659244b2dbe65bb5e3b63139a4c01d7e3aa3b6d3bf4934
+  source_url: https://www.bticino.com/products/pdf?sku=BT-3522N&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ae/d7/aed7724590d5350341659244b2dbe65bb5e3b63139a4c01d7e3aa3b6d3bf4934.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ae/d7/aed7724590d5350341659244b2dbe65bb5e3b63139a4c01d7e3aa3b6d3bf4934.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-4601-installation-nl-20130411-82719-2
   kind: documentation
   publisher: BTicino / Legrand
