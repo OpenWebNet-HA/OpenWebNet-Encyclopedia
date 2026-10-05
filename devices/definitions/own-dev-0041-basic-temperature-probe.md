@@ -25,11 +25,31 @@ SCS basic temperature probe for zone sensing.
 | Legrand - Arteor | `573920` | established catalogue identity for item `1862` | canonical commercial record |
 | Legrand - Arteor | `573921` | established catalogue identity for item `1862` | canonical commercial record |
 | Legrand - Céliane | `067458` | established catalogue identity for item `1862` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4693` | `8012199806570` | [Archived original](https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf), `HC4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4693` | `8012199806587` | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf), `HS4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4693` | `8012199987712` | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf), `HD4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4693` | `8012199800820` | [Archived original](https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf), `L4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4693` | `8012199800837` | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf), `N4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4693` | `8012199801155` | [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf), `NT4693-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | No dedicated Device-specific publisher source currently archived | source gap | current review | Catalogue extraction complete; direct product documentation remains to be recovered | - | - |
+| `HC4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4693) |
+| `HS4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693) |
+| `HD4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693) |
+| `L4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4693) |
+| `N4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4693) |
+| `NT4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693) |
 
 ## Physical and electrical characteristics
 
@@ -392,3 +412,10 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `HC4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4693); SHA-256 `7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f`.
+- `HS4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693); SHA-256 `ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82`.
+- `HD4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693); SHA-256 `e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0`.
+- `L4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4693); SHA-256 `9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb`.
+- `N4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4693); SHA-256 `5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227`.
+- `NT4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693); SHA-256 `df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd`.

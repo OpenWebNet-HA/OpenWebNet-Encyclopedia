@@ -21,11 +21,20 @@
 | BTicino | `F416U1` | Established identity | canonical commercial record for item `84` |
 | Legrand | `002621` | Established identity | canonical commercial record for item `84` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F416U1` | `8012199968209` | [Archived original](https://archive.openwebnet-ha.org/sha256/e7/ee/e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff.pdf), `F416U1-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00315-e-EN` | technical sheet | 2014-06-09 | `F416U1` / `002621` 1-channel SCS dimmer characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/79/02/7902811439501a406f3d69bf8b95b22705610fe25cc0912a1fc2bc29d157d76e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00315_e_EN.pdf) |
+| `F416U1-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F416U1` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e7/ee/e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F416U1) |
 
 ## Physical and electrical characteristics
 
@@ -204,3 +213,5 @@ The publisher sheet directly identifies both `F416U1` and `002621`, so the two c
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F416U1-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F416U1` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e7/ee/e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F416U1); SHA-256 `e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff`.

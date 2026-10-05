@@ -21,11 +21,20 @@
 | BTicino | `F420` | Established identity | canonical commercial record for item `61` |
 | Legrand | `003551` | Established identity | canonical commercial record for item `61` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F420` | `8012199738741` | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/0d/8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a.pdf), `F420-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00067-d-EN` | technical sheet | 2014-06-05 | `F420` scenario capacity, electrical data and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/a9/3b/a93b06343116dda6e4db771a72ab51ac2822748f79ba8eababe1b2a3f453a007.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00067_d_EN.pdf) |
+| `F420-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F420` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/0d/8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F420) |
 
 ## Physical and electrical characteristics
 
@@ -161,3 +170,5 @@ The canonical catalogue maps `F420` and `003551`. The dedicated publisher techni
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F420-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F420` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/8e/0d/8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F420); SHA-256 `8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a`.

@@ -24,11 +24,25 @@ Dedicated advanced shutter control with preset and reference-actuator support.
 | BTicino - LivingLight | `LN4660M2` | established catalogue identity for item `1579` | canonical commercial record |
 | BTicino - Matix | `AM5860M2` | established catalogue identity for item `1579` | canonical commercial record |
 | Legrand - Céliane | `067558` | established catalogue identity for item `1579` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4660M2` | `8005543478264` | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf), `H4660M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4660M2` | `8005543478257` | [Archived original](https://archive.openwebnet-ha.org/sha256/5f/c1/5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56.pdf), `LN4660M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5860M2` | `8005543477946` | [Archived original](https://archive.openwebnet-ha.org/sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf), `AM5860M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | AUTOMATISME | technical/system documentation | revision/date as printed | Advanced shutter control including H/LN4660M2 and AM5860M2 | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `H4660M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4660M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4660M2) |
+| `LN4660M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4660M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5f/c1/5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4660M2) |
+| `AM5860M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5860M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5860M2) |
 
 ## Physical and electrical characteristics
 
@@ -178,3 +192,7 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- `H4660M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4660M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4660M2); SHA-256 `3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03`.
+- `LN4660M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4660M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/5f/c1/5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4660M2); SHA-256 `5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56`.
+- `AM5860M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5860M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5860M2); SHA-256 `77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6`.

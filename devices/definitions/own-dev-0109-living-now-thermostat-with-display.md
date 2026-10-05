@@ -26,6 +26,16 @@ One protocol Module exposes reusable Hotel thermostat Object `95`. The published
 
 KW/KG/`KM4691` are named together in the exact manuals and 2018/2020 sheets. The current 2026 sheet adds KB/KC/KS4691, but none is attached to item `2242` in the canonical snapshot, so they are not silently added to this Device’s commercial cluster. `KW4691`’s manufacturer export independently identifies Living Now. Catalogue labels/colour suffixes do not establish an electrical or firmware difference.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `KM4691` | `8005543618837` | [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf), `KM4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `KG4691` | `8005543618820` | [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf), `KG4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `KW4691` | `8005543618844` | [Archived original](https://archive.openwebnet-ha.org/sha256/be/80/be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5.pdf), `KW4691-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -38,6 +48,8 @@ KW/KG/`KM4691` are named together in the exact manuals and 2018/2020 sheets. The
 | `RA00165AA_U_EN.pdf` | Thermostat user manual | `RA00165AA; revision from publisher filename; no publication date located` | KW/KG/`KM4691`; roles and local controls pp. 4-15; app/hotel/HOMETOUCH pp. 16-27; messages/errors pp. 28-30. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/24/28/2428d40d525f7034a5a5fa93c211b576ef6f37184afe0ca93442681b71baff31.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00165AA_U_EN.pdf) |
 | `KW4691-publisher-product-sheet.pdf` | Manufacturer product export | `DATASHEET; 03.10.2026` | `KW4691` only; description, exact marketed line and source-specific technical attributes; printed/PDF pp. 1-3 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/be/80/be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KW4691&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2242`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `KM4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KM4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691) |
+| `KG4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KG4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691) |
 
 ## Physical and electrical characteristics
 
@@ -436,3 +448,7 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- `KM4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `KM4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691); SHA-256 `42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f`.
+- `KG4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `KG4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691); SHA-256 `bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6`.
+- `KW4691-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KW4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/be/80/be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KW4691&include_technical=1); SHA-256 `be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5`.

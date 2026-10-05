@@ -25,11 +25,31 @@ The Device is a master temperature probe specialized for fan-coil installations.
 | Legrand - Arteor | `573924` | established identity | catalogue + `MQ00181-c-EN` |
 | Legrand - Arteor | `573925` | established identity | catalogue + `MQ00181-c-EN` |
 | Legrand - Céliane | `067455` | established identity | catalogue + `MQ00181-c-EN` |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `L4692FAN` | `8012199784526` | [Archived original](https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf), `L4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4692FAN` | `8012199784533` | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf), `N4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4692FAN` | `8012199784540` | [Archived original](https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf), `NT4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HC4692FAN` | `8012199823096` | [Archived original](https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf), `HC4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4692FAN` | `8012199823102` | [Archived original](https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf), `HS4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4692FAN` | `8012199987705` | [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf), `HD4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00181-c-EN` | Technical sheet | revision c / 2014-04-29 | all five current identity groups; fan-coil operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00181-c-en.pdf) |
+| `L4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692FAN) |
+| `N4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692FAN) |
+| `NT4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692FAN) |
+| `HC4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN) |
+| `HS4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692FAN) |
+| `HD4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN) |
 
 ## Physical and electrical characteristics
 
@@ -476,3 +496,10 @@ As with the non-fan probe, `SLA` differs by firmware: `0..8` on firmware `261` a
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
 - [`MQ00181-c-EN` archived original](https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf)
+
+- `L4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692FAN); SHA-256 `06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5`.
+- `N4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692FAN); SHA-256 `b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed`.
+- `NT4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692FAN); SHA-256 `11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2`.
+- `HC4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN); SHA-256 `770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af`.
+- `HS4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692FAN); SHA-256 `03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745`.
+- `HD4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN); SHA-256 `13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681`.

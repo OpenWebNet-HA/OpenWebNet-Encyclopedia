@@ -26,6 +26,15 @@ DND means Do Not Disturb; MUR means Make Up Room. This reader is separate from t
 
 The publisher technical sheets name all three references together. The catalogue `L/N/NT` grouping is marketed as LivingLight for `LN4651`. `3547` is a card accessory, not a fourth reader identity.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4651` | `8005543502563` | [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf), `H4651-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4651` | `8005543502587` | [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf), `LN4651-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -274,3 +283,6 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- `H4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4651&include_technical=1); SHA-256 `312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9`.
+- `LN4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4651&include_technical=1); SHA-256 `131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204`.

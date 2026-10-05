@@ -22,12 +22,24 @@
 | BTicino - LivingLight | `LN4691` | established catalogue identity for item `1686` | canonical commercial record |
 | Legrand - Céliane | `067459` | established catalogue identity for item `1686` | canonical commercial record |
 | Arnould - Espace Evolution | `64170` | established catalogue identity for item `1686` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4691` | `8005543498040` | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf), `H4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4691` | `8005543498057` | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf), `LN4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MM00789_b_EN` | technical sheet | revision b; date not confirmed in retained metadata | `H4691` / `LN4691` / `067459` / `64170` thermostat functions and installation characteristics | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
 | BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
+| `H4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691) |
+| `LN4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691) |
 
 ## Physical and electrical characteristics
 
@@ -935,3 +947,6 @@ The publisher sheet directly names all four catalogue identities. Firmware 1.0.-
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `H4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691); SHA-256 `77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe`.
+- `LN4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691); SHA-256 `adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4`.

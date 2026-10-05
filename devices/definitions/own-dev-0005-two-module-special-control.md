@@ -36,11 +36,25 @@ This technical definition covers the shared catalogue capability core used by 13
 | Legrand Arteor | `571849`, `573987` | Shared technical item; individual product-document review pending |
 | Legrand Céliane | `067242` | Shared technical item; individual product-document review pending |
 | Legrand Mosaic | `078472`, `078475`, `079172`, `079175` | Shared technical item; individual product-document review pending |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4651M2` | `8012199957111` | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf), `H4651M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4651M2` | `8012199957128` | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf), `L4651M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5831M2` | `8012199957135` | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf), `AM5831M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00285-d-EN` - Special control | Technical sheet | 09/06/2014 | `067553`, `H4651M2`, `L4651M2`, `AM5831M2` | [Archived original](https://archive.openwebnet-ha.org/sha256/03/f5/03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab.pdf) | [Official PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00285-d-EN.pdf) |
+| `H4651M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4651M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4651M2) |
+| `L4651M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4651M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2) |
+| `AM5831M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5831M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2) |
 
 The nine-page sheet is unusually valuable because it documents several otherwise unrelated functional systems exposed by the same configurable control.
 
@@ -2516,3 +2530,7 @@ This source is now represented as a product-specific selector/function model. Re
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `H4651M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4651M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4651M2); SHA-256 `e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814`.
+- `L4651M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4651M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2); SHA-256 `6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee`.
+- `AM5831M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5831M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2); SHA-256 `894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044`.

@@ -32,6 +32,17 @@ The official 2021 technical sheet directly documents all seven commercial refere
 | Legrand - Céliane | `067561` / printed `0 675 61` | Documented commercial reference | Catalogue + official technical sheet |
 
 Shared item membership and the common technical sheet jointly establish this commercial-identity set. Range-specific dimensions and packaging remain commercial metadata.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4672M2` | `8005543560860` | [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf), `H4672M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4672M2` | `8005543560532` | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf), `LN4672M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5852M2` | `8005543560525` | [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf), `AM5852M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -40,6 +51,9 @@ Shared item membership and the common technical sheet jointly establish this com
 | `ST-00000898-FR` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9f/b9/9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-FR.pdf) |
 | `LE09285AB` | Instruction sheet | 03/21 | `AM5852M2`, `H4672M2`, `LN4672M2` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE09285AB.pdf) |
 | `LE09287AB` | Instruction sheet | revision not yet decoded | `067561` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE09287AB.pdf) |
+| `H4672M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4672M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4672M2) |
+| `LN4672M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4672M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4672M2) |
+| `AM5852M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5852M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2) |
 
 The English and French technical sheets are distinct archived byte streams and therefore remain separate source revisions/language variants.
 
@@ -1085,3 +1099,7 @@ These facts supplement the four-Module catalogue topology and are constraints on
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `H4672M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4672M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4672M2); SHA-256 `575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7`.
+- `LN4672M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4672M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4672M2); SHA-256 `6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5`.
+- `AM5852M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5852M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2); SHA-256 `c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315`.

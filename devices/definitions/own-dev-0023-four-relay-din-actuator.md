@@ -22,12 +22,22 @@
 | Legrand | `003844` | Established identity | canonical commercial record `1707`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F411/4` | `8012199425061` | [Archived original](https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf), `F411_4-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST-00000896-EN` | Technical sheet | 2021-03-23 | whole document / PDF pp. 1-4 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f3/1c/f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/ST-00000896-EN.pdf) |
 | `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/4 configuration: printed p. 122 / PDF p. 124; load/specification tables: printed pp. 157-160 / PDF pp. 159-162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `F411_4-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F411/4` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_4) |
 
 For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -319,3 +329,5 @@ Official documentation corroborates four physical outputs, local control and pai
 - [Device Database Inventory](../inventory/)
 - [ST-00000896-EN](https://archive.openwebnet-ha.org/sha256/f3/1c/f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def.pdf)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- `F411_4-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F411/4` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_4); SHA-256 `d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a`.

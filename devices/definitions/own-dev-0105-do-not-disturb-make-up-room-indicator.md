@@ -26,6 +26,15 @@ DND means Do Not Disturb; MUR means Make Up Room. These are room-service notific
 
 All three catalogue descriptions explicitly identify an indicator without RFID. The reader family `H4651` / `LN4651` / `067591`, item `1681`, remains a separate Device despite sharing mounting instructions.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4650` | `8005543502556` | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf), `H4650-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4650` | `8005543502570` | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf), `LN4650-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -34,6 +43,8 @@ All three catalogue descriptions explicitly identify an indicator without RFID. 
 | `MM00774-b-FR.pdf` | French technical sheet | `MM00774-b-FR`, `15/01/2015` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/da/adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00774-b-FR.pdf) |
 | `LE06116AC.pdf` | Multilingual label installation / reader declarations | `LE06116AC-02PC-19W15` | Indicator identities plus separate reader H4651/LN4651/067591; shared label installation; RF statements scoped to reader; no printed pagination / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/LE06116AC.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1680`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `H4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4650` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650) |
+| `LN4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4650` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650) |
 
 ## Physical and electrical characteristics
 
@@ -269,3 +280,6 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- `H4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650); SHA-256 `93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4`.
+- `LN4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650); SHA-256 `66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c`.

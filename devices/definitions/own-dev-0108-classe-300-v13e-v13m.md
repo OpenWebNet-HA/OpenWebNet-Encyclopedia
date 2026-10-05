@@ -24,6 +24,15 @@
 
 The catalogue identifies `344612` as white V13E, `344613` as dark V13E, and `344622` as white V13M. Separate exact technical-sheet headers establish the V13E pair and V13M identity. Only V13M has the answering-machine video memory. No marketed wiring-device line is established; Classe 300 is a product family.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `344612` | `8005543535004` | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf), `344612-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `344613` | `8005543535011` | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf), `344613-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -34,6 +43,8 @@ The catalogue identifies `344612` as white V13E, `344613` as dark V13E, and `344
 | `RA00136AC_U_EN.pdf` | Classe 300 user manual | `RA00136AC; revision from publisher filename; no publication date located` | Family operations pp. 4-36; settings pp. 37-48; induction loop, door status, Office and paging pp. 49-53. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/54/c1/54c1864c80b2e7d695048acfe0e03b6834c8cd4c266ff17e0c771f2fc8d22805.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00136AC_U_EN.pdf) |
 | `LE07498AE.pdf` | Multilingual illustrated installation sheet | `LE07498AE; 04/16-01 PC` | `344612`/`344613`/`344622`; dimensions/heights/mounting PDF p. 1 (no printed number); interfaces pp. 2-4; configuration/matrices pp. 5-9; declarations pp. 10-12. Subsequent printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/74/cd/74cd8e15a7174e9cd62a2e56a5999449b972b0be331379b469c7b947fe1d049b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE07498AE.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2134`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `344612-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344612` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612) |
+| `344613-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344613` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613) |
 
 ## Physical and electrical characteristics
 
@@ -321,3 +332,6 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- `344612-ean-product-sheet.pdf`, printed/PDF p. 1: exact `344612` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612); SHA-256 `9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9`.
+- `344613-ean-product-sheet.pdf`, printed/PDF p. 1: exact `344613` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613); SHA-256 `8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591`.

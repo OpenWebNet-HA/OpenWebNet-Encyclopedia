@@ -20,11 +20,20 @@
 | --- | --- | --- | --- |
 | BTicino | `3476` | Established identity | canonical commercial record for item `55` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `3476` | `8012199653129` | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf), `3476-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST_00000915_EN` | technical sheet | publisher sheet | `3476` Basic Control Actuator electrical characteristics, local input and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/8e/6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST_00000915_EN.pdf) |
+| `3476-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `3476` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3476) |
 
 ## Physical and electrical characteristics
 
@@ -183,3 +192,5 @@ The dedicated publisher sheet directly identifies `3476` as the Basic Control Ac
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `3476-ean-product-sheet.pdf`, printed/PDF p. 1: exact `3476` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3476); SHA-256 `2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b`.

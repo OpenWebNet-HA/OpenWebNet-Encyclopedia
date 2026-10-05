@@ -21,11 +21,20 @@
 | BTicino | `F425` | Established identity | canonical commercial record for item `60` |
 | Legrand | `003552` | Established identity | canonical commercial record for item `60` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F425` | `8012199529646` | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf), `F425-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00281-b-UK` | technical sheet | 2012-12-13 | `F425` blackout-memory behavior, electrical characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
+| `F425-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F425` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425) |
 
 ## Physical and electrical characteristics
 
@@ -162,3 +171,5 @@ The canonical catalogue maps `F425` and `003552` to one technical item. The publ
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F425-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F425` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425); SHA-256 `3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc`.

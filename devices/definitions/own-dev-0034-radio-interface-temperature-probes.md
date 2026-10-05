@@ -23,6 +23,20 @@
 | BTicino - Axolute | `HC/HS/HD4577` | Established identity | canonical commercial record `1966`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `L4577` | `8012199848983` | [Archived original](https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf), `L4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4577` | `8012199848990` | [Archived original](https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf), `N4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4577` | `8012199849003` | [Archived original](https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf), `NT4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HC4577` | `8012199849027` | [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf), `HC4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4577` | `8012199849010` | [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf), `HS4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4577` | `8012199987668` | [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf), `HD4577-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -30,6 +44,12 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 | `MQ00183-c-EN` | Technical sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
 | `U1870C` | Instruction sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
 | BTicino `L4577` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-l4577) |
+| `L4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577) |
+| `N4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4577) |
+| `NT4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4577) |
+| `HC4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577) |
+| `HS4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577) |
+| `HD4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577) |
 
 ## Physical and electrical characteristics
 
@@ -198,3 +218,10 @@ Official product documentation corroborates the 4577/3455 radio-temperature role
 - [MQ00183-c-EN](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf)
 - [U1870C](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf)
 - [BTicino L4577](https://www.bticino.com/products/bt-l4577)
+
+- `L4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577); SHA-256 `4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a`.
+- `N4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4577); SHA-256 `88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288`.
+- `NT4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4577); SHA-256 `75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e`.
+- `HC4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577); SHA-256 `8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce`.
+- `HS4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577); SHA-256 `712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433`.
+- `HD4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577); SHA-256 `f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7`.

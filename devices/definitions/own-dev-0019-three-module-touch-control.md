@@ -28,12 +28,26 @@ This definition covers the three-module touch-control cluster, not the four-modu
 | Legrand - Arteor | `573913` | Documented commercial identity | Catalogue + `MQ00110` technical sheet |
 | Legrand - Arteor | `574091` | Shared technical item | Implementation evidence; direct sheet correlation pending |
 | Legrand - Arteor | `574591` | Shared technical item | Implementation evidence; direct sheet correlation pending |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4657M3` | `8012199942254` | [Archived original](https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf), `HC4657M3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4657M3` | `8012199942339` | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf), `HS4657M3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4657M3` | `8005543412862` | [Archived original](https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf), `HD4657M3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00110_f_EN` | Technical sheet | revision/date not yet pinned | 4657M3/M4 and Arteor touch-control family | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | publisher source not currently retained |
 | MyHOME catalogue `HPML0714` | Product catalogue | revision/date not yet pinned | `573912` / `573913` occur on printed pp. 16, 19 / PDF pp. 16, 19 | [Archived MyHOME catalogue](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | publisher source not currently retained |
+| `HC4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3) |
+| `HS4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4657M3) |
+| `HD4657M3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4657M3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4657M3) |
 
 The technical sheet distinguishes the three-module version by its six capacitive buttons. It documents physical and MyHOME_Suite configuration and a multifunction command set spanning lighting, automation, locking, scenarios, video-door-entry and sound functions.
 
@@ -487,3 +501,7 @@ The empty catalogue condition rows remain source artifacts requiring runtime cla
 - [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
+
+- `HC4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3); SHA-256 `6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014`.
+- `HS4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4657M3); SHA-256 `c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591`.
+- `HD4657M3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4657M3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4657M3); SHA-256 `53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929`.

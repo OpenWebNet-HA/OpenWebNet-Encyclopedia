@@ -33,6 +33,20 @@ The Device receives commands from compatible infrared remote controls and projec
 | Legrand - Mosaic | `079265` | Shared technical item | Implementation evidence; direct product sheet pending |
 
 The MyHOME Suite catalogue stores some finish variants as combined codes, so one catalogue row may represent several printed BTicino references.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4654` | `8012199745633` | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf), `HC4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4654` | `8012199745640` | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf), `HS4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4654` | `8012199986227` | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf), `HD4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4654N` | `8012199765617` | [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf), `L4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4654N` | `8012199765624` | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf), `N4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4654N` | `8012199765631` | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf), `NT4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -40,6 +54,12 @@ The MyHOME Suite catalogue stores some finish variants as combined codes, so one
 | `MQ00071-d-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
 | `MQ00071-d-FR` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
 | `MQ00071-d-IT` | Technical sheet | revision/date not yet pinned | IR receiver family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
+| `HC4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654) |
+| `HS4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654) |
+| `HD4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654) |
+| `L4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N) |
+| `N4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N) |
+| `NT4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N) |
 
 ## Physical and electrical characteristics
 
@@ -255,3 +275,10 @@ These facts are the Device-specific interpretation layer above the four fixed Ob
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `HC4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654); SHA-256 `9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999`.
+- `HS4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654); SHA-256 `fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f`.
+- `HD4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654); SHA-256 `6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41`.
+- `L4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N); SHA-256 `ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10`.
+- `N4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N); SHA-256 `fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68`.
+- `NT4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N); SHA-256 `9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f`.

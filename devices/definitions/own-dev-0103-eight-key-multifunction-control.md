@@ -26,6 +26,15 @@ The catalogue title “8 scenarios control” covers a broader multifunction com
 
 The catalogue LN record uses the grouping `L/N/NT`; the publisher markets `LN4652` as LivingLight. Label sheets `3541`, `3542`, `067595` and `067596` are accessories, not additional Device identities.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4652` | `8005543498279` | [Archived original](https://archive.openwebnet-ha.org/sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf), `H4652-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4652` | `8005543498286` | [Archived original](https://archive.openwebnet-ha.org/sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf), `LN4652-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -613,3 +622,6 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 - [LN4652 official catalogue](https://www.bticino.com/products/bt-ln4652)
 - [Retained Italian technical-sheet publisher source](https://dar.bticino.com/asset/Documents/MM00778_a_IT.pdf)
 - [Retained French catalogue-page publisher source](https://assets.legrand.com/general/legrand-fr/pc/cm220600_0982.pdf)
+
+- `H4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4652&include_technical=1); SHA-256 `b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb`.
+- `LN4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4652&include_technical=1); SHA-256 `a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3`.

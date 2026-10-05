@@ -21,12 +21,21 @@
 | BTicino | `F422` | Established identity | canonical commercial record for item `90` |
 | Legrand | `003562` | Established identity | canonical commercial record for item `90` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F422` | `8012199490854` | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf), `F422-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00280-f-EN` | technical sheet | publisher technical sheet | `F422` SCS/SCS interface electrical data and six operating modes | [Archived original](https://archive.openwebnet-ha.org/sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) |
 | MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `F422` / `003562` pairing; PDF p. 7 | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
+| `F422-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F422` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422) |
 
 ## Physical and electrical characteristics
 
@@ -276,3 +285,5 @@ The dedicated technical sheet documents `F422`, while current publisher compatib
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F422-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F422` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422); SHA-256 `4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454`.

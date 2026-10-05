@@ -21,11 +21,20 @@
 | BTicino | `F429` | Established identity | canonical commercial record for item `71` |
 | Legrand | `002631` | Established identity | canonical commercial record for item `71` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F429` | `8012199850542` | [Archived original](https://archive.openwebnet-ha.org/sha256/55/5d/555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665.pdf), `F429-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `U2068C` | instruction sheet | 2021-05 | `F429` SCS/DALI interface operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/88/80/888012e06924ff327b19eb352392050f968a9c43bd25748e9c1e278c44ca0b8a.pdf) | [Official source](https://dar.bticino.com/asset/Documents/U2068C.pdf) |
+| `F429-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F429` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/5d/555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F429) |
 
 ## Physical and electrical characteristics
 
@@ -285,3 +294,5 @@ The canonical catalogue maps `F429` and `002631` to one technical item. The curr
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F429-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F429` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/5d/555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F429); SHA-256 `555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665`.

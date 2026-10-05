@@ -22,6 +22,16 @@
 | BTicino | `344743` | established catalogue identity for item `2321` | canonical commercial record |
 | BTicino | `344745` | established catalogue identity for item `2321` | canonical commercial record |
 | BTicino | `344746` | established catalogue identity for item `2321` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `344742` | `8005543781326` | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf), `344742-ean-product-sheet.pdf`, printed/PDF p. 2 |
+| `344743` | `8005543781388` | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf), `344743-ean-product-sheet.pdf`, printed/PDF p. 2 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -29,6 +39,8 @@
 | BTicino `344742` product page | product page | current product family | Current Classe 300X connected indoor-unit functions and documentation links | Not applicable - web page | [Official product page](https://www.bticino.com/products/bt-344742) |
 | `FIS_C300X_1` | technical data sheet | current publisher copy | `344742` / `344743` / `344745` / `344746` supply, Wi-Fi and teleloop electrical data | [Archived original](https://archive.openwebnet-ha.org/sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf) | [Official source](https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf) |
 | `ST-00002362-EN` | technical sheet | current publisher copy | `344745` / `344746` connected video internal units with inductive loop | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/0c/f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf) |
+| `344742-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344742` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344742) |
+| `344743-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344743` to EAN-13 relationship at printed/PDF p. 2. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743) |
 
 ## Physical and electrical characteristics
 
@@ -190,3 +202,6 @@ Current publisher material confirms the four commercial references and different
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `344742-ean-product-sheet.pdf`, printed/PDF p. 2: exact `344742` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344742); SHA-256 `f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29`.
+- `344743-ean-product-sheet.pdf`, printed/PDF p. 2: exact `344743` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743); SHA-256 `3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5`.

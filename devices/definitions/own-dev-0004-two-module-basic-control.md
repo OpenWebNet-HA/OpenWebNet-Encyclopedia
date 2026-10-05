@@ -40,11 +40,25 @@ This technical definition covers the shared catalogue capability core used by 19
 | Legrand Vela | `687377` | Shared technical item; individual product-document review pending |
 
 Sharing one `EN_ITEM` establishes a common catalogue capability core. It does not by itself prove that every commercial package is physically identical.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4652/2` | `8012199745350` | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf), `H4652_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4652/2` | `8012199365596` | [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf), `L4652_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5832/2` | `8012199838311` | [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf), `AM5832_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00286-d-EN` - Basic control for 2 independent loads | Technical sheet | 20/01/2014 | `067552`, `H4652/2`, `L4652/2`, `AM5832/2` | [Archived original](https://archive.openwebnet-ha.org/sha256/36/64/366400ace218504580a0ec2a88e13e7676ace5ed97cdbe9fc34e33441bfb0ff6.pdf) | [Official PDF](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00286-d-en.pdf) |
+| `H4652_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4652/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2) |
+| `L4652_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4652/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_2) |
+| `AM5832_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5832/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_2) |
 
 Additional language revisions and product-range-specific sheets should be collected rather than treating this one document as exhaustive.
 
@@ -1080,3 +1094,7 @@ The archived technical sheet has therefore been reconciled into both the physica
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `H4652_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4652/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2); SHA-256 `addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443`.
+- `L4652_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4652/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_2); SHA-256 `d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53`.
+- `AM5832_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5832/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_2); SHA-256 `553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52`.

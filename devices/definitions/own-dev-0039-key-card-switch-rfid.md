@@ -26,12 +26,24 @@ The Device detects authorized RFID card insertion/removal and maps that state in
 | Legrand - Mosaic | `078480` | established catalogue identity | implementation evidence; not printed in the retained core sheet |
 | Legrand - Arteor | `572236` | established identity; printed `5 722 36` | catalogue + `MM00771-a-EN` |
 | Legrand - Arteor | `572736` | publisher-documented family identity; catalogue conflict | `MM00771-a-EN`; current catalogue assigns `572736` to item `1563` |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4648` | `8005543441701` | [Archived original](https://archive.openwebnet-ha.org/sha256/21/dd/21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7.pdf), `H4648-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4648` | `8005543441749` | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/f3/edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6.pdf), `LN4648-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | `H4648`, `LN4648`, `0 675 66`, `5 727 36`, `5 722 36`; RFID and configuration behavior | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
 | `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | cross-family comparison for the non-RFID key-card switch | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
+| `H4648-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4648` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/21/dd/21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4648) |
+| `LN4648-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4648` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/f3/edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4648) |
 
 ## Physical and electrical characteristics
 
@@ -247,3 +259,6 @@ The major commercial conflict is `572736`: `MM00771-a-EN` assigns printed `5 727
 - [Device Database Inventory](../inventory/)
 - [`MM00771-a-EN` archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf)
 - [`MM00496-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf)
+
+- `H4648-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4648` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/21/dd/21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4648); SHA-256 `21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7`.
+- `LN4648-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4648` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ed/f3/edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4648); SHA-256 `edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6`.

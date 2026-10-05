@@ -22,12 +22,22 @@
 | Legrand | `003842` | Established identity | canonical commercial record `1708`; Commercial identity of this Technical Device | Canonical catalogue |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F411/2` | `8012199365466` | [Archived original](https://archive.openwebnet-ha.org/sha256/58/90/58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a.pdf), `F411_2-ean-international-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/2 configuration: printed p. 121 / PDF p. 123; load/specification tables: printed pp. 157-160 / PDF pp. 159-162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | BTicino `F411/2` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-f411-2) |
+| `F411_2-ean-international-sheet.pdf` | English manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F411/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/58/90/58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-F411%2F2&include_technical=1) |
 
 For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
 
@@ -282,3 +292,5 @@ The database Virgin-Object topology explains the documented single, double and c
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
 - [BTicino F411/2](https://www.bticino.com/products/bt-f411-2)
+
+- `F411_2-ean-international-sheet.pdf`, printed/PDF p. 1: exact `F411/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/58/90/58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-F411%2F2&include_technical=1); SHA-256 `58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a`.

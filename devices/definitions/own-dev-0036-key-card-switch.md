@@ -28,12 +28,24 @@ The Device detects card insertion/removal and maps that state to configured scen
 | Legrand - Arteor | `572736` | catalogue-associated identity with source conflict | catalogue; `MM00771-a-EN` assigns printed `5 727 36` to the RFID family |
 
 No commercial identity is treated as canonical. The `572736` conflict is material because the official RFID sheet associates the same printed reference with the RFID product family documented by the [RFID key-card switch](own-dev-0039-key-card-switch-rfid.md).
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4649` | `8005543441718` | [Archived original](https://archive.openwebnet-ha.org/sha256/23/7e/237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733.pdf), `H4649-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4649` | `8005543441794` | [Archived original](https://archive.openwebnet-ha.org/sha256/aa/d5/aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276.pdf), `LN4649-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MM00496-b-EN` | Technical sheet | revision b / 2013-12-02 | `H4649`, `LN4649`, `0 675 65`, `5 727 35`, `5 722 35` | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00496_b_EN.pdf) |
 | `MM00771-a-EN` | Technical sheet | revision a / 2013-12-02 | cross-family evidence for the disputed `5 727 36` identity | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) |
+| `H4649-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4649` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/7e/237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4649) |
+| `LN4649-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4649` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/aa/d5/aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4649) |
 
 ## Physical and electrical characteristics
 
@@ -249,3 +261,6 @@ Two source conflicts remain explicit. First, firmware `161` stores `DEL1`/`DEL2`
 - [Device Database Inventory](../inventory/)
 - [`MM00496-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/fb/b6/fbb66b8f4b3aebc54b5159450544d393eabf559eaffe753594348dd24c34715f.pdf)
 - [`MM00771-a-EN` archived original](https://archive.openwebnet-ha.org/sha256/d2/71/d271cc73c58bd7350c84c8f295751041a5ec789c415133103dafd8d4583e5449.pdf)
+
+- `H4649-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4649` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/23/7e/237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4649); SHA-256 `237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733`.
+- `LN4649-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4649` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/aa/d5/aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4649); SHA-256 `aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276`.

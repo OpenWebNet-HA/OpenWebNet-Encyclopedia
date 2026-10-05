@@ -25,6 +25,14 @@ This Device is the shared technical definition behind Legrand `0 026 04 / 002604
 
 The later BUS/SCS guides explicitly write the pair as “`0 026 04` or `BMSW1005`”, providing direct publisher evidence that the two commercial references describe the same technical actuator.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `BMSW1005` | `8005543485484` | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf), `BMSW1005-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -39,6 +47,7 @@ The later BUS/SCS guides explicitly write the pair as “`0 026 04` or `BMSW1005
 | `le10699ad-en.pdf` | BUS/SCS hotel / device guide | revision `AD`, 2019 | Printed/PDF p. 36; programming example printed p. 157 / PDF p. 157 | [Archived original](https://archive.openwebnet-ha.org/sha256/02/bd/02bde8a8120d34ca8921a8ffeb82c725880b5e09b42888548561c18001d35607.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699ad-en.pdf) |
 | `le10699aa-fr.pdf` | BUS/SCS hotel / device guide | revision `AA`, 2018 | Printed/PDF p. 24; programming example printed p. 103 / PDF p. 103 | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
 | `LE04280AA.pdf` | publisher-linked wiring sheet | revision `AA` | Publisher-linked from the `002604` product page, but the PDF itself depicts `0 026 02` / 4 x 16 A; excluded from Device-specific facts | [Archived original](https://archive.openwebnet-ha.org/sha256/94/7c/947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE04280AA.pdf) |
+| `BMSW1005-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSW1005` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005) |
 
 ## Physical and electrical characteristics
 
@@ -348,3 +357,5 @@ The main revision difference concerns programming: the 2013 French sheet and 201
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Lighting](../../functional/who-1-lighting/README.md)
+
+- `BMSW1005-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSW1005` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005); SHA-256 `0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51`.

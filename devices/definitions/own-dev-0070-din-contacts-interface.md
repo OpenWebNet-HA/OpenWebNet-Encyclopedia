@@ -21,11 +21,20 @@
 | BTicino | `F428` | Established identity | canonical commercial record for item `79` |
 | Legrand | `003553` | Established identity | canonical commercial record for item `79` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F428` | `8012199837222` | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf), `F428-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST-00002001-EN` | technical sheet | 2024-11-13 | `F428` two-contact DIN interface characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST-00002001-EN.pdf) |
+| `F428-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F428` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428) |
 
 ## Physical and electrical characteristics
 
@@ -549,3 +558,5 @@ The canonical catalogue maps `F428` and `003553`. The current publisher sheet di
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `F428-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F428` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428); SHA-256 `9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262`.

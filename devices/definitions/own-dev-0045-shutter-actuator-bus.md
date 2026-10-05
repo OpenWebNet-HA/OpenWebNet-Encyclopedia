@@ -24,12 +24,26 @@ Flush-mounted bus shutter actuator with position and preset management.
 | BTicino - LivingLight | `LN4661M2` | established catalogue identity for item `1586` | canonical commercial record |
 | BTicino - Matix | `AM5861M2` | established catalogue identity for item `1586` | canonical commercial record |
 | Legrand - Céliane | `067557` | established catalogue identity for item `1586` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4661M2` | `8005543478288` | [Archived original](https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf), `H4661M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4661M2` | `8005543478295` | [Archived original](https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf), `LN4661M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5861M2` | `8005543478271` | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf), `AM5861M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | AUTOMATISME | technical/system documentation | revision/date as printed | Advanced shutter actuator family and preset behavior | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | ST-00000900-EN | technical sheet | 2021-03-23 | H4661M2 / LN4661M2 / 067557 / AM5861M2; addressing, motor type, calibration and modes | - | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000900-EN.pdf) |
+| `H4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4661M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2) |
+| `LN4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4661M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4661M2) |
+| `AM5861M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5861M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2) |
 
 ## Physical and electrical characteristics
 
@@ -227,3 +241,7 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- `H4661M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4661M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2); SHA-256 `dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162`.
+- `LN4661M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4661M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4661M2); SHA-256 `36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca`.
+- `AM5861M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5861M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2); SHA-256 `e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7`.

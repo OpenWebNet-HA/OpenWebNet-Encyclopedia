@@ -37,6 +37,20 @@ The canonical catalogue contains ten Device records. Several database records co
 | Legrand - Mosaic | `079178` | Shared technical item | Implementation evidence; direct product sheet pending |
 
 The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino finish variants are collapsed into combined catalogue codes such as `HC/HS/HD4680`.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4680` | `8012199774312` | [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf), `HC4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4680` | `8012199774329` | [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf), `HS4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4680` | `8012199986241` | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf), `HD4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4680` | `8012199812908` | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf), `L4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4680` | `8012199812922` | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf), `N4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4680` | `8012199812939` | [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf), `NT4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -44,6 +58,12 @@ The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino
 | `MQ00288-c-EN` | Technical sheet | revision/date not yet pinned | principal BTicino, Arteor and Céliane identities | [Archived PDF](https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
 | `MQ00288-c-FR` | Technical sheet | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
 | `U3327B` | Installation/use instructions | revision/date not yet pinned | scenario-control family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
+| `HC4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680) |
+| `HS4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680) |
+| `HD4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680) |
+| `L4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4680) |
+| `N4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680) |
+| `NT4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680) |
 
 ## Physical and electrical characteristics
 
@@ -401,3 +421,10 @@ The remaining source gaps concern Mosaic variants and hardware corroboration.
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `HC4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680); SHA-256 `1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575`.
+- `HS4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680); SHA-256 `e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2`.
+- `HD4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680); SHA-256 `bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378`.
+- `L4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4680); SHA-256 `dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530`.
+- `N4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680); SHA-256 `c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594`.
+- `NT4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680); SHA-256 `48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840`.

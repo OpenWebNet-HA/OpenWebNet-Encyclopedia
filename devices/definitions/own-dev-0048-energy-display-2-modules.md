@@ -22,12 +22,24 @@
 | BTicino - LivingLight | `LN4710` | established catalogue identity for item `1884` | canonical commercial record |
 | Legrand - Céliane | `067205` | established catalogue identity for item `1884` | canonical commercial record |
 | Arnould - Espace Evolution | `64171` | established catalogue identity for item `1884` | canonical commercial record |
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4710` | `8005543515945` | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf), `H4710-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4710` | `8005543515952` | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf), `LN4710-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ01014_a_EN` | technical sheet | revision a | Energy display functions, pages and measuring/load-management relationships | [Archived original](https://archive.openwebnet-ha.org/sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf) |
 | BTicino `H4710` catalogue page | product page | current catalogue | Current `H4710` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN) |
+| `H4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4710` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710) |
+| `LN4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4710` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710) |
 
 ## Physical and electrical characteristics
 
@@ -226,3 +238,6 @@ The technical sheet names H4710, 067205 and LN4710 and prints the Arnould refere
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `H4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710); SHA-256 `b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be`.
+- `LN4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710); SHA-256 `3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4`.

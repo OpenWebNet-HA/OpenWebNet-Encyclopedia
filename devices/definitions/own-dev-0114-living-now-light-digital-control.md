@@ -26,6 +26,16 @@ The exact manufacturer sheet and reference lists establish all three Living Now 
 
 The exact technical sheet names `KW8010`, `KM8010` and `KG8010` together; the retained guide/catalogue lists establish white, sand and black. Individual publisher exports independently identify Living Now, with the KM colour attribute labelled Beige and the catalogue labelled sand. The canonical commercial descriptions distinguish colours even though the technical item/name contains “white”; that source label does not make all variants white. EAN and commercial identity do not establish installed firmware. All three variant exports are retained separately.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `KW8010` | `8005543645994` | [Archived original](https://archive.openwebnet-ha.org/sha256/88/ca/88ca328656a25c613079ee74ad293d6ae1be4b0c06a970fb9be1f89e730c3af1.pdf), `KW8010-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `KM8010` | `8005543646014` | [Archived original](https://archive.openwebnet-ha.org/sha256/da/24/da2404125a548a616b6b5f4314e5268be741b72c6e65f485c075edf18ca4d71d.pdf), `KM8010-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `KG8010` | `8005543646038` | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/9b/2f9b4480ea05ad1e53f34957ccf13c60771e818307ab2af87c7907b6d4d3bd2f.pdf), `KG8010-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -262,3 +272,7 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- `KW8010-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KW8010` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/88/ca/88ca328656a25c613079ee74ad293d6ae1be4b0c06a970fb9be1f89e730c3af1.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KW8010&include_technical=1); SHA-256 `88ca328656a25c613079ee74ad293d6ae1be4b0c06a970fb9be1f89e730c3af1`.
+- `KM8010-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KM8010` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/da/24/da2404125a548a616b6b5f4314e5268be741b72c6e65f485c075edf18ca4d71d.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KM8010&include_technical=1); SHA-256 `da2404125a548a616b6b5f4314e5268be741b72c6e65f485c075edf18ca4d71d`.
+- `KG8010-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KG8010` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/9b/2f9b4480ea05ad1e53f34957ccf13c60771e818307ab2af87c7907b6d4d3bd2f.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KG8010&include_technical=1); SHA-256 `2f9b4480ea05ad1e53f34957ccf13c60771e818307ab2af87c7907b6d4d3bd2f`.

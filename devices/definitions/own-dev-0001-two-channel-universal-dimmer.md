@@ -27,6 +27,15 @@ The F418U2 is a two-channel SCS universal dimmer. The official technical sheet i
 | Legrand | `0 036 51` / `003651` | Equivalent commercial reference | Same vendor technical sheet + same catalogue item |
 
 No preference between these references is implied by the Device ID.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F418U2` | `8005543534991` | [Archived original](https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf), `F418U2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -37,6 +46,7 @@ No preference between these references is implied by the Device ID.
 | `LE07383AD` | Instruction sheet | 07/23 | Whole Device-specific document, PDF pp. 1-2; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/4d/2f4daed6f567b8fcc3250113603a57168b949f441eb121e7851b6f23625dfdbe.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE07383AD.pdf) |
 | `ST-00001620-EN` | Technical sheet | Current BTicino catalogue listing | Whole Device-specific document, PDF pp. 1-4; applies to this documented product family | [Archived original](https://archive.openwebnet-ha.org/sha256/10/7a/107a108bd89755bf0f2e93b861c8458d77f3fa994555126fc3f22c0f3979a004.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001620-EN.pdf) |
 | `GUI-MHOME` | MyHOME installation guide | Current BTicino catalogue listing | Publisher listing identifies the guide; retained multi-product page coverage not established | - | [BTicino product page](https://www.bticino.com/products/bt-f418u2) |
+| `F418U2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F418U2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2) |
 
 The source archive should retain every distinct revision found for this Device. The following official material is currently known:
 
@@ -626,3 +636,5 @@ The July 2023 `LE07383AD` instruction sheet also gives a different temperature i
 - [Firmware](../../device-model/firmware.md)
 - [Virgin Objects](../../device-model/virgin-objects.md#dimmer-actuator-virgin)
 - [`WHO 1` Dimensions](../../functional/who-1-lighting/dimensions.md)
+
+- `F418U2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F418U2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2); SHA-256 `978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b`.

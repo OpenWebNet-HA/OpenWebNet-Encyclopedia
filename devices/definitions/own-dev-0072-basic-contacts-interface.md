@@ -22,12 +22,21 @@
 | Legrand - Arteor | `573996` | Established identity | canonical commercial record for item `81` |
 | Legrand | `049238` | Established identity | canonical commercial record for item `81` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `3477` | `8012199653136` | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/95/f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018.pdf), `3477-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00272-c-EN` | technical sheet | 2013-08-01 | `3477` basic two-input contact interface characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/84/9f/849fecce315893cec920898f9492f474fd2e477f2d6375af65b4c50d580c641b.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00272_c_EN.pdf) |
 | MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `3477` / `573996` commercial pairing; PDF p. 7 | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
+| `3477-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `3477` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/95/f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3477) |
 
 ## Physical and electrical characteristics
 
@@ -552,3 +561,5 @@ The dedicated technical sheet directly documents `3477`. Current publisher compa
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `3477-ean-product-sheet.pdf`, printed/PDF p. 1: exact `3477` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f0/95/f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3477); SHA-256 `f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018`.

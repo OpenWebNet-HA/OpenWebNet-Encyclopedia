@@ -29,6 +29,17 @@ This Device exposes three independently addressed command Modules under a shared
 | Legrand - Vela | `687378` | Shared technical item | Implementation evidence; product-document review pending |
 
 The current Legrand web catalogue describes reference `067554` with “Arteor” wording while the canonical MyHOME Suite catalogue assigns that code to the Céliane line. Preserve this as a source/catalogue metadata difference until the historical commercial relationship is resolved.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4652/3` | `8012199745367` | [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf), `H4652_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4652/3` | `8012199365619` | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf), `L4652_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5832/3` | `8012199838342` | [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf), `AM5832_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -37,6 +48,9 @@ The current Legrand web catalogue describes reference `067554` with “Arteor”
 | `MQ00290-c-FR` | Technical sheet | revision date to verify | same family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
 | `T9807J` | Instruction sheet | revision to verify | L4652/3 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
 | `LE05420AA` | Instruction sheet | revision to verify | `067554` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
+| `H4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3) |
+| `L4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3) |
+| `AM5832_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5832/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3) |
 
 ## Physical and electrical characteristics
 
@@ -553,3 +567,7 @@ The current source set is reconciled for the core product family; direct documen
 - [Device Database Inventory](../inventory/)
 - [Diagnostics](../../diagnostics/)
 - [Programming](../../programming/)
+
+- `H4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3); SHA-256 `63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2`.
+- `L4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3); SHA-256 `2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6`.
+- `AM5832_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5832/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3); SHA-256 `1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53`.

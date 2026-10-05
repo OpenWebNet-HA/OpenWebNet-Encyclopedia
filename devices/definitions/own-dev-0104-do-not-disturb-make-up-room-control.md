@@ -26,6 +26,15 @@ DND means Do Not Disturb; MUR means Make Up Room. These are room-service notific
 
 The LED-colour legend also mentions Arteor, but supplies no Arteor commercial reference. It does not establish an additional identity for this cluster.
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4653` | `8005543502808` | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf), `H4653-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4653` | `8005543502747` | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf), `LN4653-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -34,6 +43,7 @@ The LED-colour legend also mentions Arteor, but supplies no Arteor commercial re
 | `MM00775-a-FR.pdf` | French technical sheet | `MM00775-a-FR`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00775-a-FR.pdf) |
 | `H4653-publisher-product-sheet.pdf` | Publisher product-sheet export | `DATASHEET`, `03.10.2026` (export date) | `H4653` only; identity/product characteristics printed p. 1 / PDF p. 1; technical attributes printed pp. 2-3 / PDF pp. 2-3; download inventory printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1679`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `LN4653-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4653` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653) |
 
 ## Physical and electrical characteristics
 
@@ -225,3 +235,6 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 - [H4653 official catalogue](https://www.bticino.com/products/bt-h4653)
+
+- `H4653-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1); SHA-256 `1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1`.
+- `LN4653-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653); SHA-256 `55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0`.
