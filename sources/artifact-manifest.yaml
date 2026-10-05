@@ -5301,6 +5301,37 @@ artifacts:
   language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le06187ab-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE06187AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE06187AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 663256
+  sha256: 51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE06187AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/51/d9/51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/51/d9/51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - tr
+  - pl
+  - zh
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le06433aa-20261005
   kind: documentation
   publisher: BTicino / Legrand
