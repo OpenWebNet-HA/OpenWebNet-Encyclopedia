@@ -1203,6 +1203,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4659
+  title: HC4659 official product export with EAN
+  media_type: application/pdf
+  filename: HC4659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18770
+  sha256: 9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/7d/9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hc4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
