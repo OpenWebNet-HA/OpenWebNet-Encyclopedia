@@ -1972,6 +1972,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f411u1-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F411U1-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F411U1-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 14699
+  sha256: 36ffef265654bf508a482559cdcc99b73e0eda6d2c04378512218056dbd039ed
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411U1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/ff/36ffef265654bf508a482559cdcc99b73e0eda6d2c04378512218056dbd039ed.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/ff/36ffef265654bf508a482559cdcc99b73e0eda6d2c04378512218056dbd039ed.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f411u2-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
