@@ -33,6 +33,45 @@ evidence/
 
 ---
 
+## Evidence Classes and Allowed Combinations
+
+The manifest schema enforces which values may appear together:
+
+| `evidence_class` | `capture_kind` | `epistemic_status` | Context required |
+| :--- | :--- | :--- | :--- |
+| `public_experiment`, `public_capture` | `controlled_experiment`, `active_observation`, `passive_trace`, `fingerprint` | `experimentally_confirmed`, `observed`, `hypothesized` | `installation_id`, `bus_id`, `gateway_id` (strings), `environment`, `device_under_test` (`sku`, `configured_where`); `sub_bus_id`, if present, is a string; at least one frame and one claim |
+| `firmware_emulation` | `firmware_oracle` | `firmware_observed` | `firmware_target`, `result_outcome`; the physical identifiers above are absent or `null` |
+
+- `experimentally_confirmed` is reserved for physical hardware. A firmware result cannot carry it, and a physical package cannot carry `firmware_observed`.
+- A firmware result establishes what the executed firmware produced under the recorded harness conditions (for example an ACK, or bytes written toward a simulated bus interface). It does not establish what a physical actuator does.
+- `sub_bus_id` may be `null` only in firmware packages. The earlier relaxation to `null` for physical packages was not intended and is reverted.
+
+### Firmware reproducibility context (`firmware_target`)
+
+A firmware package identifies its experiment with the keys of the own-firmware-oracle result header (`oracle/record.py` `HEADER_KEYS`), plus the path of the original result file. All are required:
+
+| Key | Meaning |
+| :--- | :--- |
+| `product`, `version`, `image_sha256` | Product, firmware version, SHA-256 of the exact firmware artifact |
+| `harness`, `target_sha256` | `full` or `unit:<program>`, and the digest of the executed target |
+| `adapter` | `<name>-<version>` of the execution adapter (pty, shim, system emulation) |
+| `reset`, `bus`, `framer`, `responder`, `settle_ms` | Reset policy, simulated bus, framing, responder and settling policy |
+| `suite`, `suite_sha256`, `oracle_version` | Suite identity, digest and oracle revision |
+| `source_result` | Path of the original oracle result file |
+
+For firmware packages `environment` is optional; `firmware_target.bus` describes the simulated bus where `environment.bus_topology` describes a physical one.
+
+### Inconclusive and zero-frame results
+
+`result_outcome` is required for firmware packages. `supported` needs at least one claim and may have `frame_count: 0` (for example a documented silence). `inconclusive` (startup failure, unresolved silence) carries no claim and a required `inconclusive_reason`. Physical packages keep the positive `frame_count` and non-empty `claims_supported` requirements.
+
+### Tests
+
+```
+python -m pytest evidence/tests
+python evidence/validate_evidence.py
+```
+
 ## Packaged Evidence Index
 
 | Evidence ID | Capture Directory | Hardware & Firmware | Kind | Epistemic Status | Frames | Primary Claims & Boundaries Established |
