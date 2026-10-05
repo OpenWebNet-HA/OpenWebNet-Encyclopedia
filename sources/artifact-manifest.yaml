@@ -4279,6 +4279,26 @@ artifacts:
   language_evidence: Language headings and manufacturer instruction text inspected in the retained original.
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-le12456ab-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE12456AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE12456AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 3400169
+  sha256: ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d
+  source_url: https://dar.bticino.it/asset/Documents/LE12456AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ed/0e/ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ed/0e/ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le12456ad-20261005
   kind: documentation
   publisher: BTicino / Legrand
