@@ -1219,6 +1219,28 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-hs4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4658
+  title: HS4658 official product export with EAN
+  media_type: application/pdf
+  filename: HS4658-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17755
+  sha256: 0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4658
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0a/15/0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0a/15/0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hs4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
