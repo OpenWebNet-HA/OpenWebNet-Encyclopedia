@@ -39,6 +39,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-344612-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '344612'
+  title: 344612 official product export with EAN
+  media_type: application/pdf
+  filename: 344612-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23571
+  sha256: 9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-344613-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '344613'
+  title: 344613 official product export with EAN
+  media_type: application/pdf
+  filename: 344613-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 24017
+  sha256: 8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-344742-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '344742'
+  title: 344742 official product export with EAN
+  media_type: application/pdf
+  filename: 344742-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 27039
+  sha256: f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344742
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-344743-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '344743'
+  title: 344743 official product export with EAN
+  media_type: application/pdf
+  filename: 344743-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 27539
+  sha256: 3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-345020-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -99,6 +187,50 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-3476-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '3476'
+  title: 3476 official product export with EAN
+  media_type: application/pdf
+  filename: 3476-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16257
+  sha256: 2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3476
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-3477-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: '3477'
+  title: 3477 official product export with EAN
+  media_type: application/pdf
+  filename: 3477-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 38323
+  sha256: f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3477
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f0/95/f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f0/95/f095af5e62d424ecaea74869e98ef6007dfa7b4ab9ef96a9b3a0caa95a6f2018.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-4601-installation-nl-20130411-82719-2
   kind: documentation
   publisher: BTicino / Legrand
@@ -212,6 +344,204 @@ artifacts:
   language_evidence: English publisher document
   notes:
   - Publisher original retrieved on 2026-10-03.
+- id: device-doc-am5658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5658
+  title: AM5658 official product export with EAN
+  media_type: application/pdf
+  filename: AM5658-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18583
+  sha256: f722c6cc24129d14c170ee752e06083de4f453bf68cf990a29ee07d255a1bcf3
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5658
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f7/22/f722c6cc24129d14c170ee752e06083de4f453bf68cf990a29ee07d255a1bcf3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f7/22/f722c6cc24129d14c170ee752e06083de4f453bf68cf990a29ee07d255a1bcf3.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5659
+  title: AM5659 official product export with EAN
+  media_type: application/pdf
+  filename: AM5659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17710
+  sha256: cc92a40fdbb0f207d702b99520a77e212715039128b670f24c75a347a3fd09a8
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/cc/92/cc92a40fdbb0f207d702b99520a77e212715039128b670f24c75a347a3fd09a8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/cc/92/cc92a40fdbb0f207d702b99520a77e212715039128b670f24c75a347a3fd09a8.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5831m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5831M2
+  title: AM5831M2 official product export with EAN
+  media_type: application/pdf
+  filename: AM5831M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40992
+  sha256: 894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5832-2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5832/2
+  title: AM5832/2 official product export with EAN
+  media_type: application/pdf
+  filename: AM5832_2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 44793
+  sha256: 553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5832-3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5832/3
+  title: AM5832/3 official product export with EAN
+  media_type: application/pdf
+  filename: AM5832_3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 38866
+  sha256: 1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5852m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5852M2
+  title: AM5852M2 official product export with EAN
+  media_type: application/pdf
+  filename: AM5852M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19608
+  sha256: c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5860m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5860M2
+  title: AM5860M2 official product export with EAN
+  media_type: application/pdf
+  filename: AM5860M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 26475
+  sha256: 77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5860M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5861m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5861M2
+  title: AM5861M2 official product export with EAN
+  media_type: application/pdf
+  filename: AM5861M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23791
+  sha256: e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-am5872-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: AM5872
+  title: AM5872 official product export with EAN
+  media_type: application/pdf
+  filename: AM5872-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 13887
+  sha256: d25ecb1f5e50bc0363c336a1e632b86d9955e9ed671bbe2b204d708e1d9e05ba
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5872
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d2/5e/d25ecb1f5e50bc0363c336a1e632b86d9955e9ed671bbe2b204d708e1d9e05ba.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d2/5e/d25ecb1f5e50bc0363c336a1e632b86d9955e9ed671bbe2b204d708e1d9e05ba.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-arnould-historical-selection-guide-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -312,6 +642,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bmse3001-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: BMSE3001
+  title: BMSE3001 official product export with EAN
+  media_type: application/pdf
+  filename: BMSE3001-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18478
+  sha256: da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3001
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-bmse3003-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: BMSE3003
+  title: BMSE3003 official product export with EAN
+  media_type: application/pdf
+  filename: BMSE3003-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18575
+  sha256: 5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3003
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/54/95/5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/54/95/5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-bmsw1003-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: BMSW1003
+  title: BMSW1003 official product export with EAN
+  media_type: application/pdf
+  filename: BMSW1003-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17756
+  sha256: a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1003
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a2/36/a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a2/36/a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-bmsw1005-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: BMSW1005
+  title: BMSW1005 official product export with EAN
+  media_type: application/pdf
+  filename: BMSW1005-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14978
+  sha256: 0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-bmsw3001-bmsw3002-u3773b
   kind: documentation
   publisher: BTicino
@@ -711,6 +1129,72 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f411-2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F411/2
+  title: F411/2 official product record with EAN
+  media_type: application/pdf
+  filename: F411_2-ean-international-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 443834
+  sha256: 58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a
+  source_url: https://www.bticino.com/products/pdf?sku=BT-F411%2F2&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/58/90/58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/58/90/58909c08dd227647669efb588adebda5671e879000c0fc2b4b12d21050f33d0a.pdf
+  language:
+  - en
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f411-4-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F411/4
+  title: F411/4 official product export with EAN
+  media_type: application/pdf
+  filename: F411_4-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 15711
+  sha256: d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_4
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f416u1-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F416U1
+  title: F416U1 official product export with EAN
+  media_type: application/pdf
+  filename: F416U1-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17347
+  sha256: e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F416U1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e7/ee/e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e7/ee/e7eef1088291662598bc466139740521584065aa1f108cab400b16709302ddff.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f418-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -731,6 +1215,138 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f418u2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F418U2
+  title: F418U2 official product export with EAN
+  media_type: application/pdf
+  filename: F418U2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17336
+  sha256: 978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418U2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/97/8f/978fcfe56ced3126d6658112df49a6f63b77e6fa1cc205f2aaba7c94bfb2566b.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f420-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F420
+  title: F420 official product export with EAN
+  media_type: application/pdf
+  filename: F420-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14223
+  sha256: 8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F420
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8e/0d/8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8e/0d/8e0dd94d2d2f31f024cc9684241de9c9c9a1cd8adb602cae12ea7c6c28fca99a.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f422-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F422
+  title: F422 official product export with EAN
+  media_type: application/pdf
+  filename: F422-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14544
+  sha256: 4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f425-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F425
+  title: F425 official product export with EAN
+  media_type: application/pdf
+  filename: F425-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14996
+  sha256: 3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f428-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F428
+  title: F428 official product export with EAN
+  media_type: application/pdf
+  filename: F428-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 35130
+  sha256: 9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f429-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F429
+  title: F429 official product export with EAN
+  media_type: application/pdf
+  filename: F429-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18286
+  sha256: 555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F429
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/55/5d/555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/55/5d/555db4a56b0514d86eea4526f805f3174407f01e016f1dfc491ca8ee98abf665.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f450-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -851,6 +1467,72 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-h4648-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4648
+  title: H4648 official product export with EAN
+  media_type: application/pdf
+  filename: H4648-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 24211
+  sha256: 21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4648
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/21/dd/21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/21/dd/21ddc78b4291f7751080f21ccbe4a2a253e954117b4e630d862c9fb8bd93acb7.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4649-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4649
+  title: H4649 official product export with EAN
+  media_type: application/pdf
+  filename: H4649-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 24191
+  sha256: 237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4649
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/23/7e/237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/23/7e/237ead515d5333a822d12f9b487add39a2f1ec69bbd4cbadfcb2e5a718f90733.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4650-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4650
+  title: H4650 official product export with EAN
+  media_type: application/pdf
+  filename: H4650-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 20495
+  sha256: 93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -871,6 +1553,72 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-h4651m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4651M2
+  title: H4651M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4651M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40941
+  sha256: e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4651M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4652-2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4652/2
+  title: H4652/2 official product export with EAN
+  media_type: application/pdf
+  filename: H4652_2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 44539
+  sha256: addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4652-3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4652/3
+  title: H4652/3 official product export with EAN
+  media_type: application/pdf
+  filename: H4652_3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 42170
+  sha256: 63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4652-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino
@@ -919,6 +1667,72 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-h4660m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4660M2
+  title: H4660M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4660M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 26514
+  sha256: 3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4660M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3a/8b/3a8bdf20830b5d0ffc171af349457b46f8be2701fa29b785b45257879093da03.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4661m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4661M2
+  title: H4661M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4661M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23829
+  sha256: dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4672m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4672M2
+  title: H4672M2 official product export with EAN
+  media_type: application/pdf
+  filename: H4672M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 20336
+  sha256: 575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4672M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4684-l4684-spanish-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -939,6 +1753,160 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-h4691-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4691
+  title: H4691 official product export with EAN
+  media_type: application/pdf
+  filename: H4691-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 34192
+  sha256: 77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4710-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4710
+  title: H4710 official product export with EAN
+  media_type: application/pdf
+  filename: H4710-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19087
+  sha256: b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4577
+  title: HC4577 official product export with EAN
+  media_type: application/pdf
+  filename: HC4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17331
+  sha256: 8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4654-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4654
+  title: HC4654 official product export with EAN
+  media_type: application/pdf
+  filename: HC4654-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40101
+  sha256: 9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4657m3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4657M3
+  title: HC4657M3 official product export with EAN
+  media_type: application/pdf
+  filename: HC4657M3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 12948
+  sha256: 6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4658
+  title: HC4658 official product export with EAN
+  media_type: application/pdf
+  filename: HC4658-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17331
+  sha256: aa7fa0b3bce43693009aea9136320416afbb4fab83d3880908021b766ccf7d45
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4658
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/aa/7f/aa7fa0b3bce43693009aea9136320416afbb4fab83d3880908021b766ccf7d45.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/aa/7f/aa7fa0b3bce43693009aea9136320416afbb4fab83d3880908021b766ccf7d45.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4659
+  title: HC4659 official product export with EAN
+  media_type: application/pdf
+  filename: HC4659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18770
+  sha256: 9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9f/7d/9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9f/7d/9f7d840c36727261a89dd6d026f33b79acc2861d48e94f1d85d786c5c9ef1d80.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hc4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -959,6 +1927,204 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hc4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4680
+  title: HC4680 official product export with EAN
+  media_type: application/pdf
+  filename: HC4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40692
+  sha256: 1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4692
+  title: HC4692 official product export with EAN
+  media_type: application/pdf
+  filename: HC4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16195
+  sha256: 00651d6923ecf5259f403bab5c512d7949c9561825e66bab439e55d4f208fe07
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/00/65/00651d6923ecf5259f403bab5c512d7949c9561825e66bab439e55d4f208fe07.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/00/65/00651d6923ecf5259f403bab5c512d7949c9561825e66bab439e55d4f208fe07.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4692FAN
+  title: HC4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: HC4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16980
+  sha256: 770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4693
+  title: HC4693 official product export with EAN
+  media_type: application/pdf
+  filename: HC4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16267
+  sha256: 7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4577
+  title: HD4577 official product export with EAN
+  media_type: application/pdf
+  filename: HD4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14628
+  sha256: f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4654-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4654
+  title: HD4654 official product export with EAN
+  media_type: application/pdf
+  filename: HD4654-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 34318
+  sha256: 6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4657m3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4657M3
+  title: HD4657M3 official product export with EAN
+  media_type: application/pdf
+  filename: HD4657M3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 12638
+  sha256: 53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4657M3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/53/b0/53b0341867a2a829f1586cd0bf5330bb65aa540dec301ac312c9f8373db82929.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4658
+  title: HD4658 official product export with EAN
+  media_type: application/pdf
+  filename: HD4658-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18589
+  sha256: 64e311e2bf7371107fef4cd3c2a33afc2ab5d40ccbeb72884bc871e5e8b93b80
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4658
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/64/e3/64e311e2bf7371107fef4cd3c2a33afc2ab5d40ccbeb72884bc871e5e8b93b80.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/64/e3/64e311e2bf7371107fef4cd3c2a33afc2ab5d40ccbeb72884bc871e5e8b93b80.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4659
+  title: HD4659 official product record with EAN
+  media_type: application/pdf
+  filename: HD4659-ean-international-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 573490
+  sha256: 2608ba817cda34281dafdd102548acb329e4be97b3ecd319b3c9b1e2197a49ac
+  source_url: https://www.bticino.com/products/pdf?sku=BT-HD4659&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/26/08/2608ba817cda34281dafdd102548acb329e4be97b3ecd319b3c9b1e2197a49ac.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/26/08/2608ba817cda34281dafdd102548acb329e4be97b3ecd319b3c9b1e2197a49ac.pdf
+  language:
+  - en
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hd4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -979,6 +2145,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hd4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4680
+  title: HD4680 official product export with EAN
+  media_type: application/pdf
+  filename: HD4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 36064
+  sha256: bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4692
+  title: HD4692 official product export with EAN
+  media_type: application/pdf
+  filename: HD4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14577
+  sha256: 008a89f040f91eb9a7246fcc591307e24b8cad790adcd3b24f4f20873cd3136f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/00/8a/008a89f040f91eb9a7246fcc591307e24b8cad790adcd3b24f4f20873cd3136f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/00/8a/008a89f040f91eb9a7246fcc591307e24b8cad790adcd3b24f4f20873cd3136f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4692FAN
+  title: HD4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: HD4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 15264
+  sha256: 13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hd4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4693
+  title: HD4693 official product export with EAN
+  media_type: application/pdf
+  filename: HD4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 15052
+  sha256: e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
@@ -999,6 +2253,116 @@ artifacts:
   language_evidence: Publisher document text inspected
   notes:
   - Publisher original retrieved on 2026-10-03; original bytes uploaded and verified before registration on main.
+- id: device-doc-hs4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4577
+  title: HS4577 official product export with EAN
+  media_type: application/pdf
+  filename: HS4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19042
+  sha256: 712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4654-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4654
+  title: HS4654 official product export with EAN
+  media_type: application/pdf
+  filename: HS4654-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 41963
+  sha256: fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4657m3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4657M3
+  title: HS4657M3 official product export with EAN
+  media_type: application/pdf
+  filename: HS4657M3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 13741
+  sha256: c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4657M3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c9/74/c97496ef3b0afd3e926574645da61c45875eacfb89113d535feee09662e2b591.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4658
+  title: HS4658 official product export with EAN
+  media_type: application/pdf
+  filename: HS4658-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17755
+  sha256: 0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4658
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0a/15/0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0a/15/0a153990e83287b94526e36feecde775e664c5e634a9aa33d917b1571fa0f61f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4659
+  title: HS4659 official product export with EAN
+  media_type: application/pdf
+  filename: HS4659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18069
+  sha256: df2dea652da781c312db2d963b197adc2f313f5633ec5028ba80f97a06b5deb8
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/df/2d/df2dea652da781c312db2d963b197adc2f313f5633ec5028ba80f97a06b5deb8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/df/2d/df2dea652da781c312db2d963b197adc2f313f5633ec5028ba80f97a06b5deb8.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hs4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -1019,6 +2383,138 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hs4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4680
+  title: HS4680 official product export with EAN
+  media_type: application/pdf
+  filename: HS4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40479
+  sha256: e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4692
+  title: HS4692 official product export with EAN
+  media_type: application/pdf
+  filename: HS4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17942
+  sha256: 70bfbfe82c807a3cd7a6b4770a6dda4c4248ce6a0980191a2c6033a70e712e55
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/70/bf/70bfbfe82c807a3cd7a6b4770a6dda4c4248ce6a0980191a2c6033a70e712e55.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/70/bf/70bfbfe82c807a3cd7a6b4770a6dda4c4248ce6a0980191a2c6033a70e712e55.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4692FAN
+  title: HS4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: HS4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17761
+  sha256: 03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4693
+  title: HS4693 official product export with EAN
+  media_type: application/pdf
+  filename: HS4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16186
+  sha256: ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-k4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: K4659
+  title: K4659 official product export with EAN
+  media_type: application/pdf
+  filename: K4659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23669
+  sha256: cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K4659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/e8/cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/e8/cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-kg4691-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: KG4691
+  title: KG4691 official product export with EAN
+  media_type: application/pdf
+  filename: KG4691-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 29691
+  sha256: bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-kg8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1079,6 +2575,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-km4691-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: KM4691
+  title: KM4691 official product export with EAN
+  media_type: application/pdf
+  filename: KM4691-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 28810
+  sha256: 42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-km8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1259,6 +2777,160 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-l4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4577
+  title: L4577 official product export with EAN
+  media_type: application/pdf
+  filename: L4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19103
+  sha256: 4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4651m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4651M2
+  title: L4651M2 official product export with EAN
+  media_type: application/pdf
+  filename: L4651M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 41214
+  sha256: 6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4652-2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4652/2
+  title: L4652/2 official product export with EAN
+  media_type: application/pdf
+  filename: L4652_2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 44848
+  sha256: d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4652-3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4652/3
+  title: L4652/3 official product export with EAN
+  media_type: application/pdf
+  filename: L4652_3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 39410
+  sha256: 2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4654n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4654N
+  title: L4654N official product export with EAN
+  media_type: application/pdf
+  filename: L4654N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 41944
+  sha256: ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4658n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4658N
+  title: L4658N official product export with EAN
+  media_type: application/pdf
+  filename: L4658N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19115
+  sha256: 682b46c7c474ceaca8ff2f8899bbedf6c14be38977d30a45eac23907302cd9f7
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4658N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/68/2b/682b46c7c474ceaca8ff2f8899bbedf6c14be38977d30a45eac23907302cd9f7.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/68/2b/682b46c7c474ceaca8ff2f8899bbedf6c14be38977d30a45eac23907302cd9f7.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4659n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4659N
+  title: L4659N official product export with EAN
+  media_type: application/pdf
+  filename: L4659N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18458
+  sha256: b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4659N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b4/af/b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b4/af/b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-l4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -1279,6 +2951,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-l4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4680
+  title: L4680 official product export with EAN
+  media_type: application/pdf
+  filename: L4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 39677
+  sha256: dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4692
+  title: L4692 official product export with EAN
+  media_type: application/pdf
+  filename: L4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18380
+  sha256: 43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/43/ec/43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/43/ec/43ec058c540f45cf0dd138ed4a2fc83b19ef6d8a9bc6062d799e601a610c42fe.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4692FAN
+  title: L4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: L4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17085
+  sha256: 06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4693
+  title: L4693 official product export with EAN
+  media_type: application/pdf
+  filename: L4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16583
+  sha256: 9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-le05177ae-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -1554,6 +3314,72 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-ln4648-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4648
+  title: LN4648 official product export with EAN
+  media_type: application/pdf
+  filename: LN4648-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 31050
+  sha256: edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4648
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ed/f3/edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ed/f3/edf3fd705cc2040d4bc69cd4e5ebf1e2e896595f04e7859a5906b1cd6227e7a6.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4649-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4649
+  title: LN4649 official product export with EAN
+  media_type: application/pdf
+  filename: LN4649-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 31028
+  sha256: aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4649
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/aa/d5/aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/aa/d5/aad500b54e38cdeb86918860f1ea2efaef15efa43087ac49668beb723d610276.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4650-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4650
+  title: LN4650 official product export with EAN
+  media_type: application/pdf
+  filename: LN4650-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 21113
+  sha256: 66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-ln4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
@@ -1598,6 +3424,160 @@ artifacts:
   - Original PDF response from the publisher product-sheet export, retrieved 2026-10-03; not browser-printed or locally converted.
   - All three printed/PDF pages inspected. Printed date is the product-sheet export date, not an installed firmware or hardware revision.
   - Uploaded bytes verified against R2 SHA-256 and size before immediate registration on main.
+- id: device-doc-ln4653-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4653
+  title: LN4653 official product export with EAN
+  media_type: application/pdf
+  filename: LN4653-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23664
+  sha256: 55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4660m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4660M2
+  title: LN4660M2 official product export with EAN
+  media_type: application/pdf
+  filename: LN4660M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 26088
+  sha256: 5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4660M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5f/c1/5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5f/c1/5fc1b27784f5ac3fe531a5cfc84e6267485f99051bf5fec044516240bdc8eb56.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4661m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4661M2
+  title: LN4661M2 official product export with EAN
+  media_type: application/pdf
+  filename: LN4661M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 24149
+  sha256: 36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4661M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4672m2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4672M2
+  title: LN4672M2 official product export with EAN
+  media_type: application/pdf
+  filename: LN4672M2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19177
+  sha256: 6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4672M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4691-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4691
+  title: LN4691 official product export with EAN
+  media_type: application/pdf
+  filename: LN4691-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 34379
+  sha256: adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4710-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4710
+  title: LN4710 official product export with EAN
+  media_type: application/pdf
+  filename: LN4710-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 21421
+  sha256: 3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4890-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4890
+  title: LN4890 official product export with EAN
+  media_type: application/pdf
+  filename: LN4890-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16057
+  sha256: 5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-mm00774-b-fr
   kind: documentation
   publisher: BTicino / Legrand
@@ -1858,6 +3838,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-n4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4577
+  title: N4577 official product export with EAN
+  media_type: application/pdf
+  filename: N4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 15796
+  sha256: 88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4654n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4654N
+  title: N4654N official product export with EAN
+  media_type: application/pdf
+  filename: N4654N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 38710
+  sha256: fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4658n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4658N
+  title: N4658N official product export with EAN
+  media_type: application/pdf
+  filename: N4658N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19250
+  sha256: 8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4658N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/85/23/8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/85/23/8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4659n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4659N
+  title: N4659N official product export with EAN
+  media_type: application/pdf
+  filename: N4659N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17954
+  sha256: 47e88293946a5581746597e216733aa1957ad35008f89577fa826cc44823cd56
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4659N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/47/e8/47e88293946a5581746597e216733aa1957ad35008f89577fa826cc44823cd56.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/47/e8/47e88293946a5581746597e216733aa1957ad35008f89577fa826cc44823cd56.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-n4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -1878,6 +3946,182 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-n4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4680
+  title: N4680 official product export with EAN
+  media_type: application/pdf
+  filename: N4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 39885
+  sha256: c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4692
+  title: N4692 official product export with EAN
+  media_type: application/pdf
+  filename: N4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16211
+  sha256: 3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/5d/3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/5d/3f5d4cbb4ca476461a381b4823aefed3b1ae7d57b4a4789bd7100bf7ac7abdc4.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4692FAN
+  title: N4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: N4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17124
+  sha256: b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-n4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4693
+  title: N4693 official product export with EAN
+  media_type: application/pdf
+  filename: N4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16425
+  sha256: 5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4577-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4577
+  title: NT4577 official product export with EAN
+  media_type: application/pdf
+  filename: NT4577-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18291
+  sha256: 75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4577
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4654n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4654N
+  title: NT4654N official product export with EAN
+  media_type: application/pdf
+  filename: NT4654N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 42601
+  sha256: 9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4658n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4658N
+  title: NT4658N official product export with EAN
+  media_type: application/pdf
+  filename: NT4658N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 21223
+  sha256: 0e1f6b5065f9ed3dbc25cbf3be064ec19f966b7f070b432bbc6180c3a39a2316
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4658N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0e/1f/0e1f6b5065f9ed3dbc25cbf3be064ec19f966b7f070b432bbc6180c3a39a2316.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0e/1f/0e1f6b5065f9ed3dbc25cbf3be064ec19f966b7f070b432bbc6180c3a39a2316.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4659n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4659N
+  title: NT4659N official product export with EAN
+  media_type: application/pdf
+  filename: NT4659N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18902
+  sha256: cd08a718bffc6184903788616984ed518e05261f7e5e09798a26887234c42c95
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4659N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/cd/08/cd08a718bffc6184903788616984ed518e05261f7e5e09798a26887234c42c95.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/cd/08/cd08a718bffc6184903788616984ed518e05261f7e5e09798a26887234c42c95.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-nt4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -1898,6 +4142,94 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-nt4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4680
+  title: NT4680 official product export with EAN
+  media_type: application/pdf
+  filename: NT4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 40509
+  sha256: 48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4692-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4692
+  title: NT4692 official product export with EAN
+  media_type: application/pdf
+  filename: NT4692-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18671
+  sha256: 4283b06329aa81ccee35beb66c6598211159b7e2eeb66c6fe5e458b8b1c43628
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/42/83/4283b06329aa81ccee35beb66c6598211159b7e2eeb66c6fe5e458b8b1c43628.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/42/83/4283b06329aa81ccee35beb66c6598211159b7e2eeb66c6fe5e458b8b1c43628.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4692fan-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4692FAN
+  title: NT4692FAN official product export with EAN
+  media_type: application/pdf
+  filename: NT4692FAN-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17231
+  sha256: 11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692FAN
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4693
+  title: NT4693 official product export with EAN
+  media_type: application/pdf
+  filename: NT4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18615
+  sha256: df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-o0192b-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -3047,6 +5379,72 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-yd4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: YD4658
+  title: YD4658 official product record with EAN
+  media_type: application/pdf
+  filename: YD4658-ean-international-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 1171689
+  sha256: 96dc33285b03b8d77ab621a315c0633d629b4fbd518725abd67b79dac88703cb
+  source_url: https://www.bticino.com/products/pdf?sku=BT-YD4658&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/96/dc/96dc33285b03b8d77ab621a315c0633d629b4fbd518725abd67b79dac88703cb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/96/dc/96dc33285b03b8d77ab621a315c0633d629b4fbd518725abd67b79dac88703cb.pdf
+  language:
+  - en
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-yg4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: YG4658
+  title: YG4658 official product record with EAN
+  media_type: application/pdf
+  filename: YG4658-ean-international-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 1515140
+  sha256: c0a8254394799a7af11923420a41d7d2f2ab16a35ab9d140a4ace748e00b80e6
+  source_url: https://www.bticino.com/products/pdf?sku=BT-YG4658&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c0/a8/c0a8254394799a7af11923420a41d7d2f2ab16a35ab9d140a4ace748e00b80e6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c0/a8/c0a8254394799a7af11923420a41d7d2f2ab16a35ab9d140a4ace748e00b80e6.pdf
+  language:
+  - en
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-yw4658-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: YW4658
+  title: YW4658 official product record with EAN
+  media_type: application/pdf
+  filename: YW4658-ean-international-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 1170466
+  sha256: 73f4eccbb21e626ef821bbd042f25f5e75fa7e7f86293f5cd14d8226a9f1919a
+  source_url: https://www.bticino.com/products/pdf?sku=BT-YW4658&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/73/f4/73f4eccbb21e626ef821bbd042f25f5e75fa7e7f86293f5cd14d8226a9f1919a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/73/f4/73f4eccbb21e626ef821bbd042f25f5e75fa7e7f86293f5cd14d8226a9f1919a.pdf
+  language:
+  - en
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: document-sha256-00649f4d577863ea
   kind: documentation
   publisher: BTicino / Legrand
