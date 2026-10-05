@@ -50,12 +50,12 @@ class BuildInfrastructureTests(unittest.TestCase):
             self.assertNotIn("guides/", first.read_text())
             self.assertEqual(136, manifest["coverage"]["canonical"]["documents"])
             self.assertEqual(1240, manifest["coverage"]["retrieval"]["emitted_chunks"])
-            self.assertEqual(7448, manifest["coverage"]["claims"]["records"])
-            self.assertEqual(651, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
-            self.assertEqual(2909, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
+            self.assertEqual(7752, manifest["coverage"]["claims"]["records"])
+            self.assertEqual(702, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
+            self.assertEqual(3138, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
             self.assertEqual(924, manifest["coverage"]["claims"]["bounded_domains"]["diagnostics"]["claims"])
             self.assertEqual(891, manifest["coverage"]["claims"]["bounded_domains"]["programming"]["claims"])
-            self.assertEqual(890, manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
+            self.assertEqual(894, manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
 
     def test_rendered_artifacts_preserve_context_and_exclude_guides(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -73,6 +73,12 @@ class BuildInfrastructureTests(unittest.TestCase):
                              manifest["coverage"]["retrieval"]["emitted_chunks"] + manifest["coverage"]["retrieval"]["empty_sections"])
             self.assertTrue(all(not record["source_path"].startswith("guides/") for record in chunks))
             self.assertTrue(all(record["section_path"] and record["qualification_cues"] for record in chunks))
+            original_chunk = next(chunk for chunk in chunks if chunk.get("evidence_support"))
+            self.assertIn("source_inspection", original_chunk["text"])
+            self.assertIn("MyOpenCommunity", original_chunk["text"])
+            self.assertTrue(all(entry["source_id"] in original_chunk["reference_ids"]
+                                for finding in original_chunk["evidence_support"]
+                                for entry in finding["provenance"]))
             CHECK.validate_artifacts(manifest, output)
 
     def test_manifest_schema_rejects_unknown_and_invalid_artifacts(self):

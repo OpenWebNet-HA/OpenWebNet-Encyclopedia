@@ -51,8 +51,9 @@ def validate_manifest(path: Path) -> dict:
 
 def validate_chunks(path: Path) -> list[dict]:
     schema = load_json(ROOT / "knowledge/schema/retrieval-chunks.schema.json")
+    common = load_json(ROOT / "knowledge/schema/common.schema.json")
     privacy = load_json(ROOT / "knowledge/schema/privacy-metadata.schema.json")
-    registry = Registry().with_resources((item["$id"], Resource.from_contents(item)) for item in (schema, privacy))
+    registry = Registry().with_resources((item["$id"], Resource.from_contents(item)) for item in (schema, privacy, common))
     validator = Draft202012Validator(schema, registry=registry)
     content = path.read_bytes()
     if content.startswith(b"\xef\xbb\xbf") or (content and not content.endswith(b"\n")):

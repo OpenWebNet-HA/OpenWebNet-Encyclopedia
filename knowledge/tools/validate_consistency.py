@@ -71,6 +71,38 @@ def validate_cross_artifact(root: Path, output_root: Path, manifest: dict[str, A
     ):
         raise ValueError("procedural guide entered claim output")
 
+    # Reviewed underlying evidence must survive both claim and retrieval generation.
+    ledger = load_json(root / "knowledge/inputs/evidence-reviews.json")["findings"]
+    published_findings = {f["finding_id"]: (chunk, f) for chunk in chunks
+                          for f in chunk.get("evidence_support", [])}
+    if set(published_findings) != {f["id"] for f in ledger}:
+        raise ValueError("reviewed evidence dispositions differ from retrieval output")
+    by_claim = {c["id"]: c for c in claims}
+    sources = {r["id"]: r for r in reference_records if r["kind"] == "source"}
+    for finding in ledger:
+        chunk, public = published_findings[finding["id"]]
+        if chunk["section_id"] != finding["section_id"]:
+            raise ValueError("evidence finding entered the wrong retrieval section")
+        for key in ("summary", "disposition", "reason", "claim_ids"):
+            if public[key] != finding[key]:
+                raise ValueError("retrieval evidence lost reviewed qualification")
+        expected = []
+        for support in finding["supports"]:
+            source = sources.get(support["source_id"])
+            if not source or "artifact_locator" not in source or source["id"] not in chunk["reference_ids"]:
+                raise ValueError("retrieval evidence lost original source reference")
+            entry = {"source_id": support["source_id"], "evidence_class": support["evidence_class"],
+                     "location": {"document_id": chunk["document_id"], "path": chunk["source_path"],
+                                  "section_id": chunk["section_id"]},
+                     "examination": {**support["examination"], "finding_id": finding["id"],
+                                     "review_path": finding["review_path"]}}
+            expected.append(entry)
+            for claim_id in entry["examination"]["claim_ids"]:
+                if claim_id not in by_claim or entry not in by_claim[claim_id]["provenance"]:
+                    raise ValueError("claim output lost its reviewed original examination")
+        if len(expected) != len(public["provenance"]) or any(e not in public["provenance"] for e in expected):
+            raise ValueError("retrieval output lost reviewed examination conditions")
+
     bounded = claim_metrics["bounded_domains"]
     if sum(domain["claims"] for domain in bounded.values()) != len(claims):
         raise ValueError("bounded-domain claim totals do not match generated claim count")

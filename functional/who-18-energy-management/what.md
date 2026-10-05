@@ -93,6 +93,8 @@ The client sends graph requests through one connection to retain ordering and pl
 
 `*18*71*WHERE##` enables the addressed Energy Management actuator.
 
+The historical touchscreen library's API names differ from these published operations: `forceOn()` sends `74`, `forceOff(150)` sends `73#15`, and `enable()` sends `73`. These are serializers at `TS10_1_0_23`, with a confirmation TODO on the duration-based method; they do not redefine the published enable/forcing meanings or establish gateway acceptance. See [implementation evidence](../../project/review/myopencommunity-kb-provenance-audit.md).
+
 ### Force for a specified time
 
 `*18*73#Time*WHERE##` forces the actuator for the requested duration. The published `Time` field is expressed in tens of minutes and accepts values `1..254`.

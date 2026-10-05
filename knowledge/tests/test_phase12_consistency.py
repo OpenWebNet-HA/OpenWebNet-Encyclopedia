@@ -30,11 +30,11 @@ class Phase12ConsistencyTests(unittest.TestCase):
         manifest = json.loads((ROOT / "knowledge/manifest.json").read_text())
         report = CONSISTENCY.validate_cross_artifact(ROOT, ROOT, manifest)
         self.assertEqual(136, report["canonical"]["documents"])
-        self.assertEqual(7448, report["claims"]["records"])
+        self.assertEqual(7752, report["claims"]["records"])
         self.assertEqual(1240, report["retrieval"]["chunks"])
         self.assertEqual(manifest["coverage"]["references"]["records"], report["references"]["records"])
-        self.assertEqual(651, report["claims"]["domains"]["protocol"]["claims"])
-        self.assertEqual(311, report["claims"]["domains"]["scenario-engine"]["claims"])
+        self.assertEqual(702, report["claims"]["domains"]["protocol"]["claims"])
+        self.assertEqual(331, report["claims"]["domains"]["scenario-engine"]["claims"])
 
     def test_canonical_change_maps_stable_and_transitive_records(self):
         report = IMPACT.analyze_changes(

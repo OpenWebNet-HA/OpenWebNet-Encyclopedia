@@ -7,7 +7,7 @@ from typing import Any
 
 from serialization import jsonl_bytes
 
-RENDER_FORMAT_VERSION = "0.1.0"
+RENDER_FORMAT_VERSION = "2.0.0"
 
 
 def inline_markdown(nodes: list[dict[str, Any]]) -> str:
@@ -87,7 +87,7 @@ def section_path(document: dict[str, Any], section: dict[str, Any]) -> list[str]
     return list(reversed(result))
 
 
-def corpus(ir: dict[str, Any]) -> bytes:
+def corpus(ir: dict[str, Any], evidence: dict | None = None, sources: dict | None = None) -> bytes:
     lines = ["# OpenWebNet Encyclopedia Machine KB Corpus", "",
              "Generated deterministically from canonical documentation. Practical Guides are excluded.", ""]
     for document in ir["documents"]:
@@ -110,12 +110,15 @@ def corpus(ir: dict[str, Any]) -> bytes:
             if any(cue.values()):
                 lines.append("")
             lines.extend(value for block in section["blocks"] for value in (block_markdown(block), ""))
+            if evidence and section["id"] in evidence:
+                from evidence_reviews import corpus_evidence
+                lines.extend(corpus_evidence(evidence[section["id"]], sources or {}))
     return ("\n".join(lines).rstrip() + "\n").encode("utf-8")
 
 
 def chunk_records(ir: dict[str, Any], identities: dict[str, str],
                   section_references: dict[str, list[str]],
-                  namespace_ids: dict[str, str]) -> tuple[list[dict[str, Any]], dict[str, int]]:
+                  namespace_ids: dict[str, str], evidence: dict | None = None, sources: dict | None = None) -> tuple[list[dict[str, Any]], dict[str, int]]:
     records = []
     candidate = emitted = empty = 0
     for document in ir["documents"]:
@@ -142,6 +145,12 @@ def chunk_records(ir: dict[str, Any], identities: dict[str, str],
                 "section_id": section["id"], "section_path": section_path(document, section),
                 "source_path": document["path"], "text": text,
             })
+            if evidence and section["id"] in evidence:
+                records[-1]["evidence_support"] = evidence[section["id"]]
+                from evidence_reviews import corpus_evidence
+                records[-1]["text"] += "\n\nReviewed evidence and dispositions - apply only to the named findings:\n\n" + "\n".join(corpus_evidence(evidence[section["id"]], sources or {}))
+                source_ids = {entry["source_id"] for f in evidence[section["id"]] for entry in f["provenance"]}
+                records[-1]["reference_ids"] = sorted(set(records[-1]["reference_ids"]) | source_ids, key=str.encode)
             emitted += 1
     records.sort(key=lambda record: record["id"].encode("ascii"))
     return records, {"candidate_sections": candidate, "empty_sections": empty, "emitted_chunks": emitted}

@@ -16,12 +16,13 @@ from render_artifacts import (bootstrap_chunk_identities, chunk_records, corpus,
 from render_references import REFERENCE_FILES, reference_records  # noqa: E402
 from render_claims import claim_coverage_metrics, claim_records  # noqa: E402
 from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
+from evidence_reviews import load_reviews, join_claim_evidence
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
-from validate_schema import validate_registry  # noqa: E402
+from validate_schema import validate_record, validate_registry  # noqa: E402
 from validate_text_hygiene import validate_generated_text  # noqa: E402
 
-GENERATOR_VERSION = "ownkb-build-0.8.2"
-SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
+GENERATOR_VERSION = "ownkb-build-0.9.0"
+SCHEMA_COMPATIBILITY_VERSION = "2.0.0"
 MANIFEST_FORMAT_VERSION = "0.1.0"
 CHUNK_IDENTITIES = ROOT / "knowledge/inputs/chunk-identities.json"
 
@@ -31,7 +32,11 @@ def sha256_bytes(content: bytes) -> str:
 
 
 def artifact(path: str, kind: str, content: bytes, record_count: int | None = None) -> dict[str, object]:
-    result: dict[str, object] = {"format_version": SCHEMA_COMPATIBILITY_VERSION, "kind": kind,
+    updated_schemas = {"common.schema.json", "record.schema.json", "retrieval-chunks.schema.json",
+                       "manifest.schema.json", "evidence-reviews.schema.json", "id-registry.schema.json"}
+    unchanged_format = kind == "id_registry" or (kind == "schema" and path.rsplit("/", 1)[-1] not in updated_schemas)
+    version = "0.1.0" if unchanged_format else SCHEMA_COMPATIBILITY_VERSION
+    result: dict[str, object] = {"format_version": version, "kind": kind,
                                  "path": path, "sha256": sha256_bytes(content)}
     if record_count is not None:
         result["record_count"] = record_count
@@ -77,7 +82,7 @@ def coverage(ir: dict[str, object], chunk_metrics: dict[str, int], reference_cou
 
 def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics: dict[str, int],
              reference_records_by_kind: dict[str, list[dict[str, object]]], claims: list[dict],
-             claim_metrics: dict, lifecycle: dict) -> dict[str, object]:
+             claim_metrics: dict, lifecycle: dict, reviews: dict) -> dict[str, object]:
     ir_digest = dict(ir)
     ir_digest.pop("identities", None)
     documents = ir["documents"]
@@ -90,7 +95,7 @@ def manifest(ir: dict[str, object], output_root: Path, root: Path, chunk_metrics
         "format_version": MANIFEST_FORMAT_VERSION,
         "generator_version": GENERATOR_VERSION,
         "input_content_sha256": sha256_bytes(json_bytes({"ir": ir_digest, "references": reference_records_by_kind,
-                                                           "claims": claims, "id_lifecycle": lifecycle})),
+                                                           "claims": claims, "id_lifecycle": lifecycle, "evidence_reviews": reviews})),
         "schema_compatibility_version": SCHEMA_COMPATIBILITY_VERSION,
     }
 
@@ -99,6 +104,11 @@ def build(root: Path, output_root: Path) -> Path:
     ir = build_ir(root, root / "knowledge/inputs/canonical-sources.jsonl", root / "knowledge/inputs/identities.json")
     references, section_references = reference_records(ir, root / "knowledge/inputs/reference-records.json")
     claims = claim_records(ir, references, root / "knowledge/inputs/claim-records.json")
+    reviews = load_reviews(root, ir, references, {c["id"] for c in claims})
+    join_claim_evidence(claims, reviews, references)
+    for claim in claims:
+        if claim["id"] in reviews["claims"]:
+            validate_record(claim)
     claim_metrics = claim_coverage_metrics(ir, claims, root / "knowledge/inputs/claim-coverage.json")
     namespace_ids = {}
     for document in ir["documents"]:
@@ -108,7 +118,8 @@ def build(root: Path, output_root: Path) -> Path:
                                          "ownkb:namespace:device-model" if document["namespace_context"]["area"] == "device-model" else
                                          "ownkb:namespace:openwebnet")
     identities = load_chunk_identities(root / "knowledge/inputs/chunk-identities.json")
-    records, metrics = chunk_records(ir, identities, section_references, namespace_ids)
+    records, metrics = chunk_records(ir, identities, section_references, namespace_ids, reviews["sections"],
+                                     {r["id"]: r for r in references["source"]})
     expected_sections = {section["id"] for document in ir["documents"] for section in document["sections"] if section["blocks"]}
     if set(identities) != expected_sections:
         raise ValueError("curated retrieval chunk identity mapping is stale or incomplete")
@@ -119,13 +130,13 @@ def build(root: Path, output_root: Path) -> Path:
     write_bytes(output_root / "knowledge/id-registry.json", json_bytes(lifecycle))
     target_corpus = output_root / "knowledge/llm/llm-corpus.md"
     target_chunks = output_root / "knowledge/retrieval/chunks.jsonl"
-    write_bytes(target_corpus, corpus(ir))
+    write_bytes(target_corpus, corpus(ir, reviews["sections"], {r["id"]: r for r in references["source"]}))
     write_bytes(target_chunks, jsonl_bytes(records))
     write_bytes(output_root / "knowledge/claims/claims.jsonl", jsonl_bytes(claims))
     for kind, filename in REFERENCE_FILES.items():
         write_bytes(output_root / "knowledge/reference" / filename, jsonl_bytes(references[kind]))
     target_manifest = output_root / "knowledge/manifest.json"
-    manifest_value = manifest(ir, output_root, root, metrics, references, claims, claim_metrics, lifecycle)
+    manifest_value = manifest(ir, output_root, root, metrics, references, claims, claim_metrics, lifecycle, reviews)
     write_bytes(target_manifest, json_bytes(manifest_value))
     validate_generated_text(output_root, manifest_value)
     return target_manifest

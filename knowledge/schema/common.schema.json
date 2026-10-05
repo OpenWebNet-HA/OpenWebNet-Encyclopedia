@@ -1,83 +1,858 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/common.schema.json",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/2.0.0/common.schema.json",
   "title": "OpenWebNet Machine KB common types",
   "$defs": {
-    "id": {"type": "string", "maxLength": 255, "pattern": "^ownkb:(document|section|namespace|entity|source|claim|chunk|relationship|caution|question|term):(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*(?::(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*)*$"},
-    "idSet": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+    "id": {
+      "type": "string",
+      "maxLength": 255,
+      "pattern": "^ownkb:(document|section|namespace|entity|source|claim|chunk|relationship|caution|question|term):(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*(?::(?=[a-z0-9-]{1,63}(?::|$))[a-z](?:[a-z0-9]|-(?=[a-z0-9]))*)*$"
+    },
+    "idSet": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/id"
+      },
+      "uniqueItems": true
+    },
     "privacy": {
-      "type": "object", "additionalProperties": false,
-      "required": ["classification", "removed_value_classes"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "classification",
+        "removed_value_classes"
+      ],
       "properties": {
-        "classification": {"enum": ["public", "sanitized"]},
-        "removed_value_classes": {"type": "array", "uniqueItems": true, "items": {"enum": ["network_address", "device_id", "hardware_id", "credential", "account_identifier", "person_identifier", "location", "installation_topology", "capture_metadata", "other"]}}
+        "classification": {
+          "enum": [
+            "public",
+            "sanitized"
+          ]
+        },
+        "removed_value_classes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "network_address",
+              "device_id",
+              "hardware_id",
+              "credential",
+              "account_identifier",
+              "person_identifier",
+              "location",
+              "installation_topology",
+              "capture_metadata",
+              "other"
+            ]
+          }
+        }
       },
       "allOf": [
-        {"if": {"properties": {"classification": {"const": "public"}}, "required": ["classification"]}, "then": {"properties": {"removed_value_classes": {"maxItems": 0}}}},
-        {"if": {"properties": {"classification": {"const": "sanitized"}}, "required": ["classification"]}, "then": {"properties": {"removed_value_classes": {"minItems": 1}}}}
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "public"
+              }
+            },
+            "required": [
+              "classification"
+            ]
+          },
+          "then": {
+            "properties": {
+              "removed_value_classes": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "sanitized"
+              }
+            },
+            "required": [
+              "classification"
+            ]
+          },
+          "then": {
+            "properties": {
+              "removed_value_classes": {
+                "minItems": 1
+              }
+            }
+          }
+        }
       ]
     },
     "sourceLocation": {
-      "type": "object", "additionalProperties": false,
-      "required": ["document_id", "path", "section_id"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "path",
+        "section_id"
+      ],
       "properties": {
-        "document_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:document:"}]},
-        "section_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:section:"}]},
-        "path": {"type": "string", "pattern": "^(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_.-]+(?:/[a-zA-Z0-9_.-]+)*\\.md$"}
+        "document_id": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:document:"
+            }
+          ]
+        },
+        "section_id": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:section:"
+            }
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_.-]+(?:/[a-zA-Z0-9_.-]+)*\\.md$"
+        }
       }
     },
     "provenance": {
-      "type": "object", "additionalProperties": false,
-      "required": ["location", "evidence_class"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "location",
+        "evidence_class"
+      ],
       "properties": {
-        "location": {"$ref": "#/$defs/sourceLocation"},
-        "source_id": {"allOf": [{"$ref": "#/$defs/id"}, {"pattern": "^ownkb:source:"}]},
-        "evidence_class": {"enum": ["official_specification", "official_catalogue", "public_database", "public_capture", "public_experiment", "configuration_software", "implementation_artifact", "firmware_interface", "prior_validated_research", "canonical_documentation"]},
-        "evidence_note": {"type": "string", "minLength": 1}
+        "location": {
+          "$ref": "#/$defs/sourceLocation"
+        },
+        "source_id": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "pattern": "^ownkb:source:"
+            }
+          ]
+        },
+        "evidence_class": {
+          "enum": [
+            "official_specification",
+            "official_catalogue",
+            "public_database",
+            "public_capture",
+            "public_experiment",
+            "configuration_software",
+            "implementation_artifact",
+            "firmware_interface",
+            "prior_validated_research",
+            "canonical_documentation"
+          ]
+        },
+        "evidence_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "examination": {
+          "$ref": "#/$defs/examination"
+        }
       },
       "allOf": [
-        {"if": {"properties": {"evidence_class": {"not": {"const": "canonical_documentation"}}}, "required": ["evidence_class"]}, "then": {"required": ["source_id"]}}
+        {
+          "if": {
+            "properties": {
+              "evidence_class": {
+                "not": {
+                  "const": "canonical_documentation"
+                }
+              }
+            },
+            "required": [
+              "evidence_class"
+            ]
+          },
+          "then": {
+            "required": [
+              "source_id"
+            ]
+          }
+        }
       ]
     },
     "versionScope": {
-      "type": "object", "additionalProperties": false,
-      "required": ["state"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
       "properties": {
-        "state": {"enum": ["specified", "unknown", "not_versioned"]},
-        "expression": {"type": "string", "minLength": 1}
+        "state": {
+          "enum": [
+            "specified",
+            "unknown",
+            "not_versioned"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "allOf": [
-        {"if": {"properties": {"state": {"const": "specified"}}, "required": ["state"]}, "then": {"required": ["expression"]}},
-        {"if": {"properties": {"state": {"enum": ["unknown", "not_versioned"]}}, "required": ["state"]}, "then": {"not": {"required": ["expression"]}}}
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "specified"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "expression"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "unknown",
+                  "not_versioned"
+                ]
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "expression"
+              ]
+            }
+          }
+        }
       ]
     },
     "applicability": {
-      "type": "object", "additionalProperties": false,
-      "required": ["state", "domain", "target", "version"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "domain",
+        "target",
+        "version"
+      ],
       "properties": {
-        "state": {"enum": ["applies", "unknown", "not_applicable"]},
-        "domain": {"enum": ["protocol", "transport", "device_model", "firmware", "implementation", "diagnostic", "database", "other"]},
-        "target": {"type": "string", "minLength": 1},
-        "version": {"$ref": "#/$defs/versionScope"},
-        "reason": {"type": "string", "minLength": 1}
+        "state": {
+          "enum": [
+            "applies",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "domain": {
+          "enum": [
+            "protocol",
+            "transport",
+            "device_model",
+            "firmware",
+            "implementation",
+            "diagnostic",
+            "database",
+            "other"
+          ]
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "$ref": "#/$defs/versionScope"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "allOf": [
-        {"if": {"properties": {"state": {"enum": ["unknown", "not_applicable"]}}, "required": ["state"]}, "then": {"required": ["reason"]}}
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "unknown",
+                  "not_applicable"
+                ]
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "reason"
+            ]
+          }
+        }
       ]
     },
     "value": {
-      "type": "object", "additionalProperties": false,
-      "required": ["state"],
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
       "properties": {
-        "state": {"enum": ["known", "unknown", "unresolved", "contradictory"]},
-        "text": {"type": "string", "minLength": 1},
-        "integer": {"type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991},
-        "boolean": {"type": "boolean"},
-        "reason": {"type": "string", "minLength": 1}
+        "state": {
+          "enum": [
+            "known",
+            "unknown",
+            "unresolved",
+            "contradictory"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "integer": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "boolean": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "allOf": [
-        {"if": {"properties": {"state": {"const": "known"}}, "required": ["state"]}, "then": {"oneOf": [{"required": ["text"], "not": {"anyOf": [{"required": ["integer"]}, {"required": ["boolean"]}]}}, {"required": ["integer"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["boolean"]}]}}, {"required": ["boolean"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["integer"]}]}}]}},
-        {"if": {"properties": {"state": {"enum": ["unknown", "unresolved", "contradictory"]}}, "required": ["state"]}, "then": {"required": ["reason"], "not": {"anyOf": [{"required": ["text"]}, {"required": ["integer"]}, {"required": ["boolean"]}]}}}
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "known"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "oneOf": [
+              {
+                "required": [
+                  "text"
+                ],
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "integer"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "boolean"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "required": [
+                  "integer"
+                ],
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "text"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "boolean"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "required": [
+                  "boolean"
+                ],
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "text"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "integer"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "unknown",
+                  "unresolved",
+                  "contradictory"
+                ]
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "reason"
+            ],
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "text"
+                  ]
+                },
+                {
+                  "required": [
+                    "integer"
+                  ]
+                },
+                {
+                  "required": [
+                    "boolean"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examination": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "enum": [
+            "source_inspection",
+            "test_expectation_inspection",
+            "helper_execution",
+            "static_firmware_analysis",
+            "dynamic_firmware_oracle",
+            "hardware_observation"
+          ]
+        },
+        "implementation_role": {
+          "enum": [
+            "client",
+            "library",
+            "simulator",
+            "gateway",
+            "firmware"
+          ]
+        },
+        "conclusion_kind": {
+          "enum": [
+            "direct",
+            "interpretation"
+          ]
+        },
+        "relationship": {
+          "enum": [
+            "supports",
+            "corroborates",
+            "qualifies",
+            "contradicts"
+          ]
+        },
+        "code_location": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "type": "string",
+              "minLength": 1
+            },
+            "start_line": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "end_line": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "symbol",
+            "start_line",
+            "end_line"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "execution": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "material": {
+              "enum": [
+                "original_helper_in_adapted_harness",
+                "original_test_suite",
+                "simulator",
+                "firmware_oracle",
+                "physical_hardware"
+              ]
+            },
+            "setup": {
+              "type": "string",
+              "minLength": 1
+            },
+            "inputs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "result": {
+              "type": "string",
+              "minLength": 1
+            },
+            "record_path": {
+              "type": "string",
+              "pattern": "^project/review/[A-Za-z0-9._/-]+$"
+            },
+            "record_locator": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "material",
+            "setup",
+            "inputs",
+            "result",
+            "record_path",
+            "record_locator"
+          ]
+        },
+        "finding_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{1,63}$"
+        },
+        "review_path": {
+          "type": "string",
+          "pattern": "^project/review/[A-Za-z0-9._/-]+$"
+        },
+        "artifact_location": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "address_space": {
+              "type": "string",
+              "minLength": 1
+            },
+            "start_offset": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "end_offset": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "address_space",
+            "start_offset",
+            "end_offset"
+          ]
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^ownkb:claim:"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "method",
+        "implementation_role",
+        "conclusion_kind",
+        "relationship",
+        "conditions",
+        "limitations",
+        "finding_id",
+        "review_path",
+        "claim_ids"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "enum": [
+                  "helper_execution",
+                  "dynamic_firmware_oracle",
+                  "hardware_observation"
+                ]
+              }
+            },
+            "required": [
+              "method"
+            ]
+          },
+          "then": {
+            "required": [
+              "execution"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "execution"
+              ]
+            }
+          }
+        },
+        {
+          "oneOf": [
+            {
+              "required": [
+                "code_location"
+              ],
+              "not": {
+                "required": [
+                  "artifact_location"
+                ]
+              }
+            },
+            {
+              "required": [
+                "artifact_location"
+              ],
+              "not": {
+                "required": [
+                  "code_location"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "const": "helper_execution"
+              }
+            },
+            "required": [
+              "method"
+            ]
+          },
+          "then": {
+            "properties": {
+              "execution": {
+                "properties": {
+                  "material": {
+                    "enum": [
+                      "original_helper_in_adapted_harness",
+                      "original_test_suite",
+                      "simulator"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "const": "dynamic_firmware_oracle"
+              }
+            },
+            "required": [
+              "method"
+            ]
+          },
+          "then": {
+            "properties": {
+              "execution": {
+                "properties": {
+                  "material": {
+                    "enum": [
+                      "firmware_oracle"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "const": "hardware_observation"
+              }
+            },
+            "required": [
+              "method"
+            ]
+          },
+          "then": {
+            "properties": {
+              "execution": {
+                "properties": {
+                  "material": {
+                    "enum": [
+                      "physical_hardware"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "artifactLocator": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "git_file"
+            },
+            "repository": {
+              "type": "string",
+              "minLength": 1
+            },
+            "preserved_repository": {
+              "type": "string",
+              "pattern": "^https://[^ ]+$"
+            },
+            "revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "path": {
+              "type": "string",
+              "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$"
+            },
+            "git_blob": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "line_count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "public_uri": {
+              "type": "string",
+              "pattern": "^https://[^ ]+$"
+            }
+          },
+          "required": [
+            "kind",
+            "repository",
+            "preserved_repository",
+            "revision",
+            "path",
+            "git_blob",
+            "sha256",
+            "line_count",
+            "public_uri"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "immutable_artifact"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "public_uri": {
+              "type": "string",
+              "pattern": "^https://[^ ]+$"
+            }
+          },
+          "required": [
+            "kind",
+            "label",
+            "version",
+            "sha256"
+          ]
+        }
       ]
     }
   }

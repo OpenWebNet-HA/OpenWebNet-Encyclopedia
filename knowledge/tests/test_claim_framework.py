@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7448)
+        self.assertEqual(len(claims), 7752)
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -119,15 +119,15 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7448, metrics["records"])
+        self.assertEqual(7752, metrics["records"])
         self.assertEqual(
-            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 18,
-             "sections": 104, "sections_with_claims": 86},
+            {"claims": 702, "documents": 11, "reviewed_nonclaim_sections": 10,
+             "sections": 104, "sections_with_claims": 94},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2909, "documents": 60, "reviewed_nonclaim_sections": 65,
-             "sections": 466, "sections_with_claims": 401},
+            {"claims": 3138, "documents": 60, "reviewed_nonclaim_sections": 27,
+             "sections": 466, "sections_with_claims": 439},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -141,8 +141,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 890, "documents": 9, "reviewed_nonclaim_sections": 29,
-             "sections": 140, "sections_with_claims": 111},
+            {"claims": 894, "documents": 9, "reviewed_nonclaim_sections": 28,
+             "sections": 140, "sections_with_claims": 112},
             metrics["bounded_domains"]["device-model"],
         )
         self.assertEqual(
@@ -156,15 +156,15 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(
-            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 13,
-             "sections": 102, "sections_with_claims": 89},
+            {"claims": 331, "documents": 11, "reviewed_nonclaim_sections": 11,
+             "sections": 102, "sections_with_claims": 91},
             metrics["bounded_domains"]["scenario-engine"],
         )
 
     def test_phase11_epistemic_boundaries_are_preserved(self):
         claims = self.render()
         phase11 = [record for record in claims
-                   if int(record["id"].rsplit("c", 1)[1]) >= 6296]
+                   if 6296 <= int(record["id"].rsplit("c", 1)[1]) <= 7527]
         self.assertEqual(1232, len(phase11))
         self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
                             for record in phase11))

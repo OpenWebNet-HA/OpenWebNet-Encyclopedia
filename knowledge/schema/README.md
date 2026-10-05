@@ -52,3 +52,7 @@ python -m unittest discover -s knowledge/tools -p test_schema.py -v
 [`../../build.py`](../../build.py) produces `knowledge/manifest.json` and all generated machine artifacts from the shared IR and curated inputs. The manifest lists artifact/schema paths, SHA-256 hashes, format versions, and applicable record counts. It deliberately excludes its own hash. Its input digest covers the semantic IR and resolved reference records; it contains no timestamp, local path, random value, or consumer setting.
 
 Run [`../../check.py`](../../check.py) to perform two clean temporary builds, compare the bytes, validate schemas and canonical serialization, verify committed artifacts are fresh, check cross-artifact integrity, and run the final privacy gate. Both commands are local, deterministic, and model-free.
+
+## Working provenance contract
+
+The current branch uses schema compatibility 2.0.0. It adds original-artifact locators, structured examination methods and retrieval evidence dispositions. Published 0.1.0/0.1.1 tags remain unchanged. See [Migration and field semantics](../../project/machine-kb/provenance-v2-migration.md).

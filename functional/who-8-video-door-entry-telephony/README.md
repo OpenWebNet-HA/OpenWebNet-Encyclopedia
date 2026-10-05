@@ -1,6 +1,6 @@
 # `WHO 8` - Video Door Entry and Telephony
 
-`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. The corpus establishes the namespace, MyHOME Suite service metadata, and historical BTicino touchscreen call and messaging behavior. It does not contain a complete public functional specification.
+`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. `OPEN.db` establishes the namespace and MyHOME Suite service metadata. The preserved touchscreen implementation separately establishes its historical call and messaging behavior. It does not contain a complete public functional specification.
 
 ## Established implementation evidence
 
@@ -16,7 +16,7 @@ The template establishes that MyHOME Suite associates a service-identification o
 
 ## Historical touchscreen call model
 
-The following forms are implementation evidence from `VideoDoorEntryDevice` and its exact tests at `TS10_1_0_23`. They describe the MyHome_Screen call stack, not guaranteed capabilities of every Video Door Entry gateway. `LOCAL`, `CALLER`, and `TARGET` are addresses in that stack; their full valid domains are not established.
+The following forms are implementation evidence from `VideoDoorEntryDevice` and its inspected test expectations at `TS10_1_0_23`. They describe the MyHome_Screen call stack, not guaranteed capabilities of every Video Door Entry gateway. `LOCAL`, `CALLER`, and `TARGET` are addresses in that stack; their full valid domains are not established.
 
 | Operation | Implemented form |
 | --- | --- |

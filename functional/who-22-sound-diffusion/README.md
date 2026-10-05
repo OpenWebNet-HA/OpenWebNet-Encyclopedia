@@ -259,6 +259,6 @@ This is **established for that Device** and was used to corroborate the `WHO 16`
 
 Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
 
-The tested client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
+Archived test examples are inspected expectations, rather than a claim that the complete suite passed. Recorded original-helper executions retain their controlled conditions separately. The client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

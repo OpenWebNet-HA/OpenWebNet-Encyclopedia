@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/0.1.0/record.schema.json",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/2.0.0/record.schema.json",
   "title": "OpenWebNet Machine KB records",
   "$ref": "#/$defs/record",
   "$defs": {
@@ -680,6 +680,9 @@
             "prior_validated_research",
             "canonical_documentation"
           ]
+        },
+        "artifact_locator": {
+          "$ref": "common.schema.json#/$defs/artifactLocator"
         }
       },
       "allOf": [
@@ -1877,15 +1880,32 @@
           "type": "string",
           "minLength": 1
         },
-        "subject_id": {"type": "string", "pattern": "^ownkb:entity:"},
-        "source_section_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "subject_id": {
+          "type": "string",
+          "pattern": "^ownkb:entity:"
+        },
+        "source_section_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
         "claim_links": {
-          "type": "object", "additionalProperties": false,
-          "required": ["supports", "qualifies", "contradicts"],
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "supports",
+            "qualifies",
+            "contradicts"
+          ],
           "properties": {
-            "supports": {"$ref": "#/$defs/claimTargets"},
-            "qualifies": {"$ref": "#/$defs/claimTargets"},
-            "contradicts": {"$ref": "#/$defs/claimTargets"}
+            "supports": {
+              "$ref": "#/$defs/claimTargets"
+            },
+            "qualifies": {
+              "$ref": "#/$defs/claimTargets"
+            },
+            "contradicts": {
+              "$ref": "#/$defs/claimTargets"
+            }
           }
         },
         "value": {
@@ -1974,7 +1994,14 @@
         }
       ]
     },
-    "claimTargets": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ownkb:claim:"}},
+    "claimTargets": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^ownkb:claim:"
+      }
+    },
     "chunk": {
       "type": "object",
       "additionalProperties": false,

@@ -9,7 +9,8 @@ The functional reference combines several evidence classes. They answer differen
 | `OPEN.db` | MyHOME Suite namespace identity, diagnostic-family mapping, address rules, and associated management templates | Complete ordinary functional vocabulary |
 | ScenarioDevices databases | Functional actions exposed by the scenario engine and their concrete frames where present | Every legal command or a universal Device capability |
 | `MHCatalogue.db` | Physical Device, firmware, Module, Object, and configuration applicability | A complete functional command registry |
-| Historical source and exact tests | Implemented wire forms, decoding, product variants, and correction history at a pinned revision | Universal protocol rules or support by every Device/Firmware |
+| Historical source and inspected test assertions | Executable code paths and expected results at a pinned implementation revision | A passed test suite, physical behavior, or support by every Device/Firmware |
+| Executed original helper | Results of the recorded helper run under its stated harness conditions | A complete application/suite pass or physical behavior beyond those conditions |
 | Observed traffic | Behavior of the captured Device/gateway/software version | Universal behavior outside the observed conditions |
 
 ## Public specification coverage
@@ -49,7 +50,7 @@ Notable relationships established outside the public functional PDFs include:
 
 These additions should be labelled as implementation evidence. A diagnostic-family association does not copy diagnostic `WHAT` or `DIMENSION` semantics into the functional namespace.
 
-The preserved BTicino touchscreen libraries and VDK simulator add separately scoped historical evidence for [Video Door Entry and messaging](who-8-video-door-entry-telephony/), [Alarm controls](who-5-alarm/protocol.md#historical-password-controls), [Platform properties](who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties), [Energy compatibility](who-18-energy-management/what.md#historical-graph-request-variants), [HVAC records](who-4-temperature-control/dimensions.md#historical-bacnet-hvac-dimensions), [Sound Diffusion](who-22-sound-diffusion/#historical-touchscreen-syntax-and-extensions), and [ScenarioPlus](who-25-transversal/#historical-scenarioplus-controls). Their scope, source pins, tests, exclusions, and existing-reference corroboration are recorded in the [MyOpenCommunity Integration Review](../project/review/myopencommunity-integration.md).
+The preserved BTicino touchscreen libraries and VDK simulator add separately scoped historical evidence for [Video Door Entry and messaging](who-8-video-door-entry-telephony/), [Alarm controls](who-5-alarm/protocol.md#historical-password-controls), [Platform properties](who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties), [Energy compatibility](who-18-energy-management/what.md#historical-graph-request-variants), [HVAC records](who-4-temperature-control/dimensions.md#historical-bacnet-hvac-dimensions), [Sound Diffusion](who-22-sound-diffusion/#historical-touchscreen-syntax-and-extensions), and [ScenarioPlus](who-25-transversal/#historical-scenarioplus-controls). Their scope, source pins, inspected assertions, exclusions, and existing-reference corroboration are recorded in the [MyOpenCommunity Integration Review](../project/review/myopencommunity-integration.md). The [Machine-readable evidence audit](../project/review/myopencommunity-kb-provenance-audit.md) traces these explanations to individual claims and original archived files. Controlled helper runs have separate methods and conditions; simulator results do not establish physical Device behavior.
 
 ## Absence rules
 
