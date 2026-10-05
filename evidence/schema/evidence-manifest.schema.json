@@ -14,11 +14,7 @@
     "confidence",
     "evidence_class",
     "recorded_at",
-    "installation_id",
-    "bus_id",
-    "gateway_id",
     "environment",
-    "device_under_test",
     "summary",
     "test_recipe",
     "claims_supported",
@@ -43,7 +39,8 @@
         "controlled_experiment",
         "active_observation",
         "passive_trace",
-        "fingerprint"
+        "fingerprint",
+        "firmware_oracle"
       ]
     },
     "epistemic_status": {
@@ -51,7 +48,8 @@
       "enum": [
         "experimentally_confirmed",
         "observed",
-        "hypothesized"
+        "hypothesized",
+        "firmware_observed"
       ]
     },
     "confidence": {
@@ -62,23 +60,24 @@
       "type": "string",
       "enum": [
         "public_experiment",
-        "public_capture"
+        "public_capture",
+        "firmware_emulation"
       ]
     },
     "recorded_at": {
       "type": "string"
     },
     "installation_id": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "bus_id": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "sub_bus_id": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "gateway_id": {
-      "type": "string"
+      "type": ["string", "null"]
     },
     "environment": {
       "type": "object",
@@ -91,8 +90,7 @@
       }
     },
     "device_under_test": {
-      "type": "object",
-      "required": ["sku", "configured_where"],
+      "type": ["object", "null"],
       "properties": {
         "sku": {"type": "string"},
         "description": {"type": "string"},
@@ -130,5 +128,33 @@
       "type": "integer",
       "minimum": 1
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "evidence_class": {
+            "enum": ["public_experiment", "public_capture"]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "installation_id",
+          "bus_id",
+          "gateway_id",
+          "device_under_test"
+        ],
+        "properties": {
+          "installation_id": {"type": "string"},
+          "bus_id": {"type": "string"},
+          "gateway_id": {"type": "string"},
+          "device_under_test": {
+            "type": "object",
+            "required": ["sku", "configured_where"]
+          }
+        }
+      }
+    }
+  ]
 }
