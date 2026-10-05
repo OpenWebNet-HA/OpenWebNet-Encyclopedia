@@ -19,6 +19,29 @@ storage:
     visibility: private
     object_layout: sha256/<first-2>/<next-2>/<sha256>
 artifacts:
+- id: device-doc-067226-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: '067226'
+  title: 067226 official product record with EAN
+  media_type: text/html
+  filename: 067226-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 305638
+  sha256: 119bcd106a380cdd76747dc36d8b7bc668e6727c0d920bb427722264e00fd9a3
+  source_url: https://www.legrand.fr/pro/catalogue/detecteur-de-mouvements-bus-celiane-presence-et-luminosite-pour-espace-de-travail-avec-poussoir
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/11/9b/119bcd106a380cdd76747dc36d8b7bc668e6727c0d920bb427722264e00fd9a3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/11/9b/119bcd106a380cdd76747dc36d8b7bc668e6727c0d920bb427722264e00fd9a3.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-067552-ean-export-20261005
   kind: documentation
   publisher: Legrand
