@@ -6921,6 +6921,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00176aa-s-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00176AA_S_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00176AA_S_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 5226020
+  sha256: 1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00194ab-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
