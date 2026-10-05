@@ -6176,6 +6176,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mm00777-b-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00777-b-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MM00777-b-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 392821
+  sha256: 92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MM00777-b-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/92/e9/92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/92/e9/92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mm00778-a-fr
   kind: documentation
   publisher: BTicino / Legrand
