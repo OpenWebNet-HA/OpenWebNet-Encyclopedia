@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 50 |
+| unreviewed | 30 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 160 |
+| review-ready | 180 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,26 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1177 | IP interface (2Wire/IP) | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1178 | IP interface (D45/IP)  | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1191 | Touch control | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1440 | Management Center 2Wires | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1459 | Audio module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1460 | A/V module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1461 | Wide angle A/V module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1470 | Keypad module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1471 | Proximity reader module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1487 | Inductive loop module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1488 | Display module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1489 | N&D wide angle camera module | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1493 | 6 channel dimmer | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1510 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1511 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1512 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1515 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1516 | Colour Touch Screen | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1570 | Shutter actuator DIN 1 motor bus | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1571 | DIN dimmer 1000 VA 127 V | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1594 | Actuator with 1 relay DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1595 | Actuator 1 relay fluorescent lamps 2 DIN | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -217,6 +197,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2279 | Easy Kit Connnected | 2 | review-ready | OWN-DEV-0158 | partial | complete | complete | pending | - |
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
+| normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
 | normal | 54 | Basic actuator | 1 | review-ready | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | review-ready | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | review-ready | OWN-DEV-0068 | complete | complete | complete | pending | - |
@@ -231,6 +212,25 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 914 | Stop&Go Btest | 1 | review-ready | OWN-DEV-0092 | partial | complete | partial | pending | - |
 | normal | 916 | Stop&Go Plus | 1 | review-ready | OWN-DEV-0093 | partial | complete | partial | pending | - |
 | normal | 925 | Touch control | 1 | review-ready | OWN-DEV-0094 | partial | partial | partial | pending | - |
+| normal | 1177 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0162 | partial | complete | complete | pending | - |
+| normal | 1178 | IP interface (D45/IP)  | 1 | review-ready | OWN-DEV-0163 | partial | complete | complete | pending | - |
+| normal | 1191 | Touch control | 1 | review-ready | OWN-DEV-0164 | partial | complete | complete | pending | - |
+| normal | 1440 | Management Center 2Wires | 1 | review-ready | OWN-DEV-0165 | partial | complete | complete | pending | - |
+| normal | 1459 | Audio module | 1 | review-ready | OWN-DEV-0166 | partial | complete | complete | pending | - |
+| normal | 1460 | A/V module | 1 | review-ready | OWN-DEV-0167 | partial | complete | complete | pending | - |
+| normal | 1461 | Wide angle A/V module | 1 | review-ready | OWN-DEV-0168 | partial | complete | complete | pending | - |
+| normal | 1470 | Keypad module | 1 | review-ready | OWN-DEV-0169 | partial | complete | complete | pending | - |
+| normal | 1471 | Proximity reader module | 1 | review-ready | OWN-DEV-0170 | partial | complete | complete | pending | - |
+| normal | 1487 | Inductive loop module | 1 | review-ready | OWN-DEV-0171 | partial | complete | complete | pending | - |
+| normal | 1488 | Display module | 1 | review-ready | OWN-DEV-0172 | partial | complete | complete | pending | - |
+| normal | 1489 | N&D wide angle camera module | 1 | review-ready | OWN-DEV-0173 | partial | complete | complete | pending | - |
+| normal | 1493 | 6 channel dimmer | 1 | review-ready | OWN-DEV-0174 | partial | pending | complete | pending | - |
+| normal | 1510 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0175 | partial | complete | complete | pending | - |
+| normal | 1511 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0176 | partial | complete | complete | pending | - |
+| normal | 1512 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0177 | partial | complete | complete | pending | - |
+| normal | 1515 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0178 | partial | pending | complete | pending | - |
+| normal | 1516 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0179 | partial | complete | complete | pending | - |
+| normal | 1570 | Shutter actuator DIN 1 motor bus | 1 | review-ready | OWN-DEV-0180 | partial | complete | complete | pending | - |
 
 ## Reviewed
 
