@@ -594,6 +594,26 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-335254-publisher-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 335254-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 335254-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 459040
+  sha256: 0c42292e249e0d7909cf346c6271b4cc302ef389d6aefb62bc12a90881d061ca
+  source_url: https://www.bticino.com/products/pdf?sku=BT-335254&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0c/42/0c42292e249e0d7909cf346c6271b4cc302ef389d6aefb62bc12a90881d061ca.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0c/42/0c42292e249e0d7909cf346c6271b4cc302ef389d6aefb62bc12a90881d061ca.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-344163-italian-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
