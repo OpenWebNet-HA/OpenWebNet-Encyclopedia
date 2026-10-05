@@ -2170,6 +2170,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-ln4890-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: LN4890
+  title: LN4890 official product export with EAN
+  media_type: application/pdf
+  filename: LN4890-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16057
+  sha256: 5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-mm00774-b-fr
   kind: documentation
   publisher: BTicino / Legrand
