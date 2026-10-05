@@ -4650,6 +4650,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-k4652m2-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: K4652M2-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: K4652M2-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 35643
+  sha256: d0886b63b9304f5c39d85a11f47780800e80cf19a2643c4f2a0398c1eda99410
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K4652M2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/d0/88/d0886b63b9304f5c39d85a11f47780800e80cf19a2643c4f2a0398c1eda99410.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/d0/88/d0886b63b9304f5c39d85a11f47780800e80cf19a2643c4f2a0398c1eda99410.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-k4652m2-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
