@@ -620,6 +620,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-bmsw1003-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: BMSW1003
+  title: BMSW1003 official product export with EAN
+  media_type: application/pdf
+  filename: BMSW1003-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 17756
+  sha256: a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1003
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/a2/36/a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/a2/36/a2365832d5b40f7b9002f1b73c112b75c1a5fe9f8795d0c267437514c4992cbb.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-bmsw3001-bmsw3002-u3773b
   kind: documentation
   publisher: BTicino
