@@ -5921,6 +5921,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-ra00162ae-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: RA00162AE_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: RA00162AE_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 96345897
+  sha256: c628c93b5971112560cc7a48705bd60aadf9d06233e87973dc940045939554c5
+  source_url: https://dar.bticino.it/asset/Documents/RA00162AE_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c6/28/c628c93b5971112560cc7a48705bd60aadf9d06233e87973dc940045939554c5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c6/28/c628c93b5971112560cc7a48705bd60aadf9d06233e87973dc940045939554c5.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00165aa-i-en-20261003
   kind: documentation
   publisher: BTicino / Legrand
