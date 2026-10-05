@@ -1503,6 +1503,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-k4659-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: K4659
+  title: K4659 official product export with EAN
+  media_type: application/pdf
+  filename: K4659-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 23669
+  sha256: cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K4659
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/e8/cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/e8/cae8772d9a0897b5859445a97a12bf036ce058d31702fcbf9143dff3a2387eef.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-kg8010-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
