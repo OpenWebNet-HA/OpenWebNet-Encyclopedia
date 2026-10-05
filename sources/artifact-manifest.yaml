@@ -5721,6 +5721,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00000901-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00000901-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00000901-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 260406
+  sha256: b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/ST-00000901-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b3/58/b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b3/58/b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00001003-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
