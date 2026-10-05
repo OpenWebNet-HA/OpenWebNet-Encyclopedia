@@ -893,6 +893,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-h4652-2-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: H4652/2
+  title: H4652/2 official product export with EAN
+  media_type: application/pdf
+  filename: H4652_2-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 44539
+  sha256: addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-h4652-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino
