@@ -88,6 +88,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-048842-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: 048842
+  title: 048842 official product record with EAN
+  media_type: text/html
+  filename: 048842-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 278308
+  sha256: 9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f
+  source_url: https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-048843-ean-export-20261005
   kind: documentation
   publisher: Legrand
