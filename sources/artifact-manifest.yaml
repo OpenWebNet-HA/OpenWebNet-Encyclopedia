@@ -2088,6 +2088,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-brochure myhome-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Brochure MyHOME manufacturer device documentation
+  media_type: application/pdf
+  filename: Brochure MyHOME.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 2869220
+  sha256: 089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718
+  source_url: https://assets.legrand.com/pim/DOCUMENT/Brochure%20MyHOME.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/08/9c/089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/08/9c/089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt-f411u2-it-20261005
   kind: documentation
   publisher: BTicino / Legrand
