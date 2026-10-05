@@ -4990,6 +4990,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-k4652m3-italian-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: K4652M3-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: K4652M3-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 22152
+  sha256: 2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K4652M3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2d/29/2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2d/29/2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-k4652m3-publisher-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
