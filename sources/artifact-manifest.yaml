@@ -1831,6 +1831,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-l4659n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: L4659N
+  title: L4659N official product export with EAN
+  media_type: application/pdf
+  filename: L4659N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 18458
+  sha256: b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4659N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b4/af/b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b4/af/b4aff92b26cbcdb644511a58da6aea791b8f19790471fbbde4c4c72f11100aec.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-l4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
