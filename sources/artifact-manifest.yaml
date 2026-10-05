@@ -2516,6 +2516,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nt4654n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: NT4654N
+  title: NT4654N official product export with EAN
+  media_type: application/pdf
+  filename: NT4654N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 42601
+  sha256: 9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-nt4658n-ean-export-20261005
   kind: documentation
   publisher: BTicino
