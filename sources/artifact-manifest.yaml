@@ -7212,6 +7212,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-nl-nl-deurcommunicatie-ontwerp-en-installatie-gids-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: nl_nl_deurcommunicatie_ontwerp_en_installatie_gids manufacturer device documentation
+  media_type: application/pdf
+  filename: nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 52382107
+  sha256: 0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe
+  source_url: https://assets.legrand.com/webf/nl/Document/nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/09/83/0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/09/83/0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-nt4577-ean-export-20261005
   kind: documentation
   publisher: BTicino
