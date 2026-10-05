@@ -4885,6 +4885,26 @@ artifacts:
   language_evidence: Document text, captions and diagrams inspected
   notes:
   - Publisher original retrieved on 2026-10-03. Uploaded original bytes verified before main registration.
+- id: device-doc-mm00779-b-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00779_b_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: MM00779_b_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 258410
+  sha256: f246af2706f2a77c36aa55565ea66f4bf8049ba2370b5efc611b1dce9da27a90
+  source_url: https://dar.bticino.it/asset/Documents/MM00779_b_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f2/46/f246af2706f2a77c36aa55565ea66f4bf8049ba2370b5efc611b1dce9da27a90.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f2/46/f246af2706f2a77c36aa55565ea66f4bf8049ba2370b5efc611b1dce9da27a90.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mm00780-a-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
