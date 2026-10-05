@@ -2484,8 +2484,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/21/ef/21ef653b8d09964881e88aafc4295c8443b7b35da73591f71321a7b55ed390f5.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - fr
+  language_evidence: Original French text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-celiane-pilotage-historical-guide-20261005
@@ -2504,8 +2504,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/7a/aa/7aaa46e456b413201dfe6f5115df3e14069ac05de1cfca4e59bc66eeba057f4c.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - fr
+  language_evidence: Original French text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-classe100x-readme-v1-20261005
@@ -2724,8 +2724,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - es
+  language_evidence: Original Spanish text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f01715en-01-20261003
@@ -3442,8 +3442,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/ac/90/ac90b9f5b2d8f0e30a41ca50f559cdf90c48e56a3b0f813bd3bcb75bf777ba49.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  language_evidence: Original Italian text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-fis-351300-20261005
@@ -3462,8 +3462,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/22/9c/229c8efca6a2a5471f37957a3753e81fda483f405d4987df3f3366fca2265aab.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  language_evidence: Original Italian text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-fis-352700-20261005
@@ -3482,8 +3482,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/3d/f9/3df9ac25e7bad2c24dbc4c2d09805f068a96e064f9369c1ab69090cadcbe3300.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  language_evidence: Original Italian text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-fis-le10815ag-20261005
@@ -5237,8 +5237,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/f8/4f/f84f0ba7492cfb576028a0e137dc23baf30380130ad4612dec38763ce3c75fff.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le06433aa-20261005
@@ -5717,8 +5717,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/db/75/db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - es
+  language_evidence: Original Spanish text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ln4648-ean-export-20261005
@@ -7286,8 +7286,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/83/fe/83fe4fb03c231f18ee940a767196a052b543b7118f93300003413d3400b7cc0c.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1684d-20261005
@@ -7306,8 +7306,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/e3/e2/e3e241cb840b912a746ed1356691118f28e00c3904537d3128e015c41a693739.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1685c-20261005
@@ -7326,8 +7326,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/61/7c/617ca9e9f8d8982bb9aca9e18e308a07724749828759358810dd3dea36ce7296.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1688a-20261005
@@ -7346,8 +7346,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/e5/96/e596e600c46963e74b25661c638dcf4f671c8c7e94d4e6e530159a19b1bb9904.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1690d-20261005
@@ -7366,8 +7366,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/19/bf/19bff3e4b870837cc5848079cc9714faad45a919077a9d61fa7186aaadd2474e.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-o1866b-20261004
@@ -9297,8 +9297,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/25/2d/252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - en
+  language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u3499a-20261004
