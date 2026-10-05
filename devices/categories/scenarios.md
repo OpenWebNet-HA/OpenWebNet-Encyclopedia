@@ -14,3 +14,4 @@
 | [OWN-DEV-0131](../definitions/own-dev-0131-mh200n-scenario-programmer.md) | `MH200N`, `003565` | MH200N scenario programmer | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0137](../definitions/own-dev-0137-three-module-soft-touch-control.md) | `HC/HS4653/3`, `HD4653M3` | Three-module Soft Touch control | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0151](../definitions/own-dev-0151-mh202-scenario-programmer.md) | `003535`, `MH202` | MH202 scenario programmer | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0026](../definitions/own-dev-0026-four-scenario-control-unit.md) | `N4681` | Flush-mounted four-scenario control and storage unit | Four stored scenarios; master/slave, learn and erase |

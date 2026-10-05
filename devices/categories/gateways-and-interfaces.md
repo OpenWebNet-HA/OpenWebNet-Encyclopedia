@@ -31,3 +31,4 @@
 | [OWN-DEV-0207](../definitions/own-dev-0207-f460-myhome-server.md) | `F460` | F460 MyHOME server | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0208](../definitions/own-dev-0208-f461-myhome-server-third-party-integration.md) | `F461` | F461 MyHOME server for third-party integration | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0209](../definitions/own-dev-0209-f459t-hvac-driver-manager.md) | `F459T` | F459T HVAC Driver Manager | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |

@@ -9,19 +9,19 @@ This two-module DIN actuator provides four independent relay outputs for configu
 | Device ID | `OWN-DEV-0023` | Project identity |
 | Technical description | Four-independent-relay 2-DIN actuator for lighting and paired automation/motor loads | Catalogue + official documentation |
 | Commercial identities | `F411/4`, `003844` | Catalogue |
-| Catalogue item | `3` - “4 relay actuator 2 modules DIN bus” | Implementation evidence |
-| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
-| Item model / `modobj` | `130` | Implementation evidence |
-| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `142` | Implementation evidence |
-| Declared Modules | `4` | Implementation evidence |
+| Catalogue item | `3` - “4 relay actuator 2 modules DIN bus” | Canonical manufacturer catalogue |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Canonical manufacturer catalogue |
+| Item model / `modobj` | `130` | Canonical manufacturer catalogue |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `142` | Canonical manufacturer catalogue |
+| Declared Modules | `4` | Canonical manufacturer catalogue |
 | Categories | Actuator, Lighting, Automation, Shutter | Capability model |
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino | `F411/4` | Established identity | canonical commercial record `3`; Commercial identity of this Technical Device | Canonical catalogue |
-| Legrand | `003844` | Established identity | canonical commercial record `1707`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `F411/4` | Established identity | Canonical catalogue; canonical commercial record `3`; Commercial identity of this Technical Device |
+| Legrand | `003844` | Established identity | Canonical catalogue; canonical commercial record `1707`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
 
@@ -38,28 +38,28 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST-00000896-EN` | Technical sheet | 2021-03-23 | whole document / PDF pp. 1-4 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f3/1c/f31ca3b29c75fc69881f4d2ed3744435c10b83bad181a5ce4fb3e55a08509def.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/ST-00000896-EN.pdf) |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F411/4 configuration: printed p. 122 / PDF p. 124; load/specification tables: printed pp. 157-160 / PDF pp. 159-162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | October 2006 publisher guide | F411/4 configuration: printed p. 122 / PDF p. 124; load/specification tables: printed pp. 157-160 / PDF pp. 159-162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | `F411_4-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F411/4` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_4) |
-
-For the multi-product guide, the printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
+| `ST-00002122-EN.pdf` | Classe 300EOS compatibility matrix | 21 October 2024 | Only applicable production/compatibility rows, p.7 and physical-configuration exclusion, p.8 | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | Publisher URL not retained in manifest |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Mounting | 2 DIN modules | `ST-00000896-EN` / current product data |
-| Outputs | 4 independent relays | `ST-00000896-EN` |
-| Local interface | manual operation with LED indication | `ST-00000896-EN` |
-| SCS nominal supply | `27 Vdc` | Current product data |
-| SCS operating range | `18..27 Vdc` | Current product data |
-| Current draw | `40 mA` | Current product data |
-| Rated switching current | `2 A` | Current product data |
-| Motor reducers | `500 W` | Current product data |
-| Ferromagnetic transformer | `2 A`, cos φ `0.5` | Current product data |
-| Fluorescent load | `70 W` | Current product data |
-| Paired motor/shutter use | relay pairs can be logically interlocked | `ST-00000896-EN` |
+| Mounting / channels | 2 DIN modules; 4 relay output(s) | ST-00000896-EN p. 1 |
+| SCS nominal / operating supply | `27 Vdc` / `18..27` Vdc | ST-00000896-EN p. 1 |
+| Current draw | `60 mA`; `40 mA` for products before batch 14W39 | ST-00000896-EN p. 1 |
+| Operating temperature | −5..+`45 °C` | ST-00000896-EN p. 1 |
+| Maximum-load dissipation | `2.4 W` | ST-00000896-EN p. 1 |
+| Local controls | Load-control button(s) and status LED(s); 2018 sheets require configuration before local operation | ST-00000896-EN p. 1 |
 
-The technical sheet shows a `10 A` protective breaker in a lighting wiring example; that example is not treated as the relay switching rating.
+| `230 Vac` load category | Published rating | Evidence |
+| --- | --- | --- |
+| Incandescent / halogen | `460 W` / `2 A` | ST-00000896-EN p. 1 |
+| LED / CFL | `70 W`, max. 2 lamps | ST-00000896-EN p. 1 |
+| Linear fluorescent / electronic transformer | `70 W` / `0.3 A` | ST-00000896-EN p. 1 |
+| Ferromagnetic transformer | `460 VA` / `2 A`, cosφ 0.5 | ST-00000896-EN p. 1 |
+| Motor | `460 W` / `2 A` | ST-00000896-EN p. 1 |
 
 ## Identity
 
@@ -68,8 +68,30 @@ The technical sheet shows a `10 A` protective breaker in a lighting wiring examp
 | `EN_ITEM.id_item` | `3` | Canonical catalogue |
 | Technical item description | 4 relay actuator 2 modules DIN bus | Canonical catalogue |
 | Item family | `2` - Actuator | Canonical catalogue |
-| Main system | `1` - lighting_automation; `modobj` `130` | AS_ITEM_SYSTEM |
-| Commercial records | `2` | EN_DEVICE |
+| Main system | `1` - lighting_automation; `modobj` `130` | `AS_ITEM_SYSTEM` |
+| Commercial records | `2` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `130` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Canonical commercial record metadata
+
+| Reference / record | Catalogue name / source description | Visibility / type | Dependent / gateway | Evidence |
+| --- | --- | --- | --- | --- |
+| `F411/4` / `3` | 4 relay actuator 2 modules DIN bus; `BTicino_Undefined_4 relays DIN actuator 6 A` | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+| `003844` / `1707` | 4 relay actuator 2 modules DIN bus; `Legrand_Undefined_Attuatore DIN 4 relay` | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+
+Visibility, dependency and gateway flags describe the catalogue record, not the installed Device state.
 
 ## Firmware and hardware
 
@@ -80,6 +102,12 @@ The technical sheet shows a `10 A` protective breaker in a lighting wiring examp
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Firmware `142` is wildcard `-1.-1.-1` and declares four Modules.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -106,13 +134,14 @@ All four slots can be Object `6`, Light actuator. Object `7`, Automation actuato
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `142` | `1` | `1` | Virtual Configuration |
-| `142` | `2` | `2` | Advanced Configuration |
-| `142` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `142` | Physical configuration | `0` | Canonical firmware/mode association |
+| `142` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `142` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-Physical configuration, Virtual Configuration and Advanced Configuration.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -122,24 +151,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | --- | --- | --- | --- | --- |
 | `142` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
 | `142` | `A` | `0..9` | `0` | A; Environment |
-| `142` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
-| `142` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
-| `142` | `PL3` | `0..9` | `0` | PL3; PL3 - (0-9) |
-| `142` | `PL4` | `0..9` | `0` | PL4; PL4 - (0-9) |
+| `142` | `PL1` | `0..9` | `0` | `PL1`; `PL1` - (0-9) |
+| `142` | `PL2` | `0..9` | `0` | `PL2`; `PL2` - (0-9) |
+| `142` | `PL3` | `0..9` | `0` | `PL3`; `PL3` - (0-9) |
+| `142` | `PL4` | `0..9` | `0` | `PL4`; `PL4` - (0-9) |
 | `142` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (1-4, Pul, Sla) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL1` | `0..9` | output 1 light-point configurator |
-| `PL2` | `0..9` | output 2 light-point configurator |
-| `PL3` | `0..9` | output 3 light-point configurator |
-| `PL4` | `0..9` | output 4 light-point configurator |
-| `M` | `0..4` / `SLA` / `PUL` | operating / function mode |
-
 
 The shared area plus `PL1` through `PL4` fields address the four output positions. The active Light / Automation / Blind Object topology is governed by the slot conditions documented below.
 
@@ -168,7 +184,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `6` - Light actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -195,7 +210,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `7` - Automation actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -217,22 +231,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
-
-**Object `1` - Blind actuator - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`.
-
-**Object `6` - Light actuator - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`, `HOURS`, `MINUTES`, `STATE_RESET`, `SECONDS`, `LOAD_CONTROL_MODE`.
-
-**Object `7` - Automation actuator - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `LOCAL_BUTTON`.
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+All four PL values equal selects Blind Object `1` through condition `4703` / rule 9; individual adjacent equalities select Automation Object `7` through 4702/4704/4705 / rule 2. These correspond to different manufacturer shutter roles and timing tables. Rule 2 `M=5..9` lies outside stored firmware M; Object `1` filter 207 references another Object scope. Do not invent precedence for overlapping candidates.
 
 ## Conditions, filters, and conversions
 
@@ -240,7 +241,7 @@ These are reusable Object fields; Device applicability remains governed by the f
 
 | Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
 | --- | --- | --- | --- | --- | --- |
-| `142` | `1` | `1` | `4703` | `PL2=PL1;PL4=PL3;PL3=PL2` | `9` |
+| `142` | `1` | `1` | `4703` | `PL2=`PL1`;`PL4`=`PL3`;`PL3`=PL2` | `9` |
 | `142` | `1` | `6` | `4151` | No textual predicate stored | `10` |
 | `142` | `1` | `7` | `4702` | `PL2=PL1` | `2` |
 | `142` | `2` | `6` | `4151` | No textual predicate stored | `10` |
@@ -316,14 +317,34 @@ No sanitized hardware fingerprint is currently retained.
 
 Resolve slot conditions before assigning relay roles. Motor/shutter arrangements require logical interlocking; a four-light arrangement keeps four independent lighting Modules.
 
+| Setting / property | Source-scoped value or behavior | Evidence |
+| --- | --- | --- |
+| Addressing | Lighting/ordinary automation: physical `A=1..9`, `PL1..PL4=1..9`; rolling-shutter §3 permits `A=0..9`; Suite room `0..10` and point `0..15`. Numeric firmware domains are stored separately. | ST-00000896-EN pp. 2–3 |
+| Master / Slave / PUL | `M=0` / SLA / PUL. PUL ignores Room and General controls; this wording alone does not establish Group behavior. | ST-00000896-EN mode tables |
+| Lighting OFF delay | Lighting mode lists Master/Slave/PUL; do not assign the two-relay lighting delay matrix to all four outputs. | ST-00000896-EN p. 2 |
+
+| Setting / property | Source-scoped value or behavior | Evidence |
+| --- | --- | --- |
+| Adjacent motor pair | Equal adjacent PL addresses interlock that pair, including `PL2=PL3`; mixed lighting/motor loads are documented. | ST-00000896-EN pp. 2–3 |
+| Rolling-shutter pair stop | `M=0..4` = 1/2/5/10 minutes / until limit stop; `M=5..9` = 20/10/5/15/30 seconds. Suite `1..60` s, `2..10` min or infinity. | ST-00000896-EN p. 3 §3 |
+| Two rabbet shutters | All four PL equal; pairs 1/2 internal and 3/4 external shutter. External opens first, internal starts 3 s later; internal closes first, external starts 3 s later. `M=0/1/2/3` = 20/15/25/60 s. | ST-00000896-EN pp. 3 §2 and 4 |
+| Wiring / groups | Common relay supply terminal; diagrams specify 10 A thermal-magnetic protection. Groups use Suite; MyHOME Server auto-configures four channels. | ST-00000896-EN pp. 1–4 |
+
 ## Source reconciliation
 
 Official documentation corroborates four physical outputs, local control and paired motor use. The Virgin-Object topology explains the shared lighting/automation/blind capability. Older catalogues publish different lamp-load figures; this dossier keeps current values source-scoped.
 
+The historical `AUTOMATISME.pdf` load tables (printed pp. 158 / PDF p. 160) and consumption table (printed p. 160 / PDF p. 162) were examined. They list resistive 6 A / 1400 W, incandescent 2 A / 500 W, fluorescent/electronic 0.3 A / 70 W, ferromagnetic 2 A / 500 VA and motor 2 A / 500 W. The retained Italian export instead labels 2 A resistive and 6 A incandescent in its description, while its structured fields give 40 mA / 460 W / 460 VA. This is a real internal/source discrepancy; the 2021 technical sheet’s 60 mA and explicit pre-14W39 qualification must not be replaced by the export. No production cutoff is inferred for load-rating differences. A specific installed revision must be matched before choosing its ratings.
+
+The 2021 sheet distinguishes the four-contact rabbet-shutter mode from ordinary interlocked rolling-shutter pairs; their timing tables are not competing revisions of one function. Its §3 notation `PL...=PL+1` is qualified by “same configurators”; it denotes matching adjacent positions, not arithmetic address increment. The historic guide lists only `M=0..4` for interlocked motors. The complete 2021 ten-value pair table is preserved without widening the older wildcard catalogue’s M domain. The sheet p. 1 gives `P[mW]=140+400*N+10*(Ic1²+…+IcN²)`; the historical guide gives 3.2 W for single loads and 40/22 mA for single/interlocked use, versus the 2021 2.4 W / 60 mA. The latter’s before-14W39 current qualifier is explicit; other revision boundaries remain unknown.
+
+The retained Classe 300EOS compatibility matrix lists F411/4 from 09W04; 003844 from 10W22; downstream F422 minimum batch `15W25`. Its p.8 excludes Devices using physical configurators. These are Classe 300EOS compatibility boundaries, not universal hardware revisions or guaranteed firmware versions.
+
 ## Evidence limits and open work
 
-- Hardware-corroborate representative four-light and paired-motor configurations.
-- Publish an exact `M` to slot-condition topology table after conversion-rule review.
+- All-PL-equal and adjacent-pair topology/conversions are documented above, but catalogue overlapping candidate precedence remains unstated.
+- Load ratings/export wording and historical dissipation differences remain source-scoped; no universal revision boundary resolves them.
+- No representative hardware trace was inspected. The export’s environmental/DWG links and additional revisions remain unexamined.
 
 ## Sources
 
@@ -333,3 +354,5 @@ Official documentation corroborates four physical outputs, local control and pai
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
 
 - `F411_4-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F411/4` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/d5/d5/d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_4); SHA-256 `d5d519a8d1715f0e8b04d20310ff7884c1b4444195e1b9a524f0c4d6fdf3bf0a`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0021-0030-2026-10-06.md#own-dev-0023)

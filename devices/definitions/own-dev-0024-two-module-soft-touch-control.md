@@ -9,40 +9,37 @@ This two-module Soft Touch control uses a capacitive surface to send configured 
 | Device ID | `OWN-DEV-0024` | Project identity |
 | Technical description | Two-module capacitive Soft Touch SCS command with configurable function and UI settings | Catalogue + official documentation |
 | Commercial identities | `HC/HS4653/2`, `HD4653M2` | Catalogue |
-| Catalogue item | `12` - “Soft touch control” | Implementation evidence |
-| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
-| Item model / `modobj` | `8` | Implementation evidence |
-| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `149` | Implementation evidence |
-| Declared Modules | `2` | Implementation evidence |
+| Catalogue item | `12` - “Soft touch control” | Canonical manufacturer catalogue |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Canonical manufacturer catalogue |
+| Item model / `modobj` | `8` | Canonical manufacturer catalogue |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `149` | Canonical manufacturer catalogue |
+| Declared Modules | `2` | Canonical manufacturer catalogue |
 | Categories | Command, Lighting, Automation, Scenario, Sound, Access | Capability model |
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino - Axolute | `HC/HS4653/2` | Established identity | canonical commercial record `12`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `HD4653M2` | Established identity | canonical commercial record `1553`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC/HS4653/2` | Established identity | Canonical catalogue; canonical commercial record `12`; Commercial identity of this Technical Device |
+| BTicino - Axolute | `HD4653M2` | Established identity | Canonical catalogue; canonical commercial record `1553`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | Soft Touch HC/HS4653/2 and HC/HS4653/3: printed pp. 93-94 / PDF pp. 95-96; specification table printed p. 161 / PDF p. 163 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-
-The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
+| `AUTOMATISME.pdf` | MyHOME automation guide | October 2006 publisher guide | Soft Touch HC/HS4653/2 and HC/HS4653/3: printed pp. 93-94 / PDF pp. 95-96; specification table printed p. 161 / PDF p. 163 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `MQ00065-d-FR.pdf` | Soft Touch technical sheet | 29 April 2014 | All seven pages; two-module HC/HS4653/2 and HD4653M2; three-module sibling excluded from this Device | [Archived original](https://archive.openwebnet-ha.org/sha256/0a/c3/0ac3d6791f9146882dea8432fd04c342b187825df9f7284150c1ab78fc57d6c7.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00065-d-fr.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Mounting | 2 flush-mounted modules | Publisher automation documentation |
-| SCS nominal supply | `27 Vdc` | Publisher data |
-| SCS operating range | `18..27 Vdc` | Publisher data |
-| Maximum current draw | `18 mA` | Publisher data |
-| Operating temperature | `5..35 °C` | Publisher data |
-| User interface | capacitive Soft Touch surface | Publisher automation documentation |
-| LED indication | intensity adjustable | Publisher automation documentation |
+| Mounting | 2 flush-mounted wiring-device modules; three-module siblings have separate identities | MQ00065-d-FR.pdf p. 1 |
+| Supply | `27 Vdc` nominal; `18..27` Vdc operating | MQ00065-d-FR.pdf p. 1 |
+| Maximum current / temperature | `18 mA`; `5..35` °C | MQ00065-d-FR.pdf p. 1 |
+| Controls / physical sockets | Capacitive surface and LED; A, PL/PF, M, `M2`, SPE, INT | MQ00065-d-FR.pdf p. 1 |
 
 ## Identity
 
@@ -51,8 +48,30 @@ The printed and 1-based PDF page locators remain unresolved and are retained exp
 | `EN_ITEM.id_item` | `12` | Canonical catalogue |
 | Technical item description | Soft touch control | Canonical catalogue |
 | Item family | `1` - Control | Canonical catalogue |
-| Main system | `1` - lighting_automation; `modobj` `8` | AS_ITEM_SYSTEM |
-| Commercial records | `2` | EN_DEVICE |
+| Main system | `1` - lighting_automation; `modobj` `8` | `AS_ITEM_SYSTEM` |
+| Commercial records | `2` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `8` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Canonical commercial record metadata
+
+| Reference / record | Catalogue name / source description | Visibility / type | Dependent / gateway | Evidence |
+| --- | --- | --- | --- | --- |
+| `HC/HS4653/2` / `12` | Soft touch control; no source description | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+| `HD4653M2` / `1553` | Soft touch control; `BTicino_Axolute_Control Soft Touch 2 module` | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+
+Visibility, dependency and gateway flags describe the catalogue record, not the installed Device state.
 
 ## Firmware and hardware
 
@@ -63,6 +82,12 @@ The printed and 1-based PDF page locators remain unresolved and are retained exp
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Firmware `149` is wildcard `-1.-1.-1` and declares two Modules.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -93,13 +118,14 @@ Slot `1` is the configurable command surface. Direct candidates are Objects `410
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `149` | `1` | `1` | Virtual Configuration |
-| `149` | `2` | `2` | Advanced Configuration |
-| `149` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `149` | Physical configuration | `0` | Canonical firmware/mode association |
+| `149` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `149` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-Physical configuration, Virtual Configuration and Advanced Configuration.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -111,22 +137,9 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `149` | `A` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A; Environment (0-9 `GEN`,`GR`,`AMB`,`AUX`) |
 | `149` | `PL` | `0..9` | `0` | PL; Light Point |
 | `149` | `M` | `0..9`; `14` = `CEN`; `10` = `OFF`; `11` = `ON`; `15` = `PUL` | `0` | M; Mode physical configurator (0-9,`OFF`,`ON`,`CEN`,`PUL`) |
-| `149` | `M2` | `0..9` | `0` | M2; Mode physical configurator (0-9) |
-| `149` | `SPE` | `0..4`; `6..9` | `0` | SPE; Special function command control (0,1,2,3,4,6,7,8,9) |
-| `149` | `INT` | `0..1`; `10` = `OFF` | `0` | INT; INT (0,1,`OFF`) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` / `GEN` / `GR` / `AMB` / `AUX` | area / environment configurator |
-| `PL` | `0..9` | light-point configurator |
-| `M` | `0..9` / `CEN` / `OFF` / `ON` / `PUL` | operating / function mode |
-| `M2` | `0..9` | channel 2 operating mode |
-| `SPE` | `0` / `1` / `2` / `3` / `4` / `6` / `7` / `8` / `9` | special-function selector |
-| `INT` | `0` / `1` / `OFF` | interface-function selector |
-
+| `149` | `M2` | `0..9` | `0` | `M2`; Mode physical configurator (0-9) |
+| `149` | `SPE` | `0..4`; `6..9` | `0` | SPE; Special function command control (0, 1, 2, 3, 4, 6, 7, 8, 9) |
+| `149` | `INT` | `0..1`; `10` = `OFF` | `0` | INT; INT (0, 1,`OFF`) |
 
 These are the Soft Touch device configurators. Their values select among the candidate control Objects; the much larger reusable Object schemas are summarized separately rather than flattened into this table.
 
@@ -157,12 +170,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
+| `M` | `0` = `UP` bistable control; `1` = `DOWN` bistable control; `2` = `UP` monostable control; `3` = `DOWN` monostable control; `4` = `UP` monostable and bistable control; `5` = `DOWN` monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
@@ -172,7 +184,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `412` - Lock/unlock actuator control
 
@@ -187,7 +198,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -200,7 +210,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -210,7 +219,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -222,7 +230,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -233,7 +240,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -241,12 +247,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
 
-
 ### Object `419` - Sound diffusion control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL, ON_OFF) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
 | `A` | `0..9` | `0` | Area |
 | `PF` | `0..9` | `0` | Audio point |
@@ -256,7 +261,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `426` - Staircase light control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -264,7 +268,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -275,7 +278,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `130` - User interface settings
 
@@ -293,58 +295,36 @@ Catalogue Object key `480` maps to external Object `130`.
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
 
+### Object `417` - AUX control (Virgin-only candidate)
 
-### Product interpretation and source differences
+No direct firmware/Object association establishes reachability.
 
-**Object `410` - Light control - product interpretation.**
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = `DOWN` Shutter bistable command; `18` = `UP` shutter monostable command; `4` = Reset `BI`; `5` = Reset `TRI`; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = `UP` shutter bistable command; `19` = `DOWN` Shutter monostable command | `0` | Modality; mode(Cyclical, off, on, pul, up, down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
 
-**Object `411` - Automation control - product interpretation.**
+No direct firmware/Object association establishes reachability.
 
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`. The catalogue relation restricts `M`: UP mono+bistable control (`4`), DOWN mono+bistable control (`5`).
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 
-**Object `412` - Lock/unlock actuator control - product interpretation.**
+### Object `462` - Open lock command on session (Virgin-only candidate)
 
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
+No direct firmware/Object association establishes reachability.
 
-**Object `413` - Scenario module control - product interpretation.**
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
 
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`.
+### Device-specific interpretation
 
-**Object `414` - Scheduled scenario - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
-
-**Object `415` - Scenario PLUS Lighting Management - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`, `M`, `TYPE_OF_REGULATION`.
-
-**Object `416` - Scheduled scenario PLUS - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `MODE`, `TYPE_CONTACT`.
-
-**Object `418` - Open lock control - product interpretation.**
-
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
-
-**Object `419` - Sound diffusion control - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `TYPE_CONTACT`, `SUB_SOURCE`, `CHANNEL`.
-
-**Object `427` - Floor call control - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `IN_AUX_CHANNEL`, `SEGMENT`. The catalogue relation restricts `TO_ALL`: General (`1`).
-
-**Object `426` - Staircase light control - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `SEG_LEV`. The catalogue relation restricts `N1` to `100..255`.
-
-**Object `130` - User interface settings - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `STATE_OF_UNUSED_BUTTON`, `BACKLIGHT_INTENSITY_STANDBY_LEVEL`, `PROXIMITY_ENABLE`, `SIGNBOARD`, `SINGLE_LED_INTENSITY_STANDBY_LEVEL`, `BACKLIGHT_DELAY`.
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+One command surface plus UI-settings slot 2 does not mean two commands. No slot-condition rows establish candidate activation. Automation M filter permits 4/5 but reusable default is 0; N1 filter spans `100..255` while the sheet’s apartment address is `0..99`. The domains are retained without silently replacing defaults or physical limits.
 
 ## Conditions, filters, and conversions
 
@@ -415,20 +395,35 @@ No sanitized hardware fingerprint is currently retained.
 
 ## Programming
 
-Treat the Device as one configurable command surface plus one UI-settings Module, not two independent commands.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Lighting addressing | Physical point `A=1..9`, `PL=0..9`; `A=AMB`, `GR` or `GEN` for room/group/general. Suite room `0..10`, point `0..15`, group `1..255`; optional status-feedback point for collective commands. | MQ00065-d-FR.pdf p. 2 |
+| ON/OFF / dimming | `SPE=0, M=0` cyclic; ON/OFF/PUL symbols. Short press switches, long press regulates point-to-point; `SPE=1, M=7` cyclic. `SPE=3, M=1..9` gives fixed `10..90`%. | MQ00065-d-FR.pdf pp. 2–3 |
+| Timed ON | `SPE=0, M=1..6` =1/2/3/4/5/15 min, `M=7` gives `30 s`; `M=8` gives `0.5 s`; sheet’s `SPE=8, M=1` gives `2 s` and `SPE=7, M=2` gives `10 min`. Suite duration `0..255` h, `0..59` min, `0..59` s. | MQ00065-d-FR.pdf p. 2 |
+| Flashing | `SPE=2, M=0..9` gives `0.5..5` s in 0.5 s steps; `5.5..8` s requires Suite. | MQ00065-d-FR.pdf p. 3 |
+| Automation / blocking | Up/down mono/bistable and lock/unlock use virtual Suite configuration. | MQ00065-d-FR.pdf p. 3 |
+| F420 scenario | `SPE=6`; decimal `M`/`M2` selects `01..16`, A/PL targets the module. Enable F420 learning, hold hand near surface 3 s until LED dims, withdraw; configure actions, briefly approach to finish. Erase: hold 3 s plus 5 s; whole-module reset at F420. | MQ00065-d-FR.pdf p. 4 |
+| Scheduled / PLUS | `SPE=0, M=CEN` sends button 1 to MH200N; Suite button `0..31`. PLUS scheduled scenario number `1..2047`/button `0..31` and PLUS Lighting Management use Suite. Command address must differ from actuator addresses. | MQ00065-d-FR.pdf pp. 4–5 |
+| Door-entry | `SPE=9`: `M=1` lock, `M=2` floor call, `M=3` staircase light; physical A/PL two-digit destination. Suite entrance `0..95`, apartment `0..99`; other destination levels and general call use Suite. | MQ00065-d-FR.pdf pp. 5–6 |
+| Sound | `SPE=8, M=0` follows last active source; `M=1..4` selects source. Physical point `A/PF=0..9`, room `A=AMB` / `PF=0..9` or `A=GEN`. Suite supports source `1..9` and volume/track/source/cyclic operations. | MQ00065-d-FR.pdf p. 6 |
+| LED INT | Absent: standby/off 30%, on 60%; `INT=1`: 45%/70%; OFF: 0%/30%. On-state indication applies to point-to-point lighting; Suite levels `0..10`. | MQ00065-d-FR.pdf p. 7 |
 
 ## Source reconciliation
 
 Official documentation establishes touch operation, adjustable LED intensity, actuator/scenario use and sound-system `ON`/`OFF`/volume use. The database expands the same command surface to the full Virgin-Object candidate set and explicitly separates UI settings into slot `2`.
 
+The newly retained 2014 sheet explicitly names HD4653M2, closing that documentation gap, and gives 18 mA. The October 2006 automation guide printed p. 161 / PDF p. 163 gives 15 mA for HC/HS4653/2; no production boundary reconciles those figures. Its printed p. 93 / PDF p. 95 places the 2-second timed command at `SPE=7, M=1`, while the 2014 sheet prints `SPE=8, M=1`. Preserve both; do not silently repair the sheet. Page 7 repeats a sound “Follow me” introductory sentence under the LED heading; the LED table establishes the actual scope. Lighting `M=O` typography denotes the cyclic mode as elsewhere `M=0`. Mechanical /3 and `M3` references in the shared sheet remain outside this two-module cluster.
+
 ## Evidence limits and open work
 
-- Archive a dedicated Soft Touch technical sheet with explicit `HD4653M2` coverage.
-- Publish the exact physical `M/M2/SPE/INT` function matrix.
-- Hardware-corroborate active Object and UI-settings behavior.
+- The historical and 2014 current figures and 2-second SPE selector conflict remain unresolved for an installed production batch.
+- Candidate activation, UI settings and actual transmitted commands have not been hardware-corroborated.
+- The English MQ00065_d_EN endpoint returned HTTP 403 during this review; its text was not incorporated. Other linked Suite help/software payloads were not examined.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0021-0030-2026-10-06.md#own-dev-0024)

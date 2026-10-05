@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 190 |
-| reviewed | 20 |
+| review-ready | 180 |
+| reviewed | 30 |
 
 Total: **210** technical-item clusters.
 
@@ -26,20 +26,10 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 1854 | Probe with regulation | 6 | review-ready | OWN-DEV-0038 | complete | complete | complete | pending | - |
 | high | 1847 | Key card switch RFID | 5 | review-ready | OWN-DEV-0039 | partial | complete | complete | pending | - |
 | high | 1856 | Fan-coil probe | 5 | review-ready | OWN-DEV-0040 | complete | complete | complete | pending | - |
-| high | 28 | Receiving radio interface | 3 | review-ready | OWN-DEV-0029 | complete | complete | partial | pending | - |
 | high | 34 | Transmitting radio interface | 3 | review-ready | OWN-DEV-0032 | partial | complete | partial | pending | - |
-| high | 1 | 1 relay DIN actuator 16 A | 2 | review-ready | OWN-DEV-0021 | complete | complete | partial | pending | - |
-| high | 2 | 2 relays DIN actuator 10 A | 2 | review-ready | OWN-DEV-0022 | complete | complete | partial | pending | - |
-| high | 3 | 4 relay actuator 2 modules DIN bus | 2 | review-ready | OWN-DEV-0023 | complete | complete | partial | pending | - |
-| high | 12 | Soft touch control | 2 | review-ready | OWN-DEV-0024 | complete | complete | partial | pending | - |
-| high | 17 | DIN dimmer 1000 W | 2 | review-ready | OWN-DEV-0025 | complete | complete | partial | pending | - |
-| high | 23 | Flush mounted dimmer | 2 | review-ready | OWN-DEV-0027 | partial | complete | partial | pending | - |
-| high | 25 | Regulation rotative control | 2 | review-ready | OWN-DEV-0028 | partial | complete | partial | pending | - |
 | high | 33 | PIR surface ceiling mounted sensor | 2 | review-ready | OWN-DEV-0031 | complete | complete | complete | pending | - |
 | high | 39 | Radio interface for temperature probes | 2 | review-ready | OWN-DEV-0034 | complete | complete | complete | pending | - |
 | high | 40 | Flush mounted radio receiver for HA/HB4572SB | 2 | review-ready | OWN-DEV-0035 | complete | complete | partial | pending | - |
-| high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
-| high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
 | normal | 1862 | Basic probe | 5 | review-ready | OWN-DEV-0041 | partial | partial | partial | pending | - |
 | normal | 291 | Temperature central unit | 4 | review-ready | OWN-DEV-0042 | partial | partial | partial | pending | - |
@@ -216,7 +206,17 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Item | Description | Outcome |
 | ---: | --- | --- |
+| 1 | 1 relay DIN actuator 16 A | OWN-DEV-0021 |
+| 2 | 2 relays DIN actuator 10 A | OWN-DEV-0022 |
+| 3 | 4 relay actuator 2 modules DIN bus | OWN-DEV-0023 |
 | 4 | Basic control | OWN-DEV-0007 |
+| 12 | Soft touch control | OWN-DEV-0024 |
+| 17 | DIN dimmer 1000 W | OWN-DEV-0025 |
+| 20 | Scenario control unit | OWN-DEV-0026 |
+| 23 | Flush mounted dimmer | OWN-DEV-0027 |
+| 25 | Regulation rotative control | OWN-DEV-0028 |
+| 28 | Receiving radio interface | OWN-DEV-0029 |
+| 31 | Ballast DIN dimmer 1-10 V | OWN-DEV-0030 |
 | 37 | IR receiver | OWN-DEV-0012 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |

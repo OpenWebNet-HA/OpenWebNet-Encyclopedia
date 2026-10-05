@@ -9,27 +9,26 @@ This DIN dimmer controls compatible lighting ballasts through a 1-10 V signal. I
 | Device ID | `OWN-DEV-0030` | Project identity |
 | Technical description | DIN-rail 1-10 V ballast dimmer | Catalogue + official documentation |
 | Commercial identities | `F413` | Catalogue |
-| Catalogue item | `31` - “Ballast DIN dimmer 1-10 V” | Implementation evidence |
-| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
-| Item model / `modobj` | `7` | Implementation evidence |
-| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `174` | Implementation evidence |
-| Declared Modules | `1` | Implementation evidence |
+| Catalogue item | `31` - “Ballast DIN dimmer 1-10 V” | Canonical manufacturer catalogue |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Canonical manufacturer catalogue |
+| Item model / `modobj` | `7` | Canonical manufacturer catalogue |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `174` | Canonical manufacturer catalogue |
+| Declared Modules | `1` | Canonical manufacturer catalogue |
 | Categories | Dimmer, Lighting | Capability model |
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino | `F413` | Established identity | canonical commercial record `31`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `F413` | Established identity | Canonical catalogue; canonical commercial record `31`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | F413 configuration: printed p. 124 / PDF p. 126; technical characteristics printed p. 165 / PDF p. 167 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-
-The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
+| `AUTOMATISME.pdf` | MyHOME automation guide | October 2006 publisher guide | F413 configuration: printed p. 124 / PDF p. 126; technical characteristics printed p. 165 / PDF p. 167 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -45,6 +44,10 @@ The printed and 1-based PDF page locators remain unresolved and are retained exp
 
 The publisher guide requires the controlled ballasts to be earthed; absence of the earth connection is documented as a possible cause of malfunction.
 
+| Setting / property | Source-scoped value or behavior | Evidence |
+| --- | --- | --- |
+| Historical rating / dissipation | Fluorescent `2.5A`/`550 W`, at most 4 T5/T8 ballasts; `0.5 W` dissipation. Examples Philips HF-REGULATOR and Osram QUICKTRONIC DELUXE DIM. | AUTOMATISME.pdf printed pp.158, 160, 165 /PDF pp.160, 162, 167 |
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -52,8 +55,29 @@ The publisher guide requires the controlled ballasts to be earthed; absence of t
 | `EN_ITEM.id_item` | `31` | Canonical catalogue |
 | Technical item description | Ballast DIN dimmer 1-10 V | Canonical catalogue |
 | Item family | `4` - Dimmer | Canonical catalogue |
-| Main system | `1` - lighting_automation; `modobj` `7` | AS_ITEM_SYSTEM |
-| Commercial records | `1` | EN_DEVICE |
+| Main system | `1` - lighting_automation; `modobj` `7` | `AS_ITEM_SYSTEM` |
+| Commercial records | `1` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `7` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Canonical commercial record metadata
+
+| Reference / record | Catalogue name / source description | Visibility / type | Dependent / gateway | Evidence |
+| --- | --- | --- | --- | --- |
+| `F413` / `31` | Ballast DIN dimmer 1-10 V; `BTicino_Undefined_Ballast DIN dimmer 1-10 V` | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+
+Visibility, dependency and gateway flags describe the catalogue record, not the installed Device state.
 
 ## Firmware and hardware
 
@@ -64,6 +88,12 @@ The publisher guide requires the controlled ballasts to be earthed; absence of t
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Firmware `174` is wildcard `-1.-1.-1` and declares one Module.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,13 +113,14 @@ The Module resolves to Object `8`, **Dimmer actuator**. Firmware `174` has no De
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `174` | `1` | `1` | Virtual Configuration |
-| `174` | `2` | `2` | Advanced Configuration |
-| `174` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `174` | Physical configuration | `0` | Canonical firmware/mode association |
+| `174` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `174` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-Advanced Configuration, Physical Configuration and Virtual Configuration are declared.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -101,20 +132,9 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `174` | `A` | `0..9` | `0` | A; Environment |
 | `174` | `PL` | `0..9` | `0` | PL; Light Point |
 | `174` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (1-4, Pul, Sla) |
-| `174` | `G1` | `0..9` | `0` | G1; G1 - (0-9) |
+| `174` | `G1` | `0..9` | `0` | `G1`; `G1` - (0-9) |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL` | `0..9` | light-point configurator |
-| `M` | `0..4` / `SLA` / `PUL` | operating / function mode |
-| `G1` | `0..9` | group configurator 1 |
-
-
-Firmware 174 exposes the physical addressing/mode/group fields. Generic Dimmer Object capabilities are kept separate below.
+Firmware `174` exposes the physical addressing/mode/group fields. Generic Dimmer Object capabilities are kept separate below.
 
 ## Object configuration surfaces
 
@@ -126,7 +146,7 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
-| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M, S + PULL) |
 | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
 | `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
 | `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
@@ -149,14 +169,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
+Rule 3 converts physical `M=1..4` to point-to-point Master-to-Slave OFF delay; condition `4149` has no textual predicate. Shared TYPE_LOAD labels including LED/DALI/DSI do not establish F413 support for those output protocols or the successor F413N’s ten-ballast capacity.
 
-**Object `8` - Dimmer actuator - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation restricts `TYPE_LOAD`: Auto detect capacitive (`0`), Auto detect inductive (`1`), Alogen lamp (`10`), LED trailing edge / electronic transformers (`11`), LED leading edge (`12`), CFL trailing edge (`13`), CFL leading edge (`14`), Forced capacitive (`2`), Forced inductive (`3`), Discharge lamps (`7`), Dali standard (`8`), DSI (`9`).
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+The reusable `MIN_LEVEL_ADV` domain is `1..100` but its stored default is `0`. No corrected default is supplied; retain this source inconsistency without treating `0` as a permitted configured value.
 
 ## Conditions, filters, and conversions
 
@@ -214,18 +231,25 @@ No sanitized F413 hardware fingerprint is currently retained.
 
 Preserve the classic `M` mode and group semantics. Do not substitute current F413N electrical specifications or configuration behavior unless the hardware identity has been established.
 
+| Setting / property | Source-scoped value or behavior | Evidence |
+| --- | --- | --- |
+| Physical modes | M absent cyclic short ON/OFF, long dimming; SLA repeats Master; PUL monostable ignores Room/General. `M=1..4` delays Slave OFF `1..4` minutes after Master OFF; point-to-point only. | AUTOMATISME.pdf printed p.124 /PDF p.126 |
+| Wiring | Ballasts must be earthed; absence may cause malfunction. Keep `1..10`V signal and switched supply roles separate; max 4 is the historical F413 limit. | AUTOMATISME.pdf printed p.165 /PDF p.167 |
+
 ## Source reconciliation
 
 The canonical database establishes F413 as a one-slot Dimmer actuator with physical, virtual and advanced configuration. Publisher material confirms the 1-10 V family role, while the currently published F413N material represents a later/current reference. The dossier therefore keeps historical F413 identity separate from successor specifications.
 
 ## Evidence limits and open work
 
-- Recover and archive a publisher-original F413-specific technical sheet.
-- Resolve the recorded condition and conversion rule into human-readable behavior.
-- Add a sanitized hardware fingerprint and establish F413 versus F413N revision continuity.
+- A standalone exact F413 sheet remains unretained; the historical manufacturer guide directly names F413 and supports the stated scope.
+- The current manufacturer F413N page is a separate successor lead (ten ballasts); no F413 hardware equivalence was established or its specifications imported.
+- Condition `4149` is empty; rule 3 is fully decoded above. Hardware activation and broader shared TYPE_LOAD labels remain uncorroborated.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0021-0030-2026-10-06.md#own-dev-0030)

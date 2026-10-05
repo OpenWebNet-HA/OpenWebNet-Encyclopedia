@@ -9,28 +9,27 @@ The 4674 is a flush-mounted SCS controller for a slave-dimmer arrangement. Its l
 | Device ID | `OWN-DEV-0027` | Project identity |
 | Technical description | Flush-mounted SCS dimmer actuator | Catalogue + official documentation |
 | Commercial identities | `H4674`, `L/N/NT4674` | Catalogue |
-| Catalogue item | `23` - “Flush mounted dimmer” | Implementation evidence |
-| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
-| Item model / `modobj` | `5` | Implementation evidence |
-| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `198` | Implementation evidence |
-| Declared Modules | `1` | Implementation evidence |
+| Catalogue item | `23` - “Flush mounted dimmer” | Canonical manufacturer catalogue |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Canonical manufacturer catalogue |
+| Item model / `modobj` | `5` | Canonical manufacturer catalogue |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `198` | Canonical manufacturer catalogue |
+| Declared Modules | `1` | Canonical manufacturer catalogue |
 | Categories | Dimmer, Lighting | Capability model |
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino - LivingLight | `L/N/NT4674` | Established identity | canonical commercial record `23`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `H4674` | Established identity | canonical commercial record `1731`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - LivingLight | `L/N/NT4674` | Established identity | Canonical catalogue; canonical commercial record `23`; Commercial identity of this Technical Device |
+| BTicino - Axolute | `H4674` | Established identity | Canonical catalogue; canonical commercial record `1731`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | 4674 family identity/catalogue: printed p. 41 / PDF p. 43; load table printed pp. 159-160 / PDF pp. 161-162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-
-The printed and 1-based PDF page locators remain unresolved and are retained explicitly as an evidence gap.
+| `AUTOMATISME.pdf` | MyHOME automation guide | October 2006 publisher guide | 4674 family identity/catalogue: printed p. 41 / PDF p. 43; wiring printed p.61 /PDF p.63; configuration p.114 /PDF p.116; load/current tables pp.159–160 /PDF pp.161–162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -38,7 +37,7 @@ The printed and 1-based PDF page locators remain unresolved and are retained exp
 | --- | --- | --- |
 | Mounting | 2 wiring-device modules | Publisher `AUTOMATISME.pdf` |
 | SCS supply | `27 Vdc` | Publisher `AUTOMATISME.pdf` |
-| Maximum current draw | `5 mA` | Publisher `AUTOMATISME.pdf` |
+| Maximum current draw | `8 mA` | Publisher `AUTOMATISME.pdf` |
 | Local interface | upper/lower pushbuttons with indicator LED | Publisher `AUTOMATISME.pdf` |
 | Supported slave dimmers | up to 3 `L/N/NT4416` units | Publisher `AUTOMATISME.pdf` |
 | Associated published load range | `60..500 W` through the slave-dimmer arrangement | Publisher `AUTOMATISME.pdf` |
@@ -53,8 +52,30 @@ The 4674 is the BUS actuator/controller for the slave-dimmer arrangement; the pu
 | `EN_ITEM.id_item` | `23` | Canonical catalogue |
 | Technical item description | Flush mounted dimmer | Canonical catalogue |
 | Item family | `4` - Dimmer | Canonical catalogue |
-| Main system | `1` - lighting_automation; `modobj` `5` | AS_ITEM_SYSTEM |
-| Commercial records | `2` | EN_DEVICE |
+| Main system | `1` - lighting_automation; `modobj` `5` | `AS_ITEM_SYSTEM` |
+| Commercial records | `2` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `5` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Canonical commercial record metadata
+
+| Reference / record | Catalogue name / source description | Visibility / type | Dependent / gateway | Evidence |
+| --- | --- | --- | --- | --- |
+| `L/N/NT4674` / `23` | Flush mounted dimmer; `BTicino_L/N/NT_Flush mounted dimmer` | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+| `H4674` / `1731` | Flush mounted dimmer; no source description | `1` / Empty | `0` / `0` | Canonical manufacturer catalogue |
+
+Visibility, dependency and gateway flags describe the catalogue record, not the installed Device state.
 
 ## Firmware and hardware
 
@@ -65,6 +86,12 @@ The 4674 is the BUS actuator/controller for the slave-dimmer arrangement; the pu
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 Firmware `198` is wildcard `-1.-1.-1` and declares one Module. Installed hardware remains to be corroborated.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -84,12 +111,13 @@ The single Module resolves to Object `8`, **Dimmer actuator**. Object `8` is als
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `198` | `1` | `1` | Virtual Configuration |
-| `198` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `198` | Physical configuration | `0` | Canonical firmware/mode association |
+| `198` | Virtual Configuration | `1` | Canonical firmware/mode association |
 
-Physical Configuration and Virtual Configuration are declared.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -100,21 +128,10 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `198` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
 | `198` | `A` | `0..9` | `0` | A; Environment |
 | `198` | `PL` | `0..9` | `0` | PL; Light Point |
-| `198` | `M` | `0`; `9` = `O/I` | `0` | M; mode (0,I/O) |
-| `198` | `G1` | `0..9` | `0` | G1; G1 - (0-9) |
+| `198` | `M` | `0`; `9` = `O/I` | `0` | M; mode (0, I/O) |
+| `198` | `G1` | `0..9` | `0` | `G1`; `G1` - (0-9) |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL` | `0..9` | light-point configurator |
-| `M` | `0` / `O/I` | operating / function mode |
-| `G1` | `0..9` | group configurator 1 |
-
-
-Firmware 198 exposes the physical addressing/mode fields. Advanced dimmer settings are reusable Object parameters and must not be confused with physical configurators.
+Firmware `198` exposes the physical addressing/mode fields. Advanced dimmer settings are reusable Object parameters and must not be confused with physical configurators.
 
 ## Object configuration surfaces
 
@@ -126,7 +143,7 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
-| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M, S + PULL) |
 | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
 | `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
 | `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
@@ -149,14 +166,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
+Condition `4145` has no textual predicate and no conversion reference; it cannot be resolved into an invented selector. Filter 596 admits DALI/DSI and LED load labels but excludes reusable default 0; those software labels do not prove compatible physical load stages on the 4674/4416 arrangement.
 
-**Object `8` - Dimmer actuator - product interpretation.**
-
-**Firmware relationship.** The catalogue relation explicitly exposes `MIN_LEVEL_ADV`, `MIN_AUTO`, `STATE_SAVING_ON_RESET`. The catalogue relation restricts `TYPE_LOAD`: Auto detect inductive (`1`), LED trailing edge / electronic transformers (`11`), LED leading edge (`12`), Forced capacitive (`2`), Forced inductive (`3`), Discharge lamps (`7`), Dali standard (`8`), DSI (`9`).
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+The reusable `MIN_LEVEL_ADV` domain is `1..100` but its stored default is `0`. No corrected default is supplied; retain this source inconsistency without treating `0` as a permitted configured value.
 
 ## Conditions, filters, and conversions
 
@@ -207,18 +221,27 @@ No sanitized hardware fingerprint for this exact item is currently retained.
 
 Treat the product as one addressed dimmer Module. Do not infer modern universal-dimmer load-selection semantics merely because they exist on the shared Object `8` surface.
 
+| Setting / property | Source-scoped value or behavior | Evidence |
+| --- | --- | --- |
+| Physical M | Absent: short cyclic ON/OFF, long regulation; O/I: upper ON/increase, lower OFF/decrease. Wait at least 3 s between ON and OFF. | AUTOMATISME.pdf printed p.114 /PDF p.116 |
+| Slave arrangement | Up to 3 compatible 4416 slave dimmers; guide wiring labels 400 W max each with 10 m / 50 m spacing annotations. Do not reinterpret these as the 4674’s internal relay rating. | AUTOMATISME.pdf printed p.61 /PDF p.63 |
+
 ## Source reconciliation
 
 The catalogue establishes one Dimmer actuator Module and the two commercial identities. The archived automation documentation corroborates the 4674 family role. Shared Object `8` contains fields used by newer dimmers as well, so this dossier deliberately distinguishes Object capability from firmware-applicable configuration.
 
+The consumption table establishes 8 mA at 27 Vdc (printed p.160 /PDF p.162), correcting the prior 5 mA. The load table (printed p.159 /PDF p.161) describes H/L4674 with L/N/NT4416 at 230 Vac 50 Hz, `0.25..2 A` and `60..500` W/VA for incandescent/resistive/ferromagnetic loads. The separate multi-slave diagram labels 400 W per slave; its relation to the 500 W table is not explained and remains source-specific. No dedicated 4674 sheet was recovered in targeted manufacturer searches. The guide’s named H/L and compatible slave forms do not independently certify every regional electrical variant.
+
 ## Evidence limits and open work
 
-- Recover and archive a dedicated H4674/L4674 technical-sheet revision if a publisher original is located.
-- Add a sanitized hardware fingerprint.
-- Resolve the single catalogue condition into a human-readable Device-specific rule.
+- Dedicated H/L4674 technical-sheet revisions and the 400 W wiring versus 500 W table difference remain documentary gaps.
+- Empty condition `4145` and filter 596’s out-of-subset default are retained; no Device-specific activation predicate or replacement default is established.
+- Actual load stage, installed firmware and behavior remain unobserved; DALI/DSI catalogue labels are not physical capability evidence.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0021-0030-2026-10-06.md#own-dev-0027)
