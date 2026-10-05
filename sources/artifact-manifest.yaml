@@ -157,6 +157,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-078479-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: 078479
+  title: 078479 official product record with EAN
+  media_type: text/html
+  filename: 078479-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 283474
+  sha256: 783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720
+  source_url: https://www.legrand.fr/pro/catalogue-archives/commande-tactile-mosaic-multiscenarios-pour-eclairage-ouvrant-et-multimedias
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-078486-ean-export-20261005
   kind: documentation
   publisher: Legrand
