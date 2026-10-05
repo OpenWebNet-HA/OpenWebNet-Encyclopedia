@@ -2232,6 +2232,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-n4658n-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4658N
+  title: N4658N official product export with EAN
+  media_type: application/pdf
+  filename: N4658N-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 19250
+  sha256: 8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4658N
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/85/23/8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/85/23/8523c991b311a636335f0974bca50973f46ae9d768761137d9ff5eeba14b7940.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-n4672n-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
