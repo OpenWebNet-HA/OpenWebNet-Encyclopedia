@@ -4605,6 +4605,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-mq01007-a-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ01007-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ01007-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 125908
+  sha256: 1ec0e48a1512f3ec6b490ebca95979d1c2b62ad50351136217eaf8a0b283a3d3
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ01007-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1e/c0/1ec0e48a1512f3ec6b490ebca95979d1c2b62ad50351136217eaf8a0b283a3d3.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1e/c0/1ec0e48a1512f3ec6b490ebca95979d1c2b62ad50351136217eaf8a0b283a3d3.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mq01008-a-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
