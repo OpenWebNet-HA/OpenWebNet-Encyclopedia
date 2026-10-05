@@ -6115,8 +6115,16 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/82/0c/820cf13af3ef3b239f5f121e3067efd69196a8e7966f627d3bfadef2334b79ef.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - ru
+  - ar
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le10329ac-20261003
@@ -6234,8 +6242,19 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/39/f0/39f075e016c36b704aa10d37a2cd9eb25905dabead71c96044a9adb3fc7a4334.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - pl
+  - tr
+  - zh
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11056ab-20261005
@@ -6254,8 +6273,19 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/e0/05/e005649236597ba5469ba43eca1c0dcbe4a12043bb9a601d0d955efaf06f8aaa.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - pl
+  - tr
+  - zh
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11285ad-20261005
@@ -6274,8 +6304,16 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/0c/f1/0cf1359e611d5526a7b47c79460887011c05dece8a30bb3fbcd2457e3efa9d08.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - ru
+  - ar
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11286ac-20261005
@@ -6294,8 +6332,16 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/7b/40/7b40940e721db538467ca4717cbd396b1e24bb33b2d318d2f838312f1f7be27c.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - ru
+  - ar
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le11336ac-20261005
@@ -6438,8 +6484,14 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/87/b0/87b0b6346b1c2ecdf656fc7bede1af1d311a5e13bfe7939795fc9e9411e6e487.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - pt
+  - nl
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le14222ac-20261005
@@ -6506,8 +6558,17 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/43/40/4340c49157f5f7b23673e939d7af60013c5431a456406e5166266065a420b194.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - pl
+  - cs
+  - ar
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le14741aa-20261004
@@ -7734,8 +7795,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-n4577-ean-export-20261005
@@ -9650,8 +9711,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/4e/90/4e90a6740ba874b71c66da7790aa84562fa6ed45edd4f28d0aaf3b373aeb1d9d.pdf
   language:
-  - und
-  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  - it
+  language_evidence: Language blocks inspected in the retained original PDF; filename suffix for single-language guide/manual.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-ra00224aa-it-20261005
