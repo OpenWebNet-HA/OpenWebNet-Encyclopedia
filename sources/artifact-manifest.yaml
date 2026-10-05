@@ -1988,6 +1988,26 @@ artifacts:
   language_evidence: predominantly pictographic; French SCS connection label and English Test/Learn labels
   notes:
   - Publisher original retrieved on 2026-10-03.
+- id: device-doc-bq01001-a-en-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BQ01001-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BQ01001-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 241683
+  sha256: 3ff2590acd901029aba31134d64f37c9c60eaf951a62fa3b7fa9d038e3902625
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/BQ01001-a-EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/f2/3ff2590acd901029aba31134d64f37c9c60eaf951a62fa3b7fa9d038e3902625.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/f2/3ff2590acd901029aba31134d64f37c9c60eaf951a62fa3b7fa9d038e3902625.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt-f411u2-it-20261005
   kind: documentation
   publisher: BTicino / Legrand
