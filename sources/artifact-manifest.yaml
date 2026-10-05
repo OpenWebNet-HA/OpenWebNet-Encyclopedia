@@ -4925,6 +4925,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-mm00780-a-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MM00780_a_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: MM00780_a_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 348684
+  sha256: 228edfd3cd51122863c134dd84ba368b7ca3bd098274f31a7124dc0984e4fd6e
+  source_url: https://dar.bticino.it/asset/Documents/MM00780_a_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/22/8e/228edfd3cd51122863c134dd84ba368b7ca3bd098274f31a7124dc0984e4fd6e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/22/8e/228edfd3cd51122863c134dd84ba368b7ca3bd098274f31a7124dc0984e4fd6e.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mm00781-b-it-20261005
   kind: documentation
   publisher: BTicino / Legrand
