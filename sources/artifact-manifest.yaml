@@ -5819,6 +5819,26 @@ artifacts:
   language_evidence: English text inspected in the retained multilingual original; additional languages present but not exhaustively enumerated
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le10316ac-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE10316AC manufacturer device documentation
+  media_type: application/pdf
+  filename: LE10316AC.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 1946909
+  sha256: 820cf13af3ef3b239f5f121e3067efd69196a8e7966f627d3bfadef2334b79ef
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE10316AC.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/82/0c/820cf13af3ef3b239f5f121e3067efd69196a8e7966f627d3bfadef2334b79ef.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/82/0c/820cf13af3ef3b239f5f121e3067efd69196a8e7966f627d3bfadef2334b79ef.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le10329ac-20261003
   kind: documentation
   publisher: BTicino / Legrand
