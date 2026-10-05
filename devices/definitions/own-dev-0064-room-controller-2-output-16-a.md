@@ -21,12 +21,21 @@
 | BTicino | `BMSW3002` | Established identity | Catalogue item `59`; named in `U3773B`, PDF p. 1 |
 | Legrand | `048841` | Established identity | canonical commercial record for item `59` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `048841` | `3245060488413` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf), `048841-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | catalogue product sheet | current publisher catalogue | `BMSW3002` Room Controller functional and electrical summary | Not applicable - web page | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-lefficienza-energetica/lighting-control---sistema-filare-bus-scs/attuatori/BTI-BMSW3002-IT) |
 | `U3773B.pdf` | installation instruction sheet | `U3773B01SY-09W51` | `BMSW3001` and `BMSW3002`; ratings/mounting PDF p. 1, panels 1-2; factory association/wiring/test/setup PDF p. 2, panels 3-6; no printed pagination | [Archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/U3773B.pdf) |
+| `048841-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048841` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-on-off-avec-2-sorties-16a) |
 
 ## Physical and electrical characteristics
 
@@ -225,3 +234,5 @@ The `200 mA` value belongs to the combined port pictograms, not an own-consumpti
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [BMSW3001/BMSW3002 installation instruction sheet, archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf)
+
+- `048841-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048841` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-on-off-avec-2-sorties-16a); SHA-256 `e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a`.

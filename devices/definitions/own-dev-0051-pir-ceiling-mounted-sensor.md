@@ -26,6 +26,7 @@
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
 | `BMSE3001` | `8012199969244` | [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf), `BMSE3001-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `048820` | `3245060488208` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf), `048820-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
@@ -35,6 +36,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | --- | --- | --- | --- | --- | --- |
 | `LE10699AA-FR` | technical/system guide | publisher guide | `048820` / `BMSE3001` physical characteristics and detection coverage | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
 | `BMSE3001-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSE3001` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3001) |
+| `048820-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048820` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-couloir) |
 
 ## Physical and electrical characteristics
 
@@ -350,3 +352,5 @@ The canonical catalogue binds `BMSE3001` and `048820` to one technical item. The
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `BMSE3001-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSE3001` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3001); SHA-256 `da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2`.
+
+- `048820-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048820` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-couloir); SHA-256 `51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c`.

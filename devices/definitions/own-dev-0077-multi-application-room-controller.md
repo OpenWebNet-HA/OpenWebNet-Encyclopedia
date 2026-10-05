@@ -21,11 +21,20 @@
 | BTicino | `BMSW3003` | Established identity | canonical commercial record for item `89` |
 | Legrand | `048847` | Established identity | canonical commercial record for item `89` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `048847` | `3245060488475` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf), `048847-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMSW3003` multi-application Room Controller outputs and SCS interfaces; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW3003) |
+| `048847-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048847` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-2-circuits-declairage-1-ouvrant-et-1-contact-cvc-mosaic) |
 
 ## Physical and electrical characteristics
 
@@ -238,3 +247,5 @@ The canonical database's shortened description emphasizes a `16 A` blind-capable
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `048847-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048847` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-2-circuits-declairage-1-ouvrant-et-1-contact-cvc-mosaic); SHA-256 `ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81`.

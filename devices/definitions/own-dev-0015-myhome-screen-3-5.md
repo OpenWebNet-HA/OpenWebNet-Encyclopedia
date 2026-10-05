@@ -37,6 +37,7 @@ The archived technical sheet contains an internal reference discrepancy: its hea
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
 | `LN4890` | `8005543450161` | [Archived original](https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf), `LN4890-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `078479` | `3245060784799` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf), `078479-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
@@ -48,6 +49,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `RA00107AC_U_EN` | User guide | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/28/33/2833c50e275c23816dfaad7ddb25571e97c73097652c61e5df5eb43e8d7bce23.pdf) | publisher source not currently retained |
 | `RA00107AC_S_FR` | Software manual | revision/date not yet pinned | MyHOME_Screen 3.5 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/06/fd/06fd9db38da00c9f208531163142a19bafd6b8801e255cb48a876adedc7bcfa5.pdf) | publisher source not currently retained |
 | `LN4890-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4890` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890) |
+| `078479-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `078479` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-tactile-mosaic-multiscenarios-pour-eclairage-ouvrant-et-multimedias) |
 
 Direct product sheets for the Legrand commercial variants and additional language revisions remain desirable archival sources.
 
@@ -249,3 +251,5 @@ The remaining completeness issues concern direct Legrand-variant documentation, 
 - [Device Database Inventory](../inventory/)
 
 - `LN4890-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4890` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/5f/69/5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4890); SHA-256 `5f69dfbb60aca1ce1a1e6365be201d3697604de49cd5fc004a4ed2cf66539c86`.
+
+- `078479-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `078479` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/78/3e/783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-tactile-mosaic-multiscenarios-pour-eclairage-ouvrant-et-multimedias); SHA-256 `783e8b0f78202d1816ad4f7062b96a4cb8826730c8b475ecd8a6fa1db91d1720`.

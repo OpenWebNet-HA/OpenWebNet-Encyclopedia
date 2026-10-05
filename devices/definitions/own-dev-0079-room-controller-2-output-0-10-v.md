@@ -21,11 +21,20 @@
 | BTicino | `BMDI3001` | Established identity | canonical commercial record for item `94` |
 | Legrand | `048842` | Established identity | canonical commercial record for item `94` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `048842` | `3245060488420` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf), `048842-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMDI3001` two-output 1-10 V Room Controller; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/47/95/47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3001) |
+| `048842-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048842` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum) |
 
 ## Physical and electrical characteristics
 
@@ -203,3 +212,5 @@ The current BTicino product sheet directly documents `BMDI3001`; Legrand `048842
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `048842-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048842` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum); SHA-256 `9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f`.

@@ -30,6 +30,7 @@ The later BUS/SCS guides explicitly write the pair as “`0 026 04` or `BMSW1005
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
 | `BMSW1005` | `8005543485484` | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf), `BMSW1005-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `002604` | `3245060026042` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf), `002604-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
@@ -48,6 +49,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `le10699aa-fr.pdf` | BUS/SCS hotel / device guide | revision `AA`, 2018 | Printed/PDF p. 24; programming example printed p. 103 / PDF p. 103 | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
 | `LE04280AA.pdf` | publisher-linked wiring sheet | revision `AA` | Publisher-linked from the `002604` product page, but the PDF itself depicts `0 026 02` / 4 x 16 A; excluded from Device-specific facts | [Archived original](https://archive.openwebnet-ha.org/sha256/94/7c/947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE04280AA.pdf) |
 | `BMSW1005-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSW1005` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005) |
+| `002604-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `002604` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-modulaire-fonction-on-et-off-avec-marche-forcee-pour-eclairage-myhome-up-8-relais-10-modules) |
 
 ## Physical and electrical characteristics
 
@@ -359,3 +361,5 @@ The main revision difference concerns programming: the 2013 French sheet and 201
 - [Lighting](../../functional/who-1-lighting/README.md)
 
 - `BMSW1005-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSW1005` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005); SHA-256 `0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51`.
+
+- `002604-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `002604` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/actionneur-modulaire-fonction-on-et-off-avec-marche-forcee-pour-eclairage-myhome-up-8-relais-10-modules); SHA-256 `1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af`.

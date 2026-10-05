@@ -21,11 +21,20 @@
 | BTicino | `BMDI3002` | Established identity | canonical commercial record for item `86` |
 | Legrand | `048843` | Established identity | canonical commercial record for item `86` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `048843` | `3245060488437` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/0e/6a/0e6ac88b94c5057fabab84f9f4d5fd816a075cb76afa669aef633367f3077ca0.pdf), `048843-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMDI3002` four-output 1-10 V Room Controller; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/36/26/3626218267f680903b46d190610c3a83879eb18b773d6e54a2ac4c0523a48e64.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3002) |
+| `048843-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048843` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/0e/6a/0e6ac88b94c5057fabab84f9f4d5fd816a075cb76afa669aef633367f3077ca0.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-4-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-ou-on-et-off-avec-4-sorties-1000va) |
 
 ## Physical and electrical characteristics
 
@@ -210,3 +219,5 @@ The catalogue names this item “0-10 V”, while the retained publisher sheet s
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- `048843-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048843` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/0e/6a/0e6ac88b94c5057fabab84f9f4d5fd816a075cb76afa669aef633367f3077ca0.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-4-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-ou-on-et-off-avec-4-sorties-1000va); SHA-256 `0e6ac88b94c5057fabab84f9f4d5fd816a075cb76afa669aef633367f3077ca0`.
