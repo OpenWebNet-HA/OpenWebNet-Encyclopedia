@@ -1877,6 +1877,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hs4693-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HS4693
+  title: HS4693 official product export with EAN
+  media_type: application/pdf
+  filename: HS4693-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 16186
+  sha256: ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-k4659-ean-export-20261005
   kind: documentation
   publisher: BTicino
