@@ -902,6 +902,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-346310-publisher-product-sheet-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 346310-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: 346310-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 411357
+  sha256: 7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19
+  source_url: https://www.bticino.com/products/pdf?sku=BT-346310&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/7f/02/7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/7f/02/7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-3476-ean-export-20261005
   kind: documentation
   publisher: BTicino
