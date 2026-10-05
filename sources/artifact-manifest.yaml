@@ -6561,6 +6561,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00000906-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST_00000906_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: ST_00000906_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 528487
+  sha256: 4a48a05cf236c8897e1c53a7781c9bb43bfa3e7c1e0f9a8bab8d7d90fb5c3e66
+  source_url: https://dar.bticino.it/asset/Documents/ST_00000906_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/4a/48/4a48a05cf236c8897e1c53a7781c9bb43bfa3e7c1e0f9a8bab8d7d90fb5c3e66.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/4a/48/4a48a05cf236c8897e1c53a7781c9bb43bfa3e7c1e0f9a8bab8d7d90fb5c3e66.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00000914-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
