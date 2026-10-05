@@ -4202,6 +4202,26 @@ artifacts:
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
   - Older LE10329AA publisher URL currently returns the identical AC PDF bytes; it does not provide the AA revision.
+- id: device-doc-le10815af-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE10815AF manufacturer device documentation
+  media_type: application/pdf
+  filename: LE10815AF.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 3837525
+  sha256: 947e54190d9e552cd2cc627970728bb586f53be7f03432e995f3f94c84a8ea15
+  source_url: https://dar.bticino.it/asset/Documents/LE10815AF.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/94/7e/947e54190d9e552cd2cc627970728bb586f53be7f03432e995f3f94c84a8ea15.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/94/7e/947e54190d9e552cd2cc627970728bb586f53be7f03432e995f3f94c84a8ea15.pdf
+  language:
+  - und
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le10815ag-20261005
   kind: documentation
   publisher: BTicino / Legrand
