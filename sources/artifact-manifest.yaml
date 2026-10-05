@@ -1265,6 +1265,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-hd4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HD4680
+  title: HD4680 official product export with EAN
+  media_type: application/pdf
+  filename: HD4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 36064
+  sha256: bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
