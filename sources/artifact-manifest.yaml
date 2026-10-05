@@ -1203,6 +1203,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-hc4657m3-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: HC4657M3
+  title: HC4657M3 official product export with EAN
+  media_type: application/pdf
+  filename: HC4657M3-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 12948
+  sha256: 6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4657M3
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/6d/59/6d59225e5abac225ba376dca4a52d38edf27d541035224f7a85f9dca41c37014.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-hc4658-ean-export-20261005
   kind: documentation
   publisher: BTicino
