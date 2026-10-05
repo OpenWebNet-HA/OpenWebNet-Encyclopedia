@@ -2384,6 +2384,28 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-n4680-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: N4680
+  title: N4680 official product export with EAN
+  media_type: application/pdf
+  filename: N4680-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 39885
+  sha256: c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-nt4658n-ean-export-20261005
   kind: documentation
   publisher: BTicino
