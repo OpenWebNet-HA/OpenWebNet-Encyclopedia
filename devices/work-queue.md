@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 70 |
+| unreviewed | 50 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 140 |
+| review-ready | 160 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,26 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 1596 | 2 relays DIN NC actuator 10 A | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1597 | Ballast DIN dimmer 1-10 V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1599 | DIN dimmer 400 VA | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1683 | Actuator DIN with 8 outputs | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1684 | Actuator DIN with 2 outputs 0-10V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1685 | Actuator DIN with 3 relays and 2 outputs 0-10V | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1852 | DIN actuator | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1859 | DIN actuator/4 | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1864 | IP server | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1885 | Pulses counter interface | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 1902 | Scenario programmer | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2064 | Basic gateway | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2115 | 2x10A actuator, 2DIN | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2131 | 1x10A actuator, 2DIN | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2162 | CLASSE300 X13E | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2214 | HOME TOUCH 7 | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2266 | CLASSE100 X16E | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2279 | Easy Kit Connnected | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2283 | CLASSE300 EOS | 2 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2301 | Easy Kit Connnected with H+S | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1177 | IP interface (2Wire/IP) | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 1178 | IP interface (D45/IP)  | 1 | unreviewed | - | pending | pending | pending | pending | - |
@@ -217,6 +197,26 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 1556 | Gateway OPEN-BACNET | 2 | review-ready | OWN-DEV-0138 | partial | complete | complete | pending | - |
 | normal | 1582 | Dimmer for energy saving lamps bus | 2 | review-ready | OWN-DEV-0139 | partial | complete | complete | pending | - |
 | normal | 1593 | 1 relay DIN NC actuator 16 A | 2 | review-ready | OWN-DEV-0140 | partial | complete | complete | pending | - |
+| normal | 1596 | 2 relays DIN NC actuator 10 A | 2 | review-ready | OWN-DEV-0141 | partial | complete | complete | pending | - |
+| normal | 1597 | Ballast DIN dimmer 1-10 V | 2 | review-ready | OWN-DEV-0142 | partial | complete | complete | pending | - |
+| normal | 1599 | DIN dimmer 400 VA | 2 | review-ready | OWN-DEV-0143 | partial | complete | complete | pending | - |
+| normal | 1683 | Actuator DIN with 8 outputs | 2 | review-ready | OWN-DEV-0144 | partial | complete | complete | pending | - |
+| normal | 1684 | Actuator DIN with 2 outputs 0-10V | 2 | review-ready | OWN-DEV-0145 | partial | complete | complete | pending | - |
+| normal | 1685 | Actuator DIN with 3 relays and 2 outputs 0-10V | 2 | review-ready | OWN-DEV-0146 | partial | complete | complete | pending | - |
+| normal | 1852 | DIN actuator | 2 | review-ready | OWN-DEV-0147 | partial | complete | complete | pending | - |
+| normal | 1859 | DIN actuator/4 | 2 | review-ready | OWN-DEV-0148 | partial | complete | complete | pending | - |
+| normal | 1864 | IP server | 2 | review-ready | OWN-DEV-0149 | partial | complete | complete | pending | - |
+| normal | 1885 | Pulses counter interface | 2 | review-ready | OWN-DEV-0150 | partial | complete | complete | pending | - |
+| normal | 1902 | Scenario programmer | 2 | review-ready | OWN-DEV-0151 | partial | complete | complete | pending | - |
+| normal | 2064 | Basic gateway | 2 | review-ready | OWN-DEV-0152 | partial | complete | complete | pending | - |
+| normal | 2115 | 2x10A actuator, 2DIN | 2 | review-ready | OWN-DEV-0153 | partial | complete | complete | pending | - |
+| normal | 2131 | 1x10A actuator, 2DIN | 2 | review-ready | OWN-DEV-0154 | partial | complete | complete | pending | - |
+| normal | 2162 | CLASSE300 X13E | 2 | review-ready | OWN-DEV-0155 | partial | complete | complete | pending | - |
+| normal | 2214 | HOME TOUCH 7 | 2 | review-ready | OWN-DEV-0156 | partial | complete | complete | pending | - |
+| normal | 2266 | CLASSE100 X16E | 2 | review-ready | OWN-DEV-0157 | partial | complete | complete | pending | - |
+| normal | 2279 | Easy Kit Connnected | 2 | review-ready | OWN-DEV-0158 | partial | complete | complete | pending | - |
+| normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
+| normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 54 | Basic actuator | 1 | review-ready | OWN-DEV-0059 | complete | complete | complete | pending | - |
 | normal | 55 | Basic control actuator | 1 | review-ready | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | review-ready | OWN-DEV-0068 | complete | complete | complete | pending | - |
