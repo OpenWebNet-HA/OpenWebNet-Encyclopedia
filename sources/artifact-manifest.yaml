@@ -1083,6 +1083,28 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-f425-ean-export-20261005
+  kind: documentation
+  publisher: BTicino
+  product: F425
+  title: F425 official product export with EAN
+  media_type: application/pdf
+  filename: F425-ean-product-sheet.pdf
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 14996
+  sha256: 3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf
+  language:
+  - it
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
 - id: device-doc-f450-publisher-product-sheet-20261004
   kind: documentation
   publisher: BTicino / Legrand
