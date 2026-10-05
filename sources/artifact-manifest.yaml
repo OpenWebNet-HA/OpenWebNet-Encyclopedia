@@ -203,6 +203,29 @@ artifacts:
   - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
   - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
+- id: device-doc-067566-ean-export-20261005
+  kind: documentation
+  publisher: Legrand
+  product: '067566'
+  title: 067566 official product record with EAN
+  media_type: text/html
+  filename: 067566-ean-publisher-page.html
+  version_label: Manufacturer export retrieved 2026-10-05; printed edition/date retained in original
+  size: 292549
+  sha256: b4d555ff3121d7c2184068ea57ba70e7190e41fa39eb5221e4817fbbbaa717d6
+  source_url: https://www.legrand.fr/pro/catalogue/lecteur-de-badge-celiane-bus-pour-badge-rfid-1356-mhz
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/b4/d5/b4d555ff3121d7c2184068ea57ba70e7190e41fa39eb5221e4817fbbbaa717d6.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/b4/d5/b4d555ff3121d7c2184068ea57ba70e7190e41fa39eb5221e4817fbbbaa717d6.pdf
+  language:
+  - fr
+  language_evidence: Language of the original SKU/EAN commercial record and product text inspected
+  notes:
+  - Original manufacturer HTTP response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
+  - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+  - Retained original HTML, not a PDF conversion. Original media type is text/html and original filename ends .html. The archive uses its existing documentation-key .pdf suffix; that suffix does not identify the original format. External page dependencies are not included.
 - id: device-doc-078479-ean-export-20261005
   kind: documentation
   publisher: Legrand
