@@ -4752,6 +4752,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-home-project-2026-new-functions-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Home-Project-2026-new-functions manufacturer device documentation
+  media_type: application/pdf
+  filename: Home-Project-2026-new-functions.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 4309300
+  sha256: c625bf9b07905fdb71e009ba2e39578b4b42cd7b957576fac87ddc4968b41b40
+  source_url: https://www.bticino.com/sites/default/files/2026-05/NUOVE%20FUNZIONI%20HOME%20%2B%20PROJECT%202026%20GB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/c6/25/c625bf9b07905fdb71e009ba2e39578b4b42cd7b957576fac87ddc4968b41b40.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/c6/25/c625bf9b07905fdb71e009ba2e39578b4b42cd7b957576fac87ddc4968b41b40.pdf
+  language:
+  - en
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
