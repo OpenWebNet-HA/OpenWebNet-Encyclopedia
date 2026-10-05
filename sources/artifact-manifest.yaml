@@ -10754,6 +10754,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-st-00002701-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: ST-00002701-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: ST-00002701-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 219150
+  sha256: 89a32f3b7bbded41d5417095d918a1b192061a4e4688c1e958abf15061898fb1
+  source_url: https://dar.bticino.it/asset/Documents/ST-00002701-IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/89/a3/89a32f3b7bbded41d5417095d918a1b192061a4e4688c1e958abf15061898fb1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/89/a3/89a32f3b7bbded41d5417095d918a1b192061a4e4688c1e958abf15061898fb1.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-st-00002701-rev2-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
