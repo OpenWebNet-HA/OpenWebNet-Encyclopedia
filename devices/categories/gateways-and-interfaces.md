@@ -28,3 +28,6 @@
 | [OWN-DEV-0195](../definitions/own-dev-0195-arteor-573992-audio-video-web-server.md) | `573992` | Arteor 573992 audio and video web server | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0198](../definitions/own-dev-0198-f459-driver-manager.md) | `F459` | F459 Driver Manager | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0199](../definitions/own-dev-0199-myhomeserver1-home-automation-server.md) | `MyHomeServer1` | MyHOMEServer1 home automation server | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0207](../definitions/own-dev-0207-f460-myhome-server.md) | `F460` | F460 MyHOME server | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0208](../definitions/own-dev-0208-f461-myhome-server-third-party-integration.md) | `F461` | F461 MyHOME server for third-party integration | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0209](../definitions/own-dev-0209-f459t-hvac-driver-manager.md) | `F459T` | F459T HVAC Driver Manager | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

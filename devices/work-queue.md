@@ -6,11 +6,11 @@
 
 | State | Items |
 | --- | ---: |
-| unreviewed | 10 |
+| unreviewed | 0 |
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 200 |
+| review-ready | 210 |
 | reviewed | 0 |
 
 Total: **210** technical-item clusters.
@@ -57,16 +57,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | high | 20 | Scenario control unit | 1 | review-ready | OWN-DEV-0026 | complete | complete | partial | pending | - |
 | high | 31 | Ballast DIN dimmer 1-10 V | 1 | review-ready | OWN-DEV-0030 | partial | complete | partial | pending | - |
 | high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
-| normal | 2208 | Comando unico Living Now 3 moduli | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2233 | Comando-Attuatore Living Now Luci | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2237 | Comando-Attuatore Living Now Tapparelle | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2268 | Basic probe with wired sensor | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2269 | Light Actuator Living Now advanced | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2275 | Shutter Actuator Living Now advanced | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2288 | F460 | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2293 | F461 | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2335 | Driver Manager HVAC | 1 | unreviewed | - | pending | pending | pending | pending | - |
-| normal | 2341 | Linea 5000 | 1 | unreviewed | - | pending | pending | pending | pending | - |
 | normal | 168 | Flush mounted temperature central unit | 7 | review-ready | OWN-DEV-0017 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
 | normal | 1147 | Local Display | 6 | review-ready | OWN-DEV-0018 | complete | partial | partial | pending | Sanitized hardware fingerprint pending |
 | normal | 1190 | Touch control | 6 | review-ready | OWN-DEV-0019 | complete | complete | complete | pending | Sanitized hardware fingerprint pending |
@@ -231,6 +221,16 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2193 | Driver Manager | 1 | review-ready | OWN-DEV-0198 | partial | complete | complete | pending | - |
 | normal | 2198 | MyHomeServer | 1 | review-ready | OWN-DEV-0199 | partial | complete | complete | pending | - |
 | normal | 2205 | Comando unico Living Now 2 moduli | 1 | review-ready | OWN-DEV-0200 | partial | complete | complete | pending | - |
+| normal | 2208 | Comando unico Living Now 3 moduli | 1 | review-ready | OWN-DEV-0201 | partial | complete | complete | pending | - |
+| normal | 2233 | Comando-Attuatore Living Now Luci | 1 | review-ready | OWN-DEV-0202 | partial | complete | complete | pending | - |
+| normal | 2237 | Comando-Attuatore Living Now Tapparelle | 1 | review-ready | OWN-DEV-0203 | partial | complete | complete | pending | - |
+| normal | 2268 | Basic probe with wired sensor | 1 | review-ready | OWN-DEV-0204 | partial | complete | complete | pending | - |
+| normal | 2269 | Light Actuator Living Now advanced | 1 | review-ready | OWN-DEV-0205 | partial | complete | complete | pending | - |
+| normal | 2275 | Shutter Actuator Living Now advanced | 1 | review-ready | OWN-DEV-0206 | partial | complete | complete | pending | - |
+| normal | 2288 | F460 | 1 | review-ready | OWN-DEV-0207 | partial | complete | complete | pending | - |
+| normal | 2293 | F461 | 1 | review-ready | OWN-DEV-0208 | partial | complete | complete | pending | - |
+| normal | 2335 | Driver Manager HVAC | 1 | review-ready | OWN-DEV-0209 | partial | pending | complete | pending | - |
+| normal | 2341 | Linea 5000 | 1 | review-ready | OWN-DEV-0210 | partial | complete | complete | pending | - |
 
 ## Reviewed
 
