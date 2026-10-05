@@ -5365,6 +5365,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-mq01012-c-it-20261005
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ01012-c-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ01012-c-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-05
+  size: 276652
+  sha256: 68773a79cc126f204723752d83b8918be4b417349ee532d765ff01448df568a1
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/MQ01012-c-IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/68/77/68773a79cc126f204723752d83b8918be4b417349ee532d765ff01448df568a1.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/68/77/68773a79cc126f204723752d83b8918be4b417349ee532d765ff01448df568a1.pdf
+  language:
+  - it
+  language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
+  notes:
+  - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mq01013-b-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
