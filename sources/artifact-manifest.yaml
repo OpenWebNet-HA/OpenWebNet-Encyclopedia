@@ -6198,6 +6198,27 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-le03166ab-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: LE03166AB manufacturer device documentation
+  media_type: application/pdf
+  filename: LE03166AB.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 1130881
+  sha256: 5aae2d51c212eba403c645e3ec1e47cbf6c991eda89f03e6a34c3ed74945416a
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/LE03166AB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/5a/ae/5aae2d51c212eba403c645e3ec1e47cbf6c991eda89f03e6a34c3ed74945416a.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/5a/ae/5aae2d51c212eba403c645e3ec1e47cbf6c991eda89f03e6a34c3ed74945416a.pdf
+  language:
+  - fr
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-le05177ae-20261004
   kind: documentation
   publisher: BTicino / Legrand
