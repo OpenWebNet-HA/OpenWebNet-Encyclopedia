@@ -12016,6 +12016,26 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u0990c-u-uk-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U0990C_U_UK manufacturer device documentation
+  media_type: application/pdf
+  filename: U0990C_U_UK.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 12667929
+  sha256: 452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U0990C_U_UK.pdf&fileId=58107.23188.51017.55872
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/45/23/452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/45/23/452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u1925d-20261005
   kind: documentation
   publisher: BTicino / Legrand
