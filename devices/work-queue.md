@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 170 |
-| reviewed | 40 |
+| review-ready | 160 |
+| reviewed | 50 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1862 | Basic probe | 5 | review-ready | OWN-DEV-0041 | partial | partial | partial | pending | - |
-| normal | 291 | Temperature central unit | 4 | review-ready | OWN-DEV-0042 | partial | partial | partial | pending | - |
-| normal | 1525 | Special functions | 4 | review-ready | OWN-DEV-0043 | partial | complete | partial | pending | - |
-| normal | 1579 | Shutter control bus | 4 | review-ready | OWN-DEV-0044 | complete | complete | complete | pending | - |
-| normal | 1586 | Shutter actuator bus | 4 | review-ready | OWN-DEV-0045 | partial | partial | partial | pending | - |
-| normal | 1686 | Display thermostat 2 modules | 4 | review-ready | OWN-DEV-0046 | complete | complete | partial | pending | - |
-| normal | 1768 | MyHOME_Screen 10 | 4 | review-ready | OWN-DEV-0047 | complete | complete | partial | pending | - |
-| normal | 1884 | Energy display 2 modules | 4 | review-ready | OWN-DEV-0048 | complete | complete | partial | pending | - |
-| normal | 1898 | MyHOME_Screen 10 Capacitive | 4 | review-ready | OWN-DEV-0049 | complete | complete | partial | pending | - |
-| normal | 2321 | Classe 300X | 4 | review-ready | OWN-DEV-0050 | complete | complete | partial | pending | - |
 | normal | 81 | Basic contacts interface | 3 | review-ready | OWN-DEV-0072 | complete | complete | partial | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | review-ready | OWN-DEV-0098 | partial | complete | partial | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0102 | partial | complete | complete | pending | - |
@@ -215,6 +205,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 40 | Flush mounted radio receiver for HA/HB4572SB | OWN-DEV-0035 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
+| 291 | Temperature central unit | OWN-DEV-0042 |
 | 402 | Scenario control | OWN-DEV-0011 |
 | 1076 | Video Display | OWN-DEV-0013 |
 | 1104 | Extended control item | OWN-DEV-0014 |
@@ -227,15 +218,24 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1465 | Load Control Panel bus | OWN-DEV-0020 |
 | 1469 | MyHOME_Screen 3.5 | OWN-DEV-0015 |
 | 1524 | Special control | OWN-DEV-0005 |
+| 1525 | Special functions | OWN-DEV-0043 |
 | 1559 | PIR+US flush mounted sensor | OWN-DEV-0010 |
 | 1563 | Key card switch | OWN-DEV-0036 |
 | 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
+| 1579 | Shutter control bus | OWN-DEV-0044 |
+| 1586 | Shutter actuator bus | OWN-DEV-0045 |
 | 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
+| 1686 | Display thermostat 2 modules | OWN-DEV-0046 |
+| 1768 | MyHOME_Screen 10 | OWN-DEV-0047 |
 | 1847 | Key card switch RFID | OWN-DEV-0039 |
 | 1854 | Probe with regulation | OWN-DEV-0038 |
 | 1856 | Fan-coil probe | OWN-DEV-0040 |
+| 1862 | Basic probe | OWN-DEV-0041 |
+| 1884 | Energy display 2 modules | OWN-DEV-0048 |
+| 1898 | MyHOME_Screen 10 Capacitive | OWN-DEV-0049 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
+| 2321 | Classe 300X | OWN-DEV-0050 |
 
 ## Workflow
 

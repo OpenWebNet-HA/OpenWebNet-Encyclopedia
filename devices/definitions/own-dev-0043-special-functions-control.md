@@ -2,21 +2,19 @@
 
 ## Summary
 
-This two-module special-functions control sends configured commands for lighting, automation, scenarios, door release or sound. Its selectable functions allow the same catalogue-established device to serve different control roles; exact physical specifications remain a documentation gap.
+This two-module SCS command provides lighting and shutter controls as well as timed commands and scenario recall through its selected keys and configuration. Special-function modes also address sound and video-door-entry roles, with published physical instructions available for H4651/2 and L4651/2.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0043` | Project identity |
 | Technical description | Two-module automation control exposing special-function Object alternatives | Canonical catalogue plus reconciled Device sources |
 | Commercial identities | `H4651/2`, `L4651/2`, `AM5831/2`, `687376` | Canonical commercial records |
-| Catalogue item | `1525` | Implementation evidence |
-| Main catalogue system | Automation | Implementation evidence |
-| Item model / `modobj` | `1` | Implementation evidence |
-| Firmware definition | `147 / -1.-1.-1` | Implementation evidence |
+| Catalogue item | `1525` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `1` | Canonical catalogue |
+| Firmware definition | `147 / -1.-1.-1` | Canonical catalogue |
 | Declared Modules | `2` | Firmware catalogue |
 | Categories | Automation, Control, Special functions | Capability model |
-
-Two-module automation control exposing special-function Object alternatives.
 
 ## Commercial identities
 
@@ -26,28 +24,54 @@ Two-module automation control exposing special-function Object alternatives.
 | BTicino - LivingLight | `L4651/2` | established catalogue identity for item `1525` | canonical commercial record |
 | BTicino - Matix | `AM5831/2` | established catalogue identity for item `1525` | canonical commercial record |
 | Legrand - Vela | `687376` | established catalogue identity for item `1525` | canonical commercial record |
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| AUTOMATISME | technical/system documentation | revision/date as printed | MyHOME automation control model; exact four identities still need direct-sheet reconciliation | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| AUTOMATISME | technical/system documentation | No applicable publication date established | H4651/2 and L4651/2: printed pp. 36, 84, 86, 160 / PDF pp. 38, 86, 88, 162; exact role, modes and ratings examined. Matix/Vela procedures remain unretained; unrelated product pages not examined | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product role | Bus automation control with selectable special-function topology | Canonical item/Object model |
-| Declared logical modules | 2 | Canonical firmware catalogue |
+| H/L4651/2 supply / current / size | 27 V bus reference; `7.5 mA`; two flush-mounted modules | AUTOMATISME printed p. 160/PDF p. 162 |
+| Front / rear | Configurable upper/lower keys and indicator; rear A/PL/M/SPE/AUX and bus | Same guide printed p. 84/PDF p. 86 |
+| Variant scope | Matix AM5831/2 and Vela 687376 identity established by catalogue; exact electrical/faceplate instructions not retained | Canonical commercial mappings |
 
 ## Identity
 
 | Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_ITEM.id_item` | `1525` | Implementation evidence |
-| Technical item description | Special-functions control | Implementation evidence |
-| Main system | Automation | Implementation evidence |
-| Item model / `modobj` | `1` | Implementation evidence |
+| `EN_ITEM.id_item` | `1525` | Canonical catalogue |
+| Technical item description | Special-functions control | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `1` | Canonical catalogue |
 | Commercial records | `4` | Canonical catalogue |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `1` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `537` | `H4651/2` | `1` | `2` | Empty in source |
+| `1831` | `L4651/2` | `1` | `4` | `BTicino_L/N/NT_Special functions` |
+| `1934` | `AM5831/2` | `1` | `3` | `BTicino_Matix_Special functions` |
+| `2180` | `687376` | `2` | `10` | `Legrand_Vela_Special functions` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
 
 ## Firmware and hardware
 
@@ -56,6 +80,12 @@ Two-module automation control exposing special-function Object alternatives.
 | `147` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -85,10 +115,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `147` | Physical configuration | supported route for this Device family |
-| `147` | Virtual Configuration | supported route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `147` | Physical configuration | `0` | Canonical firmware/mode association |
+| `147` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -130,7 +163,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -146,7 +178,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `402` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -159,7 +190,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `403` - Scenario module control
 
@@ -174,7 +204,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -186,7 +215,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
 
-
 ### Object `408` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -194,7 +222,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `P` | `0..95` | `0` | External unit address |
 | `SEGMENT` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `409` - Sound diffusion control
 
@@ -206,6 +233,62 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
 | `SOURCE` | `1..9` | `1` | Source |
+
+### Object `405` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Upper button scenario; Delay (20) |
+| `PPT_SCE_2` | `1..255` | `2` | Lower button scenario; Delay (21) |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type; Only if Scenario1=Scenario2 |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
+
+### Object `406` - Scheduled scenario PLUS (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+### Object `407` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = `ON/OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+### Object `427` - Floor call control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+### Object `430` - Staircase light control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Associated Internal Unit address - hundreds |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
 
 ## Conditions, filters, and conversions
 
@@ -599,7 +682,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Automation control functions selected through catalogue Object alternatives and physical/virtual conditions.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Standard modes | Absent M toggles on/off with long-press dimming; ON, OFF, O/I, monostable PUL and shutter arrow modes require the appropriate keycap/function combination | AUTOMATISME printed p. 84/PDF p. 86 |
+| Timed ON | M=`1..5`=`1..5` min; `M=6`: 15 min; `M=7`: 30 s; `M=8`: 0.5 s. `SPE=7` with `M=1`: 2 s and `M=2`: 10 min | Same source; physical encodings, not Object `400` M values |
+| Scenario recall | `SPE=6`; M1/2/3/4 selects scenario banks 1–4/5–8/9–12/13–16 on four corresponding keys | Same guide printed p. 86/PDF p. 88 |
+| Sound / door entry | `SPE=8` sound and `SPE=9` communication modes are documented; detailed system-specific behavior delegated to separate guides | Same source |
+| AUX input | Absent means no channel; `1..9` listens to that auxiliary channel and forwards the configured command as a key action | Same source |
 
 ## Observed behavior and corroboration
 
@@ -607,17 +696,22 @@ No sanitized hardware fingerprint or Device-specific protocol capture is current
 
 ## Programming
 
-Programming must select installed firmware applicability, resolve slot/Object alternatives through catalogue conditions, apply relation filters, and preserve configuration-mode boundaries.
+Match keycap layout and mode: the guide marks unsupported combinations, so a raw firmware enum does not validate every physical key arrangement. Scenario numbers require the addressed F420 configuration; sound/communication need their own installed system (AUTOMATISME printed pp. 84, 86/PDF pp. 86, 88).
+
+The canonical two-slot model, direct candidate membership, Virgin-only alternatives and condition/filter/conversion rows are retained separately. In particular `M=CEN` is not in this firmware enum, and no textual predicate exists for 4145. Software-only mode and input-AUX ranges cannot be substituted for physical configurators.
 
 ## Source reconciliation
 
-The canonical catalogue establishes the commercial records, firmware applicability, topology, configuration fields, filters and conditions. Publisher sources above are used only for behaviors they directly document; missing dedicated sheets remain explicit gaps.
+The French guide supplies direct H/L product and physical timing/scenario evidence; its reusable support for sound/door entry points to other guides whose detailed H/L4651/2 procedures were not examined in this batch. Catalogue Matix/Vela mappings establish identity without proving identical faceplate or electrical specifications. Lock/unlock and programmed-scenario candidates are catalogue evidence where this printed guide does not supply an exact procedure.
+
+Two declared Modules are two software placements, not two independent physical Devices. Sound Object `409` is a slot `1` candidate only. Virgin `501` admits 405/406/407/427/430 as well as the direct candidates, without establishing their reachability; their reusable fields are retained above. Condition `4593` requires `M=CEN`, which is absent from firmware `147` M enum; do not invent a numeric encoding. Empty 4145 is not an unconditional lighting predicate. Filter `287` on Lock/unlock 402 admits INST_LEV 8 (local bus 8), excludes reusable default 16 and supplies no replacement. Firmware A/PL `0..9`, AUX `0..9` and M values differ from wider Object address, AUX `0..15` and timed/dimming/automation encodings; source physical configurators and raw Object selectors are separate.
 
 ## Evidence limits and open work
 
-- Recover any missing dedicated publisher sheets for the exact identities.
-- Capture a sanitized hardware fingerprint covering identity, firmware, modules, addressing and configuration.
-- Corroborate condition/filter behavior through MyHOME Suite and controlled configuration changes.
+- Exact AM5831/2 and 687376 physical documents and the cited sound/communication guide sections remain unexamined.
+- Resolve the out-of-domain CEN condition, empty lighting predicate and local-bus 8 restriction against the applicable software release.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -627,3 +721,5 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0043)

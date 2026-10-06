@@ -2,21 +2,19 @@
 
 ## Summary
 
-This SCS shutter actuator operates one motor channel and manages shutter position after endpoint acquisition. It supports calibrated position and preset operation, with configuration determining the addressing, operating mode and supported motor arrangement.
+This two-relay SCS shutter actuator drives a motor and provides local UP, DOWN and STOP controls. With the documented advanced controls it can recall opening presets; standard motors require travel calibration, while pulse motors have separate stop-pulse and third-limit behavior.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0045` | Project identity |
 | Technical description | Flush-mounted bus shutter actuator with position and preset management | Canonical catalogue plus reconciled Device sources |
 | Commercial identities | `H4661M2`, `LN4661M2`, `AM5861M2`, `067557` | Canonical commercial records |
-| Catalogue item | `1586` | Implementation evidence |
-| Main catalogue system | Automation | Implementation evidence |
-| Item model / `modobj` | `48` | Implementation evidence |
-| Firmware definition | `192 / -1.-1.-1` | Implementation evidence |
+| Catalogue item | `1586` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `48` | Canonical catalogue |
+| Firmware definition | `192 / -1.-1.-1` | Canonical catalogue |
 | Declared Modules | `1` | Firmware catalogue |
 | Categories | Automation, Shutters, Actuator | Capability model |
-
-Flush-mounted bus shutter actuator with position and preset management.
 
 ## Commercial identities
 
@@ -44,28 +42,59 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | --- | --- | --- | --- | --- | --- |
 | AUTOMATISME | technical/system documentation | revision/date as printed | Advanced shutter actuator family and preset behavior | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 | ST-00000900-EN | technical sheet | 2021-03-23 | H4661M2 / LN4661M2 / 067557 / AM5861M2; addressing, motor type, calibration and modes | - | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000900-EN.pdf) |
-| `H4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4661M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2) |
-| `LN4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4661M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4661M2) |
-| `AM5861M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5861M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2) |
-| `067557-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067557` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/13/11/13116e4a406b60cffd3ab03a97d6d0d2d92e808dbde9f923017a07971ba74997.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-myhome-up-celiane-avec-commande-integree-pour-volets-motorises) |
+| `H4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4661M2` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/de/dd/dedd7ad5fd015532902e19745201329e4261d4b663035d931beb77fb5db4d162.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4661M2) |
+| `LN4661M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4661M2` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/36/be/36be120c08d83fcf4c17b696e4ed9bd56d6a2e84a61a5f6afdc34bc73ced6dca.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4661M2) |
+| `AM5861M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5861M2` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2) |
+| `067557-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067557` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Exact SKU/GTIN metadata examined; other technical attributes, linked downloads and prices are outside this review scope. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/13/11/13116e4a406b60cffd3ab03a97d6d0d2d92e808dbde9f923017a07971ba74997.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-myhome-up-celiane-avec-commande-integree-pour-volets-motorises) |
+| `MQ00592_d_EN.pdf` | Exact-product technical sheet | MQ00592-d-EN; 2018-09-20 | Printed/PDF pp. 1–4; ratings, all physical/software modes, pulse contacts, calibration and LEDs | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/b7/bab7b8f45774c29993353c3aae84b89aaddd44aee0eb2d624d7fbc0438c7c392.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/MQ00592_d_EN.pdf) |
+| `ST-00000900-EN.pdf` | Revised exact-product technical sheet | 2021-03-23 | Printed/PDF pp. 1–4; same four references; MyHOME Server one-channel note, pulse/calibration and LED text compared | [Archived original](https://archive.openwebnet-ha.org/sha256/5d/f4/5df47df9dbb12fcc0d098f0dbf3d4c88d03b72eb19fcc64f451f0e0a58083cc7.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000900-EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Controlled load | One shutter motor channel | ST-00000900-EN |
-| Motor models | Standard motor with manual calibration or pulse operation | ST-00000900-EN |
-| Position management | After endpoint acquisition, supports 100 positions and preset operation | ST-00000900-EN |
+| Supply / maximum current | Nominal `27 Vdc`; operating `18..27 Vdc`; `16 mA` | Both technical sheets p. 1 |
+| Output / environment | Two relays; `250 Vac`–`2 A` driven load; `0..40 °C` | Both sheets p. 1; publisher output rating retained without converting it to an arbitrary motor wattage |
+| Size / terminals / controls | Two flush-mounted modules; three front keys and three bicolor LEDs plus configuration key; load terminals 3×2.5 mm² | Both sheets p. 1 |
+| Current export wattage | Italian H/LN/AM exports list `500 W` alongside `2 A`/`250 Vac` descriptions | Exact exports printed/PDF p. 1; separate source attribute, not an extra permissive motor rating |
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| H4661M2 commercial power attribute | `500 W` | Exact H4661M2 export, printed/PDF p. 1; distinct from the sheet’s 2 A at 250 Vac rating and not a universal motor compatibility guarantee |
 
 ## Identity
 
 | Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_ITEM.id_item` | `1586` | Implementation evidence |
-| Technical item description | Shutter actuator bus | Implementation evidence |
-| Main system | Automation | Implementation evidence |
-| Item model / `modobj` | `48` | Implementation evidence |
+| `EN_ITEM.id_item` | `1586` | Canonical catalogue |
+| Technical item description | Shutter actuator bus | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `48` | Canonical catalogue |
 | Commercial records | `4` | Canonical catalogue |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `48` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1653` | `H4661M2` | `1` | `2` | `Shutter management flush-mounted actuator` |
+| `1864` | `LN4661M2` | `1` | `4` | Empty in source |
+| `1865` | `AM5861M2` | `1` | `3` | Empty in source |
+| `1930` | `067557` | `2` | `13` | `Legrand_Celiane_Shutter management flush-moun` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
 
 ## Firmware and hardware
 
@@ -74,6 +103,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `192` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -91,11 +126,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `192` | Physical configuration | supported route for this Device family |
-| `192` | Virtual Configuration | supported route for this Device family |
-| `192` | Advanced Configuration | supported route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `192` | Physical configuration | `0` | Canonical firmware/mode association |
+| `192` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `192` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -116,6 +154,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `218` - Shutter actuator
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `SHUTTER_TYPE`, `STOP_PULSE_DURATION`, `UP_OR_DOWN_PULSE_DURATION`, `TILTING`, `ROLLING`, `LOCAL_BUTTON`, `PRIORITY`, `PRESET_NUMBER`, `P1`, `P2`, `P3`, `P4`, `P5`, `P6`, `P7`, `P8`, `P9`, `P10`, `UP_SHUTTER_TIME_MINUTES`, `UP_SHUTTER_TIME_SECONDS`, `DOWN_SHUTTER_TIME_MINUTES`, `DOWN_SHUTTER_TIME_SECONDS`, `SLATS_ROTATION_TIME_DOWN_H`, `SLATS_ROTATION_TIME_DOWN_L`, `SLATS_ROTATION_TIME_MIDDLE_H`, `SLATS_ROTATION_TIME_MIDDLE_L`, `SLATS_ROTATION_STEP_NUMBER`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
 
 Catalogue Object key `514` maps to external Object `218`.
 
@@ -217,7 +260,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Advanced shutter actuation with calibrated position/preset behavior; configuration selects addressing, mode and motor type.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Address / group | Physical `A/PL=1..9` and `G=0..9`; software `A=0..10` / `PL=0..15` and ten groups `0..255` | Sheets p. 2 |
+| Master / slave / PUL | M0 master; SLA receives same-address master commands; PUL monostable ignores room/general; slave PUL is software-only | Sheets p. 2 |
+| Motor / local keys | `TYPE=1` standard manual calibration, 2 pulse; arrow bistable/arrow-M mono; `M=1/2` switch blade/bistable behavior at hold>1.5 s | Sheets p. 2 |
+| Preset / third limit | Pre `1..9`=`10..90`%; customized P1..P9 software 0..100. `TYPE=2`+Pre 9 invokes third-limit pulse; blade presets guaranteed only with pulse motor | Sheets p. 3 |
+| Scenario compatibility | Preset scenarios require F420 produced after week 29 of 2012 | Sheets p. 1; not a claimed actuator firmware cutoff |
 
 ## Observed behavior and corroboration
 
@@ -225,17 +274,31 @@ No sanitized hardware fingerprint or Device-specific protocol capture is current
 
 ## Programming
 
-Programming must select installed firmware applicability, resolve slot/Object alternatives through catalogue conditions, apply relation filters, and preserve configuration-mode boundaries.
+Move to a desired preset and hold STOP at least 10 seconds; UP/DOWN LEDs confirm for 2 seconds. `TYPE=2` pulse tables specify L1 UP and L2 DOWN 0.5 seconds, and combined L1+L2 STOP 0.5 seconds, but both duplicate ‘shutter still’ headings for different STOP behavior. Do not treat the conflicting second heading as a proven motion-state condition. Brightness cycles 30/60(default)/0/100% every 2 seconds, but the written entry timing ‘at least 5 seconds’ versus 3 seconds then another 5 seconds is unresolved (both sheets pp. 3–4, 2021 p. 3 visually checked).
+
+Standard-motor calibration (both sheets, printed/PDF p. 4):
+
+1. Hold the configuration key for at least 3 s, until all LEDs become orange or purple.
+2. Release it; the UP indicator starts flashing rapidly.
+3. Press and release UP to move to maximum opening.
+4. At the upper limit, press DOWN. The actuator measures and saves the closing time.
+5. At the lower limit, press and release UP. It measures and saves the opening time.
+6. At the upper limit, press DOWN to finish; UP becomes green or blue.
+
+Before calibration, external commands are unavailable; local movement runs in five-second intervals. Manual endpoint detection affects positioning accuracy. These are documented procedures, without a hardware test.
 
 ## Source reconciliation
 
-The canonical catalogue establishes the commercial records, firmware applicability, topology, configuration fields, filters and conditions. Publisher sources above are used only for behaviors they directly document; missing dedicated sheets remain explicit gaps.
+2018 and 2021 revisions agree on ratings, physical modes and calibration; the 2021 sheet adds automatic one-channel setup by MyHOME Server. Both retain contradictory stationary-state pulse-table headings and inconsistent LED entry timing. Exact exports count four pushbuttons including the configuration key, while the sheet describes three front operating keys; this is a count scope, not extra motor controls.
+
+Firmware `192` TYPE 1/2 is the physical standard/pulse encoding; Object `218` SHUTTER_TYPE`0..3` is a separate software encoding. Filter `597` restricts it to 0/3, excluding the sheet's pulse 2 and manual-standard 1 concepts: this is an unresolved software/document boundary, not grounds to discard documented physical pulse operation. Filter `601` restricts PRESET_NUMBER to 10, excluding reusable default 0 and the published physical presets `1..9`; no replacement default is supplied. Condition `4911` has no predicate but references rule `115`; rule `115` maps M 0/1/2/11/12/13/15 to MODE and LOCAL_BUTTON. Reusable mode field is named M, not MODE; do not silently alias the output. Both pulse durations encode tenths of seconds (`1..100` means 0.1..10 s), not literal seconds. Calibration fields and high/low slat bytes retain their own units and limits.
 
 ## Evidence limits and open work
 
-- Recover any missing dedicated publisher sheets for the exact identities.
-- Capture a sanitized hardware fingerprint covering identity, firmware, modules, addressing and configuration.
-- Corroborate condition/filter behavior through MyHOME Suite and controlled configuration changes.
+- The software SHUTTER_TYPE restriction and `PRESET_NUMBER=10-only` restriction conflict with documented physical choices; an applicable configuration/software revision is needed.
+- Pulse-table state labels, LED entry timing, motor-interface instructions and Suite-specific pulse/tilt configuration remain unresolved or unexamined.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -251,3 +314,5 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - `AM5861M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5861M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e3/2b/e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5861M2); SHA-256 `e32b59a57ebbd1b45db21c916cd2ec4808224b082ee2e05ad46f28d978c465f7`.
 
 - `067557-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067557` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/13/11/13116e4a406b60cffd3ab03a97d6d0d2d92e808dbde9f923017a07971ba74997.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/actionneur-myhome-up-celiane-avec-commande-integree-pour-volets-motorises); SHA-256 `13116e4a406b60cffd3ab03a97d6d0d2d92e808dbde9f923017a07971ba74997`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0045)

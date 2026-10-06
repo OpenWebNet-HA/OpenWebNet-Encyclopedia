@@ -2,7 +2,7 @@
 
 ## Summary
 
-This two-module thermostat combines a temperature probe, display and four keys for local room control. It can serve a residential or hotel installation, with heating, cooling, fan-coil and rear-contact functions available according to the configured role.
+This thermostat combines a room-temperature sensor, backlit display and local mode, temperature and fan controls. It can be a MyHOME central-unit probe, hotel thermostat or standalone residential thermostat, with an external contact input and optional automatic heating/cooling changeover in the documented independent modes.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -38,20 +38,26 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00789_b_EN` | technical sheet | revision b; date not confirmed in retained metadata | `H4691` / `LN4691` / `067459` / `64170` thermostat functions and installation characteristics | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
-| BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
-| `H4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691) |
-| `LN4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691) |
+| `MM00789_b_EN` | technical sheet | MM00789-b-EN; 2016-05-02 | Printed/PDF pp. 1–2; named variants, ratings, physical role/load/contact matrix, software requirements and production cutoff | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
+| BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
+| `H4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4691` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691) |
+| `LN4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4691` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691) |
+| `RA00118AC_I_EN.pdf` | Exact-product installer manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–30; roles, configuration, regulation, UI, errors and production-week qualification | [Archived original](https://archive.openwebnet-ha.org/sha256/be/9a/be9aa513be29e4437c24f38fd5c77e3f7f717b96edb47c51fdbf9a24a5743e08.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_I_EN.pdf) |
+| `RA00118AC_U_EN.pdf` | Exact-product user manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–21; local behavior for each role, settings, faults and hardware revision note | [Archived original](https://archive.openwebnet-ha.org/sha256/99/21/992132ad1dd5d46734a2fa364516e173905101161ff3d495bb6b0f4abc66c31a.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_U_EN.pdf) |
+| `RA00118AC_S_EN.pdf` | Exact-product software manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–14; complete advanced project, load/pump, setpoint, PID/contact/UI settings | [Archived original](https://archive.openwebnet-ha.org/sha256/ef/3f/ef3f540219dd8c5b6991bba3187ef2fc78838cdf7f67b8490ef1aee943afef5e.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_S_EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `27 Vdc` | Current BTicino `H4691` catalogue |
-| Input current | `30 mA` | Current BTicino `H4691` catalogue |
-| Width | 2 wiring-device modules | `MM00789_b_EN` / current catalogue |
-| Local interfaces | Temperature probe, display, four keys, rear contact input | `MM00789_b_EN` |
-| HVAC role | Probe, hotel thermostat, or residential thermostat; fan-coil speed management when applicable | `MM00789_b_EN` |
+| Supply / current | `18..27 Vdc`; MM00789-b-EN gives `14 mA` backlight off/`16 mA` standby/`30 mA` maximum; installer p. 28 gives 13/16/`30 mA` | Exact sheet p. 1 and installer manual p. 28; 13/14 discrepancy retained |
+| Environment / size / installation | `0..40 °C`; two flush-mounted modules; installation height `150 cm` | Sheet p. 1 and installer p. 28 |
+| Controls / connections | MODE, +, −, FAN; SCS bus, rear local contact and configurators | Sheet p. 1; installer pp. 6–7 |
+| Setpoint interval / defaults | `3..40 °C`; heating comfort 21/eco 18/antifreeze `7 °C`; cooling comfort 25/eco 28/protection `35 °C` | Installer p. 5; p. 20 instead prints cooling eco 25 °C, unresolved |
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Exact H4691 / LN4691 export maximum current | `30 mA` at `27 Vdc`; two modules | Individual exports, printed/PDF p. 1; agrees with the technical sheet’s maximum rather than standby/off values |
 
 ## Identity
 
@@ -63,6 +69,30 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `6` | Canonical inventory |
 | Commercial records | `4` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1746` | `H4691` | `1` | `2` | `Thermostat with display` |
+| `1991` | `LN4691` | `1` | `4` | `Thermostat with display` |
+| `1995` | `067459` | `2` | `13` | `Thermostat with display` |
+| `2172` | `64170` | `7` | `18` | `Thermostat with display` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -71,6 +101,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `691` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -94,14 +130,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `160` | Advanced Configuration | supported configuration route for this Device family |
-| `160` | Physical configuration | supported configuration route for this Device family |
-| `160` | Virtual Configuration | supported configuration route for this Device family |
-| `691` | Advanced Configuration | supported configuration route for this Device family |
-| `691` | Physical configuration | supported configuration route for this Device family |
-| `691` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `160` | Physical configuration | `0` | Canonical firmware/mode association |
+| `160` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `160` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `691` | Physical configuration | `0` | Canonical firmware/mode association |
+| `691` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `691` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -131,6 +170,14 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `184` - Master probe
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Operation, timing and presentation | `FUNCTION`, `COND`, `RISC`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable schema; apply the Device and firmware restrictions below. |
+| Addressing | `ZAZB`, `ZAZB_CENTRAL` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -243,8 +290,15 @@ The following domains and defaults describe reusable Object definitions in the c
 | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
 
-
 ### Object `95` - Hotel thermostat
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ZAZB` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `FUNCTION`, `MAXIMUM_HEATING_SETPOINT`, `MINIMUM_HEATING_SETPOINT`, `MAXIMUM_COOLING_SETPOINT`, `MINIMUM_COOLING_SETPOINT`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `FUNCTION_CHANGE_BY_LOCAL_BUTTON`, `AUTOMATIC_CHANGEOVER_MODE`, `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER`, `EXTERNAL_SENSOR_TYPE` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
 
 Catalogue Object key `542` maps to external Object `95`.
 
@@ -364,8 +418,15 @@ Catalogue Object key `542` maps to external Object `95`.
 | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
 
-
 ### Object `96` - Residential thermostat
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ZAZB` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `FUNCTION`, `MAXIMUM_HEATING_SETPOINT`, `MINIMUM_HEATING_SETPOINT`, `MAXIMUM_COOLING_SETPOINT`, `MINIMUM_COOLING_SETPOINT`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `FUNCTION_CHANGE_BY_LOCAL_BUTTON`, `AUTOMATIC_CHANGEOVER_MODE`, `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
 
 Catalogue Object key `545` maps to external Object `96`.
 
@@ -483,6 +544,37 @@ Catalogue Object key `545` maps to external Object `96`.
 | `COOLING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Cooling proportional speed 3 (%) |
 | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
+
+### Object `221` - Slave probe (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `SLA` | `1..9` | `1` | Slave number |
+| `LED_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Led enable |
+| `EXTERNAL_SENSOR_TYPE` | `0` = BTicino 3457; `1` = Vantage 8051 | `0` | External temperature sensor type |
+| `RISC` | `0` = Disable; `1` = Enable | `1` | Winter modality; Winter mode |
+| `COND` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
+| `ZAZB_CENTRALE` | `00..99` | `01` | Temperature Control unit address |
+
+### Object `144` - Remote control for thermostat (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `0..99` | `01` | Zone |
+| `SLA` | `1..9` | `1` | Slave number |
+| `TEMPERATURE_FORMAT` | `0` = Celsius; `1` = Fahrenheit | `0` | Temperature format |
+| `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED | `0` | Ambient temperature visualization |
+| `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled | `0` | Disable all pushbuttons |
+| `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled | `0` | Disable pushbutton modality change |
+| `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | Disable calibration procedure |
+| `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | Disable user settings procedure |
+| `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Heating pushbutton fan coil automatic speed |
+| `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 
 ## Conditions, filters, and conversions
 
@@ -910,6 +1002,13 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+| Physical-to-advanced record | Firmware | trans_data key | Description |
+| --- | --- | --- | --- |
+| `1` | `160` | `1` | Conversion rule device H4691 |
+| `2` | `691` | `3` | Conversion rule device H4691 Firmware `2.0` |
+
+`EN_PHY_TO_ADV_TRANS` supplies these opaque trans_data references; the referenced payload contents are not exposed in this extraction. These records do not resolve the separate rule `7204` A/PL versus ZAZB mismatch or justify an invented field alias.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -922,7 +1021,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Room-temperature control with locally selectable operating modes and firmware/Object-dependent heating, cooling, fan-coil, contact, pump and setpoint behavior.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Roles / override | `TYPE=0` central probe, 1 hotel, 2 residential. Probe manual setpoint lasts until next central change; local comfort/eco/protection persists until local automatic mode is restored | Installer pp. 8–11; user pp. 7–17 |
+| Loads / pumps / slaves | Sheet physical load matrix covers ON/OFF, open/close, 2/4 pipe fan-coils, gateways, Fil Pilote and proportional loads. Software supports up to 9 actuators, 9 pumps and 9 slave probes | Sheet p. 2 and software pp. 6–8; production scope below |
+| Automatic changeover | Not available as central-unit Master probe; advanced configuration required, documented from Suite 1.3. Setpoint±threshold or heating/cooling setpoint pairs govern switching | Installer pp. 12–16; software p. 7 |
+| Contact / regulation | Independent opening/closing actions per season, delays/timeouts, contact-based key locks; increasing fan thresholds, PID inertia, pump/fan delays, weekly two-minute anti-block and ventilation | Software pp. 8–14 |
+| Errors | Er 1 pump, Er 2 actuator, Er 3 slave: current mode retained and recurrence after 15 min if uncleared. Er 4 sensor/Er 5 internal: OFF and controls disabled | Installer p. 29 |
 
 ## Observed behavior and corroboration
 
@@ -930,17 +1035,59 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Physical zone ZA/ZB is 01..99. `TYPE=0` is a central-unit probe: leave HEAT, COOL and PUMP unconfigured and assign them at the central unit. `TYPE=1/2` selects hotel/residential operation. The following are physical configurator encodings, separate from reusable Object enums (MM00789-b-EN, printed/PDF p. 2).
+
+| HEAT / COOL value | Published load | Address / restrictions |
+| --- | --- | --- |
+| `0` | No load | No actuator |
+| `1` | ON/OFF valve | Heating `N=1`; cooling `N=2` |
+| `2` | Open/close valve | Heating `N=1`; cooling `N=2` |
+| `3` | Two-pipe fan-coil, ON/OFF valve | Heating `N=1`; cooling `N=2` |
+| `4` | Gateway | Heating `N=1`; cooling `N=2` |
+| `5` | Fil Pilote | Heating only; no `COOL=5` |
+| `6` | Two-pipe fan-coil, 0–10 V speed control | Heating `N=1`; cooling `N=2` |
+| `7` | Four-pipe fan-coil, ON/OFF valves | Heating `N=1`; cooling `N=2` |
+| `8` | Four-pipe fan-coil, 0–10 V speed control | Heating `N=1`; cooling `N=2` |
+| `9` | Three-point / 0–10 V valve | Heating `N=1`; cooling `N=2` |
+| `COOL=CEN` | Reuse heating configuration | Actuator `N=1`; HEAT must differ from 0 and 5 |
+
+| PUMP | Published physical assignment |
+| --- | --- |
+| `0` | None |
+| `1` | Heating `N=1` |
+| `2` | Cooling `N=2` |
+| `3` | Heating `N=1` and cooling `N=2` |
+| `4` | Common heating/cooling pump `N=1` |
+
+Heating-containing pump choices 1, 3 and 4 require HEAT other than 5 (Fil Pilote).
+
+| IN | Contact open | Contact closed |
+| --- | --- | --- |
+| `0` | Contact disabled | Contact disabled |
+| `1` | Protection | Restore previous state |
+| `2` | OFF | Restore previous state |
+| `3` | ECO | Restore previous state |
+| `4` | COMFORT | Restore previous state |
+| `5` | Switch to heating | Switch to cooling |
+
+`IN=5` is unavailable in the central-unit probe role.
+
+Software advanced configuration adds increasing fan thresholds, setpoint ordering, pump delays, fan delay or continuous ventilation (mutually exclusive), PID inertia, contact action delays/timeouts and UI locks. Local brightness: FAN≥7 s, +/−, FAN twice to confirm; units use the same menu then FAN. Calibration waits at least 5 hours after installation, +/−≥7 s, adjust and exit; a further 7 s hold clears manual calibration (installer pp. 24–27). These are source-described procedures, not tested hardware behavior.
 
 ## Source reconciliation
 
-The publisher sheet directly names all four catalogue identities. Firmware 1.0.-1 and 2.0.0 share the same three Object families in the catalogue, while applicability and configuration fields remain firmware- and relation-scoped.
+MM00789-b-EN dated 2May 2016 says newer functions require production batch 16W06. Installer p. 30 says week 20 of 2016; user p. 21 prints 20W16. Both manuals enumerate colored/contact icons, continuous fan, proportional control, local feature locks, brightness and unit selection. The different cutoffs are unresolved and cannot be equated to catalogue firmware `1.0` or 2.0. Installer current 13 mA differs from sheet 14 mA with backlight off. Installer p. 5 cooling eco 28 °C differs from p. 20’s 25 °C; retain the initial factory table with the contradiction visible.
+
+TYPE 0/1/2 selects 184/95/96 on each firmware. Virgin `509` also admits 144/221 but no direct slot/condition establishes reachability. Rule `7204` emits A and PL for zone digits, whereas the direct reusable Objects use ZAZB; its child map includes PL `10..15` outside firmware ZB0..9. Do not silently repair these naming/domain differences. Firmware IN text says `MOD=0` although the physical selector is TYPE; the sheet bars IN5 in the central-probe role. Numerous filters exclude ordinary actuator and setpoint defaults without replacements. Firmware `691` restricts many actuator types to 10 (IR) and Hotel 95 BACKLIGHT_STANDBY_LEVEL to 11/12, excluding default 10; this does not negate physical load classes documented by the sheet. Filters 857/858 refer to fields from another Object scope. Hotel/residential automatic-changeover, setpoint ordering, contact timeout exclusivity, Fil Pilote/gateway pump constraints and hidden threshold notes remain schema-specific. The residential HEATING_VALVE_ADVANCE_TIME description says 0.5 steps, while Hotel 95 says 5 s; unit differences are retained rather than normalized.
+
+Software-version scope also differs: the installer describes automatic changeover from MyHOME_Suite 1.3, while MM00789-b-EN p. 2 associates its broader advanced-function list with version 3.2. Neither statement supplies a firmware-version conversion or resolves the conflicting production-week cutoffs.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Production cutoff, off-backlight current and cooling eco default need an applicable manufacturer correction or observed revision.
+- Parameter names, excluded defaults and foreign-scope filters remain catalogue evidence; no payload or hardware test resolves the IR-only subsets, reserved load entries or Virgin-only candidates.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -952,3 +1099,5 @@ The publisher sheet directly names all four catalogue identities. Firmware 1.0.-
 
 - `H4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691); SHA-256 `77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe`.
 - `LN4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691); SHA-256 `adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0046)

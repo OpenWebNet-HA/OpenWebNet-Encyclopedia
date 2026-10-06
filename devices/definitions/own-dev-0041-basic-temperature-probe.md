@@ -2,21 +2,19 @@
 
 ## Summary
 
-This basic temperature probe provides room-temperature sensing for a configured zone in the SCS temperature-control system. Its heating and cooling role depends on the selected configuration; additional physical specifications remain undocumented in the retained sources.
+This selector-free temperature probe measures a room and regulates its zone through the SCS temperature-control system. With no occupant controls on its face, it suits public rooms; it can work as a master or slave sensing point, while the central unit selects OFF and protection modes.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
 | Device ID | `OWN-DEV-0041` | Project identity |
 | Technical description | SCS basic temperature probe for zone sensing | Canonical catalogue plus reconciled Device sources |
 | Commercial identities | `HC/HS/HD4693`, `L/N/NT4693`, `573920`, `573921`, `067458` | Canonical commercial records |
-| Catalogue item | `1862` | Implementation evidence |
-| Main catalogue system | Temperature control | Implementation evidence |
-| Item model / `modobj` | `21` | Implementation evidence |
-| Firmware definition | `152 / 6.0.0`; `165 / 5.2.0` | Implementation evidence |
+| Catalogue item | `1862` | Canonical catalogue |
+| Main catalogue system | Temperature control | Canonical catalogue |
+| Item model / `modobj` | `21` | Canonical catalogue |
+| Firmware definition | `152 / 6.0.0`; `165 / 5.2.0` | Canonical catalogue |
 | Declared Modules | `1` | Firmware catalogue |
 | Categories | Temperature control, HVAC, Sensor | Capability model |
-
-SCS basic temperature probe for zone sensing.
 
 ## Commercial identities
 
@@ -46,31 +44,59 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| No dedicated Device-specific publisher source currently archived | source gap | current review | Catalogue extraction complete; direct product documentation remains to be recovered | - | - |
-| `HC4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4693) |
-| `HS4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693) |
-| `HD4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693) |
-| `L4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4693) |
-| `N4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4693) |
-| `NT4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4693` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693) |
-| `067458-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067458` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/2d/96/2d96d2e66e3f7dbf0e8b27849636178c6919f019755809a2e9c3397d63f24dda.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/sonde-pour-gestion-de-temperature-myhome-up-celiane) |
+| `HC4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/7d/cc/7dcc11f63cea1c35a1e5512948b1fa668b237c86124da64c594edc83eb77a76f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4693) |
+| `HS4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/6f/ca6f3844bfe681b0eaa5ba4bdc58f66d9073a20fcebfe0314ce91cfc44581f82.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4693) |
+| `HD4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/94/e4947e9d4763e975170ce126e13aa1fe3697b2d99bb1d2afdfa94f50b26064d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4693) |
+| `L4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/95/27/9527722ea016b62620ccc04332dd49ccacfda724e448c4b590dcfca9c9157dcb.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4693) |
+| `N4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/f4/5bf4047d1b33701f0abc2d4bb78d888334513f5f2e0d4f03dc51ab15e3c99227.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4693) |
+| `NT4693-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4693` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693) |
+| `067458-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067458` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Exact SKU/GTIN metadata examined; other technical attributes, linked downloads and prices are outside this review scope. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/2d/96/2d96d2e66e3f7dbf0e8b27849636178c6919f019755809a2e9c3397d63f24dda.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/sonde-pour-gestion-de-temperature-myhome-up-celiane) |
+| `MQ00180_c_EN.pdf` | Exact-product technical sheet | MQ00180-c-EN; 2014-04-29 | Printed/PDF pp. 1–3; all named variants, configuration, fault behavior, maintenance and calibration | [Archived original](https://archive.openwebnet-ha.org/sha256/37/15/371528b7918ac34706e957b9a62502af80bb661d989cb50b0211e4e1a64c95cf.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/MQ00180_c_EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product role | Zone temperature sensing probe | Catalogue item and system mapping |
-| Declared logical modules | 1 | Canonical firmware catalogue |
+| SCS supply / current | Nominal `27 Vdc`; operating `18..27 Vdc`; `6 mA` | MQ00180-c-EN, printed/PDF p. 1 |
+| Size / environment | Two flush-mounted modules; operating `0..40 °C` | Same source p. 1; operating limit is not measurement range |
+| Indicators / controls | Green active LED; yellow actuator-state LED flashes for a fault; hidden key enables virtual configuration; no occupant selector | Same source p. 1 |
+| Installation-height source error | Sheet literally prints `1500 m`; apparent unit error, no replacement value assumed | Same source p. 1, visually checked |
+| Measurement wording | Retained Italian L/N/NT4693 exports print malformed `340 C`; no reliable numeric measurement range established by these exports | Individual exports printed/PDF p. 1, L4693 visually checked |
 
 ## Identity
 
 | Field | Value | Evidence |
 | --- | --- | --- |
-| `EN_ITEM.id_item` | `1862` | Implementation evidence |
-| Technical item description | Basic temperature probe | Implementation evidence |
-| Main system | Temperature control | Implementation evidence |
-| Item model / `modobj` | `21` | Implementation evidence |
+| `EN_ITEM.id_item` | `1862` | Canonical catalogue |
+| Technical item description | Basic temperature probe | Canonical catalogue |
+| Main system | Temperature control | Canonical catalogue |
+| Item model / `modobj` | `21` | Canonical catalogue |
 | Commercial records | `5` | Canonical catalogue |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `21` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1608` | `HC/HS/HD4693` | `1` | `2` | `BTicino_Axolute_Basic Probe Thermoregulation` |
+| `1609` | `573921` | `2` | `11` | Empty in source |
+| `1610` | `573920` | `2` | `11` | Empty in source |
+| `1611` | `067458` | `2` | `13` | Empty in source |
+| `1971` | `L/N/NT4693` | `1` | `4` | `BTicino_L/N/NT_Basic Probe Thermoregulation` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
 
 ## Firmware and hardware
 
@@ -80,6 +106,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `165` | `5` | `2` | `0` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -101,14 +133,16 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `152` | Physical configuration | supported route for this Device family |
-| `152` | Virtual Configuration | supported route for this Device family |
-| `152` | Advanced Configuration | supported route for this Device family |
-| `165` | Physical configuration | supported route for this Device family |
-| `165` | Virtual Configuration | supported route for this Device family |
-| `165` | Advanced Configuration | supported route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `152` | Physical configuration | `0` | Canonical firmware/mode association |
+| `152` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `152` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `165` | Physical configuration | `0` | Canonical firmware/mode association |
+| `165` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -144,8 +178,15 @@ The following domains and defaults describe reusable Object definitions in the c
 | `COND` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
 | `ZAZB_CENTRALE` | `01..99` | `01` | Control unit address |
 
-
 ### Object `184` - Master probe
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Operation, timing and presentation | `FUNCTION`, `COND`, `RISC`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable schema; apply the Device and firmware restrictions below. |
+| Addressing | `ZAZB`, `ZAZB_CENTRAL` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -257,7 +298,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `COOLING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Cooling proportional speed 3 (%) |
 | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
-
 
 ### Object `221` - Slave probe
 
@@ -389,7 +429,11 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Temperature-control zone sensing; exact heating/cooling behavior remains firmware/Object-filter scoped.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Master sensing | Zone can control up to nine same-type actuators and eight slave probes; averaging supports large rooms | MQ00180-c-EN pp. 1–2 |
+| OFF / protection | Central unit selects OFF or antifreeze/heating and thermal protection/cooling. OFF remains highest priority even on central-unit failure | Same source p. 1 |
+| Central-unit failure | Otherwise retains the last received temperature and seasonal settings | Same source p. 1 |
 
 ## Observed behavior and corroboration
 
@@ -397,17 +441,22 @@ No sanitized hardware fingerprint or Device-specific protocol capture is current
 
 ## Programming
 
-Programming must select installed firmware applicability, resolve slot/Object alternatives through catalogue conditions, apply relation filters, and preserve configuration-mode boundaries.
+Physical ZA/ZB are zone digits `0..9`; MOD absent means master and SLA means slave. A master’s SLA=`0..8` counts slaves; slave numbering starts at 1 without gaps. The zone and actuator addresses must agree. Virtual Configurator 2.1 is documented when physical configurators are absent (MQ00180-c-EN printed/PDF p. 2).
+
+Use central-unit Maintenance menus to assign heating/cooling/combined loads, ON/OFF, open/close or three-speed fan-coil behavior, and logical pumps. Pump delay can reach 9 minutes according to valve opening time; this is a product procedure, not the raw reusable delay field. Calibration requires at least 2 hours powered with hydraulic system OFF, stable room temperature and a calibrated reference thermometer (printed/PDF p. 3).
 
 ## Source reconciliation
 
-The canonical catalogue establishes the commercial records, firmware applicability, topology, configuration fields, filters and conditions. Publisher sources above are used only for behaviors they directly document; missing dedicated sheets remain explicit gaps.
+The 2014 sheet explicitly says P and DEL sockets were removed from an earlier version; that earlier exact revision is not retained. Its operating-temperature range is not a measurement range. Italian probe exports support 27V/6 mA/two modules but their malformed measurement wording is not silently repaired. The current English product-export endpoint returned HTML rather than a PDF; it was not incorporated.
+
+`MOD=0` selects Master probe 184 on 152 and Temperature control probe 36 on 165; `MOD=11` selects Slave 221 on both. Firmware `165` labels numeric 0 CEN, while the sheet calls the absent MOD master: retain separate literal/physical terminology. Firmware `152` SLA `0..9` and Object `221` SLA `1..9` exceed the documented eight-slave installation; 165 SLA `0..8` agrees. Rule `1000` maps `01..99`, not 00 despite reusable ZAZB permitting 00. Firmware `152` restrictions exclude actuator default 0 and protection defaults 14/70 without replacements. Reusable contact, backlight, external-sensor and PID fields do not establish those physical features on this selector-free probe.
 
 ## Evidence limits and open work
 
-- Recover any missing dedicated publisher sheets for the exact identities.
-- Capture a sanitized hardware fingerprint covering identity, firmware, modules, addressing and configuration.
-- Corroborate condition/filter behavior through MyHOME Suite and controlled configuration changes.
+- Earlier P/DEL hardware instructions and a corrected installation-height/measurement-range original remain unretained.
+- Exact catalogue restrictions versus eight-slave hardware capacity and generic external sensor/contact/UI fields require an applicable software/hardware revision to settle.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -425,3 +474,5 @@ The canonical catalogue establishes the commercial records, firmware applicabili
 - `NT4693-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4693` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4693); SHA-256 `df9a54968b961543af72bc5b75cb78e0a70d804ffa40680f4e1a7ef4d9c9b1dd`.
 
 - `067458-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067458` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/2d/96/2d96d2e66e3f7dbf0e8b27849636178c6919f019755809a2e9c3397d63f24dda.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/sonde-pour-gestion-de-temperature-myhome-up-celiane); SHA-256 `2d96d2e66e3f7dbf0e8b27849636178c6919f019755809a2e9c3397d63f24dda`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0041)

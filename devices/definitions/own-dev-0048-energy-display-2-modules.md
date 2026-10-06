@@ -2,7 +2,7 @@
 
 ## Summary
 
-This two-module energy display presents consumption information and provides control of configured load-management actuators. Its 1.6-inch screen gives the user a local view of energy use and a way to manage connected loads.
+This two-module energy display shows consumption readings from external meters and the state of configured load-management actuators. Its 1.6-inch screen can combine or convert several readings and force eligible loads; it contains nine configurable display pages plus a separate settings Module in the catalogue.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -38,20 +38,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ01014_a_EN` | technical sheet | revision a | Energy display functions, pages and measuring/load-management relationships | [Archived original](https://archive.openwebnet-ha.org/sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf) |
-| BTicino `H4710` catalogue page | product page | current catalogue | Current `H4710` electrical characteristics and product role | Not applicable - web page | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN) |
-| `H4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4710` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710) |
-| `LN4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4710` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710) |
+| `MQ01014_a_EN` | technical sheet | MQ01014-a-EN;2014-12-02; printed/PDF pp.1–36; final three pages have MQ00XYZ-a-EN placeholder footers | Energy display functions, pages and measuring/load-management relationships | [Archived original](https://archive.openwebnet-ha.org/sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf) |
+| BTicino `H4710` catalogue page | product page | current catalogue | Current `H4710` electrical characteristics and product role | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN) |
+| `H4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4710` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710) |
+| `LN4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4710` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Display | `1.6 inch` consumption/load-control display | `MQ01014_a_EN` / current catalogue |
-| Supply | `27 Vdc` | Current BTicino `H4710` catalogue |
-| Input current | `33 mA` | Current BTicino `H4710` catalogue |
-| Width | 2 wiring-device modules | Current BTicino `H4710` catalogue |
-| System role | Displays energy data and can control load-management actuators | `MQ01014_a_EN` / current catalogue |
+| Supply / current | Nominal `27 Vdc`; operating `18..27 Vdc`; `33 mA` maximum backlight, `21 mA` standby backlight, `18 mA` backlight off | MQ01014-a-EN p. 1 |
+| Environment / size | `5..35 °C`; two flush-mounted modules | Same source |
+| Screen / interface | `1.6 inch` screen, line-selection/navigation keys, energy/unit/time/date and disabled/forced-load indicators; rear M1/M2 and bus | Same source |
+| Measurement boundary | Receives meter data; power readings on load-control pages require F522; original 3522 pulse interface incompatible | Same source; 3522N appears in wiring examples |
 
 ## Identity
 
@@ -63,6 +62,30 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `14` | Canonical inventory |
 | Commercial records | `4` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `14` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `2181` | `H4710` | `1` | `2` | `BTicino_Axolute_Energy Display 2M bus` |
+| `2182` | `LN4710` | `1` | `4` | `BTicino_L/N/NT_Energy Display 2M bus` |
+| `2183` | `067205` | `2` | `13` | `Legrand_Celiane_Energy Display 2M bus` |
+| `2184` | `64171` | `7` | `18` | `Arnould_Espace Evolution_Energy Display 2M bu` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -70,6 +93,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `405` | `1` | `0` | `-1` | `10` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -105,11 +134,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `405` | Advanced Configuration | supported configuration route for this Device family |
-| `405` | Physical configuration | supported configuration route for this Device family |
-| `405` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `405` | Physical configuration | `0` | Canonical firmware/mode association |
+| `405` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `405` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -134,7 +166,6 @@ Catalogue Object key `492` maps to external Object `463`.
 | `PRIORITY` | `0..63` | `1` | Priority |
 | `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
 
-
 ### Object `104` - Measurement data visualization
 
 Catalogue Object key `606` maps to external Object `104`.
@@ -158,7 +189,6 @@ Catalogue Object key `606` maps to external Object `104`.
 | `COEFFICIENT_K_H` | `0..39` | `0` | Multiplication factor (high); The combination of parameters 26 and 27 defines a range from 1 to 10000 (from 0x0001 to 0x2710) for Coefficient K: if K_H = 0 (0x00), K_L must be in the range: 1-255 (0x01-0xFF); if K_H = 39 (0x27), K_L must be in the range: 0-16 (0x00-0x10). |
 | `ICON` | `0` = None; `1` = Electricity; `2` = Heating; `3` = Cooling; `4` = Water; `5` = Socket | `1` | Icon |
 | `MEASUREMENT_UNIT` | `0` = None; `1` = Watt; `2` = Litre; `3` = Cubic meter - no decimal places; `4` = Cubic meter - 1 decimal place; `5` = Cubic meter - 2 decimal places; `6` = Cubic meter - 3 decimal places | `1` | Measurement unit |
-
 
 ### Object `106` - Energy display settings
 
@@ -213,7 +243,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Energy-consumption visualization and load-management control with up to ten declared logical Modules and catalogue-selected energy/load-control Object families.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Consumption / threshold | Instantaneous and daily/monthly/yearly values; local threshold menu unavailable in `M1=8` and `M2=6` | MQ01014-a-EN p. 1 |
+| M1 presets | 1 heat+hot-water volume; 2 hot-water energy estimate; 3 heat+hot-water heat meters; 4 electric heating/hot water; 5 gas heat; 6 shared electric split; 7 shared gas split; 8 Energy Data Logger. Other M2 must be 0 | Same source pp. 2–19; each also supplies electric/socket/cooling and supported volume pages |
+| M2 presets | 1 total electric+loads; 2 adds three electric lines; 3 total/cooling/water/heat+loads; 4 photovoltaic balance/water+loads; 5 seven electric lines/water/heat; 6 three-phase total/cooling/water/heat. Other M1 must be 0 | Same source pp. 21–33 |
+| Meter arithmetic | Preset meter addresses must match tables; absent meters suppress associated pages. Sockets sum 002+003; ‘other’ subtracts measured branches from total. `M1=6` shares meter 004 with percentages summing 1; `M1=7` splits gas using supplier coefficient | Same source pp. 5–19; setup-specific examples, not installed values |
+| Software pages | Up to 9 page Modules; `1..9` measurement/load display and 10 settings. Six signed/add/subtract inputs, coefficient, icon/unit; load pages specify actuator priority and single/three-phase selection | Same source pp. 34–36 |
 
 ## Observed behavior and corroboration
 
@@ -221,17 +257,22 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Physical M1 and M2 select the separate published preset tables; never activate both preset matrices simultaneously. `M1=9` exists in firmware but has no retained physical procedure. For pulse conversion, normalize meter pulses through 3522N according to its own instructions, which are unexamined here; volume-to-energy coefficients 0.01..100(default 1) require supplier/system data (MQ01014-a-EN pp. 5–19).
+
+In Suite, enable pages, select Measurement or Load display, assign first signed value and up to five further additions/subtractions; require at least one active operation. Set coefficient use/value, icon and unit or load priority/phase. Slot `10` enables settings. The source’s circuit/component labels contain copy errors: several legends shift interface/display descriptions and ‘F22’ appears where the prose identifies F522. Consult the exact component instructions rather than wiring from those label errors (pp. 23–36).
 
 ## Source reconciliation
 
-The technical sheet names H4710, 067205 and LN4710 and prints the Arnould reference as 064171; the canonical catalogue records 64171. The reference-format discrepancy is retained rather than silently normalized.
+The source prints Arnould 064171 while catalogue 64171 lacks the leading zero; identity remains established with the formatting difference visible. Its final three pages use the placeholder MQ00XYZ-a-EN footer, yet continue the same dated product sheet. Firmware 10Modules agree with source nine display pages plus settings. Generic K byte range and physical decimal coefficient are preserved separately without inventing a conversion rule.
+
+Firmware `405` declares ten Modules: slots `1..9` offer Measurement 104 and Load 463 alternatives; slot `10` designates Settings 106. Virgin `524` covers slots `1..9` only. No slot selectors or conversions are stored. Firmware M 1 permits `0..9`, but the published physical table enumerates `1..8`; M 1=9 remains undocumented. M 2 permits `0..6` and the sheet enumerates 1..6. Measurement 104 permits six signed/added/subtracted input addresses, with at least one operation enabled. K high/low form `1..10000` with boundary-byte constraints; defaults 0/100 encode 100, whereas the sheet describes a physical coefficient 1 and range 0.01..100. A scaling relationship is suggested but not established by a stored conversion. Settings threshold high/low combine `0..65535`; zero meansOFF in the reusable schema even though THRESHOLD_USE defaults enabled. Do not infer nine physical sensors or automatic Object selection from nine page slots.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- The exact 3522N calibration, Energy Data Logger and load-central-unit instructions and energy display user manual remain unexamined.
+- `M1=9`, runtime page/Object selection and coefficient scaling need the applicable software implementation; no observation supplies them.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -243,3 +284,5 @@ The technical sheet names H4710, 067205 and LN4710 and prints the Arnould refere
 
 - `H4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710); SHA-256 `b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be`.
 - `LN4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710); SHA-256 `3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0048)
