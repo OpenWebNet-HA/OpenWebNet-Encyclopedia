@@ -11936,6 +11936,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-t9523g-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: T9523G manufacturer device documentation
+  media_type: application/pdf
+  filename: T9523G.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 855334
+  sha256: 1c12ae9dd5b66a58d6ab3fc18be1ec15c007c32a82b5d03b400ffdce891488bb
+  source_url: https://dar.bticino.it/asset/Documents/T9523G.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1c/12/1c12ae9dd5b66a58d6ab3fc18be1ec15c007c32a82b5d03b400ffdce891488bb.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1c/12/1c12ae9dd5b66a58d6ab3fc18be1ec15c007c32a82b5d03b400ffdce891488bb.pdf
+  language:
+  - mul
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-tisferadesign-readme-v4-20261005
   kind: documentation
   publisher: BTicino / Legrand
