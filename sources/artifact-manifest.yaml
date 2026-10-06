@@ -3328,6 +3328,26 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-f01124fr-01-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F01124FR-01 manufacturer device documentation
+  media_type: application/pdf
+  filename: F01124FR-01.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 1471912
+  sha256: e2c69a12461a618efe3eb2c0a5553cd783286a3eb0d98df80374af125bf2c7d8
+  source_url: https://assets.legrand.com/pim/NP-FT-GT/F01124FR-01.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e2/c6/e2c69a12461a618efe3eb2c0a5553cd783286a3eb0d98df80374af125bf2c7d8.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e2/c6/e2c69a12461a618efe3eb2c0a5553cd783286a3eb0d98df80374af125bf2c7d8.pdf
+  language:
+  - fr
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f01715en-01-20261003
   kind: documentation
   publisher: BTicino / Legrand
