@@ -7,7 +7,7 @@
 | [OWN-DEV-0092](../definitions/own-dev-0092-stop-go-btest.md) | `F80/SGB` | Stop&Go Btest | Legacy reclosure plus 56-day Btest; six-hour activation timing |
 | [OWN-DEV-0093](../definitions/own-dev-0093-stop-go-plus.md) | `F80/SGP` | Stop&Go Plus | Fault monitoring; 30-minute recovery and 24-hour automatic-restoration limit |
 | [OWN-DEV-0096](../definitions/own-dev-0096-pulses-counter-interface.md) | `3522`, `003554` | Pulses counter interface | SCS pulse accounting; clock-dependent history and physical multiplier matrix |
-| [OWN-DEV-0120](../definitions/own-dev-0120-three-input-electricity-meter.md) | `F520`, `003555` | Three-input electricity meter | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0120](../definitions/own-dev-0120-three-input-electricity-meter.md) | `F520`, `003555` | Three-input electricity meter | Three toroid inputs, stored energy history and distinct firmware/address scopes |
 | [OWN-DEV-0121](../definitions/own-dev-0121-load-management-central-unit.md) | `F521`, `003557` | Load management central unit | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0122](../definitions/own-dev-0122-load-actuator-current-sensor.md) | `F522`, `003558` | Load actuator with current sensor | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0123](../definitions/own-dev-0123-load-management-automation-actuator.md) | `F523`, `003559` | Load management and automation actuator | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

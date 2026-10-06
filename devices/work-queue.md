@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 100 |
-| reviewed | 110 |
+| review-ready | 90 |
+| reviewed | 120 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 2245 |  Comando unico MYHOME 3 moduli | 3 | review-ready | OWN-DEV-0111 | partial | complete | complete | pending | - |
-| normal | 2247 | Comando-Attuatore MYHOME Luci  | 3 | review-ready | OWN-DEV-0112 | partial | complete | complete | pending | - |
-| normal | 2248 | Comando-Attuatore MYHOME Tapparelle | 3 | review-ready | OWN-DEV-0113 | partial | complete | complete | pending | - |
-| normal | 2272 | Adv - command white | 3 | review-ready | OWN-DEV-0114 | partial | complete | complete | pending | - |
-| normal | 2273 | Adv - command advanced white | 3 | review-ready | OWN-DEV-0115 | partial | complete | complete | pending | - |
-| normal | 2276 | Adv - voice assistant Amazon | 3 | review-ready | OWN-DEV-0116 | partial | complete | complete | pending | - |
-| normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
-| normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
-| normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | 2 | review-ready | OWN-DEV-0120 | partial | complete | complete | pending | - |
 | normal | 1162 | Load management central unit | 2 | review-ready | OWN-DEV-0121 | partial | complete | complete | pending | - |
 | normal | 1163 | Actuator 16A with current sensor - 1 DIN | 2 | review-ready | OWN-DEV-0122 | partial | complete | complete | pending | - |
 | normal | 1164 | Actuator 16A - 1 DIN | 2 | review-ready | OWN-DEV-0123 | partial | complete | complete | pending | - |
@@ -202,6 +192,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1130 | Stereo control | OWN-DEV-0100 |
 | 1147 | Local Display | OWN-DEV-0018 |
 | 1156 | DIN - Switch  8 x 16 A - 230V | OWN-DEV-0101 |
+| 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | OWN-DEV-0120 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
 | 1190 | Touch control | OWN-DEV-0019 |
 | 1340 | Multimedia Touch Screen | OWN-DEV-0102 |
@@ -235,6 +226,15 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
 | 2242 | Add-on SCS thermostat | OWN-DEV-0109 |
 | 2243 | Comando unico MYHOME 2 moduli | OWN-DEV-0110 |
+| 2245 |  Comando unico MYHOME 3 moduli | OWN-DEV-0111 |
+| 2247 | Comando-Attuatore MYHOME Luci  | OWN-DEV-0112 |
+| 2248 | Comando-Attuatore MYHOME Tapparelle | OWN-DEV-0113 |
+| 2272 | Adv - command white | OWN-DEV-0114 |
+| 2273 | Adv - command advanced white | OWN-DEV-0115 |
+| 2276 | Adv - voice assistant Amazon | OWN-DEV-0116 |
+| 2307 | Command Device 2M Light Now | OWN-DEV-0117 |
+| 2309 | Acutator/Command Light Light Now | OWN-DEV-0118 |
+| 2311 | Command Device 3M Light Now | OWN-DEV-0119 |
 | 2321 | Classe 300X | OWN-DEV-0050 |
 
 ## Workflow

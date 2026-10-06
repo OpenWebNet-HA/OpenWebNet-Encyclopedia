@@ -31,15 +31,26 @@ This one-module DIN electricity meter measures instantaneous power and accumulat
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1160` | `F520` | `Bus meter with memory 3-inputs for toroids - 1 DIN` | `1` | `5` | `1` |  | `0` | `0` | `BTicino_Undefined_3 inputs Energy meter` |
+| `1894` | `003555` | `Bus meter with memory 3-inputs for toroids - 1 DIN` | `2` | `5` | `1` |  | `0` | `0` |  |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Energy/load functions and installation topology: printed/PDF pp. 74-80, 90, 96, 101. No exact 3456/F450 match; no rating transferred to those products. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME Technical Guide.pdf) |
+| `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | F520 energy/storage and server topology: printed/PDF pp. 75-76, 80, 90, 96, 101; adjacent F521 context does not establish F520 load-actuator ratings. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 | `ST-00001810-EN.pdf` | Technical Sheet ST-00001810-EN | `ST-00001810-EN; 28/05/2024` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/4b/52/4b52a9d26bba3549782f9c65e41c89acaafe645b07e46054e1214a84e47ffcf1.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00001810-EN.pdf) |
-| `U4724E.pdf` | Instruction Use U4724E | `U4724E; 05/24-01 PC` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/11/7e/117e45fbbbd1c684aa08b98cba3485ac14cab079e94623f82941c321e1a06000.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4724E.pdf) |
-| `F520-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-3; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/61/e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F520&include_technical=1) |
+| `U4724E.pdf` | Instruction Use U4724E | `U4724E; 05/24-01 PC` | English ratings, wiring, LED indicators and erase instructions in four-page original; other translated wording not fully reconciled | [Archived original](https://archive.openwebnet-ha.org/sha256/11/7e/117e45fbbbd1c684aa08b98cba3485ac14cab079e94623f82941c321e1a06000.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4724E.pdf) |
+| `F520-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Complete exact-reference export: commercial/EAN and all classification fields; linked documents inventoried separately, not automatically incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/e4/61/e461d606f9422c0eb12a1067e74e1e6392675356acd35add4f062be073bb56f8.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F520&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1160` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MQ00358_d_EN.pdf` | Historical exact F520 technical sheet | 01/08/2016 | Complete three-page English sheet; current/history retention, toroid orientation and physical/software address scope reconciled with 2024 sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/1e/dd/1eddc8dd65584cb4014e8e8f7b4034195b347714e190fa5d2f144e3b76265216.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/MQ00358_d_EN.pdf) |
+| `U4724D.pdf` | Historical exact F520 installation instructions | U4724D-01PC-16W36 | Four-page original; English ratings, wiring, LED and erase instructions inspected; additional translations not independently reconciled | [Archived original](https://archive.openwebnet-ha.org/sha256/86/d5/86d53f46d3a050b221ea3b5c1233095bc92eb063d3f89b61de58630363bd451e.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/U4724D.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -55,7 +66,6 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Historical storage | `hourly: 12 months; daily: 2 years; monthly: 12 years` | `ST-00001810-EN` printed/PDF pp. 1-4 |
 | Toroid accessory | `3523; one supplied` | `ST-00001810-EN` printed/PDF pp. 1-4 |
 | Mains protection | `<=16 A thermal magnetic circuit breaker` | `ST-00001810-EN` printed/PDF pp. 1-4 |
-
 
 ### Publisher export attributes
 
@@ -79,8 +89,6 @@ These are the captured publisher classification values for the named variants. T
 
 ### Published status indicators
 
-
-
 | State | LED indication | Source |
 | --- | --- | --- |
 | not configured | `orange/green 128 ms/128 ms` | Exact technical sheet, indicator table in Documentation |
@@ -100,6 +108,19 @@ These are the captured publisher classification values for the named variants. T
 | Main item model / `modobj` | `4` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `4` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -110,6 +131,12 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -132,18 +159,6 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue mode | Evidence |
-| --- | --- | --- | --- |
-| `235` | Virtual Configuration | `1` | Association key `1` |
-| `235` | Advanced Configuration | `2` | Association key `2` |
-| `235` | Physical configuration | `0` | Association key `3` |
-| `736` | Virtual Configuration | `1` | Association key `1` |
-| `736` | Advanced Configuration | `2` | Association key `2` |
-| `736` | Physical configuration | `0` | Association key `3` |
-
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
-
 ### Published physical metering selectors
 
 
@@ -153,6 +168,20 @@ No connection associations are stored for these firmware definitions. This does 
 | Address | `1..127` | software address `0..127`; catalogue restrictions separately tabulated |
 | Toroid direction | `T=0:orientation independent; T=1:directional` | same two documented direction choices |
 | Clock | system date/time required | absence prevents historical saving, not instantaneous measurement |
+
+### Complete catalogue mode and connection associations
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `235` | Physical configuration | `0` | Canonical firmware/mode association |
+| `235` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `235` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `736` | Physical configuration | `0` | Canonical firmware/mode association |
+| `736` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `736` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -186,6 +215,10 @@ Catalogue Object key `469` maps to external Object `198`.
 | --- | --- | --- | --- |
 | `A123` | `0..127` | `0` | Address; Energy Management A123 Address (0-255) |
 | `TOROID_DIRECTION` | `0` = Disabled; `1` = Enabled | `0` | Toroid direction management |
+
+### Semantic review findings
+
+Both firmware definitions have three Object `198` metering placements and no Virgin association. Wildcard firmware `235` has A1 domain `0..2` and no firmware T field; firmware `736` has A1 `0..1` and a direction field. Its A1 description still says 0-2; the actual range is preserved. The reusable two-field Object carries address `0..127` and direction for each channel; no observed conversion from physical digit selectors is inferred. Catalogue defaults do not authorize physical A3-Ta zero. Historical and current documents agree on history/time prerequisites but differ in mains marking, setup tools and server scope.
 
 ## Conditions, filters, and conversions
 
@@ -1003,7 +1036,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `198` - Energy metering | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -1024,16 +1056,27 @@ The retained current sheet, multilingual instructions, publisher export and June
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MyHOME Technical Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
+| `MyHOME-Technical-Guide.pdf` | June 2025 shared energy guide: F520 storage/server and consumption topology pp. 75-76, 80, 90, 96, 101; adjacent products remain separately scoped. |
 | `ST-00001810-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `U4724E.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `F520-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
+| `MQ00358_d_EN.pdf` | Complete three-page English sheet; current/history retention, toroid orientation and physical/software address scope reconciled with 2024 sheet |
+| `U4724D.pdf` | Four-page original; English ratings, wiring, LED and erase instructions inspected; additional translations not independently reconciled |
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Historical mains and servers | 2016 instructions mark `230 V` and show C16 protection; current sheet gives `110..240 Vac` with `110..230 V` diagram. Current server names do not retroactively establish older-hardware mains or compatibility scope | `U4724D` pp. 1-4; `MQ00358_d_EN` pp. 1-3; `ST-00001810-EN` pp. 1-4 |
+| Catalogue firmware revision | Wildcard firmware `235`: A1 `0..2`, no firmware T field. Firmware `736`, version `3.0`, build `0`: A1 `0..1` although description still says 0-2, plus T `0..1`. Both retain three reusable Object `198` channels; no physical digit-to-field encoding is inferred | Canonical firmware and field tables |
+| System scope | Guide gives up to 42 F520 meters, three channels each (126), alongside separate F521 line 127. F460/HOMETOUCH and Classe 300EOS are alternative server arrangements; HOMETOUCH is not usable with the EOS server | June 2025 guide pp. 75-76, 80 |
+| Apps and history | Guide p. 75 names Home+Control for consumption display; p. 101 names Home+Project. Stored history requires date/time distribution; instantaneous metering is distinct from preservation on bus loss below `21 V` | Guide pp. 75, 101; F520 technical sheets |
 
 ## Evidence limits and open work
 
 Installed firmware, time distribution, retention under bus loss, and diagnostic/energy behavior are not yet captured; publisher-specific Legrand instructions and current historical-guide compatibility are incomplete.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
+
+Exact Legrand `003555` instructions were not found in manufacturer discovery; catalogue identity is established. Linked F520 brochures/guide editions beyond retained sources remain unexamined. Historical and current mounting originals were checked for English technical instructions and diagrams; all translated wording is not independently reconciled.
 
 ## Sources
 
@@ -1045,3 +1088,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0111-0120-2026-10-06.md#own-dev-0120)

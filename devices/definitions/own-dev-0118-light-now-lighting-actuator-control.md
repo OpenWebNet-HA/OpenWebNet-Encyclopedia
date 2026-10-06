@@ -32,16 +32,27 @@ This Light Now device combines two independent lighting relays with local and co
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `2663` | `Y4672M2L` | `Acutator/Command Light Light Now` | `1` | `22` | `1` |  | `0` | `0` | `Actuator/Command Light Cube` |
+| `2664` | `MX5230` | `Acutator/Command Light Light Now` | `2` | `23` | `1` |  | `0` | `0` | `Actuator/Command Light Eden Park` |
+| `2688` | `AA5230` | `Acutator/Command Light Light Now` | `2` | `11` | `1` |  | `0` | `0` | `Actuator/command light Arteor Advance Slender` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE14827AA.pdf` | Instruction Use LE14827AA | `LE14827AA; 07/24-02 PC` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14827AA.pdf) |
-| `ST-00002500-EN.pdf` | Technical Sheet ST-00002500-EN | `ST-00002500-EN; 30/04/2026` | Exact-product specifications, operating/configuration material and source limitations; retained 7-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/0c/7d/0c7dbd5028ce09a64c3c79e4d69f4f610455d142088885a847b37719b0bf8065.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002500-EN.pdf) |
-| `Y4672M2L-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-5; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/d3/54/d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-Y4672M2L&include_technical=1) |
-| `ST-00002122-EN.pdf` | System compatibility sheet | `ST-00002122-EN; 21/10/2024` | Exact Y/MX controls and actuator compatibility with the named HomeTouch system: printed/PDF pp. 8, 10. Retained complete 20-page compatibility inventory; other entries do not establish this Device’s diagnostics. | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002122-EN.pdf) |
+| `LE14827AA.pdf` | Instruction Use LE14827AA | `LE14827AA; 07/24-02 PC` | English ratings/instructions, product labels and mounting diagrams inspected on PDF pp. 1-3; other translations not comprehensively reconciled | [Archived original](https://archive.openwebnet-ha.org/sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14827AA.pdf) |
+| `ST-00002500-EN.pdf` | Technical Sheet ST-00002500-EN | `ST-00002500-EN; 30/04/2026` | Complete English sheet pp. 1-7: ratings/load table, addressing and physical modes, no-neutral setup, timing and protected connection diagram | [Archived original](https://archive.openwebnet-ha.org/sha256/0c/7d/0c7dbd5028ce09a64c3c79e4d69f4f610455d142088885a847b37719b0bf8065.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002500-EN.pdf) |
+| `Y4672M2L-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Complete exact-reference export: commercial/EAN and all classification fields; linked documents inventoried separately, not automatically incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/d3/54/d354b2ac5c865733d32913efb19b1a780f0f6feeeaecd6f1c900be5b6623a957.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-Y4672M2L&include_technical=1) |
+| `ST-00002122-EN.pdf` | System compatibility sheet | `ST-00002122-EN; 21/10/2024` | Classe 300EOS with Netatmo 344845/344885 compatibility: exact Y/MX entries printed/PDF p. 8 and cross-line control entries p. 10. Retained complete 20-page compatibility inventory; other entries do not establish this Device’s diagnostics. | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002122-EN.pdf) |
 | `Light-Now-2026-2M-catalogue.pdf` | English Light Now commercial catalogue | `AD-EXLHTNW26C/GB/2M; 01/2026` | Y4652M2/Y4652M3 controls and Y4672M2L actuator: printed pp. 84-85, 90 / PDF pp. 86-87, 92. Catalogue inventory reconciled with the exact technical sheets. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/86/06868c27aec52afc42273d4fd94d8a28efdd6c7e0cddcebd5316c45174438dd9.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2026-02/Light%20Now%20catalogue%202%20MODULES%202026.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `2309` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `ST-00001843-EN.pdf` | Historical exact lighting-actuator sheet | 18/09/2024 | Complete seven-page original; supply/load/mode/no-neutral instructions and LED revision differences reconciled against ST-00002500-EN | [Archived original](https://archive.openwebnet-ha.org/sha256/fa/3a/fa3a3da27cb7374249180647a33b1b3486c874be1346dcf898052727f17c9c49.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001843-EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -62,7 +73,6 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Protection | `10 A thermal magnetic circuit breaker` | `ST-00002500-EN` printed/PDF pp. 1-7 |
 | LED brightness | `30%, 0%, 100%, 60% default; held-button steps every 2 s` | `ST-00002500-EN` printed/PDF pp. 1-7 |
 | Y / MX load LEDs | `Y: blue ON, white OFF; MX: purple ON, blue OFF; matching flash color when unconfigured` | `ST-00002500-EN` printed/PDF pp. 1-7 |
-
 
 ### Publisher export attributes
 
@@ -129,6 +139,18 @@ These are the captured publisher classification values for the named variants. T
 | Main item model / `modobj` | `143` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `3` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `143` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -138,6 +160,12 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -192,15 +220,6 @@ The active firmware has two actuator Modules, four command Modules and one user-
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue mode | Evidence |
-| --- | --- | --- | --- |
-| `869` | Virtual Configuration | `1` | Association key `1` |
-| `869` | Advanced Configuration | `2` | Association key `2` |
-| `869` | Physical configuration | `0` | Association key `3` |
-
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
-
 ### Published remote/control selector modes
 
 
@@ -230,6 +249,17 @@ No connection associations are stored for these firmware definitions. This does 
 | Two loads | `M1=CEN; M2=0,0/I,SLA,PUL,1..4; A1,A2,PL1,PL2=1..9` | two local relays, p. 3 |
 | Left local / right remote | `A2=1..9,AMB,GR,GEN; PL2=1..9 where required` | separate actuator and right-command selectors, p. 4 |
 
+### Complete catalogue mode and connection associations
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `869` | Physical configuration | `0` | Canonical firmware/mode association |
+| `869` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `869` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
 ## Firmware-scoped configuration
 
 Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
@@ -255,7 +285,7 @@ The following domains and defaults describe reusable Object definitions in the c
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
 | `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
-| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON/OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
 | `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
 | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
 | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
@@ -274,12 +304,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `410` - Light control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON`/`OFF`) |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON/OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON/OFF`) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; installation and destination levels are separately scoped fields |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
@@ -298,7 +327,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -314,7 +342,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -328,7 +355,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -339,14 +365,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `426` - Staircase light control
 
@@ -355,7 +379,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -367,7 +390,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `463` - Load control actuator visualization
 
 Catalogue Object key `492` maps to external Object `463`.
@@ -376,7 +398,6 @@ Catalogue Object key `492` maps to external Object `463`.
 | --- | --- | --- | --- |
 | `PRIORITY` | `0..63` | `1` | Priority |
 | `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
-
 
 ### Object `143` - User interface settings for command
 
@@ -387,7 +408,6 @@ Catalogue Object key `644` maps to external Object `143`.
 | `LED_LEVEL_COMMANDS` | `0` = `OFF`; `1` = Minimum level; `2` = Medium level; `3` = Maximum level | `2` | LED intensity level |
 | `ENABLE_DISABLE_LED_COMMAND` | `0` = All Led Enabled; `1` = Presence Led Enabled - State Update Led Disable; `2` = Presence Led Disable - State Update Led Enable; `3` = All Led Disable | `0` | Enable-Disable LED |
 | `PRESENCE_LED_INTENSITY_LEVEL_COMMAND` | `0` = Standard level; `1` = High intensity level | `0` | Presence LED intensity level |
-
 
 ### Object `174` - Shutter control (3 slots)
 
@@ -437,7 +457,7 @@ The following Objects are permitted by an associated Virgin Object but lack a di
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON`/`OFF` regulation) |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON/OFF` regulation) |
 | `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
 | `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
@@ -447,7 +467,7 @@ The following Objects are permitted by an associated Virgin Object but lack a di
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset `BI`; `5` = Reset `TRI`; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
 | `OUT_AUX_CH` | `1..15` | `1` | `AUX` channel |
 | `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
 
@@ -455,7 +475,7 @@ The following Objects are permitted by an associated Virgin Object but lack a di
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON/OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type; installation and destination levels are separately scoped fields |
 | `A` | `0..9` | `0` | Area |
 | `PF` | `0..9` | `0` | Audio point |
@@ -478,6 +498,91 @@ The following Objects are permitted by an associated Virgin Object but lack a di
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 
+### Object `413` - Scenario module control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0` = `A=0` `PL=0`; `1` = `A=0` `PL=1`; `2` = `A=0` `PL=2`; `3` = `A=0` `PL=3`; `4` = `A=0` `PL=4`; `5` = `A=0` `PL=5`; `6` = `A=0` `PL=6`; `7` = `A=0` `PL=7`; `8` = `A=0` `PL=8`; `9` = `A=0` `PL=9`; `10` = `A=0` `PL=10`; `11` = `A=0` `PL=11`; `12` = `A=0` `PL=12`; `13` = `A=0` `PL=13`; `14` = `A=0` `PL=14`; `15` = `A=0` `PL=15`; `16` = `A=1` `PL=0`; `17` = `A=1` `PL=1`; `18` = `A=1` `PL=2`; `19` = `A=1` `PL=3`; `20` = `A=1` `PL=4`; `21` = `A=1` `PL=5`; `22` = `A=1` `PL=6`; `23` = `A=1` `PL=7`; `24` = `A=1` `PL=8`; `25` = `A=1` `PL=9`; `26` = `A=1` `PL=10`; `27` = `A=1` `PL=11`; `28` = `A=1` `PL=12`; `29` = `A=1` `PL=13`; `30` = `A=1` `PL=14`; `31` = `A=1` `PL=15`; `32` = `A=2` `PL=0`; `33` = `A=2` `PL=1`; `34` = `A=2` `PL=2`; `35` = `A=2` `PL=3`; `36` = `A=2` `PL=4`; `37` = `A=2` `PL=5`; `38` = `A=2` `PL=6`; `39` = `A=2` `PL=7`; `40` = `A=2` `PL=8`; `41` = `A=2` `PL=9`; `42` = `A=2` `PL=10`; `43` = `A=2` `PL=11`; `44` = `A=2` `PL=12`; `45` = `A=2` `PL=13`; `46` = `A=2` `PL=14`; `47` = `A=2` `PL=15`; `48` = `A=3` `PL=0`; `49` = `A=3` `PL=1`; `50` = `A=3` `PL=2`; `51` = `A=3` `PL=3`; `52` = `A=3` `PL=4`; `53` = `A=3` `PL=5`; `54` = `A=3` `PL=6`; `55` = `A=3` `PL=7`; `56` = `A=3` `PL=8`; `57` = `A=3` `PL=9`; `58` = `A=3` `PL=10`; `59` = `A=3` `PL=11`; `60` = `A=3` `PL=12`; `61` = `A=3` `PL=13`; `62` = `A=3` `PL=14`; `63` = `A=3` `PL=15`; `64` = `A=4` `PL=0`; `65` = `A=4` `PL=1`; `66` = `A=4` `PL=2`; `67` = `A=4` `PL=3`; `68` = `A=4` `PL=4`; `69` = `A=4` `PL=5`; `70` = `A=4` `PL=6`; `71` = `A=4` `PL=7`; `72` = `A=4` `PL=8`; `73` = `A=4` `PL=9`; `74` = `A=4` `PL=10`; `75` = `A=4` `PL=11`; `76` = `A=4` `PL=12`; `77` = `A=4` `PL=13`; `78` = `A=4` `PL=14`; `79` = `A=4` `PL=15`; `80` = `A=5` `PL=0`; `81` = `A=5` `PL=1`; `82` = `A=5` `PL=2`; `83` = `A=5` `PL=3`; `84` = `A=5` `PL=4`; `85` = `A=5` `PL=5`; `86` = `A=5` `PL=6`; `87` = `A=5` `PL=7`; `88` = `A=5` `PL=8`; `89` = `A=5` `PL=9`; `90` = `A=5` `PL=10`; `91` = `A=5` `PL=11`; `92` = `A=5` `PL=12`; `93` = `A=5` `PL=13`; `94` = `A=5` `PL=14`; `95` = `A=5` `PL=15`; `96` = `A=6` `PL=0`; `97` = `A=6` `PL=1`; `98` = `A=6` `PL=2`; `99` = `A=6` `PL=3`; `100` = `A=6` `PL=4`; `101` = `A=6` `PL=5`; `102` = `A=6` `PL=6`; `103` = `A=6` `PL=7`; `104` = `A=6` `PL=8`; `105` = `A=6` `PL=9`; `106` = `A=6` `PL=10`; `107` = `A=6` `PL=11`; `108` = `A=6` `PL=12`; `109` = `A=6` `PL=13`; `110` = `A=6` `PL=14`; `111` = `A=6` `PL=15`; `112` = `A=7` `PL=0`; `113` = `A=7` `PL=1`; `114` = `A=7` `PL=2`; `115` = `A=7` `PL=3`; `116` = `A=7` `PL=4`; `117` = `A=7` `PL=5`; `118` = `A=7` `PL=6`; `119` = `A=7` `PL=7`; `120` = `A=7` `PL=8`; `121` = `A=7` `PL=9`; `122` = `A=7` `PL=10`; `123` = `A=7` `PL=11`; `124` = `A=7` `PL=12`; `125` = `A=7` `PL=13`; `126` = `A=7` `PL=14`; `127` = `A=7` `PL=15`; `128` = `A=8` `PL=0`; `129` = `A=8` `PL=1`; `130` = `A=8` `PL=2`; `131` = `A=8` `PL=3`; `132` = `A=8` `PL=4`; `133` = `A=8` `PL=5`; `134` = `A=8` `PL=6`; `135` = `A=8` `PL=7`; `136` = `A=8` `PL=8`; `137` = `A=8` `PL=9`; `138` = `A=8` `PL=10`; `139` = `A=8` `PL=11`; `140` = `A=8` `PL=12`; `141` = `A=8` `PL=13`; `142` = `A=8` `PL=14`; `143` = `A=8` `PL=15`; `144` = `A=9` `PL=0`; `145` = `A=9` `PL=1`; `146` = `A=9` `PL=2`; `147` = `A=9` `PL=3`; `148` = `A=9` `PL=4`; `149` = `A=9` `PL=5`; `150` = `A=9` `PL=6`; `151` = `A=9` `PL=7`; `152` = `A=9` `PL=8`; `153` = `A=9` `PL=9`; `154` = `A=9` `PL=10`; `155` = `A=9` `PL=11`; `156` = `A=9` `PL=12`; `157` = `A=9` `PL=13`; `158` = `A=9` `PL=14`; `159` = `A=9` `PL=15`; `160` = `A=10` `PL=0`; `161` = `A=10` `PL=1`; `162` = `A=10` `PL=2`; `163` = `A=10` `PL=3`; `164` = `A=10` `PL=4`; `165` = `A=10` `PL=5`; `166` = `A=10` `PL=6`; `167` = `A=10` `PL=7`; `168` = `A=10` `PL=8`; `169` = `A=10` `PL=9`; `170` = `A=10` `PL=10`; `171` = `A=10` `PL=11`; `172` = `A=10` `PL=12`; `173` = `A=10` `PL=13`; `174` = `A=10` `PL=14`; `175` = `A=10` `PL=15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+### Object `414` - Scheduled scenario (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+### Object `415` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON/OFF` regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+### Object `417` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset `BI`; `5` = Reset `TRI`; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+### Object `419` - Sound diffusion control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON/OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `462` - Open lock command on session (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+### Semantic review findings
+
+The two Object `6` actuator Modules, four command positions and UI Module account for seven logical Modules and two physical relays. Three-slot Object `174` starts at slot `4` only. LOCAL_BUTTON filter `4041` excludes default `0`; zero crossing, relay reset state and ten groups remain separately scoped. Seven Virgin-only candidates add 32 fields. Source load units, no-neutral commissioning, LED revision changes and exported current/temperature attributes remain source-specific.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -495,7 +600,7 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | `869` | `6` | `4038` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
 | `869` | `6` | `4039` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
 | `869` | `6` | `4040` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
-| `869` | `6` | `4041` | `LOCAL_BUTTON` | `1` = `ON`/`OFF`; `15` = Pushbutton; `18` = Timed `ON`; `9` = `ON` - `OFF` | `0` | Local button modality; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `869` | `6` | `4041` | `LOCAL_BUTTON` | `1` = `ON/OFF`; `15` = Pushbutton; `18` = Timed `ON`; `9` = `ON` - `OFF` | `0` | Local button modality; reusable default `0` is outside this subset; filter supplies no replacement default |
 | `869` | `411` | `4050` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
 | `869` | `412` | `4051` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
 | `869` | `416` | `4052` | `MODE` | `0` = Press/release only; `1` = Press/hold/release (entire reusable range retained) | `0` | Modality |
@@ -543,7 +648,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `174` - Shutter control (3 slots) | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `410` - Light control | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -552,7 +656,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-The control and actuator modules connect through their dedicated connector. For one local load configure `A1`, `PL1`, `M1`, with `A2=PL2=M2=0`. Two local loads use `M1=CEN` and the second mode selector. For a local left load plus remote right command, configure the actuator side and remote `A2/PL2/M2` separately. Physical actuator modes include cyclic, split `ON`/`OFF`, `PUL` and `1..4`-minute delayed slave `OFF`; remote timed-`ON` has separate timing values. Missing neutral causes flashing and blocks operation unless the product is commissioned for no-neutral use. The sheet gives Suite configuration or three presses of the illustrated key within five minutes of power-on; no-neutral load derating is referenced but not supplied as a separate unambiguous numeric table. Home+Project offers additional virtual functions.
+The control and actuator modules connect through their dedicated connector. For one local load configure `A1`, `PL1`, `M1`, with `A2=PL2=M2=0`. Two local loads use `M1=CEN` and the second mode selector. For a local left load plus remote right command, configure the actuator side and remote `A2/PL2/M2` separately. Physical actuator modes include cyclic, split `ON/OFF`, `PUL` and `1..4`-minute delayed slave `OFF`; remote timed-`ON` has separate timing values. Missing neutral causes flashing and blocks operation unless the product is commissioned for no-neutral use. The sheet gives Suite configuration or three presses of the illustrated key within five minutes of power-on; no-neutral load derating is referenced but not supplied as a separate unambiguous numeric table. Home+Project offers additional virtual functions.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
@@ -567,17 +671,31 @@ Y4672M2L, MX5230 and AA5230 are explicit catalogue identities. The exact shared 
 | `LE14827AA.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `ST-00002500-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `Y4672M2L-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
-| `ST-00002122-EN.pdf` | Server/gateway ecosystem compatibility: exact Y/MX entries printed/PDF pp. 8, 10; product commissioning compatibility is not protocol support for every installed release. |
+| `ST-00002122-EN.pdf` | Classe 300EOS with Netatmo compatibility p. 8 excludes physically configured devices; p. 10 lists exact multifunction controls, but not Y4672M2L/MX5230 cross-line commissioning. |
 | `Light-Now-2026-2M-catalogue.pdf` | Exact Y references and function/cover inventory: printed pp. 84-85, 90 / PDF pp. 86-87, 92. Commercial catalogue does not replace firmware domains. |
-
+| `ST-00001843-EN.pdf` | Complete seven-page original; supply/load/mode/no-neutral instructions and LED revision differences reconciled against ST-00002500-EN |
 
 The relation-specific restriction table explicitly identifies reusable defaults outside the permitted subset. These are catalogue inconsistencies; no replacement default is inferred. Runtime Configuration and manufacturer modes must be corroborated before selecting a substitute.
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Server and configuration boundary | The exact Y/MX references are listed on p. 8 for Classe 300EOS with Netatmo, with physically configured devices explicitly excluded. Page 10 has no exact Y4672M2L/MX5230 cross-line entry. The K4672M2L production threshold must not be transferred to Y/MX. | `ST-00002122-EN` pp. 8, 10 |
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| MX status LED revision | 2024 MX: blue `ON` / white `OFF`. 2026 MX and MX-C: purple `ON` / blue `OFF`. Y retains blue `ON` / white `OFF`; colour cannot be prescribed across all revisions | `ST-00001843-EN` p. 1; `ST-00002500-EN` p. 1 |
+| Printed load and conductor units | 2024 and 2026 sheets both retain the LED/CFL `250 A / 110 A` and conductor-area m² anomalies. Later revision does not resolve the printed units | Both sheets pp. 1, 7 |
+| Protection | Connection diagram specifies a `10 A` circuit breaker; this is separate from load-table and relay-marking limits | `ST-00002500-EN` p. 7 |
 
 ## Evidence limits and open work
 
 Manufacturer clarification is needed for LED/CFL units and maximum count, conductor units, rated currents, temperature scope, no-neutral derating and the C/L naming discrepancy. Exact AA instructions and installed-mode validation remain missing.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
+
+Publisher-linked `BRO-LHNOW2M`, `BRO-LHNOW3M`, `CAT-LHNOW3M` and `PRE-LHNOW` have not all been independently examined. The retained two-module catalogue and technical sheets support only their stated page/revision scopes. Mounting leaflets were examined for English instructions, labels and diagrams; additional translations remain unexamined.
+
+The discovered and archived `ST-00001842-EN.pdf` concerns Y4672M2S/MX5220 shutter actuators, not this lighting item; it is excluded from this dossier’s specifications. Exact server cross-line support and LED production-transition applicability remain unestablished.
 
 ## Sources
 
@@ -589,3 +707,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0111-0120-2026-10-06.md#own-dev-0118)

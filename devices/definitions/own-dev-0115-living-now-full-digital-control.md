@@ -38,14 +38,24 @@ The exact technical sheet names `KW8011`, `KM8011` and `KG8011` together; the re
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `2630` | `KW8011` | `Adv - command advanced white` | `1` | `20` | `1` |  | `0` | `0` | `Adv - command advanced white` |
+| `2631` | `KM8011` | `Adv - command advanced white` | `1` | `20` | `1` |  | `0` | `0` | `Adv - command advanced sand` |
+| `2632` | `KG8011` | `Adv - command advanced white` | `1` | `20` | `1` |  | `0` | `0` | `Adv - command advanced dark` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `ST-00000784-EN.pdf` | English FULL technical sheet | `ST-00000784-EN; 14/10/2020` | KW/KM/KG8011: variant-dependent current, layout, icons and app/Suite setup p. 1; complete function/touch-area/slot mapping p. 2. Printed/PDF pp. 1-2 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/18/8f/188f03e3a7030800cfafc12baa7b8250d40f25d96459736b0a5a766c44314170.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000784-EN.pdf) |
-| `KW8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | KW8011 only: identity, line, colour and descriptive capability pp. 1-2; physical/technical attributes pp. 3-4; publisher document inventory p. 5. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/f1/65/f165fe498237036b996aa2a26a4353ff453a63700f162f966896b0e154bc3ac8.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KW8011&include_technical=1) |
-| `KM8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | KM8011 only: identity, line, colour and descriptive capability pp. 1-2; physical/technical attributes pp. 3-4; publisher document inventory p. 5. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/5e/b9/5eb9686b608f8c10b7dac16da159c687a4fc5a94a544eb29fe06301e6de99ac3.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KM8011&include_technical=1) |
-| `KG8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | KG8011 only: identity, line, colour and descriptive capability pp. 1-2; physical/technical attributes pp. 3-4; publisher document inventory p. 5. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/25/ee25e66076affa4298dd914aeb190be60700291084bcb7662dbcab03714f1ebc.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KG8011&include_technical=1) |
+| `KW8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | Complete exact-reference export: commercial/EAN and all classification fields; linked documents inventoried separately, not automatically incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/f1/65/f165fe498237036b996aa2a26a4353ff453a63700f162f966896b0e154bc3ac8.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KW8011&include_technical=1) |
+| `KM8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | Complete exact-reference export: commercial/EAN and all classification fields; linked documents inventoried separately, not automatically incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/5e/b9/5eb9686b608f8c10b7dac16da159c687a4fc5a94a544eb29fe06301e6de99ac3.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KM8011&include_technical=1) |
+| `KG8011-publisher-product-sheet.pdf` | English publisher product export | `DATASHEET; 03.10.2026` | Complete exact-reference export: commercial/EAN and all classification fields; linked documents inventoried separately, not automatically incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/25/ee25e66076affa4298dd914aeb190be60700291084bcb7662dbcab03714f1ebc.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KG8011&include_technical=1) |
 | `KW8011-italian-product-sheet.pdf` | Italian publisher product export | `Price-list validity 01/07/2026; retrieved 03/10/2026` | KW8011 only: exact name, line, supply/current/module attribute and EAN p. 1; compatible parts on following pages. Printed/PDF pages coincide. Prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/26/47/26477524059892ef8e1fc9aaba0edae34bfba6ce4e9ef9357e64a22aa8603c56.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KW8011) |
 | `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover; URL directory is older` | Digital-control customisation, construction, mounting, Home+Project, frame/box composition and exact colour/reference lists: printed pp. 22, 50-53, 84-85 / PDF pp. 22, 50-53, 84-85. Printed edition confirmed on rear cover. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 | `Living-Now-2025-3M-catalogue.pdf` | English Living Now catalogue | `AD-EXLNW25C/GB; Edition 01/2025 printed on rear cover` | KW/KG/KM8010 and 8011 exact family/colour descriptions, functions and frame/connection compatibility printed p. 103 / PDF p. 103. The original contains the complete 144-page catalogue. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/15/e3153d42a54335de37d0ca05b7f696b3345bf2743ebe2ec78e32a1cb7ee5f47e.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2024-12/GB%20Living%20NOW%20catalogue%203%20MODULES%202025.pdf) |
@@ -91,6 +101,19 @@ MyHOME guide p. 53 and Living Now catalogue p. 103 distinguish box size from dig
 | Main item model / `modobj` | `119` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `3` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `119` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -100,6 +123,12 @@ MyHOME guide p. 53 and Living Now catalogue p. 103 distinguish box size from dig
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -132,14 +161,16 @@ Command slots `1/2/3` each permit single-slot Objects `434`, `416` and `463`. Th
 
 ## Configuration modes
 
+The exact 2020 sheet names MyHOME_Up and MyHOME_Suite. Its description also names Digital Controls for function/icon/brightness customisation; load-control configuration is explicitly MyHOME_Suite only in that revision. The retained `6/2025` system guide names Home+Project for function assignment, associated actuators and icon configuration. These are source/revision-specific workflows. The catalogue mode and connection associations above remain the implementation snapshot; no installed gateway/app/firmware compatibility is inferred from current app names. No published physical configurator setup is documented for this digital contact-mounted control.
+
+### Complete catalogue mode and connection associations
+
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `804` | Advanced Configuration | `2` | Association key `2` |
+| `804` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
-
-The exact 2020 sheet names MyHOME_Up and MyHOME_Suite. Its description also names Digital Controls for function/icon/brightness customisation; load-control configuration is explicitly MyHOME_Suite only in that revision. The retained `6/2025` system guide names Home+Project for function assignment, associated actuators and icon configuration. These are source/revision-specific workflows. The catalogue mode and connection associations above remain the implementation snapshot; no installed gateway/app/firmware compatibility is inferred from current app names. No published physical configurator setup is documented for this digital contact-mounted control.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -163,7 +194,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `463` - Load control actuator visualization
 
 Catalogue Object key `492` maps to external Object `463`.
@@ -172,7 +202,6 @@ Catalogue Object key `492` maps to external Object `463`.
 | --- | --- | --- | --- |
 | `PRIORITY` | `0..63` | `1` | Priority |
 | `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
-
 
 ### Object `434` - Simplified Light single control basic
 
@@ -190,7 +219,6 @@ Catalogue Object key `652` maps to external Object `434`.
 | `SECONDS` | `0..59` | `30` | TimeSec; Only for `MOD=4` |
 | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
-
 
 ### Object `147` - User interface settings for symbol management with led matrix
 
@@ -283,14 +311,13 @@ Catalogue Object key `655` maps to external Object `147`.
 | `BEHAVIOUR_WITH_PROXY_DISABLED` | `0` = Icons `ON` only on touch; `1` = Icons always `ON` | `0` | Behaviour with proximity disabled |
 | `LED_IN_STANDBY_OFF` | `0` = NO; `1` = YES | `0` | Led in Stand-by `OFF` |
 
-
 ### Object `436` - Dimmer Command 3 Keys
 
 Catalogue Object key `656` maps to external Object `436`.
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `COLOR_SET` | `0` = NO; `1` = YES | `0` | Color set; If value = YES, the `ON`/`OFF` key also set the colour of colored lamp |
+| `COLOR_SET` | `0` = NO; `1` = YES | `0` | Color set; If value = YES, the `ON/OFF` key also set the colour of colored lamp |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; installation and destination levels are separately scoped fields |
 | `G` | `0..255` | `1` | Main Group (`GR`/GS) |
 | `A` | `0..10` | `0` | Area |
@@ -322,7 +349,6 @@ Catalogue Object key `656` maps to external Object `436`.
 | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
 
-
 ### Object `148` - Led Brightness Settings
 
 Catalogue Object key `657` maps to external Object `148`.
@@ -332,7 +358,6 @@ Catalogue Object key `657` maps to external Object `148`.
 | `LED_BRIGHTNESS_LEVEL` | `0` = Min; `1` = Max | `0` | Led brightness level |
 | `LED_OFF_FOR_POWER_SAVE` | `0` = NO; `1` = YES | `0` | Led `OFF` for power save |
 | `G` | `0..255` | `0` | Main Group (`GR`/GS) |
-
 
 ### Object `437` - Simplified Shutter control 3 slots
 
@@ -349,7 +374,6 @@ Catalogue Object key `659` maps to external Object `437`.
 | `PRESET_NUMBER` | `1..10`; `0` = None | `0` | Preset; Shutter management preset number |
 | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
-
 
 ### Object `438` - Player command 3 slots
 
@@ -376,6 +400,179 @@ Catalogue Object key `660` maps to external Object `438`.
 | `CEN` PLUS | One command slot per assigned scenario | Each touch area activates its corresponding scenario number | Exact sheet p. 2; Object `416` |
 | Load control | One command slot per assigned role | Display enabled/disabled/overridden state; force or remove forcing; requires external load-control system | Exact sheet pp. 1-2; Object `463` |
 | Brightness | UI settings | Configured LEDs can use default or maximum level; default level is not numerically specified | `ST-00000784-EN` p. 2 |
+
+### Object `410` - Light control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON/OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON/OFF`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group  |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+
+### Object `411` - Automation control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (UP/DOWN) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group  |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+### Object `412` - Lock/unlock actuator control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Disable; `2` = Enable | `1` | Modality; mode (D/E) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group  |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+### Object `413` - Scenario module control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0` = `A=0` `PL=0`; `1` = `A=0` `PL=1`; `2` = `A=0` `PL=2`; `3` = `A=0` `PL=3`; `4` = `A=0` `PL=4`; `5` = `A=0` `PL=5`; `6` = `A=0` `PL=6`; `7` = `A=0` `PL=7`; `8` = `A=0` `PL=8`; `9` = `A=0` `PL=9`; `10` = `A=0` `PL=10`; `11` = `A=0` `PL=11`; `12` = `A=0` `PL=12`; `13` = `A=0` `PL=13`; `14` = `A=0` `PL=14`; `15` = `A=0` `PL=15`; `16` = `A=1` `PL=0`; `17` = `A=1` `PL=1`; `18` = `A=1` `PL=2`; `19` = `A=1` `PL=3`; `20` = `A=1` `PL=4`; `21` = `A=1` `PL=5`; `22` = `A=1` `PL=6`; `23` = `A=1` `PL=7`; `24` = `A=1` `PL=8`; `25` = `A=1` `PL=9`; `26` = `A=1` `PL=10`; `27` = `A=1` `PL=11`; `28` = `A=1` `PL=12`; `29` = `A=1` `PL=13`; `30` = `A=1` `PL=14`; `31` = `A=1` `PL=15`; `32` = `A=2` `PL=0`; `33` = `A=2` `PL=1`; `34` = `A=2` `PL=2`; `35` = `A=2` `PL=3`; `36` = `A=2` `PL=4`; `37` = `A=2` `PL=5`; `38` = `A=2` `PL=6`; `39` = `A=2` `PL=7`; `40` = `A=2` `PL=8`; `41` = `A=2` `PL=9`; `42` = `A=2` `PL=10`; `43` = `A=2` `PL=11`; `44` = `A=2` `PL=12`; `45` = `A=2` `PL=13`; `46` = `A=2` `PL=14`; `47` = `A=2` `PL=15`; `48` = `A=3` `PL=0`; `49` = `A=3` `PL=1`; `50` = `A=3` `PL=2`; `51` = `A=3` `PL=3`; `52` = `A=3` `PL=4`; `53` = `A=3` `PL=5`; `54` = `A=3` `PL=6`; `55` = `A=3` `PL=7`; `56` = `A=3` `PL=8`; `57` = `A=3` `PL=9`; `58` = `A=3` `PL=10`; `59` = `A=3` `PL=11`; `60` = `A=3` `PL=12`; `61` = `A=3` `PL=13`; `62` = `A=3` `PL=14`; `63` = `A=3` `PL=15`; `64` = `A=4` `PL=0`; `65` = `A=4` `PL=1`; `66` = `A=4` `PL=2`; `67` = `A=4` `PL=3`; `68` = `A=4` `PL=4`; `69` = `A=4` `PL=5`; `70` = `A=4` `PL=6`; `71` = `A=4` `PL=7`; `72` = `A=4` `PL=8`; `73` = `A=4` `PL=9`; `74` = `A=4` `PL=10`; `75` = `A=4` `PL=11`; `76` = `A=4` `PL=12`; `77` = `A=4` `PL=13`; `78` = `A=4` `PL=14`; `79` = `A=4` `PL=15`; `80` = `A=5` `PL=0`; `81` = `A=5` `PL=1`; `82` = `A=5` `PL=2`; `83` = `A=5` `PL=3`; `84` = `A=5` `PL=4`; `85` = `A=5` `PL=5`; `86` = `A=5` `PL=6`; `87` = `A=5` `PL=7`; `88` = `A=5` `PL=8`; `89` = `A=5` `PL=9`; `90` = `A=5` `PL=10`; `91` = `A=5` `PL=11`; `92` = `A=5` `PL=12`; `93` = `A=5` `PL=13`; `94` = `A=5` `PL=14`; `95` = `A=5` `PL=15`; `96` = `A=6` `PL=0`; `97` = `A=6` `PL=1`; `98` = `A=6` `PL=2`; `99` = `A=6` `PL=3`; `100` = `A=6` `PL=4`; `101` = `A=6` `PL=5`; `102` = `A=6` `PL=6`; `103` = `A=6` `PL=7`; `104` = `A=6` `PL=8`; `105` = `A=6` `PL=9`; `106` = `A=6` `PL=10`; `107` = `A=6` `PL=11`; `108` = `A=6` `PL=12`; `109` = `A=6` `PL=13`; `110` = `A=6` `PL=14`; `111` = `A=6` `PL=15`; `112` = `A=7` `PL=0`; `113` = `A=7` `PL=1`; `114` = `A=7` `PL=2`; `115` = `A=7` `PL=3`; `116` = `A=7` `PL=4`; `117` = `A=7` `PL=5`; `118` = `A=7` `PL=6`; `119` = `A=7` `PL=7`; `120` = `A=7` `PL=8`; `121` = `A=7` `PL=9`; `122` = `A=7` `PL=10`; `123` = `A=7` `PL=11`; `124` = `A=7` `PL=12`; `125` = `A=7` `PL=13`; `126` = `A=7` `PL=14`; `127` = `A=7` `PL=15`; `128` = `A=8` `PL=0`; `129` = `A=8` `PL=1`; `130` = `A=8` `PL=2`; `131` = `A=8` `PL=3`; `132` = `A=8` `PL=4`; `133` = `A=8` `PL=5`; `134` = `A=8` `PL=6`; `135` = `A=8` `PL=7`; `136` = `A=8` `PL=8`; `137` = `A=8` `PL=9`; `138` = `A=8` `PL=10`; `139` = `A=8` `PL=11`; `140` = `A=8` `PL=12`; `141` = `A=8` `PL=13`; `142` = `A=8` `PL=14`; `143` = `A=8` `PL=15`; `144` = `A=9` `PL=0`; `145` = `A=9` `PL=1`; `146` = `A=9` `PL=2`; `147` = `A=9` `PL=3`; `148` = `A=9` `PL=4`; `149` = `A=9` `PL=5`; `150` = `A=9` `PL=6`; `151` = `A=9` `PL=7`; `152` = `A=9` `PL=8`; `153` = `A=9` `PL=9`; `154` = `A=9` `PL=10`; `155` = `A=9` `PL=11`; `156` = `A=9` `PL=12`; `157` = `A=9` `PL=13`; `158` = `A=9` `PL=14`; `159` = `A=9` `PL=15`; `160` = `A=10` `PL=0`; `161` = `A=10` `PL=1`; `162` = `A=10` `PL=2`; `163` = `A=10` `PL=3`; `164` = `A=10` `PL=4`; `165` = `A=10` `PL=5`; `166` = `A=10` `PL=6`; `167` = `A=10` `PL=7`; `168` = `A=10` `PL=8`; `169` = `A=10` `PL=9`; `170` = `A=10` `PL=10`; `171` = `A=10` `PL=11`; `172` = `A=10` `PL=12`; `173` = `A=10` `PL=13`; `174` = `A=10` `PL=14`; `175` = `A=10` `PL=15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+### Object `414` - Scheduled scenario (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+### Object `415` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON/OFF` regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+### Object `417` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset `BI`; `5` = Reset `TRI`; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+### Object `418` - Open lock control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+### Object `419` - Sound diffusion control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON/OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `426` - Staircase light control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `427` - Floor call control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+### Object `462` - Open lock command on session (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+### Semantic review findings
+
+Firmware `804` has three command positions plus icon/proximity and brightness Modules. The 84 icon fields comprise 75 bitmap rows and nine animation/proximity settings; the three first-row filters exclude default `0`. RGB COLOR_SET and shutter ADDR_TYPE restrictions also exclude their defaults. Thirteen Virgin-only candidates add 78 reusable fields without a direct firmware association. Three-slot RGB/shutter/player roles cannot be stacked with three independent light functions. The 2025 guide describes shutters without preset while the 2020 sheet and 2025 Living Now catalogue retain preset/NUVO; source wording is preserved without inferring feature removal.
 
 ## Conditions, filters, and conversions
 
@@ -467,17 +664,19 @@ All exact colour variants and the retained sheet/export revisions are accounted 
 | Frame mounting terminology | Sheet says surface-mounted one-module control, export says flush-mounted; guide shows digital control on front of electrified frame over a flush box | Sheet p. 1; export p. 3; guide pp. 50-53 |
 | Digital transport | SCS contact supply/connection is established; exported voice/internet/interoperability attributes describe a system capability, not a native microphone, radio or direct IP socket | Exports pp. 3-4; guide distinguishes separate voice control |
 | Virgin membership | Virgin `521` generic allowed list is different from direct Objects of firmware `804`; no automatic conversion is established | Exact catalogue relations |
-| Preset/NUVO wording | Current English description says shutter without preset and omits NUVO, but its capability list includes NUVO/coloured lights; 2020 exact sheet and 2025 catalogue explicitly include preset/NUVO. No removal inferred | Export p. 1; exact sheet pp. 1-2; catalogue p. 103 |
+| Preset/NUVO wording | Current English description and June 2025 system guide p. 84 say shutter without preset and omit NUVO, but the export capability list includes NUVO/coloured lights; 2020 exact sheet pp. 1-2 and January 2025 catalogue p. 103 explicitly include preset/NUVO. No removal inferred | Export p. 1; exact sheet pp. 1-2; catalogue p. 103 |
 | Restricted defaults | First icon rows `32..63`, COLOR_SET `1`, shutter ADDR_TYPE `1` exclude their generic defaults `0`; no replacement defaults or runtime resolution | Filters `3852/3853/3854/3858/3843` |
 | Proximity versus IR attribute | Exact sheet establishes a proximity sensor; export IR-sensor No is a separate classification and does not negate it | Sheet p. 1; exact exports p. 3 |
 | Hue prose inconsistency | Fifth hue-low field prose names fourth high bit; range/default and separate fifth high-bit field remain literal. No guessed fix | Object `436` field definitions |
 
 ## Evidence limits and open work
 
-- Reconcile published functions with the exact firmware filter/default restrictions through inspected parameter payloads and accepted software/hardware configuration.
+- Reconcile published functions with the exact firmware filter/default restrictions through accepted software/hardware configuration; no firmware parameter-file association is stored.
 - Establish the temperature and standby-current differences, revision applicability, complete reset/update/replacement procedures and app/gateway prerequisites.
 - Corroborate active Modules/Objects, Virgin transitions, installed firmware/build, hardware/MCU revisions and source-defined behavior using sanitized captures.
 - Confirm the icon-row extra-bit semantics, accepted RGB/NUVO transport and three-slot occupancy without treating shared reusable Objects as universal support.
+
+Publisher-linked `BRO-LNOW2M`, `BRO-LNOW3M`, `CAT-LNOW2M` and other Living Now catalogue/brochure editions have not all been independently examined. Only the retained revisions and page scopes listed in Documentation support claims here; linked inventory is not evidence of every edition’s contents.
 
 ## Sources
 
@@ -493,3 +692,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - `KW8011-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KW8011` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f1/65/f165fe498237036b996aa2a26a4353ff453a63700f162f966896b0e154bc3ac8.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KW8011&include_technical=1); SHA-256 `f165fe498237036b996aa2a26a4353ff453a63700f162f966896b0e154bc3ac8`.
 - `KM8011-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KM8011` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/5e/b9/5eb9686b608f8c10b7dac16da159c687a4fc5a94a544eb29fe06301e6de99ac3.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KM8011&include_technical=1); SHA-256 `5eb9686b608f8c10b7dac16da159c687a4fc5a94a544eb29fe06301e6de99ac3`.
 - `KG8011-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KG8011` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ee/25/ee25e66076affa4298dd914aeb190be60700291084bcb7662dbcab03714f1ebc.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KG8011&include_technical=1); SHA-256 `ee25e66076affa4298dd914aeb190be60700291084bcb7662dbcab03714f1ebc`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0111-0120-2026-10-06.md#own-dev-0115)
