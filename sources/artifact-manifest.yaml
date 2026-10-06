@@ -3468,6 +3468,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-03. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-f3757b-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F3757B manufacturer device documentation
+  media_type: application/pdf
+  filename: F3757B.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 1139342
+  sha256: 100cfcfa3695d93726cc85427d902ea77fa5211152058ae91163dd48859d010e
+  source_url: https://dar.bticino.it/asset/Documents/F3757B.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/10/0c/100cfcfa3695d93726cc85427d902ea77fa5211152058ae91163dd48859d010e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/10/0c/100cfcfa3695d93726cc85427d902ea77fa5211152058ae91163dd48859d010e.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f401-italian-product-sheet-20261005
   kind: documentation
   publisher: BTicino / Legrand
