@@ -4,6 +4,13 @@
 | --- | --- | --- | --- |
 | [OWN-DEV-0010](../definitions/own-dev-0010-pir-us-daylight-presence-sensor.md) | 12-record PIR+US Green Switch family | PIR+US daylight and presence sensor | Presence, daylight regulation and IR scenario-control functions |
 | [OWN-DEV-0016](../definitions/own-dev-0016-pir-flush-mounted-sensor.md) | 8-record PIR Green Switch family | PIR daylight and presence sensor | Presence, daylight regulation and IR scenario-control functions |
+| [OWN-DEV-0051](../definitions/own-dev-0051-pir-ceiling-mounted-sensor.md) | `BMSE3001`, `048820` | `PIR` ceiling-mounted sensor | PIR presence and daylight sensing; ceiling installation |
+| [OWN-DEV-0053](../definitions/own-dev-0053-ultrasonic-ceiling-sensor-ir-port.md) | `BMSE3002`, `048821` | Ultrasonic ceiling sensor with IR port | Ultrasonic presence and daylight sensing; detailed exact-product sheet gap remains explicit |
+| [OWN-DEV-0054](../definitions/own-dev-0054-pir-us-ceiling-mounted-sensor.md) | `BMSE3003`, `048822` | `PIR`+`US` ceiling-mounted sensor | Combined PIR and ultrasonic presence/daylight sensing; technology-specific coverage |
+| [OWN-DEV-0055](../definitions/own-dev-0055-pir-us-wall-mounted-sensor.md) | `BMSE2005`, `048823` | `PIR`+`US` wall-mounted sensor | Combined PIR and ultrasonic presence/daylight sensing; wall or ceiling installation |
+| [OWN-DEV-0056](../definitions/own-dev-0056-pir-wall-mounted-sensor-straight-range.md) | `BMSE2001`, `048824` | `PIR` wall-mounted sensor - straight range | Wide-beam PIR movement/daylight sensing; conflicting coverage figures retained |
+| [OWN-DEV-0057](../definitions/own-dev-0057-pir-wall-mounted-sensor-short-range.md) | `BMSE2002`, `048825` | `PIR` wall-mounted sensor - short range | Narrow-beam PIR movement/daylight sensing; source-specific coverage matrices |
+| [OWN-DEV-0058](../definitions/own-dev-0058-pir-wall-mounted-sensor-dual-range.md) | `BMSE2003`, `048826` | Bidirectional narrow-beam `PIR` wall/ceiling sensor | Bidirectional narrow-beam PIR movement/daylight sensing; complete historical exact-product sheet |
 | [OWN-DEV-0120](../definitions/own-dev-0120-three-input-electricity-meter.md) | `F520`, `003555` | Three-input electricity meter | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0122](../definitions/own-dev-0122-load-actuator-current-sensor.md) | `F522`, `003558` | Load actuator with current sensor | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0150](../definitions/own-dev-0150-pulse-counter-interface.md) | `003576`, `3522N` | Pulse counter interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

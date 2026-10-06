@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 160 |
-| reviewed | 50 |
+| review-ready | 150 |
+| reviewed | 60 |
 
 Total: **210** technical-item clusters.
 
@@ -41,14 +41,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 45 | PIR ceiling mounted sensor | 2 | review-ready | OWN-DEV-0051 | complete | complete | complete | pending | - |
-| normal | 47 | Ballast DIN dimmer 0-10 V | 2 | review-ready | OWN-DEV-0052 | complete | complete | complete | pending | - |
-| normal | 48 | Sensor lighting and movement US ceiling + IR Port | 2 | review-ready | OWN-DEV-0053 | complete | complete | complete | pending | - |
-| normal | 49 | PIR+US ceiling mounted sensor | 2 | review-ready | OWN-DEV-0054 | complete | complete | complete | pending | - |
-| normal | 50 | PIR+US wall mounted sensor | 2 | review-ready | OWN-DEV-0055 | complete | complete | complete | pending | - |
-| normal | 51 | PIR wall mounted sensor, straight range | 2 | review-ready | OWN-DEV-0056 | complete | complete | complete | pending | - |
-| normal | 52 | PIR wall mounted sensor, short range | 2 | review-ready | OWN-DEV-0057 | complete | complete | complete | pending | - |
-| normal | 53 | PIR wall mounted sensor, dual range | 2 | review-ready | OWN-DEV-0058 | complete | complete | complete | pending | - |
 | normal | 56 | PIR wall maunted sensor, long range | 2 | review-ready | OWN-DEV-0061 | complete | complete | partial | pending | - |
 | normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | review-ready | OWN-DEV-0062 | partial | complete | partial | pending | - |
 | normal | 58 | Sensor occupancy + IR + ZigBee | 2 | review-ready | OWN-DEV-0063 | partial | complete | partial | pending | - |
@@ -118,8 +110,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 54 | Basic actuator | 1 | review-ready | OWN-DEV-0059 | complete | complete | complete | pending | - |
-| normal | 55 | Basic control actuator | 1 | review-ready | OWN-DEV-0060 | complete | complete | complete | pending | - |
 | normal | 66 | Actuator 1 module 1 relay | 1 | review-ready | OWN-DEV-0068 | complete | complete | complete | pending | - |
 | normal | 80 | Module contacts interface | 1 | review-ready | OWN-DEV-0071 | complete | complete | complete | pending | - |
 | normal | 98 | Scenes programmer | 1 | review-ready | OWN-DEV-0080 | complete | complete | complete | pending | - |
@@ -203,6 +193,16 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 37 | IR receiver | OWN-DEV-0012 |
 | 39 | Radio interface for temperature probes | OWN-DEV-0034 |
 | 40 | Flush mounted radio receiver for HA/HB4572SB | OWN-DEV-0035 |
+| 45 | PIR ceiling mounted sensor | OWN-DEV-0051 |
+| 47 | Ballast DIN dimmer 0-10 V | OWN-DEV-0052 |
+| 48 | Sensor lighting and movement US ceiling + IR Port | OWN-DEV-0053 |
+| 49 | PIR+US ceiling mounted sensor | OWN-DEV-0054 |
+| 50 | PIR+US wall mounted sensor | OWN-DEV-0055 |
+| 51 | PIR wall mounted sensor, straight range | OWN-DEV-0056 |
+| 52 | PIR wall mounted sensor, short range | OWN-DEV-0057 |
+| 53 | PIR wall mounted sensor, dual range | OWN-DEV-0058 |
+| 54 | Basic actuator | OWN-DEV-0059 |
+| 55 | Basic control actuator | OWN-DEV-0060 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
 | 291 | Temperature central unit | OWN-DEV-0042 |
