@@ -2,7 +2,7 @@
 
 ## Summary
 
-This DIN SCS/SCS interface connects and separates two bus domains. Its configured roles include physical or logical expansion, system-to-system interfacing and riser separation, allowing larger installations to be organized into distinct sections.
+`F422` / `003562` connects SCS bus sections and systems through separate IN and OUT terminals. Its configured role determines whether it extends a bus, separates address spaces, links burglar-alarm or sound functions, supervises public-riser alarms, or learns device placement for physical separation.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -35,20 +35,17 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00280-f-EN` | technical sheet | publisher technical sheet | `F422` SCS/SCS interface electrical data and six operating modes | [Archived original](https://archive.openwebnet-ha.org/sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) |
-| MyHOME Server compatibility table | compatibility documentation | current publisher support | Corroborates `F422` / `003562` pairing; PDF p. 7 | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
-| `F422-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F422` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422) |
+| `MQ00280-f-EN` | technical sheet | MQ00280-f-EN;2015-03-18 | Printed/PDF pp. 1–10;complete exactF422 ratings,six published roles,installation/address-learning and combined-mode diagrams | [Archived original](https://archive.openwebnet-ha.org/sha256/16/dd/16ddee94af03d514235d5d4c0e781be9bea0a5973b7dfbbf8dfe8e195a731b6e.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) |
+| F460/F461 installation/configuration compatibility table | compatibility documentation | RA00224AA;retained publisher revision | PDF p. 7: `F422` / `003562` pairing and direct association from batch `12W20`; distinct `F422 A` row for all batches | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00224AA_EN.pdf) |
+| `F422-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Printed/PDF p. 1;exact-reference EAN and complete technical export attributes examined;linked downloads/prices not incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `27 Vdc` from SCS BUS; operating `18..27 Vdc` | `MQ00280-f-EN` |
-| Current draw - IN side | `25 mA` | `MQ00280-f-EN` |
-| Current draw - OUT side | `5 mA` | `MQ00280-f-EN` |
-| Maximum dissipated power | `1 W` | `MQ00280-f-EN` |
-| Width | `2 DIN modules` | `MQ00280-f-EN` |
-| Interfaces | two SCS BUS domains | `MQ00280-f-EN` |
+| Supply/current | `27 Vdc` SCS, `18..27 Vdc` operating; IN25 mA, OUT5 mA; `1 W` maximum dissipation | MQ00280-f-EN, p. 1 |
+| Construction | Two DIN modules; IN/OUT bus terminals, configurator socket, LED and C button | MQ00280-f-EN, p. 1 |
+| LED states | Steady: supply/configuration correct; off: bus absent; flashing: configuration missing/incorrect | MQ00280-f-EN, p. 1 |
 
 ## Identity
 
@@ -60,6 +57,34 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `251` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `151` | Yes | Canonical item/system relationship |
+| Video door entry system | `69` | No | Canonical item/system relationship |
+| Integration function | `251` | No | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `90` | `F422` | `1` | `5` | `BTicino_Undefined_SCS-SCS gateway` |
+| `1592` | `003562` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -68,6 +93,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `722` | `6` | `0` | `0` | `1` | Not catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -98,14 +129,16 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `143` | Advanced Configuration | supported configuration route for this Device family |
-| `143` | Physical configuration | supported configuration route for this Device family |
-| `143` | Virtual Configuration | supported configuration route for this Device family |
-| `722` | Advanced Configuration | supported configuration route for this Device family |
-| `722` | Physical configuration | supported configuration route for this Device family |
-| `722` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `143` | Physical configuration | `0` | Canonical firmware/mode association |
+| `143` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `722` | Physical configuration | `0` | Canonical firmware/mode association |
+| `722` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `722` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -137,7 +170,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `I3` | `0` | `0` | Automation interface address 3 |
 | `I4` | `1..15` | `1` | Automation interface address 4 |
 
-
 ### Object `75` - Interface SCS / SCS physical
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -145,13 +177,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `I3` | `0..10` | `0` | Automation interface address 3 |
 | `I4` | `0..15` | `1` | Automation interface address 4 |
 
-
 ### Object `76` - Interface SCS / SCS galvanic
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `I4` | `0..239` | `1` | Address |
-
 
 ### Object `77` - Interface SCS / SCS burglar alarm
 
@@ -159,13 +189,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `I4` | `0..15` | `0` | Address |
 
-
 ### Object `78` - Interface SCS / SCS public riser
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `I1I2I3I4` | `0..3999` | `0` | Internal unit address |
-
 
 ### Object `79` - Interface SCS / SCS access control
 
@@ -176,8 +204,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `I3` | `0` | `0` | Automation interface address 3 |
 | `I4` | `0..15` | `1` | Automation interface address 4 |
 
-
 ### Object `85` - Interface SCS / SCS physical separation
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Operation, timing and presentation | `I4`, `ADDRESSES_MANAGED_1`, `ADDRESSES_MANAGED_2`, `ADDRESSES_MANAGED_3`, `ADDRESSES_MANAGED_4`, `ADDRESSES_MANAGED_5`, `ADDRESSES_MANAGED_6`, `ADDRESSES_MANAGED_7`, `ADDRESSES_MANAGED_8`, `ADDRESSES_MANAGED_9`, `ADDRESSES_MANAGED_10`, `ADDRESSES_MANAGED_11`, `ADDRESSES_MANAGED_12`, `ADDRESSES_MANAGED_13`, `ADDRESSES_MANAGED_14`, `ADDRESSES_MANAGED_15`, `ADDRESSES_MANAGED_16`, `ADDRESSES_MANAGED_17`, `ADDRESSES_MANAGED_18`, `ADDRESSES_MANAGED_19`, `ADDRESSES_MANAGED_20`, `ADDRESSES_MANAGED_22`, `CENTRAL_AUTOMATION_MANAGED`, `CENTRAL_ANTINTRUSION_MANAGED` | Reusable schema; apply the Device and firmware restrictions below. |
 
 Catalogue Object key `496` maps to external Object `85`.
 
@@ -207,6 +238,10 @@ Catalogue Object key `496` maps to external Object `85`.
 | `ADDRESSES_MANAGED_22` | `0..255` | `0` | Address managed 22; fx=0 device installed in IN side, fx=1 device installed in OUT side. Addresses managed values=f7f6f5f4f3f2f1f0 f0=address 169........f6=address 175 |
 | `CENTRAL_AUTOMATION_MANAGED` | `0` = Managed on IN side; `1` = Managed on OUT side | `0` | Control unit automation managed; 0x00 managed on IN side, 0x01 managed on OUT side |
 | `CENTRAL_ANTINTRUSION_MANAGED` | `0` = Managed on IN side; `1` = Managed on OUT side | `0` | Control unit burglar alarm managed; 0x00 managed on IN side, 0x01 managed on OUT side |
+
+### Device-specific interpretation
+
+Keep firmware `143` (-1/-1/-1, default) and `722` (6.0.0, non-default), both Official, separate. `MOD=5/access-system` Object `79` has a direct relation and condition only for firmware `143`; firmware `722` restricts MOD to `0..4` and 6 and omits that direct Object/condition, although Virgin `525` (internal key `524`) still admits Object `79` for both. This firmware-specific Virgin-only membership does not establish access-mode reachability for 722. MOD 2/1/4/3/6 select Objects 74/75/77/78/85; fixed Object `76` has no `MOD=0` predicate. All relation filters belong only to 143 and exclude reusable defaults: I4 `10..15` or `10..239`, and physical expansion I3 0 or 10. Do not inherit them into 722 or reinterpret manufacturer decimal configurators as these software values. Object `85` (internal key `496`) records address bitmaps `1..20` and 22, omits 21 (addresses `161..168`), and gives bitmap 22 f0..f6 for `169..175` without an f7 meaning. ADDRESSES_MANAGED_16 has the source description “address managed17”. Bitmap flags map 0 to IN and 1 to OUT; automation/antintrusion controls use separate flags. No conversion branch is recorded to explain encodings or repair omitted addresses.
 
 ## Conditions, filters, and conversions
 
@@ -260,7 +295,14 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-SCS/SCS interface used for physical or logical expansion, system-to-system interfacing, riser separation, galvanic separation and physical separation. The catalogue retains both wildcard firmware applicability and a concrete `6.0.0` firmware surface, with one Object difference between them.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| MOD1 physical expansion | Up to 4 interfaces in series/5 individually powered sections; no parallel interfaces; separation address partitions lower IN/higher OUT addresses; does not increase 175 actuator address limit | MQ00280-f-EN, pp. 1–2 |
+| MOD2 logical expansion | Local OUT systems connect to IN automation riser; up to 9 interfaces/10 systems; point-to-point stays within its system, group/general cross from riser; extended controls required for cross-system points | MQ00280-f-EN, p. 3 |
+| MOD3 public riser | Common-area burglar/technical alarm display via 346310; up to 9 auxiliary channels on IN; use free video-handset address | MQ00280-f-EN, p. 4 |
+| MOD4 burglar interface | Alarm bus on OUT, automation/video/sound on IN; only 1 alarm interface, no alarm-bus physical extension or automation actuators within alarm system | MQ00280-f-EN, p. 5 |
+| Unconfigured MOD:galvanic separation | Separate supplies, automation on IN and other function on OUT; no multiple automation systems sharing same sound bus; no consumed automation address | MQ00280-f-EN, p. 5 |
+| MOD6 physical separation | Up to 4 interfaces; each system separately powered; addresses may overlap across sides; interfaces have distinct addresses; point/room/group/general cross without the MOD1 address partition | MQ00280-f-EN, pp. 6–7 |
 
 ## Observed behavior and corroboration
 
@@ -268,17 +310,22 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Select role before assigning interfaces and power sections. MOD1 needs I1/I2 absent, I3/I4 `1..9` and no device sharing the separation address; place web/scenario programmer on lowest-address section. MOD2 needs I1..I3 absent, I4 `1..9`; place programmer/webserver on IN riser. MOD4/galvanic use I1..I3 absent, I4 1..9. MOD6 leaves I1/I2 absent and uses I3 `0..9`, I4 `1..9`; configure a unique interface address (physical, Virtual Configurator or button procedure), then acquire connected-device addresses only after all interface/actuator addresses are configured. The button address sequence is short press, short press to start and steady LED on completion; address acquisition uses at least 2 s. Cascades require a system between one OUT and another IN, not two OUT links; memory module goes after the final OUT. Evidence: MQ00280-f-EN pp. 1–7; combined-role diagrams pp. 8–10.
 
 ## Source reconciliation
 
-The dedicated technical sheet documents `F422`, while current publisher compatibility documentation explicitly pairs Legrand `003562` with BTicino `F422`; commercial reconciliation is therefore established across both references.
+The F460/F461 manual PDF p. 7 lists `F422`/003562 direct association from production batch 12W20 onward and separately lists `F422 A` for all batches; `F422 A` is not added to this canonical item.
+
+The exact `F422` sheet revision f dated 18 March 2015 and the compatibility table PDF p. 7 establish `F422`/003562 scope. The technical sheet opens with “physical configuration only” and calls the C button future use in its legend, but later documents Virtual Configurator and button/self-configuration for MOD6; the latter route is retained with its specific scope. Its logical-expansion prose alternates 175 addresses with 81 in the installation rules, and example diagrams use `01..99` or `01..175`; physical/software addressing scopes and the unresolved 81/175 wording are distinguished. The MOD6 installation text gives addresses 01–99 while the configurator table restricts I4 to 1–9; that table excludes the decade addresses, so the broad range does not establish that every integer is assignable. MOD6’s example mentions Automation/Temperature Control but labels the second system Energy management; do not silently relabel the printed diagram. No access-system MOD5 is documented in this 2015 sheet, although it remains in catalogue 143. Firmware 722 has no such direct candidate. Manufacturer decimal configurators and catalogue filters/bitmaps are not assumed interchangeable.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); these software records do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- MOD5/access technical procedure is not covered by the retained 2015 sheet. The conflicting 81/175 wording, opening-only configuration claim, button legend and incomplete address bitmaps remain source limits.
+- Virtual Configurator/self-configuration manual, 346310 switchboard sheet, linked DWG/environmental profile and installed behavior are unexamined. Catalogue LAN bus association does not establish an Ethernet connector on `F422`.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -289,3 +336,5 @@ The dedicated technical sheet documents `F422`, while current publisher compatib
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `F422-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F422` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/4d/9a/4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F422); SHA-256 `4d9a1c46645f5c1e6d2dad84c789efb9bb5f27bca830339f9b03bedfc0735454`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0071-0080-2026-10-06.md#own-dev-0078)

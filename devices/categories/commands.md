@@ -16,6 +16,8 @@
 | [OWN-DEV-0028](../definitions/own-dev-0028-rotary-regulation-control.md) | `HC/HS/HD4563`, `L/N/NT4563` | Flush-mounted rotary SCS control | Advanced dimmer adjustment and sound volume/source controls; mode-specific settings |
 | [OWN-DEV-0060](../definitions/own-dev-0060-basic-control-actuator.md) | `3476` | Basic control actuator | One compact relay and normally open pushbutton input; cyclic, separate and timed control |
 | [OWN-DEV-0070](../definitions/own-dev-0070-din-contacts-interface.md) | `F428`, `003553` | DIN contacts interface | Two contact inputs; revision-dependent lighting, automation and scenario roles |
+| [OWN-DEV-0071](../definitions/own-dev-0071-module-contacts-interface.md) | `L/N/NT4688` | Module contacts interface | Two traditional contact inputs; catalogue and physical command scopes distinguished |
+| [OWN-DEV-0072](../definitions/own-dev-0072-basic-contacts-interface.md) | `3477`, `573996`, `049238` | Basic contacts interface | Two dry-contact inputs for lighting, shutters, scenes and audio; source conflicts explicit |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0104](../definitions/own-dev-0104-do-not-disturb-make-up-room-control.md) | `H4653`, `LN4653`, `067593` | Do Not Disturb / Make Up Room control | Inside-room DND/MUR control and local LED status/brightness |
 | [OWN-DEV-0106](../definitions/own-dev-0106-rfid-reader-and-outside-door-indicator.md) | `H4651`, `LN4651`, `067591` | RFID reader and outside-door DND/MUR indicator | RFID card access, outside-room status/doorbell and lot-scoped visual alarm |

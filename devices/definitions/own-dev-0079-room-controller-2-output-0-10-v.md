@@ -2,7 +2,7 @@
 
 ## Summary
 
-This Room Controller provides two independent 1-10 V dimming outputs for compatible lighting loads. Two local SCS inputs connect sensors and controls, and a separate trunk connection links the room controller to the rest of the installation.
+`BMDI3001` / `048842` controls two lighting circuits through analogue ballast dimming and supplies compatible SCS controls or sensors from its local bus ports. It supports automatic pairing, local load tests and integrated bus operation; its two dimmer Modules are accompanied by a separate controller Module.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -36,18 +36,21 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMDI3001` two-output 1-10 V Room Controller; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/47/95/47959cd888b93d2c1a5329cc1b5652eb72bbc3851b8b8b5dcec98c77734bf91d.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMDI3001) |
-| `048842-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048842` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum) |
+| `048842-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact SKU/GTIN metadata retained;technical/installation downloads examined separately below;generic ETIM attributes not adopted | [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum) |
+| `BT00497_c_IT.pdf` | Italian exact technical sheet | BT00497-c-IT;2013-11-12 | `BMDI3001`;full 3 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/41/7b/417b3e0b25fbb7e62b61ff376d0504e615f47095cee0c59094d0c2f155a6549a.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/BT00497_c_IT.pdf) |
+| `F01120EN-00.pdf` | English exact technical sheet | F01120EN/00;2010-09-08 | `048842`;full 3 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/75/3a751d6641f23bde1f177249ef92d837bf7a1656f6cbadd0e8a0800167afab2d.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/F01120EN-00.pdf) |
+| `F01120FR-00.pdf` | French exact technical sheet | F01120FR/00;2010-09-08 | `048842`;full 3 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/27/8d27b35aec620712a40f3a868252cc6cf4dc0a71742c2f864b8b3ccb0c33026e.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/F01120FR-00.pdf) |
+| `LE02801AB.pdf` | Illustrated installation instructions | LE02801AB;date not printed | `048842`;full 2 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/33/7c33472b2c51095c6014530b7a8e16a79f4dcbd93f9f420f7d6cf01bf5bd9986.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/LE02801AB.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `100..240 Vac @ 50/60 Hz` | BTicino General Catalogue product sheet |
-| Dimming outputs | `2` independent 1-10 V outputs, max `4.3 A @ 230 Vac` each | BTicino General Catalogue product sheet |
-| Local BUS inputs | `2`; combined supply maximum `200 mA` | BTicino General Catalogue product sheet |
-| Trunk SCS input | `1` terminal/RJ45 input | BTicino General Catalogue product sheet |
-| Protection | `IP20` | BTicino General Catalogue product sheet |
-| Installation | Ceiling / false-ceiling | BTicino General Catalogue product sheet |
+| Supply and power discrepancy | Italian technical sheet `110..230` Vac `50..60 Hz`; export and Legrand `100..240` Vac `50..60 Hz`; `3 W` standby/no-load | BT00497-c-IT, p. 1; F01120EN/FR-00, p. 1; `BMDI3001` export, p. 1 |
+| Load limits at 230/110 V | Two × `4.3 A`; linear/halogen ballast `2× 1000/500 VA`; CFL ballast 2× 1000/`500 W` | BT00497-c-IT and F01120EN/FR-00, p. 1; LE02801AB, p. 1 |
+| Combined limit and bus | Italian wiring explicitly IL1+IL2=`16 A` max, separate from each `4.3 A` limit; two local bus ports `200 mA` combined, upstream bus separate | BT00497-c-IT, p. 3 and export, p. 1; Legrand technical/instruction, p. 1 |
+| Environment and body | `-5..45 °C`; IP20, IK04. Legrand: storage`-20..70 °C`, `330 g`; `95.5 × 172 mm` body, `207 mm` mounting extent, 49/`50 mm` dimension arrows | BT00497-c-IT, pp. 1–2; F01120EN/FR-00, pp. 1–2 |
+| Wiring | Screw `2× 2.5 mm²`; Legrand analogue ≤ `1.5 mm²`, RJ45; `150 m` controller–furthest sensor, `500 m` supply–furthest product | BT00497-c-IT, pp. 1, 3; F01120EN/FR-00, pp. 1–2 |
 
 ## Identity
 
@@ -59,6 +62,28 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `168` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `168` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `94` | `BMDI3001` | `1` | `5` | `BTicino_Undefined_Room Controller 2 Dim Outpu` |
+| `1774` | `048842` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +91,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `208` | `-1` | `-1` | `-1` | `3` | Catalogue default | Deprecated |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -85,11 +116,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `208` | Advanced Configuration | supported configuration route for this Device family |
-| `208` | Physical configuration | supported configuration route for this Device family |
-| `208` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `208` | Physical configuration | `0` | Canonical firmware/mode association |
+| `208` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `208` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -110,6 +144,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `8` - Dimmer actuator
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `LOCAL_BUTTON`, `DELAYED_OFF`, `STATE_SAVING_ON_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -138,12 +177,15 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
-
 ### Object `167` - Room controller
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `MODE` | `0` = Stand-alone mode; `1` = Supervision mode | `0` | Modality; Mode |
+
+### Device-specific interpretation
+
+Firmware `208` is the wildcard catalogue default with Deprecated status, not a proven installed version or current availability. Slots `1..2` are Object `8` load contexts; slot `3` is Object `167` controller MODE (stand-alone 0 / supervision 1, default 0), not another electrical output. No Virgin, slot condition or conversion is stored. Relation filters without subset rows retain the complete reusable domains rather than proving physical support for every load enum, local-button mode or timer. The reusable MIN_LEVEL_ADV default 0 lies outside 1..100. Firmware A/PL/M and the recorded physical/virtual/advanced modes are retained, but the examined Lighting Management sheets describe automatic pairing and software/remote setup; their procedures do not establish a physical configurator socket. Symbolic SLA/PUL branches are recorded as firmware values but no conversion is supplied. The catalogue title says 0-10 V while the technical load interface is 1-10 V; wiring labels 0-10 V and reusable TYPE_STANDARD are separate evidence, not proof that every installed ballast responds down to 0 V.
 
 ## Conditions, filters, and conversions
 
@@ -187,7 +229,10 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Two-output zero-crossing Room Controller for 1-10 V lighting loads with two local SCS sensor/control inputs and one SCS trunk connection. The canonical topology exposes two dimmer Modules plus the Room Controller context.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Local test and automatic pairing | L1/L2 buttons switch and long press adjusts load; Plug&Go at power-on, Push&Learn/software integrated setup | BT00497-c-IT, pp. 1–2; LE02801AB, p. 2 |
+| Fault response | Legrand:local peripheral fault relights after 10 min; upstream bus connection fault after 50 s; capacity LED | F01120EN/FR-00, p. 1 |
 
 ## Observed behavior and corroboration
 
@@ -195,17 +240,21 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Wire with mains disconnected. Automatic pairing begins at power-on; BTicino distinguishes standalone and integrated bus installations and documents Plug&Go, Push&Learn and Virtual Configurator. The Legrand sheets specify remote configuration tools 88235/88230; those tool manuals and detailed sensor sheets are not incorporated. Local test buttons switch loads; holding the relevant dimming button adjusts level. The software catalogue mode associations remain distinct from these product commissioning procedures.
 
 ## Source reconciliation
 
-The current BTicino product sheet directly documents `BMDI3001`; Legrand `048842` is corroborated by the canonical catalogue and current Legrand product information, but the archived direct sheet is BTicino-branded.
+Canonical mapping establishes `BMDI3001`/048842; BT00497-c-IT dated 12 November 2013 and F01120EN/FR-00 dated 8 September 2010 provide direct exact-product evidence for both references. The Italian sheet’s `110..230` V differs from the `100..240` V export/Legrand technical range and is kept scoped. Its 3-page wiring gives a 16 A aggregate label, which does not increase each 4.3 A channel limit. Catalogue “0-10 V” wording and illustrated 0-10 V terminals coexist with 1-10 V ballast interfaces. The Legrand FR/EN ratings agree; historical FR NF EN 50428 and EN IEC 60669-2-1 declarations differ and are not presented as present-day certifications. The retained HTML remains exact-SKU/GTIN evidence; generic output-power attributes do not override the load-class tables.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); these software records do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- No installed hardware observation is retained. Exact tool manuals, detailed sensor setup, Suite help, referenced drawings and broader current installation guides are unexamined; no commissioning-completion claim is made.
+- Catalogue 0-10 V wording, wiring labels and reusable voltage/load settings do not by themselves establish every ballast or LED compatibility. Regional standards and load units are kept source-specific.
+- Supply-range and dimension-arrow differences are preserved; no physical revision is assumed to resolve them.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -216,3 +265,5 @@ The current BTicino product sheet directly documents `BMDI3001`; Legrand `048842
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `048842-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048842` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/9d/13/9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-variation-ballast-1v-a-10v-avec-2-sorties-1000va-maximum); SHA-256 `9d13d4580b63376b05737629165b360c5fa6d874d0a7e08815b210599bea706f`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0071-0080-2026-10-06.md#own-dev-0079)

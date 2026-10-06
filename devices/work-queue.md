@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 140 |
-| reviewed | 70 |
+| review-ready | 130 |
+| reviewed | 80 |
 
 Total: **210** technical-item clusters.
 
@@ -21,7 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 81 | Basic contacts interface | 3 | review-ready | OWN-DEV-0072 | complete | complete | partial | pending | - |
 | normal | 1122 | Shutter flush mounted actuator | 3 | review-ready | OWN-DEV-0098 | partial | complete | partial | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0102 | partial | complete | complete | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | review-ready | OWN-DEV-0103 | partial | complete | complete | pending | - |
@@ -41,13 +40,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 84 | DIN dimmer 1000 VA | 2 | review-ready | OWN-DEV-0073 | complete | complete | complete | pending | - |
-| normal | 85 | DIN dimmer 2 x 400 VA | 2 | review-ready | OWN-DEV-0074 | complete | complete | complete | pending | - |
-| normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0075 | complete | complete | partial | pending | - |
-| normal | 88 | Room Controller 2 Dim Outputs All loads 1000W | 2 | review-ready | OWN-DEV-0076 | partial | complete | partial | pending | - |
-| normal | 89 | Room Controller 1 Output 16 Amps - Blind devi | 2 | review-ready | OWN-DEV-0077 | complete | complete | partial | pending | - |
-| normal | 90 | SCS-SCS interface | 2 | review-ready | OWN-DEV-0078 | complete | complete | complete | pending | - |
-| normal | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0079 | complete | complete | partial | pending | - |
 | normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0081 | partial | complete | partial | pending | - |
 | normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | complete | complete | pending | - |
 | normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0083 | partial | complete | partial | pending | - |
@@ -101,8 +93,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 80 | Module contacts interface | 1 | review-ready | OWN-DEV-0071 | complete | complete | complete | pending | - |
-| normal | 98 | Scenes programmer | 1 | review-ready | OWN-DEV-0080 | complete | complete | complete | pending | - |
 | normal | 139 | Burglar alarm central unit with communicator | 1 | review-ready | OWN-DEV-0085 | partial | complete | partial | pending | - |
 | normal | 140 | Polyx Alarm | 1 | review-ready | OWN-DEV-0086 | partial | partial | partial | pending | - |
 | normal | 141 | GSM burglar alarm central unit | 1 | review-ready | OWN-DEV-0087 | partial | complete | partial | pending | - |
@@ -203,6 +193,16 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 66 | Actuator 1 module 1 relay | OWN-DEV-0068 |
 | 71 | SCS/DALI gateway | OWN-DEV-0069 |
 | 79 | DIN contacts interface | OWN-DEV-0070 |
+| 80 | Module contacts interface | OWN-DEV-0071 |
+| 81 | Basic contacts interface | OWN-DEV-0072 |
+| 84 | DIN dimmer 1000 VA | OWN-DEV-0073 |
+| 85 | DIN dimmer 2 x 400 VA | OWN-DEV-0074 |
+| 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | OWN-DEV-0075 |
+| 88 | Room Controller 2 Dim Outputs All loads 1000W | OWN-DEV-0076 |
+| 89 | Room Controller 1 Output 16 Amps - Blind devi | OWN-DEV-0077 |
+| 90 | SCS-SCS interface | OWN-DEV-0078 |
+| 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | OWN-DEV-0079 |
+| 98 | Scenes programmer | OWN-DEV-0080 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
 | 291 | Temperature central unit | OWN-DEV-0042 |

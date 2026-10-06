@@ -2,7 +2,7 @@
 
 ## Summary
 
-This multi-application Room Controller provides four outputs with configurable lighting, blind or 1-10 V control roles. Its four local SCS inputs bring sensors and controls into the room-level installation, with output ratings determined by the selected application.
+`BMSW3003` / `048847` combines a shutter motor channel, a 16 A switched-lighting or ventilation channel and two analogue dimming channels in one Room Controller. It supports manual or sensor-driven operation and bus pairing; the catalogue represents its four load channels plus a fifth controller Module.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -36,19 +36,23 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | BTicino General Catalogue product sheet | publisher product sheet | current catalogue export | `BMSW3003` multi-application Room Controller outputs and SCS interfaces; printed p. 1 / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/d1/7c/d17c79d0a00ce5901c44991a992cb0d6fabfe9abbcb36338294eac4e433ef593.pdf) | [Official source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW3003) |
-| `048847-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `048847` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-2-circuits-declairage-1-ouvrant-et-1-contact-cvc-mosaic) |
+| `048847-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact SKU/GTIN metadata retained;technical/installation downloads examined separately below;generic ETIM attributes not adopted | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-2-circuits-declairage-1-ouvrant-et-1-contact-cvc-mosaic) |
+| `BT00587_b_IT.pdf` | Italian exact technical sheet | BT00587-b-IT;2013-11-12 | `BMSW3003`;full 4 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/d7/20/d720eaf75c918746408f18ed4df24cb7a8bac5d1646cf8e1d73c1285f2ed95a5.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/BT00587_b_IT.pdf) |
+| `F01124EN-01.pdf` | English exact technical sheet | F01124EN/01;created 2010-10-28,updated 2013-02-12 | `048847`;full 4 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/da/82/da82d0918419341b465844effec732d45bf732fc70587c0a48a75cd1f78a6191.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/F01124EN-01.pdf) |
+| `F01124FR-01.pdf` | French exact technical sheet | F01124FR/01;created 2010-10-28,updated 2013-02-12 | `048847`;full 4 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/e2/c6/e2c69a12461a618efe3eb2c0a5553cd783286a3eb0d98df80374af125bf2c7d8.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/F01124FR-01.pdf) |
+| `LE03166AB.pdf` | Illustrated installation instructions | LE03166AB;date not printed | `048847`;full 4 pages | [Archived original](https://archive.openwebnet-ha.org/sha256/5a/ae/5aae2d51c212eba403c645e3ec1e47cbf6c991eda89f03e6a34c3ed74945416a.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/LE03166AB.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `100..240 Vac @ 50/60 Hz` | BTicino General Catalogue product sheet |
-| Outputs | `4` multi-application outputs | BTicino General Catalogue product sheet |
-| Automation output class | max `2.1 A @ 230 Vac` | BTicino General Catalogue product sheet |
-| `ON`/`OFF` output class | up to `16 A @ 230 Vac` | BTicino General Catalogue product sheet |
-| 1-10 V output class | up to `4.3 A @ 230 Vac` | BTicino General Catalogue product sheet |
-| Local SCS inputs | `4`; combined supply maximum `200 mA` | BTicino General Catalogue product sheet |
-| Protection | `IP20` | BTicino General Catalogue product sheet |
+| Supply/environment | `100..240 Vac`, `50..60 Hz`; `3 W` standby/no-load; `-5..45 °C` operating, `-20..70 °C` storage; IP20, IK04; `595 g` | BT00587-b-IT pp. 1–2; F01124EN/FR-01 pp. 1–2 |
+| Motor channel 1 | `500 VA` at 230 V /`250 VA` at 110 V; `2.1 A` | BT00587-b-IT and F01124EN/FR-01, p. 1 |
+| Switched channel 2 | Incandescent/halogen `3680 W`/`1760 W`, `16 A`; transformers `3680 VA`/`1760 VA`, `16 A`; fluorescent 10×(`2× 36 W`)/5×(`2× 36 W`), `4.3 A`; CFL `1150/550 VA`, `5 A` | BT00587-b-IT and F01124EN/FR-01, p. 1 |
+| LED channel 2 limit discrepancy | F01124 EN/FR:`1150/550 VA`, `5 A`; LE03166AB:`1000/500 VA`, `4.3 A`. Neither adopted as a universal rating | F01124EN/FR-01, p. 1; LE03166AB, p. 1 |
+| Dimming channels 3/4 | Each `4.3 A`; `1000 VA` at 230 V and `500 VA` at 110 V per channel for linear/halogen ballast loads. CFL: technical W, instruction VA. LED column `500/250 VA`, `2.1 A`; diagram labels `50 mA` /0-10 V | BT00587-b-IT, p. 1; F01124EN/FR-01, p. 1; LE03166AB, p. 1 |
+| Bus ports | Local 1, 3, 4 share `200 mA`; port 2 marked Do not use in wiring. Export says four local bus inputs: discrepancy retained; upstream bus separate | BT00587-b-IT, p. 3; F01124EN/FR-01, pp. 2–3; LE03166AB, pp. 1, 3 |
+| Dimensions/terminals | `147 × 240 mm` body, `275 mm` mounting extent, `50 mm` arrows; screw `2 × 2.5 mm²`, analogue ≤ `1.5 mm²`; `150 m` sensor link, `500 m` upstream reach | BT00587-b-IT/F01124EN/FR-01, pp. 2–3 |
 
 ## Identity
 
@@ -60,6 +64,28 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `173` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `173` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `89` | `BMSW3003` | `1` | `5` | Empty in source |
+| `1788` | `048847` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +93,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `285` | `-1` | `-1` | `-1` | `5` | Catalogue default | Deprecated |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -88,9 +120,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `285` | Advanced Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `285` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -105,6 +140,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `8` - Dimmer actuator
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `LOCAL_BUTTON`, `DELAYED_OFF`, `STATE_SAVING_ON_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -133,13 +173,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
-
 ### Object `167` - Room controller
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `MODE` | `0` = Stand-alone mode; `1` = Supervision mode | `0` | Modality; Mode |
-
 
 ### Object `16` - Actuator for sensors
 
@@ -161,7 +199,6 @@ Catalogue Object key `479` maps to external Object `16`.
 | `G8` | `0..255` | `0` | Group 8 |
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
-
 
 ### Object `29` - Automation actuator
 
@@ -185,6 +222,10 @@ Catalogue Object key `490` maps to external Object `29`.
 | `G8` | `0..255` | `0` | Group 8 |
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
+
+### Device-specific interpretation
+
+Firmware `285` declares five Modules for four electrical load channels: slot `1` external Object `29` uses catalogue key `490`, slot `2` external Object `16` uses key `479`, slots 3/4 Object `8`, and slot `5` Object `167`. Preserve those external/internal identifiers and field scopes. Only AID and Advanced Configuration are firmware-associated; no physical configurator schema, Virgin or slot condition/conversion is stored. Object `29` STOP_TIME uses seconds for `1..60` and minute labels `62..65`/`67..70`, omits 61/66, and defaults to 60; Object `16` STOP_TIME is a different minute-domain field with zero Infinite and unusual 181=101 label. Do not merge them. The TYPE_LOAD/TYPE_STANDARD and group domains are reusable definitions; the single state-saving filter has no subset. The MIN_LEVEL_ADV default 0 is out of domain. Deprecated metadata does not establish current discontinuation or an installed software version.
 
 ## Conditions, filters, and conversions
 
@@ -222,7 +263,10 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Multi-application Room Controller whose outputs can serve lighting, automation/blind and 1-10 V control roles depending on configuration. The canonical firmware exposes dedicated controller/automation Objects plus the shared dimmer and Room Controller Objects.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Local controls | UP/STOP/DOWN for motor; ON/OFF for channel 2; short switch/long dim channels 3/4 | LE03166AB, p. 4 |
+| Commissioning | Automatic recognition at power-on, Learn and software/remote configuration; manual/sensor operation | BT00587-b-IT, p. 4; F01124EN/FR-01, p. 4 |
 
 ## Observed behavior and corroboration
 
@@ -230,17 +274,21 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Wire with mains disconnected. Automatic pairing begins at power-on; BTicino distinguishes standalone and integrated bus installations and documents Plug&Go, Push&Learn and Virtual Configurator. The Legrand sheets specify remote configuration tools 88235/88230; those tool manuals and detailed sensor sheets are not incorporated. Local test buttons switch loads; holding the relevant dimming button adjusts level. The software catalogue mode associations remain distinct from these product commissioning procedures. Use the exact load-specific channel table; the 16 A channel ceiling is not the motor rating. Follow the marked unused local bus port and shared 200 mA budget. Conflicting LED/load-unit ratings are not resolved by selecting the larger value.
 
 ## Source reconciliation
 
-The canonical database's shortened description emphasizes a `16 A` blind-capable application, while the current BTicino product sheet documents a broader four-output multi-application controller. The page preserves the canonical identity while using the publisher description for functional scope; `048847` remains catalogue-derived cross-brand identity.
+The canonical short name is misleading about which channel has 16 A; external Object `29`/key 490 is the motor and Object `16`/key 479 the switched channel. BT00587-b-IT (12 November 2013) and F01124EN/FR-01 (created 28 October 2010, updated 12 February 2013) show 1 motor+1 switched+2 analogue channels, contradicting the Italian export’s four-output headline followed by five role counts (1+2+2). These exact diagrams govern the role description. The export’s four local bus inputs also differs from the wiring’s 1/3/4 shared 200 mA and unused 2; that is unresolved rather than treated as four usable inputs. LE03166AB’s LED switched rating is 1000/500 VA, 4.3 A versus 1150/550 VA, 5 A in regional technical sheets; CFL analogue limits use VA in instructions but W in technical sheets. The switched-channel transformer limits are printed in VA in F01124EN/FR-01 but W in LE03166AB. The motor wiring labels also differ: BT00587-b-IT p. 2 prints +/N and −/L, whereas LE03166AB p. 2 prints +/L and −/N. These unresolved source differences do not establish interchangeable DC polarity; use the applicable manufacturer instruction for the exact installed revision. Regional FR product standard NF EN 50428 differs from EN IEC 60669-2-1; declarations are historical and source-scoped. The retained HTML is used only for exact `048847`/GTIN provenance, not its generic two-output attribute.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); these software records do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- No installed hardware observation is retained. Exact tool manuals, detailed sensor setup, Suite help, referenced drawings and broader current installation guides are unexamined; no commissioning-completion claim is made.
+- Catalogue 0-10 V wording, wiring labels and reusable voltage/load settings do not by themselves establish every ballast or LED compatibility. Regional standards and load units are kept source-specific.
+- Conflicting bus-port descriptions, motor polarity labels, LED ratings and transformer/CFL units remain unresolved; no installed revision or tested interpretation chooses between them.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -251,3 +299,5 @@ The canonical database's shortened description emphasizes a `16 A` blind-capable
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `048847-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048847` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/ba/24/ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-2-circuits-declairage-1-ouvrant-et-1-contact-cvc-mosaic); SHA-256 `ba2400e8829a0d7a0d52474c8f86080c33eb6833e1b4c4604e2ec12765da7b81`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0071-0080-2026-10-06.md#own-dev-0077)

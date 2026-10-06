@@ -7,6 +7,7 @@
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Scenario, scheduled-scenario and PLUS scenario candidate roles |
 | [OWN-DEV-0026](../definitions/own-dev-0026-four-scenario-control-unit.md) | `N4681` | Flush-mounted four-scenario control and storage unit | Four stored scenarios; master/slave, learn and erase |
 | [OWN-DEV-0066](../definitions/own-dev-0066-scenario-module.md) | `F420`, `003551` | Scenario module | Sixteen stored scenarios; revision-specific learning timeout and current limits |
+| [OWN-DEV-0080](../definitions/own-dev-0080-scenario-programmer.md) | `MH200` | Scenario programmer | Programmable scenario collections; software/editor limits and evidence scope |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0110](../definitions/own-dev-0110-two-module-myhome-unified-control.md) | `H4652M2`, `LN4652M2`, `067584` | Two-module MYHOME unified control | Catalogue-defined two command Modules and separate UI; commercial candidates unconfirmed |
 | [OWN-DEV-0111](../definitions/own-dev-0111-three-module-myhome-unified-control.md) | `H4652M3`, `LN4652M3`, `067585` | Three-module MYHOME unified control | Three command Modules, separate UI; catalogue-established identities; physical construction unconfirmed |

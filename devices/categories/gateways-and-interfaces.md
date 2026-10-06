@@ -6,6 +6,9 @@
 | [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |
 | [OWN-DEV-0069](../definitions/own-dev-0069-scs-dali-gateway.md) | `F429`, `002631` | SCS/DALI gateway | Eight independent DALI outputs; DALI2 and source-filter limits |
 | [OWN-DEV-0070](../definitions/own-dev-0070-din-contacts-interface.md) | `F428`, `003553` | DIN contacts interface | Two contact inputs; revision-dependent lighting, automation and scenario roles |
+| [OWN-DEV-0071](../definitions/own-dev-0071-module-contacts-interface.md) | `L/N/NT4688` | Module contacts interface | Two traditional contact inputs; catalogue and physical command scopes distinguished |
+| [OWN-DEV-0072](../definitions/own-dev-0072-basic-contacts-interface.md) | `3477`, `573996`, `049238` | Basic contacts interface | Two dry-contact inputs for lighting, shutters, scenes and audio; source conflicts explicit |
+| [OWN-DEV-0078](../definitions/own-dev-0078-scs-scs-interface.md) | `F422`, `003562` | SCS/SCS interface | Six published SCS interface roles; firmware-specific access applicability and address limits |
 | [OWN-DEV-0125](../definitions/own-dev-0125-scs-zigbee-gateway.md) | `048832`, `BMNE4000` | SCS and ZigBee gateway | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0126](../definitions/own-dev-0126-eight-output-scs-dali-interface.md) | `002633`, `BMDI1100` | Eight-output SCS and DALI interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0128](../definitions/own-dev-0128-four-channel-dali-room-controller.md) | `BMDI3101`, `048844` | Four-channel DALI room controller | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

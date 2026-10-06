@@ -2,7 +2,7 @@
 
 ## Summary
 
-This DIN dimmer provides two independently addressable lighting channels for documented resistive and transformer loads. It combines separate channel control with Lighting Management procedures or MyHOME physical and software configuration.
+The `F417U2` / `002622` is a six-DIN-module phase-cut dimmer with two independently controlled outputs. It regulates incandescent and halogen lighting, including compatible transformer loads, and provides local test/dimming buttons and selectable capacitive or inductive load operation.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -27,19 +27,17 @@ This DIN dimmer provides two independently addressable lighting channels for doc
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00316-e-EN` | technical sheet | 2014-06-09 | `F417U2` / `002622` dual-channel SCS dimmer characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/5d/86/5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00316_e_EN.pdf) |
+| `MQ00316-e-EN` | technical sheet | 2014-06-09 | Printed/PDF pp. 1–4;complete exact-product ratings,load classes,physical/software setup,local forcing and wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/5d/86/5d86ca223ed7002c2aa078a71213c4dc8851852abc70ebebc7f50635249fdc75.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00316_e_EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `100..240 Vac @ 50/60 Hz` | `MQ00316-e-EN` |
-| Outputs | `2 x 1.7 A` | `MQ00316-e-EN` |
-| Standby consumption | `0.9 W` | `MQ00316-e-EN` |
-| Operating temperature | `-5..45 °C` | `MQ00316-e-EN` |
-| Protection | `IP20`; `IK04` | `MQ00316-e-EN` |
-| Width | `6 DIN modules` | `MQ00316-e-EN` |
-| Resistive / transformer load at 230 V | up to `2 x 400 W` / `2 x 400 VA` | `MQ00316-e-EN` |
+| Supply/standby | `100..240 Vac`, `50..60 Hz`; `0.9 W` | MQ00316_e_EN.pdf, printed/PDF p. 1 |
+| Outputs at 230 V | `2 × 1.7 A`; incandescent/halogen `2 × 400 W`, ferromagnetic/electronic transformers `2 × 400 VA` | MQ00316_e_EN.pdf, printed/PDF p. 1 |
+| Loads at 110 V | Incandescent/halogen `2 × 200 W`, ferromagnetic/electronic `2 × 200 VA`; retain the printed current rating separately | MQ00316_e_EN.pdf, printed/PDF p. 1 |
+| Environment/enclosure | `-5..45 °C`; IP20; IK04; six DIN modules | MQ00316_e_EN.pdf, printed/PDF p. 1 |
+| Connections | RJ45 bus; input `2 × 2.5 mm²`, output `2 × 1.5 mm²` and `1 × 2.5 mm²`; cable `2.5 mm²` | MQ00316_e_EN.pdf, printed/PDF p. 1 |
 
 ## Identity
 
@@ -51,6 +49,28 @@ This DIN dimmer provides two independently addressable lighting channels for doc
 | Item model / `modobj` | `165` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `165` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `85` | `F417U2` | `1` | `5` | `BTicino_Undefined_DIN dimmer 2 x 400 VA` |
+| `1604` | `002622` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -58,6 +78,12 @@ This DIN dimmer provides two independently addressable lighting channels for doc
 | `179` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -76,11 +102,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `179` | Advanced Configuration | supported configuration route for this Device family |
-| `179` | Physical configuration | supported configuration route for this Device family |
-| `179` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `179` | Physical configuration | `0` | Canonical firmware/mode association |
+| `179` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `179` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -101,6 +130,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `8` - Dimmer actuator
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `LOCAL_BUTTON`, `DELAYED_OFF`, `STATE_SAVING_ON_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -128,6 +162,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8 |
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
+
+### Device-specific interpretation
+
+Firmware `179` exposes numeric `M=0..4` only; stored rule `3` also contains I/O, PUL and SLA branches outside that firmware domain. The manufacturer documents SLA/PUL physical configurators, so retain the source discrepancy rather than silently widening the database domain. The empty condition retains rule `3` but does not establish runtime activation. M=`1..4` converts to 60/120/180/240 seconds and master mode; the documented delay concerns the associated slave after the master switches off. Relation filters have no subset rows and retain whole reusable domains even when their descriptions say reduced or absent. Thus TYPE_LOAD values for DALI, fluorescent and LED technology and TYPE_STANDARD do not prove those physical load types or an analogue output on this phase-cut dimmer. `MIN_LEVEL_ADV` default 0 is outside reusable `1..100`, with no replacement default. All fields, groups, filters and conversions remain source-scoped.
 
 ## Conditions, filters, and conversions
 
@@ -181,7 +219,11 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-Two-channel DIN SCS dimmer for resistive loads and ferromagnetic/electronic transformers. Each channel is independently addressable; the device supports Lighting Management procedures and MyHOME physical/software configuration.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Addressing | Physical A and PL1/PL2 `1..9`; virtual room `0..10`, point `0..15`; G1/G2 `1..9`; virtual group `1..255` | MQ00316_e_EN.pdf, p. 2 |
+| Master/slave/PUL | `M=0` master, SLA same-address slave, PUL monostable ignores room/general; M `1..4` delays corresponding slave OFF by `1..4` min, master OFF immediately; Suite `0..255` s for master/master PUL | MQ00316_e_EN.pdf, p. 2 |
+| Local operation and load detection | ON/+ and OFF/− buttons switch/dim; load LED off=OFF, green=`1..100`%, orange=fault; load recognition/forcing cycles capacitive, forced capacitive, inductive, forced inductive | MQ00316_e_EN.pdf, pp. 1, 3 |
 
 ## Observed behavior and corroboration
 
@@ -189,17 +231,20 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+MyHOME supports physical or Suite setup; slave with PUL and minimum start brightness require Suite (`1..100` explicitly printed). Lighting Management uses Plug&Go only with a Room Controller association, Push&Learn or Virtual Configurator (p. 2). Do not mix electronic and ferromagnetic transformers on one channel (p. 1). In the pictured forcing procedure, short presses cycle load modes, a 10 s RL/C press confirms, and a short press exits without saving (p. 3). Follow the exact wiring diagram on p. 4; its protective-device example is not a universally specified installation rating.
 
 ## Source reconciliation
 
-The publisher sheet directly identifies both `F417U2` and `002622`, strongly reconciling the commercial identities and the canonical two-module topology.
+The technical sheet directly names both `F417U2` / `002622` and is revision e, 9 June 2014. The p. 3 forcing illustration contains a copied 4.3 A single-output graphic, while the exact p. 1 data and dual-output diagram specify 2 × 1.7 A; the graphic is not adopted as the output rating. Physical manufacturer SLA/PUL modes exceed firmware `179`’s numeric M domain; that disagreement is documented rather than corrected by assumption.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); these software records do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- No installed load test, firmware capture or minimum-load rating is retained; no universal LED/CFL compatibility is inferred.
+- Suite function help, Virtual Configurator guide, separate Plug&Go/Push&Learn procedures and linked DWG/additional regional revisions are unexamined. Filter descriptions and their unreduced domains disagree; symbolic conversion reachability and the out-of-domain advanced minimum default remain unresolved.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -208,3 +253,5 @@ The publisher sheet directly identifies both `F417U2` and `002622`, strongly rec
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0071-0080-2026-10-06.md#own-dev-0074)
