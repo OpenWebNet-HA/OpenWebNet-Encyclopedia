@@ -9,6 +9,10 @@
 | [OWN-DEV-0071](../definitions/own-dev-0071-module-contacts-interface.md) | `L/N/NT4688` | Module contacts interface | Two traditional contact inputs; catalogue and physical command scopes distinguished |
 | [OWN-DEV-0072](../definitions/own-dev-0072-basic-contacts-interface.md) | `3477`, `573996`, `049238` | Basic contacts interface | Two dry-contact inputs for lighting, shutters, scenes and audio; source conflicts explicit |
 | [OWN-DEV-0078](../definitions/own-dev-0078-scs-scs-interface.md) | `F422`, `003562` | SCS/SCS interface | Six published SCS interface roles; firmware-specific access applicability and address limits |
+| [OWN-DEV-0085](../definitions/own-dev-0085-burglar-alarm-central-unit-with-communicator.md) | `3485` | Burglar alarm central unit with communicator | PSTN alarm integration; 3485/3485STD scope and battery compatibility |
+| [OWN-DEV-0087](../definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md) | `3486` | GSM burglar alarm central unit | Eight sensor zones; GSM/PSTN communication, scenarios and automations |
+| [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
+| [OWN-DEV-0090](../definitions/own-dev-0090-enhanced-webserver.md) | `F453` | Enhanced Webserver | Enhanced Webserver/Open SCS; MHVISUAL version-6 compatibility, hardware gaps explicit |
 | [OWN-DEV-0125](../definitions/own-dev-0125-scs-zigbee-gateway.md) | `048832`, `BMNE4000` | SCS and ZigBee gateway | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0126](../definitions/own-dev-0126-eight-output-scs-dali-interface.md) | `002633`, `BMDI1100` | Eight-output SCS and DALI interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0128](../definitions/own-dev-0128-four-channel-dali-room-controller.md) | `BMDI3101`, `048844` | Four-channel DALI room controller | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

@@ -30,6 +30,7 @@ This flush-mounted alarm central unit manages a four-zone burglar-alarm installa
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
 | `U2860B.pdf` | installation manual | `U2860B`, `11/09-01 PC` | 4601 family on cover, PDF p. 1; English functions printed pp. 68-69 / PDF pp. 68-69; installation and programming printed pp. 70-105 / PDF pp. 70-105; update printed p. 115 / PDF p. 115; technical data printed p. 116 / PDF p. 116; Italian equivalents printed pp. 10-47, 57-58 / PDF pp. 10-47, 57-58 | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/U2860B.pdf) |
 | `20130411_82719_2.pdf` (`4601 NL`) | Dutch installation manual | Cover `11/09-01 PC`; no part number printed | `HC/HS/HD/L/N/NT4601`; cover PDF p. 1; package printed p. 5 / PDF p. 5; functions printed pp. 10-11 / PDF pp. 10-11; installation/commissioning printed pp. 12-28 / PDF pp. 12-28; settings/functions printed pp. 32-47 / PDF pp. 32-47; update, technical data and recovery printed pp. 57-59 / PDF pp. 57-59 | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf) | [Publisher original](https://configuratoren.legrand.nl/documize/2013/4/20130411_82719_2.pdf) |
+| `U2864B_Software_IT.pdf` | TiSecurityBasic software manual | Version 1.0; 11/09-01-PC | Complete 16-page document: workflow pp. 3–7; firmware pp. 8–11; configuration acquisition/transfer pp. 12–14. Explicit `3485B` and HC/HS/HD/L/N/NT4601 targets | [Archived original](https://archive.openwebnet-ha.org/sha256/0b/ed/0bed021e002ce15f14ea5c7a5d576c323fa31acf791967bcf7c9285eb4a3cbcf.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/U2864B_Software_IT.pdf) |
 
 `4601 NL` below denotes the Dutch file `20130411_82719_2.pdf`. Its cover revision is November 2009; the April 2013 URL path is not a publication date. It is a separately archived 62-page Dutch edition; the Italian/English `U2860B` contains 120 pages.
 
@@ -60,6 +61,32 @@ This flush-mounted alarm central unit manages a four-zone burglar-alarm installa
 | Item model / `modobj` | `200` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Burglar alarm system | `200` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `142` | `HC/HS/HD4601` | `1` | `2` | `BTicino_Axolute_Flush mounted alarm central u` |
+| `160` | `L/N/NT4601` | `1` | `4` | `BTicino_L/N/NT_Flush mounted alarm central un` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `142` | `1` | `0` | `0` | Empty in source |
+| `160` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +94,16 @@ This flush-mounted alarm central unit manages a four-zone burglar-alarm installa
 | `22` | `1` | `0` | `10` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `22` | `61` | BTicino (key `1`) | `0` | external software | `TiSecurityBasic_0100` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -84,9 +121,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `22` | Product Programming | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `22` | Product Programming | `3` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -125,6 +165,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | External siren flash | Armed: `3` flashes; disarmed: `1` flash | `4601 NL`, printed p. 47 / PDF p. 47 |
 
 These local menu settings supplement reusable Object `11`'s `ZONA1`/`ALLARME` fields. The manual supplies no mapping to those catalogue fields, to `AID`, or to diagnostic serialization.
+
+### Device-specific interpretation
+
+Official/default firmware `22`=1.0.10 has one Module with Object `11`, AID only and Product Programming `3`. All six HC/HS/HD/L/N/NT commercial variants map to item `160`. Object `11` has only ZONA1ALLARME and ALLARME reusable fields; complete local-contact, relay, learning and access settings remain in the published product section and are not squeezed into that small schema. No Virgin/condition/filter/conversion, connection or package association is stored; parameter `61` brand `1`, line `0` is shared with the distinct `3485B` item, without proving hardware equivalence. Zones `0` and `5` are bookkeeping/technical contexts, not extra sensor zones or diagnostic Modules.
 
 ## Conditions, filters, and conversions
 
@@ -247,7 +291,13 @@ The Dutch edition corroborates battery polarity and switch-`OFF` connection, rea
 | Learning options | Automatic scan configures peripherals; manual path inspects and stores connection, device type and tamper state | `4601 NL`, printed p. 46 / PDF p. 46 |
 | Key maintenance actions | New, Share (multiple installations), Update, Select (display numeric code), Delete and Delete all; source describes these as key operations, not a central-unit factory reset | `4601 NL`, printed p. 46 / PDF p. 46 |
 
-The retained manual refers to the separate TiSecurityBasic manual for the complete PC workflow. Pressing `RESET` in the documented recovery context enters Maintenance; it is not evidence of a full factory erase. The manual does not identify an update package matching catalogue firmware `1.0.10`.
+The separately retained TiSecurityBasic manual now supplies the PC workflow below. Pressing `RESET` in the documented recovery context enters Maintenance; it is not evidence of a full factory erase. The manual does not identify an update package matching catalogue firmware `1.0.10`.
+
+### TiSecurityBasic transfer and update
+
+TiSecurityBasic explicitly selects the correct target, `3485B` or HC/HS/HD/L/N/NT4601. Its Version 1.0 is a software version (`U2864B`, PDF pp. 8–11), not installed panel firmware. For firmware update: enter Maintenance, move the rear slide to OFF, connect serial 335919 or USB 3559 at the six-pin connector, choose the COM port and .fwz file, follow the transfer, disconnect, move slide ON and press physical RESET. That post-update RESET is not documented as a factory erase.
+
+For configuration acquisition/transfer, pp. 12–14 separately describe Maintenance, six-pin connection, COM selection and saving/opening a configuration file. Acquisition retains a backup; transfer restores a saved configuration or transfers it to another correctly selected target. Those pages do not prescribe the update-specific OFF/ON/RESET sequence. No edited parameter domain or transport mapping is inferred from the screenshots. The complete product’s local commissioning still requires its exact hardware manual.
 
 ## Source reconciliation
 
@@ -261,13 +311,18 @@ Dutch section 6.9 says the installation must be `ingeschakeld` (armed) before Ma
 
 Local menu settings and automation command forms remain scoped to the published product procedure. The manual neither identifies the installed firmware tuple nor supplies a serialization mapping to the catalogue configuration fields. The catalogue remains the source of firmware `22`, Module slot `1` and external Object `11`; hardware and remote-transport corroboration remain open.
 
+The Dutch package list also retains a metal wall-mounting base despite the family’s documented flush installation; the correct 4601 name does not resolve every packing-list detail. TiSecurityBasic explicitly covers all six 4601 variants and separately the `3485B`. Its update and configuration-transfer procedures have different switch/reset requirements; the shared software does not establish identical hardware or a telephone connection.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); the complete firmware, topology and restriction tables remain authoritative for software applicability.
+
 ## Evidence limits and open work
 
-- Obtain the separate TiSecurityBasic manual for complete project transfer and firmware-update details.
 - Retain the English packing-list error despite the Italian/Dutch corroboration of 4601; resolve telephone-call wording and the Dutch armed/disarmed recovery contradiction with further exact-product evidence.
 - Establish HD4601 dimensions, backup-battery voltage/capacity/chemistry and local relay voltage type from a directly applicable specification.
 - Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
 - Corroborate the local-menu to catalogue/diagnostic mapping and any gateway acceptance of the published automation-menu codes on controlled hardware.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -278,3 +333,5 @@ Local menu settings and automation command forms remain scoped to the published 
 - [Physical Devices](../../device-model/physical-devices.md)
 - [4601 installation manual, archived original](https://archive.openwebnet-ha.org/sha256/6a/82/6a8296490e7ec2cf53f48620225dd6bbbac389a146e1eb3ad8e4a30fc2cfd14c.pdf)
 - [Dutch 4601 installation manual, archived original](https://archive.openwebnet-ha.org/sha256/ca/b4/cab40b96a02307873e24b9ba79ac6d703bb5b79f6f7d4a45ca38886fdcd879e0.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0088)

@@ -2208,6 +2208,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00301-d-it-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00301_d_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00301_d_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 1052720
+  sha256: 0f23b2a75812de6b9e91eb88c55697f0fd674014b0a6ba081b1f022d2c1aed86
+  source_url: https://dar.bticino.it/asset/Documents/BT00301_d_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0f/23/0f23b2a75812de6b9e91eb88c55697f0fd674014b0a6ba081b1f022d2c1aed86.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0f/23/0f23b2a75812de6b9e91eb88c55697f0fd674014b0a6ba081b1f022d2c1aed86.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00308-c-it-20261006
   kind: documentation
   publisher: BTicino / Legrand
@@ -2268,6 +2288,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bt00383-a-en-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BT00383-a-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: BT00383-a-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 714289
+  sha256: 32de6b7809c112f6dce610302780e43a33a5a500497abff6d704002624e45f0d
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=BT00383-a-EN.pdf&fileId=58107.23188.48006.45026
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/32/de/32de6b7809c112f6dce610302780e43a33a5a500497abff6d704002624e45f0d.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/32/de/32de6b7809c112f6dce610302780e43a33a5a500497abff6d704002624e45f0d.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bt00459-b-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
@@ -11956,6 +11996,46 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u0990c-s-uk-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U0990C_S_UK manufacturer device documentation
+  media_type: application/pdf
+  filename: U0990C_S_UK.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 10255750
+  sha256: ac238e48e634cbf0fe83f685ad4b2f4011b173452693a8777b9786a31374e443
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U0990C_S_UK.pdf&fileId=58107.23188.51017.55872
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/ac/23/ac238e48e634cbf0fe83f685ad4b2f4011b173452693a8777b9786a31374e443.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/ac/23/ac238e48e634cbf0fe83f685ad4b2f4011b173452693a8777b9786a31374e443.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u0990c-u-uk-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U0990C_U_UK manufacturer device documentation
+  media_type: application/pdf
+  filename: U0990C_U_UK.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 12667929
+  sha256: 452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5
+  source_url: https://www.homesystems-legrandgroup.com/MatrixENG/liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&fileName=U0990C_U_UK.pdf&fileId=58107.23188.51017.55872
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/45/23/452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/45/23/452374d5de9776539a27aa834b29438f0bfeaa2b482a17943df26ebe4b65afa5.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u1925d-20261005
   kind: documentation
   publisher: BTicino / Legrand
@@ -11976,6 +12056,26 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u2073i-i-en-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U2073I_I_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: U2073I_I_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 4235156
+  sha256: 0e2bdbb00e33d8cb7fac01d6d22188333660136141b05e11b74bbfa0ab8b9877
+  source_url: https://dar.bticino.it/asset/Documents/U2073I_I_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0e/2b/0e2bdbb00e33d8cb7fac01d6d22188333660136141b05e11b74bbfa0ab8b9877.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0e/2b/0e2bdbb00e33d8cb7fac01d6d22188333660136141b05e11b74bbfa0ab8b9877.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u2099c-20261005
   kind: documentation
   publisher: BTicino / Legrand
@@ -12082,6 +12182,26 @@ artifacts:
   language_evidence: Original English text inspected; other languages, where present, are not exhaustively enumerated.
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u2864b-software-it-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U2864B_Software_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: U2864B_Software_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 5480816
+  sha256: 0bed021e002ce15f14ea5c7a5d576c323fa31acf791967bcf7c9285eb4a3cbcf
+  source_url: https://dar.bticino.it/asset/Documents/U2864B_Software_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/0b/ed/0bed021e002ce15f14ea5c7a5d576c323fa31acf791967bcf7c9285eb4a3cbcf.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/0b/ed/0bed021e002ce15f14ea5c7a5d576c323fa31acf791967bcf7c9285eb4a3cbcf.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u3499a-20261004
   kind: documentation
   publisher: BTicino / Legrand
@@ -12261,6 +12381,26 @@ artifacts:
   language:
   - en
   language_evidence: Predominantly pictographic installation sheet; English functional labels are present
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u4617a-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4617A manufacturer device documentation
+  media_type: application/pdf
+  filename: U4617A.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 730850
+  sha256: e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc
+  source_url: https://dar.bticino.it/asset/Documents/U4617A.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e3/91/e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e3/91/e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc.pdf
+  language:
+  - en
+  language_evidence: English control labels Auto, Eco, LED IR and LEARN; remaining installation content is numerical and pictorial, with no language-specific explanatory prose
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u4713a-s-en-20261004

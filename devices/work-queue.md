@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 130 |
-| reviewed | 80 |
+| review-ready | 120 |
+| reviewed | 90 |
 
 Total: **210** technical-item clusters.
 
@@ -40,11 +40,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 128 | 1 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0081 | partial | complete | partial | pending | - |
-| normal | 130 | Room Controller 1 Output 16 Amps | 2 | review-ready | OWN-DEV-0082 | partial | complete | complete | pending | - |
-| normal | 134 | 2 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0083 | partial | complete | partial | pending | - |
-| normal | 137 | IP55 PIR wall mounted sensor | 2 | review-ready | OWN-DEV-0084 | partial | complete | partial | pending | - |
-| normal | 160 | Flush mounted alarm central unit | 2 | review-ready | OWN-DEV-0088 | partial | complete | complete | pending | - |
 | normal | 975 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0095 | partial | partial | partial | pending | - |
 | normal | 1031 | Pulses counter interface | 2 | review-ready | OWN-DEV-0096 | partial | complete | partial | pending | - |
 | normal | 1078 | Video Station | 2 | review-ready | OWN-DEV-0097 | partial | complete | partial | pending | - |
@@ -93,11 +88,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 139 | Burglar alarm central unit with communicator | 1 | review-ready | OWN-DEV-0085 | partial | complete | partial | pending | - |
-| normal | 140 | Polyx Alarm | 1 | review-ready | OWN-DEV-0086 | partial | partial | partial | pending | - |
-| normal | 141 | GSM burglar alarm central unit | 1 | review-ready | OWN-DEV-0087 | partial | complete | partial | pending | - |
-| normal | 207 | Webserver Audio/Video DIN | 1 | review-ready | OWN-DEV-0089 | partial | complete | partial | pending | - |
-| normal | 912 | Enhanced Webserver | 1 | review-ready | OWN-DEV-0090 | partial | complete | partial | pending | - |
 | normal | 913 | Stop&Go | 1 | review-ready | OWN-DEV-0091 | partial | complete | partial | pending | - |
 | normal | 914 | Stop&Go Btest | 1 | review-ready | OWN-DEV-0092 | partial | complete | partial | pending | - |
 | normal | 916 | Stop&Go Plus | 1 | review-ready | OWN-DEV-0093 | partial | complete | partial | pending | - |
@@ -203,10 +193,20 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 90 | SCS-SCS interface | OWN-DEV-0078 |
 | 94 | Room Controller 2 Dim Outputs 0-10V 1000VA | OWN-DEV-0079 |
 | 98 | Scenes programmer | OWN-DEV-0080 |
+| 128 | 1 relay DIN actuator 16 A 100/240 V | OWN-DEV-0081 |
+| 130 | Room Controller 1 Output 16 Amps | OWN-DEV-0082 |
+| 134 | 2 relay DIN actuator 16 A 100/240 V | OWN-DEV-0083 |
+| 137 | IP55 PIR wall mounted sensor | OWN-DEV-0084 |
+| 139 | Burglar alarm central unit with communicator | OWN-DEV-0085 |
+| 140 | Polyx Alarm | OWN-DEV-0086 |
+| 141 | GSM burglar alarm central unit | OWN-DEV-0087 |
+| 160 | Flush mounted alarm central unit | OWN-DEV-0088 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
+| 207 | Webserver Audio/Video DIN | OWN-DEV-0089 |
 | 281 | Basic control | OWN-DEV-0004 |
 | 291 | Temperature central unit | OWN-DEV-0042 |
 | 402 | Scenario control | OWN-DEV-0011 |
+| 912 | Enhanced Webserver | OWN-DEV-0090 |
 | 1076 | Video Display | OWN-DEV-0013 |
 | 1104 | Extended control item | OWN-DEV-0014 |
 | 1121 | Flush mounted actuator 1 relay | OWN-DEV-0008 |

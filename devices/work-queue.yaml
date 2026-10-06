@@ -1434,7 +1434,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0071-0080-2026-10-06.md#own-dev-0080. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '128':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1443,27 +1443,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0081 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0081. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '130':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1472,28 +1473,29 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0082 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-03: User-supplied U3773B archived byte-for-byte and reconciled with exact PDF/panel locators. Shared ratings/load matrix, mounting and illustrated controls incorporated. BMSW3002 has a combined 16 A output limit; BMSW3001 remains single-output with two protocol Modules. Legrand-specific sources, fuller commissioning procedures and hardware/runtime corroboration remain open.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0082. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '134':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1502,27 +1504,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0083 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0083. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '137':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1531,27 +1534,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0084 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0084. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '139':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1560,27 +1564,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0085 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0085. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '140':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1589,27 +1594,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
-      documentation_archive: partial
-      source_reconciliation: partial
+      documentation_discovery: complete
+      documentation_archive: complete
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0086 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0086. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '141':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1618,27 +1624,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0087 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0087. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '160':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1647,27 +1654,28 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0088 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-03: U2860B 4601 installation manual archived and reconciled; technical data, zone model, local input/relay settings, first activation, access levels, automation-menu forms and PC update incorporated with printed/PDF locators. Package-list and telephone wording inconsistencies retained; separate TiSecurityBasic workflow and hardware/runtime corroboration remain open.'
     - '2026-10-03: Dutch 4601 installation manual 20130411_82719_2.pdf uploaded and immediately registered on main; technical data and commissioning corroborated, additional local settings and automation triggers incorporated, and Dutch armed/disarmed recovery contradiction preserved. Separate TiSecurityBasic manual and hardware/runtime corroboration remain open.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0088. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '168':
     state: reviewed
     priority: normal
@@ -1701,7 +1709,7 @@ items:
     - '2026-10-05: Hardware fingerprint remains pending; removed from acceptance blockers because current review policy explicitly does not require hardware corroboration.'
     - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0017. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '207':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1710,25 +1718,26 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0089 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0089. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '281':
     state: reviewed
     priority: high
@@ -1821,7 +1830,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-05: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0011. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '912':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -1830,25 +1839,26 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
-      source_reconciliation: partial
+      source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - OWN-DEV-0090 created from the canonical MyHOME Suite catalogue; dedicated publisher-document discovery and hardware corroboration remain explicit open evidence tasks.
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0090. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '913':
     state: review-ready
     priority: normal

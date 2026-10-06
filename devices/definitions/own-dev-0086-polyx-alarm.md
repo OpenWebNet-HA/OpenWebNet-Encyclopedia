@@ -2,7 +2,7 @@
 
 ## Summary
 
-Polyx Alarm is a burglar-alarm control unit whose catalogue role covers a four-zone alarm system. It provides the system's central alarm-control endpoint; detailed local controls, construction and operating procedures remain undocumented in the retained product sources.
+The Polyx Alarm `3485B` is a four-zone alarm central unit in the canonical catalogue. It shares the TiSecurityBasic configuration-backup and firmware-update workflow with the flush-mounted 4601 family, while remaining a separate hardware identity.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -27,13 +27,15 @@ Polyx Alarm is a burglar-alarm control unit whose catalogue role covers a four-z
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `U2864B_Software_IT.pdf` | TiSecurityBasic software manual | Version 1.0; 11/09-01-PC | Complete 16-page document: workflow pp. 3–7; firmware pp. 8–11; configuration acquisition/transfer pp. 12–14. Explicit `3485B` and HC/HS/HD/L/N/NT4601 targets | [Archived original](https://archive.openwebnet-ha.org/sha256/0b/ed/0bed021e002ce15f14ea5c7a5d576c323fa31acf791967bcf7c9285eb4a3cbcf.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/U2864B_Software_IT.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Polyx Alarm` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Not established by retained product documentation | Direct product-source reconciliation remains open |
+| Catalogue role | Polyx Alarm; four-zone central unit | Commercial item 140 and Object `11` |
+| PC interface | Six-pin programming connection; serial 335919 or USB 3559 | `U2864B`, PDF pp. 10, 12–14; exact target `3485B` |
+| Hardware ratings | Enclosure dimensions, supply/current, battery and telephone hardware are not established here | Exact `3485B` hardware manual/technical sheet not retained |
 
 ## Identity
 
@@ -45,6 +47,30 @@ Polyx Alarm is a burglar-alarm control unit whose catalogue role covers a four-z
 | Item model / `modobj` | `199` | Canonical inventory |
 | Commercial records | `1` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Burglar alarm system | `199` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `140` | `3485B` | `1` | `4` | `BTicino_L/N/NT_Polyx Alarm` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `140` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -52,6 +78,16 @@ Polyx Alarm is a burglar-alarm control unit whose catalogue role covers a four-z
 | `18` | `1` | `0` | `10` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `18` | `61` | BTicino (key `1`) | `0` | external software | `TiSecurityBasic_0100` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -69,9 +105,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `18` | Product Programming | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `18` | Product Programming | `3` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -91,6 +130,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `ZONA1` | `1..4` | `1` | First zone AI |
 | `ALLARME` | `0..9` | `0` | Allarm setting |
+
+### Device-specific interpretation
+
+Firmware `18`=1.0.10, Official/default, has one Module with four-zone Object `11` and AID only. Object `11` exposes only ZONA1ALLARME and ALLARME in this catalogue; the local menu and complete product capabilities cannot be inferred from those two fields. No Virgin, condition, filter or conversion is associated. Product Programming `3` and parameter record `61` (brand `1`, line `0`) are stored; no connection or package association is stored. Sharing this schema/parameter with the flush-mounted 4601 item `160` does not establish identical enclosures, battery ratings or telephone capability. TiSecurityBasic Version 1.0 is software-document scope, not the catalogue firmware `1`.0.10.
 
 ## Conditions, filters, and conversions
 
@@ -132,7 +175,15 @@ These maps describe stored conversion branches after Object selection. Validate 
 | --- | --- | --- |
 | `11` Burglar alarm 4 zones control unit | Burglar alarm system | Firmware/Object capability association; resolve the slot and configuration first |
 
-Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
+These are catalogue Object/system associations, not `WHO` numbers, physical connector claims or observed command acceptance. Resolve the active Module/Object and its restrictions before using the [Functional Protocol](../../functional/).
+
+### Published product functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Firmware update | Separate .fwz firmware transfer procedure with Maintenance and rear slide OFF | `U2864B`, PDF pp. 8–11 |
+| Configuration backup / restoration | Acquire and save configuration; open and transfer to the selected panel | `U2864B`, PDF pp. 12–14 |
+| Local menu scope | Four-zone Object catalogue; the 4601 hardware menu is not assumed identical | Canonical item 140; shared software target does not prove hardware equivalence |
 
 ## Observed behavior and corroboration
 
@@ -140,21 +191,22 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-The catalogue registers Product Programming for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+TiSecurityBasic explicitly selects the correct target, `3485B` or HC/HS/HD/L/N/NT4601. Its Version 1.0 is a software version (`U2864B`, PDF pp. 8–11), not installed panel firmware. For firmware update: enter Maintenance, move the rear slide to OFF, connect serial 335919 or USB 3559 at the six-pin connector, choose the COM port and .fwz file, follow the transfer, disconnect, move slide ON and press physical RESET. That post-update RESET is not documented as a factory erase.
 
-No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+For configuration acquisition/transfer, pp. 12–14 separately describe Maintenance, six-pin connection, COM selection and saving/opening a configuration file. Acquisition retains a backup; transfer restores a saved configuration or transfers it to another correctly selected target. Those pages do not prescribe the update-specific OFF/ON/RESET sequence. No edited parameter domain or transport mapping is inferred from the screenshots. The complete product’s local commissioning still requires its exact hardware manual.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. No product manual is retained for this exact dossier. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+The catalogue establishes exact `3485B` identity independently of the missing hardware manual. TiSecurityBasic explicitly names `3485B` and 4601 as selectable targets. Its connection diagram carries ART.3485 although the accompanying target text says `3485B`; that legacy diagram label is recorded rather than treated as an alias to PSTN item 139. Commercial line key 4 is retained as catalogue metadata; no marketed L/N/NT enclosure is inferred from it. Hardware and local-menu details from `U2860B` are not transplanted to this separate item.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); the complete firmware, topology and restriction tables remain authoritative for software applicability.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Obtain a dedicated `3485B` hardware/installation manual for supply/current, enclosure, zones, local controls, battery and any telephone capability.
+- Resolve the ART.3485 illustration label against the explicitly named `3485B` target and corroborate installed firmware.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -163,3 +215,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0086)

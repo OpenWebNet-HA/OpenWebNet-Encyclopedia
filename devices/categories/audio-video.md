@@ -3,6 +3,11 @@
 | Device ID | Commercial identity | Description | Relevant functions |
 | --- | --- | --- | --- |
 | [OWN-DEV-0013](../definitions/own-dev-0013-video-display.md) | 8-record Video Display family | Video Display | Internal unit, lock, autoswitch, staircase-light and paging functions |
+| [OWN-DEV-0024](../definitions/own-dev-0024-two-module-soft-touch-control.md) | `HC/HS4653/2`, `HD4653M2` | Two-module capacitive Soft Touch SCS command with configurable function and UI settings | Configured lighting, scenarios, sound and door-entry command roles; separate UI settings |
+| [OWN-DEV-0028](../definitions/own-dev-0028-rotary-regulation-control.md) | `HC/HS/HD4563`, `L/N/NT4563` | Flush-mounted rotary SCS control | Advanced dimmer adjustment and sound volume/source controls; mode-specific settings |
+| [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |
+| [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
+| [OWN-DEV-0090](../definitions/own-dev-0090-enhanced-webserver.md) | `F453` | Enhanced Webserver | Enhanced Webserver/Open SCS; MHVISUAL version-6 compatibility, hardware gaps explicit |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0107](../definitions/own-dev-0107-legrand-multimedia-touch-screen.md) | `067285`, `573963`, `573962` | Legrand Multimedia Touch Screen | Multimedia, scenarios, lighting, temperature, alarm and video-entry interface |
 | [OWN-DEV-0108](../definitions/own-dev-0108-classe-300-v13e-v13m.md) | `344612`, `344613`, `344622` | Classe 300 V13E/V13M video internal unit | Video internal unit, intercom, locks and V13M-only video memory |
@@ -32,6 +37,3 @@
 | [OWN-DEV-0195](../definitions/own-dev-0195-arteor-573992-audio-video-web-server.md) | `573992` | Arteor 573992 audio and video web server | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0196](../definitions/own-dev-0196-classe100-x12b-energy-display-video-handset.md) | `344602` | Classe100 X12B energy-display video handset | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0210](../definitions/own-dev-0210-345000-linea-5000-entrance-panel-display.md) | `345000` | 345000 Linea 5000 entrance-panel display | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
-| [OWN-DEV-0024](../definitions/own-dev-0024-two-module-soft-touch-control.md) | `HC/HS4653/2`, `HD4653M2` | Two-module capacitive Soft Touch SCS command with configurable function and UI settings | Configured lighting, scenarios, sound and door-entry command roles; separate UI settings |
-| [OWN-DEV-0028](../definitions/own-dev-0028-rotary-regulation-control.md) | `HC/HS/HD4563`, `L/N/NT4563` | Flush-mounted rotary SCS control | Advanced dimmer adjustment and sound volume/source controls; mode-specific settings |
-| [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |

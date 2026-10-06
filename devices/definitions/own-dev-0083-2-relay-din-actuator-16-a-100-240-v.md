@@ -2,7 +2,7 @@
 
 ## Summary
 
-This four-module DIN actuator provides two relay outputs for configured SCS lighting control. Its two-output arrangement distinguishes it from the single-relay version, with electrical limits remaining specific to the documented load and product source.
+This DIN actuator switches two independent lighting loads in an SCS automation installation. The hotel configuration guide identifies `BMSW1002` / 002601 and provides output naming and state-recall settings; the catalogue separately describes addressing, groups and timed operation.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -35,11 +35,10 @@ This four-module DIN actuator provides two relay outputs for configured SCS ligh
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `2 relay DIN actuator 16 A 100/240 V` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
-| SCS current | `5 mA` | Retained residential catalogue, printed p. 165 / PDF p. 167 |
-| DIN width | 4 modules | Same source |
-| Power dissipation | `1.7 W` | Same source |
+| Output count | Two | Exact references in le10699aa-fr, printed/PDF p. 102; Swiss guide printed p. 165 / PDF p. 167 |
+| SCS current / mounting | `5 mA` at SCS `27 Vdc`; 4 DIN modules | Swiss guide printed p. 165 / PDF p. 167 |
+| Maximum dissipation | `1.7 W` | Same exact-reference row; not a switched-load rating |
+| Catalogue load / supply description | `16 A`; `100..240` V | Historical item description only; a complete exact-product electrical/load specification is not retained |
 
 ## Identity
 
@@ -51,6 +50,33 @@ This four-module DIN actuator provides two relay outputs for configured SCS ligh
 | Item model / `modobj` | `161` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `161` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `134` | `BMSW1002` | `1` | `5` | `BTicino_Undefined_2 relay DIN actuator 16 A 1` |
+| `1576` | `002601` | `2` | `5` | Empty in source |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `134` | `1` | `0` | `0` | Empty in source |
+| `1576` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -58,6 +84,12 @@ This four-module DIN actuator provides two relay outputs for configured SCS ligh
 | `168` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -76,11 +108,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `168` | Advanced Configuration | supported configuration route for this Device family |
-| `168` | Physical configuration | supported configuration route for this Device family |
-| `168` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `168` | Physical configuration | `0` | Canonical firmware/mode association |
+| `168` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `168` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -125,6 +160,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+### Device-specific interpretation
+
+Firmware `168` has two Object `6` Module slots, representing the two-output catalogue model. Its firmware has two group fields; the reusable actuator has ten. Rule `1` maps numeric `M = 0..4` to delay `0/60/120/180/240` and `LOCAL_BUTTON` `0`; symbolic `I/O`, `PUL` and `SLA` selectors are outside the numeric firmware domain. Filter `1796` includes `LOCAL_BUTTON` `0`, unlike item `128`/firmware `167`; do not copy the `BMSW1001` restriction here. Whole-domain state-reset, load-control and timer filters remain distinct from product-document settings.
 
 ## Conditions, filters, and conversions
 
@@ -179,7 +218,15 @@ These maps describe stored conversion branches after Object selection. Validate 
 | --- | --- | --- |
 | `6` Light actuator | Automation | Firmware/Object capability association; resolve the slot and configuration first |
 
-Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product behavior is additionally bounded by the publisher evidence below; uncorroborated transport and firmware details remain open work.
+These are catalogue Object/system associations, not `WHO` numbers, physical connector claims or observed command acceptance. Resolve the active Module/Object and its restrictions before using the [Functional Protocol](../../functional/).
+
+### Published product functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Output naming | One setting window per output; the two-output guide illustrates separate channels | le10699aa-fr, printed/PDF p. 102 |
+| State recall option | Enable/disable Rappel de l’état. The guide does not define its electrical action or map it to a protocol/configuration field | Same page; screenshot label and accompanying text examined |
+| Addressing and timing | Area/light point, groups, local button, state-reset and timer surfaces are catalogue-scoped; exact filters/conversions below apply | Canonical firmware and Object `6` |
 
 ## Observed behavior and corroboration
 
@@ -187,21 +234,20 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Advanced Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has 2 declared Modules; retain the individual Module placements when preparing a project.
-
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
-
-The retained hotel guide, printed p. 102, / PDF p. 102, gives product-specific per-output naming and enable/disable controls; the two-output product has a corresponding panel for each channel. This is project-tool behavior, not a new OpenWebNet command grammar.
+The catalogue associates Physical `0`, Virtual `1` and Advanced Configuration `2` with this firmware. The retained hotel guide documents naming and state-recall controls (printed/PDF p. 102); it does not document a complete reset, transfer, firmware update or load-wiring procedure for this reference. Use the exact firmware domains and conversion limits below; the mode list alone does not resolve symbolic configurators outside the stored numeric domain.
 
 ## Source reconciliation
 
-The retained residential catalogue supplies the SCS current, DIN width and dissipation rows now incorporated above. The retained hotel guide also explicitly names this commercial pair in its output-state programming example. These publisher facts supplement the complete catalogue configuration model; dedicated load-family limits and hardware behavior still require further evidence.
+The Swiss exact-reference consumption table corroborates two outputs, 5 mA bus demand, four DIN units and 1.7 W dissipation. The hotel guide explicitly names both catalogue commercial references. Its caption says to activate/deactivate the state, but its UI label is Rappel de l’état; the literal state-recall label is retained. It does not establish an output-enable switch, a power-recovery policy or a mapping to `STATE_RESET`. No load table from BMSW1003 or a room controller is borrowed. The item description’s mains range and 16 A are retained with catalogue-only provenance.
+
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); the complete firmware, topology and restriction tables remain authoritative for software applicability.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Obtain dedicated exact-reference instructions/load tables for mains, load-family limits, local forcing and commissioning. Existing manufacturer guide coverage establishes identity and the stated settings.
+- Confirm the catalogue conversion/filter inconsistencies and actual installed firmware on controlled hardware.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -210,3 +256,5 @@ The retained residential catalogue supplies the SCS current, DIN width and dissi
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0083)

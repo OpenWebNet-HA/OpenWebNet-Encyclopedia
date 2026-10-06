@@ -2,7 +2,7 @@
 
 ## Summary
 
-The F453 Enhanced Webserver provides a network-facing supervision and OpenWebNet/SCS gateway role for MyHOME. Its documented sound-system compatibility establishes one integration context; the complete product-level control and multimedia feature set still needs exact documentation.
+The `F453` is the catalogue’s Enhanced Webserver for MyHOME network integration, with a separate Open SCS gateway Module. The retained sound-system guide places it alongside `F453AV` for MHVISUAL version-6 multichannel supervision; a complete exact `F453` hardware and programming specification is still absent.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -27,13 +27,14 @@ The F453 Enhanced Webserver provides a network-facing supervision and OpenWebNet
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | F453 supervision compatibility: printed p. 38 / PDF p. 38; not a complete F453 installation manual | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | `F453` supervision compatibility: printed p. 38 / PDF p. 38; not a complete `F453` installation manual | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Programming / connectivity surface | Ethernet | canonical inventory |
+| Product role | Enhanced Webserver, one webserver and one Open SCS Module | Canonical item 912 / firmware `5`; not a connector count |
+| Supply / dimensions / ports | Not established by an exact retained `F453` hardware specification | Do not borrow `F453AV` or successor `F454` ratings |
 
 ## Identity
 
@@ -45,6 +46,34 @@ The F453 Enhanced Webserver provides a network-facing supervision and OpenWebNet
 | Item model / `modobj` | `42` | Canonical inventory |
 | Commercial records | `1` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `42` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `912` | `F453` | `1` | `5` | Empty in source |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `912` | `1` | `0` | `1` | `EDC` |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -52,6 +81,20 @@ The F453 Enhanced Webserver provides a network-facing supervision and OpenWebNet
 | `5` | `2` | `0` | `8` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `5` | `5` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `5` | `6` | BTicino (key `1`) | `0` | SVM | `912_2.0_BT\xml\SVM\svm.xml` |
+| `5` | `7` | BTicino (key `1`) | `0` | Extra | `912_2.0_BT\xml\Extra\extra.xml` |
+| `5` | `8` | BTicino (key `1`) | `0` | Director | `912_2.0_BT\xml\DIRECTOR\director.xml` |
+| `5` | `9` | BTicino (key `1`) | `0` | Protocol and other device parameters | `912_2.0_BT\xml\Protocol\protocol.xml` |
+
+All 5 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -70,9 +113,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `5` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `5` | Product Programming | supported configuration route for this Device family |
+| `5` | Ethernet | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -103,7 +152,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
-
 ### Object `178` - Enhanced Webserver
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -118,6 +166,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `S_VCT` | `0` = Disable; `1` = Enable | `0` | Voice box videos |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Device-specific interpretation
+
+Firmware `5`=2.0.8 is Official/default with two Modules: `178` in slot `1` and Open SCS Object `150` in slot `2`. No Virgin, condition, filter or conversion is stored. Product Programming `3`, one Ethernet connection and five parameter associations `5..9` (brand `1`, line `0`) are explicit; no package association is stored. Commercial metadata marks this reference as a gateway with visibility_type `EDC`, while reusable `IS_GATEWAY` defaults to `0`: these are different scopes. Reusable `FW_VER` default `3.0.0` differs from the firmware tuple 2.0.8; preserve both without choosing an installed value. VCD_TYPE `10000` and CMD_TYPE `20000` have no protocol-unit mapping here. Firmware identity and Object AID fields are not alias proof. LAN connection `0` denotes static IP, public connection `0` DHCP; their enums/defaults are not interchangeable. Static network defaults and video-answering/SMTP fields are reusable software data, not observed network settings, a physical modem connector or proof of every source-era service.
 
 ## Conditions, filters, and conversions
 
@@ -160,9 +212,14 @@ These maps describe stored conversion branches after Object selection. Validate 
 | `150` Gateway Open SCS | Integration function | Firmware/Object capability association; resolve the slot and configuration first |
 | `178` Enhanced Webserver | Integration function | Firmware/Object capability association; resolve the slot and configuration first |
 
-Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
+These are catalogue Object/system associations, not `WHO` numbers, physical connector claims or observed command acceptance. Resolve the active Module/Object and its restrictions before using the [Functional Protocol](../../functional/).
 
-The sound-system guide, printed p. 38, / PDF p. 38, explicitly includes F453 in the supervision compatibility table, with version-6 applicability for the HC/HS4684 touchscreen. This establishes that documented compatibility context, not a complete gateway command inventory.
+### Published product functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Sound supervision compatibility | MHVISUAL version 6 with `F453AV` or `F453` for multichannel installations | French sound guide printed/PDF p. 38, MHVISUAL row |
+| Software applicability | Enhanced Webserver Object `178` and Open SCS Object `150`; Ethernet catalogue connection | Canonical record only; reusable video/network fields do not establish every physical service |
 
 ## Observed behavior and corroboration
 
@@ -170,21 +227,20 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-The catalogue registers Product Programming for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has 2 declared Modules; retain the individual Module placements when preparing a project.
-
-No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+Product Programming `3` and one Ethernet connection are catalogue-associated. No retained exact `F453` manual establishes a complete commissioning, project-transfer, reset or update sequence. Manufacturer legacy download listings identify TiF453 software/manual candidates, but attempted publisher downloads did not supply usable originals. No `F453AV` workflow is adopted here.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. Retained publisher evidence is listed in Documentation; its exact Device coverage is stated there. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+The French sound-system table’s version 6 applies to the MHVISUAL software row, which names `F453AV` or `F453`. The separate H/L4684 touchscreen row instead says first-half 2007; it is not the version-6 statement. Correct the former touchscreen attribution without upgrading the source into a complete hardware specification. `F453` is distinct from `F453AV` and `F454`, and its reusable webserver/answering fields do not establish AV hardware. Candidate exact software/manual listings and unavailable endpoints remain discovery evidence only; their payloads and hardware claims are not incorporated.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+Catalogue interpretation is detailed under [Object configuration surfaces](#object-configuration-surfaces); the complete firmware, topology and restriction tables remain authoritative for software applicability.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Obtain exact `F453` technical/user/software originals, including revision applicability, electrical ratings, ports and commissioning.
+- Inspect parameter payloads `5..9` and corroborate active webserver/gateway fields; missing PDFs are documentation gaps, not an identity ambiguity.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -193,3 +249,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0081-0090-2026-10-06.md#own-dev-0090)

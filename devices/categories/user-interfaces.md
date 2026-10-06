@@ -8,6 +8,10 @@
 | [OWN-DEV-0018](../definitions/own-dev-0018-local-display.md) | 6-record 4685 family | Local Display | FUN-selected scenario, sound or temperature-control interface |
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Six capacitive command positions plus UI settings |
 | [OWN-DEV-0020](../definitions/own-dev-0020-load-control-panel.md) | 6-record load-panel family | Load Control Panel bus | Four status / override buttons with LED feedback |
+| [OWN-DEV-0085](../definitions/own-dev-0085-burglar-alarm-central-unit-with-communicator.md) | `3485` | Burglar alarm central unit with communicator | PSTN alarm integration; 3485/3485STD scope and battery compatibility |
+| [OWN-DEV-0086](../definitions/own-dev-0086-polyx-alarm.md) | `3485B` | Polyx Alarm | Four-zone catalogue panel; exact TiSecurityBasic transfer/update workflow |
+| [OWN-DEV-0087](../definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md) | `3486` | GSM burglar alarm central unit | Eight sensor zones; GSM/PSTN communication, scenarios and automations |
+| [OWN-DEV-0088](../definitions/own-dev-0088-flush-mounted-alarm-central-unit.md) | `HC/HS/HD4601`, `L/N/NT4601` | Flush mounted alarm central unit | Four sensor zones; local contact/relay, learning and TiSecurityBasic programming |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0104](../definitions/own-dev-0104-do-not-disturb-make-up-room-control.md) | `H4653`, `LN4653`, `067593` | Do Not Disturb / Make Up Room control | Inside-room DND/MUR control and local LED status/brightness |
