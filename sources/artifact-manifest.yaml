@@ -12176,6 +12176,26 @@ artifacts:
   language_evidence: English text inspected in the retained multilingual original; additional languages present but not exhaustively enumerated
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u2109b-s-it-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U2109B_S_IT manufacturer device documentation
+  media_type: application/pdf
+  filename: U2109B_S_IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 843068
+  sha256: 260cf214c8e3fbc7bc3353003aadb025b7e272a977bafacc9ae14bddc16cba1b
+  source_url: https://dar.bticino.it/asset/Documents/U2109B_S_IT.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/26/0c/260cf214c8e3fbc7bc3353003aadb025b7e272a977bafacc9ae14bddc16cba1b.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/26/0c/260cf214c8e3fbc7bc3353003aadb025b7e272a977bafacc9ae14bddc16cba1b.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u2109g-i-en-20261006
   kind: documentation
   publisher: BTicino / Legrand
