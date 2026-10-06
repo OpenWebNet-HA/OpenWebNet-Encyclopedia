@@ -12283,6 +12283,26 @@ artifacts:
   language_evidence: Predominantly pictographic installation sheet; English functional labels are present
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u4617a-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4617A manufacturer device documentation
+  media_type: application/pdf
+  filename: U4617A.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 730850
+  sha256: e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc
+  source_url: https://dar.bticino.it/asset/Documents/U4617A.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e3/91/e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e3/91/e391282de05e30fb081d80382cfd7494ba14dfe1918e679f23c372b258d37dfc.pdf
+  language:
+  - en
+  language_evidence: English control labels Auto, Eco, LED IR and LEARN; remaining installation content is numerical and pictorial, with no language-specific explanatory prose
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u4713a-s-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
