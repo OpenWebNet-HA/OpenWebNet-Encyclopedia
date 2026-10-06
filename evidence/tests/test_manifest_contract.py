@@ -13,6 +13,7 @@ EVIDENCE_DIR = Path(__file__).resolve().parents[1]
 SCHEMA = json.loads((EVIDENCE_DIR / "schema" / "evidence-manifest.schema.json").read_text(encoding="utf-8"))
 VALIDATOR = Draft202012Validator(SCHEMA)
 SHA = "a" * 64
+COMMIT = "b" * 40
 
 
 def physical() -> dict:
@@ -41,11 +42,25 @@ def firmware() -> dict:
         "frame_count": 2,
         "result_outcome": "supported",
         "firmware_target": {
-            "product": "MH200N", "version": "1.0.0", "image_sha256": SHA,
-            "harness": "full", "target_sha256": SHA, "adapter": "pty-1",
-            "reset": "cold", "bus": "scs-sim", "framer": "own", "responder": "none",
-            "settle_ms": "500", "suite": "light1", "suite_sha256": SHA,
-            "oracle_version": "1", "source_result": "MH200N/1.0.0/oracle/full/light1.tsv",
+            "product": "MH200N",
+            "version": "1.0.0",
+            "image_sha256": SHA,
+            "target_config_sha256": SHA,
+            "harness": "full",
+            "target_sha256": SHA,
+            "adapter": "pty-1",
+            "reset": "each",
+            "bus": "scs-sim",
+            "framer": "own",
+            "responder": "none",
+            "settle_ms": "500",
+            "quiet_ms": "50",
+            "suite": "light1",
+            "suite_sha256": SHA,
+            "oracle_version": "1",
+            "oracle_commit": COMMIT,
+            "source_result": "results/MH200N/010108/checks/lights-level.tsv",
+            "source_cases": "oracle/cases/lights-level.cases",
         },
     }
 
@@ -63,7 +78,25 @@ def test_complete_firmware_package_passes() -> None:
     assert errors(firmware()) == []
 
 
-@pytest.mark.parametrize("key", ["image_sha256", "suite_sha256", "harness", "reset", "settle_ms", "source_result"])
+@pytest.mark.parametrize(
+    "key",
+    [
+        "image_sha256",
+        "target_config_sha256",
+        "harness",
+        "target_sha256",
+        "adapter",
+        "reset",
+        "settle_ms",
+        "quiet_ms",
+        "suite",
+        "suite_sha256",
+        "oracle_version",
+        "oracle_commit",
+        "source_result",
+        "source_cases",
+    ],
+)
 def test_firmware_rejects_missing_reproducibility_metadata(key: str) -> None:
     m = firmware()
     del m["firmware_target"][key]
@@ -76,9 +109,62 @@ def test_firmware_requires_target_block() -> None:
     assert errors(m)
 
 
-def test_firmware_rejects_bad_digest() -> None:
+@pytest.mark.parametrize(
+    "bad_digest",
+    [
+        SHA[:63],      # too short (63 chars)
+        SHA + "a",     # too long (65 chars)
+        SHA.upper(),   # uppercase hex rejected
+        " " + SHA,     # leading whitespace
+        SHA + " ",     # trailing whitespace
+        "g" * 64,      # non-hex chars
+    ],
+)
+def test_firmware_rejects_malformed_sha256_digests(bad_digest: str) -> None:
     m = firmware()
-    m["firmware_target"]["image_sha256"] = "abc"
+    m["firmware_target"]["image_sha256"] = bad_digest
+    assert errors(m)
+
+
+@pytest.mark.parametrize(
+    "bad_commit",
+    [
+        COMMIT[:39],    # too short (39 chars)
+        COMMIT + "b",   # too long (41 chars)
+        COMMIT.upper(), # uppercase hex rejected
+        " " + COMMIT,   # leading whitespace
+        COMMIT + " ",   # trailing whitespace
+        "g" * 40,       # non-hex chars
+    ],
+)
+def test_firmware_rejects_malformed_git_commit(bad_commit: str) -> None:
+    m = firmware()
+    m["firmware_target"]["oracle_commit"] = bad_commit
+    assert errors(m)
+
+
+@pytest.mark.parametrize("field", ["product", "version", "adapter", "suite"])
+def test_firmware_rejects_whitespace_in_tokens(field: str) -> None:
+    m1 = firmware()
+    m1["firmware_target"][field] = " " + m1["firmware_target"][field]
+    assert errors(m1)
+
+    m2 = firmware()
+    m2["firmware_target"][field] = m2["firmware_target"][field] + " "
+    assert errors(m2)
+
+
+@pytest.mark.parametrize("valid_reset", ["each", "batch-1", "batch-10", "0", "1"])
+def test_firmware_accepts_valid_reset_policies(valid_reset: str) -> None:
+    m = firmware()
+    m["firmware_target"]["reset"] = valid_reset
+    assert errors(m) == []
+
+
+@pytest.mark.parametrize("invalid_reset", ["cold", "warm", "batch-0", "batch-", "each ", " 0"])
+def test_firmware_rejects_invalid_reset_policies(invalid_reset: str) -> None:
+    m = firmware()
+    m["firmware_target"]["reset"] = invalid_reset
     assert errors(m)
 
 
@@ -127,21 +213,49 @@ def test_physical_still_needs_a_frame_and_a_claim() -> None:
     assert errors(m)
 
 
-def test_firmware_zero_frame_supported_silence_is_allowed() -> None:
+def test_firmware_zero_frame_supported_silence_package() -> None:
+    """A complete supported package with 0 frames represents intentional silence."""
     m = firmware()
-    m["frame_count"] = 0
+    m.update(
+        frame_count=0,
+        result_outcome="supported",
+        summary="Firmware deliberately ignores and remains silent on unconfigured query.",
+        claims_supported=["Firmware remains silent and produces no response on *#1*99##."],
+    )
     assert errors(m) == []
 
 
-def test_inconclusive_run_needs_reason_and_no_claim() -> None:
+def test_firmware_zero_frame_inconclusive_package() -> None:
+    """A complete inconclusive package carries an inconclusive_reason and no claims."""
     m = firmware()
-    m.update(result_outcome="inconclusive", claims_supported=[], frame_count=0)
-    assert errors(m)
-    m["inconclusive_reason"] = "Image failed to boot; no output captured."
+    m.update(
+        frame_count=0,
+        result_outcome="inconclusive",
+        summary="Target daemon crashed during initialization before processing inputs.",
+        claims_supported=[],
+        machine_kb_claims=[],
+        inconclusive_reason="Target daemon process crashed during startup initialization.",
+    )
     assert errors(m) == []
-    bad = copy.deepcopy(m)
-    bad["claims_supported"] = ["claim"]
-    assert errors(bad)
+
+
+def test_inconclusive_rejects_supported_claims_and_machine_kb_claims() -> None:
+    m = firmware()
+    m.update(
+        frame_count=0,
+        result_outcome="inconclusive",
+        claims_supported=[],
+        inconclusive_reason="Daemon died before accepting connections.",
+    )
+    # Having claims_supported in an inconclusive package must be rejected
+    bad1 = copy.deepcopy(m)
+    bad1["claims_supported"] = ["Some claim"]
+    assert errors(bad1)
+
+    # Having machine_kb_claims in an inconclusive package must also be rejected
+    bad2 = copy.deepcopy(m)
+    bad2["machine_kb_claims"] = ["ownkb:claim:c001234"]
+    assert errors(bad2)
 
 
 def test_supported_firmware_needs_a_claim() -> None:

@@ -47,6 +47,15 @@ jobs:
             echo "Machine KB privacy validator not present on this branch; skipped."
           fi
 
+      - name: Install evidence validation dependencies
+        run: python -m pip install --disable-pip-version-check pytest jsonschema
+
+      - name: Validate canonical evidence packages
+        run: python evidence/validate_evidence.py
+
+      - name: Run evidence acceptance tests
+        run: python -m pytest evidence/tests
+
   source-integrity:
     name: Source integrity and reproducibility
     runs-on: ubuntu-latest

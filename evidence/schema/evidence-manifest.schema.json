@@ -129,7 +129,7 @@
     "result_outcome": {
       "type": "string",
       "enum": ["supported", "inconclusive"],
-      "description": "firmware_emulation only. 'supported' needs at least one claim; 'inconclusive' (startup failure, unresolved silence, zero frames) carries no claim and an inconclusive_reason."
+      "description": "firmware_emulation only. 'supported' establishes at least one claim (including documented silence); 'inconclusive' (startup failure, unresolved timeout, crash) carries no claim and requires an inconclusive_reason."
     },
     "inconclusive_reason": {
       "type": "string",
@@ -137,39 +137,88 @@
     },
     "firmware_target": {
       "type": "object",
-      "description": "Reproducibility context of a firmware_emulation package. Keys mirror the own-firmware-oracle result header (oracle/record.py HEADER_KEYS); each can change an answer.",
+      "description": "Reproducibility context of a firmware_emulation package. Keys mirror the own-firmware-oracle result header (oracle/record.py HEADER_KEYS) plus target configuration and source references.",
       "additionalProperties": false,
       "required": [
-        "product", "version", "image_sha256", "harness", "target_sha256",
-        "adapter", "reset", "bus", "framer", "responder", "settle_ms",
-        "suite", "suite_sha256", "oracle_version", "source_result"
+        "product",
+        "version",
+        "image_sha256",
+        "target_config_sha256",
+        "harness",
+        "target_sha256",
+        "adapter",
+        "reset",
+        "bus",
+        "framer",
+        "responder",
+        "settle_ms",
+        "quiet_ms",
+        "suite",
+        "suite_sha256",
+        "oracle_version",
+        "oracle_commit",
+        "source_result",
+        "source_cases"
       ],
       "properties": {
         "product": {"$ref": "#/$defs/token"},
         "version": {"$ref": "#/$defs/token"},
         "image_sha256": {"$ref": "#/$defs/sha256"},
+        "target_config_sha256": {
+          "$ref": "#/$defs/sha256",
+          "description": "SHA-256 digest of the catalog target configuration file (catalog/<Product>/<Version>.yaml)."
+        },
         "harness": {"type": "string", "pattern": "^(full|unit:[A-Za-z0-9][A-Za-z0-9._-]*)$"},
-        "target_sha256": {"$ref": "#/$defs/sha256"},
+        "target_sha256": {
+          "$ref": "#/$defs/sha256",
+          "description": "SHA-256 digest of the selected executable binary under test (typically openserver for full runs), distinct from the target configuration."
+        },
         "adapter": {"$ref": "#/$defs/token"},
-        "reset": {"$ref": "#/$defs/token"},
+        "reset": {
+          "type": "string",
+          "pattern": "^(each|batch-[1-9][0-9]*|[0-9]+)$",
+          "description": "Supported oracle reset policy: 'each', 'batch-N', or integer."
+        },
         "bus": {"$ref": "#/$defs/token"},
         "framer": {"$ref": "#/$defs/token"},
         "responder": {"$ref": "#/$defs/token"},
-        "settle_ms": {"type": "string", "pattern": "^[0-9]+$"},
+        "settle_ms": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Maximum observation limit in milliseconds before timing out."
+        },
+        "quiet_ms": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Quiet period in milliseconds without bus activity after which observation ends early."
+        },
         "suite": {"$ref": "#/$defs/token"},
         "suite_sha256": {"$ref": "#/$defs/sha256"},
-        "oracle_version": {"$ref": "#/$defs/token"},
+        "oracle_version": {
+          "$ref": "#/$defs/token",
+          "description": "Oracle format version counter (e.g. '1'), distinct from Git revision."
+        },
+        "oracle_commit": {
+          "$ref": "#/$defs/git_commit",
+          "description": "Exact 40-character Git commit hash of own-firmware-oracle used to generate the evidence."
+        },
         "source_result": {
           "type": "string",
           "minLength": 5,
-          "description": "Path of the original oracle result file this package was derived from."
+          "description": "Path of the original oracle result TSV file this package was derived from."
+        },
+        "source_cases": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Path of the test suite cases file (e.g. 'oracle/cases/lights-level.cases')."
         }
       }
     }
   },
   "$defs": {
     "token": {"type": "string", "pattern": "^[!-~]+$"},
-    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "git_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
   },
   "allOf": [
     {
@@ -245,7 +294,10 @@
       },
       "then": {
         "required": ["inconclusive_reason"],
-        "properties": {"claims_supported": {"maxItems": 0}}
+        "properties": {
+          "claims_supported": {"maxItems": 0},
+          "machine_kb_claims": {"maxItems": 0}
+        }
       }
     },
     {

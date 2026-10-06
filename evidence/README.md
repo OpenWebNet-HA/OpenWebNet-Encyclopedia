@@ -43,31 +43,51 @@ The manifest schema enforces which values may appear together:
 | `firmware_emulation` | `firmware_oracle` | `firmware_observed` | `firmware_target`, `result_outcome`; the physical identifiers above are absent or `null` |
 
 - `experimentally_confirmed` is reserved for physical hardware. A firmware result cannot carry it, and a physical package cannot carry `firmware_observed`.
+- `firmware_observed` is tracked as a **provisional status** in this manifest specification. Coordination toward a unified shared model (`observed` with explicit examination method and provenance tracking) remains a linked follow-up.
 - A firmware result establishes what the executed firmware produced under the recorded harness conditions (for example an ACK, or bytes written toward a simulated bus interface). It does not establish what a physical actuator does.
 - `sub_bus_id` may be `null` only in firmware packages. The earlier relaxation to `null` for physical packages was not intended and is reverted.
 
+### Scope Boundary
+
+This specification focuses strictly on the evidence manifest schema contract (`manifest.json`), validation rules, and acceptance tests. Follow-up work will address:
+1. `results.jsonl` raw case-result export formatting.
+2. Shared evidence/method/status model coordination with MyOpen-Community findings.
+3. Machine KB ingestion mapping and published KB contract versioning.
+
 ### Firmware reproducibility context (`firmware_target`)
 
-A firmware package identifies its experiment with the keys of the own-firmware-oracle result header (`oracle/record.py` `HEADER_KEYS`), plus the path of the original result file. All are required:
+A firmware package identifies its experiment with the keys of the own-firmware-oracle result header (`oracle/record.py` `HEADER_KEYS`), target configuration digest, git revision, and source references. All are required:
 
 | Key | Meaning |
 | :--- | :--- |
-| `product`, `version`, `image_sha256` | Product, firmware version, SHA-256 of the exact firmware artifact |
-| `harness`, `target_sha256` | `full` or `unit:<program>`, and the digest of the executed target |
-| `adapter` | `<name>-<version>` of the execution adapter (pty, shim, system emulation) |
-| `reset`, `bus`, `framer`, `responder`, `settle_ms` | Reset policy, simulated bus, framing, responder and settling policy |
-| `suite`, `suite_sha256`, `oracle_version` | Suite identity, digest and oracle revision |
-| `source_result` | Path of the original oracle result file |
+| `product`, `version`, `image_sha256` | Product code, firmware version string, and SHA-256 of the exact vendor firmware archive |
+| `target_config_sha256` | SHA-256 digest of the catalog target configuration file (`catalog/<Product>/<Version>.yaml`) |
+| `harness`, `target_sha256` | Harness mode (`full` or `unit:<program>`), and SHA-256 digest of the selected executable binary under test (typically `openserver` for full runs; distinct from the target configuration) |
+| `adapter` | `<name>-<version>` of the execution adapter (`pty-1`, shim, system emulation) |
+| `reset` | Supported reset policy: `each` (fresh daemon per step), `batch-N`, or integer |
+| `bus`, `framer`, `responder` | Bus simulation, framing, and responder implementations |
+| `settle_ms` | Maximum observation limit in milliseconds before timing out (`max_ms`) |
+| `quiet_ms` | Quiet period in milliseconds without bus activity after which observation ends early |
+| `suite`, `suite_sha256` | Test suite identifier and SHA-256 digest of the test suite file |
+| `oracle_version` | Oracle format version counter (e.g. `1`), distinct from Git revision |
+| `oracle_commit` | Exact 40-character Git commit hash of the `own-firmware-oracle` repository |
+| `source_result` | Relative path of the original oracle result TSV file |
+| `source_cases` | Relative path of the test suite cases file (`oracle/cases/<suite>.cases`) |
 
 For firmware packages `environment` is optional; `firmware_target.bus` describes the simulated bus where `environment.bus_topology` describes a physical one.
 
 ### Inconclusive and zero-frame results
 
-`result_outcome` is required for firmware packages. `supported` needs at least one claim and may have `frame_count: 0` (for example a documented silence). `inconclusive` (startup failure, unresolved silence) carries no claim and a required `inconclusive_reason`. Physical packages keep the positive `frame_count` and non-empty `claims_supported` requirements.
+`result_outcome` is required for firmware packages. A zero-frame package (`frame_count: 0`) does not automatically imply an inconclusive run:
+
+- **Supported Documented Silence (`result_outcome: "supported"`)**: The gateway intentionally drops or ignores a frame without responding (verdict `silent` in the source oracle record). It requires at least one supported claim in `claims_supported` establishing this verified silence behavior.
+- **Inconclusive Run (`result_outcome: "inconclusive"`)**: An execution failure, startup crash, or unresolved timeout where the harness could not reach a valid determination. It requires an `inconclusive_reason` and strictly forbids claims: both `claims_supported` and `machine_kb_claims` must be empty (`maxItems: 0`).
+
+Physical packages continue to require positive `frame_count` and non-empty `claims_supported`.
 
 ### Tests
 
-```
+```bash
 python -m pytest evidence/tests
 python evidence/validate_evidence.py
 ```
