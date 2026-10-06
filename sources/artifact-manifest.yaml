@@ -12795,6 +12795,38 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u4724d-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U4724D manufacturer device documentation
+  media_type: application/pdf
+  filename: U4724D.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 397284
+  sha256: 86d53f46d3a050b221ea3b5c1233095bc92eb063d3f89b61de58630363bd451e
+  source_url: https://dar.bticino.it/asset/Documents/U4724D.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/86/d5/86d53f46d3a050b221ea3b5c1233095bc92eb063d3f89b61de58630363bd451e.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/86/d5/86d53f46d3a050b221ea3b5c1233095bc92eb063d3f89b61de58630363bd451e.pdf
+  language:
+  - it
+  - en
+  - fr
+  - de
+  - es
+  - nl
+  - pt
+  - el
+  - ru
+  - pl
+  - tr
+  - zh
+  - ar
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u4724e-20261004
   kind: documentation
   publisher: BTicino / Legrand
