@@ -4452,6 +4452,26 @@ artifacts:
   notes:
   - Original manufacturer PDF response retained byte-for-byte. Exact SKU/EAN association inspected; EAN-13 check digit verified.
   - Original uploaded and archival public retrieval SHA-256/size verified, then immediately registered and pushed on main before device-page incorporation. EAN backfill for existing definitions only; this export does not establish installed hardware or firmware.
+- id: device-doc-h4650-publisher-product-sheet-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: H4650-publisher-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: H4650-publisher-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 1364240
+  sha256: e8f0a14245222ce05aad03c488ad7b88a1632c149f5552c985c43eb2128318f9
+  source_url: https://www.bticino.com/products/pdf?sku=BT-H4650&include_technical=1
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/e8/f0/e8f0a14245222ce05aad03c488ad7b88a1632c149f5552c985c43eb2128318f9.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/e8/f0/e8f0a14245222ce05aad03c488ad7b88a1632c149f5552c985c43eb2128318f9.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-h4651-publisher-product-sheet-20261003
   kind: documentation
   publisher: BTicino / Legrand
