@@ -37,6 +37,16 @@ The LED-colour legend also mentions Arteor, but supplies no Arteor commercial re
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1735` | `H4653` | `DO NOT DISTURB-MAKE UP ROOM control` | `1` | `2` | `1` | Empty | `0` | `0` | `Axolute DND/MUR command` |
+| `1998` | `067593` | `DO NOT DISTURB-MAKE UP ROOM control` | `2` | `13` | `1` | Empty | `0` | `0` | `Celiane DND/MUR command` |
+| `2171` | `LN4653` | `DO NOT DISTURB-MAKE UP ROOM control` | `1` | `4` | `1` | Empty | `0` | `0` | `Living DND/MUR command` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -45,7 +55,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `MM00775-a-FR.pdf` | French technical sheet | `MM00775-a-FR`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00775-a-FR.pdf) |
 | `H4653-publisher-product-sheet.pdf` | Publisher product-sheet export | `DATASHEET`, `03.10.2026` (export date) | `H4653` only; identity/product characteristics printed p. 1 / PDF p. 1; technical attributes printed pp. 2-3 / PDF pp. 2-3; download inventory printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1679`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `LN4653-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4653` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653) |
+| `LN4653-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4653` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653) |
 
 ## Physical and electrical characteristics
 
@@ -79,6 +89,18 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Commercial records | `3`; record IDs `1735`, `1998`, `2171` | Three shared-item catalogue variants |
 | Gateway metadata | None of the three records is marked as a gateway | Commercial metadata; an MH201 software route is an external system connection |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `9` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -87,8 +109,13 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
-
 Hardware revision, microcontroller and installed firmware are unknown. The firmware table records source applicability, not an observed Physical Device.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -108,9 +135,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `253` | Virtual Configuration | `1` | Catalogue association `1` |
-| `253` | Advanced Configuration | `2` | Catalogue association `2` |
-| `253` | Physical configuration | `0` | Catalogue association `3` |
+| `253` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `253` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `253` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 Both technical sheets document physical configurators and MyHOME Suite software configuration. The software route uses the PC Ethernet network and external MH201 scenario module; the control/indicator itself remains on SCS BUS. No connection association is stored for this firmware in `AS_CONNECTION_FIRMWARE`; this absence does not invalidate the published Ethernet route. No Product Programming mode association is stored for this firmware.
 
@@ -146,6 +176,10 @@ Catalogue Object key `555` maps to external Object `489`.
 | --- | --- | --- | --- |
 | `R1R2` | `0..99` | `0` | Room address |
 | `MODE` | `0` = DO NOT DISTURB and MAKE UP ROOM; `1` = DO NOT DISTURB only; `2` = MAKE UP ROOM only | `0` | Mode of DO NOT DISTURB/MAKE UP ROOM control |
+
+### Semantic review findings
+
+The sole Object `489` admits a MUR-only mode 2, but exact technical sheets prescribe only physical modes 0/1. The hotel example uses LN4651, LN4648 and 348210 with F411/1N; room label 127 corresponds to bus address 27. Cover count remains mode-specific, and the one-button export classification is not universal.
 
 ## Conditions, filters, and conversions
 
@@ -202,9 +236,9 @@ No sanitized hardware fingerprint, protocol capture or commissioning experiment 
 
 MyHOME Suite software configuration uses PC Ethernet through MH201 to the SCS system; it offers more options than physical configuration. The technical sheets do not define a complete transfer wizard, erase scope, firmware-update package or recovery procedure. Validate the active Object and its complete configuration before applying changes; absence of slot predicates does not supply a selection algorithm.
 
-Match room-address configuration to the associated outside indicator. Use two one-module key covers for physical `M=0` or one two-module cover for `M=1.` Catalogue legal `M=2` and reusable Object MUR-only `MODE=2` must remain distinct until an exact physical/software mapping is verified. The local LED adjustment is a press longer than `2 s` with the published brightness cycle.
+Match room-address configuration to the associated outside indicator. Use two one-module key covers for physical `M=0` or one two-module cover for `M=1`. Catalogue legal `M=2` and reusable Object MUR-only `MODE=2` must remain distinct until an exact physical/software mapping is verified. The local LED adjustment is a press longer than `2 s` with the published brightness cycle.
 
-The sheet p. 3 / PDF p. 3 hotel example uses `R1=2`, `R2=7`, `M=–` alongside LN4650, LN4649, LN4652, LN4691, MH201, F430R8 and E49. A displayed room number `127` is a human label; it does not extend the two-digit bus address domain to 127. Power-supply/load protection and air-conditioning actuator choice depend on the installed loads; the example is not a universal bill of materials.
+The sheet p. 3 / PDF p. 3 hotel example uses `R1=2`, `R2=7`, `M=–` alongside `LN4651`, `LN4648`, card `348210`, `F411/1N`, `LN4652`, `LN4691`, `MH201`, `F430R8` and `E49`. A displayed room number `127` is a human label; it does not extend the two-digit bus address domain to 127. Power-supply/load protection and air-conditioning actuator choice depend on the installed loads; the example is not a universal bill of materials.
 
 ## Source reconciliation
 
@@ -213,7 +247,7 @@ The English and French technical sheets have the same `a`, `02/12/2013` revision
 | Source issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
 | Unprinted physical mode | Catalogue firmware M and Object `489` MODE both admit `2`; only reusable MODE names MUR-only. Technical sheets specify physical `M=0/1` only | Firmware/Object domains; both sheets p. 2 |
-| Button count | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3 say one button/actuation point; dated sheets show two one-module DND/MUR covers at `M=0` and a two-module DND cover at `M=1.` No universal one-button count substituted | Retained H4653 product sheet, printed p. 2 / PDF p. 2; both sheets pp. 1-2 |
+| Button count | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3 say one button/actuation point; dated sheets show two one-module DND/MUR covers at `M=0` and a two-module DND cover at `M=1`. No universal one-button count substituted | Retained H4653 product sheet, printed p. 2 / PDF p. 2; both sheets pp. 1-2 |
 | Room-label scope | Hotel illustration label 127 accompanies bus address 27; a room-number label is not an encoded address or new legal domain | Both sheets p. 3 |
 | Arteor colour legend | Arteor is named in LED-colour grouping but no associated SKU is established | Both sheets p. 1 |
 
@@ -240,3 +274,5 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 
 - `H4653-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1); SHA-256 `1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1`.
 - `LN4653-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653); SHA-256 `55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0104)

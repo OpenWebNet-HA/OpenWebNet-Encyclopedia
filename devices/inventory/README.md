@@ -39,3 +39,5 @@ Every commercial Device record in this source revision has at least one system m
 - FW conf counts firmware-scoped configuration fields; Object conf counts reusable Object configuration fields reachable from direct or Virgin Object candidates.
 - Conditions and conversion rules quantify topology/configuration logic that should be preserved when a Device definition is curated.
 - Shared item membership must not by itself choose a canonical SKU or erase package, brand, or region differences.
+
+[Touch screen package Unicode ranges](touch-screen-package-unicode-ranges.json) retains all 4534 canonical set/range associations used by reviewed Devices OWN-DEV-0102 and OWN-DEV-0107. It describes catalogue package metadata; package payloads and installed releases remain unexamined.

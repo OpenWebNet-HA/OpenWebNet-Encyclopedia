@@ -28,6 +28,16 @@ Catalogue item `1809`, main model `48`, is separate from the BTicino item `1340`
 
 Both installer covers print `672 85`, establishing catalogue `067285`. The user-manual version illustration prints `573962/63`, supporting both Arteor references; it is not a hardware capture. All three catalogue records use Arteor, but the retained manuals do not establish the marketed line of `067285`; the human-facing row therefore uses Legrand alone. Catalogue colours are Titanium, Magnesium and White respectively; accessory plates are separate identities.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1949` | `573963` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen Magnesium` |
+| `1950` | `067285` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen Titanium` |
+| `1951` | `573962` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen White` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -36,6 +46,8 @@ Both installer covers print `672 85`, establishing catalogue `067285`. The user-
 | `U3971A.pdf` | French / English installation manual | `U3971A; 10/09-01 PC` | Cover 672 85; English pp. 15-26: interfaces pp. 17-18, mounting pp. 19-22, battery p. 23, software/PC pp. 24-25, specifications p. 26. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/5a/87/5a87da8c493ac9acc149494d6267a1ac9ae3e00415bb6a9f20730674c6a46076.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3971a.pdf) |
 | `U3971B.pdf` | Multilingual installation manual | `U3971B; 12/10-01 PC` | Cover 672 85; interfaces pp. 6-13; plates/mounting pp. 14-18; battery p. 19; software/PC pp. 20-21; specifications pp. 22-23; dimensions p. 24. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/b1/7f/b17fc56132562fb71a7f0a3e6e521f4965547ed90f004cc6705597225586c4b3.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3971b.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1809`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `U3972D_S_FR.pdf` | Exact Legrand MultimediaTouchScreenConfig software manual, French | D / G from document identifier; full publication date not located | 67285 cover; all substantive configuration and transfer chapters examined. D pp. 4-67; G pp. 4-74; printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/cb/f1/cbf16a2673a9e8329795c38eb8899c841cdc435658c21cca4039fce3d2ef41aa.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3972d_s_fr.pdf) |
+| `U3972G_Software_FR.pdf` | Exact Legrand MultimediaTouchScreenConfig software manual, French | D / G from document identifier; full publication date not located | 67285 cover; all substantive configuration and transfer chapters examined. D pp. 4-67; G pp. 4-74; printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/2a/b2/2ab25e7e880b7c3b546f25d4f69545e345457c239d5b4a5b2d338084621b3152.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3972g_software_fr.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -66,6 +78,22 @@ Both installer covers print `672 85`, establishing catalogue `067285`. The user-
 | Main item model / `modobj` | `48` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `3` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `48` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -89,8 +117,42 @@ No installed release, hardware revision or microcontroller fingerprint is corrob
 | `123` | `15` | GL42 | `4.0.0` |
 | `123` | `16` | GL51 | `4.0.0` |
 
-
 Package labels are source metadata; package applicability does not establish the installed tuple.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `123` | `236` | Legrand (key `2`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `123` | `237` | Legrand (key `2`) | `2` | SVM | `1809_4.0_LG\xml\SVM\svm.xml` |
+| `123` | `238` | Legrand (key `2`) | `2` | Extra | `1809_4.0_LG\xml\Extra\extra.xml` |
+| `123` | `239` | Legrand (key `2`) | `2` | Director | `1809_4.0_LG\xml\DIRECTOR\director.xml` |
+| `123` | `240` | Legrand (key `2`) | `2` | Protocol and other device parameters | `1809_4.0_LG\xml\Protocol\protocol.xml` |
+| `665` | `710` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0300` |
+| `666` | `711` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0200` |
+| `667` | `712` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0101` |
+
+All 8 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+| Firmware | Package record | Name | GL | Version | Release | Build | Unicode set | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `123` | `12` | `GL1` | `1` | `4` | `0` | `0` | `1` | Canonical package metadata |
+| `123` | `13` | `GL21` | `21` | `4` | `0` | `0` | `2` | Canonical package metadata |
+| `123` | `14` | `GL31` | `31` | `4` | `0` | `0` | `3` | Canonical package metadata |
+| `123` | `15` | `GL42` | `42` | `4` | `0` | `0` | `4` | Canonical package metadata |
+| `123` | `16` | `GL51` | `51` | `4` | `0` | `0` | `5` | Canonical package metadata |
+
+These are catalogue package metadata; package payloads have not been inspected.
+
+| Unicode set | Catalogue notes |
+| --- | --- |
+| `1` | GL1 |
+| `2` | GL21 |
+| `3` | GL31 |
+| `4` | GL42 |
+| `5` | GL51 |
+
+The five package Unicode sets and all 4534 stored set/range associations were extracted and their hexadecimal bounds checked. [Complete canonical Unicode-set and range inventory](../inventory/touch-screen-package-unicode-ranges.json) retains each association key and minimum/maximum. These package text ranges do not define the allowed characters of firmware identity or network masks. Package payloads remain unexamined.
 
 ## Module, Object, and Virgin Object model
 
@@ -113,22 +175,23 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `123` | Product Programming | `3` | Association key `4` |
-| `665` | Product Programming | `3` | Association key `4` |
-| `666` | Product Programming | `3` | Association key `4` |
-| `667` | Product Programming | `3` | Association key `4` |
+| `123` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `665` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `666` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `667` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `123` | Ethernet | `2` |
-| `123` | USB | `3` |
-| `665` | Ethernet | `2` |
-| `665` | USB | `3` |
-| `666` | Ethernet | `2` |
-| `666` | USB | `3` |
-| `667` | Ethernet | `2` |
-| `667` | USB | `3` |
+| `123` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `123` | USB | Canonical firmware/connection association ; connection key `3` |
+| `665` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `665` | USB | Canonical firmware/connection association ; connection key `3` |
+| `666` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `666` | USB | Canonical firmware/connection association ; connection key `3` |
+| `667` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `667` | USB | Canonical firmware/connection association ; connection key `3` |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Associated parameter definitions
 
@@ -143,10 +206,30 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | `666` | `2` | `2` | `MultimediaTouchScreenConfig_0200` | Parameter type `7`; payload not inspected |
 | `667` | `2` | `2` | `MultimediaTouchScreenConfig_0101` | Parameter type `7`; payload not inspected |
 
-
 Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
 
 `U3971A` pp. 24-25 and `U3971B` pp. 20-21 document MultimediaTouchScreenConfig transfer/update via USB, Ethernet and serial cable `49234`. Catalogue associations retain Ethernet and USB only; serial support is publisher evidence, not an absent-table negation. Software application/project settings are distinct from three reusable Object fields.
+
+### Published Legrand project configuration
+
+| Surface | Published settings / limits | Exact source |
+| --- | --- | --- |
+| Project and transfer | Create/save `.prj`, receive an existing project, edit and send; firmware update uses `.fwz`; device-info query; D marks `.mhz` import future and exports CSV | D pp. 5-7, 63-67; G pp. 5, 8-9 |
+| Network/security | Project name, progressive screen address, IP acquisition/address/mask/router, primary/secondary DSN (printed spelling), OPEN password; no credential copied into the dossier | D p. 9; G p. 74 |
+| Clock and system | Clock Master and conditional update frequency; date formats, zone, Celsius/Fahrenheit; Multimedia/Automation bus, riser/local bus, video enabled/type SCS/IP, internal-unit address, source/amplifier address; G adds decimal separator and UI language | D p. 12; G p. 10 |
+| Automation/lighting | Normal (hold to move) or advanced (start/Stop) control; A/PL and level 3 private riser or 4 local bus plus conditional interface; lock uses video address or A/PL by bus; PUL option, point/group/room/general associations, hours/minutes/seconds for supported timed loads and staircase control | D pp. 15-19; G pp. 14-18 |
+| Alarm and supervision | Eight alarm-zone entries (source calls them sources); up to 20 Stop&Go entries, address `1..127`; load diagnostics `1..64` | D pp. 20-23; G pp. 19-22 |
+| Energy and load control | Electricity/water/gas/DHW/heating-cooling/custom; up to 20 line entries, address `1..255`, kW/€ labels, economic valuation and consumption/production; advanced load priority `1..255`, controller-dependent mode/counters; G adds monthly objectives/graph and thresholds 1/2 | D pp. 24-27; G pp. 23-27 |
+| Temperature | One controller type, external-probe category, unmanaged-zone category and AC category; four-zone controller bounds zones to four; five program entries and seasonal/scenario selection; external sensor address and unmanaged ZA/ZB/N | D/G pp. 28-33 |
+| Air conditioning | 88301 interface, 20 stored commands in base mode; advanced direct control plus stored commands; A/PL/level/interface or ZA/ZB/N `0..9`, OFF command/group, optional slave `1..8`, minimum/maximum temperature, step 0.5/1 °C, auto/high/medium/low/silent fan, swing | D/G pp. 34-38 |
+| Sound | Up to eight sources, Radio/Aux/Multimedia; do not duplicate this screen’s source address; room/group/general amplifier PF addresses and custom power-amplifier adjustment option | D/G pp. 39-41 |
+| Scenarios | A/PL/level/interface, button, module scenario selection (16 stored by scenario module), Scenario Plus address; advanced time/device condition and generated OPEN action; programmed CEN Start/Stop/Enable/Disable must match programmer assignments | D/G pp. 42-47 |
+| Video and media | Camera/entrance-panel address; internal/external intercom `1..3999`; USB/SD need no project address, Web radio streaming URL (not browser page), RSS/category and webcam URLs; Favorites with PUL and lighting/automation addresses | D/G pp. 48-56 |
+| Home tools and UI | Options cannot be removed; temperature/radio/webcam home tools; beep, date/time, numeric local password, volume/ringing/version/network/video, brightness and calibration. Cleaning 10 s..1 min; screensaver none/time/text/photo, display off 30 s..5 min, activation 30 s..2 min, image interval `2..60` s | D pp. 57-62; G pp. 57-63 |
+| Later notification/alarm/video | G: energy threshold beep and first-day-of-month consumption popup at selected time; alarm beep default or sound system, enable without losing settings, days/time; hands-free, ringing exclusion, Office and matching Tele Loop mode | G pp. 60, 64-67 |
+| Later ringtone and tariff setup | G: at most ten ringtones, choose/import MP3/WAV/PCM, trim to maximum 30 s and save/reuse; currency, tariff and decimal digits | G pp. 68-74 |
+
+These are product-project settings, separate from three protocol Object fields. The retained older U3970A user revision does not describe every feature added by the D/G software revisions.
 
 ## Firmware-scoped configuration
 
@@ -202,6 +285,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | Local settings | Brightness, calibration, cleaning lock, screensaver; date/time; speaker/mic volume; event ringtones; optional five-digit menu password | pp. 122-129 |
 | Cleaning lock | Default `20 s`, software-customizable | p. 124 |
 | Version view | Model/firmware/kernel/IP/netmask; illustrated `573962/63`, `1.1.3`, `2.3.3`, `192.168.1.110` are examples, not defaults or observations | p. 129  Published example default, not an installed address |
+
+### Semantic review findings
+
+The Legrand item 1809/model 48 remains separate from BTicino item 1340/model 41. Four firmware definitions expose Object `32`; UI applications are project content. Installer revisions change bundled SD capacity; the user manual also prohibits two simultaneous USB drives. Exact Legrand D/G software manuals now supply the project procedures; executable/parameter payloads remain unexamined.
 
 ## Conditions, filters, and conversions
 
@@ -264,9 +351,11 @@ Use MultimediaTouchScreenConfig to compose and transfer the project; use the reg
 
 U3970A distinguishes runtime controls from project composition. Locked scenario modules omit programming controls; scenario creation records actions then ends learning, while deletion is a separate confirmation flow. Temperature control requires the controller’s remote-control function; protected/`OFF` local sensor dials prevent overriding from the screen. Intercom/camera commands wait for a free audio/video channel; entrance-panel calls interrupt these uses. Touch cleaning/calibration changes input handling and must not be treated as protocol Object reconfiguration. Media forwarding requires the installed sound-system amplifiers and configuration.
 
+The D software manual pp. 64-66 shows Ethernet, Serial and USB in the transfer wizard: save the project, select Download/send, set date/time, choose the actual connection and transfer; Receive loads the existing configuration for inspection/editing. D describes serial cable `49234`, crossed LAN cable and remote IP/OPEN-password use with compatible PC/device IPs. G pp. 8-9 retains send/receive, device information and `.fwz` update workflows. No firmware recovery/rollback compatibility or direct TCP endpoint is inferred.
+
 ## Source reconciliation
 
-Installer revisions A and B agree on supply, current, `5..45 °C`, metric dimensions, battery and physical PC routes. B changes the bundled card from `512 MB` to `2 GB`, adds the explicit simultaneous-USB prohibition and expands languages. Both still label USB webcam, Wi-Fi dongle and PSTN as future applications; U3970A network webcam viewing is a separate configured LAN service. No shipped USB webcam/Wi-Fi/PSTN support is inferred.
+Installer revisions A and B agree on supply, current, `5..45 °C`, metric dimensions, battery and physical PC routes. B changes the bundled card from `512 MB` to `2 GB`, states the simultaneous-USB prohibition and expands languages; U3970A also prohibits simultaneous pen drives. Both still label USB webcam, Wi-Fi dongle and PSTN as future applications; U3970A network webcam viewing is a separate configured LAN service. No shipped USB webcam/Wi-Fi/PSTN support is inferred.
 
 | Issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
@@ -275,11 +364,13 @@ Installer revisions A and B agree on supply, current, `5..45 °C`, metric dimens
 | IP defaults | Catalogue default `192.168.1.35` differs from screenshot `192.168.1.110`; screenshot is illustrative | Object `32`; U3970A p. 129 |
 | PC connections | Serial is physically documented, although only Ethernet/USB have catalogue connection associations | Both installers; connection table |
 | Multimedia/UI limits | Advanced audio increment wording and image Mb notation remain unresolved; no normalized byte size or uniform audio step invented | U3970A pp. 88, 94 |
-| Software dossier scope | Exact-product Legrand software manual and later user revisions were sought but not retrieved. Retained user/installer facts are incorporated; BTicino software manual is not silently reused | Research `2026-10-03` |
+| Software dossier scope | Exact Legrand French software revisions D and G are now retained and incorporated; later English user candidate 20121113_70351_1.pdf returned HTTP 403. BTicino software content is not substituted | Research `2026-10-03` |
+
+D and G software covers name `67285`. G repeats “Local Display” in introductory/currency text despite its MultimediaTouchScreenConfig cover, so this wording does not merge products. Both French revisions use Celsius `°C` and slave addresses `1..8`; the different BTicino translation’s °F/Slave 9 errors are not imported. Both still describe an obligatory time condition at p. 44 and a conditional one at p. 45. Five software program entries differ from the older user’s three seasonal programs; software screensaver four choices differ from U3970A’s No/Default menu. G adds objectives/thresholds, notifications, alarm/video settings and ringtone authoring beyond D/older-user coverage. Serial is explicit in D’s transfer wizard, though absent from canonical connection associations. General warranty/contact text and historical PC requirements remain available in the retained originals; they do not establish current software support.
 
 ## Evidence limits and open work
 
-- Obtain the exact Legrand MultimediaTouchScreenConfig software manual and newer Legrand user revisions; confirm `067285` marketed line and Arteor variant-specific installer details.
+- Obtain and compare newer Legrand user revisions (the Belgian publisher candidate returned HTTP 403); confirm `067285` marketed line and Arteor variant-specific installer details.
 - Resolve audio condition steps, image-size notation, reset data preservation and optional port support for each firmware.
 - Inspect associated parameter/package payloads and corroborate installed Object, address/configuration responses and project transfer on all three variants.
 - Historical Internet services and example network/version values have no verified current service or installed-state evidence.
@@ -294,3 +385,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0107)

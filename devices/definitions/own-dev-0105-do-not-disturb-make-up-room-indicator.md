@@ -37,6 +37,16 @@ All three catalogue descriptions explicitly identify an indicator without RFID. 
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1736` | `H4650` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `1` | `2` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Axolute` |
+| `2001` | `LN4650` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `1` | `4` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Living` |
+| `2002` | `067590` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `2` | `13` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Celiane` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -45,8 +55,10 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `MM00774-b-FR.pdf` | French technical sheet | `MM00774-b-FR`, `15/01/2015` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/da/adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00774-b-FR.pdf) |
 | `LE06116AC.pdf` | Multilingual label installation / reader declarations | `LE06116AC-02PC-19W15` | Indicator identities plus separate reader H4651/LN4651/067591; shared label installation; RF statements scoped to reader; no printed pagination / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/LE06116AC.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1680`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `H4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4650` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650) |
-| `LN4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4650` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650) |
+| `H4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4650` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650) |
+| `LN4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4650` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650) |
+| `H4650-publisher-product-sheet.pdf` | Exact manufacturer product export | DATASHEET; 06.10.2026 | Exact H4650 or LN4650; description/contact/bus attributes pp. 1-2; complete download list examined. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/f0/e8f0a14245222ce05aad03c488ad7b88a1632c149f5552c985c43eb2128318f9.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-H4650&include_technical=1) |
+| `LN4650-publisher-product-sheet.pdf` | Exact manufacturer product export | DATASHEET; 06.10.2026 | Exact H4650 or LN4650; description/contact/bus attributes pp. 1-2; complete download list examined. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/49/f6/49f6dfd24dfc1eba6777bc4812f414dc13c9f4bb5c213bb5ffb4d8452f70bbda.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4650&include_technical=1) |
 
 ## Physical and electrical characteristics
 
@@ -67,6 +79,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Visual alarm applicability | MH201 plus MyHOME Suite programming; lot `14w40` or later (2014 week 40) | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
 | Published standards | `EN 60669-2-1`, `EN 50491-5-1`, `EN 50428` | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
 | Exact dimensions / IP / storage / MCU | Not established by the retained indicator-specific sheets | Two-module mounting size does not establish metric dimensions; no hardware fingerprint |
+| H4650/LN4650 export contact limit | One contact; `1 A`, `12..230 V`, maximum `230 W` | Original H/LN product exports p. 2; power figure is SKU-scoped, not a new Céliane rating |
 
 ## Identity
 
@@ -81,6 +94,18 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Commercial records | `3`; record IDs `1736`, `2001`, `2002` | Three shared-item catalogue variants |
 | Gateway metadata | None of the three records is marked as a gateway | Commercial metadata; an MH201 software route is an external system connection |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `8` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -89,8 +114,13 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
-
 Hardware revision, microcontroller and installed firmware are unknown. The indicator lot boundary `14w40` is a published production-lot limit, not a firmware version, and cannot be recovered from the wildcard tuple.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -110,9 +140,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `255` | Virtual Configuration | `1` | Catalogue association `1` |
-| `255` | Advanced Configuration | `2` | Catalogue association `2` |
-| `255` | Physical configuration | `0` | Catalogue association `3` |
+| `255` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `255` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `255` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 Both technical sheets document physical configurators and MyHOME Suite software configuration. The software route uses the PC Ethernet network and external MH201 scenario module; the control/indicator itself remains on SCS BUS. No connection association is stored for this firmware in `AS_CONNECTION_FIRMWARE`; this absence does not invalidate the published Ethernet route. No Product Programming mode association is stored for this firmware.
 
@@ -150,7 +183,6 @@ Domains and defaults below are catalogue evidence. `AID` is an eight-character m
 | `6` | Always off | Enabled | Enabled |
 | `7` | Always off | Enabled | Disabled |
 
-
 Both technical sheets print this mapping on p. 2 / PDF p. 2; it agrees with firmware `L` descriptions. Software Object `DND_ENABLE` separately permits disabling DND; that value is not a ninth physical L choice.
 
 ## Object configuration surfaces
@@ -179,6 +211,10 @@ Catalogue Object key `554` maps to external Object `488`.
 
 `ENTRANCE_ENABLE_GROUP` is described as applicable only in `MODE=0`; the catalogue does not attach an equivalent condition row. The generic MODE description about local/IP badge storage is explicitly for indicators with RFID and does not establish an RFID reader in these three NO-RFID variants. The `ROOM_GENERIC_SERVICE` description names `PUL_Signal` without defining the frame or its Device-specific behavior.
 
+### Semantic review findings
+
+The product is explicitly non-RFID. Object `488` generic reader/group/door fields are software metadata, not evidence of indicator radio hardware. Preserve the literal room default 01 and filter admitting only 0; the nonzero doorbell-address requirement is prose, not enforced by a stored condition. New H/LN exports corroborate one contact and add a SKU-scoped 230 W maximum.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -195,7 +231,7 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | --- | --- | --- | --- | --- | --- | --- |
 | `255` | `488` | `1378` | `LOCAL_RELAY_FUNCTION` | `0` = Doorbell; `1` = Door opening (entire reusable range retained) | `0` | Local relay function |
 | `255` | `488` | `1380` | `DOOR_RELAY_TIMER` | `1..100` (entire reusable range retained; value / 10 seconds) | `10` | Door relay timer, step 100ms |
-| `255` | `488` | `1792` | `APL_DOOR` | `0..175` (entire reusable range retained; `A=floor`(value/16), `PL=value` mod 16) | `1` | Address of the actuator of door relay |
+| `255` | `488` | `1792` | `APL_DOOR` | `0..175` (entire reusable range retained; `A=floor(value/16)`, `PL=value mod 16`) | `1` | Address of the actuator of door relay |
 | `255` | `488` | `3096` | `ROOM_GENERIC_SERVICE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Room_Generic_Service |
 | `255` | `488` | `3106` | `R1R2` | `0` | `01` | Room address; reusable default `01` is outside this subset; filter supplies no replacement default |
 
@@ -264,9 +300,11 @@ The English and French technical sheets have the same `b`, `15/01/2015` revision
 
 The illustrated instruction revision `LE06116AC-02PC-19W15` has been incorporated for label handling. Multilingual reader regulatory statements add no indicator-specific radio capability; their applicability remains explicitly separate.
 
+The `06.10.2026` H4650/LN4650 originals corroborate one contact and `230 W` maximum, two wiring-device modules, LED, local control and SCS bus. They classify RF/KNX/LON/Powernet as No and connected-object as No; these are commercial classifications. “Different phases connectable” is not an installation instruction or permission to exceed the technical-sheet contact rating. Their LE06116AC/MM00774_b_EN links reuse retained originals. The H4650 broad catalogue `3211578` and linked drawing files remain unexamined; the known Italian MM00774_b_IT translation is not independently reconciled. No metric dimensions or IP rating appears in these two exports.
+
 ## Evidence limits and open work
 
-- Resolve the firmware 00 versus reusable Object `01` room default and filter `3106` restriction to 0, unenforced nonzero relay-address requirement, extra A/PL/T diagram positions and L/L1 versus L1/L2 terminal notation.
+- Resolve the firmware `00` versus reusable Object `01` room default and filter `3106` restriction to 0, unenforced nonzero relay-address requirement, extra A/PL/T diagram positions and L/L1 versus L1/L2 terminal notation.
 - Obtain lot-scoped hardware evidence for the MH201 visual-alarm feature, including trigger events, indication pattern, reset/acknowledgement and accepted configuration fields.
 - Verify non-RFID applicability of reusable door opening, door timer, entrance/leaving group and generic-service fields; inspect the relevant software definitions before asserting wire encoding.
 - Corroborate Object `488`, room address, bell interlock/contact behavior and LED mapping for all three variants; exact metric dimensions, IP and MCU remain undocumented by retained indicator sheets.
@@ -285,3 +323,5 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 
 - `H4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650); SHA-256 `93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4`.
 - `LN4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650); SHA-256 `66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0105)

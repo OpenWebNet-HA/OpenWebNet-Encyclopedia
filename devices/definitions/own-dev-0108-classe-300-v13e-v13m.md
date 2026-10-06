@@ -35,6 +35,16 @@ The catalogue identifies `344612` as white V13E, `344613` as dark V13E, and `344
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `2473` | `344612` | `CLASSE300 V13E/M` | `1` | `5` | `1` | Empty | `0` | `0` | `Classe 300 V13E White` |
+| `2474` | `344613` | `CLASSE300 V13E/M` | `1` | `5` | `1` | Empty | `0` | `0` | `Classe 300 V13E Dark` |
+| `2475` | `344622` | `CLASSE300 V13E/M` | `1` | `5` | `1` | Empty | `0` | `0` | `Classe 300 V13M White` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -45,8 +55,8 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `RA00136AC_U_EN.pdf` | Classe 300 user manual | `RA00136AC; revision from publisher filename; no publication date located` | Family operations pp. 4-36; settings pp. 37-48; induction loop, door status, Office and paging pp. 49-53. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/54/c1/54c1864c80b2e7d695048acfe0e03b6834c8cd4c266ff17e0c771f2fc8d22805.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00136AC_U_EN.pdf) |
 | `LE07498AE.pdf` | Multilingual illustrated installation sheet | `LE07498AE; 04/16-01 PC` | `344612`/`344613`/`344622`; dimensions/heights/mounting PDF p. 1 (no printed number); interfaces pp. 2-4; configuration/matrices pp. 5-9; declarations pp. 10-12. Subsequent printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/74/cd/74cd8e15a7174e9cd62a2e56a5999449b972b0be331379b469c7b947fe1d049b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE07498AE.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2134`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
-| `344612-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344612` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612) |
-| `344613-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344613` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613) |
+| `344612-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344612` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612) |
+| `344613-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344613` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613) |
 
 ## Physical and electrical characteristics
 
@@ -80,6 +90,22 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Commercial record count | `3` | `EN_DEVICE` |
 | Additional system | Video door entry; system key `4`, model `16` | Separate non-main association; inventory summary chooses this system, but main association is Integration functions/model `69` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `16` | No | Canonical item/system relationship |
+| Integration function | `69` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -90,6 +116,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `671` | `719` | BTicino (key `1`) | `0` | Extra | `2134_1.0_BT\xml\Extra\extra.xml` |
+| `671` | `720` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2134_1.0_BT\xml\Protocol\protocol.xml` |
+| `727` | `1020` | BTicino (key `1`) | `0` | Extra | `2134_2.0_BT\xml\Extra\extra.xml` |
+| `727` | `1021` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2134_2.0_BT\xml\Protocol\protocol.xml` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -112,14 +151,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `671` | Product Programming | `3` | Association key `4` |
-| `727` | Product Programming | `3` | Association key `4` |
+| `671` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `727` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `671` | Ethernet over USB | `4` |
-| `727` | Ethernet over USB | `4` |
+| `671` | Ethernet over USB | Canonical firmware/connection association ; connection key `4` |
+| `727` | Ethernet over USB | Canonical firmware/connection association ; connection key `4` |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Associated parameter definitions
 
@@ -129,7 +169,6 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 | `671` | `1` | `0` | `2134_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
 | `727` | `1` | `0` | `2134_2.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
 | `727` | `1` | `0` | `2134_2.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
 
 Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
 
@@ -219,7 +258,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
 | `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
 
-
 ### Object `132` - CLASSE300 V13E/M
 
 Catalogue Object key `628` maps to external Object `132`.
@@ -241,6 +279,10 @@ Catalogue Object key `628` maps to external Object `132`.
 | Display | Background choice; five-position touch calibration; cleaning inhibits touch/keys `10 s` | Installer pp. 23-24; user pp. 41-42 |
 | Advanced intercom types | Internal, external, paging, general; external/internal scope depends on apartment interfaces | Installer pp. 35-36 |
 | Advanced cameras | Private, public, CCTV; without apartment interface cameras treated private; CCTV `3 min` view with no cycling, `347400` integration | Installer pp. 37-38 |
+
+### Semantic review findings
+
+Integration model 69 and video-entry model 16 are both stored with their main flags; neither replaces the other. Two Modules expose Internal Unit 154 and UI 132. Stored DOSA_CALL/LAN fields do not establish network hardware. V13M recording is variant-scoped. Both installer RA00136AB p. 7 and LE07498AE show 25 mm depth against 22 mm in technical sheets.
 
 ## Conditions, filters, and conversions
 
@@ -309,8 +351,8 @@ Both exact sheets establish their own variant identities and agree on the common
 
 | Issue | Reconciliation / unresolved limit | Evidence |
 | --- | --- | --- |
-| System/model identity | Main Integration functions/model `69` coexists with video-door-entry model `16`; generated inventory summary uses the latter. Neither is the project Device ID | AS_ITEM_SYSTEM; inventory |
-| Depth | Technical sheets `22 mm`; installation sheet `25 mm`, with no documented hardware/measurement explanation | Exact sheet p. 1; LE07498AE PDF p. 1 |
+| System/model identity | Main Integration functions/model `69` coexists with video-door-entry model `16`; generated inventory summary uses the latter. Neither is the project Device ID | `AS_ITEM_SYSTEM`; inventory |
+| Depth | Technical sheets `22 mm`; installer and installation sheet `25 mm`, with no documented hardware/measurement explanation | Exact sheet p. 1; RA00136AB_I_EN p. 7; LE07498AE PDF p. 1 |
 | Firmware defaults | Catalogue application tuples `1.0.0/2.0.0`, Object `132` FW_VER `1.0.0`, firmware-scoped FW_VER `3.0.0` and installer example `1.0.12` are distinct; no installed tuple inferred | Catalogue; installer p. 21 |
 | Network fields | Firmware LAN_IP_ADDRESS/SYSADDRESS and Object `154` DOSA_CALL coexist with documented SCS and Mini-USB. These do not establish Wi-Fi, RJ45 or app forwarding | Catalogue; exact rear legends |
 | Activation labels | Sheets say 50 direct auto-on to EP; installer says 50 direct activations and 50 locks/generic activations. Preserve the source terms without adding capacities together | Sheets p. 5; installer p. 44 |
@@ -337,3 +379,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 
 - `344612-ean-product-sheet.pdf`, printed/PDF p. 1: exact `344612` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/0e/9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344612); SHA-256 `9c0ed29efbcad6aa457848f07b5197cb5bd89297b68241c2874c9de462f863b9`.
 - `344613-ean-product-sheet.pdf`, printed/PDF p. 1: exact `344613` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/8b/e1/8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344613); SHA-256 `8be12fa4069ebde6d703e60b856356988cdea39fe224f07fae1f5f53b86c1591`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0108)

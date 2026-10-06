@@ -37,6 +37,16 @@ The catalogue LN record uses the grouping `L/N/NT`; the publisher markets `LN465
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1733` | `H4652` | `8 scenarios control` | `1` | `2` | `1` | Empty | `0` | `0` | `BTicino_Axolute_8 scenarios command bus` |
+| `2155` | `LN4652` | `8 scenarios control` | `1` | `4` | `1` | Empty | `0` | `0` | `BTicino_L/N/NT_8 scenarios command bus` |
+| `2156` | `067592` | `8 scenarios control` | `2` | `13` | `1` | Empty | `0` | `0` | `Legrand_Celiane_8 scenarios command bus` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -84,6 +94,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Commercial records | `3`; record IDs `1733`, `2155`, `2156` | Three shared-item catalogue variants |
 | Gateway metadata | None of the three records is marked as a gateway | Commercial metadata; an MH201 software route is an external system connection |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `49` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -92,8 +115,31 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
-
 Hardware revision, microcontroller and installed firmware are unknown. The firmware table records source applicability, not an observed Physical Device.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `122` | `233` | BTicino (key `1`) | `1` | SDC | `xml\SDC\sdc.xml` |
+| `122` | `234` | BTicino (key `1`) | `1` | Extra | `1678_1.0_BT\xml\Extra\extra.xml` |
+| `122` | `235` | BTicino (key `1`) | `1` | Director | `1678_1.0_BT\xml\DIRECTOR\director.xml` |
+| `122` | `263` | BTicino (key `1`) | `3` | SDC | `xml\SDC\sdc.xml` |
+| `122` | `264` | BTicino (key `1`) | `3` | SVM | `1678_1.0_BT\xml\SVM\svm.xml` |
+| `122` | `265` | BTicino (key `1`) | `3` | Extra | `1678_1.0_BT\xml\Extra\extra.xml` |
+| `122` | `266` | BTicino (key `1`) | `3` | Director | `1678_1.0_BT\xml\DIRECTOR\director.xml` |
+| `122` | `267` | BTicino (key `1`) | `3` | Protocol and other device parameters | `1678_1.0_BT\xml\Protocol\protocol.xml` |
+| `122` | `268` | BTicino (key `1`) | `1` | SVM | `1678_1.0_BT\xml\SVM\svm.xml` |
+| `122` | `269` | BTicino (key `1`) | `1` | Protocol and other device parameters | `1678_1.0_BT\xml\Protocol\protocol.xml` |
+| `122` | `275` | Legrand (key `2`) | `4` | SDC | `xml\SDC\sdc.xml` |
+| `122` | `276` | Legrand (key `2`) | `4` | SVM | `1678_1.0_LG\xml\SVM\svm.xml` |
+| `122` | `277` | Legrand (key `2`) | `4` | Extra | `1678_1.0_LG\xml\Extra\extra.xml` |
+| `122` | `278` | Legrand (key `2`) | `4` | Director | `1678_1.0_LG\xml\DIRECTOR\director.xml` |
+| `122` | `279` | Legrand (key `2`) | `4` | Protocol and other device parameters | `1678_1.0_LG\xml\Protocol\protocol.xml` |
+
+All 15 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -227,10 +273,13 @@ All eight command slots have the same fourteen associated external Objects; slot
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `122` | Virtual Configuration | `1` | Catalogue association `1` |
-| `122` | Advanced Configuration | `2` | Catalogue association `2` |
-| `122` | Physical configuration | `0` | Catalogue association `3` |
-| `122` | Product Programming | `3` | Catalogue association `4` |
+| `122` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `122` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `122` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+| `122` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 Both technical sheets document physical configurators and MyHOME Suite software configuration. The software route uses the PC Ethernet network and external MH201 scenario module; the control/indicator itself remains on SCS BUS. No connection association is stored for this firmware in `AS_CONNECTION_FIRMWARE`; this absence does not invalidate the published Ethernet route. Product Programming is additionally registered for firmware `122`; the source does not equate its mode number with a runtime protocol frame.
 
@@ -282,7 +331,6 @@ Domains and defaults below are catalogue evidence. `AID` is an eight-character m
 | `OFF` | Off | `10` |
 | `ON` | `100 %` | `11` |
 
-
 This table is printed on technical-sheet p. 3 / PDF p. 3 in both languages. The default physical token `0` is `30 %`; these tokens are not Object `130` level numbers.
 
 ## Object configuration surfaces
@@ -312,7 +360,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -328,7 +375,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -342,7 +388,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -355,7 +400,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -365,7 +409,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -377,7 +420,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -388,7 +430,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `417` - `AUX` control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -397,14 +438,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `OUT_AUX_CH` | `1..15` | `1` | `AUX` channel |
 | `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `419` - Sound diffusion control
 
@@ -420,14 +459,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `421` - Cyclic autoswitch control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `426` - Staircase light control
 
@@ -436,7 +473,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -447,7 +483,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `130` - User interface settings
 
@@ -465,7 +500,6 @@ Catalogue Object key `480` maps to external Object `130`.
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
 
-
 ### Object `462` - Open lock command on session
 
 Catalogue Object key `489` maps to external Object `462`.
@@ -482,6 +516,10 @@ Catalogue Object key `489` maps to external Object `462`.
 | UI Object `130` | Unused-button state, feedback, intensity/fade, standby light, delay, proximity and signboard fields are reusable configuration evidence | Several descriptions explicitly make defaults/distribution Device-dependent; proximity field does not establish a physical sensor |
 | Physical LED versus UI levels | Physical token `0` yields `30 %`; Object `LED_LEVEL` has stored default `6` | No conversion associates physical percentages with Object values; preserve separate defaults |
 | Learning versus Object selection | Publisher learning procedures associate commands; catalogue alternatives expose reusable capability | No stored predicate chooses one active Object; no inferred selection precedence |
+
+### Semantic review findings
+
+Nine protocol Modules differ from the two physical wiring-device modules: eight command slots and one UI slot. Physical learning, scenario and CEN procedures do not establish simultaneous activation of every command Object. `A=14/CEN`, TYPE_CONTACT with no stored legal values, duplicate CHANNEL labels, restricted N1/default and generic proximity capability remain explicit irregularities.
 
 ## Conditions, filters, and conversions
 
@@ -627,3 +665,5 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 
 - `H4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4652&include_technical=1); SHA-256 `b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb`.
 - `LN4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4652&include_technical=1); SHA-256 `a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0103)

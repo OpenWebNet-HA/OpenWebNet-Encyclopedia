@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 110 |
-| reviewed | 100 |
+| review-ready | 100 |
+| reviewed | 110 |
 
 Total: **210** technical-item clusters.
 
@@ -21,15 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1340 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0102 | partial | complete | complete | pending | - |
-| normal | 1678 | 8 scenarios control | 3 | review-ready | OWN-DEV-0103 | partial | complete | complete | pending | - |
-| normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | review-ready | OWN-DEV-0104 | partial | complete | complete | pending | - |
-| normal | 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | 3 | review-ready | OWN-DEV-0105 | partial | complete | complete | pending | - |
-| normal | 1681 | DO NOT DISTURB-MAKE UP ROOM reader | 3 | review-ready | OWN-DEV-0106 | partial | complete | complete | pending | - |
-| normal | 1809 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0107 | partial | complete | complete | pending | - |
-| normal | 2134 | CLASSE300 V13E/M | 3 | review-ready | OWN-DEV-0108 | partial | complete | complete | pending | - |
-| normal | 2242 | Add-on SCS thermostat | 3 | review-ready | OWN-DEV-0109 | partial | complete | complete | pending | - |
-| normal | 2243 | Comando unico MYHOME 2 moduli | 3 | review-ready | OWN-DEV-0110 | partial | complete | complete | pending | - |
 | normal | 2245 |  Comando unico MYHOME 3 moduli | 3 | review-ready | OWN-DEV-0111 | partial | complete | complete | pending | - |
 | normal | 2247 | Comando-Attuatore MYHOME Luci  | 3 | review-ready | OWN-DEV-0112 | partial | complete | complete | pending | - |
 | normal | 2248 | Comando-Attuatore MYHOME Tapparelle | 3 | review-ready | OWN-DEV-0113 | partial | complete | complete | pending | - |
@@ -39,7 +30,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | review-ready | OWN-DEV-0101 | complete | complete | complete | pending | - |
 | normal | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | 2 | review-ready | OWN-DEV-0120 | partial | complete | complete | pending | - |
 | normal | 1162 | Load management central unit | 2 | review-ready | OWN-DEV-0121 | partial | complete | complete | pending | - |
 | normal | 1163 | Actuator 16A with current sensor - 1 DIN | 2 | review-ready | OWN-DEV-0122 | partial | complete | complete | pending | - |
@@ -211,8 +201,10 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1123 | Flush mounted leading dimmer 300 VA | OWN-DEV-0099 |
 | 1130 | Stereo control | OWN-DEV-0100 |
 | 1147 | Local Display | OWN-DEV-0018 |
+| 1156 | DIN - Switch  8 x 16 A - 230V | OWN-DEV-0101 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
 | 1190 | Touch control | OWN-DEV-0019 |
+| 1340 | Multimedia Touch Screen | OWN-DEV-0102 |
 | 1376 | Touch control multifunction | OWN-DEV-0009 |
 | 1455 | Web Server A/V Bus | OWN-DEV-0002 |
 | 1465 | Load Control Panel bus | OWN-DEV-0020 |
@@ -225,8 +217,13 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1579 | Shutter control bus | OWN-DEV-0044 |
 | 1586 | Shutter actuator bus | OWN-DEV-0045 |
 | 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
+| 1678 | 8 scenarios control | OWN-DEV-0103 |
+| 1679 | DO NOT DISTURB-MAKE UP ROOM control | OWN-DEV-0104 |
+| 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | OWN-DEV-0105 |
+| 1681 | DO NOT DISTURB-MAKE UP ROOM reader | OWN-DEV-0106 |
 | 1686 | Display thermostat 2 modules | OWN-DEV-0046 |
 | 1768 | MyHOME_Screen 10 | OWN-DEV-0047 |
+| 1809 | Multimedia Touch Screen | OWN-DEV-0107 |
 | 1847 | Key card switch RFID | OWN-DEV-0039 |
 | 1854 | Probe with regulation | OWN-DEV-0038 |
 | 1856 | Fan-coil probe | OWN-DEV-0040 |
@@ -234,7 +231,10 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1884 | Energy display 2 modules | OWN-DEV-0048 |
 | 1898 | MyHOME_Screen 10 Capacitive | OWN-DEV-0049 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
+| 2134 | CLASSE300 V13E/M | OWN-DEV-0108 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
+| 2242 | Add-on SCS thermostat | OWN-DEV-0109 |
+| 2243 | Comando unico MYHOME 2 moduli | OWN-DEV-0110 |
 | 2321 | Classe 300X | OWN-DEV-0050 |
 
 ## Workflow

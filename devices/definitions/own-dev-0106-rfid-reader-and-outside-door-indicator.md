@@ -37,6 +37,16 @@ The publisher technical sheets name all three references together. The catalogue
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1737` | `H4651` | `DO NOT DISTURB-MAKE UP ROOM reader` | `1` | `2` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Axolute` |
+| `1999` | `LN4651` | `DO NOT DISTURB-MAKE UP ROOM reader` | `1` | `4` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Living` |
+| `2000` | `067591` | `DO NOT DISTURB-MAKE UP ROOM reader` | `2` | `13` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Celiane` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -66,7 +76,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `H4651`/`LN4651` metric size | `45 x 45 x 24 mm`; minimum box depth `55 mm`; `IP20` | Both original product exports, printed/PDF p. 2 |
 | `H4651`/`LN4651` storage/connection | `-10..70 °C`; terminals `0.34..2.5 mm²`, flexible or rigid wire | Both product exports, pp. 2-3 |
 | `H4651` construction | Thermoplastic; untreated glossy finish, transparent attribute; RAL-like `9011` | `H4651` export p. 2; no Céliane extension |
-| SKU-scoped attributes | Both exports: bidirectional radio Yes; RF bus No; SCS; one actuation point/button; LED and no display, thermostat or IR sensor. `H4651` label-area Yes | Exports pp. 2-3; radio bus classification distinct from card-reader RF |
+| SKU-scoped attributes | H4651: bidirectional radio Yes; LN4651: bidirectional radio No; both RF bus No; SCS; one actuation point/button; LED and no display, thermostat or IR sensor. `H4651` label-area Yes | Exports pp. 2-3; radio bus classification distinct from card-reader RF |
 | Published standards | `EN 60669-2-1`, `EN 50491-5-1`, `EN 50428` | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
 
 ## Identity
@@ -80,6 +90,18 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Main item model / `modobj` | `6` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `3` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -89,6 +111,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -108,10 +136,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `254` | Virtual Configuration | `1` | Association key `1` |
-| `254` | Advanced Configuration | `2` | Association key `2` |
-| `254` | Physical configuration | `0` | Association key `3` |
+| `254` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `254` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `254` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
@@ -183,6 +213,10 @@ Catalogue Object key `554` maps to external Object `488`.
 
 The address and timer compression above preserves every enumerated catalogue value. Standalone modes `0/1` store cards locally; mode `2` stores them in the IP scenario module according to Object `488` prose. Physical `T=0` and software timer value `5` both label `0.5 s` in their separate sources; no attached conversion equates their wire encoding.
 
+### Semantic review findings
+
+RFID card radio is documented at 13.56 MHz; RF automation bus classifications are separate. Mifare/3547 and visual alarm require lot 14w40 onward; wildcard firmware does not resolve lot. H4651 and LN4651 exports disagree on bidirectional-radio classification. Physical card programming/reset procedures and software room/default restrictions remain distinct.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -252,7 +286,6 @@ Resolve the actual firmware and Object before writing configuration. Keep two-di
 | Local lock only | Room 115: `M=2`, absent `A/PL`, `T=3`; valid card operates local lock `3 s`, front key disabled; MH201 required | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
 | Labels and mounting | Remove front/label, print and cut room-number insert, reinsert/refit; use the shared sheet drawings | `LE06116AC-02PC-19W15`, PDF p. 1 |
 
-
 The hotel-room diagram on p. 4 / PDF p. 4 includes LN4648, LN4653, LN4652, LN4691, MH201, F430R8 and F411/1N with E49. It is an example: choose protection and actuators for installed loads; E46ADCN is the published alternative if E49 current is insufficient.
 
 ## Source reconciliation
@@ -265,7 +298,7 @@ The two `c` technical-sheet translations agree on the three-reference cluster, r
 | Relay constraint | LOCAL_RELAY_FUNCTION Doorbell requires nonzero APL_DOOR in prose; legal APL_DOOR still contains `0`, with no attached conditional enforcement. Default `1` satisfies the prose, but not every legal value does | Object `488` |
 | Lot boundary | Mifare/3547 and visual alarm apply from `14w40`; wildcard firmware cannot prove a pre/post-lot Physical Device | Sheets p. 1 |
 | Reader/local relay | Introductory legend says relay activated by front key; local-lock wiring disables front key and uses card acceptance. These are configuration-dependent examples, not contradictory unconditional behavior | Sheets pp. 1, 3 |
-| RF attribute | RF-bus No and bidirectional-radio Yes describe different attribute scopes; `13.56 MHz` identifies the card-reader radio. No RF automation bus inferred | Exports p. 2; LE06116AC |
+| RF attribute | Both exports say RF-bus No, but H4651 says bidirectional radio Yes and LN4651 No. This SKU-specific classification conflict remains unresolved; `13.56 MHz` identifies the card-reader radio. No RF automation bus inferred | Exports p. 2; LE06116AC |
 | Unspecified limits | Card capacity, badge data format, acceptance algorithm, alarm trigger/reset and key-programming timeouts are not specified by retained sources | All reader originals |
 
 ## Evidence limits and open work
@@ -288,3 +321,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 
 - `H4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4651&include_technical=1); SHA-256 `312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9`.
 - `LN4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4651&include_technical=1); SHA-256 `131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0106)

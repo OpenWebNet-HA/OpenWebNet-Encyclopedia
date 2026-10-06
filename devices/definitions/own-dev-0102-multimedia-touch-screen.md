@@ -26,6 +26,16 @@ This 10-inch multimedia touchscreen combines configured MyHOME controls with vid
 
 Finish labels above are catalogue descriptions. The `HA4690...` surround plates are accessories, not additional Device identities. The separate Legrand Multimedia Touch Screen cluster, item `1809` / `modobj = 48`, is not merged into this `modobj = 41` dossier merely because its description and firmware tuples resemble it.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1340` | `HC4690` | `Multimedia Touch Screen` | `1` | `2` | `1` | Empty | `0` | `0` | `BTicino-Axolute-Multimedia Touch Screen Clear` |
+| `1947` | `HD4690` | `Multimedia Touch Screen` | `1` | `2` | `1` | Empty | `0` | `0` | `BTicino-Axolute-Multimedia Touch Screen White` |
+| `1948` | `HS4690` | `Multimedia Touch Screen` | `1` | `2` | `1` | Empty | `0` | `0` | `BTicino-Axolute-Multimedia Touch Screen Dark` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -56,7 +66,7 @@ Finish labels above are catalogue descriptions. The `HA4690...` surround plates 
 | Future-application interfaces | USB webcam port, Wi-Fi dongle use and PSTN telephone port marked future application | `U3567E`, printed p. 7 / PDF p. 7; `U3567E`, printed p. 12 / PDF p. 12 |
 | Rear connections | Sound-source output, Ethernet RJ45 with LAN LEDs, video two-wire SCS BUS, supply `1-2`, RS232 PC connection | `U3567E`, printed p. 12 / PDF p. 12 |
 | Rear controls / audio | End-of-line `ON`/`OFF` switch, speakers, factory-settings reset button, battery compartment | `U3567E`, printed p. 12 / PDF p. 12 |
-| Battery rating | HC/HS: NiMH `7.2 V`, `160 mAh`; HD rating not separately established | `BT00635-a-EN`, printed p. 1 / PDF p. 1; family replacement illustration `U3567E`, printed p. 25 / PDF p. 25 |
+| Battery rating | HC/HD/HS: NiMH `7.2 V`, `160 mAh`; backup duration not specified | `BT00635-a-EN`, printed p. 1 / PDF p. 1; family replacement illustration `U3567E`, printed p. 25 / PDF p. 25 |
 
 ## Identity
 
@@ -70,6 +80,22 @@ Finish labels above are catalogue descriptions. The `HA4690...` surround plates 
 | Brand / line metadata | BTicino; Axolute; brand model `1`, line model `3` | Commercial records and model fields; line database key `2` is separate |
 | Commercial records | `3` | Canonical catalogue |
 | Catalogue gateway flag | Not marked as a gateway for all three records | Commercial metadata; does not negate the software manual's remote-control password setting |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `41` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -92,6 +118,41 @@ The publisher download page separately labels firmware packages `MMT_040006.fwz`
 | `664` (`1.1.0`) | `TiMultimediaTouchScreen_0101` | Product-tool association; executable not examined |
 | `1` (`4.0.0`) | Language packages `GL1`, `GL21`, `GL31`, `GL42`, `GL51`, each tuple `4.0.0` | Catalogue package membership; associated `2.xtz` / `3.xtz` payloads not examined |
 
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `1` | `10` | BTicino (key `1`) | `3` | SDC | `xml\SDC\sdc.xml` |
+| `1` | `11` | BTicino (key `1`) | `3` | SVM | `1340_4.0_BT\xml\SVM\svm.xml` |
+| `1` | `12` | BTicino (key `1`) | `3` | Extra | `1340_4.0_BT\xml\Extra\extra.xml` |
+| `1` | `13` | BTicino (key `1`) | `3` | Director | `1340_4.0_BT\xml\DIRECTOR\director.xml` |
+| `1` | `14` | BTicino (key `1`) | `3` | Protocol and other device parameters | `1340_4.0_BT\xml\Protocol\protocol.xml` |
+| `662` | `707` | BTicino (key `1`) | `3` | external software | `TiMultimediaTouchScreen_0300` |
+| `663` | `708` | BTicino (key `1`) | `3` | external software | `TiMultimediaTouchScreen_0200` |
+| `664` | `709` | BTicino (key `1`) | `3` | external software | `TiMultimediaTouchScreen_0101` |
+
+All 8 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+| Firmware | Package record | Name | GL | Version | Release | Build | Unicode set | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1` | `12` | `GL1` | `1` | `4` | `0` | `0` | `1` | Canonical package metadata |
+| `1` | `13` | `GL21` | `21` | `4` | `0` | `0` | `2` | Canonical package metadata |
+| `1` | `14` | `GL31` | `31` | `4` | `0` | `0` | `3` | Canonical package metadata |
+| `1` | `15` | `GL42` | `42` | `4` | `0` | `0` | `4` | Canonical package metadata |
+| `1` | `16` | `GL51` | `51` | `4` | `0` | `0` | `5` | Canonical package metadata |
+
+These are catalogue package metadata; package payloads have not been inspected.
+
+| Unicode set | Catalogue notes |
+| --- | --- |
+| `1` | GL1 |
+| `2` | GL21 |
+| `3` | GL31 |
+| `4` | GL42 |
+| `5` | GL51 |
+
+The five package Unicode sets and all 4534 stored set/range associations were extracted and their hexadecimal bounds checked. [Complete canonical Unicode-set and range inventory](../inventory/touch-screen-package-unicode-ranges.json) retains each association key and minimum/maximum. These package text ranges do not define the allowed characters of firmware identity or network masks. Package payloads remain unexamined.
+
 ## Module, Object, and Virgin Object model
 
 | Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
@@ -111,12 +172,25 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue connection routes | Product-source reconciliation |
+| Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `1` | Product Programming | Ethernet, USB | Catalogue mode/connection associations; publisher also describes serial `3559` |
-| `662` | Product Programming | Ethernet, USB | Catalogue mode/connection associations; publisher also describes serial `3559` |
-| `663` | Product Programming | Ethernet, USB | Catalogue mode/connection associations; publisher also describes serial `3559` |
-| `664` | Product Programming | Ethernet, USB | Catalogue mode/connection associations; publisher also describes serial `3559` |
+| `1` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `662` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `663` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `664` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `1` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `1` | USB | Canonical firmware/connection association ; connection key `3` |
+| `662` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `662` | USB | Canonical firmware/connection association ; connection key `3` |
+| `663` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `663` | USB | Canonical firmware/connection association ; connection key `3` |
+| `664` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `664` | USB | Canonical firmware/connection association ; connection key `3` |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 `Product Programming` means a configured product project in this catalogue. The application icons described in the software manual are project objects; they are not additional protocol Objects or Modules. The manuals describe serial, USB and Ethernet PC connections (installer printed pp. 26-27 / PDF pp. 26-27; software printed p. 7 / PDF p. 7), while the retained send wizard shows only Ethernet and USB (software printed p. 8 / PDF p. 8).
 
@@ -197,6 +271,10 @@ Object `32`'s string masks have no stored numeric minimum/maximum. Its defaults 
 | Door-entry options | Hands free, ring exclusion, Professional Studio and Teleloop mode matching associated device | Software printed pp. 66-67 / PDF pp. 66-67; `U3569H User EN`, printed p. 89 / PDF p. 89 |
 | Ringtones | Maximum `10`; import `.mp3`, `.wav`, `.pcm`; select/edit a maximum `5 s` extract; save and add to project | Software printed pp. 68-72 / PDF pp. 68-72 |
 | Energy notifications | Warning beep enable; monthly previous-consumption window and display time in software; user manual separately describes threshold popup | Software printed p. 60 / PDF p. 60; user printed p. 89 / PDF p. 89; trigger scope unresolved |
+
+### Semantic review findings
+
+One Module with Object `32` is shared by four firmware definitions; UI applications are not additional protocol Objects. FW_VER default 3.0.0 is independent of catalogue tuples and publisher release labels. The all-family installer confirms the battery for HD4690 as well as HC/HS; backup duration remains unknown. String masks provide no proven character sets. All parameter/package scopes are recorded under Firmware and hardware.
 
 ## Conditions, filters, and conversions
 
@@ -307,7 +385,7 @@ Use the applicable TiMultimediaTouchScreen project and firmware association. Pro
 
 ## Source reconciliation
 
-The catalogue groups `HC4690`, `HD4690` and `HS4690` under item `1340` with main `modobj = 41`. The covers of `U3567E` and both `U3569H` manuals name all three references, independently supporting the family association. `BT00635-a-EN` names only HC/HS: use the all-family installation manual for shared supply, current, temperature and dimensions, while the sheet-only battery rating remains HC/HS-scoped. Clear/White/Dark finish labels are catalogue evidence. `HA4690...` plates are accessories. The Legrand item `1809`, with model `48`, remains a separate technical cluster.
+The catalogue groups `HC4690`, `HD4690` and `HS4690` under item `1340` with main `modobj = 41`. The covers of `U3567E` and both `U3569H` manuals name all three references, independently supporting the family association. `BT00635-a-EN` names only HC/HS: use the all-family installation manual for shared supply, current, temperature and dimensions, and its p. 25 battery illustration confirms NiMH `7.2 V`, `160 mAh` for the named HC/HD/HS family. Clear/White/Dark finish labels are catalogue evidence. `HA4690...` plates are accessories. The Legrand item `1809`, with model `48`, remains a separate technical cluster.
 
 The four firmware definitions each register one Module slot and Object `32`; the three reusable Object fields repeat firmware-level string-mask information. A product application, screen page or software project object is not an additional protocol Object. Catalogue default `FW_VER = 3.0.0` persists across different firmware tuples and is not an installed-version report. Publisher release labels `4.0.6` and `4.0.13` are separate from the catalogue's `4.0.0` definition.
 
@@ -337,7 +415,7 @@ The English technical sheet was fetched from both the BTicino document server an
 - Retrieve and compare the older installer `U3567C` and the known Italian technical-sheet translation; current source review is limited to the four archived documents listed above.
 - Resolve the mounting direction, seasonal/scenario capacities, Slave-address endpoint, audio-condition progression, image-size unit, energy-alert triggers and force-on defaults with exact software/hardware evidence.
 - Examine referenced product-parameter XML, language-package and firmware-package payloads before asserting serialization, update compatibility, recovery or additional field domains.
-- Establish the HD4690 battery rating, backup duration and exact reset-button timing/erase scope from directly applicable specifications.
+- Establish backup duration and exact reset-button timing/erase scope from directly applicable specifications.
 - Corroborate Module/Object identity, firmware, addressing, project transfer and local/OPEN/alarm credential boundaries using sanitized hardware observations.
 - Validate any required remote gateway/session behavior separately; an OPEN-password project field does not establish a TCP endpoint or universal runtime access.
 - Check current online-feed, radio and remote-image availability only when operational use is required; these dated manuals establish the product feature, not service continuity.
@@ -352,3 +430,5 @@ The English technical sheet was fetched from both the BTicino document server an
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Product Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0102)

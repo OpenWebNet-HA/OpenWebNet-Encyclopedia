@@ -36,6 +36,15 @@ The later BUS/SCS guides explicitly write the pair as “`0 026 04` or `BMSW1005
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1156` | `002604` | `DIN - Switch  8 x 16 A - 230V` | `2` | `5` | `1` | Empty | `0` | `0` | Empty |
+| `1729` | `BMSW1005` | `DIN - Switch  8 x 16 A - 230V` | `1` | `5` | `1` | Empty | `0` | `0` | Empty |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -50,8 +59,8 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `le10699ad-en.pdf` | BUS/SCS hotel / device guide | revision `AD`, 2019 | Printed/PDF p. 36; programming example printed p. 157 / PDF p. 157 | [Archived original](https://archive.openwebnet-ha.org/sha256/02/bd/02bde8a8120d34ca8921a8ffeb82c725880b5e09b42888548561c18001d35607.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699ad-en.pdf) |
 | `le10699aa-fr.pdf` | BUS/SCS hotel / device guide | revision `AA`, 2018 | Printed/PDF p. 24; programming example printed p. 103 / PDF p. 103 | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
 | `LE04280AA.pdf` | publisher-linked wiring sheet | revision `AA` | Publisher-linked from the `002604` product page, but the PDF itself depicts `0 026 02` / 4 x 16 A; excluded from Device-specific facts | [Archived original](https://archive.openwebnet-ha.org/sha256/94/7c/947c7c7db73629689e1858107d83ceea972e69af85d4066fbf22e7bd664ffb36.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE04280AA.pdf) |
-| `BMSW1005-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSW1005` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005) |
-| `002604-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `002604` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-modulaire-fonction-on-et-off-avec-marche-forcee-pour-eclairage-myhome-up-8-relais-10-modules) |
+| `BMSW1005-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSW1005` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005) |
+| `002604-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `002604` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-modulaire-fonction-on-et-off-avec-marche-forcee-pour-eclairage-myhome-up-8-relais-10-modules) |
 
 ## Physical and electrical characteristics
 
@@ -98,6 +107,19 @@ The older dedicated sheets describe the contact as a bistable relay. The later B
 | Commercial records | `2` | canonical catalogue |
 | Commercial codes | `002604`, `BMSW1005` | canonical catalogue and publisher sources |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `159` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -105,6 +127,12 @@ The older dedicated sheets describe the contact as a bistable relay. The later B
 | `199` | `-1` | `-1` | `-1` | `8` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -131,11 +159,14 @@ All eight slots are fixed to the same Light actuator Object. The distinct conver
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue mode | Description |
+| Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `199` | Virtual Configuration | `1` | software configuration route |
-| `199` | Advanced Configuration | `2` | catalogue-declared advanced route |
-| `199` | Physical configuration | `0` | physical configurator route |
+| `199` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `199` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `199` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 The 2013 French sheet also documents Push'n Learn as a Lighting Management association procedure. That procedure is not represented as a separate firmware configuration-mode row in the canonical catalogue and disappears from the parameter-setting list of the 2017 English sheet.
 
@@ -149,16 +180,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `199` | `A` | `0..9` | `0` | A; Environment |
 | `199` | `G` | `0..9` | `0` | G (0-9) |
 | `199` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (0-4, Pul, Sla) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` (configuration `2018`) | physical documentation: `1..9`; software uses Area `0..10` | area / zone base |
-| `G` (configuration `4065`) | physical documentation: `1..9` | physical group number |
-| `M` (configuration `2027`) | codes `0..4` select the documented standard/timed modes; `PUL` selects pushbutton behavior and `SLA` selects slave operation | operating modality |
-
 
 Physical configuration has no `PL` configurator for this product. The published rule is that the eight actuator addresses are derived by incrementing the base address across outputs 1 through 8.
 
@@ -192,12 +213,15 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Product interpretation and source differences
 
 **Object `6` - Light actuator - product interpretation.**
 
 Reusable Object `6` exposes a broader surface than the dedicated product sheets explain. Device relation filters `725`, `1870`, `1894`, `1895`, `1896`, and `1897` must be applied before presenting the reusable Object values as Device capability.
+
+### Semantic review findings
+
+Eight output Modules each reference Object `6`. The eight empty condition predicates do not establish unconditional activation. Conversion rules 7206–7213 map `A=0` to `PL=0` and A=`1..9` to the output number; `A=10` is admitted by the reusable range but has no conversion branch. LOCAL_BUTTON filter `1894` excludes reusable default 0. Dedicated relay claims, hotel memory behavior and generic dimmer text remain distinct source scopes.
 
 ## Conditions, filters, and conversions
 
@@ -338,6 +362,10 @@ Programming must preserve the eight fixed Light actuator channels and the distin
 
 Push'n Learn is documented by the earlier Lighting Management material but is omitted from the parameter-setting section of the 2017 English technical sheet, so it should be treated as revision-dependent rather than universally available.
 
+### Historical Push’n Learn sequence
+
+`LE04385AB` English pp. 4-9 describes the Lighting Management leader/member procedure: press the leader learn key, select its command (for a detector, use its specified second learn action), put each member in learn mode and select its output, then finish at the leader within `10 min`. To alter an output association, follow the guide’s deletion/relearning procedure; deleting all associated members requires adding the required members again. These are revision-scoped Lighting Management procedures. The guide’s detector/leader examples do not establish universal Plug’n Go behavior in every later MyHOME installation.
+
 ## Source reconciliation
 
 The canonical catalogue, dedicated technical sheets, later BUS/SCS guides, and current MyHOME guide agree that `002604 / 0 026 04` and `BMSW1005` are the same eight-output actuator and agree on the principal supply, form factor, BUS connection, zero-current switching, local controls, and load ratings. The `310 g` product mass in the technical sheets and the `457 g` packaged mass in the PEP have different scopes and are not contradictory.
@@ -346,11 +374,13 @@ The main revision difference concerns programming: the 2013 French sheet and 201
 
 `LE04280AA.pdf` is linked from the current `002604` product page but its content is for `0 026 02` / four outputs. It is retained in the archive for provenance and excluded from this Device's electrical and topology facts.
 
+The 2013 PEP is an environmental-declaration scenario: its `240 VA` functional unit, `0.8 W`/`0.5 W` assumed operating profile and four-year validity do not replace the dedicated technical sheet’s load ratings or `0.9 W` no-load figure. Its packaged mass `457 g` remains distinct from product mass `310 g`. `LE04280AA` describes 002602, not this eight-output item, and supplies no transferred specification.
+
 ## Evidence limits and open work
 
 - Capture a sanitized hardware fingerprint covering identity, firmware, all eight Modules, addresses and configuration.
 - Resolve the publisher conflict between “bistable relay” in the dedicated sheets and “normally-open monostable relay” in the later BUS/SCS guides.
-- The current BTicino generated product-sheet endpoint for `BMSW1005` was access-controlled/non-PDF during this run, so its binary was not archived; the current publisher catalogue page remains useful corroborating web evidence.
+- The original `BMSW1005` manufacturer product export is retained and its EAN verified. A separate BMSW1005-only detailed technical manual has not been retained; the paired-reference guides and 002604 technical sheets establish the stated shared scope.
 - `AID` is retained from the canonical implementation model, but the reviewed product PDFs do not give a Device-specific semantic explanation beyond the implementation label “ID”.
 
 ## Sources
@@ -365,3 +395,5 @@ The main revision difference concerns programming: the 2013 French sheet and 201
 - `BMSW1005-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSW1005` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/06/66/0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW1005); SHA-256 `0666a5adbe30c536820735ffd0dca78f6725b0aa251fbc65248f288ff63a0e51`.
 
 - `002604-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `002604` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/1e/af/1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/actionneur-modulaire-fonction-on-et-off-avec-marche-forcee-pour-eclairage-myhome-up-8-relais-10-modules); SHA-256 `1eaf018512228d7c66772e200b0e0140cca2b2eafaf7d94c638b2c621da4c2af`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0101)

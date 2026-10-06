@@ -38,6 +38,16 @@ KW/KG/`KM4691` are named together in the exact manuals and 2018/2020 sheets. The
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `2586` | `KM4691` | `Add-on SCS thermostat` | `1` | `20` | `1` | Empty | `0` | `0` | Empty |
+| `2587` | `KG4691` | `Add-on SCS thermostat` | `1` | `20` | `1` | Empty | `0` | `0` | Empty |
+| `2588` | `KW4691` | `Add-on SCS thermostat` | `1` | `20` | `1` | Empty | `0` | `0` | Empty |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -50,8 +60,8 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `RA00165AA_U_EN.pdf` | Thermostat user manual | `RA00165AA; revision from publisher filename; no publication date located` | KW/KG/`KM4691`; roles and local controls pp. 4-15; app/hotel/HOMETOUCH pp. 16-27; messages/errors pp. 28-30. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/24/28/2428d40d525f7034a5a5fa93c211b576ef6f37184afe0ca93442681b71baff31.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00165AA_U_EN.pdf) |
 | `KW4691-publisher-product-sheet.pdf` | Manufacturer product export | `DATASHEET; 03.10.2026` | `KW4691` only; description, exact marketed line and source-specific technical attributes; printed/PDF pp. 1-3 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/be/80/be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-KW4691&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2242`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
-| `KM4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KM4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691) |
-| `KG4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KG4691` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691) |
+| `KM4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KM4691` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691) |
+| `KG4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `KG4691` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691) |
 
 ## Physical and electrical characteristics
 
@@ -85,6 +95,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Main item model / `modobj` | `9` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `3` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `9` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -94,6 +117,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -113,8 +142,10 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `771` | Advanced Configuration | `2` | Association key `2` |
+| `771` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
@@ -310,6 +341,10 @@ Catalogue Object key `542` maps to external Object `95`.
 | Contact action | Separate heating/cooling opening/closing action, activation delay, timeout and contact-number scenario trigger through MH202 | Installer pp. 28-29, 56-57 |
 | Display/buttons | Software backlight levels/automatic light-based setting, Celsius/Fahrenheit, measured-temperature visibility, window symbol and key locks | Installer pp. 58-59; scale mismatch reconciled below |
 
+### Semantic review findings
+
+Object `95` is reusable hotel-thermostat configuration for a residential-capable product. Half-degree setpoints, tenth-degree bands, five-second delays and minute timeouts retain their distinct stored scales and cross-field constraints; they are not observed wire encodings. Actuator, contact-lock, window-symbol and backlight filters are retained even when they exclude reusable defaults or differ from published configuration.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -424,14 +459,16 @@ The retained exact-product revisions are separately accounted for. The `ST-00000
 | --- | --- | --- |
 | Operating temperature | Sheet/manual `0..40 °C`, current KW export `-5..35 °C`; measuring-range attribute is another scope. No one rating silently replaces another | 2020/2026 sheets; installer p. 7; KW export p. 2 |
 | Geometry | Two-module mounting and export `45 x 90 x 10 mm` have no assembly/depth explanation; not converted into installed overall size | Sheets; KW export |
-| Actuator filters | Firmware `771` filters permit IR emitter/Fil Pilote for the nine ACTUATOR_TYPE fields and heating type, only IR for cooling. Published sheets specify F430 relay/proportional actuators; restrictions also exclude reusable default0. Stored subsets retained, unresolved, not rewritten as excluded values | Filters `3310..3320`; exact sheets p. 1 |
-| Contact key lock | Firmware filters `3308/3309` admit only `2`=Enabled_contact_closed, exclude default0; manual describes disabled or enabled when open. No polarity correction guessed | Object `95`/filter table; installer p. 59 |
-| Window symbol | Filter `3325` admits `2/3/4`, excludes default0; manual describes several indication choices, with no proven mapping | Object `95`/filter table; installer p. 58 |
-| Backlight scale | Installer says five levels/automatic; illustration and current text also use display level10; catalogue EN_CONF range preserves its own named scale. No five-to-ten conversion established | Installer pp. 7, 27, 58; Object `95` |
+| Actuator filters | Firmware `771` filters permit IR emitter/Fil Pilote for the nine ACTUATOR_TYPE fields and heating type, only IR for cooling. Published sheets specify F430 relay/proportional actuators; restrictions also exclude reusable default `0`. Stored subsets retained, unresolved, not rewritten as excluded values | Filters `3310..3320`; exact sheets p. 1 |
+| Contact key lock | Firmware filters `3308/3309` admit only `2`=Enabled_contact_closed, exclude default `0`; manual describes disabled or enabled when open. No polarity correction guessed | Object `95`/filter table; installer p. 59 |
+| Window symbol | Filter `3325` admits `2/3/4`, excludes default `0`; manual describes several indication choices, with no proven mapping | Object `95`/filter table; installer p. 58 |
+| Backlight scale | Installer says five levels/automatic; illustration and current text also use display level10; catalogue `EN_CONF` range preserves its own named scale. No five-to-ten conversion established | Installer pp. 7, 27, 58; Object `95` |
 | `OFF` wording | Local `ON`/`OFF` and app `OFF` mean protection; true `OFF` belongs to HotelSupervision or configured contact. Introductory user prose says setpoints can be activated by MyHOME Up, but its explicit table excludes Eco/Comfort | User pp. 4-5, 8, 17, 21, 28; sheets |
-| Stabilisation | Sheets say a few minutes; installer/user say at least5h after first installation, ER4 or suspect measurement. Calibration procedure beyond that note is not specified | Sheets p. 2; installer p. 85; user p. 30 |
+| Stabilisation | Sheets say a few minutes; installer/user say at least `5 h` after first installation, ER4 or suspect measurement. Calibration procedure beyond that note is not specified | Sheets p. 2; installer p. 85; user p. 30 |
 | Catalogue maturity | Missing build row is unknown; no physical configurator fields beyond AID; Hotel thermostat Object is reused for a residential product | Firmware `771`; exact manuals |
 | Export classifications | KW export says Programmable No / Interoperability No despite documented configuration and system integration. These attributes are not a negation of the product-specific procedures | Export p. 2; current sheet p. 2 |
+
+The reusable actuator-type descriptions refer to “highlighted” future-use values, but the database text does not retain that highlighting. No particular enum is guessed to be the highlighted subset. The hidden development-only changeover threshold remains catalogue metadata, not a prescribed installer setting.
 
 ## Evidence limits and open work
 
@@ -454,3 +491,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - `KM4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `KM4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/42/ee/42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KM4691); SHA-256 `42eedff97fc243e4915ea53317c19e1d1079a2eb9de00f975f93b452782d702f`.
 - `KG4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `KG4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/be/d5/bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-KG4691); SHA-256 `bed5f9bff02014fe7011a5a73f1747c852ac3596469c1ddeae50a75182b72af6`.
 - `KW4691-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `KW4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/be/80/be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-KW4691&include_technical=1); SHA-256 `be8098ab422a7ed9b2cf4ff35c4b5979792350d1f6e666fa80c00da7ffd4cfc5`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0109)
