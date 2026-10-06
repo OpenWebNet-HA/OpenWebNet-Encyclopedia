@@ -1961,6 +1961,26 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-bmne500-italian-product-sheet-it-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: BMNE500-italian-product-sheet-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: BMNE500-italian-product-sheet-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 17815
+  sha256: f6115b19a650fd2a1a105a232514dc7d07123d0127f258efad678e451c383b56
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMNE500
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/f6/11/f6115b19a650fd2a1a105a232514dc7d07123d0127f258efad678e451c383b56.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/f6/11/f6115b19a650fd2a1a105a232514dc7d07123d0127f258efad678e451c383b56.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-bmse3001-ean-export-20261005
   kind: documentation
   publisher: BTicino
