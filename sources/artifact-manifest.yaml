@@ -11918,15 +11918,8 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/da/d7/dad7569e38b9cf2f7d8dca0f6eaa9022624a6067b8aff90e00527fd530f2982c.pdf
   language:
-  - it
   - en
-  - fr
-  - de
-  - es
-  - nl
-  - pt
-  - el
-  language_evidence: Language verified by reading the retained manufacturer original
+  language_evidence: Predominantly pictographic installation sheet; English functional labels are present
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u4713a-s-en-20261004
