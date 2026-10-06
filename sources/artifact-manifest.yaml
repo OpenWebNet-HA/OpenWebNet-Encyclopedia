@@ -1526,6 +1526,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-3550-italian-product-sheet-it-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: 3550-italian-product-sheet-IT manufacturer device documentation
+  media_type: application/pdf
+  filename: 3550-italian-product-sheet-IT.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 16375
+  sha256: 9bee7de338f9fffd39fb72ba9b1800efd9da53d2036ef81d0612c9bfd51a8ecd
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3550
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/9b/ee/9bee7de338f9fffd39fb72ba9b1800efd9da53d2036ef81d0612c9bfd51a8ecd.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/9b/ee/9bee7de338f9fffd39fb72ba9b1800efd9da53d2036ef81d0612c9bfd51a8ecd.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-4601-installation-nl-20130411-82719-2
   kind: documentation
   publisher: BTicino / Legrand
