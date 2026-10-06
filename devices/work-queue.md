@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 120 |
-| reviewed | 90 |
+| review-ready | 110 |
+| reviewed | 100 |
 
 Total: **210** technical-item clusters.
 
@@ -21,7 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1122 | Shutter flush mounted actuator | 3 | review-ready | OWN-DEV-0098 | partial | complete | partial | pending | - |
 | normal | 1340 | Multimedia Touch Screen | 3 | review-ready | OWN-DEV-0102 | partial | complete | complete | pending | - |
 | normal | 1678 | 8 scenarios control | 3 | review-ready | OWN-DEV-0103 | partial | complete | complete | pending | - |
 | normal | 1679 | DO NOT DISTURB-MAKE UP ROOM control | 3 | review-ready | OWN-DEV-0104 | partial | complete | complete | pending | - |
@@ -40,11 +39,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 975 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0095 | partial | partial | partial | pending | - |
-| normal | 1031 | Pulses counter interface | 2 | review-ready | OWN-DEV-0096 | partial | complete | partial | pending | - |
-| normal | 1078 | Video Station | 2 | review-ready | OWN-DEV-0097 | partial | complete | partial | pending | - |
-| normal | 1123 | Flush mounted leading dimmer 300 VA | 2 | review-ready | OWN-DEV-0099 | partial | complete | partial | pending | - |
-| normal | 1130 | Stereo control | 2 | review-ready | OWN-DEV-0100 | partial | complete | partial | pending | - |
 | normal | 1156 | DIN - Switch  8 x 16 A - 230V | 2 | review-ready | OWN-DEV-0101 | complete | complete | complete | pending | - |
 | normal | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | 2 | review-ready | OWN-DEV-0120 | partial | complete | complete | pending | - |
 | normal | 1162 | Load management central unit | 2 | review-ready | OWN-DEV-0121 | partial | complete | complete | pending | - |
@@ -88,10 +82,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 913 | Stop&Go | 1 | review-ready | OWN-DEV-0091 | partial | complete | partial | pending | - |
-| normal | 914 | Stop&Go Btest | 1 | review-ready | OWN-DEV-0092 | partial | complete | partial | pending | - |
-| normal | 916 | Stop&Go Plus | 1 | review-ready | OWN-DEV-0093 | partial | complete | partial | pending | - |
-| normal | 925 | Touch control | 1 | review-ready | OWN-DEV-0094 | partial | partial | partial | pending | - |
 | normal | 1177 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0162 | partial | complete | complete | pending | - |
 | normal | 1178 | IP interface (D45/IP)  | 1 | review-ready | OWN-DEV-0163 | partial | complete | complete | pending | - |
 | normal | 1191 | Touch control | 1 | review-ready | OWN-DEV-0164 | partial | complete | complete | pending | - |
@@ -207,9 +197,19 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 291 | Temperature central unit | OWN-DEV-0042 |
 | 402 | Scenario control | OWN-DEV-0011 |
 | 912 | Enhanced Webserver | OWN-DEV-0090 |
+| 913 | Stop&Go | OWN-DEV-0091 |
+| 914 | Stop&Go Btest | OWN-DEV-0092 |
+| 916 | Stop&Go Plus | OWN-DEV-0093 |
+| 925 | Touch control | OWN-DEV-0094 |
+| 975 | Burglar alarm central unit with communicator | OWN-DEV-0095 |
+| 1031 | Pulses counter interface | OWN-DEV-0096 |
 | 1076 | Video Display | OWN-DEV-0013 |
+| 1078 | Video Station | OWN-DEV-0097 |
 | 1104 | Extended control item | OWN-DEV-0014 |
 | 1121 | Flush mounted actuator 1 relay | OWN-DEV-0008 |
+| 1122 | Shutter flush mounted actuator | OWN-DEV-0098 |
+| 1123 | Flush mounted leading dimmer 300 VA | OWN-DEV-0099 |
+| 1130 | Stereo control | OWN-DEV-0100 |
 | 1147 | Local Display | OWN-DEV-0018 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
 | 1190 | Touch control | OWN-DEV-0019 |

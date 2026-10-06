@@ -28,6 +28,11 @@
 | [OWN-DEV-0081](../definitions/own-dev-0081-1-relay-din-actuator-16-a-100-240-v.md) | `BMSW1001`, `002600` | 1 relay DIN actuator 16 A 100/240 V | One switched lighting load; source-scoped state-recall and software timer settings |
 | [OWN-DEV-0082](../definitions/own-dev-0082-room-controller-1-output-16-amps.md) | `BMSW3001`, `048840` | Room Controller 1 Output 16 Amps | One lighting load and local sensor bus; relay/controller Modules separated |
 | [OWN-DEV-0083](../definitions/own-dev-0083-2-relay-din-actuator-16-a-100-240-v.md) | `BMSW1002`, `002601` | 2 relay DIN actuator 16 A 100/240 V | Two switched lighting loads; independent naming and state-recall settings |
+| [OWN-DEV-0091](../definitions/own-dev-0091-stop-go.md) | `F80/SG` | Stop&Go | Fault-checked legacy reclosure; separate SCS accessory scope |
+| [OWN-DEV-0092](../definitions/own-dev-0092-stop-go-btest.md) | `F80/SGB` | Stop&Go Btest | Legacy reclosure plus 56-day Btest; six-hour activation timing |
+| [OWN-DEV-0093](../definitions/own-dev-0093-stop-go-plus.md) | `F80/SGP` | Stop&Go Plus | Fault monitoring; 30-minute recovery and 24-hour automatic-restoration limit |
+| [OWN-DEV-0098](../definitions/own-dev-0098-shutter-flush-mounted-actuator.md) | `H4671/2`, `L4671/2`, `AM5851/2` | Shutter flush mounted actuator | Interlocked shutter motor control; physical timing and missing Module slot 2 |
+| [OWN-DEV-0099](../definitions/own-dev-0099-flush-mounted-leading-dimmer-300-va.md) | `L4678`, `H4678` | Flush mounted leading dimmer 300 VA | Leading-edge dimming; source-restricted incandescent/transformer load ratings |
 | [OWN-DEV-0101](../definitions/own-dev-0101-eight-output-din-actuator-16-a.md) | BTicino BMSW1005 / Legrand 002604 | Eight-output DIN ON/OFF actuator 16 A | Eight independent Lighting actuator Modules with zero-current switching |
 | [OWN-DEV-0112](../definitions/own-dev-0112-myhome-lighting-command-actuator.md) | `H4672M2L`, `LN4672M2L`, `067586` | MYHOME lighting command and actuator | Two lighting actuator Modules, two command Modules and separate UI; physical ratings unconfirmed |
 | [OWN-DEV-0113](../definitions/own-dev-0113-myhome-shutter-command-actuator.md) | `H4672M2S`, `LN4672M2S`, `067587` | MYHOME shutter command and actuator | One shutter actuator Module, two command Modules and separate UI; physical ratings unconfirmed |

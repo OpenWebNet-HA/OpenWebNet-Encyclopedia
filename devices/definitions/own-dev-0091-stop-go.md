@@ -2,7 +2,7 @@
 
 ## Summary
 
-Stop&Go is a circuit-protection control and motor kit catalogued for MyHOME energy management. Its family provides protection-state supervision and automatic-reset control; the device-specific operating sequence and accepted runtime commands still require corroboration.
+Stop&Go F80/SG is a motor-operated reclosure kit for compatible protective devices. It checks for earth faults and short circuits before restoring supply, with LEDs and a buzzer explaining why reclosure is inhibited; an optional interface provides SCS supervision.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -27,20 +27,20 @@ Stop&Go is a circuit-protection control and motor kit catalogued for MyHOME ener
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `F80_SG-publisher-product-sheet.pdf` | product sheet | Publisher export retained 2026-10-03 | Whole product document, PDF pp. 1-1; printed p. 1 for one-page catalogue exports | [Archived original](https://archive.openwebnet-ha.org/sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F80_SG) |
-| `F4269H.pdf` | technical / instruction manual | 10W04 / revision H | Whole product document, PDF pp. 1-4; printed p. 1 for one-page catalogue exports | [Archived original](https://archive.openwebnet-ha.org/sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/F4269H.pdf) |
+| `F80_SG-publisher-product-sheet.pdf` | product sheet | Publisher export retained 2026-10-03 | Whole one-page exact F80/SG export; PDF/printed p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/36/e2/36e2d559658eebb9352169dd63f700803baa46231910e3e2b5324c1f9009db32.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F80_SG) |
+| `F4269H.pdf` | technical / instruction manual | 10W04 / revision H | Entire applicable kit instructions, PDF pp. 1–4; unnumbered panels 1–9b and technical legend p. 4; 10W04 | [Archived original](https://archive.openwebnet-ha.org/sha256/16/d6/16d6f331c180eb1fc0afbc2042f7e6aa1c0e967207e88cc3c3e8fab421254e23.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/F4269H.pdf) |
+| `F80SCS-product-sheet.pdf` | Accessory product export · IT | Retrieved 2026-10-06 | Whole one-page export: optional Stop&Go fault/intervention display on Touchscreen; accessory dimensions not adopted for the kit | [Archived original](https://archive.openwebnet-ha.org/sha256/7f/71/7f7110949fc1b80058368b6455a100ff738ce5b2125213ec8ac41e82b2393262.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F80SCS) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Stop&Go` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
-| Nominal supply | `230 Vac` | F80/SG publisher export, printed p. 1 / PDF p. 1 |
-| Housing width | 3 physical modules | Same source; separate from one protocol Module |
-| Protection | `IP20` | Same source |
-| Dimensions | `83 x 53.4 x 80.5 mm` | Same source, height x width x depth |
-| Maximum cable cross-section | `1.5 mm²` | Same source |
+| Kit construction | Motor 2 DIN modules plus control unit 1 DIN module | F4269H, PDF p. 4; physical width differs from one logical Module |
+| Supply / operating conditions | `230 Vac`, `85..110%` nominal; `50 Hz`; `−5..60 °C`; flexible conductors up to `1.5 mm²` | F4269H, PDF p. 4 |
+| Motor / control rating | Motor: 4000 operations and maximum actuation rating `14 VA`; control: `1 VA` | F4269H, PDF p. 4; not an observed standby-total measurement |
+| Fault-check thresholds | Earth resistance: non-operating `225 kΩ` / operating `375 kΩ`; short-circuit resistance: non-operating `0.75 Ω` / operating `1.25 Ω` | F4269H, PDF p. 4; intervening bands do not have one stated exact trip threshold |
+| Contacts / interfaces | Motor 12/13 fault relay; remote closure L input; separate control-unit sensing terminals; optional F80SCS / F80CMD expansion | F4269H, PDF p. 4; expansion does not establish a built-in SCS port |
+| Exact export dimensions / enclosure | H×W×D `83×53.4×80.5 mm`; width 3 DIN modules; IP20 | F80_SG product export, PDF p. 1 |
 
 ## Identity
 
@@ -52,6 +52,31 @@ Stop&Go is a circuit-protection control and motor kit catalogued for MyHOME ener
 | Item model / `modobj` | `0` | Canonical inventory |
 | Commercial records | `1` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `0` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `913` | `F80/SG` | `1` | `5` | `BTicino_Undefined_Stop&Go` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `913` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +84,12 @@ Stop&Go is a circuit-protection control and motor kit catalogued for MyHOME ener
 | `228` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -76,10 +107,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `228` | Physical configuration | supported configuration route for this Device family |
-| `228` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `228` | Physical configuration | `0` | Canonical firmware/mode association |
+| `228` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -101,6 +135,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A123` | `0..127` | `0` | Address; Energy Management A123 Address (0-255) |
+
+### Device-specific interpretation
+
+Official/default wildcard firmware `228` declares one Module with Object `175`. There are no Virgin Objects or stored Object filters. Empty condition `4158` links rule `520` but supplies no activation predicate. Firmware A1 is `0..1`, A2/A3 `0..9`, defaults `0/0/1`; reusable A123 is `0..127`, default `0`. All 256 conversion branches are retained: A123 = 100 × A1 + 10 × A2 + A3 for outputs 0..255. Inputs for outputs `128..199` fit the independent firmware digits but exceed the reusable Object domain; `200..255` also require `A1=2` outside the firmware domain. No narrower default, precedence or wider effective domain is inferred. The reusable A123 label says `0..255` although its stored domain is 0..127. Remote reclosure through a documented accessory does not establish a complete OpenWebNet command interface.
 
 ## Conditions, filters, and conversions
 
@@ -399,29 +437,49 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product behavior is additionally bounded by the publisher evidence below; uncorroborated transport and firmware details remain open work.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Supply restoration | Initial powering does not automatically reclose the coupled protective device | F4269H, PDF p. 2, panel 8a |
+| Pre-reclosure check | Short-circuit and earth-fault checks inhibit restoration when a fault is detected | F4269H, PDF pp. 3–4 |
+| Indications | Upper LED: short circuit; lower: earth fault. Green/green: healthy closed state; one red: corresponding fault; both red: both faults; yellow: resolved fault indication; alternating red: blocked state | F4269H, PDF pp. 3–4; combine LED state with breaker state and buzzer |
+| Other status | Upper flashing green: reclosure disabled; both LEDs off: mains absence or device fault; buzzer accompanies documented fault/block states | F4269H, PDF p. 3 |
+| SCS supervision | F80SCS accessory supports Touchscreen display of Stop&Go intervention following a fault | F80SCS product export, PDF p. 1; no complete OpenWebNet command/control API established |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+F4269H (10W04), PDF pp. 1–4, describes coupling and enabling the legacy kit; the protective device must be closed during coupling, and the kit is powered after coupling. Panel 8a enables reclosure with P held for more than 2 seconds after closed-state setup. The transparent isolating slider disables automatic operation in OFF. The diagrams and compatibility list cover the specifically listed protective-device families (including G722/G723/G724/G725, G8130/G8230/G823, F82+G2 and F810N/F820/F81/F82/F881); compatibility is not assumed for every breaker.
 
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+### Connector scope
 
-The retained `F4269H` installation sheet explicitly covers `F80/SG` and `F80/SGB`. It requires association with the protective device before energizing Stop&Go and distinguishes fault indicators, the local button and isolation controls. Its physical installation/activation procedure is product commissioning evidence; it is not an OpenWebNet firmware-update sequence.
+F4269H, PDF p. 4, supplies this terminal legend; it is a source locator, not an installation substitute.
+
+| Assembly | Source terminals / purpose |
+| --- | --- |
+| Motor, upper | 1 L remote closure; 2 L1; 3 unused; 4 N input; 5 unused; 6 L control output; 7 unused; 8 N output |
+| Motor, lower | 12/13 fault-indication relay (05/06 in schematic) |
+| Control, upper | 1 L1 closure; 2 L; 3 unused; 4 N |
+| Control, lower | 5 downstream PE; 6 unused; 7 SC1; 8 SC2; 9 downstream L; 10 unused; 11 downstream N |
+
+These physical P-button/terminal procedures are independent of the catalogue address fields and its configuration-mode identifiers. No manufacturer programming project, reset-to-factory workflow, firmware package or full SCS functional command vocabulary is supplied by these kit instructions.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. Publisher evidence is retained as listed in Documentation; its Device-specific coverage is bounded below. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+F4269H explicitly covers F80/SG and F80/SGB, with different activation and Btest scopes. Its four PDF pages are not printed as four numbered manual pages: panel locators and PDF page numbers are used. Physical three-module kit width must not be confused with the one-Module catalogue topology. F80SCS evidence concerns optional fault-intervention display; it does not prove the base kit itself implements the complete SCS command surface. Historical TT/TN application statements are source claims, not current universal installation rules.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- F4269H references further maintenance instructions; F4268H was not obtained from the tested publisher endpoint. Installed behavior and a complete accessory protocol remain uncorroborated.
+- Exact catalogue identity is F80/SG; dimensions/IP from its export are not automatically applied to other kits.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -430,3 +488,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0091)

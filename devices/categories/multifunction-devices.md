@@ -23,6 +23,7 @@
 | [OWN-DEV-0087](../definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md) | `3486` | GSM burglar alarm central unit | Eight sensor zones; GSM/PSTN communication, scenarios and automations |
 | [OWN-DEV-0088](../definitions/own-dev-0088-flush-mounted-alarm-central-unit.md) | `HC/HS/HD4601`, `L/N/NT4601` | Flush mounted alarm central unit | Four sensor zones; local contact/relay, learning and TiSecurityBasic programming |
 | [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
+| [OWN-DEV-0097](../definitions/own-dev-0097-video-station.md) | `349320`, `349321` | Video Station | Video entry and configurable MyHOME menus; USB projects, ringing and reset |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0107](../definitions/own-dev-0107-legrand-multimedia-touch-screen.md) | `067285`, `573963`, `573962` | Legrand Multimedia Touch Screen | Multimedia, scenarios, lighting, temperature, alarm and video-entry interface |

@@ -2,7 +2,7 @@
 
 ## Summary
 
-Stop&Go Plus is the separately catalogued Plus member of the Stop&Go protection-control family, integrated through MyHOME energy management. Its exact additional functions and recovery sequence remain undocumented here, so the family role does not establish every variant-specific operation.
+Stop&Go Plus F80/SGP is a protective-device reclosure kit that continues monitoring after a detected fault. Its distinctive recovery logic waits 30 minutes after the fault clears, while a fault persisting beyond 24 hours prevents automatic restoration.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -27,14 +27,18 @@ Stop&Go Plus is the separately catalogued Plus member of the Stop&Go protection-
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `F3758D.pdf` | technical / instruction manual | 10W05 / revision D | Whole product document, PDF pp. 1-4; printed p. 1 for one-page catalogue exports | [Archived original](https://archive.openwebnet-ha.org/sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/F3758D.pdf) |
+| `F3758D.pdf` | technical / instruction manual | 10W05 / revision D | Entire exact F80SGP installation instructions, PDF pp. 1–4; unnumbered panels and p. 4 legend; 10W05 | [Archived original](https://archive.openwebnet-ha.org/sha256/86/0a/860a0ce3385c46f8f7e66c6923191a4b5a119f6dfd96b87c48c585ed94fd7c23.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/F3758D.pdf) |
+| `F3757B.pdf` | User instructions · IT | 10/07-01AP | Entire exact F80SGP user instructions, PDF pp. 1–2; unnumbered diagrams; recovery windows, buzzer, isolation and troubleshooting | [Archived original](https://archive.openwebnet-ha.org/sha256/10/0c/100cfcfa3695d93726cc85427d902ea77fa5211152058ae91163dd48859d010e.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/F3757B.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Stop&Go Plus` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
+| Kit construction | Motor 2 DIN modules plus control unit 1 DIN module | F3758D, PDF p. 4; physical width differs from one logical Module |
+| Supply / operating conditions | `230 Vac`, `85..110%` nominal; `50 Hz`; `−5..60 °C`; flexible conductors up to `1.5 mm²` | F3758D, PDF p. 4 |
+| Motor / control rating | Motor: 4000 operations and maximum actuation rating `14 VA`; control: `1 VA` | F3758D, PDF p. 4; not an observed standby-total measurement |
+| Fault-check thresholds | Earth resistance: non-operating `225 kΩ` / operating `375 kΩ`; short-circuit resistance: non-operating `0.75 Ω` / operating `1.25 Ω` | F3758D, PDF p. 4; intervening bands do not have one stated exact trip threshold |
+| Contacts / interfaces | Motor 12/13 fault relay; remote closure L input; separate control-unit sensing terminals; optional F80SCS / F80CMD expansion | F3758D, PDF p. 4; expansion does not establish a built-in SCS port |
 
 ## Identity
 
@@ -46,6 +50,31 @@ Stop&Go Plus is the separately catalogued Plus member of the Stop&Go protection-
 | Item model / `modobj` | `2` | Canonical inventory |
 | Commercial records | `1` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `2` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `916` | `F80/SGP` | `1` | `5` | `BTicino_Undefined_Stop&Go Plus` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `916` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -53,6 +82,12 @@ Stop&Go Plus is the separately catalogued Plus member of the Stop&Go protection-
 | `226` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -70,10 +105,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `226` | Physical configuration | supported configuration route for this Device family |
-| `226` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `226` | Physical configuration | `0` | Canonical firmware/mode association |
+| `226` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -97,6 +135,10 @@ Catalogue Object key `452` maps to external Object `177`.
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `A123` | `0..127` | `0` | Address; Energy Management A123 Address (0-127) |
+
+### Device-specific interpretation
+
+Official/default wildcard firmware `226` declares one Module with Object `177`. There are no Virgin Objects or stored Object filters. Empty condition `4158` links rule `520` but supplies no activation predicate. Firmware A1 is `0..1`, A2/A3 `0..9`, defaults `0/0/1`; reusable A123 is `0..127`, default `0`. All 256 conversion branches are retained: A123 = 100 × A1 + 10 × A2 + A3 for outputs 0..255. Inputs for outputs `128..199` fit the independent firmware digits but exceed the reusable Object domain; `200..255` also require `A1=2` outside the firmware domain. No narrower default, precedence or wider effective domain is inferred. The A1 label says `0..2` although its stored domain is 0..1. External Object `177` differs from catalogue key 452. The physical 30-minute/24-hour recovery windows do not establish extra firmware fields.
 
 ## Conditions, filters, and conversions
 
@@ -395,29 +437,37 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product behavior is additionally bounded by the publisher evidence below; uncorroborated transport and firmware details remain open work.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Recovery timer | Restoration 30 minutes after fault clearance; no automatic restoration if clearance occurs after 24 hours | F3758D, PDF p. 3; F3757B, PDF p. 1 |
+| Warnings / local inhibition | Resolved-fault yellow indication; intermittent buzzer for the final 30 seconds before restoration; OFF deactivates every automatic reclose | F3757B, PDF p. 1; F3758D, PDF pp. 2–3 |
+| Fault state | Source says a detected fault prevents manual reclosure; blocked-state instructions require installation checks before manual closure | F3758D, PDF p. 3; not an instruction to bypass a fault |
+| Indications | Upper LED short circuit / lower LED earth fault, red fault / yellow resolved; both off mains absence/device fault; alternating red block with buzzer | F3758D, PDF pp. 3–4 |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+F3758D, panels 1–8 and PDF p. 4, documents the exact kit assembly, protective-device compatibility and sensing/fault-relay terminals; the terminal roles match the named motor/control components, not an internal SCS connector. Initial power-up does not reclose the protection. Its OFF slider may be padlocked (padlock not supplied). F3757B, PDF p. 1, says pressing P for 1 second silences the buzzer and OFF disables automatic restoration. Its circuit-isolation illustrations on p. 2 are troubleshooting source material, not a universal remote-reset procedure.
 
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
-
-The retained `F3758D` sheet names `F80SGP` and documents association with the protective device before energizing Stop&Go Plus. Its product-specific mechanical/electrical setup supplements the catalogue mode registration; do not substitute a generic OpenWebNet programming session for that procedure.
+F3758D panel 8 labels the activation illustration F80/SG–F80/SGB despite the F80SGP cover; that copied caption leaves the exact Plus activation applicability less clear. No new programming transport, firmware-update sequence or universal P-button factory reset is inferred.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. Publisher evidence is retained as listed in Documentation; its Device-specific coverage is bounded below. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+F3758D is the 10W05 installation revision; F3757B is the 10/07-01AP user revision. Both explicitly name F80SGP and agree on the 30-minute and 24-hour limits. The panel-8 F80/SG–F80/SGB caption and the p. 4 test-current qualifier “only F80/SGB” are source-specific carry-over text, not evidence that Plus includes Btest. Modern F80SGPN sources describe a different reference/generation and are excluded.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Plus-specific command/interface and installed timing remain unobserved. Modern SGPN dimensions/Btest behavior are not adopted.
+- Clarify the installation caption’s activation applicability with a matching historical revision; the explicitly documented user P/OFF functions remain usable evidence.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -426,3 +476,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0093)

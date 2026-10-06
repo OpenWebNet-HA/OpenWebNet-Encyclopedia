@@ -12,6 +12,9 @@
 | [OWN-DEV-0086](../definitions/own-dev-0086-polyx-alarm.md) | `3485B` | Polyx Alarm | Four-zone catalogue panel; exact TiSecurityBasic transfer/update workflow |
 | [OWN-DEV-0087](../definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md) | `3486` | GSM burglar alarm central unit | Eight sensor zones; GSM/PSTN communication, scenarios and automations |
 | [OWN-DEV-0088](../definitions/own-dev-0088-flush-mounted-alarm-central-unit.md) | `HC/HS/HD4601`, `L/N/NT4601` | Flush mounted alarm central unit | Four sensor zones; local contact/relay, learning and TiSecurityBasic programming |
+| [OWN-DEV-0094](../definitions/own-dev-0094-touch-control.md) | `HC/HS4657M3_OLD` | Touch control | Historical selectable lighting/shutter/scenario control plus UI; OLD revision boundaries |
+| [OWN-DEV-0095](../definitions/own-dev-0095-burglar-alarm-central-unit-with-communicator.md) | `067510`, `775795` | Burglar alarm central unit with communicator | PSTN alarm panel; exact USB accessory caption and missing panel manuals |
+| [OWN-DEV-0097](../definitions/own-dev-0097-video-station.md) | `349320`, `349321` | Video Station | Video entry and configurable MyHOME menus; USB projects, ringing and reset |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0104](../definitions/own-dev-0104-do-not-disturb-make-up-room-control.md) | `H4653`, `LN4653`, `067593` | Do Not Disturb / Make Up Room control | Inside-room DND/MUR control and local LED status/brightness |

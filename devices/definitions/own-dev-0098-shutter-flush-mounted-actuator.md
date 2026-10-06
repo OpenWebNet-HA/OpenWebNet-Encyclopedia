@@ -2,7 +2,7 @@
 
 ## Summary
 
-This flush-mounted shutter actuator drives a motor using two interlocked relays. It combines SCS bus control with a two-module wall-device format, with the published motor-load limit applying to the documented shutter arrangement.
+H4671/2 / L4671/2 is a flush-mounted shutter actuator with two interlocked motor relays and local up/down controls. The catalogue also maps AM5851/2 to this item; the retained H/L guide establishes timed and slave operation, while the AM variant’s hardware details remain unverified.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -29,18 +29,15 @@ This flush-mounted shutter actuator drives a motor using two interlocked relays.
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | H/L4671/2 configuration: printed p. 113 / PDF p. 115; motor load table printed p. 159 / PDF p. 161; consumption/dissipation printed p. 160 / PDF p. 162 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | H/L4671/2 configuration: printed p. 113 / PDF p. 115; motor load table printed p. 159 / PDF p. 161; consumption/dissipation printed p. 160 / PDF p. 162; only cited applicable leaves examined; unrelated guide pages and linked dedicated documents unexamined | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Shutter flush mounted actuator` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
-| Relay arrangement | Two interlocked relays | AUTOMATISME, printed p. 113 / PDF p. 115; H/L4671/2 |
-| Motor load | `2 A / 500 W`, `50/60 Hz` | Same guide, printed p. 159 / PDF p. 161; shutter-motor column |
-| SCS supply / current | `27 Vdc` / `13.5 mA` | Same guide, printed p. 160 / PDF p. 162 |
-| Housing / dissipation | 2 flush-mounted wiring modules; `0.9 W` at maximum load | Same guide, printed p. 160 / PDF p. 162 |
+| Construction / power | Two wiring modules; two interlocked motor relays; `27 Vdc`, `13.5 mA`; dissipation `0.9 W` | AUTOMATISME printed p. 113/PDF p. 115; ratings printed p. 160/PDF p. 162; H/L only |
+| Motor load | `2 A` / `500 W` at `50/60 Hz`; source row does not specify a voltage for this rating | AUTOMATISME printed p. 159/PDF p. 161 |
+| Controls / sockets | Local up/down controls and LED; rear A/PL/M/G configurator positions | AUTOMATISME printed p. 113/PDF p. 115; AM construction not established |
 
 ## Identity
 
@@ -52,6 +49,35 @@ This flush-mounted shutter actuator drives a motor using two interlocked relays.
 | Item model / `modobj` | `102` | Canonical inventory |
 | Commercial records | `3` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `102` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `7` | `H4671/2` | `1` | `2` | Empty in source |
+| `1122` | `L4671/2` | `1` | `4` | Empty in source |
+| `1635` | `AM5851/2` | `1` | `3` | `BTicino_Matix_Shutter flush mounted actuator` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `7` | `1` | `0` | `0` | Empty in source |
+| `1122` | `1` | `0` | `0` | Empty in source |
+| `1635` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +85,12 @@ This flush-mounted shutter actuator drives a motor using two interlocked relays.
 | `188` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -76,10 +108,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `188` | Physical configuration | supported configuration route for this Device family |
-| `188` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `188` | Physical configuration | `0` | Canonical firmware/mode association |
+| `188` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -117,6 +152,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+### Device-specific interpretation
+
+Official/default wildcard firmware `188` declares two Modules but only slot `1` with Object `7` is stored; no slot-2 mapping or Virgin exists. This is a catalogue topology gap, not proof of two independent physical loads or permission to invent a second Object. Firmware M permits `0..4` and 15 PUL. Rule `2` also stores numeric `5..9` and symbolic I/O, PUL and SLA branches; the extra numeric values and I/O/SLA lie outside the firmware domain. Stored STOP_TIME codes retain 60/62/65/70/0 and shorter branches; symbolic conversion outputs I/`O=13`, `PUL=15`, `SLA=11` do not establish extra firmware legal inputs. Reusable STOP_TIME lacks values 18 and 61; no replacements are supplied. Ten reusable group fields and broad gate/garage SUBTYPE labels do not prove ten physical sockets or distinct gate hardware. The exact H/L source documents one G socket and physical SLA operation, which remains a source/catalogue discrepancy. AM5851/2 has an established canonical identity but no retained exact-variant hardware sheet.
 
 ## Conditions, filters, and conversions
 
@@ -172,34 +211,36 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product behavior is additionally bounded by the publisher evidence below; uncorroborated transport and firmware details remain open work.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Shutter operation | Interlocked directions; source physical M timing: 60 s, 2 min, 5 min, 10 min or infinite until next command | Same guide printed p. 113; physical settings separate from STOP_TIME enum |
+| Slave scope | Physical SLA slave setting documented for H/L4671/2 | Same guide; source/canonical M discrepancy retained |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has 2 declared Modules; retain the individual Module placements when preparing a project.
+AUTOMATISME, printed p. 113 / PDF p. 115, supplies local A/PL/M/G configuration and timed direction control. Physical timed settings cover unconfigured/`0..4` and the source separately documents SLA; canonical firmware `188` does not admit SLA, but records `PUL=15`. No source establishes an offset or precedence that resolves these scopes. Do not substitute two independently switched lighting loads for the interlocked shutter motor.
 
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
-
-| Physical selector | Setting | Published behavior | Evidence |
-| --- | --- | --- | --- |
-| `M` | No configurator | Timed stop after `1 min` | AUTOMATISME, printed p. 113 / PDF p. 115 |
-| `M` | `1` | Timed stop after `2 min` | Same source |
-| `M` | `2` | Timed stop after `5 min` | Same source |
-| `M` | `3` | Timed stop after `10 min` | Same source |
-| `M` | `4` | No timed stop; deactivates on following command | Same source |
-| `M` | `SLA` | Slave receives commands from a master actuator | Same source |
+No retained exact AM5851/2 manual establishes its connector diagram or local commissioning. Neither the guide nor canonical association supplies a universal factory reset, software transfer or firmware-update procedure.
 
 ## Source reconciliation
 
-The retained guide directly identifies H/L4671/2 as a two-relay interlocked actuator and establishes the motor rating, consumption, form factor and physical timed-stop settings recorded above. These facts apply to the named H/L references; the AM5851/2 commercial association is catalogue evidence. The database firmware and reusable Object domains remain separate from the printed physical selector settings. Direct installed-firmware and runtime diagnostic corroboration remains open.
+Exact H/L pages establish motor load, power and local operation; they are not direct physical evidence for AM5851/2. The database declares two Modules while supplying only slot `1`, and that missing slot remains explicit. Physical two-relay construction does not fill this logical-data gap. Source SLA and software PUL domains remain separate.
+
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Resolve the missing declared slot `2`, physical SLA/canonical M applicability and exact AM5851/2 construction from further evidence.
+- No installed timing, reset or update behavior has been observed.
+- Applicable exact-product guide leaves were inspected; unrelated guide pages and linked dedicated documents remain unexamined.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -208,3 +249,5 @@ The retained guide directly identifies H/L4671/2 as a two-relay interlocked actu
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0098)

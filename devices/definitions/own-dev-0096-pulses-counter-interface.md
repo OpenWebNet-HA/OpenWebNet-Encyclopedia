@@ -2,7 +2,7 @@
 
 ## Summary
 
-This pulse-counter interface brings readings from compatible pulse-output meters into the energy-management system. It calculates instantaneous values and maintains counters and history, with system date and time required for historical archiving.
+3522 / 003554 is a compact SCS pulse-counter interface for compatible water, gas or heat meters with pulse outputs. It reports consumption and can retain hourly, daily and monthly history for one year when a system device supplies the date and time.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -28,22 +28,18 @@ This pulse-counter interface brings readings from compatible pulse-output meters
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `3522-publisher-product-sheet.pdf` | product sheet | Publisher export retained 2026-10-03 | Whole product document, PDF pp. 1-1; printed p. 1 for one-page catalogue exports | [Archived original](https://archive.openwebnet-ha.org/sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3522) |
-| `MQ00359_b_EN.pdf` | technical / instruction manual | 2012-12-11 | Whole product document, PDF pp. 1-2; printed p. 1 for one-page catalogue exports | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00359_b_EN.pdf) |
+| `3522-publisher-product-sheet.pdf` | product sheet | Publisher export retained 2026-10-03 | Whole exact 3522 export, PDF/printed p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/16/b6/16b671b522f2d6522fe4dd53e249e1600c3e53a0b6be107a1ab92a2b0624d601.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3522) |
+| `MQ00359_b_EN.pdf` | technical / instruction manual | 11/12/2012; MQ00359-b-UK | Entire exact technical sheet, printed/PDF pp. 1–2; MQ00359-b-UK, 11/12/2012 | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/1f/ed1fd00db6fa60bd146761506281b3b23892f1a2153219d8dcc34aebc04d1454.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00359_b_EN.pdf) |
+| `BR-MyHOME-HPML0714.pdf` | Regional MyHOME catalogue | HPML0714; source-era issue | Only printed/PDF p. 34: old 03554 to 3522 cross-reference; unrelated leaves unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Publisher source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Pulses counter interface` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
-| SCS operating supply | `18..27 Vdc` | `MQ00359-b-UK`, printed p. 1 / PDF p. 1 |
-| Standby absorption | Maximum `7.5 mA` | Same source |
-| Operating temperature | `0..40 °C` | Same source |
-| Dimensions | `40 x 40 x 23 mm` | Same source; length x width x height |
-| Minimum pulse duration | `50 ms` | Same source |
-| Maximum pulse rate | `5` pulses per second; minimum period `200 ms` | Same source |
-| Physical configurators | `A1`, `A2`, `A3`, `G`, `M`, `SM` | Same source |
+| Construction | Basic concealed-box/board module, `40×40×23 mm` | MQ00359-b-UK, printed/PDF p. 1 |
+| Power / temperature | `18..27 Vdc`; maximum standby `7.5 mA`; `0..40 °C` | Same source; export 27 V / 0.0075 A agrees with rating |
+| Pulse input | Minimum pulse `50 ms`; at most 5 pulses/s; minimum period `200 ms` | Same source |
+| Outputs / indicators | Optoisolated pulse-repetition output; green supply and red pulse indication | Same source; virtual-configuration button marked future application |
 
 ## Identity
 
@@ -55,6 +51,33 @@ This pulse-counter interface brings readings from compatible pulse-output meters
 | Item model / `modobj` | `3` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `3` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1031` | `3522` | `1` | `5` | `BTicino_Undefined_Pulses counter interface` |
+| `1893` | `003554` | `2` | `5` | Empty in source |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `1031` | `1` | `0` | `0` | Empty in source |
+| `1893` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -62,6 +85,12 @@ This pulse-counter interface brings readings from compatible pulse-output meters
 | `200` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -79,9 +108,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `200` | Physical configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `200` | Physical configuration | `0` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -111,6 +143,10 @@ Catalogue Object key `481` maps to external Object `204`.
 | `G` | `0..4` | `0` | G; G - (0-4) |
 | `M` | `0..3` | `0` | Modality; Mode (0-3) |
 | `SM` | `0..3` | `0` | Divider; Configurator SM Energy Mng (0-3) |
+
+### Device-specific interpretation
+
+Official/default wildcard firmware `200` declares one Module with external Object `204` (catalogue key 481), and only Physical Configuration mode 0. There are no Virgin Objects or connection/parameter/package associations. Firmware A1=`0..2`, A2/A3=`0..9`, defaults 0/0/1; reusable A123=`0..255`, default 0. Empty condition `4158` links all 256 rule-520 branches, `A123=100`×A1+10×A2+A3; independent digit combinations `256..299` have no stored conversion branch. G/M/SM defaults are 0 with domains `0..4`/`0..3`/`0..3`; G filter `732` retains its full range. Manufacturer physical `M=1` gas, 2 heat, 3 water, 4 generic/future differs from catalogue `M=0..3`. No offset mapping is stored, and rule `520` addresses only A123. G and the virtual-configuration button are marked future applications by the exact sheet; do not turn their presence into enabled functionality or a Virtual Configuration catalogue mode.
 
 ## Conditions, filters, and conversions
 
@@ -411,38 +447,47 @@ Catalogue system identifiers are not `WHO` numbers. The source establishes the r
 
 The retained pulse-interface sheet establishes instantaneous-value calculation and hourly/daily/monthly counters with one-year memory. Archiving requires a source of current date/time on the system; without it, totalizers and instantaneous calculations continue but historical data is not archived. Partial data is saved on loss of power.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Consumption history | Hourly/daily/monthly archive for one year requires a system date/time source, e.g. Touchscreen | MQ00359-b-UK, p. 1; without clock only total/instantaneous data continue |
+| Power loss | Partial acquired data retained across loss of supply | Same source; installed retention not observed |
+| Instantaneous value | Description refers both to averaging two pulses and to elapsed-time/multiplier calculation within one hour | Same source; no universal extra conversion formula inferred |
+| Physical type / scale | `M=1` gas, 2 heat, 3 water, 4 generic/future; `SM=0/1/2/3` divides by 1/10/100/1000 | Same source, p. 2; G marked future application |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
+MQ00359-b-UK, printed/PDF p. 2, uses A1/A2/A3 as hundreds/tens/units with maximum address 255. M selects the physical meter type and SM the pulse multiplier; `SM=0` is recommended, independently of the recorded software default. G and the configuration button are explicitly future applications. No local factory-reset, download or firmware-update procedure is supplied.
 
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+### Pulse-unit examples
 
-The published physical address uses `A1`/`A2`/`A3` as hundreds/tens/units, with maximum address `255`; `M=1..4` selects the measured value and `SM=0..3` its submode. The sheet labels `G` and the virtual-configuration button for future applications, so those statements must remain separate from the catalogue software-mode registration.
+The p. 2 table was visually checked because its merged cells are flattened by text extraction.
 
-| Selector | Physical setting | Published meaning | Evidence |
+| Unit / meter pulse output | SM | Display resolution | Display full scale |
 | --- | --- | --- | --- |
-| `M` | `1` | Gas volume | MQ00359-b-UK, printed p. 2 / PDF p. 2 |
-| `M` | `2` | Heat | Same source |
-| `M` | `3` | Water volume | Same source |
-| `M` | `4` | Generic sensor, reserved for future uses in this sheet | Same source |
-| `SM` | `0` | Count every `1` pulse; recommended setting | Same source |
-| `SM` | `1` | Count every `10` pulses | Same source |
-| `SM` | `2` | Count every `100` pulses | Same source |
-| `SM` | `3` | Count every `1000` pulses | Same source |
+| Litres; one pulse per litre | 0 | 1 L/h | 254 L/h |
+| Cubic metres; one pulse per 1000 litres | 0 | 1 m³/h | 254 m³/h |
+| Cubic metres; one pulse per 100 litres | 1 | 1 m³/h | 254 m³/h |
+| Cubic metres; one pulse per 10 litres | 2 | 1 m³/h | 254 m³/h |
+| Cubic metres; one pulse per litre | 3 | 1 m³/h | 254 m³/h |
 
 ## Source reconciliation
 
-The newly archived `MQ00359_b_EN.pdf` identifies itself internally as `MQ00359-b-UK`, dated 2012-12-11. Preserve the publisher filename and printed identifier separately. It establishes supply, current, physical dimensions, pulse timing limits, counters and the date/time dependency incorporated above. Its future-application wording for `G` and virtual setup is source-scoped and must not be silently overwritten by catalogue capability metadata.
+The technical sheet filename MQ00359_b_EN prints MQ00359-b-UK dated 11/12/2012. The item’s M=`0..3` software enum differs from its physical M=`1..4` instructions; no stored offset conversion resolves them. The regional BR catalogue cross-reference (printed/PDF p. 34) maps old 03554 to 3522, while the canonical commercial record uses 003554. This padding difference is preserved, not rewritten as a different identity. 3522N is a separate technical item and supplies no borrowed specifications here.
+
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- The physical/software M mapping and unspecified address-zero semantics remain unresolved; stored domains are retained unchanged.
+- Linked later 3522N documentation is outside this exact product scope; no payload or runtime measurements are available.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -451,3 +496,5 @@ The newly archived `MQ00359_b_EN.pdf` identifies itself internally as `MQ00359-b
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0096)

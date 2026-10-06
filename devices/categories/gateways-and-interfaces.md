@@ -13,6 +13,9 @@
 | [OWN-DEV-0087](../definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md) | `3486` | GSM burglar alarm central unit | Eight sensor zones; GSM/PSTN communication, scenarios and automations |
 | [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
 | [OWN-DEV-0090](../definitions/own-dev-0090-enhanced-webserver.md) | `F453` | Enhanced Webserver | Enhanced Webserver/Open SCS; MHVISUAL version-6 compatibility, hardware gaps explicit |
+| [OWN-DEV-0095](../definitions/own-dev-0095-burglar-alarm-central-unit-with-communicator.md) | `067510`, `775795` | Burglar alarm central unit with communicator | PSTN alarm panel; exact USB accessory caption and missing panel manuals |
+| [OWN-DEV-0096](../definitions/own-dev-0096-pulses-counter-interface.md) | `3522`, `003554` | Pulses counter interface | SCS pulse accounting; clock-dependent history and physical multiplier matrix |
+| [OWN-DEV-0100](../definitions/own-dev-0100-stereo-control.md) | `L4561N`, `003586` | Stereo control | External RCA stereo source with learnt IR events; USB/COM programming |
 | [OWN-DEV-0125](../definitions/own-dev-0125-scs-zigbee-gateway.md) | `048832`, `BMNE4000` | SCS and ZigBee gateway | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0126](../definitions/own-dev-0126-eight-output-scs-dali-interface.md) | `002633`, `BMDI1100` | Eight-output SCS and DALI interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0128](../definitions/own-dev-0128-four-channel-dali-room-controller.md) | `BMDI3101`, `048844` | Four-channel DALI room controller | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

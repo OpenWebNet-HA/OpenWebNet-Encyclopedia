@@ -2,7 +2,7 @@
 
 ## Summary
 
-This historical touch control sends configured lighting, automation or scheduled-scenario commands over SCS. Its catalogue includes a separate user-interface configuration role; the exact touch layout and physical specifications require documentation for this older product identity.
+The catalogue describes HC/HS4657M3_OLD as a historical Axolute touch control for lighting, shutters or scenarios. It separates the selectable control role from a user-interface Module; the exact physical layout remains undocumented for this OLD revision.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -32,8 +32,7 @@ This historical touch control sends configured lighting, automation or scheduled
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Touch control` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Not established by retained product documentation | Direct product-source reconciliation remains open |
+| Physical construction / power / key count | Not established for the exact OLD revision | Canonical item 925 establishes identity, not an enclosure specification |
 
 ## Identity
 
@@ -45,6 +44,31 @@ This historical touch control sends configured lighting, automation or scheduled
 | Item model / `modobj` | `12` | Canonical inventory |
 | Commercial records | `1` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `12` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `925` | `HC/HS4657M3_OLD` | `1` | `2` | `BTicino_Axolute_Touch control` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `925` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -52,6 +76,12 @@ This historical touch control sends configured lighting, automation or scheduled
 | `201` | `-1` | `-1` | `-1` | `2` | Catalogue default | Deprecated |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -72,10 +102,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `201` | Physical configuration | supported configuration route for this Device family |
-| `201` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `201` | Physical configuration | `0` | Canonical firmware/mode association |
+| `201` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -116,7 +149,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -132,7 +164,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `404` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -143,7 +174,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BUTTON_2` | `0..31` | `2` | Lower button |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 | `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
-
 
 ### Object `130` - User interface settings
 
@@ -160,6 +190,10 @@ Catalogue Object key `480` maps to external Object `130`.
 | `BACKLIGHT_DELAY` | `0..255` | `15` | Delay time (seconds); Time en second to light off the backlight |
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
+
+### Device-specific interpretation
+
+Firmware `201` is Deprecated and wildcard, not a current six-key product firmware. It declares two logical Modules: slot `1` has candidates 400 Light (fixed/designated), 401 Automation and 404 Scheduled scenario; slot `2` has external Object `130` (catalogue key 480) User interface. No Virgin, slot predicate or conversion is stored, so no M-to-candidate selection precedence is established. Firmware A/PL are `0..9`; M is `0..6`, 9 O/I, 12 UP/DOWN, 13 monostable and 14 CEN; INT is `0..4` or 10 OFF, default 0. Reusable 400 additionally includes timer/dimmer/blinking modes; 401 includes blade control; 404 BUTTON1/BUTTON2 are `0..31`, defaults 1/2, and START_DELAY is `0..255`, default 10. Filter `1710` retains that whole START_DELAY domain. User-interface filters 3112/3119/3126/3134/3157 retain the full documented reusable LED, state-update, fade/backlight, proximity and signboard settings. Those capabilities are software scopes; they do not establish physical key counts, sensors or timing units without an exact historical manual.
 
 ## Conditions, filters, and conversions
 
@@ -220,27 +254,33 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
 
+### Catalogue-documented roles
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Selectable control roles | Lighting, automation and scheduled-scenario candidates share Module slot `1` | Canonical firmware `201` / Objects 400, 401, 404; selection predicates not supplied |
+| Presentation controls | LED/state-update/backlight/proximity/signboard schema in Module slot `2` | Reusable Object `130` and full-range filters; physical implementation not established |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has 2 declared Modules; retain the individual Module placements when preparing a project.
-
-No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+The catalogue records the available configuration-mode associations above, with addressing and M/INT scopes in the firmware table. No exact OLD manual has been retained to establish local key commissioning, project transfer, button reset or firmware update. Physical routines and six-key layouts from the later HC/HS4657M3 cannot be assumed for this Deprecated technical item.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. No product manual is retained for this exact dossier. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+The single commercial record literally names HC/HS4657M3_OLD. Manufacturer discovery supplies modern HC/HS4657M3 documentation (including MQ00110_f_EN and U2701D), but no explicit revision bridge to item 925 was found. Modern EANs, dimensions and sensors are therefore not adopted. Catalogue identity is established; the historical hardware revision documentation is incomplete.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Obtain a manufacturer document or explicit historical revision relationship for HC/HS4657M3_OLD.
+- Resolve candidate-selection predicates and the physical meaning/units of the reusable UI/scenario settings; no hardware evidence is required to accept the accurately limited catalogue description.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -249,3 +289,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0094)

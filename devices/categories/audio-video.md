@@ -8,6 +8,8 @@
 | [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |
 | [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
 | [OWN-DEV-0090](../definitions/own-dev-0090-enhanced-webserver.md) | `F453` | Enhanced Webserver | Enhanced Webserver/Open SCS; MHVISUAL version-6 compatibility, hardware gaps explicit |
+| [OWN-DEV-0097](../definitions/own-dev-0097-video-station.md) | `349320`, `349321` | Video Station | Video entry and configurable MyHOME menus; USB projects, ringing and reset |
+| [OWN-DEV-0100](../definitions/own-dev-0100-stereo-control.md) | `L4561N`, `003586` | Stereo control | External RCA stereo source with learnt IR events; USB/COM programming |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0107](../definitions/own-dev-0107-legrand-multimedia-touch-screen.md) | `067285`, `573963`, `573962` | Legrand Multimedia Touch Screen | Multimedia, scenarios, lighting, temperature, alarm and video-entry interface |
 | [OWN-DEV-0108](../definitions/own-dev-0108-classe-300-v13e-v13m.md) | `344612`, `344613`, `344622` | Classe 300 V13E/V13M video internal unit | Video internal unit, intercom, locks and V13M-only video memory |

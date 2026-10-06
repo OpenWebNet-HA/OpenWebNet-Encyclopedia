@@ -2,7 +2,7 @@
 
 ## Summary
 
-This flush-mounted leading-edge dimmer regulates documented resistive lighting or ferromagnetic-transformer loads. A brief local-button press switches the load and a sustained press changes brightness, alongside commands received over the SCS bus.
+H4678 / L4678 is a flush-mounted leading-edge dimmer for the resistive/incandescent and ferromagnetic-transformer loads specified in its historical guide. Short presses switch the load and long presses adjust brightness; broad reusable software load labels do not extend those published load ratings.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -28,21 +28,16 @@ This flush-mounted leading-edge dimmer regulates documented resistive lighting o
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
-| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | H/L4678 load table printed p. 159 / PDF p. 161; consumption/dissipation printed p. 160 / PDF p. 162; technical characteristics printed p. 163 / PDF p. 165 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | H/L4678 load table printed p. 159 / PDF p. 161; consumption/dissipation printed p. 160 / PDF p. 162; technical characteristics printed p. 163 / PDF p. 165; only cited applicable leaves examined; unrelated guide pages and linked dedicated documents unexamined | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Product description | `Flush mounted leading dimmer 300 VA` | Catalogue item description; not a complete product specification |
-| Additional electrical/mechanical characteristics | Properties not established beyond the source-scoped facts on this page | Direct product-source reconciliation remains open |
-| SCS supply / current | `27 Vdc` / `9 mA` | AUTOMATISME, printed p. 163 / PDF p. 165 |
-| Operating temperature | `5..35 °C` | Same source |
-| Housing | 2 flush-mounted wiring modules | Same source |
-| Load families | Resistive or ferromagnetic transformer loads | Same source |
-| Resistive / incandescent load | `60..300 W`; `0.25..1.35 A`; `50/60 Hz` | Same guide, printed p. 159 / PDF p. 161 |
-| Ferromagnetic transformer load | `60..300 VA`; `0.25..1.35 A`; `50/60 Hz` | Same load table; observe transformer loading note in source |
-| Dissipation | `3 W` at maximum load | Same guide, printed p. 160 / PDF p. 162 |
+| Construction / supply | Two wiring modules; `27 Vdc`, `9 mA`; dissipation `3 W`; `5..35 °C` | AUTOMATISME printed pp. 159–160/PDF pp. 161–162 |
+| Supported load ratings | Resistive/incandescent `60..300 W`, `0.25..1.35 A`; ferromagnetic `60..300 VA`, `0.25..1.35 A`; `50/60 Hz` | AUTOMATISME printed p. 159/PDF p. 161; electronic/fluorescent/shutter entries have no supported rating |
+| Transformer condition | Rated loading at least 90%; efficiency-dependent apparent-power example retained as a source condition | Same page footnote; not a measured installed efficiency |
+| Controls / terminals | Local switch/dim button, status LED, A/PL/M/G sockets; controlled-load/line/neutral diagram | AUTOMATISME printed p. 163/PDF p. 165 |
 
 ## Identity
 
@@ -54,6 +49,33 @@ This flush-mounted leading-edge dimmer regulates documented resistive lighting o
 | Item model / `modobj` | `106` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `106` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1123` | `L4678` | `1` | `4` | Empty in source |
+| `1730` | `H4678` | `1` | `2` | `BTicino_Axolute_Flush mounted leading dimmer ` |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `1123` | `1` | `0` | `0` | Empty in source |
+| `1730` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -61,6 +83,12 @@ This flush-mounted leading-edge dimmer regulates documented resistive lighting o
 | `197` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -78,10 +106,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `197` | Physical configuration | supported configuration route for this Device family |
-| `197` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `197` | Physical configuration | `0` | Canonical firmware/mode association |
+| `197` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -100,6 +131,11 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `8` - Dimmer actuator
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `LOCAL_BUTTON`, `DELAYED_OFF`, `STATE_SAVING_ON_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -127,6 +163,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8 |
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
+
+### Device-specific interpretation
+
+Official/default wildcard firmware `197` declares one Module with Object `8` and no Virgin Objects. Firmware M permits `0..4`, 9 O/I, 11 SLA and 15 PUL; no stored conversion establishes their mapping to all reusable fields. The broad TYPE_LOAD enum includes LED, CFL, DALI and DSI, while the exact historical H/L4678 source only supports its specified resistive/incandescent and ferromagnetic loads. MIN_LEVEL_ADV retains domain `1..100` with default 0 outside that domain: no corrected default is invented. STATE_SAVING_ON_RESET filter `2192` retains the whole boolean domain/default 0; this is software state policy, not a documented physical factory-reset sequence. Reusable ten-group and regulation fields remain software scopes rather than additional physical configurators.
 
 ## Conditions, filters, and conversions
 
@@ -172,25 +212,35 @@ Catalogue system identifiers are not `WHO` numbers. The source establishes the r
 
 The guide describes bus and local-button operation: a brief press switches the load, while a sustained press adjusts intensity. These documented functions do not independently establish the full OpenWebNet command or diagnostic vocabulary.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Local operation | Short press ON/OFF; long press brightness regulation | AUTOMATISME printed p. 163/PDF p. 165 |
+| Indications | Green/blue supplied with load OFF; red load ON; flashing indication configuration error | Same source; source labels are historical device scope |
+| Software settings | Load-type/minimum-level/state-recall surfaces require exact product/firmware qualification | Canonical Object `8`; LED/CFL/DALI/DSI labels are not independent hardware support evidence |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Virtual Configuration, Physical configuration for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
-
-The retained sources establish only the Device-specific procedures described below; reset, transfer or update details not covered by those sources remain open work. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+AUTOMATISME, printed p. 163 / PDF p. 165, describes local physical addressing and operation with A/PL/M/G. The source includes a fuse-replacement illustration, but it does not establish an invented fuse rating or a button factory-reset sequence. Recorded catalogue modes and state-saving fields do not supply a universal project-transfer/update procedure. The exact supported-load table and transformer conditions apply before broader reusable load settings.
 
 ## Source reconciliation
 
-The retained H/L4678 guide supplies the source-scoped electrical, temperature, physical and load-family facts recorded above. Its load table distinguishes watts for resistive lamps from volt-amperes for ferromagnetic transformers; the catalogue title “300 VA” must not replace that distinction. Local-button behavior is documented, while installed firmware and direct runtime mapping remain uncorroborated.
+The canonical technical title identifies leading-edge control; the exact historical H/L guide supplies the restricted load ratings. Reusable Object `8` also contains other load-type enums, so those are retained as schema rather than advertised hardware capability. The MIN_LEVEL_ADV default/domain discrepancy is not silently corrected; STATE_SAVING_ON_RESET is not a documented hardware reset method.
+
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Clarify the out-of-domain minimum-level default and firmware-specific effective load settings with matching software/source revisions.
+- Linked dedicated revisions, fuse specification, project transfer/reset/update and installed behavior remain unexamined.
+- Applicable exact-product guide leaves were inspected; unrelated guide pages and linked dedicated documents remain unexamined.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -199,3 +249,5 @@ The retained H/L4678 guide supplies the source-scoped electrical, temperature, p
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0099)

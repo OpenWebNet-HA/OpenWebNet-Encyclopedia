@@ -2,7 +2,7 @@
 
 ## Summary
 
-This burglar-alarm central unit combines central alarm control with a fixed-line telephone communicator, as established by its catalogue role. Detailed zone limits, telephone workflows and local controls still require exact-product documentation.
+This Legrand burglar-alarm central unit combines alarm control with a PSTN telephone communicator. Céliane 067510 and Galea 775795 are established catalogue identities, with two recorded firmware builds; detailed zone capacity and telephone workflows remain gaps in exact-product documentation.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ This burglar-alarm central unit combines central alarm control with a fixed-line
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| Legrand - Celiane | `067510` | Established catalogue identity | canonical commercial record for item `975` |
+| Legrand - Céliane | `067510` | Established catalogue identity | canonical commercial record for item `975` |
 | Legrand - Galea | `775795` | Established catalogue identity | canonical commercial record for item `975` |
 
 ## Documentation
@@ -28,12 +28,14 @@ This burglar-alarm central unit combines central alarm control with a fixed-line
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | canonical configuration catalogue | `3.5.38` | commercial identity, firmware, Module/Object topology and configuration surfaces | [Archived source database](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `Legrand-TR-256-291.pdf` | Regional manufacturer catalogue · TR | Printed issue date not stated in examined leaf; retrieved 2026-10-06 | Only printed p. 274 / PDF p. 19: USB cable 49234 explicitly for central unit 67510; preceding 67520 panel ratings excluded; other catalogue leaves unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/d4/8dd46231dc38ff1b76e37443f29b3521ebaf446e1dfcf27238cbf00905a864f0.pdf) | [Publisher source](https://www.legrand.com.tr/pdf/katalog-sayfa/256-291.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Programming / connectivity surface | Serial | canonical inventory |
+| Hardware / electrical limits | Not established by retained exact panel documentation | Catalogue Serial connection is software metadata, not a physical connector rating |
+| Programming accessory | Regional catalogue explicitly lists USB cable 49234 for central unit 67510 | Legrand Turkish catalogue, printed p. 274 / PDF p. 19; 67510 is the unpadded regional reference |
 
 ## Identity
 
@@ -45,6 +47,32 @@ This burglar-alarm central unit combines central alarm control with a fixed-line
 | Item model / `modobj` | `201` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Burglar alarm system | `201` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `974` | `067510` | `2` | `13` | Empty in source |
+| `975` | `775795` | `2` | `14` | Empty in source |
+
+| Record | Visible | Dependent | Gateway flag | Visibility type |
+| --- | --- | --- | --- | --- |
+| `974` | `1` | `0` | `0` | Empty in source |
+| `975` | `1` | `0` | `0` | Empty in source |
+
+These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -53,6 +81,23 @@ This burglar-alarm central unit combines central alarm control with a fixed-line
 | `107` | `7` | `0` | `17` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `106` | `166` | Legrand (key `2`) | `0` | external software | `SecurityConfig_010041` |
+| `106` | `192` | Legrand (key `2`) | `2` | external software | `SecurityConfig_0100` |
+| `106` | `633` | Legrand (key `2`) | `4` | external software | `AlarmConfig_0100` |
+| `106` | `640` | Legrand (key `2`) | `5` | external software | `AlarmConfig_0100` |
+| `107` | `167` | Legrand (key `2`) | `0` | external software | `SecurityConfig_020030` |
+| `107` | `193` | Legrand (key `2`) | `2` | external software | `SecurityConfig_0200` |
+| `107` | `634` | Legrand (key `2`) | `4` | external software | `AlarmConfig_0200` |
+| `107` | `639` | Legrand (key `2`) | `5` | external software | `AlarmConfig_0200` |
+
+All 8 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -71,10 +116,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `106` | Product Programming | `3` | Canonical firmware/mode association |
+| `107` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `106` | Product Programming | supported configuration route for this Device family |
-| `107` | Product Programming | supported configuration route for this Device family |
+| `106` | Serial | Canonical firmware/connection association |
+| `107` | Serial | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -96,6 +148,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `NUM_PSTN` | No legal values specified in source | Not specified in source | Telephone number PSTN |
 | `FW_VER` | No legal values specified in source | Not specified in source | Firmware version |
 | `IS_GATEWAY` | `0` = Disable; `1` = Enable | `0` | Gateway |
+
+### Device-specific interpretation
+
+Official firmware `106`=6.0.20 and default 107=7.0.17 each declare one Module with PSTN Object `13`; firmware AID has no prescribed character set/default. Object NUM_PSTN and FW_VER have no stored domain/default; IS_GATEWAY is boolean default 0, not an Ethernet connector specification. No Virgin, condition, filter or conversion is associated. Product Programming mode 3 and Serial connection 1 apply to both builds. All eight parameter associations are retained, including separate Legrand brand 2 and line 0/2/4/5 scopes; none of the payloads was supplied or examined. The catalogue establishes both 067510 and 775795 identities, independently of the exact-product hardware-documentation gap.
 
 ## Conditions, filters, and conversions
 
@@ -140,27 +196,33 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Catalogue system identifiers are not `WHO` numbers. The source establishes the roles shown, not a complete command vocabulary or proof of every installed function. Correlate the selected role with [Functional Protocol](../../functional/) before sending functional commands. Product-specific behavior and transport constraints remain unestablished where no direct source is retained.
 
+### Manufacturer-documented functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Alarm / PSTN role | Central control with fixed-line communication | Canonical item 975 and Object `13`; no documented complete dialling/zone workflow |
+| USB accessory scope | Cable 49234 is explicitly associated with 67510 | Regional catalogue p. 274; adapter/bridge implementation and applicability to 775795 not specified |
+
 ## Observed behavior and corroboration
 
 No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
 
 ## Programming
 
-The catalogue registers Product Programming for this technical item. Use the firmware-specific fields, selected Module/Object and effective restrictions on this page as the configuration boundary. This item has one declared Module; do not treat candidate Object rows as additional channels.
-
-No retained product manual establishes the complete commissioning, reset, transfer or update procedure for these commercial identities. Obtain that evidence before prescribing a Device-specific sequence. The catalogue mode registration alone does not establish a universal physical-button or gateway-session workflow.
+Product Programming mode 3 and Serial connection 1 are associated with firmware `106` and 107. The regional catalogue supplies an exact 67510 USB-programming-cable relationship, but not the panel commissioning, reset, project format, update or complete transport arrangement. Do not prescribe the procedures of BTicino 3485/3486 or another Legrand panel. All eight parameter metadata associations are shown; their files have not been examined.
 
 ## Source reconciliation
 
-The canonical MyHOME Suite `3.5.38` catalogue establishes the commercial-to-item association, firmware definitions, Module placements, reusable configuration values and relationship-specific conditions/filters recorded above. No product manual is retained for this exact dossier. Catalogue descriptions and Object names therefore remain implementation evidence; electrical limits, commissioning procedures and runtime behavior cannot be borrowed from sibling products.
+The database explicitly maps 067510 and 775795 to item 975. The regional catalogue uses 67510 in its cable caption, without the leading zero. Its preceding panel entry is 67520, so that entry’s detector capacity, battery/supply and construction are not evidence for 67510. USB accessory evidence and canonical Serial metadata have different scopes; no unexamined bridge implementation is invented. Third-party copies found during historical discovery are not retained manufacturer evidence.
 
-The corrected tables distinguish external Object/Virgin Object numbers from database keys, firmware status from wildcard applicability and actual Module slots from slot row IDs. Remaining source acquisition and runtime checks are listed below.
+The catalogue-domain and conversion discrepancies are explained under [Device-specific interpretation](#device-specific-interpretation), alongside the complete reusable fields.
 
 ## Evidence limits and open work
 
-- Locate and archive dedicated publisher documentation for the exact commercial references where available.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Locate exact 067510/67510 and 775795 installation/user/software manuals and relevant historical revisions.
+- Establish physical supply, zone/call workflows, reset/update and the USB-to-Serial programming arrangement from those originals; payloads and hardware behavior remain unexamined.
+
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -169,3 +231,5 @@ The corrected tables distinguish external Object/Virgin Object numbers from data
 - [Firmware](../../device-model/firmware.md)
 - [Configuration](../../device-model/configuration.md)
 - [Physical Devices](../../device-model/physical-devices.md)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0091-0100-2026-10-06.md#own-dev-0095)
