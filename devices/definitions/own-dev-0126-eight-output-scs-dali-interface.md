@@ -23,6 +23,15 @@ This DIN interface brings SCS lighting control to eight independent DALI outputs
 | Legrand | `002633` | Established catalogue identity | Manufacturer database commercial record `1171` explicitly links this SKU to item `1171` |
 | BTicino | `BMDI1100` | Established catalogue identity | Manufacturer database commercial record `2516` explicitly links this SKU to item `1171` |
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1171` | `002633` | `8 channels DALI/SCS interface, 10DIN` | `2` | `5` | `1` | `` | `0` | `0` | `Legrand_Undefined_DALI DIN DIMMER 8 Outputs D` |
+| `2516` | `BMDI1100` | `8 channels DALI/SCS interface, 10DIN` | `1` | `5` | `1` | `` | `0` | `0` | `BTicino_Undefined_DALI DIN DIMMER 8 Outputs Dali/Dsi` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -46,6 +55,7 @@ This DIN interface brings SCS lighting control to eight independent DALI outputs
 | Supply terminals | `screw terminals; 2 x 2.5 mm²` | `BT00582-b-IT` printed/PDF pp. 1-3 |
 | DALI terminals | `<=1.5 mm²` | `BT00582-b-IT` printed/PDF pp. 1-3 |
 | DALI cable runs | `<=100 m at 0.5 mm²; <=150 m at 0.75 mm²; <=300 m at 1.5 mm²` | `BT00582-b-IT` printed/PDF pp. 1-3 |
+| SCS nominal draw in export | `27 Vdc; 5 mA` | BMDI1100-italian-product-sheet.pdf PDF p. 1; this bus figure is separate from the sheet’s mains input/0.8 W standby |
 
 ## Identity
 
@@ -58,6 +68,19 @@ This DIN interface brings SCS lighting control to eight independent DALI outputs
 | Main item model / `modobj` | `175` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `175` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +90,12 @@ This DIN interface brings SCS lighting control to eight independent DALI outputs
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -93,12 +122,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `211` | Virtual Configuration | `1` | Association key `1` |
-| `211` | Advanced Configuration | `2` | Association key `2` |
-| `211` | Physical configuration | `0` | Association key `3` |
+| `211` | Physical configuration | `0` | Canonical firmware/mode association |
+| `211` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `211` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ## Firmware-scoped configuration
 
@@ -143,6 +173,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G8` | `0..255` | `0` | Group 8 |
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
+
+### Semantic review findings
+
+Firmware `211` declares eight Modules and places Object `8` in slots `1..8`; no Virgin association is stored. All eight empty conditions `4956`, `4937`, `4938`, `4957`, `4958`, `4959`, `4961`, `4962` reference rules `7206..7213` respectively: `A=0` produces `PL=0` for every slot, while A=`1..9` produces PL equal to the slot number (1 through 8). These are 80 stored branches, not a successive-address rule obtained by adding offsets to A. No G/M conversion is attached here. Filters `969..974` retain the full ranges although their descriptions say local-button/load selection reduced or timing absent. Preserve the label-versus-range inconsistency rather than manufacturing a restriction. MIN_LEVEL_ADV default `0` lies outside `1..100`, including filter `3006`; no replacement is supplied. Generic phase-control, DSI and voltage-standard choices/default `TYPE_LOAD=0` do not override the product’s documented DALI outputs. DSI appears in the sheet’s indicator/compatibility notes, but mixed DALI/DSI on one product is expressly forbidden. The retained sources do not establish installed behavior for every generic TYPE_LOAD value.
 
 ## Conditions, filters, and conversions
 
@@ -260,7 +294,7 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | `7213` | `A=8` | `PL` = `8` | `7213` |
 | `7213` | `A=9` | `PL` = `8` | `7213` |
 
-No conversion reference is attached to these slot rows. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+Each of the eight slot conditions references its own rule, 7206 through 7213; all stored branches are retained above. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -282,7 +316,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `8` - Dimmer actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -294,6 +327,8 @@ No publishable Device-specific hardware captures or experiments are retained for
 Connect compatible SCS controls/sensors and a separate SCS supply. An addressing module is required except with software configuration. Plug&Go applies through a room controller; Push&Learn creates or changes associations, and Virtual Configurator is the documented software route. Local channel buttons and LEARN/status indicators are distinct from bus commands. Ballast learning uses the illustrated DALI button sequence: a short press followed by a ten-second hold; loads fully illuminate and progressively extinguish. Do not mix DALI and DSI ballasts on one product.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
+
+The local DALI learning button, rather than LEARN for SCS associations, is pressed for less than one second and then held for ten seconds (BT00582-b-IT p. 3). All DALI loads illuminate and then progressively switch off in random order. The per-channel DALI indicator is distinct from the LEARN indicator. Do not connect the RJ45 SCS bus to Ethernet.
 
 ## Source reconciliation
 
@@ -308,7 +343,7 @@ The exact BTicino technical sheet and Italian export establish the electrical/ou
 
 ## Evidence limits and open work
 
-Exact Legrand-reference instructions, installed DALI/1-10 V control behavior, association persistence and firmware diagnostics remain unobserved.
+Exact 002633 hardware instructions, separate Push&Learn/Virtual Configurator procedure manuals, DSI operating constraints, association persistence and installed DALI/diagnostic captures remain unexamined or unavailable. Generic voltage-standard fields do not establish a 1–10 V physical output on this DALI interface.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -322,3 +357,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0126)

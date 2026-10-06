@@ -2,7 +2,7 @@
 
 ## Summary
 
-Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch colour screen and an answering-machine function. Its configurable on-screen icons provide access to the installed communication and MyHOME functions, with exact memory capacity still uncorroborated.
+Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch colour screen and audio/video answering memory. The 344163 manuals specify up to 160 photo-and-audio messages or 18 sixteen-second video messages, while configurable icons provide access to installed communication and MyHOME functions.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -22,6 +22,15 @@ Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch 
 | --- | --- | --- | --- |
 | BTicino - Polyx | `344163` | Established catalogue identity | Manufacturer database commercial record `1195` explicitly links this SKU to item `1195` |
 | Legrand - Céliane | `067546` | Established catalogue identity | Manufacturer database commercial record `1448` explicitly links this SKU to item `1195` |
+
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1195` | `344163` | `Polyx Memory Display` | `1` | `7` | `1` | `` | `0` | `0` | `BTicino_Polyx_Polyx Memory Display` |
+| `1448` | `067546` | `Polyx Memory Display` | `2` | `13` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
 
 ## Documentation
 
@@ -50,6 +59,9 @@ Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch 
 | Interfaces | `2-wire SCS; mini-USB; 1-2 additional supply; termination switch` | `BT00639-b-EN/IT` printed/PDF pp. 1-2 |
 | Accessories | `346020 supplementary supply; 344165 inductive-loop module` | `BT00639-b-EN/IT` printed/PDF pp. 1-2 |
 | Indicators | `ringtone exclusion; door status; entrance-panel connection; answering machine` | `BT00639-b-EN/IT` printed/PDF pp. 1-2 |
+| Answering-memory capacity | Photo/audio: up to 160 messages; video/audio: up to 18, each 16 seconds | O0194B_U_EN/IT printed/PDF p. 20; documented limits, not measured installed capacity |
+| Memo / welcome recording | Memo up to 16 s; welcome up to 8 s | O0194B_U_EN/IT printed/PDF pp. 17–18 |
+| Additional supply | `18..27 Vdc at 1–2` | O0192B English printed/PDF p. 46; technical-sheet 346020 accessory scope |
 
 ## Identity
 
@@ -62,6 +74,19 @@ Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch 
 | Main item model / `modobj` | `166` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `166` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -71,6 +96,17 @@ Polyx Memory Display is a two-wire video-door-entry indoor unit with a 3.5-inch 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `72` | `67` | BTicino (key `1`) | `4` | external software | `TiPolyxMemoryDisplay_0100` |
+| `72` | `126` | Legrand (key `2`) | `4` | external software | `VideoUnitConfig_0100` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -90,22 +126,25 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `72` | Product Programming | `3` | Association key `4` |
+| `72` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `72` | USB | `3` |
+| `72` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `72` | `1` | `4` | `TiPolyxMemoryDisplay_0100` | Parameter type `7`; payload not inspected |
-| `72` | `2` | `4` | `VideoUnitConfig_0100` | Parameter type `7`; payload not inspected |
+| Physical M | Five preset functions (Settings remains sixth) | Evidence |
+| --- | --- | --- |
+| 0 | Answering machine; intercom I/II/III; staircase lights | O0192B English p. 33 diagram |
+| 1 | Staircase lights; answering machine; camera cycling; activation I; intercom I | Same diagram |
+| 2 | Intercom I/II/III/IV; staircase lights | Same diagram |
+| 3 | Intercom I/II; staircase lights; activation I; camera cycling | Same diagram |
+| 4 | Staircase lights; answering machine; intercom I; activation I; camera cycling | Same diagram |
+| 5 | Answering machine; staircase lights; activation I/II; intercom I | Same diagram |
+| 6 | Staircase lights; answering machine; intercom I/II; activation I | Same diagram |
 
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Intercom indices are offsets from N, camera/activation indices from P (p. 34); the p. 33 `N=1`/`N=2` intercom example is a specific pairing, not a general address-range restriction.
 
 ## Firmware-scoped configuration
 
@@ -143,6 +182,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
 | `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
 | `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Semantic review findings
+
+Firmware `72` is Official/default `1.0.1`, one Module containing Object `154`; no Virgin, slot conditions or conversions. Firmware N_1/N_2 and P have `0..9` domains, M `0..6`; reusable N `0..3999`/P `0..95` are wider and have no attached digit-to-address conversion. IS_SLAVE has no stored default; do not silently import the installation-menu factory NO into catalogue metadata. PEOPLE_S codes 1/2 retain unknown descriptions. Filter `2002` retains DOSA_CALL `0` Enable / `1` Disable with default 0; its label “Forward incoming call to ethernet” does not establish an Ethernet connector on the unit, whose exact hardware documentation shows two-wire SCS and USB. Parameter records `67` and `126` retain their different brand/line/path scopes (TiPolyxMemoryDisplay_0100 / VideoUnitConfig_0100), payloads unexamined. The manual’s answering memory, ringtone file conversion and PC menu pages do not add local Objects to the single-slot model.
 
 ## Conditions, filters, and conversions
 
@@ -188,7 +231,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `154` - Internal Unit | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -200,6 +242,14 @@ No publishable Device-specific hardware captures or experiments are retained for
 Quick physical configuration uses N/P/M for handset address, associated entrance panel and predefined menu. Up to three parallel handsets without apartment interface 346850 use the same N address; the sheet recommends software configuration when that interface is present. For USB configuration transfer or firmware update the device must be powered and not physically configured. TiPolyxMemoryDisplay customizes communication, scenario, alarm, sound, temperature and advanced menu functions, time/services, ringtones and firmware selection. The user guide documents message playback, memo/welcome recording, mass deletion and recording modes; these local answering-machine functions are distinct from OpenWebNet readback.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
+
+### Answering memory, services and reset
+
+O0194B_U_EN/IT pp. 16–20: unread messages have an asterisk; the red answering LED is steady when enabled and flashes when messages are present. Calls can still be answered while the answering machine is active. When full, memory overwrites the oldest messages. Changing photo/video recording mode deletes all recorded messages; mass message deletion requires confirmation. Enable only one answering machine per apartment. O0192B p. 41 recommends the Master, with local power required if it is enabled on a Slave. Three same-address parallel handsets are one Master plus two Slaves.
+
+The installer manual pp. 32–34 defines physical N as a two-digit address, P as associated entrance panel and M=`0..6` as a preset menu; physical configuration cannot be edited from the menu. Confirm language and the configuration summary after initial power-up. USB configuration/update requires BUS power and no physical configurators (technical sheet p. 2 and O0192B p. 38). The software manual p. 7 omits the configurator exclusion, which is not permission to disregard the installer restriction. Its pp. 8–10 label Download as PC-to-device and Upload as device-to-PC; select serial/COM, and firmware update chooses a `.fwz` file. Request device info reports hardware/software features. Ringtone import accepts `.mp3`/`.wav`/`.pcm` with at most five seconds per clip (pp. 25–30). No firmware or parameter payload is examined.
+
+O0192B pp. 35–37 describes up to thirty combined scenario/communication functions, six sound rooms/amplifiers, four sources and ten temperature zones; these UI limits do not shrink reusable addressing domains or create additional local Modules. Services include automatic door release (Professional Studio), automatic audio answer (Hands Free), paging, alarm messages and system-dependent door-state display. Studio and Door State are mutually exclusive (user guide pp. 37–38). Connection-key hold for at least two seconds activates push-to-talk; release listens and a short press ends the connection. Reset in the installer menu cancels all data and returns factory settings; this differs from deleting answering messages or restoring only the four Options to NO. Source O0192B p. 43 requires selecting Continue and confirming before clearing configuration.
 
 ## Source reconciliation
 
@@ -218,9 +268,11 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 | `O0194B_S_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `O0194B_U_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
+O0194B user-manual p. 20 explicitly documents 160 photo/audio or eighteen 16-second video messages in both Italian and English; the previous claim that no capacity was documented was incorrect. In English p. 37 the Hands Free paragraph reuses a door-lock LED flashing sentence from Professional Studio; Italian p. 37 does too, so this is not resolved by translation and is not asserted as a measured handsfree LED pattern. The 2010 installer manual’s indoor-only and BTicino two-wire system limits remain applicable within its stated scope. Italian technical/software editions were compared for key ratings, transfer direction and memory limits; their other prose was not independently reconciled in full.
+
 ## Evidence limits and open work
 
-Exact 067546 physical/product manual, audio/video memory capacity, installed firmware/UI behavior and diagnostics remain uncorroborated.
+Exact 067546 physical/product documentation, mapping of 2010 software/manual features to installed firmware, opaque PEOPLE_S codes, parameter/firmware payloads and installed UI/diagnostic behavior remain uncorroborated. Published 344163 memory limits are now explicit; they are not automatically transferred to unexamined 067546 hardware.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -234,3 +286,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0129)

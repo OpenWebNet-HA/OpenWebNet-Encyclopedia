@@ -31,20 +31,31 @@ This DIN load actuator combines a bistable switching relay with load-current mea
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1163` | `F522` | `Actuator 16A with current sensor - 1 DIN` | `1` | `5` | `1` | `` | `0` | `0` | `BTicino_Undefined_Actuator 16A with current s` |
+| `1896` | `003558` | `Actuator 16A with current sensor - 1 DIN` | `2` | `5` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Energy/load functions and installation topology: printed/PDF pp. 74-80, 90, 96, 101. No exact 3456/F450 match; no rating transferred to those products. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME Technical Guide.pdf) |
+| `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Exact F521/F522/F523 and all six flush references: printed/PDF pp. 74–79. The F520 photovoltaic diagram on p. 80 is a different product and does not establish F521 production wiring. Remaining guide sections unexamined for this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher source](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 | `O0195E.pdf` | Instruction Use O0195E | `O0195E; 05/24-01 PC` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/67/f4/67f46e5b5c9e1c2082991dfc6ee6748d3bc316025eef4f0ccbe7489a1cf688d0.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O0195E.pdf) |
 | `ST-00002261-EN.pdf` | Technical Sheet ST-00002261-EN | `ST-00002261-EN; 06/06/2025` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-5; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/2a/60/2a608ff9ffbd316c85f39b450b343b13b9c7d3b753240af3c4b1e0939bf64970.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002261-EN.pdf) |
 | `F522-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-3; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/95/bc958fd41fb0e316508f10feb58296aa62ebe617c77d92591f84477b76c7e5ec.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F522&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1163` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MQ00361_d_EN.pdf` | Exact historical F522 technical sheet | 09/06/2014; printed MQ00361-d-EN | Printed/PDF pp. 1–5 examined: legacy ratings, physical/virtual addressing, mixed-mode restoration, priority, LED and wiring scopes. | [Archived original](https://archive.openwebnet-ha.org/sha256/91/73/9173e95f34287823a27e3ee3e143e5f5aa6652a2bd7be139a3dd27488308d56f.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/MQ00361_d_EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
+| Dimensions | `17.7 × 105.2 × 67.6 mm` | O0195E printed/PDF p. 1 dimension drawing |
 | SCS supply | `18..27 Vdc` | `ST-00002261-EN` printed/PDF pp. 1-5 |
 | Draw | `30 mA primary; 10 mA SCS` | `ST-00002261-EN` printed/PDF pp. 1-5 |
 | Operating temperature | `0..40 °C` | `ST-00002261-EN` printed/PDF pp. 1-5 |
@@ -62,7 +73,6 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Current measurement interval | `200 mA..16 A` | `ST-00002261-EN` printed/PDF pp. 1-5 |
 | Residual-current sensor | `optional external toroid 3523; not a protective residual-current circuit breaker` | `ST-00002261-EN` printed/PDF pp. 1-5 |
 | Power-factor selector PF | `0=0.92 default; 1=1; 2=0.85; 3=0.8; 4=0.75; 5=0.7; 6=0.65; 7=0.6; 8=0.55; 9=0.5` | `ST-00002261-EN` printed/PDF pp. 1-5 |
-
 
 ### Publisher export attributes
 
@@ -85,8 +95,6 @@ These are the captured publisher classification values for the named variants. T
 | Connected object | `No` | `F522` export p. 2 |
 
 ### Published status indicators
-
-
 
 | State | LED indication | Source |
 | --- | --- | --- |
@@ -112,6 +120,20 @@ These are the captured publisher classification values for the named variants. T
 | Commercial record count | `2` | `EN_DEVICE` |
 | Additional system | Automation; key `1`; model `125` | Separate non-main catalogue association |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `125` | No | Canonical item/system relationship |
+| New energy saving and load control | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -121,6 +143,12 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -141,16 +169,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `229` | Virtual Configuration | `1` | Association key `1` |
-| `229` | Advanced Configuration | `2` | Association key `2` |
-| `229` | Physical configuration | `0` | Association key `3` |
+| `229` | Physical configuration | `0` | Canonical firmware/mode association |
+| `229` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `229` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ### Published physical actuator modes
-
-
 
 | Function | Physical selector | Published virtual scope |
 | --- | --- | --- |
@@ -159,6 +186,12 @@ No connection associations are stored for these firmware definitions. This does 
 | Master pushbutton | `M=PUL` | ignores room/general controls |
 | Delayed slave `OFF` | `M=1..4:1..4 min` | `0..255 s; point-to-point only` |
 | Slave `PUL` | no listed physical selector | software configuration required |
+
+| Addressing scope | Published physical | Published virtual | Evidence |
+| --- | --- | --- | --- |
+| Lighting | A=`1..9`; PL=`1..9` | Area `0..10`; lighting point `0..15` | Current and 2014 exact technical sheets p. 2 |
+| Groups | No G socket on F522 | `0..255`; F523 supports ten software groups | Exact technical sheets p. 2 |
+| Load priority | P1/P2=`01..63` | `1..63` | Exact technical sheets, load-management section |
 
 ## Firmware-scoped configuration
 
@@ -204,7 +237,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `197` - Energy load control actuator
 
 Catalogue Object key `468` maps to external Object `197`.
@@ -223,6 +255,10 @@ Catalogue Object key `468` maps to external Object `197`.
 | `STANDBY_THRESHOLD` | `0..255` | `50` | Stand-by power threshold for energy management actuators (W) |
 | `DC_RATED_VOLTAGE` | `1..255` | `24` | DC voltage (V) |
 | `WITH_SENSOR` | `1` = Yes | `1` | With sensor |
+
+### Semantic review findings
+
+Firmware `229` places load-control Object `197` in slot `1` and lighting Object `6` in slot `2`; these two software roles share one physical relay. No Virgin association is stored. Empty conditions `4157`/`4145` do not prove installed activation. Conversion `411` under condition `4157` supplies priorities `1..63` from P1/P2; no priority 0 or mappings for 64–69 are stored even though individual P1/P2 fields allow those digit combinations. `WITH_SENSOR=1` is retained by filter `1208` and agrees with the documented F522 sensor, but diagnostics require the optional external 3523. PF firmware selectors and reusable POWER_FACTOR percentages are separate domains; no PF conversion is attached to this item. Reusable default POWER_FACTOR `0` is not physical `PF=0`, which the sheet interprets as 0.92. `LOCAL_BUTTON` and zero-crossing filters retain their entire reusable domains; they do not turn all generic modes into manufacturer-confirmed procedures. Default priority `1`, phases, state-on-enable, AC/DC and voltage fields remain catalogue settings, not proof of DC mains compatibility.
 
 ## Conditions, filters, and conversions
 
@@ -334,7 +370,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `197` - Energy load control actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `6` - Light actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -343,11 +378,15 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
+The current mounting leaflet identifies the local button in Home+Project by a short press when the app prompts; this is distinct from load forcing, acquisition or energy-data deletion.
+
 Configure lighting and load management independently. In mixed use, automation commands set the relay only while enabled or forced. During shedding the device remembers the latest automation request and applies it after load re-enabling; an automation `ON` command does not override shedding. Physical lighting modes include master `M=0`, slave `M=SLA`, master `PUL` `M=PUL` and delayed slave `OFF` `M=1..4` minutes. Suite exposes additional load type, phase, restoration and slave-`PUL` options. Physical priority uses `P1/P2=01..63`; this is distinct from lighting A/PL. In lighting-only mode P1/P2 address consumption reporting rather than shedding priority. Pure load management sets A/PL/M to zero. Configure PF for the assumed load; use Suite for automatic/fixed voltage, residual-current threshold and standby-energy threshold. High-current wiring closer than 5 cm can disturb the integrated current sensor; keep phase/neutral paired. Abnormal-reading recovery uses a ten-second hold. Current server support is F460, F461 and Classe 300EOS. Protect with a breaker <=16 A.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
 ## Source reconciliation
+
+The historical 2014 F522 table lists delayed Master PUL OFF as 1–255 seconds while separately listing zero for ordinary Master PUL. The current sheet consolidates the software-delay scope to 0–255 seconds; this is a presentation difference, not a conversion of the physical 1–4 minute selectors into seconds of the same numeric value.
 
 The current technical sheet, multilingual instruction and export are reconciled with the June 2025 energy system guide. The database separates lighting Object `6` and load-control Object `197`; one physical relay does not make these the same Object. Physical and virtual delays have different units: `1..4` minutes versus `0..255` seconds; they must not be copied as equal numeric domains. The legacy catalogue does not by itself establish the newer server/app support declaration.
 
@@ -355,12 +394,19 @@ The current technical sheet, multilingual instruction and export are reconciled 
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MyHOME Technical Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
+| `MyHOME-Technical-Guide.pdf` | June 2025 guide, pp. 74–79: priority/load-control topology, F521 per-phase count and F522/F523/flush relay roles; F520 photovoltaic diagram p. 80 excluded from F521 wiring. |
 | `O0195E.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `ST-00002261-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `F522-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
+| `MQ00361_d_EN.pdf` | Historical 2014 exact F522 ratings, SCS draw, counter/sensor and delayed-slave differences; hardware revision assignment remains unknown. |
 
 The F522 export states rated voltage `27 Vdc` and current `30 mA`; the June 2025 sheet separately states primary draw `30 mA` and SCS draw `10 mA`. The export does not assign its rated-current label unambiguously to those interfaces. Preserve that discrepancy rather than assuming 30 mA is the current SCS specification.
+
+The applicable June 2025 guide pp. 74–79 was checked separately from the exact technical sheets. Its priority-editing/app description requires F460 or Classe 300EOS; that scoped example is not a contradiction of later technical sheets additionally naming F461. Publisher brochure/catalogue-page links and CAD/BIM drawings remain unexamined; their link labels are not extra capability evidence. English mounting-leaflet instructions and electrical/LED diagrams were checked; other translations were not independently reconciled in full. No manufacturer change notice maps source revisions to installed hardware.
+
+The 2014 sheet labels its mains connection 230 Vac and does not list the newer 16 A/3680 W resistive-load row; the June 2025 sheet explicitly supplies the 110–240 Vac primary rating and that load category. Both document the same 10 A incandescent/halogen, 4 A fluorescent/electronic/ferromagnetic and 500 W/max-ten LED/CFL limits. Ratings at 230 V are not unchanged wattage ratings at 110 V. The newer sheet’s copied HomeKit-accessory wording does not establish native HomeKit hardware or direct pairing. The virtual AC/DC selector is catalogue/load-description scope, not a DC primary-supply approval.
+
+The historical F522 sheet gives 30 mA maximum under SCS-BUS technical data; the 2025 sheet separates 30 mA primary from 10 mA SCS. The publisher export also labels 27 Vdc/30 mA. These source-specific assignments conflict; no revision-to-hardware mapping resolves them. Two resettable energy totalizers and 200 mA–16 A controlled-load measurement are documented; external 3523 is required for residual-current diagnostics.
 
 ## Evidence limits and open work
 
@@ -378,3 +424,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0122)

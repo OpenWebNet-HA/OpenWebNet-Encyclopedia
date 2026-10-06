@@ -31,15 +31,25 @@ This DIN load-management central unit measures power and accumulated energy and 
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1162` | `F521` | `Load management central unit` | `1` | `5` | `1` | `` | `0` | `0` | `BTicino_Undefined_Load management central uni` |
+| `1895` | `003557` | `Load management central unit` | `2` | `5` | `1` | `` | `0` | `0` | `Legrand_Undefined_Load control central unit` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Energy/load functions and installation topology: printed/PDF pp. 74-80, 90, 96, 101. No exact 3456/F450 match; no rating transferred to those products. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME Technical Guide.pdf) |
+| `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Exact F521/F522/F523 and all six flush references: printed/PDF pp. 74–79. The F520 photovoltaic diagram on p. 80 is a different product and does not establish F521 production wiring. Remaining guide sections unexamined for this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher source](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 | `ST-00001811-EN.pdf` | Technical Sheet ST-00001811-EN | `ST-00001811-EN; 28/05/2024` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/cd/98cd21a7039899d30aa8f309876607f44b4af3cd411144a33f2a11c86af1e0d3.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00001811-EN.pdf) |
 | `U4725D.pdf` | Instruction Use U4725D | `U4725D; 05/24-01 PC` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/00/6300e7a27e8722dc3b2945f6c3b7e908cb3042c7193d3ab988519bab6311bfcd.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4725D.pdf) |
 | `F521-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-3; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/32/663200333ff67628f2f3cc671eaa694563ca4942344456623de1f57818fb0b3b.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F521&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1162` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MQ00360_d_EN.pdf` | Exact historical F521 technical sheet | MQ00360-d-EN; 01/08/2016 | Printed/PDF pp. 1–4 examined: 230 Vac labelled connection, low-BUS storage warning, acquisition prerequisites and exact selector/LED tables. Historical scope differs from the 2024 sheet. | [Archived original](https://archive.openwebnet-ha.org/sha256/6d/d3/6dd372dcfb7b6f44122b99c2440fcc86c63dcf42a1b8091375a026b17c5fd6a9.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/MQ00360_d_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -55,7 +65,7 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Historical storage | `hourly: 12 months; daily: 2 years; monthly: 12 years` | `ST-00001811-EN` printed/PDF pp. 1-4 |
 | Toroid accessory | `3523; one supplied` | `ST-00001811-EN` printed/PDF pp. 1-4 |
 | Mains protection | `<=16 A thermal magnetic circuit breaker` | `ST-00001811-EN` printed/PDF pp. 1-4 |
-
+| Dimensions | `17.7 × 105.2 × 67.6 mm` | U4725D printed/PDF p. 1 dimension drawing |
 
 ### Publisher export attributes
 
@@ -79,8 +89,6 @@ These are the captured publisher classification values for the named variants. T
 
 ### Published status indicators
 
-
-
 | State | LED indication | Source |
 | --- | --- | --- |
 | not configured | `orange/green 128 ms/128 ms` | Exact technical sheet, indicator table in Documentation |
@@ -103,6 +111,19 @@ These are the captured publisher classification values for the named variants. T
 | Main item model / `modobj` | `5` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `5` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -113,6 +134,12 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -133,19 +160,18 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `231` | Virtual Configuration | `1` | Association key `1` |
-| `231` | Advanced Configuration | `2` | Association key `2` |
-| `231` | Physical configuration | `0` | Association key `3` |
-| `735` | Virtual Configuration | `1` | Association key `1` |
-| `735` | Advanced Configuration | `2` | Association key `2` |
-| `735` | Physical configuration | `0` | Association key `3` |
+| `231` | Physical configuration | `0` | Canonical firmware/mode association |
+| `231` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `231` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `735` | Physical configuration | `0` | Canonical firmware/mode association |
+| `735` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `735` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ### Published physical metering selectors
-
-
 
 | Selector | Physical domain / meaning | Published software scope |
 | --- | --- | --- |
@@ -197,6 +223,10 @@ Catalogue Object key `470` maps to external Object `199`.
 | `RATED_POWER` | `1` = 100 W; `2` = 200 W; `3` = 300 W; `4` = 400 W; `5` = 500 W; `6` = 600 W; `7` = 700 W; `8` = 800 W; `9` = 900 W; `10` = 1000 W; `11` = 1100 W; `12` = 1200 W; `13` = 1300 W; `14` = 1400 W; `15` = 1500 W; `16` = 1600 W; `17` = 1700 W; `18` = 1800 W; `19` = 1900 W; `20` = 2000 W; `21` = 2100 W; `22` = 2200 W; `23` = 2300 W; `24` = 2400 W; `25` = 2500 W; `26` = 2600 W; `27` = 2700 W; `28` = 2800 W; `29` = 2900 W; `30` = 3000 W; `31` = 3100 W; `32` = 3200 W; `33` = 3300 W; `34` = 3400 W; `35` = 3500 W; `36` = 3600 W; `37` = 3700 W; `38` = 3800 W; `39` = 3900 W; `40` = 4000 W; `41` = 4100 W; `42` = 4200 W; `43` = 4300 W; `44` = 4400 W; `45` = 4500 W; `46` = 4600 W; `47` = 4700 W; `48` = 4800 W; `49` = 4900 W; `50` = 5000 W; `51` = 5100 W; `52` = 5200 W; `53` = 5300 W; `54` = 5400 W; `55` = 5500 W; `56` = 5600 W; `57` = 5700 W; `58` = 5800 W; `59` = 5900 W; `60` = 6000 W; `61` = 6100 W; `62` = 6200 W; `63` = 6300 W; `64` = 6400 W; `65` = 6500 W; `66` = 6600 W; `67` = 6700 W; `68` = 6800 W; `69` = 6900 W; `70` = 7000 W; `71` = 7100 W; `72` = 7200 W; `73` = 7300 W; `74` = 7400 W; `75` = 7500 W; `76` = 7600 W; `77` = 7700 W; `78` = 7800 W; `79` = 7900 W; `80` = 8000 W; `81` = 8100 W; `82` = 8200 W; `83` = 8300 W; `84` = 8400 W; `85` = 8500 W; `86` = 8600 W; `87` = 8700 W; `88` = 8800 W; `89` = 8900 W; `90` = 9000 W; `91` = 9100 W; `92` = 9200 W; `93` = 9300 W; `94` = 9400 W; `95` = 9500 W; `96` = 9600 W; `97` = 9700 W; `98` = 9800 W; `99` = 9900 W; `100` = 10000 W; `101` = 10100 W; `102` = 10200 W; `103` = 10300 W; `104` = 10400 W; `105` = 10500 W; `106` = 10600 W; `107` = 10700 W; `108` = 10800 W; `109` = 10900 W; `110` = 11000 W; `111` = 11100 W; `112` = 11200 W; `113` = 11300 W; `114` = 11400 W; `115` = 11500 W; `116` = 11600 W; `117` = 11700 W; `118` = 11800 W; `119` = 11900 W; `120` = 12000 W; `121` = 12100 W; `122` = 12200 W; `123` = 12300 W; `124` = 12400 W; `125` = 12500 W; `126` = 12600 W; `127` = 12700 W; `128` = 12800 W; `129` = 12900 W; `130` = 13000 W; `131` = 13100 W; `132` = 13200 W; `133` = 13300 W; `134` = 13400 W; `135` = 13500 W; `136` = 13600 W; `137` = 13700 W; `138` = 13800 W; `139` = 13900 W; `140` = 14000 W; `141` = 14100 W; `142` = 14200 W; `143` = 14300 W; `144` = 14400 W; `145` = 14500 W; `146` = 14600 W; `147` = 14700 W; `148` = 14800 W; `149` = 14900 W; `150` = 15000 W; `151` = 15100 W; `152` = 15200 W; `153` = 15300 W; `154` = 15400 W; `155` = 15500 W; `156` = 15600 W; `157` = 15700 W; `158` = 15800 W; `159` = 15900 W; `160` = 16000 W; `161` = 16100 W; `162` = 16200 W; `163` = 16300 W; `164` = 16400 W; `165` = 16500 W; `166` = 16600 W; `167` = 16700 W; `168` = 16800 W; `169` = 16900 W; `170` = 17000 W; `171` = 17100 W; `172` = 17200 W; `173` = 17300 W; `174` = 17400 W; `175` = 17500 W; `176` = 17600 W; `177` = 17700 W; `178` = 17800 W; `179` = 17900 W; `180` = 18000 W; `181` = 18100 W; `182` = 18200 W; `183` = 18300 W; `184` = 18400 W; `185` = 18500 W; `186` = 18600 W; `187` = 18700 W; `188` = 18800 W; `189` = 18900 W; `190` = 19000 W; `191` = 19100 W; `192` = 19200 W; `193` = 19300 W; `194` = 19400 W; `195` = 19500 W; `196` = 19600 W; `197` = 19700 W; `198` = 19800 W; `199` = 19900 W; `200` = 20000 W; `201` = 20100 W; `202` = 20200 W; `203` = 20300 W; `204` = 20400 W; `205` = 20500 W; `206` = 20600 W; `207` = 20700 W; `208` = 20800 W; `209` = 20900 W; `210` = 21000 W; `211` = 21100 W; `212` = 21200 W; `213` = 21300 W; `214` = 21400 W; `215` = 21500 W; `216` = 21600 W; `217` = 21700 W; `218` = 21800 W; `219` = 21900 W; `220` = 22000 W; `221` = 22100 W; `222` = 22200 W; `223` = 22300 W; `224` = 22400 W; `225` = 22500 W; `226` = 22600 W; `227` = 22700 W; `228` = 22800 W; `229` = 22900 W; `230` = 23000 W; `231` = 23100 W; `232` = 23200 W; `233` = 23300 W; `234` = 23400 W; `235` = 23500 W; `236` = 23600 W; `237` = 23700 W; `238` = 23800 W; `239` = 23900 W; `240` = 24000 W; `241` = 24100 W; `242` = 24200 W; `243` = 24300 W; `244` = 24400 W; `245` = 24500 W; `246` = 24600 W; `247` = 24700 W; `248` = 24800 W; `249` = 24900 W; `250` = 25000 W; `251` = 25100 W; `252` = 25200 W; `253` = 25300 W; `254` = 25400 W; `255` = 25500 W | `30` | Rated power; Rated power to be used for load control (100W steps) |
 | `POWER_TOLERANCE` | `0` = 0 %; `1` = +1 %; `2` = +2 %; `3` = +3 %; `4` = +4 %; `5` = +5 %; `6` = +6 %; `7` = +7 %; `8` = +8 %; `9` = +9 %; `10` = +10 %; `11` = +11 %; `12` = +12 %; `13` = +13 %; `14` = +14 %; `15` = +15 %; `16` = +16 %; `17` = +17 %; `18` = +18 %; `19` = +19 %; `20` = +20 %; `129` = -1 %; `130` = -2 %; `131` = -3 %; `132` = -4 %; `133` = -5 %; `134` = -6 %; `135` = -7 %; `136` = -8 %; `137` = -9 %; `138` = -10 %; `139` = -11 %; `140` = -12 %; `141` = -13 %; `142` = -14 %; `143` = -15 %; `144` = -16 %; `145` = -17 %; `146` = -18 %; `147` = -19 %; `148` = -20 % | `0` | Tolerance on rated power; 1 bit sign - 7 bits value -20 = 0x94 -19 = 0x93 ... -1 = 0x81 0 = 0x00 +1 = 0x01 ... +20 = 0x14 |
 | `TOROID_DIRECTION` | `0` = Disabled; `1` = Enabled | `0` | Toroid direction management |
+
+### Semantic review findings
+
+Firmware `231` is the wildcard catalogue default; `735` is `3.0.0`, not the default. Both place Object `199` (database key `470`) in one slot and have no Virgin association. Firmware `231` permits A1 `0..2`, whereas `735` permits `0..1` and adds `T↑`; its A1 description still says 0–2. The physical sheet limits the combined address to `1..127`; Object A123 is `0..127`, despite its description saying 0–255. Conversion `800` nevertheless enumerates combined addresses `0..255`, so outputs `128..255` are invalid for A123 and inputs with `A1=2` are outside firmware `735`. Do not repair these conflicts by broadening the fields. The P conversion writes `POWER`, and TOL writes the misspelled `TOLLERANCE`, while the actual reusable fields are `RATED_POWER` and `POWER_TOLERANCE`; no alias equivalence is established. Reusable rated-power codes `1..255` mean 100 W times the code, default `30` (3000 W). Tolerance codes `0..20` are nonnegative percentages and `129..148` represent −1 through −20; preserve this encoding independently of physical TOL `0..8`. Filter `3000` retains both TOROID_DIRECTION values only on firmware `231`; absence of that filter on `735` is not a new hardware restriction. The empty slot predicate is not an assertion of unconditional installed activation.
 
 ## Conditions, filters, and conversions
 
@@ -517,7 +547,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `199` - Energy metering and load control | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -526,9 +555,13 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-Set address, contractual power, tolerance, phase and toroid direction. Acquire actuators after installation: hold about ten seconds until red, release, and wait for interrogation; no load control occurs until acquisition succeeds. Time/date must be supplied by a system device to store history; without it only instantaneous variables continue. Direction `T=0` ignores orientation; `T=1` is directional. In consumption wiring the toroid’s printed side faces the meter; production wiring reverses toward the inverter. Hold about twenty seconds to erase cumulative data. Home+Project, physical selectors and Suite are separately documented configuration routes. Current published server support is F460, F461 and Classe 300EOS; the MHS1 upgrade path uses backup/restore.
+The current mounting leaflet identifies the local button in Home+Project by a short press when the app prompts; this is distinct from load forcing, acquisition or energy-data deletion.
+
+Set address, contractual power, tolerance, phase and toroid direction. Acquire actuators after installation: hold about ten seconds until red, release, and wait for interrogation; no load control occurs until acquisition succeeds. Time/date must be supplied by a system device to store history; without it only instantaneous variables continue. Direction `T=0` ignores orientation; `T=1` is directional. The exact F521 connection diagram points the toroid’s printed side toward the electricity meter; the retained sources do not establish an F521 inverter-facing production arrangement. Hold about twenty seconds to erase cumulative data. Home+Project, physical selectors and Suite are separately documented configuration routes. Current published server support is F460, F461 and Classe 300EOS; the MHS1 upgrade path uses backup/restore.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
+
+Historical MQ00360-d-EN p. 3 inhibits acquisition when BUS voltage is too low, 230 V is absent or overload is present; acquisition can finish only with the steady orange or steady green starting state. Below approximately 21 V it says operation continues but energy-data saving/recovery after BUS failure is not guaranteed. This is a 2016 statement, omitted from the 2024 sheet; it is not a measured retention guarantee. Acquisition is a ten-second release sequence, whereas cumulative-data deletion continues to approximately twenty seconds.
 
 ## Source reconciliation
 
@@ -538,14 +571,19 @@ The retained current sheet, multilingual instructions, publisher export and June
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MyHOME Technical Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
+| `MyHOME-Technical-Guide.pdf` | June 2025 guide, pp. 74–79: priority/load-control topology, F521 per-phase count and F522/F523/flush relay roles; F520 photovoltaic diagram p. 80 excluded from F521 wiring. |
 | `ST-00001811-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `U4725D.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `F521-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
+| `MQ00360_d_EN.pdf` | Historical 2016 exact F521 connection, acquisition, LED and low-voltage/history limits; newer ratings are not backported. |
+
+The applicable June 2025 guide pp. 74–79 was checked separately from the exact technical sheets. Its priority-editing/app description requires F460 or Classe 300EOS; that scoped example is not a contradiction of later technical sheets additionally naming F461. Publisher brochure/catalogue-page links and CAD/BIM drawings remain unexamined; their link labels are not extra capability evidence. English mounting-leaflet instructions and electrical/LED diagrams were checked; other translations were not independently reconciled in full. No manufacturer change notice maps source revisions to installed hardware.
+
+The 2016 sheet labels its mains connection 230 Vac; the 2024 sheet gives a 110–240 Vac primary input. Do not backport the newer range to all historical hardware. The F521 publisher export describes three toroid inputs, but both exact F521 sheets show one toroid connection and the June 2025 guide distinguishes three-line F520 from single controlled-line F521. The export wording is an unresolved product-description discrepancy; it does not establish three F521 channels. Its 1.5–18 kW marketing range is the physical P selector span; published software permits 100–25500 W. No alias mapping resolves the catalogue POWER/TOLLERANCE field-name inconsistencies.
 
 ## Evidence limits and open work
 
-Installed firmware, time distribution, retention under bus loss, and diagnostic/energy behavior are not yet captured; publisher-specific Legrand instructions and current historical-guide compatibility are incomplete.
+Exact 003557-reference installation instructions, manufacturer clarification of the export’s three-input wording, hardware revision applicability and installed energy/time/retention/diagnostic behavior remain uncorroborated. The historical low-BUS warning is now documented with its revision scope.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -559,3 +597,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0121)

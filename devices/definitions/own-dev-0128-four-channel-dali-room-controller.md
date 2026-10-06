@@ -23,6 +23,15 @@ This room controller provides four DALI lighting channels and local SCS connecti
 | BTicino | `BMDI3101` | Established catalogue identity | Manufacturer database commercial record `1180` explicitly links this SKU to item `1180` |
 | Legrand | `048844` | Established catalogue identity | Manufacturer database commercial record `1776` explicitly links this SKU to item `1180` |
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1180` | `BMDI3101` | `Room controller - Dimmer 4 Outputs Dali` | `1` | `5` | `1` | `` | `0` | `0` | `` |
+| `1776` | `048844` | `Room controller - Dimmer 4 Outputs Dali` | `2` | `5` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -38,7 +47,7 @@ This room controller provides four DALI lighting channels and local SCS connecti
 | Mains | `100..240 Vac; 50/60 Hz` | `BT00310-c-IT` printed/PDF pp. 1-3 |
 | Standby consumption | `2.4 W` | `BT00310-c-IT` printed/PDF pp. 1-3 |
 | DALI outputs, technical sheet | `4 channels; <=32 ballasts/channel` | `BT00310-c-IT` printed/PDF pp. 1-3 |
-| DALI outputs, Italian export | `4 independent channels; <=16 ballasts/channel` | `BT00310-c-IT` printed/PDF pp. 1-3 |
+| DALI outputs, Italian export | `4 independent channels; <=16 ballasts/channel` | BMDI3101 Italian product export PDF p. 1 |
 | Peripheral SCS supply budget | `combined four peripheral branches <=200 mA` | `BT00310-c-IT` printed/PDF pp. 1-3 |
 | SCS cable lengths | `<=150 m controller-to-farthest peripheral; <=500 m supply-to-farthest bus device` | `BT00310-c-IT` printed/PDF pp. 1-3 |
 | DALI cable lengths | `100 m/0.5 mm²; 150 m/0.75 mm²; 300 m/1.5 mm²` | `BT00310-c-IT` printed/PDF pp. 1-3 |
@@ -60,6 +69,19 @@ This room controller provides four DALI lighting channels and local SCS connecti
 | Main item model / `modobj` | `170` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `170` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -69,6 +91,12 @@ This room controller provides four DALI lighting channels and local SCS connecti
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -92,10 +120,11 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `377` | Advanced Configuration | `2` | Association key `2` |
+| `377` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ## Firmware-scoped configuration
 
@@ -138,12 +167,15 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
-
 ### Object `167` - Room controller
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `MODE` | `0` = Stand-alone mode; `1` = Supervision mode | `0` | Modality; Mode |
+
+### Semantic review findings
+
+Firmware `377` is wildcard/default and Deprecated in this retained catalogue. Slots `1..4` contain dimmer Object `8`; slot `5` is room-controller Object `167`, MODE `0` stand-alone / `1` supervision, default 0. Five Modules therefore do not mean five DALI outputs. No Virgin, slot-condition or conversion rows are stored; AID is the sole firmware field and Advanced Configuration the sole stored mode. Product Plug&Go/Push&Learn are commissioning procedures, not missing physical-selector records. Filters `1029..1034`/`2185` retain full reusable domains; no filter forces `TYPE_LOAD=8` (DALI). Generic TYPE_STANDARD 1–10/0–10 V and phase-control choices do not make this a universal voltage/phase dimmer. MIN_LEVEL_ADV default 0 remains outside its domain 1..100. Source-supported 16/32-ballast capacities are a revision/specification discrepancy, not an unresolved identity.
 
 ## Conditions, filters, and conversions
 
@@ -196,7 +228,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `8` - Dimmer actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `167` - Room controller | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -209,6 +240,8 @@ The standalone topology powers SCS controls/sensors from the mains-powered room 
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
+The sheet’s p. 3 drawing uses a local channel command for DALI learning: press less than one second, then hold for ten seconds; this is distinct from the SCS LEARN button. The loads fully illuminate and then dim/switch off in random order. Mixing DALI and DSI on the same channel is forbidden. The four sensor/control branches share the 200 mA supply budget; the separate SCS backbone is not a fifth DALI output. RJ45 is used for SCS, not Ethernet. The p. 1 standalone wiring prose labels 110–230 Vac whereas its technical table gives 100–240 V; retain the broader technical rating without rewriting the example.
+
 ## Source reconciliation
 
 BMDI3101 and 048844 are explicit database identities. The exact 2013 sheet states 32 ballasts per channel repeatedly, whereas the retrieved Italian product export states 16. This is an unresolved capacity/revision discrepancy; no manufacturer change notice establishes which installed units support which capacity. Four dimmer placements plus room-controller Object `167` explain five Firmware Modules without implying five DALI outputs.
@@ -219,6 +252,8 @@ BMDI3101 and 048844 are explicit database identities. The exact 2013 sheet state
 | --- | --- |
 | `BT00310_c_IT.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `BMDI3101-italian-product-sheet.pdf` | Exact named product export; identity and available commercial/physical attributes retained; compliance-template date does not date the product. |
+
+The product export additionally identifies four peripheral SCS inputs and one backbone input with terminal/RJ45 connections and zero-crossing wording. These do not resolve the 16-versus-32-ballast capacity conflict. No change notice ties the different published capacities to a hardware/firmware revision. Separate Push&Learn and Virtual Configurator manuals linked generically by the sheet were not inspected; a generic programme name does not prove all reusable dimmer settings reach this hardware.
 
 ## Evidence limits and open work
 
@@ -236,3 +271,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0128)

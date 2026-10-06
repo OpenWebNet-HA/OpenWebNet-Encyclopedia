@@ -2,7 +2,7 @@
 
 ## Summary
 
-This gateway links the SCS and ZigBee sides of the automation system, as established by its manufacturer catalogue role. Exact radio compatibility, commissioning procedures and physical specifications remain documentation gaps for the established product references.
+This gateway links the wired SCS lighting system to a manufacturer-profile ZigBee radio network. The exact Legrand 048832 leaflet documents a 27 Vdc BUS connection, false-ceiling mounting and separate network and Push&Learn commissioning; BMNE4000 shares its catalogue item, with exact hardware documentation still absent.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -23,17 +23,35 @@ This gateway links the SCS and ZigBee sides of the automation system, as establi
 | Legrand | `048832` | Established catalogue identity | Manufacturer database commercial record `1786` explicitly links this SKU to item `1169` |
 | BTicino | `BMNE4000` | Established catalogue identity | Manufacturer database commercial record `1923` explicitly links this SKU to item `1169` |
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1786` | `048832` | `Gateway SCS / ZIGBEE` | `2` | `5` | `1` | `` | `0` | `0` | `` |
+| `1923` | `BMNE4000` | `Gateway SCS / ZIGBEE` | `1` | `5` | `1` | `` | `0` | `0` | `BTicino_Undefined_Gateway SCS / ZIGBEE` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1169` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `LE05133AA.pdf` | Exact Legrand 048832 installation/commissioning leaflet | LE05133AA; no explicit publication date established | All eight PDF pages examined: exact 048832 cover, 27 Vdc, radio/profile/range and temperature; p. 2 mounting/BUS topology/LEDs; p. 3 network; pp. 4–7 direction-specific Push&Learn and peripheral deletion; p. 8 safety. Other commercial reference BMNE4000 not named. | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/e1/6ee11e2bd386a9b3506ef1e48a5846874dec6f0109f70971bb3d7caa6e4130c8.pdf) | [Publisher source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le05133aa.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Physical/electrical specification coverage | Unknown - no applicable exact-product original located | Documentation gap; explicit catalogue SKU-to-item identities are established |
+| Documented hardware scope | Legrand 048832 only | LE05133AA PDF p. 1 |
+| Supply | `27 Vdc` | LE05133AA PDF pp. 1–2; BUS/SCS RJ45, not Ethernet |
+| Operating temperature | `5..45 °C` | LE05133AA PDF p. 1 |
+| Radio | `2.4 GHz` | LE05133AA PDF p. 1; ZigBee certified mesh, manufacturer-specific profile stated in French |
+| Open-field range | English/most cover languages: approximately `150 m`; Chinese: `100 m` | LE05133AA PDF p. 1 translation discrepancy; no universal installed range inferred |
+| Mounting | False ceiling, screw fixing and connector cover | LE05133AA PDF p. 2 |
+| SCS run | A≤`250 m` (branch to gateway); A+B≤`500 m` (complete illustrated run) | LE05133AA PDF p. 2 diagram |
+| Gateway count | One 048832 on the illustrated SCS topology; second crossed out | LE05133AA PDF p. 2; not extrapolated to every isolated bus segment |
+| Current / dimensions / learning capacity | Not numerically specified in the examined leaflet | Full-table indication is documented without a number of entries |
 
 ## Identity
 
@@ -46,6 +64,19 @@ This gateway links the SCS and ZigBee sides of the automation system, as establi
 | Main item model / `modobj` | `202` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `202` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -55,6 +86,12 @@ This gateway links the SCS and ZigBee sides of the automation system, as establi
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -74,10 +111,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `376` | Advanced Configuration | `2` | Association key `2` |
+| `376` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+### Manufacturer commissioning scope
+
+LE05133AA p. 3 requires radio-network creation/joining before Push&Learn and a five-second wait after closing the network. The illustrated NETWORK creation hold is three seconds; the ten-second network-removal hold belongs to the illustrated radio peripheral, not a documented gateway factory reset. Multiple open networks produce the illustrated three-second flash/retry indication. These procedures do not change the catalogue’s sole Advanced Configuration association.
+
+Push&Learn pp. 4–5 pairs a ZigBee control to SCS recipients; pp. 6–7 pairs SCS group/scenario controls to ZigBee loads. The first ZigBee learn indication takes four seconds, with subsequent selection within ten seconds; the illustrated recipient-selection phase allows up to ten minutes. The completion/recipient interaction differs by direction, so follow the appropriate original sequence. Ten-second deletion drawings concern the depicted peripheral/control associations and are not a universal gateway reset. Traffic means SCS/radio exchanges, Identify means identification active, and Full table is a five-second notification. No generic ZigBee-brand interoperability or unlimited association count is established.
 
 ## Firmware-scoped configuration
 
@@ -100,6 +144,10 @@ Catalogue Object key `465` maps to external Object `193`.
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
 | `MODE` | `0` = SCS2; `1` = SCS1 | `0` | Mode for SCS-Zigbee |
+
+### Semantic review findings
+
+Firmware `376` is wildcard/default and Deprecated in this retained historical catalogue, with one placement of Object `193` (database key `465`) and no Virgin association. AID is its sole firmware field. Object A `0..10`/PL `0..15` are reusable software addresses, not an inferred physical configurator bay. MODE has reusable `0` (SCS2, default) and `1` (SCS1); relation filter `1102` allows only `1`, excluding default `0` without supplying a replacement. Preserve that inconsistency; SCS1/SCS2 labels alone do not identify protocol versions. No slot conditions, conversions, connections, parameters or packages are stored. The exact 048832 leaflet establishes BUS/SCS over RJ45 and a manufacturer-profile ZigBee radio; RJ45 does not mean Ethernet, and catalogue equivalence does not automatically transfer the leaflet’s physical properties to unexamined BMNE4000 hardware.
 
 ## Conditions, filters, and conversions
 
@@ -145,7 +193,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `193` - Gateway SCS-ZigBee | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -160,13 +207,19 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 
 ## Source reconciliation
 
-048832 and BMNE4000 are explicit manufacturer database commercial identities of the same technical item. Exact manufacturer PDF discovery did not yield an applicable original: current numeric/legacy routes were absent or returned catalogue shells/errors. AUTOMATISME contains no BMNE4000/048832 match and supplies no transferable ratings. The item’s deprecated catalogue status and unspecified version tuple do not establish current market availability or installed firmware.
+The manufacturer catalogue explicitly links 048832 and BMNE4000 to item 1169. The exact 048832 LE05133AA leaflet now establishes mounting, wired/radio interfaces and commissioning within that SKU scope; no applicable BMNE4000 hardware original was obtained. The cover’s approximately 150 m English range differs from the Chinese 100 m statement; installation-dependent radio range is not resolved by choosing one translation. The French cover specifies a manufacturer profile, so ZigBee certification alone is not generic interoperability evidence. LED flashing legends differ between the pp. 4/5 examples (60/200 ms versus 60/60 ms); no unified timing is inferred. Historical catalogue MODE default 0 versus filter-only 1 remains a separate unresolved metadata inconsistency.
 
-The relation-specific restriction table explicitly identifies reusable defaults outside the permitted subset. These are catalogue inconsistencies; no replacement default is inferred. Runtime Configuration and manufacturer modes must be corroborated before selecting a substitute.
+A discovered MQ00410-c-EN document concerns flush-mounted L/N/NT4578N, 067250 and HD/HC/HS4578, not these SKUs; its 20 mA, two-module and 32-device specifications are excluded. The French Céliane radio guide likewise did not establish an applicable 048832/BMNE4000 specification. Deprecated status and wildcard firmware do not establish present-day availability or installed state.
+
+### Retained source accounting
+
+| Original | Role / reconciliation scope |
+| --- | --- |
+| `LE05133AA.pdf` | Exact 048832 installation, radio/BUS topology and commissioning; language/range/timing discrepancies retained. BMNE4000 hardware applicability remains uncorroborated. |
 
 ## Evidence limits and open work
 
-Exact installation/commissioning instructions, supply/current, mounting, radio specification, pairing/reset behavior and installed diagnostics remain documentation or observation gaps. Catalogue identity is established; it is not unresolved because these PDFs are missing.
+Exact BMNE4000 hardware documentation, a stated gateway current/dimension/association-capacity specification, manufacturer clarification of language/timing discrepancies, gateway-specific factory reset and installed diagnostic/radio captures remain gaps. Exact 048832 identity, supply, mounting and commissioning are now documented.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -180,3 +233,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0125)

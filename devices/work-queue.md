@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 90 |
-| reviewed | 120 |
+| review-ready | 80 |
+| reviewed | 130 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1162 | Load management central unit | 2 | review-ready | OWN-DEV-0121 | partial | complete | complete | pending | - |
-| normal | 1163 | Actuator 16A with current sensor - 1 DIN | 2 | review-ready | OWN-DEV-0122 | partial | complete | complete | pending | - |
-| normal | 1164 | Actuator 16A - 1 DIN | 2 | review-ready | OWN-DEV-0123 | partial | complete | complete | pending | - |
-| normal | 1165 | Flush mounted actuator 16A | 2 | review-ready | OWN-DEV-0124 | partial | complete | complete | pending | - |
-| normal | 1169 | Gateway SCS / ZIGBEE | 2 | review-ready | OWN-DEV-0125 | partial | pending | complete | pending | - |
-| normal | 1171 | 8 channels DALI/SCS interface, 10DIN | 2 | review-ready | OWN-DEV-0126 | partial | complete | complete | pending | - |
-| normal | 1175 | VideoTouchTelephone | 2 | review-ready | OWN-DEV-0127 | partial | complete | complete | pending | - |
-| normal | 1180 | Room controller - Dimmer 4 Outputs Dali | 2 | review-ready | OWN-DEV-0128 | partial | complete | complete | pending | - |
-| normal | 1195 | Polyx Memory Display | 2 | review-ready | OWN-DEV-0129 | partial | complete | complete | pending | - |
-| normal | 1311 | DIN - Dimmer 4X  1-10V 1 000VA - 230V | 2 | review-ready | OWN-DEV-0130 | partial | complete | complete | pending | - |
 | normal | 1331 | Scenario programmer | 2 | review-ready | OWN-DEV-0131 | partial | complete | complete | pending | - |
 | normal | 1423 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0132 | partial | complete | complete | pending | - |
 | normal | 1463 | Actuator DIN with 4 fil pilote outputs bus | 2 | review-ready | OWN-DEV-0133 | partial | complete | complete | pending | - |
@@ -193,8 +183,18 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1147 | Local Display | OWN-DEV-0018 |
 | 1156 | DIN - Switch  8 x 16 A - 230V | OWN-DEV-0101 |
 | 1160 | Bus meter with memory 3-inputs for toroids - 1 DIN | OWN-DEV-0120 |
+| 1162 | Load management central unit | OWN-DEV-0121 |
+| 1163 | Actuator 16A with current sensor - 1 DIN | OWN-DEV-0122 |
+| 1164 | Actuator 16A - 1 DIN | OWN-DEV-0123 |
+| 1165 | Flush mounted actuator 16A | OWN-DEV-0124 |
+| 1169 | Gateway SCS / ZIGBEE | OWN-DEV-0125 |
+| 1171 | 8 channels DALI/SCS interface, 10DIN | OWN-DEV-0126 |
+| 1175 | VideoTouchTelephone | OWN-DEV-0127 |
+| 1180 | Room controller - Dimmer 4 Outputs Dali | OWN-DEV-0128 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
 | 1190 | Touch control | OWN-DEV-0019 |
+| 1195 | Polyx Memory Display | OWN-DEV-0129 |
+| 1311 | DIN - Dimmer 4X  1-10V 1 000VA - 230V | OWN-DEV-0130 |
 | 1340 | Multimedia Touch Screen | OWN-DEV-0102 |
 | 1376 | Touch control multifunction | OWN-DEV-0009 |
 | 1455 | Web Server A/V Bus | OWN-DEV-0002 |

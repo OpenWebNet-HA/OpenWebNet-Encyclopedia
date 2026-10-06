@@ -23,6 +23,15 @@ Iryde Touch Phone combines telephone and two-wire video-door-entry functions in 
 | BTicino | `345020` | Established catalogue identity | Manufacturer database commercial record `1174` explicitly links this SKU to item `1175` |
 | BTicino | `345021` | Established catalogue identity | Manufacturer database commercial record `1175` explicitly links this SKU to item `1175` |
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1174` | `345020` | `VideoTouchTelephone` | `1` | `5` | `1` | `` | `0` | `0` | `` |
+| `1175` | `345021` | `VideoTouchTelephone` | `1` | `5` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -32,6 +41,7 @@ Iryde Touch Phone combines telephone and two-wire video-door-entry functions in 
 | `BT00650_b_IT.pdf` | Manufacturer legacy documentation | `BT00650_b_IT; 22/01/2014` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-5; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/5a/b8/5ab87783add80df4bc0d990f800b9a0297251e3f331522da35a8f7f4bde1c388.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00650_b_IT.pdf) |
 | `BT00650_b_EN.pdf` | Exact historical manufacturer documentation | `BT00650_b_EN; 22/01/2014` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-5; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/19/2f194a23331d8b4371df7f2a4aa15f783b95cb5517b0e41b76b87ebb64129125.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/BT00650_b_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1175` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `345020-software-FR.pdf` | Exact TiIrydeTouchPhone software manual, BTicino Belgium | 10/11-01 PC; cover 345020–345021 | All 52 PDF pages (printed pp. 1–50 plus end matter) examined: project/menu configuration, USB serial transfer, firmware/info, sound/temperature/scenario/paging, contacts and ringtones. Software UI objects are not additional catalogue Modules. | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/7d/bc7dba0f8c840b2d33520f5112cba1cf82fafb7ad23a7f99f8d242623d29d4d8.pdf) | [Publisher source](https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/TiIrydetouchphone/345020%20software%20FR.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -42,7 +52,7 @@ Iryde Touch Phone combines telephone and two-wire video-door-entry functions in 
 | Operating temperature | `5..45 °C` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
 | Display | `4.3-inch 16:9 colour LCD touch screen` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
 | Dimensions, technical sheets | `235 x 120 x 22 mm` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
-| Dimensions, Italian 345020 export | `235 x 120 x 20 mm` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
+| Dimensions, both Italian exports | `235 x 120 x 20 mm` | Exact 345020 and 345021 Italian product exports, PDF p. 1 |
 | Mounting accessories | `345024 wall bracket; 345023 tabletop support` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
 | Interfaces | `PSTN/PABX; 2-wire SCS video; supplementary 1-2 supply; mini-USB` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
 | Controls | `backlit keypad; magnetic handset/Hall detection; handsfree speaker/microphone; camera, staircase, ringtone, handsfree and door-lock keys` | `BT00650-b-EN/IT` printed/PDF pp. 1-5 |
@@ -58,6 +68,19 @@ Iryde Touch Phone combines telephone and two-wire video-door-entry functions in 
 | Main item model / `modobj` | `165` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `165` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +90,16 @@ Iryde Touch Phone combines telephone and two-wire video-door-entry functions in 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `68` | `70` | BTicino (key `1`) | `0` | external software | `TiIrydeTouchPhone_0102` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,21 +119,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `68` | Product Programming | `3` | Association key `4` |
+| `68` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `68` | USB | `3` |
+| `68` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `68` | `1` | `0` | `TiIrydeTouchPhone_0102` | Parameter type `7`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -146,6 +171,10 @@ Catalogue Object key `475` maps to external Object `153`.
 | `VDEADDRESS2_ENABLE` | `0` = disable; `1` = enable | `0` | Enable VDEaddress2 (CITO2) |
 | `VDEGENADDRESS_ENABLE` | `1` = enable | `0` | VDE general CITO enable |
 
+### Semantic review findings
+
+Firmware `68` is Official/default, version/revision/build `1.2.24`, with one slot for Object `153` (database key `475`), no Virgin association, no conditions/filters/conversions. Its physical N digits `0..9`, P digit `0..9` and `M=0` differ from reusable N `0..3999` and P `0..95`; no attached conversion establishes digit composition into the extended address. VDEGENADDRESS_ENABLE has domain {1} with default 0 outside it; no replacement default is inferred. The 21 reusable fields include extra call addresses, timeout selectors, paging, handsfree and studio roles; their timing units and installed effects are not supplied by the catalogue descriptions. USB and parameter record `70` (brand 1, line 0, TiIrydeTouchPhone_0102) are retained as associations; parameter payload and firmware file are not inspected. Rich PC menu objects control remote subsystems and do not add local firmware Modules.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -190,7 +219,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `153` - Telephonic Internal Unit | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -203,9 +231,15 @@ Basic setup selects a language and exposes video/telephone/settings functions; p
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
+### TiIrydeTouchPhone USB and project workflow
+
+The October 2011 French software manual pp. 4–13 requires the device connected to the BUS and powered; USB-miniUSB appears on the PC as a virtual COM port. Select the serial connection and the assigned COM port. Send configuration writes the project; Receive configuration retrieves it for editing/saving. Firmware update selects a manufacturer `.fwz` file, while Request device info reports hardware/software information. No firmware payload or successful installed update is established by this procedure. Offline project creation needs no connected unit. Historical OS/.NET requirements are those of the manual, not a claim of modern OS support.
+
+Pages 14–41 document eight home-page icons: seven customizable and Settings fixed. Separate projects can update menus, contacts or ringtones without rewriting every project component. Paging targets point-to-point, room, general or advanced destinations; scenarios use the module/central-unit/CEN address, and temperature control has distinct four-zone and 99-zone paths. Telephone and Settings objects need no configuration; remote subsystem menu objects are separate from local Object `153`. Pages 42–49 import `.mp3`, `.wav` or `.pcm`, select a ringtone clip of at most five seconds, associate it to events and configure contacts/numbers/photos. Page 50 sets PABX presence before partition/general-ring settings; master-clock and Master/Slave settings are product setup, not installed values inferred from reusable defaults.
+
 ## Source reconciliation
 
-345020 and 345021 are explicitly co-listed as Iryde Touch Phone in the exact bilingual sheet and database. The 345020 product export reports 20 mm depth while both technical sheets report 22 mm; no source explains the measurement boundary. Handset/telephone UI capability is broader than the single configured Object `153`; it does not establish all displayed subsystem Objects as active device-local Modules. Labels/legend numbering in the sheet’s English translation are inconsistent; port names and diagrams govern the documented physical interface, not the shifted list indices.
+345020 and 345021 are explicitly co-listed as Iryde Touch Phone in the exact bilingual sheet and database. Both 345020 and 345021 product exports report 20 mm depth while both technical sheets report 22 mm; no source explains the measurement boundary. Handset/telephone UI capability is broader than the single configured Object `153`; it does not establish all displayed subsystem Objects as active device-local Modules. Labels/legend numbering in the sheet’s English translation are inconsistent; port names and diagrams govern the documented physical interface, not the shifted list indices.
 
 ### Retained source accounting
 
@@ -215,10 +249,11 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 | `345021-italian-product-sheet.pdf` | Exact named product export; identity and available commercial/physical attributes retained; compliance-template date does not date the product. |
 | `BT00650_b_IT.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `BT00650_b_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
+| `345020-software-FR.pdf` | October 2011 software manual explicitly covering 345020 and 345021; USB/COM transfer, menu, ringtone, contact and device-info procedures. |
 
 ## Evidence limits and open work
 
-Exact software manual and model-specific firmware/update/reset procedure, depth clarification, concurrent handset behavior and diagnostic captures remain missing.
+A model-specific hardware reset sequence, 20 versus 22 mm depth clarification, mapping of software/manual revision to installed firmware, actual telephone/PABX continuity, parameter payloads and hardware captures remain uncorroborated. The exact software transfer/update/info procedure is now retained and examined; linked installation/user editions and firmware downloads remain unexamined.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -232,3 +267,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0127)

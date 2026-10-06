@@ -42,6 +42,15 @@ This flush-mounted load-management actuator switches a configured load through a
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1166` | `HC/HS/HD4672N` | `Flush mounted actuator 16A` | `1` | `2` | `1` | `` | `0` | `0` | `BTicino_Axolute_Flush mounted actuator 16A` |
+| `1891` | `L/N/NT4672N` | `Flush mounted actuator 16A` | `1` | `4` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -71,7 +80,8 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Ferromagnetic transformer | `4 A; cos phi 0.5 / 920 VA` | `ST-00001920-EN` printed/PDF pp. 1-4 |
 | Load-control priority | `1..63` | `ST-00001920-EN` printed/PDF pp. 1-4 |
 | Local forcing | `4 h after load shedding` | `ST-00001920-EN` printed/PDF pp. 1-4 |
-
+| Primary / load supply | `110..240 Vac; 50/60 Hz; load maximum 16 A` | LE14741AA printed/PDF p. 2 electrical tables; technical-sheet lamp ratings remain separate |
+| Primary draw | `10 mA` | LE14741AA printed/PDF p. 2; ST-00001920-EN p. 1 separately specifies 10 mA max BUS draw |
 
 ### Publisher export attributes
 
@@ -95,8 +105,6 @@ These are the captured publisher classification values for the named variants. T
 
 ### Published status indicators
 
-
-
 | State | LED indication | Source |
 | --- | --- | --- |
 | not configured | `orange/green 128 ms/128 ms` | Exact technical sheet, indicator table in Documentation |
@@ -119,6 +127,20 @@ These are the captured publisher classification values for the named variants. T
 | Commercial record count | `2` | `EN_DEVICE` |
 | Additional system | Automation; key `1`; model `127` | Separate non-main catalogue association |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `127` | No | Canonical item/system relationship |
+| New energy saving and load control | `8` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -128,6 +150,12 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -148,16 +176,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `236` | Virtual Configuration | `1` | Association key `1` |
-| `236` | Advanced Configuration | `2` | Association key `2` |
-| `236` | Physical configuration | `0` | Association key `3` |
+| `236` | Physical configuration | `0` | Canonical firmware/mode association |
+| `236` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `236` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ### Published physical actuator modes
-
-
 
 | Function | Physical selector | Published virtual scope |
 | --- | --- | --- |
@@ -166,6 +193,12 @@ No connection associations are stored for these firmware definitions. This does 
 | Master pushbutton | `M=PUL` | ignores room/general controls |
 | Delayed slave `OFF` | `M=1..4:1..4 min` | `0..255 s; point-to-point only` |
 | Slave `PUL` | no listed physical selector | software configuration required |
+
+| Addressing scope | Published physical | Published virtual | Evidence |
+| --- | --- | --- | --- |
+| Lighting | A=`0..9`; PL=`1..9` | Area `0..10`; lighting point `0..15` | ST-00001920-EN p. 2 |
+| Groups | G=`0..9` | Ten groups; each `0..255` | ST-00001920-EN p. 2 |
+| Load priority | P1/P2=`01..63` | `1..63` | ST-00001920-EN p. 2 |
 
 ## Firmware-scoped configuration
 
@@ -211,7 +244,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `197` - Energy load control actuator
 
 Catalogue Object key `468` maps to external Object `197`.
@@ -230,6 +262,10 @@ Catalogue Object key `468` maps to external Object `197`.
 | `STANDBY_THRESHOLD` | `0..255` | `50` | Stand-by power threshold for energy management actuators (W) |
 | `DC_RATED_VOLTAGE` | `1..255` | `24` | DC voltage (V) |
 | `WITH_SENSOR` | `1` = Yes | `1` | With sensor |
+
+### Semantic review findings
+
+Firmware `236` places Objects `197`/`6` in slots `1`/`2`, with no Virgin association. Condition `4157` references conversion `411` for P1/P2 priority `1..63`; priority 0 and digit combinations 64–69 have no mapped output. Slot-2 condition `4145` has no conversion. Filters `1218`, `1876` and `1219..1226` retain the indicated reusable domains, including `WITH_SENSOR=1`. That generic sensor field does not establish an integrated consumption sensor for the six flush-mounted products. Physical A is `0..9`, PL `1..9`, G `0..9`, and priority `01..63`; reusable A `0..10`, PL `0..15` and ten group fields `0..255` are software scopes. Two wiring-device modules, two software slots and one bistable relay count different things.
 
 ## Conditions, filters, and conversions
 
@@ -348,7 +384,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `6` - Light actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `197` - Energy load control actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -356,6 +391,8 @@ These are catalogue-derived functional roles, not a declaration that every candi
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
 
 ## Programming
+
+ST-00001920-EN p. 2 documents configuration from Home+Project following the app flow. LE14741AA names the local load-forcing/control button but supplies no app-identification gesture; the DIN products’ short-press identification instruction is not transferred.
 
 Configure lighting and load management independently. In mixed use, automation commands set the relay only while enabled or forced. During shedding the device remembers the latest automation request and applies it after load re-enabling; an automation `ON` command does not override shedding. Physical lighting modes include master `M=0`, slave `M=SLA`, master `PUL` `M=PUL` and delayed slave `OFF` `M=1..4` minutes. Suite exposes additional load type, phase, restoration and slave-`PUL` options. Physical priority uses `P1/P2=01..63`; this is distinct from lighting A/PL. Current server support is F460, F461 and Classe 300EOS. Use a supporting relay above 16 A; the sheet’s physical A range is `0..9`, unlike DIN actuator sheets’ `1..9`.
 
@@ -378,6 +415,10 @@ The current technical sheet, multilingual instruction and export are reconciled 
 | `N4672N-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
 | `NT4672N-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
 
+The applicable June 2025 guide pp. 74–79 was checked separately from the exact technical sheets. Its priority-editing/app description requires F460 or Classe 300EOS; that scoped example is not a contradiction of later technical sheets additionally naming F461. Publisher brochure/catalogue-page links and CAD/BIM drawings remain unexamined; their link labels are not extra capability evidence. English mounting-leaflet instructions and electrical/LED diagrams were checked; other translations were not independently reconciled in full. No manufacturer change notice maps source revisions to installed hardware.
+
+LE14741AA supplies the primary/load voltage/current tables missing from the technical-sheet overview. Its maximum 16 A is separate from the technical sheet’s lamp-type ratings; a 3680 W resistive-load rating from F522/F523 is not transferred to this family. The six exact publisher exports agree on two-module mounting, 10 A incandescent, 4 A fluorescent/ferromagnetic and 500 W LED/CFL. A separate red LED indicates shedding, unlike the DIN actuators’ single bicolour red state. Leaflet p. 2 depicts removal from the support, not a factory reset.
+
 ## Evidence limits and open work
 
 Installed mixed-mode priority/restoration behavior, hardware revisions and diagnostic support remain unobserved. Current load ratings apply only to the named sheet revision, not every historical physical unit.
@@ -394,3 +435,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0124)

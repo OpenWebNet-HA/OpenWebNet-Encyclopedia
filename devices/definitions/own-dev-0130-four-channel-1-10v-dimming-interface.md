@@ -23,6 +23,23 @@ This DIN dimming interface controls four lighting channels through 1-10 V output
 | BTicino | `BMDI1002` | Established catalogue identity | Manufacturer database commercial record `1311` explicitly links this SKU to item `1311` |
 | Legrand | `002612` | Established catalogue identity | Manufacturer database commercial record `1772` explicitly links this SKU to item `1311` |
 
+### Complete catalogue commercial metadata
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1311` | `BMDI1002` | `DIN - Dimmer 4X  1-10V 1 000VA - 230V` | `1` | `5` | `1` | `` | `0` | `0` | `` |
+| `1772` | `002612` | `DIN - Dimmer 4X  1-10V 1 000VA - 230V` | `2` | `5` | `1` | `` | `0` | `0` | `` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `BMDI1002` | `8005543406496` | [Archived original](https://archive.openwebnet-ha.org/sha256/be/e8/bee84fb8d01855fb741c199fbd27c235e2648dcc426793b3e708dd1e0b71a173.pdf), `BMDI1002-italian-product-sheet.pdf`, PDF p. 1 |
+
+This verified EAN identifies the exact BTicino reference; it does not establish an installed firmware revision.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -60,6 +77,19 @@ This DIN dimming interface controls four lighting channels through 1-10 V output
 | Main item model / `modobj` | `174` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `174` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -69,6 +99,12 @@ This DIN dimming interface controls four lighting channels through 1-10 V output
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -91,12 +127,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `207` | Virtual Configuration | `1` | Association key `1` |
-| `207` | Advanced Configuration | `2` | Association key `2` |
-| `207` | Physical configuration | `0` | Association key `3` |
+| `207` | Physical configuration | `0` | Canonical firmware/mode association |
+| `207` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `207` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
 
 ## Firmware-scoped configuration
 
@@ -145,6 +182,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9 |
 | `G10` | `0..255` | `0` | Group 10 |
 
+### Semantic review findings
+
+Firmware `207` is wildcard/default Official with four slots containing Object `8`; no Virgin association. Each slot’s empty condition `4149` references conversion `3`: physical M=`1..4` yields `M=0` with DELAYED_OFF 60/120/180/240 seconds and `LOCAL_BUTTON=0`; `M=0` yields all zeros; symbolic PUL/SLA map to 15/11. Stored `M=I/O` yields `LOCAL_BUTTON=9` but is outside this firmware’s declared domain, which permits only `0..4`, SLA and PUL; do not advertise I/O as a reachable mode. Filters `921..926`, `2181`, `2477` and `2478` retain the listed restrictions. TYPE_LOAD filter `926` excludes reusable code 5 (fluorescent) but still retains DALI, DSI and phase-control labels; the technical sheet documents 1–10 V ballast control, so generic retained values do not establish those interfaces. MIN_LEVEL_ADV default 0 remains outside 1..100. Catalogue software TYPE_STANDARD includes 0–10 V, without proving product electrical compatibility or repairing the source default.
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -185,7 +226,7 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | `3` | `M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `3` |
 | `3` | `M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `3` |
 
-No conversion reference is attached to these slot rows. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+All four slot conditions reference rule `3`, with the stored M-to-delay/local-button/role branches retained above. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
 ## Diagnostic applicability
 
@@ -206,7 +247,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | Catalogue Object / role | Applicability | Evidence |
 | --- | --- | --- |
 | `8` - Dimmer actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
-
 
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
@@ -231,9 +271,11 @@ The exact BTicino technical sheet and Italian export establish the electrical/ou
 | `BMDI1002-italian-product-sheet.pdf` | Exact named product export; identity and available commercial/physical attributes retained; compliance-template date does not date the product. |
 | `BT00581_b_IT.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
+The Italian BMDI1002 export independently confirms zero-crossing wording, four 4.3 A outputs at 230 Vac, 100–240 Vac supply, 10 DIN modules and the EAN recorded under Commercial identities. The exact sheet’s 200 mA refers to the sum of ballast-provided 1–10 V control currents, not 200 mA switched-load capacity. The 120 A/20 ms inrush limit is stated at 230 Vac. Its 1000 VA at 230 Vac and 500 VA at 110 Vac are per channel for the illustrated ballast-controlled lamp categories, not a universal lamp rating. Linked separate Push&Learn/Virtual Configurator guides and drawings remain unexamined.
+
 ## Evidence limits and open work
 
-Exact Legrand-reference instructions, installed DALI/1-10 V control behavior, association persistence and firmware diagnostics remain unobserved.
+Exact 002612 hardware instructions, separate commissioning-software manuals, source-specific 0–10 V versus 1–10 V naming, association persistence and installed 1–10 V/diagnostic captures remain unexamined or uncorroborated. Generic DALI/DSI selector labels do not establish DALI/DSI electrical outputs.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -247,3 +289,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0130)
