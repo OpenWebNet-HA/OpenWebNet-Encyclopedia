@@ -47,25 +47,29 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00181-c-EN` | Technical sheet | revision c / 2014-04-29 | all five current identity groups; fan-coil operation and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/05/d1/05d165146138f9a01bb959ab13afc5cda85ada4cca98deb57a92bb3c15a6d1dc.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00181-c-en.pdf) |
-| `L4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692FAN) |
-| `N4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692FAN) |
-| `NT4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692FAN) |
-| `HC4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN) |
-| `HS4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692FAN) |
-| `HD4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4692FAN` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN) |
-| `067455-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067455` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/7f/92/7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/sonde-avec-commande-pour-ventilo-convecteur-myhome-up-celiane) |
+| `L4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/a1/06a19f989189cb0fac3e1904848bbce38337ce2870ee1d4298cde6afb4f419a5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4692FAN) |
+| `N4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/33/b833c91f0184f022477f301ccf18670c09624c8316930c8a641a0d22e19988ed.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4692FAN) |
+| `NT4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/11/d8/11d8149fa99f3c264bd65cd20ad36c5b5e26eca1cfa8370dce1280ab0f0178e2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4692FAN) |
+| `HC4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/0b/770b9d07a8147d1a9fad5b3311bb1f3411748d4e338dfa9522a8d17178aec1af.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4692FAN) |
+| `HS4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/03/10/03102f25ebccdbcadc5f31e1dbb5085be9cda233c07805eade769c16b8b1e745.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4692FAN) |
+| `HD4692FAN-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4692FAN` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN) |
+| `067455-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067455` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Exact SKU/EAN metadata examined; other technical attributes, linked downloads and prices are outside this review scope. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/7f/92/7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/sonde-avec-commande-pour-ventilo-convecteur-myhome-up-celiane) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Mounting | 2 wiring-device modules | publisher product family data |
-| Temperature measurement range | `0..40 °C` | publisher product data |
-| Local setpoint adjustment | approximately `-3..+3 °C` around the central setpoint | `MQ00181-c-EN` |
+| Local setpoint adjustment | `-3..+3 °C` around the central setpoint | `MQ00181-c-EN` |
 | Local modes | normal regulation, antifreeze / thermal protection and `OFF` | `MQ00181-c-EN` |
 | Fan control | automatic or manual fan-speed selection, including minimum / medium / maximum | `MQ00181-c-EN` |
 | Local indicators | green/yellow status LEDs | `MQ00181-c-EN` |
 | Zone capability | up to `9` same-type actuators and `8` slave probes in documented master configuration | `MQ00181-c-EN` |
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Nominal SCS supply / current | `27 Vdc` / `6 mA` | Retained L/N/NT/HC/HS/HD4692FAN individual exports, printed/PDF p. 1 |
+| Additional fan indicators | Red automatic/manual mode LED and three red speed LEDs | `MQ00181-c-EN`, printed/PDF pp. 1 |
 
 ## Identity
 
@@ -77,6 +81,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Catalogue buses | `1`, `2` | Implementation evidence |
 | Commercial records | `5` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `19` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -85,6 +102,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `261` | `5` | `2` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No AS_FW_PACKAGE association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -105,13 +128,16 @@ No Virgin Object relation is required for the fixed topology.
 
 ## Configuration modes
 
-| Firmware | Mode | Meaning |
-| --- | --- | --- |
-| `261` | `1` | Physical configuration |
-| `261` | `3` | Advanced Configuration |
-| `185` | `1` | Physical configuration |
-| `185` | `2` | Virtual Configuration |
-| `185` | `3` | Advanced Configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `185` | Physical configuration | `0` | Canonical firmware/mode association |
+| `185` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `185` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `261` | Physical configuration | `0` | Canonical firmware/mode association |
+| `261` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -128,7 +154,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `261` | `ZB` | `0..9` | `1` | ZB; ZB thermo zone address |
 | `261` | `SLA` | `0..8` | `0` | `SLA`; Thermoregulation slave probe |
 
-
 The default firmware `261` uses wildcard build `-1` and a narrower `SLA` domain than firmware `185`.
 
 ## Object configuration surfaces
@@ -136,6 +161,14 @@ The default firmware `261` uses wildcard build `-1` and a narrower `SLA` domain 
 The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
 
 ### Object `184` - Master probe
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Sensing and operation | `FUNCTION`, `COND`, `RISC`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable sensing, mode and presentation settings; presence in this schema is not proof of physical capability. |
+| Addressing and membership | `ZAZB`, `ZAZB_CENTRAL` | Reusable addressing and group/zone scope; apply Device firmware restrictions. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Heating setpoints, timing, thresholds and regulation controls; values retain their encoded units. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Cooling setpoints, timing, thresholds and regulation controls; values retain their encoded units. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Logical associations and load classes, with cross-field validity requirements retained below. |
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
@@ -248,12 +281,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
 | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
-
-**Object `184` - Master probe - product interpretation.**
-
-For this Device, the fan-coil, ventilation, threshold and fan-speed settings are especially relevant. The same reusable Master probe Object also contains generic actuator, pump, contact, PID and setpoint surfaces; applicability remains filter- and firmware-scoped.
+Firmware `185` restricts `ZAZB` and `ZAZB_CENTRAL` to `0`, conflicting with rule `1000`, which maps only `01..99`, and their reusable defaults `01`. Its antifreeze subset `41..80` excludes default `14`, thermal-protection subset `6..49` excludes default `70`, and actuator-type subsets exclude ON/OFF default `0`. No replacement defaults are stored. Firmware `261` retains broader reusable ranges and `SLA=0..8`; firmware `185` permits `0..9` despite the published eight-slave limit. Validate the installed firmware and its restricted domains before presenting these values as usable configuration.
 
 ## Conditions, filters, and conversions
 
@@ -475,6 +505,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 The Device participates in temperature-control functions for fan-coil zones. The publisher additionally documents local automatic/manual fan-speed control and master operation with multiple actuators and slave probes.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| OFF priority | OFF has highest priority and must be released by the device that set it; local OFF also prevails if central unit fails. | `MQ00181-c-EN`, printed/PDF pp. 1 |
+| Protection / central-unit fault | Heating selects antifreeze, cooling thermal protection; on central-unit fault retains last received temperature/season settings. | `MQ00181-c-EN`, printed/PDF pp. 1 |
+| Master zone | Up to nine same-type actuators and eight slave probes; master averages its own measurement and those of slaves. | `MQ00181-c-EN`, printed/PDF pp. 1–2 |
+| Load classes in this sheet | Heating, cooling or combined; ON/OFF, OPEN/CLOSE, 3-speed fan-coil and GATEWAY; specifically 3-speed/Climaveneta fan-coil management. Reusable classes wider than these remain catalogue evidence. | `MQ00181-c-EN`, printed/PDF pp. 2 |
+
 ## Observed behavior and corroboration
 
 No sanitized hardware fingerprint is currently retained. Fan-speed behavior, local setpoint adjustment and master-zone capability are publisher-documented and still need protocol-level corroboration.
@@ -483,17 +520,28 @@ No sanitized hardware fingerprint is currently retained. Fan-speed behavior, loc
 
 Programming must apply the installed firmware's filter set, convert `ZA`/`ZB` to `ZAZB` and preserve the `SLA` difference between firmware lines. Fan-coil controls should be exposed only where their relation-specific filters permit them.
 
+Configure ZA/ZB to match the zone and its actuators; physical SLA `0..8` counts slaves. The knob probe operates as master, with probe family `4693` as slave. Slave numbering starts at `1` with no gaps. Virtual configuration is documented with Virtual Configurator `2.1` when physical configurators are absent (printed/PDF p. 2).
+
+Set heating/cooling load types, zone/pump associations and pump mode through the central unit’s Maintenance menus. The fan probe sheet permits a pump start delay but does not give a numeric limit. Calibration uses the central unit after probes have been powered for at least `2 h` with the hydraulic system OFF and stable room temperature, compared against a calibrated thermometer (printed/PDF p. 3).
+
+Reusable thermostat fields contain actuator/pump compatibility rules: combined actuator functions require matching heating/cooling types; fan thresholds must increase above regulation band; local opening/closing timeouts cannot both be active; zero timeout has the documented infinite meaning. Fil Pilote and gateway pump restrictions and reserved load values remain scoped to the catalogue schema, not proof of physical functionality on this knob probe.
+
 ## Source reconciliation
 
 `MQ00181-c-EN` establishes the fan-coil product family, local ±3 °C setpoint adjustment, fan-speed controls, indicators and master-zone capabilities. The catalogue establishes the two firmware lines, fixed Object `184`, `ZA`/`ZB`/`SLA` surface, zone conversion and relation-specific filtered Master-probe configuration.
 
 As with the non-fan probe, `SLA` differs by firmware: `0..8` on firmware `261` and `0..9` on firmware `185`. Firmware `261` also uses build sentinel `-1` rather than a concrete build number.
 
+The fan sheet has no electrical or environmental technical-data table: nominal supply/current are instead supported by the retained exact-reference exports. The previously stated measurement range was unsupported and has been removed. The sheet’s physical eight-slave limit agrees with the older `5.2.x` firmware but not the `6.0.0` SLA enum reaching nine. Reusable Object `184` also includes display/UI, contact, advanced proportional/IR and PID fields not certified as physical features by the product sheet. Firmware restrictions and excluded defaults remain explicit.
+
 ## Evidence limits and open work
 
 - Hardware-corroborate automatic/manual fan-speed behavior and the exposed Object fields.
 - Confirm installed build reporting for firmware `261` rather than interpreting catalogue `-1` as a runtime value.
 - Verify `SLA` limits and relation-specific fan-coil filters through configuration reads/writes.
+
+- The linked central-unit installation/calibration manual and Virtual Configurator/Suite help were not inspected for this batch; procedures here are bounded to this probe sheet.
+- No retained runtime data establishes the ninth-slave case, reserved reusable actuator types or physical contact/display features. An exact fan-probe environmental operating/measurement range is not established by the examined sheets.
 
 ## Sources
 
@@ -509,3 +557,5 @@ As with the non-fan probe, `SLA` differs by firmware: `0..8` on firmware `261` a
 - `HD4692FAN-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4692FAN` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/13/b0/13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4692FAN); SHA-256 `13b0e73e25b05e2f052d1b31376ac1538d8ecaa2eadc9ce8a91c5614bbc91681`.
 
 - `067455-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067455` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/7f/92/7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/sonde-avec-commande-pour-ventilo-convecteur-myhome-up-celiane); SHA-256 `7f9289d93a1d5a56473acde0a651ba5c216b59b9814e163c0962d511d68c6eb3`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0031-0040-2026-10-06.md#own-dev-0040)

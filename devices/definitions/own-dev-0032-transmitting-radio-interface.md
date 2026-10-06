@@ -18,13 +18,14 @@ This transmitting interface links configured SCS controls to compatible 868 MHz 
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino - Axolute | `HC/HS4576` | Established identity | canonical commercial record `34`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `L/N/NT4576` | Established identity | canonical commercial record `1828`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `HD4576` | Established identity | canonical commercial record `1829`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC/HS4576` | Established identity | Canonical catalogue; canonical commercial record `34`; Commercial identity of this Technical Device |
+| BTicino - LivingLight | `L/N/NT4576` | Established identity | Canonical catalogue; canonical commercial record `1828`; Commercial identity of this Technical Device |
+| BTicino - Axolute | `HD4576` | Established identity | Canonical catalogue; canonical commercial record `1829`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -35,14 +36,10 @@ All listed commercial records map to the same Technical Device; catalogue orderi
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `27 Vdc` | Publisher `AUTOMATISME.pdf` |
-| Mounting | 2 wiring-device modules | Publisher `AUTOMATISME.pdf` |
-| Radio role | transmitting interface from SCS controls to the supported radio side | Publisher `AUTOMATISME.pdf` |
-| Operating temperature | `-5..35 °C` | AUTOMATISME, printed p. 173 / PDF p. 175; transmitting-interface subsection |
-| Radio frequency / free-field range | `868 MHz` / `100 m` | Same source; walls, metal and concrete reduce range |
-| Maximum SCS current | `40 mA` | Same source; receiver subsection has a different current rating |
-
-Commercial suffixes and aesthetic variants differ by product line; the shared Device definition covers the common SCS/radio implementation role.
+| SCS supply / maximum current | `27 Vdc` / `40 mA` | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175; `HC/HS4576` and suffixed `L/N/NT4576N` rows |
+| Operating temperature | `-5..35 °C` | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
+| Radio / open-field range | `868 MHz` / `100 m`; metal and concrete reduce range | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
+| Mounting / connection | 2 flush-mounted modules; SCS terminal, LED and programming key | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
 
 ## Identity
 
@@ -54,6 +51,19 @@ Commercial suffixes and aesthetic variants differ by product line; the shared De
 | Main system | `1` - lighting_automation; `modobj` `21` | AS_ITEM_SYSTEM |
 | Commercial records | `3` | EN_DEVICE |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `21` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -61,6 +71,12 @@ Commercial suffixes and aesthetic variants differ by product line; the shared De
 | `215` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No AS_FW_PACKAGE association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -80,12 +96,13 @@ Slot `1` is fixed Object `172`, Radio Interface Transmitter.
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `215` | `1` | `1` | Virtual Configuration |
-| `215` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `215` | Physical configuration | `0` | Canonical firmware/mode association |
+| `215` | Virtual Configuration | `1` | Canonical firmware/mode association |
 
-The catalogue declares configuration modes 1 and 3.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -97,16 +114,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `215` | `A` | `0..9` | `0` | A; Environment |
 | `215` | `PL` | `0..9` | `0` | PL; Light Point |
 | `215` | `M` | `0..1` | `0` | M; mode (0/1) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL` | `0..9` | light-point configurator |
-| `M` | `0` / `1` | operating / function mode |
-
 
 Firmware `215` narrows `M` to `0` / `1`. The reusable transmitter Object has a wider generic mode family, which must not be projected back onto this Device.
 
@@ -122,14 +129,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL` | `0..9` | `0` | Light point |
 | `M` | `1`; `6..8`; `14` = `CEN`; `0` = None | `0` | Modality; Mode (0,1,6,7,8,`CEN`) |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
-
-**Object `172` - Radio Interface Transmitter - product interpretation.**
-
-**Firmware relationship.** catalogue irregularity: `TYPE_CONTACT` (filter `1631`) is not present in this reusable Object schema.
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+Firmware `M=0..1` and reusable Object `172` modes `0/1/6/7/8/CEN` have different scopes. The transmitter guide documents logical extension with `M=1`; it does not establish the other reusable modes. Filter `1631` references `TYPE_CONTACT` in another Object scope and supplies no legal values. It does not establish a contact input on this radio transmitter.
 
 ## Conditions, filters, and conversions
 
@@ -177,9 +179,17 @@ No sanitized hardware fingerprint for this exact technical item is currently ret
 
 Treat firmware 215's `M` values 0/1 domain as authoritative for this Device unless direct revision-specific evidence establishes additional modes.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Logical extension | Set physical `M=1`. Only one transmitter is allowed in the documented wired installation. | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
+| Address partition | A/PL divide wired and radio ranges; the guide example boundary `62` reserves `11..61` for wired devices and `63..99` for radio devices. | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
+| Coexisting receiver | The guide permits its non-SB receiver only in logical extension `M=1` or remote-scenario `M=6/7/8`; it recommends adjacent interface addresses. | `AUTOMATISME.pdf`, printed pp. 155, 173 / PDF pp. 157, 175 |
+
 ## Source reconciliation
 
 The canonical catalogue establishes the one-slot Radio Interface Transmitter model and the three grouped commercial records. Official historical documentation corroborates the family role and physical format, but suffix naming differs between the implementation catalogue and printed guide; that mismatch remains explicit.
+
+The guide directly lists `HC/HS4576` and the suffixed `L/N/NT4576N`; the database lists unsuffixed `L/N/NT4576` plus `HD4576`. These explicit catalogue identities remain established, but equivalence of each historical suffix and HD electrical ratings is not independently proved. The guide also calls a transmitter diagram a receiver and repeats inconsistent references in surrounding text; those labels are not used to reclassify the Device. Firmware `M=0..1` is narrower than reusable Object `172` modes; no examined source establishes the extra modes on this transmitter.
 
 ## Evidence limits and open work
 
@@ -187,8 +197,14 @@ The canonical catalogue establishes the one-slot Radio Interface Transmitter mod
 - Hardware-corroborate firmware identity and transmitted command behavior.
 - Resolve the Contact type filter into a human-readable Device-specific rule.
 
+- Exact unsuffixed `L/N/NT4576` and `HD4576` electrical/configuration revisions were not retained; historical suffixed guide figures remain source-scoped. A separate transmitter pairing instruction was not found in the examined manufacturer sources.
+
+- Linked programming software/help, other product-download revisions and unrelated multi-product guide pages were not inspected; the Documentation table gives the examined scope. Catalogue mode associations and reusable schemas are not observed installed behavior.
+
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0031-0040-2026-10-06.md#own-dev-0032)

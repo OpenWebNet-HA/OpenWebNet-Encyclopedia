@@ -18,30 +18,29 @@ This flush-mounted receiver brings compatible batteryless radio controls into an
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino - Axolute | `HC/HS/HD4575SB` | Established identity | canonical commercial record `40`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `L/N/NT4575SB` | Established identity | canonical commercial record `1841`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC/HS/HD4575SB` | Established identity | Canonical catalogue; canonical commercial record `40`; Commercial identity of this Technical Device |
+| BTicino - LivingLight | `L/N/NT4575SB` | Established identity | Canonical catalogue; canonical commercial record `1841`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `AUTOMATISME.pdf` | MyHOME automation guide | historical publisher guide | Batteryless control/4575SB receiver configuration: printed pp. 138-141 / PDF pp. 140-143; technical characteristics printed p. 172 / PDF p. 174 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4575SB sound-mode configuration: printed pp. 66-67 / PDF pp. 66-67 and 82; radio-interface technical data printed p. 99 / PDF p. 99 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
+| `mh_diff-sonore2008.pdf` | Two-wire sound-system technical guide | historical publisher guide | 4575SB sound-mode configuration: printed pp. 66-67 / PDF pp. 66-67 and 82-83; radio-interface technical data printed p. 99 / PDF p. 99 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/f4/96/f496f0943750657477c03e43eae6708271a8e798101831991ebc02904673dccd.pdf) | [Publisher PDF](https://assets.legrand.com/general/cession/bt/np-ft-gt/mh_diff-sonore2008.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `27 Vdc` | Publisher automation documentation |
-| Mounting | 2 wiring-device modules | Publisher automation documentation |
-| Radio frequency | `868 MHz` | `mh_diff-sonore2008.pdf` |
-| Published current draw | `33 mA` for the documented `L/N/NT4575SB` variant | `mh_diff-sonore2008.pdf` |
-| Radio role | receiver for the batteryless flat-control family | Publisher automation documentation |
-
-Where package variants are not covered by the same electrical table, current/range figures remain explicitly source-revision and variant scoped.
+| Supply / maximum current | `18..27 Vdc` / `33 mA` | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Radio / open-field range | `868 MHz` / `100 m`; metal/concrete reduce range | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Operating temperature, automation guide | `-5..35 °C` | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Operating temperature, sound guide | `5..35 °C` | `mh_diff-sonore2008.pdf`, printed/PDF pp. 82–83, 99 |
+| Mounting / radio partners | 2 flush-mounted modules; batteryless `HA/HB/L4572SB` controls | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
 
 ## Identity
 
@@ -53,6 +52,19 @@ Where package variants are not covered by the same electrical table, current/ran
 | Main system | `1` - lighting_automation; `modobj` `19` | AS_ITEM_SYSTEM |
 | Commercial records | `2` | EN_DEVICE |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `19` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -60,6 +72,12 @@ Where package variants are not covered by the same electrical table, current/ran
 | `218` | `-1` | `-1` | `-1` | `4` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No AS_FW_PACKAGE association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -88,12 +106,13 @@ Object `400` Light control is fixed on slots `1`, `2`, `3` and `4`. Object `403`
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `218` | `1` | `1` | Virtual Configuration |
-| `218` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `218` | Physical configuration | `0` | Canonical firmware/mode association |
+| `218` | Virtual Configuration | `1` | Canonical firmware/mode association |
 
-The catalogue declares configuration modes 1 and 3.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -108,19 +127,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `218` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
 | `218` | `M2` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
 | `218` | `SPE` | `0..1`; `6` | `0` | SPE; Special function command control (0,1,6) |
-
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL1` | `0..9` | output 1 light-point configurator |
-| `M1` | `0..8` / `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` | channel 1 operating mode |
-| `PL2` | `0..9` | output 2 light-point configurator |
-| `M2` | `0..8` / `O/I` / `OFF` / `ON` / `UP/DOWN` / `UP/DOWN` monostable / `CEN` / `PUL` | channel 2 operating mode |
-| `SPE` | `0` / `1` / `6` | special-function selector |
-
 
 `M1` / `M2` select the command behavior for the two control positions; `SPE` is the special-function selector. Slot/Object conditions further constrain which reusable control Object is active.
 
@@ -151,7 +157,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `401` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -167,7 +172,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
 
-
 ### Object `403` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -181,22 +185,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 | `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
-
-**Object `400` - Light control - product interpretation.**
-
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
-
-**Object `403` - Scenario module control - product interpretation.**
-
-**Firmware relationship.** The catalogue relation restricts `INST_LEV` to encoded value `8` (catalogue label `Level 4 #8`).
-
-**Object `401` - Automation control - product interpretation.**
-
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+The stored `SPE` enum is `0/1/6`, although slot conditions reference `7/8/9`. The sound guide independently documents `SPE=8`; applicability to firmware `218` remains unresolved. Empty condition `4145` supplies no lighting predicate. Scenario filter `1109` allows only `INST_LEV=8` (local bus 8), excludes reusable default `16`, and supplies no replacement. Four Modules are software placements, not four physical receivers.
 
 ## Conditions, filters, and conversions
 
@@ -247,6 +238,14 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 Depending on Object and mode, the receiver can expose lighting, automation and scenario-control functions from paired batteryless radio controls.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Self-learning `SPE=0` | Up to eighteen functions from nine controls: lighting/dimming, timed ON, flashing, shutters, lock/unlock or scenario recall; A `0..9`, PL1 `1..9`; M1/PL2/M2 zero. | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Standard `SPE=1` | Two button pairs supply toggle/dimming, ON, OFF, O/I, full or held shutter travel, PUL or timed ON. Up to 128 learned codes. | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Timed standard ON | M `1/2/3/4/5/6/7/8` gives `1/2/3/4/5/15 min`, `30 s`, `0.5 s` respectively. | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Remote scenario `SPE=6` | F420 scenario address; M1 `1..4` selects four groups of four scenarios `1..16`; PL2 and M2 zero. | `AUTOMATISME.pdf`, printed pp. 138–141, 172 / PDF pp. 140–143, 174 |
+| Sound self-learning / `SPE=8` | Documented L/N/NT4575SB controls amplifier ON/OFF, volume, source and track/station. Sound mode uses A/PL1/PF1 and M1; PL2/M2 unused; M1 `0` follow-me or `1..4` initial source. | `mh_diff-sonore2008.pdf`, printed/PDF pp. 82–83, 99 |
+
 ## Observed behavior and corroboration
 
 No sanitized hardware fingerprint for this exact technical item is currently retained.
@@ -255,18 +254,26 @@ No sanitized hardware fingerprint for this exact technical item is currently ret
 
 Preserve slot-by-slot Object selection and the complete `M` / `SPE` mode set. Do not model the receiver as a single generic pushbutton or as four unconditional Light controls.
 
+Self-learning enters with a `3 s` hold, receives a control within `20 s`, and learns a system function within `5 min`. Standard mode uses the same first two steps without function learning. A selected pair/code can be erased using an `8 s` hold and control press within `20 s`; approximately `12 s` erases all receiver associations. Scenario learning requires F420 programming enabled and completion within the guide’s `35 min`; erasing receiver associations does not erase F420 scenarios. These are the automation guide procedures at printed pp. 138–141 / PDF pp. 140–143.
+
+The sound guide documents `SPE=8` despite the firmware enum `0/1/6`; preserve the product procedure and unresolved catalogue applicability separately. Scenario filter `1109` means local bus `8` and rejects reusable default standard `16` without replacement. No slot-selection precedence is stored.
+
 ## Source reconciliation
 
 Publisher documentation establishes the 4575SB batteryless-radio receiver family and SCS BUS role. The canonical database explains its richer software topology: four fixed Light-control slot positions with optional Automation and Scenario Objects, plus the firmware-level `PL` / `M` / `SPE` configuration.
 
+The automation guide gives `-5..35 °C` whereas the 2008 sound guide gives `5..35 °C`; the revision/variant applicability of that difference is not resolved. The sound guide’s `SPE=8` is outside the stored firmware domain. Slot conditions `SPE=7/8/9` likewise cannot be treated as accepted firmware inputs merely because they are stored. Source procedures concern two physical button pairs; four catalogue Modules remain software placements.
+
 ## Evidence limits and open work
 
-- Add sanitized pairing and button-action captures for representative 4572SB controls.
-- Corroborate optional Automation/Scenario Object resolution by `DIMENSION 30` on hardware.
-- Document the Installation level filter for Scenario module control in human-readable form.
+- No retained capture establishes how the four Module slots resolve or whether firmware `218` accepts `SPE=7/8/9`.
+- Exact `HD4575SB` electrical revision and a product-specific installation sheet have not been retained; guide figures remain within their printed reference families.
+- The automation/sound temperature difference and unresolved source-selection cases require an applicable revision or runtime evidence.
 
 ## Sources
 
 - [Device Sources](../../sources/devices/)
 - [Device Database Inventory](../inventory/)
 - [AUTOMATISME.pdf](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0031-0040-2026-10-06.md#own-dev-0035)

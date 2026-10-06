@@ -19,10 +19,10 @@ This radio interface brings compatible wireless temperature probes into the SCS 
 
 ## Commercial identities
 
-| Brand / line | Reference | Catalogue record | Relationship | Evidence |
-| --- | --- | ---: | --- | --- |
-| BTicino - LivingLight | `L/N/NT4577` | Established identity | canonical commercial record `39`; Commercial identity of this Technical Device | Canonical catalogue |
-| BTicino - Axolute | `HC/HS/HD4577` | Established identity | canonical commercial record `1966`; Commercial identity of this Technical Device | Canonical catalogue |
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - LivingLight | `L/N/NT4577` | Established identity | Canonical catalogue; canonical commercial record `39`; Commercial identity of this Technical Device |
+| BTicino - Axolute | `HC/HS/HD4577` | Established identity | Canonical catalogue; canonical commercial record `1966`; Commercial identity of this Technical Device |
 
 All listed commercial records map to the same Technical Device; catalogue ordering does not make any SKU canonical.
 
@@ -43,25 +43,25 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00183-c-EN` | Technical sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
-| `U1870C` | Instruction sheet | publisher revision as archived | whole document | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
-| BTicino `L4577` product record | Current product record | current | whole product page | - | [Publisher page](https://www.bticino.com/products/bt-l4577) |
-| `L4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577) |
-| `N4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4577) |
-| `NT4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4577) |
-| `HC4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577) |
-| `HS4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577) |
-| `HD4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4577` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577) |
+| `MQ00183-c-EN` | Technical sheet | publisher revision as archived | English printed/PDF pp. 6–10; pairing, configuration and ratings | [Archived PDF](https://archive.openwebnet-ha.org/sha256/2d/34/2d34fb8c90385159e620c4f9515267dc8b8fa3acda9471f0cc226558fab7f03c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00183-c-EN.pdf) |
+| `U1870C` | Instruction sheet | publisher revision as archived | English printed/PDF pp. 6–10; pairing, configuration and ratings | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a6/10/a610f6d8fd4aa811944d0e2c05adacda5b459571814108ee504e5074adcece9c.pdf) | [Publisher PDF](https://assets.legrand.com/pim/NP-FT-GT/U1870C.pdf) |
+| BTicino `L4577` product record | Current product record | current | Unretained discovery lead; claims here use retained sheet, instructions and exports | - | [Publisher page](https://www.bticino.com/products/bt-l4577) |
+| `L4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/4f/ae/4fae495303a9b2368b081ab504e7c2ce62f8fc8b5390a66bf6afd7bce1f2ec9a.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4577) |
+| `N4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/88/b9/88b93a6a6b99cf9900f911f16ce97b24314a16b1e1f5c9d8589170fe65459288.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4577) |
+| `NT4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/dd/75dd70f0c92e380e18effbd58454af313992f3d0511a6d37a257078c1cd4f79e.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4577) |
+| `HC4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577) |
+| `HS4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577) |
+| `HD4577-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4577` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined in this review; electrical/temperature claims remain reference- and revision-scoped; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `27 Vdc` | `MQ00183-c-EN` / current publisher product data |
-| Current draw | `33 mA` | Current publisher product data |
-| Radio frequency | `868 MHz` | Current publisher product data |
-| Mounting | 2 flush-mounted modules | Current publisher product data |
-| Probe channels | 2 configured channel positions | Catalogue topology + publisher family documentation |
+| Supply / maximum absorption | Nominal `27 Vdc`; operating `18..27 Vdc`; `33 mA` | `MQ00183-c-EN`, printed/PDF p. 1; `U1870C` printed/PDF p. 10 |
+| Operating temperature | `0..40 °C` | `MQ00183-c-EN`, printed/PDF p. 1 |
+| Radio / maximum distance | `868 MHz`; `70 m` in free field, reduced by metal/concrete | `MQ00183-c-EN`, printed/PDF p. 1 |
+| Mounting / capacity | 2 flush-mounted modules; up to two probes, one per configured address; up to nine temperature probes per system | `MQ00183-c-EN`, printed/PDF p. 1 |
+| Interface controls | Programming key and red status LED; SCS bus terminal | `MQ00183-c-EN`, printed/PDF p. 1 |
 
 ## Identity
 
@@ -74,6 +74,20 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Main system | `2` - thermoregulation; `modobj` `23` | AS_ITEM_SYSTEM |
 | Commercial records | `2` | EN_DEVICE |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `23` | No | Canonical item/system relationship |
+| Temperature control | `23` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -81,6 +95,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `239` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No AS_FW_PACKAGE association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -101,12 +121,13 @@ Slots `1` and `2` are both fixed Object `124`, Radio interface for sensors (meas
 
 ## Configuration modes
 
-| Firmware | Mode ID | Catalogue mode | Description |
-| ---: | ---: | ---: | --- |
-| `239` | `1` | `1` | Virtual Configuration |
-| `239` | `3` | `0` | Physical configuration |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `239` | Physical configuration | `0` | Canonical firmware/mode association |
+| `239` | Virtual Configuration | `1` | Canonical firmware/mode association |
 
-The catalogue declares configuration modes 1 and 3.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -122,19 +143,6 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `239` | `PL2/N2` | `0..9` | `0` | PL2/N2; Configurator with range (0-9) PL2N2 |
 | `239` | `M2` | `0..1`; `6` | `0` | M2; mode M2 not configured - Value : 0 temperature sensor - Value : 1 lighting sensor - Value : 6 |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | area / environment configurator |
-| `PL1/N1` | `0..9` | channel 1 point / zone selector |
-| `M1` | `0` / `1` / `6` | channel 1 operating mode |
-| `A2/-` | `0..9` | channel 2 area selector / disabled position |
-| `PL2/N2` | `0..9` | channel 2 point / zone selector |
-| `M2` | `0` / `1` / `6` | channel 2 operating mode |
-
-
 For each channel, `M=0` means not configured, `M=1` selects a temperature sensor and `M=6` selects a lighting sensor. The latter is retained as implementation evidence despite the product name.
 
 ## Object configuration surfaces
@@ -149,14 +157,9 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_N` | `0..9` | `0` | Light point N |
 | `M` | `1`; `0` = None | `1` | Modality |
 
+### Device-specific interpretation
 
-### Product interpretation and source differences
-
-**Object `124` - Radio interface for sensors (measurer T) - product interpretation.**
-
-**Firmware relationship.** No additional Object/Firmware range filter in the catalogue.
-
-These are reusable Object fields; Device applicability remains governed by the firmware relationship above.
+Both fixed slots use Object `124`, whose reusable `A=0` and `M=0/1` differ from the firmware surface. Firmware `M1/M2` also include `6`, labelled lighting sensor, but retained receiver instructions establish temperature mode `1`. That label does not certify lighting-sensor pairing. Stored `PL_N=0..9` includes zero, whereas used physical probe addresses must be distinct values `1..9`.
 
 ## Conditions, filters, and conversions
 
@@ -204,14 +207,24 @@ No sanitized hardware fingerprint for this exact technical item is currently ret
 
 Program and validate both channel positions independently. Preserve `M` values 0/1/6 semantics and the dual-system applicability.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Probe address | For temperature probe `3455`, `M1/M2=1`, unused A positions left unconfigured; used N addresses `1..9` and distinct. Configure only addresses actually used. | `MQ00183-c-EN`, printed/PDF p. 1; `U1870C` printed/PDF pp. 7–9 |
+| Association | Hold receiver key `5 s`; one/two flashes select first/second address; send probe serial code within `20 s`. Only the last sensor paired at an address is retained. | `MQ00183-c-EN`, printed/PDF p. 1 |
+| Confirmation / erase | Normal single/double flash identifies source address; hold key about `12 s` to erase all associations; invalid configuration causes flashing. | `MQ00183-c-EN`, printed/PDF p. 1 |
+
 ## Source reconciliation
 
 Official product documentation corroborates the 4577/3455 radio-temperature role, 27 Vdc BUS supply and two-module form. The database adds two fixed Object slots and explicitly permits `M` value 6 lighting-sensor mode, which broadens the implementation model beyond the product headline.
+
+`MQ00183-c-EN` dated `29/04/2014` agrees with `U1870C` on two temperature measuring points, one sensor per address, pairing/overwrite and electrical limits. Six retained individual product exports also corroborate `27 Vdc`, `33 mA`, two-module size and probe `3455` pairing. The wider firmware mode enum includes a lighting-sensor label, but the retained exact-product procedures establish only temperature pairing; it is not an unconditional supported additional sensor type.
 
 ## Evidence limits and open work
 
 - Hardware-corroborate both slot identities and `M` value 6 behavior.
 - Capture representative radio-probe traffic without retaining private installation identifiers.
+
+- Linked programming software/help, other product-download revisions and unrelated multi-product guide pages were not inspected; the Documentation table gives the examined scope. Catalogue mode associations and reusable schemas are not observed installed behavior.
 
 ## Sources
 
@@ -227,3 +240,5 @@ Official product documentation corroborates the 4577/3455 radio-temperature role
 - `HC4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/8a/bb/8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4577); SHA-256 `8abb0709a13b0efc4cb996ba5154173d7e5d7fa222aed0359c30d5f0302b92ce`.
 - `HS4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/71/27/712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4577); SHA-256 `712769ad54075bc127e09bd927f33b6afee8b415084e6c7c059d7d2097c62433`.
 - `HD4577-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4577` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f7/c7/f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4577); SHA-256 `f7c7687b4520a4b8b09f83dbee5a281eb1573c11b391ceb50b3d8f381dec54b7`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0031-0040-2026-10-06.md#own-dev-0034)

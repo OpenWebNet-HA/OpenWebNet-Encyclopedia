@@ -28,11 +28,13 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 | Legrand - Céliane | `067272` | established identity | catalogue + `MQ00692-b-EN` |
 | Legrand - Arteor | `573716` | established identity | catalogue + `MQ00692-b-EN` |
 | Legrand - Arteor | `573717` | established identity | catalogue + `MQ00692-b-EN` |
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00692-b-EN` | Technical sheet | revision b / 2014-04-17 | all six current catalogue identity groups; hardware, configuration and available functions | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00692_b_EN.pdf) |
+| `MQ00692-b-EN` | Technical sheet | revision b / 2014-04-17 | All seven pages; six catalogue identity groups, hardware and complete functional configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00692_b_EN.pdf) |
+| `O2189D_U_EN.pdf` | Exact-product user manual | 10/14-01 PC | BTicino HC/HS/HD/L/N/NT4891; printed/PDF pp. 6–28; operating functions and scenario procedure conflicts | [Archived original](https://archive.openwebnet-ha.org/sha256/06/55/06556aebd384e635cdc57be4eb608cc4ea280c25aeccf435f743df353d8a4524.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/O2189D_U_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -47,6 +49,12 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 | Local connections | SCS BUS, external temperature probe terminal and USB | `MQ00692-b-EN` |
 | Software capacity | `1..4` configured functions | `MQ00692-b-EN` |
 
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Internal temperature probe | Not fitted; external probe or associated SCS probe required for temperature measurement | `MQ00692-b-EN`, printed/PDF pp. 2, 4–5 |
+| Recommended installation height | `150..160 cm` | `MQ00692-b-EN`, printed/PDF pp. 2 |
+| External sensor | `10 kΩ` at `25 °C`, BETA `3435`; maximum connection `10 m` | `MQ00692-b-EN`, printed/PDF pp. 4 |
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -57,6 +65,22 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 | Catalogue buses | `1`, `11`, `12`, `16`, `19` | Implementation evidence |
 | Commercial records | `6` | Implementation evidence |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `70` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -64,6 +88,30 @@ The Local Display is one Physical Device with two catalogue Modules: a function-
 | `11` | `1` | `0` | `1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `11` | `25` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `11` | `26` | BTicino (key `1`) | `0` | SVM | `1657_1.0_BT\xml\SVM\svm.xml` |
+| `11` | `27` | BTicino (key `1`) | `0` | Extra | `1657_1.0_BT\xml\Extra\extra.xml` |
+| `11` | `28` | BTicino (key `1`) | `0` | Director | `1657_1.0_BT\xml\DIRECTOR\director.xml` |
+| `11` | `29` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1657_1.0_BT\xml\Protocol\protocol.xml` |
+| `11` | `204` | Legrand (key `2`) | `4` | SDC | `xml\SDC\sdc.xml` |
+| `11` | `205` | Legrand (key `2`) | `4` | SVM | `1657_1.0_LG\xml\SVM\svm.xml` |
+| `11` | `206` | Legrand (key `2`) | `4` | Extra | `1657_1.0_LG\xml\Extra\extra.xml` |
+| `11` | `207` | Legrand (key `2`) | `4` | Director | `1657_1.0_LG\xml\DIRECTOR\director.xml` |
+| `11` | `208` | Legrand (key `2`) | `4` | Protocol and other device parameters | `1657_1.0_LG\xml\Protocol\protocol.xml` |
+| `11` | `209` | Legrand (key `2`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `11` | `210` | Legrand (key `2`) | `2` | SVM | `1657_1.0_LG\xml\SVM\svm.xml` |
+| `11` | `211` | Legrand (key `2`) | `2` | Extra | `1657_1.0_LG\xml\Extra\extra.xml` |
+| `11` | `212` | Legrand (key `2`) | `2` | Director | `1657_1.0_LG\xml\DIRECTOR\director.xml` |
+| `11` | `213` | Legrand (key `2`) | `2` | Protocol and other device parameters | `1657_1.0_LG\xml\Protocol\protocol.xml` |
+
+All 15 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No AS_FW_PACKAGE association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -88,11 +136,15 @@ The first slot is function-selected while Object `108` remains fixed at slot `2`
 
 ## Configuration modes
 
-| Mode | Meaning | Evidence |
-| --- | --- | --- |
-| `4` | Product Programming | Implementation evidence + USB/software configuration in `MQ00692-b-EN` |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `11` | Product Programming | `3` | Canonical firmware/mode association |
 
-The official sheet also documents physical configurator use. Catalogue mode `4` describes the implementation programming association; it does not erase the physical configuration surface printed on the product.
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `11` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -106,18 +158,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | `11` | `MOD` | `0..4` | `0` | MOD; Mode 0-4 |
 | `11` | `FUN` | `0..4` | `0` | FUN; Configurator FUN |
 
-
-### Previously reconciled configuration scopes
-
-| Field | Domain | Meaning |
-| --- | --- | --- |
-| `A` | `0..9` | catalogue address field corresponding to the first zone/address configurator position |
-| `PL` | `0..9` | catalogue address field corresponding to the second zone/address configurator position |
-| `MOD` | `0..4` | mode selector |
-| `FUN` | stored enum `0..4` | function selector; slot conditions also reference `FUN=5` |
-
-
-The rear product labelling uses `ZA/ZB`, `MOD` and `FUN`, while firmware `11` names the two address fields `A` and `PL`. This naming difference is preserved. More importantly, the stored `FUN` enumeration stops at `4` while catalogue slot condition `4931` selects Object `197` with `FUN=5`.
+The printed probe-function labels use `ZA/ZB`, while firmware `11` names the address fields `A` and `PL`; scenario and sound labels have separate scopes. This naming difference is preserved. More importantly, the stored `FUN` enumeration stops at `4` while catalogue slot condition `4931` selects Object `197` with `FUN=5`.
 
 ## Object configuration surfaces
 
@@ -137,7 +178,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `191` - Local display as temperature control probe
 
 Catalogue Object key `460` maps to external Object `191`.
@@ -149,7 +189,6 @@ Catalogue Object key `460` maps to external Object `191`.
 | `COLD` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
 | `WARM` | `0` = Disable; `1` = Enable | `0` | Winter modality; Winter mode |
 | `ZAZB_CENTRAL` | `1..99` | `01` | Control unit address |
-
 
 ### Object `197` - Energy load control actuator
 
@@ -170,7 +209,6 @@ Catalogue Object key `468` maps to external Object `197`.
 | `DC_RATED_VOLTAGE` | `1..255` | `24` | DC voltage (V) |
 | `WITH_SENSOR` | `1` = Yes | `1` | With sensor |
 
-
 ### Object `221` - Slave probe
 
 Catalogue Object key `546` maps to external Object `221`.
@@ -185,7 +223,6 @@ Catalogue Object key `546` maps to external Object `221`.
 | `COND` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
 | `ZAZB_CENTRALE` | `00..99` | `01` | Temperature Control unit address |
 
-
 ### Object `433` - Scenario module control - local display
 
 Catalogue Object key `617` maps to external Object `433`.
@@ -197,7 +234,6 @@ Catalogue Object key `617` maps to external Object `433`.
 | `SCE_BUTT_3` | `1..16` | `3` | Button 3 |
 | `SCE_BUTT_4` | `1..16` | `4` | Button 4 |
 
-
 ### Object `108` - Local Display
 
 Catalogue Object key `618` maps to external Object `108`.
@@ -205,6 +241,10 @@ Catalogue Object key `618` maps to external Object `108`.
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `ADDRESS` | `0..95` | `0` | Address |
+
+### Device-specific interpretation
+
+`FUN=3` selects Object `221`, named Slave probe, while the sheet describes an external-probe role with up to eight slaves. The Object name does not settle the installed role. `FUN=4` selects `191` and `FUN=5` selects `197`, despite the firmware enum ending at `4`. Firmware `MOD=0..4` also differs from published sound and probe ranges reaching `8`. Filter `3755` fixes external sensor type `0` and excludes Vantage `8051`. Object `197` electrical fields do not prove that the display measures or switches a load directly.
 
 ## Conditions, filters, and conversions
 
@@ -234,22 +274,6 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
-### Product interpretation and source differences
-
-| Condition ID | Slot | Predicate | Selected Object | Meaning |
-| --- | --- | --- | --- | --- |
-| `4912` | `1` | `FUN=1` | `433` | scenario function |
-| `4913` | `1` | `FUN=2` | `419` | sound diffusion function |
-| `4929` | `1` | `FUN=3` | `221` | slave temperature probe |
-| `4930` | `1` | `FUN=4` | `191` | local display temperature-control probe |
-| `4931` | `1` | `FUN=5` | `197` | energy/load-control function |
-
-| Filter ID | Object | Field | Meaning |
-| --- | --- | --- | --- |
-| `3755` | `221` | `EXTERNAL_SENSOR_TYPE` | External temperature sensor type |
-
-The `FUN=5` condition lies outside the stored firmware `FUN` enum `0..4`. It is retained as a catalogue inconsistency and must not be “corrected” by guessing whether the condition or enum is stale.
-
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -264,19 +288,39 @@ The `FUN=5` condition lies outside the stored firmware `FUN` enum `0..4`. It is 
 
 The publisher lists scenario control, temperature control, sound system, consumption display, load management and software-only advanced scenario functions. The active OpenWebNet-facing first Module depends on `FUN`; Object `108` represents the Local Display itself as the second Module.
 
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Physical / software setup | Physical setup gives one basic function; PC configuration gives one to four functions and advanced parameters. | `MQ00692-b-EN`, printed/PDF pp. 1–2 |
+| `FUN=1`, scenarios | A `0..9`, PL `1..9`; MOD `1..4` selects scenarios `1..4`, `5..8`, `9..12` or `13..16`. | `MQ00692-b-EN`, printed/PDF pp. 2 |
+| `FUN=2`, sound | A `0..9`, PF `1..9`, MOD `0..8`; zero starts source 1 without first switching sources OFF. Volume, source selection, alarm clock and source-specific control. | `MQ00692-b-EN`, printed/PDF pp. 3; `O2189D_U_EN.pdf`, printed/PDF pp. 12–15 |
+| `FUN=3`, external probe | Physical configuration requires 99-zone central unit; ZA `0..9`, ZB `1..9`, MOD `0..8` slave count. | `MQ00692-b-EN`, printed/PDF pp. 4 |
+| `FUN=4`, associated probe | Physical configuration requires 99-zone central unit; ZA `0..9`, ZB `1..9`, MOD `1..8`; at least one associated probe required. | `MQ00692-b-EN`, printed/PDF pp. 5 |
+| `FUN=5`, consumption | Up to ten monitored lines; physical setup one line. MOD `0/1/2/3/4` means electricity/water/gas/DHW/heating-cooling; two thresholds and visual/audible indications. | `MQ00692-b-EN`, printed/PDF pp. 6 |
+| Load management | Software-only; up to twenty loads, priorities and force activation; consumption information requires an actuator with current sensing. | `MQ00692-b-EN`, printed/PDF pp. 7 |
+| Advanced scenarios | Software-only; four icons recall scenarios from an installed scenario programmer. | `MQ00692-b-EN`, printed/PDF pp. 7 |
+| Temperature UI variants | User manual separately describes 4-zone ±3 °C adjustment, 99-zone half-degree adjustment reverting with the next profile change, and standalone thermostat operation. These are configured modes, not proof of an internal sensor. | `O2189D_U_EN.pdf`, printed/PDF pp. 16–19 |
+
 ## Observed behavior and corroboration
 
 No sanitized hardware fingerprint is currently retained. Runtime testing is especially useful here because `FUN=5` is present in topology conditions but absent from the stored firmware enum.
 
 ## Programming
 
-The USB interface supports configuration, firmware-related operations and character/icon resources. Programming software must resolve the function-selected Object before presenting Object-specific settings and must preserve the `A`/`PL` versus printed `ZA/ZB` naming boundary.
+The USB interface supports configuration, firmware-related operations and character/icon resources. Programming software must resolve the function-selected Object before presenting Object-specific settings and must preserve the function-specific `A`/`PL`/`PF` and `ZA/ZB` naming boundary.
+
+USB supports configuration, firmware and icon/character resources. Physical configuration and software configuration have different capacities. Do not present the catalogue’s `MOD=0..4` or `FUN=0..4` as a complete description of the publisher’s physical matrices. No physical setup for advanced scenarios or load management is given.
+
+Scenario procedure revisions disagree: the technical sheet uses a `3 s` learning hold, `30 min` inactivity timeout and at least `7 s` to delete; the `10/14-01 PC` user manual uses `3 s`, `30 s` and `10 s` respectively (sheet printed/PDF p. 2; manual printed/PDF pp. 9–10). Use the applicable device/software revision rather than silently combining the procedures.
 
 ## Source reconciliation
 
 `MQ00692-b-EN` corroborates all six commercial identity groups, the two-module hardware, 1.2-inch display, electrical limits, USB/external-probe connections and the product-level function set. The catalogue adds the two-Module topology and exact reusable Object surfaces.
 
-Two implementation tensions remain explicit: the database names the physical address fields `A`/`PL` while the product labels them `ZA/ZB`, and `EN_CONF_RANGE` lists `FUN=0..4` while slot condition `4931` requires `FUN=5`.
+The database uses `A`/`PL` for firmware address fields, whereas printed labels depend on the selected function. `EN_CONF_RANGE` lists `FUN=0..4`, while slot condition `4931` and the physical consumption instructions require `FUN=5`.
+
+The retained user manual corroborates consumption, load, sound and temperature UI roles, but calls the screen LCD and includes an inconsistent “four or five” modes sentence while its own introduction and the technical sheet state up to four configured functions. The technical sheet’s OLED specification and one-to-four software capacity remain the product specification; the user manual’s conflicting wording is not silently upgraded to five concurrent functions. Its scenario timeout/delete differences are retained above.
+
+The printed scenario/sound address names A/PL/PF and probe/energy names ZA/ZB are function-specific labels; a blanket claim that all hardware positions are ZA/ZB would be inaccurate. `FUN=5` is supported by the sheet and condition `4931` yet omitted from the firmware enum. Fifteen parameter-file associations are fully listed, but their payload contents remain unexamined.
 
 ## Evidence limits and open work
 
@@ -284,8 +328,13 @@ Two implementation tensions remain explicit: the database names the physical add
 - Determine whether `FUN=5` is accepted by firmware `1.0.1` despite its absence from the stored firmware enum.
 - Correlate the catalogue `A`/`PL` field names with the printed `ZA/ZB` positions through a real configuration read.
 
+- Fifteen linked parameter payloads and TiLocalDisplayNew software binaries/help were not available in this extraction; user-facing software modes do not prove additional Module projections.
+- The OLED/LCD wording, concurrent-function wording and scenario procedure differences require an applicable device/software revision to settle.
+
 ## Sources
 
 - [Device Source Index](../../sources/devices/index.md)
 - [Device Database Inventory](../inventory/)
 - [`MQ00692-b-EN` archived original](https://archive.openwebnet-ha.org/sha256/b8/56/b856e489d0b6da84d20534a4aafdd61d540cc2d46b15edb0c9c47d0e12d59bc6.pdf)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0031-0040-2026-10-06.md#own-dev-0037)

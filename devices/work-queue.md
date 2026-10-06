@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 180 |
-| reviewed | 30 |
+| review-ready | 170 |
+| reviewed | 40 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| high | 1563 | Key card switch | 6 | review-ready | OWN-DEV-0036 | complete | complete | complete | pending | - |
-| high | 1657 | Local Display 1.2" bus | 6 | review-ready | OWN-DEV-0037 | complete | complete | complete | pending | - |
-| high | 1854 | Probe with regulation | 6 | review-ready | OWN-DEV-0038 | complete | complete | complete | pending | - |
-| high | 1847 | Key card switch RFID | 5 | review-ready | OWN-DEV-0039 | partial | complete | complete | pending | - |
-| high | 1856 | Fan-coil probe | 5 | review-ready | OWN-DEV-0040 | complete | complete | complete | pending | - |
-| high | 34 | Transmitting radio interface | 3 | review-ready | OWN-DEV-0032 | partial | complete | partial | pending | - |
-| high | 33 | PIR surface ceiling mounted sensor | 2 | review-ready | OWN-DEV-0031 | complete | complete | complete | pending | - |
-| high | 39 | Radio interface for temperature probes | 2 | review-ready | OWN-DEV-0034 | complete | complete | complete | pending | - |
-| high | 40 | Flush mounted radio receiver for HA/HB4572SB | 2 | review-ready | OWN-DEV-0035 | complete | complete | partial | pending | - |
-| high | 35 | Light manager control unit | 1 | review-ready | OWN-DEV-0033 | complete | complete | complete | pending | - |
 | normal | 1862 | Basic probe | 5 | review-ready | OWN-DEV-0041 | partial | partial | partial | pending | - |
 | normal | 291 | Temperature central unit | 4 | review-ready | OWN-DEV-0042 | partial | partial | partial | pending | - |
 | normal | 1525 | Special functions | 4 | review-ready | OWN-DEV-0043 | partial | complete | partial | pending | - |
@@ -217,7 +207,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 25 | Regulation rotative control | OWN-DEV-0028 |
 | 28 | Receiving radio interface | OWN-DEV-0029 |
 | 31 | Ballast DIN dimmer 1-10 V | OWN-DEV-0030 |
+| 33 | PIR surface ceiling mounted sensor | OWN-DEV-0031 |
+| 34 | Transmitting radio interface | OWN-DEV-0032 |
+| 35 | Light manager control unit | OWN-DEV-0033 |
 | 37 | IR receiver | OWN-DEV-0012 |
+| 39 | Radio interface for temperature probes | OWN-DEV-0034 |
+| 40 | Flush mounted radio receiver for HA/HB4572SB | OWN-DEV-0035 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
 | 402 | Scenario control | OWN-DEV-0011 |
@@ -233,7 +228,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1469 | MyHOME_Screen 3.5 | OWN-DEV-0015 |
 | 1524 | Special control | OWN-DEV-0005 |
 | 1559 | PIR+US flush mounted sensor | OWN-DEV-0010 |
+| 1563 | Key card switch | OWN-DEV-0036 |
 | 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
+| 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
+| 1847 | Key card switch RFID | OWN-DEV-0039 |
+| 1854 | Probe with regulation | OWN-DEV-0038 |
+| 1856 | Fan-coil probe | OWN-DEV-0040 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
 
