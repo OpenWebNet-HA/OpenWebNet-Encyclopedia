@@ -13,6 +13,8 @@
 | [OWN-DEV-0016](../definitions/own-dev-0016-pir-flush-mounted-sensor.md) | 8-record PIR sensor family | PIR daylight and presence sensor | Configuration-selected sensor role plus sixteen IR scenario-control Modules |
 | [OWN-DEV-0018](../definitions/own-dev-0018-local-display.md) | 6-record Local Display family | Local Display | Conditional scenario, sound-diffusion and temperature-probe roles |
 | [OWN-DEV-0019](../definitions/own-dev-0019-three-module-touch-control.md) | 6-record touch-control family | Three-module touch control | Lighting, automation, scenario, AUX, sound and door-entry command roles |
+| [OWN-DEV-0064](../definitions/own-dev-0064-room-controller-2-output-16-a.md) | `BMSW3002`, `048841` | Room Controller - 2 outputs 16 A | Two lighting outputs, powered local bus and combined 16 A maximum |
+| [OWN-DEV-0070](../definitions/own-dev-0070-din-contacts-interface.md) | `F428`, `003553` | DIN contacts interface | Two contact inputs; revision-dependent lighting, automation and scenario roles |
 | [OWN-DEV-0102](../definitions/own-dev-0102-multimedia-touch-screen.md) | `HC4690`, `HD4690`, `HS4690` | Multimedia Touch Screen | Configured MyHOME controls, video door entry and multimedia applications |
 | [OWN-DEV-0103](../definitions/own-dev-0103-eight-key-multifunction-control.md) | `H4652`, `LN4652`, `067592` | Eight-key multifunction control | Eight command Modules, separate UI Module; learning, F420, paired lighting/shutter and CEN modes |
 | [OWN-DEV-0107](../definitions/own-dev-0107-legrand-multimedia-touch-screen.md) | `067285`, `573963`, `573962` | Legrand Multimedia Touch Screen | Multimedia, scenarios, lighting, temperature, alarm and video-entry interface |

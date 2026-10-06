@@ -15,6 +15,10 @@
 | [OWN-DEV-0052](../definitions/own-dev-0052-ballast-din-dimmer-0-10-v.md) | `BMDI1001`, `002611` | Ballast DIN dimmer 0-10 V | One switched channel with analog ballast dimming; physical and virtual ranges distinguished |
 | [OWN-DEV-0059](../definitions/own-dev-0059-basic-actuator.md) | `3475` | Basic actuator | One compact relay; same-address slave and delayed slave OFF |
 | [OWN-DEV-0060](../definitions/own-dev-0060-basic-control-actuator.md) | `3476` | Basic control actuator | One compact relay and normally open pushbutton input; cyclic, separate and timed control |
+| [OWN-DEV-0064](../definitions/own-dev-0064-room-controller-2-output-16-a.md) | `BMSW3002`, `048841` | Room Controller - 2 outputs 16 A | Two lighting outputs, powered local bus and combined 16 A maximum |
+| [OWN-DEV-0067](../definitions/own-dev-0067-four-relay-din-actuator-16-a.md) | `BMSW1003`, `002602` | 4-relay DIN actuator 16 A | Four independent relays; load classes and software/filter limits |
+| [OWN-DEV-0068](../definitions/own-dev-0068-one-module-one-relay-actuator.md) | `L/N/NT4675` | 1-module 1-relay actuator | One compact relay; exact historical load classes and slave modes |
+| [OWN-DEV-0069](../definitions/own-dev-0069-scs-dali-gateway.md) | `F429`, `002631` | SCS/DALI gateway | Eight independent DALI outputs; DALI2 and source-filter limits |
 | [OWN-DEV-0101](../definitions/own-dev-0101-eight-output-din-actuator-16-a.md) | BTicino BMSW1005 / Legrand 002604 | Eight-output DIN ON/OFF actuator 16 A | Eight independent Lighting actuator Modules with zero-current switching |
 | [OWN-DEV-0112](../definitions/own-dev-0112-myhome-lighting-command-actuator.md) | `H4672M2L`, `LN4672M2L`, `067586` | MYHOME lighting command and actuator | Two lighting actuator Modules, two command Modules and separate UI; physical ratings unconfirmed |
 | [OWN-DEV-0113](../definitions/own-dev-0113-myhome-shutter-command-actuator.md) | `H4672M2S`, `LN4672M2S`, `067587` | MYHOME shutter command and actuator | One shutter actuator Module, two command Modules and separate UI; physical ratings unconfirmed |

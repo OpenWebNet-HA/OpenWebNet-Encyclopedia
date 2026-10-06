@@ -2,7 +2,7 @@
 
 ## Summary
 
-This DIN contact interface converts two conventional dry-contact inputs into SCS commands. The inputs can control independent loads, form a paired command for a motorized load or trigger scenarios, depending on configuration.
+This two-module DIN interface lets conventional dry-contact switches and pushbuttons control a MyHOME system. Its two inputs can act independently or as a paired shutter control, with configured lighting and scenario roles; historical sound and `AUX` roles and revision-dependent button assignments are kept separate.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -35,20 +35,19 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00002001-EN` | technical sheet | 2024-11-13 | `F428` two-contact DIN interface characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST-00002001-EN.pdf) |
-| `F428-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F428` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428) |
+| `ST-00002001-EN` | technical sheet | ST-00002001-EN; 2024-11-13 | Printed/PDF pp. 1–7; complete `F428` current functions, physical/virtual selectors, scenario controls, cable limits and wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/68/e4/68e473ba614f1a24993302ab11a82bf9a272c78c58fe9861340178f6a3d89ebf.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST-00002001-EN.pdf) |
+| `F428-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Printed/PDF p. 1; exact-reference EAN and complete technical attributes examined; linked technical/DWG downloads and prices not incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish exact-product sheet within compilation | BT00283-a-ES; undated leaf | Printed pp. 715–719 / PDF pp. 146–150; complete `F428` physical, command, sound, `AUX`/contact, configuration and wiring scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `27 Vdc` SCS BUS | `ST-00002001-EN` |
-| Rated current | `9 mA` | `ST-00002001-EN` |
-| Inputs | `2` independent contact inputs | `ST-00002001-EN` |
-| Width | `2 DIN modules` | `ST-00002001-EN` |
-| Protection | `IP20` | `ST-00002001-EN` |
-| Maximum generic-cable contact distance | `50 m` | `ST-00002001-EN` |
-| Maximum distance with specified BUS cable | up to `200 m` | `ST-00002001-EN` |
+| Supply / consumption / dissipation | `27 Vdc` nominal; operating `18..27 Vdc`; `9 mA`; `0.2 W` | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Form / terminals | Two DIN modules; common C plus `N1`/`N2` inputs, two indicators and configuration area | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Inputs | Two dry-contact conventional switch/pushbutton inputs, NO or NC; paired use can command one double-function actuator | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Cable reach | `50 m` standard cable; `200 m` with L4669/336904/336905 bus cable | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Wiring restriction | Do not connect interfaces in parallel; manufacturer cites electromagnetic compatibility | ST-00002001-EN, printed/PDF pp. 1–7 |
 
 ## Identity
 
@@ -60,6 +59,28 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `149` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `149` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `79` | `F428` | `1` | `5` | `BTicino_Undefined_DIN contacts interface` |
+| `1605` | `003553` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +88,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `144` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -103,11 +130,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `144` | Advanced Configuration | supported configuration route for this Device family |
-| `144` | Physical configuration | supported configuration route for this Device family |
-| `144` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `144` | Physical configuration | `0` | Canonical firmware/mode association |
+| `144` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `144` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -117,10 +147,10 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | --- | --- | --- | --- | --- |
 | `144` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
 | `144` | `A` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A; Environment (0-9 `GEN`,`GR`,`AMB`,`AUX`) |
-| `144` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
-| `144` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `144` | `PL1` | `0..9` | `0` | `PL1`; `PL1` - (0-9) |
+| `144` | `PL2` | `0..9` | `0` | `PL2`; `PL2` - (0-9) |
 | `144` | `M` | `0..9`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M; Mode physical configurator (0-9, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
-| `144` | `SPE` | `0..8` | `0` | SPE; Special function command control (0-9) |
+| `144` | `SPE` | `0..8` | `0` | `SPE`; Special function command control (0-9) |
 
 ## Object configuration surfaces
 
@@ -132,12 +162,11 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `CONTACT_NUMBER` | `1..201` | `1` | Number of contact |
 
-
 ### Object `410` - Light control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON`/`OFF`) |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (`MODE`+`ON`/`OFF`) |
 | `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
@@ -156,7 +185,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -172,7 +200,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -186,7 +213,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -199,7 +225,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -209,7 +234,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -221,7 +245,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -232,7 +255,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `417` - `AUX` control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -240,7 +262,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
 | `OUT_AUX_CH` | `1..15` | `1` | `AUX` channel |
 | `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
-
 
 ### Object `419` - Sound diffusion control
 
@@ -255,6 +276,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SOURCE` | `1..9` | `1` | Source |
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+### Device-specific interpretation
+
+Firmware `144` declares two slots, each admitting Contact state 181, controls 410/411/412/413/414/415/416/417/419; Virgin `512` admits the same ten Objects on both slots. These are two physical inputs, not twenty independent controls. Contact 181, scheduled PLUS 416 and `AUX` 417 have no slot predicate; PLUS lighting 415 has empty 4145. Other selectors distinguish `SPE`/M roles, with slot-specific conversion rules; e.g. O/I uses rule `67` at slot `1` (`M=20`) and rule `69` at slot `2` (`M=21`), while `SPE=1`/`M=3` maps lock modes differently. Preserve every stored branch. Firmware M contains numeric 9 and labelled 9=O/I; `SPE` domain `0..8` conflicts with its `0..9` description. Predicates use SU_GIU/SU_GIU_M while firmware labels UP/DOWN variants, without a stored explicit alias declaration. Filter `1838` permits only light-control `M=135..138`, excluding reusable default 0 and many conversion outputs: unresolved restriction/conversion conflict. Conversions use CONTACT_TYPE, FOLLOW, `IN_AUX_CHANNEL` and OUT_AUX_CHANNEL where selected reusable definitions use `TYPE_CONTACT`, `IS_FOLLOW_ME` or lack the named field; these are literal source mismatches, not automatically equivalent names. Sound branches depend on `PL1`/`PL2` and preserve `SOURCE=0` outside reusable 1..9. `CHANNEL` 11 retains the duplicate Left and video label. `AUX` `TYPE_CONTACT` has no legal values despite default 0. `APL` uses 16*A+`PL`; local-bus and delay encodings remain source values, not installed addresses or timings.
 
 ## Conditions, filters, and conversions
 
@@ -341,7 +366,7 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | `144` | `415` | `246` | `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation (entire reusable range retained) | `0` | Mode |
 | `144` | `415` | `247` | `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only (entire reusable range retained) | `0` | REG_TYPE |
 | `144` | `419` | `250` | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video (entire reusable range retained) | `3` | Channel (BB-Stereo) |
-| `144` | `419` | `251` | `SUB_SOURCE` | `0..255` (entire reusable range retained) | `0` | SUB_SOURCE |
+| `144` | `419` | `251` | `SUB_SOURCE` | `0..255` (entire reusable range retained) | `0` | `SUB_SOURCE` |
 
 ### Device-specific conversions
 
@@ -533,7 +558,13 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-DIN interface integrating two conventional dry-contact controls into the SCS system. The two contact channels can address independent single loads, a double-function motor load, or scenario commands depending on configuration.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Lighting / dimming | Cyclic, ON, OFF, pushbutton, separate ON/OFF, timed, preset level and blinking commands to external actuators | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Automation / lock | Paired shutter commands; disable/enable controls | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Scenarios | Scenario-module recall/edit, programmed CEN, Lighting Management PLUS and programmed PLUS roles | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Physical outputs | Input interface sends commands; it is not a two-relay load actuator | ST-00002001-EN, printed/PDF pp. 1–7 |
+| Historical additional roles | Sound diffusion, contact and `AUX` are documented in historical setup; they are not assumed removed or universally available in current installations | BT00283-a-ES, printed pp. 715–719 / PDF pp. 146–150 |
 
 ## Observed behavior and corroboration
 
@@ -541,17 +572,53 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+The 2024 sheet permits physical configurators, MyHOME_Suite or Home+Project App for MyHOME, and Plug&Go/Project&Download for Lighting Management. `PL1`/`PL2` identify software Modules 1/2. Physical address bounds are role-specific; software `A=0..10`/`PL=0..15` and local/riser levels remain separate.
+
+| 2024 function | Physical setting / documented consequence |
+| --- | --- |
+| Basic addresses | Lighting `A=1..9`, `PL1`/`PL2=0..9`; GEN/AMB/GR scopes separately shown |
+| Contact type | NO `SPE=0`; NC `SPE=7` for supported standard commands |
+| Cyclic / single | `SPE=0` `M=0` cyclic; ON/OFF symbols; PUL; `SPE=1` `M=7` NO-only cyclic |
+| Separate ON/OFF | 2024 O/I: `N2` ON, `N1` OFF; historical Spanish `N1` ON, `N2` OFF |
+| Timed ON | `SPE=0` `M=8`: 0.5 s, 7: 30 s, `1..5`: `1..5` min, 6: 15 min; `SPE=8` `M=1`: 2 s, 2: 10 min |
+| Software timer | `0..255` h, `0..59` min, `0..59` s |
+| Dimmer | Point-to-point only; cyclic `M=O` as printed; O/I hold; `SPE=3` `M=1..9` sets `10..90`% |
+| Blink | `SPE=2` `M=0..9`: 0.5..5 s in 0.5 s steps; software 5.5..8 s; OFF stops blinking |
+| Automation | `PL1=PL2`, `SPE=0` (NO) or 7 (NC); bistable/monostable up/down symbols |
+| Enable / disable | `SPE=1` `M=1` disable, `M=2` enable |
+| Scenario module | `SPE=6` recall/edit or `SPE=4` recall only; `M=1..8` maps `N1=2*M−1` and `N2=2*M`; `PL2=PL1` or absent disables second button as stated |
+| Scenario address inconsistency | Page 5 upper table `A=1..9`/`PL=0..9`, lower note `A=0..9`/`PL=1..9`; no silent normalization |
+| CEN | `SPE=0` or NC 7, `M=CEN`; physical A/`PL1`/`PL2=1..9`; virtual buttons `0..31` |
+| CEN pairing | Source says `PL1=PL2` gives two different scenarios; `PL1`≠`PL2` gives the same scenario; retain this literal rule |
+| PLUS | Lighting PLUS through software; programmed PLUS address `1..2047` and buttons `0..31` |
+
+### Historical Spanish roles and differences
+
+BT00283-a-ES, printed pp. 715–719 / PDF pp. 146–150.
+
+| Role / selector | Historical behavior |
+| --- | --- |
+| Separate ON/OFF | `N1` ON / `N2` OFF, unlike 2024 table |
+| Double enable/disable | `SPE=1` `M=3`: `N1` locks, `N2` unlocks; absent from 2024 function list |
+| Sound `SPE=5` `M=0` | Short `N1`: source and amplifier ON; long `N1`: volume +; short `N2`: OFF; long `N2`: volume − |
+| Sound `SPE=5` `M=1` | `N1` cycles source, `N2` cycles track |
+| Sound address | A/`PL1` address amplifier; `PL2` source `1..4`, or 0 follow-me; AMB/GEN scopes separately documented, GEN `PL1=0` |
+| Contact / `AUX` | Historical virtual/Lighting Management role list includes both; exact catalogue candidates are not proof of unconditional activation |
+
+`F420` scenario learning uses unlock at least 0.5 s, hold scenario control 3 s, perform actions then confirm briefly; individual deletion is about 10 s. Programmed CEN uses MH200N and a unique address in the local or riser context. Reconcile the exact installed revision before relying on a particular input assignment; the two published ON/OFF directions must not be merged.
 
 ## Source reconciliation
 
-The canonical catalogue maps `F428` and `003553`. The current publisher sheet directly documents `F428`; the archived MyHOME catalogue corroborates the historical `003553` commercial reference.
+The 2024 sheet and current Italian export agree on 27 V/9 mA, two inputs, NO/NC and two DIN modules. The older Spanish leaf explicitly documents sound, contact and `AUX` roles. It reverses the separate `N1`/`N2` ON/OFF assignment relative to 2024 and includes double enable/disable absent from that newer table. The 2024 scenario-address table disagrees with its own lower note, and its CEN pairing wording is counterintuitive but retained literally. These changes are not mapped to firmware `144` or a hardware revision. Complete historical catalogue predicates, aliases, field-name mismatches, filter conflicts and slot-specific conversions are preserved without inventing selection precedence.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Current/historical ON/OFF assignment, scenario-address bounds and CEN pairing wording need revision-specific confirmation; installed firmware behavior remains unobserved.
+- The light-mode filter/conversion conflict, unresolved selector aliases, conversion field-name mismatches and `AUX` empty contact domain are preserved catalogue limitations.
+- Exact independent `003553` physical instructions/EAN, Home+Project/MyHOME_Suite help, MH200N/`F420` integration and remote setup sources are not independently examined.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -562,3 +629,5 @@ The canonical catalogue maps `F428` and `003553`. The current publisher sheet di
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `F428-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F428` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/83/9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F428); SHA-256 `9c83931fd9422de10c8c3ff8597c3e687526a6a3d2b6d48c683265b786109262`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0070)

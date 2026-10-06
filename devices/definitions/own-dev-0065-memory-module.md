@@ -2,7 +2,7 @@
 
 ## Summary
 
-This DIN memory module records managed lighting-actuator states and restores them after a power interruption. It provides blackout recovery for the configured SCS system or power-supply domain, with separate guidance for logically expanded installations.
+This SCS memory module records lighting states and restores them after a power interruption. It excludes shutters and requires learning the loads to restore; systems joined by physical expansion can share one memory module.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -35,19 +35,18 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00281-b-UK` | technical sheet | 2012-12-13 | `F425` blackout-memory behavior, electrical characteristics and configuration | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
-| `F425-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `F425` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425) |
+| `MQ00281-b-UK` | technical sheet | MQ00281-b-UK; 2012-12-13 | Printed/PDF p. 1; complete `F425` memory, physical expansion, ratings, indicators and learning procedure | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
+| `F425-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Printed/PDF p. 1; exact-reference EAN and complete technical attributes examined; linked technical/DWG downloads and prices not incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish exact-product sheet within compilation | BT00281-a-ES; undated leaf | Printed p. 714 / PDF p. 145; complete `F425` ratings, placement, `LED`/learning procedure and physical-expansion exception | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Supply | `27 Vdc` from SCS BUS; operating `18..27 Vdc` | `MQ00281-b-UK` |
-| Consumption | `5 mA` | `MQ00281-b-UK` |
-| Operating temperature | `0..40 °C` | `MQ00281-b-UK` |
-| Dissipated power | `0.1 W` maximum | `MQ00281-b-UK` |
-| Width | `2 DIN modules` | `MQ00281-b-UK` |
-| Recommended distance from power supply | not more than `10 m` | `MQ00281-b-UK` |
+| Supply / current / dissipation | `27 Vdc` nominal; `18..27 Vdc` operating; `5 mA`; `0.1 W` | MQ00281-b-UK, printed/PDF p. 1 |
+| Temperature / size | `0..40 °C`; two DIN modules | MQ00281-b-UK, printed/PDF p. 1 |
+| Placement | No more than `10 m` from the power supply | MQ00281-b-UK, printed/PDF p. 1 |
+| Restoration trigger / delay | Power interruption at least `400 ms`; lighting restoration about `10 s` after supply returns | MQ00281-b-UK, printed/PDF p. 1 |
 
 ## Identity
 
@@ -59,6 +58,28 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Item model / `modobj` | `54` | Canonical inventory |
 | Commercial records | `2` | Canonical catalogue |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `54` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Commercial-record metadata
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `60` | `F425` | `1` | `5` | `BTicino_Undefined_Black-out memory` |
+| `1629` | `003552` | `2` | `5` | `Black-out memory` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +87,12 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | `187` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,11 +110,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 ## Configuration modes
 
-| Firmware | Mode | Catalogue interpretation |
-| --- | --- | --- |
-| `187` | Advanced Configuration | supported configuration route for this Device family |
-| `187` | Physical configuration | supported configuration route for this Device family |
-| `187` | Virtual Configuration | supported configuration route for this Device family |
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `187` | Physical configuration | `0` | Canonical firmware/mode association |
+| `187` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `187` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -97,7 +127,7 @@ Catalogue domains/defaults below are firmware-scoped, separate from the product-
 | --- | --- | --- | --- | --- |
 | `187` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
 | `187` | `A` | `0..9` | `0` | A; Environment |
-| `187` | `PL` | `0..9` | `0` | PL; Light Point |
+| `187` | `PL` | `0..9` | `0` | `PL`; Light Point |
 
 ## Object configuration surfaces
 
@@ -109,6 +139,10 @@ The following domains and defaults describe reusable Object definitions in the c
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
+
+### Device-specific interpretation
+
+Firmware `187` designates Black-out memory Object `30` at slot `1`, without a Virgin, slot condition, relation filter or conversion. Firmware A/`PL=0..9` default 0 differs from reusable Object `A=0..10`/`PL=0..15`. The sheet recommends `A=0` and `PL=1..9` to avoid actuator address overlap; that recommendation is not a different stored default or proof of all wider Object addresses. Physical, virtual and advanced mode associations are software applicability, separate from the front-button learning sequence.
 
 ## Conditions, filters, and conversions
 
@@ -146,7 +180,12 @@ These maps describe stored conversion branches after Object selection. Validate 
 
 ## Functional applicability
 
-SCS blackout-memory module that records actuator states and restores managed lighting states after power returns. One module is normally used per system/power-supply domain, with documented behavior for logically expanded systems.
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Memory | Saves lighting actuator state on each bus command and restores it after qualifying interruption | MQ00281-b-UK, printed/PDF p. 1 |
+| System boundary | Normally one module per installed system/power supply; one may cover multiple systems joined by F422 physical expansion | MQ00281-b-UK, printed/PDF p. 1 |
+| Exceptions | Shutters are not managed; timed ON restores as simple ON | MQ00281-b-UK, printed/PDF p. 1 |
+| `LED` states | Off: too far from supply; green fixed: normal; orange fixed: unacquired; red fixed: excluded; red flashing: learning; orange flashing: wrong/missing configuration | MQ00281-b-UK, printed/PDF p. 1 |
 
 ## Observed behavior and corroboration
 
@@ -154,17 +193,28 @@ No additional publishable Device-specific hardware/runtime observation is curren
 
 ## Programming
 
-Programming must select the applicable firmware, resolve active Module/Object relationships through catalogue conditions and filters, and preserve the documented configuration-mode boundary. Product-programmed Devices should not be reduced to generic physical-configurator semantics.
+Use a distinct address from actuators; the sheet recommends `A=0`, `PL=1..9`. For Lighting Management use Project&Download; MyHOME configuration is separately represented by the catalogue modes. Relearn after installation changes.
+
+| Learning step | Manufacturer sequence |
+| --- | --- |
+| Prepare | All loads OFF, including powered dimmers |
+| Enter / exclude | Hold front button 5 s until red; release; turn ON loads that must be excluded |
+| Acquire | Within 30 min press button; red flashes quickly while learning; after about 30 s green indicates completion |
+| Timeout | No confirmation within 30 min returns orange |
+| Test | Perform a blackout of at least 15 s as instructed; this test is distinct from the `400 ms` minimum restoration trigger |
 
 ## Source reconciliation
 
-The canonical catalogue maps `F425` and `003552` to one technical item. The publisher sheet directly documents `F425`; the old Legrand number `003552` is corroborated by the archived MyHOME catalogue cross-reference.
+The exact English sheet and Spanish BT00281-a-ES agree on power, timing, placement and physical-expansion scope. The current `F425` export confirms 27 V/5 mA/two DIN modules and its exact EAN. The previous logical-expansion wording was incorrect: `F425`’s exception is physical expansion, whereas `F420` has a separate logical-expansion limitation. Reusable addresses and catalogue defaults do not replace the recommended non-overlapping learning address.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
 
 ## Evidence limits and open work
 
-- Archive the identified publisher documents locally where licensing and repository policy allow.
-- Capture a sanitized hardware fingerprint covering identity, firmware, Modules, addressing and configuration.
-- Corroborate relation filters and condition-selected topology against MyHOME Suite and controlled hardware observations.
+- Exact `003552` physical instructions and independent EAN remain unretained; catalogue identity is established.
+- F422 topology/application instructions and Project&Download help are referenced but not independently examined.
+- Restoration, excluded loads and address collision behavior remain unobserved.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
 
 ## Sources
 
@@ -175,3 +225,5 @@ The canonical catalogue maps `F425` and `003552` to one technical item. The publ
 - [Physical Devices](../../device-model/physical-devices.md)
 
 - `F425-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F425` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425); SHA-256 `3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc`.
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0065)

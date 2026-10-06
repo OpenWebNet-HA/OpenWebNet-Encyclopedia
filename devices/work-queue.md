@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 150 |
-| reviewed | 60 |
+| review-ready | 140 |
+| reviewed | 70 |
 
 Total: **210** technical-item clusters.
 
@@ -41,15 +41,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2307 | Command Device 2M Light Now | 3 | review-ready | OWN-DEV-0117 | partial | complete | complete | pending | - |
 | normal | 2309 | Acutator/Command Light Light Now | 3 | review-ready | OWN-DEV-0118 | partial | complete | complete | pending | - |
 | normal | 2311 | Command Device 3M Light Now | 3 | review-ready | OWN-DEV-0119 | partial | complete | complete | pending | - |
-| normal | 56 | PIR wall maunted sensor, long range | 2 | review-ready | OWN-DEV-0061 | complete | complete | partial | pending | - |
-| normal | 57 | Daylight sensor for Room Controller + RJ45 | 2 | review-ready | OWN-DEV-0062 | partial | complete | partial | pending | - |
-| normal | 58 | Sensor occupancy + IR + ZigBee | 2 | review-ready | OWN-DEV-0063 | partial | complete | partial | pending | - |
-| normal | 59 | Room Controller 2 Outputs 16 Amps | 2 | review-ready | OWN-DEV-0064 | partial | complete | complete | pending | - |
-| normal | 60 | Memory module | 2 | review-ready | OWN-DEV-0065 | complete | complete | complete | pending | - |
-| normal | 61 | Scenario module | 2 | review-ready | OWN-DEV-0066 | complete | complete | complete | pending | - |
-| normal | 63 | 4 relay DIN actuator 16 A 100/240 V | 2 | review-ready | OWN-DEV-0067 | complete | complete | complete | pending | - |
-| normal | 71 | SCS/DALI gateway | 2 | review-ready | OWN-DEV-0069 | complete | complete | complete | pending | - |
-| normal | 79 | DIN contacts interface | 2 | review-ready | OWN-DEV-0070 | complete | complete | complete | pending | - |
 | normal | 84 | DIN dimmer 1000 VA | 2 | review-ready | OWN-DEV-0073 | complete | complete | complete | pending | - |
 | normal | 85 | DIN dimmer 2 x 400 VA | 2 | review-ready | OWN-DEV-0074 | complete | complete | complete | pending | - |
 | normal | 86 | Room Controller 4 Dim Outputs 0-10V 1000VA | 2 | review-ready | OWN-DEV-0075 | complete | complete | partial | pending | - |
@@ -110,7 +101,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 | normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
 | normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 66 | Actuator 1 module 1 relay | 1 | review-ready | OWN-DEV-0068 | complete | complete | complete | pending | - |
 | normal | 80 | Module contacts interface | 1 | review-ready | OWN-DEV-0071 | complete | complete | complete | pending | - |
 | normal | 98 | Scenes programmer | 1 | review-ready | OWN-DEV-0080 | complete | complete | complete | pending | - |
 | normal | 139 | Burglar alarm central unit with communicator | 1 | review-ready | OWN-DEV-0085 | partial | complete | partial | pending | - |
@@ -203,6 +193,16 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 53 | PIR wall mounted sensor, dual range | OWN-DEV-0058 |
 | 54 | Basic actuator | OWN-DEV-0059 |
 | 55 | Basic control actuator | OWN-DEV-0060 |
+| 56 | PIR wall maunted sensor, long range | OWN-DEV-0061 |
+| 57 | Daylight sensor for Room Controller + RJ45 | OWN-DEV-0062 |
+| 58 | Sensor occupancy + IR + ZigBee | OWN-DEV-0063 |
+| 59 | Room Controller 2 Outputs 16 Amps | OWN-DEV-0064 |
+| 60 | Memory module | OWN-DEV-0065 |
+| 61 | Scenario module | OWN-DEV-0066 |
+| 63 | 4 relay DIN actuator 16 A 100/240 V | OWN-DEV-0067 |
+| 66 | Actuator 1 module 1 relay | OWN-DEV-0068 |
+| 71 | SCS/DALI gateway | OWN-DEV-0069 |
+| 79 | DIN contacts interface | OWN-DEV-0070 |
 | 168 | Flush mounted temperature central unit | OWN-DEV-0017 |
 | 281 | Basic control | OWN-DEV-0004 |
 | 291 | Temperature central unit | OWN-DEV-0042 |
