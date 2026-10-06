@@ -7499,6 +7499,26 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-mq00180-c-en-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: MQ00180_c_EN manufacturer device documentation
+  media_type: application/pdf
+  filename: MQ00180_c_EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 236706
+  sha256: 371528b7918ac34706e957b9a62502af80bb661d989cb50b0211e4e1a64c95cf
+  source_url: https://dar.bticino.com/asset/Documents/MQ00180_c_EN.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/37/15/371528b7918ac34706e957b9a62502af80bb661d989cb50b0211e4e1a64c95cf.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/37/15/371528b7918ac34706e957b9a62502af80bb661d989cb50b0211e4e1a64c95cf.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-mq00184-c-en-20261005
   kind: documentation
   publisher: BTicino / Legrand
