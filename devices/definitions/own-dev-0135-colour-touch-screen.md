@@ -23,6 +23,15 @@ This flush-mounted colour touchscreen brings configured lighting, automation, sc
 | BTicino - Axolute | `H4684` | Established catalogue identity | Manufacturer database commercial record `924` explicitly links this SKU to item `1509` |
 | BTicino - LivingLight | `L4684` | Established catalogue identity | Manufacturer database commercial record `1509` explicitly links this SKU to item `1509` |
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `H4684` | Colour Touch Screen | Canonical commercial record `924` |
+| `L4684` | Colour Touch Screen | Canonical commercial record `1509` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -54,6 +63,22 @@ This flush-mounted colour touchscreen brings configured lighting, automation, sc
 | Main item model / `modobj` | `29` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `29` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +91,23 @@ This flush-mounted colour touchscreen brings configured lighting, automation, sc
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `76` | `56` | BTicino (key `1`) | `1` | external software | `TiDisplayColorIP_0601` |
+| `76` | `56` | BTicino (key `1`) | `3` | external software | `TiDisplayColorIP_0601` |
+| `77` | `98` | BTicino (key `1`) | `1` | external software | `TiDisplayColorIP_0500` |
+| `77` | `98` | BTicino (key `1`) | `3` | external software | `TiDisplayColorIP_0500` |
+| `78` | `99` | BTicino (key `1`) | `1` | external software | `TiDisplayColorIP_0400` |
+| `78` | `99` | BTicino (key `1`) | `3` | external software | `TiDisplayColorIP_0400` |
+| `79` | `101` | BTicino (key `1`) | `1` | external software | `TiDisplayColorIP_0101` |
+| `79` | `101` | BTicino (key `1`) | `3` | external software | `TiDisplayColorIP_0101` |
+
+All 8 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -88,38 +130,23 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `76` | Product Programming | `3` | Association key `4` |
-| `77` | Product Programming | `3` | Association key `4` |
-| `78` | Product Programming | `3` | Association key `4` |
-| `79` | Product Programming | `3` | Association key `4` |
+| `76` | Product Programming | `3` | Canonical firmware/mode association |
+| `77` | Product Programming | `3` | Canonical firmware/mode association |
+| `78` | Product Programming | `3` | Canonical firmware/mode association |
+| `79` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `76` | Ethernet | `2` |
-| `76` | USB | `3` |
-| `77` | Ethernet | `2` |
-| `77` | USB | `3` |
-| `78` | Ethernet | `2` |
-| `78` | USB | `3` |
-| `79` | Ethernet | `2` |
-| `79` | USB | `3` |
+| `76` | Ethernet | Canonical firmware/connection association |
+| `76` | USB | Canonical firmware/connection association |
+| `77` | Ethernet | Canonical firmware/connection association |
+| `77` | USB | Canonical firmware/connection association |
+| `78` | Ethernet | Canonical firmware/connection association |
+| `78` | USB | Canonical firmware/connection association |
+| `79` | Ethernet | Canonical firmware/connection association |
+| `79` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `76` | `1` | `1` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-| `76` | `1` | `3` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-| `77` | `1` | `1` | `TiDisplayColorIP_0500` | Parameter type `7`; payload not inspected |
-| `77` | `1` | `3` | `TiDisplayColorIP_0500` | Parameter type `7`; payload not inspected |
-| `78` | `1` | `1` | `TiDisplayColorIP_0400` | Parameter type `7`; payload not inspected |
-| `78` | `1` | `3` | `TiDisplayColorIP_0400` | Parameter type `7`; payload not inspected |
-| `79` | `1` | `1` | `TiDisplayColorIP_0101` | Parameter type `7`; payload not inspected |
-| `79` | `1` | `3` | `TiDisplayColorIP_0101` | Parameter type `7`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -128,19 +155,19 @@ Domains and defaults are catalogue evidence. `AID` is a literal mask with no sto
 | Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
 | `76` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
-| `76` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `76` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `76` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `76` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 | `77` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
-| `77` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `77` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `77` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `77` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 | `78` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
-| `78` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `78` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `78` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `78` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 | `79` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
-| `79` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `79` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `79` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `79` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
@@ -152,7 +179,7 @@ The following domains and defaults describe reusable Object definitions in the c
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
@@ -200,7 +227,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `32` - Colors Touch Screen | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -224,11 +250,17 @@ H4684/L4684 catalogue identities agree with exact English and Spanish sheets. Th
 | `H4684-L4684-Spanish-sheet.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `BT00287-a-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
+### Semantic review findings
+
+All four official firmware definitions (`6.0.8`, default; `5.0.9`; `4.1.19`; `3.0.9`) place one Object `32`, with no Virgin, conditions, filters or conversions. The common reusable/firmware `FW_VER=3.0.0` is a historical schema default, not evidence of the installed tuple. Eight USB/Ethernet connection associations and eight TiDisplayColorIP parameter associations are separate from the technical sheets' TiDisplay Color, RS232/USB-adapter and LAN examples. The English sheet also names `AM5864`; that reference is not added to this catalogue item. Spanish imposition timestamps `01/04/11` are document-production metadata rather than a hardware release mapping. Exact legacy software discovery distinguishes TiDisplayColor and TiDisplayColorIP editions but the linked edition-specific manuals were not examined. Their missing retention is an evidence limit, not unresolved H4684/L4684 identity.
+
 ## Evidence limits and open work
 
 Full TiDisplay Color software manual, exact reset procedure, hardware/microcontroller identities and installed per-firmware diagnostic/function behavior remain missing.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
+
+A historical Legrand Netherlands legacy-software page was discovered listing TiDisplayColor and TiDisplayColorIP editions, but its linked edition-specific user/software manuals were not retained or examined. Hardware/software edition matching, detailed menu procedures and transfer compatibility across the four catalogue firmware tuples remain limited to the exact sheets and canonical associations. The sheets' RS232/USB adapter wording and LAN/USB-miniUSB diagrams do not prove identical ports on every production unit.
 
 ## Sources
 
@@ -240,3 +272,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0135)

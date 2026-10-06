@@ -23,12 +23,30 @@ This DIN SCS actuator switches a load through a normally closed, two-way relay. 
 | BTicino | `F411/1NC` | Established catalogue identity | Manufacturer database commercial record `1593` explicitly links this SKU to item `1593` |
 | Legrand | `003845` | Established catalogue identity | Manufacturer database commercial record `1705` explicitly links this SKU to item `1593` |
 
+### EAN-13 commercial identifiers
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F411/1NC` | `8012199958910` | [Retained Italian manufacturer product export](https://archive.openwebnet-ha.org/sha256/50/9e/509eb91aab16126716183482ca65cdbdc3cf8d793dcaa11d7e24941837d8ba36.pdf), retrieved 6 October 2026, PDF p. 1 |
+
+No verified EAN is retained for `003845`; the shared catalogue identity does not establish a shared barcode.
+
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F411/1NC` | 1 relay DIN NC actuator 16 A | Canonical commercial record `1593` |
+| `003845` | 1 relay DIN NC actuator 16 A | Canonical commercial record `1705` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00190_e_EN.pdf` | Exact manufacturer documentation | `MQ00190_e_EN; 07/06/2014` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-2; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/c0/82c0464ab612fc3c8c1a118cfb7cb3e772eb90eacd9a19677bb3cb1724f54b7a.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00190_e_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1593` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `F411-1NC-italian-product-sheet.pdf` | Exact Italian product export | Retrieved 06/10/2026; list validity 01/10/26 is not a product publication date | Exact F411/1NC identity, EAN, resistive/incandescent/fluorescent ratings and electrical/mounting attributes; PDF p. 1 examined | [Archived original](https://archive.openwebnet-ha.org/sha256/50/9e/509eb91aab16126716183482ca65cdbdc3cf8d793dcaa11d7e24941837d8ba36.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_1NC) |
 
 ## Physical and electrical characteristics
 
@@ -45,6 +63,7 @@ This DIN SCS actuator switches a load through a normally closed, two-way relay. 
 | Ferromagnetic transformer | `4 A; cos phi 0.5 / 920 VA` | `MQ00190-e-EN` printed/PDF pp. 1-2 |
 | Group sockets | `G1, G2, G3; three physical group assignments` | `MQ00190-e-EN` printed/PDF pp. 1-2 |
 | Bus-loss state | `contact remains closed; load ON` | `MQ00190-e-EN` printed/PDF pp. 1-2 |
+| Resistive contact rating, current Italian export | `16 A` | F411-1NC-italian-product-sheet.pdf p. 1; not transferred to historical production or other load classes |
 
 ## Identity
 
@@ -57,6 +76,19 @@ This DIN SCS actuator switches a load through a normally closed, two-way relay. 
 | Main item model / `modobj` | `139` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `139` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +98,12 @@ This DIN SCS actuator switches a load through a normally closed, two-way relay. 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -85,12 +123,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `170` | Virtual Configuration | `1` | Association key `1` |
-| `170` | Advanced Configuration | `2` | Association key `2` |
-| `170` | Physical configuration | `0` | Association key `3` |
+| `170` | Physical configuration | `0` | Canonical firmware/mode association |
+| `170` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `170` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published physical actuator modes
 
@@ -205,7 +243,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `6` - Light actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -228,9 +265,13 @@ F411/1NC/003845 are explicit catalogue identities. The e-sheet heading calls the
 | --- | --- |
 | `MQ00190_e_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
+### Semantic review findings
+
+One fixed Object `6` via condition `4147`/rule `1` represents one changeover NC relay, not independent relays for each contact. Firmware M admits only `0..4/PUL`; the conversion stores SLA/I/O branches outside that input domain, while the exact e technical sheet explicitly permits physical SLA. This historical catalogue-versus-manufacturer discrepancy is preserved; neither source is silently widened or erased. M=`1..4` maps to master with `60..240 s` delayed slave OFF, consistent with the sheet's point-to-point limitation; PUL maps to reusable `M=15`. All seven relation filters remain complete. Reusable STATE_RESET restore/closed/open choices concern powered Device reset and do not override the documented NC closed path on loss of bus supply. The newly retained exact Italian export establishes a published `16 A` resistive rating, alongside `10 A` incandescent and `4 A` fluorescent, and a verified commercial EAN; none is transferred to every lamp class or every historical production revision. The inaccessible older d-UK sheet and exact Legrand variant instructions remain evidence gaps, not identity uncertainty.
+
 ## Evidence limits and open work
 
-The older d-UK revision, exact Legrand manual, verified resistive-contact rating by production revision, NC bus-loss behavior and diagnostics remain uncorroborated.
+The older d-UK revision, exact Legrand manual, historical resistive-contact rating by production revision, observed NC bus-loss behavior and diagnostics remain uncorroborated.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
@@ -244,3 +285,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0140)

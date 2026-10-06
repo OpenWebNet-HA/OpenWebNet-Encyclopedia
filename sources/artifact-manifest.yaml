@@ -3548,6 +3548,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-f411-1nc-italian-product-sheet-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: F411-1NC-italian-product-sheet manufacturer device documentation
+  media_type: application/pdf
+  filename: F411-1NC-italian-product-sheet.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 14950
+  sha256: 509eb91aab16126716183482ca65cdbdc3cf8d793dcaa11d7e24941837d8ba36
+  source_url: https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_1NC
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/50/9e/509eb91aab16126716183482ca65cdbdc3cf8d793dcaa11d7e24941837d8ba36.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/50/9e/509eb91aab16126716183482ca65cdbdc3cf8d793dcaa11d7e24941837d8ba36.pdf
+  language:
+  - it
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-f411-2-ean-export-20261005
   kind: documentation
   publisher: BTicino
@@ -12263,6 +12283,26 @@ artifacts:
     public_url: https://archive.openwebnet-ha.org/sha256/1c/12/1c12ae9dd5b66a58d6ab3fc18be1ec15c007c32a82b5d03b400ffdce891488bb.pdf
   language:
   - mul
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-timh200n-software-en-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: TiMH200N-software-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: TiMH200N-software-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 12879120
+  sha256: 724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44
+  source_url: https://www.bticino.be/sites/default/files/Service-en-support/software-en-schemas2/Audio-Video/MH200N/SOFTWARE%20MANUAL_UK.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/72/4c/724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/72/4c/724cc849e6e54db50b9bb4cb2da7465bdcdb21d735e00f17c74dc6c2a3f71b44.pdf
+  language:
+  - en
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.

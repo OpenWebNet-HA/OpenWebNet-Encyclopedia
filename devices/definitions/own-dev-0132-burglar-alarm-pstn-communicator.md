@@ -23,14 +23,23 @@ This burglar-alarm central unit combines intrusion-system management with a fixe
 | Legrand - Arteor | `573934` | Established catalogue identity | Manufacturer database commercial record `976` explicitly links this SKU to item `1423` |
 | Legrand - Céliane | `067520` | Established catalogue identity | Manufacturer database commercial record `1423` explicitly links this SKU to item `1423` |
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `573934` | Burglar alarm central unit with communicator | Canonical commercial record `976` |
+| `067520` | Burglar alarm central unit with communicator | Canonical commercial record `1423` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `u3500a.pdf` | Installation manual | `u3500a; 11/08-01 PC` | Exact-product specifications, operating/configuration material and source limitations; retained 84-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3500a.pdf) |
-| `u3501a_s_uk.pdf` | SecurityConfig manual | `u3501a_s_uk; original publication date not established` | Exact-product specifications, operating/configuration material and source limitations; retained 54-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/72/35/7235899a2edacb9dddd4ba11aed4a033b2c2a03d7c8897bcee4ccc123ea453ac.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3501a_s_uk.pdf) |
-| `U3887A.pdf` | French/English Céliane installation manual | `U3887A; 11/09-01 PC` | 067520: English commissioning/function section printed/PDF pp. 87-164; technical data p. 163; OPEN commands pp. 151-162. French counterpart occupies the first half. | [Archived original](https://archive.openwebnet-ha.org/sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U3887A.pdf) |
-| `u3499a.pdf` | Exact historical manufacturer documentation | `u3499a; 11/08-01 PC` | Exact-product specifications, operating/configuration material and source limitations; retained 40-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3499a.pdf) |
+| `u3500a.pdf` | Installation manual | `u3500a; 11/08-01 PC` | Exact 573934/573935 shared installer original; review examined identity/overview pp. 1–12, installation/commissioning pp. 14–34 and protocol/appendix pp. 69–82. Detailed menu pages 35–68 not fully rechecked; 573935 remains outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/a3/75/a375768955e0bd9d19a227b8f9416584cbbdfa7443d0cf23552aecb20a68b6d0.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3500a.pdf) |
+| `u3501a_s_uk.pdf` | SecurityConfig manual | `u3501a_s_uk; original publication date not established` | Exact Arteor SecurityConfig manual; pp. 4–20 and 46–54 examined for project/connection/parameter transfer/history/voice/update procedures. Detailed parameter screens pp. 21–45 remain unexamined in this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/72/35/7235899a2edacb9dddd4ba11aed4a033b2c2a03d7c8897bcee4ccc123ea453ac.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3501a_s_uk.pdf) |
+| `U3887A.pdf` | French/English Céliane installation manual | `U3887A; 11/09-01 PC` | Exact 067520 manual; selected English installation/learning/PC and protocol/technical comparison pp. 98–104, 112–113, 161–164 examined. Other English pages and the French translation not claimed as fully reconciled in this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/40/7e/407e5481847fadc8e3180c703fcc464a2c1c6c2987079be71d34690d8d70d983.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U3887A.pdf) |
+| `u3499a.pdf` | Exact historical manufacturer documentation | `u3499a; 11/08-01 PC` | Exact Arteor user manual, PDF pp. 1–40 examined; alarm/key/zone/call/voice and remote-operation scopes, distinct local/telephone lockouts and published examples. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/c3/b7c3620e398e201f98ff2760806a8c885a81e4f2e953dc20a7e0d6ce47566882.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/u3499a.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1423` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -59,6 +68,18 @@ This burglar-alarm central unit combines intrusion-system management with a fixe
 | Main item model / `modobj` | `203` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Burglar alarm system | `203` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -69,6 +90,20 @@ This burglar-alarm central unit combines intrusion-system management with a fixe
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `105` | `167` | Legrand (key `2`) | `0` | external software | `SecurityConfig_020030` |
+| `105` | `628` | Legrand (key `2`) | `4` | external software | `UNAVAILABLE_0000` |
+| `105` | `631` | Legrand (key `2`) | `2` | external software | `SecurityConfig_0100` |
+| `641` | `629` | Legrand (key `2`) | `4` | external software | `SecurityConfig_0200` |
+| `641` | `630` | Legrand (key `2`) | `2` | external software | `SecurityConfig_0200` |
+
+All 5 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -89,27 +124,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `105` | Product Programming | `3` | Association key `4` |
-| `641` | Product Programming | `3` | Association key `4` |
+| `105` | Product Programming | `3` | Canonical firmware/mode association |
+| `641` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `105` | Serial | `1` |
-| `641` | Serial | `1` |
+| `105` | Serial | Canonical firmware/connection association |
+| `641` | Serial | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `105` | `2` | `0` | `SecurityConfig_020030` | Parameter type `7`; payload not inspected |
-| `105` | `2` | `2` | `SecurityConfig_0100` | Parameter type `7`; payload not inspected |
-| `105` | `2` | `4` | `UNAVAILABLE_0000` | Parameter type `7`; payload not inspected |
-| `641` | `2` | `2` | `SecurityConfig_0200` | Parameter type `7`; payload not inspected |
-| `641` | `2` | `4` | `SecurityConfig_0200` | Parameter type `7`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -176,7 +199,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `13` - AI Control Unit With Communicator Pstn | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 U3500A printed/PDF p. 81 explicitly lists OPEN-SCS families `WHO 0`, `WHO 1`, `WHO 2`, `WHO 4`, `WHO 5`, `WHO 9`; its commands on pp. 69-80 include alarm status, auxiliary commands, scenarios and stored-event readback. These are published capabilities, not measured installed responses.
@@ -190,6 +212,16 @@ No publishable Device-specific hardware captures or experiments are retained for
 Commission through system learning, sensor/zone test, scenario and key setup, date/time and telephone-dialler configuration. The installer workflow separately exposes zones, devices, event history, automation associations, preferences, maintenance, jolly/directory numbers, call events, vocal messages and telephone commands. SecurityConfig transfers configuration/history, customizes voice messages and updates firmware. Three incorrect keys block arming/disarming/menu access for one minute. The Céliane manual’s English section repeats these commissioning and OPEN command functions for 067520. Telephone service compatibility and Contact ID monitoring are documented capabilities, not contemporary provider availability or installed behavior. Credentials and installation-specific values are not reproduced.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
+
+### Commissioning and PC configuration
+
+U3500A pp. 14–34 and the corresponding Céliane English sections pp. 98–104, 112–113 distinguish the local maintenance slide switch from software configuration. With the switch OFF, select language and run automatic learning; resolve reported tamper errors, then send the learned configuration to ready display devices when present. Switch ON, leave maintenance, return to System Test and check sensors without generating an alarm; configure keys/scenarios and date/time. Re-run learning after adding/removing devices and after SecurityConfig changes. The PSTN unit is placed first on the internal telephone line, ahead of other telephone devices (p. 16 / p. 98).
+
+SecurityConfig pp. 5–20 uses a selected COM port through cable `049234` between a PC USB port and the unit's six-way connector. Start learning and follow the software's switch/cable prompts. Receive configuration before editing an existing system; compatibility comparison exposes differences. Force sends the project's parameters to the unit; Align changes the project to match the unit.  Event memory can be received and exported. Project files use `.jai`; configuration exports use `.csv`.
+
+Voice-message receive and loading preset messages overwrite the corresponding project content. WAV imports require PCM 8 kHz, 8-bit mono, with duration bounded by the selected message. The firmware workflow selects `.fwz`, compares versions and prompts for the maintenance-switch/cable sequence; after successful transfer it requires disconnection and a unit reset. Reset cancels date/time according to the installer troubleshooting appendix. Payloads, real recordings, telephone numbers and installation credentials were not examined (SecurityConfig pp. 46–53; U3500A pp. 31, 82).
+
+The exact user manual pp. 12–35 distinguishes intrusion-zone selection, enabling/disabling keys, alarm-history display, siren stopping, telephone-call suppression and remote-management authorization. Telephone remote management can be ON, Manager only, User only or OFF. A directory can contain ten entries but each event call set selects up to four, after the Jolly number; disabling that set does not suppress Jolly. Three wrong telephone credentials end the call, distinct from the local one-minute lockout. These are documented workflows, not tested service availability.
 
 ## Source reconciliation
 
@@ -206,11 +238,17 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 
 The Céliane appendix independently repeats the `125 x 128 x 31 mm`, supply, current, temperature and IP30 data; those facts therefore have direct support for both product lines. The physical rechargeable battery is documented in installation, while its exact chemistry/capacity is not fixed by the quoted technical tables.
 
+### Semantic review findings
+
+Both catalogue commercial records establish identities; the shared Arteor manual also covers `573935`, which is outside this item and is not added as a variant. Both exact installer manuals state SCS `18..28 V` and the unusual standby `55..90 mA Max` wording, retained without inventing a separate peak rating. Firmware `105` (`1.0.17`, default) and `641` (`2.0.0`, nondefault) each place Object `13` in one slot, without Virgin, filter, condition or conversion associations. Their small AID/FW_VER/SYSADDRESS schema does not describe all local menus, telephone functions or SecurityConfig parameters. Five parameter associations include the literal `UNAVAILABLE_0000`; this named catalogue association is not silently dropped. The serial catalogue connection is consistent with USB-to-six-way adapter `049234`, not a native USB socket. U3500A p. 80 incorrectly prints WHO `1` in its auxiliary table although its example, p. 70 family table and Céliane p. 162 specify WHO `9`. No protocol KB change or observed compatibility claim is inferred.
+
 ## Evidence limits and open work
 
 Battery replacement applicability, PSTN provider compatibility, per-line physical differences, installed firmware, telephone security behavior and device-specific captures remain open.
 
 No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
+
+Detailed per-parameter SecurityConfig screens on pp. 21–45 and installer menu details outside the examined commissioning/protocol scopes have not been fully rechecked during this review. The Céliane French translation and remaining English menu details are not claimed as fully reconciled. A regional Legrand Tunisia exact 067520 product-page lead was found, but retrieval returned HTTP 403; its search-result barcode was not incorporated without retaining and verifying the original. Source references to historical portals or Contact ID services do not establish their current availability.
 
 ## Sources
 
@@ -222,3 +260,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0132)

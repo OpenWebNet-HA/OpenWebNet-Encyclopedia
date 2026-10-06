@@ -12,5 +12,5 @@
 | [OWN-DEV-0122](../definitions/own-dev-0122-load-actuator-current-sensor.md) | `F522`, `003558` | Load actuator with current sensor | One measured relay, local totalizers and optional residual-current sensor |
 | [OWN-DEV-0123](../definitions/own-dev-0123-load-management-automation-actuator.md) | `F523`, `003559` | Load management and automation actuator | One unmetered relay combining load shedding and automation |
 | [OWN-DEV-0124](../definitions/own-dev-0124-flush-mounted-load-management-actuator.md) | `HC/HS/HD4672N`, `L/N/NT4672N` | Flush-mounted load management actuator | Two-module flush relay with separate shedding indicator |
-| [OWN-DEV-0134](../definitions/own-dev-0134-energy-data-logger.md) | `F524`, `003566` | Energy data logger | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0134](../definitions/own-dev-0134-energy-data-logger.md) | `F524`, `003566` | Energy data logger | Energy history, virtual lines and source-specific load forcing/reset workflows |
 | [OWN-DEV-0150](../definitions/own-dev-0150-pulse-counter-interface.md) | `003576`, `3522N` | Pulse counter interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

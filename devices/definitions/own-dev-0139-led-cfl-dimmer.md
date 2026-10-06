@@ -23,14 +23,23 @@ This single-channel DIN dimmer regulates documented dimmable LED, compact fluore
 | BTicino | `F418` | Established catalogue identity | Manufacturer database commercial record `1638` explicitly links this SKU to item `1582` |
 | Legrand | `003665` | Established catalogue identity | Manufacturer database commercial record `2187` explicitly links this SKU to item `1582` |
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F418` | Dimmer for energy saving lamps bus | Canonical commercial record `1638` |
+| `003665` | Dimmer for energy saving lamps bus | Canonical commercial record `2187` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `F418-italian-product-sheet.pdf` | Exact Italian product export | `Retrieved 04/10/2026; old compliance-template date does not establish product publication date` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-1; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/62/8f/628f8e289d17ee293652df5772dab21bd838b7bd06e0e4af950fde92328871c3.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F418) |
-| `LE05177AE.pdf` | Manufacturer legacy documentation | `LE05177AE-01PC-17W18; diagrams include older product marking 12W19` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-2; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/41/90/41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE05177AE.pdf) |
-| `MQ00594_d_IT.pdf` | Manufacturer legacy documentation | `MQ00594_d_IT; 20/09/2018` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/88/758805e32270325d7905b9bce00e7f5997d37cb4997483c01c479c3a0577090c.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MQ00594_d_IT.pdf) |
-| `MQ00594_d_EN.pdf` | Exact historical manufacturer documentation | `MQ00594_d_EN; 20/09/2018` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/0f/cf0f1ea620adca98efc2cf844ed0866021e087fbcc4e0ffb88a239adfed5b873.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00594_d_EN.pdf) |
+| `LE05177AE.pdf` | Manufacturer legacy documentation | `LE05177AE-01PC-17W18; diagrams include older product marking 12W19` | Exact F418 two-page multilingual leaflet; English ratings/installation/LED/fuse instructions and diagrams examined; older pictorial 12W19 marking differs from table and d sheet. Other translations not fully reconciled. | [Archived original](https://archive.openwebnet-ha.org/sha256/41/90/41903d436019966da6cb9b08d6a2d628819513382804de476db9f44f6d1a90e8.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE05177AE.pdf) |
+| `MQ00594_d_IT.pdf` | Manufacturer legacy documentation | `MQ00594_d_IT; 20/09/2018` | Exact F418 Italian 20/09/2018 four-page d technical sheet examined in full; electrical, modes, minima and lamp-table claims compared with English. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/88/758805e32270325d7905b9bce00e7f5997d37cb4997483c01c479c3a0577090c.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MQ00594_d_IT.pdf) |
+| `MQ00594_d_EN.pdf` | Exact historical manufacturer documentation | `MQ00594_d_EN; 20/09/2018` | Exact F418 English 20/09/2018 four-page d technical sheet examined in full; TY/MIN and lamp-table inconsistency, ratings/modes/LED/wiring. | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/0f/cf0f1ea620adca98efc2cf844ed0866021e087fbcc4e0ffb88a239adfed5b873.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00594_d_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1582` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -52,8 +61,6 @@ This single-channel DIN dimmer regulates documented dimmable LED, compact fluore
 
 ### Instruction-specific load and installation limits
 
-
-
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Low-voltage mains range | `110..127 Vac:1..150 W halogen; 1..150 VA LED/CFL/electronic transformer` | LE05177AE PDF p. 1 |
@@ -71,6 +78,19 @@ This single-channel DIN dimmer regulates documented dimmable LED, compact fluore
 | Main item model / `modobj` | `47` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `47` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -80,6 +100,12 @@ This single-channel DIN dimmer regulates documented dimmable LED, compact fluore
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -99,12 +125,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `189` | Virtual Configuration | `1` | Association key `1` |
-| `189` | Advanced Configuration | `2` | Association key `2` |
-| `189` | Physical configuration | `0` | Association key `3` |
+| `189` | Physical configuration | `0` | Canonical firmware/mode association |
+| `189` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `189` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published physical actuator modes
 
@@ -223,7 +249,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `8` - Dimmer actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -235,6 +260,8 @@ No publishable Device-specific hardware captures or experiments are retained for
 Choose the actual dimmable lamp/transformer type and stable minimum before operation. Local short presses switch; long presses adjust. Physical addressing uses A/PL and G; master/slave/`PUL`/delayed-slave settings are separately scoped from TY and MIN. Suite enables slave `PUL` and virtual minimum `0..100`. The exact sheet says MyHOME Server configures one channel automatically. Manufacturer-tested lamp examples on p. 4 are revision-bound and not a promise of compatibility with changed bulbs. The instruction warns about flicker from carried waves on mains and requires supply isolation when changing the fuse.
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
+
+The d-sheet pp. 2–3 defines physical `TY=0/1` inductive LED/CFL, `TY=2/3` capacitive LED/CFL and `TY=4` halogen; their default minima are 10%, 37%, 10%, 37% and 1%. `MIN=0` uses that TY-dependent default, while MIN=`1..9` explicitly selects 1%, 5%, 10%, 15%, 20%, 25%, 30%, 35% or 40%. These product selector values are separate from the reusable TYPE_LOAD enum and its firmware filter. The lamp list on p. 4 is revision-specific: its G53 LED `TY=1` row conflicts with the generic CFL heading and must not be changed to `TY=0` without further exact evidence. The instruction's table gives `200..240` Vac and `110..127` Vac, whereas its pictured older marking says `220..240` Vac and `110..127` Vac; load classes, VA and approximate LED/CFL W equivalents remain distinct.
 
 ## Source reconciliation
 
@@ -250,6 +277,10 @@ The exact d-revision English and Italian sheets agree on dimming capacity and co
 | `MQ00594_d_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
 LE05177AE states LED green=load `OFF`, red=`ON`, flashing=load fault, whereas the d-sheet specifies orange=`ON` and distinguishes fast/slow orange/green flashing. Its photograph contains older `200 W/100 W` markings while its table states `300 VA/150 VA` (approximately `200 W/100 W` for typical LED/CFL). The markings describe a load-class/production distinction; no universal 300 W LED rating is inferred.
+
+### Semantic review findings
+
+One fixed dimmer Object `8` is selected through condition `4149` and conversion `3`, with no Virgin. The delayed-M conversion maps `1..4` to `60..240 s` and reusable master `M=0`; its stored I/O branch lies outside firmware M `0..4/SLA/PUL`. Physical TY/MIN settings are distinct from the firmware TY/MIN and reusable TYPE_LOAD/MIN_LEVEL_ADV: no attached conversion establishes their equivalence. Filter `1036` retains TYPE_LOAD code `4` which is absent from its reusable enum, and excludes the reusable modern codes `10..14`; these irregularities are recorded without repairing the database or claiming DALI/DSI/0–10 V electrical output from shared enum names. MIN_LEVEL_ADV default `0` is outside its reusable `1..100` domain; no filter supplies a replacement. The d-sheet's p. 4 G53 Philips LED entry prescribes `TY=1` despite the p. 2 `TY=1` CFL heading; that lamp-specific/source inconsistency is retained, not corrected by inference. LED colours and voltage-dependent capacities remain separately attributed to LE05177AE and the d technical sheets.
 
 ## Evidence limits and open work
 
@@ -267,3 +298,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0139)

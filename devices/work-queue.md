@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 80 |
-| reviewed | 130 |
+| review-ready | 70 |
+| reviewed | 140 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1331 | Scenario programmer | 2 | review-ready | OWN-DEV-0131 | partial | complete | complete | pending | - |
-| normal | 1423 | Burglar alarm central unit with communicator | 2 | review-ready | OWN-DEV-0132 | partial | complete | complete | pending | - |
-| normal | 1463 | Actuator DIN with 4 fil pilote outputs bus | 2 | review-ready | OWN-DEV-0133 | partial | complete | complete | pending | - |
-| normal | 1475 | Energy data logger | 2 | review-ready | OWN-DEV-0134 | partial | complete | complete | pending | - |
-| normal | 1509 | Colour Touch Screen | 2 | review-ready | OWN-DEV-0135 | partial | complete | complete | pending | - |
-| normal | 1520 | IR emitter | 2 | review-ready | OWN-DEV-0136 | partial | complete | complete | pending | - |
-| normal | 1554 | Soft touch control | 2 | review-ready | OWN-DEV-0137 | partial | complete | complete | pending | - |
-| normal | 1556 | Gateway OPEN-BACNET | 2 | review-ready | OWN-DEV-0138 | partial | complete | complete | pending | - |
-| normal | 1582 | Dimmer for energy saving lamps bus | 2 | review-ready | OWN-DEV-0139 | partial | complete | complete | pending | - |
-| normal | 1593 | 1 relay DIN NC actuator 16 A | 2 | review-ready | OWN-DEV-0140 | partial | complete | complete | pending | - |
 | normal | 1596 | 2 relays DIN NC actuator 10 A | 2 | review-ready | OWN-DEV-0141 | partial | complete | complete | pending | - |
 | normal | 1597 | Ballast DIN dimmer 1-10 V | 2 | review-ready | OWN-DEV-0142 | partial | complete | complete | pending | - |
 | normal | 1599 | DIN dimmer 400 VA | 2 | review-ready | OWN-DEV-0143 | partial | complete | complete | pending | - |
@@ -195,18 +185,28 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1190 | Touch control | OWN-DEV-0019 |
 | 1195 | Polyx Memory Display | OWN-DEV-0129 |
 | 1311 | DIN - Dimmer 4X  1-10V 1 000VA - 230V | OWN-DEV-0130 |
+| 1331 | Scenario programmer | OWN-DEV-0131 |
 | 1340 | Multimedia Touch Screen | OWN-DEV-0102 |
 | 1376 | Touch control multifunction | OWN-DEV-0009 |
+| 1423 | Burglar alarm central unit with communicator | OWN-DEV-0132 |
 | 1455 | Web Server A/V Bus | OWN-DEV-0002 |
+| 1463 | Actuator DIN with 4 fil pilote outputs bus | OWN-DEV-0133 |
 | 1465 | Load Control Panel bus | OWN-DEV-0020 |
 | 1469 | MyHOME_Screen 3.5 | OWN-DEV-0015 |
+| 1475 | Energy data logger | OWN-DEV-0134 |
+| 1509 | Colour Touch Screen | OWN-DEV-0135 |
+| 1520 | IR emitter | OWN-DEV-0136 |
 | 1524 | Special control | OWN-DEV-0005 |
 | 1525 | Special functions | OWN-DEV-0043 |
+| 1554 | Soft touch control | OWN-DEV-0137 |
+| 1556 | Gateway OPEN-BACNET | OWN-DEV-0138 |
 | 1559 | PIR+US flush mounted sensor | OWN-DEV-0010 |
 | 1563 | Key card switch | OWN-DEV-0036 |
 | 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
 | 1579 | Shutter control bus | OWN-DEV-0044 |
+| 1582 | Dimmer for energy saving lamps bus | OWN-DEV-0139 |
 | 1586 | Shutter actuator bus | OWN-DEV-0045 |
+| 1593 | 1 relay DIN NC actuator 16 A | OWN-DEV-0140 |
 | 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
 | 1678 | 8 scenarios control | OWN-DEV-0103 |
 | 1679 | DO NOT DISTURB-MAKE UP ROOM control | OWN-DEV-0104 |

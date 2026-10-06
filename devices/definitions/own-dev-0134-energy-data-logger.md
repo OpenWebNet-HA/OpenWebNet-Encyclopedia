@@ -31,17 +31,26 @@ This DIN energy data logger collects readings from up to ten electricity, water,
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F524` | Energy data logger | Canonical commercial record `1475` |
+| `003566` | Energy data logger | Canonical commercial record `1986` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Energy/load functions and installation topology: printed/PDF pp. 74-80, 90, 96, 101. No exact 3456/F450 match; no rating transferred to those products. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME Technical Guide.pdf) |
+| `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | AD-EXMH25GT, Versione 6/2025 rear-cover label; exact F524 entry printed/PDF p. 101 examined. No exact 3456/F450 match; other product ratings/wiring excluded from those items. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
 | `MQ00521-b-EN.pdf` | Technical Sheet MQ00521-B-EN | `MQ00521-b-EN; 09/06/2014` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-1; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/f8/e2/f8e2e80cb63d90c27d42c42bc2e8445cbf99a581a7a432adbe3038849f4b2044.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00521-b-EN.pdf) |
-| `O2074C.pdf` | Instruction Use O2074C | `O2074C-01PC-12W45` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-4; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/f4/d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O2074C.pdf) |
-| `RA00040AB_I_EN.pdf` | Technical Guide RA00040AB_I_EN | `RA00040AB_I_EN; source filename revision; printed publication date not established` | Exact-product specifications, operating/configuration material and source limitations; retained 24-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/32/f0/32f016c987a230e14cfbec922206a62cb4d5d6d2c68add541235d7bd0f2e445b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AB_I_EN.pdf) |
-| `RA00040AC_U_EN.pdf` | Technical Guide RA00040AC_U_EN | `RA00040AC_U_EN; source filename revision; printed publication date not established` | Exact-product specifications, operating/configuration material and source limitations; retained 32-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/df/4ddf61377d61579eade05ba8958a938b426b20c1157027517de374107fb528d4.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AC_U_EN.pdf) |
-| `RA00040AF_I_EN.pdf` | Technical Guide RA00040AF_I_EN | `RA00040AF_I_EN; source filename revision; printed publication date not established` | Exact-product specifications, operating/configuration material and source limitations; retained 16-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/87/4f/874fb89da0129e8582e4c2c5a9a1ff9fabc513bb6870f8a0a1febf851a9d0f47.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_I_EN.pdf) |
-| `RA00040AF_U_EN.pdf` | Technical Guide RA00040AF_U_EN | `RA00040AF_U_EN; source filename revision; printed publication date not established` | Exact-product specifications, operating/configuration material and source limitations; retained 36-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/ce/5c/ce5c45316fdf9df635d1ac94de35a1f5d44979c5dfcce7b2fc9b48dd9617fbda.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_U_EN.pdf) |
+| `O2074C.pdf` | Instruction Use O2074C | `O2074C-01PC-12W45` | Exact F524 4-page multilingual mounting leaflet; English reset/LED instructions on pp. 1–2 examined, translations not fully rechecked. | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/f4/d2f4b257e60493b94067392cf25173a90fee831bb1c6b2dd9613ff91bfa7ecec.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O2074C.pdf) |
+| `RA00040AB_I_EN.pdf` | Technical Guide RA00040AB_I_EN | `RA00040AB_I_EN; source filename revision; printed publication date not established` | Exact F524 24-page installer manual examined in full; commissioning/LED/reset/network and `5..45` °C rating. Historical Windows/browser requirements, not modern compatibility evidence. | [Archived original](https://archive.openwebnet-ha.org/sha256/32/f0/32f016c987a230e14cfbec922206a62cb4d5d6d2c68add541235d7bd0f2e445b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AB_I_EN.pdf) |
+| `RA00040AC_U_EN.pdf` | Technical Guide RA00040AC_U_EN | `RA00040AC_U_EN; source filename revision; printed publication date not established` | Exact F524 32-page user manual examined in full; energy/tariff/virtual-line/admin/data/IP recovery functions and source limits. | [Archived original](https://archive.openwebnet-ha.org/sha256/4d/df/4ddf61377d61579eade05ba8958a938b426b20c1157027517de374107fb528d4.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AC_U_EN.pdf) |
+| `RA00040AF_I_EN.pdf` | Technical Guide RA00040AF_I_EN | `RA00040AF_I_EN; source filename revision; printed publication date not established` | Exact F524/003566 16-page installer manual examined in full; additional load-management function and retained reset/network/`5..45` °C scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/87/4f/874fb89da0129e8582e4c2c5a9a1ff9fabc513bb6870f8a0a1febf851a9d0f47.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_I_EN.pdf) |
+| `RA00040AF_U_EN.pdf` | Technical Guide RA00040AF_U_EN | `RA00040AF_U_EN; source filename revision; printed publication date not established` | Exact F524/003566 36-page user manual examined in full; energy and added F521 load forcing/actuator setup, reset/IP differences and source limits. | [Archived original](https://archive.openwebnet-ha.org/sha256/ce/5c/ce5c45316fdf9df635d1ac94de35a1f5d44979c5dfcce7b2fc9b48dd9617fbda.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00040AF_U_EN.pdf) |
 | `F524-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-3; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/78/fc/78fc076141a2ad69164d75249a2577c63f1422990965db7d88655a3bf94e562e.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F524&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1475` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
@@ -49,18 +58,18 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `18..27 Vdc` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Current draw | `30 mA` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Operating temperature | `5..40 °C` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Mounting | `1 DIN module` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Energy lines | `maximum 10 electric/water/gas/heat lines` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Electrical sources | `F520 meters or F521 central units` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Non-electrical sources | `3522 pulse-counter interfaces` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Detailed electric recording | `15-minute intervals; Excel export` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Electric tariffs | `up to 8 time bands/tariffs` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Backup | `microSD; daily per-line consumption records` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-| Interfaces | `Ethernet; SCS; reset key; status LED` | `MQ00521-b-EN` p. 1; `RA00040AF_I_EN` printed/PDF pp. 4-14 |
-
+| SCS supply | `18..27 Vdc` | `MQ00521-b-EN` p. 1 |
+| Current draw | `30 mA` | `MQ00521-b-EN` p. 1 |
+| Operating temperature, technical sheet | `5..40 °C` | `MQ00521-b-EN` p. 1 |
+| Operating temperature, installation manuals | `5..45 °C` | `RA00040AB_I_EN` p. 23; `RA00040AF_I_EN` p. 14 |
+| Mounting | `1 DIN module` | `MQ00521-b-EN` p. 1 |
+| Energy lines | `maximum 10 electric/water/gas/heat lines` | `MQ00521-b-EN` p. 1 |
+| Electrical sources | `F520 meters or F521 central units` | `MQ00521-b-EN` p. 1 |
+| Non-electrical sources | `3522 pulse-counter interfaces` | `MQ00521-b-EN` p. 1 |
+| Detailed electric recording | `15-minute intervals; Excel export` | `MQ00521-b-EN` p. 1 |
+| Electric tariffs | `up to 8 time bands/tariffs` | `MQ00521-b-EN` p. 1 |
+| Backup | `microSD; daily per-line consumption records` | `MQ00521-b-EN` p. 1 |
+| Interfaces | `Ethernet; SCS; reset key; status LED` | `MQ00521-b-EN` p. 1 |
 
 ### Publisher export attributes
 
@@ -84,8 +93,6 @@ These are the captured publisher classification values for the named variants. T
 
 ### Published network and setup indications
 
-
-
 | State | LED indication | Source |
 | --- | --- | --- |
 | no network / awaiting address | slow regular red | AF installer p. 5 |
@@ -105,6 +112,19 @@ These are the captured publisher classification values for the named variants. T
 | Main item model / `modobj` | `13` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `13` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -114,6 +134,19 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `98` | `53` | BTicino (key `1`) | `0` | Extra | `1475_1.0_BT\xml\Extra\extra.xml` |
+| `98` | `55` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1475_1.0_BT\xml\Protocol\protocol.xml` |
+| `98` | `339` | Legrand (key `2`) | `0` | Extra | `1475_1.0_LG\xml\Extra\extra.xml` |
+| `98` | `340` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1475_1.0_LG\xml\Protocol\protocol.xml` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -133,24 +166,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `98` | Product Programming | `3` | Association key `4` |
+| `98` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `98` | Ethernet | `2` |
+| `98` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `98` | `1` | `0` | `1475_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `98` | `1` | `0` | `1475_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `98` | `2` | `0` | `1475_1.0_LG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `98` | `2` | `0` | `1475_1.0_LG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -159,7 +181,7 @@ Domains and defaults are catalogue evidence. `AID` is a literal mask with no sto
 | Firmware | Field | Catalogue domain | Catalogue default | Meaning |
 | --- | --- | --- | --- | --- |
 | `98` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
-| `98` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `98` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `98` | `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity; Local Dynamic IP |
 | `98` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `98` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
@@ -174,7 +196,7 @@ Catalogue Object key `528` maps to external Object `219`.
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
-| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (manufacturer catalogue default/example) | Local IP address |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` (publisher catalogue documentation default) | Local IP address |
 | `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
 | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
@@ -223,7 +245,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `219` - Energy Data Logger | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -236,6 +257,16 @@ Configure built-in web pages and set date/time before enabling logging. The inst
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
+### Energy-line setup and data boundaries
+
+AC user pp. 11–28 and AF user pp. 11–32 separate display/exports, tariff setup and administrator configuration. Set real meter/interface addresses in `1..127`, the family, unit, description, decimal precision and consumption/production direction. Virtual sum/difference/multiplication lines have their own display address and unit; multiplication factors must be at least 0.001. The examples' virtual addresses do not describe an installed channel allocation.
+
+Electric tariffs can use up to eight bands; coverage must span the full day, week and holidays. Other consumption tariffs are single-rate. Holiday customization is lost when the year changes. User and installer passwords are separate roles, with 8–12-character changes and security-question recovery to the published factory password; these are manufacturer defaults and procedures, not installation credentials. Data Reset deletes selected energy-line data; it is distinct from the front-panel restart/IP procedures. AF adds actuator phase/priority configuration and F521 load status/temporary forced reactivation; the logger does not replace the central unit's shedding logic.
+
+The last-12-month display/export and optional microSD backup are documented, but card capacity, filesystem, failure recovery and guaranteed physical retention are not established here. The pulse-interface example states 254 pulses/hour without independently establishing its applicability to every supported interface revision. Do not use a virtual multiplier to infer a larger physical pulse acquisition rate.
+
+Installation AB p. 22 and AF p. 13 recover the published fixed IP/mask through a power-up/reset sequence. AC user p. 30 instead describes automatic IP assignment; AF user p. 34 describes the fixed pair without the power-up distinction. Preserve these revision/procedure differences alongside the common timed 10/20-second reset controls. Legacy Windows discovery and listed browser versions document historical setup; current operating-system/browser support remains untested.
+
 ## Source reconciliation
 
 The AB installer and AC user editions are preserved beside both AF editions. AF installer reorganizes legacy operating-system/network instructions; AF user adds load-control pages and administrator actuator configuration absent from AC. These are material UI/document revisions, not catalogue Firmware version proof. The one-page sheet’s ten-line/logging/tariff claims agree with the guides. The web administrator pages expose more capability than the catalogue’s single energy-data-logger Object; they do not establish extra local Modules.
@@ -244,7 +275,7 @@ The AB installer and AC user editions are preserved beside both AF editions. AF 
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MyHOME Technical Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
+| `MyHOME-Technical-Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
 | `MQ00521-b-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `O2074C.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `RA00040AB_I_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
@@ -252,6 +283,12 @@ The AB installer and AC user editions are preserved beside both AF editions. AF 
 | `RA00040AF_I_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `RA00040AF_U_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `F524-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
+
+### Semantic review findings
+
+One fixed Object `219`, no Virgin/conditions/filters/conversions, and four XML parameter associations describe historical catalogue coverage, not ten local meter Objects. The source's ten energy lines are collected from external devices; virtual arithmetic does not create physical channels. The AB/AF installers retain a 10-second restart and 20-second restart plus dynamic-IP selection. Their troubleshooting also describes powering while holding reset to recover a fixed factory address/mask, whereas AC user troubleshooting describes DHCP recovery and AF user troubleshooting specifies the fixed pair: these distinct and partly inconsistent procedures must not be collapsed into a universal factory reset. Installation manuals permit `5..45 °C`; the exact b technical sheet specifies `5..40 °C`. Both ranges are attributed rather than merged. AF adds F521 load status/forcing and actuator configuration beyond AC. The user guides' last-12-month export/display interval is not an independently proven storage-retention guarantee. The generic 254-pulses/hour example is not established as a hardware limit for every `3522`/`3522N` revision. Published OPENWebNet consumption access does not supply a complete diagnostic/protocol implementation here.
+
+The retained June 2025 guide's exact F524 entry is printed/PDF p. 101. It names `3522N` where the older b sheet/manuals name `3522`; their payloads and firmware-specific support are not established by substituting the identifiers. Adjacent F520 photovoltaic wiring and unrelated range pages do not establish F524 production wiring. Its current export describes external consumption sources and OPENWebNet consumption display while classification says Energy meter and S0 interface None; those labels do not create a direct toroid/pulse input on the logger.
 
 ## Evidence limits and open work
 
@@ -269,3 +306,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0134)

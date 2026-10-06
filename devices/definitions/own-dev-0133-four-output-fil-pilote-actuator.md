@@ -23,6 +23,15 @@ This four-output Fil Pilote actuator sends pilot-wire operating signals to compa
 | Legrand | `003577` | Established catalogue identity | Manufacturer database commercial record `1463` explicitly links this SKU to item `1463` |
 | BTicino | `F430FP` | Established catalogue identity | Manufacturer database commercial record `2007` explicitly links this SKU to item `1463` |
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `003577` | Actuator DIN with 4 fil pilote outputs bus | Canonical commercial record `1463` |
+| `F430FP` | Actuator DIN with 4 fil pilote outputs bus | Canonical commercial record `2007` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -54,6 +63,19 @@ This four-output Fil Pilote actuator sends pilot-wire operating signals to compa
 | Main item model / `modobj` | `1` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `1` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -63,6 +85,12 @@ This four-output Fil Pilote actuator sends pilot-wire operating signals to compa
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -85,12 +113,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `221` | Virtual Configuration | `1` | Association key `1` |
-| `221` | Advanced Configuration | `2` | Association key `2` |
-| `221` | Physical configuration | `0` | Association key `3` |
+| `221` | Physical configuration | `0` | Canonical firmware/mode association |
+| `221` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `221` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -163,7 +191,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `214` - Fil-Pilote actuator | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -176,6 +203,8 @@ Assign the zone address for each Fil Pilote output separately from the common ac
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
+O1866B PDF p. 1 defines each local button precisely: OFF becomes Comfort; any other operating state becomes OFF. The corresponding LED is unlit in OFF and lit in the other states. Any button can identify the device during virtual configuration. Its wiring diagram separates the 230 Vac L/N supply, four pilot outputs and SCS bus; the pilot output is not the heater's power feed.
+
 ## Source reconciliation
 
 003577 and F430FP are explicit catalogue identities. The exact French instruction supplies electrical limits and local behavior. Four Object `214` placements agree with four output zones, but the instruction does not supply every Suite field’s encoding, physical selector domain or Fil Pilote waveform. A technical-item model number must not be used as the functional system WHO.
@@ -185,6 +214,10 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 | Original | Role / reconciliation scope |
 | --- | --- |
 | `O1866B.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
+
+### Semantic review findings
+
+Four fixed FilPilote Object `214` placements describe four pilot-wire signal outputs; they are not four mains power relays. The leaflet supplies `25 mA` per output and a maximum of ten FilPilote devices per output. It states that pressing a local button selects Comfort only from OFF, and selects OFF from every other state; a simple Comfort/OFF toggle omits that distinction. Firmware `ZA=0..9`, `ZB=1..4`, `N=0..9` with default `0` is distinct from each reusable Object's `ZA/ZB=01..99` and `N=1..9`, default `1`. No Virgin, condition, conversion or filter explains the mapping. Neither zone `00` nor firmware `N=0` is silently transferred into the reusable Object domain. Exact `003577` instructions, pilot-waveform details and the physical selector interpretation remain documentation gaps within established identity.
 
 ## Evidence limits and open work
 
@@ -202,3 +235,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0133)

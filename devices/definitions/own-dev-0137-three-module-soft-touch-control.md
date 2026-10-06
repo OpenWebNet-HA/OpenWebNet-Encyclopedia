@@ -25,12 +25,21 @@ This three-module Soft Touch control uses a capacitive sensitive area to send co
 | BTicino - Axolute | `HC4653/3` | Established member of grouped catalogue identity | AUTOMATISME printed p. 36 / PDF p. 38 and grouped database code |
 | BTicino - Axolute | `HS4653/3` | Established member of grouped catalogue identity | AUTOMATISME printed p. 36 / PDF p. 38 and grouped database code |
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `HC/HS4653/3` | Soft touch control | Canonical commercial record `1554` |
+| `HD4653M3` | Soft touch control | Canonical commercial record `1555` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `AUTOMATISME.pdf` | Exact manufacturer documentation | `AUTOMATISME; original publication date not established` | HC/HS4653/3: range printed p. 36 / PDF p. 38; physical modes and LED/scenario procedures printed pp. 93-94 / PDF pp. 95-96; supply/current/size printed p. 161 / PDF p. 163. HD4653M3 is outside this original’s explicit reference list. | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-| `Axolute-AD-ITAX17C.pdf` | Italian Axolute commercial catalogue | `AD-ITAX17C; Edizione 11/2017 printed on rear cover` | HD4653M3 and HC/HS4653/3: lighting/scenarios printed/PDF p. 76; sound control p. 86; depth p. 116. Publication is 2017; the URL’s 2025 directory does not date the original. | [Archived original](https://archive.openwebnet-ha.org/sha256/b9/5f/b95ff63d6989dc791a02d0da95575948d735fee3048c3aced5f4b432f98d5233.pdf) | [Publisher original](https://www.bticino.it/sites/default/files/2025-03/catalogo-Axolute_AD_ITAX17C.pdf) |
+| `AUTOMATISME.pdf` | Exact manufacturer documentation | `AUTOMATISME; original publication date not established` | HC/HS4653/3 exact scopes: printed pp. 36, 93–94, 161 / PDF pp. 38, 95–96, 163 examined; product/current, mode matrices, gestures and LED selectors. Detailed sound/video instructions delegated elsewhere. | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
+| `Axolute-AD-ITAX17C.pdf` | Italian Axolute commercial catalogue | `AD-ITAX17C; Edizione 11/2017 printed on rear cover` | 2017 catalogue: printed/PDF pp. 76, 86, 116 examined for exact HC/HS4653/3 and HD4653M3 roles/depth. Traditional supports/plates only; AXOLUTE AIR excluded; no HD electrical rating transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/b9/5f/b95ff63d6989dc791a02d0da95575948d735fee3048c3aced5f4b432f98d5233.pdf) | [Publisher original](https://www.bticino.it/sites/default/files/2025-03/catalogo-Axolute_AD_ITAX17C.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1554` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -52,12 +61,10 @@ This three-module Soft Touch control uses a capacitive sensitive area to send co
 
 ### Additional exact Axolute catalogue facts
 
-
-
 | Property | Value | Evidence |
 | --- | --- | --- |
 | HD4653M3 mounting | `3 wiring-device modules` | AD-ITAX17C printed/PDF p. 76 |
-| HD4653M3 depth | `20 mm` | AD-ITAX17C printed/PDF p. 116 |
+| HD4653M3 depth | `20 mm`, traditional supports/plates; not AXOLUTE AIR | AD-ITAX17C printed/PDF p. 116 |
 | Co-listed sound role | speaker `ON`/`OFF` and volume adjustment | AD-ITAX17C printed/PDF p. 86 |
 
 ## Identity
@@ -71,6 +78,19 @@ This three-module Soft Touch control uses a capacitive sensitive area to send co
 | Main item model / `modobj` | `8` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `8` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -80,6 +100,12 @@ This three-module Soft Touch control uses a capacitive sensitive area to send co
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -110,12 +136,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `150` | Virtual Configuration | `1` | Association key `1` |
-| `150` | Advanced Configuration | `2` | Association key `2` |
-| `150` | Physical configuration | `0` | Association key `3` |
+| `150` | Physical configuration | `0` | Canonical firmware/mode association |
+| `150` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `150` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -158,7 +184,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
 | `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
 
-
 ### Object `411` - Automation control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -174,7 +199,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `412` - Lock/unlock actuator control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -188,7 +212,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `413` - Scenario module control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -201,7 +224,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
 
-
 ### Object `414` - Scheduled scenario
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -211,7 +233,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `CEN_BUTT_1` | `0..31` | `1` | Button |
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
-
 
 ### Object `415` - Scenario PLUS Lighting Management
 
@@ -223,7 +244,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 | `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
 
-
 ### Object `416` - Scheduled scenario PLUS
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -234,14 +254,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
 
-
 ### Object `418` - Open lock control
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `P` | `0..95` | `0` | External unit address |
 | `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
-
 
 ### Object `419` - Sound diffusion control
 
@@ -257,7 +275,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `SUB_SOURCE` | `0..255` | `0` | Sub source |
 | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
 
-
 ### Object `426` - Staircase light control
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -265,7 +282,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N1` | `0..255` | `0` | Internal unit address |
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
-
 
 ### Object `427` - Floor call control
 
@@ -276,7 +292,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N2` | `0..15` | `0` | Internal unit address |
 | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
 | `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
-
 
 ### Object `130` - User interface settings
 
@@ -399,7 +414,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `426` - Staircase light control | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `130` - User interface settings | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -423,16 +437,19 @@ HC/HS4653/3 and HD4653M3 are explicit manufacturer database identities. AUTOMATI
 | `AUTOMATISME.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `Axolute-AD-ITAX17C.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 
-
 The relation-specific restriction table explicitly identifies reusable defaults outside the permitted subset. These are catalogue inconsistencies; no replacement default is inferred. Runtime Configuration and manufacturer modes must be corroborated before selecting a substitute.
 
 The Object `426` restriction permits target `N1=100..255`, excluding its reusable default `0`; the physical guide delegates detailed video-door-entry settings elsewhere. The automation Object restricts M to combined monostable/bistable directions and excludes the reusable default. These catalogue constraints are not repaired by borrowing physical modes from another control.
+
+### Semantic review findings
+
+Firmware `150` declares two catalogue Modules: one slot with eleven alternative function Objects and a second fixed UI Object `130`. The physical product occupies three wiring-device modules and has a sensitive area; those counts are different concepts. All reusable fields and relation restrictions remain complete. Object `411`'s effective M subset `4/5` excludes its default `0`; Object `426`'s N1 `100..255` filter excludes default `0`. No replacement default is invented. No slot-condition or conversion rows are stored to establish selection or mapping. Virgin Object `521` permits slot-1 Objects beyond the eleven direct candidates: `417` AUX control, `421` cyclic autoswitch control and `462` session lock command. Their complete reusable fields are retained separately, with no direct Object/Firmware relation proving reachability or effective restrictions. The source gives no legal TYPE_CONTACT enum for Virgin-only Object `417` despite a default `0`; the empty domain is not silently replaced from another Object. The exact guide documents HC/HS physical lighting/scenario functions and delegates sound/video details. The Axolute catalogue corroborates HD4653M3 identity, lighting/scenario/sound roles and `20 mm` mounting depth, explicitly for traditional supports/plates and not AXOLUTE AIR. The HC/HS `15 mA` rating is not transferred to HD without exact evidence. F420 single-scenario programming/deletion gestures remain distinct from resetting every scenario at F420.
 
 ## Evidence limits and open work
 
 Exact HD4653M3 technical/installation instructions and electrical ratings, operating-temperature range, sound/video mode instructions, Suite-specific physical equivalence and captures of the broader Object/filter surface remain incomplete.
 
-No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
+No installed release, hardware revision or microcontroller fingerprint has been established for this cluster. The diagnostic table describes source-derived candidates. An alternate current publisher URL for the 2017 Axolute catalogue was retrieved and matched the retained SHA-256 and byte length exactly; no duplicate artifact was registered. Further manufacturer discovery and hardware corroboration remain partial; catalogue extraction and source reconciliation are complete for the retained evidence listed here.
 
 ## Sources
 
@@ -444,3 +461,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0137)

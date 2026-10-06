@@ -31,15 +31,24 @@ This compact infrared emitter brings compatible air-conditioning units into the 
 
 Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
 
+### Catalogue labels and classifications
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `3456` | IR emitter | Canonical commercial record `1157` |
+| `088301` | IR emitter | Canonical commercial record `1728` |
+
+Both commercial records are enabled for catalogue display, have no visibility-type value, and are not marked dependent or gateway in this historical commercial table. These classifications do not establish market availability, installed state or functional gateway capability. Empty or truncated internal description labels are not used to infer additional product features.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00357-b-UK.pdf` | Technical Sheet MQ00357-B-UK | `MQ00357-b-UK; 17/12/2012` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-2; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/85/78/85788000ca03620c64639768465e28e7a45b4d1e92892fa64ef32c27a6ff4ba5.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00357-b-UK.pdf) |
 | `MQ00357-c-EN.pdf` | Technical Sheet MQ00357-C-EN | `MQ00357-c-EN; 05/06/2014` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-2; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/56/5c/565c6b83a0ff7f52beb3980f5fc102e2159e45b7f363926f5ef65e9b8832336b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00357-c-EN.pdf) |
-| `MyHOME Technical Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | Energy/load functions and installation topology: printed/PDF pp. 74-80, 90, 96, 101. No exact 3456/F450 match; no rating transferred to those products. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME Technical Guide.pdf) |
-| `U4713A_S_EN.pdf` | Technical Guide U4713A_S_EN | `U4713A_S_EN; 07/10-01 PC` | Exact-product specifications, operating/configuration material and source limitations; retained 22-page original; relevant product sections reviewed. Printed pagination and 1-based PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4713A_S_EN.pdf) |
-| `U4714B.pdf` | Instruction Use U4714B | `U4714B-01PC-12W46` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-2; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4714B.pdf) |
+| `MyHOME-Technical-Guide.pdf` | English system technical guide | `AD-EXMH25GT; Versione 6/2025 printed on rear cover` | AD-EXMH25GT, Versione 6/2025 rear-cover label; exact F524 entry printed/PDF p. 101 examined. No exact 3456/F450 match; other product ratings/wiring excluded from those items. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://www.bticino.com/sites/default/files/2024-02/MyHOME%20Technical%20Guide.pdf) |
+| `U4713A_S_EN.pdf` | Technical Guide U4713A_S_EN | `U4713A_S_EN; 07/10-01 PC` | Exact 3456 IRSplit 22-page software manual examined in full; basic/advanced learning, full-state acquisition, database/project transfer, firmware and Device Info. | [Archived original](https://archive.openwebnet-ha.org/sha256/8c/ab/8cab26ca1a6b06d4f0dd5a1d96a2420c2e36b4dadef41c2992863c8f52368230.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4713A_S_EN.pdf) |
+| `U4714B.pdf` | Instruction Use U4714B | `U4714B-01PC-12W46` | Exact 3456 two-page multilingual leaflet; English connector/button legends and 2 cm acquisition diagram examined; other translations not fully reconciled. | [Archived original](https://archive.openwebnet-ha.org/sha256/4c/2c/4c2c63a2a0a44692284f3a160dad650499fb3fd880a956f982d5eb3777aac580.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U4714B.pdf) |
 | `3456-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 04.10.2026` | Exact references, specifications and configuration/wiring as applicable: PDF pp. 1-3; printed pages coincide where numbered; unnumbered product exports are identified separately. | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/1b/8d1b557543aef5e5b9c6bfc3215993e5505706a42631ba778fe322b68a226091.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-3456&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | All item, commercial, system, Firmware, Module/Object/Virgin, field, filter, condition, conversion and ancillary associations for item `1520` | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
@@ -57,7 +66,6 @@ Each EAN is tied to the exact commercial reference in the cited manufacturer rec
 | Advanced temperature selection | `16..30 °C` | `MQ00357-b-UK` pp. 1-2; `MQ00357-c-EN` pp. 1-2 |
 | Advanced operating modes | `auto; heating; cooling; dry; fan` | `MQ00357-b-UK` pp. 1-2; `MQ00357-c-EN` pp. 1-2 |
 | Advanced fan / swing | `auto/minimum/medium/maximum; swing ON/OFF` | `MQ00357-b-UK` pp. 1-2; `MQ00357-c-EN` pp. 1-2 |
-
 
 ### Publisher export attributes
 
@@ -100,6 +108,20 @@ These are the captured publisher classification values for the named variants. T
 | Commercial record count | `2` | `EN_DEVICE` |
 | Additional system | Automation; key `1`; model `26` | Separate non-main catalogue association |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `26` | No | Canonical item/system relationship |
+| Temperature control | `26` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -109,6 +131,17 @@ These are the captured publisher classification values for the named variants. T
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `128` | `251` | BTicino (key `1`) | `0` | external software | `IRSplit_0100` |
+| `128` | `252` | Legrand (key `2`) | `0` | external software | `IRSplit_0100` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -129,25 +162,16 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `128` | Virtual Configuration | `1` | Association key `1` |
-| `128` | Advanced Configuration | `2` | Association key `2` |
-| `128` | Physical configuration | `0` | Association key `3` |
-| `128` | Product Programming | `3` | Association key `4` |
+| `128` | Physical configuration | `0` | Canonical firmware/mode association |
+| `128` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `128` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `128` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `128` | USB | `3` |
+| `128` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `128` | `1` | `0` | `IRSplit_0100` | Parameter type `7`; payload not inspected |
-| `128` | `2` | `0` | `IRSplit_0100` | Parameter type `7`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ## Firmware-scoped configuration
 
@@ -173,7 +197,6 @@ Catalogue Object key `471` maps to external Object `195`.
 | --- | --- | --- | --- |
 | `A` | `0..10` | `0` | Area |
 | `PL` | `0..15` | `0` | Light point |
-
 
 ### Object `196` - IR complete split control
 
@@ -498,7 +521,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `195` - IR self-learning split control | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 | `196` - IR complete split control | Applicable only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue relationship |
 
-
 These are catalogue-derived functional roles, not a declaration that every candidate is simultaneously configured. Product UI pages may control remote subsystems without instantiating their Objects locally. System/model mappings in Identity are not WHO values. See [Functional Protocol](../../functional/) for canonical system semantics.
 
 ## Observed behavior and corroboration
@@ -511,6 +533,8 @@ Use `M=1` for self-learned commands with automation A/PL and `N=0`; acquire a co
 
 Apply the complete catalogue domains, defaults, conditions and relation-specific filters above. A legal reusable value is not necessarily legal for this Firmware. Configuration paths and package labels are source associations, not verified payload encoding. The generic validation/session algorithm remains in [Programming](../../programming/).
 
+IRSplit printed/PDF pp. 7–20 uses the miniUSB connection with a selected/detected COM port. Basic acquisition records an entire remote state rather than an isolated temperature command: acquire the same state twice, returning the remote to its prior state before the second acquisition. Name it, test with the connected IR lead, select the commands and download the project. The leaflet limits remote-to-receiver acquisition distance to 2 cm. A supported software-database model avoids learning; advanced projects send the model's full command set. Personal models can be exported/imported for reuse. `.fwz` update and Device Info are distinct workflows; the supported-versions menu describes software compatibility, not installed identification. Local LED/test indications do not provide HVAC state readback or proof that the split accepted an IR transmission.
+
 ## Source reconciliation
 
 3456/088301 are established database identities. Revisions b (2012) and c (2014) agree on the two modes and supply/current; c retains a b-style UK code in one footer despite its EN filename and explicit c revision. U4714B and IRSplit supplement wiring/acquisition procedures. The publisher-linked shared system guide does not name 3456 and contributes no exact-product rating. Object `195` (learning) and `196` (complete split) are mode alternatives; a single Module does not expose both unconditionally. IR transmission provides no captured proof that the air conditioner accepted a command.
@@ -521,10 +545,14 @@ Apply the complete catalogue domains, defaults, conditions and relation-specific
 | --- | --- |
 | `MQ00357-b-UK.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `MQ00357-c-EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
-| `MyHOME Technical Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
+| `MyHOME-Technical-Guide.pdf` | June 2025 shared energy guide: wiring, load control and consumption topology; no exact 3456/F450 match and no specifications transferred to those products. |
 | `U4713A_S_EN.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `U4714B.pdf` | Device-specific ratings, roles, configuration or operating procedures incorporated above; material revision differences and remaining limits are stated here. |
 | `3456-publisher-product-sheet.pdf` | Captured exact-variant identity and complete technical classification attributes tabulated above; document links are discovery provenance, not additional independently verified capability. |
+
+### Semantic review findings
+
+Firmware `128` selects one alternative Module: `M=1` Object `195` (basic) via condition `4955`/rule `7204`, or `M=0` Object `196` (advanced) via condition `4914`/rule `7000`; Virgin Object `522` permits both at slot `1`. They are alternatives, not two simultaneously independent IR channels. Rule `7000` contains all 99 zone leaves, mapping the decimal ZA/ZB pairs `01..99` while excluding `00`. Rule `7204` contains 170 assignments, with extended PL `10..15` branches outside this firmware's ZB/PL `0..9` input domain. Those stored branches are retained but not made reachable by widening firmware applicability. Firmware N default `1`, basic physical N=`0`, and reusable Object domains are distinct. No filters are stored. The export's `With LED indication=No` and `Updateable=No` conflict with the exact leaflet's LEDs and IRSplit firmware-update workflow; its `Radio interface=Yes` does not establish a radio transceiver. Its linked firmware `1.1.1` and brand/model database payload remain unexamined; catalogue `1.0.0` is not replaced from a download label. Virtual configuration and the button are marked future use in the exact sheet.
 
 ## Evidence limits and open work
 
@@ -542,3 +570,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0136)

@@ -2781,7 +2781,7 @@ items:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0130 created from the next priority-sorted unreviewed cluster 1311, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 2 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
     - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0121-0130-2026-10-06.md#own-dev-0130. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1331':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -2790,24 +2790,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0131 created from the next priority-sorted unreviewed cluster 1331, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 2 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0131. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1340':
     state: reviewed
     priority: normal
@@ -2868,7 +2869,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-05: Semantic review accepted after all eight checks; substantive source/catalogue corrections and validation recorded in project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0009. Explicit documentation, source-conflict and hardware limits remain within the accepted evidence scope.'
   '1423':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -2877,24 +2878,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0132 created from the next priority-sorted unreviewed cluster 1423, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 4 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0132. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1440':
     state: review-ready
     priority: normal
@@ -3038,7 +3040,7 @@ items:
     notes:
     - '2026-10-05 requested batch: OWN-DEV-0168 created from the next priority-sorted unreviewed cluster 1461, continuing after OWN-DEV-0160. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 8 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
   '1463':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3047,24 +3049,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0133 created from the next priority-sorted unreviewed cluster 1463, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 1 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0133. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1465':
     state: reviewed
     priority: normal
@@ -3184,7 +3187,7 @@ items:
     notes:
     - '2026-10-05 requested batch: OWN-DEV-0170 created from the next priority-sorted unreviewed cluster 1471, continuing after OWN-DEV-0160. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 10 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
   '1475':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3193,24 +3196,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0134 created from the next priority-sorted unreviewed cluster 1475, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 8 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0134. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1487':
     state: review-ready
     priority: normal
@@ -3324,7 +3328,7 @@ items:
     notes:
     - '2026-10-05 requested batch: OWN-DEV-0174 created from the next priority-sorted unreviewed cluster 1493, continuing after OWN-DEV-0160. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 0 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
   '1509':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3333,24 +3337,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0135 created from the next priority-sorted unreviewed cluster 1509, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 2 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0135. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1510':
     state: review-ready
     priority: normal
@@ -3492,7 +3497,7 @@ items:
     notes:
     - '2026-10-05 requested batch: OWN-DEV-0179 created from the next priority-sorted unreviewed cluster 1516, continuing after OWN-DEV-0160. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 2 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
   '1520':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3501,24 +3506,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0136 created from the next priority-sorted unreviewed cluster 1520, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 6 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0136. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1524':
     state: reviewed
     priority: high
@@ -3581,7 +3587,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0043. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1554':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3590,26 +3596,27 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0137 created from the next priority-sorted unreviewed cluster 1554, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 2 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0137. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1556':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3618,24 +3625,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0138 created from the next priority-sorted unreviewed cluster 1556, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 6 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0138. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1559':
     state: reviewed
     priority: high
@@ -3813,7 +3821,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0044. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1582':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3822,24 +3830,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0139 created from the next priority-sorted unreviewed cluster 1582, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 4 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0139. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1586':
     state: reviewed
     priority: normal
@@ -3871,7 +3880,7 @@ items:
     - '2026-10-03: ECV/ESG/presentation corrections applied; catalogue slots, external Object namespaces, legal domains/defaults, restrictions and conversions checked against the retained database. Publisher omissions corrected where directly evidenced. Remaining source conflicts and hardware/runtime evidence limits are explicit; final evidence closure remains partial.'
     - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0045. Accurate documentation, source-conflict, payload and hardware limits remain within the accepted scope.'
   '1593':
-    state: review-ready
+    state: reviewed
     priority: normal
     outcome:
       type: device-definition
@@ -3880,24 +3889,25 @@ items:
     review:
       commercial_identities: complete
       database_extraction: complete
-      documentation_discovery: partial
+      documentation_discovery: complete
       documentation_archive: complete
       source_reconciliation: complete
       definition: complete
       hardware_corroboration: pending
-      final_review: partial
+      final_review: complete
       review_gate:
-        identity_scope: pending
-        claim_evidence: pending
-        source_reconciliation: pending
-        information_architecture: pending
-        reader_usefulness: pending
-        evidence_limits: pending
-        presentation: pending
-        validation: pending
+        identity_scope: complete
+        claim_evidence: complete
+        source_reconciliation: complete
+        information_architecture: complete
+        reader_usefulness: complete
+        evidence_limits: complete
+        presentation: complete
+        validation: complete
     blockers: []
     notes:
     - '2026-10-04 UTC scheduled batch: OWN-DEV-0140 created from the next priority-sorted unreviewed cluster 1593, continuing after OWN-DEV-0115. Complete canonical catalogue extraction, explicit SKU relationships, source-specific specifications/physical modes/procedures, revisions, limits and source discrepancies curated. 1 retained originals reconciled for this cluster. Batch originals were uploaded, archival SHA-256 verified and registered/pushed immediately on main before incorporation; existing originals reused by fingerprint. Missing product-specific documents are documentation gaps, not unresolved identity. Further discovery/hardware corroboration and final evidence closure remain partial. Work published on existing docs/devices-foundation; no additional batch selected.'
+    - '2026-10-06: Semantic review accepted after all eight checks; source/catalogue corrections and validation recorded in project/review/device-reviews-0131-0140-2026-10-06.md#own-dev-0140. Accurate documentation, source-conflict and hardware evidence limits remain within the accepted scope.'
   '1594':
     state: review-ready
     priority: normal
