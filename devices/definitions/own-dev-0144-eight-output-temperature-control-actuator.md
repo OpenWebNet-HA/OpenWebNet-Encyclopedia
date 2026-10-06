@@ -29,17 +29,27 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F430R8` | `8005543501771` | `F430R8-publisher-product-sheet.pdf` PDF p. 1 |
+| `F430R8` | `8005543501771` | [F430R8-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/a0/1f/a01f9ea0b1c9b7bf665e6a944b829ee639bd0b08af97369eb4a57d03116234b2.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F430R8` | Actuator DIN with 8 outputs | Canonical commercial record `1743` |
+| `003517` | Actuator DIN with 8 outputs | Canonical commercial record `2123` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00000914-EN.pdf` | Technical Sheet ST-00000914-EN | `ST-00000914-EN; 15/04/2021` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/f7/8df7f135a9b4d26382d3cd32b278fa6a4ae5de82752fac999b81ef6608fd2596.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000914-EN.pdf) |
+| `ST-00000914-EN.pdf` | Technical Sheet ST-00000914-EN | `ST-00000914-EN; 15/04/2021` | Exact English 2021 sheet; PDF pp. 1–2 examined in full; introduction omits one relay count | [Archived original](https://archive.openwebnet-ha.org/sha256/8d/f7/8df7f135a9b4d26382d3cd32b278fa6a4ae5de82752fac999b81ef6608fd2596.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000914-EN.pdf) |
 | `F430R8-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/a0/1f/a01f9ea0b1c9b7bf665e6a944b829ee639bd0b08af97369eb4a57d03116234b2.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F430R8&include_technical=1) |
-| `MM00779_b_IT.pdf` | Legacy manufacturer technical documentation | `MM00779_b_IT; 05/04/2016` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/f2/46/f246af2706f2a77c36aa55565ea66f4bf8049ba2370b5efc611b1dce9da27a90.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00779_b_IT.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `MM00779_b_IT.pdf` | Legacy manufacturer technical documentation | `MM00779_b_IT; 05/04/2016` | Exact Italian 2016 b sheet; PDF pp. 1–2 examined in full; five-relay four-pipe count explicit | [Archived original](https://archive.openwebnet-ha.org/sha256/f2/46/f246af2706f2a77c36aa55565ea66f4bf8049ba2370b5efc611b1dce9da27a90.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00779_b_IT.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1683`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MyHOME-Suite-thermoregulation-actuator-functions-IT.html` | Italian manufacturer Suite function help | MHS_function_0304b / IT_MHS_function_0304; page publication date not stated | Exact F430R8 function-family inventory examined; linked navigation/image assets are not independent evidence or an output-allocation algorithm | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/cc/bccc3ce223a0e3536f2e76e28ed010ec664397e14ab6fc7a14a30eb7dc7f5413.pdf) | [Publisher source](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/IT_MHS_function_0304/attuatori_termo.html) |
 
 ## Physical and electrical characteristics
 
@@ -52,10 +62,9 @@ EANs identify the named commercial variant, not the configured physical device o
 | Capacity | `8 on/off valves or 4 open/close or three-point valves` | `ST-00000914-EN` printed/PDF pp. 1-2; `F430R8-publisher-product-sheet` PDF p. 2 |
 | Fan-coil applications | `two 2-pipe on/off units; one 2-pipe three-point, 4-pipe on/off or 4-pipe three-point unit` | `ST-00000914-EN` printed/PDF pp. 1-2; `F430R8-publisher-product-sheet` PDF p. 2 |
 
-
 ### Publisher export attributes
 
-These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. A negative connected-object classification does not exclude remote control through another system device.
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
@@ -92,6 +101,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `3` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `3` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -101,6 +123,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -164,12 +192,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `155` | Virtual Configuration | `1` | Association key `1` |
-| `155` | Advanced Configuration | `2` | Association key `2` |
-| `155` | Physical configuration | `0` | Association key `3` |
+| `155` | Physical configuration | `0` | Canonical firmware/mode association |
+| `155` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `155` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -182,6 +210,21 @@ These published settings are independent of catalogue programming-mode IDs. Revi
 | `LOAD=1` | OUT`1..3` fan speeds; OUT4/5 valve open/close; OUT`6..8` unused | `ST-00000914-EN` printed/PDF pp. 1-2; `F430R8-publisher-product-sheet` PDF p. 2 |
 | `LOAD=2` | OUT`1..3` fan speeds; OUT4/5 heating open/close; OUT6/7 cooling open/close; OUT8 unused | `ST-00000914-EN` printed/PDF pp. 1-2; `F430R8-publisher-product-sheet` PDF p. 2 |
 | `Other applications` | complete software configuration; Suite >=1.3; output reuse scoped to application | `ST-00000914-EN` printed/PDF pp. 1-2; `F430R8-publisher-product-sheet` PDF p. 2 |
+
+### Physical output allocation
+
+| Output | `LOAD=0`: four-pipe on/off | `LOAD=1`: two-pipe three-point | `LOAD=2`: four-pipe three-point |
+| --- | --- | --- | --- |
+| 1 | Fan speed 1 | Fan speed 1 | Fan speed 1 |
+| 2 | Fan speed 2 | Fan speed 2 | Fan speed 2 |
+| 3 | Fan speed 3 | Fan speed 3 | Fan speed 3 |
+| 4 | Heating valve | Valve opening | Heating valve opening |
+| 5 | Cooling valve | Valve closure | Heating valve closure |
+| 6 | Unused | Unused | Cooling valve opening |
+| 7 | Unused | Unused | Cooling valve closure |
+| 8 | Unused | Unused | Unused |
+
+Exact ST-00000914-EN and MM00779_b_IT PDF p. 1. Software-only output reuse is outside this physical matrix.
 
 ## Firmware-scoped configuration
 
@@ -207,7 +250,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N` | `1..9` | `1` | Device number |
 | `SUBTYPE` | `16` = Valve on/off; `17` = Pump | `16` | Type of load |
 
-
 ### Object `170` - Temperature control open/close actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -216,14 +258,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N` | `1..9` | `1` | Device number |
 | `SUBTYPE` | `16` = Valve on/off; `17` = Pump | `16` | Type of load |
 
-
 ### Object `171` - 2 pipes fan coil actuator with `ON`-`OFF` valve
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `ZAZB` | `01..99` | `01` | Zone |
 | `N` | `1..9` | `1` | Device number |
-
 
 ### Object `52` - Temperature control pump actuator
 
@@ -233,7 +273,6 @@ Catalogue Object key `533` maps to external Object `52`.
 | --- | --- | --- | --- |
 | `ZAZB` | `00` | `00` | Zone |
 | `N` | `1..9` | `1` | Device number |
-
 
 ### Object `86` - Temperature control 3 points valve actuator
 
@@ -246,7 +285,6 @@ Catalogue Object key `536` maps to external Object `86`.
 | `VALVE_TIME_LOW` | `0..255` | `60` | Valve time low; Valve_time_low (Valve time in seconds, over 2 bytes (0...767s)) |
 | `VALVE_TIME_HIGH` | `0..2` | `0` | Valve time high; Valve_time_high (Valve time in seconds, over 2 bytes (0...767s)) |
 
-
 ### Object `87` - Temperature control 2 pipes fan coil actuator with 3 points valve
 
 Catalogue Object key `537` maps to external Object `87`.
@@ -258,7 +296,6 @@ Catalogue Object key `537` maps to external Object `87`.
 | `VALVE_TIME_LOW` | `0..255` | `60` | Valve time low; Valve_time_low (Valve time in seconds, over 2 bytes (0...767s)) |
 | `VALVE_TIME_HIGH` | `0..2` | `0` | Valve time high; Valve_time_high (Valve time in seconds, over 2 bytes (0...767s)) |
 
-
 ### Object `89` - Temperature control 4 pipes fan coil actuator with `ON`/`OFF` valves
 
 Catalogue Object key `539` maps to external Object `89`.
@@ -267,7 +304,6 @@ Catalogue Object key `539` maps to external Object `89`.
 | --- | --- | --- | --- |
 | `ZAZB` | `01..99` | `01` | Zone |
 | `N` | `0..9` | `1` | Device number |
-
 
 ### Object `93` - Temperature control 4 pipes fan coil actuator with 3 points valve
 
@@ -334,7 +370,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `170` - Temperature control open/close actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 | `169` - Temperature control on/off actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -345,7 +380,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Physical ZA/ZB selects the zone and N the progressive actuator number. `LOAD=0` selects a four-pipe on/off fan-coil: OUT1/2/3 are low/medium/high fan speed, OUT4 heating valve and OUT5 cooling valve; OUT`6..8` unused. `LOAD=1` uses OUT`1..3` for fan speeds and OUT4/5 for valve opening/closing; OUT`6..8` unused. `LOAD=2` uses OUT`1..3` for fan speeds, OUT4/5 heating opening/closing, OUT6/7 cooling opening/closing and OUT8 unused. Other applications require MyHOME_Suite 1.3 or later; the complete application must then be configured in software, which can assign otherwise unused outputs. Local override buttons and LEDs identify outputs. The two-pipe on/off software-only wiring note uses the single valve on terminal 5. Protect the illustrated mains circuit with the specified 10 A breaker; this is separate from the relay rating.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
@@ -355,10 +390,14 @@ The exact 2021 sheet and older Italian sheet distinguish eight on/off channels f
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `ST-00000914-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `F430R8-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `MM00779_b_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `ST-00000914-EN.pdf` | Exact English 2021 sheet; PDF pp. 1–2 examined in full; introduction omits one relay count Source conflicts and limits are reconciled above. |
+| `F430R8-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MM00779_b_IT.pdf` | Exact Italian 2016 b sheet; PDF pp. 1–2 examined in full; five-relay four-pipe count explicit Source conflicts and limits are reconciled above. |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. Source conflicts and limits are reconciled above. |
+
+### Semantic review findings
+
+Firmware `155` declares eight slots with progressively fewer legal candidates toward the final outputs; Virgin `519` permits eight reusable function types, not eight simultaneous complete fan-coils. No slot predicates, filters, conversions or parameter/package associations establish automatic relay allocation. Pump Object `52` uses `ZAZB=00` whereas ordinary zone Objects use `01..99`; firmware ZA/ZB/N defaults 0 cannot be treated as every reusable default. The exact Italian 2016 sheet fills the five-relay count missing from the English 2021 introduction and agrees on the `LOAD=0/1/2` wiring matrix. Software 1.3+ configures the entire application and unused outputs; two-pipe on/off uses terminal 5, distinct from the four-pipe physical matrix. English 2021 adds the 10 A protective breaker note; the product relays remain 4 A resistive/1 A inductive. The archived Suite function inventory independently lists the exact product's supported families but is not an installed configuration or output-allocation algorithm. Linked GUI-MHOME and broader brochures remain unexamined.
 
 ## Evidence limits and open work
 
@@ -378,6 +417,10 @@ These publisher-linked sources were identified but were not retained or used as 
 | `Catalogue Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 2M.pdf) |
 | `Catalogue Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 3M.pdf) |
 
+The current product export links installation guide GUI-MHOME as well as commercial brochures; those linked originals were not examined here. The retained Suite help provides a function-family inventory, with publication/installed-software applicability still unestablished.
+
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -388,3 +431,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0144)

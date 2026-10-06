@@ -29,34 +29,43 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F430V10` | `8005543505304` | `F430V10-publisher-product-sheet.pdf` PDF p. 1 |
+| `F430V10` | `8005543505304` | [F430V10-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/a7/cf/a7cf84342e5bbd2ef626ddb775234289e2c2b6a579d9a204c7b1aa2ce7140524.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F430V10` | Actuator DIN with 2 outputs 0-10V | Canonical commercial record `1744` |
+| `003518` | Actuator DIN with 2 outputs 0-10V | Canonical commercial record `2111` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MM00780-a-EN.pdf` | Technical Sheet MM00780-A-EN | `MM00780-a-EN; 30/09/2013` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/86/15/8615ca26e997c90179d1bd79e02e0e94e79b96957d3ea5954f13662928fba7e1.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00780-a-EN.pdf) |
+| `MM00780-a-EN.pdf` | Technical Sheet MM00780-A-EN | `MM00780-a-EN; 30/09/2013` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/86/15/8615ca26e997c90179d1bd79e02e0e94e79b96957d3ea5954f13662928fba7e1.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00780-a-EN.pdf) |
 | `F430V10-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/a7/cf/a7cf84342e5bbd2ef626ddb775234289e2c2b6a579d9a204c7b1aa2ce7140524.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F430V10&include_technical=1) |
-| `MM00780_a_IT.pdf` | Legacy manufacturer technical documentation | `MM00780_a_IT; 12/09/2013` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/8e/228edfd3cd51122863c134dd84ba368b7ca3bd098274f31a7124dc0984e4fd6e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00780_a_IT.pdf) |
-| `MM00780_a_EN.pdf` | English counterpart of manufacturer-linked document | `MM00780_a_EN; 30/09/2013` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/86/15/8615ca26e997c90179d1bd79e02e0e94e79b96957d3ea5954f13662928fba7e1.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00780_a_EN.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `MM00780_a_IT.pdf` | Legacy manufacturer technical documentation | `MM00780_a_IT; 12/09/2013` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/8e/228edfd3cd51122863c134dd84ba368b7ca3bd098274f31a7124dc0984e4fd6e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00780_a_IT.pdf) |
+| `MM00780_a_EN.pdf` | English counterpart of manufacturer-linked document | `MM00780_a_EN; 30/09/2013` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/86/15/8615ca26e997c90179d1bd79e02e0e94e79b96957d3ea5954f13662928fba7e1.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00780_a_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1684`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MyHOME-Suite-thermoregulation-actuator-functions-IT.html` | Italian manufacturer Suite function help | MHS_function_0304b / IT_MHS_function_0304; page date not stated | Exact F430V10 two-output 0–10 V valve role examined; publication/installed-software applicability not established | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/cc/bccc3ce223a0e3536f2e76e28ed010ec664397e14ab6fc7a14a30eb7dc7f5413.pdf) | [Publisher source](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/IT_MHS_function_0304/attuatori_termo.html) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS operating supply | `18..27 Vdc` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-| Standby / maximum draw | `19 mA / 25 mA` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-| Temperature | `5..40 °C` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-| Outputs | `two independent 0..10 V analogue channels; maximum 1 mA per output` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-| Mounting | `2 DIN modules, publisher classification` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-| Local interface | `two manual open/close controls and associated status LEDs` | `MM00780-a-EN` printed/PDF p. 1; `F430V10-publisher-product-sheet` PDF p. 2 |
-
+| SCS operating supply | `18..27 Vdc` | MM00780-a-EN and MM00780_a_IT PDF p. 1 |
+| Standby / maximum draw | `19 mA / 25 mA` | MM00780-a-EN and MM00780_a_IT PDF p. 1 |
+| Temperature | `5..40 °C` | MM00780-a-EN and MM00780_a_IT PDF p. 1 |
+| Outputs | `two independent 0..10 V analogue channels; maximum 1 mA per output` | MM00780-a-EN and MM00780_a_IT PDF p. 1 |
+| Mounting | `2 DIN modules, publisher classification` | F430V10-publisher-product-sheet.pdf PDF p. 2 |
+| Local interface | `two manual open/close controls and associated status LEDs` | MM00780-a-EN and MM00780_a_IT PDF p. 1 |
 
 ### Publisher export attributes
 
-These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. A negative connected-object classification does not exclude remote control through another system device.
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
@@ -93,6 +102,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `4` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `4` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -102,6 +124,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -122,12 +150,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `252` | Virtual Configuration | `1` | Association key `1` |
-| `252` | Advanced Configuration | `2` | Association key `2` |
-| `252` | Physical configuration | `0` | Association key `3` |
+| `252` | Physical configuration | `0` | Canonical firmware/mode association |
+| `252` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `252` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -450,7 +478,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `54` - Temperature control 0-10V valve actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -461,7 +488,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Set ZA1/ZB1/N1 for the first output and ZA2/ZB2/N2 for the second: each has its own two-digit zone and progressive number. A probe and its actuator must refer to the same zone. MyHOME_Suite 1.3 or later permits virtual configuration only when no physical configurators are fitted. The outputs supply a control signal; size and power the external valve separately. The current EOS compatibility list includes F430V10 and 003518 but requires software configuration for that ecosystem. Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
@@ -471,11 +498,15 @@ The one-page technical sheet and export agree on two analogue channels and 1 mA 
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MM00780-a-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `F430V10-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `MM00780_a_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MM00780_a_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `MM00780-a-EN.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `F430V10-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MM00780_a_IT.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MM00780_a_EN.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. Source conflicts and limits are reconciled above. |
+
+### Semantic review findings
+
+Two fixed Object `54` placements (catalogue key 535) expose two analogue channels. Conditions 4919/4920 and 4921/4922 select normal versus OFF paths from ZB1/ZB2, with conversion roots 7011/7012/7022/7023. Decimal zone leaves preserve `01..99`, exclude 00, and retain explicit OFF assignments outside the reusable active-zone domain; OFF disables an output rather than proving a legal active zone. No filters, Virgin or parameter/package associations are stored. Firmware N defaults 0 differ from reusable `N=1`, and no replacement is inferred. EN and IT a sheets have different printed September 2013 dates but agree on 19/25 mA, two 1 mA outputs and software-only-when-not-physically-configured. Publisher switching-contact count 0.001 is a classification defect matching a current magnitude, not a fractional relay or a digital input. Two-DIN width is supported by the exact export, not an absent dimensions table in the technical sheet. The archived Suite help independently lists the exact 0-10 V valve role. EOS compatibility is a separate ecosystem scope.
 
 ## Evidence limits and open work
 
@@ -495,6 +526,8 @@ These publisher-linked sources were identified but were not retained or used as 
 | `Catalogue Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 2M.pdf) |
 | `Catalogue Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 3M.pdf) |
 
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -505,3 +538,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0145)

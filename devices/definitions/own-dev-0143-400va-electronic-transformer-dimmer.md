@@ -23,29 +23,40 @@ F415 is a DIN-rail dimmer for low-voltage lamps supplied through electronic tran
 | Legrand | `003653` | Established catalogue identity | Manufacturer database commercial record `1600` explicitly links this SKU to item `1599` |
 | BTicino | `F415` | Established catalogue identity | Manufacturer database commercial record `1599` explicitly links this SKU to item `1599` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F415` | DIN dimmer 400 VA | Canonical commercial record `1599` |
+| `003653` | DIN dimmer 400 VA | Canonical commercial record `1600` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `F415-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/c6/73/c6737bb7d64dac9864e183183e56a756eada757e6f7e89b0db39678db86fb109.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F415) |
+| `F415-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/c6/73/c6737bb7d64dac9864e183183e56a756eada757e6f7e89b0db39678db86fb109.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F415) |
 | `MQ00278_e_IT.pdf` | Legacy manufacturer technical documentation | `MQ00278_e_IT; 20/09/2018` | Shared F414/F415 exact-product sheet, PDF pp. 1-2: use F415-specific values. The 1000VA heading applies to F414, not the separately tabulated 400VA F415. | [Archived original](https://archive.openwebnet-ha.org/sha256/fc/29/fc296454ad251c4f28cb3c71452fff97e9a7f4e8a0fd2d100e5a4bf922fddf95.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MQ00278_e_IT.pdf) |
 | `MQ00278_e_EN.pdf` | English counterpart of manufacturer-linked document | `MQ00278_e_EN; 20/09/2018` | Shared F414/F415 exact-product sheet, PDF pp. 1-2: use F415-specific values. The 1000VA heading applies to F414, not the separately tabulated 400VA F415. | [Archived original](https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
 | `AUTOMATISME.pdf` | Exact manufacturer documentation | `AUTOMATISME; printed publication date not established` | F415: physical configuration printed p. 123 / PDF p. 125; load table printed p. 158 / PDF p. 160; technical data/wiring printed p. 164 / PDF p. 166. Historical edition; not a current compatibility guarantee. | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/0a/dc0ab523bbdba359aa2c2bb56a0e581755ff51476c0e21cef8e866310cf16092.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/AUTOMATISME.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | PDF pp. 7–8: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1599`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish historical MyHOME technical sheets | BT00278-b-ES; compilation date not established | Printed pp. 693–695 / PDF pp. 124–126; exact F415 ratings, modes and fuse/wiring scope examined | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS nominal / operating supply | `27 Vdc / 18..27 Vdc` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| 2018 current draw | `22 mA; older historical catalogue says 9 mA` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Electronic-transformer load | `230 Vac, 50 Hz; 60..400 VA; 0.25..1.7 A` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Temperature / size | `-5..45 °C; 4 DIN modules` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Maximum dissipation | `11 W` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Outputs | `one dimmed output` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Protection codes | `IP20 / IK04; sheet property labels reversed` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| Historical fuse marking | `T2.5H 250 V in F415 wiring drawing; F414 T5H marking is separate` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
+| SCS nominal / operating supply | `27 Vdc / 18..27 Vdc` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| 2018 current draw | `22 mA; older historical catalogue says 9 mA` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Electronic-transformer load | `230 Vac, 50 Hz; 60..400 VA; 0.25..1.7 A` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Temperature / size | `-5..45 °C; 4 DIN modules` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Maximum dissipation | `11 W` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Outputs | `one dimmed output` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Protection codes | `IP20 / IK04; sheet property labels reversed` | `MQ00278_e_EN` PDF p. 1; historical comparison: AUTOMATISME printed p. 164 / PDF p. 166 |
+| Historical F415 fuse marking | `T2.5H 250 V` | AUTOMATISME printed p. 164 / PDF p. 166, F415 drawing |
+| Later F415 fuse marking | `T5H 250 V` | MQ00278_e_EN/IT 2018 PDF pp. 1, 3; also Spanish b sheet printed p. 695 / PDF p. 126 |
 
 ## Identity
 
@@ -58,6 +69,19 @@ F415 is a DIN-rail dimmer for low-voltage lamps supplied through electronic tran
 | Main item model / `modobj` | `135` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `135` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +91,12 @@ F415 is a DIN-rail dimmer for low-voltage lamps supplied through electronic tran
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,12 +116,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `181` | Virtual Configuration | `1` | Association key `1` |
-| `181` | Advanced Configuration | `2` | Association key `2` |
-| `181` | Physical configuration | `0` | Association key `3` |
+| `181` | Physical configuration | `0` | Canonical firmware/mode association |
+| `181` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `181` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -99,10 +129,10 @@ These published settings are independent of catalogue programming-mode IDs. Revi
 
 | Selector / setting | Published role or value | Evidence |
 | --- | --- | --- |
-| `A / PL / G` | physical `1..9` / `1..9` / `0..9`; virtual room `0..10`, point `0..15`, ten groups `0..255` | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| `M=0 / SLA / PUL` | master / slave / monostable master | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| `M=1..4` | slave `OFF` delay `1..4` min; virtual `0..255` s | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
-| `Virtual-only options` | slave `PUL`; minimum power-on brightness | `MQ00278_e_EN` printed/PDF pp. 1-2; `AUTOMATISME` printed pp. 123,158,164 / PDF pp. 125,160,166 |
+| `A / PL / G` | physical `1..9` / `1..9` / `0..9`; virtual room `0..10`, point `0..15`, ten groups `0..255` | MQ00278_e_EN/IT PDF p. 2; historical M modes only: AUTOMATISME printed p. 123 / PDF p. 125 |
+| `M=0 / SLA / PUL` | master / slave / monostable master | MQ00278_e_EN/IT PDF p. 2; historical M modes only: AUTOMATISME printed p. 123 / PDF p. 125 |
+| `M=1..4` | slave `OFF` delay `1..4` min; virtual `0..255` s | MQ00278_e_EN/IT PDF p. 2; historical M modes only: AUTOMATISME printed p. 123 / PDF p. 125 |
+| `Virtual-only options` | slave `PUL`; minimum power-on brightness | MQ00278_e_EN/IT PDF p. 2; historical M modes only: AUTOMATISME printed p. 123 / PDF p. 125 |
 
 ## Firmware-scoped configuration
 
@@ -208,7 +238,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `8` - Dimmer actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -219,7 +248,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. Short local presses switch the load; holding adjusts brightness. Suite provides minimum brightness at power-on and slave `PUL`. The sheet says MyHOME Server automatically configures one channel. The historical diagram distinguishes F415’s electronic-transformer connection and fuse from F414’s resistive/ferromagnetic arrangement. The actuator reports load faults such as lamp failure and has a replaceable fuse; use the actual production instructions when servicing. The later EOS compatibility table qualifies F415 from 09W22 and 003653 from 10W07 and excludes physical-configurator devices in that system.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
@@ -229,17 +258,25 @@ MQ00278_e explicitly covers F414, F414/127, F415 and F415/127 despite its broad 
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `F415-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `MQ00278_e_IT.pdf` | Shared F414/F415 sheet; F415-specific load, current and configuration rows apply. The shared 1000VA heading does not raise F415 capacity. |
-| `MQ00278_e_EN.pdf` | Shared F414/F415 sheet; F415-specific load, current and configuration rows apply. The shared 1000VA heading does not raise F415 capacity. |
-| `AUTOMATISME.pdf` | Historical F415 configuration, load table and wiring at printed pp. 123,158,164 / PDF pp. 125,160,166; 9 mA differs from the later sheet’s 22 mA. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `F415-italian-product-sheet.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MQ00278_e_IT.pdf` | Shared F414/F415 exact-product sheet, PDF pp. 1-2: use F415-specific values. The 1000VA heading applies to F414, not the separately tabulated 400VA F415. Source conflicts and limits are reconciled above. |
+| `MQ00278_e_EN.pdf` | Shared F414/F415 exact-product sheet, PDF pp. 1-2: use F415-specific values. The 1000VA heading applies to F414, not the separately tabulated 400VA F415. Source conflicts and limits are reconciled above. |
+| `AUTOMATISME.pdf` | F415: physical configuration printed p. 123 / PDF p. 125; load table printed p. 158 / PDF p. 160; technical data/wiring printed p. 164 / PDF p. 166. Historical edition; not a current compatibility guarantee. Source conflicts and limits are reconciled above. |
+| `ST-00002703-EN.pdf` | PDF pp. 7–8: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. Source conflicts and limits are reconciled above. |
+
+### Semantic review findings
+
+One fixed Object `8`, condition `4155` and conversion `4` retain the complete dimmer surface and relation filters, without Virgin/parameters/packages. Firmware A/PL `0..9` differs from the sheets' physical `1..9` and reusable `0..10`/0..15. Stored I/O conversion is outside M `0..4`/SLA/PUL; no physical I/O capability is inferred. MIN_LEVEL_ADV default 0 remains outside its `1..100` domain. Exact electronic-transformer `60..400` VA/230 V scope excludes the co-listed F414 and F415/127. AUTOMATISME printed 164/PDF 166 gives 9 mA and an F415 T2.5H 250 V drawing; the later 2018 EN/IT e sheets give 22 mA and draw T5H 250 V at F415 as well as F414. Spanish b sheets retain 22 mA and T5H; this material fuse/revision conflict is explicit without prescribing a universal replacement fuse. The current Italian export still gives 9 mA and 400 VA; its compressed 60400VA is not a 60400 VA rating. EOS minimum batch labels are ecosystem constraints, not an installed fingerprint.
 
 ## Evidence limits and open work
 
 The current-draw revision boundary, exact fuse requirements of installed units, transformer compatibility and hardware diagnostics remain uncorroborated.
 
 No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+
+The historical T2.5H versus later T5H F415 fuse drawings do not establish a safe interchangeable fuse specification for an unidentified installed unit. Apply its own exact production instructions; no production boundary has been established.
+
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
 
 ## Sources
 
@@ -251,3 +288,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0143)

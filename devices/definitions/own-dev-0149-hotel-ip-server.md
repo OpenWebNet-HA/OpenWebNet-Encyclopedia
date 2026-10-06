@@ -23,11 +23,20 @@ F458 is the IP server used to organise larger BTicino/Legrand hotel installation
 | Legrand | `003599` | Established catalogue identity | Manufacturer database commercial record `2158` explicitly links this SKU to item `1864` |
 | BTicino | `F458` | Established catalogue identity | Manufacturer database commercial record `2157` explicitly links this SKU to item `1864` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F458` | IP server | Canonical commercial record `2157` |
+| `003599` | IP server | Canonical commercial record `2158` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE06433AA.pdf` | Legacy manufacturer technical documentation | `LE06433AA-01PC-13W22; printed revision label` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/74/25/742573bc3915ad251a7abf01c81e8c01dba2b390f1553993c555ae8e0f4110c1.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE06433AA.pdf) |
+| `LE06433AA.pdf` | Legacy manufacturer technical documentation | `LE06433AA-01PC-13W22; printed revision label` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/74/25/742573bc3915ad251a7abf01c81e8c01dba2b390f1553993c555ae8e0f4110c1.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE06433AA.pdf) |
 | `MM00857_a_IT.pdf` | Legacy manufacturer technical documentation | `MM00857_a_IT; 15/01/2015` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/e7/cfe75feffd8b77ec861b848ef7cf8f4a5a88f8fd3ad4e91d6f58c584be6ddd6e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00857_a_IT.pdf) |
 | `MM00857_a_EN.pdf` | English counterpart of manufacturer-linked document | `MM00857_a_EN; 15/01/2015` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/81/6e/816e26925d197689d4bd9fc99a770181bdea0d339d60c87b82591ab435a61ff0.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00857_a_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1864`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
@@ -36,16 +45,16 @@ F458 is the IP server used to organise larger BTicino/Legrand hotel installation
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Power supply | `18..30 Vdc; external DC supply, 346020 recommended` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Maximum current | `55 mA` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Minimum / maximum consumption | `1.3 W / 3.3 W as printed` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Clock retention without supply | `48 hours` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Temperature / size | `5..45 °C; 6 DIN modules` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Network | `RJ45 Ethernet 10/100 Mbit` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Service interface | `mini-USB for configuration and software update` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| Default IP / mask | `192.168.1.51 / 255.255.255.0` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction; public documentation value, not an observed installation |
-| DHCP/DNS range in Suite 2.0.91 | `192.168.1.52..192.168.5.49` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction; public documentation value, not an observed installation |
-| Default OPEN password | `12345; published factory value, not an installed credential` | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
+| Power supply | `18..30 Vdc; external DC supply, 346020 recommended` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Maximum current | `55 mA` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Minimum / maximum consumption | `1.3 W / 3.3 W as printed` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Clock retention without supply | `48 hours` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Temperature / size | `5..45 °C; 6 DIN modules` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Network | `RJ45 Ethernet 10/100 Mbit` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Service interface | `mini-USB for configuration and software update` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
+| Default IP / mask | `192.168.1.51 / 255.255.255.0` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1; public documentation value, not an observed installation |
+| DHCP/DNS range in Suite 2.0.91 | `192.168.1.52..192.168.5.49` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1; public documentation value, not an observed installation |
+| Default OPEN password | `12345; published factory value, not an installed credential` | `MM00857_a_EN` and `MM00857_a_IT` PDF p. 1 |
 
 ## Identity
 
@@ -58,6 +67,18 @@ F458 is the IP server used to organise larger BTicino/Legrand hotel installation
 | Main item model / `modobj` | `105` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `105` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +88,25 @@ F458 is the IP server used to organise larger BTicino/Legrand hotel installation
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `545` | `341` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `545` | `342` | BTicino (key `1`) | `0` | SVM | `1864_1.0_BT\xml\SVM\svm.xml` |
+| `545` | `343` | BTicino (key `1`) | `0` | Extra | `1864_1.0_BT\xml\Extra\extra.xml` |
+| `545` | `344` | BTicino (key `1`) | `0` | Director | `1864_1.0_BT\xml\DIRECTOR\director.xml` |
+| `545` | `345` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1864_1.0_BT\xml\Protocol\protocol.xml` |
+| `545` | `374` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `545` | `375` | Undefined (key `5`) | `0` | SVM | `1864_1.0_LGG\xml\SVM\svm.xml` |
+| `545` | `376` | Undefined (key `5`) | `0` | Extra | `1864_1.0_LGG\xml\Extra\extra.xml` |
+| `545` | `377` | Undefined (key `5`) | `0` | Director | `1864_1.0_LGG\xml\DIRECTOR\director.xml` |
+| `545` | `378` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1864_1.0_LGG\xml\Protocol\protocol.xml` |
+
+All 10 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -87,31 +127,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `545` | Product Programming | `3` | Association key `4` |
+| `545` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `545` | Ethernet | `2` |
-| `545` | Ethernet over USB | `4` |
+| `545` | Ethernet | Canonical firmware/connection association |
+| `545` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `545` | `1` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `545` | `1` | `0` | `1864_1.0_BT\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `545` | `1` | `0` | `1864_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `545` | `1` | `0` | `1864_1.0_BT\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `545` | `1` | `0` | `1864_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `545` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `545` | `5` | `0` | `1864_1.0_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `545` | `5` | `0` | `1864_1.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `545` | `5` | `0` | `1864_1.0_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `545` | `5` | `0` | `1864_1.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -123,7 +146,7 @@ These published settings are independent of catalogue programming-mode IDs. Revi
 | `System LED` | supply on, goes off, returns steadily operational | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
 | `Speed LED` | `ON` 100 Mbit / `OFF` 10 Mbit | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
 | `Link LED` | Ethernet network present | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
-| `Hotel topology` | required over 100 rooms/MH201 areas; examples up to 500 areas and ten supervision PCs | `MM00857_a_EN` printed/PDF pp. 1-4; `LE06433AA` installation instruction |
+| `Hotel topology` | required over 100 rooms/MH201 areas; examples up to 500 areas and ten supervision PCs | `MM00857_a_EN` and `MM00857_a_IT` PDF pp. 1–4 |
 
 ## Firmware-scoped configuration
 
@@ -148,7 +171,6 @@ Catalogue Object key `609` maps to external Object `99989`.
 | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `192.168.1.35` | Local IP address; public documentation value, not an observed installation |
 | `FW_VER` | `######` = Firmware version | `1.0.0` | Firmware version |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
-
 
 ### Object `99988` - DNS server
 
@@ -205,7 +227,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `99989` - DHCP server | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 | `99988` - DNS server | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -216,7 +237,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Configure with MyHOME_Suite. The sheet requires this server for installations over 100 rooms or over 100 MH201 areas and illustrates systems up to 500 areas and up to ten supervision PCs. Room controllers, layer-3 switches/router, supervision server and PMS interface are shown on a dedicated BTicino/Legrand VLAN. These are topology examples, not arbitrary Ethernet interoperability guarantees. The System LED lights at supply connection, goes off, then returns steadily when operational; Speed `ON` means 100 Mbit and `OFF` means 10 Mbit; Link indicates network presence. Use the separately documented DC input: the BUS-SCS title alone does not establish an SCS field connector.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
@@ -226,9 +247,15 @@ The technical sheet title says BUS-SCS server IP, but its interface legend shows
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `LE06433AA.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MM00857_a_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MM00857_a_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
+| `LE06433AA.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MM00857_a_IT.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MM00857_a_EN.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+
+The EN and IT manufacturer documentation specifies factory IP 192.168.1.51, while both firmware and reusable DHCP/DNS Objects store 192.168.1.35. These independent defaults are a source discrepancy; neither identifies a live network. All three originals agree on Ethernet/USB/DC and LED meanings; the one-page LE06433AA does not supply the technical sheet’s power ratings, default IP, password or hotel-size examples. The diagram labelled fewer than 100 areas nevertheless includes a Room 100 label; no additional threshold is inferred. Ethernet over USB is a catalogue connection label, not a measured USB network protocol.
+
+### Semantic review findings
+
+Firmware `545` is official/default 1.0.0 with two fixed service slots, DHCP 99989/key609 and DNS99988/key611, no Virgin, conditions, filters or conversions. Complete IP/FW_VER/SYSADDRESS reusable fields and firmware AID/IP/FW_VER preserved; masks do not define validation or byte encoding. Public manufacturer documentation default IP 192.168.1.35 conflicts with both EN/IT sheets factory IP 192.168.1.51, now explicitly reconciled. Ten parameter associations cover BT and LGG SDC/SVM/Extra/Director/Protocol with actual type/brand/line metadata, no package associations and unexamined XML payloads. One programming mode and Ethernet/Ethernet-over-USB connections match setup routes but do not establish USB wire protocol. BUS-SCS title does not add an SCS connector; canonical bus is LAN. EN/IT four-page topology and power facts inspected; LE06433AA one-page interface/LED scope separately attributed rather than incorrectly cited for power/IP/password. Public factory password is not a private installed credential. 55mA versus3.3W lacks measurement reconciliation; fewer-than100 diagram includes Room100, retained as illustration. No EAN is retained in these originals; current exact manufacturer listing found, no catalogue identity uncertainty.
 
 ## Evidence limits and open work
 
@@ -246,3 +273,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0149)

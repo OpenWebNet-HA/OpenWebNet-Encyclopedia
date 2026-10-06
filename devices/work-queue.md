@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 70 |
-| reviewed | 140 |
+| review-ready | 60 |
+| reviewed | 150 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1596 | 2 relays DIN NC actuator 10 A | 2 | review-ready | OWN-DEV-0141 | partial | complete | complete | pending | - |
-| normal | 1597 | Ballast DIN dimmer 1-10 V | 2 | review-ready | OWN-DEV-0142 | partial | complete | complete | pending | - |
-| normal | 1599 | DIN dimmer 400 VA | 2 | review-ready | OWN-DEV-0143 | partial | complete | complete | pending | - |
-| normal | 1683 | Actuator DIN with 8 outputs | 2 | review-ready | OWN-DEV-0144 | partial | complete | complete | pending | - |
-| normal | 1684 | Actuator DIN with 2 outputs 0-10V | 2 | review-ready | OWN-DEV-0145 | partial | complete | complete | pending | - |
-| normal | 1685 | Actuator DIN with 3 relays and 2 outputs 0-10V | 2 | review-ready | OWN-DEV-0146 | partial | complete | complete | pending | - |
-| normal | 1852 | DIN actuator | 2 | review-ready | OWN-DEV-0147 | partial | complete | complete | pending | - |
-| normal | 1859 | DIN actuator/4 | 2 | review-ready | OWN-DEV-0148 | partial | complete | complete | pending | - |
-| normal | 1864 | IP server | 2 | review-ready | OWN-DEV-0149 | partial | complete | complete | pending | - |
-| normal | 1885 | Pulses counter interface | 2 | review-ready | OWN-DEV-0150 | partial | complete | complete | pending | - |
 | normal | 1902 | Scenario programmer | 2 | review-ready | OWN-DEV-0151 | partial | complete | complete | pending | - |
 | normal | 2064 | Basic gateway | 2 | review-ready | OWN-DEV-0152 | partial | complete | complete | pending | - |
 | normal | 2115 | 2x10A actuator, 2DIN | 2 | review-ready | OWN-DEV-0153 | partial | complete | complete | pending | - |
@@ -207,19 +197,29 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1582 | Dimmer for energy saving lamps bus | OWN-DEV-0139 |
 | 1586 | Shutter actuator bus | OWN-DEV-0045 |
 | 1593 | 1 relay DIN NC actuator 16 A | OWN-DEV-0140 |
+| 1596 | 2 relays DIN NC actuator 10 A | OWN-DEV-0141 |
+| 1597 | Ballast DIN dimmer 1-10 V | OWN-DEV-0142 |
+| 1599 | DIN dimmer 400 VA | OWN-DEV-0143 |
 | 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
 | 1678 | 8 scenarios control | OWN-DEV-0103 |
 | 1679 | DO NOT DISTURB-MAKE UP ROOM control | OWN-DEV-0104 |
 | 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | OWN-DEV-0105 |
 | 1681 | DO NOT DISTURB-MAKE UP ROOM reader | OWN-DEV-0106 |
+| 1683 | Actuator DIN with 8 outputs | OWN-DEV-0144 |
+| 1684 | Actuator DIN with 2 outputs 0-10V | OWN-DEV-0145 |
+| 1685 | Actuator DIN with 3 relays and 2 outputs 0-10V | OWN-DEV-0146 |
 | 1686 | Display thermostat 2 modules | OWN-DEV-0046 |
 | 1768 | MyHOME_Screen 10 | OWN-DEV-0047 |
 | 1809 | Multimedia Touch Screen | OWN-DEV-0107 |
 | 1847 | Key card switch RFID | OWN-DEV-0039 |
+| 1852 | DIN actuator | OWN-DEV-0147 |
 | 1854 | Probe with regulation | OWN-DEV-0038 |
 | 1856 | Fan-coil probe | OWN-DEV-0040 |
+| 1859 | DIN actuator/4 | OWN-DEV-0148 |
 | 1862 | Basic probe | OWN-DEV-0041 |
+| 1864 | IP server | OWN-DEV-0149 |
 | 1884 | Energy display 2 modules | OWN-DEV-0048 |
+| 1885 | Pulses counter interface | OWN-DEV-0150 |
 | 1898 | MyHOME_Screen 10 Capacitive | OWN-DEV-0049 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
 | 2134 | CLASSE300 V13E/M | OWN-DEV-0108 |

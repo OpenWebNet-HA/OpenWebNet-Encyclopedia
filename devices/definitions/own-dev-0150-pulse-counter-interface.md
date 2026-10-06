@@ -29,7 +29,16 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `3522N` | `8005543520710` | `3522N-publisher-product-sheet.pdf` PDF p. 1 |
+| `3522N` | `8005543520710` | [3522N-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/ae/d7/aed7724590d5350341659244b2dbe65bb5e3b63139a4c01d7e3aa3b6d3bf4934.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `3522N` | Pulses counter interface | Canonical commercial record `2192` |
+| `003576` | Pulses counter interface | Canonical commercial record `2194` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -46,20 +55,19 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply / maximum draw | `21..27 Vdc / 17 mA` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Temperature / enclosure | `0..40 °C; basic module 40 x 40 x 23 mm` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Input | `pulse contact or galvanically isolated output; observe open-collector/open-drain polarity` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Repeat output | `opto-isolated input-pulse repetition` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Minimum pulse interval | `60 ms: 30 ms signal plus 30 ms pause as specified` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Instantaneous flow | `(3600 / interval in seconds) x (MUL / DIV); zero when interval exceeds 30 s` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| History retention | `hourly 12 months; daily 2 years; monthly 12 years` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Hourly capacity | `65536 x (DIV / MUL) meter pulses; source example MUL=100,DIV=1 caps at 655 pulses/h` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| Time/date | `external system time/date required for historical storage` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-
+| SCS supply / maximum draw | `21..27 Vdc / 17 mA` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852 AC` PDF pp. 1-2 |
+| Temperature / enclosure | `0..40 °C; basic module 40 x 40 x 23 mm` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| Input | `pulse contact or galvanically isolated output; observe open-collector/open-drain polarity` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852 AC` PDF pp. 1-2 |
+| Repeat output | `opto-isolated input-pulse repetition` | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852 AC` PDF pp. 1-2 |
+| Minimum pulse interval | `60 ms: 30 ms signal plus 30 ms pause as specified` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| Instantaneous flow | `(3600 / interval in seconds) x (MUL / DIV); zero when interval exceeds 30 s` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| History retention | `hourly 12 months; daily 2 years; monthly 12 years` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| Hourly capacity | `65536 x (DIV / MUL) meter pulses; source example MUL=100,DIV=1 caps at 655 pulses/h` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| Time/date | `external system time/date required for historical storage` | `MQ01007-a-EN` printed/PDF pp. 1-2 |
 
 ### Publisher export attributes
 
-These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. A negative connected-object classification does not exclude remote control through another system device.
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
@@ -89,6 +97,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `12` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `12` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -98,6 +119,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -117,12 +144,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `406` | Virtual Configuration | `1` | Association key `1` |
-| `406` | Advanced Configuration | `2` | Association key `2` |
-| `406` | Physical configuration | `0` | Association key `3` |
+| `406` | Physical configuration | `0` | Canonical firmware/mode association |
+| `406` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `406` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -130,13 +157,13 @@ These published settings are independent of catalogue programming-mode IDs. Revi
 
 | Selector / setting | Published role or value | Evidence |
 | --- | --- | --- |
-| `A1 / A2 / A3` | hundreds / tens / units; address up to 127 | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
+| `A1 / A2 / A3` | hundreds / tens / units; address up to 127 | `MQ01007-a-EN` printed/PDF pp. 1-2 |
 | `MUL=0,1,2,3,4,5,6` | factors 1,2,5,10,20,50,100 | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
 | `DIV=0,1,2,3,4,5,6,7` | divisors 1,10,100,1000,2,20,200,2000 | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| `Data reset` | hold >=20 s; release when green/red LEDs flash | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| `Green steady / red toggle` | powered / pulse indication | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| `Green 500 ms on/off` | insufficient supply; retention not guaranteed below 21 V | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
-| `Irregular or 128 ms red/green` | configuration error / unconfigured | `MQ01007-a-EN` printed/PDF pp. 1-2; `LE06852AC` PDF pp. 1-2 |
+| `Data reset` | hold >=20 s; release when green/red LEDs flash | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| `Green steady / red toggle` | powered / pulse indication | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| `Green 500 ms on/off` | insufficient supply; retention not guaranteed below 21 V | `MQ01007-a-EN` printed/PDF pp. 1-2 |
+| `Irregular or 128 ms red/green` | configuration error / unconfigured | `MQ01007-a-EN` printed/PDF pp. 1-2 |
 
 ## Firmware-scoped configuration
 
@@ -466,7 +493,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `105` - Pulse counter | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -477,7 +503,7 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Physical A1/A2/A3 forms the meter address up to 127. MUL configurators `0..6` select factors 1,2,5,10,20,50,100; DIV `0..7` selects divisors 1,10,100,1000,2,20,200,2000. They can be combined. Suite is a separately documented virtual configuration route. Hold the button for at least 20 seconds and release when both LEDs flash to erase stored readings. Install close to the bus supply: below 21 V the green LED flashes and normal operation may continue, but storage/recovery after bus loss is not guaranteed. Steady green indicates power; red toggles with pulses; green 500 ms on/off indicates insufficient supply; irregular red/green indicates configuration error and 128 ms alternating red/green indicates unconfigured state. Without date/time, instantaneous flow remains available but history is not stored.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
@@ -487,11 +513,17 @@ The exact sheet and instruction distinguish pulse input, isolated repeat output,
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `LE06852AC.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MQ01007-a-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `3522N-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `MQ01007_a_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MQ01007_a_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
+| `LE06852AC.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MQ01007-a-EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `3522N-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MQ01007_a_IT.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `MQ01007_a_EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+
+English MQ01007-a is dated 07/06/2014 and Italian a is dated 17/04/2014; they agree on flow, retention, multiplier/divisor mappings and the reset procedure. LE06852AC (17W17) corroborates supply, input isolation/polarity and physical scaling, but does not publish the flow/history/reset details. The sheet labels 17 mA as maximum standby consumption, while the instruction says maximum absorption. The catalogue stores byte-pair limits allowing software multiplier `1..1000` and divisor `1..10000`; these exceed the physical selector factors and do not prove an inspected software implementation. Root 520 also stores `A1=2` and addresses `128..255` outside the exact firmware A1 `0..1` and Object A123 `0..127` domains; those branches cannot be treated as valid addresses. No attached conversion in this extraction maps physical MUL/DIV selectors into those byte pairs.
+
+### Semantic review findings
+
+Firmware406 official/default1.0/wildcard build has one fixed Object105/key607, no Virgin/filter/parameter/package and three configuration modes. Full A123 and four scaling-byte domains/defaults retained. Byte combination constraints require multiplier`1..1000`/divisor`1..10000`; zero low/high invalid at zero high despite individual byte domains, and high-end low-byte caps are explicit. Empty predicate4158 references address root520 with all256decimal leaves; `A1=2` is outside firmware`0..1`, and addresses`128..255` outside reusable`0..127`, so stored conversion does not legalize them. No MUL/DIV conversion is attached; physical scaling maps and software byte fields remain independent. EN/IT a dates differ but two-page technical contents agree, including30s flow-zero threshold, 30ms high+30ms pause, hourly12month/daily2year/monthly12year retention and external date/time requirement. LE06852AC two-page17W17 instruction adds dry/isolated input requirement and mirrors physical maps, without providing history/flow/reset procedure. Removed false unretained-source row for this already archived instruction and corrected overbroad citations. 17mA standby-versusmaximum labels are source scoped. 65536formula/rounded655example retains unknown overflow encoding. Verified current-export EAN8005543520710; broad GUI/brochures remain unexamined.
 
 ## Evidence limits and open work
 
@@ -505,7 +537,6 @@ These publisher-linked sources were identified but were not retained or used as 
 
 | Source | Remaining scope | Publisher provenance |
 | --- | --- | --- |
-| `LE06852AC.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/NP-FT-GT/LE06852AC.pdf) |
 | `Brochure Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 2M.pdf) |
 | `Brochure Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 3M.pdf) |
 | `Brochure MyHOME.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure MyHOME.pdf) |
@@ -522,3 +553,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0150)

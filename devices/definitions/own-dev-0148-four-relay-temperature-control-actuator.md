@@ -29,7 +29,16 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F430/4` | `8012199667706` | `F430-4-publisher-product-sheet.pdf` PDF p. 1 |
+| `F430/4` | `8012199667706` | [F430-4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/ba/98/ba98639f09572fe0b80d9cc602a5a381388f29aeb894473f5e4ffbbc42a6bbad.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F430/4` | DIN actuator/4 | Canonical commercial record `73` |
+| `003580` | DIN actuator/4 | Canonical commercial record `1697` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -39,8 +48,9 @@ EANs identify the named commercial variant, not the configured physical device o
 | `F430-4-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/4a/3f/4a3fdd0242299f2dd6a394f87fb949cb8771a99668d4d842cc2c2b6de559d6ef.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F430_4) |
 | `ST-00000903-EN.pdf` | Technical Sheet ST-00000903-EN | `ST-00000903-EN; 23/03/2021` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/7b/cc/7bccd79e80c2436c8e11af36a3e0ea63dfe23d301cfdc84777259cbec6535d23.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000903-EN.pdf) |
 | `F430-4-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/98/ba98639f09572fe0b80d9cc602a5a381388f29aeb894473f5e4ffbbc42a6bbad.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F430/4&include_technical=1) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1859`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `MyHOME-Suite-thermoregulation-actuator-functions-IT.html` | Manufacturer Suite function help | Publication date unstated | Exact F430/4 on/off, open/close and pump function inventory | [Archived original](https://archive.openwebnet-ha.org/sha256/bc/cc/bccc3ce223a0e3536f2e76e28ed010ec664397e14ab6fc7a14a30eb7dc7f5413.pdf) | [Publisher source](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/IT_MHS_function_0304/attuatori_termo.html) |
 
 ## Physical and electrical characteristics
 
@@ -54,10 +64,9 @@ EANs identify the named commercial variant, not the configured physical device o
 | Maximum dissipation | `3.2 W` | `ST-00000903-EN` printed/PDF pp. 1-4 |
 | Contacts | `terminal 1 common; outputs C1/C2/C3/C4 terminals 2/3/4/5` | `ST-00000903-EN` printed/PDF pp. 1-4 |
 
-
 ### Publisher export attributes
 
-These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. A negative connected-object classification does not exclude remote control through another system device.
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
@@ -111,6 +120,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `145` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `145` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -121,6 +143,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -160,14 +188,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `13` | Virtual Configuration | `1` | Association key `1` |
-| `13` | Advanced Configuration | `2` | Association key `2` |
-| `13` | Physical configuration | `0` | Association key `3` |
-| `164` | Virtual Configuration | `1` | Association key `1` |
-| `164` | Physical configuration | `0` | Association key `3` |
+| `13` | Physical configuration | `0` | Canonical firmware/mode association |
+| `13` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `13` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `164` | Physical configuration | `0` | Canonical firmware/mode association |
+| `164` | Virtual Configuration | `1` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -215,7 +243,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N` | `1..9` | `1` | Device number |
 | `SUBTYPE` | `16` = Valve on/off; `17` = Pump | `16` | Type of load |
 
-
 ### Object `170` - Temperature control open/close actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -224,14 +251,12 @@ The following domains and defaults describe reusable Object definitions in the c
 | `N` | `1..9` | `1` | Device number |
 | `SUBTYPE` | `16` = Valve on/off; `17` = Pump | `16` | Type of load |
 
-
 ### Object `171` - 2 pipes fan coil actuator with `ON`-`OFF` valve
 
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `ZAZB` | `01..99` | `01` | Zone |
 | `N` | `1..9` | `1` | Device number |
-
 
 ### Object `52` - Temperature control pump actuator
 
@@ -241,6 +266,50 @@ Catalogue Object key `533` maps to external Object `52`.
 | --- | --- | --- | --- |
 | `ZAZB` | `00` | `00` | Zone |
 | `N` | `1..9` | `1` | Device number |
+
+### Object `86` - Temperature control 3 points valve actuator (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `01..99` | `01` | Zone |
+| `N` | `0..9` | `1` | Device number |
+| `VALVE_TIME_LOW` | `0..255` | `60` | Valve time low; Valve_time_low (Valve time in seconds, over 2 bytes (0...767s)) |
+| `VALVE_TIME_HIGH` | `0..2` | `0` | Valve time high; Valve_time_high (Valve time in seconds, over 2 bytes (0...767s)) |
+
+### Object `87` - Temperature control 2 pipes fan coil actuator with 3 points valve (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `01..99` | `01` | Zone |
+| `N` | `0..9` | `1` | Device number |
+| `VALVE_TIME_LOW` | `0..255` | `60` | Valve time low; Valve_time_low (Valve time in seconds, over 2 bytes (0...767s)) |
+| `VALVE_TIME_HIGH` | `0..2` | `0` | Valve time high; Valve_time_high (Valve time in seconds, over 2 bytes (0...767s)) |
+
+### Object `89` - Temperature control 4 pipes fan coil actuator with ON/OFF valves (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `01..99` | `01` | Zone |
+| `N` | `0..9` | `1` | Device number |
+
+### Object `93` - Temperature control 4 pipes fan coil actuator with 3 points valve (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `01..99` | `01` | Zone |
+| `N` | `0..9` | `1` | Device number |
+| `HEATING_VALVE_TIME_LOW` | `0..255` | `60` | Heating valve time low; (Valve time in seconds, over 2 bytes (0...767s)) |
+| `HEATING_VALVE_TIME_HIGH` | `0..2` | `0` | Heating valve time high; (Valve time in seconds, over 2 bytes (0...767s)) |
+| `COOLING_VALVE_TIME_LOW` | `0..255` | `60` | Cooling valve time low; (Valve time in seconds, over 2 bytes (0...767s)) |
+| `COOLING_VALVE_TIME_HIGH` | `0..2` | `0` | Cooling valve time high; (Valve time in seconds, over 2 bytes (0...767s)) |
 
 ## Conditions, filters, and conversions
 
@@ -990,7 +1059,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `170` - Temperature control open/close actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 | `52` - Temperature control pump actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -1001,27 +1069,35 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Use ZA, ZB1..ZB4 and shared N. Four different ZB digits select four separate zones; identical consecutive ZB1/ZB2 and ZB3/ZB4 interlock valve pairs, with C1/C3 opening and C2/C4 closing. All four ZB digits equal selects fan-coil control: C1 valve, C2/C3/C4 low/medium/high fan speed. The sheet says RL1 cannot be excluded, although unused other relays can use `OFF`. It prohibits circulation-pump zone 00 and separate loads in the same zone in physical configuration. A four-pipe fan-coil uses two actuators with separate progressive numbers, their fan-speed contacts paralleled as drawn. Prevent the fan from blowing cold water during heating using a water probe or an immersion thermostat/remote switch as prescribed. Apply the illustrated 10 A breaker. EOS compatibility requires batch 13W06 or later and software configuration.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
-The current export’s description says five relays in one paragraph; its four-contact classification and the exact sheet establish four. The sheet’s introduction also says two on/off loads, whereas its configuration section and Example 1 explicitly describe four; the detailed mapping is retained with that discrepancy. The physical prohibition on zone 00 contrasts with the database’s later firmware 164 pump Object `52` candidate. That is a source/firmware-scope issue, not permission to configure a physical F430/4 as a pump. Firmware `13` and 164 remain separate applicability rows.
+The retained English and Italian exact-product exports both specify four relays; no five-relay rating is supported by these exports. The sheet’s introduction also says two on/off loads, whereas its configuration section and Example 1 explicitly describe four; the detailed mapping is retained with that discrepancy. The physical prohibition on zone 00 contrasts with the database’s version 6.0.0 firmware `13` pump Object `52` candidate (firmware `164` is version 5.0.0 and lacks that direct candidate). That is a source/firmware-scope issue, not permission to configure a physical F430/4 as a pump. Firmware `13` and 164 remain separate applicability rows.
 
 ### Retained source accounting
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `MyHOME Technical Guide.pdf` | Shared system guide; relevant exact-product roles and connection topology, with descriptive model/count defects explicitly scoped. No unrelated product’s ratings transferred. |
-| `F430-4-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `ST-00000903-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `F430-4-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `MyHOME Technical Guide.pdf` | Shared guide: F411U2 PDF pp. 47, 99; F413N pp. 56,100; HVAC pp. 63-68,101; HOMETOUCH pp. 18-20,82; pulse meter p.101. Printed page is PDF page minus 2. Model-name and output-count defects reconciled locally. Source conflicts and limits are reconciled above. |
+| `F430-4-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `ST-00000903-EN.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `F430-4-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact-reference ecosystem compatibility rows and minimum production batches; other EOS functions and wiring are outside this review. Source conflicts and limits are reconciled above. |
+
+The English export classifies height as 105 mm, while the Italian exact export gives 90 mm; no dimensional revision boundary is established. Its 3.2 W “Output power” classification agrees numerically with the technical sheet’s maximum dissipation, not delivered load power. The Suite function inventory lists a pump role despite the technical sheet’s physical zone-00 prohibition; software family membership does not override that wiring limitation. Broader GUI-MHOME, environmental declaration LGRP-00434-V01.01-EN, linked DWG and listed brochures/catalogues remain unexamined.
+
+### Semantic review findings
+
+Firmware `13` is version 6.0.0/nondefault, 164 is 5.0.0/default: corrected former inverted pump attribution. Both declare four slots and Virgin `519`; direct pump 52 appears only under 13. Added all omitted Virgin-only field surfaces, with admission distinct from physical reachability. Two SUBTYPE filters 675/678 retain the full 16/17 domain. All equal ZB selects fan-coil, overlapping pair equalities select open/close, OFF predicates and empty 4164 have no precedence; firmware slot-2 equality `ZB2=ZB3` differs from the sheet’s illustrated pair `ZB1=ZB2` and `ZB3=ZB4`. Root 6000 retains both ZB1/ZB2 assignments; fan-coil conversion `2001` is a units-only branch even for nonzero ZA, preserved as a discrepancy. No runtime arbitration is inferred. Source prohibits RL1 exclusion and physical zone 00 despite stored OFF/pump candidates and Suite pump listing. Common terminal 1, individual outputs `2..5`, one valve plus three fan speeds, and two-actuator four-pipe drawing are retained. Exact exports both say four relays, correcting the false five-relay export attribution. English height 105 mm versus Italian 90 mm remains unresolved. 3.2 W classification is dissipation-sized, not load power; 10 A protection is not contact rating. Advanced mode is linked only to firmware `13`; no parameter/package associations. All linked broader documents/DWG remain explicit unexamined scopes.
 
 ## Evidence limits and open work
 
-Installed firmware support for the later pump candidate, physical/software role boundaries and contact/diagnostic behavior need corroboration.
+Installed firmware support for the version 6 pump candidate, physical/software role boundaries and contact/diagnostic behavior need corroboration.
 
 No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
 
 ## Sources
 
@@ -1033,3 +1109,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0148)

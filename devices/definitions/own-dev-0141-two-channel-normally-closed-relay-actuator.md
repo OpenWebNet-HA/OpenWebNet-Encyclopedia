@@ -23,14 +23,24 @@ This DIN-rail actuator switches two independent lighting loads through normally 
 | Legrand | `003843` | Established catalogue identity | Manufacturer database commercial record `1704` explicitly links this SKU to item `1596` |
 | BTicino | `F411/2NC` | Established catalogue identity | Manufacturer database commercial record `1596` explicitly links this SKU to item `1596` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F411/2NC` | 2 relays DIN NC actuator 10 A | Canonical commercial record `1596` |
+| `003843` | 2 relays DIN NC actuator 10 A | Canonical commercial record `1704` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `F411-2NC-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/a3/db/a3dbc68476037873e8a4a76662b70fc4f20b035a613dac04d5e16f9c9644f44e.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_2NC) |
-| `MQ00191_d_EN.pdf` | Exact-product manufacturer original | `MQ00191_d_EN; 30/04/2014` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/75/d2/75d2f02b31ac6ef73a477f0f0ba9731ae4a1e8f8532f8dee66159d718f9a4106.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00191_d_EN.pdf) |
-| `MQ00191_d_IT.pdf` | Exact-product manufacturer original | `MQ00191_d_IT; 30/04/2014` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/61/2d/612da6f156a3cb85aa02d0d7488935c144e3015ca57c4d4b8605896a191ff9fb.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00191_d_IT.pdf) |
+| `F411-2NC-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Exact NC reference and 6 A/0.65 A description; PDF p. 1 examined; no retained EAN | [Archived original](https://archive.openwebnet-ha.org/sha256/a3/db/a3dbc68476037873e8a4a76662b70fc4f20b035a613dac04d5e16f9c9644f44e.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411_2NC) |
+| `MQ00191_d_EN.pdf` | Exact-product manufacturer original | `MQ00191_d_EN; 30/04/2014` | Exact English d sheet 30/04/2014; PDF p. 1 examined in full | [Archived original](https://archive.openwebnet-ha.org/sha256/75/d2/75d2f02b31ac6ef73a477f0f0ba9731ae4a1e8f8532f8dee66159d718f9a4106.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00191_d_EN.pdf) |
+| `MQ00191_d_IT.pdf` | Exact-product manufacturer original | `MQ00191_d_IT; 30/04/2014` | Exact Italian d sheet 30/04/2014; PDF p. 1 examined in full and compared with English | [Archived original](https://archive.openwebnet-ha.org/sha256/61/2d/612da6f156a3cb85aa02d0d7488935c144e3015ca57c4d4b8605896a191ff9fb.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00191_d_IT.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1596`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish historical MyHOME technical sheets | Individual revision labels; shared compilation date not established | Spanish BT00191-c-ES; printed p. 686 / PDF p. 117 examined; agrees with EN/IT d load ratings, NC behavior and physical modes | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -57,6 +67,19 @@ This DIN-rail actuator switches two independent lighting loads through normally 
 | Main item model / `modobj` | `140` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `140` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +89,12 @@ This DIN-rail actuator switches two independent lighting loads through normally 
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,12 +115,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `173` | Virtual Configuration | `1` | Association key `1` |
-| `173` | Advanced Configuration | `2` | Association key `2` |
-| `173` | Physical configuration | `0` | Association key `3` |
+| `173` | Physical configuration | `0` | Canonical firmware/mode association |
+| `173` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `173` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -204,7 +233,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `6` - Light actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -213,27 +241,33 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-Use the NC contact arrangement shown in the sheet. `ON` closes the contacts and lights the corresponding LED; `OFF` opens the contacts. The sheet excludes functions requiring interlocked relays, so do not use this model as a shutter motor interlock. `M=PUL` ignores room/general commands; `M=SLA` follows a master with the same address; `M=1..4` delays the corresponding slave `OFF` by `1..4` minutes for point-to-point operation. Local pushbuttons act on their respective loads. Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement.
+Use the NC contact arrangement shown in the sheet. `ON` closes the contacts and lights the corresponding LED; `OFF` opens the contacts. The sheet excludes functions requiring interlocked relays, so do not use this model as a shutter motor interlock. `M=PUL` ignores room/general commands; `M=SLA` follows a master with the same address; `M=1..4` delays the corresponding slave `OFF` by `1..4` minutes for point-to-point operation. Local pushbuttons act on their respective loads.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
-The database calls this item a 10 A actuator, while the exact 2014 sheet gives 6 A incandescent and smaller load-specific ratings. The Italian product export also says 10A. These source labels do not establish that the retained sheet’s 6 A limit can be replaced by 10 A for all production revisions or load types. F411/2NC and 003843 identities are established by explicit database links; the 2014 table remains independently scoped.
+The database calls this item a 10 A actuator, while the exact 2014 sheet gives 6 A incandescent and smaller load-specific ratings. The retained Italian product export instead states 6 A resistive/incandescent and 0.65 A fluorescent. The 10 A text is the historical catalogue name, not a verified universal contact rating. These source labels do not establish that the retained sheet’s 6 A limit can be replaced by 10 A for all production revisions or load types. F411/2NC and 003843 identities are established by explicit database links; the 2014 table remains independently scoped.
 
 ### Retained source accounting
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `F411-2NC-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `MQ00191_d_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MQ00191_d_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
+| `F411-2NC-italian-product-sheet.pdf` | Exact NC reference and 6 A/0.65 A description; PDF p. 1 examined; no retained EAN Source conflicts and limits are reconciled above. |
+| `MQ00191_d_EN.pdf` | Exact English d sheet 30/04/2014; PDF p. 1 examined in full Source conflicts and limits are reconciled above. |
+| `MQ00191_d_IT.pdf` | Exact Italian d sheet 30/04/2014; PDF p. 1 examined in full and compared with English Source conflicts and limits are reconciled above. |
+
+### Semantic review findings
+
+Two fixed Object `6` placements share relation `419` and condition `4147`/conversion `1`, with no Virgin. Six filters retain their complete reusable domains. Firmware M `0..4/PUL` excludes the stored SLA and I/O conversion branches; the exact d sheets nevertheless document physical SLA. No domain is silently widened. Powered-reset STATE_RESET is distinct from NC bus-power loss. The historical catalogue name says 10 A, but the retained Italian export actually says 6 A resistive/incandescent and 0.65 A fluorescent; its former description as a 10 A export was incorrect. The Spanish c sheet (printed 686/PDF 117) corroborates the d sheets' load ratings and modes; no publication date is inferred from the shared PDF URL. No EAN is retained in the exact NC export.
 
 ## Evidence limits and open work
 
 The production revision behind the differing 10 A label, modern LED/CFL ratings, and bus-loss behavior on actual hardware remain uncorroborated.
 
 No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
 
 ## Sources
 
@@ -245,3 +279,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0141)

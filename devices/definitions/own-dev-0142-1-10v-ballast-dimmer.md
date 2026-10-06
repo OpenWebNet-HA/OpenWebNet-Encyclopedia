@@ -29,39 +29,48 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F413N` | `8012199894461` | `F413N-publisher-product-sheet.pdf` PDF p. 1 |
+| `F413N` | `8012199894461` | [F413N-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/9a/f0/9af037809958dc3ed0d4d40724e61ddee5ad034ecd0fe0288d3a28c5e51bcccd.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F413N` | Ballast DIN dimmer 1-10 V | Canonical commercial record `1597` |
+| `003656` | Ballast DIN dimmer 1-10 V | Canonical commercial record `1709` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00000901-EN.pdf` | Technical Sheet ST-00000901-EN | `ST-00000901-EN; 23/03/2021` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/b3/58/b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000901-EN.pdf) |
-| `U2099C.pdf` | Legacy manufacturer technical documentation | `U2099C-01PC-12W46; printed revision label` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/46/76/46760e8898ea7c091713edb862cf44c4cccbd871b1f6eb82bc3b3841dac52cbf.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/U2099C.pdf) |
+| `ST-00000901-EN.pdf` | Technical Sheet ST-00000901-EN | `ST-00000901-EN; 23/03/2021` | Exact 2021 English sheet; PDF pp. 1–3 examined in full | [Archived original](https://archive.openwebnet-ha.org/sha256/b3/58/b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000901-EN.pdf) |
+| `U2099C.pdf` | Legacy manufacturer technical documentation | `U2099C-01PC-12W46; printed revision label` | Exact multilingual leaflet: English text and diagrams on PDF pp. 1–3 examined; other translations not exhaustively reconciled; conflicting ten/fifteen ballast labels explicit | [Archived original](https://archive.openwebnet-ha.org/sha256/46/76/46760e8898ea7c091713edb862cf44c4cccbd871b1f6eb82bc3b3841dac52cbf.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/U2099C.pdf) |
 | `F413N-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/9a/f0/9af037809958dc3ed0d4d40724e61ddee5ad034ecd0fe0288d3a28c5e51bcccd.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F413N&include_technical=1) |
-| `F413N-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/e1/e1e10008f1a79c9b17613372d63c5d9b27539dc41a829568c4f195aeffbe0265.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F413N) |
-| `ST_00000901_IT.pdf` | Legacy manufacturer technical documentation | `ST_00000901_IT; 23/03/2021` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/38/79/3879722f95f768c0f2c85c573eddeaa93d08a9129af53fba148396ec9a7bfb7d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000901_IT.pdf) |
+| `F413N-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/e1/e1e10008f1a79c9b17613372d63c5d9b27539dc41a829568c4f195aeffbe0265.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F413N) |
+| `ST_00000901_IT.pdf` | Legacy manufacturer technical documentation | `ST_00000901_IT; 23/03/2021` | Exact 2021 Italian counterpart; PDF pp. 1–3 examined in full | [Archived original](https://archive.openwebnet-ha.org/sha256/38/79/3879722f95f768c0f2c85c573eddeaa93d08a9129af53fba148396ec9a7bfb7d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000901_IT.pdf) |
 | `ST_00000901_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00000901_EN; 23/03/2021` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/b3/58/b35812017eaa42deb82245af5db63a3c68e4de87c2f3019996c9c0f360ebe2a1.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00000901_EN.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | EOS compatibility inventory on PDF p. 18 examined for exact F413N/003656 minimum batches; EOS ratings and unrelated pages excluded | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1597`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish historical MyHOME technical sheets | Individual revision labels; shared compilation date not established | Spanish BT00277-b-ES and final a-ES footer; printed pp. 690–692 / PDF pp. 121–123 examined for ratings, physical/software modes and wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS nominal / operating supply | `27 Vdc / 18..27 Vdc` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Current draw | `30 mA` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Temperature / size | `-5..45 °C; 2 DIN modules` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Switching capacity | `2 A; 460 W at 230 V / 220 W at 110 V` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Analogue output | `1..10 V nominal; minimum can be configured to 0 V; 6 mA maximum` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Ballasts / drivers | `maximum 10 compatible ballasts or LED drivers` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Dissipated power | `1 W` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Protection codes | `IP20 / IK04; printed property labels reversed` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| Contactors | `U2099C recommends above 1.5 A and requires them for loads above the direct 2 A rating` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-
+| SCS nominal / operating supply | `27 Vdc / 18..27 Vdc` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Current draw | `30 mA` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Temperature / size | `-5..45 °C; 2 DIN modules` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Switching capacity | `2 A; 460 W at 230 V / 220 W at 110 V` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Analogue output | `1..10 V nominal; minimum can be configured to 0 V; 6 mA maximum` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Ballasts / drivers | `maximum 10 compatible ballasts or LED drivers` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Dissipated power | `1 W` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Protection codes | `IP20 / IK04; printed property labels reversed` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| Contactors | `U2099C recommends above 1.5 A and requires them for loads above the direct 2 A rating` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
 
 ### Publisher export attributes
 
-These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. A negative connected-object classification does not exclude remote control through another system device.
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
@@ -101,6 +110,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `141` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `141` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -110,6 +132,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -129,12 +157,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `175` | Virtual Configuration | `1` | Association key `1` |
-| `175` | Advanced Configuration | `2` | Association key `2` |
-| `175` | Physical configuration | `0` | Association key `3` |
+| `175` | Physical configuration | `0` | Canonical firmware/mode association |
+| `175` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `175` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -142,11 +170,11 @@ These published settings are independent of catalogue programming-mode IDs. Revi
 
 | Selector / setting | Published role or value | Evidence |
 | --- | --- | --- |
-| `A / PL / G` | physical `1..9` / `1..9` / `0..9`; virtual room `0..10`, point `0..15`, ten groups `0..255` | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| `M=0 / SLA / PUL` | master / slave / monostable master | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| `M=1..4` | slave `OFF` delay `1..4` min; virtual `0..255` s | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| `L=0,1,2,3,4` | minimum voltage 1,1.5,2,0,0.5 V | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
-| `TYPE=0 / TYPE=1` | fluorescent soft start after 1.5 s / immediate LED soft start | `ST-00000901-EN` printed/PDF pp. 1-3; `U2099C` PDF p. 1 |
+| `A / PL / G` | physical `1..9` / `1..9` / `0..9`; virtual room `0..10`, point `0..15`, ten groups `0..255` | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| `M=0 / SLA / PUL` | master / slave / monostable master | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| `M=1..4` | slave `OFF` delay `1..4` min; virtual `0..255` s | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| `L=0,1,2,3,4` | minimum voltage 1,1.5,2,0,0.5 V | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
+| `TYPE=0 / TYPE=1` | fluorescent soft start after 1.5 s / immediate LED soft start | `ST-00000901-EN` printed/PDF pp. 1–3; U2099C physical M modes on PDF p. 2, connection on p. 1 |
 
 ## Firmware-scoped configuration
 
@@ -259,7 +287,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `8` - Dimmer actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -268,25 +295,29 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. Physical minimum `L=0`/1/2/3/4 selects 1/1.5/2/0/0.5 V. The virtual minimum parameter is `1..100` in this sheet. `TYPE=0` fluorescent introduces a 1.5-second switch-on delay for soft start; `TYPE=1` LED switches on immediately with soft start. Suite exposes additional load-type labels, including DALI and DSI; these labels do not establish a DALI/DSI hardware port on this analogue product. MyHOME Server automatic configuration uses one channel. The source also describes Lighting Management Push&Learn and Virtual Configurator routes. Keep the load connection at least 3 m as shown, and apply the sheet’s 10 A protective breaker independently of its 2 A relay rating.
+Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. Physical minimum `L=0`/1/2/3/4 selects 1/1.5/2/0/0.5 V. The virtual minimum parameter is `1..100` in this sheet. `TYPE=0` fluorescent introduces a 1.5-second switch-on delay for soft start; `TYPE=1` LED switches on immediately with soft start. Suite exposes additional load-type labels, including DALI and DSI; these labels do not establish a DALI/DSI hardware port on this analogue product. MyHOME Server automatic configuration uses one channel. The source also describes Lighting Management Push&Learn and Virtual Configurator routes. U2099C PDF p. 1 requires ballast earth connection, recommends contactors above 1.5 A and uses them for loads above 2 A; T5 ballast placement keeps the conduit assembly equipotential to the installation earth. Its diagram specifies at least 3 m for the shown connection; and apply the sheet’s 10 A protective breaker independently of its 2 A relay rating.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the exact firmware restrictions above. The generic session/validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
-The exact sheet and U2099C agree on 2 A, maximum ten ballasts and 6 mA analogue current. The older shared guide’s F413 entry is a different reference; its 2.5 A/four-ballast values are not transferred to F413N. IP and IK property labels are reversed in the sheet; the codes are preserved with their correct meanings. The database’s dimmer Object is configuration metadata, independently of the one physical output. The 2026 EOS compatibility sheet lists F413N from batch 09W14 and 003656 from 10W05, with software configuration required for that ecosystem.
+The exact sheet and U2099C's terminal legend agree on 2 A, ten ballasts and 6 mA analogue current. U2099C additionally prints a conflicting fifteen-per-line warning; this does not establish a higher analogue capacity. The retained current product exports describe 2.5 A while their power field is 460 W and the 2021 sheets state 2 A. These differences remain attributed to their sources without replacing the older rating. The older shared guide’s F413 entry is a different reference; its 2.5 A/four-ballast values are not transferred to F413N. IP and IK property labels are reversed in the sheet; the codes are preserved with their correct meanings. The database’s dimmer Object is configuration metadata, independently of the one physical output. The 2026 EOS compatibility sheet lists F413N from batch 09W14 and 003656 from 10W05, with software configuration required for that ecosystem.
 
 ### Retained source accounting
 
 | Original | Role / reconciliation scope |
 | --- | --- |
-| `ST-00000901-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `U2099C.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `F413N-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `F413N-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `ST_00000901_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST_00000901_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `ST-00000901-EN.pdf` | Exact 2021 English sheet; PDF pp. 1–3 examined in full Source conflicts and limits are reconciled above. |
+| `U2099C.pdf` | Exact multilingual leaflet: English text and diagrams on PDF pp. 1–3 examined; other translations not exhaustively reconciled; conflicting ten/fifteen ballast labels explicit Source conflicts and limits are reconciled above. |
+| `F413N-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `F413N-italian-product-sheet.pdf` | PDF p. 1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `ST_00000901_IT.pdf` | Exact 2021 Italian counterpart; PDF pp. 1–3 examined in full Source conflicts and limits are reconciled above. |
+| `ST_00000901_EN.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. Source conflicts and limits are reconciled above. |
+| `ST-00002703-EN.pdf` | EOS compatibility inventory on PDF p. 18 examined for exact F413N/003656 minimum batches; EOS ratings and unrelated pages excluded Source conflicts and limits are reconciled above. |
+
+### Semantic review findings
+
+One fixed Object `8` uses condition `4152` and conversion `11`, without Virgin. Its L branches map to MIN_LEVEL/TYPE_STANDARD; `TY=0/1` writes `TYPE_LOAD=5/6`. Relation filter `400` excludes both 5 and 6 despite those stored outputs and the exact fluorescent/LED role. This catalogue inconsistency is preserved without altering the filter or inventing a substitute. MIN_LEVEL_ADV default 0 lies outside 1..100. Shared DALI/DSI enum names are not physical-port evidence. The 2021 EN/IT sheets specify 2 A, ten ballasts and 6 mA, whereas the exact current product export's description says 2.5 A; these are separately scoped. U2099C p. 1 labels the analogue path ten ballasts/6 mA and also prints a contradictory fifteen-per-line warning; ten is not silently changed to fifteen. Its contactor and earthing instructions are retained. Spanish BT00277-b-ES/a-ES mixed-page footers remain source revisions, not device firmware. EOS compatibility dates are ecosystem minimum batches, not hardware identification.
 
 ## Evidence limits and open work
 
@@ -300,11 +331,12 @@ These publisher-linked sources were identified but were not retained or used as 
 
 | Source | Remaining scope | Publisher provenance |
 | --- | --- | --- |
-| `U2099C.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/NP-FT-GT/U2099C.pdf) |
 | `Brochure Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 2M.pdf) |
 | `Brochure Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 3M.pdf) |
 | `Catalogue Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 2M.pdf) |
 | `Catalogue Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 3M.pdf) |
+
+Known earlier EOS system editions RA00215AC_I_EN.pdf and ST-00001816-EN.pdf were discovered but not examined in this batch; no earlier-edition capability is transferred. The reviewed EOS compatibility evidence is the 16/06/2026 edition only.
 
 ## Sources
 
@@ -316,3 +348,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0141-0150-2026-10-06.md#own-dev-0142)
