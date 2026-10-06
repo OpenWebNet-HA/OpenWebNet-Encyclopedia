@@ -12563,6 +12563,26 @@ artifacts:
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-u3972g-software-fr-20261006
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: U3972G_Software_FR manufacturer device documentation
+  media_type: application/pdf
+  filename: U3972G_Software_FR.pdf
+  version_label: Printed revision in original; retrieved 2026-10-06
+  size: 23849400
+  sha256: 2ab25e7e880b7c3b546f25d4f69545e345457c239d5b4a5b2d338084621b3152
+  source_url: https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3972g_software_fr.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/2a/b2/2ab25e7e880b7c3b546f25d4f69545e345457c239d5b4a5b2d338084621b3152.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/2a/b2/2ab25e7e880b7c3b546f25d4f69545e345457c239d5b4a5b2d338084621b3152.pdf
+  language:
+  - fr
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-06. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u4613b-u-en-20261004
   kind: documentation
   publisher: BTicino / Legrand
