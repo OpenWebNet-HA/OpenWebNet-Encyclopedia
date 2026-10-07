@@ -148,77 +148,77 @@
     {
       "device_id": "OWN-DEV-0030",
       "path": "devices/definitions/own-dev-0030-ballast-din-dimmer-1-10-v.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0031",
       "path": "devices/definitions/own-dev-0031-pir-surface-ceiling-mounted-sensor.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0032",
       "path": "devices/definitions/own-dev-0032-transmitting-radio-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0033",
       "path": "devices/definitions/own-dev-0033-light-manager-control-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0034",
       "path": "devices/definitions/own-dev-0034-radio-interface-temperature-probes.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0035",
       "path": "devices/definitions/own-dev-0035-flush-mounted-radio-receiver-batteryless-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0036",
       "path": "devices/definitions/own-dev-0036-key-card-switch.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0037",
       "path": "devices/definitions/own-dev-0037-local-display-1-2-bus.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0038",
       "path": "devices/definitions/own-dev-0038-probe-with-regulation.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0039",
       "path": "devices/definitions/own-dev-0039-key-card-switch-rfid.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0040",
       "path": "devices/definitions/own-dev-0040-fan-coil-probe.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0041",
       "path": "devices/definitions/own-dev-0041-basic-temperature-probe.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0042",
       "path": "devices/definitions/own-dev-0042-temperature-control-central-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0043",
       "path": "devices/definitions/own-dev-0043-special-functions-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0044",
       "path": "devices/definitions/own-dev-0044-shutter-control-bus.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0045",
