@@ -2,7 +2,7 @@
 
 ## Summary
 
-F411U2 switches two independent lighting loads or interlocks its relays to drive one shutter motor. Zero-crossing control improves switching of compatible LED and fluorescent loads. It also provides local control and configurable power-restoration behavior.
+`F411U2` switches two independent lighting loads or interlocks its relays to drive one shutter motor. Zero-crossing control improves switching of compatible LED and fluorescent loads. It also provides local control and configurable power-restoration behavior.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -29,21 +29,31 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F411U2` | `8005543533871` | `F411U2-publisher-product-sheet.pdf` PDF p. 1 |
+| `F411U2` | `8005543533871` | [`F411U2`-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/cf/87/cf879e27a57038b30f3dfa99faf2e33c061218f8ad90bd1aa2aa99fb54626ac3.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F411U2` | 2x10 A actuator, 2DIN | Canonical commercial record `2450` |
+| `003848` | 2x10 A actuator, 2DIN | Canonical commercial record `2518` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `ST-00000893-EN.pdf` | Technical Sheet ST-00000893-EN | `ST-00000893-EN; 23/03/2021` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/9a/f59a4f84982b8d0040f7824acbe4be8125f877d93d28aa6f8bf27fe4ec6892a0.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000893-EN.pdf) |
-| `ST-00002461-EN.pdf` | Technical Sheet ST-00002461-EN | `ST-00002461-EN; 10/10/2025` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/33/f1/33f1629776d7e18399846278bf533512d66169bf3f4c417eb5a0bd3df4d7d71b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002461-EN.pdf) |
-| `F411U2-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/87/cf879e27a57038b30f3dfa99faf2e33c061218f8ad90bd1aa2aa99fb54626ac3.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F411U2&include_technical=1) |
-| `F411U2-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/58/ee58f29189bd4487b54dedb5be2eeb3dd868e196cc18b2348405e10e4543952d.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411U2) |
-| `BT-F411U2-IT.pdf` | Legacy manufacturer technical documentation | `BT-F411U2-IT; printed publication date not established` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/55/ca5508aadf551c57492c7553f2cc23f23ca6b9d713580b32ec941aab6288b36e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT-F411U2-IT.pdf) |
-| `ST_00000893_IT.pdf` | Legacy manufacturer technical documentation | `ST_00000893_IT; 23/03/2021` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/74/df7470db3704d79ba75a0f7d720ccac6a59995a214a1a1a2a740f317606d5b7b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000893_IT.pdf) |
-| `ST_00000893_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00000893_EN; 23/03/2021` | PDF pp. 1-4: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/9a/f59a4f84982b8d0040f7824acbe4be8125f877d93d28aa6f8bf27fe4ec6892a0.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00000893_EN.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `ST-00000893-EN.pdf` | Technical Sheet `ST-00000893-EN` | `ST-00000893-EN; 23/03/2021` | PDF pp. 1–4: complete 2021 exact-product `F411U2` sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/9a/f59a4f84982b8d0040f7824acbe4be8125f877d93d28aa6f8bf27fe4ec6892a0.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000893-EN.pdf) |
+| `ST-00002461-EN.pdf` | Technical Sheet `ST-00002461-EN` | `ST-00002461-EN; 10/10/2025` | PDF pp. 1–4: complete 2025 exact-product `F411U2` sheet; p. 1 inspected visually for formula and IK label | [Archived original](https://archive.openwebnet-ha.org/sha256/33/f1/33f1629776d7e18399846278bf533512d66169bf3f4c417eb5a0bd3df4d7d71b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002461-EN.pdf) |
+| `F411U2-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/87/cf879e27a57038b30f3dfa99faf2e33c061218f8ad90bd1aa2aa99fb54626ac3.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F411U2&include_technical=1) |
+| `F411U2-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/58/ee58f29189bd4487b54dedb5be2eeb3dd868e196cc18b2348405e10e4543952d.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411U2) |
+| `BT-F411U2-IT.pdf` | Exact-product environmental declaration (PEP) | `LGRP-01196-V01.01-IT / 20E0028C-IT; May 2020` | PDF pp. 1–4: complete 05/2020 environmental declaration; LCA assumptions are not service-life guarantees | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/55/ca5508aadf551c57492c7553f2cc23f23ca6b9d713580b32ec941aab6288b36e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT-F411U2-IT.pdf) |
+| `ST_00000893_IT.pdf` | Legacy manufacturer technical documentation | `ST_00000893_IT; 23/03/2021` | PDF pp. 1–2: Italian load/formula/IK/configuration cross-check; pp. 3–4 not compared in full | [Archived original](https://archive.openwebnet-ha.org/sha256/df/74/df7470db3704d79ba75a0f7d720ccac6a59995a214a1a1a2a740f317606d5b7b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000893_IT.pdf) |
+| `ST_00000893_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00000893_EN; 23/03/2021` | PDF pp. 1–4: separately retained 2021 publisher original; load and mode tables compared | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/9a/f59a4f84982b8d0040f7824acbe4be8125f877d93d28aa6f8bf27fe4ec6892a0.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00000893_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet `ST-00002703-EN` | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2115`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf` | Manufacturer catalogue guide | EXOD18SAG_GB; historical retained edition | PDF pp. 30,66,79 examined for exact `F411U1`/`F411U2` load tables and actuator/wiring scope; other product chapters not reviewed | [Archived original](https://archive.openwebnet-ha.org/sha256/2e/8b/2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40.pdf) | Publisher URL not retained in manifest |
 
 ## Physical and electrical characteristics
 
@@ -59,7 +69,6 @@ EANs identify the named commercial variant, not the configured physical device o
 | Ferromagnetic transformer | `920 VA / 4 A cos phi 0.5 at 250 Vac; 440 VA / 4 A at 110 Vac` | `ST-00002461-EN` printed/PDF pp. 1-4 |
 | Protection codes | `IP20; IK40 printed in 2025 sheet, not silently corrected` | `ST-00002461-EN` printed/PDF pp. 1-4 |
 | Shutter motor | `460 W / 2 A at 250 Vac; 250 W / 2 A at 110 Vac` | `ST-00002461-EN` printed/PDF pp. 1-4 |
-
 
 ### Publisher export attributes
 
@@ -91,11 +100,24 @@ These are the complete captured publisher classification values for the named va
 | Field | Value | Evidence |
 | --- | --- | --- |
 | `EN_ITEM.id_item` | `2115` | Canonical catalogue |
-| Technical item description | 2x10A actuator, 2DIN | Canonical catalogue |
+| Technical item description | 2x10 A actuator, 2DIN | Canonical catalogue |
 | Item family | 0; key `2` | Canonical catalogue |
 | Main system | Automation; key `1` | `AS_ITEM_SYSTEM` |
 | Main item model / `modobj` | `78` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `78` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -106,6 +128,12 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -127,12 +155,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `659` | Virtual Configuration | `1` | Association key `1` |
-| `659` | Advanced Configuration | `2` | Association key `2` |
-| `659` | Physical configuration | `0` | Association key `3` |
+| `659` | Physical configuration | `0` | Canonical firmware/mode association |
+| `659` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `659` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -158,7 +186,7 @@ Domains and defaults are catalogue evidence. `AID` is a literal mask with no sto
 | `659` | `PL1` | `0..9` | `0` | PL1 - (0-9) |
 | `659` | `PL2` | `0..9` | `0` | PL2 - (0-9) |
 | `659` | `G1` | `0..255` | `0` | Group 1 |
-| `659` | `MODE` | `0..9`; `11` = `SLA`; `15` = PLU | `0` | mode(0-9, sla ,plu); Mode 5-9 only for light |
+| `659` | `MODE` | `0..9`; `11` = `SLA`; `15` = PLU | `0` | mode(0-9, sla , plu); Mode 5-9 only for light |
 | `659` | `C` | `0..1` | `0` | Zero crossing - Dry contact; For shutter only value 0 is valid |
 
 ## Object configuration surfaces
@@ -191,7 +219,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
 | `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
 
-
 ### Object `7` - Automation actuator
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -202,6 +229,29 @@ The following domains and defaults describe reusable Object definitions in the c
 | `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control; `14` = Bistable and blades control | `12` | Local button modality |
 | `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time |
 | `SUBTYPE` | `11` = Actuator; `2` = Shutter; `3` = Curtain; `4` = Gate; `5` = Garage door; `15` = Differential restart | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+### Object `1` - Blind actuator (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `21` = 21 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time; Only for Master modes |
+| `DELAY_DOORS` | `0..60` | `3` | Delay between doors |
 | `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
 | `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
 | `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
@@ -284,7 +334,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `7` - Automation actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 | `6` - Light actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -293,32 +342,39 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. The stated load capacities require zero crossing and neutral connected; without them relay bonding may occur. The sheet’s 250 Vac column retains 2300 W/920 W values as printed rather than recalculating power. The local press switches the load. Suite exposes contact state at power recovery and additional role/local-button options. MyHOME Server automatically configures 2 channel(s). `PL1=PL2` interlocks the relays for an AC motor with two windings. Physical motor stop `M=0`/1/2/3/4/5/6/7/8/9 gives 1 min/2 min/5 min/10 min/infinite-until-next-command/20 s/10 s/5 s/15 s/30 s; software offers `1..60` s, `2..10` min and infinite. The 2025 sheet adds a dissipated-power formula P[mW]=140+400*N+10*(Ic1+Ic2), with N the loaded-relay count; its expression differs from older squared-current formulas and is retained as printed. The source’s 10 A breaker and at least 3 m load connection are wiring qualifications, not a different relay rating.
+Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. The stated load capacities require zero crossing and neutral connected; without them relay bonding may occur. The sheet’s 250 Vac column retains 2300 W/920 W values as printed rather than recalculating power. The local press switches the load. Suite exposes contact state at power recovery and additional role/local-button options. MyHOME Server automatically configures 2 channel(s). `PL1=PL2` interlocks the relays for an AC motor with two windings. Physical motor stop `M=0`/1/2/3/4/5/6/7/8/9 gives 1 min/2 min/5 min/10 min/infinite-until-next-command/20 s/10 s/5 s/15 s/30 s; software offers `1..60` s, `2..10` min and infinite. Both English 2021 and 2025 sheets print a dissipated-power formula P[mW]=140+400*N+10*(Ic1+Ic2), with N the loaded-relay count; the printed expression is retained without adding current squares or claiming a newly introduced revision. The source’s 10 A breaker and at least 3 m load connection are wiring qualifications, not a different relay rating.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+For zero crossing select `C=0`; missing L/N is indicated by a flashing LED. With `C=1` and no neutral, clean-contact use is documented. Independent light mode requires `PL1≠PL2`; motor interlock requires `PL1=PL2`. Delayed OFF is a master-to-slave function, not a promise that the master output remains on (2021/2025 sheet pp. 2–3).
 
 ## Source reconciliation
 
-Exact reference and Legrand alias are established by the database and shared manufacturer heading. The 2021 and 2025 F411U2 technical sheets are retained separately. The 2025 sheet prints IK40, whereas the older sheet must be applied by its own values; no production boundary or corrected IK value is assumed. The shared guide incorrectly calls F411U2 a four-relay actuator in its descriptive text but the exact sheets and terminal diagram establish two. The database has lighting Object `6` and automation Object `7` candidates, consistent with alternate physical roles. The 2026 EOS list uses a 16 A product label for these references, while the exact sheets describe 10 A and load-specific lower capacities. That label is not authority to raise every load rating.
+Exact reference and Legrand alias are established by the database and shared manufacturer heading. The 2021 and 2025 `F411U2` technical sheets are retained separately. The 2025 sheet prints IK40, whereas the older sheet must be applied by its own values; no production boundary or corrected IK value is assumed. The shared guide incorrectly calls `F411U2` a four-relay actuator in its descriptive text but the exact sheets and terminal diagram establish two. The database has lighting Object `6` and automation Object `7` candidates, consistent with alternate physical roles. The 2026 EOS list uses a 16 A product label for these references, while the exact sheets describe 10 A and load-specific lower capacities. That label is not authority to raise every load rating.
+
+### Reviewed source boundaries
+
+The reusable Automation Object `7` STOP_TIME enumeration omits `18` and `61`; it must not be replaced with a continuous domain. Firmware field `MODE` and conversion selector `M` are different names without a documented alias. Both English 2021 and 2025 sheets print `IK40` and the same unsquared-current dissipation formula, whereas the Italian 2021 sheet prints `IK04`. No corrected IK label or production cut-over is inferred. The environmental declaration’s ten-year assessment scenario is not a guaranteed operating life.
 
 ### Retained source accounting
 
-| Original | Role / reconciliation scope |
+| Original | Examined role / remaining scope |
 | --- | --- |
-| `ST-00000893-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002461-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `F411U2-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `F411U2-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `BT-F411U2-IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST_00000893_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST_00000893_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `ST-00000893-EN.pdf` | PDF pp. 1–4: complete 2021 exact-product `F411U2` sheet |
+| `ST-00002461-EN.pdf` | PDF pp. 1–4: complete 2025 exact-product `F411U2` sheet; p. 1 inspected visually for formula and IK label |
+| `F411U2-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `F411U2-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `BT-F411U2-IT.pdf` | PDF pp. 1–4: complete 05/2020 environmental declaration; LCA assumptions are not service-life guarantees |
+| `ST_00000893_IT.pdf` | PDF pp. 1–2: Italian load/formula/IK/configuration cross-check; pp. 3–4 not compared in full |
+| `ST_00000893_EN.pdf` | PDF pp. 1–4: separately retained 2021 publisher original; load and mode tables compared |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred |
+| `HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf` | PDF pp. 30,66,79 examined for exact `F411U1`/`F411U2` load tables and actuator/wiring scope; other product chapters not reviewed |
 
 ## Evidence limits and open work
 
 Production-specific rating/IK discrepancies, zero-crossing and restoration behavior, load compatibility and diagnostic responses remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
 
 ### Discovered sources outside this review
 
@@ -326,11 +382,11 @@ These publisher-linked sources were identified but were not retained or used as 
 
 | Source | Remaining scope | Publisher provenance |
 | --- | --- | --- |
-| `Brochure Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 2M.pdf) |
-| `Brochure Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 3M.pdf) |
-| `Brochure MyHOME.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure MyHOME.pdf) |
-| `Catalogue Living_NOW 2M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 2M.pdf) |
-| `Catalogue Living_NOW 3M.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 3M.pdf) |
+| `Brochure Living_NOW 2M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 2M.pdf) |
+| `Brochure Living_NOW 3M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure Living_NOW 3M.pdf) |
+| `Brochure MyHOME.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure MyHOME.pdf) |
+| `Catalogue Living_NOW 2M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 2M.pdf) |
+| `Catalogue Living_NOW 3M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue Living_NOW 3M.pdf) |
 
 ## Sources
 
@@ -342,3 +398,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0153)

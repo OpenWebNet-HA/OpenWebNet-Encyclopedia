@@ -29,48 +29,53 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `344842` | `8005543677513` | `344842-publisher-product-sheet.pdf` PDF p. 1 |
+| `344842` | `8005543677513` | [344842-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/bb/27/bb27dc329a7d9738f736a1c54481ea85039db0c97032a74ed56421963527b978.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `344842` | CLASSE300 EOS | Canonical commercial record `2645` |
+| `344845` | CLASSE300 EOS | Canonical commercial record `2648` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `LE12456AD.pdf` | Instruction Use LE12456AD | `LE12456AD; printed publication date not established` | Retained 8-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/44/60/4460df01dfba400961f17f3edf8afa3ec266d03606f2ac1629906165b9d236aa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE12456AD.pdf) |
-| `RA00194AB_EN.pdf` | Technical Guide RA00194AB_EN | `RA00194AB_EN; 16/06/2021, 09/03/2021` | Retained 116-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/74/88/748837d5a89ccc092356f306de0d70ca7a9aeeab0bc58d8ee34fe1b31c76066c.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00194AB_EN.pdf) |
-| `RA00215AC_I_EN.pdf` | Installation Guide RA00215AC_I_EN | `RA00215AC_I-11/24-PC; printed revision label` | Retained 338-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_I_EN.pdf) |
-| `RA00215AC_U_EN.pdf` | Technical Guide RA00215AC_U_EN | `RA00215AC_U-12/24-PC; printed revision label` | Retained 114-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/34/5b3409d549c70bb0d078468c4249c8e4265f229cb381cf29e85392c2b51b4de4.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_U_EN.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
-| `344842-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Retained 6-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/bb/27/bb27dc329a7d9738f736a1c54481ea85039db0c97032a74ed56421963527b978.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-344842&include_technical=1) |
-| `344842-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-3: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/46/2346eebed579490907aea0b553cfde70e6043c5365094dbc6075681c192e36b3.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344842) |
-| `LE12456AB.pdf` | Legacy manufacturer technical documentation | `LE12456AB; printed publication date not established` | Retained 8-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/0e/ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE12456AB.pdf) |
-| `ST_00001000_IT.pdf` | Legacy manufacturer technical documentation | `ST_00001000_IT; 27/06/2023` | Retained 17-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/62/8a/628a137a1c477bac54a1daf71ef2ae13b75edd486b7134888ec2d2e20ae0b763.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00001000_IT.pdf) |
-| `ST_00001000_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00001000_EN; 27/06/2023` | Retained 17-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/34/c4/34c45807e121af30e969e1635156cb33a423ccc21ddce8c05b1a6d733cb7ef36.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00001000_EN.pdf) |
-| `RA00215AC_I_EN-dar-source.pdf` | Exact-product manufacturer variant/revision documentation | `RA00215AC_I-11/24-PC; printed revision label` | Retained 338-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00215AC_I_EN.pdf) |
-| `RA00215AC_U_EN-dar-source.pdf` | Exact-product manufacturer variant/revision documentation | `RA00215AC_U-12/24-PC; printed revision label` | Retained 114-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/34/5b3409d549c70bb0d078468c4249c8e4265f229cb381cf29e85392c2b51b4de4.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00215AC_U_EN.pdf) |
-| `ST-00001582-FR.pdf` | Exact-product manufacturer variant/revision documentation | `ST-00001582-FR; printed date 21/07/223 (malformed; year not silently corrected)` | Retained 18-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/60/2b607cb96b832a8595488b1d416284eb698852bf499625fad8383c71e7da1693.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00001582-FR.pdf) |
-| `ST-00001582-FR-cloudinary.pdf` | Exact-product manufacturer variant/revision documentation | `ST-00001582-FR; printed date 21/07/223 (malformed; year not silently corrected)` | Retained 18-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/60/2b607cb96b832a8595488b1d416284eb698852bf499625fad8383c71e7da1693.pdf) | [Publisher original](https://fra-connect.mo.cloudinary.net/PRODUCT/DOCUMENT/38/ST-00001582-FR.pdf?ts=1750464255277) |
-| `RA00211AA_I_ENG.pdf` | Exact-product manufacturer variant/revision documentation | `RA00211AA_I-07/22-PC` | Retained 240-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/ac/ae/acaed77dcec7038be3040037a5afe29d8dc26d4b9db062d95271192abff2e47f.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00211AA_I_ENG.pdf) |
+| `LE12456AD.pdf` | Instruction Use `LE12456AD` | `LE12456AD`;12/21-01PC | PDF p. 1:121 mm dimension and12/21 installation revision; remaining sections unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/44/60/4460df01dfba400961f17f3edf8afa3ec266d03606f2ac1629906165b9d236aa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE12456AD.pdf) |
+| `RA00194AB_EN.pdf` | Technical Guide `RA00194AB_EN` | `RA00194AB`-07/21-PC; printed cover label | PDF pp. 3–4,19,36,47,51–52:2021 function inventory, firmware update, recording and loop/safe-lock scope; remaining chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/74/88/748837d5a89ccc092356f306de0d70ca7a9aeeab0bc58d8ee34fe1b31c76066c.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00194AB_EN.pdf) |
+| `RA00215AC_I_EN.pdf` | Installation Guide `RA00215AC_I_EN` | `RA00215AC_I-11/24-PC; printed revision label` | PDF pp. 3–8,25–28,31–32:2024 capacity, compatibility, commissioning and physical/menu paths; remaining object/application chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_I_EN.pdf) |
+| `RA00215AC_U_EN.pdf` | Technical Guide `RA00215AC_U_EN` | `RA00215AC_U-12/24-PC; printed revision label` | PDF pp. 3–4,20–21,30–35:2024 service inventory, recording/Office/safe-lock/loop; remaining app/automation chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/34/5b3409d549c70bb0d078468c4249c8e4265f229cb381cf29e85392c2b51b4de4.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_U_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet `ST-00002703-EN` | `ST-00002703-EN; 16/06/2026` | PDF pp. 1–19:2026 functions, load/device compatibility, topology and configuration examined; p. 4 mode diagram inspected visually | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `344842-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/bb/27/bb27dc329a7d9738f736a1c54481ea85039db0c97032a74ed56421963527b978.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-344842&include_technical=1) |
+| `344842-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/23/46/2346eebed579490907aea0b553cfde70e6043c5365094dbc6075681c192e36b3.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344842) |
+| `LE12456AB.pdf` | Legacy manufacturer technical documentation | `LE12456AB`;04/21-01PC | PDF p. 1: older121 mm dimension and04/21 installation revision; remaining sections unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/0e/ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE12456AB.pdf) |
+| `ST_00001000_IT.pdf` | Legacy manufacturer technical documentation | `ST_00001000_IT; 27/06/2023` | PDF p. 1: Italian identity/function/technical heading cross-check; remaining pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/62/8a/628a137a1c477bac54a1daf71ef2ae13b75edd486b7134888ec2d2e20ae0b763.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00001000_IT.pdf) |
+| `ST_00001000_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00001000_EN; 27/06/2023` | PDF pp. 1–2: older27/06/2023 sheet printedST-00001580-EN, ratings and setup; remaining diagrams unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/34/c4/34c45807e121af30e969e1635156cb33a423ccc21ddce8c05b1a6d733cb7ef36.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00001000_EN.pdf) |
+| `ST-00001582-FR.pdf` | Exact-product manufacturer variant/revision documentation | `ST-00001582-FR; printed date 21/07/223 (malformed; year not silently corrected)` | PDF pp. 1–2: exact 344845/344885 loop, rating and setup; malformed21/07/223 date retained; remaining pages unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/60/2b607cb96b832a8595488b1d416284eb698852bf499625fad8383c71e7da1693.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00001582-FR.pdf) |
+| `RA00211AA_I_ENG.pdf` | Exact-product manufacturer variant/revision documentation | `RA00211AA_I-07/22-PC` | PDF pp. 3,22: earlier MyHOME setup and explicit HomeKit assertion; remaining chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/ac/ae/acaed77dcec7038be3040037a5afe29d8dc26d4b9db062d95271192abff2e47f.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00211AA_I_ENG.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2283`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| AV BUS supply | `21..27 Vdc` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Maximum AV BUS operating draw | `580 mA` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Additional supply | `27 Vdc on 1–2; AV BUS draw with it maximum 22 mA` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Temperature / dimensions | `5..40 °C; 122 x 222 x 32 mm` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Display | `5-inch vertical LCD touch screen` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Cable section per terminal | `maximum 2 x 1 mm²` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Wireless | `IEEE 802.11 b/g/n; 2.4 GHz; <20 dBm; WEP/WPA/WPA2` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Ethernet | `RJ45 through accessory 344844, not supplied` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Alexa | `up to 5 m in optimum ambient audio; minimum 512 Kbps for streaming; availability varies by country/language` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Start-up | `up to 2 minutes after power-on` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| 2026 manual MyHOME limits | `30 rooms; 50 graphical objects per room; 50 commands per actuator; 50 scenarios; 150 actions and 50 start conditions per scenario; 30 temperature zones` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Installer accounts / concurrent users | `15 accounts; one simultaneously connected installer` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
-| Managed addresses | `175 with one supply; 350 with two supplies and one F422A, as manual table` | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| AV BUS supply | `21..27 Vdc` | `ST-00002703-EN` p. 1 |
+| Maximum AV BUS operating draw | `580 mA` | `ST-00002703-EN` p. 1 |
+| Additional supply | `27 Vdc on 1–2; AV BUS draw with it maximum 22 mA` | `ST-00002703-EN` p. 1 |
+| Temperature / dimensions | `5..40 °C; 122 x 222 x 32 mm` | `ST-00002703-EN` p. 2 |
+| Display | `5-inch vertical LCD touch screen` | `ST-00002703-EN` p. 1 |
+| Cable section per terminal | `maximum 2 x 1 mm²` | `ST-00002703-EN` p. 1 |
+| Wireless | `IEEE 802.11 b/g/n; 2.4 GHz; <20 dBm; WEP/WPA/WPA2` | `ST-00002703-EN` p. 1 |
+| Ethernet | `RJ45 through accessory 344844, not supplied` | `ST-00002703-EN` p. 2 |
+| Alexa | `up to 5 m in optimum ambient audio; minimum 512 Kbps for streaming; availability varies by country/language` | `ST-00002703-EN` p. 1 |
+| Start-up | `up to 2 minutes after power-on` | `ST-00002703-EN` p. 1 |
+| 11/24 installer MyHOME limits | `30 rooms; 50 graphical objects per room; 50 commands per actuator; 50 scenarios; 150 actions and 50 start conditions per scenario; 30 temperature zones` | `RA00215AC_I_EN` p. 7 (11/24 revision; not a2026-only limit) |
+| Installer accounts / concurrent users | `15 accounts; one simultaneously connected installer` | `RA00215AC_I_EN` p. 7 (11/24 revision; not a2026-only limit) |
+| Managed addresses | `175 with one supply; 350 with two supplies and one F422A, as manual table` | `RA00215AC_I_EN` p. 7 |
 | Inductive loop, 344845 only | `hearing aid T position; recommended 25..35 cm frontal position` | `RA00215AC_U_EN` printed/PDF p. 35; `ST-00001582-FR` p. 1 |
-
 
 ### Publisher export attributes
 
@@ -78,78 +83,78 @@ These are the complete captured publisher classification values for the named va
 
 | Property | Publisher value | Variant / source |
 | --- | --- | --- |
-| With video | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Installation technique | `Bus system` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Mounting method | `Surface mounted` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Material | `Plastic` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Picture system | `PAL` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
+| With video | `Yes` | `ST-00002703-EN` p. 1 |
+| Installation technique | `Bus system` | `ST-00002703-EN` p. 1 |
+| Mounting method | `Surface mounted` | `ST-00002703-EN` p. 1 |
+| Material | `Plastic` | `ST-00002703-EN` p. 1 |
+| Picture system | `PAL` | `ST-00002703-EN` p. 1 |
 | Property picture system | `Colour` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| With memory function | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Overhear protected | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Operation door lock | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Control extra function(s) | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Hands free | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Can be connected to smartphone | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Hearing aid compatible | `No` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| With automatic door opener | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Colour | `White` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Type of interface | `Wi-Fi` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Mutable call tone | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Internal communication | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Specific call tone | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Loudness setting | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| With touch screen | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Width | `130 mm` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Height | `230 mm` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Depth | `40 mm` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Compatible with Apple HomeKit | `No` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Compatible with Google Assistant | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Compatible with Amazon Alexa | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| IFTTT support available | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| degree of impact strength (IK) | `IK07` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Degree of protection (IP) | `IP54` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Operating / setting temperature (Min-Max) | `5-40 °C` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Storage temperature (Min-Max) | `-10-70 °C` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Voltage type | `DC` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Nominal voltage (Min-Max) | `20-27 V` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Supply current (Min-Max) | `0.1-0.580 A` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Frequency (Min-Max) | `50-60 Hz` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Sound level | `80 dB` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Standby consumption | `215 mA` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
-| Antimicrobial treatment | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Cable nature for connection | `Flexible or rigid` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Cable section (Min-Max) | `0.28-0.5 mm²` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Label space/information surface | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Fitted with USB plug | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Fitted with rainproof plate protection | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| With complemantary luminous signal | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Vertical fixing center distance (Min-Max) | `1600-1650 mm` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Horizontal fixing center distance (Min-Max) | `40-40 mm` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Contains Batteries | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Additional unit | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Maximum number of additional screens | `0` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Addressable | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Door entry system with mobile application | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Number of ringtones | `6` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Remote opening of gate / Electric door opener | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Screen resolution | `1280x720` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Screen brightness setting | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Screen contrast setting | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Memory video function | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Camera type | `Not applicable` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Max distance between internal and external unit | `200 m` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Connected object | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Operating method | `Wifi network 2.4G` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Application store for download | `Google Play Store` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Programming way | `Smartphone apps` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| With voice command | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Programmable | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Interoperable connection Protocol | `No` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Connectable by Internet box | `Yes` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Compatible voice assistants | `Amazon Alexa` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Application name | `Home + Security, Home + Control` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Product use function | `Door entry systems` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
-| Software Update Duration (years) | `3` | `344842-publisher-product-sheet.pdf` PDF p. 4 |
+| With memory function | `Yes` | `ST-00002703-EN` p. 1 |
+| Overhear protected | `Yes` | `ST-00002703-EN` p. 1 |
+| Operation door lock | `Yes` | `ST-00002703-EN` p. 1 |
+| Control extra function(s) | `Yes` | `ST-00002703-EN` p. 1 |
+| Hands free | `Yes` | `ST-00002703-EN` p. 1 |
+| Can be connected to smartphone | `Yes` | `ST-00002703-EN` p. 1 |
+| Hearing aid compatible | `No` | `ST-00002703-EN` p. 1 |
+| With automatic door opener | `Yes` | `ST-00002703-EN` p. 1 |
+| Colour | `White` | `ST-00002703-EN` p. 1 |
+| Type of interface | `Wi-Fi` | `ST-00002703-EN` p. 1 |
+| Mutable call tone | `Yes` | `ST-00002703-EN` p. 1 |
+| Internal communication | `Yes` | `ST-00002703-EN` p. 1 |
+| Specific call tone | `Yes` | `ST-00002703-EN` p. 1 |
+| Loudness setting | `Yes` | `ST-00002703-EN` p. 1 |
+| With touch screen | `Yes` | `ST-00002703-EN` p. 1 |
+| Width | `130 mm` | `ST-00002703-EN` p. 1 |
+| Height | `230 mm` | `ST-00002703-EN` p. 1 |
+| Depth | `40 mm` | `ST-00002703-EN` p. 1 |
+| Compatible with Apple HomeKit | `No` | `ST-00002703-EN` p. 1 |
+| Compatible with Google Assistant | `Yes` | `ST-00002703-EN` p. 1 |
+| Compatible with Amazon Alexa | `Yes` | `ST-00002703-EN` p. 1 |
+| IFTTT support available | `Yes` | `ST-00002703-EN` p. 1 |
+| degree of impact strength (IK) | `IK07` | `ST-00002703-EN` p. 1 |
+| Degree of protection (IP) | `IP54` | `ST-00002703-EN` p. 1 |
+| Operating / setting temperature (Min-Max) | `5-40 °C` | `ST-00002703-EN` p. 1 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `ST-00002703-EN` p. 1 |
+| Voltage type | `DC` | `ST-00002703-EN` p. 1 |
+| Nominal voltage (Min-Max) | `20-27 V` | `ST-00002703-EN` p. 1 |
+| Supply current (Min-Max) | `0.1-0.580 A` | `ST-00002703-EN` p. 1 |
+| Frequency (Min-Max) | `50-60 Hz` | `ST-00002703-EN` p. 1 |
+| Sound level | `80 dB` | `ST-00002703-EN` p. 1 |
+| Standby consumption | `215 mA` | `ST-00002703-EN` p. 1 |
+| Antimicrobial treatment | `No` | `ST-00002703-EN` p. 1 |
+| Cable nature for connection | `Flexible or rigid` | `ST-00002703-EN` p. 1 |
+| Cable section (Min-Max) | `0.28-0.5 mm²` | `ST-00002703-EN` p. 1 |
+| Label space/information surface | `No` | `ST-00002703-EN` p. 1 |
+| Fitted with USB plug | `Yes` | `ST-00002703-EN` p. 1 |
+| Fitted with rainproof plate protection | `No` | `ST-00002703-EN` p. 1 |
+| With complemantary luminous signal | `Yes` | `ST-00002703-EN` p. 1 |
+| Vertical fixing center distance (Min-Max) | `1600-1650 mm` | `ST-00002703-EN` p. 1 |
+| Horizontal fixing center distance (Min-Max) | `40-40 mm` | `ST-00002703-EN` p. 1 |
+| Contains Batteries | `No` | `ST-00002703-EN` p. 1 |
+| Additional unit | `Yes` | `ST-00002703-EN` p. 1 |
+| Maximum number of additional screens | `0` | `ST-00002703-EN` p. 1 |
+| Addressable | `Yes` | `ST-00002703-EN` p. 1 |
+| Door entry system with mobile application | `Yes` | `ST-00002703-EN` p. 1 |
+| Number of ringtones | `6` | `ST-00002703-EN` p. 1 |
+| Remote opening of gate / Electric door opener | `Yes` | `ST-00002703-EN` p. 1 |
+| Screen resolution | `1280x720` | `ST-00002703-EN` p. 1 |
+| Screen brightness setting | `Yes` | `ST-00002703-EN` p. 1 |
+| Screen contrast setting | `Yes` | `ST-00002703-EN` p. 1 |
+| Memory video function | `Yes` | `ST-00002703-EN` p. 1 |
+| Camera type | `Not applicable` | `ST-00002703-EN` p. 1 |
+| Max distance between internal and external unit | `200 m` | `ST-00002703-EN` p. 1 |
+| Connected object | `Yes` | `ST-00002703-EN` p. 1 |
+| Operating method | `Wifi network 2.4G` | `ST-00002703-EN` p. 1 |
+| Application store for download | `Google Play Store` | `ST-00002703-EN` p. 1 |
+| Programming way | `Smartphone apps` | `ST-00002703-EN` p. 1 |
+| With voice command | `Yes` | `ST-00002703-EN` p. 1 |
+| Programmable | `No` | `ST-00002703-EN` p. 1 |
+| Interoperable connection Protocol | `No` | `ST-00002703-EN` p. 1 |
+| Connectable by Internet box | `Yes` | `ST-00002703-EN` p. 1 |
+| Compatible voice assistants | `Amazon Alexa` | `ST-00002703-EN` p. 1 |
+| Application name | `Home + Security, Home + Control` | `ST-00002703-EN` p. 1 |
+| Product use function | `Door entry systems` | `ST-00002703-EN` p. 1 |
+| Software Update Duration (years) | `3` | `ST-00002703-EN` p. 1 |
 
 ## Identity
 
@@ -162,6 +167,22 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `130` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 | Additional system | Video door entry system; key `4`; model `130` | Separate non-main catalogue association |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `130` | No | Canonical item/system relationship |
+| Integration function | `130` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -179,6 +200,31 @@ These are the complete captured publisher classification values for the named va
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `826` | `1082` | BTicino (key `1`) | `0` | Extra | `2283_1.0_BT\xml\Extra\extra.xml` |
+| `826` | `1083` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.0_BT\xml\Protocol\protocol.xml` |
+| `832` | `1101` | BTicino (key `1`) | `0` | Extra | `2283_2.1_BT\xml\Extra\extra.xml` |
+| `832` | `1102` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_2.1_BT\xml\Protocol\protocol.xml` |
+| `845` | `1111` | BTicino (key `1`) | `0` | Extra | `2283_1.1_BT\xml\Extra\extra.xml` |
+| `845` | `1112` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.1_BT\xml\Protocol\protocol.xml` |
+| `846` | `1113` | BTicino (key `1`) | `0` | Extra | `2283_1.2_BT\xml\Extra\extra.xml` |
+| `846` | `1114` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.2_BT\xml\Protocol\protocol.xml` |
+| `847` | `1115` | BTicino (key `1`) | `0` | Extra | `2283_1.3_BT\xml\Extra\extra.xml` |
+| `847` | `1116` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.3_BT\xml\Protocol\protocol.xml` |
+| `848` | `1117` | BTicino (key `1`) | `0` | Extra | `2283_1.5_BT\xml\Extra\extra.xml` |
+| `848` | `1118` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.5_BT\xml\Protocol\protocol.xml` |
+| `856` | `1119` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_2.2_BT\xml\Protocol\protocol.xml` |
+| `856` | `1120` | BTicino (key `1`) | `0` | Extra | `2283_2.2_BT\xml\Extra\extra.xml` |
+| `883` | `1133` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_3.0_BT\xml\Protocol\protocol.xml` |
+| `883` | `1134` | BTicino (key `1`) | `0` | Extra | `2283_3.0_BT\xml\Extra\extra.xml` |
+
+All 16 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -213,66 +259,43 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `826` | Physical configuration | `0` | Association key `3` |
-| `826` | Product Programming | `3` | Association key `4` |
-| `832` | Physical configuration | `0` | Association key `3` |
-| `832` | Product Programming | `3` | Association key `4` |
-| `845` | Physical configuration | `0` | Association key `3` |
-| `845` | Product Programming | `3` | Association key `4` |
-| `846` | Physical configuration | `0` | Association key `3` |
-| `846` | Product Programming | `3` | Association key `4` |
-| `847` | Physical configuration | `0` | Association key `3` |
-| `847` | Product Programming | `3` | Association key `4` |
-| `848` | Physical configuration | `0` | Association key `3` |
-| `848` | Product Programming | `3` | Association key `4` |
-| `856` | Physical configuration | `0` | Association key `3` |
-| `856` | Product Programming | `3` | Association key `4` |
-| `883` | Physical configuration | `0` | Association key `3` |
-| `883` | Product Programming | `3` | Association key `4` |
+| `826` | Physical configuration | `0` | Canonical firmware/mode association |
+| `826` | Product Programming | `3` | Canonical firmware/mode association |
+| `832` | Physical configuration | `0` | Canonical firmware/mode association |
+| `832` | Product Programming | `3` | Canonical firmware/mode association |
+| `845` | Physical configuration | `0` | Canonical firmware/mode association |
+| `845` | Product Programming | `3` | Canonical firmware/mode association |
+| `846` | Physical configuration | `0` | Canonical firmware/mode association |
+| `846` | Product Programming | `3` | Canonical firmware/mode association |
+| `847` | Physical configuration | `0` | Canonical firmware/mode association |
+| `847` | Product Programming | `3` | Canonical firmware/mode association |
+| `848` | Physical configuration | `0` | Canonical firmware/mode association |
+| `848` | Product Programming | `3` | Canonical firmware/mode association |
+| `856` | Physical configuration | `0` | Canonical firmware/mode association |
+| `856` | Product Programming | `3` | Canonical firmware/mode association |
+| `883` | Physical configuration | `0` | Canonical firmware/mode association |
+| `883` | Product Programming | `3` | Canonical firmware/mode association |
 
-
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `826` | Ethernet | `2` |
-| `826` | Ethernet over USB | `4` |
-| `832` | Ethernet | `2` |
-| `832` | Ethernet over USB | `4` |
-| `845` | Ethernet | `2` |
-| `845` | Ethernet over USB | `4` |
-| `846` | Ethernet | `2` |
-| `846` | Ethernet over USB | `4` |
-| `847` | Ethernet | `2` |
-| `847` | Ethernet over USB | `4` |
-| `848` | Ethernet | `2` |
-| `848` | Ethernet over USB | `4` |
-| `856` | Ethernet | `2` |
-| `856` | Ethernet over USB | `4` |
-| `883` | Ethernet | `2` |
-| `883` | Ethernet over USB | `4` |
+| `826` | Ethernet | Canonical firmware/connection association |
+| `826` | Ethernet over USB | Canonical firmware/connection association |
+| `832` | Ethernet | Canonical firmware/connection association |
+| `832` | Ethernet over USB | Canonical firmware/connection association |
+| `845` | Ethernet | Canonical firmware/connection association |
+| `845` | Ethernet over USB | Canonical firmware/connection association |
+| `846` | Ethernet | Canonical firmware/connection association |
+| `846` | Ethernet over USB | Canonical firmware/connection association |
+| `847` | Ethernet | Canonical firmware/connection association |
+| `847` | Ethernet over USB | Canonical firmware/connection association |
+| `848` | Ethernet | Canonical firmware/connection association |
+| `848` | Ethernet over USB | Canonical firmware/connection association |
+| `856` | Ethernet | Canonical firmware/connection association |
+| `856` | Ethernet over USB | Canonical firmware/connection association |
+| `883` | Ethernet | Canonical firmware/connection association |
+| `883` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `826` | `1` | `0` | `2283_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `826` | `1` | `0` | `2283_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `832` | `1` | `0` | `2283_2.1_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `832` | `1` | `0` | `2283_2.1_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `845` | `1` | `0` | `2283_1.1_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `845` | `1` | `0` | `2283_1.1_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `846` | `1` | `0` | `2283_1.2_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `846` | `1` | `0` | `2283_1.2_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `847` | `1` | `0` | `2283_1.3_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `847` | `1` | `0` | `2283_1.3_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `848` | `1` | `0` | `2283_1.5_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `848` | `1` | `0` | `2283_1.5_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `856` | `1` | `0` | `2283_2.2_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `856` | `1` | `0` | `2283_2.2_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `883` | `1` | `0` | `2283_3.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `883` | `1` | `0` | `2283_3.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-
-Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -362,7 +385,6 @@ The following domains and defaults describe reusable Object definitions in the c
 | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
 | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
 
-
 ### Object `154` - Internal Unit
 
 | Field | Reusable domain | Reusable default | Meaning |
@@ -429,7 +451,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 | `32` - Colors Touch Screen | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -440,37 +461,53 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Configure video-entry N/P/M physically or through the device menu; units digit `M=0..9` selects staircase light, P+1/P+2/P+3 locks, P+1/P+2/P+3 auto-on, paging, internal intercom or Office. Tens digit selects the four-action arrangement. Change rear switches unpowered and wait one minute before reconnecting after configuration. For MyHOME, update firmware before commissioning and configure through Home + Project, delivering the system for Home + Control use; associate supported alarm functions through Home + Security. The current sheet excludes physically configured home-automation devices and the 99-zone central-unit solution; it permits only one EOS in the house to use MyHOME functions. HOMETOUCH is incompatible. Devices on different lines have explicit per-model/production compatibility limits in the installer manual; “supported” does not imply unrestricted cross-line control. Multi-family sheet diagrams require additional supply 1–2, and other layouts must follow their own power-sizing instructions. The BUS-MH terminal is labelled future application in the technical sheet and manual, despite their MyHOME functions; no independent active terminal role is inferred. Door status requires actuator 346260. Alexa mute disables its and the device microphone.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+### Commissioning and function limits
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Setup path | Video entry can be configured by menu, physically plus menu, or physically. Removing physical configurators before full menu setup requires a reboot. MyHOME and associated alarm/load devices are commissioned through Home+Project; Home+Control is the user control app and Home + Security handles video/alarm functions. | Installer pp. 26–32 |
+| Supply and parallel units | Multi-family and integrated automation layouts require1–2 additional supply. In particular single-family layouts it is recommended for Alexa performance but optional for ordinary video entry. Parallel3/5-unit and one app-connected EOS limits are diagram-specific. | 2026 sheet pp. 12–18; installer pp. 17–24 |
+| Capacity | 30 rooms; 50 objects per room; 50 commands per actuator; 50 scenarios; 150 actions and 50 start conditions per scenario; 30 temperature zones; 15 installer accounts and one simultaneous installer. 175 addresses with one supply; 350 with two supplies and `F422A`. These are application limits, not Object slot counts. | Installer p.7 |
+| Answering machine revisions | 25 high-resolution15 s messages in both manuals. AB user p. 47 states50 low-resolution messages; AC user p. 30 states35. Full memory overwrites oldest. A firmware boundary for the change is not documented. | `RA00194AB_EN` p. 47;`RA00215AC_U_EN` p. 30 |
+| Office and safe lock | Door status requires 346260 plus contact and excludes Office. Office opens automatically on an EP call and excludes safe lock. Safe lock permits release only during EP/IU voice communication and also restricts app/object/Favourite commands. | AC user pp. 32–34; AB pp. 49–51 |
+| Physical M tens | `1`: internal intercom, EP+1, locks+1/+2; `2`: paging, EP+1, locks+1/+2; `3`: internal intercom, intercom1, EP+1, lock1; `4`: intercom among addresses1–3, locks1/2; `5`: external intercom among addresses1–4, lock1; `6`: intercom among addresses1–5; `7`: external intercom among addresses1–5; `8`: EP+1, intercom1, locks1/2; `9`: locks1–4. In the illustrated multi-address presets a call targets the other addresses, excluding the originating unit. Interface346850 determines internal/external scope. M units separately select Favourite action0–9. | 2026 sheet pp.3–5; pp.4–5 visually inspected |
 
 ## Source reconciliation
 
-344842 and 344845 are explicit database identities and are both named on the retained RA00215AC_I-11/24-PC installer manual. The current English sheet names 344842/344884, while the exact French ST-00001582-FR sheet names 344845/344885; the 344884/344885 variants are outside this catalogue cluster. The user manual explicitly scopes the inductive loop to 344845. Both exact variants therefore have retained documentation; their differing hearing assistance is not flattened. The French sheet prints the malformed date 21/07/223; it is preserved without silently inferring 2023. The older ST_00001000_EN filename prints ST-00001580-EN and 27/06/2023. The 11/24 installer manual and 16/06/2026 English sheet reverse DALI2 gateway/dimmer names in portions of their compatibility inventory; no corrected assignment is inferred. Physical video-entry configuration is separate from the software-configured home-automation solution and its exclusion of physically configured associated devices. Catalogue history alone does not establish that all later functions existed in every older release.
+344842 and 344845 are explicit database identities and are both named on the retained `RA00215AC_I`-11/24-PC installer manual. The current English sheet names 344842/344884, while the exact French `ST-00001582-FR` sheet names 344845/344885; the 344884/344885 variants are outside this catalogue cluster. The user manual explicitly scopes the inductive loop to 344845. Both exact variants therefore have retained documentation; their differing hearing assistance is not flattened. The French sheet prints the malformed date 21/07/223; it is preserved without silently inferring 2023. The older `ST_00001000_EN` filename prints `ST-00001580-EN` and 27/06/2023. The 11/24 installer manual and 16/06/2026 English sheet reverse DALI2 gateway/dimmer names in portions of their compatibility inventory; no corrected assignment is inferred. Physical video-entry configuration is separate from the software-configured home-automation solution and its exclusion of physically configured associated devices. Catalogue history alone does not establish that all later functions existed in every older release.
+
+Earlier installer `RA00211AA_I_ENG` p. 22 explicitly calls HomeKit compatible, whereas the captured344842 product classification says Apple HomeKit No; this is an unresolved source/scope discrepancy, not a basis for promising direct HomeKit integration. Earlier AB and current AC user manuals also disagree on low-resolution recording capacity. `LE12456AB`/AD p. 1 give121 mm width, technical sheets122 mm, export130×230×40 mm; no hardware-change date or packing-dimension explanation is supplied. The2024 installer p. 25 calls the command-actuator LG067561; the2026 sheet p. 11 instead prints LG067554, duplicating the basic-command reference. That code discrepancy remains explicit.
+
+The alternate dar installation/user URLs and cloudinary French path resolve to the same respective archived SHA-256 fingerprints as the originals shown above. Their earlier duplicate local filename rows were provenance aliases, not distinct revisions.
+
+### Reviewed source boundaries
+
+Both catalogue variants have retained exact-variant documentation, and the user manual limits the inductive loop to `344845`. The current `344884/344885` references remain outside this catalogue cluster. The 2024 installer uses `F422A` for its 350-address/two-supply limit. Later MyHOME and security functions are scoped to the examined revisions; they are not inferred for every older catalogue release. Recording capacity and HomeKit support retain the specific source disagreements described here.
 
 ### Retained source accounting
 
-| Original | Role / reconciliation scope |
+| Original | Examined role / remaining scope |
 | --- | --- |
-| `LE12456AD.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00194AB_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00215AC_I_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00215AC_U_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `344842-publisher-product-sheet.pdf` | Exact named variant; complete classification attributes captured above and EAN under Commercial identities. Sheet-specific ratings remain independently scoped. |
-| `344842-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `LE12456AB.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST_00001000_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST_00001000_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00215AC_I_EN-dar-source.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00215AC_U_EN-dar-source.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00001582-FR.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00001582-FR-cloudinary.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `RA00211AA_I_ENG.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
+| `LE12456AD.pdf` | PDF p. 1:121 mm dimension and12/21 installation revision; remaining sections unexamined |
+| `RA00194AB_EN.pdf` | PDF pp. 3–4,19,36,47,51–52:2021 function inventory, firmware update, recording and loop/safe-lock scope; remaining chapters unexamined |
+| `RA00215AC_I_EN.pdf` | PDF pp. 3–8,25–28,31–32:2024 capacity, compatibility, commissioning and physical/menu paths; remaining object/application chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `RA00215AC_U_EN.pdf` | PDF pp. 3–4,20–21,30–35:2024 service inventory, recording/Office/safe-lock/loop; remaining app/automation chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `ST-00002703-EN.pdf` | PDF pp. 1–19:2026 functions, load/device compatibility, topology and configuration examined; p. 4 mode diagram inspected visually |
+| `344842-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `344842-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `LE12456AB.pdf` | PDF p. 1: older121 mm dimension and04/21 installation revision; remaining sections unexamined |
+| `ST_00001000_IT.pdf` | PDF p. 1: Italian identity/function/technical heading cross-check; remaining pages unexamined |
+| `ST_00001000_EN.pdf` | PDF pp. 1–2: older27/06/2023 sheet printedST-00001580-EN, ratings and setup; remaining diagrams unexamined |
+| `ST-00001582-FR.pdf` | PDF pp. 1–2: exact 344845/344885 loop, rating and setup; malformed21/07/223 date retained; remaining pages unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `RA00211AA_I_ENG.pdf` | PDF pp. 3,22: earlier MyHOME setup and explicit HomeKit assertion; remaining chapters unexamined |
 
 ## Evidence limits and open work
 
 The compatibility-table reference corrections, actual firmware enabling later MyHOME functions, the future BUS-MH terminal and installed responses remain uncorroborated. Both catalogue SKU identities and exact-variant documentation are established.
 
-No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
 
 ### Discovered sources outside this review
 
@@ -478,12 +515,12 @@ These publisher-linked sources were identified but were not retained or used as 
 
 | Source | Remaining scope | Publisher provenance |
 | --- | --- | --- |
-| `LGELWJGOYE.PDF` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/Certif/LGELWJGOYE.PDF) |
-| `LGFKVBKBFZ.PDF` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/Certif/LGFKVBKBFZ.PDF) |
-| `Bticino-Door Entry System-Classe 300EOS-Internal Unit.rfa` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Bticino-Door Entry System-Classe 300EOS-Internal Unit.rfa) |
-| `Classe_300.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Classe_300.pdf) |
+| `LGELWJGOYE.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGELWJGOYE.PDF) |
+| `LGFKVBKBFZ.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGFKVBKBFZ.PDF) |
+| `Bticino-Door Entry System-Classe 300EOS-Internal Unit.rfa` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Bticino-Door Entry System-Classe 300EOS-Internal Unit.rfa) |
+| `Classe_300.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Classe_300.pdf) |
 | `MX_040012.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MX_040012.fwz) |
-| `MyHome_Suite_README_v2.pdf` | Software licence, declaration or ancillary document; not used for product specifications here | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
+| `MyHome_Suite_README_v2.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
 
 ## Sources
 
@@ -495,3 +532,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0159)

@@ -17,4 +17,4 @@
 | [OWN-DEV-0119](../definitions/own-dev-0119-three-module-light-now-multifunction-control.md) | `Y4652M3`, `MX5223`, `AA5223` | Three-module Light Now multifunction control | Three-module multifunction control; complete shared-selector mode matrix |
 | [OWN-DEV-0131](../definitions/own-dev-0131-mh200n-scenario-programmer.md) | `MH200N`, `003565` | MH200N scenario programmer | Scenario execution, clock/network access and OpenSCS gateway |
 | [OWN-DEV-0137](../definitions/own-dev-0137-three-module-soft-touch-control.md) | `HC/HS4653/3`, `HD4653M3` | Three-module Soft Touch control | Capacitive control with alternative functions, UI settings and scoped Virgin candidates |
-| [OWN-DEV-0151](../definitions/own-dev-0151-mh202-scenario-programmer.md) | `003535`, `MH202` | MH202 scenario programmer | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0151](../definitions/own-dev-0151-mh202-scenario-programmer.md) | `003535`, `MH202` | MH202 scenario programmer | 300 scenarios with trigger/condition/action limits and complete firmware scope |

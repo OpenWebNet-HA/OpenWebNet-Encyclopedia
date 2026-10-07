@@ -2,7 +2,7 @@
 
 ## Summary
 
-F411U1 is a single-channel lighting actuator with a local button and status LED. It switches compatible LED, fluorescent and transformer-fed loads, with configurable zero-crossing control. Its one relay can also act as a clean contact in the documented non-zero-crossing configuration.
+`F411U1` is a single-channel lighting actuator with a local button and status LED. It switches compatible LED, fluorescent and transformer-fed loads, with configurable zero-crossing control. Its one relay can also act as a clean contact in the documented non-zero-crossing configuration.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -23,15 +23,25 @@ F411U1 is a single-channel lighting actuator with a local button and status LED.
 | Legrand | `003847` | Established catalogue identity | Manufacturer database commercial record `2517` explicitly links this SKU to item `2131` |
 | BTicino | `F411U1` | Established catalogue identity | Manufacturer database commercial record `2468` explicitly links this SKU to item `2131` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F411U1` | 1x10 A actuator, 2DIN | Canonical commercial record `2468` |
+| `003847` | 1x10 A actuator, 2DIN | Canonical commercial record `2517` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `F411U1-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | PDF pp. 1-1: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/36/ff/36ffef265654bf508a482559cdcc99b73e0eda6d2c04378512218056dbd039ed.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411U1) |
-| `MQ01015_b_IT.pdf` | Legacy manufacturer technical documentation | `MQ01015_b_IT; 20/09/2018` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/f1/12/f112b3b96ac05db7e9fbe751994d23542c07bdb9784ccbc0fa69e679308476ac.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MQ01015_b_IT.pdf) |
-| `MQ01015_b_EN.pdf` | English counterpart of manufacturer-linked document | `MQ01015_b_EN; 20/09/2018` | PDF pp. 1-2: exact-reference specifications, configuration or wiring as applicable. Printed and PDF pagination coincide where numbered. | [Archived original](https://archive.openwebnet-ha.org/sha256/af/33/af33550d62e7be08a0adf00966c14893d77e52e43f018ff2d8e7e0be5e6923c6.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ01015_b_EN.pdf) |
-| `ST-00002703-EN.pdf` | Technical Sheet ST-00002703-EN | `ST-00002703-EN; 16/06/2026` | Retained 19-page original; exact-product technical, configuration and operating sections reviewed where applicable. Source-specific facts and remaining limits are scoped in the dossier; this does not claim a line-by-line review of every manual page. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `F411U1-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/36/ff/36ffef265654bf508a482559cdcc99b73e0eda6d2c04378512218056dbd039ed.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F411U1) |
+| `MQ01015_b_IT.pdf` | Legacy manufacturer technical documentation | `MQ01015_b_IT; 20/09/2018` | PDF pp. 1–2: complete exact `F411U1`/003847 load and configuration sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/f1/12/f112b3b96ac05db7e9fbe751994d23542c07bdb9784ccbc0fa69e679308476ac.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MQ01015_b_IT.pdf) |
+| `MQ01015_b_EN.pdf` | English counterpart of manufacturer-linked document | `MQ01015_b_EN; 20/09/2018` | PDF pp. 1–2: complete exact `F411U1`/003847 load and configuration sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/af/33/af33550d62e7be08a0adf00966c14893d77e52e43f018ff2d8e7e0be5e6923c6.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ01015_b_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet `ST-00002703-EN` | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2131`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf` | Manufacturer catalogue guide | EXOD18SAG_GB; historical retained edition | PDF pp. 30,66,79 examined for exact `F411U1`/`F411U2` load tables and actuator/wiring scope; other product chapters not reviewed | [Archived original](https://archive.openwebnet-ha.org/sha256/2e/8b/2e8b52836a644b6726555eb523b3f5fe8bce39419c0f096c035baae0b1a38d40.pdf) | Publisher URL not retained in manifest |
 
 ## Physical and electrical characteristics
 
@@ -42,7 +52,7 @@ F411U1 is a single-channel lighting actuator with a local button and status LED.
 | Temperature / size | `0..40 °C; 2 DIN modules` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
 | Outputs | `1 x 10 A` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
 | Incandescent/halogen | `2300 W / 10 A at printed 250 Vac; 1100 W / 10 A at 110 Vac` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
-| LED / CFL | `500 W / 2 A at 250 Vac; 250 W / 2 A at 110 Vac; maximum 10 lamps with neutral connected` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
+| LED / CFL | `500 W / 2 A at 250 Vac; 250 W / 2 A at 110 Vac` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
 | Linear fluorescent / electronic transformer | `920 W / 4 A at 250 Vac; 440 W / 4 A at 110 Vac` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
 | Ferromagnetic transformer | `920 VA / 4 A cos phi 0.5 at 250 Vac; 440 VA / 4 A at 110 Vac` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
 | Protection codes | `IP20; IK04` | `MQ01015_b_EN` printed/PDF pp. 1-2 |
@@ -52,11 +62,24 @@ F411U1 is a single-channel lighting actuator with a local button and status LED.
 | Field | Value | Evidence |
 | --- | --- | --- |
 | `EN_ITEM.id_item` | `2131` | Canonical catalogue |
-| Technical item description | 1x10A actuator, 2DIN | Canonical catalogue |
+| Technical item description | 1x10 A actuator, 2DIN | Canonical catalogue |
 | Item family | 0; key `2` | Canonical catalogue |
 | Main system | Automation; key `1` | `AS_ITEM_SYSTEM` |
 | Main item model / `modobj` | `79` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `79` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -67,6 +90,12 @@ F411U1 is a single-channel lighting actuator with a local button and status LED.
 Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,12 +115,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed/
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `669` | Virtual Configuration | `1` | Association key `1` |
-| `669` | Advanced Configuration | `2` | Association key `2` |
-| `669` | Physical configuration | `0` | Association key `3` |
+| `669` | Physical configuration | `0` | Canonical firmware/mode association |
+| `669` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `669` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating modes
 
@@ -203,7 +232,6 @@ These are catalogue-derived diagnostic candidates. No Device-specific response o
 | --- | --- | --- |
 | `6` - Light actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
 
-
 These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
 
 ## Observed behavior and corroboration
@@ -214,26 +242,33 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Physical A/PL addressing uses `1..9`; Suite uses room `0..10` and lighting point 0..15. Physical group G uses `0..9`; Suite provides ten group fields 0..255. Master `M=0`, slave `M=SLA` and monostable master `M=PUL` are documented; `PUL` ignores room/general controls. Delayed slave `OFF` uses `M=1..4` minutes physically or `0..255` seconds in Suite, for point-to-point control only: the master switches off immediately, its slave after the delay. Slave `PUL` requires software. The stated load capacities require zero crossing and neutral connected; without them relay bonding may occur. The sheet’s 250 Vac column retains 2300 W/920 W values as printed rather than recalculating power. The local press switches the load. Suite exposes contact state at power recovery and additional role/local-button options. MyHOME Server automatically configures 1 channel(s). `C=0` selects zero crossing and the LED flashes if L/N is not connected. `C=1` disables zero crossing; without neutral, the relay may be used as a clean contact. The source specifies at least 3 m load connection.
 
-Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session/validation method remains in [Programming](../../programming/).
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+The historical guide pp. 66/79 limits `F411U1` to10 LED lamps at500 W and10 compact fluorescent lamps at500 W; its4 A/920 W linear fluorescent and4 A/920VA ferromagnetic entries have different load scopes. Use the actual connected load class and applicable source revision, rather than the largest headline current.
 
 ## Source reconciliation
 
-Exact reference and Legrand alias are established by the database and shared manufacturer heading. The exact F411U1/003847 sheet establishes one channel; F411U2’s motor interlock and two-output roles are not transferred. Its group table describes G1/G2 fields even though the simplified addressing illustration names only A/PL/M; retain the sheet and database domains independently. The 2026 EOS list uses a 16 A product label for these references, while the exact sheets describe 10 A and load-specific lower capacities. That label is not authority to raise every load rating.
+Exact reference and Legrand alias are established by the database and shared manufacturer heading. The exact `F411U1`/003847 sheet establishes one channel; `F411U2`’s motor interlock and two-output roles are not transferred. Its group table describes G1/G2 fields even though the simplified addressing illustration names only A/PL/M; retain the sheet and database domains independently. The 2026 EOS list uses a 16 A product label for these references, while the exact sheets describe 10 A and load-specific lower capacities. That label is not authority to raise every load rating.
+
+### Reviewed source boundaries
+
+The catalogue stores a lighting Object and no Virgin Object for this item. The physical sheet’s `A/PL=1..9` range and reusable/software ranges have different scopes. Catalogue text refers to `PLU`, while the conversion uses `PUL` and emits an `O/I` symbol outside the stored input domain; those irregularities remain explicit rather than being silently normalised. The adjacent two-channel motor application is not transferred to this single-channel device.
 
 ### Retained source accounting
 
-| Original | Role / reconciliation scope |
+| Original | Examined role / remaining scope |
 | --- | --- |
-| `F411U1-italian-product-sheet.pdf` | Exact named commercial/product export; values and descriptive defects reconciled against technical documents. Compliance-template dates do not date the product. |
-| `MQ01015_b_IT.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `MQ01015_b_EN.pdf` | Exact-product or explicitly shared manufacturer material; technical/procedural facts, source revision and remaining variant limits are reconciled above. Manual sections outside the stated scope remain available in the retained original. |
-| `ST-00002703-EN.pdf` | Explicit compatibility/reference inventory and ecosystem restrictions for this product; EOS electrical/display specifications are not transferred. |
+| `F411U1-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `MQ01015_b_IT.pdf` | PDF pp. 1–2: complete exact `F411U1`/003847 load and configuration sheet |
+| `MQ01015_b_EN.pdf` | PDF pp. 1–2: complete exact `F411U1`/003847 load and configuration sheet |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred |
+| `HRM_SCS_Guide_AD_EXOD18SAG_GB.pdf` | PDF pp. 30,66,79 examined for exact `F411U1`/`F411U2` load tables and actuator/wiring scope; other product chapters not reviewed |
 
 ## Evidence limits and open work
 
 Production-specific rating/IK discrepancies, zero-crossing and restoration behavior, load compatibility and diagnostic responses remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete for the retained evidence; further documentation discovery, runtime corroboration and final evidence closure remain partial.
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
 
 ## Sources
 
@@ -245,3 +280,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0154)

@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 60 |
-| reviewed | 150 |
+| review-ready | 50 |
+| reviewed | 160 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1902 | Scenario programmer | 2 | review-ready | OWN-DEV-0151 | partial | complete | complete | pending | - |
-| normal | 2064 | Basic gateway | 2 | review-ready | OWN-DEV-0152 | partial | complete | complete | pending | - |
-| normal | 2115 | 2x10A actuator, 2DIN | 2 | review-ready | OWN-DEV-0153 | partial | complete | complete | pending | - |
-| normal | 2131 | 1x10A actuator, 2DIN | 2 | review-ready | OWN-DEV-0154 | partial | complete | complete | pending | - |
-| normal | 2162 | CLASSE300 X13E | 2 | review-ready | OWN-DEV-0155 | partial | complete | complete | pending | - |
-| normal | 2214 | HOME TOUCH 7 | 2 | review-ready | OWN-DEV-0156 | partial | complete | complete | pending | - |
-| normal | 2266 | CLASSE100 X16E | 2 | review-ready | OWN-DEV-0157 | partial | complete | complete | pending | - |
-| normal | 2279 | Easy Kit Connnected | 2 | review-ready | OWN-DEV-0158 | partial | complete | complete | pending | - |
-| normal | 2283 | CLASSE300 EOS | 2 | review-ready | OWN-DEV-0159 | partial | complete | complete | pending | - |
-| normal | 2301 | Easy Kit Connnected with H+S | 2 | review-ready | OWN-DEV-0160 | partial | complete | complete | pending | - |
 | normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
 | normal | 1177 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0162 | partial | complete | complete | pending | - |
 | normal | 1178 | IP interface (D45/IP)  | 1 | review-ready | OWN-DEV-0163 | partial | complete | complete | pending | - |
@@ -221,17 +211,27 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1884 | Energy display 2 modules | OWN-DEV-0048 |
 | 1885 | Pulses counter interface | OWN-DEV-0150 |
 | 1898 | MyHOME_Screen 10 Capacitive | OWN-DEV-0049 |
+| 1902 | Scenario programmer | OWN-DEV-0151 |
+| 2064 | Basic gateway | OWN-DEV-0152 |
 | 2065 | 2x1,6A universal dimmer, 4DIN | OWN-DEV-0001 |
+| 2115 | 2x10A actuator, 2DIN | OWN-DEV-0153 |
+| 2131 | 1x10A actuator, 2DIN | OWN-DEV-0154 |
 | 2134 | CLASSE300 V13E/M | OWN-DEV-0108 |
+| 2162 | CLASSE300 X13E | OWN-DEV-0155 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
+| 2214 | HOME TOUCH 7 | OWN-DEV-0156 |
 | 2242 | Add-on SCS thermostat | OWN-DEV-0109 |
 | 2243 | Comando unico MYHOME 2 moduli | OWN-DEV-0110 |
 | 2245 |  Comando unico MYHOME 3 moduli | OWN-DEV-0111 |
 | 2247 | Comando-Attuatore MYHOME Luci  | OWN-DEV-0112 |
 | 2248 | Comando-Attuatore MYHOME Tapparelle | OWN-DEV-0113 |
+| 2266 | CLASSE100 X16E | OWN-DEV-0157 |
 | 2272 | Adv - command white | OWN-DEV-0114 |
 | 2273 | Adv - command advanced white | OWN-DEV-0115 |
 | 2276 | Adv - voice assistant Amazon | OWN-DEV-0116 |
+| 2279 | Easy Kit Connnected | OWN-DEV-0158 |
+| 2283 | CLASSE300 EOS | OWN-DEV-0159 |
+| 2301 | Easy Kit Connnected with H+S | OWN-DEV-0160 |
 | 2307 | Command Device 2M Light Now | OWN-DEV-0117 |
 | 2309 | Acutator/Command Light Light Now | OWN-DEV-0118 |
 | 2311 | Command Device 3M Light Now | OWN-DEV-0119 |
