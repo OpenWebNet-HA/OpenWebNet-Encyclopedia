@@ -24717,3 +24717,9775 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 - [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0210)
+
+# Document: ownkb:document:d000146
+
+Source path: `devices/definitions/own-dev-0003-flush-mounted-actuator-free-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Flush-mounted two-relay actuator and free control
+
+Section ID: `ownkb:section:d000146:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000146:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This flush-mounted device combines two relay outputs with local controls and commands for other SCS actuators. Configuration lets it operate two lighting circuits or an interlocked motor load, while the available rocker packages adapt the front controls to the intended use.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0003` | Project identity |
+| Technical description | Flush-mounted two-relay actuator with integrated/free command functions | Catalogue + vendor catalogue |
+| Commercial identities | 9 catalogue records across Arnould, BTicino, and Legrand ranges | Implementation evidence; Arnould subset also vendor-catalogue documented |
+| Catalogue item | `1184` - “Flush mounted actuator and free control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation (`id_system = 1`) | Implementation evidence |
+| Item model / `modobj` | `107` | Implementation evidence |
+| Catalogue brand / line | Arnould `BRAND = 6`; Espace Evolution `LINE = 8` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified (`EN_FIRMWARE 157`) | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
+| Categories | Actuator, Command, Multifunction, Lighting, Automation, Scenario | Capability model |
+
+This Device is deliberately modelled as a multifunction Physical Device rather than as one actuator address. Its firmware can expose actuator functions on slots `1..2` and command/scenario functions on slots `3..4`, with the active Object set selected by configuration.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000146:s000003`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+The canonical catalogue maps nine commercial Device records to item `1184`, item model `107`, and firmware `157`. Historical Arnould Espace Evolution documentation independently groups `64391`, `64191`, and `64192` in the same two-relay actuator/control family. The Spanish manufacturer leaf directly covers the three BTicino references. The three remaining Legrand references have established catalogue identities but lack retained exact-product sheets.
+
+| Brand / line | Reference | Relationship to technical definition | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64391` | Established identity | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64191` | Established commercial variant | Catalogue + vendor catalogue |
+| Arnould - Espace Evolution | `64192` | Established commercial variant | Catalogue + vendor catalogue |
+| BTicino - Axolute | `H4671M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| BTicino - LivingLight | `LN4671M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| BTicino - Matix | `AM5851M2` | Shared technical-item identity | Catalogue + `BT00411-b-ES`, printed pp. 749–753 / PDF pp. 180–184 |
+| Legrand - Arteor | `573961` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067249` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067556` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+
+The technical Device ID does not privilege one of these references. Shared-item membership establishes the common catalogue capability core but does not erase possible package, finish, regional, or hardware differences.
+
+### Documentation
+
+Section ID: `ownkb:section:d000146:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| Arnould Espace Evolution catalogue | Historical product catalogue | No dated imprint established in the inspected original | Device/family coverage described by retained source | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf); `64391` / `64191` / `64192` occur on printed pp. 27, 32 / PDF pp. 27, 32 | Arnould Espace Evolution catalogue |
+| MyHOME Suite lighting actuator function documentation | Vendor implementation documentation | No dated imprint established in the inspected original | Device/family coverage described by retained source | - | MyHOME Suite lighting actuator function documentation |
+| MyHOME Suite automation actuator function documentation | Vendor implementation documentation | No dated imprint established in the inspected original | Device/family coverage described by retained source | - | MyHOME Suite automation actuator function documentation |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Multi-product technical-sheet compendium (Spanish) | Exact leaf `BT00411-b-ES`; no date established | `H4671M2`, `LN4671M2`, `AM5851M2`: printed pp. 749–753 / PDF pp. 180–184, read in full. Other products outside scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+
+Additional installation sheets and catalogue revisions should be collected rather than treating this list as exhaustive.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000146:s000005`
+
+Applicability cues: `scs`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting / outputs | 2 flush-mounted modules; 2 independent relays | Arnould catalogue printed/PDF p. 32; `BT00411-b-ES`, printed pp. 749–750 / PDF pp. 180–181 |
+| BTicino front controls | 4 pushbuttons, 4 two-colour LEDs; local LED adjustment/exclusion button | `BT00411-b-ES`, printed p. 749 / PDF p. 180 |
+| BTicino SCS supply | Nominal `27 Vdc`; operating `18..27 Vdc` | `BT00411-b-ES`, printed p. 750 / PDF p. 181 |
+| BTicino standby current | Maximum `14 mA` | Same exact BTicino leaf |
+| BTicino temperature rows | `0..40 °C` and `-5..45 °C`, both labelled operating temperature | Same leaf; second label is a source ambiguity, not silently relabelled storage |
+| BTicino incandescent/halogen and shutter motor at `230 Vac` | `460 W / 2 A` for each documented load class | Same leaf; not automatically transferable to Arnould packages |
+| BTicino LED/CFL | `70 W`, maximum 2 lamps | Same leaf |
+| BTicino fluorescent/electronic transformer | `70 W / 0.3 A` | Same leaf |
+| BTicino ferromagnetic transformer | `460 VA / 2 A`, `cosφ=0.5` | Same leaf |
+| Arnould base `64391` load classes | Incandescent/halogen `2 A`; ferromagnetic `2 A cosφ=0.5`; fluorescent/electronic `70 W`; maximum 2 CFL/LED lamps | Arnould catalogue printed/PDF p. 32 |
+| Arnould base motor figure | Printed `460 pour moteurs`, without a clear unit in the inspected page image | Same catalogue; not normalized to watts |
+| `64391` package | No rocker supplied; accepts one 2-module or two 1-module rockers | Same catalogue |
+| `64191` lighting package | Two blank 1-module rockers; blue `0/1` and `CEN` configurators supplied | Same catalogue |
+| `64192` motor package | One 2-module Up/Down rocker and matching configurator; motor maximum `500 W` | Same catalogue; unresolved difference from BTicino `460 W` leaf |
+| Physical sockets | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | BTicino leaf printed pp. 751–753 / PDF pp. 182–184 |
+
+### Identity
+
+Section ID: `ownkb:section:d000146:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1184` | Canonical catalogue |
+| Item model / `modobj` | `107` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation (`id_system = 1`) | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000146:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `107` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000146:s000008`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `157` | `-1` | `-1` | `-1` | `4` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000146:s000009`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000146:s000010`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `157` | `1` | `6` Light actuator | Fixed/designated metadata | `1155` | `6` | `619` |
+| `157` | `1` | `7` Automation actuator | Candidate alternative | `1159` | `7` | `621` |
+| `157` | `2` | `6` Light actuator | Fixed/designated metadata | `1156` | `6` | `619` |
+| `157` | `3` | `400` Light control | Fixed/designated metadata | `1157` | `400` | `620` |
+| `157` | `3` | `401` Automation control | Candidate alternative | `1160` | `401` | `622` |
+| `157` | `3` | `404` Scheduled scenario | Candidate alternative | `2402` | `404` | `623` |
+| `157` | `3` | `406` Scheduled scenario PLUS | Candidate alternative | `2403` | `406` | `624` |
+| `157` | `4` | `400` Light control | Fixed/designated metadata | `1158` | `400` | `620` |
+| `157` | `4` | `401` Automation control | Candidate alternative | `1161` | `401` | `622` |
+| `157` | `4` | `404` Scheduled scenario | Candidate alternative | `1162` | `404` | `623` |
+| `157` | `4` | `406` Scheduled scenario PLUS | Candidate alternative | `1163` | `406` | `624` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000146:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `must not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `157` | `500` Automation double command virgin | `3`, `4` | `400`, `401`, `404`, `406`, `407` | `500` | `31` |
+| `157` | `510` Automation relay virgin | `1`, `2` | `1`, `6`, `7` | `510` | `32` |
+
+The four Modules must not be confused with the eleven slot/Object association rows in the database.
+
+Object `1` and Object `407` are permitted through the Virgin Object definitions even though they do not appear as direct firmware/Object rows in the extracted `AS_OBJECT_FIRMWARE` set. Preserve that distinction.
+
+Installed Module state is read through [`DIMENSION 30`](../../diagnostics/dim30-modules.md).
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000146:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `157` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `157` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `157` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000146:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `157` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `157` | `A1` | `0..9` | `0` | A1; Configurator A1 (0-9) |
+| `157` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
+| `157` | `M1` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M1; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
+| `157` | `A2` | `0..9` | `0` | A2; Configurator A2 (0-9) |
+| `157` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `157` | `M2` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000146:s000014`
+
+Provenance cues: `catalogue`
+
+The six fields `A1/PL1/M1/A2/PL2/M2` are the Device's physical configurator surface in the canonical catalogue. `AID` is an identity field and is not counted as a physical configurator position.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000146:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000146:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `7` - Automation actuator
+
+Section ID: `ownkb:section:d000146:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control; `14` = Bistable and blades control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time |
+| `SUBTYPE` | `11` = Actuator; `2` = Shutter; `3` = Curtain; `4` = Gate; `5` = Garage door; `15` = Differential restart | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `400` - Light control
+
+Section ID: `ownkb:section:d000146:s000018`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `401` - Automation control
+
+Section ID: `ownkb:section:d000146:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000146:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000146:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Virgin-only candidate Objects
+
+Section ID: `ownkb:section:d000146:s000022`
+
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
+
+#### Object `1` - Blind actuator (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000146:s000023`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master PUL; `16` = Slave and PUL | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `21` = 21 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time; Only for Master modes |
+| `DELAY_DOORS` | `0..60` | `3` | Delay between doors |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `407` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000146:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000146:s000025`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+Object `7`'s reusable `STOP_TIME` enum lacks an `18 s` entry; the Virgin-only Blind Object `1` has a different domain. Objects `1` and `407` above are admitted by Virgin Objects only: no direct firmware/Object association or Device-specific filter establishes their reachability. Their fields are retained as candidate catalogue data, not asserted physical functions.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000146:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000146:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `157` | `1` | `6` | `4145` | No textual predicate stored | None |
+| `157` | `1` | `6` | `4232` | `M1=0` | `20` |
+| `157` | `1` | `6` | `4239` | `M1=1` | `20` |
+| `157` | `1` | `6` | `4241` | `M1=2` | `20` |
+| `157` | `1` | `6` | `4243` | `M1=3` | `20` |
+| `157` | `1` | `6` | `4245` | `M1=4` | `20` |
+| `157` | `1` | `6` | `4256` | `M1=CEN;M2=0` | `25` |
+| `157` | `1` | `6` | `4258` | `M1=CEN;M2=1` | `25` |
+| `157` | `1` | `6` | `4260` | `M1=CEN;M2=2` | `25` |
+| `157` | `1` | `6` | `4262` | `M1=CEN;M2=3` | `25` |
+| `157` | `1` | `6` | `4264` | `M1=CEN;M2=4` | `25` |
+| `157` | `1` | `6` | `4266` | `M1=CEN;M2=O/I` | `25` |
+| `157` | `1` | `6` | `4268` | `M1=CEN;M2=PUL` | `25` |
+| `157` | `1` | `6` | `4273` | `M1=O/I` | `20` |
+| `157` | `1` | `6` | `4292` | `M1=PUL` | `20` |
+| `157` | `1` | `7` | `4247` | `M1=5` | `26` |
+| `157` | `1` | `7` | `4249` | `M1=6` | `26` |
+| `157` | `1` | `7` | `4251` | `M1=7` | `26` |
+| `157` | `1` | `7` | `4253` | `M1=8` | `26` |
+| `157` | `1` | `7` | `4280` | `M1=OFF` | `26` |
+| `157` | `1` | `7` | `4298` | `M1=SU_GIU` | `26` |
+| `157` | `1` | `7` | `4306` | `M1=SU_GIU_M` | `26` |
+| `157` | `2` | `6` | `4145` | No textual predicate stored | None |
+| `157` | `2` | `6` | `4256` | `M1=CEN;M2=0` | `25` |
+| `157` | `2` | `6` | `4258` | `M1=CEN;M2=1` | `25` |
+| `157` | `2` | `6` | `4260` | `M1=CEN;M2=2` | `25` |
+| `157` | `2` | `6` | `4262` | `M1=CEN;M2=3` | `25` |
+| `157` | `2` | `6` | `4264` | `M1=CEN;M2=4` | `25` |
+| `157` | `2` | `6` | `4266` | `M1=CEN;M2=O/I` | `25` |
+| `157` | `2` | `6` | `4268` | `M1=CEN;M2=PUL` | `25` |
+| `157` | `3` | `400` | `4145` | No textual predicate stored | None |
+| `157` | `3` | `400` | `4231` | `M1=0` | `4` |
+| `157` | `3` | `400` | `4238` | `M1=1` | `4` |
+| `157` | `3` | `400` | `4240` | `M1=2` | `4` |
+| `157` | `3` | `400` | `4242` | `M1=3` | `4` |
+| `157` | `3` | `400` | `4244` | `M1=4` | `4` |
+| `157` | `3` | `400` | `4255` | `M1=CEN;M2=0` | `4` |
+| `157` | `3` | `400` | `4257` | `M1=CEN;M2=1` | `4` |
+| `157` | `3` | `400` | `4259` | `M1=CEN;M2=2` | `4` |
+| `157` | `3` | `400` | `4261` | `M1=CEN;M2=3` | `4` |
+| `157` | `3` | `400` | `4263` | `M1=CEN;M2=4` | `4` |
+| `157` | `3` | `400` | `4265` | `M1=CEN;M2=O/I` | `4` |
+| `157` | `3` | `400` | `4267` | `M1=CEN;M2=PUL` | `4` |
+| `157` | `3` | `400` | `4272` | `M1=O/I` | `4` |
+| `157` | `3` | `400` | `4291` | `M1=PUL` | `4` |
+| `157` | `3` | `401` | `4246` | `M1=5` | `4` |
+| `157` | `3` | `401` | `4248` | `M1=6` | `4` |
+| `157` | `3` | `401` | `4250` | `M1=7` | `4` |
+| `157` | `3` | `401` | `4252` | `M1=8` | `4` |
+| `157` | `3` | `401` | `4279` | `M1=OFF` | `4` |
+| `157` | `3` | `401` | `4299` | `M1=SU_GIU` | `550` |
+| `157` | `3` | `401` | `4307` | `M1=SU_GIU_M` | `550` |
+| `157` | `4` | `400` | `4145` | No textual predicate stored | None |
+| `157` | `4` | `400` | `4194` | `M1<>CEN;M2=0;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `157` | `4` | `400` | `4195` | `M1<>CEN;M2=0;A2=AMB` | `97` |
+| `157` | `4` | `400` | `4197` | `M1<>CEN;M2=0;A2=GEN` | `95` |
+| `157` | `4` | `400` | `4198` | `M1<>CEN;M2=0;A2=GR` | `96` |
+| `157` | `4` | `400` | `4201` | `M1<>CEN;M2=O/I;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `157` | `4` | `400` | `4202` | `M1<>CEN;M2=O/I;A2=AMB` | `97` |
+| `157` | `4` | `400` | `4204` | `M1<>CEN;M2=O/I;A2=GEN` | `95` |
+| `157` | `4` | `400` | `4205` | `M1<>CEN;M2=O/I;A2=GR` | `96` |
+| `157` | `4` | `400` | `4206` | `M1<>CEN;M2=OFF;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `157` | `4` | `400` | `4207` | `M1<>CEN;M2=OFF;A2=AMB` | `97` |
+| `157` | `4` | `400` | `4209` | `M1<>CEN;M2=OFF;A2=GEN` | `95` |
+| `157` | `4` | `400` | `4210` | `M1<>CEN;M2=OFF;A2=GR` | `96` |
+| `157` | `4` | `400` | `4211` | `M1<>CEN;M2=ON;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `157` | `4` | `400` | `4212` | `M1<>CEN;M2=ON;A2=AMB` | `97` |
+| `157` | `4` | `400` | `4214` | `M1<>CEN;M2=ON;A2=GEN` | `95` |
+| `157` | `4` | `400` | `4215` | `M1<>CEN;M2=ON;A2=GR` | `96` |
+| `157` | `4` | `400` | `4216` | `M1<>CEN;M2=PUL;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `157` | `4` | `400` | `4217` | `M1<>CEN;M2=PUL;A2=AMB` | `97` |
+| `157` | `4` | `400` | `4219` | `M1<>CEN;M2=PUL;A2=GEN` | `95` |
+| `157` | `4` | `400` | `4220` | `M1<>CEN;M2=PUL;A2=GR` | `96` |
+| `157` | `4` | `400` | `4255` | `M1=CEN;M2=0` | `4` |
+| `157` | `4` | `400` | `4257` | `M1=CEN;M2=1` | `4` |
+| `157` | `4` | `400` | `4259` | `M1=CEN;M2=2` | `4` |
+| `157` | `4` | `400` | `4261` | `M1=CEN;M2=3` | `4` |
+| `157` | `4` | `400` | `4263` | `M1=CEN;M2=4` | `4` |
+| `157` | `4` | `400` | `4265` | `M1=CEN;M2=O/I` | `4` |
+| `157` | `4` | `400` | `4267` | `M1=CEN;M2=PUL` | `4` |
+| `157` | `4` | `400` | `4908` | `M1<>CEN;M2<>CEN;A2<>AUX;A2<>GR;A2<>AMB;A2<>GE` | `4` |
+| `157` | `4` | `401` | `4222` | `M1<>CEN;M2=SU_GIU;A2=AMB` | `97` |
+| `157` | `4` | `401` | `4224` | `M1<>CEN;M2=SU_GIU;A2=GEN` | `95` |
+| `157` | `4` | `401` | `4225` | `M1<>CEN;M2=SU_GIU;A2=GR` | `96` |
+| `157` | `4` | `401` | `4227` | `M1<>CEN;M2=SU_GIU_M;A2=AMB` | `97` |
+| `157` | `4` | `401` | `4229` | `M1<>CEN;M2=SU_GIU_M;A2=GEN` | `95` |
+| `157` | `4` | `401` | `4230` | `M1<>CEN;M2=SU_GIU_M;A2=GR` | `96` |
+| `157` | `4` | `401` | `4909` | `M1<>CEN;M2=SU_GIU_M;A2<>AUX;A2<>GR;A2<>AMB;A2` | `4` |
+| `157` | `4` | `401` | `4910` | `M1<>CEN;M2=SU_GIU;A2<>AUX;A2<>GR;A2<>AMB;A2<>` | `4` |
+| `157` | `4` | `404` | `4199` | `M1<>CEN;M2=CEN` | `4` |
+| `157` | `4` | `406` | `4200` | `M1<>CEN;M2=FAKE` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000146:s000028`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `157` | `6` | `1167` | `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `157` | `6` | `1168` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `157` | `6` | `1169` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `157` | `6` | `1170` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `157` | `6` | `1172` | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open (entire reusable range retained) | `0` | Relay state on device reset |
+| `157` | `6` | `1873` | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing (entire reusable range retained) | `0` | Load_control_mode |
+| `157` | `7` | `1195` | `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control; `14` = Bistable and blades control (entire reusable range retained) | `12` | Funzionalità di pulsante locale ridotta (Local button mode) |
+| `157` | `7` | `1196` | `SUBTYPE` | `15` = Differential restart | `11` | subtype(ASTCBR); reusable default `11` is outside this subset; filter supplies no replacement default |
+| `157` | `400` | `1184` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `157` | `400` | `1185` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `157` | `400` | `1186` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `157` | `400` | `1187` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `157` | `400` | `1188` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `157` | `400` | `1189` | `LEVEL` | `0..100` (entire reusable range retained) | `100` | Level |
+| `157` | `400` | `1190` | `START_S` | `0..255` (entire reusable range retained) | `255` | Soft start speed |
+| `157` | `400` | `1191` | `STOP_S` | `0..255` (entire reusable range retained) | `255` | Soft stop speed |
+| `157` | `400` | `1192` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `157` | `400` | `1193` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `157` | `400` | `1194` | `M` | `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `4` = Toggle `ON`/`OFF`; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `5` = `ON`/`OFF`; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90% | `0` | Mode; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `157` | `401` | `1200` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `157` | `401` | `1201` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `157` | `401` | `1202` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `157` | `404` | `1203` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `157` | `404` | `1204` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `157` | `404` | `1205` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `157` | `404` | `1704` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000146:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `4` | `M1=0` | `M` = `0` | `4` |
+| `4` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M1=O/I` | `M` = `9` | `4` |
+| `4` | `M1=OFF` | `M` = `10` | `4` |
+| `4` | `M1=ON` | `M` = `11` | `4` |
+| `4` | `M1=PUL` | `M` = `15` | `4` |
+| `4` | `M1=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M1=SU_GIU_M` | `M` = `13` | `4` |
+| `4` | `M2=0` | `M` = `0` | `4` |
+| `4` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M2=O/I` | `M` = `9` | `4` |
+| `4` | `M2=OFF` | `M` = `10` | `4` |
+| `4` | `M2=ON` | `M` = `11` | `4` |
+| `4` | `M2=PUL` | `M` = `15` | `4` |
+| `4` | `M2=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M2=SU_GIU_M` | `M` = `13` | `4` |
+| `20` | `M1=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `20` |
+| `20` | `M1=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `20` |
+| `20` | `M1=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `20` |
+| `25` | `M2=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `25` |
+| `25` | `M2=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `25` |
+| `25` | `M2=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `25` |
+| `26` | `M2=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `26` |
+| `26` | `M2=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `26` |
+| `26` | `M2=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `26` |
+| `26` | `M2=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `26` |
+| `26` | `M2=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `26` |
+| `26` | `M2=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `26` |
+| `26` | `M2=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `26` |
+| `26` | `M2=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `26` |
+| `26` | `M2=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `26` |
+| `26` | `M2=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `26` |
+| `95` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `3` | `95` |
+| `96` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=0; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=0; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=0; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=0; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=0; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=0; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=0; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=0; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=0; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=1; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=1; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=1; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=1; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=1; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=1; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=1; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=1; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=1; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=2; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=2; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=2; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=2; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=2; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=2; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=2; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=2; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=2; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=3; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=3; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=3; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=3; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=3; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=3; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=3; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=3; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=3; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=4; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=4; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=4; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=4; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=4; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=4; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=4; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=4; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=4; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=5; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=5; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=5; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=5; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=5; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=5; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=5; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=5; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=5; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=6; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=6; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=6; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=6; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=6; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=6; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=6; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=6; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=6; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=7; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=7; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=7; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=7; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=7; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=7; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=7; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=7; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=7; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=8; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=8; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=8; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=8; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=8; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=8; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=8; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=8; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=8; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=O/I; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=O/I; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=O/I; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=O/I; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=O/I; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=O/I; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=O/I; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=O/I; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=O/I; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=OFF; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=OFF; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=OFF; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=OFF; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=OFF; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=OFF; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=OFF; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=OFF; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=OFF; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=ON; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=ON; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=ON; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=ON; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=ON; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=ON; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=ON; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=ON; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=ON; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=PUL; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=PUL; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=PUL; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=PUL; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=PUL; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=PUL; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=PUL; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=PUL; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=PUL; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=9` | `G1` = `9` | `96` → `202` |
+| `97` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=0; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=0; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=0; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=0; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=0; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=0; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=0; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=0; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=0; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=1; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=1; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=1; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=1; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=1; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=1; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=1; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=1; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=1; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=2; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=2; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=2; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=2; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=2; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=2; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=2; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=2; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=2; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=3; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=3; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=3; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=3; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=3; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=3; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=3; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=3; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=3; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=4; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=4; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=4; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=4; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=4; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=4; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=4; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=4; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=4; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=5; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=5; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=5; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=5; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=5; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=5; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=5; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=5; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=5; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=6; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=6; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=6; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=6; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=6; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=6; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=6; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=6; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=6; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=7; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=7; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=7; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=7; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=7; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=7; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=7; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=7; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=7; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=8; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=8; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=8; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=8; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=8; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=8; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=8; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=8; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=8; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=O/I; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=O/I; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=O/I; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=O/I; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=O/I; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=O/I; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=O/I; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=O/I; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=O/I; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=OFF; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=OFF; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=OFF; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=OFF; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=OFF; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=OFF; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=OFF; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=OFF; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=OFF; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=ON; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=ON; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=ON; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=ON; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=ON; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=ON; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=ON; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=ON; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=ON; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=PUL; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=PUL; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=PUL; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=PUL; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=PUL; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=PUL; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=PUL; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=PUL; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=PUL; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=9` | `A` = `9` | `97` → `203` |
+| `550` | `M1=0` | `M` = `0` | `550` |
+| `550` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M1=O/I` | `M` = `9` | `550` |
+| `550` | `M1=OFF` | `M` = `10` | `550` |
+| `550` | `M1=ON` | `M` = `11` | `550` |
+| `550` | `M1=PUL` | `M` = `15` | `550` |
+| `550` | `M1=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M1=SU_GIU_M` | `M` = `13` | `550` |
+| `550` | `A1=1` | `A` = `1` | `550` |
+| `550` | `A1=2` | `A` = `2` | `550` |
+| `550` | `A1=3` | `A` = `3` | `550` |
+| `550` | `A1=4` | `A` = `4` | `550` |
+| `550` | `A1=5` | `A` = `5` | `550` |
+| `550` | `A1=6` | `A` = `6` | `550` |
+| `550` | `A1=7` | `A` = `7` | `550` |
+| `550` | `A1=8` | `A` = `8` | `550` |
+| `550` | `A1=9` | `A` = `9` | `550` |
+| `550` | `PL1=1` | `PL` = `1` | `550` |
+| `550` | `PL1=1; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `1` |
+| `550` | `PL1=1; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `1` |
+| `550` | `PL1=2` | `PL` = `2` | `550` |
+| `550` | `PL1=2; M=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `550` → `2` |
+| `550` | `PL1=2; M=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `550` → `2` |
+| `550` | `PL1=2; M=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `550` → `2` |
+| `550` | `PL1=2; M=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `550` → `2` |
+| `550` | `PL1=2; M=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `2` |
+| `550` | `PL1=2; M=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `550` → `2` |
+| `550` | `PL1=2; M=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `550` → `2` |
+| `550` | `PL1=2; M=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `2` |
+| `550` | `PL1=2; M=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `550` → `2` |
+| `550` | `PL1=2; M=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `2` |
+| `550` | `PL1=3` | `PL` = `3` | `550` |
+| `550` | `PL1=3; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `3` |
+| `550` | `PL1=3; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `3` |
+| `550` | `PL1=4` | `PL` = `4` | `550` |
+| `550` | `PL1=4; M1=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M1=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M1=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M1=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=4; M2=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M2=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M2=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M2=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=5` | `PL` = `5` | `550` |
+| `550` | `PL1=5; M1=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M1=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M1=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M1=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M1=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; M2=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M2=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M2=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M2=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M2=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; PL1=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL1=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL1=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL1=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL1=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL1=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL1=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL1=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL1=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL1=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=5; PL2=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL2=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL2=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL2=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL2=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL2=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL2=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL2=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL2=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL2=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=6` | `PL` = `6` | `550` |
+| `550` | `PL1=6; M=3` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=4` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=5` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=6` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=7` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=8` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=0` | `PIR` = `0` | `550` → `6` |
+| `550` | `PL1=6; S=1` | `PIR` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=2` | `PIR` = `2` | `550` → `6` |
+| `550` | `PL1=6; S=3` | `PIR` = `3` | `550` → `6` |
+| `550` | `PL1=6; T=0` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=1` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `30` | `550` → `6` |
+| `550` | `PL1=6; T=2` | `HOURS` = `0`; `MINUTES` = `1`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=3` | `HOURS` = `0`; `MINUTES` = `2`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=4` | `HOURS` = `0`; `MINUTES` = `5`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=5` | `HOURS` = `0`; `MINUTES` = `10`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=6` | `HOURS` = `0`; `MINUTES` = `15`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=7` | `HOURS` = `0`; `MINUTES` = `20`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=8` | `HOURS` = `0`; `MINUTES` = `30`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=9` | `HOURS` = `0`; `MINUTES` = `40`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=0` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=1` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=7` | `PL` = `7` | `550` |
+| `550` | `PL1=7` | Referenced conversion rule absent from source | `550` → `7` |
+| `550` | `PL1=8` | `PL` = `8` | `550` |
+| `550` | `PL1=8` | Referenced conversion rule absent from source | `550` → `8` |
+| `550` | `PL1=9` | `PL` = `9` | `550` |
+| `550` | `PL1=9; M=0` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=1` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `9` |
+| `550` | `PL1=9; M=2` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `25` | `550` → `9` |
+| `550` | `PL1=9; M=3` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `9` |
+| `550` | `PL1=9; M=PUL` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `9` |
+| `550` | `M2=0` | `M` = `0` | `550` |
+| `550` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M2=O/I` | `M` = `9` | `550` |
+| `550` | `M2=OFF` | `M` = `10` | `550` |
+| `550` | `M2=ON` | `M` = `11` | `550` |
+| `550` | `M2=PUL` | `M` = `15` | `550` |
+| `550` | `M2=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M2=SU_GIU_M` | `M` = `13` | `550` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+#### Source irregularities affecting selection
+
+Section ID: `ownkb:section:d000146:s000030`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `source`
+
+| Source entry / scope | Issue | Interpretation limit |
+| --- | --- | --- |
+| Conditions `4908`, `4909`, `4910` | Stored endings `A2<>GE`, standalone `A2`, and `A2<>` are incomplete/unresolved | Do not repair missing tokens or infer condition precedence |
+| Remote addressing condition branches | `A2=AMB/GR/GEN` is stored although firmware `A2` has only `0..9` | A stored conversion branch is not proof of a legal physical selector |
+| PLUS selector branch | `M2=FAKE` occurs as a predicate; `FAKE` is absent from the declared firmware enum | Published software PLUS capability is distinct from this unresolved stored selector |
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000146:s000031`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve item model `107`, brand `6`, line `8`, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | installed firmware observation, despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` / `6` / `13` | hardware, microcontroller, and Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine active Object at each of four Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine per-Module configured system/address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values and physical-configurability flags | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+No generic diagnostic frame is duplicated here.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000146:s000032`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting actuator | One local load plus remote control, or two separately addressed lighting loads (`M1=CEN` in the published physical two-load setup) | `BT00411-b-ES`, printed pp. 749, 751–753 |
+| Automation actuator | One motor using the two relays and the corresponding shutter rocker; relay interlocking is configuration-dependent | Arnould catalogue p. 32; BTicino leaf pp. 749–751 |
+| Remote command / scenario | Right-hand control can target a remote light, automation actuator or MH200N scenarios; physical `M2=CEN` has source-specific address/cover constraints | BTicino leaf p. 752 |
+
+Resolved light and automation Objects relate to [Lighting](../../functional/who-1-lighting/) and [Automation](../../functional/who-2-automation/). Four catalogue Modules represent a configurable projection, not four physical relays.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000146:s000033`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000146:s000034`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Use `A1/PL1/M1` for the local actuator and `A2/PL2/M2` for the remote command, or the published two-light arrangement. The BTicino leaf gives motor stop times `M1=5 → 1 min`, `6 → 2 min`, `7 → 5 min`, `8 → until a subsequent command`; `OFF` is a two-minute PUL form, and Up/Down covers select bistable or monostable operation. Do not apply a lighting selector to a motor solely because its numeric value exists in a reusable Object.
+
+For lighting `M1=1..4`, OFF switches the Master off immediately and delays the corresponding Slave by 1–4 minutes; the published note limits this to point-to-point commands. `M1=CEN` in the two-load actuator table is not the same role as `M2=CEN` in the remote scenario-control table. Resolve the firmware slot conditions before applying conversions or writing Object configuration. Generic sequencing remains in [Programming Validation](../../programming/validation.md).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000146:s000035`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+The Arnould catalogue establishes base versus package relationships for `64391/64191/64192`. Its product page is printed/PDF p. 32, not printed p. 31. The page image confirms a unitless motor figure `460`; the explicitly printed `64192` package rating is `500 W`.
+
+The retained Spanish `BT00411-b-ES` leaf covers `H4671M2/LN4671M2/AM5851M2`, supplies their electrical/configuration data, and gives `460 W` for a shutter motor. Catalogue membership establishes a shared technical core but does not resolve the `460` versus `500 W` commercial/revision difference. Its two temperature rows have the same operating-temperature label, so the second is not reclassified by inference.
+
+MyHOME Suite lighting/automation help entries previously listed without retained originals are discovery leads only. The lighting page was reachable during this review, but its original could not be registered through the available task-scoped HTML archival helper; its content is not used as retained claim evidence. Guessed automation-help and English-sheet endpoints were unavailable and do not establish that such revisions do not exist. The retained BTicino leaf now supports the product modes independently.
+
+Firmware `157`'s stored conditions, filters and conversions remain implementation evidence. Out-of-domain selector branches and Virgin-only Objects are retained without inventing precedence or declaring their physical reachability.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000146:s000036`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+- Retained exact-product sheets are still absent for Legrand `573961`, `067249`, `067556`; these are documentation gaps, not unresolved catalogue identities.
+- Resolve the `64192` `500 W` package rating against the base unitless `460` and the BTicino `460 W` motor rating before transferring ratings between variants.
+- Resolve the duplicate temperature label in `BT00411-b-ES`; no publication date is established for that leaf.
+- Unretained Suite help and inaccessible guessed endpoints remain discovery leads, not incorporated evidence.
+- Known-hardware identity, firmware, four-Module projection and the physical reachability of Virgin-only Objects/out-of-domain branches remain unobserved.
+
+### Sources
+
+Section ID: `ownkb:section:d000146:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Physical Devices](../../device-model/physical-devices.md#64391-64191-and-64192)
+- [Firmware](../../device-model/firmware.md#firmware-example)
+- [Modules](../../device-model/modules.md#combined-device-example)
+- [Objects](../../device-model/objects.md#device-and-object-descriptions)
+- [Virgin Objects](../../device-model/virgin-objects.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md#worked-example-firmware-157)
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0003)
+
+# Document: ownkb:document:d000147
+
+Source path: `devices/definitions/own-dev-0004-two-module-basic-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Two-module basic control
+
+Section ID: `ownkb:section:d000147:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000147:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This two-module wall control uses four buttons to operate configured lights, dimmers, shutters or scenarios over the SCS bus. Its two-colour indicators provide feedback, with locally adjustable LED brightness.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0004` | Project identity |
+| Technical description | Two-module, two-channel configurable SCS control | Catalogue + official technical sheet |
+| Catalogue item | `281` - “Basic control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `2` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `145` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
+| Categories | Command, Multifunction, Lighting, Automation, Scenario | Capability model |
+
+This technical definition covers the shared catalogue capability core used by 19 commercial Device records. The official `MQ00286-d-EN` technical sheet directly covers four of those references - `067552`, `H4652/2`, `L4652/2`, and `AM5832/2`. The remaining catalogue records are retained as commercial identities associated with item `281`, but their packaging, range, and exact commercial equivalence still require product-document review.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000147:s000003`
+
+#### Directly documented references
+
+Section ID: `ownkb:section:d000147:s000004`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| BTicino - LivingLight | `L4652/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| BTicino - Matix | `AM5832/2` | Established identity | Catalogue + `MQ00286-d-EN` |
+| Legrand - Céliane | `067552` | Established identity | Catalogue + `MQ00286-d-EN` |
+
+#### Additional commercial records sharing item 281
+
+Section ID: `ownkb:section:d000147:s000005`
+
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64160`, `64161`, `64360` | Established catalogue identities | Canonical catalogue; retained Arnould catalogue printed/PDF p. 32 establishes packages |
+| Legrand - Arteor | `571848`, `573974` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Matix | `078473` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Mosaic | `078462`, `078463`, `078471`, `079171`, `079173`, `079262`, `079263` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand | `067241` | Established catalogue identities | Canonical catalogue; marketed line and exact-product sheet not established |
+| Legrand - Vela | `687377` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+
+Sharing one `EN_ITEM` establishes a common catalogue capability core. It does not by itself prove that every commercial package is physically identical.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000147:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4652/2` | `8012199745350` | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf), `H4652_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4652/2` | `8012199365596` | [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf), `L4652_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5832/2` | `8012199838311` | [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf), `AM5832_2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `067552` | `3245060675523` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf), `067552-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+| `079171` | `3245060791711` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/11/51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30.pdf), `079171-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+| `079173` | `3245060791735` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf), `079173-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000147:s000007`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00286-d-EN` - Basic control for 2 independent loads | Technical sheet | 20/01/2014 | `067552`, `H4652/2`, `L4652/2`, `AM5832/2` | [Archived original](https://archive.openwebnet-ha.org/sha256/36/64/366400ace218504580a0ec2a88e13e7676ace5ed97cdbe9fc34e33441bfb0ff6.pdf) | [Official PDF](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00286-d-en.pdf) |
+| `H4652_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4652/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2) |
+| `L4652_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4652/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_2) |
+| `AM5832_2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5832/2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_2) |
+| `067552-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067552` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-celiane-1-ou-2-fonctions-pour-lumiere-ou-volets-myhome-up) |
+| `079171-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `079171` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/11/51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-1-sortie-alu) |
+| `079173-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `079173` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-2-sorties-alu) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64360`, `64160`, `64161`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
+
+Additional language revisions and product-range-specific sheets should be collected rather than treating this one document as exhaustive.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000147:s000008`
+
+Applicability cues: `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting size | 2 flush-mounted modules | Official technical sheet |
+| Controls | 4 buttons | Official technical sheet |
+| Indicators | two-colour LEDs with local brightness/off adjustment | Official technical sheet |
+| SCS nominal supply | `27 Vdc` | Official technical sheet |
+| SCS operating supply | `18..27 Vdc` | Official technical sheet |
+| Maximum LED-brightness current | `6 mA` for `H4652/2`; `8.5 mA` for `L4652/2`, `AM5832/2`, `067552` | Official technical sheet |
+| Physical configurator positions | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | Official technical sheet |
+
+The six documented physical configurator positions are consistent with the ordinary diagnostic interpretation of `N_CONF`, but an observed `DIMENSION 1` value for known hardware is still needed before recording `N_CONF = 6` as corroborated behavior.
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64360` / `64160` / `64161` package distinction | `64360` supplied without rocker; `64160` has one blank 2-module rocker and blue `0/1` configurator; `64161` has two blank 1-module rockers and blue `0/1` configurators | Arnould catalogue printed/PDF p. 32 |
+
+### Identity
+
+Section ID: `ownkb:section:d000147:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `281` | Canonical catalogue |
+| Item model / `modobj` | `2` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000147:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `2` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000147:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `145` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000147:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000147:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `145` | `1` | `400` Light control | Fixed/designated metadata | `533` | `400` | `368` |
+| `145` | `1` | `401` Automation control | Candidate alternative | `535` | `401` | `369` |
+| `145` | `1` | `404` Scheduled scenario | Candidate alternative | `537` | `404` | `370` |
+| `145` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `539` | `406` | `371` |
+| `145` | `2` | `400` Light control | Fixed/designated metadata | `534` | `400` | `368` |
+| `145` | `2` | `401` Automation control | Candidate alternative | `536` | `401` | `369` |
+| `145` | `2` | `404` Scheduled scenario | Candidate alternative | `538` | `404` | `370` |
+| `145` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `540` | `406` | `371` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000147:s000014`
+
+Applicability cues: `applies to`, `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `145` | `500` Automation double command virgin | `1`, `2` | `400`, `401`, `404`, `406`, `407` | `500` | `18` |
+
+Firmware `145` exposes two configurable Modules.
+
+Virgin Object `500`, **Automation double command virgin**, applies to slots `1` and `2` and permits Objects `400`, `401`, `404`, `406`, and `407` (`AUX` control).
+
+Installed Object selection belongs to [`DIMENSION 30`](../../diagnostics/dim30-modules.md); generic frame syntax is not repeated here.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000147:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `145` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `145` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `145` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product documentation additionally distinguishes MyHOME configuration from Lighting Management Plug & Go / Push & Learn procedures. Those system-level procedures are not extra numeric catalogue modes.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000147:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `145` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `145` | `A1` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A1; Automation A addressing space (for configurator A1) |
+| `145` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
+| `145` | `M1` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M1; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
+| `145` | `A2` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A2; Automation A addressing space (for configurator A2) |
+| `145` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `145` | `M2` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000147:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+The complete firmware-scoped configuration surface is:
+
+| Field | Domain | Meaning / document correlation |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A1`, `A2` | `0..9`, `GEN=12`, `GR=13`, `AMB=14`, `AUX=15` | channel address scope |
+| `PL1`, `PL2` | `0..9` | physical point / function value |
+| `M1`, `M2` | `0..8`, `O/I=9`, `OFF=10`, `ON=11`, `UP/DOWN=12`, `UP/DOWN monostable=13`, `CEN=14`, `PUL=15` | channel mode |
+
+The official sheet uses physical `A=1..9` and `PL=1..9` for ordinary point-to-point addressing, while the database stores `0` in the firmware-level domains. Preserve that source-level distinction.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000147:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `400` - Light control
+
+Section ID: `ownkb:section:d000147:s000019`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `401` - Automation control
+
+Section ID: `ownkb:section:d000147:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000147:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000147:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Virgin-only candidate Objects
+
+Section ID: `ownkb:section:d000147:s000023`
+
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
+
+#### Object `407` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000147:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000147:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Reusable Object domains do not override product-level physical address limits. Firmware conditions, filters and conversions determine which values can be selected on a particular Module.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000147:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000147:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `145` | `1` | `400` | `4165` | `A1=AMB` | `94` |
+| `145` | `1` | `400` | `4167` | `A1=GEN` | `95` |
+| `145` | `1` | `400` | `4169` | `A1=GR` | `93` |
+| `145` | `1` | `400` | `4192` | `M1<>CEN;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4233` | `M1=0;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4234` | `M1=0;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4236` | `M1=0;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4237` | `M1=0;A1=GR` | `93` |
+| `145` | `1` | `400` | `4274` | `M1=O/I;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4275` | `M1=O/I;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4277` | `M1=O/I;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4278` | `M1=O/I;A1=GR` | `93` |
+| `145` | `1` | `400` | `4281` | `M1=OFF;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4282` | `M1=OFF;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4284` | `M1=OFF;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4285` | `M1=OFF;A1=GR` | `93` |
+| `145` | `1` | `400` | `4286` | `M1=ON;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4287` | `M1=ON;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4289` | `M1=ON;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4290` | `M1=ON;A1=GR` | `93` |
+| `145` | `1` | `400` | `4293` | `M1=PUL;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `400` | `4294` | `M1=PUL;A1=AMB` | `94` |
+| `145` | `1` | `400` | `4296` | `M1=PUL;A1=GEN` | `95` |
+| `145` | `1` | `400` | `4297` | `M1=PUL;A1=GR` | `93` |
+| `145` | `1` | `401` | `4300` | `M1=SU_GIU;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `401` | `4301` | `M1=SU_GIU;A1=AMB` | `94` |
+| `145` | `1` | `401` | `4303` | `M1=SU_GIU;A1=GEN` | `95` |
+| `145` | `1` | `401` | `4304` | `M1=SU_GIU;A1=GR` | `93` |
+| `145` | `1` | `401` | `4308` | `M1=SU_GIU_M;A1<>AUX;A1<>GR;A1<>AMB;A1<>GEN` | `4` |
+| `145` | `1` | `401` | `4309` | `M1=SU_GIU_M;A1=AMB` | `94` |
+| `145` | `1` | `401` | `4311` | `M1=SU_GIU_M;A1=GEN` | `95` |
+| `145` | `1` | `401` | `4312` | `M1=SU_GIU_M;A1=GR` | `93` |
+| `145` | `1` | `404` | `4254` | `M1=CEN` | `4` |
+| `145` | `1` | `404` | `4270` | `M1=M2;M2=CEN` | `17` |
+| `145` | `1` | `406` | `4269` | `M1=FAKE` | None |
+| `145` | `2` | `400` | `4171` | `A2=AMB` | `97` |
+| `145` | `2` | `400` | `4173` | `A2=GEN` | `95` |
+| `145` | `2` | `400` | `4175` | `A2=GR` | `96` |
+| `145` | `2` | `400` | `4314` | `M2<>CEN;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4315` | `M2=0;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4316` | `M2=0;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4318` | `M2=0;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4319` | `M2=0;A2=GR` | `96` |
+| `145` | `2` | `400` | `4391` | `M2=O/I;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4392` | `M2=O/I;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4394` | `M2=O/I;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4395` | `M2=O/I;A2=GR` | `96` |
+| `145` | `2` | `400` | `4396` | `M2=OFF;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4397` | `M2=OFF;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4399` | `M2=OFF;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4400` | `M2=OFF;A2=GR` | `96` |
+| `145` | `2` | `400` | `4401` | `M2=ON;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4402` | `M2=ON;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4404` | `M2=ON;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4405` | `M2=ON;A2=GR` | `96` |
+| `145` | `2` | `400` | `4406` | `M2=PUL;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `400` | `4407` | `M2=PUL;A2=AMB` | `97` |
+| `145` | `2` | `400` | `4409` | `M2=PUL;A2=GEN` | `95` |
+| `145` | `2` | `400` | `4410` | `M2=PUL;A2=GR` | `96` |
+| `145` | `2` | `401` | `4411` | `M2=SU_GIU;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `401` | `4412` | `M2=SU_GIU;A2=AMB` | `97` |
+| `145` | `2` | `401` | `4414` | `M2=SU_GIU;A2=GEN` | `95` |
+| `145` | `2` | `401` | `4415` | `M2=SU_GIU;A2=GR` | `96` |
+| `145` | `2` | `401` | `4417` | `M2=SU_GIU_M;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `145` | `2` | `401` | `4418` | `M2=SU_GIU_M;A2=AMB` | `97` |
+| `145` | `2` | `401` | `4420` | `M2=SU_GIU_M;A2=GEN` | `95` |
+| `145` | `2` | `401` | `4421` | `M2=SU_GIU_M;A2=GR` | `96` |
+| `145` | `2` | `404` | `4271` | `M1=M2;M2=CEN` | `18` |
+| `145` | `2` | `404` | `4389` | `M2=CEN` | `4` |
+| `145` | `2` | `406` | `4390` | `M2=FAKE` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000147:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `145` | `400` | `263` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `145` | `400` | `264` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `145` | `400` | `265` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `145` | `400` | `266` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `145` | `400` | `267` | `START_S` | `0..255` (entire reusable range retained) | `255` | Soft start speed |
+| `145` | `400` | `268` | `STOP_S` | `0..255` (entire reusable range retained) | `255` | Soft stop speed |
+| `145` | `400` | `269` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `145` | `400` | `270` | `LEVEL` | `0..100` (entire reusable range retained) | `100` | Level |
+| `145` | `400` | `271` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `400` | `272` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `145` | `400` | `273` | `M` | `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `4` = Toggle `ON`/`OFF`; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `5` = `ON`/`OFF`; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90% | `0` | Modality; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `145` | `401` | `277` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `145` | `401` | `278` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `401` | `279` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `145` | `404` | `281` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `145` | `404` | `1701` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000147:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `4` | `M1=0` | `M` = `0` | `4` |
+| `4` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M1=O/I` | `M` = `9` | `4` |
+| `4` | `M1=OFF` | `M` = `10` | `4` |
+| `4` | `M1=ON` | `M` = `11` | `4` |
+| `4` | `M1=PUL` | `M` = `15` | `4` |
+| `4` | `M1=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M1=SU_GIU_M` | `M` = `13` | `4` |
+| `4` | `M2=0` | `M` = `0` | `4` |
+| `4` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M2=O/I` | `M` = `9` | `4` |
+| `4` | `M2=OFF` | `M` = `10` | `4` |
+| `4` | `M2=ON` | `M` = `11` | `4` |
+| `4` | `M2=PUL` | `M` = `15` | `4` |
+| `4` | `M2=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M2=SU_GIU_M` | `M` = `13` | `4` |
+| `17` | `M1=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `1`; `CEN_BUTT_2` = `3` | `17` |
+| `18` | `M2=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `2`; `CEN_BUTT_2` = `4` | `18` |
+| `93` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `93` |
+| `93` | `M1=0; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=0; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=0; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=0; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=0; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=0; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=0; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=0; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=0; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=1; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=1; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=1; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=1; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=1; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=1; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=1; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=1; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=1; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=2; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=2; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=2; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=2; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=2; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=2; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=2; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=2; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=2; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=3; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=3; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=3; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=3; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=3; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=3; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=3; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=3; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=3; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=4; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=4; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=4; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=4; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=4; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=4; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=4; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=4; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=4; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=5; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=5; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=5; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=5; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=5; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=5; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=5; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=5; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=5; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=6; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=6; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=6; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=6; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=6; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=6; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=6; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=6; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=6; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=7; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=7; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=7; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=7; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=7; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=7; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=7; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=7; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=7; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=8; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=8; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=8; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=8; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=8; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=8; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=8; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=8; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=8; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=O/I; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=O/I; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=O/I; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=O/I; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=O/I; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=O/I; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=O/I; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=O/I; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=O/I; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=OFF; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=OFF; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=OFF; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=OFF; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=OFF; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=OFF; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=OFF; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=OFF; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=OFF; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=ON; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=ON; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=ON; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=ON; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=ON; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=ON; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=ON; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=ON; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=ON; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=PUL; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=PUL; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=PUL; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=PUL; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=PUL; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=PUL; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=PUL; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=PUL; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=PUL; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=SU_GIU; PL1=9` | `G1` = `9` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=1` | `G1` = `1` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=2` | `G1` = `2` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=3` | `G1` = `3` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=4` | `G1` = `4` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=5` | `G1` = `5` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=6` | `G1` = `6` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=7` | `G1` = `7` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=8` | `G1` = `8` | `93` → `200` |
+| `93` | `M1=SU_GIU_M; PL1=9` | `G1` = `9` | `93` → `200` |
+| `94` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `94` |
+| `94` | `M1=0; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=0; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=0; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=0; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=0; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=0; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=0; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=0; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=0; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=1; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=1; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=1; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=1; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=1; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=1; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=1; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=1; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=1; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=2; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=2; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=2; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=2; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=2; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=2; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=2; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=2; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=2; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=3; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=3; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=3; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=3; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=3; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=3; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=3; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=3; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=3; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=4; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=4; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=4; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=4; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=4; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=4; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=4; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=4; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=4; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=5; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=5; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=5; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=5; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=5; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=5; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=5; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=5; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=5; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=6; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=6; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=6; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=6; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=6; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=6; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=6; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=6; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=6; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=7; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=7; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=7; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=7; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=7; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=7; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=7; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=7; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=7; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=8; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=8; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=8; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=8; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=8; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=8; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=8; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=8; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=8; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=O/I; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=O/I; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=O/I; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=O/I; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=O/I; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=O/I; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=O/I; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=O/I; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=O/I; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=OFF; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=OFF; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=OFF; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=OFF; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=OFF; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=OFF; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=OFF; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=OFF; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=OFF; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=ON; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=ON; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=ON; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=ON; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=ON; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=ON; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=ON; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=ON; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=ON; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=PUL; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=PUL; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=PUL; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=PUL; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=PUL; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=PUL; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=PUL; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=PUL; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=PUL; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=SU_GIU; PL1=9` | `A` = `9` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=1` | `A` = `1` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=2` | `A` = `2` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=3` | `A` = `3` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=4` | `A` = `4` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=5` | `A` = `5` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=6` | `A` = `6` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=7` | `A` = `7` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=8` | `A` = `8` | `94` → `201` |
+| `94` | `M1=SU_GIU_M; PL1=9` | `A` = `9` | `94` → `201` |
+| `95` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `3` | `95` |
+| `96` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=0; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=0; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=0; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=0; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=0; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=0; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=0; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=0; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=0; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=1; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=1; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=1; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=1; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=1; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=1; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=1; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=1; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=1; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=2; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=2; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=2; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=2; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=2; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=2; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=2; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=2; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=2; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=3; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=3; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=3; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=3; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=3; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=3; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=3; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=3; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=3; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=4; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=4; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=4; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=4; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=4; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=4; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=4; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=4; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=4; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=5; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=5; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=5; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=5; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=5; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=5; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=5; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=5; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=5; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=6; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=6; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=6; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=6; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=6; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=6; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=6; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=6; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=6; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=7; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=7; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=7; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=7; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=7; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=7; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=7; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=7; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=7; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=8; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=8; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=8; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=8; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=8; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=8; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=8; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=8; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=8; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=O/I; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=O/I; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=O/I; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=O/I; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=O/I; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=O/I; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=O/I; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=O/I; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=O/I; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=OFF; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=OFF; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=OFF; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=OFF; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=OFF; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=OFF; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=OFF; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=OFF; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=OFF; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=ON; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=ON; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=ON; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=ON; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=ON; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=ON; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=ON; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=ON; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=ON; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=PUL; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=PUL; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=PUL; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=PUL; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=PUL; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=PUL; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=PUL; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=PUL; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=PUL; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=9` | `G1` = `9` | `96` → `202` |
+| `97` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=0; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=0; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=0; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=0; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=0; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=0; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=0; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=0; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=0; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=1; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=1; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=1; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=1; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=1; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=1; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=1; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=1; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=1; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=2; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=2; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=2; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=2; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=2; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=2; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=2; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=2; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=2; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=3; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=3; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=3; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=3; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=3; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=3; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=3; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=3; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=3; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=4; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=4; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=4; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=4; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=4; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=4; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=4; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=4; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=4; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=5; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=5; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=5; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=5; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=5; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=5; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=5; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=5; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=5; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=6; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=6; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=6; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=6; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=6; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=6; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=6; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=6; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=6; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=7; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=7; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=7; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=7; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=7; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=7; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=7; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=7; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=7; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=8; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=8; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=8; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=8; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=8; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=8; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=8; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=8; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=8; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=O/I; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=O/I; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=O/I; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=O/I; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=O/I; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=O/I; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=O/I; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=O/I; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=O/I; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=OFF; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=OFF; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=OFF; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=OFF; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=OFF; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=OFF; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=OFF; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=OFF; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=OFF; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=ON; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=ON; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=ON; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=ON; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=ON; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=ON; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=ON; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=ON; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=ON; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=PUL; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=PUL; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=PUL; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=PUL; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=PUL; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=PUL; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=PUL; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=PUL; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=PUL; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=9` | `A` = `9` | `97` → `203` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000147:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 2`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe actual installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3`, `6`, `13` | hardware, microcontroller, and physical Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine active Objects on the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000147:s000031`
+
+Provenance cues: `evidence`
+
+| Documented function | Evidence |
+| --- | --- |
+| point-to-point, room, group, and general lighting addressing | `MQ00286-d-EN`, pp. 1–4; four named references |
+| lighting cyclic, `ON`, `OFF`, pushbutton, timed-`ON`, and dimming functions | `MQ00286-d-EN`, pp. 1–4; four named references |
+| automation bistable, monostable, and lath/blade control | `MQ00286-d-EN`, pp. 1–4; four named references |
+| programmed scenario buttons `0..31` | `MQ00286-d-EN`, pp. 1–4; four named references |
+| PLUS scenario number `1..2047` and button number `0..31` through virtual configuration | `MQ00286-d-EN`, pp. 1–4; four named references |
+| Lighting Management virtual functions including dual light, `CEN`, `CEN` PLUS, and `AUX` control | `MQ00286-d-EN`, pp. 1–4; four named references |
+
+The exact generic functional frame grammar remains canonical under [Lighting](../../functional/who-1-lighting/) and [Automation](../../functional/who-2-automation/).
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000147:s000032`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000147:s000033`
+
+A programmer should resolve each Module independently from the physical/virtual configuration, then apply the selected Object configuration and conversion rules. Generic write/read-back mechanics remain in [Programming](../../programming/).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000147:s000034`
+
+`MQ00286-d-EN` has been reconciled beyond the high-level Object list:
+
+- physical and virtual configuration both support point-to-point, room, group and general lighting control, but the published physical ranges and the reusable Object ranges are not identical;
+- the Device supports timed-`ON` and dimming variants in addition to simple cyclic/`ON`/`OFF`/pushbutton behavior;
+- load-status feedback for room/group/general commands is tied to a reference actuator address in software configuration rather than being implied by the command address alone;
+- `CEN`-only use has a product-level configuration constraint: secondary address positions that are not part of the `CEN` function must remain unconfigured rather than being treated as independent command channels;
+- local LED behavior and brightness adjustment are part of the Device user interface and remain distinct from the OpenWebNet command Modules.
+
+The archived technical sheet has therefore been reconciled into both the physical configuration model and the reusable Object model; remaining incompleteness concerns other commercial variants and hardware corroboration.
+
+The retained Arnould page adds the explicit `64360/64160/64161` rocker/package relationships. It does not transfer the four named MQ00286 references’ current-draw specifications to every commercial variant. `MQ00286-d-EN` is already archived and fingerprint-verified; archival work on that exact original is complete.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000147:s000035`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `capture`, `catalogue`, `documentation`
+
+- Exact-product electrical/procedure sheets remain absent for variants beyond the four MQ00286 references. Arnould `64360/64160/64161` package relationships are now documented; missing sheets do not unset established identities.
+- Capture a sanitized fingerprint from known hardware to corroborate `modobj`, `N_CONF`, firmware, Module/Object projection, addressing, and configuration.
+- Establish which commercial variants differ only in finish/package and which have material hardware differences.
+- Preserve any disagreement between product documentation and the catalogue rather than normalizing it away.
+
+### Sources
+
+Section ID: `ownkb:section:d000147:s000036`
+
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `H4652_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4652/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ad/dd/addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_2); SHA-256 `addd32061c1c9d26cc0d020b1350da5df27703e04b47e09dc7e0c2e25ee4c443`.
+- `L4652_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4652/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/d9/bb/d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_2); SHA-256 `d9bbfd3bf418467ba799b924c4c498bdfd81756e2f2d2a9ce2f4b4872e526f53`.
+- `AM5832_2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5832/2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/3f/553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_2); SHA-256 `553f31cf8d9e29c0823e2d113a732ef7e1d111c44776fbfa8e6390467833ec52`.
+- `067552-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067552` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/fc/79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-celiane-1-ou-2-fonctions-pour-lumiere-ou-volets-myhome-up); SHA-256 `79fc17156bfa9496ba91f4c31e18fc53de8b4628e2df4d0fc111386156802dfb`.
+- `079171-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `079171` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/11/51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-1-sortie-alu); SHA-256 `51112351ad65b37aadc0900f4183618a017781b6fd444018804f1628b98f8c30`.
+- `079173-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `079173` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/79/c1/79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/commande-mosaic-pour-lumiere-ou-volets-myhome-up-2-sorties-alu); SHA-256 `79c1d9371186159008b486b4d978ef92d6bc9c7ae3ed89d67e55b04313a66ed5`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0004)
+
+# Document: ownkb:document:d000148
+
+Source path: `devices/definitions/own-dev-0005-two-module-special-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Two-module special control
+
+Section ID: `ownkb:section:d000148:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000148:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This two-module, four-button SCS control supports a broad choice of functions, including lighting, shutters, scenarios, sound and door-entry commands. Its special-function configuration allows the same control hardware to serve different roles within the installation.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0005` | Project identity |
+| Technical description | Two-module configurable special-function SCS control | Catalogue + official technical sheet |
+| Catalogue item | `1524` - “Special control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `16` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `146` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
+| Categories | Command, Multifunction, Lighting, Automation, Scenario, Audio / Video | Capability model |
+
+This technical definition covers the shared catalogue capability core used by 13 commercial Device records. The official `MQ00285-d-EN` technical sheet directly covers `067553`, `H4651M2`, `L4651M2`, and `AM5831M2`. The other records have established catalogue identities; retained Arnould evidence now documents `64362/64162` packaging, while further variant-specific electrical/procedure coverage remains limited.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000148:s000003`
+
+#### Directly documented references
+
+Section ID: `ownkb:section:d000148:s000004`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino - LivingLight | `L4651M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| BTicino - Matix | `AM5831M2` | Established identity | Catalogue + `MQ00285-d-EN` |
+| Legrand - Céliane | `067553` | Established identity | Catalogue + `MQ00285-d-EN` |
+
+#### Additional commercial records sharing item 1524
+
+Section ID: `ownkb:section:d000148:s000005`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64162`, `64362` | Established catalogue identities | Canonical catalogue; retained Arnould catalogue printed/PDF p. 32 establishes packages |
+| Legrand - Arteor | `571849`, `573987` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067242` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Mosaic | `078472`, `078475`, `079172`, `079175` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000148:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4651M2` | `8012199957111` | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf), `H4651M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4651M2` | `8012199957128` | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf), `L4651M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5831M2` | `8012199957135` | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf), `AM5831M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `067553` | `3245060675530` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/01/53/0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d.pdf), `067553-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000148:s000007`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00285-d-EN` - Special control | Technical sheet | 09/06/2014 | `067553`, `H4651M2`, `L4651M2`, `AM5831M2` | [Archived original](https://archive.openwebnet-ha.org/sha256/03/f5/03f5093d833c675ac3fdf10c2e3b21e38e494bc3b3637d2838454e9a85b81cab.pdf) | [Official PDF](https://assets.legrand.com/pim/NP-FT-GT/MQ00285-d-EN.pdf) |
+| `H4651M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4651M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4651M2) |
+| `L4651M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4651M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2) |
+| `AM5831M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5831M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2) |
+| `067553-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067553` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/01/53/0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-pour-fonctions-speciales-commande-de-scenario-diffusion-sonore-commande-temporisee-myhome-up-celiane) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64362`, `64162`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
+
+The nine-page sheet is unusually valuable because it documents several otherwise unrelated functional systems exposed by the same configurable control.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000148:s000008`
+
+Applicability cues: `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting size | 2 flush-mounted modules | Official technical sheet |
+| Controls | 4 buttons | Official technical sheet |
+| Indicators | two-colour LEDs with local brightness/off adjustment | Official technical sheet |
+| SCS nominal supply | `27 Vdc` | Official technical sheet |
+| SCS operating supply | `18..27 Vdc` | Official technical sheet |
+| Maximum LED-brightness current | `6 mA` H4651M2; `7.5 mA` 067553; `8.5 mA` L4651M2 and AM5831M2 | Official technical sheet |
+| Operating temperature | `5..35 °C` | Official technical sheet |
+| Physical configurator positions | `A`, `PL/PF`, `M`, `LIV1/AUX`, `LIV2`, `SPE`, `I` | Official technical sheet |
+
+The seven documented configurator positions strongly support the ordinary diagnostic interpretation `N_CONF = 7`, but a known-hardware observation is still required before marking that value as corroborated.
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64362` / `64162` package distinction | `64362` supplied without rocker; `64162` preassembled with two blank 1-module rocker controls; supplied configurators are not specified for this package | Arnould catalogue printed/PDF p. 32 |
+
+### Identity
+
+Section ID: `ownkb:section:d000148:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1524` | Canonical catalogue |
+| Item model / `modobj` | `16` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000148:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `16` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000148:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `146` | `-1` | `-1` | `-1` | `2` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000148:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000148:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `146` | `1` | `400` Light control | Fixed/designated metadata | `716` | `400` | `494` |
+| `146` | `1` | `401` Automation control | Candidate alternative | `718` | `401` | `495` |
+| `146` | `1` | `402` Lock/unlock actuator control | Candidate alternative | `720` | `402` | `496` |
+| `146` | `1` | `403` Scenario module control | Candidate alternative | `722` | `403` | `497` |
+| `146` | `1` | `404` Scheduled scenario | Candidate alternative | `724` | `404` | `498` |
+| `146` | `1` | `405` Scenario PLUS Lighting Management | Candidate alternative | `726` | `405` | `499` |
+| `146` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `1207` | `406` | `649` |
+| `146` | `1` | `408` Open lock control | Candidate alternative | `728` | `408` | `500` |
+| `146` | `1` | `409` Sound diffusion control | Candidate alternative | `730` | `409` | `501` |
+| `146` | `1` | `427` Floor call control | Candidate alternative | `731` | `427` | `502` |
+| `146` | `1` | `430` Staircase light control | Candidate alternative | `733` | `430` | `503` |
+| `146` | `2` | `400` Light control | Fixed/designated metadata | `717` | `400` | `494` |
+| `146` | `2` | `401` Automation control | Candidate alternative | `719` | `401` | `495` |
+| `146` | `2` | `402` Lock/unlock actuator control | Candidate alternative | `721` | `402` | `496` |
+| `146` | `2` | `403` Scenario module control | Candidate alternative | `723` | `403` | `497` |
+| `146` | `2` | `404` Scheduled scenario | Candidate alternative | `725` | `404` | `498` |
+| `146` | `2` | `405` Scenario PLUS Lighting Management | Candidate alternative | `727` | `405` | `499` |
+| `146` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `1208` | `406` | `649` |
+| `146` | `2` | `408` Open lock control | Candidate alternative | `729` | `408` | `500` |
+| `146` | `2` | `427` Floor call control | Candidate alternative | `732` | `427` | `502` |
+| `146` | `2` | `430` Staircase light control | Candidate alternative | `734` | `430` | `503` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000148:s000014`
+
+Applicability cues: `applies to`, `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `146` | `501` Special double command virgin | `1`, `2` | `400`, `401`, `402`, `403`, `404`, `405`, `406`, `407`, `408`, `409`, `427`, `430` | `501` | `19` |
+
+Firmware `146` exposes two configurable Modules and a broad set of Object alternatives.
+
+Virgin Object `501`, **Special double command virgin**, applies to both slots and permits all Objects above plus Object `407` `AUX` control.
+
+The broad Object set explains why this Device belongs to several functional categories despite being one Physical Device.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000148:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `146` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `146` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `146` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000148:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `146` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `146` | `A` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A; Environment (0-9 `GEN`,`GR`,`AMB`,`AUX`) |
+| `146` | `PL/PF` | `0..9` | `0` | PL/PF; Light Point |
+| `146` | `M` | `0..9`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | M; Mode physical configurator (0-9, `O/I`,`OFF`,`ON`,SU_GIU,SU_GIU_M,`CEN`,`PUL`) |
+| `146` | `LIV1/AUX` | `0..9` | `0` | LIV1/`AUX`; Configurator LIV1 |
+| `146` | `LIV2` | `0..9` | `0` | LIV2; Configurator LIV2 |
+| `146` | `SPE` | `0..3`; `6`; `8..9`; `11` = `ON` | `0` | SPE; Special function command control (0,1,2,3,6,8,9,`ON`) |
+| `146` | `I` | `0..9` | `0` | I; Automation interface address |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000148:s000017`
+
+Cautions: `must not`
+Provenance cues: `catalogue`, `database`
+
+| Field | Catalogue domain | Purpose |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A` | `0..9`, `GEN=12`, `GR=13`, `AMB=14`, `AUX=15` | environment/address scope |
+| `PL/PF` | `0..9` | lighting/audio point |
+| `M` | `0..8`, `O/I=9`, `OFF=10`, `ON=11`, `UP/DOWN=12`, `UP/DOWN monostable=13`, `CEN=14`, `PUL=15`, plus a second stored literal `9` entry | base mode |
+| `LIV1/AUX` | `0..9` | level / `AUX` physical field |
+| `LIV2` | `0..9` | second level field |
+| `SPE` | `0,1,2,3,6,8,9,ON(11)` | special-function selector |
+| `I` | `0..9` | automation interface address |
+
+The duplicate stored `M` value `9` - one row labelled `O/I` and another labelled `9` - is retained as a canonical database irregularity. It must not be silently deduplicated without context.
+
+The official sheet uses `A=1..9` and `PL=1..9` for ordinary physical point-to-point addressing while virtual configuration extends the logical ranges.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000148:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `400` - Light control
+
+Section ID: `ownkb:section:d000148:s000019`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `401` - Automation control
+
+Section ID: `ownkb:section:d000148:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `402` - Lock/unlock actuator control
+
+Section ID: `ownkb:section:d000148:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (lower button) - enable (upper button) | `1` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `403` - Scenario module control
+
+Section ID: `ownkb:section:d000148:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number | `0` | Destination level |
+| `SCE_BUTT_1` | `1..16` | `1` | Upper button scenario |
+| `SCE_BUTT_2` | `1..16` | `2` | Lower button scenario |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000148:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `405` - Scenario PLUS Lighting Management
+
+Section ID: `ownkb:section:d000148:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Upper button scenario; Delay (20) |
+| `PPT_SCE_2` | `1..255` | `2` | Lower button scenario; Delay (21) |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type; Only if Scenario1=Scenario2 |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000148:s000025`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Object `408` - Open lock control
+
+Section ID: `ownkb:section:d000148:s000026`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEGMENT` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `409` - Sound diffusion control
+
+Section ID: `ownkb:section:d000148:s000027`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+
+#### Object `427` - Floor call control
+
+Section ID: `ownkb:section:d000148:s000028`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `430` - Staircase light control
+
+Section ID: `ownkb:section:d000148:s000029`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Associated Internal Unit address - hundreds |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Virgin-only candidate Objects
+
+Section ID: `ownkb:section:d000148:s000030`
+
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
+
+#### Object `407` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000148:s000031`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000148:s000032`
+
+Provenance cues: `catalogue`
+
+Encoded scenario-address and delay domains retain their complete catalogue values above. Physical presets and software values are distinct configuration scopes.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000148:s000033`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000148:s000034`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `146` | `1` | `400` | `4145` | No textual predicate stored | None |
+| `146` | `1` | `400` | `4177` | `A=AMB` | `101` |
+| `146` | `1` | `400` | `4181` | `A=GEN` | `104` |
+| `146` | `1` | `400` | `4184` | `A=GR` | `98` |
+| `146` | `1` | `400` | `4606` | `M=O/I;A=AMB` | `101` |
+| `146` | `1` | `400` | `4608` | `M=O/I;A=GEN` | `104` |
+| `146` | `1` | `400` | `4609` | `M=O/I;A=GR` | `98` |
+| `146` | `1` | `400` | `4620` | `M=OFF;A=AMB` | `101` |
+| `146` | `1` | `400` | `4622` | `M=OFF;A=GEN` | `104` |
+| `146` | `1` | `400` | `4623` | `M=OFF;A=GR` | `98` |
+| `146` | `1` | `400` | `4634` | `M=ON;A=AMB` | `101` |
+| `146` | `1` | `400` | `4636` | `M=ON;A=GEN` | `104` |
+| `146` | `1` | `400` | `4637` | `M=ON;A=GR` | `98` |
+| `146` | `1` | `400` | `4648` | `M=PUL;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `36` |
+| `146` | `1` | `400` | `4649` | `M=PUL;A=AMB` | `101` |
+| `146` | `1` | `400` | `4651` | `M=PUL;A=GEN` | `104` |
+| `146` | `1` | `400` | `4652` | `M=PUL;A=GR` | `98` |
+| `146` | `1` | `400` | `4833` | `SPE=1;M=7` | `38` |
+| `146` | `1` | `400` | `4837` | `SPE=1;M=8` | `38` |
+| `146` | `1` | `400` | `4842` | `SPE=2` | `39` |
+| `146` | `1` | `400` | `4844` | `SPE=3` | `40` |
+| `146` | `1` | `400` | `4849` | `SPE=5;LIV2<>0` | `21` |
+| `146` | `1` | `400` | `4850` | `SPE=5;LIV2=0` | `22` |
+| `146` | `1` | `400` | `4878` | `SPE=9;LIV2<>0` | `21` |
+| `146` | `1` | `400` | `4879` | `SPE=9;LIV2=0` | `22` |
+| `146` | `1` | `400` | `4880` | `SPE=ON` | `42` |
+| `146` | `1` | `401` | `4664` | `M=SU_GIU;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `30` |
+| `146` | `1` | `401` | `4665` | `M=SU_GIU;A=AMB` | `102` |
+| `146` | `1` | `401` | `4667` | `M=SU_GIU;A=GEN` | `105` |
+| `146` | `1` | `401` | `4668` | `M=SU_GIU;A=GR` | `99` |
+| `146` | `1` | `401` | `4685` | `M=SU_GIU_M;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `30` |
+| `146` | `1` | `401` | `4686` | `M=SU_GIU_M;A=AMB` | `102` |
+| `146` | `1` | `401` | `4688` | `M=SU_GIU_M;A=GEN` | `105` |
+| `146` | `1` | `401` | `4689` | `M=SU_GIU_M;A=GR` | `99` |
+| `146` | `1` | `402` | `4800` | `SPE=1;M=1;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `1` | `402` | `4801` | `SPE=1;M=1;A=AMB` | `103` |
+| `146` | `1` | `402` | `4805` | `SPE=1;M=1;A=GEN` | `106` |
+| `146` | `1` | `402` | `4806` | `SPE=1;M=1;A=GR` | `100` |
+| `146` | `1` | `402` | `4808` | `SPE=1;M=2;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `1` | `402` | `4809` | `SPE=1;M=2;A=AMB` | `103` |
+| `146` | `1` | `402` | `4813` | `SPE=1;M=2;A=GEN` | `106` |
+| `146` | `1` | `402` | `4814` | `SPE=1;M=2;A=GR` | `100` |
+| `146` | `1` | `402` | `4817` | `SPE=1;M=3;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `1` | `402` | `4818` | `SPE=1;M=3;A=AMB` | `103` |
+| `146` | `1` | `402` | `4822` | `SPE=1;M=3;A=GEN` | `106` |
+| `146` | `1` | `402` | `4823` | `SPE=1;M=3;A=GR` | `100` |
+| `146` | `1` | `403` | `4846` | `SPE=4` | `41` |
+| `146` | `1` | `403` | `4859` | `SPE=6;` | `34` |
+| `146` | `1` | `404` | `4585` | `M=CEN` | `7` |
+| `146` | `1` | `405` | `4594` | `M=FAKE` | None |
+| `146` | `1` | `408` | `4864` | `SPE=7;M=1` | `23` |
+| `146` | `1` | `409` | `4875` | `SPE=8` | `24` |
+| `146` | `1` | `427` | `4865` | `SPE=7;M=2` | `23` |
+| `146` | `1` | `430` | `4866` | `SPE=7;M=3` | `23` |
+| `146` | `2` | `400` | `4177` | `A=AMB` | `101` |
+| `146` | `2` | `400` | `4181` | `A=GEN` | `104` |
+| `146` | `2` | `400` | `4184` | `A=GR` | `98` |
+| `146` | `2` | `400` | `4606` | `M=O/I;A=AMB` | `101` |
+| `146` | `2` | `400` | `4608` | `M=O/I;A=GEN` | `104` |
+| `146` | `2` | `400` | `4609` | `M=O/I;A=GR` | `98` |
+| `146` | `2` | `400` | `4620` | `M=OFF;A=AMB` | `101` |
+| `146` | `2` | `400` | `4622` | `M=OFF;A=GEN` | `104` |
+| `146` | `2` | `400` | `4623` | `M=OFF;A=GR` | `98` |
+| `146` | `2` | `400` | `4634` | `M=ON;A=AMB` | `101` |
+| `146` | `2` | `400` | `4636` | `M=ON;A=GEN` | `104` |
+| `146` | `2` | `400` | `4637` | `M=ON;A=GR` | `98` |
+| `146` | `2` | `400` | `4648` | `M=PUL;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `36` |
+| `146` | `2` | `400` | `4649` | `M=PUL;A=AMB` | `101` |
+| `146` | `2` | `400` | `4651` | `M=PUL;A=GEN` | `104` |
+| `146` | `2` | `400` | `4652` | `M=PUL;A=GR` | `98` |
+| `146` | `2` | `400` | `4833` | `SPE=1;M=7` | `38` |
+| `146` | `2` | `400` | `4837` | `SPE=1;M=8` | `38` |
+| `146` | `2` | `400` | `4842` | `SPE=2` | `39` |
+| `146` | `2` | `400` | `4844` | `SPE=3` | `40` |
+| `146` | `2` | `400` | `4849` | `SPE=5;LIV2<>0` | `21` |
+| `146` | `2` | `400` | `4850` | `SPE=5;LIV2=0` | `22` |
+| `146` | `2` | `400` | `4878` | `SPE=9;LIV2<>0` | `21` |
+| `146` | `2` | `400` | `4879` | `SPE=9;LIV2=0` | `22` |
+| `146` | `2` | `400` | `4881` | `SPE=ON` | `43` |
+| `146` | `2` | `401` | `4664` | `M=SU_GIU;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `30` |
+| `146` | `2` | `401` | `4665` | `M=SU_GIU;A=AMB` | `102` |
+| `146` | `2` | `401` | `4667` | `M=SU_GIU;A=GEN` | `105` |
+| `146` | `2` | `401` | `4668` | `M=SU_GIU;A=GR` | `99` |
+| `146` | `2` | `401` | `4685` | `M=SU_GIU_M;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `30` |
+| `146` | `2` | `401` | `4686` | `M=SU_GIU_M;A=AMB` | `102` |
+| `146` | `2` | `401` | `4688` | `M=SU_GIU_M;A=GEN` | `105` |
+| `146` | `2` | `401` | `4689` | `M=SU_GIU_M;A=GR` | `99` |
+| `146` | `2` | `402` | `4800` | `SPE=1;M=1;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `2` | `402` | `4801` | `SPE=1;M=1;A=AMB` | `103` |
+| `146` | `2` | `402` | `4805` | `SPE=1;M=1;A=GEN` | `106` |
+| `146` | `2` | `402` | `4806` | `SPE=1;M=1;A=GR` | `100` |
+| `146` | `2` | `402` | `4808` | `SPE=1;M=2;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `2` | `402` | `4809` | `SPE=1;M=2;A=AMB` | `103` |
+| `146` | `2` | `402` | `4813` | `SPE=1;M=2;A=GEN` | `106` |
+| `146` | `2` | `402` | `4814` | `SPE=1;M=2;A=GR` | `100` |
+| `146` | `2` | `402` | `4817` | `SPE=1;M=3;A<>AUX;A<>GR;A<>AMB;A<>GEN` | `37` |
+| `146` | `2` | `402` | `4818` | `SPE=1;M=3;A=AMB` | `103` |
+| `146` | `2` | `402` | `4822` | `SPE=1;M=3;A=GEN` | `106` |
+| `146` | `2` | `402` | `4823` | `SPE=1;M=3;A=GR` | `100` |
+| `146` | `2` | `403` | `4846` | `SPE=4` | `41` |
+| `146` | `2` | `403` | `4860` | `SPE=6;` | `35` |
+| `146` | `2` | `404` | `4586` | `M=CEN` | `8` |
+| `146` | `2` | `405` | `4594` | `M=FAKE` | None |
+| `146` | `2` | `408` | `4864` | `SPE=7;M=1` | `23` |
+| `146` | `2` | `427` | `4865` | `SPE=7;M=2` | `23` |
+| `146` | `2` | `430` | `4866` | `SPE=7;M=3` | `23` |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000148:s000035`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `146` | `400` | `697` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `400` | `698` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `146` | `401` | `701` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `401` | `1797` | `M` | `14` = Blades control and bistable | `12` | Modality; reusable default `12` is outside this subset; filter supplies no replacement default |
+| `146` | `402` | `704` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `404` | `706` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `404` | `1708` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+| `146` | `408` | `708` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `409` | `709` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `427` | `712` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `427` | `1902` | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone (entire reusable range retained) | `0` | Segment |
+| `146` | `430` | `716` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `146` | `430` | `717` | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone (entire reusable range retained) | `0` | Segment |
+| `146` | `430` | `4120` | `N2` | `0..15` (entire reusable range retained) | `0` | Associated Internal Unit address - hundreds |
+| `146` | `430` | `4133` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000148:s000036`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `7` | No item-side predicate on this branch | Referenced conversion rule absent from source | `7` |
+| `8` | No item-side predicate on this branch | Referenced conversion rule absent from source | `8` |
+| `21` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `21` |
+| `21` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `21` |
+| `21` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `21` |
+| `21` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `21` |
+| `21` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `21` |
+| `21` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `21` |
+| `21` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `21` |
+| `21` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `21` |
+| `21` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `21` |
+| `21` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `10` | `21` |
+| `21` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `21` |
+| `21` | `SPE=5` | `M` = `133` | `21` |
+| `21` | `SPE=9` | `M` = `134` | `21` |
+| `21` | `M=0` | `START_S` = `0`; `STOP_S` = `0` | `21` |
+| `21` | `M=1` | `START_S` = `1`; `STOP_S` = `1` | `21` |
+| `21` | `M=2` | `START_S` = `2`; `STOP_S` = `2` | `21` |
+| `21` | `M=3` | `START_S` = `3`; `STOP_S` = `3` | `21` |
+| `21` | `M=4` | `START_S` = `4`; `STOP_S` = `4` | `21` |
+| `21` | `M=5` | `START_S` = `5`; `STOP_S` = `5` | `21` |
+| `21` | `M=6` | `START_S` = `6`; `STOP_S` = `6` | `21` |
+| `21` | `M=7` | `START_S` = `7`; `STOP_S` = `7` | `21` |
+| `21` | `M=8` | `START_S` = `8`; `STOP_S` = `8` | `21` |
+| `21` | `M=9` | `START_S` = `9`; `STOP_S` = `9` | `21` |
+| `21` | `LIV1=0; LIV2=0` | `LEVEL` = `0` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=1` | `LEVEL` = `1` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=2` | `LEVEL` = `2` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=3` | `LEVEL` = `3` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=4` | `LEVEL` = `4` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=5` | `LEVEL` = `5` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=6` | `LEVEL` = `6` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=7` | `LEVEL` = `7` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=8` | `LEVEL` = `8` | `21` → `45` |
+| `21` | `LIV1=0; LIV2=9` | `LEVEL` = `9` | `21` → `45` |
+| `21` | `LIV1=1; LIV2=0` | `LEVEL` = `10` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=1` | `LEVEL` = `11` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=2` | `LEVEL` = `12` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=3` | `LEVEL` = `13` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=4` | `LEVEL` = `14` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=5` | `LEVEL` = `15` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=6` | `LEVEL` = `16` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=7` | `LEVEL` = `17` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=8` | `LEVEL` = `18` | `21` → `46` |
+| `21` | `LIV1=1; LIV2=9` | `LEVEL` = `19` | `21` → `46` |
+| `21` | `LIV1=2; LIV2=0` | `LEVEL` = `20` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=1` | `LEVEL` = `21` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=2` | `LEVEL` = `22` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=3` | `LEVEL` = `23` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=4` | `LEVEL` = `24` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=5` | `LEVEL` = `25` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=6` | `LEVEL` = `26` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=7` | `LEVEL` = `27` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=8` | `LEVEL` = `28` | `21` → `47` |
+| `21` | `LIV1=2; LIV2=9` | `LEVEL` = `29` | `21` → `47` |
+| `21` | `LIV1=3; LIV2=0` | `LEVEL` = `30` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=1` | `LEVEL` = `31` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=2` | `LEVEL` = `32` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=3` | `LEVEL` = `33` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=4` | `LEVEL` = `34` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=5` | `LEVEL` = `35` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=6` | `LEVEL` = `36` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=7` | `LEVEL` = `37` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=8` | `LEVEL` = `38` | `21` → `48` |
+| `21` | `LIV1=3; LIV2=9` | `LEVEL` = `39` | `21` → `48` |
+| `21` | `LIV1=4; LIV2=0` | `LEVEL` = `40` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=1` | `LEVEL` = `41` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=2` | `LEVEL` = `42` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=3` | `LEVEL` = `43` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=4` | `LEVEL` = `44` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=5` | `LEVEL` = `45` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=6` | `LEVEL` = `46` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=7` | `LEVEL` = `47` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=8` | `LEVEL` = `48` | `21` → `49` |
+| `21` | `LIV1=4; LIV2=9` | `LEVEL` = `49` | `21` → `49` |
+| `21` | `LIV1=5; LIV2=0` | `LEVEL` = `50` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=1` | `LEVEL` = `51` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=2` | `LEVEL` = `52` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=3` | `LEVEL` = `53` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=4` | `LEVEL` = `54` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=5` | `LEVEL` = `55` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=6` | `LEVEL` = `56` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=7` | `LEVEL` = `57` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=8` | `LEVEL` = `58` | `21` → `50` |
+| `21` | `LIV1=5; LIV2=9` | `LEVEL` = `59` | `21` → `50` |
+| `21` | `LIV1=6; LIV2=0` | `LEVEL` = `60` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=1` | `LEVEL` = `61` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=2` | `LEVEL` = `62` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=3` | `LEVEL` = `63` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=4` | `LEVEL` = `64` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=5` | `LEVEL` = `65` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=6` | `LEVEL` = `66` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=7` | `LEVEL` = `67` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=8` | `LEVEL` = `68` | `21` → `51` |
+| `21` | `LIV1=6; LIV2=9` | `LEVEL` = `69` | `21` → `51` |
+| `21` | `LIV1=7; LIV2=0` | `LEVEL` = `70` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=1` | `LEVEL` = `71` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=2` | `LEVEL` = `72` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=3` | `LEVEL` = `73` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=4` | `LEVEL` = `74` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=5` | `LEVEL` = `75` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=6` | `LEVEL` = `76` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=7` | `LEVEL` = `77` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=8` | `LEVEL` = `78` | `21` → `52` |
+| `21` | `LIV1=7; LIV2=9` | `LEVEL` = `79` | `21` → `52` |
+| `21` | `LIV1=8; LIV2=0` | `LEVEL` = `80` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=1` | `LEVEL` = `81` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=2` | `LEVEL` = `82` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=3` | `LEVEL` = `83` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=4` | `LEVEL` = `84` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=5` | `LEVEL` = `85` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=6` | `LEVEL` = `86` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=7` | `LEVEL` = `87` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=8` | `LEVEL` = `88` | `21` → `53` |
+| `21` | `LIV1=8; LIV2=9` | `LEVEL` = `89` | `21` → `53` |
+| `21` | `LIV1=9; LIV2=0` | `LEVEL` = `90` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=1` | `LEVEL` = `91` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=2` | `LEVEL` = `92` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=3` | `LEVEL` = `93` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=4` | `LEVEL` = `94` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=5` | `LEVEL` = `95` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=6` | `LEVEL` = `96` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=7` | `LEVEL` = `97` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=8` | `LEVEL` = `98` | `21` → `54` |
+| `21` | `LIV1=9; LIV2=9` | `LEVEL` = `99` | `21` → `54` |
+| `22` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `22` |
+| `22` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `22` |
+| `22` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `22` |
+| `22` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `22` |
+| `22` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `22` |
+| `22` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `22` |
+| `22` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `22` |
+| `22` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `22` |
+| `22` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `22` |
+| `22` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `22` |
+| `22` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `22` |
+| `22` | `SPE=5` | `M` = `129` | `22` |
+| `22` | `SPE=9` | `M` = `130` | `22` |
+| `22` | `M=0` | `START_S` = `0`; `STOP_S` = `0` | `22` |
+| `22` | `M=1` | `START_S` = `1`; `STOP_S` = `1` | `22` |
+| `22` | `M=2` | `START_S` = `2`; `STOP_S` = `2` | `22` |
+| `22` | `M=3` | `START_S` = `3`; `STOP_S` = `3` | `22` |
+| `22` | `M=4` | `START_S` = `4`; `STOP_S` = `4` | `22` |
+| `22` | `M=5` | `START_S` = `5`; `STOP_S` = `5` | `22` |
+| `22` | `M=6` | `START_S` = `6`; `STOP_S` = `6` | `22` |
+| `22` | `M=7` | `START_S` = `7`; `STOP_S` = `7` | `22` |
+| `22` | `M=8` | `START_S` = `8`; `STOP_S` = `8` | `22` |
+| `22` | `M=9` | `START_S` = `9`; `STOP_S` = `9` | `22` |
+| `23` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `23` |
+| `23` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `23` |
+| `23` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `23` |
+| `23` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `23` |
+| `23` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `23` |
+| `23` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `23` |
+| `23` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `23` |
+| `23` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `23` |
+| `23` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `23` |
+| `23` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `23` |
+| `23` | `M=1` | `M` = `1` | `23` |
+| `23` | `M=2` | `M` = `2` | `23` |
+| `23` | `M=3` | `M` = `3` | `23` |
+| `24` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `24` |
+| `24` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `24` |
+| `24` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `24` |
+| `24` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `24` |
+| `24` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `24` |
+| `24` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `24` |
+| `24` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `24` |
+| `24` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `24` |
+| `24` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `24` |
+| `24` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `24` |
+| `24` | `M=0` | `FOLLOW` = `1` | `24` |
+| `24` | `M=0; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `24` → `1` |
+| `24` | `M=0; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `24` → `1` |
+| `24` | `M=0; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `24` → `1` |
+| `24` | `M=1` | `FOLLOW` = `0`; `SOURCE` = `1` | `24` |
+| `24` | `M=1; M=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `24` → `2` |
+| `24` | `M=1; M=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `24` → `2` |
+| `24` | `M=1; M=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `24` → `2` |
+| `24` | `M=1; M=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `24` → `2` |
+| `24` | `M=1; M=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `24` → `2` |
+| `24` | `M=1; M=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `24` → `2` |
+| `24` | `M=1; M=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `24` → `2` |
+| `24` | `M=1; M=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `24` → `2` |
+| `24` | `M=1; M=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `24` → `2` |
+| `24` | `M=1; M=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `24` → `2` |
+| `24` | `M=1; M=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `24` → `2` |
+| `24` | `M=1; M=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `24` → `2` |
+| `24` | `M=1; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `24` → `2` |
+| `24` | `M=2` | `FOLLOW` = `0`; `SOURCE` = `2` | `24` |
+| `24` | `M=2; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `24` → `3` |
+| `24` | `M=2; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `24` → `3` |
+| `24` | `M=2; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `24` → `3` |
+| `24` | `M=3` | `FOLLOW` = `0`; `SOURCE` = `3` | `24` |
+| `24` | `M=3; M1=0` | `M` = `0` | `24` → `4` |
+| `24` | `M=3; M1=1` | `M` = `1`; `T_TIME ` = `1` | `24` → `4` |
+| `24` | `M=3; M1=2` | `M` = `1`; `T_TIME ` = `2` | `24` → `4` |
+| `24` | `M=3; M1=3` | `M` = `1`; `T_TIME ` = `3` | `24` → `4` |
+| `24` | `M=3; M1=4` | `M` = `1`; `T_TIME ` = `4` | `24` → `4` |
+| `24` | `M=3; M1=5` | `M` = `1`; `T_TIME ` = `5` | `24` → `4` |
+| `24` | `M=3; M1=6` | `M` = `1`; `T_TIME ` = `6` | `24` → `4` |
+| `24` | `M=3; M1=7` | `M` = `1`; `T_TIME ` = `7` | `24` → `4` |
+| `24` | `M=3; M1=8` | `M` = `1`; `T_TIME ` = `8` | `24` → `4` |
+| `24` | `M=3; M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `24` → `4` |
+| `24` | `M=3; M1=O/I` | `M` = `9` | `24` → `4` |
+| `24` | `M=3; M1=OFF` | `M` = `10` | `24` → `4` |
+| `24` | `M=3; M1=ON` | `M` = `11` | `24` → `4` |
+| `24` | `M=3; M1=PUL` | `M` = `15` | `24` → `4` |
+| `24` | `M=3; M1=SU_GIU` | `M` = `12` | `24` → `4` |
+| `24` | `M=3; M1=SU_GIU_M` | `M` = `13` | `24` → `4` |
+| `24` | `M=3; M2=0` | `M` = `0` | `24` → `4` |
+| `24` | `M=3; M2=1` | `M` = `1`; `T_TIME ` = `1` | `24` → `4` |
+| `24` | `M=3; M2=2` | `M` = `1`; `T_TIME ` = `2` | `24` → `4` |
+| `24` | `M=3; M2=3` | `M` = `1`; `T_TIME ` = `3` | `24` → `4` |
+| `24` | `M=3; M2=4` | `M` = `1`; `T_TIME ` = `4` | `24` → `4` |
+| `24` | `M=3; M2=5` | `M` = `1`; `T_TIME ` = `5` | `24` → `4` |
+| `24` | `M=3; M2=6` | `M` = `1`; `T_TIME ` = `6` | `24` → `4` |
+| `24` | `M=3; M2=7` | `M` = `1`; `T_TIME ` = `7` | `24` → `4` |
+| `24` | `M=3; M2=8` | `M` = `1`; `T_TIME ` = `8` | `24` → `4` |
+| `24` | `M=3; M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `24` → `4` |
+| `24` | `M=3; M2=O/I` | `M` = `9` | `24` → `4` |
+| `24` | `M=3; M2=OFF` | `M` = `10` | `24` → `4` |
+| `24` | `M=3; M2=ON` | `M` = `11` | `24` → `4` |
+| `24` | `M=3; M2=PUL` | `M` = `15` | `24` → `4` |
+| `24` | `M=3; M2=SU_GIU` | `M` = `12` | `24` → `4` |
+| `24` | `M=3; M2=SU_GIU_M` | `M` = `13` | `24` → `4` |
+| `24` | `M=4` | `FOLLOW` = `0`; `SOURCE` = `4` | `24` |
+| `24` | `M=4; M1=0` | `M` = `0` | `24` → `5` |
+| `24` | `M=4; M1=O/I` | `M` = `9` | `24` → `5` |
+| `24` | `M=4; M1=OFF` | `M` = `10` | `24` → `5` |
+| `24` | `M=4; M1=ON` | `M` = `11` | `24` → `5` |
+| `24` | `M=4; M1=PUL` | `M` = `15` | `24` → `5` |
+| `24` | `M=4; M1=SU_GIU` | `M` = `12` | `24` → `5` |
+| `24` | `M=4; M1=SU_GIU_M` | `M` = `13` | `24` → `5` |
+| `24` | `M=4; M2=0` | `M` = `0` | `24` → `5` |
+| `24` | `M=4; M2=O/I` | `M` = `9` | `24` → `5` |
+| `24` | `M=4; M2=OFF` | `M` = `10` | `24` → `5` |
+| `24` | `M=4; M2=ON` | `M` = `11` | `24` → `5` |
+| `24` | `M=4; M2=PUL` | `M` = `15` | `24` → `5` |
+| `24` | `M=4; M2=SU_GIU` | `M` = `12` | `24` → `5` |
+| `24` | `M=4; M2=SU_GIU_M` | `M` = `13` | `24` → `5` |
+| `24` | `M=4; PL1=0` | `OUT_AUX_CHANNEL` = `0` | `24` → `5` |
+| `24` | `M=4; PL1=1` | `OUT_AUX_CHANNEL` = `1` | `24` → `5` |
+| `24` | `M=4; PL1=2` | `OUT_AUX_CHANNEL` = `2` | `24` → `5` |
+| `24` | `M=4; PL1=3` | `OUT_AUX_CHANNEL` = `3` | `24` → `5` |
+| `24` | `M=4; PL1=4` | `OUT_AUX_CHANNEL` = `4` | `24` → `5` |
+| `24` | `M=4; PL1=5` | `OUT_AUX_CHANNEL` = `5` | `24` → `5` |
+| `24` | `M=4; PL1=6` | `OUT_AUX_CHANNEL` = `6` | `24` → `5` |
+| `24` | `M=4; PL1=7` | `OUT_AUX_CHANNEL` = `7` | `24` → `5` |
+| `24` | `M=4; PL1=8` | `OUT_AUX_CHANNEL` = `8` | `24` → `5` |
+| `24` | `M=4; PL1=9` | `OUT_AUX_CHANNEL` = `9` | `24` → `5` |
+| `24` | `M=4; PL2=0` | `OUT_AUX_CHANNEL` = `0` | `24` → `5` |
+| `24` | `M=4; PL2=1` | `OUT_AUX_CHANNEL` = `1` | `24` → `5` |
+| `24` | `M=4; PL2=2` | `OUT_AUX_CHANNEL` = `2` | `24` → `5` |
+| `24` | `M=4; PL2=3` | `OUT_AUX_CHANNEL` = `3` | `24` → `5` |
+| `24` | `M=4; PL2=4` | `OUT_AUX_CHANNEL` = `4` | `24` → `5` |
+| `24` | `M=4; PL2=5` | `OUT_AUX_CHANNEL` = `5` | `24` → `5` |
+| `24` | `M=4; PL2=6` | `OUT_AUX_CHANNEL` = `6` | `24` → `5` |
+| `24` | `M=4; PL2=7` | `OUT_AUX_CHANNEL` = `7` | `24` → `5` |
+| `24` | `M=4; PL2=8` | `OUT_AUX_CHANNEL` = `8` | `24` → `5` |
+| `24` | `M=4; PL2=9` | `OUT_AUX_CHANNEL` = `9` | `24` → `5` |
+| `24` | `M=5` | `FOLLOW` = `0`; `SOURCE` = `5` | `24` |
+| `24` | `M=5; M=3` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `24` → `6` |
+| `24` | `M=5; M=4` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `24` → `6` |
+| `24` | `M=5; M=5` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `24` → `6` |
+| `24` | `M=5; M=6` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `24` → `6` |
+| `24` | `M=5; M=7` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `24` → `6` |
+| `24` | `M=5; M=8` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `24` → `6` |
+| `24` | `M=5; S=0` | `PIR` = `0` | `24` → `6` |
+| `24` | `M=5; S=1` | `PIR` = `1` | `24` → `6` |
+| `24` | `M=5; S=2` | `PIR` = `2` | `24` → `6` |
+| `24` | `M=5; S=3` | `PIR` = `3` | `24` → `6` |
+| `24` | `M=5; T=0` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=1` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `30` | `24` → `6` |
+| `24` | `M=5; T=2` | `HOURS` = `0`; `MINUTES` = `1`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=3` | `HOURS` = `0`; `MINUTES` = `2`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=4` | `HOURS` = `0`; `MINUTES` = `5`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=5` | `HOURS` = `0`; `MINUTES` = `10`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=6` | `HOURS` = `0`; `MINUTES` = `15`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=7` | `HOURS` = `0`; `MINUTES` = `20`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=8` | `HOURS` = `0`; `MINUTES` = `30`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; T=9` | `HOURS` = `0`; `MINUTES` = `40`; `SECONDS` = `0` | `24` → `6` |
+| `24` | `M=5; M=0` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1` | `24` → `6` |
+| `24` | `M=5; M=1` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `0` | `24` → `6` |
+| `24` | `M=6` | `FOLLOW` = `0`; `SOURCE` = `6` | `24` |
+| `24` | `M=6` | Referenced conversion rule absent from source | `24` → `7` |
+| `24` | `M=7` | `FOLLOW` = `0`; `SOURCE` = `7` | `24` |
+| `24` | `M=7` | Referenced conversion rule absent from source | `24` → `8` |
+| `24` | `M=8` | `FOLLOW` = `0`; `SOURCE` = `8` | `24` |
+| `24` | `M=8; M=0` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `24` → `9` |
+| `24` | `M=8; M=1` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `24` → `9` |
+| `24` | `M=8; M=2` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `25` | `24` → `9` |
+| `24` | `M=8; M=3` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `24` → `9` |
+| `24` | `M=8; M=PUL` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `20` | `24` → `9` |
+| `24` | `M=8; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `24` → `9` |
+| `24` | `M=9` | `FOLLOW` = `0`; `SOURCE` = `9` | `24` |
+| `24` | `M=9; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `10` |
+| `24` | `M=9; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `24` → `10` |
+| `24` | `M=9; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `24` → `10` |
+| `24` | `M=1; L=0` | `MIN_LEVEL` = `1`; `TYPE_STANDARD` = `0` | `24` → `11` |
+| `24` | `M=1; L=1` | `MIN_LEVEL` = `13`; `TYPE_STANDARD` = `0` | `24` → `11` |
+| `24` | `M=1; L=2` | `MIN_LEVEL` = `25`; `TYPE_STANDARD` = `0` | `24` → `11` |
+| `24` | `M=1; L=3` | `MIN_LEVEL` = `1`; `TYPE_STANDARD` = `1` | `24` → `11` |
+| `24` | `M=1; L=4` | `MIN_LEVEL` = `3`; `TYPE_STANDARD` = `1` | `24` → `11` |
+| `24` | `M=1; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `11` |
+| `24` | `M=1; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `11` |
+| `24` | `M=1; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `11` |
+| `24` | `M=1; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `11` |
+| `24` | `M=1; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `24` → `11` |
+| `24` | `M=1; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `24` → `11` |
+| `24` | `M=1; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `24` → `11` |
+| `24` | `M=1; TY=0` | `TYPE_LOAD` = `5` | `24` → `11` |
+| `24` | `M=1; TY=1` | `TYPE_LOAD` = `6` | `24` → `11` |
+| `24` | `M=2; M=1` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `1`; `SCENARIO_BUTTON_2` = `3` | `24` → `12` |
+| `24` | `M=2; M=2` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `5`; `SCENARIO_BUTTON_2` = `7` | `24` → `12` |
+| `24` | `M=2; M=3` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `9`; `SCENARIO_BUTTON_2` = `11` | `24` → `12` |
+| `24` | `M=2; M=4` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `13`; `SCENARIO_BUTTON_2` = `15` | `24` → `12` |
+| `24` | `M=2; N=0` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `12` |
+| `24` | `M=2; N=1; DEL=0` | `DELAY_BUTTON_1` = `0` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=1` | `DELAY_BUTTON_1` = `60` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=2` | `DELAY_BUTTON_1` = `62` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=3` | `DELAY_BUTTON_1` = `63` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=4` | `DELAY_BUTTON_1` = `64` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=5` | `DELAY_BUTTON_1` = `65` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=6` | `DELAY_BUTTON_1` = `70` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=7` | `DELAY_BUTTON_1` = `71` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=8` | `DELAY_BUTTON_1` = `15` | `24` → `12` → `16` |
+| `24` | `M=2; N=1; DEL=9` | `DELAY_BUTTON_1` = `30` | `24` → `12` → `16` |
+| `24` | `M=2; N=1` | `DELAY_BUTTON_2` = `0` | `24` → `12` |
+| `24` | `M=2; N=2` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `12` |
+| `24` | `M=2; N=3` | `DELAY_BUTTON_1` = `0` | `24` → `12` |
+| `24` | `M=2; N=3; DEL=0` | `DELAY_BUTTON_2` = `0` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=1` | `DELAY_BUTTON_2` = `60` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=2` | `DELAY_BUTTON_2` = `62` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=3` | `DELAY_BUTTON_2` = `63` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=4` | `DELAY_BUTTON_2` = `64` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=5` | `DELAY_BUTTON_2` = `65` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=6` | `DELAY_BUTTON_2` = `70` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=7` | `DELAY_BUTTON_2` = `71` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=8` | `DELAY_BUTTON_2` = `15` | `24` → `12` → `19` |
+| `24` | `M=2; N=3; DEL=9` | `DELAY_BUTTON_2` = `30` | `24` → `12` → `19` |
+| `24` | `M=2; N=4` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `12` |
+| `24` | `M=2; N=5; DEL=0` | `DELAY_BUTTON_1` = `0` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=1` | `DELAY_BUTTON_1` = `60` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=2` | `DELAY_BUTTON_1` = `62` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=3` | `DELAY_BUTTON_1` = `63` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=4` | `DELAY_BUTTON_1` = `64` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=5` | `DELAY_BUTTON_1` = `65` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=6` | `DELAY_BUTTON_1` = `70` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=7` | `DELAY_BUTTON_1` = `71` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=8` | `DELAY_BUTTON_1` = `15` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=9` | `DELAY_BUTTON_1` = `30` | `24` → `12` → `16` |
+| `24` | `M=2; N=5; DEL=0` | `DELAY_BUTTON_2` = `0` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=1` | `DELAY_BUTTON_2` = `60` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=2` | `DELAY_BUTTON_2` = `62` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=3` | `DELAY_BUTTON_2` = `63` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=4` | `DELAY_BUTTON_2` = `64` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=5` | `DELAY_BUTTON_2` = `65` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=6` | `DELAY_BUTTON_2` = `70` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=7` | `DELAY_BUTTON_2` = `71` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=8` | `DELAY_BUTTON_2` = `15` | `24` → `12` → `19` |
+| `24` | `M=2; N=5; DEL=9` | `DELAY_BUTTON_2` = `30` | `24` → `12` → `19` |
+| `24` | `M=3; M=1` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `2`; `SCENARIO_BUTTON_2` = `4` | `24` → `13` |
+| `24` | `M=3; M=2` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `6`; `SCENARIO_BUTTON_2` = `8` | `24` → `13` |
+| `24` | `M=3; M=3` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `10`; `SCENARIO_BUTTON_2` = `12` | `24` → `13` |
+| `24` | `M=3; M=4` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `14`; `SCENARIO_BUTTON_2` = `16` | `24` → `13` |
+| `24` | `M=3; N=0` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `13` |
+| `24` | `M=3; N=1` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `13` |
+| `24` | `M=3; N=2; DEL=0` | `DELAY_BUTTON_1` = `0` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=1` | `DELAY_BUTTON_1` = `60` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=2` | `DELAY_BUTTON_1` = `62` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=3` | `DELAY_BUTTON_1` = `63` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=4` | `DELAY_BUTTON_1` = `64` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=5` | `DELAY_BUTTON_1` = `65` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=6` | `DELAY_BUTTON_1` = `70` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=7` | `DELAY_BUTTON_1` = `71` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=8` | `DELAY_BUTTON_1` = `15` | `24` → `13` → `16` |
+| `24` | `M=3; N=2; DEL=9` | `DELAY_BUTTON_1` = `30` | `24` → `13` → `16` |
+| `24` | `M=3; N=2` | `DELAY_BUTTON_2` = `0` | `24` → `13` |
+| `24` | `M=3; N=3` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `24` → `13` |
+| `24` | `M=3; N=4` | `DELAY_BUTTON_1` = `0` | `24` → `13` |
+| `24` | `M=3; N=4; DEL=0` | `DELAY_BUTTON_2` = `0` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=1` | `DELAY_BUTTON_2` = `60` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=2` | `DELAY_BUTTON_2` = `62` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=3` | `DELAY_BUTTON_2` = `63` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=4` | `DELAY_BUTTON_2` = `64` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=5` | `DELAY_BUTTON_2` = `65` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=6` | `DELAY_BUTTON_2` = `70` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=7` | `DELAY_BUTTON_2` = `71` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=8` | `DELAY_BUTTON_2` = `15` | `24` → `13` → `19` |
+| `24` | `M=3; N=4; DEL=9` | `DELAY_BUTTON_2` = `30` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=0` | `DELAY_BUTTON_1` = `0` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=1` | `DELAY_BUTTON_1` = `60` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=2` | `DELAY_BUTTON_1` = `62` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=3` | `DELAY_BUTTON_1` = `63` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=4` | `DELAY_BUTTON_1` = `64` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=5` | `DELAY_BUTTON_1` = `65` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=6` | `DELAY_BUTTON_1` = `70` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=7` | `DELAY_BUTTON_1` = `71` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=8` | `DELAY_BUTTON_1` = `15` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=9` | `DELAY_BUTTON_1` = `30` | `24` → `13` → `16` |
+| `24` | `M=3; N=5; DEL=0` | `DELAY_BUTTON_2` = `0` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=1` | `DELAY_BUTTON_2` = `60` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=2` | `DELAY_BUTTON_2` = `62` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=3` | `DELAY_BUTTON_2` = `63` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=4` | `DELAY_BUTTON_2` = `64` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=5` | `DELAY_BUTTON_2` = `65` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=6` | `DELAY_BUTTON_2` = `70` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=7` | `DELAY_BUTTON_2` = `71` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=8` | `DELAY_BUTTON_2` = `15` | `24` → `13` → `19` |
+| `24` | `M=3; N=5; DEL=9` | `DELAY_BUTTON_2` = `30` | `24` → `13` → `19` |
+| `24` | `M=4` | Referenced conversion rule absent from source | `24` → `14` |
+| `24` | `M=5` | Referenced conversion rule absent from source | `24` → `15` |
+| `24` | `M=6; DEL=0` | `DELAY_BUTTON_1` = `0` | `24` → `16` |
+| `24` | `M=6; DEL=1` | `DELAY_BUTTON_1` = `60` | `24` → `16` |
+| `24` | `M=6; DEL=2` | `DELAY_BUTTON_1` = `62` | `24` → `16` |
+| `24` | `M=6; DEL=3` | `DELAY_BUTTON_1` = `63` | `24` → `16` |
+| `24` | `M=6; DEL=4` | `DELAY_BUTTON_1` = `64` | `24` → `16` |
+| `24` | `M=6; DEL=5` | `DELAY_BUTTON_1` = `65` | `24` → `16` |
+| `24` | `M=6; DEL=6` | `DELAY_BUTTON_1` = `70` | `24` → `16` |
+| `24` | `M=6; DEL=7` | `DELAY_BUTTON_1` = `71` | `24` → `16` |
+| `24` | `M=6; DEL=8` | `DELAY_BUTTON_1` = `15` | `24` → `16` |
+| `24` | `M=6; DEL=9` | `DELAY_BUTTON_1` = `30` | `24` → `16` |
+| `24` | `M=7; M1=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `1`; `CEN_BUTT_2` = `3` | `24` → `17` |
+| `24` | `M=8; M2=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `2`; `CEN_BUTT_2` = `4` | `24` → `18` |
+| `24` | `M=9; DEL=0` | `DELAY_BUTTON_2` = `0` | `24` → `19` |
+| `24` | `M=9; DEL=1` | `DELAY_BUTTON_2` = `60` | `24` → `19` |
+| `24` | `M=9; DEL=2` | `DELAY_BUTTON_2` = `62` | `24` → `19` |
+| `24` | `M=9; DEL=3` | `DELAY_BUTTON_2` = `63` | `24` → `19` |
+| `24` | `M=9; DEL=4` | `DELAY_BUTTON_2` = `64` | `24` → `19` |
+| `24` | `M=9; DEL=5` | `DELAY_BUTTON_2` = `65` | `24` → `19` |
+| `24` | `M=9; DEL=6` | `DELAY_BUTTON_2` = `70` | `24` → `19` |
+| `24` | `M=9; DEL=7` | `DELAY_BUTTON_2` = `71` | `24` → `19` |
+| `24` | `M=9; DEL=8` | `DELAY_BUTTON_2` = `15` | `24` → `19` |
+| `24` | `M=9; DEL=9` | `DELAY_BUTTON_2` = `30` | `24` → `19` |
+| `30` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `30` |
+| `30` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `30` |
+| `30` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `30` |
+| `30` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `30` |
+| `30` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `30` |
+| `30` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `30` |
+| `30` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `30` |
+| `30` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `30` |
+| `30` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `30` |
+| `30` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `30` |
+| `30` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `30` |
+| `30` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `30` |
+| `30` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `30` |
+| `30` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `30` |
+| `30` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `30` |
+| `30` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `30` |
+| `30` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `30` |
+| `30` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `30` |
+| `30` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `30` |
+| `30` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `30` |
+| `30` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `30` |
+| `30` | `M=0` | `M` = `0` | `30` |
+| `30` | `M=1` | `M` = `1`; `T_TIME ` = `1` | `30` |
+| `30` | `M=2` | `M` = `1`; `T_TIME ` = `2` | `30` |
+| `30` | `M=3` | `M` = `1`; `T_TIME ` = `3` | `30` |
+| `30` | `M=4` | `M` = `1`; `T_TIME ` = `4` | `30` |
+| `30` | `M=5` | `M` = `1`; `T_TIME ` = `5` | `30` |
+| `30` | `M=6` | `M` = `1`; `T_TIME ` = `6` | `30` |
+| `30` | `M=7` | `M` = `1`; `T_TIME ` = `7` | `30` |
+| `30` | `M=8` | `M` = `1`; `T_TIME ` = `8` | `30` |
+| `30` | `M=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `30` |
+| `30` | `M=O/I` | `M` = `9` | `30` |
+| `30` | `M=OFF` | `M` = `10` | `30` |
+| `30` | `M=ON` | `M` = `11` | `30` |
+| `30` | `M=PUL` | `M` = `15` | `30` |
+| `30` | `M=SU_GIU` | `M` = `12` | `30` |
+| `30` | `M=SU_GIU_M` | `M` = `13` | `30` |
+| `34` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `34` |
+| `34` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `34` |
+| `34` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `34` |
+| `34` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `34` |
+| `34` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `34` |
+| `34` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `34` |
+| `34` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `34` |
+| `34` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `34` |
+| `34` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `34` |
+| `34` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `34` |
+| `34` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `34` |
+| `34` | `M=1` | `M` = `0`; `SCENARIO_BUTTON_1` = `1`; `SCENARIO_BUTTON_2` = `3` | `34` |
+| `34` | `M=2` | `M` = `0`; `SCENARIO_BUTTON_1` = `5`; `SCENARIO_BUTTON_2` = `7` | `34` |
+| `34` | `M=3` | `M` = `0`; `SCENARIO_BUTTON_1` = `9`; `SCENARIO_BUTTON_2` = `11` | `34` |
+| `34` | `M=4` | `M` = `0`; `SCENARIO_BUTTON_1` = `13`; `SCENARIO_BUTTON_2` = `15` | `34` |
+| `35` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `35` |
+| `35` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `35` |
+| `35` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `35` |
+| `35` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `35` |
+| `35` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `35` |
+| `35` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `35` |
+| `35` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `35` |
+| `35` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `35` |
+| `35` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `35` |
+| `35` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `35` |
+| `35` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `35` |
+| `35` | `M=1` | `M` = `0`; `SCENARIO_BUTTON_1` = `2`; `SCENARIO_BUTTON_2` = `4` | `35` |
+| `35` | `M=2` | `M` = `0`; `SCENARIO_BUTTON_1` = `6`; `SCENARIO_BUTTON_2` = `8` | `35` |
+| `35` | `M=3` | `M` = `0`; `SCENARIO_BUTTON_1` = `10`; `SCENARIO_BUTTON_2` = `12` | `35` |
+| `35` | `M=4` | `M` = `0`; `SCENARIO_BUTTON_1` = `14`; `SCENARIO_BUTTON_2` = `16` | `35` |
+| `36` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `36` |
+| `36` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `36` |
+| `36` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `36` |
+| `36` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `36` |
+| `36` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `36` |
+| `36` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `36` |
+| `36` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `36` |
+| `36` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `36` |
+| `36` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `36` |
+| `36` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `36` |
+| `36` | `M=0` | `M` = `0` | `36` |
+| `36` | `M=O/I` | `M` = `9` | `36` |
+| `36` | `M=OFF` | `M` = `10` | `36` |
+| `36` | `M=ON` | `M` = `11` | `36` |
+| `36` | `M=PUL` | `M` = `15` | `36` |
+| `36` | `M=SU_GIU` | `M` = `12` | `36` |
+| `36` | `M=SU_GIU_M` | `M` = `13` | `36` |
+| `37` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `37` |
+| `37` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `37` |
+| `37` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `37` |
+| `37` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `37` |
+| `37` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `37` |
+| `37` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `37` |
+| `37` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `37` |
+| `37` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `37` |
+| `37` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `37` |
+| `37` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `37` |
+| `37` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `37` |
+| `37` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `37` |
+| `37` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `37` |
+| `37` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `37` |
+| `37` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `37` |
+| `37` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `37` |
+| `37` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `37` |
+| `37` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `37` |
+| `37` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `37` |
+| `37` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `37` |
+| `37` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `37` |
+| `37` | `M=1` | `M` = `1` | `37` |
+| `37` | `M=2` | `M` = `2` | `37` |
+| `37` | `M=3` | `M` = `3` | `37` |
+| `38` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `38` |
+| `38` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `38` |
+| `38` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `38` |
+| `38` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `38` |
+| `38` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `38` |
+| `38` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `38` |
+| `38` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `38` |
+| `38` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `38` |
+| `38` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `38` |
+| `38` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `38` |
+| `38` | `M=1` | `M` = `1` | `38` |
+| `38` | `M=2` | `M` = `2` | `38` |
+| `38` | `M=3` | `M` = `3` | `38` |
+| `38` | `M=4` | `M` = `4` | `38` |
+| `38` | `M=5` | `M` = `5` | `38` |
+| `38` | `M=6` | `M` = `6` | `38` |
+| `38` | `M=7` | `M` = `1`; `T_TIME ` = `9` | `38` |
+| `38` | `M=8` | `M` = `1`; `T_TIME ` = `10` | `38` |
+| `39` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `39` |
+| `39` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `39` |
+| `39` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `39` |
+| `39` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `39` |
+| `39` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `39` |
+| `39` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `39` |
+| `39` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `39` |
+| `39` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `39` |
+| `39` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `39` |
+| `39` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `39` |
+| `39` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `39` |
+| `39` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `39` |
+| `39` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `39` |
+| `39` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `39` |
+| `39` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `39` |
+| `39` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `39` |
+| `39` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `39` |
+| `39` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `39` |
+| `39` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `39` |
+| `39` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `39` |
+| `39` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `39` |
+| `39` | `M=0` | `M` = `32` | `39` |
+| `39` | `M=1` | `M` = `33` | `39` |
+| `39` | `M=2` | `M` = `34` | `39` |
+| `39` | `M=3` | `M` = `35` | `39` |
+| `39` | `M=4` | `M` = `36` | `39` |
+| `39` | `M=5` | `M` = `37` | `39` |
+| `39` | `M=6` | `M` = `38` | `39` |
+| `39` | `M=7` | `M` = `39` | `39` |
+| `39` | `M=8` | `M` = `40` | `39` |
+| `39` | `M=9` | `M` = `41` | `39` |
+| `39` | `M=10` | `M` = `42` | `39` |
+| `39` | `M=11` | `M` = `43` | `39` |
+| `39` | `M=12` | `M` = `44` | `39` |
+| `39` | `M=13` | `M` = `45` | `39` |
+| `39` | `M=14` | `M` = `46` | `39` |
+| `39` | `M=15` | `M` = `47` | `39` |
+| `40` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `40` |
+| `40` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `40` |
+| `40` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `40` |
+| `40` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `40` |
+| `40` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `5` | `40` |
+| `40` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `40` |
+| `40` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `40` |
+| `40` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `40` |
+| `40` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `40` |
+| `40` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `40` |
+| `40` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `40` |
+| `40` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `40` |
+| `40` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `40` |
+| `40` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `40` |
+| `40` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `40` |
+| `40` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `40` |
+| `40` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `40` |
+| `40` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `40` |
+| `40` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `40` |
+| `40` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `40` |
+| `40` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `40` |
+| `40` | `M=0` | `M` = `49` | `40` |
+| `40` | `M=1` | `M` = `50` | `40` |
+| `40` | `M=2` | `M` = `51` | `40` |
+| `40` | `M=3` | `M` = `52` | `40` |
+| `40` | `M=4` | `M` = `53` | `40` |
+| `40` | `M=5` | `M` = `54` | `40` |
+| `40` | `M=6` | `M` = `55` | `40` |
+| `40` | `M=7` | `M` = `56` | `40` |
+| `40` | `M=8` | `M` = `57` | `40` |
+| `40` | `M=9` | `M` = `58` | `40` |
+| `41` | `M=1` | `M` = `1`; `SCENARIO_BUTTON_1` = `1`; `SCENARIO_BUTTON_2` = `1` | `41` |
+| `41` | `M=2` | `M` = `1`; `SCENARIO_BUTTON_1` = `2`; `SCENARIO_BUTTON_2` = `2` | `41` |
+| `41` | `M=3` | `M` = `1`; `SCENARIO_BUTTON_1` = `3`; `SCENARIO_BUTTON_2` = `3` | `41` |
+| `41` | `M=4` | `M` = `1`; `SCENARIO_BUTTON_1` = `4`; `SCENARIO_BUTTON_2` = `4` | `41` |
+| `41` | `M=5` | `M` = `1`; `SCENARIO_BUTTON_1` = `5`; `SCENARIO_BUTTON_2` = `5` | `41` |
+| `41` | `M=6` | `M` = `1`; `SCENARIO_BUTTON_1` = `6`; `SCENARIO_BUTTON_2` = `6` | `41` |
+| `41` | `M=7` | `M` = `1`; `SCENARIO_BUTTON_1` = `7`; `SCENARIO_BUTTON_2` = `7` | `41` |
+| `41` | `M=8` | `M` = `1`; `SCENARIO_BUTTON_1` = `8`; `SCENARIO_BUTTON_2` = `8` | `41` |
+| `41` | `M=9` | `M` = `1`; `SCENARIO_BUTTON_1` = `9`; `SCENARIO_BUTTON_2` = `9` | `41` |
+| `41` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `41` |
+| `41` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `41` |
+| `41` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `41` |
+| `41` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `41` |
+| `41` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `41` |
+| `41` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `41` |
+| `41` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `41` |
+| `41` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `41` |
+| `41` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `41` |
+| `41` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `41` |
+| `41` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `41` |
+| `42` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `42` |
+| `42` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=2` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=3` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=4` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=5` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=6` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=7` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=8` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=9` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `42` |
+| `42` | `I=CEN` | `INST_LEV` = `0`; `DEST_LEV` = `1` | `42` |
+| `42` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `42` |
+| `42` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `42` |
+| `42` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `42` |
+| `42` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `42` |
+| `42` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `42` |
+| `42` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `42` |
+| `42` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `42` |
+| `42` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `42` |
+| `42` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `42` |
+| `42` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `42` |
+| `42` | `SPE=ON` | `M` = `128`; `HOURS` = `0` | `42` |
+| `42` | `LIV2=0` | `SECONDS` = `0` | `42` |
+| `42` | `LIV2=1` | `SECONDS` = `5` | `42` |
+| `42` | `LIV2=2` | `SECONDS` = `10` | `42` |
+| `42` | `LIV2=3` | `SECONDS` = `15` | `42` |
+| `42` | `LIV2=4` | `SECONDS` = `20` | `42` |
+| `42` | `LIV2=5` | `SECONDS` = `25` | `42` |
+| `42` | `LIV2=6` | `SECONDS` = `30` | `42` |
+| `42` | `LIV2=7` | `SECONDS` = `35` | `42` |
+| `42` | `LIV2=8` | `SECONDS` = `40` | `42` |
+| `42` | `LIV2=9` | `SECONDS` = `45` | `42` |
+| `42` | `M=0; LIV1=0` | `LEVEL` = `0` | `42` → `55` |
+| `42` | `M=0; LIV1=1` | `LEVEL` = `1` | `42` → `55` |
+| `42` | `M=0; LIV1=2` | `LEVEL` = `2` | `42` → `55` |
+| `42` | `M=0; LIV1=3` | `LEVEL` = `3` | `42` → `55` |
+| `42` | `M=0; LIV1=4` | `LEVEL` = `4` | `42` → `55` |
+| `42` | `M=0; LIV1=5` | `LEVEL` = `5` | `42` → `55` |
+| `42` | `M=0; LIV1=6` | `LEVEL` = `6` | `42` → `55` |
+| `42` | `M=0; LIV1=7` | `LEVEL` = `7` | `42` → `55` |
+| `42` | `M=0; LIV1=8` | `LEVEL` = `8` | `42` → `55` |
+| `42` | `M=0; LIV1=9` | `LEVEL` = `9` | `42` → `55` |
+| `42` | `M=1; LIV1=7` | `LEVEL` = `17` | `42` → `56` |
+| `42` | `M=1; LIV1=8` | `LEVEL` = `18` | `42` → `56` |
+| `42` | `M=1; LIV1=9` | `LEVEL` = `19` | `42` → `56` |
+| `42` | `M=1; LIV1=0` | `LEVEL` = `10` | `42` → `56` |
+| `42` | `M=1; LIV1=1` | `LEVEL` = `11` | `42` → `56` |
+| `42` | `M=1; LIV1=2` | `LEVEL` = `12` | `42` → `56` |
+| `42` | `M=1; LIV1=3` | `LEVEL` = `13` | `42` → `56` |
+| `42` | `M=1; LIV1=4` | `LEVEL` = `14` | `42` → `56` |
+| `42` | `M=1; LIV1=5` | `LEVEL` = `15` | `42` → `56` |
+| `42` | `M=1; LIV1=6` | `LEVEL` = `16` | `42` → `56` |
+| `42` | `M=2; LIV1=0` | `LEVEL` = `20` | `42` → `57` |
+| `42` | `M=2; LIV1=1` | `LEVEL` = `21` | `42` → `57` |
+| `42` | `M=2; LIV1=2` | `LEVEL` = `22` | `42` → `57` |
+| `42` | `M=2; LIV1=3` | `LEVEL` = `23` | `42` → `57` |
+| `42` | `M=2; LIV1=4` | `LEVEL` = `24` | `42` → `57` |
+| `42` | `M=2; LIV1=5` | `LEVEL` = `25` | `42` → `57` |
+| `42` | `M=2; LIV1=6` | `LEVEL` = `26` | `42` → `57` |
+| `42` | `M=2; LIV1=7` | `LEVEL` = `27` | `42` → `57` |
+| `42` | `M=2; LIV1=8` | `LEVEL` = `28` | `42` → `57` |
+| `42` | `M=2; LIV1=9` | `LEVEL` = `29` | `42` → `57` |
+| `42` | `M=3; LIV1=0` | `LEVEL` = `30` | `42` → `58` |
+| `42` | `M=3; LIV1=1` | `LEVEL` = `31` | `42` → `58` |
+| `42` | `M=3; LIV1=2` | `LEVEL` = `32` | `42` → `58` |
+| `42` | `M=3; LIV1=3` | `LEVEL` = `33` | `42` → `58` |
+| `42` | `M=3; LIV1=4` | `LEVEL` = `34` | `42` → `58` |
+| `42` | `M=3; LIV1=5` | `LEVEL` = `35` | `42` → `58` |
+| `42` | `M=3; LIV1=6` | `LEVEL` = `36` | `42` → `58` |
+| `42` | `M=3; LIV1=7` | `LEVEL` = `37` | `42` → `58` |
+| `42` | `M=3; LIV1=8` | `LEVEL` = `38` | `42` → `58` |
+| `42` | `M=3; LIV1=9` | `LEVEL` = `39` | `42` → `58` |
+| `42` | `M=4; LIV1=0` | `LEVEL` = `40` | `42` → `59` |
+| `42` | `M=4; LIV1=1` | `LEVEL` = `41` | `42` → `59` |
+| `42` | `M=4; LIV1=2` | `LEVEL` = `42` | `42` → `59` |
+| `42` | `M=4; LIV1=3` | `LEVEL` = `43` | `42` → `59` |
+| `42` | `M=4; LIV1=4` | `LEVEL` = `44` | `42` → `59` |
+| `42` | `M=4; LIV1=5` | `LEVEL` = `45` | `42` → `59` |
+| `42` | `M=4; LIV1=6` | `LEVEL` = `46` | `42` → `59` |
+| `42` | `M=4; LIV1=7` | `LEVEL` = `47` | `42` → `59` |
+| `42` | `M=4; LIV1=8` | `LEVEL` = `48` | `42` → `59` |
+| `42` | `M=4; LIV1=9` | `LEVEL` = `49` | `42` → `59` |
+| `42` | `M=5; LIV1=0` | `LEVEL` = `50` | `42` → `60` |
+| `42` | `M=5; LIV1=1` | `LEVEL` = `51` | `42` → `60` |
+| `42` | `M=5; LIV1=2` | `LEVEL` = `52` | `42` → `60` |
+| `42` | `M=5; LIV1=3` | `LEVEL` = `53` | `42` → `60` |
+| `42` | `M=5; LIV1=4` | `LEVEL` = `54` | `42` → `60` |
+| `42` | `M=5; LIV1=5` | `LEVEL` = `55` | `42` → `60` |
+| `42` | `M=5; LIV1=6` | `LEVEL` = `56` | `42` → `60` |
+| `42` | `M=5; LIV1=7` | `LEVEL` = `57` | `42` → `60` |
+| `42` | `M=5; LIV1=8` | `LEVEL` = `58` | `42` → `60` |
+| `42` | `M=5; LIV1=9` | `LEVEL` = `59` | `42` → `60` |
+| `42` | `M=6; LIV1=0` | `LEVEL` = `60` | `42` → `61` |
+| `42` | `M=6; LIV1=1` | `LEVEL` = `61` | `42` → `61` |
+| `42` | `M=6; LIV1=2` | `LEVEL` = `62` | `42` → `61` |
+| `42` | `M=6; LIV1=3` | `LEVEL` = `63` | `42` → `61` |
+| `42` | `M=6; LIV1=4` | `LEVEL` = `64` | `42` → `61` |
+| `42` | `M=6; LIV1=5` | `LEVEL` = `65` | `42` → `61` |
+| `42` | `M=6; LIV1=6` | `LEVEL` = `66` | `42` → `61` |
+| `42` | `M=6; LIV1=7` | `LEVEL` = `67` | `42` → `61` |
+| `42` | `M=6; LIV1=8` | `LEVEL` = `68` | `42` → `61` |
+| `42` | `M=6; LIV1=9` | `LEVEL` = `69` | `42` → `61` |
+| `42` | `M=7; LIV1=0` | `LEVEL` = `70` | `42` → `62` |
+| `42` | `M=7; LIV1=1` | `LEVEL` = `71` | `42` → `62` |
+| `42` | `M=7; LIV1=2` | `LEVEL` = `72` | `42` → `62` |
+| `42` | `M=7; LIV1=3` | `LEVEL` = `73` | `42` → `62` |
+| `42` | `M=7; LIV1=4` | `LEVEL` = `74` | `42` → `62` |
+| `42` | `M=7; LIV1=5` | `LEVEL` = `75` | `42` → `62` |
+| `42` | `M=7; LIV1=6` | `LEVEL` = `76` | `42` → `62` |
+| `42` | `M=7; LIV1=7` | `LEVEL` = `77` | `42` → `62` |
+| `42` | `M=7; LIV1=8` | `LEVEL` = `78` | `42` → `62` |
+| `42` | `M=7; LIV1=9` | `LEVEL` = `79` | `42` → `62` |
+| `42` | `M=8; LIV1=0` | `LEVEL` = `80` | `42` → `63` |
+| `42` | `M=8; LIV1=1` | `LEVEL` = `81` | `42` → `63` |
+| `42` | `M=8; LIV1=2` | `LEVEL` = `82` | `42` → `63` |
+| `42` | `M=8; LIV1=3` | `LEVEL` = `83` | `42` → `63` |
+| `42` | `M=8; LIV1=4` | `LEVEL` = `84` | `42` → `63` |
+| `42` | `M=8; LIV1=5` | `LEVEL` = `85` | `42` → `63` |
+| `42` | `M=8; LIV1=6` | `LEVEL` = `86` | `42` → `63` |
+| `42` | `M=8; LIV1=7` | `LEVEL` = `87` | `42` → `63` |
+| `42` | `M=8; LIV1=8` | `LEVEL` = `88` | `42` → `63` |
+| `42` | `M=8; LIV1=9` | `LEVEL` = `89` | `42` → `63` |
+| `42` | `M=9; LIV1=0` | `LEVEL` = `90` | `42` → `64` |
+| `42` | `M=9; LIV1=1` | `LEVEL` = `91` | `42` → `64` |
+| `42` | `M=9; LIV1=2` | `LEVEL` = `92` | `42` → `64` |
+| `42` | `M=9; LIV1=3` | `LEVEL` = `93` | `42` → `64` |
+| `42` | `M=9; LIV1=4` | `LEVEL` = `94` | `42` → `64` |
+| `42` | `M=9; LIV1=5` | `LEVEL` = `95` | `42` → `64` |
+| `42` | `M=9; LIV1=6` | `LEVEL` = `96` | `42` → `64` |
+| `42` | `M=9; LIV1=7` | `LEVEL` = `97` | `42` → `64` |
+| `42` | `M=9; LIV1=8` | `LEVEL` = `98` | `42` → `64` |
+| `42` | `M=9; LIV1=9` | `LEVEL` = `99` | `42` → `64` |
+| `43` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `43` |
+| `43` | `I=4` | `INST_LEV` = `5`; `DEST_LEV` = `4` | `43` |
+| `43` | `I=5` | `INST_LEV` = `6`; `DEST_LEV` = `5` | `43` |
+| `43` | `I=6` | `INST_LEV` = `7`; `DEST_LEV` = `6` | `43` |
+| `43` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `43` |
+| `43` | `I=8` | `INST_LEV` = `9`; `DEST_LEV` = `8` | `43` |
+| `43` | `I=9` | `INST_LEV` = `10`; `DEST_LEV` = `9` | `43` |
+| `43` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `43` |
+| `43` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `43` |
+| `43` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `43` |
+| `43` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `43` |
+| `43` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `43` |
+| `43` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `43` |
+| `43` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `43` |
+| `43` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `43` |
+| `43` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `43` |
+| `43` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `43` |
+| `43` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `43` |
+| `43` | `SPE=ON` | `M` = `9` | `43` |
+| `43` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `43` |
+| `43` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `43` |
+| `43` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `43` |
+| `98` | `M=0` | `ADDR_TYPE` = `2`; `M` = `0` | `98` |
+| `98` | `M=0; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=0; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=0; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=0; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=0; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=0; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=0; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=0; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=0; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=1` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=1; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=1; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=1; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=1; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=1; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=1; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=1; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=1; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=1; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=2` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=2; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=2; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=2; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=2; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=2; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=2; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=2; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=2; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=2; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=3` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=3; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=3; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=3; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=3; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=3; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=3; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=3; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=3; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=3; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=4` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=4; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=4; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=4; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=4; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=4; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=4; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=4; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=4; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=4; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=5` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=5; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=5; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=5; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=5; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=5; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=5; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=5; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=5; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=5; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=6` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=6; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=6; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=6; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=6; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=6; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=6; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=6; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=6; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=6; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=7` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=7; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=7; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=7; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=7; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=7; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=7; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=7; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=7; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=7; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=8` | `ADDR_TYPE` = `2` | `98` |
+| `98` | `M=8; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=8; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=8; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=8; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=8; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=8; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=8; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=8; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=8; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=O/I` | `ADDR_TYPE` = `2`; `M` = `9` | `98` |
+| `98` | `M=OFF` | `ADDR_TYPE` = `2`; `M` = `10` | `98` |
+| `98` | `M=ON` | `ADDR_TYPE` = `2`; `M` = `11` | `98` |
+| `98` | `M=PUL` | `ADDR_TYPE` = `2`; `M` = `15` | `98` |
+| `98` | `M=SU_GIU` | `ADDR_TYPE` = `2`; `M` = `12` | `98` |
+| `98` | `M=SU_GIU_M` | `ADDR_TYPE` = `2`; `M` = `13` | `98` |
+| `98` | `M=O/I; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=O/I; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=O/I; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=O/I; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=O/I; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=O/I; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=O/I; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=O/I; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=O/I; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=OFF; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=OFF; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=OFF; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=OFF; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=OFF; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=OFF; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=OFF; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=OFF; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=OFF; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=ON; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=ON; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=ON; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=ON; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=ON; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=ON; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=ON; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=ON; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=ON; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=PUL; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=PUL; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=PUL; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=PUL; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=PUL; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=PUL; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=PUL; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=PUL; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=PUL; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=SU_GIU; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=1` | `G1` = `1` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=2` | `G1` = `2` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=3` | `G1` = `3` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=4` | `G1` = `4` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=5` | `G1` = `5` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=6` | `G1` = `6` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=7` | `G1` = `7` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=8` | `G1` = `8` | `98` → `300` |
+| `98` | `M=SU_GIU_M; PL=9` | `G1` = `9` | `98` → `300` |
+| `98` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `98` |
+| `98` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `98` |
+| `98` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `98` |
+| `98` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `98` |
+| `98` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `98` |
+| `98` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `98` |
+| `98` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `98` |
+| `98` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `98` |
+| `98` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `98` |
+| `98` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `98` |
+| `98` | `I=0` | `DEST_LEV` = `1` | `98` |
+| `98` | `I=1` | `DEST_LEV` = `0` | `98` |
+| `98` | `I=2` | `DEST_LEV` = `2` | `98` |
+| `98` | `I=3` | `DEST_LEV` = `3` | `98` |
+| `98` | `I=4` | `DEST_LEV` = `4` | `98` |
+| `98` | `I=5` | `DEST_LEV` = `5` | `98` |
+| `98` | `I=6` | `DEST_LEV` = `6` | `98` |
+| `98` | `I=7` | `DEST_LEV` = `7` | `98` |
+| `98` | `I=8` | `DEST_LEV` = `8` | `98` |
+| `98` | `I=9` | `DEST_LEV` = `9` | `98` |
+| `98` | `I=CEN` | `DEST_LEV` = `10` | `98` |
+| `99` | `I=0` | `DEST_LEV` = `1`; `INST_LEV` = `1` | `99` |
+| `99` | `M=0` | `M` = `0`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `99` |
+| `99` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `99` |
+| `99` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `99` |
+| `99` | `M=1` | `T_TIME ` = `1`; `M` = `1`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `99` |
+| `99` | `I=2` | `DEST_LEV` = `2`; `INST_LEV` = `3` | `99` |
+| `99` | `I=3` | `DEST_LEV` = `3`; `INST_LEV` = `4` | `99` |
+| `99` | `M=3` | `T_TIME ` = `3`; `M` = `1`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `99` |
+| `99` | `M=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `99` |
+| `99` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `99` |
+| `99` | `M=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `99` |
+| `99` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `99` |
+| `99` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `99` |
+| `99` | `M=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `99` |
+| `99` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `99` |
+| `99` | `M=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `99` |
+| `99` | `M=8` | `M` = `1`; `T_TIME ` = `8`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `99` |
+| `99` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `99` |
+| `99` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `99` |
+| `99` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `99` |
+| `99` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `99` |
+| `99` | `M=CEN` | `CEN_BUTT_2 ` = `2`; `CEN_BUTT_1 ` = `1` | `99` |
+| `99` | `M=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `99` |
+| `99` | `M=0; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=0; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=0; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=0; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=0; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=0; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=0; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=0; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=0; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=1; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=1; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=1; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=1; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=1; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=1; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=1; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=1; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=1; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=2; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=2; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=2; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=2; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=2; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=2; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=2; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=2; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=2; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=3; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=3; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=3; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=3; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=3; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=3; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=3; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=3; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=3; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=4; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=4; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=4; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=4; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=4; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=4; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=4; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=4; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=4; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=5; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=5; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=5; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=5; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=5; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=5; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=5; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=5; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=5; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=6; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=6; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=6; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=6; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=6; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=6; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=6; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=6; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=6; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=7; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=7; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=7; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=7; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=7; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=7; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=7; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=7; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=7; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=8; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=8; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=8; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=8; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=8; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=8; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=8; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=8; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=8; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=O/I; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=O/I; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=O/I; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=O/I; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=O/I; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=O/I; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=O/I; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=O/I; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=O/I; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=OFF; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=OFF; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=OFF; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=OFF; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=OFF; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=OFF; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=OFF; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=OFF; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=OFF; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=ON; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=ON; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=ON; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=ON; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=ON; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=ON; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=ON; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=ON; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=ON; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=PUL; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=PUL; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=PUL; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=PUL; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=PUL; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=PUL; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=PUL; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=PUL; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=PUL; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=SU_GIU; PL=9` | `G1` = `9` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=1` | `G1` = `1` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=2` | `G1` = `2` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=3` | `G1` = `3` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=4` | `G1` = `4` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=5` | `G1` = `5` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=6` | `G1` = `6` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=7` | `G1` = `7` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=8` | `G1` = `8` | `99` → `300` |
+| `99` | `M=SU_GIU_M; PL=9` | `G1` = `9` | `99` → `300` |
+| `100` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `100` |
+| `100` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `100` |
+| `100` | `I=1` | `DEST_LEV` = `0`; `INST_LEV` = `1` | `100` |
+| `100` | `M=1` | `M` = `1`; `ADDR_TYPE` = `2` | `100` |
+| `100` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `100` |
+| `100` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `100` |
+| `100` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `100` |
+| `100` | `M=2` | `M` = `2`; `ADDR_TYPE` = `2` | `100` |
+| `100` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `100` |
+| `100` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `100` |
+| `100` | `M=3` | `M` = `3`; `ADDR_TYPE` = `2` | `100` |
+| `100` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `100` |
+| `100` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `100` |
+| `100` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `100` |
+| `100` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `100` |
+| `100` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `100` |
+| `100` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `100` |
+| `100` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `100` |
+| `100` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `100` |
+| `100` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `100` |
+| `100` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `100` |
+| `100` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `100` |
+| `100` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `100` |
+| `100` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `100` |
+| `100` | `M=0` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=0; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=0; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=0; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=0; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=0; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=0; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=0; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=0; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=0; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=1; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=1; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=1; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=1; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=1; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=1; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=1; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=1; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=1; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=2; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=2; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=2; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=2; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=2; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=2; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=2; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=2; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=2; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=3; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=3; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=3; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=3; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=3; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=3; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=3; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=3; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=3; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=4` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=4; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=4; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=4; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=4; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=4; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=4; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=4; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=4; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=4; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=5` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=5; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=5; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=5; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=5; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=5; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=5; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=5; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=5; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=5; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=6` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=6; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=6; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=6; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=6; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=6; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=6; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=6; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=6; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=6; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=7` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=7; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=7; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=7; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=7; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=7; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=7; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=7; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=7; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=7; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=8` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=8; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=8; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=8; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=8; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=8; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=8; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=8; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=8; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=8; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=O/I` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=OFF` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=ON` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=PUL` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=SU_GIU` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=SU_GIU_M` | `ADDR_TYPE` = `2` | `100` |
+| `100` | `M=O/I; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=O/I; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=O/I; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=O/I; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=O/I; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=O/I; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=O/I; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=O/I; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=O/I; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=OFF; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=OFF; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=OFF; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=OFF; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=OFF; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=OFF; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=OFF; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=OFF; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=OFF; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=ON; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=ON; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=ON; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=ON; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=ON; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=ON; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=ON; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=ON; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=ON; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=PUL; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=PUL; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=PUL; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=PUL; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=PUL; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=PUL; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=PUL; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=PUL; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=PUL; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=SU_GIU; PL=9` | `G1` = `9` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=1` | `G1` = `1` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=2` | `G1` = `2` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=3` | `G1` = `3` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=4` | `G1` = `4` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=5` | `G1` = `5` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=6` | `G1` = `6` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=7` | `G1` = `7` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=8` | `G1` = `8` | `100` → `300` |
+| `100` | `M=SU_GIU_M; PL=9` | `G1` = `9` | `100` → `300` |
+| `101` | `M=0` | `ADDR_TYPE` = `1`; `M` = `0` | `101` |
+| `101` | `M=0; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=0; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=0; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=0; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=0; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=0; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=0; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=0; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=0; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=1` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=1; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=1; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=1; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=1; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=1; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=1; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=1; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=1; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=1; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=2` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=2; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=2; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=2; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=2; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=2; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=2; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=2; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=2; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=2; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=3` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=3; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=3; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=3; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=3; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=3; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=3; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=3; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=3; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=3; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=4` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=4; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=4; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=4; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=4; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=4; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=4; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=4; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=4; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=4; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=5` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=5; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=5; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=5; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=5; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=5; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=5; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=5; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=5; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=5; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=6` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=6; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=6; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=6; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=6; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=6; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=6; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=6; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=6; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=6; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=7` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=7; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=7; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=7; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=7; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=7; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=7; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=7; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=7; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=7; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=8` | `ADDR_TYPE` = `1` | `101` |
+| `101` | `M=8; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=8; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=8; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=8; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=8; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=8; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=8; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=8; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=8; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=O/I` | `ADDR_TYPE` = `1`; `M` = `9` | `101` |
+| `101` | `M=OFF` | `ADDR_TYPE` = `1`; `M` = `10` | `101` |
+| `101` | `M=ON` | `ADDR_TYPE` = `1`; `M` = `11` | `101` |
+| `101` | `M=PUL` | `ADDR_TYPE` = `1`; `M` = `15` | `101` |
+| `101` | `M=SU_GIU` | `ADDR_TYPE` = `1`; `M` = `12` | `101` |
+| `101` | `M=SU_GIU_M` | `ADDR_TYPE` = `1`; `M` = `13` | `101` |
+| `101` | `M=O/I; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=O/I; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=O/I; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=O/I; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=O/I; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=O/I; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=O/I; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=O/I; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=O/I; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=OFF; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=OFF; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=OFF; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=OFF; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=OFF; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=OFF; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=OFF; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=OFF; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=OFF; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=ON; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=ON; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=ON; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=ON; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=ON; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=ON; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=ON; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=ON; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=ON; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=PUL; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=PUL; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=PUL; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=PUL; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=PUL; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=PUL; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=PUL; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=PUL; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=PUL; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=SU_GIU; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=1` | `A` = `1` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=2` | `A` = `2` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=3` | `A` = `3` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=4` | `A` = `4` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=5` | `A` = `5` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=6` | `A` = `6` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=7` | `A` = `7` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=8` | `A` = `8` | `101` → `301` |
+| `101` | `M=SU_GIU_M; PL=9` | `A` = `9` | `101` → `301` |
+| `101` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `101` |
+| `101` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `101` |
+| `101` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `101` |
+| `101` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `101` |
+| `101` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `101` |
+| `101` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `101` |
+| `101` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `101` |
+| `101` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `101` |
+| `101` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `101` |
+| `101` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `101` |
+| `102` | `I=0` | `DEST_LEV` = `1`; `INST_LEV` = `1` | `102` |
+| `102` | `M=0` | `M` = `0`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `102` |
+| `102` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `102` |
+| `102` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `102` |
+| `102` | `M=1` | `T_TIME ` = `1`; `M` = `1`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `102` |
+| `102` | `I=2` | `DEST_LEV` = `2`; `INST_LEV` = `3` | `102` |
+| `102` | `I=3` | `DEST_LEV` = `3`; `INST_LEV` = `4` | `102` |
+| `102` | `M=3` | `T_TIME ` = `3`; `M` = `1`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `102` |
+| `102` | `M=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `102` |
+| `102` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `102` |
+| `102` | `M=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `102` |
+| `102` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `102` |
+| `102` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `102` |
+| `102` | `M=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `102` |
+| `102` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `102` |
+| `102` | `M=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `102` |
+| `102` | `M=8` | `M` = `1`; `T_TIME ` = `8`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `102` |
+| `102` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `102` |
+| `102` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `102` |
+| `102` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `102` |
+| `102` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `102` |
+| `102` | `M=CEN` | `CEN_BUTT_2 ` = `2`; `CEN_BUTT_1 ` = `1` | `102` |
+| `102` | `M=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `102` |
+| `102` | `M=0; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=0; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=0; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=0; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=0; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=0; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=0; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=0; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=0; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=1; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=1; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=1; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=1; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=1; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=1; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=1; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=1; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=1; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=2; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=2; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=2; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=2; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=2; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=2; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=2; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=2; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=2; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=3; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=3; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=3; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=3; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=3; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=3; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=3; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=3; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=3; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=4; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=4; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=4; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=4; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=4; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=4; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=4; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=4; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=4; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=5; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=5; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=5; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=5; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=5; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=5; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=5; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=5; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=5; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=6; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=6; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=6; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=6; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=6; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=6; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=6; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=6; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=6; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=7; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=7; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=7; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=7; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=7; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=7; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=7; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=7; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=7; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=8; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=8; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=8; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=8; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=8; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=8; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=8; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=8; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=8; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=O/I; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=O/I; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=O/I; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=O/I; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=O/I; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=O/I; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=O/I; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=O/I; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=O/I; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=OFF; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=OFF; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=OFF; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=OFF; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=OFF; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=OFF; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=OFF; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=OFF; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=OFF; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=ON; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=ON; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=ON; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=ON; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=ON; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=ON; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=ON; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=ON; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=ON; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=PUL; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=PUL; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=PUL; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=PUL; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=PUL; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=PUL; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=PUL; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=PUL; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=PUL; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=SU_GIU; PL=9` | `A` = `9` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=1` | `A` = `1` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=2` | `A` = `2` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=3` | `A` = `3` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=4` | `A` = `4` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=5` | `A` = `5` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=6` | `A` = `6` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=7` | `A` = `7` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=8` | `A` = `8` | `102` → `301` |
+| `102` | `M=SU_GIU_M; PL=9` | `A` = `9` | `102` → `301` |
+| `103` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `103` |
+| `103` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `103` |
+| `103` | `I=1` | `DEST_LEV` = `0`; `INST_LEV` = `1` | `103` |
+| `103` | `M=1` | `M` = `1`; `ADDR_TYPE` = `1` | `103` |
+| `103` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `103` |
+| `103` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `103` |
+| `103` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `103` |
+| `103` | `M=2` | `M` = `2`; `ADDR_TYPE` = `1` | `103` |
+| `103` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `103` |
+| `103` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `103` |
+| `103` | `M=3` | `M` = `3`; `ADDR_TYPE` = `1` | `103` |
+| `103` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `103` |
+| `103` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `103` |
+| `103` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `103` |
+| `103` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `103` |
+| `103` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `103` |
+| `103` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `103` |
+| `103` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `103` |
+| `103` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `103` |
+| `103` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `103` |
+| `103` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `103` |
+| `103` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `103` |
+| `103` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `103` |
+| `103` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `103` |
+| `103` | `M=0` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=0; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=0; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=0; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=0; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=0; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=0; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=0; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=0; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=0; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=1; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=1; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=1; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=1; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=1; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=1; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=1; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=1; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=1; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=2; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=2; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=2; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=2; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=2; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=2; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=2; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=2; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=2; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=3; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=3; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=3; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=3; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=3; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=3; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=3; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=3; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=3; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=4` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=4; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=4; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=4; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=4; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=4; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=4; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=4; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=4; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=4; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=5` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=5; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=5; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=5; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=5; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=5; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=5; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=5; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=5; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=5; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=6` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=6; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=6; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=6; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=6; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=6; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=6; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=6; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=6; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=6; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=7` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=7; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=7; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=7; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=7; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=7; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=7; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=7; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=7; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=7; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=8` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=8; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=8; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=8; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=8; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=8; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=8; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=8; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=8; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=8; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=O/I` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=OFF` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=ON` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=PUL` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=SU_GIU` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=SU_GIU_M` | `ADDR_TYPE` = `1` | `103` |
+| `103` | `M=O/I; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=O/I; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=O/I; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=O/I; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=O/I; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=O/I; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=O/I; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=O/I; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=O/I; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=OFF; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=OFF; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=OFF; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=OFF; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=OFF; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=OFF; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=OFF; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=OFF; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=OFF; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=ON; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=ON; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=ON; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=ON; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=ON; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=ON; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=ON; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=ON; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=ON; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=PUL; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=PUL; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=PUL; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=PUL; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=PUL; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=PUL; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=PUL; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=PUL; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=PUL; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=SU_GIU; PL=9` | `A` = `9` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=1` | `A` = `1` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=2` | `A` = `2` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=3` | `A` = `3` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=4` | `A` = `4` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=5` | `A` = `5` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=6` | `A` = `6` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=7` | `A` = `7` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=8` | `A` = `8` | `103` → `301` |
+| `103` | `M=SU_GIU_M; PL=9` | `A` = `9` | `103` → `301` |
+| `104` | `M=0` | `ADDR_TYPE` = `3`; `M` = `0` | `104` |
+| `104` | `M=1` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=2` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=3` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=4` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=5` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=6` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=7` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=8` | `ADDR_TYPE` = `3` | `104` |
+| `104` | `M=O/I` | `ADDR_TYPE` = `3`; `M` = `9` | `104` |
+| `104` | `M=OFF` | `ADDR_TYPE` = `3`; `M` = `10` | `104` |
+| `104` | `M=ON` | `ADDR_TYPE` = `3`; `M` = `11` | `104` |
+| `104` | `M=PUL` | `ADDR_TYPE` = `3`; `M` = `15` | `104` |
+| `104` | `M=SU_GIU` | `ADDR_TYPE` = `3`; `M` = `12` | `104` |
+| `104` | `M=SU_GIU_M` | `ADDR_TYPE` = `3`; `M` = `13` | `104` |
+| `104` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `104` |
+| `104` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `104` |
+| `104` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `104` |
+| `104` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `104` |
+| `104` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `104` |
+| `104` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `104` |
+| `104` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `104` |
+| `104` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `104` |
+| `104` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `104` |
+| `104` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `104` |
+| `104` | `I=0` | `DEST_LEV` = `1` | `104` |
+| `104` | `I=1` | `DEST_LEV` = `0` | `104` |
+| `104` | `I=2` | `DEST_LEV` = `2` | `104` |
+| `104` | `I=3` | `DEST_LEV` = `3` | `104` |
+| `104` | `I=4` | `DEST_LEV` = `4` | `104` |
+| `104` | `I=5` | `DEST_LEV` = `5` | `104` |
+| `104` | `I=6` | `DEST_LEV` = `6` | `104` |
+| `104` | `I=7` | `DEST_LEV` = `7` | `104` |
+| `104` | `I=8` | `DEST_LEV` = `8` | `104` |
+| `104` | `I=9` | `DEST_LEV` = `9` | `104` |
+| `104` | `I=CEN` | `DEST_LEV` = `10` | `104` |
+| `105` | `I=0` | `DEST_LEV` = `1`; `INST_LEV` = `1` | `105` |
+| `105` | `M=0` | `M` = `0`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `105` |
+| `105` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `105` |
+| `105` | `I=1` | `INST_LEV` = `1`; `DEST_LEV` = `0` | `105` |
+| `105` | `M=1` | `T_TIME ` = `1`; `M` = `1`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `105` |
+| `105` | `I=2` | `DEST_LEV` = `2`; `INST_LEV` = `3` | `105` |
+| `105` | `I=3` | `DEST_LEV` = `3`; `INST_LEV` = `4` | `105` |
+| `105` | `M=3` | `T_TIME ` = `3`; `M` = `1`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `105` |
+| `105` | `M=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `105` |
+| `105` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `105` |
+| `105` | `M=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `105` |
+| `105` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `105` |
+| `105` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `105` |
+| `105` | `M=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `105` |
+| `105` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `105` |
+| `105` | `M=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `105` |
+| `105` | `M=8` | `M` = `1`; `T_TIME ` = `8`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `105` |
+| `105` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `105` |
+| `105` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `105` |
+| `105` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `105` |
+| `105` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `10` | `105` |
+| `105` | `M=CEN` | `CEN_BUTT_2 ` = `2`; `CEN_BUTT_1 ` = `1` | `105` |
+| `105` | `M=O/I` | `M` = `9`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=OFF` | `M` = `10`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=ON` | `M` = `11`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=PUL` | `M` = `15`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `3` | `105` |
+| `105` | `M=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `3` | `105` |
+| `106` | `I=0` | `INST_LEV` = `1`; `DEST_LEV` = `1` | `106` |
+| `106` | `AUX=0` | `IN_AUX_CHANNEL` = `0` | `106` |
+| `106` | `I=1` | `DEST_LEV` = `0`; `INST_LEV` = `1` | `106` |
+| `106` | `M=1` | `M` = `1`; `ADDR_TYPE` = `3` | `106` |
+| `106` | `AUX=1` | `IN_AUX_CHANNEL` = `1` | `106` |
+| `106` | `I=2` | `INST_LEV` = `3`; `DEST_LEV` = `2` | `106` |
+| `106` | `AUX=2` | `IN_AUX_CHANNEL` = `2` | `106` |
+| `106` | `M=2` | `M` = `2`; `ADDR_TYPE` = `3` | `106` |
+| `106` | `I=3` | `INST_LEV` = `4`; `DEST_LEV` = `3` | `106` |
+| `106` | `AUX=3` | `IN_AUX_CHANNEL` = `3` | `106` |
+| `106` | `M=3` | `M` = `3`; `ADDR_TYPE` = `3` | `106` |
+| `106` | `AUX=4` | `IN_AUX_CHANNEL` = `4` | `106` |
+| `106` | `I=4` | `DEST_LEV` = `4`; `INST_LEV` = `5` | `106` |
+| `106` | `AUX=5` | `IN_AUX_CHANNEL` = `5` | `106` |
+| `106` | `I=5` | `DEST_LEV` = `5`; `INST_LEV` = `6` | `106` |
+| `106` | `AUX=6` | `IN_AUX_CHANNEL` = `6` | `106` |
+| `106` | `I=6` | `DEST_LEV` = `6`; `INST_LEV` = `7` | `106` |
+| `106` | `AUX=7` | `IN_AUX_CHANNEL` = `7` | `106` |
+| `106` | `I=7` | `INST_LEV` = `8`; `DEST_LEV` = `7` | `106` |
+| `106` | `I=8` | `DEST_LEV` = `8`; `INST_LEV` = `9` | `106` |
+| `106` | `AUX=8` | `IN_AUX_CHANNEL` = `8` | `106` |
+| `106` | `I=9` | `DEST_LEV` = `9`; `INST_LEV` = `10` | `106` |
+| `106` | `AUX=9` | `IN_AUX_CHANNEL` = `9` | `106` |
+| `106` | `I=CEN` | `INST_LEV` = `1`; `DEST_LEV` = `10` | `106` |
+| `106` | `M=0` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=4` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=5` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=6` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=7` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=8` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=O/I` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=OFF` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=ON` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=PUL` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=SU_GIU` | `ADDR_TYPE` = `3` | `106` |
+| `106` | `M=SU_GIU_M` | `ADDR_TYPE` = `3` | `106` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000148:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 16`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe physical firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3`, `6`, `13` | hardware, microcontroller, Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine selected Objects on the two Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000148:s000038`
+
+Provenance cues: `evidence`, `source`
+
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting | Cyclic, ON/OFF, timed ON, dimmer adjustment, preset levels and ramps; physical selector presets depend on `SPE/M` | `MQ00285-d-EN`, pp. 2–4 |
+| Automation | Monostable/bistable shutter commands and reed-control mode under the published selector/cover conditions | Same sheet, p. 5 |
+| Scenarios | F420 recall/editing; MH200N CEN; software PLUS scenario addresses `1..2047` and buttons `0..31` | Same sheet, pp. 5–6 |
+| Video door entry | Door lock, floor call and staircase light; each has a distinct address interpretation | Same sheet, pp. 7–8 |
+| Sound system | Amplifier/source selection, volume adjustment and active-source command | Same sheet, p. 9 |
+
+This is a multifunction command Device. The mode changes the meaning of its address/configurator positions; the function families are not simultaneous unconditional capabilities.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000148:s000039`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000148:s000040`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `source`
+
+Choose the target function before interpreting `A`, `PL/PF`, `LIV1/AUX`, `LIV2`, `SPE` and `I`. The same positions serve lighting levels, scenario numbers, video-door-entry addresses or sound-system targeting in different configurations.
+
+For physical lighting, `SPE=0` uses `M=1..5` for 1–5 minutes, `M=6` for 15 minutes, `M=7` for 30 seconds and `M=8` for 0.5 seconds; `SPE=1` adds `M=7` at 2 seconds and `M=8` at 10 minutes. These are published presets, separate from software delay domains. Ramps use source-specific `SPE=5/9`, `LIV1/LIV2` levels and `M` ramp time; do not infer them from a generic timed-ON value.
+
+F420 scenario editing requires programming enabled at the scenario module, a 3-second control-button hold to begin learning, a brief press to save, and a 10-second hold to erase that scenario. `SPE=6` selects scenario groups while `SPE=4` provides recall without editing. CEN/PLUS target the scenario programmer and are not interchangeable with F420 storage. Follow the sheet's mode table and the stored firmware conditions; generic writes and read-back remain in [Programming Validation](../../programming/validation.md).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000148:s000041`
+
+Applicability cues: `scs`
+Cautions: `must not`
+Provenance cues: `catalogue`, `source`
+
+The nine-page `MQ00285-d-EN` sheet has been reconciled as a Device-specific function map rather than only as a list of reusable Objects:
+
+- lighting functions include simple, timed, dimming and special light-control variants selected through `M`, `SPE` and the level fields;
+- `LIV1` / `LIV2` participate in published dimming/special-function selection and must not be treated as generic numeric fields without the surrounding mode;
+- automation, Device lock/unlock, scenario-module, programmed-scenario, PLUS-scenario, video-door-entry, staircase/floor-call, sound-system and `AUX` roles share the same Physical Device but use different button/address semantics;
+- the sheet documents programming/editing behavior for scenario functions, including product-level activation/programming distinctions that are not visible from Object identity alone;
+- operation across SCS/SCS interfaces uses installation/destination-level concepts that correspond to reusable `INST_LEV` / `DEST_LEV` fields;
+- audio/video and sound roles reuse `PL/PF`, level and special-function fields contextually, so a validator must interpret them only after resolving the selected function family.
+
+This source is now represented as a product-specific selector/function model. Remaining gaps are commercial variants, exact package relationships and hardware corroboration, not omission of the principal published function families.
+
+`MQ00285-d-EN` is dated 9 June 2014 and is already archived. Its physical function tables were compared with the catalogue branches rather than treated as an identical numeric namespace. The Arnould catalogue now establishes `64362/64162` base/package relationships; it does not prove identical electronics across all 13 records.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000148:s000042`
+
+Applicability cues: `firmware`
+Uncertainty: `may`, `unresolved`
+Provenance cues: `evidence`
+
+- Electrical/procedure sheets remain absent for commercial variants outside the four references named by `MQ00285-d-EN`; Arnould `64362/64162` packaging is documented separately.
+- No sanitized hardware fingerprint establishes installed firmware, diagnostic configurator count or active Object projection.
+- Stored condition/conversion branches outside declared selector domains remain implementation irregularities; their physical reachability and precedence are unresolved.
+- Earlier/later technical-sheet revisions and materially different regional evidence may add facts; no unbounded discovery-completeness claim is made.
+
+### Sources
+
+Section ID: `ownkb:section:d000148:s000043`
+
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `H4651M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4651M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e8/ce/e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4651M2); SHA-256 `e8ce722acabbd5a0900e01566fe896911a61ba2c418038c0d425bcb472b56814`.
+- `L4651M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4651M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6b/f3/6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4651M2); SHA-256 `6bf31de42f3d531b97c4515dea24a9529e5fb49fe789aca57057237c8eea21ee`.
+- `AM5831M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5831M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/89/4b/894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5831M2); SHA-256 `894b27959af3a52a6a1621f8ec46052c84cc4c8c16a3eb32b451416ddb2c9044`.
+- `067553-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067553` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/01/53/0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-pour-fonctions-speciales-commande-de-scenario-diffusion-sonore-commande-temporisee-myhome-up-celiane); SHA-256 `0153ea79e9af64263e4b7ab51b50da92f3792215abc1134120a40b5cad10857d`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0005)
+
+# Document: ownkb:document:d000149
+
+Source path: `devices/definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Two-module zero-crossing actuator and control
+
+Section ID: `ownkb:section:d000149:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000149:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This two-module device combines two zero-crossing relay outputs with four front buttons and status LEDs. It can control one shutter or one or two lighting loads, with configurations that also reserve buttons for remote actuators or scenarios.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0006` | Project identity |
+| Technical description | Two-module two-relay actuator with integrated command functions and zero-crossing switching | Catalogue + official technical sheet |
+| Catalogue item | `2180` - “Flush mounted actuator and free control with zero crossing” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `82` | Implementation evidence |
+| Firmware definition | `1.0.-1` wildcard-build applicability, firmware `707` | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
+| Categories | Actuator, Command, Multifunction, Lighting, Automation, Scenario | Capability model |
+
+Item `2180` is the zero-crossing counterpart of the multifunction actuator/control family. It contains two independent relays and front controls, and can expose actuator functions on slots `1..2` plus command/scenario functions on slots `3..4`.
+
+The official 2021 technical sheet directly documents all seven commercial references in the current catalogue cluster.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000149:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64195` | Documented commercial reference | Catalogue + official technical sheet |
+| Arnould - Espace Evolution | `64196` | Documented commercial reference | Catalogue + official technical sheet |
+| Arnould - Espace Evolution | `64393` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - Axolute | `H4672M2` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - LivingLight | `LN4672M2` | Documented commercial reference | Catalogue + official technical sheet |
+| BTicino - Matix | `AM5852M2` | Documented commercial reference | Catalogue + official technical sheet |
+| Legrand - Céliane | `067561` / printed `0 675 61` | Documented commercial reference | Catalogue + official technical sheet |
+
+Shared item membership and the common technical sheet jointly establish this commercial-identity set. Range-specific dimensions and packaging remain commercial metadata.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000149:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4672M2` | `8005543560860` | [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf), `H4672M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4672M2` | `8005543560532` | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf), `LN4672M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5852M2` | `8005543560525` | [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf), `AM5852M2-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `067561` | `3414970736895` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/00/ab/00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc.pdf), `067561-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000149:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `ST-00000898-EN` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/4e/7b/4e7b78e4a7051d0e1c634dd8a412e4f429be925de5801a40b7781fdc441f3896.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-EN.pdf) |
+| `ST-00000898-FR` | Technical sheet | 23/03/2021 | all seven references | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9f/b9/9fb9cdac69b9bf9763961763a55ea357d8dd8340f6063d053273f5fcc477e7e9.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00000898-FR.pdf) |
+| `LE09285AB` | Instruction sheet | 03/21 | `AM5852M2`, `H4672M2`, `LN4672M2` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/a3/ac/a3ac229039a7d503d6f1dde6ea067ae95477d36005c45ec94c89348d1ab4ca7a.pdf) | [Official source](https://dar.bticino.com/asset/Documents/LE09285AB.pdf) |
+| `LE09287AB` | Instruction sheet | revision not yet decoded | `067561` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/fd/d9/fdd9607fac4470e3c1d97d25041f9f840ee116f02525c8e7fba9bcfceb5e7b04.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE09287AB.pdf) |
+| `H4672M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4672M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4672M2) |
+| `LN4672M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4672M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4672M2) |
+| `AM5852M2-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5852M2` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2) |
+| `067561-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067561` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/00/ab/00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-commande-2-relais-myhome-up-celiane) |
+
+The English and French technical sheets are distinct archived byte streams and therefore remain separate source revisions/language variants.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000149:s000006`
+
+Applicability cues: `revision`, `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting size | 2 flush-mounted modules | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Front controls | 4 buttons and 4 two-colour LEDs | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Local outputs | 2 independent relays | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| SCS supply | `18..27 Vdc` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Current draw | `7 mA` standby; `16 mA` max with one shutter/light; `24 mA` max with two lights | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Operating temperature | `0..40 °C` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Storage temperature | `-5..45 °C` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Mains side | `110..230 Vac`, `50..60 Hz` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+| Physical configurator positions | `A1`, `PL1`, `M1`, `A2`, `PL2`, `M2` | `ST-00000898-EN/FR`, 23/03/2021, pp. 1–2 |
+
+The sheet also documents reduced load limits when used without a connected neutral. Keep neutral-dependent load tables revision-scoped rather than collapsing them into one rating.
+
+The control and contact parts are physically separable and can be wired separately.
+
+#### Load matrix by voltage and neutral connection
+
+Section ID: `ownkb:section:d000149:s000007`
+
+Provenance cues: `source`
+
+| Supply / neutral | Incandescent / halogen | Motor | LED / CFL | Fluorescent / electronic transformer | Ferromagnetic transformer |
+| --- | --- | --- | --- | --- | --- |
+| `230 Vac`, with neutral | `1380 W / 6 A` | `460 W / 2 A` | `250 W / 1 A`; max 10 lamps | `460 W / 2 A` | `460 VA / 2 A`, `cosφ=0.5` |
+| `110 Vac`, with neutral | `660 W / 6 A` | `250 W / 2 A` | `110 W / 1 A`; max 10 lamps | `220 W / 2 A` | `220 VA / 2 A`, `cosφ=0.5` |
+| `230 Vac`, without neutral | `460 W / 2 A` | `460 W / 2 A` | Not specified (dash) | Not specified (dash) | `460 VA / 2 A`, `cosφ=0.5` |
+| `110 Vac`, without neutral | `220 W / 2 A` | `250 W / 2 A` | Not specified (dash) | Not specified (dash) | `220 VA / 2 A`, `cosφ=0.5` |
+
+Source: `ST-00000898-EN/FR`, printed/PDF p. 2. A dash is not converted into a positive load capability. Ratings apply to the named sheet references, not automatically to every package sharing the item.
+
+### Identity
+
+Section ID: `ownkb:section:d000149:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2180` | Canonical catalogue |
+| Item model / `modobj` | `82` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000149:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `82` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000149:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `707` | `1` | `0` | `-1` | `4` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000149:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000149:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `707` | `1` | `6` Light actuator | Fixed/designated metadata | `2615` | `6` | `1227` |
+| `707` | `1` | `7` Automation actuator | Candidate alternative | `2608` | `7` | `1223` |
+| `707` | `2` | `6` Light actuator | Fixed/designated metadata | `2616` | `6` | `1227` |
+| `707` | `3` | `400` Light control | Fixed/designated metadata | `2606` | `400` | `1222` |
+| `707` | `3` | `401` Automation control | Candidate alternative | `2609` | `401` | `1224` |
+| `707` | `3` | `404` Scheduled scenario | Candidate alternative | `2612` | `404` | `1225` |
+| `707` | `3` | `406` Scheduled scenario PLUS | Candidate alternative | `2614` | `406` | `1226` |
+| `707` | `4` | `400` Light control | Fixed/designated metadata | `2607` | `400` | `1222` |
+| `707` | `4` | `401` Automation control | Candidate alternative | `2610` | `401` | `1224` |
+| `707` | `4` | `404` Scheduled scenario | Candidate alternative | `2611` | `404` | `1225` |
+| `707` | `4` | `406` Scheduled scenario PLUS | Candidate alternative | `2613` | `406` | `1226` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000149:s000013`
+
+Applicability cues: `applies to`, `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `707` | `500` Automation double command virgin | `3`, `4` | `400`, `401`, `404`, `406`, `407` | `500` | `58` |
+| `707` | `510` Automation relay virgin | `1`, `2` | `1`, `6`, `7` | `510` | `59` |
+
+Virgin Object `510`, **Automation relay virgin**, applies to slots `1..2` and permits Blind actuator `1`, Light actuator `6`, and Automation actuator `7`.
+
+Installed Object selection belongs to [`DIMENSION 30`](../../diagnostics/dim30-modules.md).
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000149:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `707` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `707` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `707` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000149:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `707` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `707` | `A1` | `0..9` | `0` | A1; Configurator A1 (0-9) |
+| `707` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
+| `707` | `M1` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M1; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
+| `707` | `A2` | `0..9` | `0` | A2; Configurator A2 (0-9) |
+| `707` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `707` | `M2` | `0..8`; `9` = `O/I`; `14` = `CEN`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `10` = `OFF`; `15` = `PUL` | `0` | M2; Mode physical configurator (0-8, `O/I`,SU_GIU,SU_GIU_M,`CEN`,`OFF`,`PUL`) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000149:s000016`
+
+Provenance cues: `catalogue`
+
+| Field | Catalogue domain | Role |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A1` | `0..9` | local actuator address |
+| `PL1` | `0..9` | local actuator point |
+| `M1` | `0..8`, `O/I`, `OFF`, `UP/DOWN`, `UP/DOWN monostable`, `CEN`, `PUL` | first/local mode |
+| `A2` | `0..9` | second actuator or remote-control address |
+| `PL2` | `0..9` | second actuator or remote-control point |
+| `M2` | same stored enum as `M1` | second/remote mode |
+
+The 2021 technical sheet uses physical `A1/A2 = 1..9` and `PL1/PL2 = 1..9` for ordinary point-to-point addressing, while virtual configuration supports room `0..10`, lighting point `0..15`, and group `0..255` ranges.
+
+#### Source irregularities
+
+Section ID: `ownkb:section:d000149:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+The catalogue condition matrix contains selectors that are absent from the firmware-level enum, including `M2=ON`, scope values such as `A2=GEN/GR/AMB`, and malformed/truncated condition strings. The official technical sheet independently documents `ON`, room, group, and general remote-control modes.
+
+Preserve this as a source-model difference: the stored firmware field domain is not sufficient by itself to enumerate every condition token used by the converter.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000149:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000149:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `7` - Automation actuator
+
+Section ID: `ownkb:section:d000149:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control; `14` = Bistable and blades control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time |
+| `SUBTYPE` | `11` = Actuator; `2` = Shutter; `3` = Curtain; `4` = Gate; `5` = Garage door; `15` = Differential restart | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `400` - Light control
+
+Section ID: `ownkb:section:d000149:s000021`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `401` - Automation control
+
+Section ID: `ownkb:section:d000149:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000149:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000149:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Virgin-only candidate Objects
+
+Section ID: `ownkb:section:d000149:s000025`
+
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
+
+#### Object `1` - Blind actuator (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000149:s000026`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master PUL; `16` = Slave and PUL | `0` | Modality |
+| `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control | `12` | Local button modality |
+| `STOP_TIME` | `0` = Infinite; `1` = 1 s; `2` = 2 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `21` = 21 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min | `60` | Stop time; Only for Master modes |
+| `DELAY_DOORS` | `0..60` | `3` | Delay between doors |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `407` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000149:s000027`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000149:s000028`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The actuator and command Object families belong to four separate catalogue Modules. Their reusable fields do not prove every value is reachable on this firmware.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000149:s000029`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000149:s000030`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `707` | `1` | `6` | `4145` | No textual predicate stored | None |
+| `707` | `1` | `6` | `4232` | `M1=0` | `20` |
+| `707` | `1` | `6` | `4239` | `M1=1` | `20` |
+| `707` | `1` | `6` | `4241` | `M1=2` | `20` |
+| `707` | `1` | `6` | `4243` | `M1=3` | `20` |
+| `707` | `1` | `6` | `4245` | `M1=4` | `20` |
+| `707` | `1` | `6` | `4256` | `M1=CEN;M2=0` | `25` |
+| `707` | `1` | `6` | `4258` | `M1=CEN;M2=1` | `25` |
+| `707` | `1` | `6` | `4260` | `M1=CEN;M2=2` | `25` |
+| `707` | `1` | `6` | `4262` | `M1=CEN;M2=3` | `25` |
+| `707` | `1` | `6` | `4264` | `M1=CEN;M2=4` | `25` |
+| `707` | `1` | `6` | `4266` | `M1=CEN;M2=O/I` | `25` |
+| `707` | `1` | `6` | `4268` | `M1=CEN;M2=PUL` | `25` |
+| `707` | `1` | `6` | `4273` | `M1=O/I` | `20` |
+| `707` | `1` | `6` | `4292` | `M1=PUL` | `20` |
+| `707` | `1` | `7` | `4247` | `M1=5` | `26` |
+| `707` | `1` | `7` | `4249` | `M1=6` | `26` |
+| `707` | `1` | `7` | `4251` | `M1=7` | `26` |
+| `707` | `1` | `7` | `4253` | `M1=8` | `26` |
+| `707` | `1` | `7` | `4280` | `M1=OFF` | `26` |
+| `707` | `1` | `7` | `4298` | `M1=SU_GIU` | `26` |
+| `707` | `1` | `7` | `4306` | `M1=SU_GIU_M` | `26` |
+| `707` | `2` | `6` | `4145` | No textual predicate stored | None |
+| `707` | `2` | `6` | `4256` | `M1=CEN;M2=0` | `25` |
+| `707` | `2` | `6` | `4258` | `M1=CEN;M2=1` | `25` |
+| `707` | `2` | `6` | `4260` | `M1=CEN;M2=2` | `25` |
+| `707` | `2` | `6` | `4262` | `M1=CEN;M2=3` | `25` |
+| `707` | `2` | `6` | `4264` | `M1=CEN;M2=4` | `25` |
+| `707` | `2` | `6` | `4266` | `M1=CEN;M2=O/I` | `25` |
+| `707` | `2` | `6` | `4268` | `M1=CEN;M2=PUL` | `25` |
+| `707` | `3` | `400` | `4145` | No textual predicate stored | None |
+| `707` | `3` | `400` | `4231` | `M1=0` | `4` |
+| `707` | `3` | `400` | `4238` | `M1=1` | `4` |
+| `707` | `3` | `400` | `4240` | `M1=2` | `4` |
+| `707` | `3` | `400` | `4242` | `M1=3` | `4` |
+| `707` | `3` | `400` | `4244` | `M1=4` | `4` |
+| `707` | `3` | `400` | `4255` | `M1=CEN;M2=0` | `4` |
+| `707` | `3` | `400` | `4257` | `M1=CEN;M2=1` | `4` |
+| `707` | `3` | `400` | `4259` | `M1=CEN;M2=2` | `4` |
+| `707` | `3` | `400` | `4261` | `M1=CEN;M2=3` | `4` |
+| `707` | `3` | `400` | `4263` | `M1=CEN;M2=4` | `4` |
+| `707` | `3` | `400` | `4265` | `M1=CEN;M2=O/I` | `4` |
+| `707` | `3` | `400` | `4267` | `M1=CEN;M2=PUL` | `4` |
+| `707` | `3` | `400` | `4272` | `M1=O/I` | `4` |
+| `707` | `3` | `400` | `4291` | `M1=PUL` | `4` |
+| `707` | `3` | `401` | `4246` | `M1=5` | `4` |
+| `707` | `3` | `401` | `4248` | `M1=6` | `4` |
+| `707` | `3` | `401` | `4250` | `M1=7` | `4` |
+| `707` | `3` | `401` | `4252` | `M1=8` | `4` |
+| `707` | `3` | `401` | `4279` | `M1=OFF` | `4` |
+| `707` | `3` | `401` | `4299` | `M1=SU_GIU` | `550` |
+| `707` | `3` | `401` | `4307` | `M1=SU_GIU_M` | `550` |
+| `707` | `4` | `400` | `4145` | No textual predicate stored | None |
+| `707` | `4` | `400` | `4194` | `M1<>CEN;M2=0;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `707` | `4` | `400` | `4195` | `M1<>CEN;M2=0;A2=AMB` | `97` |
+| `707` | `4` | `400` | `4197` | `M1<>CEN;M2=0;A2=GEN` | `95` |
+| `707` | `4` | `400` | `4198` | `M1<>CEN;M2=0;A2=GR` | `96` |
+| `707` | `4` | `400` | `4201` | `M1<>CEN;M2=O/I;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `707` | `4` | `400` | `4202` | `M1<>CEN;M2=O/I;A2=AMB` | `97` |
+| `707` | `4` | `400` | `4204` | `M1<>CEN;M2=O/I;A2=GEN` | `95` |
+| `707` | `4` | `400` | `4205` | `M1<>CEN;M2=O/I;A2=GR` | `96` |
+| `707` | `4` | `400` | `4206` | `M1<>CEN;M2=OFF;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `707` | `4` | `400` | `4207` | `M1<>CEN;M2=OFF;A2=AMB` | `97` |
+| `707` | `4` | `400` | `4209` | `M1<>CEN;M2=OFF;A2=GEN` | `95` |
+| `707` | `4` | `400` | `4210` | `M1<>CEN;M2=OFF;A2=GR` | `96` |
+| `707` | `4` | `400` | `4211` | `M1<>CEN;M2=ON;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `707` | `4` | `400` | `4212` | `M1<>CEN;M2=ON;A2=AMB` | `97` |
+| `707` | `4` | `400` | `4214` | `M1<>CEN;M2=ON;A2=GEN` | `95` |
+| `707` | `4` | `400` | `4215` | `M1<>CEN;M2=ON;A2=GR` | `96` |
+| `707` | `4` | `400` | `4216` | `M1<>CEN;M2=PUL;A2<>AUX;A2<>GR;A2<>AMB;A2<>GEN` | `4` |
+| `707` | `4` | `400` | `4217` | `M1<>CEN;M2=PUL;A2=AMB` | `97` |
+| `707` | `4` | `400` | `4219` | `M1<>CEN;M2=PUL;A2=GEN` | `95` |
+| `707` | `4` | `400` | `4220` | `M1<>CEN;M2=PUL;A2=GR` | `96` |
+| `707` | `4` | `400` | `4255` | `M1=CEN;M2=0` | `4` |
+| `707` | `4` | `400` | `4257` | `M1=CEN;M2=1` | `4` |
+| `707` | `4` | `400` | `4259` | `M1=CEN;M2=2` | `4` |
+| `707` | `4` | `400` | `4261` | `M1=CEN;M2=3` | `4` |
+| `707` | `4` | `400` | `4263` | `M1=CEN;M2=4` | `4` |
+| `707` | `4` | `400` | `4265` | `M1=CEN;M2=O/I` | `4` |
+| `707` | `4` | `400` | `4267` | `M1=CEN;M2=PUL` | `4` |
+| `707` | `4` | `400` | `4908` | `M1<>CEN;M2<>CEN;A2<>AUX;A2<>GR;A2<>AMB;A2<>GE` | `4` |
+| `707` | `4` | `401` | `4222` | `M1<>CEN;M2=SU_GIU;A2=AMB` | `97` |
+| `707` | `4` | `401` | `4224` | `M1<>CEN;M2=SU_GIU;A2=GEN` | `95` |
+| `707` | `4` | `401` | `4225` | `M1<>CEN;M2=SU_GIU;A2=GR` | `96` |
+| `707` | `4` | `401` | `4227` | `M1<>CEN;M2=SU_GIU_M;A2=AMB` | `97` |
+| `707` | `4` | `401` | `4229` | `M1<>CEN;M2=SU_GIU_M;A2=GEN` | `95` |
+| `707` | `4` | `401` | `4230` | `M1<>CEN;M2=SU_GIU_M;A2=GR` | `96` |
+| `707` | `4` | `401` | `4909` | `M1<>CEN;M2=SU_GIU_M;A2<>AUX;A2<>GR;A2<>AMB;A2` | `4` |
+| `707` | `4` | `401` | `4910` | `M1<>CEN;M2=SU_GIU;A2<>AUX;A2<>GR;A2<>AMB;A2<>` | `4` |
+| `707` | `4` | `404` | `4199` | `M1<>CEN;M2=CEN` | `4` |
+| `707` | `4` | `406` | `4200` | `M1<>CEN;M2=FAKE` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000149:s000031`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `707` | `6` | `2428` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `707` | `6` | `2429` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `707` | `6` | `2430` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `707` | `6` | `2994` | `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `707` | `7` | `2419` | `SUBTYPE` | `15` = Differential restart | `11` | subtype(ASTCBR); reusable default `11` is outside this subset; filter supplies no replacement default |
+| `707` | `7` | `2993` | `LOCAL_BUTTON` | `12` = Bistable control; `13` = Monostable control; `14` = Bistable and blades control (entire reusable range retained) | `12` | Local button modality |
+| `707` | `400` | `2407` | `M` | `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `4` = Toggle `ON`/`OFF`; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `5` = `ON`/`OFF`; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90% | `0` | Mode; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `707` | `400` | `2408` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `707` | `400` | `2409` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `707` | `400` | `2410` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `707` | `400` | `2411` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `707` | `400` | `2412` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `707` | `400` | `2413` | `LEVEL` | `0..100` (entire reusable range retained) | `100` | Level |
+| `707` | `400` | `2414` | `START_S` | `0..255` (entire reusable range retained) | `255` | Soft start speed |
+| `707` | `400` | `2415` | `STOP_S` | `0..255` (entire reusable range retained) | `255` | Soft stop speed |
+| `707` | `400` | `2416` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `707` | `400` | `2417` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `707` | `401` | `2420` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `707` | `401` | `2421` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `707` | `401` | `2422` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `707` | `404` | `2423` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `707` | `404` | `2424` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `707` | `404` | `2425` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `707` | `404` | `2426` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000149:s000032`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `4` | `M1=0` | `M` = `0` | `4` |
+| `4` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M1=O/I` | `M` = `9` | `4` |
+| `4` | `M1=OFF` | `M` = `10` | `4` |
+| `4` | `M1=ON` | `M` = `11` | `4` |
+| `4` | `M1=PUL` | `M` = `15` | `4` |
+| `4` | `M1=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M1=SU_GIU_M` | `M` = `13` | `4` |
+| `4` | `M2=0` | `M` = `0` | `4` |
+| `4` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `4` |
+| `4` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `4` |
+| `4` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `4` |
+| `4` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `4` |
+| `4` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `4` |
+| `4` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `4` |
+| `4` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `4` |
+| `4` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `4` |
+| `4` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `4` |
+| `4` | `M2=O/I` | `M` = `9` | `4` |
+| `4` | `M2=OFF` | `M` = `10` | `4` |
+| `4` | `M2=ON` | `M` = `11` | `4` |
+| `4` | `M2=PUL` | `M` = `15` | `4` |
+| `4` | `M2=SU_GIU` | `M` = `12` | `4` |
+| `4` | `M2=SU_GIU_M` | `M` = `13` | `4` |
+| `20` | `M1=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `20` |
+| `20` | `M1=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `20` |
+| `20` | `M1=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `20` |
+| `20` | `M1=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `20` |
+| `25` | `M2=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `25` |
+| `25` | `M2=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `25` |
+| `25` | `M2=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `25` |
+| `25` | `M2=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `25` |
+| `26` | `M2=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `26` |
+| `26` | `M2=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `26` |
+| `26` | `M2=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `26` |
+| `26` | `M2=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `26` |
+| `26` | `M2=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `26` |
+| `26` | `M2=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `26` |
+| `26` | `M2=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `26` |
+| `26` | `M2=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `26` |
+| `26` | `M2=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `26` |
+| `26` | `M2=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `26` |
+| `26` | `M2=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `26` |
+| `95` | `M1=0` | `M` = `0`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=O/I` | `M` = `9`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=OFF` | `M` = `10`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=ON` | `M` = `11`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=PUL` | `M` = `15`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `3` | `95` |
+| `95` | `M1=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `3` | `95` |
+| `96` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `2` | `96` |
+| `96` | `M2=0; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=0; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=0; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=0; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=0; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=0; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=0; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=0; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=0; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=1; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=1; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=1; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=1; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=1; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=1; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=1; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=1; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=1; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=2; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=2; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=2; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=2; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=2; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=2; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=2; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=2; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=2; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=3; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=3; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=3; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=3; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=3; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=3; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=3; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=3; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=3; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=4; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=4; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=4; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=4; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=4; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=4; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=4; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=4; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=4; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=5; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=5; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=5; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=5; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=5; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=5; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=5; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=5; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=5; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=6; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=6; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=6; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=6; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=6; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=6; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=6; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=6; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=6; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=7; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=7; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=7; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=7; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=7; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=7; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=7; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=7; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=7; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=8; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=8; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=8; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=8; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=8; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=8; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=8; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=8; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=8; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=O/I; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=O/I; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=O/I; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=O/I; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=O/I; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=O/I; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=O/I; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=O/I; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=O/I; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=OFF; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=OFF; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=OFF; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=OFF; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=OFF; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=OFF; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=OFF; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=OFF; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=OFF; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=ON; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=ON; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=ON; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=ON; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=ON; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=ON; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=ON; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=ON; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=ON; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=PUL; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=PUL; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=PUL; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=PUL; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=PUL; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=PUL; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=PUL; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=PUL; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=PUL; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU; PL2=9` | `G1` = `9` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=1` | `G1` = `1` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=2` | `G1` = `2` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=3` | `G1` = `3` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=4` | `G1` = `4` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=5` | `G1` = `5` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=6` | `G1` = `6` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=7` | `G1` = `7` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=8` | `G1` = `8` | `96` → `202` |
+| `96` | `M2=SU_GIU_M; PL2=9` | `G1` = `9` | `96` → `202` |
+| `97` | `M2=0` | `M` = `0`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=1` | `M` = `1`; `T_TIME ` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=2` | `M` = `1`; `T_TIME ` = `2`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=3` | `M` = `1`; `T_TIME ` = `3`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=4` | `T_TIME ` = `4`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=5` | `T_TIME ` = `5`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=6` | `M` = `1`; `T_TIME ` = `6`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=7` | `M` = `1`; `T_TIME ` = `7`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=8` | `T_TIME ` = `8`; `M` = `1`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=O/I` | `M` = `9`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=OFF` | `M` = `10`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=ON` | `M` = `11`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=PUL` | `M` = `15`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU` | `M` = `12`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=SU_GIU_M` | `M` = `13`; `ADDR_TYPE` = `1` | `97` |
+| `97` | `M2=0; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=0; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=0; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=0; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=0; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=0; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=0; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=0; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=0; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=1; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=1; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=1; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=1; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=1; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=1; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=1; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=1; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=1; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=2; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=2; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=2; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=2; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=2; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=2; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=2; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=2; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=2; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=3; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=3; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=3; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=3; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=3; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=3; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=3; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=3; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=3; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=4; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=4; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=4; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=4; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=4; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=4; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=4; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=4; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=4; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=5; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=5; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=5; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=5; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=5; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=5; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=5; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=5; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=5; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=6; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=6; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=6; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=6; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=6; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=6; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=6; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=6; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=6; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=7; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=7; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=7; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=7; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=7; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=7; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=7; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=7; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=7; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=8; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=8; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=8; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=8; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=8; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=8; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=8; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=8; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=8; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=O/I; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=O/I; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=O/I; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=O/I; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=O/I; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=O/I; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=O/I; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=O/I; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=O/I; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=OFF; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=OFF; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=OFF; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=OFF; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=OFF; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=OFF; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=OFF; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=OFF; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=OFF; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=ON; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=ON; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=ON; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=ON; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=ON; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=ON; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=ON; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=ON; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=ON; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=PUL; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=PUL; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=PUL; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=PUL; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=PUL; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=PUL; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=PUL; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=PUL; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=PUL; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU; PL2=9` | `A` = `9` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=1` | `A` = `1` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=2` | `A` = `2` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=3` | `A` = `3` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=4` | `A` = `4` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=5` | `A` = `5` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=6` | `A` = `6` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=7` | `A` = `7` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=8` | `A` = `8` | `97` → `203` |
+| `97` | `M2=SU_GIU_M; PL2=9` | `A` = `9` | `97` → `203` |
+| `550` | `M1=0` | `M` = `0` | `550` |
+| `550` | `M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M1=O/I` | `M` = `9` | `550` |
+| `550` | `M1=OFF` | `M` = `10` | `550` |
+| `550` | `M1=ON` | `M` = `11` | `550` |
+| `550` | `M1=PUL` | `M` = `15` | `550` |
+| `550` | `M1=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M1=SU_GIU_M` | `M` = `13` | `550` |
+| `550` | `A1=1` | `A` = `1` | `550` |
+| `550` | `A1=2` | `A` = `2` | `550` |
+| `550` | `A1=3` | `A` = `3` | `550` |
+| `550` | `A1=4` | `A` = `4` | `550` |
+| `550` | `A1=5` | `A` = `5` | `550` |
+| `550` | `A1=6` | `A` = `6` | `550` |
+| `550` | `A1=7` | `A` = `7` | `550` |
+| `550` | `A1=8` | `A` = `8` | `550` |
+| `550` | `A1=9` | `A` = `9` | `550` |
+| `550` | `PL1=1` | `PL` = `1` | `550` |
+| `550` | `PL1=1; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `1` |
+| `550` | `PL1=1; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `1` |
+| `550` | `PL1=1; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `1` |
+| `550` | `PL1=2` | `PL` = `2` | `550` |
+| `550` | `PL1=2; M=0` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=1` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `62` | `550` → `2` |
+| `550` | `PL1=2; M=2` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `65` | `550` → `2` |
+| `550` | `PL1=2; M=3` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `70` | `550` → `2` |
+| `550` | `PL1=2; M=4` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `0` | `550` → `2` |
+| `550` | `PL1=2; M=5` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `2` |
+| `550` | `PL1=2; M=6` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `10` | `550` → `2` |
+| `550` | `PL1=2; M=7` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `5` | `550` → `2` |
+| `550` | `PL1=2; M=8` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `2` |
+| `550` | `PL1=2; M=9` | `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `30` | `550` → `2` |
+| `550` | `PL1=2; M=I/O` | `LOCAL_BUTTON` = `13`; `M` = `0`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=PUL` | `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `60` | `550` → `2` |
+| `550` | `PL1=2; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `2` |
+| `550` | `PL1=3` | `PL` = `3` | `550` |
+| `550` | `PL1=3; M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `550` → `3` |
+| `550` | `PL1=3; M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `550` → `3` |
+| `550` | `PL1=3; M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `550` → `3` |
+| `550` | `PL1=4` | `PL` = `4` | `550` |
+| `550` | `PL1=4; M1=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M1=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M1=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M1=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M1=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M1=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M1=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M1=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M1=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M1=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M1=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M1=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M1=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M1=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=4; M2=0` | `M` = `0` | `550` → `4` |
+| `550` | `PL1=4; M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` → `4` |
+| `550` | `PL1=4; M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` → `4` |
+| `550` | `PL1=4; M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` → `4` |
+| `550` | `PL1=4; M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` → `4` |
+| `550` | `PL1=4; M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` → `4` |
+| `550` | `PL1=4; M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` → `4` |
+| `550` | `PL1=4; M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` → `4` |
+| `550` | `PL1=4; M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` → `4` |
+| `550` | `PL1=4; M2=O/I` | `M` = `9` | `550` → `4` |
+| `550` | `PL1=4; M2=OFF` | `M` = `10` | `550` → `4` |
+| `550` | `PL1=4; M2=ON` | `M` = `11` | `550` → `4` |
+| `550` | `PL1=4; M2=PUL` | `M` = `15` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU` | `M` = `12` | `550` → `4` |
+| `550` | `PL1=4; M2=SU_GIU_M` | `M` = `13` | `550` → `4` |
+| `550` | `PL1=5` | `PL` = `5` | `550` |
+| `550` | `PL1=5; M1=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M1=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M1=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M1=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M1=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M1=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; M2=0` | `M` = `0` | `550` → `5` |
+| `550` | `PL1=5; M2=O/I` | `M` = `9` | `550` → `5` |
+| `550` | `PL1=5; M2=OFF` | `M` = `10` | `550` → `5` |
+| `550` | `PL1=5; M2=ON` | `M` = `11` | `550` → `5` |
+| `550` | `PL1=5; M2=PUL` | `M` = `15` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU` | `M` = `12` | `550` → `5` |
+| `550` | `PL1=5; M2=SU_GIU_M` | `M` = `13` | `550` → `5` |
+| `550` | `PL1=5; PL1=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL1=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL1=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL1=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL1=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL1=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL1=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL1=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL1=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL1=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=5; PL2=0` | `OUT_AUX_CHANNEL` = `0` | `550` → `5` |
+| `550` | `PL1=5; PL2=1` | `OUT_AUX_CHANNEL` = `1` | `550` → `5` |
+| `550` | `PL1=5; PL2=2` | `OUT_AUX_CHANNEL` = `2` | `550` → `5` |
+| `550` | `PL1=5; PL2=3` | `OUT_AUX_CHANNEL` = `3` | `550` → `5` |
+| `550` | `PL1=5; PL2=4` | `OUT_AUX_CHANNEL` = `4` | `550` → `5` |
+| `550` | `PL1=5; PL2=5` | `OUT_AUX_CHANNEL` = `5` | `550` → `5` |
+| `550` | `PL1=5; PL2=6` | `OUT_AUX_CHANNEL` = `6` | `550` → `5` |
+| `550` | `PL1=5; PL2=7` | `OUT_AUX_CHANNEL` = `7` | `550` → `5` |
+| `550` | `PL1=5; PL2=8` | `OUT_AUX_CHANNEL` = `8` | `550` → `5` |
+| `550` | `PL1=5; PL2=9` | `OUT_AUX_CHANNEL` = `9` | `550` → `5` |
+| `550` | `PL1=6` | `PL` = `6` | `550` |
+| `550` | `PL1=6; M=3` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=4` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=5` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=6` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=7` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `3`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=8` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=0` | `PIR` = `0` | `550` → `6` |
+| `550` | `PL1=6; S=1` | `PIR` = `1` | `550` → `6` |
+| `550` | `PL1=6; S=2` | `PIR` = `2` | `550` → `6` |
+| `550` | `PL1=6; S=3` | `PIR` = `3` | `550` → `6` |
+| `550` | `PL1=6; T=0` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=1` | `HOURS` = `0`; `MINUTES` = `0`; `SECONDS` = `30` | `550` → `6` |
+| `550` | `PL1=6; T=2` | `HOURS` = `0`; `MINUTES` = `1`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=3` | `HOURS` = `0`; `MINUTES` = `2`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=4` | `HOURS` = `0`; `MINUTES` = `5`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=5` | `HOURS` = `0`; `MINUTES` = `10`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=6` | `HOURS` = `0`; `MINUTES` = `15`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=7` | `HOURS` = `0`; `MINUTES` = `20`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=8` | `HOURS` = `0`; `MINUTES` = `30`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; T=9` | `HOURS` = `0`; `MINUTES` = `40`; `SECONDS` = `0` | `550` → `6` |
+| `550` | `PL1=6; M=0` | `ADDR_TYPE` = `0`; `MAIN_GROUP` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1` | `550` → `6` |
+| `550` | `PL1=6; M=1` | `ADDR_TYPE` = `0`; `LOAD_CONTROL` = `1`; `FUNCTIONAL_MODE` = `1`; `REG` = `0` | `550` → `6` |
+| `550` | `PL1=7` | `PL` = `7` | `550` |
+| `550` | `PL1=7` | Referenced conversion rule absent from source | `550` → `7` |
+| `550` | `PL1=8` | `PL` = `8` | `550` |
+| `550` | `PL1=8` | Referenced conversion rule absent from source | `550` → `8` |
+| `550` | `PL1=9` | `PL` = `9` | `550` |
+| `550` | `PL1=9; M=0` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=1` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `15` | `550` → `9` |
+| `550` | `PL1=9; M=2` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `25` | `550` → `9` |
+| `550` | `PL1=9; M=3` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `0`; `STOP_TIME` = `60` | `550` → `9` |
+| `550` | `PL1=9; M=PUL` | `DELAY_DOORS` = `3`; `LOCAL_BUTTON` = `12`; `M` = `15`; `STOP_TIME` = `20` | `550` → `9` |
+| `550` | `PL1=9; M=SLA` | `LOCAL_BUTTON` = `12`; `M` = `11` | `550` → `9` |
+| `550` | `M2=0` | `M` = `0` | `550` |
+| `550` | `M2=1` | `M` = `1`; `T_TIME ` = `1` | `550` |
+| `550` | `M2=2` | `M` = `1`; `T_TIME ` = `2` | `550` |
+| `550` | `M2=3` | `M` = `1`; `T_TIME ` = `3` | `550` |
+| `550` | `M2=4` | `M` = `1`; `T_TIME ` = `4` | `550` |
+| `550` | `M2=5` | `M` = `1`; `T_TIME ` = `5` | `550` |
+| `550` | `M2=6` | `M` = `1`; `T_TIME ` = `6` | `550` |
+| `550` | `M2=7` | `M` = `1`; `T_TIME ` = `7` | `550` |
+| `550` | `M2=8` | `M` = `1`; `T_TIME ` = `8` | `550` |
+| `550` | `M2=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `2` | `550` |
+| `550` | `M2=O/I` | `M` = `9` | `550` |
+| `550` | `M2=OFF` | `M` = `10` | `550` |
+| `550` | `M2=ON` | `M` = `11` | `550` |
+| `550` | `M2=PUL` | `M` = `15` | `550` |
+| `550` | `M2=SU_GIU` | `M` = `12` | `550` |
+| `550` | `M2=SU_GIU_M` | `M` = `13` | `550` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+#### Source irregularities affecting selection
+
+Section ID: `ownkb:section:d000149:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `source`
+
+| Source entry / scope | Issue | Interpretation limit |
+| --- | --- | --- |
+| Conditions `4908`, `4909`, `4910` | Stored endings `A2<>GE`, standalone `A2`, and `A2<>` are incomplete/unresolved | Do not repair missing tokens or infer condition precedence |
+| Remote addressing condition branches | `A2=AMB/GR/GEN` is stored although firmware `A2` has only `0..9` | A stored conversion branch is not proof of a legal physical selector |
+| PLUS selector branch | `M2=FAKE` occurs as a predicate; `FAKE` is absent from the declared firmware enum | Published software PLUS capability is distinct from this unresolved stored selector |
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000149:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 82`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware/build | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3`, `6`, `13` | hardware, microcontroller, and Device ID when supported | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine the four installed Module/Object roles | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine Module system/address configuration | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+The six physical configurator positions documented by the official sheet provide independent evidence for the expected ordinary addressed-form configurator count, but an observed `DIMENSION 1` read is still required for hardware corroboration.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000149:s000035`
+
+Provenance cues: `evidence`
+
+| Published arrangement | Evidence |
+| --- | --- |
+| one lighting or shutter load with local control | `ST-00000898-EN/FR`, pp. 3–7 |
+| two independent lighting loads with two local controls | `ST-00000898-EN/FR`, pp. 3–7 |
+| one lighting load with local control plus remote-actuator/scenario control | `ST-00000898-EN/FR`, pp. 3–7 |
+| one shutter load with local control plus remote-actuator/scenario control | `ST-00000898-EN/FR`, pp. 3–7 |
+
+For lighting, physical modes include cyclic `ON`/`OFF`, separate `ON`/`OFF`, slave operation, `PUL`, and delayed-`OFF` presets. For automation, physical modes include timed `UP/DOWN`, bistable and monostable shutter control.
+
+The remote-control side supports point-to-point, room, group, and general addressing plus lighting, automation, and programmed-scenario functions. Virtual configuration exposes a broader parameter surface than physical configurators.
+
+Generic WHO frame grammar remains canonical under [`WHO 1` - Lighting](../../functional/who-1-lighting/) and [`WHO 2` - Automation](../../functional/who-2-automation/).
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000149:s000036`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000149:s000037`
+
+A programmer must resolve local actuator topology and front/remote command topology separately. It must evaluate the Device-specific condition/conversion graph rather than treating this as one fixed actuator Object.
+
+See [Configuration Programming](../../programming/configuration-programming.md), [Object Programming](../../programming/object-programming.md), and [Programming Validation](../../programming/validation.md).
+
+The 2021 sheet, p. 7, requires neutral for normal operation; missing neutral otherwise causes flashing LEDs and disabled commands. Software can explicitly configure operation without neutral, subject to the reduced load matrix. For physical configuration, its unlock procedure is three presses of the **illustrated** front key within five minutes of power-up, applicable only from production `16W09`. The key location must be read from the diagram; no arbitrary button is substituted. Its shutter diagram separately says neutral is recommended but not required. Keep these published use/production constraints visible.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000149:s000038`
+
+Provenance cues: `catalogue`
+
+The archived zero-crossing technical and instruction sheets establish additional product constraints:
+
+- the Device has four documented operating arrangements: one local lighting/shutter load, two local lighting loads, one local lighting load plus remote/scenario control, and one local shutter load plus remote/scenario control;
+- software configuration can expose four independent logical addresses - two actuator addresses and two front-control addresses - even though the physical configurator surface is shared;
+- delayed-`OFF` lighting behavior is explicitly suitable for linked loads such as light/fan arrangements and must remain tied to the selected mode;
+- operation without a connected neutral is supported only under documented load and production constraints, with reduced load limits and an explicit product procedure for that operating arrangement;
+- the front control and contact portions are separable, and range-specific LED/current behavior is product hardware metadata rather than OpenWebNet topology.
+
+These facts supplement the four-Module catalogue topology and are constraints on a future configurator/validator.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000149:s000039`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+- Add sanitized hardware fingerprints for at least one commercial variant.
+- Corroborate installed `modobj`, firmware/build, configurator count, Module/Object topology, addresses, and configuration.
+- Continue document discovery for older revisions and range-specific sheets.
+- Compare zero-crossing item `2180` experimentally with non-zero-crossing item `1184`, keeping hardware and load-control differences explicit.
+- Resolve catalogue conditions that use values outside the firmware-level physical enum.
+
+### Sources
+
+Section ID: `ownkb:section:d000149:s000040`
+
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `H4672M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4672M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/57/52/575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4672M2); SHA-256 `575284f0fb0bde456e0e5122bbf632c2e03739d15658ba7533e3a93b83ba94f7`.
+- `LN4672M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4672M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6b/19/6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4672M2); SHA-256 `6b19c5a1e1d740e4fd4168bccb23f77109a45c4d988d1b444e313ccb64c1a4a5`.
+- `AM5852M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5852M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c3/f4/c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5852M2); SHA-256 `c3f44f472988b7718fe4ad50aa3ae512aa004e2f532391ea983bf2775bc23315`.
+- `067561-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067561` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/00/ab/00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/actionneur-commande-2-relais-myhome-up-celiane); SHA-256 `00ab23b359c564b31d32e9ae48f4429c1de92d51da6738579c2b0fb0322e04cc`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0006)
+
+# Document: ownkb:document:d000150
+
+Source path: `devices/definitions/own-dev-0007-three-module-basic-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Three-module basic control
+
+Section ID: `ownkb:section:d000150:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000150:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This three-module SCS wall control provides six pushbuttons for three independently configured loads or functions. Status LEDs give local feedback, while configuration determines how each pair of buttons operates its assigned target.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0007` | Project identity |
+| Technical description | Three-module, six-button configurable SCS control for three independent loads/functions | Catalogue + official technical sheet |
+| Catalogue item | `4` - “Basic control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `3` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `148` | Implementation evidence |
+| Declared Modules | `3` | Implementation evidence |
+| Categories | Command, Multifunction, Lighting, Automation, Scenario | Capability model |
+
+This Device exposes three independently addressed command Modules under a shared physical mode selector. The official `MQ00290-c-EN` technical sheet directly covers `067554`, `H4652/3`, `L4652/3`, and `AM5832/3`. The catalogue also maps `573975` and `687378` to the same technical item.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000150:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4652/3` | Established identity | Catalogue + official technical sheet |
+| BTicino - LivingLight | `L4652/3` | Established identity | Catalogue + official technical sheet |
+| BTicino - Matix | `AM5832/3` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067554` | Established catalogue identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573975` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Vela | `687378` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+
+The retained canonical catalogue assigns `067554` to Céliane. An attempted current manufacturer export was inaccessible during review, so no new marketed-line assignment is incorporated.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000150:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4652/3` | `8012199745367` | [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf), `H4652_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4652/3` | `8012199365619` | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf), `L4652_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `AM5832/3` | `8012199838342` | [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf), `AM5832_3-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000150:s000005`
+
+Applicability cues: `revision`
+Uncertainty: `not established`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00290-c-EN` | Technical sheet | 01/08/2013 | `067554`, `H4652/3`, `L4652/3`, `AM5832/3` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/21/3c/213cc3f253156d5ef9c7311ff6a1a5f9ae6c48405991341ded7f7b3a94517a85.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ00290_c_EN.pdf) |
+| `MQ00290-c-FR` | Technical sheet | 05/05/2014 | same family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/48/79/48794f03e6d3bc4b5e200f3ebf49de93f7d85f4c29714869914e11752b8cff2e.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00290-c-FR.pdf) |
+| `T9807J` | Instruction sheet | Printed revision; date not established | L4652/3 family | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3e/59/3e59e4fbc2a4cbfb4f70b85750d2d970f750e8ac81c79af99f91c332c7512cc5.pdf) | [Official source](https://dar.bticino.com/asset/Documents/T9807J.pdf) |
+| `LE05420AA` | Instruction sheet | Printed `10/12-01 PC` | `067554` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/c5/f9/c5f96fb6a845ad7c7b2ffc5b41c232c446ed6e1d306585e133ca56f263fdaf17.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE05420AA.pdf) |
+| `H4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3) |
+| `L4652_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4652/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3) |
+| `AM5832_3-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `AM5832/3` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000150:s000006`
+
+Applicability cues: `scs`
+Provenance cues: `documentation`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Width | 3 flush-mounted modules | Publisher documentation cited in this section |
+| Front controls | 6 pushbuttons with status LEDs | Publisher documentation cited in this section |
+| SCS nominal supply | `27 Vdc` | Publisher documentation cited in this section |
+| SCS operating supply | `18..27 Vdc` | Publisher documentation cited in this section |
+| Current draw | `9 mA` | Publisher documentation cited in this section |
+| Physical configurator positions | `A1`, `PL1`, `A2`, `PL2`, `A3`, `PL3`, `M` | Publisher documentation cited in this section |
+
+The seven printed configurator positions independently support the expected ordinary addressed-form configurator count. An observed `DIMENSION 1` read is still required before recording `N_CONF = 7` as hardware-corroborated.
+
+### Identity
+
+Section ID: `ownkb:section:d000150:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `4` | Canonical catalogue |
+| Item model / `modobj` | `3` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000150:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `3` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000150:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `148` | `-1` | `-1` | `-1` | `3` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000150:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000150:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `148` | `1` | `400` Light control | Fixed/designated metadata | `638` | `400` | `444` |
+| `148` | `1` | `401` Automation control | Candidate alternative | `551` | `401` | `377` |
+| `148` | `1` | `404` Scheduled scenario | Candidate alternative | `554` | `404` | `378` |
+| `148` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `557` | `406` | `379` |
+| `148` | `2` | `400` Light control | Fixed/designated metadata | `639` | `400` | `444` |
+| `148` | `2` | `401` Automation control | Candidate alternative | `552` | `401` | `377` |
+| `148` | `2` | `404` Scheduled scenario | Candidate alternative | `555` | `404` | `378` |
+| `148` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `558` | `406` | `379` |
+| `148` | `3` | `400` Light control | Fixed/designated metadata | `640` | `400` | `444` |
+| `148` | `3` | `401` Automation control | Candidate alternative | `553` | `401` | `377` |
+| `148` | `3` | `404` Scheduled scenario | Candidate alternative | `556` | `404` | `378` |
+| `148` | `3` | `406` Scheduled scenario PLUS | Candidate alternative | `559` | `406` | `379` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000150:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `148` | `500` Automation double command virgin | `1`, `2`, `3` | `400`, `401`, `404`, `406`, `407` | `500` | `21` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000150:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `148` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `148` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `148` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000150:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `148` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `148` | `A1` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A1; Automation A addressing space (for configurator A1) |
+| `148` | `PL1` | `0..9` | `0` | PL1; PL1 - (0-9) |
+| `148` | `A2` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A2; Automation A addressing space (for configurator A2) |
+| `148` | `PL2` | `0..9` | `0` | PL2; PL2 - (0-9) |
+| `148` | `A3` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB`; `15` = `AUX` | `0` | A3; Automation A addressing space (for configurator A3) |
+| `148` | `PL3` | `0..9` | `0` | PL3; PL3 - (0-9) |
+| `148` | `M` | `0..9`; `14` = `CEN` | `0` | M; Mode (0-9,`CEN`) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000150:s000015`
+
+Provenance cues: `catalogue`
+
+| Field | Catalogue domain | Role |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A1`, `A2`, `A3` | `0..9`, `GEN`, `GR`, `AMB`, `AUX` | address scope for each Module |
+| `PL1`, `PL2`, `PL3` | `0..9` | point/function value for each Module |
+| `M` | `0..9`, `CEN` | shared function selector |
+
+The published sheet documents virtual point-to-point room `0..10`, light point `0..15`, group `1..255`, room, group, and general command forms. The physical form uses the three A/PL pairs and the shared `M` position.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000150:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `400` - Light control
+
+Section ID: `ownkb:section:d000150:s000017`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `3` = `ON`/`OFF` and dimming; `4` = Toggle `ON`/`OFF`; `5` = `ON`/`OFF`; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation | `0` | Modality; Standard mode means: with regulation for Point-to-point addressing, without regulation for Area, Group and General addressing |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Light point of reference actuator; 0=no referent address |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0=no referent address |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129-134` |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129-134` |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129-134` |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129-132` |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `401` - Automation control
+
+Section ID: `ownkb:section:d000150:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `12` = Bistable control; `13` = Monostable control; `14` = Blades control and bistable | `12` | Modality |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000150:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000150:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Virgin-only candidate Objects
+
+Section ID: `ownkb:section:d000150:s000021`
+
+The following reusable surfaces occur only through permitted Virgin Object membership; no direct association proves that they become active on this Device.
+
+#### Object `407` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000150:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = ON/OFF and point to point dimming; `10` = OFF; `11` = ON; `15` = PUL; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset GEN; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000150:s000023`
+
+Three addressed Modules share a physical mode selector. Reusable Object membership does not permit independent physical `M` values for each pair of buttons.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000150:s000024`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000150:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `148` | `1` | `400` | `4464` | `M=1;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4465` | `M=1;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4466` | `M=1;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4467` | `M=1;A1=GR` | `31` |
+| `148` | `1` | `400` | `4479` | `M=2;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4480` | `M=2;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4481` | `M=2;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4482` | `M=2;A1=GR` | `31` |
+| `148` | `1` | `400` | `4507` | `M=4;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4508` | `M=4;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4509` | `M=4;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4510` | `M=4;A1=GR` | `31` |
+| `148` | `1` | `400` | `4521` | `M=5;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4522` | `M=5;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4523` | `M=5;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4524` | `M=5;A1=GR` | `31` |
+| `148` | `1` | `400` | `4547` | `M=7;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4548` | `M=7;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4549` | `M=7;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4550` | `M=7;A1=GR` | `31` |
+| `148` | `1` | `400` | `4560` | `M=8;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4561` | `M=8;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4562` | `M=8;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4563` | `M=8;A1=GR` | `31` |
+| `148` | `1` | `400` | `4572` | `M=9;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `400` | `4573` | `M=9;A1=AMB` | `31` |
+| `148` | `1` | `400` | `4574` | `M=9;A1=GEN` | `31` |
+| `148` | `1` | `400` | `4575` | `M=9;A1=GR` | `31` |
+| `148` | `1` | `401` | `4493` | `M=3;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `401` | `4494` | `M=3;A1=AMB` | `31` |
+| `148` | `1` | `401` | `4495` | `M=3;A1=GEN` | `31` |
+| `148` | `1` | `401` | `4496` | `M=3;A1=GR` | `31` |
+| `148` | `1` | `401` | `4534` | `M=6;A1<>AMB;A1<>GR;A1<>GEN` | `31` |
+| `148` | `1` | `401` | `4535` | `M=6;A1=AMB` | `31` |
+| `148` | `1` | `401` | `4536` | `M=6;A1=GEN` | `31` |
+| `148` | `1` | `401` | `4537` | `M=6;A1=GR` | `31` |
+| `148` | `1` | `404` | `4587` | `M=CEN` | `31` |
+| `148` | `1` | `406` | `4594` | `M=FAKE` | None |
+| `148` | `2` | `400` | `4468` | `M=1;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `400` | `4469` | `M=1;A2=AMB` | `32` |
+| `148` | `2` | `400` | `4470` | `M=1;A2=GEN` | `32` |
+| `148` | `2` | `400` | `4471` | `M=1;A2=GR` | `32` |
+| `148` | `2` | `400` | `4511` | `M=4;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `400` | `4512` | `M=4;A2=AMB` | `32` |
+| `148` | `2` | `400` | `4513` | `M=4;A2=GEN` | `32` |
+| `148` | `2` | `400` | `4514` | `M=4;A2=GR` | `32` |
+| `148` | `2` | `400` | `4551` | `M=7;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `400` | `4552` | `M=7;A2=AMB` | `32` |
+| `148` | `2` | `400` | `4553` | `M=7;A2=GEN` | `32` |
+| `148` | `2` | `400` | `4554` | `M=7;A2=GR` | `32` |
+| `148` | `2` | `400` | `4564` | `M=8;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `400` | `4565` | `M=8;A2=AMB` | `32` |
+| `148` | `2` | `400` | `4566` | `M=8;A2=GEN` | `32` |
+| `148` | `2` | `400` | `4567` | `M=8;A2=GR` | `32` |
+| `148` | `2` | `400` | `4576` | `M=9;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `400` | `4577` | `M=9;A2=AMB` | `32` |
+| `148` | `2` | `400` | `4578` | `M=9;A2=GEN` | `32` |
+| `148` | `2` | `400` | `4579` | `M=9;A2=GR` | `32` |
+| `148` | `2` | `401` | `4483` | `M=2;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `401` | `4484` | `M=2;A2=AMB` | `32` |
+| `148` | `2` | `401` | `4485` | `M=2;A2=GEN` | `32` |
+| `148` | `2` | `401` | `4486` | `M=2;A2=GR` | `32` |
+| `148` | `2` | `401` | `4497` | `M=3;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `401` | `4498` | `M=3;A2=AMB` | `32` |
+| `148` | `2` | `401` | `4499` | `M=3;A2=GEN` | `32` |
+| `148` | `2` | `401` | `4500` | `M=3;A2=GR` | `32` |
+| `148` | `2` | `401` | `4525` | `M=5;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `401` | `4526` | `M=5;A2=AMB` | `32` |
+| `148` | `2` | `401` | `4527` | `M=5;A2=GEN` | `32` |
+| `148` | `2` | `401` | `4528` | `M=5;A2=GR` | `32` |
+| `148` | `2` | `401` | `4538` | `M=6;A2<>AMB;A2<>GR;A2<>GEN` | `32` |
+| `148` | `2` | `401` | `4539` | `M=6;A2=AMB` | `32` |
+| `148` | `2` | `401` | `4540` | `M=6;A2=GEN` | `32` |
+| `148` | `2` | `401` | `4541` | `M=6;A2=GR` | `32` |
+| `148` | `2` | `404` | `4588` | `M=CEN` | `32` |
+| `148` | `2` | `406` | `4594` | `M=FAKE` | None |
+| `148` | `3` | `400` | `4555` | `M=7;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `400` | `4556` | `M=7;A3=AMB` | `33` |
+| `148` | `3` | `400` | `4557` | `M=7;A3=GEN` | `33` |
+| `148` | `3` | `400` | `4558` | `M=7;A3=GR` | `33` |
+| `148` | `3` | `400` | `4568` | `M=8;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `400` | `4569` | `M=8;A3=AMB` | `33` |
+| `148` | `3` | `400` | `4570` | `M=8;A3=GEN` | `33` |
+| `148` | `3` | `400` | `4571` | `M=8;A3=GR` | `33` |
+| `148` | `3` | `400` | `4580` | `M=9;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `400` | `4581` | `M=9;A3=AMB` | `33` |
+| `148` | `3` | `400` | `4582` | `M=9;A3=GEN` | `33` |
+| `148` | `3` | `400` | `4583` | `M=9;A3=GR` | `33` |
+| `148` | `3` | `401` | `4472` | `M=1;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4473` | `M=1;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4474` | `M=1;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4475` | `M=1;A3=GR` | `33` |
+| `148` | `3` | `401` | `4487` | `M=2;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4488` | `M=2;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4489` | `M=2;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4490` | `M=2;A3=GR` | `33` |
+| `148` | `3` | `401` | `4501` | `M=3;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4502` | `M=3;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4503` | `M=3;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4504` | `M=3;A3=GR` | `33` |
+| `148` | `3` | `401` | `4515` | `M=4;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4516` | `M=4;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4517` | `M=4;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4518` | `M=4;A3=GR` | `33` |
+| `148` | `3` | `401` | `4529` | `M=5;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4530` | `M=5;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4531` | `M=5;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4532` | `M=5;A3=GR` | `33` |
+| `148` | `3` | `401` | `4542` | `M=6;A3<>AMB;A3<>GR;A3<>GEN` | `33` |
+| `148` | `3` | `401` | `4543` | `M=6;A3=AMB` | `33` |
+| `148` | `3` | `401` | `4544` | `M=6;A3=GEN` | `33` |
+| `148` | `3` | `401` | `4545` | `M=6;A3=GR` | `33` |
+| `148` | `3` | `404` | `4589` | `M=CEN` | `33` |
+| `148` | `3` | `406` | `4594` | `M=FAKE` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000150:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `148` | `400` | `562` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `148` | `400` | `563` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `148` | `400` | `564` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `148` | `400` | `565` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `148` | `400` | `566` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `148` | `400` | `567` | `LEVEL` | `0..100` (entire reusable range retained) | `100` | Level |
+| `148` | `400` | `568` | `START_S` | `0..255` (entire reusable range retained) | `255` | Soft start speed |
+| `148` | `400` | `569` | `STOP_S` | `0..255` (entire reusable range retained) | `255` | Soft stop speed |
+| `148` | `400` | `570` | `DIMMING_S` | `0..255` (entire reusable range retained) | `255` | Dimming speed |
+| `148` | `400` | `571` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `148` | `400` | `572` | `M` | `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `130` = Customized `ON`/`OFF` and point to point dimmer; `131` = Customized toggle dimmer; `132` = Customized `ON`/`OFF` and dimmer; `133` = Customized toggle dimmer without regulation; `134` = Customized `ON`/`OFF` and dimmer without regulation; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `4` = Toggle `ON`/`OFF`; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `5` = `ON`/`OFF`; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90% | `0` | Mode; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `148` | `401` | `298` | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems (entire reusable range retained) | `0` | Destination level |
+| `148` | `401` | `299` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `148` | `401` | `300` | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard (entire reusable range retained) | `16` | Installation level |
+| `148` | `401` | `301` | `M` | `14` = Blades control and bistable | `12` | Modality; reusable default `12` is outside this subset; filter supplies no replacement default |
+| `148` | `404` | `304` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `148` | `404` | `1702` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000150:s000027`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `31` | `M=0` | `M` = `0` | `31` |
+| `31` | `M=1` | `M` = `0` | `31` |
+| `31` | `M=2` | `M` = `0` | `31` |
+| `31` | `M=3` | `M` = `12` | `31` |
+| `31` | `M=4` | `M` = `0` | `31` |
+| `31` | `M=5` | `M` = `0` | `31` |
+| `31` | `M=6` | `M` = `13` | `31` |
+| `31` | `M=7` | `M` = `0` | `31` |
+| `31` | `M=8` | `M` = `0` | `31` |
+| `31` | `M=9` | `M` = `9` | `31` |
+| `31` | `M=CEN` | `CEN_BUTT_1 ` = `2`; `CEN_BUTT_2 ` = `5` | `31` |
+| `31` | `A1=AMB` | `ADDR_TYPE` = `1` | `31` |
+| `31` | `A1=GR` | `ADDR_TYPE` = `2` | `31` |
+| `31` | `A1=GEN` | `ADDR_TYPE` = `3` | `31` |
+| `31` | `A1=AMB; PL1=1` | `A` = `1` | `31` → `201` |
+| `31` | `A1=AMB; PL1=2` | `A` = `2` | `31` → `201` |
+| `31` | `A1=AMB; PL1=3` | `A` = `3` | `31` → `201` |
+| `31` | `A1=AMB; PL1=4` | `A` = `4` | `31` → `201` |
+| `31` | `A1=AMB; PL1=5` | `A` = `5` | `31` → `201` |
+| `31` | `A1=AMB; PL1=6` | `A` = `6` | `31` → `201` |
+| `31` | `A1=AMB; PL1=7` | `A` = `7` | `31` → `201` |
+| `31` | `A1=AMB; PL1=8` | `A` = `8` | `31` → `201` |
+| `31` | `A1=AMB; PL1=9` | `A` = `9` | `31` → `201` |
+| `31` | `A1=GR; PL1=1` | `G1` = `1` | `31` → `200` |
+| `31` | `A1=GR; PL1=2` | `G1` = `2` | `31` → `200` |
+| `31` | `A1=GR; PL1=3` | `G1` = `3` | `31` → `200` |
+| `31` | `A1=GR; PL1=4` | `G1` = `4` | `31` → `200` |
+| `31` | `A1=GR; PL1=5` | `G1` = `5` | `31` → `200` |
+| `31` | `A1=GR; PL1=6` | `G1` = `6` | `31` → `200` |
+| `31` | `A1=GR; PL1=7` | `G1` = `7` | `31` → `200` |
+| `31` | `A1=GR; PL1=8` | `G1` = `8` | `31` → `200` |
+| `31` | `A1=GR; PL1=9` | `G1` = `9` | `31` → `200` |
+| `32` | `M=0` | `M` = `0` | `32` |
+| `32` | `M=1` | `M` = `0` | `32` |
+| `32` | `M=2` | `M` = `12` | `32` |
+| `32` | `M=3` | `M` = `12` | `32` |
+| `32` | `M=4` | `M` = `0` | `32` |
+| `32` | `M=5` | `M` = `13` | `32` |
+| `32` | `M=6` | `M` = `13` | `32` |
+| `32` | `M=7` | `M` = `0` | `32` |
+| `32` | `M=8` | `M` = `9` | `32` |
+| `32` | `M=9` | `M` = `9` | `32` |
+| `32` | `M=CEN` | `CEN_BUTT_1 ` = `1`; `CEN_BUTT_2 ` = `5` | `32` |
+| `32` | `A2=AMB` | `ADDR_TYPE` = `1` | `32` |
+| `32` | `A2=GR` | `ADDR_TYPE` = `2` | `32` |
+| `32` | `A2=GEN` | `ADDR_TYPE` = `3` | `32` |
+| `32` | `A2=AMB; PL2=1` | `A` = `1` | `32` → `203` |
+| `32` | `A2=AMB; PL2=2` | `A` = `2` | `32` → `203` |
+| `32` | `A2=AMB; PL2=3` | `A` = `3` | `32` → `203` |
+| `32` | `A2=AMB; PL2=4` | `A` = `4` | `32` → `203` |
+| `32` | `A2=AMB; PL2=5` | `A` = `5` | `32` → `203` |
+| `32` | `A2=AMB; PL2=6` | `A` = `6` | `32` → `203` |
+| `32` | `A2=AMB; PL2=7` | `A` = `7` | `32` → `203` |
+| `32` | `A2=AMB; PL2=8` | `A` = `8` | `32` → `203` |
+| `32` | `A2=AMB; PL2=9` | `A` = `9` | `32` → `203` |
+| `32` | `A2=GR; PL2=1` | `G1` = `1` | `32` → `202` |
+| `32` | `A2=GR; PL2=2` | `G1` = `2` | `32` → `202` |
+| `32` | `A2=GR; PL2=3` | `G1` = `3` | `32` → `202` |
+| `32` | `A2=GR; PL2=4` | `G1` = `4` | `32` → `202` |
+| `32` | `A2=GR; PL2=5` | `G1` = `5` | `32` → `202` |
+| `32` | `A2=GR; PL2=6` | `G1` = `6` | `32` → `202` |
+| `32` | `A2=GR; PL2=7` | `G1` = `7` | `32` → `202` |
+| `32` | `A2=GR; PL2=8` | `G1` = `8` | `32` → `202` |
+| `32` | `A2=GR; PL2=9` | `G1` = `9` | `32` → `202` |
+| `33` | `M=0` | `M` = `0` | `33` |
+| `33` | `M=1` | `M` = `12` | `33` |
+| `33` | `M=2` | `M` = `12` | `33` |
+| `33` | `M=3` | `M` = `12` | `33` |
+| `33` | `M=4` | `M` = `13` | `33` |
+| `33` | `M=5` | `M` = `13` | `33` |
+| `33` | `M=6` | `M` = `13` | `33` |
+| `33` | `M=7` | `M` = `9` | `33` |
+| `33` | `M=8` | `M` = `9` | `33` |
+| `33` | `M=9` | `M` = `9` | `33` |
+| `33` | `M=CEN` | `CEN_BUTT_1 ` = `3`; `CEN_BUTT_2 ` = `6` | `33` |
+| `33` | `A3=AMB` | `ADDR_TYPE` = `1` | `33` |
+| `33` | `A3=GR` | `ADDR_TYPE` = `2` | `33` |
+| `33` | `A3=GEN` | `ADDR_TYPE` = `3` | `33` |
+| `33` | `A3=AMB; PL3=1` | `A` = `1` | `33` → `205` |
+| `33` | `A3=AMB; PL3=2` | `A` = `2` | `33` → `205` |
+| `33` | `A3=AMB; PL3=3` | `A` = `3` | `33` → `205` |
+| `33` | `A3=AMB; PL3=4` | `A` = `4` | `33` → `205` |
+| `33` | `A3=AMB; PL3=5` | `A` = `5` | `33` → `205` |
+| `33` | `A3=AMB; PL3=6` | `A` = `6` | `33` → `205` |
+| `33` | `A3=AMB; PL3=7` | `A` = `7` | `33` → `205` |
+| `33` | `A3=AMB; PL3=8` | `A` = `8` | `33` → `205` |
+| `33` | `A3=AMB; PL3=9` | `A` = `9` | `33` → `205` |
+| `33` | `A3=GR; PL3=1` | `G1` = `1` | `33` → `204` |
+| `33` | `A3=GR; PL3=2` | `G1` = `2` | `33` → `204` |
+| `33` | `A3=GR; PL3=3` | `G1` = `3` | `33` → `204` |
+| `33` | `A3=GR; PL3=4` | `G1` = `4` | `33` → `204` |
+| `33` | `A3=GR; PL3=5` | `G1` = `5` | `33` → `204` |
+| `33` | `A3=GR; PL3=6` | `G1` = `6` | `33` → `204` |
+| `33` | `A3=GR; PL3=7` | `G1` = `7` | `33` → `204` |
+| `33` | `A3=GR; PL3=8` | `G1` = `8` | `33` → `204` |
+| `33` | `A3=GR; PL3=9` | `G1` = `9` | `33` → `204` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+The stored PLUS condition `M=FAKE` uses a symbol absent from firmware `148`'s enum. The product sheet documents software PLUS activation, but does not resolve the internal `FAKE` selector or its execution precedence.
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000150:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 3`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | obtain actual installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | determine active Object for each of the three command Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine the three Module addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000150:s000029`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Lighting | Three A/PL pairs; cyclic ON/OFF and cover-dependent ON/OFF/adjustment, with software reference address for group/room status | `MQ00290-c-EN`, pp. 2, 4; FR pp. 2, 4 |
+| Automation | Cover-dependent bistable or monostable shutter commands under a shared `M` | Same EN/FR sheets, pp. 2–4 |
+| MH200N CEN | Six scenario buttons; physical `M=CEN` uses the first A/PL pair and leaves `A2/PL2/A3/PL3` unconfigured | Same sheets, pp. 3–4 |
+| PLUS scenarios | Software scenario address `1..2047`; button `0..31` | Same sheets, p. 3 |
+
+Three independent catalogue command Modules do not imply three independently selectable physical mode values.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000150:s000030`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000150:s000031`
+
+Provenance cues: `catalogue`
+
+For ordinary addressed controls, the left, middle and right button pairs correspond to `A1/PL1`, `A2/PL2` and `A3/PL3`. `M` is shared and its physical effect depends on the fitted button covers. The published table mixes lighting and shutter functions for some covers; resolve the exact cover/function combination instead of assigning three unrelated `M` values.
+
+Physical CEN is different: configure only the first address pair and leave `A2/PL2/A3/PL3` empty. Software uses button identifiers `0..31` and, for PLUS scenarios, scenario address `1..2047`. Physical A/PL values `1..9` and software room `0..10` / point `0..15` remain separate from the catalogue's underlying `0..9` fields. Check the active Object projection before writing; generic sequencing stays in [Programming Validation](../../programming/validation.md).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000150:s000032`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `may`
+Provenance cues: `documentation`, `source`
+
+The archived `MQ00290` and installation sheets add Device-specific behavior to the three independent command Modules:
+
+- the shared physical `M` selector changes the function family of all three A/PL pairs and therefore cannot be interpreted independently per Module;
+- physical and virtual configuration cover point-to-point, room, group and general lighting scopes, programmed scenarios, `CEN`/`CEN` PLUS behavior and automation control;
+- software configuration can associate return-of-load status with a reference actuator address for non-point-to-point commands;
+- `CEN`-only use has product-level constraints on address positions that are not used by the `CEN` function;
+- the published PLUS scenario representation uses the wider software scenario domain rather than only the physical selector values;
+- LED/mechanical behavior remains a commercial/package concern and should not be inferred solely from the shared item.
+
+The current source set is reconciled for the core product family; direct documentation for `573975` and `687378` remains outstanding.
+
+The English sheet is dated 1 August 2013; the French revision is dated 5 May 2014. Their addressing, CEN constraints and function/cover tables agree on the reviewed facts. `T9807J` is a multi-product button-assembly instruction including `L4652/3`; `LE05420AA` (`10/12-01 PC`) is an assembly sheet. Neither supplies additional firmware or load ratings. The inaccessible current manufacturer export remains a discovery lead; an earlier unretained Arteor wording report is not used to establish a competing marketed-line identity.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000150:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `documentation`
+
+- Locate product-specific documentation for `573975` and `687378`.
+- Retrieve a retained current manufacturer record for `067554` before adjudicating any reported marketed-line wording difference.
+- Add a sanitized hardware fingerprint to corroborate `modobj`, firmware, expected configurator count, Module Objects, addresses, and configuration.
+- Verify whether all package/finish variants expose identical LED and mechanical behavior.
+- Continue archival discovery for older technical-sheet revisions and language variants.
+
+### Sources
+
+Section ID: `ownkb:section:d000150:s000034`
+
+Provenance cues: `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `H4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/63/e5/63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4652_3); SHA-256 `63e5b4eb1e7aaf083e4c5949b4aed30ca2d067944554caa6014d0e98fd0843a2`.
+- `L4652_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4652/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/07/2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4652_3); SHA-256 `2f0714e82b199b9d75fcb29f08d7b64ddf15a612c97f9af7f160e82c87df4fd6`.
+- `AM5832_3-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5832/3` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/1c/ec/1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5832_3); SHA-256 `1cecf514a4b6bbae5c315d16bb1dd0f74f5203899e30cb418d22bbaf10c91e53`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0007)
+
+# Document: ownkb:document:d000151
+
+Source path: `devices/definitions/own-dev-0008-flush-mounted-one-relay-actuator.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Flush-mounted one-relay actuator
+
+Section ID: `ownkb:section:d000151:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000151:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This flush-mounted SCS actuator switches a lighting load through one integrated relay. Upper and lower pushbuttons provide local operation, with an LED for feedback; the permissible load depends on the lamp or transformer type.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0008` | Project identity |
+| Technical description | Flush-mounted single-relay lighting actuator with local control | Catalogue + official technical sheet |
+| Catalogue item | `1121` - “Flush mounted actuator 1 relay” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `101` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `186` | Implementation evidence |
+| Declared Modules | `1` | Implementation evidence |
+| Categories | Actuator, Lighting | Capability model |
+
+This Device is a single-Module lighting actuator with one electromechanical relay, local buttons, LED indication, physical configurator positions, and MyHOME Suite configuration.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000151:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Arnould - Espace Evolution | `64390` | Established identity | Catalogue + official technical sheet |
+| BTicino - Axolute | `H4671/1` | Established identity | Catalogue + official technical sheet |
+| BTicino - LivingLight | `L4671/1` | Established identity | Catalogue + official technical sheet + PEP |
+| BTicino - Matix | `AM5851/1` | Established identity | Catalogue + official technical sheet + PEP |
+| Arnould - Espace Evolution | `64190` | Established commercial variant | Canonical catalogue + Arnould catalogue printed/PDF p. 32; preassembled package |
+| Legrand - Céliane | `067559` | Shared technical-item identity | Canonical catalogue; retained exact-product sheet absent |
+
+The Product Environmental Profile independently identifies `L4671/1` as its reference product and states that the environmental data also represents `H4671/1` and `AM5851/1`.
+
+### Documentation
+
+Section ID: `ownkb:section:d000151:s000004`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00072-e-FR` | Technical sheet | 29/04/2014 | `H4671/1`, `L4671/1`, `AM5851/1`, `64390` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/b6/39/b63971b46893557a9c8b4c930da6a55fc3165997d79768e612ef5db3087f5ea0.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00072-e-fr.pdf) |
+| `BT-L4671_1-EN` | Environmental product profile (PEP) | Issue `12-2016`; `LGRP-00332-V01.01-EN` / `20 E0041B-EN`, PDF p. 4 | Reference `L4671/1`; family applicability to `H4671/1`, `AM5851/1`. Weight includes unit packaging (PDF p. 2); not an installation/firmware manual. | [Archived PDF](https://archive.openwebnet-ha.org/sha256/85/34/853429f229cda5612efb9210cd2e044cd7ce8a346cf96d643eba5f26f9acfe27.pdf) | [Official source](https://dar.bticino.com/asset/Documents/BT-L4671_1-EN.pdf) |
+| `Espace-Evolution-catalogue.pdf` | Historical Arnould Espace Evolution product catalogue | No publication date established | `64390`, `64190`: printed p. 32 / PDF p. 32; selection guide printed p. 27 / PDF p. 27. Historical package facts only. | [Archived original](https://archive.openwebnet-ha.org/sha256/98/e4/98e446ba788aba89c58c0d0f3e13cce2b357f6850c3c3df31de64ff023e7303a.pdf) | Publisher URL not recorded in retained provenance; see [artifact manifest](../../sources/artifact-manifest.yaml) |
+
+The identified Suite lighting-help page is a discovery lead; it is not incorporated as retained claim evidence.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000151:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Relay | 1 integrated electromechanical relay | Publisher documentation cited in this section |
+| Mounting size | 2 flush-mounted modules | Publisher documentation cited in this section |
+| Local interface | upper/lower pushbuttons plus LED | Publisher documentation cited in this section |
+| SCS nominal supply | `27 Vdc` | Publisher documentation cited in this section |
+| SCS operating supply | `18..27 Vdc` | Publisher documentation cited in this section |
+| Current draw | `16.5 mA` | Publisher documentation cited in this section |
+| Incandescent / halogen load at 230 Vac | `1380 W / 6 A` | Publisher documentation cited in this section |
+| LED / compact fluorescent | `150 W`, maximum 3 lamps | Publisher documentation cited in this section |
+| Linear fluorescent / electronic transformer | `150 W / 0.65 A` | Publisher documentation cited in this section |
+| Ferromagnetic transformer | `460 VA / 2 A`, cos φ 0.5 | Publisher documentation cited in this section |
+| Dissipation at maximum load | `0.9 W` | Publisher documentation cited in this section |
+| Physical configurator positions | `A`, `PL`, `M`, `G1`, `G2` | Publisher documentation cited in this section |
+
+The five printed configurator positions provide independent evidence for the expected ordinary addressed-form configurator count. Hardware observation is still required before marking `N_CONF = 5` as corroborated.
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| `64390` / `64190` package distinction | `64390` without rocker; `64190` preassembled with one blank 2-module rocker and supplied blue `0/1` configurator | Arnould catalogue printed/PDF p. 32 |
+
+### Identity
+
+Section ID: `ownkb:section:d000151:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1121` | Canonical catalogue |
+| Item model / `modobj` | `101` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000151:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `101` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000151:s000008`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `186` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000151:s000009`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000151:s000010`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `186` | `1` | `6` Light actuator | Fixed/designated metadata | `641` | `6` | `445` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000151:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000151:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `186` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `186` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+
+No Advanced Configuration association is stored for firmware `186`. The product sheet documents physical and virtual setup.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000151:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `186` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `186` | `A` | `0..9` | `0` | A; Environment |
+| `186` | `PL` | `0..9` | `0` | PL; Light Point |
+| `186` | `M` | `0..1`; `3..4`; `11` = `SLA`; `15` = `PUL`; `9` = `O/I` | `0` | M; Mode (0-4, Pul, Sla, I/O) |
+| `186` | `G1` | `0..9` | `0` | G1; G1 - (0-9) |
+| `186` | `G2` | `0..9` | `0` | G2; G2 - (0-9) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000151:s000014`
+
+Provenance cues: `catalogue`
+
+| Field | Catalogue domain | Published role |
+| --- | --- | --- |
+| `AID` | Device identity field | not a physical configurator |
+| `A` | `0..9` | room/environment address |
+| `PL` | `0..9` | lighting point |
+| `M` | stored values `0`, `1`, `3`, `4`, `O/I`, `SLA`, `PUL` | actuator mode |
+| `G1` | `0..9` | physical group membership |
+| `G2` | `0..9` | physical group membership |
+
+#### Database/PDF discrepancy for `M=2`
+
+Section ID: `ownkb:section:d000151:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `database`, `documentation`, `source`
+
+The published technical sheet explicitly documents:
+
+| Physical `M` | Function |
+| --- | --- |
+| `0` | Master cyclic `ON`/`OFF` |
+| `O/I` | upper button `ON`, lower button `OFF` |
+| `SLA` | Slave |
+| `PUL` | monostable `ON` / ignores room and general commands |
+| `1` | Master with 1-minute delayed slave `OFF` |
+| `2` | Master with 2-minute delayed slave `OFF` |
+| `3` | Master with 3-minute delayed slave `OFF` |
+| `4` | Master with 4-minute delayed slave `OFF` |
+
+Firmware `186`'s stored `M` range omits value `2` even though the official 2014 sheet includes it. This is retained as a source discrepancy. Do not constrain a physical configurator validator to the database enum without accounting for the published Device documentation.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000151:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000151:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000151:s000018`
+
+Physical fields `G1` and `G2` provide two group positions. The reusable Object has a larger group-membership surface under software configuration; this does not add physical sockets.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000151:s000019`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000151:s000020`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `186` | `1` | `6` | `4147` | No textual predicate stored | `1` |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000151:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `186` | `6` | `573` | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open (entire reusable range retained) | `0` | Per energy management (State on Reset) |
+| `186` | `6` | `1866` | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing (entire reusable range retained) | `0` | Load_control_mode |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000151:s000022`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `1` | `M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `1` |
+| `1` | `M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `1` |
+| `1` | `M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `1` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000151:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 101`, brand, line, and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware despite wildcard catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm the single Light actuator Object | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | obtain the configured lighting address | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/virtual configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000151:s000024`
+
+The Device participates in [`WHO 1` - Lighting](../../functional/who-1-lighting/). General lighting command syntax remains canonical there.
+
+The product-specific dossier establishes which actuator modes, load ratings, physical configuration fields, and product identities apply.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000151:s000025`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000151:s000026`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+
+Programming should preserve the distinction between:
+
+- physical `A/PL/M/G1/G2` fields;
+- reusable Object configuration fields;
+- published Device-specific mode values that may not be represented faithfully by the firmware enum.
+
+See [Configuration Programming](../../programming/configuration-programming.md) and [Programming Validation](../../programming/validation.md).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000151:s000027`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `evidence`, `source`
+
+The archived product sheet has been reconciled with the database discrepancy around `M=2`.
+
+The Master modes with delayed corresponding-Slave OFF, `M=1..4`, are product behaviors, not merely enum labels: a Master command can turn linked loads on together while a subsequent Master `OFF` leaves the Slave output active for the configured delay. The documentation uses this for arrangements such as a light with delayed ventilation. `M=2` is therefore a genuine published physical mode despite its absence from firmware `186`'s stored enum.
+
+The remaining completeness gap is commercial documentation/hardware corroboration, not the physical `M=2` semantics.
+
+The retained Arnould catalogue now establishes that `64190` is the preassembled rocker package for base `64390`. Its source-scoped ratings/package wording are not silently substituted for the named MQ00072 BTicino/Céliane variants. The `BT-L4671_1-EN` document is a PEP environmental profile; its `80 g` figure includes unit packaging and does not establish bare installed weight. The official Suite lighting-help page was reached but remains unregistered and is not incorporated as claim evidence.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000151:s000028`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `not established`
+Provenance cues: `evidence`, `source`
+
+- `64190` base/package relationship is now documented. Retained exact electrical/installation evidence for `067559` is still absent.
+- Search for additional language/revision variants of `MQ00072`.
+- Add a sanitized hardware fingerprint to corroborate `modobj`, firmware, expected configurator count, address, and configuration.
+- Experimentally confirm the published `M=2` mode on known hardware or another independent implementation source.
+- The Arnould source establishes a supplied-cover distinction; identical hardware across all variants is not established.
+
+### Sources
+
+Section ID: `ownkb:section:d000151:s000029`
+
+Provenance cues: `database`, `documentation`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [MyHOME Suite lighting actuator function documentation](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_attuatore_luci.html)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0008)
+
+# Document: ownkb:document:d000152
+
+Source path: `devices/definitions/own-dev-0009-four-zone-touch-multifunction-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Four-zone touch multifunction control
+
+Section ID: `ownkb:section:d000152:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000152:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This compact SCS wall control has four capacitive touch zones with adjustable blue LED feedback. Its configurable and self-learning functions cover lighting, shutters, scenarios, sound and selected door-entry actions, allowing individual touch zones to serve different purposes.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0009` | Project identity |
+| Technical description | Two-module capacitive four-zone multifunction SCS control | Catalogue + official technical sheet |
+| Catalogue item | `1376` - “Touch control multifunction” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `17` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `159` | Implementation evidence |
+| Declared Modules | `5` | Implementation evidence |
+| Categories | Command, Multifunction, Lighting, Automation, Scenario, Audio / Video | Capability model |
+
+The Device has four capacitive command zones plus a fifth fixed **User interface settings** Module. Its command Modules can be configured across lighting, automation, scenarios, `AUX`, sound-system, and video-door-entry-related roles.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000152:s000003`
+
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+The canonical catalogue contains 15 commercial records for item `1376`.
+
+| Brand / line | References | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand - Arteor | `573904`, `573905`, `573906`, `573907` | Established catalogue identities | directly documented by `LG00045-b-UK` and the MyHOME catalogue |
+| Legrand - Arteor | `574089`, `574589` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+| Legrand - Céliane | `067243`, `067244`, `067245` | Established catalogue identities | catalogue + MyHOME Server compatibility documentation; minimum compatible production batch `13W05` |
+| Legrand - Céliane | `067273`, `067274`, `067275`, `067293`, `067294`, `067295` | Established catalogue identities | Canonical catalogue; retained exact-product sheet absent |
+
+The older technical sheet directly names only the four Arteor references. Shared item membership establishes a common implementation capability core, not perfect physical/package synonymy.
+
+### Documentation
+
+Section ID: `ownkb:section:d000152:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LG00045-b-UK` | Technical sheet | No dated imprint established in the inspected original | `573904..573907` | [Archived PDF](https://archive.openwebnet-ha.org/sha256/9e/18/9e18cf6694d6fcb44ee1c0964175c88d7a9f1918de4e4c4ac8c2d969b401d422.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LG00045_b_UK.pdf) |
+| `U3300B` | Instruction sheet | No dated imprint established in the inspected original | Multi-product touch-control manual: exact `573904..573907` on cover PDF p. 1; English printed/PDF pp. 3–8. Other key-count illustrations are not this Device topology. | [Archived PDF](https://archive.openwebnet-ha.org/sha256/bf/19/bf19dc9f2f7d44ed0714fc43e734b58428aa5320cfd30c9a8822e4530f63b9cd.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3300B.pdf) |
+| MyHOME residential automation catalogue | Product catalogue | No dated imprint established in the inspected original | all `573904..573907` references on printed p. 19 / PDF p. 19; `573904` / `573905` also appear in the installation principle on printed p. 31 / PDF p. 31 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/13/8e/138e7a234fe24fb044d3bfc82954e08b2887be22f3f8ceb24aecaeff6ed2f2e5.pdf) | [Official source](https://assets.legrand.com/pim/DOCUMENT/BR%20MyHOME%20HPML0714.pdf) |
+| `ST-00001031-EN` | MyHOMEServer1 technical sheet / compatibility table | 30/05/2022 | Compatibility entries on printed/PDF p. 2; `067243/067244/067245` minimum batch `13W05`, not all identities in this cluster | [Archived PDF](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00001031-EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000152:s000005`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `documentation`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | Publisher documentation cited in this section |
+| User controls | 4 capacitive touch zones | Publisher documentation cited in this section |
+| Feedback | two light-blue LEDs per key zone, with adjustable intensity behavior | Publisher documentation cited in this section |
+| SCS supply | `18..27 Vdc` | Publisher documentation cited in this section |
+| Maximum consumption | `25 mA` at maximum LED level; `20 mA` medium; `17 mA` minimum | Publisher documentation cited in this section |
+| Operating temperature | `0..40 °C` | Publisher documentation cited in this section |
+| Depth | `18.3 mm` | Publisher documentation cited in this section |
+| Physical labels | `A`, `PL`, `M`, `SPE`; rear programming/LED-intensity button `P` | Publisher documentation cited in this section |
+
+The programming pushbutton `P` is a physical user/programming control, not simply another firmware configuration value.
+
+### Identity
+
+Section ID: `ownkb:section:d000152:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1376` | Canonical catalogue |
+| Item model / `modobj` | `17` | Canonical catalogue / retained definition |
+| Main system | Lighting / Automation | Canonical catalogue / retained definition |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000152:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `17` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These are software applicability associations, not an inventory of physical ports or proof of every functional service.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000152:s000008`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `159` | `-1` | `-1` | `-1` | `5` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Catalogue firmware applicability is distinct from an observed installed firmware fingerprint.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000152:s000009`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file associations are stored for this item in the canonical snapshot.
+
+No `AS_FW_PACKAGE` association is stored for these firmware definitions. This is a catalogue coverage statement, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000152:s000010`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `159` | `1` | `410` Light control | Fixed/designated metadata | `920` | `410` | `578` |
+| `159` | `1` | `411` Automation control | Candidate alternative | `924` | `411` | `579` |
+| `159` | `1` | `412` Lock/unlock actuator control | Candidate alternative | `928` | `412` | `580` |
+| `159` | `1` | `413` Scenario module control | Candidate alternative | `932` | `413` | `581` |
+| `159` | `1` | `414` Scheduled scenario | Candidate alternative | `936` | `414` | `582` |
+| `159` | `1` | `415` Scenario PLUS Lighting Management | Candidate alternative | `940` | `415` | `583` |
+| `159` | `1` | `416` Scheduled scenario PLUS | Candidate alternative | `944` | `416` | `584` |
+| `159` | `1` | `417` `AUX` control | Candidate alternative | `948` | `417` | `585` |
+| `159` | `1` | `418` Open lock control | Candidate alternative | `952` | `418` | `586` |
+| `159` | `1` | `419` Sound diffusion control | Candidate alternative | `956` | `419` | `587` |
+| `159` | `1` | `421` Cyclic autoswitch control | Candidate alternative | `969` | `421` | `590` |
+| `159` | `1` | `426` Staircase light control | Candidate alternative | `973` | `426` | `591` |
+| `159` | `1` | `427` Floor call control | Candidate alternative | `977` | `427` | `592` |
+| `159` | `1` | `462` Open lock command on session | Candidate alternative | `981` | `489` | `593` |
+| `159` | `2` | `410` Light control | Fixed/designated metadata | `921` | `410` | `578` |
+| `159` | `2` | `411` Automation control | Candidate alternative | `925` | `411` | `579` |
+| `159` | `2` | `412` Lock/unlock actuator control | Candidate alternative | `929` | `412` | `580` |
+| `159` | `2` | `413` Scenario module control | Candidate alternative | `933` | `413` | `581` |
+| `159` | `2` | `414` Scheduled scenario | Candidate alternative | `937` | `414` | `582` |
+| `159` | `2` | `415` Scenario PLUS Lighting Management | Candidate alternative | `941` | `415` | `583` |
+| `159` | `2` | `416` Scheduled scenario PLUS | Candidate alternative | `945` | `416` | `584` |
+| `159` | `2` | `417` `AUX` control | Candidate alternative | `949` | `417` | `585` |
+| `159` | `2` | `418` Open lock control | Candidate alternative | `953` | `418` | `586` |
+| `159` | `2` | `419` Sound diffusion control | Candidate alternative | `957` | `419` | `587` |
+| `159` | `2` | `421` Cyclic autoswitch control | Candidate alternative | `970` | `421` | `590` |
+| `159` | `2` | `426` Staircase light control | Candidate alternative | `974` | `426` | `591` |
+| `159` | `2` | `427` Floor call control | Candidate alternative | `978` | `427` | `592` |
+| `159` | `2` | `462` Open lock command on session | Candidate alternative | `982` | `489` | `593` |
+| `159` | `3` | `410` Light control | Fixed/designated metadata | `922` | `410` | `578` |
+| `159` | `3` | `411` Automation control | Candidate alternative | `926` | `411` | `579` |
+| `159` | `3` | `412` Lock/unlock actuator control | Candidate alternative | `930` | `412` | `580` |
+| `159` | `3` | `413` Scenario module control | Candidate alternative | `934` | `413` | `581` |
+| `159` | `3` | `414` Scheduled scenario | Candidate alternative | `938` | `414` | `582` |
+| `159` | `3` | `415` Scenario PLUS Lighting Management | Candidate alternative | `942` | `415` | `583` |
+| `159` | `3` | `416` Scheduled scenario PLUS | Candidate alternative | `946` | `416` | `584` |
+| `159` | `3` | `417` `AUX` control | Candidate alternative | `950` | `417` | `585` |
+| `159` | `3` | `418` Open lock control | Candidate alternative | `954` | `418` | `586` |
+| `159` | `3` | `419` Sound diffusion control | Candidate alternative | `958` | `419` | `587` |
+| `159` | `3` | `421` Cyclic autoswitch control | Candidate alternative | `971` | `421` | `590` |
+| `159` | `3` | `426` Staircase light control | Candidate alternative | `975` | `426` | `591` |
+| `159` | `3` | `427` Floor call control | Candidate alternative | `979` | `427` | `592` |
+| `159` | `3` | `462` Open lock command on session | Candidate alternative | `983` | `489` | `593` |
+| `159` | `4` | `410` Light control | Fixed/designated metadata | `923` | `410` | `578` |
+| `159` | `4` | `411` Automation control | Candidate alternative | `927` | `411` | `579` |
+| `159` | `4` | `412` Lock/unlock actuator control | Candidate alternative | `931` | `412` | `580` |
+| `159` | `4` | `413` Scenario module control | Candidate alternative | `935` | `413` | `581` |
+| `159` | `4` | `414` Scheduled scenario | Candidate alternative | `939` | `414` | `582` |
+| `159` | `4` | `415` Scenario PLUS Lighting Management | Candidate alternative | `943` | `415` | `583` |
+| `159` | `4` | `416` Scheduled scenario PLUS | Candidate alternative | `947` | `416` | `584` |
+| `159` | `4` | `417` `AUX` control | Candidate alternative | `951` | `417` | `585` |
+| `159` | `4` | `418` Open lock control | Candidate alternative | `955` | `418` | `586` |
+| `159` | `4` | `419` Sound diffusion control | Candidate alternative | `959` | `419` | `587` |
+| `159` | `4` | `421` Cyclic autoswitch control | Candidate alternative | `972` | `421` | `590` |
+| `159` | `4` | `426` Staircase light control | Candidate alternative | `976` | `426` | `591` |
+| `159` | `4` | `427` Floor call control | Candidate alternative | `980` | `427` | `592` |
+| `159` | `4` | `462` Open lock command on session | Candidate alternative | `984` | `489` | `593` |
+| `159` | `5` | `130` User interface settings | Fixed/designated metadata | `919` | `480` | `577` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000152:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `159` | `521` Soft-Touch command virgin | `1`, `2`, `3`, `4` | `410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `462` | `521` | `36` |
+
+#### Fixed UI Module
+
+Section ID: `ownkb:section:d000152:s000012`
+
+Slot `5` is fixed to Object `130`, **User interface settings**.
+
+The published sheet independently documents three LED intensity pairings for active/idle states: 100%/60%, 75%/30%, and 45%/off.
+
+#### Command Modules
+
+Section ID: `ownkb:section:d000152:s000013`
+
+Applicability cues: `firmware`
+Cautions: `must not`
+
+Slots `1..4` use Virgin Object `521`, **Soft-Touch command virgin**, and can select:
+
+Light control `410` is the designated Object on all four command slots. The canonical firmware has **no `AS_SLOT_CONDITION` rows** for these slots, so the Device page must not invent a physical-condition-to-Object mapping from the mere Object list.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000152:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | Mode | Catalogue mode | Applicability |
+| --- | --- | --- | --- |
+| `159` | Physical configuration | `0` | Canonical catalogue association; not proof of installed state |
+| `159` | Virtual Configuration | `1` | Canonical catalogue association; not proof of installed state |
+| `159` | Advanced Configuration | `2` | Canonical catalogue association; not proof of installed state |
+
+Product physical and software setup are distinct from the catalogue mode labels. A declared mode does not prove every reusable Object or programming operation is available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000152:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `159` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `159` | `A` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB` | `0` | A; Environment (0-9 `GEN`,`GR`,`AMB`) |
+| `159` | `PL` | `0..9` | `0` | PL; Light Point |
+| `159` | `M` | `0..3`; `5..6`; `9` = `O/I`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN` | `0` | M; Mode physical configurator (0-3,5-6,`O/I`,SU_GIU,SU_GIU_M,`CEN`) |
+| `159` | `SET` | `0..7` | `0` | SET; User interface settings configurator (0-7) |
+
+#### Published and reconciled details
+
+Section ID: `ownkb:section:d000152:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`
+
+The firmware-level fields are:
+
+| Field | Stored domain | Evidence |
+| --- | --- | --- |
+| `AID` | Device identity field | Implementation evidence |
+| `A` | `0..9`, `GEN`, `GR`, `AMB` | Implementation evidence |
+| `PL` | `0..9` | Implementation evidence |
+| `M` | `0,1,2,3,5,6,O/I,UP/DOWN,UP/DOWN monostable,CEN` | Implementation evidence |
+| `SET` | `0..7` | Implementation evidence |
+
+#### Database/document mapping boundary
+
+Section ID: `ownkb:section:d000152:s000017`
+
+Provenance cues: `database`, `evidence`, `source`
+
+The physical technical sheet labels the configurator housing `A / PL / M / SPE` and separately identifies programming button `P`. The database instead stores `A / PL / M / SET`.
+
+No equivalence between database `SET` and physical `SPE` is asserted here without further implementation evidence. Preserve both source models.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000152:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `410` - Light control
+
+Section ID: `ownkb:section:d000152:s000019`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON`/`OFF`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+
+#### Object `411` - Automation control
+
+Section ID: `ownkb:section:d000152:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `412` - Lock/unlock actuator control
+
+Section ID: `ownkb:section:d000152:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Disable; `2` = Enable | `1` | Modality; mode (D/E) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = All systems | `0` | Destination level |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `413` - Scenario module control
+
+Section ID: `ownkb:section:d000152:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+#### Object `414` - Scheduled scenario
+
+Section ID: `ownkb:section:d000152:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `415` - Scenario PLUS Lighting Management
+
+Section ID: `ownkb:section:d000152:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON`/`OFF` regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+#### Object `416` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000152:s000025`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `417` - `AUX` control
+
+Section ID: `ownkb:section:d000152:s000026`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | `AUX` channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+#### Object `418` - Open lock control
+
+Section ID: `ownkb:section:d000152:s000027`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `419` - Sound diffusion control
+
+Section ID: `ownkb:section:d000152:s000028`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+#### Object `421` - Cyclic autoswitch control
+
+Section ID: `ownkb:section:d000152:s000029`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000152:s000030`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `427` - Floor call control
+
+Section ID: `ownkb:section:d000152:s000031`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `130` - User interface settings
+
+Section ID: `ownkb:section:d000152:s000032`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `480` maps to external Object `130`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `STATE_OF_UNUSED_BUTTON` | `0` = `ON`; `1` = `OFF` | `1` | State of unused button; Default depends on device |
+| `STATE_UPDATE` | `0` = No; `1` = Yes | `1` | Feedback update; Default depends on device |
+| `LED_LEVEL` | `0..10` | `6` | LED intensity level; Default, minimum level (0), maximum level (10) and distribution of intermediate levels depend on device |
+| `LED_FADE` | `0..10` | `5` | LED fading; Default, minimum level (0), maximum level (10) and distribution of intermediate levels depend on device |
+| `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 | `1` | Backlight intensity stand by level |
+| `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 | `1` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is `OFF`, only one led can be used for the standby. |
+| `BACKLIGHT_DELAY` | `0..255` | `15` | Delay time (seconds); Time en second to light off the backlight |
+| `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
+| `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
+
+#### Object `462` - Open lock command on session
+
+Section ID: `ownkb:section:d000152:s000033`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `489` maps to external Object `462`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+#### Applicability interpretation
+
+Section ID: `ownkb:section:d000152:s000034`
+
+Provenance cues: `catalogue`, `source`
+
+The UI-settings Object is separate from the four command Modules. Physical label `SPE` and catalogue field `SET` are not silently equated; selection must follow the stored conditions and the source-specific product mode.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000152:s000035`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000152:s000036`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000152:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `159` | `410` | `1057` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `411` | `1061` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `412` | `1065` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `413` | `1069` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `414` | `1076` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `414` | `1077` | `MODE` | `0` = Press/release only; `1` = Press/hold/release (entire reusable range retained) | `0` | Mode for `CEN` command |
+| `159` | `415` | `1081` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `416` | `1088` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `416` | `1089` | `MODE` | `0` = Press/release only; `1` = Press/hold/release (entire reusable range retained) | `0` | Mode for `CEN` command |
+| `159` | `417` | `1093` | `TYPE_CONTACT` | No legal values specified in source (entire reusable range retained) | `0` | Contact type |
+| `159` | `419` | `1097` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `159` | `426` | `4107` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `159` | `427` | `1101` | `TO_ALL` | `1` = General | `1` | Type of call |
+| `159` | `427` | `1904` | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone (entire reusable range retained) | `0` | Segment |
+| `159` | `130` | `3114` | `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 (entire reusable range retained) | `1` | Backlight intensity stand by level |
+| `159` | `130` | `3121` | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable (entire reusable range retained) | `1` | Proximity Activation |
+| `159` | `130` | `3128` | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase (entire reusable range retained) | `2` | Signboard activation type |
+| `159` | `130` | `3136` | `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 (entire reusable range retained) | `1` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is `OFF`, only one led can be used for the standby. |
+| `159` | `130` | `3159` | `BACKLIGHT_DELAY` | `0..255` (entire reusable range retained) | `15` | Delay time (seconds) |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000152:s000038`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000152:s000039`
+
+Applicability cues: `firmware`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 17`, brand/line and installed `N_CONF` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | enumerate four command Objects plus the UI-settings Module | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | determine configured functional addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000152:s000040`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Function / configuration | Documented use | Evidence |
+| --- | --- | --- |
+| Self-learning (`SPE=0`, `M=0/6`) | Learn one command per touch key; `M=6` provides non-cyclic paired behavior | `LG00045-b-UK`, pp. 2–3 |
+| Scenario-module control (`SPE=0`, `M=1/5/2/3`) | Four scenarios per control, covering respectively `1..4`, `5..8`, `9..12`, `13..16` | Same sheet, pp. 3–4 |
+| Consecutive target pairs | Two consecutive light points/shutters, rooms or groups; general mode sends the same general controls | Same sheet, p. 4 |
+| CEN programmer | Unique system A/PL address; `A=0, PL=0` explicitly excluded | Same sheet, p. 4 |
+| Sound system (`SPE=1`) | Amplifier on/off, volume, source cycling and active-source command | Same sheet, p. 5 |
+
+The retained four-zone sheet governs `573904..573907`; catalogue sharing does not prove every Céliane/Arteor package has identical touch markings or LEDs.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000152:s000041`
+
+No additional publishable runtime observation is asserted beyond observations explicitly retained elsewhere on this page.
+
+### Programming
+
+Section ID: `ownkb:section:d000152:s000042`
+
+Cautions: `must not`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+After installation, the four-zone sheet requires two minutes for self-calibration and warns that controls may be sent during that period. To teach a key, briefly press the rear programming button, select the key within 20 seconds and issue the desired system command; use the rear button or the stated timeout to exit. Self-learning needs a unique A/PL address.
+
+To delete one learned key, select it within 20 seconds and hold it for four seconds. Deleting all keys uses a second rear-button hold of ten seconds; scenario-module memory reset is a different procedure on that module, not on this control. Follow `LG00045-b-UK`, pp. 2–4, for these mode-dependent operations.
+
+For cleaning, hold diagonally opposite zones `1` and `4`; the LEDs sequence while touch operation is disabled. The four-zone technical sheet says normal operation returns after ten seconds; `U3300B` describes restoration after ten seconds without touching. Its multi-product diagrams must not be used to infer six keys for this four-zone Device. Physical `SPE` and catalogue `SET` remain differently labelled evidence surfaces.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000152:s000043`
+
+Cautions: `do not`, `must not`
+Provenance cues: `catalogue`, `source`
+
+The archived touch-control sources establish user/programming behavior in addition to the catalogue Object set:
+
+- the four capacitive zones can be temporarily disabled for cleaning, with the product restoring normal touch operation after the documented cleaning interval;
+- self-learning can operate in cyclic and non-cyclic forms and includes explicit learn/delete procedures rather than being a generic “scenario” capability;
+- scenario-module and `CEN`/programmed-scenario operation have distinct product programming workflows and button/address interpretations;
+- sound-system operation assigns the touch zones to product-specific audio controls rather than treating them as ordinary lighting keys;
+- front LED behavior, standby/active intensity and programming feedback are product functions of the fixed UI settings Module;
+- after installation the Device performs an automatic calibration interval during which touch behavior must not be treated as normal steady-state operation.
+
+These behaviors do not resolve the implementation `SPE` versus `SET` mapping; that source-model boundary remains explicit.
+
+`LG00045-b-UK` describes two light-blue LEDs per key zone, while the multi-product `U3300B` introduction uses a single central blue-LED description. The product/illustration scope is kept explicit; no universal LED count for all commercial variants is inferred. `BR-MyHOME-HPML0714` is a regional range catalogue and does not replace the exact four-zone mode table. `ST-00001031-EN` is a MyHOMEServer1 compatibility source: its `13W05` entries name `067243/067244/067245`, so that requirement is not transferred to `067273..067295`, `574089/574589` or all four-zone controls. The attempted Ghana product record returned inaccessible; no EAN or additional attribute was incorporated from it.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000152:s000044`
+
+Cautions: `do not`
+Provenance cues: `database`
+
+- Locate direct product sheets for the Céliane `067273..067295` variants and Arteor `574089/574589`.
+- Determine the exact relationship between physical `SPE`, database `SET`, and Object selection.
+- Add sanitized hardware fingerprints from at least one Arteor and one Céliane variant.
+- Corroborate the fifth UI-settings Module and four command Modules through `DIMENSION 30`.
+- Do not extend the server-compatibility `13W05` condition beyond its explicitly named references. Exact server compatibility of other cluster variants remains unestablished.
+
+### Sources
+
+Section ID: `ownkb:section:d000152:s000045`
+
+Provenance cues: `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0001-0010-2026-10-05.md#own-dev-0009)
+
+# Document: ownkb:document:d000153
+
+Source path: `devices/definitions/own-dev-0011-scenario-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Scenario control
+
+Section ID: `ownkb:section:d000153:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000153:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This two-module wall control provides four buttons for recalling or programming configured scenarios. Depending on the installation, it works with a scenario module or a scenario programmer to coordinate several actions from one button press.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0011` | Project identity |
+| Technical description | Two-module four-button scenario control | Catalogue + official technical sheet |
+| Catalogue item | `402` - “Scenario control” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `6` | Implementation evidence |
+| Firmware definition | `1.0.0`, firmware `7` | Implementation evidence |
+| Declared Modules | `2` | Implementation evidence |
+| Categories | Command, Scenario, Multifunction | Capability model |
+
+The Device is a four-button scenario control that can drive scenario modules, programmed `CEN` scenarios, and PLUS scenario representations. The canonical firmware models the four physical keys as two configurable command Modules.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000153:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+The canonical catalogue contains ten Device records. Several database records combine finish variants into one code, while the official technical sheet names the printed references separately.
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HS4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HD4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `L4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `N4680` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `NT4680` | Established identity | Catalogue cluster + official technical sheet |
+| Legrand - Arteor | `573902` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573903` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `574503` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `574504` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067217` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067218` | Established identity | Catalogue + official technical sheet |
+| Legrand - Mosaic | `078478` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+| Legrand - Mosaic | `079178` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+
+The count of printed identities exceeds the ten `EN_DEVICE` rows because BTicino finish variants are collapsed into combined catalogue codes such as `HC/HS/HD4680`.
+
+The canonical `EN_DEVICE.code` uses combined `L/N/NT4680`; the named L4680, N4680 and NT4680 rows above expand that catalogue code, rather than establish additional technical items.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000153:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4680` | `8012199774312` | [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf), `HC4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4680` | `8012199774329` | [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf), `HS4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4680` | `8012199986241` | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf), `HD4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4680` | `8012199812908` | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf), `L4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4680` | `8012199812922` | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf), `N4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4680` | `8012199812939` | [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf), `NT4680-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `067217` | `3245060672171` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/83/1a/831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7.pdf), `067217-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+| `067218` | `3245060672188` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/3a/d1/3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a.pdf), `067218-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000153:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00288-c-EN` | Technical sheet | 09/06/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/30/34/303432cca6900f183b69227c4c203c211aaeb063b47238f70aeb244b731dc751.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-EN.pdf) |
+| `MQ00288-c-FR` | Technical sheet | 05/05/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/6d/f7/6df709af3becb5131015cf62433d7cab1c758dbb9239e1b80125e95b93ea0ee0.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00288-c-FR.pdf) |
+| `U3327B` | Installation/use instructions | U3327B01PC-11W36; English PDF pp. 3–6 | 573902/573903; English operation/LED/program/delete instructions inspected; other translations not independently reconciled | [Archived PDF](https://archive.openwebnet-ha.org/sha256/3c/cd/3ccd34b5b6adf4955a0a3dc0532a3cff9bf69387efc3a07710602db26db9bfbc.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/U3327B.pdf) |
+| `HC4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680) |
+| `HS4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680) |
+| `HD4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680) |
+| `L4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4680) |
+| `N4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680) |
+| `NT4680-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4680` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680) |
+| `067217-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067217` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/83/1a/831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-blanc) |
+| `067218-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `067218` to EAN-13 relationship at HTML product record, SKU/GTIN metadata and EAN/Gencode field. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived HTML](https://archive.openwebnet-ha.org/sha256/3a/d1/3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-titane) |
+| `ST-00002122-EN.pdf` | Classe300EOS technical sheet / compatibility matrix | 21 October 2024 | Scenario controls, printed/PDF p. 7; only applicable compatibility rows incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/a8/e1a8da77199296d9f56ea708402f144b8614473558002c0f8db4ee16eb2f0d0d.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000153:s000006`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | `MQ00288-c-EN` |
+| User controls | 4 scenario buttons | `MQ00288-c-EN` |
+| SCS nominal supply | `27 Vdc` | `MQ00288-c-EN` |
+| SCS operating supply | `18..27 Vdc` | `MQ00288-c-EN` |
+| Current draw | `9 mA` | `MQ00288-c-EN` |
+| Primary physical configurators | `A`, `PL`, `M`, `N`, `DEL` | `MQ00288-c-EN` |
+
+The sheet also describes a destination-level configurator `I` when the control operates across an SCS/SCS interface. Firmware-scoped configuration does not contain an `I` field; reusable Object configuration carries installation and destination level fields. Preserve this as a source-model boundary rather than inventing a firmware field.
+
+### Identity
+
+Section ID: `ownkb:section:d000153:s000007`
+
+Provenance cues: `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `402` | Implementation evidence |
+| Main system | Lighting / Automation | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `6` | Implementation evidence |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000153:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000153:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `7` | `1` | `0` | `0` | `2` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000153:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000153:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `7` | `1` | `403` Scenario module control | Fixed/designated metadata | `691` | `403` | `480` |
+| `7` | `1` | `404` Scheduled scenario | Candidate alternative | `693` | `404` | `481` |
+| `7` | `1` | `405` Scenario PLUS Lighting Management | Candidate alternative | `695` | `405` | `482` |
+| `7` | `1` | `406` Scheduled scenario PLUS | Candidate alternative | `697` | `406` | `483` |
+| `7` | `2` | `403` Scenario module control | Fixed/designated metadata | `692` | `403` | `480` |
+| `7` | `2` | `404` Scheduled scenario | Candidate alternative | `694` | `404` | `481` |
+| `7` | `2` | `405` Scenario PLUS Lighting Management | Candidate alternative | `696` | `405` | `482` |
+| `7` | `2` | `406` Scheduled scenario PLUS | Candidate alternative | `698` | `406` | `483` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000153:s000012`
+
+Applicability cues: `applies to`, `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `7` | `502` Scene double command virgin | `1`, `2` | `403`, `404`, `405`, `406` | `502` | `22` |
+
+Firmware `7` exposes two configurable Modules.
+Virgin Object `502`, **Scene double command virgin**, applies to both slots and permits Objects `403..406`.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000153:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `7` | Physical configuration | `0` | Canonical firmware/mode association |
+| `7` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `7` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000153:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `7` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `7` | `A` | `0..9` | `0` | A; Environment |
+| `7` | `PL` | `0..9` | `0` | PL; Light Point |
+| `7` | `M` | `0..4`; `14` = `CEN` | `0` | M; Mode (0-4,`CEN`) |
+| `7` | `N` | `0..5` | `0` | N; N (0-5) |
+| `7` | `DEL` | `0..9` | `0` | DEL; Configurator DEL |
+
+#### Published `M` mapping
+
+Section ID: `ownkb:section:d000153:s000015`
+
+Provenance cues: `catalogue`
+
+The technical sheet documents:
+
+| `M` | Physical keys activate |
+| --- | --- |
+| `1` | scenarios `1..4` |
+| `2` | scenarios `5..8` |
+| `3` | scenarios `9..12` |
+| `4` | scenarios `13..16` |
+| `CEN` | `CEN`/programmed scenario mode |
+
+With no `CEN` selector, the catalogue selects Scenario module Object `403`; with `M=CEN`, it selects Scheduled scenario Object `404`.
+
+Implementation-only `M=FAKE` conditions expose PLUS Objects `405` and `406`; `FAKE` is not part of the physical `M` enum.
+
+#### Published delay mapping
+
+Section ID: `ownkb:section:d000153:s000016`
+
+| `N` | Delayed key(s) |
+| --- | --- |
+| `0` | none |
+| `1` | key 1 |
+| `2` | key 2 |
+| `3` | key 3 |
+| `4` | key 4 |
+| `5` | all four |
+
+| `DEL` | Delay |
+| --- | --- |
+| `0` | none |
+| `1` | 1 min |
+| `2` | 2 min |
+| `3` | 3 min |
+| `4` | 4 min |
+| `5` | 5 min |
+| `6` | 10 min |
+| `7` | 15 min |
+| `8` | 15 s |
+| `9` | 30 s |
+
+#### Published address and bus-level scopes
+
+Section ID: `ownkb:section:d000153:s000017`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+F420 targeting uses physical `A=0..9, PL=1..9`, versus software room `0..10`, point `0..15`. For CEN the sheet gives physical `A/PL=1..9`. Physical destination `I=1..9` selects another local bus, `I=CEN` the riser and `I=0` the whole system; software local-bus destinations extend to `1..15`, and installation level is software-configured. These are the destination semantics in `MQ00288-c-EN/FR`, p. 2; they are not interchangeable with another product’s installation-level I socket.
+
+The CEN table on p. 4 prints `SPE=0, M=CEN`, although neither the principal configurator list nor firmware `7` has an SPE field. This is a source irregularity, not authority to invent another socket. Software PLUS address `1..2047` and button `0..31` are published separately from the unresolved `M=FAKE` catalogue conditions.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000153:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `403` - Scenario module control
+
+Section ID: `ownkb:section:d000153:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1..15` = Local bus with matching number | `0` | Destination level |
+| `SCE_BUTT_1` | `1..16` | `1` | Upper button scenario |
+| `SCE_BUTT_2` | `1..16` | `2` | Lower button scenario |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
+
+#### Object `404` - Scheduled scenario
+
+Section ID: `ownkb:section:d000153:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+#### Object `405` - Scenario PLUS Lighting Management
+
+Section ID: `ownkb:section:d000153:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Upper button scenario; Delay (20) |
+| `PPT_SCE_2` | `1..255` | `2` | Lower button scenario; Delay (21) |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type; Only if Scenario1=Scenario2 |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
+
+#### Object `406` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000153:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000153:s000023`
+
+Applicability cues: `firmware`
+
+The two activation-delay enums contain different stored row counts (63 and 56); the complete reusable domains are preserved separately. PLUS predicates use `FAKE`, which is absent from the firmware enum. Physical address and software address limits differ.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000153:s000024`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000153:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `7` | `1` | `403` | `4145` | No textual predicate stored | None |
+| `7` | `1` | `403` | `4435` | `M<>CEN` | `14` |
+| `7` | `1` | `404` | `4590` | `M=CEN` | `65` |
+| `7` | `1` | `405` | `4594` | `M=FAKE` | None |
+| `7` | `1` | `406` | `4594` | `M=FAKE` | None |
+| `7` | `2` | `403` | `4434` | `M<>CEN` | `13` |
+| `7` | `2` | `404` | `4591` | `M=CEN` | `66` |
+| `7` | `2` | `405` | `4594` | `M=FAKE` | None |
+| `7` | `2` | `406` | `4594` | `M=FAKE` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000153:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `7` | `404` | `1707` | `START_DELAY` | `0..255` (entire reusable range retained) | `10` | Start delay |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000153:s000027`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `13` | `M=1` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `2`; `SCENARIO_BUTTON_2` = `4` | `13` |
+| `13` | `M=2` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `6`; `SCENARIO_BUTTON_2` = `8` | `13` |
+| `13` | `M=3` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `10`; `SCENARIO_BUTTON_2` = `12` | `13` |
+| `13` | `M=4` | `DEST_LEV` = `0`; `INST_LEVEL` = `0`; `M` = `0`; `SCENARIO_BUTTON_1` = `14`; `SCENARIO_BUTTON_2` = `16` | `13` |
+| `13` | `N=0` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=1` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=2; DEL=0` | `DELAY_BUTTON_1` = `0` | `13` → `16` |
+| `13` | `N=2; DEL=1` | `DELAY_BUTTON_1` = `60` | `13` → `16` |
+| `13` | `N=2; DEL=2` | `DELAY_BUTTON_1` = `62` | `13` → `16` |
+| `13` | `N=2; DEL=3` | `DELAY_BUTTON_1` = `63` | `13` → `16` |
+| `13` | `N=2; DEL=4` | `DELAY_BUTTON_1` = `64` | `13` → `16` |
+| `13` | `N=2; DEL=5` | `DELAY_BUTTON_1` = `65` | `13` → `16` |
+| `13` | `N=2; DEL=6` | `DELAY_BUTTON_1` = `70` | `13` → `16` |
+| `13` | `N=2; DEL=7` | `DELAY_BUTTON_1` = `71` | `13` → `16` |
+| `13` | `N=2; DEL=8` | `DELAY_BUTTON_1` = `15` | `13` → `16` |
+| `13` | `N=2; DEL=9` | `DELAY_BUTTON_1` = `30` | `13` → `16` |
+| `13` | `N=2` | `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=3` | `DELAY_BUTTON_1` = `0`; `DELAY_BUTTON_2` = `0` | `13` |
+| `13` | `N=4` | `DELAY_BUTTON_1` = `0` | `13` |
+| `13` | `N=4; DEL=0` | `DELAY_BUTTON_2` = `0` | `13` → `19` |
+| `13` | `N=4; DEL=1` | `DELAY_BUTTON_2` = `60` | `13` → `19` |
+| `13` | `N=4; DEL=2` | `DELAY_BUTTON_2` = `62` | `13` → `19` |
+| `13` | `N=4; DEL=3` | `DELAY_BUTTON_2` = `63` | `13` → `19` |
+| `13` | `N=4; DEL=4` | `DELAY_BUTTON_2` = `64` | `13` → `19` |
+| `13` | `N=4; DEL=5` | `DELAY_BUTTON_2` = `65` | `13` → `19` |
+| `13` | `N=4; DEL=6` | `DELAY_BUTTON_2` = `70` | `13` → `19` |
+| `13` | `N=4; DEL=7` | `DELAY_BUTTON_2` = `71` | `13` → `19` |
+| `13` | `N=4; DEL=8` | `DELAY_BUTTON_2` = `15` | `13` → `19` |
+| `13` | `N=4; DEL=9` | `DELAY_BUTTON_2` = `30` | `13` → `19` |
+| `13` | `N=5; DEL=0` | `DELAY_BUTTON_1` = `0` | `13` → `16` |
+| `13` | `N=5; DEL=1` | `DELAY_BUTTON_1` = `60` | `13` → `16` |
+| `13` | `N=5; DEL=2` | `DELAY_BUTTON_1` = `62` | `13` → `16` |
+| `13` | `N=5; DEL=3` | `DELAY_BUTTON_1` = `63` | `13` → `16` |
+| `13` | `N=5; DEL=4` | `DELAY_BUTTON_1` = `64` | `13` → `16` |
+| `13` | `N=5; DEL=5` | `DELAY_BUTTON_1` = `65` | `13` → `16` |
+| `13` | `N=5; DEL=6` | `DELAY_BUTTON_1` = `70` | `13` → `16` |
+| `13` | `N=5; DEL=7` | `DELAY_BUTTON_1` = `71` | `13` → `16` |
+| `13` | `N=5; DEL=8` | `DELAY_BUTTON_1` = `15` | `13` → `16` |
+| `13` | `N=5; DEL=9` | `DELAY_BUTTON_1` = `30` | `13` → `16` |
+| `13` | `N=5; DEL=0` | `DELAY_BUTTON_2` = `0` | `13` → `19` |
+| `13` | `N=5; DEL=1` | `DELAY_BUTTON_2` = `60` | `13` → `19` |
+| `13` | `N=5; DEL=2` | `DELAY_BUTTON_2` = `62` | `13` → `19` |
+| `13` | `N=5; DEL=3` | `DELAY_BUTTON_2` = `63` | `13` → `19` |
+| `13` | `N=5; DEL=4` | `DELAY_BUTTON_2` = `64` | `13` → `19` |
+| `13` | `N=5; DEL=5` | `DELAY_BUTTON_2` = `65` | `13` → `19` |
+| `13` | `N=5; DEL=6` | `DELAY_BUTTON_2` = `70` | `13` → `19` |
+| `13` | `N=5; DEL=7` | `DELAY_BUTTON_2` = `71` | `13` → `19` |
+| `13` | `N=5; DEL=8` | `DELAY_BUTTON_2` = `15` | `13` → `19` |
+| `13` | `N=5; DEL=9` | `DELAY_BUTTON_2` = `30` | `13` → `19` |
+| `14` | No item-side predicate on this branch | Referenced conversion rule absent from source | `14` |
+| `65` | `M=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `1`; `CEN_BUTT_2` = `3` | `65` |
+| `66` | `M=CEN` | `IN_AUX_CHANNEL` = `0`; `CEN_BUTT_1` = `2`; `CEN_BUTT_2` = `4` | `66` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000153:s000028`
+
+Applicability cues: `firmware`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 6`, brand/line and installed configurator count | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | resolve the two active scenario Objects | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | obtain configured addresses | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000153:s000029`
+
+The Device participates in scenario control. Depending on the selected Object, its Modules represent scenario-module, programmed/`CEN`, or PLUS scenario functions. Generic scenario protocol semantics remain canonical under Functional Protocol.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000153:s000030`
+
+Provenance cues: `evidence`
+
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
+
+### Programming
+
+Section ID: `ownkb:section:d000153:s000031`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+For the F420 procedure in `MQ00288-c-EN/FR`, p. 4, unlock the scenario module with a hold of at least 0.5 seconds (green status LED). Hold the chosen control key for four seconds, carry out the system actions, then briefly press the same key to save/exit. Repeat for other scenarios and lock the module again (red LED). Recall uses a brief key press.
+
+The 2014 technical sheets delete one scenario with a control-key hold of at least ten seconds, confirmed by rapid LED flashing for about two seconds. Entire-memory erasure uses DEL on the scenario module for ten seconds, not the control’s DEL configurator. The older exact `573902/573903` user guide `U3327B`, PDF pp. 5–6, instead says at least eight seconds for individual deletion (LED on after three seconds, off after five more) and names module `003551`. Keep these procedures scoped to their sources; no hardware revision cutoff is established.
+
+Resolve each Module’s active Object before applying M/N/DEL conversions. PLUS catalogue branches do not establish a physical FAKE configurator.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000153:s000032`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+The scenario-control documentation has been reconciled with the two-Module catalogue model:
+
+- the four physical buttons map to scenario groups selected by `M`, while the two catalogue Modules represent paired command positions rather than four independent Modules;
+- F420-style scenario operation includes explicit scenario programming and deletion workflows with product feedback states;
+- `CEN`/programmed-scenario use is distinct from local scenario-module use and must preserve the installation/destination-level context;
+- Lighting Management software configuration can represent double-scenario, double-`CEN` and PLUS forms beyond the physical `M` selector;
+- `N` and `DEL` are product delay selectors and are already mapped above, but their effect is tied to selected physical buttons rather than to a generic timer Object.
+
+The remaining source gaps concern Mosaic variants and hardware corroboration.
+
+The English technical sheet is dated 9 June 2014 and French 5 May 2014; their four-key scenario groups, N/DEL presets and address/level scopes agree. `U3327B01PC-11W36` is specifically a 573902/573903 user guide, not installation evidence for every variant. Its eight-second deletion threshold differs from the ten-second technical-sheet instruction. Its LED brightness control (hold over two seconds; 0/30/60/100%, 60% marked default) is scoped to those named references. No equivalent LED feature is inferred for all finishes.
+
+The 63-row versus 56-row reusable delay domains, absent SPE field, physical/software address differences and out-of-domain FAKE branches remain explicit. Mosaic SKU identities are established by the catalogue; their missing exact technical sheets are documentation gaps.
+
+The Classe300EOS compatibility table lists 573902/573903 from production `08W51`, L/N/NT/HC/HD/HS4680 from `09W08`, and its named Mosaic/Céliane/574503/574504 codes as all batches. This is compatibility with Classe300EOS, not a general firmware equivalence. The sheet p. 8 excludes physically configured Devices from Classe300EOS compatibility.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000153:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `documentation`, `source`
+
+- Locate direct product documentation for Mosaic `078478` and `079178`.
+- Add a sanitized hardware fingerprint and corroborate firmware, configurator count, two-Module projection, addresses and configuration.
+- Corroborate the product’s destination-level I mapping against installed Object values; the published level role is now explicit. Resolve the source-specific eight/ten-second deletion threshold and absent SPE socket without assuming a hardware cutoff.
+- Preserve any package/finish differences between the several printed BTicino references.
+
+### Sources
+
+Section ID: `ownkb:section:d000153:s000034`
+
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `HC4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/1b/60/1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4680); SHA-256 `1b60e34dc0234147d2f62e333f060b8167e9dedf305470d3716d8fd6f46e9575`.
+- `HS4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/e9/72/e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4680); SHA-256 `e9723de6521d8114a9c55b3f77e81fcd8544faa579fc238ceb4eee54f069dfb2`.
+- `HD4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ba/c9/bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4680); SHA-256 `bac9d769b4b3542ae4d0397813019e0738e1db59a3f599d2c7441cdbac1cd378`.
+- `L4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/dc/fc/dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4680); SHA-256 `dcfc6f8a05a59d667101942c0b31e0e07d46cfac28f45a71fc56b61a0b354530`.
+- `N4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/c9/bb/c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4680); SHA-256 `c9bbb720085c750ca7d148866fab49a66f1d0562fd955a8ad46402d151ecd594`.
+- `NT4680-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4680` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/48/31/48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4680); SHA-256 `48312b9c56eb9cf1c1c0754cfc561cb9f004f5958c1470b3a553e1f408111840`.
+- `067217-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067217` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/83/1a/831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-blanc); SHA-256 `831a9a80beee59800374c22807f3ed406b18c615a0de23f0a626c3b8ea7f39c7`.
+- `067218-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067218` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/3a/d1/3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-4-scenarios-myhome-up-celiane-titane); SHA-256 `3ad1912f0868fdf963c0a0f7eb8b53960d5fcee3b66abc26ab6599e746f91c0a`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0011)
+
+# Document: ownkb:document:d000154
+
+Source path: `devices/definitions/own-dev-0012-four-channel-ir-receiver.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Four-channel IR receiver
+
+Section ID: `ownkb:section:d000154:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000154:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This four-channel infrared receiver translates commands from compatible handheld remotes into SCS actions. Each configured channel can serve lighting, automation, scenarios or other documented system functions, bringing remote operation to otherwise wired controls.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0012` | Project identity |
+| Technical description | Four-channel SCS infrared receiver for remote control and scenario functions | Catalogue + official technical sheet |
+| Catalogue item | `37` - “IR receiver” | Implementation evidence |
+| Main catalogue system | Lighting / Automation | Implementation evidence |
+| Item model / `modobj` | `22` | Implementation evidence |
+| Firmware definition | `-1.-1.-1` wildcard / unspecified, firmware `216` | Implementation evidence |
+| Declared Modules | `4` | Implementation evidence |
+| Categories | Command, Interface, Multifunction | Capability model |
+
+The Device receives commands from compatible infrared remote controls and projects four fixed IR-receiver Modules. Physical configuration assigns the function of each IR channel, while virtual configuration can describe the channels through reusable IR receiver Objects.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000154:s000003`
+
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HS4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Axolute | `HD4654` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `L4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `N4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - LivingLight | `NT4654N` | Established identity | Catalogue cluster + official technical sheet |
+| BTicino - Matix | `AM5834` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573900` | Established identity | Catalogue + official technical sheet |
+| Legrand - Arteor | `573901` | Established identity | Catalogue + official technical sheet |
+| Legrand - Céliane | `067216` | Established identity | Catalogue + official technical sheet |
+| Legrand - Mosaic | `078465` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+| Legrand - Mosaic | `079265` | Established catalogue identity | Canonical catalogue; exact-product technical sheet not retained |
+
+The MyHOME Suite catalogue stores some finish variants as combined codes, so one catalogue row may represent several printed BTicino references.
+
+The canonical `EN_DEVICE.code` retains combined `HS/HD/HC4654` and `L/N/NT4654N`. The named finish references above expand those catalogue codes; their ordering does not imply a different technical item.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000154:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4654` | `8012199745633` | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf), `HC4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HS4654` | `8012199745640` | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf), `HS4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `HD4654` | `8012199986227` | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf), `HD4654-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `L4654N` | `8012199765617` | [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf), `L4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `N4654N` | `8012199765624` | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf), `N4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `NT4654N` | `8012199765631` | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf), `NT4654N-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000154:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00071-d-EN` | Technical sheet | 05/06/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/23/77/2377847553a0c47193ebc21f19d7bc31c55e1b897f424f0a4ee3f44dd9514abe.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-EN.pdf) |
+| `MQ00071-d-FR` | Technical sheet | 29/04/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/58/3e/583ecd811160edb5e46567918b78e2ffc8dd61301e756fa1c80815f044490e78.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-FR.pdf) |
+| `MQ00071-d-IT` | Technical sheet | 29/04/2014; PDF pp. 1–4 | Exact named references and all Device-specific configuration/programming pages inspected | [Archived PDF](https://archive.openwebnet-ha.org/sha256/ec/df/ecdf700916a509417e86448e095a9e780b29251daac28659b8e558f648588e13.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00071-d-IT.pdf) |
+| `HC4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HC4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654) |
+| `HS4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HS4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654) |
+| `HD4654-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `HD4654` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654) |
+| `L4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `L4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N) |
+| `N4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `N4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N) |
+| `NT4654N-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `NT4654N` to EAN-13 relationship at printed/PDF p. 1. Commercial-identifier scope for this update; other attributes and prices are not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000154:s000006`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | 2 flush-mounted modules | `MQ00071-d-EN` |
+| Compatible remote controls | `3527N` and `3529` | `MQ00071-d-EN` |
+| SCS nominal supply | `27 Vdc` | `MQ00071-d-EN` |
+| SCS operating supply | `18..27 Vdc` | `MQ00071-d-EN` |
+| Current draw | `8.5 mA` | `MQ00071-d-EN` |
+| Operating temperature | `5..35 °C` | `MQ00071-d-EN` |
+| Physical configurator positions | `A`, `PL1/PF1`, `PL2/PF2`, `PL3/PF3`, `PL4/PF4`, `M` | `MQ00071-d-EN` |
+
+The six physical positions independently support the expected ordinary addressed-form configurator count, pending an observed Device-identity read.
+
+### Identity
+
+Section ID: `ownkb:section:d000154:s000007`
+
+Provenance cues: `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `37` | Implementation evidence |
+| Main system | Lighting / Automation | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `22` | Implementation evidence |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000154:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `22` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000154:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `216` | `-1` | `-1` | `-1` | `4` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Wildcard values are catalogue applicability sentinels, not claims about an installed firmware version.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000154:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000154:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `216` | `1` | `34` IR receiver | Fixed/designated metadata | `1169` | `34` | `628` |
+| `216` | `2` | `34` IR receiver | Fixed/designated metadata | `1170` | `34` | `628` |
+| `216` | `3` | `34` IR receiver | Fixed/designated metadata | `1171` | `34` | `628` |
+| `216` | `4` | `34` IR receiver | Fixed/designated metadata | `1172` | `34` | `628` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000154:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+There is no Virgin Object and no slot-condition row for firmware `216`.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000154:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `216` | Physical configuration | `0` | Canonical firmware/mode association |
+| `216` | Virtual Configuration | `1` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000154:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `216` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `216` | `A` | `0..9` | `0` | A; Environment |
+| `216` | `PL1` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL1; PL1 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL2` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL2; PL2 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL3` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL3; PL3 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `PL4` | `0..9`; `10` = `OFF`; `11` = `ON`; `12` = `GEN`; `13` = `UP/DOWN`; `14` = `UP/DOWN` monostable; `15` = `AMB` | `0` | PL4; PL4 (0-9, `OFF`,`ON`,`GEN`,SU_GIU,SU_GIU_M,`AMB`) |
+| `216` | `M` | `0..9`; `14` = `CEN` | `0` | M; Mode (0-9,`CEN`) |
+
+The database uses `PL1`..`PL4` while the official sheet labels each socket `PLn/PFn` because its meaning depends on `M`.
+
+#### Published operating modes
+
+Section ID: `ownkb:section:d000154:s000015`
+
+The official sheet documents five broad modes:
+
+| Mode | Physical selection | Function |
+| --- | --- | --- |
+| Remote control | `M=1..4` | four generic `ON`/`OFF`/`UP/DOWN`-style remote control channels |
+| Advanced scenarios | `M=CEN` | commands a scenario programmer such as MH200N |
+| Self-learning | no `M` configurator | learns functions for the remote keys |
+| Scenario module | `M=6` | activates up to 16 scenarios stored in F420-style scenario modules |
+| Sound diffusion | `M=9` | controls amplifier/audio functions |
+
+The sheet also documents lighting, automation, video-door-entry and scenario behavior through the remote-control key assignments.
+
+The generic functional frame grammar remains canonical under the relevant [Functional Protocol](../../functional/) sections.
+
+#### Addressing model
+
+Section ID: `ownkb:section:d000154:s000016`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+
+The Device has one environment field `A` and four per-channel physical selectors. Depending on the selected mode, a `PLn/PFn` position may identify:
+
+- a lighting point;
+- `ON`/`OFF`/general/room-style lighting scope;
+- an automation `UP/DOWN` function;
+- a scenario or programmed-scenario function;
+- an audio/sound function.
+
+This contextual reuse is why the firmware parameter enum is wider than the reusable Object `PL=0..9` field.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000154:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `34` - IR receiver
+
+Section ID: `ownkb:section:d000154:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..9` | `0` | Area |
+| `PL` | `0..9` | `0` | Light point |
+| `MOD` | `0..4` | `0` | Modality; Mode 0-4 |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000154:s000019`
+
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Physical sockets are labelled `PLn/PFn` because the shared M mode changes their meaning. Four catalogue Modules do not limit self-learning to four remote keys: the product sheet allows sixteen learned commands. Numeric reusable fields do not replace the contextual physical symbols.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000154:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000154:s000021`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000154:s000022`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000154:s000023`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000154:s000024`
+
+Applicability cues: `firmware`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | resolve `modobj = 22`, commercial identity and installed configurator count | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe actual installed firmware | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | confirm four fixed IR receiver Objects | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | inspect configured channel addresses/context | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect the physical/virtual configuration | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000154:s000025`
+
+Provenance cues: `evidence`, `source`
+
+Depending on shared `M` mode and per-channel selectors, the receiver participates in lighting, automation, programmed scenarios, scenario-module control, sound diffusion, and published video-door-entry-related remote functions. Generic functional frame grammar remains canonical under Functional Protocol.
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| M=`1..4` | Four fixed channel assignments per receiver; up to four receivers yield sixteen distinct commands in the room | MQ00071-d-EN, pp. 2–3 |
+| `M=0` / no configurator | Up to sixteen learned commands, including timed/flashing lighting, lock/unlock, AUX shutter/light, door-lock/stair-light and amplifier controls | Same source, p. 3 |
+| `M=6` | Up to sixteen F420 scenarios through sixteen remote channels; programming switch and F420 unlock both apply | Same source, p. 4 |
+| `M=9` | Up to four amplifiers; brief On/Off, held volume up/down, source cycling and station/track change; Follow Me | Same source, p. 4 |
+
+For sound mode A=`1..9` is the destination room and PF1..PF4=`0..9` identify amplifiers. Each PF uses four consecutive remote channels. Neither the four Module projection nor numeric PL defaults reduces these contextual functions to four ordinary lighting points.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000154:s000026`
+
+Provenance cues: `evidence`
+
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
+
+### Programming
+
+Section ID: `ownkb:section:d000154:s000027`
+
+Interpret each PLn/PFn in the context of shared M. `MQ00071-d-EN`, p. 2, requires identical selectors in both positions of a shutter pair; the first sends Up and the second Down. `M=1/2/3/4` chooses remote channels 1–4/5–8/9–12/13–16. CEN pairs up to six 3529 buttons with MH200N scenarios in software.
+
+For self-learning (M empty/0), use `A=0` and PL=`1..9`; the sheet excludes that address from actuators. With the rear switch unlocked, hold programming for three seconds, select a remote key within twenty seconds and issue the required system command. Repeat key/command selection and press programming to exit. To erase one learned key hold programming for at least eight seconds, release within the next four seconds, then select the key within twenty seconds; rapid flashing confirms deletion. Erase all learned commands with an approximately twelve-second hold. The locked rear switch disables programming/deletion.
+
+For `M=6`, also unlock the F420 module (at least 0.5 seconds, green LED). Enter programming with the receiver’s three-second hold, select a remote key within twenty seconds, issue scenario actions and press programming to exit. Individual scenario erasure uses the eight-second receiver hold and key selection; entire scenario memory must be reset on F420. Receiver self-learning erasure and F420 memory erasure are distinct operations. See `MQ00071-d-EN`, pp. 3–4, with corresponding FR/IT sections.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000154:s000028`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+The IR-receiver technical sheets have been reconciled into concrete Device behavior:
+
+- `M=1..4` select remote-control channel blocks; multiple receivers can be arranged to provide up to sixteen distinct remote commands;
+- shutter/automation assignments use paired `UP/DOWN` semantics rather than four unrelated light-point values;
+- `M=CEN` selects programmed-scenario/`CEN` use, while the unconfigured/self-learning mode has its own learn/delete workflow;
+- `M=6` is the published scenario-module mode and `M=9` is the published sound-diffusion mode;
+- each physical `PLn/PFn` socket is contextual: the same configurator position can mean a light point, automation function, scenario selection or audio point depending on `M`;
+- the product includes a programming/lock control whose state affects learning/configuration behavior but is not an OpenWebNet Module.
+
+These facts are the Device-specific interpretation layer above the four fixed Object `34` instances.
+
+English revision d is dated 5 June 2014; French and Italian d are dated 29 April 2014. Their five mode categories and the inspected self-learning/F420 procedures agree, including three/eight/twelve-second stages and rear programming-lock behavior. The heading “none” for self-learning and the detailed `M=0` notation express the no-configurator setup, distinct from an observed installed value. Named electrical coverage excludes Mosaic 078465/079265; catalogue identities remain established, with their individual electrical/procedure evidence still a documentation gap.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000154:s000029`
+
+Provenance cues: `documentation`
+
+- Locate direct product documentation for Mosaic `078465` and `079265`.
+- Add sanitized hardware fingerprints for at least one commercial variant.
+- Corroborate the six physical configurator positions and four fixed Modules.
+- Preserve real remote-control observations showing the mapping between physical `M`, channel selectors and emitted functional commands.
+- Locate installation sheets and older technical-sheet revisions where available.
+
+### Sources
+
+Section ID: `ownkb:section:d000154:s000030`
+
+Provenance cues: `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Programming](../../programming/)
+- `HC4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HC4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9e/95/9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HC4654); SHA-256 `9e9591626666bbcf78b4d7c3168066f05d2b8f4ef5b4f1532ca59158ba383999`.
+- `HS4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HS4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/fd/dc/fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HS4654); SHA-256 `fddcaad93e0fcb251f742091057a578b331259a1a29ffc68ae3264dc6ea0860f`.
+- `HD4654-ean-product-sheet.pdf`, printed/PDF p. 1: exact `HD4654` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/6e/d7/6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-HD4654); SHA-256 `6ed760ddbe69f4660bdb3e572e4caebc34876b72d48cca3b88f80dfc30736d41`.
+- `L4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `L4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ff/db/ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-L4654N); SHA-256 `ffdb9e0a99012ec0016fc25661513a84df7a30581840c550e4f499cd07331a10`.
+- `N4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `N4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/fd/fa/fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-N4654N); SHA-256 `fdfaf8d50aadc1b1eeb96e97818e9de499b9afb2ec6dbc8b79eed4843e2e2d68`.
+- `NT4654N-ean-product-sheet.pdf`, printed/PDF p. 1: exact `NT4654N` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/9c/72/9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-NT4654N); SHA-256 `9c728ac545a3d2ecc106c9418604806488aeaeec545eeab1b6a66d047e1ff32f`.
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0012)
+
+# Document: ownkb:document:d000155
+
+Source path: `devices/definitions/own-dev-0013-video-display.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Video Display
+
+Section ID: `ownkb:section:d000155:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000155:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+Video Display is a flush-mounted video-door-entry indoor unit with a 2.5-inch LCD and navigation keys. Alongside answering calls and operating entry functions, its configured menus can provide access to scenarios, sound, alarms and temperature control.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0013` | Project identity |
+| Technical description | Video-door-entry internal unit with display and configurable auxiliary controls | Catalogue + official documentation |
+| Catalogue item | `1076` - “Video Display” | Implementation evidence |
+| Main catalogue system | Video door entry system | Implementation evidence |
+| Item model / `modobj` | `145` | Implementation evidence |
+| Firmware definition | `5.0.0` and `6.0.1` | Implementation evidence |
+| Declared Modules | `5` | Implementation evidence |
+| Configuration mode | Product Programming | Implementation evidence |
+| Programming connection | USB | Implementation evidence |
+| Categories | Audio / Video, User Interface, Multifunction | Product and capability model |
+
+The Video Display is a MyHOME video-door-entry internal unit that combines the primary internal-unit function with four fixed auxiliary control Modules. The catalogue capability model is shared by eight commercial records across BTicino and Legrand ranges.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000155:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - LivingLight | `344400` | Established identity | Catalogue + archived installation/user/software manuals |
+| BTicino - LivingLight | `344401` | Established identity | Catalogue + archived installation/user/software manuals |
+| BTicino - Axolute | `349311` | Established identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349312` | Established identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349313` | Established catalogue identity | Catalogue + archived exact Axolute technical sheet |
+| BTicino - Axolute | `349340` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
+| Legrand - Arteor | `573950` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
+| Legrand - Arteor | `573951` | Established catalogue identity | Implementation evidence; exact-product technical sheet not retained |
+
+Shared item membership establishes the common catalogue capability core. It does not erase possible finish, package, market, or hardware differences between commercial references.
+
+### Documentation
+
+Section ID: `ownkb:section:d000155:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `O1421A_I_EN` | Installation manual | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/39/ab/39ab54625c817d9c3b49c5c7283698dc918a38b399a6462c14b23204413745a4.pdf) | publisher source not currently retained |
+| `O1421A_U_EN` | User guide | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/34/3b/343bd9b36ddc436084b47b34a9c6cc4079ee63ef216a87046c49c19eab33ef27.pdf) | publisher source not currently retained |
+| `O1421A_S_EN` | TiLivingLightDisplay software manual | March 2011; `03/11-01 PC` | `344400`, `344401` Video Display | [Archived PDF](https://archive.openwebnet-ha.org/sha256/32/76/32767ea509c1d8d439ffb4c1f3c4be28a4a9443f1f98aba8f0219d2200f03771.pdf) | publisher source not currently retained |
+| MyHOME Automation guide | System / product guide | No dated imprint established in inspected original | Axolute Video Display references `349311` and `349312` occur on printed pp. 24, 25 / PDF pp. 26, 27 | [Archived PDF](https://archive.openwebnet-ha.org/sha256/80/6a/806a55bffb924f5ef7b25398432c0a86ab210722adc30b81f33558c6ec36f561.pdf) | publisher source not currently retained |
+| `BT00636_b_EN.pdf` | Exact Axolute technical sheet | 22/01/2014 | 349311/349312/349313; all two pages inspected. Electrical data and installation/programming limits are variant-scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/08/0c/080c227f7ab88a3a8aacfe631dc56567aff6515187ecc16948cf9d015cb60eff.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/BT00636_b_EN.pdf) |
+| `U1925D.pdf` | Axolute user manual | U1925D; 03/10-01 PC | 349311/349312/349313; English PDF pp. 19–34 inspected. Other language sections not independently reconciled. | [Archived original](https://archive.openwebnet-ha.org/sha256/6a/d1/6ad1f090cf2f36f59feba30ca5093ebd8f02ea62df289682940b8c4a250bfb69.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/U1925D.pdf) |
+
+All retained files are byte-for-byte originals registered in the source manifest.
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000155:s000005`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | flush-mounted Video Display | `O1421A_I_EN` |
+| Display | 2.5-inch LCD | `O1421A_I_EN` |
+| Local interface | navigation and function keys | `O1421A_I_EN` |
+| SCS interface | SCS connection | `O1421A_I_EN` |
+| Programming interface | mini-USB for advanced programming and firmware-related operations | `O1421A_I_EN` |
+
+The user-facing function set is broader than the five catalogue Modules. Product UI functions do not imply one OpenWebNet Module per menu entry.
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Axolute named variants | 2.5-inch colour LCD; box 506E or PB526, 3+3 modules; table base 349319 | BT00636-b-EN, p. 1; 349311/349312/349313 |
+| Axolute supply/current | `18..27` Vdc; `10 mA` standby, `320 mA` maximum operating | Same source, p. 1 |
+| Axolute operating temperature | `5..40` °C | Same source, p. 1 |
+| LivingLight manual current/temperature | `8 mA` standby; `200 mA` maximum A/V; `0..40` °C | O1421A_I_EN, p. 24; separate from Axolute sheet |
+| Axolute enclosure | `105.5 × 118 mm` body; drawing depths 9.5 and `30.2 mm`; `127 × 141.5 mm` maximum cover envelope | BT00636-b-EN, p. 1; drawing dimensions, not a combined depth |
+
+### Identity
+
+Section ID: `ownkb:section:d000155:s000006`
+
+Provenance cues: `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1076` | Implementation evidence |
+| Main system | Video door entry system | Implementation evidence |
+| `AS_ITEM_SYSTEM.modobj` | `145` | Implementation evidence |
+| BTicino brand / line | brand `1`; L/N/NT line `1`; Axolute line `3` | Implementation evidence |
+| Legrand Arteor | brand `2`; line `2` | Implementation evidence |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000155:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `145` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000155:s000008`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `27` | `6` | `0` | `1` | `5` | Catalogue default | Official |
+| `616` | `5` | `0` | `0` | `5` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Both definitions expose the same five fixed Objects, Product Programming mode, USB programming connection and firmware-scoped configuration fields.
+Catalogue applicability does not prove the firmware installed on every commercial variant.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000155:s000009`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `27` | `66` | BTicino (key `1`) | `1` | external software | `TiLivingLightDisplay_0600` |
+| `27` | `520` | BTicino (key `1`) | `3` | external software | `UNAVAILABLE_0000` |
+| `27` | `521` | Legrand (key `2`) | `2` | external software | `UNAVAILABLE_0000` |
+| `616` | `526` | BTicino (key `1`) | `1` | external software | `UNAVAILABLE_0000` |
+| `616` | `527` | Legrand (key `2`) | `2` | external software | `VideoDisplayConfig_0500` |
+| `616` | `922` | BTicino (key `1`) | `3` | external software | `TiAxoluteDisplay_0500` |
+
+All 6 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000155:s000010`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `27` | `1` | `154` Internal Unit | Fixed/designated metadata | `2265` | `154` | `943` |
+| `27` | `2` | `418` Open lock control | Fixed/designated metadata | `2266` | `418` | `944` |
+| `27` | `3` | `422` Addressed autoswitch control | Fixed/designated metadata | `2267` | `422` | `945` |
+| `27` | `4` | `426` Staircase light control | Fixed/designated metadata | `2268` | `426` | `946` |
+| `27` | `5` | `429` Paging button | Fixed/designated metadata | `2269` | `429` | `947` |
+| `616` | `1` | `154` Internal Unit | Fixed/designated metadata | `2426` | `154` | `1078` |
+| `616` | `2` | `418` Open lock control | Fixed/designated metadata | `2427` | `418` | `1079` |
+| `616` | `3` | `422` Addressed autoswitch control | Fixed/designated metadata | `2428` | `422` | `1080` |
+| `616` | `4` | `426` Staircase light control | Fixed/designated metadata | `2429` | `426` | `1081` |
+| `616` | `5` | `429` Paging button | Fixed/designated metadata | `2430` | `429` | `1082` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000155:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+There are no Virgin Objects and no slot-condition rows for either firmware definition.
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000155:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `27` | Product Programming | `3` | Canonical firmware/mode association |
+| `616` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `27` | USB | Canonical firmware/connection association |
+| `616` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000155:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `27` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `27` | `N_1` | `0..9` | `0` | N; Configurator N(0-9) |
+| `27` | `N_2` | `0..9` | `0` | N; Configurator N(0-9) |
+| `27` | `P` | `0..9` | `0` | P; Configurator P |
+| `27` | `M` | `0..6` | Not specified in source | M; (0-6) |
+| `616` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `616` | `N_1` | `0..9` | `0` | N; Configurator N(0-9) |
+| `616` | `N_2` | `0..9` | `0` | N; Configurator N(0-9) |
+| `616` | `P` | `0..9` | `0` | P; Configurator P |
+| `616` | `M` | `0..6` | Not specified in source | M; (0-6) |
+
+Physical quick configuration is a two-digit `N` plus `P` and `M`. Advanced configuration is performed with the PC software.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000155:s000014`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000155:s000015`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+#### Object `418` - Open lock control
+
+Section ID: `ownkb:section:d000155:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `422` - Addressed autoswitch control
+
+Section ID: `ownkb:section:d000155:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000155:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `429` - Paging button
+
+Section ID: `ownkb:section:d000155:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Base; `2` = Advanced | `2` | Modality; mode(Base,Advanced) |
+| `AMPL_AREA` | `0..99` | `0` | Amplifier area |
+| `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
+| `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000155:s000020`
+
+Provenance cues: `catalogue`
+
+Five fixed catalogue Objects are a protocol projection, not a count of available display icons or applications. `PEOPLE_S` values 1 and 2 have no stronger published meaning established in these sources. Quick hardware configuration and PC menu composition are distinct.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000155:s000021`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000155:s000022`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000155:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `27` | `154` | `2003` | `DOSA_CALL` | `0` = Enable; `1` = Disable (entire reusable range retained) | `0` | Forward incoming call to ethernet |
+| `27` | `426` | `4110` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `616` | `154` | `2019` | `DOSA_CALL` | `0` = Enable; `1` = Disable (entire reusable range retained) | `0` | Forward incoming call to ethernet |
+| `616` | `426` | `4111` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000155:s000024`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000155:s000025`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | identify item model `145`, brand and line | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | observe installed firmware rather than assume catalogue applicability | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate the five fixed Modules | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | inspect configured Module addresses where exposed | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect configuration values where exposed | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+Generic diagnostic frame grammar belongs in the linked references.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000155:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+The primary role is video door entry. The product UI can also expose intercom/camera activation, scenarios, alarms, sound, temperature-control and multimedia functions without creating one firmware Module per UI function.
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Scenario UI | Basic first five F420 scenarios; advanced menu can add additional scenario/communication pages | O1421A_I_EN, pp. 5, 13–15 |
+| Alarm UI | System/zone state and last three alarms; not an assertion of alarm-control authority | O1421A_U_EN, pp. 25–26 |
+| Sound / temperature / multimedia | Source and amplifier control; central/zone manual, weekly/automatic, protection and Off states; multimedia interface 3465 requires that interface | Same source, pp. 26–29 |
+| Door-entry services | Professional Studio automatically opens on a call; mutually exclusive with Door State. Hands Free enables microphone/speaker on a call | Same source, pp. 33–34 |
+| Axolute operation | Volume/display/ringtone adjustment, configured paging and Push to Talk; custom menu shows functions actually configured | U1925D, English PDF pp. 22–34 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000155:s000027`
+
+Provenance cues: `evidence`
+
+No publishable hardware observation has yet been incorporated as canonical corroboration for this Device definition. Outstanding runtime and hardware checks are listed under Evidence limits and open work.
+
+### Programming
+
+Section ID: `ownkb:section:d000155:s000028`
+
+Provenance cues: `catalogue`
+
+`O1421A_I_EN`, pp. 10–16, separates quick physical N/P/M setup from TiLivingLightDisplay PC composition. N is a two-digit handset address; P selects the associated entrance panel; M=`0..6` selects a predefined five-function menu plus Settings. With apartment interface 346850, advanced configuration is recommended. A physically configured device cannot have that configuration edited from its menu. For transfer/update, connect USB–miniUSB with the device powered and not physically configured; USB is presented as a virtual COM port.
+
+The advanced menu can contain up to thirty scenario/communication functions, six amplification points, four sound sources and ten temperature zones in the LivingLight installation manual’s scope. Those counts are application limits, not five new protocol slots. Parallel handsets with the same N are limited to three (one Master and two Slaves); the Axolute sheet qualifies its no-346850 case. The line-termination switch and auxiliary supply terminals are physical installation features, not extra catalogue configuration fields.
+
+TiLivingLightDisplay offers communication, scenario module/central-unit, scheduled-scenario Start/Stop, alarm display, single/multichannel sound, multimedia, 4/99-zone temperature and paging configuration (`O1421A_S_EN`, pp. 16–21). Advanced paging can include selected handsfree handsets; Basic paging uses sound-system speakers. Installer Reset deletes configuration; it is distinct from returning only Slave/Paging options to their defaults (`O1421A_I_EN`, pp. 19–21).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000155:s000029`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The archived Video Display installation, user and TiLivingLightDisplay manuals add substantial product behavior beyond the five fixed catalogue Objects:
+
+- physical configuration exposes predefined `M=0..6` menu/application arrangements rather than one generic configuration;
+- the `P` address participates in camera/activation behavior relative to the entrance-panel address and must be interpreted in the video-door-entry context;
+- the product has a line-termination control and documented auxiliary-supply wiring options that affect installation but not the OpenWebNet Module count;
+- quick/physical configuration has documented restrictions in systems using interface `346850`;
+- software configuration can add/arrange applications and transfer projects/firmware through the product tooling rather than only setting the catalogue Object parameters;
+- Master/Slave and menu/application limitations are product-level constraints and must remain distinct from generic WHO semantics;
+- reset and user-menu behavior are part of the Device operational model, not additional Objects.
+
+The dossier now treats the five Objects as the OpenWebNet projection of a richer video-door-entry user interface rather than as the whole product.
+
+The March 2011 O1421A installation, software and user originals cover LivingLight presentation; U1925D has a March 2010 imprint and directly names the three Axolute references. The January 2014 Axolute sheet gives different current and temperature figures from the LivingLight manual. These are commercial/source scopes, not proof of interchangeable hardware or a date-defined revision change. Exact electrical evidence for 349340 and Arteor 573950/573951 remains absent. The five protocol Objects do not bound the richer programmed UI, and undocumented PEOPLE_S enum meanings remain open.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000155:s000030`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `documentation`
+
+- Obtain sanitized fingerprints for at least one `344400/344401` unit and one Axolute/Arteor variant.
+- Exact electrical documentation remains unretained for `349340`, `573950` and `573951`; the new Axolute sheet explicitly covers `349313`.
+- Correlate observed firmware versions to catalogue firmware `5.0.0` and `6.0.1`.
+- Determine the meaning of the unresolved `PEOPLE_S` enum values.
+- Search for older and language-specific document revisions.
+
+### Sources
+
+Section ID: `ownkb:section:d000155:s000031`
+
+Provenance cues: `database`, `source`
+
+- [Device Sources](../../sources/devices/)
+- [Canonical MyHOME Suite source set](../../sources/myhome-suite/3.5.38/)
+- [Device Database Inventory](../inventory/)
+- [Diagnostics](../../diagnostics/)
+- [Semantic review record, 5 October 2026](../../project/review/device-reviews-0011-0020-2026-10-05.md#own-dev-0013)

@@ -171,6 +171,27 @@ class ClaimFrameworkTests(unittest.TestCase):
                 "sections": len(entries), "sections_with_claims": sum(r["status"] == "claimed" for r in entries),
                 "reviewed_nonclaim_sections": sum(r["status"] == "nonclaim" for r in entries)}
 
+    def test_device_review_cache_is_local_and_preserves_source_pins(self):
+        from unittest.mock import patch
+        import device_units
+        section_paths = {s["id"]: d["path"] for d in self.ir["documents"]
+                         for s in d["sections"]}
+        device_sections = {c["section_id"] for c in self.seeds["claims"]
+                           if section_paths[c["section_id"]].startswith("devices/definitions/")}
+        seeds_path = ROOT / "knowledge/inputs/claim-records.json"
+        with patch("device_units.source_units", wraps=device_units.source_units) as units:
+            claim_records(self.ir, self.refs, seeds_path)
+            self.assertEqual(len(device_sections), units.call_count)
+        section = next(t for d in self.ir["documents"] if d["path"].startswith("devices/definitions/")
+                       for t in d["sections"] if t["id"] in device_sections)
+        original = section["title"]
+        try:
+            section["title"] += " changed meaning"
+            with self.assertRaisesRegex(ValueError, "section changed"):
+                claim_records(self.ir, self.refs, seeds_path)
+        finally:
+            section["title"] = original
+
     def test_phase11_epistemic_boundaries_are_preserved(self):
         claims = self.render()
         phase11 = [record for record in claims

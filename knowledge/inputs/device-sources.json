@@ -13,37 +13,37 @@
     {
       "device_id": "OWN-DEV-0003",
       "path": "devices/definitions/own-dev-0003-flush-mounted-actuator-free-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0004",
       "path": "devices/definitions/own-dev-0004-two-module-basic-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0005",
       "path": "devices/definitions/own-dev-0005-two-module-special-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0006",
       "path": "devices/definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0007",
       "path": "devices/definitions/own-dev-0007-three-module-basic-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0008",
       "path": "devices/definitions/own-dev-0008-flush-mounted-one-relay-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0009",
       "path": "devices/definitions/own-dev-0009-four-zone-touch-multifunction-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0010",
@@ -53,17 +53,17 @@
     {
       "device_id": "OWN-DEV-0011",
       "path": "devices/definitions/own-dev-0011-scenario-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0012",
       "path": "devices/definitions/own-dev-0012-four-channel-ir-receiver.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0013",
       "path": "devices/definitions/own-dev-0013-video-display.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0014",

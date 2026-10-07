@@ -143,3 +143,13 @@
 {"classification":"sanitize","source_id":"ownkb:source:s000170","source_path":"devices/definitions/own-dev-0207-f460-myhome-server.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000171","source_path":"devices/definitions/own-dev-0209-f459t-hvac-driver-manager.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000172","source_path":"devices/definitions/own-dev-0210-345000-linea-5000-entrance-panel-display.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000246","source_path":"devices/definitions/own-dev-0003-flush-mounted-actuator-free-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000247","source_path":"devices/definitions/own-dev-0004-two-module-basic-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000248","source_path":"devices/definitions/own-dev-0005-two-module-special-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000249","source_path":"devices/definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000250","source_path":"devices/definitions/own-dev-0007-three-module-basic-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000251","source_path":"devices/definitions/own-dev-0008-flush-mounted-one-relay-actuator.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000252","source_path":"devices/definitions/own-dev-0009-four-zone-touch-multifunction-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000253","source_path":"devices/definitions/own-dev-0011-scenario-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000254","source_path":"devices/definitions/own-dev-0012-four-channel-ir-receiver.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000255","source_path":"devices/definitions/own-dev-0013-video-display.md","source_type":"canonical_documentation"}

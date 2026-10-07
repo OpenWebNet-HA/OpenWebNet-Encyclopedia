@@ -96,7 +96,8 @@ def materialize_statement(statement: str, section: dict, block_indexes: list[int
             f"Within that context, the atomic assertion is: {assertion}.")
 
 
-def validate_atomicity_review(statement: str, section: dict, review: dict) -> str:
+def validate_atomicity_review(statement: str, section: dict, review: dict,
+                              source_unit_indexes: dict | None = None) -> str:
     fields = {"block_indexes", "mode", "review_status"}
     if review.get("review_status") == "reviewed-device-pilot":
         fields.add("source_unit_key")
@@ -104,7 +105,7 @@ def validate_atomicity_review(statement: str, section: dict, review: dict) -> st
         raise ValueError("atomicity review has unknown or missing fields")
     if review["review_status"] not in REVIEW_STATUSES:
         raise ValueError("atomicity review is not approved")
-    expected = reviewed_block_indexes(statement, section, review)
+    expected = reviewed_block_indexes(statement, section, review, source_unit_indexes)
     if review["block_indexes"] != expected:
         raise ValueError("atomicity source block mapping is stale")
     reasons = atomicity_reasons(statement)
@@ -118,17 +119,19 @@ def validate_atomicity_review(statement: str, section: dict, review: dict) -> st
     return rendered
 
 
-def reviewed_block_indexes(statement: str, section: dict, review: dict) -> list[int]:
+def reviewed_block_indexes(statement: str, section: dict, review: dict,
+                           source_unit_indexes: dict | None = None) -> list[int]:
     if review.get("review_status") != "reviewed-device-pilot":
         return best_block_indexes(statement, section)
     from device_units import source_units
     if not section.get("provenance", {}).get("path", "").startswith("devices/definitions/"):
         raise ValueError("Device review status used outside a Device definition")
-    units = {unit["key"]: unit for unit in source_units(section)}
-    unit = units.get(review.get("source_unit_key"))
-    if unit is None:
+    if source_unit_indexes is None:
+        source_unit_indexes = {unit["key"]: unit["block_index"] for unit in source_units(section)}
+    index = source_unit_indexes.get(review.get("source_unit_key"))
+    if index is None:
         raise ValueError("Device claim has an unknown source unit")
-    return [unit["block_index"]]
+    return [index]
 
 IMPLEMENTATION_TITLE = re.compile(r"(?:MyHOME(?:_Suite| Suite)|OPEN\.db|MHCatalogue\.db|ScenarioDevices)", re.I)
 
@@ -179,14 +182,15 @@ def make_evidence_review(seed: dict, section: dict, block_indexes: list[int],
     }
 
 def validate_evidence_review(seed: dict, section: dict, review: dict,
-                             resolved_source_id: str, path: str) -> None:
+                             resolved_source_id: str, path: str,
+                             source_unit_indexes: dict | None = None) -> None:
     expected_fields = {"applicability", "block_indexes", "evidence_class",
                        "resolved_source_id", "review_status", "widening_override"}
     if review.get("review_status") == "reviewed-device-pilot":
         expected_fields.add("source_unit_key")
     if set(review) != expected_fields or review["review_status"] not in REVIEW_STATUSES:
         raise ValueError("claim evidence review has unknown, missing, or unapproved fields")
-    if review["block_indexes"] != reviewed_block_indexes(seed["statement"], section, review):
+    if review["block_indexes"] != reviewed_block_indexes(seed["statement"], section, review, source_unit_indexes):
         raise ValueError("claim evidence block mapping is stale")
     current = (seed["evidence_class"], resolved_source_id, seed["applicability"])
     reviewed = (review["evidence_class"], review["resolved_source_id"], review["applicability"])
