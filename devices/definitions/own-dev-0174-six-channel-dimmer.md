@@ -22,6 +22,14 @@ The manufacturer catalogue identifies 002627 as a six-channel lighting dimmer. I
 | --- | --- | --- | --- |
 | Legrand | `002627` | Established catalogue identity | Manufacturer database commercial record `1493` explicitly links this SKU to item `1493` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `002627` | 6 channel dimmer | Canonical commercial record `1493` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -46,6 +54,19 @@ The manufacturer catalogue identifies 002627 as a six-channel lighting dimmer. I
 | Main item model / `modobj` | `142` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `142` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -55,6 +76,12 @@ The manufacturer catalogue identifies 002627 as a six-channel lighting dimmer. I
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -79,11 +106,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `219` | Virtual Configuration | `1` | Association key `1` |
-| `219` | Advanced Configuration | `2` | Association key `2` |
-| `219` | Physical configuration | `0` | Association key `3` |
+| `219` | Physical configuration | `0` | Canonical firmware/mode association |
+| `219` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `219` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -286,6 +314,10 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+Firmware `219` has six fixed/designated placements for reusable Object `8`, with condition records `4956`, `4937`, `4938`, `4957`, `4958`, `4959`. Each stores no textual predicate, but references one of conversions `7206..7211`; the blank predicate is not an unconditional-activation claim. For item `A=0`, each conversion sets Object `PL=0`; for `A=1..9`, channel slots 1 through 6 yield `PL=1..6` respectively. These rows specify catalogue addressing, not six verified wired load outputs or a measured response.
+
+Filter `2063` excludes reusable `LOCAL_BUTTON=0`; it admits `9`, `15`, `18` without storing a replacement default. Independently, `MIN_LEVEL_ADV` has reusable/default `0` outside its own `1..100` domain, and filter `2069` retains that full domain without repairing the default. Filter `2067` omits `TYPE_LOAD=8` (DALI) while retaining DSI and other reusable labels. Neither the retained labels nor `TYPE_STANDARD` establish hardware ballast outputs or load ratings. Item `M=0..4,11,15` differs from reusable Object `M=0,11,15,16`; no Object conversion for that mode field is referenced here.
+
 002627 is explicitly linked to item 1493 in the manufacturer database, so its identity is established. Discovery found a mirrored 02627 technical-sheet transcript; attempted Legrand Australia locations returned 403 and no exact current product page was found. Related 002622/002671 dimmers have different outputs and are excluded. No electrical ratings are inferred from their similar references or from the six-Module count.
 
 No exact-product document original is retained for this item. The canonical database is the source for the identity and configuration inventory; product-document discovery remains partial.
@@ -296,7 +328,9 @@ The exact restriction table identifies reusable defaults outside a Firmware/Obje
 
 Retain and inspect the original 02627/002627 sheet, including load classes, per-channel and aggregate ratings, local edge-mode programming, wiring and production applicability. EAN and observed diagnostics remain unavailable in retained evidence.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
+
+The 7 October retry of the [Legrand Australia technical-sheet route](https://www.legrand.com.au/sites/default/files/02627_SCS%206%20Channel%20Dimmer_Technical%20sheet.pdf) returned HTTP 403; the [discovery transcript](https://studyres.com/doc/7813220/02627_scs-6-channel-dimmer_technical-sheet) remains a lead rather than a retained exact-product original. Its claimed `300 VA` per-channel rating and edge-mode procedure are not adopted as verified Device facts. Searches for `002627`, `02627` and the six-channel SCS description found no usable official replacement original. The archival check covers the registered canonical database; no product PDF is represented as archived.
 
 ## Sources
 
@@ -308,3 +342,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0174)

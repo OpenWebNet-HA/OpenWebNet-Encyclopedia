@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F401` | `8005543469699` | `F401-publisher-product-sheet.pdf` PDF p. 1; `F401-italian-product-sheet.pdf` PDF p. 1 |
+| `F401` | `8005543469699` | [F401-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/8e/81/8e817a5676c4373d1793c324c9ba8a22368619a0e3242429370c0ff87eadd16d.pdf) PDF p. 1; [F401-italian-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/f8/49/f8490dfd3dd79a1d5058cb0203b31a0c2b6ebee2e37d43d739c849325475fbe7.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F401` | Shutter actuator DIN 1 motor bus | Canonical commercial record `1570` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -40,6 +48,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | `F401-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/81/8e817a5676c4373d1793c324c9ba8a22368619a0e3242429370c0ff87eadd16d.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F401&include_technical=1) |
 | `F401-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/f8/49/f8490dfd3dd79a1d5058cb0203b31a0c2b6ebee2e37d43d739c849325475fbe7.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F401) |
 | `ST_00000897_IT.pdf` | Manufacturer Italian/installation document | ST_00000897_IT; 23/03/2021 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/59/91/5991446162831c57ebbeafa2ba9b509fcd85f3e27be09b016fbbeb8567b29af0.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000897_IT.pdf) |
+| `ST_00000897_EN.pdf` | Manufacturer original | Printed ST-00000897-EN, 23/03/2021 | Printed/PDF pp. 1-3: exact F401 ratings, modes, physical/software addressing, calibration and wiring. Compared with Italian 2021, English 2024 and LE05557AC. | [Archived original](https://archive.openwebnet-ha.org/sha256/c6/ef/c6ef35063e0b41e2ad2da9ce49422455b25b6f03cc1b6075e6ab4e81ccf62bc4.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00000897_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1570`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -56,7 +65,6 @@ EANs identify the named commercial variant, not the configured physical device o
 | Motor types | `standard automatic; standard manual; pulse motor` | `ST-00001901-EN` printed/PDF pp. 1-3; `ST_00000897_IT` pp. 1-3; `LE05557AC` calibration / wiring original |
 | Preset requirement | `advanced shutter control; scenario module production after week 29-2012` | `ST-00001901-EN` printed/PDF pp. 1-3; `ST_00000897_IT` pp. 1-3; `LE05557AC` calibration / wiring original |
 | Uncalibrated operation | `local buttons only; not manageable by control devices` | `ST-00001901-EN` printed/PDF pp. 1-3; `ST_00000897_IT` pp. 1-3; `LE05557AC` calibration / wiring original |
-
 | Publisher rated power | `500 W; separate load-related publisher value,not SCS consumption` | `F401-publisher-product-sheet.pdf` p.1 |
 | Publisher nominated advanced controls | `LN4660M2,H4660M2,AM5861M2; exact published reference list,not an exhaustive compatibility declaration` | `F401-publisher-product-sheet.pdf` p.1 |
 
@@ -125,6 +133,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `31` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `31` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -134,6 +155,12 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -153,11 +180,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `191` | Virtual Configuration | `1` | Association key `1` |
-| `191` | Advanced Configuration | `2` | Association key `2` |
-| `191` | Physical configuration | `0` | Association key `3` |
+| `191` | Physical configuration | `0` | Canonical firmware/mode association |
+| `191` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `191` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -337,28 +365,24 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+The 2021 English `ST_00000897_EN.pdf` p. 1 prints “Protection index: IK04” and “Impact resistance: IP20”; the original page was checked visually. Its labels are transposed relative to the Italian 2021 sheet and English 2024 `ST-00001901-EN.pdf`, which identify `IP20` protection and `IK04` impact resistance. Keep the corroborated classification and preserve the 2021 English printing error explicitly. The 2024 sheet also adds the qualification that blade-adjustment PRESET operation is guaranteed only with a pulse motor; the 2021 English text omits that qualification and must not be treated as an unrestricted guarantee.
+
+Catalogue filter `4614` restricts Object `SHUTTER_TYPE` to `3` (standard with slats) while its reusable default is `0`; item `TYPE` is instead `0..2`. No cited conversion supplies a bridge between those fields, so the conflict remains rather than turning the filter into a physical Type-socket instruction. Filter `574` points to a `G` field belonging to another Object scope; it is not aliased to `G1/G2`. Conversion `115` returns `MODE`, absent from the reusable Object’s declared fields (`M` is present). Branches for `M=1,2,12,13` also lie outside item `M=0,11,15`; they are retained stored branches, not valid commissioning selectors for Firmware `191`.
+
 The exact English/Italian sheets and LE05557AC retain the one-motor, two-interlocked-relay model. The current English product page / export says “flush mounted” while the F401 technical sheet and installation drawing establish a 2-DIN enclosure: preserve the conflicting classification without reinterpreting the physical mounting. The export’s 27 Vdc and 0.016 A rated supply / draw agree with the sheet’s 27 Vdc and16 mA maximum. Its 500 W value is a separate load-related publisher rating; it is not SCS consumption. The same export’s characteristic list and mounting attribute say DIN, contradicting its own flush-mounted title / description. One catalogue shutter Object is not two independent motor channels; interlocking is intrinsic to the documented one-motor role.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `LE05557AC.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `MyHOME Technical Guide.pdf` | F401 printed/PDF pp.47, 89, 93, 95, 99 and unnumbered wiring-example PDF p.58; HC/HS/HD4657M4 touch controls printed/PDF p.95. Other product sheets and their incidental dates do not date the whole guide or override exact-product limits. |
-| `ST-00001901-EN.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `F401-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `F401-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `ST_00000897_IT.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
 
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
 
 The shared MyHOME guide’s unnumbered PDF p.58 separately draws F401 AC-motor wiring and F411U2 DC-motor wiring. The latter’s `12..48 Vdc` motor allowance and zero-crossing instruction are not assigned to F401. Printed/PDF p.99 names K4652M2 as a current control pairing, extending the export’s named LN/H/AM control list without implying all generations are equivalent.
 
+The English and Italian installation data in `LE05557AC.pdf` p. 4 identify maximum SCS draw as `16 mA`; its Arabic translation prints `16 A`. The multilingual row disagreement is not used to multiply the Device’s supply demand by 1000. The `2 A` motor-relay rating and specified `10 A` protective breaker remain separate electrical quantities. Technical-sheet dates do not establish installed hardware or prove that every production generation has the current preset behavior.
+
 ## Evidence limits and open work
 
 Calibration precision, production-specific preset compatibility, mechanical / electronic / pulse motor behavior and observed diagnostics remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ### Discovered sources outside this review
 
@@ -372,6 +396,8 @@ These publisher-linked files were identified but are not used as retained eviden
 | `Catalogue Living_NOW 2M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%202M.pdf) |
 | `Catalogue Living_NOW 3M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%203M.pdf) |
 
+The foreign-field `G` filter, unresolved conversion target `MODE`, out-of-item-domain branches and `TYPE`/`SHUTTER_TYPE` mismatch remain source irregularities. No undocumented symbol alias, replacement default or runtime selection precedence is inferred.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -382,3 +408,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0180)

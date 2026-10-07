@@ -22,11 +22,19 @@ HW4684 is the Axolute Etèris colour touchscreen for configured MyHOME controls.
 | --- | --- | --- | --- |
 | BTicino - Axolute Etèris | `HW4684` | Established catalogue identity | Manufacturer database commercial record `1512` explicitly links this SKU to item `1512` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `HW4684` | Colour Touch Screen | Canonical commercial record `1512` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `eteris-historical-catalogue.pdf` | Historical exact-product manufacturer source | eteris-historical-catalogue; printed publication date not established | HW4684 printed pp.148, 151 / PDF pp.150, 153; touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf) | [Publisher original](https://www.bticino.es/pdf/C_50_EditorialContent_145_Lib_Props_GLib_AList_GLib_AItem_0_GLib_ABin.pdf) |
+| `eteris-historical-catalogue.pdf` | Historical exact-product manufacturer source | eteris-historical-catalogue; printed publication date not established | HW4684 printed pp. 148, 151 / PDF pp. 150, 153; associated box dimensions printed p. 165 / PDF p. 167. Adjacent controls, video displays and their depth rows are not HW4684 specifications. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf) | [Publisher original](https://www.bticino.es/pdf/C_50_EditorialContent_145_Lib_Props_GLib_AList_GLib_AItem_0_GLib_ABin.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1512`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -39,6 +47,11 @@ HW4684 is the Axolute Etèris colour touchscreen for configured MyHOME controls.
 | Box dimensions, PB528W | `116.5 x 116.5 x 58 mm; box dimensions, not display enclosure` | `eteris-historical-catalogue` printed p. 148 / PDF p. 150 and printed p. 151 / PDF p. 153 |
 | Electrical ratings | `not established for HW4684 by the retained exact catalogue pages` | `eteris-historical-catalogue` printed p. 148 / PDF p. 150 and printed p. 151 / PDF p. 153 |
 
+| Installation accessory | Documented scope | Evidence |
+| --- | --- | --- |
+| `HW4826HC`, `HW4826HS`, `HW4826HD` | Tech / anthracite / white finishing plates shown for the monobloc HW4684 | Historical catalogue printed p. 151 / PDF p. 153 |
+| `H4728W` | Eight-module wiring-device support in a different branch of the mounting diagram; not assigned to HW4684 | Historical catalogue printed p. 151 / PDF p. 153 |
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -50,6 +63,22 @@ HW4684 is the Axolute Etèris colour touchscreen for configured MyHOME controls.
 | Main item model / `modobj` | `0` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `0` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +88,16 @@ HW4684 is the Axolute Etèris colour touchscreen for configured MyHOME controls.
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `85` | `56` | BTicino (key `1`) | `3` | external software | `TiDisplayColorIP_0601` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -78,20 +117,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `85` | Product Programming | `3` | Association key `4` |
+| `85` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `85` | Ethernet | `2` |
-| `85` | USB | `3` |
+| `85` | Ethernet | Canonical firmware/connection association |
+| `85` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `85` | `1` | `3` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -193,19 +226,18 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+The mounting diagram was inspected visually: `HW4684` leads directly to finishing plates `HW4826HC/HS/HD`, while `H4728W` leads to an independent eight-module assembly. The same finishing plates can complete the neighbouring video display `349340`; that shared accessory does not make HW4684 a video-entry indoor station. The catalogue’s literal main `modobj=0` is retained as stored metadata, not replaced by AM5864’s `36` or LN4684A’s `50`, and it does not prove a responding runtime diagnostic model. No exact user or electrical manual for HW4684 was obtained.
+
+Reusable Object `32` stores `FW_VER=3.0.0` and the item-level field repeats it even where the firmware-definition table identifies a different release. This is a configuration-field default, not proof that any listed or installed firmware is version `3.0.0`. Its `LAN_IP_ADDRESS=192.168.1.35` is a public manufacturer-catalogue documentation default, not an observed installation address. `SYSADDRESS` is a separate device code (default `1`); the six-character mask does not establish its character set or an SCS physical configurator. One local UI Object does not instantiate the remote lighting, shutter, alarm, temperature or sound Objects it may control.
+
 The historical catalogue establishes HW4684 as Axolute Etèris. The mounting table separates the 8-module H4728W support from the monobloc HW4684 touchscreen and its plates; that support is not assigned to HW4684. Its box dimensions are installation-accessory facts, not touchscreen body dimensions. The HW4684-specific entry does not state a 3.5-inch diagonal or sound-control function, so those are not imported from neighbouring touchscreens. The database’s explicit single-SKU item remains distinct from H4684/L4684 and AM5864. U1881 manufacturer retrieval attempts returned 403/404 and were not retained as original PDFs.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `eteris-historical-catalogue.pdf` | HW4684 printed pp.148, 151 / PDF pp.150, 153; touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. |
 
 ## Evidence limits and open work
 
 An exact electrical / installation / software manual, software applicability and EAN for HW4684 and installed diagnostics remain gaps; its identity is established.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ## Sources
 
@@ -217,3 +249,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0177)

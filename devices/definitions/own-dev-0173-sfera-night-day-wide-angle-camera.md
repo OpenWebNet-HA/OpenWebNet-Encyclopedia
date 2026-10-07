@@ -28,14 +28,22 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `352400` | `8005543457566` | `352400-publisher-product-sheet.pdf` PDF p. 1; `352400-italian-product-sheet.pdf` PDF p. 1 |
+| `352400` | `8005543457566` | [352400-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/28/5f/285ffaf766a7319d04fea1a4d7e06c7865319a441ea182129666bcb50e1a548a.pdf) PDF p. 1; [352400-italian-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/5a/99/5a998b5512c59a7bee55a4d5326b65641f4a2bd5a2a51a6e179dbc15c32dc4b1.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `352400` | N&D wide angle camera module | Canonical commercial record `1489` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `BT00602-b-EN.pdf` | Technical Sheet BT00602-B-EN | BT00602-b-EN; 10/10/2013 | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/a0/63/a06322efa494783bf133f876fb0a242bd99427e92f699f15d7daf0a5f5225011.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00602-b-EN.pdf) |
-| `O1684D.pdf` | Instruction Use O1684D | O1684D; printed publication date not established | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/e2/e3e241cb840b912a746ed1356691118f28e00c3904537d3128e015c41a693739.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1684D.pdf) |
+| `O1684D.pdf` | Instruction Use O1684D | O1684D-09/17-01 PC; printed revision/date | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/e3/e2/e3e241cb840b912a746ed1356691118f28e00c3904537d3128e015c41a693739.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1684D.pdf) |
 | `352400-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/28/5f/285ffaf766a7319d04fea1a4d7e06c7865319a441ea182129666bcb50e1a548a.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-352400&include_technical=1) |
 | `352400-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/5a/99/5a998b5512c59a7bee55a4d5326b65641f4a2bd5a2a51a6e179dbc15c32dc4b1.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-352400) |
 | `BT00602_b_IT.pdf` | Manufacturer Italian / installation document | BT00602_b_IT; 10/10/2013 | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/c0/2b/c02b043042ac5d5fa80b680ad7b381b0364ccb4ccf4fc685c3f61d9673baa341.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00602_b_IT.pdf) |
@@ -84,6 +92,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `38` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `38` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -94,6 +115,17 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `114` | `203` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0102` |
+| `638` | `624` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0200` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -114,22 +146,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `114` | Product Programming | `3` | Association key `4` |
-| `638` | Product Programming | `3` | Association key `4` |
+| `114` | Product Programming | `3` | Canonical firmware/mode association |
+| `638` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `114` | USB | `3` |
-| `638` | USB | `3` |
+| `114` | USB | Canonical firmware/connection association |
+| `638` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `114` | `1` | `0` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-| `638` | `1` | `0` | `TiSferaDesign_0200` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -236,26 +261,22 @@ Use the supplied multicable to connect this camera to speaker module 351100. The
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+Avoid aiming the camera at a large light source or leaving the subject strongly backlit (`O1684D.pdf`, PDF p. 2). Both Firmware `114` and `638` have Object `129` with no reusable fields, conditions, filters or conversions stored; that absence does not negate the documented automatic image controls or their firmware-update route.
+
 ## Source reconciliation
+
+`O1684D.pdf` is printed `09/17-01 PC` (p. 1). Its p. 2 English, French, Italian and Greek lighting rows say IR, but the Portuguese, Dutch, Russian and Turkish rows say white LEDs. This is an unresolved translation discrepancy: the common front-view legend identifies IR LEDs and both 2013 technical-sheet languages identify IR illumination. The description follows that corroborated scope; no white-LED hardware variant is established by the translated row. The English PC paragraph’s “speaker module” wording is also inconsistent with the drawing locating Mini-USB on the separate camera itself.
+
+The viewing diagram specifies `135°` horizontally and `96°` vertically, with `240 × 115 cm` coverage at `50 cm`. Its `160 cm` vertical reference depicts installation height and is not another field dimension; the diagram does not establish those coverage dimensions at other distances. The installation sheet advises avoiding large light sources and strong backlighting. Front-cover `IK08`/`IK10` ratings belong to the named covers, independently of the assembled `IP54` panel.
 
 This camera is a separate accessory, unlike the combined 351200/351300 audio / video modules. Its IR Night & Day lighting and f1.85 mm lens are not the white-LED f1.8 mm camera of 351300. The technical sheet’s generic PC paragraph mentions physical configuration despite the explicit no-configuration requirement; only the established firmware-update route is carried forward. Neither the duplicated sentence nor the boilerplate creates a second physical configuration mode.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `BT00602-b-EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `O1684D.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `352400-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `352400-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `BT00602_b_IT.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
 
 ## Evidence limits and open work
 
 Exact update-tool applicability, image behavior across database Firmware releases, IR-filter transition and installed diagnostic support remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ### Discovered sources outside this review
 
@@ -279,3 +300,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0173)

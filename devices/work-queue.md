@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 40 |
-| reviewed | 170 |
+| review-ready | 30 |
+| reviewed | 180 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1487 | Inductive loop module | 1 | review-ready | OWN-DEV-0171 | partial | complete | complete | pending | - |
-| normal | 1488 | Display module | 1 | review-ready | OWN-DEV-0172 | partial | complete | complete | pending | - |
-| normal | 1489 | N&D wide angle camera module | 1 | review-ready | OWN-DEV-0173 | partial | complete | complete | pending | - |
-| normal | 1493 | 6 channel dimmer | 1 | review-ready | OWN-DEV-0174 | partial | pending | complete | pending | - |
-| normal | 1510 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0175 | partial | complete | complete | pending | - |
-| normal | 1511 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0176 | partial | complete | complete | pending | - |
-| normal | 1512 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0177 | partial | complete | complete | pending | - |
-| normal | 1515 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0178 | partial | pending | complete | pending | - |
-| normal | 1516 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0179 | partial | complete | complete | pending | - |
-| normal | 1570 | Shutter actuator DIN 1 motor bus | 1 | review-ready | OWN-DEV-0180 | partial | complete | complete | pending | - |
 | normal | 1571 | DIN dimmer 1000 VA 127 V | 1 | review-ready | OWN-DEV-0181 | partial | complete | complete | pending | - |
 | normal | 1594 | Actuator with 1 relay DIN | 1 | review-ready | OWN-DEV-0182 | partial | complete | complete | pending | - |
 | normal | 1595 | Actuator 1 relay fluorescent lamps 2 DIN | 1 | review-ready | OWN-DEV-0183 | partial | complete | complete | pending | - |
@@ -173,7 +163,16 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1470 | Keypad module | OWN-DEV-0169 |
 | 1471 | Proximity reader module | OWN-DEV-0170 |
 | 1475 | Energy data logger | OWN-DEV-0134 |
+| 1487 | Inductive loop module | OWN-DEV-0171 |
+| 1488 | Display module | OWN-DEV-0172 |
+| 1489 | N&D wide angle camera module | OWN-DEV-0173 |
+| 1493 | 6 channel dimmer | OWN-DEV-0174 |
 | 1509 | Colour Touch Screen | OWN-DEV-0135 |
+| 1510 | Colour Touch Screen | OWN-DEV-0175 |
+| 1511 | Colour Touch Screen | OWN-DEV-0176 |
+| 1512 | Colour Touch Screen | OWN-DEV-0177 |
+| 1515 | Colour Touch Screen | OWN-DEV-0178 |
+| 1516 | Colour Touch Screen | OWN-DEV-0179 |
 | 1520 | IR emitter | OWN-DEV-0136 |
 | 1524 | Special control | OWN-DEV-0005 |
 | 1525 | Special functions | OWN-DEV-0043 |
@@ -182,6 +181,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1559 | PIR+US flush mounted sensor | OWN-DEV-0010 |
 | 1563 | Key card switch | OWN-DEV-0036 |
 | 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
+| 1570 | Shutter actuator DIN 1 motor bus | OWN-DEV-0180 |
 | 1579 | Shutter control bus | OWN-DEV-0044 |
 | 1582 | Dimmer for energy saving lamps bus | OWN-DEV-0139 |
 | 1586 | Shutter actuator bus | OWN-DEV-0045 |

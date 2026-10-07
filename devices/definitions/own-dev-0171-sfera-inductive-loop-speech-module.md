@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `352700` | `8005543449226` | `352700-publisher-product-sheet.pdf` PDF p. 1; `352700-italian-product-sheet.pdf` PDF p. 1 |
+| `352700` | `8005543449226` | [352700-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/e7/3b/e73ba5cedf37a2e5583de1f287acdc04557e4447d5ec07336726767e737afd4b.pdf) PDF p. 1; [352700-italian-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/93/e0/93e033f142a07b3b9894fd71779316b1a3b0cac70f2d3338a3aa39957a570a24.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `352700` | Inductive loop module | Canonical commercial record `1487` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -53,9 +61,9 @@ EANs identify the named commercial variant, not the configured physical device o
 | Temperature / assembled protection | `-25..70 °C; IP54` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
 | Face dimensions | `115 x 91 mm` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
 | Interfaces | `speaker-module multicable; SCS/additional supply; mini-USB; speaker level adjustment` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
-| Recommended hearing-aid position | `25..35 cm in front; diagram indicates 40 cm vertical reference` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
+| Recommended hearing-aid position | `25..35 cm in front; separate 40 cm vertical diagram reference, not a mounting height` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
 | Operating mode | `M=0 loop plus speech; M=1 loop only` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
-| Language selectors | `L for selected speech language; DL for preloaded-pack default language` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
+| Language selectors | `L for selected speech language; DL for preloaded-pack default language; physical DL has ten positions, catalogue eight` | `BT00604-b-EN` printed/PDF pp. 1-3; `FIS_352700` installation sheet |
 
 ### Publisher export attributes
 
@@ -83,6 +91,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `37` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `37` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -92,6 +113,16 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `118` | `202` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0102` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -111,19 +142,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `118` | Product Programming | `3` | Association key `4` |
+| `118` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `118` | USB | `3` |
+| `118` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `118` | `1` | `0` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -238,26 +263,18 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+The physical `DL` table in `BT00604-b-EN.pdf` p. 2 and `BT00604_b_IT.pdf` p. 2 permits absent/`1..9`, selecting ten language-pack positions. Firmware `118` and reusable Object `122` both store `DL=0..7`. These scopes disagree at positions 9 and 10; no conversion or filter resolves the difference, and no extended software domain is inferred. `MOD` is the item field name, while `M` is the Object field and physical socket label; spelling alone is not an established wire translation.
+
+The technical-sheet drawing and multinational installation sheet establish a Mini-USB connector on 352700 itself. The copied “speaker module” wording in the English and Italian update paragraphs does not establish a cross-module update operation. Italian product-export height/width labels are reversed relative to the English export and technical drawing: preserve `91 mm` wide × `115 mm` high from the latter, rather than silently combining exports.
+
 The exact technical sheet establishes both loop and speech functions; reusable Object `122` is their catalogue representation. DL pack indexing and L language selection are separate mechanisms. The USB paragraph refers to the “speaker module” even though this sheet describes 352700; connector and module-specific software selection must be corroborated, rather than implying that updating one module updates all connected modules. Assembly-dependent IP54 and cover impact ratings are separate.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00176AA_S_EN.pdf` | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. |
-| `BT00604-b-EN.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `352700-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `352700-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_IT.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `BT00604_b_IT.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `FIS_352700.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
 
 ## Evidence limits and open work
 
-Actual preloaded language pack, update target behavior, measured hearing-loop field / audio quality and installed diagnostics remain uncorroborated.
+DL positions 9/10 beyond the retained software domain, actual preloaded language pack, update target behavior, measured hearing-loop field / audio quality and installed diagnostics remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ### Discovered sources outside this review
 
@@ -279,3 +296,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0171)

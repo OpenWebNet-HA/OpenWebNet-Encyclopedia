@@ -22,6 +22,14 @@ AM5864 is a Matix colour touchscreen for central control of configured MyHOME fu
 | --- | --- | --- | --- |
 | BTicino - Matix | `AM5864` | Established catalogue identity | Manufacturer database commercial record `1510` explicitly links this SKU to item `1510` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `AM5864` | Colour Touch Screen | Canonical commercial record `1510` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -52,6 +60,22 @@ AM5864 is a Matix colour touchscreen for central control of configured MyHOME fu
 | Main item model / `modobj` | `36` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `36` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -64,6 +88,19 @@ AM5864 is a Matix colour touchscreen for central control of configured MyHOME fu
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `80` | `56` | BTicino (key `1`) | `2` | external software | `TiDisplayColorIP_0601` |
+| `81` | `98` | BTicino (key `1`) | `2` | external software | `TiDisplayColorIP_0500` |
+| `82` | `99` | BTicino (key `1`) | `2` | external software | `TiDisplayColorIP_0400` |
+| `83` | `101` | BTicino (key `1`) | `2` | external software | `TiDisplayColorIP_0101` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,32 +123,23 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `80` | Product Programming | `3` | Association key `4` |
-| `81` | Product Programming | `3` | Association key `4` |
-| `82` | Product Programming | `3` | Association key `4` |
-| `83` | Product Programming | `3` | Association key `4` |
+| `80` | Product Programming | `3` | Canonical firmware/mode association |
+| `81` | Product Programming | `3` | Canonical firmware/mode association |
+| `82` | Product Programming | `3` | Canonical firmware/mode association |
+| `83` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `80` | Ethernet | `2` |
-| `80` | USB | `3` |
-| `81` | Ethernet | `2` |
-| `81` | USB | `3` |
-| `82` | Ethernet | `2` |
-| `82` | USB | `3` |
-| `83` | Ethernet | `2` |
-| `83` | USB | `3` |
+| `80` | Ethernet | Canonical firmware/connection association |
+| `80` | USB | Canonical firmware/connection association |
+| `81` | Ethernet | Canonical firmware/connection association |
+| `81` | USB | Canonical firmware/connection association |
+| `82` | Ethernet | Canonical firmware/connection association |
+| `82` | USB | Canonical firmware/connection association |
+| `83` | Ethernet | Canonical firmware/connection association |
+| `83` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `80` | `1` | `2` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-| `81` | `1` | `2` | `TiDisplayColorIP_0500` | Parameter type `7`; payload not inspected |
-| `82` | `1` | `2` | `TiDisplayColorIP_0400` | Parameter type `7`; payload not inspected |
-| `83` | `1` | `2` | `TiDisplayColorIP_0101` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -123,6 +151,8 @@ Published product selectors and software settings are separate from catalogue mo
 | `Physical selector map` | No complete exact-product physical selector map established by retained originals; reusable Object fields remain separate | Exact source scope in Documentation; canonical catalogue tables below |
 | `TiDisplay Color project` | Configure icons, system-function references, logic / time scenarios, activations, clock and access protection | `BT00287-a-EN` printed/PDF pp. 1-2 |
 | `Transfer / update` | RS232335919, USB3559 or Ethernet; software configuration and updating documented for namedAM5864 | `BT00287-a-EN` printed/PDF pp. 1-2 |
+
+The exact AM5864 sheet names a historical RS232 interface `335919` in addition to USB `3559` and Ethernet (printed/PDF p. 2). The canonical firmware/connection associations contain only USB and Ethernet. Preserve RS232 as the sheet’s interface-cable workflow; do not add an unsupported direct catalogue connection association.
 
 ## Firmware-scoped configuration
 
@@ -227,19 +257,18 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+Reusable Object `32` stores `FW_VER=3.0.0` and the item-level field repeats it even where the firmware-definition table identifies a different release. This is a configuration-field default, not proof that any listed or installed firmware is version `3.0.0`. Its `LAN_IP_ADDRESS=192.168.1.35` is a public manufacturer-catalogue documentation default, not an observed installation address. `SYSADDRESS` is a separate device code (default `1`); the six-character mask does not establish its character set or an SCS physical configurator. One local UI Object does not instantiate the remote lighting, shutter, alarm, temperature or sound Objects it may control.
+
 The archived English sheet explicitly co-lists AM5864 with H4684 and L4684, making it exact evidence for this Matix item. Its filename ends EN while its printed identifier ends UK; both are preserved. The explicit database commercial relationship establishes AM5864 independently of related touchscreens. The current product lookup and export attempts did not return an exact current page; that is a documentation gap, not a weakened identity.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `BT00287-a-EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
 
 ## Evidence limits and open work
 
 An exact user / software manual for the retained AM5864 generation, current EAN, multimedia accessory compatibility and measured runtime support remain gaps.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
+
+`U1881D` (printed 11/08-01 PC in a discovery mirror) names H/L4684 and AM5864, but fresh `dar.bticino.com` and `dar.bticino.it` original retrieval attempts returned HTTP 403 on 7 October. Its unretained text is not used to extend this sheet’s functions or establish per-release menu applicability. AM5890 successor instructions and EANs are not assigned to AM5864.
 
 ## Sources
 
@@ -251,3 +280,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0175)

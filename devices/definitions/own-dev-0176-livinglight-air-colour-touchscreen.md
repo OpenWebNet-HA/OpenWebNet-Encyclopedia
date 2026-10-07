@@ -22,11 +22,19 @@ LN4684A is the LivingLight Air colour touchscreen variant for central MyHOME con
 | --- | --- | --- | --- |
 | BTicino - LivingLight Air | `LN4684A` | Established catalogue identity | Manufacturer database commercial record `1511` explicitly links this SKU to item `1511` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `LN4684A` | Colour Touch Screen | Canonical commercial record `1511` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `livinglight-historical-catalogue.pdf` | Historical exact-product manufacturer source | livinglight-historical-catalogue; printed publication date not established | LN4684A: printed p. 66 / PDF p. 68; exact commercial and functional description. Other products and successor sheets do not establish its ratings. | [Archived original](https://archive.openwebnet-ha.org/sha256/db/75/db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414.pdf) | [Publisher original](https://www.bticino.es/pdf/livinglight.pdf) |
+| `livinglight-historical-catalogue.pdf` | Historical exact-product manufacturer source | Page 66 footer 12/01/12 13:28; catalogue-wide publication date not established | LN4684A: printed p. 66 / PDF p. 68; exact commercial and functional description. Other products and successor sheets do not establish its ratings. | [Archived original](https://archive.openwebnet-ha.org/sha256/db/75/db75d0071e27ea0904973b8ebaa936334347e3646135884b7b7081e110a3f414.pdf) | [Publisher original](https://www.bticino.es/pdf/livinglight.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1511`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -48,6 +56,22 @@ LN4684A is the LivingLight Air colour touchscreen variant for central MyHOME con
 | Main item model / `modobj` | `50` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `50` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -57,6 +81,17 @@ LN4684A is the LivingLight Air colour touchscreen variant for central MyHOME con
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `84` | `56` | BTicino (key `1`) | `0` | external software | `TiDisplayColorIP_0601` |
+| `84` | `359` | BTicino (key `1`) | `1` | external software | `TiDisplayColorIP_0601` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -76,21 +111,14 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `84` | Product Programming | `3` | Association key `4` |
+| `84` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `84` | Ethernet | `2` |
-| `84` | USB | `3` |
+| `84` | Ethernet | Canonical firmware/connection association |
+| `84` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `84` | `1` | `0` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-| `84` | `1` | `1` | `TiDisplayColorIP_0601` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -192,19 +220,18 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
+The exact `LN4684A` entry says “touchscreen as above”, referring to `L4684`’s `3.5-inch` colour display and enumerated system-control roles on the same printed p. 66 / PDF p. 68. That explicit cross-reference supports the stated display/roles; it does not import the separately retained AM5864 sheet’s `80 mA`, box `506E` or RS232 cable. Page 66’s dated production footer is source metadata, rather than a proven release date for the entire catalogue. The catalogue’s “L/N/NT” line grouping is not a marketed variant name; Air is established by the exact entry.
+
+Reusable Object `32` stores `FW_VER=3.0.0` and the item-level field repeats it even where the firmware-definition table identifies a different release. This is a configuration-field default, not proof that any listed or installed firmware is version `3.0.0`. Its `LAN_IP_ADDRESS=192.168.1.35` is a public manufacturer-catalogue documentation default, not an observed installation address. `SYSADDRESS` is a separate device code (default `1`); the six-character mask does not establish its character set or an SCS physical configurator. One local UI Object does not instantiate the remote lighting, shutter, alarm, temperature or sound Objects it may control.
+
 The database’s L/N/NT grouping is presented as marketed LivingLight Air using the exact historical entry. The Spanish catalogue names LN4684A and the applicable system functions. Its neighbouring L4684 and 3496 entries are separate references; the shared listing does not directly rate LN4684A or guarantee multimedia accessory compatibility for its production revision. No replacement-product EAN or rating is imported.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `livinglight-historical-catalogue.pdf` | LN4684A: printed p. 66 / PDF p. 68; exact commercial and functional description. Other products and successor sheets do not establish its ratings. |
 
 ## Evidence limits and open work
 
 A retained exact LN4684A technical / installation / software manual, electrical and dimensional specifications, EAN and hardware diagnostics remain documentation / corroboration gaps; identity is established.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ## Sources
 
@@ -216,3 +243,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0176)

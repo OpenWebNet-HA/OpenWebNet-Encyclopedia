@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `352500` | `8005543457573` | `352500-publisher-product-sheet.pdf` PDF p. 1; `352500-italian-product-sheet.pdf` PDF p. 1 |
+| `352500` | `8005543457573` | [352500-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/23/54/2354395f54d3c325fbab7d08a2ce2db6e1fcbb83c499338faa319fcbb3958b10.pdf) PDF p. 1; [352500-italian-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/bc/4d/bc4d97a63232dda61139d327304f409569004f8cf6ee6343544eda7bc40a88ef.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `352500` | Display module | Canonical commercial record `1488` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -44,6 +52,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | `BT00603_c_IT.pdf` | Manufacturer Italian / installation document | BT00603_c_IT; 10/11/2015 | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/b6/4e/b64eca94c2f7decaaa1b8214a446975861bf2e85313f2a6506b5ca6227f2cd72.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00603_c_IT.pdf) |
 | `RA00178AB_IT.pdf` | Manufacturer Italian / installation document | RA00178AB-08/23-PC; printed revision label | 352500: printed/PDF pp. 6-7, 14-34; settings, formats, ECO / brightness, address book, multiple call and door code. | [Archived original](https://archive.openwebnet-ha.org/sha256/79/f1/79f1027f18d89577fb963dea59230d24768f8e499eb7fc12b15f12c7ef9b6c00.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00178AB_IT.pdf) |
 | `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
+| `RA00176AC_S_EN.pdf` | Manufacturer original | RA00176AC-03/24-PC | TiSferaDesign AC: printed/PDF pp. 6, 20-21, 22-35, 38-41; display settings, contacts and individual-module transfer; compared with AA and Italian AC. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1488`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -89,6 +98,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `39` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `39` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -100,6 +122,18 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `115` | `199` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0102` |
+| `639` | `625` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0200` |
+| `733` | `1030` | BTicino (key `1`) | `0` | external software | `TiSferaDesign_0300` |
+
+All 3 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -121,25 +155,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `115` | Product Programming | `3` | Association key `4` |
-| `639` | Product Programming | `3` | Association key `4` |
-| `733` | Product Programming | `3` | Association key `4` |
+| `115` | Product Programming | `3` | Canonical firmware/mode association |
+| `639` | Product Programming | `3` | Canonical firmware/mode association |
+| `733` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `115` | USB | `3` |
-| `639` | USB | `3` |
-| `733` | USB | `3` |
+| `115` | USB | Canonical firmware/connection association |
+| `639` | USB | Canonical firmware/connection association |
+| `733` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `115` | `1` | `0` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-| `639` | `1` | `0` | `TiSferaDesign_0200` | Parameter type `7`; payload not inspected |
-| `733` | `1` | `0` | `TiSferaDesign_0300` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -148,14 +174,14 @@ Published product selectors and software settings are separate from catalogue mo
 | Selector / setting | Published role or value | Evidence |
 | --- | --- | --- |
 | `Configuration route` | No physical configurators required; installer menu/TiSferaDesign still required for directory / settings | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
-| `Directory modes` | Alphanumeric with numeric or alphanumeric call code(max8 digits) using 353000; Numeric BFA(Block/Floor/Apartment) | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
+| `Directory modes` | Alphanumeric with numeric or alphanumeric call code (maximum 8 characters) using 353000; Numeric BFA(Block/Floor/Apartment) | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `Order / local editing` | By surname or address: software editing; device-managed order: software or display editing, factory order logic cannot be changed | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `Name / surname fields` | Up to 16 characters each in local directory editor | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `Language / tone` | User manual: Italian default language; key tone enabled by default; software zero disables tone | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
-| `Multiple calls` | Disabled by default; AC software permits up to 4 repeat calls at10 s intervals if unanswered | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
+| `Multiple calls` | Disabled by default; AC software permits up to 4 repeat calls at `10 s` intervals if unanswered | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `ECO` | Reduces brightness to 20% after 1 min inactivity; any key restores configured brightness | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `Riser M` | Backbone `M=0`; configure riser base for riser entrance panel | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
-| `Visitor door codes` | 20 numerical codes; requires353000; length `4..9` digits, software default maximum 9; delete-all removes whole visitor list | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
+| `Visitor door codes` | 20 numerical codes; requires `353000`; length `4..9` digits, software default maximum 9; delete-all removes whole visitor list | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `BFA field lengths` | Set digit counts for Block/Floor/Apartment; AC manual states maximum 8 digits | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 | `Administrator password, AC software` | Published default 12345; public documentation default, not an observed installation credential | `BT00603-c-EN` printed/PDF pp. 1-2; `RA00178AB_EN.PDF` pp. 14-34; `RA00176AC_S_EN` pp. 20-21 |
 
@@ -273,30 +299,22 @@ Use TiSferaDesign or the installer menu to set format, language, multiple calls,
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+`RA00178AB_EN.PDF` printed/PDF p. 14 opens Settings by holding the indicated navigation keys for more than `10 s`; the printed default password `12345` is a public manufacturer documentation default. Pages 24-25 also limit the contact Description to 16 characters and its direct Logic code to eight characters, separate from the `4..9`-digit door code. Page 24’s wording places a keypad on an “internal unit”, while pp. 4 and 36 identify this product as an entrance-panel module used with 353000; the wording does not establish a different hardware location. Pages 18-20 offer four screensaver styles: address-book or numeric-call graphics for New or Robur finishes.
+
 ## Source reconciliation
+
+The reusable Object `51` stores `BEEP=0` (disabled) and `BUZZER_VOLUME=50`, whereas `RA00178AB_EN.PDF` printed/PDF p. 18 states that key tones are enabled by default. No relation-specific filter overrides the reusable default; the UI tone and catalogue beep fields are not proven to be identical settings. `MULTIPLE_CALL=0` agrees with the manual’s disabled default, but its binary Object domain does not encode the manual’s repeat-count control. The two source scopes remain separate.
+
+The technical-sheet capacity of 4000 resident names is a published product limit, not 4000 physical call buttons. English and Italian product exports invert the height/width labels relative to one another; the sheet’s drawing and English classification show `91 mm` wide × `115 mm` high. The Robur cover is rated `IK09` in `BT00603-c-EN.pdf` p. 1, distinct from its Sfera New `IK08` covers and the assembled panel’s `IP54`.
 
 The technical sheet explicitly says no physical configuration is required while the software and user manuals require directory / setup configuration: those statements concern different configuration layers. The current manual and AB revision are retained with their exact dates. Database Object `51` and Firmware variants describe directory capability but do not establish that all newer menus exist on older releases. The display’s Italian language default differs from the loop module’s English default and is not normalized across products.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00176AA_S_EN.pdf` | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. |
-| `BT00603-c-EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `O1685C.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00178AB_EN.PDF` | 352500: printed/PDF pp. 6-7, 14-34; settings, formats, ECO / brightness, address book, multiple call and door code. |
-| `352500-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `352500-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_IT.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `BT00603_c_IT.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00178AB_IT.pdf` | 352500: printed/PDF pp. 6-7, 14-34; settings, formats, ECO / brightness, address book, multiple call and door code. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
 
 ## Evidence limits and open work
 
 Applicability of the published 4000-name capacity to each installed firmware, exact call-code / riser translation, ECO behavior and measured USB / diagnostic responses remain uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ### Discovered sources outside this review
 
@@ -319,3 +337,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0172)

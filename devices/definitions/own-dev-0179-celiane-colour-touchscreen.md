@@ -22,6 +22,14 @@
 | --- | --- | --- | --- |
 | Legrand - Céliane | `067283` | Established catalogue identity | Manufacturer database commercial record `1516` explicitly links this SKU to item `1516` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `067283` | Colour Touch Screen | Canonical commercial record `1516` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -53,6 +61,22 @@
 | Main item model / `modobj` | `46` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `46` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -63,6 +87,19 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `88` | `122` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0601` |
+| `88` | `354` | Legrand (key `2`) | `4` | external software | `ColorTouchConfigIP_0601` |
+| `89` | `123` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0500` |
+| `89` | `355` | Legrand (key `2`) | `4` | external software | `ColorTouchConfigIP_0500` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,26 +120,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `88` | Product Programming | `3` | Association key `4` |
-| `89` | Product Programming | `3` | Association key `4` |
+| `88` | Product Programming | `3` | Canonical firmware/mode association |
+| `89` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `88` | Ethernet | `2` |
-| `88` | USB | `3` |
-| `89` | Ethernet | `2` |
-| `89` | USB | `3` |
+| `88` | Ethernet | Canonical firmware/connection association |
+| `88` | USB | Canonical firmware/connection association |
+| `89` | Ethernet | Canonical firmware/connection association |
+| `89` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `88` | `2` | `0` | `ColorTouchConfigIP_0601` | Parameter type `7`; payload not inspected |
-| `88` | `2` | `4` | `ColorTouchConfigIP_0601` | Parameter type `7`; payload not inspected |
-| `89` | `2` | `0` | `ColorTouchConfigIP_0500` | Parameter type `7`; payload not inspected |
-| `89` | `2` | `4` | `ColorTouchConfigIP_0500` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -204,26 +232,24 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 ## Programming
 
-ColorTouchConfigIP associates icons with configured automation, sound, alarm and temperature functions, allows logic / time conditions and timed activations, sets time / date / protection and updates software. Use the 49234 PC interface shown in the exact sheet. Network multimedia content depends on the appropriate installed network / sound topology; the shared wiring example includes the 574044 adapter and must be read as that specific installation. Catalogue Firmware `88`/89 and UI restrictions remain independent of the nominal display-control functions.
+ColorTouchConfigIP associates icons with configured automation, sound, alarm and temperature functions, allows logic / time conditions and timed activations, sets time / date / protection and updates software. Use the 49234 PC interface shown in the exact sheet. Network multimedia content depends on the appropriate installed network / sound topology; the retained guide’s exact `67283` examples show automation/temperature integration and automation/temperature/alarm integration, without establishing a particular multimedia adapter. Catalogue Firmware `88`/89 and UI restrictions remain independent of the nominal display-control functions.
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
 ## Source reconciliation
 
+Reusable Object `32` stores `FW_VER=3.0.0` and the item-level field repeats it even where the firmware-definition table identifies a different release. This is a configuration-field default, not proof that any listed or installed firmware is version `3.0.0`. Its `LAN_IP_ADDRESS=192.168.1.35` is a public manufacturer-catalogue documentation default, not an observed installation address. `SYSADDRESS` is a separate device code (default `1`); the six-character mask does not establish its character set or an SCS physical configurator. One local UI Object does not instantiate the remote lighting, shutter, alarm, temperature or sound Objects it may control.
+
 The exact French sheet names 672 83, corresponding to database 067283, and prints LG00160-a-UK despite its French text. Its 2+3-module mounting label is preserved rather than replaced by the BTicino 3+3-module label from a different reference. ColorTouchConfigIP is the stated Legrand software, not inferred to be TiDisplay Color. Shared integration-guide diagrams establish a configured system example but do not guarantee all related firmware / media-server combinations. Newer 067292 and the larger 067285 are different references.
 
-### Retained source accounting
 
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `celiane-pilotage-historical-guide.pdf` | 067283: exact wiring examples printed pp. 364, 366 / PDF pp. 28, 30; general integration pp. 338-349 / PDF pp. 2-13. Broader system examples do not establish unsupported firmware features. |
-| `celiane-067283-historical-sheet.pdf` | 067283 / 672 83: printed pp. 605-606 / PDF pp. 1-2; exact supply, draw, mounting, interfaces and configuration. French text prints LG00160-a-UK. |
+The retained guide’s printed p. 364 / PDF p. 28 names `67283` in an automation/temperature example; printed p. 366 / PDF p. 30 adds alarm activation, deactivation and partitioning with the configured alarm central and BUS/BUS gateway. Those are installation examples, not a capture of this screen’s diagnostic or media-server support. The previous reference to adapter `574044` is removed because it is not established by the cited exact-product sheet or retained guide. The sheet itself establishes access to network multimedia content but does not specify the corresponding adapter, protocols or media formats. Its “LED technology” legend is preserved as publisher terminology, rather than recast as an independently proven OLED/LCD panel type.
 
 ## Evidence limits and open work
 
 An exact user manual, software executable / version applicability, supported network / media server formats and retained EAN remain gaps. Display / network and diagnostic runtime behavior remains uncorroborated.
 
-No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further product-source discovery and runtime corroboration remain open.
 
 ## Sources
 
@@ -235,3 +261,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0171-0180-2026-10-07.md#own-dev-0179)
