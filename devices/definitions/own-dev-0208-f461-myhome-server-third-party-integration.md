@@ -28,13 +28,21 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F461` | `8005543718223` | `F461-publisher-product-sheet.pdf` PDF p. 1; `F461-italian-product-sheet.pdf` PDF p. 1 |
+| `F461` | `8005543718223` | [F461-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/17/75/1775f6f62743e5de0453df330348074f68c4be1929d6c80afaf93d0b3fa32cac.pdf) PDF p. 1; `F461-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F461` | F461 | Canonical commercial record `2650` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 26-28, 82: exact-reference role, system context and catalogue entries; other products/chapters not transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
+| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `AD-EXMH25GT; printed version 6/2025, rear cover` | Printed/PDF pp. 26-28, 82: exact-reference role, system context and catalogue entries; other products/chapters not transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
 | `RA00224AA_EN.pdf` | Installation Guide RA00224AA_EN | `RA00224AA_EN-07/24-PC; F460/F461 server manual` | Printed/PDF pp. 5-13, 44-72, 211-279: limits, roles, topology, commissioning, settings and scoped functional chapters; screenshots not runtime evidence; unrelated UI steps not exhaustively reviewed. | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00224AA_EN.pdf) |
 | `ST-00002702-REV2-EN.pdf` | Technical Sheet ST-00002702-REV2-EN | `ST-00002702-REV2-EN; 16/06/2026` | Printed/PDF pp. 1-6: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002702-REV2-EN.pdf) |
 | `F461-publisher-product-sheet.pdf` | Exact English product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-4: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/17/75/1775f6f62743e5de0453df330348074f68c4be1929d6c80afaf93d0b3fa32cac.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-F461&include_technical=1) |
@@ -42,7 +50,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | `LE13693AB.pdf` | Italian manufacturer technical document | `LE13693AB; 03/24-01 PC` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/87/b0/87b0b6346b1c2ecdf656fc7bede1af1d311a5e13bfe7939795fc9e9411e6e487.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE13693AB.pdf) |
 | `ST-00001808-IT.pdf` | Italian manufacturer technical document | `ST-00001808-IT; 29/05/2024` | Printed/PDF pp. 1-5: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/6b/636b22fd7891dd41ebe839e4da5c53f9a959aba8cb275aa58aa7128dacc79057.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST-00001808-IT.pdf) |
 | `F461-italian-product-sheet.pdf` | Exact Italian product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/2d/b3/2db382a9ee744070e8e15f094bd4dfe9bf6e0b3d1027915a3d77808ad2a4556a.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F461) |
-| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 26-28, 134: exact-reference role and system context; URL generation 2025 does not establish a single printed release. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
+| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `AD-ITMH25GT; Edizione 04/2025, printed cover` | Printed/PDF pp. 26-28, 134: exact-reference role and system context; Edizione 04/2025 established from the printed cover. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
 | `Brochure MyHOME.pdf` | MyHOME brochure | `Brochure MyHOME; printed publication date not established` | PDF pp. 22-24: F460 server/system role; no printed pagination established; no independent F461 operating specification. | [Archived original](https://archive.openwebnet-ha.org/sha256/08/9c/089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718.pdf) | [Publisher original](https://assets.legrand.com/pim/DOCUMENT/Brochure%20MyHOME.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2293`: complete retained canonical associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
@@ -56,7 +64,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | Supplementary supply draw | `106 mA at 20 Vdc; 87 mA at 27 Vdc` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
 | Operating temperature | `5–35 °C` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
 | Dimensions, 2026 sheet | `71.5 × 105 × 30.35 mm; 4 DIN modules` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
-| Dimensions, leaflet | `71.5 × 105 × 31.2 mm; unresolved depth difference` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
+| Dimensions, leaflet | `71.5 × 105 × 31.2 mm; unresolved depth difference` | `LE13693AB.pdf` p. 1 |
 | Connections | `RJ45 Ethernet LAN 10/100 Mbit; USB-C firmware/service port; SCS terminals; optional additional supply; unused connector` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
 | Indicators / restart | `System orange at power connection, then off, operative indication later; Speed yellow steady network connected; Link green steady connected, flashing transfer; brief restart-key press` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
 | Server coexistence | `Do not use F460 and F461 in the same installation` | `ST-00002702-REV2-EN.pdf` printed/PDF p. 1 |
@@ -127,6 +135,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `134` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `134` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -136,6 +157,17 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `843` | `1131` | Undefined (key `5`) | `0` | Extra | `2293_1.0_LGG\xml\Extra\extra.xml` |
+| `843` | `1132` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2293_1.0_LGG\xml\Protocol\protocol.xml` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -152,25 +184,20 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 | --- | --- | --- | --- | --- | --- |
 | all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
 
+Official firmware `843` is `1.0`, build `1`, not marked default. It has two candidate placements: Open SCS Object `150` in slot `1` and web-server Object `216` (catalogue key `512`) in slot `2`. The reused F454 label, `FW_VER=3.0.0`, `192.168.1.35` and `20000/10000` port defaults are Object metadata; they do not establish this F461’s identity, firmware or live endpoints. No Virgin, slot condition, filter, conversion or package is stored. Both LGG-scoped parameter paths remain visible with unexamined payloads. These are catalogue documentation values, not installed endpoint data.
+
 ## Configuration modes
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `843` | Product Programming | `3` | Association key `4` |
+| `843` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `843` | Ethernet | `2` |
-| `843` | Ethernet over USB | `4` |
+| `843` | Ethernet | Canonical firmware/connection association |
+| `843` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `843` | `5` | `0` | `2293_1.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `843` | `5` | `0` | `2293_1.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -335,24 +362,11 @@ Place the server in the documented SCS automation topology and use Home + Projec
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+RA00224AA_EN p. 55 separates Internet package download from local installation and states that native F460/F461 installations before `3.71.11` require a first MyHOME Suite update. No mapping to catalogue firmware `843` or the later server-release matrix is established. Page 57 requires the app to remain open near the gateway; completion follows restarts and System steady for 10 seconds. Pages 272–275 require a deliberate project backup, account-associated and refreshed after edits; it preserves Home + Project objects/groups/scenarios/settings, excludes customer app customisations and must be shared for installer handover. The brief restart key is distinct from the app’s destructive configuration reset. Pages 277/279 document DHCP/manual networking and app synchronisation of desktop work.
+
 ## Source reconciliation
 
 Catalogue Objects 150 and 216 are reusable gateway / web-server definitions. The parenthetical F454 label of Object `216` is not an additional commercial identity and does not make this server an F454. Catalogue V1/R0 is independent of publisher downloadable firmware labels and current server releases. The 2026 English sheets and retained Italian generations differ in compatibility inventory coverage, and both have 30.35 mm depth versus 31.2 mm in the leaflet. The shared July 2024 manual prints 50 scenarios, while the later Italian MyHOME guide says up to 150 installer custom scenarios; limits remain generation-scoped, without an invented firmware boundary. The Italian guide’s F461 diagram uses an F460-labelled product illustration; its heading and text establish F461 third-party scope, not co-installation.
-
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MyHOME Technical Guide.pdf` | Printed/PDF pp. 26-28, 82: exact-reference role, system context and catalogue entries; other products/chapters not transferred. |
-| `RA00224AA_EN.pdf` | Printed/PDF pp. 5-13, 44-72, 211-279: limits, roles, topology, commissioning, settings and scoped functional chapters; screenshots not runtime evidence; unrelated UI steps not exhaustively reviewed. |
-| `ST-00002702-REV2-EN.pdf` | Printed/PDF pp. 1-6: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `F461-publisher-product-sheet.pdf` | PDF pp. 1-4: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `Home-Project-2026-new-functions.pdf` | Printed/PDF pp. 3-5, 21-29: exact F460/F461 version matrix and commissioning updates; earlier feature descriptions reviewed for applicability, not installed behavior. |
-| `LE13693AB.pdf` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `ST-00001808-IT.pdf` | Printed/PDF pp. 1-5: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `F461-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `MyHOME-2025-Italian-guide.pdf` | Printed/PDF pp. 26-28, 134: exact-reference role and system context; URL generation 2025 does not establish a single printed release. |
-| `Brochure MyHOME.pdf` | PDF pp. 22-24: F460 server/system role; no printed pagination established; no independent F461 operating specification. |
 
 The export dimensions 72 × 105 × 36 mm differ from the sheet 71.5 × 105 × 30.35 mm and leaflet 71.5 × 105 × 31.2 mm. Its supply-current class 3–160 mA is broader than the exact source-specific draw at stated voltages. Dimensional measurement basis and revision equivalence remain unresolved.
 
@@ -363,6 +377,8 @@ The export dimensions 72 × 105 × 36 mm differ from the sheet 71.5 × 105 × 30
 | `F460-F461-historical-RA00211AA-EN.pdf` | `RA00224AA_EN.pdf` | Byte-identical SHA-256; alternate source URL, not another revision | [Alternate publisher response](https://www.bticino.com/sites/default/files/2024-06/RA00211AA_I_EN.pdf) |
 
 The 2026 feature matrix identifies server/app pairs independently of the MyHOME Suite catalogue V/R tuples. Blank F460/F461 cells for older features are unspecified, not zero or proof of absence. Its grouped F460/461 table includes Home + Control deactivation, but the feature description names F460/Classe300EOS only; that user-app operation is not transferred to F461. The group table alone does not override the exact F461 sheet’s third-party-user role.
+
+The exact 2024 Italian and 2026 English descriptions both assign user control to third-party software. English export p. 3 nevertheless classifies Application name as Home + Control and voice assistants as Alexa/Google. Those classes are retained as an unresolved metadata conflict, not adopted as F461 native user features. Manual p. 61 gives a 175-address per-system ceiling while p. 6 gives 350/525 expanded capacities; keep these source-specific, with actual topology/release uncorroborated. Newer compatibility inventory adds MatixGO/Legrand references, digital-control variants and thermostat finishes, without proving old product references changed hardware. The 2024 Italian cross-line command-actuator row names `067561/AM5852M2/H4672M2/LN4672M2`; the 2026 English row instead repeats the preceding `067554/L4652/3/H4652/3/AM5832/3` entries. This looks like a source transcription discrepancy and remains unresolved; it is not normalised into a new compatibility claim.
 
 ## Evidence limits and open work
 
@@ -384,6 +400,8 @@ These manufacturer-listed resources are visible discovery work. A listing establ
 | `MyHOME_Suite_030538.exe` | Software MYHOME_SUITE_030538  /  EXE (571.7 MB) | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `MyHome_Suite_README_v2.pdf` | Software MYHOME_SUITE_README_V2  /  PDF (551 KB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 
+The shared commissioning manual was examined at limits, update, scan, role and settings scopes; detailed UI screens of every graphic-object chapter remain unexamined. The developer Local Interoperability specification and linked firmware/XML payloads were not inspected. Product export and guide integration examples do not establish every available driver or protocol behavior.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -395,19 +413,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | `a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9` | 23769059 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) |
-| `RA00224AA_EN.pdf` | `d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d` | 44324781 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) |
-| `ST-00002702-REV2-EN.pdf` | `26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662` | 218692 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) |
-| `F461-publisher-product-sheet.pdf` | `1775f6f62743e5de0453df330348074f68c4be1929d6c80afaf93d0b3fa32cac` | 716187 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/17/75/1775f6f62743e5de0453df330348074f68c4be1929d6c80afaf93d0b3fa32cac.pdf) |
-| `Home-Project-2026-new-functions.pdf` | `c625bf9b07905fdb71e009ba2e39578b4b42cd7b957576fac87ddc4968b41b40` | 4309300 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/c6/25/c625bf9b07905fdb71e009ba2e39578b4b42cd7b957576fac87ddc4968b41b40.pdf) |
-| `LE13693AB.pdf` | `87b0b6346b1c2ecdf656fc7bede1af1d311a5e13bfe7939795fc9e9411e6e487` | 1468305 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/87/b0/87b0b6346b1c2ecdf656fc7bede1af1d311a5e13bfe7939795fc9e9411e6e487.pdf) |
-| `ST-00001808-IT.pdf` | `636b22fd7891dd41ebe839e4da5c53f9a959aba8cb275aa58aa7128dacc79057` | 214736 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/63/6b/636b22fd7891dd41ebe839e4da5c53f9a959aba8cb275aa58aa7128dacc79057.pdf) |
-| `F461-italian-product-sheet.pdf` | `2db382a9ee744070e8e15f094bd4dfe9bf6e0b3d1027915a3d77808ad2a4556a` | 16027 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/2d/b3/2db382a9ee744070e8e15f094bd4dfe9bf6e0b3d1027915a3d77808ad2a4556a.pdf) |
-| `MyHOME-2025-Italian-guide.pdf` | `0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e` | 32362939 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) |
-| `Brochure MyHOME.pdf` | `089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718` | 2869220 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/08/9c/089c3f74e9a9713866f42956811fe779f1d952bb69aad27d6de5c4d689241718.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0208)

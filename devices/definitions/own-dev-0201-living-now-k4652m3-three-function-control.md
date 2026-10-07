@@ -28,13 +28,21 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `K4652M3` | `8005543615164` | `K4652M3-publisher-product-sheet.pdf` PDF p. 1; `K4652M3-italian-product-sheet.pdf` PDF p. 1 |
+| `K4652M3` | `8005543615164` | [K4652M3-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/ee/28/ee2837193554a81c3dd93e7c89f5215ddbbfb007c3253808d18c82366257afb0.pdf) PDF p. 1; `K4652M3-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `K4652M3` | Comando unico Living Now 3 moduli | Canonical commercial record `2569` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 86-87: exact-reference role, system context and catalogue entries; other products/chapters not transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
+| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `AD-EXMH25GT; printed version 6/2025, rear cover` | Printed/PDF pp. 86-87: exact-reference role, system context and catalogue entries; other products/chapters not transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
 | `ST-00002701-REV2-EN.pdf` | Technical Sheet ST-00002701-REV2-EN | `ST-00002701-REV2-EN; 16/06/2026` | Printed/PDF pp. 4, 6: exact-reference F460 compatibility only; electrical ratings belong to F460, not this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002701-REV2-EN.pdf) |
 | `ST-00002702-REV2-EN.pdf` | Technical Sheet ST-00002702-REV2-EN | `ST-00002702-REV2-EN; 16/06/2026` | Printed/PDF pp. 3, 5: exact-reference F461 compatibility only; electrical ratings belong to F461, not this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002702-REV2-EN.pdf) |
 | `LE10514AA.pdf` | Instruction Use LE10514AA | `LE10514AA; 02/18-01 PC` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/38/d2/38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE10514AA.pdf) |
@@ -42,7 +50,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | `K4652M3-publisher-product-sheet.pdf` | Exact English product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-5: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/28/ee2837193554a81c3dd93e7c89f5215ddbbfb007c3253808d18c82366257afb0.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-K4652M3&include_technical=1) |
 | `K4652M3-italian-product-sheet.pdf` | Exact Italian product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/2d/29/2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K4652M3) |
 | `ST_00000219_IT.pdf` | Italian manufacturer technical document | `ST_00000219_IT; 20/07/2018` | Printed/PDF pp. 1-4: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/92/63927d83528b1c4e61ebdc638a1ec23888523ea09d981e3d1fb00723aa16fd52.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000219_IT.pdf) |
-| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 137-139: exact-reference role and system context; URL generation 2025 does not establish a single printed release. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
+| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `AD-ITMH25GT; Edizione 04/2025, printed cover` | Printed/PDF pp. 140-141: exact K4652M3 role and cover context; unrelated product pages 137-139 excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2208`: complete retained canonical associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -124,6 +132,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `91` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `91` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -133,6 +153,12 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -174,15 +200,18 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 | --- | --- | --- | --- | --- | --- |
 | `746` | `501` Special double command virgin | `1`, `2`, `3` | `400`, `401`, `402`, `403`, `404`, `405`, `406`, `407`, `408`, `409`, `427`, `430` | `501` | `82` |
 
+Four logical Modules comprise three control positions and UI Object `143`. Shutter Object `145` is placed in slots `1` and `2` only; its label does not establish slot `3`. Virgin `501` admits 12 roles in slots `1..3`; five roles (`403`, `404`, `405`, `407`, `409`) have no direct firmware/Object placement. Their reusable fields are inventoried below without claiming active reachability. No attached selection predicate or conversion establishes a physical-to-Object mapping.
+
 ## Configuration modes
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `746` | Virtual Configuration | `1` | Association key `1` |
-| `746` | Advanced Configuration | `2` | Association key `2` |
-| `746` | Physical configuration | `0` | Association key `3` |
+| `746` | Physical configuration | `0` | Canonical firmware/mode association |
+| `746` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `746` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -190,13 +219,13 @@ Physical selectors, application limits and procedures are tied to the cited docu
 
 | Setting / operation | Published meaning or limit | Evidence |
 | --- | --- | --- |
-| Current commissioning application | Home + Project; MyHOME Suite or physical configurators also described. Physical configurator operation is excluded when using F460/F461 association, by the separate server compatibility notes. | `ST-00002493-EN.pdf` printed/PDF p. 1 |
+| Current commissioning application | Home + Project; MyHOME Suite or physical configurators also described. Physical configurator operation is excluded when using F460/F461 association, by the separate server compatibility notes. | `ST-00002493-EN.pdf` printed/PDF p. 2 |
 | Historical application prerequisites | MyHOME_Up firmware after 2.1 and app after 2.2; MyHOME Suite version higher than 03.03.73. These are historical commissioning-stack requirements, not this item’s canonical V/R tuple. | `ST_00000219_IT.pdf` PDF p. 1 |
 | Software / physical addressing | Virtual room 0–10, lighting point 0–15; physical address digits 1–9. Room / global and group commands are function-scoped; the group command domain is 1–255, separately from actuator group-membership values. | `ST-00002493-EN.pdf` printed/PDF p. 2 |
 | PLUS scenarios | Virtual scenario address 1–2047; scenario number 0–31. | `ST-00002493-EN.pdf` printed/PDF p. 3 |
 | Door-entry commands | Door lock address 0–95 virtual, physical A/`PL=1–9` and source `M=3` (M1/M2 in table); floor call handset 0–99 and `M=4`; stair light handset 0–99 and `M=5`. K4652M3 mixed physical roles use Table A, rather than independently selected per-button M values. | `ST-00002493-EN.pdf` printed/PDF p. 3; `ST-00002493-EN.pdf` printed/PDF p. 4 |
 | Virtual-only commands | Position-control shutter command; device lock / unlock; display of load-control actuator. | `ST-00002493-EN.pdf` printed/PDF p. 4 |
-| Address pairs | Three separate A1/PL1, A2/PL2, A3/PL3 pairs; M selects the shared three-role combination. Physical room: `A=AMB`, `PL=1–9`; group: `A=GR`, `PL=1–9`; general: `A=``GEN``.` | `ST-00002493-EN.pdf` printed/PDF p. 2 |
+| Address pairs | Three separate A1/PL1, A2/PL2, A3/PL3 pairs; M selects the shared three-role combination. Physical room: `A=AMB`, `PL=1–9`; group: `A=GR`, `PL=1–9`; general: `A=GEN`. | `ST-00002493-EN.pdf` printed/PDF p. 2 |
 | Custom timed `ON` | 0–255 hours using MyHOME Suite virtual configuration; not the combined actuator’s physical minute selector. | `ST-00002493-EN.pdf` printed/PDF p. 2 |
 | Physical shared `M=0` | Light cycle / light cycle / light cycle; left / centre / right function order. | `ST-00002493-EN.pdf` printed/PDF p. 4 |
 | Physical shared `M=1` | Light cycle / light cycle / bistable shutter; left / centre / right function order. | `ST-00002493-EN.pdf` printed/PDF p. 4 |
@@ -361,6 +390,69 @@ Catalogue Object key `650` maps to external Object `145`.
 | `PRIORITY` | `0` = Low; `1` = Medium; `2` = High; `3` = Safety | `1` | Priority; Shutter management command priority |
 | `PRE` | `1..9`; `0` = None | `0` | Preset; Shutter management preset number |
 
+### Object `403` - Scenario module control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0` = `A=0` `PL=0`; `1` = `A=0` `PL=1`; `2` = `A=0` `PL=2`; `3` = `A=0` `PL=3`; `4` = `A=0` `PL=4`; `5` = `A=0` `PL=5`; `6` = `A=0` `PL=6`; `7` = `A=0` `PL=7`; `8` = `A=0` `PL=8`; `9` = `A=0` `PL=9`; `10` = `A=0` `PL=10`; `11` = `A=0` `PL=11`; `12` = `A=0` `PL=12`; `13` = `A=0` `PL=13`; `14` = `A=0` `PL=14`; `15` = `A=0` `PL=15`; `16` = `A=1` `PL=0`; `17` = `A=1` `PL=1`; `18` = `A=1` `PL=2`; `19` = `A=1` `PL=3`; `20` = `A=1` `PL=4`; `21` = `A=1` `PL=5`; `22` = `A=1` `PL=6`; `23` = `A=1` `PL=7`; `24` = `A=1` `PL=8`; `25` = `A=1` `PL=9`; `26` = `A=1` `PL=10`; `27` = `A=1` `PL=11`; `28` = `A=1` `PL=12`; `29` = `A=1` `PL=13`; `30` = `A=1` `PL=14`; `31` = `A=1` `PL=15`; `32` = `A=2` `PL=0`; `33` = `A=2` `PL=1`; `34` = `A=2` `PL=2`; `35` = `A=2` `PL=3`; `36` = `A=2` `PL=4`; `37` = `A=2` `PL=5`; `38` = `A=2` `PL=6`; `39` = `A=2` `PL=7`; `40` = `A=2` `PL=8`; `41` = `A=2` `PL=9`; `42` = `A=2` `PL=10`; `43` = `A=2` `PL=11`; `44` = `A=2` `PL=12`; `45` = `A=2` `PL=13`; `46` = `A=2` `PL=14`; `47` = `A=2` `PL=15`; `48` = `A=3` `PL=0`; `49` = `A=3` `PL=1`; `50` = `A=3` `PL=2`; `51` = `A=3` `PL=3`; `52` = `A=3` `PL=4`; `53` = `A=3` `PL=5`; `54` = `A=3` `PL=6`; `55` = `A=3` `PL=7`; `56` = `A=3` `PL=8`; `57` = `A=3` `PL=9`; `58` = `A=3` `PL=10`; `59` = `A=3` `PL=11`; `60` = `A=3` `PL=12`; `61` = `A=3` `PL=13`; `62` = `A=3` `PL=14`; `63` = `A=3` `PL=15`; `64` = `A=4` `PL=0`; `65` = `A=4` `PL=1`; `66` = `A=4` `PL=2`; `67` = `A=4` `PL=3`; `68` = `A=4` `PL=4`; `69` = `A=4` `PL=5`; `70` = `A=4` `PL=6`; `71` = `A=4` `PL=7`; `72` = `A=4` `PL=8`; `73` = `A=4` `PL=9`; `74` = `A=4` `PL=10`; `75` = `A=4` `PL=11`; `76` = `A=4` `PL=12`; `77` = `A=4` `PL=13`; `78` = `A=4` `PL=14`; `79` = `A=4` `PL=15`; `80` = `A=5` `PL=0`; `81` = `A=5` `PL=1`; `82` = `A=5` `PL=2`; `83` = `A=5` `PL=3`; `84` = `A=5` `PL=4`; `85` = `A=5` `PL=5`; `86` = `A=5` `PL=6`; `87` = `A=5` `PL=7`; `88` = `A=5` `PL=8`; `89` = `A=5` `PL=9`; `90` = `A=5` `PL=10`; `91` = `A=5` `PL=11`; `92` = `A=5` `PL=12`; `93` = `A=5` `PL=13`; `94` = `A=5` `PL=14`; `95` = `A=5` `PL=15`; `96` = `A=6` `PL=0`; `97` = `A=6` `PL=1`; `98` = `A=6` `PL=2`; `99` = `A=6` `PL=3`; `100` = `A=6` `PL=4`; `101` = `A=6` `PL=5`; `102` = `A=6` `PL=6`; `103` = `A=6` `PL=7`; `104` = `A=6` `PL=8`; `105` = `A=6` `PL=9`; `106` = `A=6` `PL=10`; `107` = `A=6` `PL=11`; `108` = `A=6` `PL=12`; `109` = `A=6` `PL=13`; `110` = `A=6` `PL=14`; `111` = `A=6` `PL=15`; `112` = `A=7` `PL=0`; `113` = `A=7` `PL=1`; `114` = `A=7` `PL=2`; `115` = `A=7` `PL=3`; `116` = `A=7` `PL=4`; `117` = `A=7` `PL=5`; `118` = `A=7` `PL=6`; `119` = `A=7` `PL=7`; `120` = `A=7` `PL=8`; `121` = `A=7` `PL=9`; `122` = `A=7` `PL=10`; `123` = `A=7` `PL=11`; `124` = `A=7` `PL=12`; `125` = `A=7` `PL=13`; `126` = `A=7` `PL=14`; `127` = `A=7` `PL=15`; `128` = `A=8` `PL=0`; `129` = `A=8` `PL=1`; `130` = `A=8` `PL=2`; `131` = `A=8` `PL=3`; `132` = `A=8` `PL=4`; `133` = `A=8` `PL=5`; `134` = `A=8` `PL=6`; `135` = `A=8` `PL=7`; `136` = `A=8` `PL=8`; `137` = `A=8` `PL=9`; `138` = `A=8` `PL=10`; `139` = `A=8` `PL=11`; `140` = `A=8` `PL=12`; `141` = `A=8` `PL=13`; `142` = `A=8` `PL=14`; `143` = `A=8` `PL=15`; `144` = `A=9` `PL=0`; `145` = `A=9` `PL=1`; `146` = `A=9` `PL=2`; `147` = `A=9` `PL=3`; `148` = `A=9` `PL=4`; `149` = `A=9` `PL=5`; `150` = `A=9` `PL=6`; `151` = `A=9` `PL=7`; `152` = `A=9` `PL=8`; `153` = `A=9` `PL=9`; `154` = `A=9` `PL=10`; `155` = `A=9` `PL=11`; `156` = `A=9` `PL=12`; `157` = `A=9` `PL=13`; `158` = `A=9` `PL=14`; `159` = `A=9` `PL=15`; `160` = `A=10` `PL=0`; `161` = `A=10` `PL=1`; `162` = `A=10` `PL=2`; `163` = `A=10` `PL=3`; `164` = `A=10` `PL=4`; `165` = `A=10` `PL=5`; `166` = `A=10` `PL=6`; `167` = `A=10` `PL=7`; `168` = `A=10` `PL=8`; `169` = `A=10` `PL=9`; `170` = `A=10` `PL=10`; `171` = `A=10` `PL=11`; `172` = `A=10` `PL=12`; `173` = `A=10` `PL=13`; `174` = `A=10` `PL=14`; `175` = `A=10` `PL=15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level |
+| `SCE_BUTT_1` | `1..16` | `1` | Upper button scenario |
+| `SCE_BUTT_2` | `1..16` | `2` | Lower button scenario |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `43` = 43 s; `44` = 44 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `36` = 36 s; `37` = 37 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `69` = 9 min; `70` = 10 min | `0` | Activation delay for lower button |
+
+### Object `404` - Scheduled scenario (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `BUTTON_1` | `0..31` | `1` | Upper button |
+| `BUTTON_2` | `0..31` | `2` | Lower button |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+| `START_DELAY` | `0..255` | `10` | Time of restart device (s) |
+
+### Object `405` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Upper button scenario; Delay (20) |
+| `PPT_SCE_2` | `1..255` | `2` | Lower button scenario; Delay (21) |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type; Only if Scenario1=Scenario2 |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button; Only if Scenario1<>Scenario2 |
+| `DEL_BUTTON_2` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for lower button; Only if Scenario1<>Scenario2 |
+
+### Object `407` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `9` = `ON`/`OFF` and point to point dimming; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `12` = Bistable control; `13` = Monostable control; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable (lower button); `2` = Enable (lower button); `3` = Disable (upper button) - enable (lower button) | `0` | Modality |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+
+### Object `409` - Sound diffusion control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input AUX channel |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -405,6 +497,8 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 | None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+Stair-light Object `430` filter `4135` admits `N1=100..255`, excluding reusable default `0`, while the published handset address is `0..99`. UI filter `3662` admits only `1` but defaults to `0`. Shutter destination-level enumeration omits `14`; the full-range filter preserves that omission. These source conflicts do not supply a replacement default or precedence.
 
 ## Diagnostic applicability
 
@@ -490,6 +584,33 @@ The correspondence below is a semantic cross-reference based on the named role a
 | Actuator lock/unlock | [Special commands](../../functional/who-14-special-commands/) | Semantic reference for Object `402`; exact target and runtime operation require corroboration |
 | PLUS scenario trigger | [CEN+ events](../../functional/who-25-transversal/cen-plus.md) | Related event semantics: address/button ranges correspond, but exact emissions remain uncorroborated |
 
+### Virgin-only reusable system associations
+
+| External Object | Reusable system | Catalogue system key | Applicability limit |
+| --- | --- | --- | --- |
+| `403` Scenario module control | Automation | `1` | Virgin membership only; no direct firmware/Object placement |
+| `403` Scenario module control | Burglar alarm system | `3` | Virgin membership only; no direct firmware/Object placement |
+| `403` Scenario module control | Video door entry system | `4` | Virgin membership only; no direct firmware/Object placement |
+| `403` Scenario module control | Sound system | `5` | Virgin membership only; no direct firmware/Object placement |
+| `404` Scheduled scenario | Automation | `1` | Virgin membership only; no direct firmware/Object placement |
+| `404` Scheduled scenario | Burglar alarm system | `3` | Virgin membership only; no direct firmware/Object placement |
+| `404` Scheduled scenario | Video door entry system | `4` | Virgin membership only; no direct firmware/Object placement |
+| `404` Scheduled scenario | Sound system | `5` | Virgin membership only; no direct firmware/Object placement |
+| `405` Scenario PLUS Lighting Management | Automation | `1` | Virgin membership only; no direct firmware/Object placement |
+| `405` Scenario PLUS Lighting Management | Burglar alarm system | `3` | Virgin membership only; no direct firmware/Object placement |
+| `405` Scenario PLUS Lighting Management | Video door entry system | `4` | Virgin membership only; no direct firmware/Object placement |
+| `405` Scenario PLUS Lighting Management | Sound system | `5` | Virgin membership only; no direct firmware/Object placement |
+| `407` AUX control | Automation | `1` | Virgin membership only; no direct firmware/Object placement |
+| `407` AUX control | Burglar alarm system | `3` | Virgin membership only; no direct firmware/Object placement |
+| `407` AUX control | Video door entry system | `4` | Virgin membership only; no direct firmware/Object placement |
+| `407` AUX control | Sound system | `5` | Virgin membership only; no direct firmware/Object placement |
+| `409` Sound diffusion control | Automation | `1` | Virgin membership only; no direct firmware/Object placement |
+| `409` Sound diffusion control | Burglar alarm system | `3` | Virgin membership only; no direct firmware/Object placement |
+| `409` Sound diffusion control | Video door entry system | `4` | Virgin membership only; no direct firmware/Object placement |
+| `409` Sound diffusion control | Sound system | `5` | Virgin membership only; no direct firmware/Object placement |
+
+No special-function association is stored for these Virgin-only Objects.
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -500,27 +621,15 @@ Configure through MyHOME Suite or the documented MyHOME_Up generation, or use th
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The shared physical `M` selector uses Table A for the entire left/centre/right combination. The 2026 individual door/floor/stair rows print `M1/M2=3`, `M=4` and `M=5`, while Table A assigns mixed floor-call and door/stair combinations to `M=7/8`; the 2018 Italian door row instead says to consult Table A. Those individual-row labels are not three independently available M selectors. The safety/sealing clear cap must remain in place; the leaflet’s neutral-wire footnote does not establish mains wiring for this SCS control (LE10514AA; both technical sheets).
+
 ## Source reconciliation
 
-The 2018 Italian sheet and leaflet establish the same three-module control and supply / draw. The 2026 English sheet adds lighting-group return status from production 26W18. That boundary is not interchangeable with the 25W49 boundary of K4652M2 or the combined actuators. The video-entry tables print M1/M2 even though the physical model has one shared M selector; this source inconsistency is retained. None of the manufacturer application-version prerequisites is a mapping to catalogue firmware 746.
-
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MyHOME Technical Guide.pdf` | Printed/PDF pp. 86-87: exact-reference role, system context and catalogue entries; other products/chapters not transferred. |
-| `ST-00002701-REV2-EN.pdf` | Printed/PDF pp. 4, 6: exact-reference F460 compatibility only; electrical ratings belong to F460, not this Device. |
-| `ST-00002702-REV2-EN.pdf` | Printed/PDF pp. 3, 5: exact-reference F461 compatibility only; electrical ratings belong to F461, not this Device. |
-| `LE10514AA.pdf` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `ST-00002493-EN.pdf` | Printed/PDF pp. 1-4: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `K4652M3-publisher-product-sheet.pdf` | PDF pp. 1-5: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `K4652M3-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `ST_00000219_IT.pdf` | Printed/PDF pp. 1-4: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `MyHOME-2025-Italian-guide.pdf` | Printed/PDF pp. 137-139: exact-reference role and system context; URL generation 2025 does not establish a single printed release. |
+The 2018 Italian sheet and leaflet establish the same three-module control and supply / draw. The 2018 sheet already describes virtual room/group/general load-state return on p. 2; the 2026 English sheet adds an explicit group-feedback production condition from 26W18. That boundary is not interchangeable with the 25W49 boundary of K4652M2 or the combined actuators. The video-entry tables print M1/M2 even though the physical model has one shared M selector; this source inconsistency is retained. None of the manufacturer application-version prerequisites is a mapping to catalogue firmware `746`.
 
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
 
-The export operating/setting classification is 5–45 °C, versus the exact sheet 0–40 °C. Its radio-frequency BUS classification does not establish a transceiver; the exact product connection is SCS. No hardware/release mapping resolves the temperature difference.
+The export operating/setting classification is 5–45 °C, versus the exact sheet 0–40 °C. It classifies radio-frequency BUS and bidirectional radio as No; voice/Internet classification values describe system integration, not an embedded voice or Internet interface. The exact product connection is SCS. No hardware/release mapping resolves the temperature difference.
 
 The technical sheet labels the PLUS values as scenario address/number, while Object `406` stores `PPT_CEN_LOW`/`PPT_CEN_HIG` and separate `BUTTON_1`/`BUTTON_2` fields. Their address/button ranges correspond to the canonical CEN+ event model; this is a semantic inference, not a captured frame or proof of stored-scene execution under another namespace.
 
@@ -542,6 +651,8 @@ These manufacturer-listed resources are visible discovery work. A listing establ
 | `Catalogue Living_NOW 2M.pdf` | Catalog Commercial Page CAT-LNOW-2M  /  PDF (23.1 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%202M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `Catalogue Living_NOW 3M.pdf` | Catalog Commercial Page CAT-LNOW-3M  /  PDF (22.5 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%203M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 
+Discovery also found historical English `ST_00000219_EN.pdf` and regional French `ST-00002493-FR.pdf` links. These language variants remain unexamined; no specifications were adopted from their search excerpts. The retained Italian 2018 and English 2026 revisions establish the scope examined here.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -553,18 +664,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | `a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9` | 23769059 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) |
-| `ST-00002701-REV2-EN.pdf` | `78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6` | 218474 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf) |
-| `ST-00002702-REV2-EN.pdf` | `26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662` | 218692 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) |
-| `LE10514AA.pdf` | `38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247` | 2217498 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/38/d2/38d2b5bc30b1ce4e743c38c975eb0e7d3629d03b84d27316a5a7cbaee53fc247.pdf) |
-| `ST-00002493-EN.pdf` | `575d01abacbcf935d1634fa8cf74f071ccce9d9e309dd7ec1115094b836423c7` | 485982 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/57/5d/575d01abacbcf935d1634fa8cf74f071ccce9d9e309dd7ec1115094b836423c7.pdf) |
-| `K4652M3-publisher-product-sheet.pdf` | `ee2837193554a81c3dd93e7c89f5215ddbbfb007c3253808d18c82366257afb0` | 563982 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/ee/28/ee2837193554a81c3dd93e7c89f5215ddbbfb007c3253808d18c82366257afb0.pdf) |
-| `K4652M3-italian-product-sheet.pdf` | `2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828` | 22152 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/2d/29/2d2970639f9996ace1ec7aa8359269dec27458e07f7dfe1ee72590c166c7e828.pdf) |
-| `ST_00000219_IT.pdf` | `63927d83528b1c4e61ebdc638a1ec23888523ea09d981e3d1fb00723aa16fd52` | 302965 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/63/92/63927d83528b1c4e61ebdc638a1ec23888523ea09d981e3d1fb00723aa16fd52.pdf) |
-| `MyHOME-2025-Italian-guide.pdf` | `0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e` | 32362939 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0201)

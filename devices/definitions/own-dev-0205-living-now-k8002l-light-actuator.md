@@ -28,13 +28,21 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `K8002L` | `8005543640159` | `K8002L-publisher-product-sheet.pdf` PDF p. 1; `K8002L-italian-product-sheet.pdf` PDF p. 1 |
+| `K8002L` | `8005543640159` | [K8002L-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/7c/02/7c02138471bb5eeb01794c4366df3cd389053962188d4d990103b9822095f99f.pdf) PDF p. 1; `K8002L-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `K8002L` | Light Actuator Living Now advanced | Canonical commercial record `2633` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 84-85: exact-reference role, system context and catalogue entries; other products/chapters not transferred. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
+| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | `AD-EXMH25GT; printed version 6/2025, rear cover` | Printed/PDF pp. 50, 53, 84: exact K8002 role, shared actuator context and catalogue entry; other product specifications excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
 | `ST-00002701-REV2-EN.pdf` | Technical Sheet ST-00002701-REV2-EN | `ST-00002701-REV2-EN; 16/06/2026` | Printed/PDF pp. 3: exact-reference F460 compatibility only; electrical ratings belong to F460, not this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002701-REV2-EN.pdf) |
 | `ST-00002702-REV2-EN.pdf` | Technical Sheet ST-00002702-REV2-EN | `ST-00002702-REV2-EN; 16/06/2026` | Printed/PDF pp. 2: exact-reference F461 compatibility only; electrical ratings belong to F461, not this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002702-REV2-EN.pdf) |
 | `LE11285AD.pdf` | Instruction Use LE11285AD | `LE11285AD; 10/20-01 PC` | Printed/PDF pp. 1-4: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/0c/f1/0cf1359e611d5526a7b47c79460887011c05dece8a30bb3fbcd2457e3efa9d08.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE11285AD.pdf) |
@@ -42,7 +50,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | `K8002L-publisher-product-sheet.pdf` | Exact English product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-3: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/02/7c02138471bb5eeb01794c4366df3cd389053962188d4d990103b9822095f99f.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-K8002L&include_technical=1) |
 | `K8002L-italian-product-sheet.pdf` | Exact Italian product export | `Publisher export retrieved 05.10.2026; Italian compliance dates are boilerplate` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. | [Archived original](https://archive.openwebnet-ha.org/sha256/57/75/5775b52e6387ee046b25d443721bb184aab4698866fc04a98f07d9c07b60e61f.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-K8002L) |
 | `ST_00000539_IT.pdf` | Italian manufacturer technical document | `ST_00000539_IT; 27/02/2020` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/8f/6c/8f6c85d11cb21d546d0c8e3b240e271297ddea98e5d0d287c9e13dfe3d63f2f1.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000539_IT.pdf) |
-| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `Manufacturer system guide; URL retrieval generation, no explicit single release established; illustrative dates are not publication dates` | Printed/PDF pp. 136: exact-reference role and system context; URL generation 2025 does not establish a single printed release. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
+| `MyHOME-2025-Italian-guide.pdf` | MyHOME 2025 Italian guide | `AD-ITMH25GT; Edizione 04/2025, printed cover` | Printed/PDF pp. 52, 56, 136: exact K8002 role, shared actuator context and catalogue entry; Edizione 04/2025 established from the printed cover. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) | [Publisher original](https://professionisti.bticino.it/sites/default/files/2025-03/MyHOME%20AD-ITMH25GT_smart_new.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2269`: complete retained canonical associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -114,9 +122,9 @@ These are the complete captured publisher classification values for the named va
 | Load | `230 Vac with neutral` | `110 Vac with neutral` | `230 Vac without neutral` | `110 Vac without neutral` |
 | --- | --- | --- | --- | --- |
 | Filament/halogen | `920 W` | `440 W` | `460 W` | `220 W` |
-| LED | `250 W` | `110 W` | `Not supported in matrix` | `Not supported in matrix` |
-| Compact fluorescent | `250 W` | `110 W` | `Not supported in matrix` | `Not supported in matrix` |
-| Electronic transformer | `460 W` | `220 W` | `Not supported in matrix` | `Not supported in matrix` |
+| LED | `250 W` | `110 W` | No rating given (dash) | No rating given (dash) |
+| Compact fluorescent | `250 W` | `110 W` | No rating given (dash) | No rating given (dash) |
+| Electronic transformer | `460 W` | `220 W` | No rating given (dash) | No rating given (dash) |
 | Ferromagnetic transformer | `460 VA` | `220 VA` | `460 VA` | `220 VA` |
 
 ## Identity
@@ -130,6 +138,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `118` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `118` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -139,6 +159,12 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -155,13 +181,16 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 | --- | --- | --- | --- | --- | --- |
 | all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
 
+Firmware `799` is Official default `1.0` with two Module slots, each light-actuator Object `6`; there is no Virgin membership or build row. The two independent local relays are distinct from the separate digital command’s remote functions. Their catalogue mode and output count do not establish a 16 A rating.
+
 ## Configuration modes
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `799` | Advanced Configuration | `2` | Association key `2` |
+| `799` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -170,7 +199,7 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | Setting / operation | Published meaning or limit | Evidence |
 | --- | --- | --- |
 | Configuration route | MyHOME_Up or MyHOME Suite; exact sheet establishes no physical configurator sockets. External server compatibility requires software configuration. | `ST-00000539-EN.pdf` printed/PDF p. 1 |
-| Related completion | Connection module / electrified frame supplies SCS contacts; digital control is a separate product. Full 8011 supplies the shutter PRESET interface. | `ST-00000539-EN.pdf` printed/PDF p. 1 |
+| Related completion | Connection module / electrified frame supplies SCS contacts; digital control is a separate product. The shutter PRESET description belongs to the separate K8002S actuator. | `ST-00000539-EN.pdf` printed/PDF p. 1 |
 
 ### Exact-reference server compatibility
 
@@ -244,6 +273,8 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+Local-button filter `3706` admits `1/15/18/9` but excludes reusable default `0`. Time filters `3707..3709` retain complete hours/minutes/seconds ranges. No slot predicates, conversion rules, parameter files or packages are stored. Defaults do not specify the installed relay reset behavior.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -298,23 +329,11 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 The 2020 English and Italian technical sheets and LE11285AD support 2 × 4 A and the same load-specific ratings. The publisher export prose instead says two 16 A relays at 250 Vac, while its classification fields give 4 A rated current and 2 A maximum switching current. These conflicting source values remain separately visible; 16 A is not adopted as the design rating. The export 5–40 °C range also differs from the technical sheet 0–40 °C. F460/F461 explicitly list the exact K8002L for all production in their published compatibility scope.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MyHOME Technical Guide.pdf` | Printed/PDF pp. 84-85: exact-reference role, system context and catalogue entries; other products/chapters not transferred. |
-| `ST-00002701-REV2-EN.pdf` | Printed/PDF pp. 3: exact-reference F460 compatibility only; electrical ratings belong to F460, not this Device. |
-| `ST-00002702-REV2-EN.pdf` | Printed/PDF pp. 2: exact-reference F461 compatibility only; electrical ratings belong to F461, not this Device. |
-| `LE11285AD.pdf` | Printed/PDF pp. 1-4: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `ST-00000539-EN.pdf` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `K8002L-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `K8002L-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference commercial record, EAN and classification values; no printed page sequence established; linked resources are separately accounted for. |
-| `ST_00000539_IT.pdf` | Printed/PDF pp. 1-2: exact-reference specification, connection and configuration content; shared-product content separately scoped. |
-| `MyHOME-2025-Italian-guide.pdf` | Printed/PDF pp. 136: exact-reference role and system context; URL generation 2025 does not establish a single printed release. |
-
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
 
 The export rated operating voltage 25–27 V and supply-current classification 20–40 mA differ in scope and range from the sheet SCS 18–27 V and 5 mA standby/30 mA both outputs. They remain source-specific classification values, without an inferred replacement specification.
+
+English MyHOME guide p. 84 also prints 16 A for K8002L, so the rating conflict is not confined to the product exporter. Exact sheets ST-00000539-EN (17 March 2020), ST_00000539_IT (27 February 2020) and LE11285AD (October 2020) agree on the load matrix and 2 × 4 A. Export p. 2 additionally gives 25–27 V versus 18–27 V for the SCS part and 20–40 mA versus 5 mA standby/30 mA maximum. Its With bus connection: No classification does not negate the documented side-contact SCS supply. Leaflet p. 1 specifies white status LEDs; p. 2 requires blanking module K4950 in empty frame positions. Table dashes for no-neutral LED, compact fluorescent and electronic-transformer loads supply no rating. Neutral omission is load-specific and does not justify importing K4672M2L’s button procedure.
 
 ## Evidence limits and open work
 
@@ -333,6 +352,8 @@ These manufacturer-listed resources are visible discovery work. A listing establ
 | `Catalogue Living_NOW 2M.pdf` | Catalog Commercial Page CAT-LNOW-2M  /  PDF (23.1 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%202M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 | `Catalogue Living_NOW 3M.pdf` | Catalog Commercial Page CAT-LNOW-3M  /  PDF (22.5 MB)  /  EN | [Manufacturer link](https://assets.legrand.com/pim/DOCUMENT/Catalogue%20Living_NOW%203M.pdf) | Linked payload not examined in this dossier; inventory evidence from retained product export / catalogue page |
 
+Current exact manufacturer discovery found the retained LE11285AD and ST-00000539-EN sources and an alternate historical English filename. The alternate filename and linked broad catalogues are not separately examined. No manufacturer resolution of the 16 A versus 4 A conflict or installed load/neutral/relay revision is retained.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -344,18 +365,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `MyHOME Technical Guide.pdf` | `a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9` | 23769059 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) |
-| `ST-00002701-REV2-EN.pdf` | `78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6` | 218474 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/78/ae/78ae843060334dbd6d065284c0e5144469d8629633b519585b8daec14deacdc6.pdf) |
-| `ST-00002702-REV2-EN.pdf` | `26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662` | 218692 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/26/c4/26c407274fdd72d4c0269d84f045ca21cc1beb9e8f26ca64d4de005c0026a662.pdf) |
-| `LE11285AD.pdf` | `0cf1359e611d5526a7b47c79460887011c05dece8a30bb3fbcd2457e3efa9d08` | 2688906 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/0c/f1/0cf1359e611d5526a7b47c79460887011c05dece8a30bb3fbcd2457e3efa9d08.pdf) |
-| `ST-00000539-EN.pdf` | `30229c1426a9dc3567f02d3d9331e4b1e3781fb611cba2b54bbf86727956feb3` | 199487 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/30/22/30229c1426a9dc3567f02d3d9331e4b1e3781fb611cba2b54bbf86727956feb3.pdf) |
-| `K8002L-publisher-product-sheet.pdf` | `7c02138471bb5eeb01794c4366df3cd389053962188d4d990103b9822095f99f` | 1638110 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/7c/02/7c02138471bb5eeb01794c4366df3cd389053962188d4d990103b9822095f99f.pdf) |
-| `K8002L-italian-product-sheet.pdf` | `5775b52e6387ee046b25d443721bb184aab4698866fc04a98f07d9c07b60e61f` | 29904 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/57/75/5775b52e6387ee046b25d443721bb184aab4698866fc04a98f07d9c07b60e61f.pdf) |
-| `ST_00000539_IT.pdf` | `8f6c85d11cb21d546d0c8e3b240e271297ddea98e5d0d287c9e13dfe3d63f2f1` | 199267 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/8f/6c/8f6c85d11cb21d546d0c8e3b240e271297ddea98e5d0d287c9e13dfe3d63f2f1.pdf) |
-| `MyHOME-2025-Italian-guide.pdf` | `0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e` | 32362939 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/0d/f6/0df6729969f31f61feb275e84c7da84c665f8c93aeb1d5af9ba1ac29d4f82e4e.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0205)

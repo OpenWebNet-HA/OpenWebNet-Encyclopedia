@@ -22,6 +22,14 @@ F459T is the HVAC Driver Manager reference explicitly identified in the manufact
 | --- | --- | --- | --- |
 | BTicino | `F459T` | Established catalogue identity | Manufacturer database commercial record `2697` explicitly links this SKU to item `2335` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F459T` | Driver Manager HVAC | Canonical commercial record `2697` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -46,6 +54,22 @@ F459T is the HVAC Driver Manager reference explicitly identified in the manufact
 | Main item model / `modobj` | `141` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `141` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -56,6 +80,19 @@ F459T is the HVAC Driver Manager reference explicitly identified in the manufact
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `907` | `1143` | Undefined (key `5`) | `0` | Extra | `2335_1.0_LGG\xml\Extra\extra.xml` |
+| `907` | `1144` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2335_1.0_LGG\xml\Protocol\protocol.xml` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+Builds `0` and `1` are two explicit rows attached to the same Official firmware `907` version `1`, revision `0`; the default flag is unset. They are not two commercial Devices or measured installed releases. Both parameter-file associations use LGG brand scope with line `0`; their XML payloads are absent from the reviewed catalogue evidence.
 
 ## Module, Object, and Virgin Object model
 
@@ -71,25 +108,20 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 | --- | --- | --- | --- | --- | --- |
 | all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
 
+Slot `1` directly designates external Driver Manager Object `142` (database key `642`), with four reusable fields for static/DHCP selection, local IP, gateway enable and system code. `192.168.1.45` is a catalogue documentation default, not a verified installed endpoint. There are no Virgin, slot predicate, relation filter, conversion or package associations. Five catalogue bus scopes, including burglar-alarm and multimedia risers, do not establish corresponding physical connectors or HVAC protocol compatibility.
+
 ## Configuration modes
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `907` | Product Programming | `3` | Association key `4` |
+| `907` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `907` | Ethernet | `2` |
-| `907` | Ethernet over USB | `4` |
+| `907` | Ethernet | Canonical firmware/connection association |
+| `907` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `907` | `5` | `0` | `2335_1.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `907` | `5` | `0` | `2335_1.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -190,9 +222,11 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
-EN_DEVICE record 2697 explicitly links F459T to EN_ITEM 2335 and names Driver Manager HVAC. This establishes catalogue identity independently of PDF availability. Exact searches of BTicino and Legrand domains and both current / regional catalogue entry points found no exact manufacturer document: the global page returned 404, the Italian product route redirected to the catalogue home page and the export returned 500. Broader manufacturer guides describe F459, without the T suffix; they do not establish F459T physical equivalence or HVAC-driver compatibility. Secondary distributor listings were discovery leads, not primary verification of specifications or an EAN.
+`EN_DEVICE` record 2697 explicitly links F459T to `EN_ITEM` 2335 and names Driver Manager HVAC. This establishes catalogue identity independently of PDF availability. Exact searches of BTicino and Legrand domains and both current / regional catalogue entry points found no exact manufacturer document: the global page returned 404, the Italian product route redirected to the catalogue home page and the export returned 500. Broader manufacturer guides describe F459, without the T suffix; they do not establish F459T physical equivalence or HVAC-driver compatibility. Secondary distributor listings were discovery leads, not primary verification of specifications or an EAN.
 
 No exact-product document original is retained for this item. The canonical database is the source for the identity and configuration inventory; product-document discovery remains partial.
+
+The 7 October review repeated exact-SKU manufacturer-domain searches and direct global/Italian entry checks. No exact manufacturer payload was established. Distributor listings remain discovery leads; their repeated EAN and electrical classifications have not been promoted to verified manufacturer facts. Catalogue commercial record `2697` is BTicino brand key `6`, line key `5`, while its parameter paths use LGG scope. Those independent metadata scopes do not change the explicit SKU-to-item relationship.
 
 ## Evidence limits and open work
 
@@ -201,6 +235,8 @@ Exact-product electrical ratings, housing, interfaces, manufacturer-verified EAN
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
 
 The general Living Now 2026 catalogue was searched for an exact F459T reference and yielded F459 only. Its original is a discovery candidate excluded from incorporated evidence: 125579283 bytes exceeds the installed PDF archive helper’s 100 MiB limit. No derivative or compressed file substitutes for it. The exact F459T documentation gap therefore remains open; no F459 ratings were transferred.
+
+Semantic acceptance of this bounded catalogue description does not close exact-product document discovery or archive coverage. Discovery completion covers the examined inventory and renewed search scope; archival coverage remains pending. No source from the unsuffixed F459 is substituted. Required follow-up is an exact F459T manufacturer specification covering electrical and mechanical limits, HVAC protocols/drivers and commissioning/licensing.
 
 ## Sources
 
@@ -212,3 +248,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0209)

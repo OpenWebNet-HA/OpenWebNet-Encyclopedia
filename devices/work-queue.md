@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 10 |
-| reviewed | 200 |
+| review-ready | 0 |
+| reviewed | 210 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 2208 | Comando unico Living Now 3 moduli | 1 | review-ready | OWN-DEV-0201 | partial | complete | complete | pending | - |
-| normal | 2233 | Comando-Attuatore Living Now Luci | 1 | review-ready | OWN-DEV-0202 | partial | complete | complete | pending | - |
-| normal | 2237 | Comando-Attuatore Living Now Tapparelle | 1 | review-ready | OWN-DEV-0203 | partial | complete | complete | pending | - |
-| normal | 2268 | Basic probe with wired sensor | 1 | review-ready | OWN-DEV-0204 | partial | complete | complete | pending | - |
-| normal | 2269 | Light Actuator Living Now advanced | 1 | review-ready | OWN-DEV-0205 | partial | complete | complete | pending | - |
-| normal | 2275 | Shutter Actuator Living Now advanced | 1 | review-ready | OWN-DEV-0206 | partial | complete | complete | pending | - |
-| normal | 2288 | F460 | 1 | review-ready | OWN-DEV-0207 | partial | complete | complete | pending | - |
-| normal | 2293 | F461 | 1 | review-ready | OWN-DEV-0208 | partial | complete | complete | pending | - |
-| normal | 2335 | Driver Manager HVAC | 1 | review-ready | OWN-DEV-0209 | partial | pending | complete | pending | - |
-| normal | 2341 | Linea 5000 | 1 | review-ready | OWN-DEV-0210 | partial | complete | complete | pending | - |
 
 ## Reviewed
 
@@ -218,24 +208,34 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 2193 | Driver Manager | OWN-DEV-0198 |
 | 2198 | MyHomeServer | OWN-DEV-0199 |
 | 2205 | Comando unico Living Now 2 moduli | OWN-DEV-0200 |
+| 2208 | Comando unico Living Now 3 moduli | OWN-DEV-0201 |
 | 2214 | HOME TOUCH 7 | OWN-DEV-0156 |
+| 2233 | Comando-Attuatore Living Now Luci | OWN-DEV-0202 |
+| 2237 | Comando-Attuatore Living Now Tapparelle | OWN-DEV-0203 |
 | 2242 | Add-on SCS thermostat | OWN-DEV-0109 |
 | 2243 | Comando unico MYHOME 2 moduli | OWN-DEV-0110 |
 | 2245 |  Comando unico MYHOME 3 moduli | OWN-DEV-0111 |
 | 2247 | Comando-Attuatore MYHOME Luci  | OWN-DEV-0112 |
 | 2248 | Comando-Attuatore MYHOME Tapparelle | OWN-DEV-0113 |
 | 2266 | CLASSE100 X16E | OWN-DEV-0157 |
+| 2268 | Basic probe with wired sensor | OWN-DEV-0204 |
+| 2269 | Light Actuator Living Now advanced | OWN-DEV-0205 |
 | 2272 | Adv - command white | OWN-DEV-0114 |
 | 2273 | Adv - command advanced white | OWN-DEV-0115 |
+| 2275 | Shutter Actuator Living Now advanced | OWN-DEV-0206 |
 | 2276 | Adv - voice assistant Amazon | OWN-DEV-0116 |
 | 2279 | Easy Kit Connnected | OWN-DEV-0158 |
 | 2283 | CLASSE300 EOS | OWN-DEV-0159 |
+| 2288 | F460 | OWN-DEV-0207 |
+| 2293 | F461 | OWN-DEV-0208 |
 | 2301 | Easy Kit Connnected with H+S | OWN-DEV-0160 |
 | 2307 | Command Device 2M Light Now | OWN-DEV-0117 |
 | 2309 | Acutator/Command Light Light Now | OWN-DEV-0118 |
 | 2310 | Acutator/Command Shutter Light Now | OWN-DEV-0161 |
 | 2311 | Command Device 3M Light Now | OWN-DEV-0119 |
 | 2321 | Classe 300X | OWN-DEV-0050 |
+| 2335 | Driver Manager HVAC | OWN-DEV-0209 |
+| 2341 | Linea 5000 | OWN-DEV-0210 |
 
 ## Workflow
 
