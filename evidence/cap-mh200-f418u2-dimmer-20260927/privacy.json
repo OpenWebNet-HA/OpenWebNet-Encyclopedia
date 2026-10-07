@@ -1,0 +1,20 @@
+{
+  "classification": "sanitized",
+  "removed_value_classes": [
+    "network_address",
+    "hardware_id",
+    "device_id",
+    "credential",
+    "installation_topology",
+    "location"
+  ],
+  "notes": "Conducted on an isolated test bench with a physical BTicino MH200 gateway. Network addresses, MACs, credentials, and real installation topology are completely sanitized. Configured bus address (WHERE) is an isolated test-bench assignment.",
+  "pseudonymization": {
+    "device_ids": {
+      "62": "04E6CECF"
+    }
+  },
+  "retained_local_addresses": [
+    "62"
+  ]
+}

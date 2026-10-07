@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/evidence/schema/evidence-privacy.schema.json",
+  "title": "OpenWebNet Evidence Privacy Profile Schema",
+  "description": "Defines the sanitization profile and pseudonymization metadata for evidence packages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "classification",
+    "removed_value_classes"
+  ],
+  "properties": {
+    "classification": {
+      "type": "string",
+      "enum": ["public", "sanitized"]
+    },
+    "removed_value_classes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "network_address",
+          "device_id",
+          "hardware_id",
+          "credential",
+          "account_identifier",
+          "person_identifier",
+          "location",
+          "installation_topology",
+          "capture_metadata",
+          "other"
+        ]
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "pseudonymization": {
+      "type": "object"
+    },
+    "retained_local_addresses": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

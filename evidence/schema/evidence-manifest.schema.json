@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/evidence/schema/evidence-manifest.schema.json",
+  "title": "OpenWebNet Field Evidence Manifest Schema",
+  "description": "Defines metadata, hardware context, test recipe, and claim mappings for empirical OpenWebNet evidence packages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "capture_id",
+    "title",
+    "capture_kind",
+    "epistemic_status",
+    "confidence",
+    "evidence_class",
+    "recorded_at",
+    "summary",
+    "test_recipe",
+    "claims_supported",
+    "frame_count"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^EVID-[A-Z0-9]+(-[A-Z0-9]+)+$"
+    },
+    "capture_id": {
+      "type": "string",
+      "pattern": "^cap-[a-z0-9]+(-[a-z0-9]+)+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "capture_kind": {
+      "type": "string",
+      "enum": [
+        "controlled_experiment",
+        "active_observation",
+        "passive_trace",
+        "fingerprint",
+        "firmware_oracle"
+      ]
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "experimentally_confirmed",
+        "observed",
+        "hypothesized",
+        "firmware_observed"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "undetermined"]
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": [
+        "public_experiment",
+        "public_capture",
+        "firmware_emulation"
+      ]
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "installation_id": {
+      "type": ["string", "null"]
+    },
+    "bus_id": {
+      "type": ["string", "null"]
+    },
+    "sub_bus_id": {
+      "type": ["string", "null"]
+    },
+    "gateway_id": {
+      "type": ["string", "null"]
+    },
+    "environment": {
+      "type": "object",
+      "required": ["gateway_model", "gateway_firmware", "bus_topology"],
+      "properties": {
+        "gateway_model": {"type": "string"},
+        "gateway_firmware": {"type": "string"},
+        "who13_device_type": {"type": "integer"},
+        "bus_topology": {"type": "string"}
+      }
+    },
+    "device_under_test": {
+      "type": ["object", "null"],
+      "properties": {
+        "sku": {"type": "string"},
+        "description": {"type": "string"},
+        "configured_where": {"type": "string"},
+        "pseudonym_device_id": {"type": "string"}
+      }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "test_recipe": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 5},
+      "minItems": 1
+    },
+    "claims_supported": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "machine_kb_claims": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^ownkb:claim:[a-z0-9]+$"}
+    },
+    "related_questions": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^ownkb:question:[a-z0-9]+$"}
+    },
+    "related_documents": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "frame_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result_outcome": {
+      "type": "string",
+      "enum": ["supported", "inconclusive"],
+      "description": "firmware_emulation only. 'supported' establishes at least one claim (including documented silence); 'inconclusive' (startup failure, unresolved timeout, crash) carries no claim and requires an inconclusive_reason."
+    },
+    "inconclusive_reason": {
+      "type": "string",
+      "minLength": 10
+    },
+    "firmware_target": {
+      "type": "object",
+      "description": "Reproducibility context of a firmware_emulation package. Keys mirror the own-firmware-oracle result header (oracle/record.py HEADER_KEYS) plus target configuration and source references.",
+      "additionalProperties": false,
+      "required": [
+        "product",
+        "version",
+        "image_sha256",
+        "target_config_sha256",
+        "harness",
+        "target_sha256",
+        "adapter",
+        "reset",
+        "bus",
+        "framer",
+        "responder",
+        "settle_ms",
+        "quiet_ms",
+        "suite",
+        "suite_sha256",
+        "oracle_version",
+        "oracle_commit",
+        "source_result",
+        "source_cases"
+      ],
+      "properties": {
+        "product": {"$ref": "#/$defs/token"},
+        "version": {"$ref": "#/$defs/token"},
+        "image_sha256": {"$ref": "#/$defs/sha256"},
+        "target_config_sha256": {
+          "$ref": "#/$defs/sha256",
+          "description": "SHA-256 digest of the catalog target configuration file (catalog/<Product>/<Version>.yaml)."
+        },
+        "harness": {"type": "string", "pattern": "^(full|unit:[A-Za-z0-9][A-Za-z0-9._-]*)$"},
+        "target_sha256": {
+          "$ref": "#/$defs/sha256",
+          "description": "SHA-256 digest of the selected executable binary under test (typically openserver for full runs), distinct from the target configuration."
+        },
+        "adapter": {"$ref": "#/$defs/token"},
+        "reset": {
+          "type": "string",
+          "pattern": "^(each|batch-[1-9][0-9]*|[0-9]+)$",
+          "description": "Supported oracle reset policy: 'each', 'batch-N', or integer."
+        },
+        "bus": {"$ref": "#/$defs/token"},
+        "framer": {"$ref": "#/$defs/token"},
+        "responder": {"$ref": "#/$defs/token"},
+        "settle_ms": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Maximum observation limit in milliseconds before timing out."
+        },
+        "quiet_ms": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Quiet period in milliseconds without bus activity after which observation ends early."
+        },
+        "suite": {"$ref": "#/$defs/token"},
+        "suite_sha256": {"$ref": "#/$defs/sha256"},
+        "oracle_version": {
+          "$ref": "#/$defs/token",
+          "description": "Oracle format version counter (e.g. '1'), distinct from Git revision."
+        },
+        "oracle_commit": {
+          "$ref": "#/$defs/git_commit",
+          "description": "Exact 40-character Git commit hash of own-firmware-oracle used to generate the evidence."
+        },
+        "source_result": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Path of the original oracle result TSV file this package was derived from."
+        },
+        "source_cases": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Path of the test suite cases file (e.g. 'oracle/cases/lights-level.cases')."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "token": {"type": "string", "pattern": "^[!-~]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "git_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"evidence_class": {"enum": ["public_experiment", "public_capture"]}},
+        "required": ["evidence_class"]
+      },
+      "then": {
+        "required": [
+          "installation_id",
+          "bus_id",
+          "gateway_id",
+          "environment",
+          "device_under_test"
+        ],
+        "properties": {
+          "capture_kind": {"enum": ["controlled_experiment", "active_observation", "passive_trace", "fingerprint"]},
+          "epistemic_status": {"enum": ["experimentally_confirmed", "observed", "hypothesized"]},
+          "installation_id": {"type": "string"},
+          "bus_id": {"type": "string"},
+          "sub_bus_id": {"type": "string"},
+          "gateway_id": {"type": "string"},
+          "environment": {"required": ["gateway_model", "gateway_firmware", "bus_topology"]},
+          "device_under_test": {
+            "type": "object",
+            "required": ["sku", "configured_where"]
+          },
+          "claims_supported": {"minItems": 1},
+          "frame_count": {"minimum": 1}
+        },
+        "not": {
+          "anyOf": [
+            {"required": ["firmware_target"]},
+            {"required": ["result_outcome"]},
+            {"required": ["inconclusive_reason"]}
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"evidence_class": {"const": "firmware_emulation"}},
+        "required": ["evidence_class"]
+      },
+      "then": {
+        "required": ["firmware_target", "result_outcome"],
+        "properties": {
+          "capture_kind": {"const": "firmware_oracle"},
+          "epistemic_status": {"const": "firmware_observed"},
+          "installation_id": {"type": "null"},
+          "bus_id": {"type": "null"},
+          "sub_bus_id": {"type": "null"},
+          "gateway_id": {"type": "null"},
+          "device_under_test": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"result_outcome": {"const": "supported"}},
+        "required": ["result_outcome"]
+      },
+      "then": {
+        "required": ["claims_supported"],
+        "properties": {"claims_supported": {"minItems": 1}},
+        "not": {"required": ["inconclusive_reason"]}
+      }
+    },
+    {
+      "if": {
+        "properties": {"result_outcome": {"const": "inconclusive"}},
+        "required": ["result_outcome"]
+      },
+      "then": {
+        "required": ["inconclusive_reason"],
+        "properties": {
+          "claims_supported": {"maxItems": 0},
+          "machine_kb_claims": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"capture_kind": {"const": "firmware_oracle"}},
+        "required": ["capture_kind"]
+      },
+      "then": {"properties": {"evidence_class": {"const": "firmware_emulation"}}}
+    }
+  ]
+}
