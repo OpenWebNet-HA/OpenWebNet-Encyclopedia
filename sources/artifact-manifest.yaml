@@ -7296,9 +7296,14 @@ artifacts:
     visibility: public
     public_url: https://archive.openwebnet-ha.org/sha256/78/ca/78ca31a67be1a93dc933574dd7d0cf30ddff259881e23c050fe49e3d565c5660.pdf
   language:
-  - fr
+  - it
   - en
+  - fr
+  - de
+  - es
   - nl
+  - pt
+  - ar
   language_evidence: Language verified by reading the retained manufacturer original
   notes:
   - Original manufacturer response retrieved on 2026-10-07. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
