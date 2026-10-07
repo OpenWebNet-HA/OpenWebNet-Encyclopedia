@@ -5372,6 +5372,26 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-home-project-functions-2024-en-20261007
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Home-Project-functions-2024-EN manufacturer device documentation
+  media_type: application/pdf
+  filename: Home-Project-functions-2024-EN.pdf
+  version_label: Printed revision in original; retrieved 2026-10-07
+  size: 2828511
+  sha256: fd533693372a2afc9d29d1a9fe33df0dcb81932559880b0acda9cb07ff29d490
+  source_url: https://www.bticino.com/sites/default/files/2025-03/NUOVE%20FUNZIONI%20HOME%20%2B%20PROJECT%202024_REV_5_GB.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/fd/53/fd533693372a2afc9d29d1a9fe33df0dcb81932559880b0acda9cb07ff29d490.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/fd/53/fd533693372a2afc9d29d1a9fe33df0dcb81932559880b0acda9cb07ff29d490.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-07. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-hotel-cm220600-0982-fr
   kind: documentation
   publisher: BTicino / Legrand
