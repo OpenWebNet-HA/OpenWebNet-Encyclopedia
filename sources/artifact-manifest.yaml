@@ -12920,6 +12920,27 @@ artifacts:
   language_evidence: Manufacturer original text and diagrams inspected
   notes:
   - Original manufacturer response retrieved on 2026-10-04. Original PDF bytes uploaded, public retrieval SHA-256 verified, then immediately registered on main before incorporation.
+- id: device-doc-u3641a-20261007
+  kind: documentation
+  publisher: BTicino / Legrand
+  title: Area Manager 02645 installation sheet
+  media_type: application/pdf
+  filename: U3641A.pdf
+  version_label: U3641A; 02/10 - 01 SY
+  size: 235981
+  sha256: 1f5315b6444cc760851ea8923e5b4ad0b60dac176a0e8e78543b639a854d0a30
+  source_url: https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3641a.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/1f/53/1f5315b6444cc760851ea8923e5b4ad0b60dac176a0e8e78543b639a854d0a30.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/1f/53/1f5315b6444cc760851ea8923e5b4ad0b60dac176a0e8e78543b639a854d0a30.pdf
+  language:
+  - fr
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Original manufacturer response retrieved on 2026-10-07. Original response bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
 - id: device-doc-u3887a-20261004
   kind: documentation
   publisher: BTicino / Legrand
