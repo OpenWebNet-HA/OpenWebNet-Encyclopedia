@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 30 |
-| reviewed | 180 |
+| review-ready | 20 |
+| reviewed | 190 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1571 | DIN dimmer 1000 VA 127 V | 1 | review-ready | OWN-DEV-0181 | partial | complete | complete | pending | - |
-| normal | 1594 | Actuator with 1 relay DIN | 1 | review-ready | OWN-DEV-0182 | partial | complete | complete | pending | - |
-| normal | 1595 | Actuator 1 relay fluorescent lamps 2 DIN | 1 | review-ready | OWN-DEV-0183 | partial | complete | complete | pending | - |
-| normal | 1602 | DIN dimmer 400 VA 127 V | 1 | review-ready | OWN-DEV-0184 | partial | complete | complete | pending | - |
-| normal | 1672 | Light manager control unit | 1 | review-ready | OWN-DEV-0185 | partial | complete | complete | pending | - |
-| normal | 1689 | Central unit access control 1 head Vigik  | 1 | review-ready | OWN-DEV-0186 | partial | complete | complete | pending | - |
-| normal | 1690 | Local portable programmer | 1 | review-ready | OWN-DEV-0187 | partial | complete | complete | pending | - |
-| normal | 1691 | GPRS Interface | 1 | review-ready | OWN-DEV-0188 | partial | complete | complete | pending | - |
-| normal | 1698 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0189 | partial | complete | complete | pending | - |
-| normal | 1771 | IP scenario module | 1 | review-ready | OWN-DEV-0190 | partial | complete | complete | pending | - |
 | normal | 1804 | Burglar alarm control unit with contacts | 1 | review-ready | OWN-DEV-0191 | partial | complete | complete | pending | - |
 | normal | 1812 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0192 | partial | pending | complete | pending | - |
 | normal | 1814 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0193 | partial | complete | complete | pending | - |
@@ -182,14 +172,19 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1563 | Key card switch | OWN-DEV-0036 |
 | 1566 | PIR flush mounted sensor | OWN-DEV-0016 |
 | 1570 | Shutter actuator DIN 1 motor bus | OWN-DEV-0180 |
+| 1571 | DIN dimmer 1000 VA 127 V | OWN-DEV-0181 |
 | 1579 | Shutter control bus | OWN-DEV-0044 |
 | 1582 | Dimmer for energy saving lamps bus | OWN-DEV-0139 |
 | 1586 | Shutter actuator bus | OWN-DEV-0045 |
 | 1593 | 1 relay DIN NC actuator 16 A | OWN-DEV-0140 |
+| 1594 | Actuator with 1 relay DIN | OWN-DEV-0182 |
+| 1595 | Actuator 1 relay fluorescent lamps 2 DIN | OWN-DEV-0183 |
 | 1596 | 2 relays DIN NC actuator 10 A | OWN-DEV-0141 |
 | 1597 | Ballast DIN dimmer 1-10 V | OWN-DEV-0142 |
 | 1599 | DIN dimmer 400 VA | OWN-DEV-0143 |
+| 1602 | DIN dimmer 400 VA 127 V | OWN-DEV-0184 |
 | 1657 | Local Display 1.2" bus | OWN-DEV-0037 |
+| 1672 | Light manager control unit | OWN-DEV-0185 |
 | 1678 | 8 scenarios control | OWN-DEV-0103 |
 | 1679 | DO NOT DISTURB-MAKE UP ROOM control | OWN-DEV-0104 |
 | 1680 | DO NOT DISTURB-MAKE UP ROOM indicator | OWN-DEV-0105 |
@@ -198,7 +193,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1684 | Actuator DIN with 2 outputs 0-10V | OWN-DEV-0145 |
 | 1685 | Actuator DIN with 3 relays and 2 outputs 0-10V | OWN-DEV-0146 |
 | 1686 | Display thermostat 2 modules | OWN-DEV-0046 |
+| 1689 | Central unit access control 1 head Vigik  | OWN-DEV-0186 |
+| 1690 | Local portable programmer | OWN-DEV-0187 |
+| 1691 | GPRS Interface | OWN-DEV-0188 |
+| 1698 | IP interface (2Wire/IP) | OWN-DEV-0189 |
 | 1768 | MyHOME_Screen 10 | OWN-DEV-0047 |
+| 1771 | IP scenario module | OWN-DEV-0190 |
 | 1809 | Multimedia Touch Screen | OWN-DEV-0107 |
 | 1847 | Key card switch RFID | OWN-DEV-0039 |
 | 1852 | DIN actuator | OWN-DEV-0147 |

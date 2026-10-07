@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `346891` | `8005543502792` | `346891-publisher-product-sheet.pdf` PDF p. 1; `346891-italian-product-sheet.pdf` PDF p. 1 |
+| `346891` | `8005543502792` | [Exact publisher export](https://archive.openwebnet-ha.org/sha256/93/ed/93ed9799d93e4b0879b53c880239a202b596aac3982a82c12e42752c09f2f640.pdf), PDF p. 1; `346891-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `346891` | IP interface (2Wire/IP) | Canonical commercial record `1762` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -54,8 +62,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | Indicators / controls | `LINK, SPEED, POWER; reset; physical configurator sockets` | `ST_00000937IT.pdf` printed/PDF p. 1 |
 | Software minimum | `Switchboard Suite 4.0.23` | `ST_00000937IT.pdf` printed/PDF p. 1 |
 | Excluded combinations | `346890 predecessor; Classe300, Classe300X, Hometouch and Classe300EOS with Netatmo` | `ST_00000937IT.pdf` printed/PDF p. 1 |
-
-| Current export compatibility wording | ONLY Class 100 internal units; not compatible with Classe300EOS or Hometouch | `346891-publisher-product-sheet.pdf` PDF p. 1 |
+| Current export compatibility wording | ONLY Class 100 internal units; not compatible with Classe300EOS or Hometouch | [Exact publisher export](https://archive.openwebnet-ha.org/sha256/93/ed/93ed9799d93e4b0879b53c880239a202b596aac3982a82c12e42752c09f2f640.pdf), PDF p. 1 |
 
 ### Publisher export attributes
 
@@ -85,6 +92,22 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `19` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `19` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -94,6 +117,20 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `96` | `41` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `96` | `42` | BTicino (key `1`) | `0` | SVM | `1698_1.0_BT\xml\SVM\svm.xml` |
+| `96` | `43` | BTicino (key `1`) | `0` | Extra | `1698_1.0_BT\xml\Extra\extra.xml` |
+| `96` | `44` | BTicino (key `1`) | `0` | Director | `1698_1.0_BT\xml\DIRECTOR\director.xml` |
+| `96` | `45` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1698_1.0_BT\xml\Protocol\protocol.xml` |
+
+All 5 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -113,23 +150,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `96` | Product Programming | `3` | Association key `4` |
+| `96` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `96` | USB | `3` |
+| `96` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `96` | `1` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `96` | `1` | `0` | `1698_1.0_BT\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `96` | `1` | `0` | `1698_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `96` | `1` | `0` | `1698_1.0_BT\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `96` | `1` | `0` | `1698_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -151,6 +178,18 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | Older software capacity wording | Basic 3999 internal units / 95 entrance panels; “practically unlimited” via base offsets; differs from bounded 2021 technical-sheet capacity table | `RA00060AA_S_IT.pdf` p. 11 |
 | Range endpoints / PABX delay | Lower and upper units must physically exist; intermediate addresses may be absent; DOSA forwarding disabled or 10/15/20 seconds; force concierge call optional | `RA00060AA_S_IT.pdf` pp. 12-13 |
 | Switchboards / polling | Ordered fallback; handset-specific single address / interval mapping; optional polling frequency and interruption command on non-response | `RA00060AA_S_IT.pdf` pp. 18-19 |
+
+### Advanced configuration functions
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Interface identity / authentication | Unique interface number `1..100000`; public default password 12345, `5..9` digits | RA00060AA_S_IT pp. 9–10 |
+| Handset / entrance intervals | Both endpoints must physically exist; intermediate addresses may be absent; PABX forwarding delay 10/15/20 seconds or disabled | RA00060AA_S_IT pp. 12–13 |
+| Direct entrance panels | Configured panels call handsets without activating the concierge switchboard | RA00060AA_S_IT p. 14 |
+| Activation redirection | Maps unused local entrance addresses to remote system addresses; unavailable if all 95 local entrance addresses are occupied | RA00060AA_S_IT p. 15 |
+| Camera cycling / locks | Set starting camera and local/remote system addresses; lock targets accept a single address or interval | RA00060AA_S_IT pp. 16–17 |
+| Concierge ordering | Ordered switchboard list provides busy/offline fallback; dedicated switchboards may serve handset intervals | RA00060AA_S_IT p. 18 |
+| Alarm polling | Enable cyclic interrogation, select seconds/minutes interval and optionally send interruption commands when a device fails to respond | RA00060AA_S_IT p. 19 |
 
 ## Firmware-scoped configuration
 
@@ -184,6 +223,8 @@ The following domains and defaults describe reusable Object definitions in the c
 | `EXTERNAL_UNIT_MAX` | `0..100090` | Not specified in source | (0-100090) |
 | `INTERNAL_UNIT_MIN` | `0..103999` | Not specified in source | (0-103999) |
 | `INTERNAL_UNIT_MAX` | `0..103999` | Not specified in source | (0-103999) |
+
+Reusable Object `92` internal and external address domains (`0..103999` and `0..100090`) describe address values, not capacity. No filter, conversion or Virgin Object association supplies a different effective domain. Quick and advanced manufacturer configuration limits remain separate from those reusable ranges and the item’s split configurator fields.
 
 ## Conditions, filters, and conversions
 
@@ -263,17 +304,11 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 This is catalogue item 1698 with its own IP-interface Object and Firmware; it is not the earlier 346890 cluster. Current exact-product technical restrictions override a family-level assumption of compatibility. The product exports corroborate the exact commercial reference and EAN but do not establish the installed release.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `346891-publisher-product-sheet.pdf` | Complete description, product-characteristics and classification tables; exact commercial EAN; linked document / payload inventory remains separately scoped. |
-| `346891-italian-product-sheet.pdf` | Exact commercial description and technical attributes; EAN used only if explicitly present; European compliance boilerplate is not a publication revision. |
-| `LE05302AA.pdf` | PDF pp. 1-3: labelled interfaces, supply / connection drawings and mounting; English blocks reviewed; 346000 accessory drawing separately scoped. |
-| `RA00060AA_S_IT.pdf` | Printed/PDF pp. 4-6, 9-19: configuration transfer / update, general / network / security parameters, base offsets, handset / entrance ranges, switchboards and alarm polling. |
-| `ST_00000937IT.pdf` | Printed/PDF pp. 1-6: electrical / interface specifications, compatibility, quick / advanced modes, capacities, address translation and topology examples. |
-
 The older software manual says 3999 basic internal units and describes growth by base offsets as practically unlimited; the 2021 sheet gives explicit quick / advanced capacities of 3900/10000. The wording and publication scopes remain separate. The 2013 leaflet draws a 346000 power supply, while the 2021 sheet uses 346050; accessory revisions are not silently substituted. The current product export further limits internal units to Class 100.
+
+LE05302AA p. 2 names M1/N1 as minimum and M2/N2 as maximum address parts; the 2021 technical-sheet legend duplicates N2/M2 in its minimum-address explanation, while its visually checked socket drawing remains C/N2/M2/N1/M1. This is a legend discrepancy. The leaflet gives C=`1..9` in Italian and other blocks but C=`0..9` in English, while item-side C also admits 0. Do not silently make the language blocks identical. The M1/M2 first-part `00..99` wording exceeds the item’s first-digit domains `0..3`; physical selectors, system limits and software address fields have distinct scopes.
+
+The technical-sheet range text uses strict inequalities, while its illustrated mode-2 example includes the endpoints 112 and 3209. Preserve this boundary discrepancy when deriving an interval. Its 3999 basic-address statement, 3900 quick-configuration capacity and 4000-unit example do not establish a single interchangeable limit; the advanced capacity table gives 10000 internal units and 1000 entrance panels. Address fields are identifiers, not endpoint counts.
 
 ## Evidence limits and open work
 
@@ -302,14 +337,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `346891-publisher-product-sheet.pdf` | `93ed9799d93e4b0879b53c880239a202b596aac3982a82c12e42752c09f2f640` | 404075 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/93/ed/93ed9799d93e4b0879b53c880239a202b596aac3982a82c12e42752c09f2f640.pdf) |
-| `346891-italian-product-sheet.pdf` | `3cfcb76b340160131ead91138775d5042c764a287f9f561db1d59e4bd6a076a3` | 18542 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/3c/fc/3cfcb76b340160131ead91138775d5042c764a287f9f561db1d59e4bd6a076a3.pdf) |
-| `LE05302AA.pdf` | `3d31d8d854febc7d676e51182b3bb1dfe0cb1a12e4ddbe8b29fa70633d70a4b5` | 504289 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/3d/31/3d31d8d854febc7d676e51182b3bb1dfe0cb1a12e4ddbe8b29fa70633d70a4b5.pdf) |
-| `RA00060AA_S_IT.pdf` | `0c6f1e3cb8b98e85bc6ad7bf7482ec478655247c137fa2973323a6d1a8f114d2` | 6324454 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/0c/6f/0c6f1e3cb8b98e85bc6ad7bf7482ec478655247c137fa2973323a6d1a8f114d2.pdf) |
-| `ST_00000937IT.pdf` | `085968ebe183ef296d38ae591c73e03938fa3ede57094f982e30dd4d5fc3edaf` | 1387570 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/08/59/085968ebe183ef296d38ae591c73e03938fa3ede57094f982e30dd4d5fc3edaf.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0189)

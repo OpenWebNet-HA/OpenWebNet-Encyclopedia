@@ -22,6 +22,14 @@ Legrand 002645 Area Manager coordinates lighting scenarios and connects a BUS/SC
 | --- | --- | --- | --- |
 | Legrand | `002645` | Established catalogue identity | Manufacturer database commercial record `1676` explicitly links this SKU to item `1672` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `002645` | Light manager control unit | Canonical commercial record `1676` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -29,18 +37,29 @@ Legrand 002645 Area Manager coordinates lighting scenarios and connects a BUS/SC
 | `ex212001_657.pdf` | Historical lighting catalogue page | `Catalogue 2012–2013; extract ex212001_657` | Printed p. 657 / PDF p. 1: 002645 and 573960 exact-reference mentions; 573958 paragraph excluded from 573960 specifications. | [Archived original](https://archive.openwebnet-ha.org/sha256/40/0d/400d2496efd6d5d7d7ecb32711f9014db2d885f83849c64d8bbb5b262144f662.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/cexp2012-13/ex212001_657.pdf) |
 | `le05228aa_en.pdf` | Assisted living technical guide | `LE05228AA-EN; April 2012` | Printed/PDF pp. 19, 34-35: illustrated topology, exact Area Manager technical box, terminal drawing and auxiliary supply; conflicting accessory values preserved. | [Archived original](https://archive.openwebnet-ha.org/sha256/ce/5e/ce5e8c0067a7633f761f4e0221e5fd7849f0cc171986bc16b1e628157d118ebb.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-exp/np-ft-gt/le05228aa_en.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1672`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `U3641A.pdf` | Exact Area Manager installation sheet | U3641A; 02/10-01 SY | Printed/PDF pp. 1–2: auxiliary/SCS draws, dissipation, Ethernet/maintenance connectors, indications and common-switch installation | [Archived original](https://archive.openwebnet-ha.org/sha256/1f/53/1f5315b6444cc760851ea8923e5b4ad0b60dac176a0e8e78543b639a854d0a30.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3641a.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Published SCS supply | `27 Vdc` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
+| Published supply label in catalogue / guide | `27 Vdc; exact installation sheet separately identifies the auxiliary input` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Standby consumption | `1.5 W` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Operating temperature | `5..40 °C` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Protection / mounting | `IP20; 6 DIN modules (6 × 17.5 mm)` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Auxiliary supply accessory | `063442 / 0 634 42; source voltages conflict` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Connections | `Ethernet; SCS; separate auxiliary supply; reset control` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
 | Software packs | `048881 for operation; 048882 for supervision; historical catalogue scope` | `le05228aa_en.pdf` printed/PDF p. 34; `ex212001_657.pdf` printed p. 657 / PDF p. 1 |
+
+### Exact installation-sheet details
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Auxiliary input / SCS draw | `27 Vdc` auxiliary supply; SCS draw `8 mA` | U3641A printed/PDF p. 1 |
+| Auxiliary draw | `40 mA` at rest; `55 mA` during remote transfer | U3641A printed/PDF p. 1 |
+| Maximum dissipated power | `1.5 W` | U3641A printed/PDF p. 1 |
+| Network / maintenance | 10BaseT Ethernet; serial maintenance connector with interface 376000 / 49234 | U3641A printed/PDF p. 1 |
+| Indications | Red flashes at startup/maintenance, steady in normal operation; green Ethernet indicator | U3641A printed/PDF p. 1 |
 
 ## Identity
 
@@ -53,6 +72,22 @@ Legrand 002645 Area Manager coordinates lighting scenarios and connects a BUS/SC
 | Main item model / `modobj` | `43` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `43` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -62,6 +97,18 @@ Legrand 002645 Area Manager coordinates lighting scenarios and connects a BUS/SC
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `127` | `950` | Legrand (key `2`) | `0` | external software | `AreaManager_0200` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+Firmware `127` is version/revision/build `2.0.1` and Deprecated in the retained catalogue. Its item-side `FW_VER` default `3.0.0` is a configuration value, not evidence of an additional firmware release. Gateway-field defaults do not override the separately documented network role or the three Module slots. The public LAN/address defaults remain templates, not installed network data.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,19 +130,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `127` | Product Programming | `3` | Association key `4` |
+| `127` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `127` | Ethernet | `2` |
+| `127` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `127` | `2` | `0` | `AreaManager_0200` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -228,16 +269,13 @@ The catalogue registers lighting-manager, scenario-scheduler and gateway Objects
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The exact U3641A installation sheet requires the SCS supply 03560 and auxiliary supply 63442 to be controlled by the same common mains switch (printed/PDF p. 2). Its configuration instructions refer to a supplied CD manual, which has not been retained or examined. The maintenance connector is a separately documented serial route; it does not change the catalogue Ethernet connection association.
+
 ## Source reconciliation
 
 The assisted-living guide prints 27 Vdc in the Area Manager technical box but labels the auxiliary terminal 12 Vdc in the drawing; its 063442 supply page (printed/PDF p. 35) specifies 27 Vdc/600 mA, whereas the 2012–13 catalogue specifies 12 Vdc/1.2 A for 063442. These source-specific values conflict and are not silently unified. The 175-address example is installation topology, independent of catalogue Module count.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `ex212001_657.pdf` | Printed p. 657 / PDF p. 1: 002645 and 573960 exact-reference mentions; 573958 paragraph excluded from 573960 specifications. |
-| `le05228aa_en.pdf` | Printed/PDF pp. 19, 34-35: illustrated topology, exact Area Manager technical box, terminal drawing and auxiliary supply; conflicting accessory values preserved. |
+U3641A identifies the auxiliary input as 27 Vdc and gives independent SCS and auxiliary current draws. This supports the 27 V accessory row in the assisted-living guide, while the guide’s 12 V terminal annotation and historical catalogue accessory 12 V / 1.2 A remain conflicting evidence. The installation sheet calls 1.5 W maximum dissipated power; the catalogue/guide call 1.5 W standby consumption. These descriptions are preserved rather than treated as the same operating condition. The 175-address / 45-room ward illustration is an example topology, not a firmware Module count or a universal system capacity.
 
 ## Evidence limits and open work
 
@@ -256,11 +294,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `ex212001_657.pdf` | `400d2496efd6d5d7d7ecb32711f9014db2d885f83849c64d8bbb5b262144f662` | 265011 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/40/0d/400d2496efd6d5d7d7ecb32711f9014db2d885f83849c64d8bbb5b262144f662.pdf) |
-| `le05228aa_en.pdf` | `ce5e8c0067a7633f761f4e0221e5fd7849f0cc171986bc16b1e628157d118ebb` | 16882220 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/ce/5e/ce5e8c0067a7633f761f4e0221e5fd7849f0cc171986bc16b1e628157d118ebb.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0185)

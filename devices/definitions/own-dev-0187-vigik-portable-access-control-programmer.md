@@ -22,13 +22,23 @@
 | --- | --- | --- | --- |
 | BTicino | `348405` | Established catalogue identity | Manufacturer database commercial record `1754` explicitly links this SKU to item `1690` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `348405` | Local portable programmer | Canonical commercial record `1754` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `guide_controle_dacces_vigik.pdf` | Vigik access-control system guide | `Publication date not established` | Printed/PDF pp. 5, 7, 9, 12-19, 24-41: 348040 controller, 348405 programmer and 348330 GPRS specifications, administration modes and historical service workflow. | [Archived original](https://archive.openwebnet-ha.org/sha256/21/f1/21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563.pdf) | [Publisher original](https://assets.legrand.com/general/mediagrp/np-ft-gt/guide_controle_dacces_vigik.pdf) |
+| `guide_controle_dacces_vigik.pdf` | Vigik access-control system guide | `Publication date not established` | Printed/PDF pp. 5, 7, 9, 12-19: 348040 controller, 348405 programmer and 348330 GPRS specifications, administration modes and historical service workflow. | [Archived original](https://archive.openwebnet-ha.org/sha256/21/f1/21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563.pdf) | [Publisher original](https://assets.legrand.com/general/mediagrp/np-ft-gt/guide_controle_dacces_vigik.pdf) |
 | `BT00756_b_IT.pdf` | 348405 programmer technical sheet | `BT00756-b-IT; 16/01/2014` | Printed/PDF p. 1: supply / batteries, display, dimensions, buttons, antennas, USB / micro-USB and storage interfaces. | [Archived original](https://archive.openwebnet-ha.org/sha256/4a/35/4a35bb890420c58e5a84c7af95932722786d828632aaa74ece0ac849bbbed67a.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00756_b_IT.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1690`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00082AA_S_FR.pdf` | ACWEB installer portal manual | RA00082AA_S_FR; publication date unestablished | Printed/PDF pp. 14–41: local-plus/online configuration, validation, transfers, site/family/service limits and synchronisation; portal concepts are not local Objects | [Archived original](https://archive.openwebnet-ha.org/sha256/80/05/80052edcb622123171d31b6797b3ee0efb70125f285e3c30f6ce4a9afc789bd9.pdf) | [Publisher source](https://www.acweb.bticino.com/fr_FR/browser/attachments/bin/help/RA00082AA_S_FR.pdf) |
+| `BT-controle-acces.pdf` | Manufacturer access-control brochure | Publication date unestablished | Printed pp. 12–13 / PDF pp. 14–15: exact controller, programmer and GPRS descriptions; supply and USB wording conflicts scoped | [Archived original](https://archive.openwebnet-ha.org/sha256/f9/bd/f9bdca3299f987ae1207b5fdeb9b4be5173038d9f448734597d819c9eeb58d3f.pdf) | [Publisher source](https://assets.legrand.com/pim/DOCUMENT/BT_controle_acces.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -53,6 +63,18 @@
 | Main item model / `modobj` | `5` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `5` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -63,6 +85,23 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `102` | `183` | Unspecified (key `0`) | `0` | Extra | `1690_1.0_undefined\xml\Extra\extra.xml` |
+| `102` | `184` | Unspecified (key `0`) | `0` | Protocol and other device parameters | `1690_1.0_undefined\xml\Protocol\protocol.xml` |
+| `102` | `185` | BTicino (key `1`) | `0` | Extra | `1690_1.0_BT\xml\Extra\extra.xml` |
+| `102` | `186` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1690_1.0_BT\xml\Protocol\protocol.xml` |
+| `587` | `894` | BTicino (key `1`) | `0` | Extra | `1690_1.1_BT\xml\Extra\extra.xml` |
+| `587` | `895` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1690_1.1_BT\xml\Protocol\protocol.xml` |
+
+All 6 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+The Vigik integration compatibility table requires 348405 programmer 1.01.26 (guide printed/PDF p. 19). This is a minimum for the named intercom/access integration, not proof that every older catalogue release supports it. Companion requirements include 348040/T25 1.02.06/2.01.00, 348405 1.01.26 and 348330 1.00.43; exact connected-product applicability must be checked.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,26 +122,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `102` | Product Programming | `3` | Association key `4` |
-| `587` | Product Programming | `3` | Association key `4` |
+| `102` | Product Programming | `3` | Canonical firmware/mode association |
+| `587` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `102` | USB | `3` |
-| `587` | USB | `3` |
+| `102` | USB | Canonical firmware/connection association |
+| `587` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `102` | `0` | `0` | `1690_1.0_undefined\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `102` | `0` | `0` | `1690_1.0_undefined\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `102` | `1` | `0` | `1690_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `102` | `1` | `0` | `1690_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `587` | `1` | `0` | `1690_1.1_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `587` | `1` | `0` | `1690_1.1_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -136,6 +164,8 @@ Catalogue Object key `622` maps to external Object `126`.
 | Surface | Evidence |
 | --- | --- |
 | Object configuration | No reusable fields stored for this Object in the canonical catalogue |
+
+Object `126` (catalogue key `622`) has no reusable field rows; the two firmware records contain only item-side `AID`. Site, badge, door and portal settings are software-managed data, not omitted local Object fields. USB mode/connection metadata and the six parameter-file associations do not establish their XML payload contents or RF encoding.
 
 ## Conditions, filters, and conversions
 
@@ -203,22 +233,25 @@ The technical sheet describes local-menu programming or a site database download
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+### ACWEB configuration and transfer scope
+
+The retained AA installer manual separates Local Plus (transfer through 348405) from On-line (through 348330); site and management types cannot be changed after setup (p. 14). Controllers must be associated with at least one entrance, with one Vigik reader per controller (p. 19). Validate addresses before activation; Local Plus requires confirming settings, exporting the site and transferring it through the portable programmer (pp. 21–23). On-line requires the site password and interface serial, installation diagnostics and correction of errors before management is enabled (pp. 24–28). These are setup requirements; no installation-specific credentials or serial are retained here.
+
+Even an On-line site must add new Vigik services through 348405: export to the programmer, add the service, transfer to the controller and import the changed site back to ACWEB (p. 31). The Local Plus sequence imports the changed site before the controller transfer. AA portal notifications distinguish pending, sent/acknowledged and executed commands; GPRS connects hourly, with an immediate synchronisation option (p. 41). Portal or mobile-service availability today is unestablished.
+
 ## Source reconciliation
 
 The exact technical sheet and system guide agree on front badge and rear reader antennas, SD / smart-card slots and the separation of USB / controller and micro-USB/PC connections. Recharge applies to NiMH cells; alkaline cells are not represented as rechargeable. Catalogue gateway-related identity tokens do not prove that this portable accessory answers installed-device diagnostics.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `guide_controle_dacces_vigik.pdf` | Printed/PDF pp. 5, 7, 9, 12-19, 24-41: 348040 controller, 348405 programmer and 348330 GPRS specifications, administration modes and historical service workflow. |
-| `BT00756_b_IT.pdf` | Printed/PDF p. 1: supply / batteries, display, dimensions, buttons, antennas, USB / micro-USB and storage interfaces. |
+The exact BT00756-b-IT sheet (16 January 2014, p. 1) and Vigik guide p. 7 label USB for the controller and micro-USB for the PC, supply and NiMH charging. The new brochure reverses the connection labels: USB to PC and micro-USB to controller (printed p. 13 / PDF p. 15), and uses generic USB charging wording. Retain this disagreement; the exact sheet governs the described connector layout, without assigning an undocumented hardware revision. Recharge applies to NiMH cells only; alkaline AA cells are a separate supply choice. Frequencies printed for neighbouring badges/radio receivers do not establish this programmer’s antenna frequencies.
 
 ## Evidence limits and open work
 
 Operating temperature, protection, charger electrical rating, radio frequencies, detailed administrator workflow and installed firmware behavior remain unestablished.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+The official ACWEB AD HTML overview was found at [RA00082AD_S_FR-3.html](https://www.acweb.bticino.com/fr_FR/browser/attachments/bin/help/PortailACWEB-FR/RA00082AD_S_FR-3.html). Only its Local Plus / On-line overview was inspected; the complete AD revision is outside this review. The corresponding attempted PDF retrieval returned 404. AA procedures must not be represented as a complete reconciliation of AD. The older Vigik guide’s customer-screen walkthrough beyond p. 19 was not re-audited; the AA installer manual supplies the reviewed portal workflow.
 
 ## Sources
 
@@ -231,11 +264,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `guide_controle_dacces_vigik.pdf` | `21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563` | 14121445 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/21/f1/21f15d54f5aabef655f35d8c64294b6288fdf5a6e1bfa98fc2d905d6e0f05563.pdf) |
-| `BT00756_b_IT.pdf` | `4a35bb890420c58e5a84c7af95932722786d828632aaa74ece0ac849bbbed67a` | 641417 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/4a/35/4a35bb890420c58e5a84c7af95932722786d828632aaa74ece0ac849bbbed67a.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0187)

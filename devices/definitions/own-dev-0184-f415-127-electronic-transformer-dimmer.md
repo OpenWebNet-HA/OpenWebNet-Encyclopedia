@@ -22,12 +22,21 @@ F415/127 is a one-channel DIN dimmer for electronic-transformer loads. It switch
 | --- | --- | --- | --- |
 | BTicino | `F415/127` | Established catalogue identity | Manufacturer database commercial record `1602` explicitly links this SKU to item `1602` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F415/127` | DIN dimmer 400 VA 127 V | Canonical commercial record `1602` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `MQ00278_e_EN.pdf` | Dimmer technical sheet | `MQ00278-e-EN; 20/09/2018` | Printed/PDF pp. 1-3: exact /127 load rows, supply / draw, enclosure, physical / virtual selectors, local operation and wiring. Non-/127 dissipation excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MQ00278_e_EN.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1602`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BTicino-Mexico-lighting-control.pdf` | Regional lighting technical guide | Publication date unestablished | Printed pp. 76, 78 / PDF pp. 78, 80: exact /127 ratings, draw, terminals, IP20 and Push & Learn table; regional discrepancies retained | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/0f/c90ff73d4a7395428ae1147b00da9f5ac9c9ff1c7133c772df1411d35cd56aa3.pdf) | [Publisher source](https://bticino.com.mx/uploads/8661202a4fdd25e15583d09fc93f8e02.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -42,6 +51,16 @@ F415/127 is a one-channel DIN dimmer for electronic-transformer loads. It switch
 | Printed protection / impact values | `IK04 / IP20; labels apparently inverted` | `MQ00278_e_EN.pdf` printed/PDF p. 1 |
 | Interfaces / local indication | `SCS connector; load terminals; configurator socket; local load key; load LED; replaceable fuse` | `MQ00278_e_EN.pdf` printed/PDF p. 1 |
 
+### Regional rating evidence
+
+| Source | Published mains voltage | Exact F415/127 load / current evidence |
+| --- | --- | --- |
+| MQ00278-e-EN, 20 September 2018 | `110 Vac`, `50 Hz` | `60..400` VA; 0.9..3.6 A; 22 mA |
+| Mexico guide, printed p. 76 / PDF p. 78 | 110 V | `60..400` W; 0.25..1.7 A; 6 mA |
+| Mexico guide, printed p. 78 / PDF p. 80 | `127 Vac` | `100..400` W; 6 mA |
+
+The Mexico guide also gives IP20, 2.5 mm² terminals, 27 Vdc supply, four DIN modules, −5..+45 °C and no Push & Learn for this reference (printed p. 76 / PDF p. 78). These are source-specific specifications, not a conversion of VA to W.
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -53,6 +72,19 @@ F415/127 is a one-channel DIN dimmer for electronic-transformer loads. It switch
 | Main item model / `modobj` | `136` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `136` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -62,6 +94,12 @@ F415/127 is a one-channel DIN dimmer for electronic-transformer loads. It switch
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -81,9 +119,10 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `238` | Physical configuration | `0` | Association key `3` |
+| `238` | Physical configuration | `0` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -168,6 +207,10 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+### Applicability irregularities
+
+Firmware `238` item-side `M=0..4,11,15` and reusable Object `8` mode values have different scopes. No conversion is attached to resolve physical timer selectors into the reusable Object mode. The sole state-saving filter retains its full reusable domain and default. `MIN_LEVEL_ADV` stores default `0` outside its `1..100` reusable domain, with no applicable correction recorded. Generic `TYPE_LOAD` labels for LED, fluorescent, DALI and other loads, and `TYPE_STANDARD` values, do not establish those capabilities on this exact product. The published load families remain the applicable evidence.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -222,11 +265,7 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 The exact sheet covers four distinct references. Only the named `/127` load row is used here: it prints 110 Vac at 50 Hz, despite the `/127` commercial suffix and catalogue wording. The sheet prints “Protection index: IK04” and “Impact resistance: IP20”; the values are preserved with this apparent label inversion. Dissipation values 10 W and 11 W are explicitly labelled F414 and F415 respectively and are not established for their `/127` variants. The generic “1000VA” heading does not override the F415/127 400 VA row.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MQ00278_e_EN.pdf` | Printed/PDF pp. 1-3: exact /127 load rows, supply / draw, enclosure, physical / virtual selectors, local operation and wiring. Non-/127 dissipation excluded. |
+The retained Mexican manufacturer guide differs from the 2018 English sheet in mains voltage, load units, current limits and SCS draw. Its two exact-reference pages also differ internally in the minimum load for F415/127. No dated hardware change or regional equivalence is established. Preserve each row when checking a physical installation; the SKU suffix alone does not resolve these conflicts.
 
 ## Evidence limits and open work
 
@@ -245,10 +284,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `MQ00278_e_EN.pdf` | `d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273` | 220085 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/d6/ca/d6cafa21923a3de3dfe1cbb42895617134892c56ae2edda866c2e7fff2c54273.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0184)

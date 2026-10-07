@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `MH201` | `8005543498033` | `MH201-publisher-product-sheet.pdf` PDF p. 1 |
+| `MH201` | `8005543498033` | [Exact publisher export](https://archive.openwebnet-ha.org/sha256/f8/91/f8915cd76aff8dab551f9f8e774ed44db38dcb6fc80e8ed1d1e45f5b7f4ec3c5.pdf), PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `MH201` | IP scenario module | Canonical commercial record `1814` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -36,10 +44,10 @@ EANs identify the named commercial variant, not the configured physical device o
 | --- | --- | --- | --- | --- | --- |
 | `LE06187AB.pdf` | MH201 multilingual installation leaflet | `LE06187AB-01PC-13W46` | PDF pp. 1-3: restart/DHCP timings, LED phase table and direct / switch Ethernet wiring; English blocks reviewed; differs from technical sheet actions. | [Archived original](https://archive.openwebnet-ha.org/sha256/51/d9/51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE06187AB.pdf) |
 | `MM00777-b-EN.pdf` | MH201 technical sheet | `MM00777-b; 15/01/2015` | Printed/PDF pp. 1-4: electrical ratings, scenario capacities, password / name, fixed-IP startup and log deletion; pp. 3-4 topology / wiring examples. | [Archived original](https://archive.openwebnet-ha.org/sha256/92/e9/92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00777-b-EN.pdf) |
-| `RA00122AB_S_EN.pdf` | MH201 software manual | `RA00122AB_S; printed publication date not established` | Printed/PDF pp. 4-10, 13-21, 22-38: send / receive / update, network / security / memory, room access / contacts / thermostat, scenarios and object configuration. Examples are not observed installations. | [Archived original](https://archive.openwebnet-ha.org/sha256/34/57/3457250e4c5fcce9b9fe43fc6ad5e73c31df9f69023933935c61557c3d328a79.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00122AB_S_EN.pdf) |
+| `RA00122AB_S_EN.pdf` | MH201 software manual | `RA00122AB_S; printed publication date not established` | Printed/PDF pp. 4-10, 13-21, 22-43: send / receive / update, network / security / memory, room access / contacts / thermostat, scenarios and object configuration. Examples are not observed installations. | [Archived original](https://archive.openwebnet-ha.org/sha256/34/57/3457250e4c5fcce9b9fe43fc6ad5e73c31df9f69023933935c61557c3d328a79.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00122AB_S_EN.pdf) |
 | `MH201-publisher-product-sheet.pdf` | Exact English publisher product export | `Export dated 05.10.2026` | Complete description, product-characteristics and classification tables; exact commercial EAN; linked document / payload inventory remains separately scoped. | [Archived original](https://archive.openwebnet-ha.org/sha256/f8/91/f8915cd76aff8dab551f9f8e774ed44db38dcb6fc80e8ed1d1e45f5b7f4ec3c5.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-MH201&include_technical=1) |
 | `MM00777_b_IT.pdf` | MH201 technical sheet | `MM00777-b; 15/01/2015` | Printed/PDF pp. 1-4: electrical ratings, scenario capacities, password / name, fixed-IP startup and log deletion; pp. 3-4 topology / wiring examples. | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/79/b27919dbe63fb723c14e955c6a8dc2968a0e392cee382ed7fac9e3723b64f36a.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/MM00777_b_IT.pdf) |
-| `RA00122AB_S_IT.pdf` | MH201 software manual | `RA00122AB_S; printed publication date not established` | Printed/PDF pp. 4-10, 13-21, 22-38: send / receive / update, network / security / memory, room access / contacts / thermostat, scenarios and object configuration. Examples are not observed installations. | [Archived original](https://archive.openwebnet-ha.org/sha256/d8/e3/d8e3245ba86f79409657ebd715c41254e34f7605cac10e2af663431e741b215e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00122AB_S_IT.pdf) |
+| `RA00122AB_S_IT.pdf` | MH201 software manual | `RA00122AB_S; printed publication date not established` | Printed/PDF pp. 13–15, 17, 20, 22, 26: compared network/authentication, memory/trusted-IP, access, contact conditions and scenario STOP/family scopes with English AB; remaining Italian pages not independently reread in this review. | [Archived original](https://archive.openwebnet-ha.org/sha256/d8/e3/d8e3245ba86f79409657ebd715c41254e34f7605cac10e2af663431e741b215e.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00122AB_S_IT.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1771`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
@@ -53,7 +61,6 @@ EANs identify the named commercial variant, not the configured physical device o
 | Scenario limit | `50 scenarios; each up to 5 start triggers, 1 stop trigger, 1 IF condition and 10 actions` | `MM00777-b-EN.pdf` printed/PDF pp. 1-2 |
 | Room roles | `DND, make-up-room, access requests, generic notifications, thermostat contact and presence` | `MM00777-b-EN.pdf` printed/PDF pp. 1-2 |
 | Published conformance references | `EN60669-2-1; EN50491-5-1; EN50428` | `MM00777-b-EN.pdf` printed/PDF pp. 1-2 |
-
 | Room wiring example | LivingLight references E49, LN4651, 348210, LN4648, LN4653, LN4652, LN4691, MH201, F430R8, F411/1N; installation-specific quantities / ratings not transferred | `MM00777-b-EN.pdf` printed/PDF p. 4 |
 
 ### Publisher export attributes
@@ -85,6 +92,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `10` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `10` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -98,6 +117,40 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `119` | `214` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `119` | `219` | Undefined (key `5`) | `0` | SVM | `1771_1.0_LGG\xml\SVM\svm.xml` |
+| `119` | `220` | Undefined (key `5`) | `0` | Extra | `1771_1.0_LGG\xml\Extra\extra.xml` |
+| `119` | `221` | Undefined (key `5`) | `0` | Director | `1771_1.0_LGG\xml\DIRECTOR\director.xml` |
+| `119` | `222` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1771_1.0_LGG\xml\Protocol\protocol.xml` |
+| `562` | `324` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `562` | `325` | Undefined (key `5`) | `0` | SVM | `1771_1.1_LGG\xml\SVM\svm.xml` |
+| `562` | `326` | Undefined (key `5`) | `0` | Extra | `1771_1.1_LGG\xml\Extra\extra.xml` |
+| `562` | `327` | Undefined (key `5`) | `0` | Director | `1771_1.1_LGG\xml\DIRECTOR\director.xml` |
+| `562` | `328` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1771_1.1_LGG\xml\Protocol\protocol.xml` |
+| `599` | `417` | Undefined (key `5`) | `0` | SVM | `1771_2.0_LGG\xml\SVM\svm.xml` |
+| `599` | `418` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `599` | `419` | Undefined (key `5`) | `0` | Extra | `1771_2.0_LGG\xml\Extra\extra.xml` |
+| `599` | `420` | Undefined (key `5`) | `0` | Director | `1771_2.0_LGG\xml\DIRECTOR\director.xml` |
+| `599` | `421` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1771_2.0_LGG\xml\Protocol\protocol.xml` |
+| `694` | `938` | Undefined (key `5`) | `0` | SVM | `1771_2.1_LGG\xml\SVM\svm.xml` |
+| `694` | `939` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `694` | `940` | Undefined (key `5`) | `0` | Extra | `1771_2.1_LGG\xml\Extra\extra.xml` |
+| `694` | `941` | Undefined (key `5`) | `0` | Director | `1771_2.1_LGG\xml\DIRECTOR\director.xml` |
+| `694` | `942` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1771_2.1_LGG\xml\Protocol\protocol.xml` |
+| `724` | `1013` | Undefined (key `5`) | `0` | SVM | `1771_3.0_LGG\xml\SVM\svm.xml` |
+| `724` | `1014` | Undefined (key `5`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `724` | `1015` | Undefined (key `5`) | `0` | Extra | `1771_3.0_LGG\xml\Extra\extra.xml` |
+| `724` | `1016` | Undefined (key `5`) | `0` | Director | `1771_3.0_LGG\xml\DIRECTOR\director.xml` |
+| `724` | `1017` | Undefined (key `5`) | `0` | Protocol and other device parameters | `1771_3.0_LGG\xml\Protocol\protocol.xml` |
+
+All 25 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -131,51 +184,21 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `119` | Product Programming | `3` | Association key `4` |
-| `562` | Product Programming | `3` | Association key `4` |
-| `599` | Product Programming | `3` | Association key `4` |
-| `694` | Product Programming | `3` | Association key `4` |
-| `724` | Product Programming | `3` | Association key `4` |
+| `119` | Product Programming | `3` | Canonical firmware/mode association |
+| `562` | Product Programming | `3` | Canonical firmware/mode association |
+| `599` | Product Programming | `3` | Canonical firmware/mode association |
+| `694` | Product Programming | `3` | Canonical firmware/mode association |
+| `724` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `119` | Ethernet | `2` |
-| `562` | Ethernet | `2` |
-| `599` | Ethernet | `2` |
-| `694` | Ethernet | `2` |
-| `724` | Ethernet | `2` |
+| `119` | Ethernet | Canonical firmware/connection association |
+| `562` | Ethernet | Canonical firmware/connection association |
+| `599` | Ethernet | Canonical firmware/connection association |
+| `694` | Ethernet | Canonical firmware/connection association |
+| `724` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `119` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `119` | `5` | `0` | `1771_1.0_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `119` | `5` | `0` | `1771_1.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `119` | `5` | `0` | `1771_1.0_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `119` | `5` | `0` | `1771_1.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `562` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `562` | `5` | `0` | `1771_1.1_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `562` | `5` | `0` | `1771_1.1_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `562` | `5` | `0` | `1771_1.1_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `562` | `5` | `0` | `1771_1.1_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `599` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `599` | `5` | `0` | `1771_2.0_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `599` | `5` | `0` | `1771_2.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `599` | `5` | `0` | `1771_2.0_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `599` | `5` | `0` | `1771_2.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `694` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `694` | `5` | `0` | `1771_2.1_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `694` | `5` | `0` | `1771_2.1_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `694` | `5` | `0` | `1771_2.1_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `694` | `5` | `0` | `1771_2.1_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `724` | `5` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `724` | `5` | `0` | `1771_3.0_LGG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `724` | `5` | `0` | `1771_3.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `724` | `5` | `0` | `1771_3.0_LGG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `724` | `5` | `0` | `1771_3.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -337,6 +360,19 @@ These are complete explicit catalogue associations for the candidate Objects. Mu
 
 No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
 
+### Hotel-specific operating limits
+
+One MH201 is required per room or common area; systems with more than 100 rooms/areas additionally require F458 (MM00777-b-EN/IT pp. 1/3). User badge validity dates do not apply to service badges. The three access-time profiles and maximum-access count apply only to common areas (p. 1).
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Access / SOS | Up to eight access entries; reader R1/R2 each `1..99`, door actuator A/PL, keycard-switch address matched to reader; up to three SOS support actuators | RA00122AB_S_EN p. 17 |
+| Window / strongbox / fridge | Up to three window contacts reset automatically on closing; strongbox after three minutes absence requires software reset; fridge after three minutes absence resets on closing, with logged notifications | RA00122AB_S_EN pp. 18–19 |
+| Generic contacts | NO/NC, contact type, Info/Warning/Alarm; Warning/Alarm add always/presence/absence conditions, delay, local CEN reset, software or automatic reset and keycard-switch flashing | RA00122AB_S_EN p. 20 |
+| Thermostat / master badge | Select availability, thermostat address and contact use; optional master badge enables guest-card programming without management software | RA00122AB_S_EN p. 21 |
+| Scenario execution | START activates, IF restricts, STOP cancels remaining actions; completed actions are not undone and already-started delayed actions finish their cycle | RA00122AB_S_EN pp. 22–26 |
+| Scenario families | Alarm, automation, delay, contacts, hotel, lighting, scenarios, programmed scenarios, special controls, temperature and time have field-specific availability | RA00122AB_S_EN pp. 26–37 |
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -347,20 +383,15 @@ Scenarios are configured with MyHOME Suite. The sheet specifies a device name of
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The software manual permits up to four trusted IP intervals to connect without the OPEN password (RA00122AB_S_EN p. 15). Its optional memory-module setting restores associated device state after a power cut; enabling the feature is separate from the technical sheet’s summary description. Scenario editing supports lighting level comparisons, timed actions, automation levels/presets, actuator lock/unlock, thermostat comfort/ECO/manual/antifreeze/protection and local-key control, and time/date/weekday conditions (pp. 27–37). The guest-entry/exit example includes a three-minute courtesy light and cancellation when a keycard is reinserted (pp. 38–43); this is a documented example, not an observed default room installation.
+
 ## Source reconciliation
 
 The technical sheet specifies fixed `192.168.1.5` and mask `255.255.255.0`; public documentation values, not an observed installation. These sheet facts remain separate from Firmware-specific catalogue defaults. The three candidate roles (hotel manager, Open SCS and XOpen gateway) are distinct Objects. The one-DIN physical width is independent of three catalogue Modules. The LE06187AB leaflet describes 10-second restart and 20-second DHCP selection, and red / green LED phases that differ from the technical sheet’s startup fixed-IP and 30-second log-erasure actions. These source-specific sequences are retained without assigning the difference to an unverified firmware revision.
 
-### Retained source accounting
+Both 15 January 2015 English and Italian sheets contain the same DND paragraph inconsistency: the preceding text describes DND, but its CEN sentence names MUR. Neither language independently establishes that sentence as a DND command mapping. The software manual’s scenario “objects” are editor components controlling addressed equipment; they must not be equated with local diagnostic Objects `98`, `150` and `250`.
 
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `LE06187AB.pdf` | PDF pp. 1-3: restart/DHCP timings, LED phase table and direct / switch Ethernet wiring; English blocks reviewed; differs from technical sheet actions. |
-| `MM00777-b-EN.pdf` | Printed/PDF pp. 1-4: electrical ratings, scenario capacities, password / name, fixed-IP startup and log deletion; pp. 3-4 topology / wiring examples. |
-| `RA00122AB_S_EN.pdf` | Printed/PDF pp. 4-10, 13-21, 22-38: send / receive / update, network / security / memory, room access / contacts / thermostat, scenarios and object configuration. Examples are not observed installations. |
-| `MH201-publisher-product-sheet.pdf` | Complete description, product-characteristics and classification tables; exact commercial EAN; linked document / payload inventory remains separately scoped. |
-| `MM00777_b_IT.pdf` | Printed/PDF pp. 1-4: electrical ratings, scenario capacities, password / name, fixed-IP startup and log deletion; pp. 3-4 topology / wiring examples. |
-| `RA00122AB_S_IT.pdf` | Printed/PDF pp. 4-10, 13-21, 22-38: send / receive / update, network / security / memory, room access / contacts / thermostat, scenarios and object configuration. Examples are not observed installations. |
+The public documentation startup fixed IP `192.168.1.5` differs from the public catalogue template LAN default `192.168.1.35`. The leaflet’s 10-second restart / 20-second DHCP actions and technical sheet’s startup fixed-IP / 30-second log deletion apply to separate documented operations. No universal firmware-independent reset sequence is inferred. The item-side `FW_VER=1.0.0` default does not collapse five firmware records into one release, and gateway defaults do not negate the documented configuration gateway.
 
 ## Evidence limits and open work
 
@@ -392,15 +423,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `LE06187AB.pdf` | `51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b` | 663256 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/51/d9/51d96097d2085e3648b56f74e44143a07e69b5da8b0e1802a0837d6a3fa80f5b.pdf) |
-| `MM00777-b-EN.pdf` | `92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806` | 392821 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/92/e9/92e93b6f6499c1457b4e2f9f6add55a7aef2499ef3c4631fc83aef2d8d558806.pdf) |
-| `RA00122AB_S_EN.pdf` | `3457250e4c5fcce9b9fe43fc6ad5e73c31df9f69023933935c61557c3d328a79` | 13180278 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/34/57/3457250e4c5fcce9b9fe43fc6ad5e73c31df9f69023933935c61557c3d328a79.pdf) |
-| `MH201-publisher-product-sheet.pdf` | `f8915cd76aff8dab551f9f8e774ed44db38dcb6fc80e8ed1d1e45f5b7f4ec3c5` | 207945 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/f8/91/f8915cd76aff8dab551f9f8e774ed44db38dcb6fc80e8ed1d1e45f5b7f4ec3c5.pdf) |
-| `MM00777_b_IT.pdf` | `b27919dbe63fb723c14e955c6a8dc2968a0e392cee382ed7fac9e3723b64f36a` | 393896 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/b2/79/b27919dbe63fb723c14e955c6a8dc2968a0e392cee382ed7fac9e3723b64f36a.pdf) |
-| `RA00122AB_S_IT.pdf` | `d8e3245ba86f79409657ebd715c41254e34f7605cac10e2af663431e741b215e` | 13891573 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/d8/e3/d8e3245ba86f79409657ebd715c41254e34f7605cac10e2af663431e741b215e.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0190)

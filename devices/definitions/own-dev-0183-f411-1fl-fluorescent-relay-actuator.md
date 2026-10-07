@@ -22,12 +22,21 @@ F411/1FL is a DIN relay actuator designed for conventional fluorescent lamps wit
 | --- | --- | --- | --- |
 | BTicino | `F411/1FL` | Established catalogue identity | Manufacturer database commercial record `1595` explicitly links this SKU to item `1595` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F411/1FL` | Actuator 1 relay fluorescent lamps 2 DIN | Canonical commercial record `1595` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `bticino-historical-comfort-manufacturer-guide.pdf` | BTicino technical guide on educational mirror | `Publication date and original publisher download URL unestablished` | Printed pp. 60-61 / PDF pp. 61-62: exact F411/1 and F411/1FL ratings, relay roles and physical selector modes; intact manufacturer guide from an educational mirror. | [Archived original](https://archive.openwebnet-ha.org/sha256/ef/56/ef567b87586483244a5c076aba822ffcf81c77ccedde472de94cf7eb843d4448.pdf) | [Manufacturer guide on educational mirror](https://leonardocanducci.org/wiki/tp3/_media/guida_myhome_bticino.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1595`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BTicino-historical-comfort-technical.pdf` | Manufacturer technical guide on educational mirror | Publication date / publisher download URL unestablished | Printed/PDF pp. 57, 64, 80: exact actuator load table, selector diagram and current/dimensions; source generation not dated | [Archived original](https://archive.openwebnet-ha.org/sha256/b0/55/b0559623cec41d801be9344dfcf6aa48eeee12fae94abca96f9f24a151b0452d.pdf) | [Educational mirror](https://www2.malignani.ud.it/EltWeb/domotica/MH/BibliotecaTecnica%20Bticino%20-%20My%20Home%20comfort%20parte%201%20introduzione%20sistemi%20bus.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -38,6 +47,8 @@ F411/1FL is a DIN relay actuator designed for conventional fluorescent lamps wit
 | Historical load rating | `Up to 500 W conventional fluorescent lamps` | `bticino-historical-comfort-manufacturer-guide.pdf` printed p. 61 / PDF p. 62 |
 | Mounting / outputs | `2 DIN modules; one relay` | `bticino-historical-comfort-manufacturer-guide.pdf` printed p. 61 / PDF p. 62 |
 | Controls / groups | `Local load-test micro-button and LED; text names G1/G2 and two groups` | `bticino-historical-comfort-manufacturer-guide.pdf` printed p. 61 / PDF p. 62 |
+| Load range in second retained edition | `150..500 W fluorescent with ferromagnetic ballast` | `BTicino-historical-comfort-technical.pdf` printed/PDF p. 64 |
+| Load connection cable in second retained edition | `At least 3 m` | `BTicino-historical-comfort-technical.pdf` printed/PDF p. 64, note (1) |
 
 ## Identity
 
@@ -50,6 +61,19 @@ F411/1FL is a DIN relay actuator designed for conventional fluorescent lamps wit
 | Main item model / `modobj` | `132` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `132` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +83,12 @@ F411/1FL is a DIN relay actuator designed for conventional fluorescent lamps wit
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -78,9 +108,10 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `172` | Physical configuration | `0` | Association key `3` |
+| `172` | Physical configuration | `0` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -170,6 +201,10 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+### Selector / conversion limits
+
+The firmware `172` item-side mode domain omits `M=1`, although the physical guide and stored rule `1` both describe the one-minute delay. All eight stored rule `1` branches are retained, including symbolic `PUL` and `SLA`; their labels do not establish numeric wire encoding. The attached state-reset and load-control filters retain their entire reusable ranges and default `0`. The slot condition has an empty predicate, which does not establish unconditional runtime activation. Reusable zero-crossing and other generic actuator fields are not independently documented physical functions of this exact historical product.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -222,17 +257,15 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
-The historical exact-reference page establishes a 500 W fluorescent rating. It does not specify the 150 W minimum found in other editions, so no minimum is inferred here. Its mode illustration includes G3 while the prose and front drawing identify G1/G2; this drawing inconsistency remains explicit. The manufacturer guide is retained from an educational mirror with original publisher download URL and publication date unestablished.
+The historical exact-reference page establishes a 500 W fluorescent rating. The second retained technical edition explicitly gives `150..500` W and a load cable of at least 3 m (printed/PDF p. 64). This establishes a source-scoped minimum, without an identified production revision. Its mode illustration includes G3 while the prose and front drawing identify G1/G2; this drawing inconsistency remains explicit. The manufacturer guide is retained from an educational mirror with original publisher download URL and publication date unestablished.
 
-### Retained source accounting
+The second edition’s exact F411/1FL selector drawing was visually checked and shows G1/G2. The earlier edition’s additional G3 mode label is therefore a source drawing discrepancy; the stored item-side G3 field does not prove a third physical socket.
 
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `bticino-historical-comfort-manufacturer-guide.pdf` | Printed pp. 60-61 / PDF pp. 61-62: exact F411/1 and F411/1FL ratings, relay roles and physical selector modes; intact manufacturer guide from an educational mirror. |
+Both guides are manufacturer-authored documents retained from educational mirrors; publication dates and original manufacturer download URLs are unestablished. Retrieval of the second mirror used an unverified TLS connection after certificate validation failed. Its intact page content supplies historical evidence, without authenticating that mirror as a manufacturer server.
 
 ## Evidence limits and open work
 
-A current exact-product PDF, minimum load, lamp / ballast combinations, temperature, protection and terminal capacity remain unestablished. Later relay variants do not establish this product’s rating.
+A current exact-product PDF, applicability of the historical minimum/cable requirement to production revisions, lamp / ballast combinations, temperature, protection and terminal capacity remain unestablished. Later relay variants do not establish this product’s rating.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
 
@@ -247,10 +280,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `bticino-historical-comfort-manufacturer-guide.pdf` | `ef567b87586483244a5c076aba822ffcf81c77ccedde472de94cf7eb843d4448` | 4331445 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/ef/56/ef567b87586483244a5c076aba822ffcf81c77ccedde472de94cf7eb843d4448.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0181-0190-2026-10-07.md#own-dev-0183)
