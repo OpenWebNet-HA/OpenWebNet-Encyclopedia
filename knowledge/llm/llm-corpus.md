@@ -49311,3 +49311,10484 @@ Provenance cues: `catalogue`, `database`, `source`
 - `AM5860M2-ean-product-sheet.pdf`, printed/PDF p. 1: exact `AM5860M2` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/ae/77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-AM5860M2); SHA-256 `77aeb8583854b8350a6bbd571052568a55ec703063d9c4a3d3dd93ef85e7d5f6`.
 - `067558-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `067558` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/8f/3b/8f3b48ee90ef8ea6256908796297009d83e98564277bb45fbdcbeea9f1337c08.pdf); [publisher source](https://www.legrand.fr/pro/catalogue/commande-myhome-up-celiane-specifique-pour-gestion-avancee-de-moteurs); SHA-256 `8f3b48ee90ef8ea6256908796297009d83e98564277bb45fbdcbeea9f1337c08`.
 - [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0044)
+
+# Document: ownkb:document:d000186
+
+Source path: `devices/definitions/own-dev-0046-display-thermostat-2-modules.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Display thermostat 2 modules
+
+Section ID: `ownkb:section:d000186:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000186:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This thermostat combines a room-temperature sensor, backlit display and local mode, temperature and fan controls. It can be a MyHOME central-unit probe, hotel thermostat or standalone residential thermostat, with an external contact input and optional automatic heating/cooling changeover in the documented independent modes.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0046` | Project identity |
+| Technical description | Display thermostat 2 modules | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `H4691`, `LN4691`, `067459`, `64170` | Canonical commercial records |
+| Catalogue item | `1686` | Canonical catalogue |
+| Main catalogue system | Temperature control | Canonical catalogue |
+| Item model / `modobj` | `6` | Canonical inventory |
+| Firmware definition | `1.0.-1`; `2.0.0` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Temperature control, HVAC, Thermostat | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000186:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4691` | established catalogue identity for item `1686` | canonical commercial record |
+| BTicino - LivingLight | `LN4691` | established catalogue identity for item `1686` | canonical commercial record |
+| Legrand - Céliane | `067459` | established catalogue identity for item `1686` | canonical commercial record |
+| Arnould - Espace Evolution | `64170` | established catalogue identity for item `1686` | canonical commercial record |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000186:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4691` | `8005543498040` | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf), `H4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4691` | `8005543498057` | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf), `LN4691-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000186:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00789_b_EN` | technical sheet | MM00789-b-EN; 2016-05-02 | Printed/PDF pp. 1–2; named variants, ratings, physical role/load/contact matrix, software requirements and production cutoff | [Archived original](https://archive.openwebnet-ha.org/sha256/ee/ad/eead45860c389c7bd4063c68bd8c1790407398b1b43e5554dfb0944f6bae7108.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) |
+| BTicino `H4691` catalogue page | product page | current catalogue | Current `H4691` electrical characteristics and product role | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogo.bticino.it/BTI-H4691-IT) |
+| `H4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4691` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691) |
+| `LN4691-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4691` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691) |
+| `RA00118AC_I_EN.pdf` | Exact-product installer manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–30; roles, configuration, regulation, UI, errors and production-week qualification | [Archived original](https://archive.openwebnet-ha.org/sha256/be/9a/be9aa513be29e4437c24f38fd5c77e3f7f717b96edb47c51fdbf9a24a5743e08.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_I_EN.pdf) |
+| `RA00118AC_U_EN.pdf` | Exact-product user manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–21; local behavior for each role, settings, faults and hardware revision note | [Archived original](https://archive.openwebnet-ha.org/sha256/99/21/992132ad1dd5d46734a2fa364516e173905101161ff3d495bb6b0f4abc66c31a.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_U_EN.pdf) |
+| `RA00118AC_S_EN.pdf` | Exact-product software manual | RA00118AC; retained publisher copy | Printed/PDF pp. 4–14; complete advanced project, load/pump, setpoint, PID/contact/UI settings | [Archived original](https://archive.openwebnet-ha.org/sha256/ef/3f/ef3f540219dd8c5b6991bba3187ef2fc78838cdf7f67b8490ef1aee943afef5e.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/RA00118AC_S_EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000186:s000006`
+
+Applicability cues: `scs`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `18..27 Vdc`; MM00789-b-EN gives `14 mA` backlight off/`16 mA` standby/`30 mA` maximum; installer p. 28 gives 13/16/`30 mA` | Exact sheet p. 1 and installer manual p. 28; 13/14 discrepancy retained |
+| Environment / size / installation | `0..40 °C`; two flush-mounted modules; installation height `150 cm` | Sheet p. 1 and installer p. 28 |
+| Controls / connections | MODE, +, −, FAN; SCS bus, rear local contact and configurators | Sheet p. 1; installer pp. 6–7 |
+| Setpoint interval / defaults | `3..40 °C`; heating comfort 21/eco 18/antifreeze `7 °C`; cooling comfort 25/eco 28/protection `35 °C` | Installer p. 5; p. 20 instead prints cooling eco 25 °C, unresolved |
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Exact H4691 / LN4691 export maximum current | `30 mA` at `27 Vdc`; two modules | Individual exports, printed/PDF p. 1; agrees with the technical sheet’s maximum rather than standby/off values |
+
+### Identity
+
+Section ID: `ownkb:section:d000186:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1686` | Canonical catalogue |
+| Technical item | Display thermostat 2 modules | Canonical catalogue |
+| Main system | Temperature control | Canonical catalogue |
+| Item model / `modobj` | `6` | Canonical inventory |
+| Commercial records | `4` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000186:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Temperature control | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000186:s000009`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1746` | `H4691` | `1` | `2` | `Thermostat with display` |
+| `1991` | `LN4691` | `1` | `4` | `Thermostat with display` |
+| `1995` | `067459` | `2` | `13` | `Thermostat with display` |
+| `2172` | `64170` | `7` | `18` | `Thermostat with display` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000186:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `160` | `1` | `0` | `-1` | `1` | Catalogue default | Official |
+| `691` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000186:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000186:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `160` | `1` | `184` Master probe | Fixed/designated metadata | `2095` | `184` | `877` |
+| `160` | `1` | `95` Hotel thermostat | Candidate alternative | `877` | `542` | `553` |
+| `160` | `1` | `96` Residential thermostat | Candidate alternative | `878` | `545` | `554` |
+| `691` | `1` | `184` Master probe | Fixed/designated metadata | `2575` | `184` | `1194` |
+| `691` | `1` | `95` Hotel thermostat | Candidate alternative | `2573` | `542` | `1192` |
+| `691` | `1` | `96` Residential thermostat | Candidate alternative | `2574` | `545` | `1193` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000186:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `160` | `509` Thermostat virgin | `1` | `95`, `96`, `144`, `184`, `221` | `530` | `40` |
+| `691` | `509` Thermostat virgin | `1` | `95`, `96`, `144`, `184`, `221` | `530` | `54` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000186:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `160` | Physical configuration | `0` | Canonical firmware/mode association |
+| `160` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `160` | Advanced Configuration | `2` | Canonical firmware/mode association |
+| `691` | Physical configuration | `0` | Canonical firmware/mode association |
+| `691` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `691` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000186:s000015`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `160` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `160` | `ZA` | `0..9` | `0` | ZA; ZA thermo zone address |
+| `160` | `ZB` | `0..9` | `1` | ZB; ZB thermo zone address |
+| `160` | `TYPE` | `0..2` | `0` | TYPE; 0 Master probe, 1 Hotel thermostat, 2 residential thermostat |
+| `160` | `HEAT` | `0..9` | `0` | HEAT; (LOAD NOT USED: 0) (`ON`/`OFF`: 1) (Open/Close: 2) (2 pipes fan coil with on/off valve: 3) (Gateway: 4) (Fil Pilote: 5) (2 pipes fan coil with proportional valve: 6) (4 pipes fan coil with on/off valves: 7) (4 pipes fan coil with proportional valves: 8) (Proportional valve: 9) Heating actuator type (`N=1`) |
+| `160` | `COOL` | `0..4`; `6..9`; `14` = `CEN` | `0` | COOL; Cooling actuator type (`N=2`) or (`N=1` if TYPE_C = `CEN`). If TYPE_C = `CEN`, TYPE_H must be different from FIL PILOTE and `OFF`. |
+| `160` | `PUMP` | `0..4` | `0` | PUMP; (NO PUMP: 0) (PUMP `N=1` FOR HEATING ONLY: 1) (PUMP `N=2` FOR COOLING ONLY: 2) (PUMP `N=1` FOR HEATING, `N=2` FOR COOLING: 3) (PUMP `N=1` FOR HEATING AND COOLING: 4) |
+| `160` | `IN` | `0..5` | `0` | IN; (DISABLED: 0) (OPEN --> PROTECTION, CLOSE --> BACK TO THE PREVIOUS STATE: 1) (OPEN --> `OFF`, CLOSE --> BACK TO THE PREVIOUS STATE: 2) (OPEN --> ECO, CLOSE --> BACK TO THE PREVIOUS STATE: 3) (OPEN --> COMFORT, CLOSE --> BACK TO THE PREVIOUS STATE: 4) (OPEN --> SWITCH TO HEATING, CLOSE --> SWITCH TO COOLING: 5) Contact function (same action for heating and cooling).If MOD = 0, contact must be different from 5. |
+| `691` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `691` | `ZA` | `0..9` | `0` | ZA; ZA thermo zone address |
+| `691` | `ZB` | `0..9` | `1` | ZB; ZB thermo zone address |
+| `691` | `TYPE` | `0..2` | `0` | TYPE; 0 Master probe, 1 Hotel thermostat, 2 residential thermostat |
+| `691` | `HEAT` | `0..9` | `0` | HEAT; (LOAD NOT USED: 0) (`ON`/`OFF`: 1) (Open/Close: 2) (2 pipes fan coil with on/off valve: 3) (Gateway: 4) (Fil Pilote: 5) (2 pipes fan coil with proportional valve: 6) (4 pipes fan coil with on/off valves: 7) (4 pipes fan coil with proportional valves: 8) (Proportional valve: 9) Heating actuator type (`N=1`) |
+| `691` | `COOL` | `0..4`; `6..9`; `14` = `CEN` | `0` | COOL; Cooling actuator type (`N=2`) or (`N=1` if TYPE_C = `CEN`). If TYPE_C = `CEN`, TYPE_H must be different from FIL PILOTE and `OFF`. |
+| `691` | `PUMP` | `0..4` | `0` | PUMP; (NO PUMP: 0) (PUMP `N=1` FOR HEATING ONLY: 1) (PUMP `N=2` FOR COOLING ONLY: 2) (PUMP `N=1` FOR HEATING, `N=2` FOR COOLING: 3) (PUMP `N=1` FOR HEATING AND COOLING: 4) |
+| `691` | `IN` | `0..5` | `0` | IN; (DISABLED: 0) (OPEN --> PROTECTION, CLOSE --> BACK TO THE PREVIOUS STATE: 1) (OPEN --> `OFF`, CLOSE --> BACK TO THE PREVIOUS STATE: 2) (OPEN --> ECO, CLOSE --> BACK TO THE PREVIOUS STATE: 3) (OPEN --> COMFORT, CLOSE --> BACK TO THE PREVIOUS STATE: 4) (OPEN --> SWITCH TO HEATING, CLOSE --> SWITCH TO COOLING: 5) Contact function (same action for heating and cooling).If MOD = 0, contact must be different from 5. |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000186:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `184` - Master probe
+
+Section ID: `ownkb:section:d000186:s000017`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `must not`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Operation, timing and presentation | `FUNCTION`, `COND`, `RISC`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable schema; apply the Device and firmware restrictions below. |
+| Addressing | `ZAZB`, `ZAZB_CENTRAL` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `FUNCTION` | `0` = Heating; `1` = Cooling; `2` = Heating & cooling | `0` | Function type |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `COND` | `0` = Disable; `1` = Enable | `0` | Summer modality |
+| `RISC` | `0` = Disable; `1` = Enable | `1` | Winter modality |
+| `ZAZB_CENTRAL` | `00..99` | `01` | Temperature Control unit address |
+| `COMFORT_HEATING_SETPOINT` | `7..80` | `42` | Comfort; Comfort heating setpoint > Eco heating setpoint |
+| `ECO_HEATING_SETPOINT` | `6..79` | `36` | Eco; Eco heating setpoint < Comfort heating setpoint |
+| `ANTIFREEZE_SETPOINT` | `6..80` | `14` | Antifreeze |
+| `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Heating fan delay; checked only if "Heating actuator type" is set to one of values related to fan coil |
+| `HEATING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Automatic heating thresholds settings; For automatic, while checking configuration, set parameters 8, 9, 10 according to device specific settings. |
+| `HEATING_REGULATION_BAND` | `1..10` | `1` | Heating setpoint allowance |
+| `HEATING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 2 threshold > Heating regulation band |
+| `HEATING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 3 threshold > Heating Fan coil speed 2 threshold |
+| `HEATING_CONTACT_OPENING` | `0` = No action; `1` = Protection; `2` = Off; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact opening; If parameter "Heating contact opening" is set to 0, 4, parameter "Heating contact opening timeout" must be set to 0." If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact opening must be different from 5...25. |
+| `HEATING_CONTACT_CLOSING` | `0` = No action; `1` = Protection; `2` = Off; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact closing; If parameter "Heating contact closing" is set to 0, 4, parameter "Heating contact closing timeout" must be set to 0." If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact closing must be different from 5...25. |
+| `HEATING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact opening |
+| `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact closing |
+| `HEATING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Heating contact opening timeout" is different from 0, "Heating contact closing timeout" must be set to 0. |
+| `HEATING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact closing action; 0 corresponds to infinite. If parameter "Heating contact closing timeout" is different from 0, "Heating contact opening timeout" must be set to 0." |
+| `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled when contact is open; `2` = Enabled when contact is closed | `0` | Heating contact pushbutton locking |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Heating fancoil continuous ventilation |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `COMFORT_COOLING_SETPOINT` | `6..79` | `50` | Comfort; Comfort cooling setpoint < Eco cooling setpoint |
+| `ECO_COOLING_SETPOINT` | `7..80` | `56` | Eco; Eco cooling setpoint > Comfort cooling setpoint |
+| `THERMAL_PROTECTION_SETPOINT` | `6..80` | `70` | Thermal protection |
+| `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Cooling fan delay; Checked only if "Cooling actuator type" is set to one of values related to fan coil |
+| `COOLING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Automatic cooling thresholds settings; For automatic, while checking configuration, set 28, 29, 30 according to device specific settings. |
+| `COOLING_REGULATION_BAND` | `1..10` | `1` | Cooling setpoint allowance |
+| `COOLING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 2 threshold > Cooling regulation band |
+| `COOLING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 3 threshold > Cooling Fan coil speed 2 threshold |
+| `COOLING_CONTACT_OPENING` | `0` = No action; `1` = Protection; `2` = Off; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact opening; If parameter Cooling contact opening is set to 0, 4, parameter Cooling contact opening timeout must be set to 0. |
+| `COOLING_CONTACT_CLOSING` | `0` = No action; `1` = Protection; `2` = Off; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact closing; If parameter "Cooling contact closing" is set to 0, 4, parameter "Cooling contact closing timeout" must be set to 0. |
+| `COOLING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Timeout for local contact opening action |
+| `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Timeout for local contact closing action |
+| `COOLING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Cooling contact opening timeout" is different from 0, "Cooling contact closing timeout" must be set to 0. |
+| `COOLING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact closing action; 0 corresponds to infinite. If parameter Cooling contact closing timeout is different from 0, Cooling contact opening timeout must be set to 0. |
+| `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled when contact is open; `2` = Enabled when contact is closed | `0` | Cooling contact pushbutton locking |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling fancoil continuous ventilation |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `ACTUATOR_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 1 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 2 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 3 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 4 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 5 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 6 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 7 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 8 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 9 function; If this parameter is set to "Heating and cooling", it must be checked that "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=1_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=2_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=3_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=4_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=5_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=6_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=7_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=8_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=9_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `HEATING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). |
+| `COOLING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). |
+| `PUMP_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 1 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 2 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 3 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 4 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 5 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 6 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 7 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 8 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 9 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `HEATING_PUMP_DELAY` | `0..255` | `0` | Time delay for heating pumps |
+| `COOLING_PUMP_DELAY` | `0..255` | `0` | Time delay for cooling pumps |
+| `NUMBER_OF_SLAVES` | `0..9` | `0` | Number of slave probes |
+| `LED_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Led enable |
+| `TEMPERATURE_FORMAT` | `0` = Celsius; `1` = Fahrenheit | `0` | Temperature format |
+| `BACKLIGHT_STAND_BY_LEVEL` | `0` = `OFF`; `1` = `ON` | `1` | Display standby backlight |
+| `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED | `0` | Ambient temperature visualization |
+| `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 | `10` | Backlight stand-by level |
+| `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled | `0` | Disable all pushbuttons |
+| `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled | `0` | Pushbutton modality change |
+| `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled | `0` | Calibration procedure |
+| `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled | `0` | User settings procedure |
+| `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open | `0` | Windows contact icon |
+| `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled | `0` | Windows contact number |
+| `HEATING_PID_REGULATION_BAND` | `6..30` | `16` | Heating PID regulation band (°) |
+| `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Heating PID inertia |
+| `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Heating proportional gain (low) |
+| `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Heating proportional gain (high) |
+| `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Heating integrative gain low |
+| `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Heating integrative gain high |
+| `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Heating derivative gain low |
+| `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Heating derivative gain high |
+| `HEATING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Heating proportional speed 1 (%) |
+| `HEATING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Heating proportional speed 2 (%) |
+| `HEATING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Heating proportional speed 3 (%) |
+| `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Heating pushbutton fan coil automatic speed |
+| `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Heating anti-seizing up protection |
+| `COOLING_PID_REGULATION_BAND` | `6..30` | `16` | Cooling PID regulation band (°) |
+| `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Cooling PID inertia |
+| `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Cooling proportional gain (low) |
+| `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Cooling proportional gain (high) |
+| `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Cooling integrative gain low |
+| `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Cooling integrative gain high |
+| `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Cooling derivative gain low |
+| `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Cooling derivative gain high |
+| `COOLING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Cooling proportional speed 1 (%) |
+| `COOLING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Cooling proportional speed 2 (%) |
+| `COOLING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Cooling proportional speed 3 (%) |
+| `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
+| `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
+
+#### Object `95` - Hotel thermostat
+
+Section ID: `ownkb:section:d000186:s000018`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `must not`
+Provenance cues: `catalogue`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ZAZB` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `FUNCTION`, `MAXIMUM_HEATING_SETPOINT`, `MINIMUM_HEATING_SETPOINT`, `MAXIMUM_COOLING_SETPOINT`, `MINIMUM_COOLING_SETPOINT`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `FUNCTION_CHANGE_BY_LOCAL_BUTTON`, `AUTOMATIC_CHANGEOVER_MODE`, `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER`, `EXTERNAL_SENSOR_TYPE` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
+
+Catalogue Object key `542` maps to external Object `95`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `FUNCTION` | `0` = Heating; `1` = Cooling; `2` = Heating & cooling | `0` | Function type |
+| `MAXIMUM_HEATING_SETPOINT` | `20..80` | `80` | Max; Maximum heating setpoint > Minimum heating setpoint Maximum cooling setpoint >= Maximum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). step 0.5 °C |
+| `MINIMUM_HEATING_SETPOINT` | `6..79` | `6` | Min; Minimum heating setpoint = Minimum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). step 0.5 °C |
+| `COMFORT_HEATING_SETPOINT` | `7..80` | `42` | Comfort; Comfort heating setpoint > Eco heating setpoint Comfort heating setpoint = Minimum heating setpoint. step 0.5 °C |
+| `ECO_HEATING_SETPOINT` | `6..79` | `36` | Eco; Eco heating setpoint = Minimum heating setpoint. step 0.5 °C |
+| `ANTIFREEZE_SETPOINT` | `6..80` | `14` | Antifreeze; step 0.5 °C |
+| `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Heating fan delay; Checked only if "Heating actuator type" is set to one of values related to fan coil step 5 s |
+| `HEATING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Automatic heating thresholds settings; For automatic, while checking configuration, set parameters 8, 9, 10 according to device specific settings. |
+| `HEATING_REGULATION_BAND` | `1..10` | `1` | Heating setpoint allowance; Step 0.1°C |
+| `HEATING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 2 threshold > Heating regulation band |
+| `HEATING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 3 threshold > Heating Fan coil speed 2 threshold |
+| `HEATING_CONTACT_OPENING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to cooling; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact opening; If parameter "Heating contact opening" is set to 0, 3, 4, parameter "Heating contact opening timeout" must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact opening" = "Cooling contact opening". If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact opening must be different from 5...25. |
+| `HEATING_CONTACT_CLOSING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to cooling; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact closing; If parameter "Heating contact closing" is set to 0, 3, 4, parameter "Heating contact closing timeout" must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact closing" = "Cooling contact closing" If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact closing must be different from 5...25. |
+| `HEATING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact after opening; step 5s |
+| `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact after closing; step 5 s |
+| `HEATING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact after opening; 0 corresponds to infinite. If parameter "Heating contact opening timeout" is different from 0, "Heating contact closing timeout" must be set to 0." step 1 min |
+| `HEATING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact after closing; 0 corresponds to infinite. If parameter "Heating contact closing timeout" is different from 0, "Heating contact opening timeout" must be set to 0. step 1 min |
+| `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed | `0` | Heating contact pushbutton locking |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Heating fancoil ventilation function |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `MAXIMUM_COOLING_SETPOINT` | `7..80` | `80` | Max; Maximum cooling setpoint > Minimum cooling setpoint Maximum cooling setpoint >= Maximum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). step 0.5 °C |
+| `MINIMUM_COOLING_SETPOINT` | `6..70` | `6` | Min; Minimum cooling setpoint = Minimum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). step 0.5 °C |
+| `COMFORT_COOLING_SETPOINT` | `6..79` | `50` | Comfort; Comfort cooling setpoint = Minimum cooling setpoint. step 0.5 °C |
+| `ECO_COOLING_SETPOINT` | `7..80` | `56` | Eco; Eco cooling setpoint > Comfort cooling setpoint Eco cooling setpoint = Minimum cooling setpoint. step 0.5 °C |
+| `THERMAL_PROTECTION_SETPOINT` | `6..80` | `70` | Thermal protection; step 0.5 °C |
+| `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Cooling fan delay; Checked only if "Cooling actuator type" is set to one of values related to fan coil step 5s |
+| `COOLING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Cooling thresholds settings; For automatic, while checking configuration, set 28, 29, 30 according to device specific settings. |
+| `COOLING_REGULATION_BAND` | `1..10` | `1` | Cooling setpoint allowance; step 0.1 °C |
+| `COOLING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 2 threshold > Cooling regulation band |
+| `COOLING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 3 threshold > Cooling Fan coil speed 2 threshold |
+| `COOLING_CONTACT_OPENING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to heating; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact opening; If parameter Cooling contact opening is set to 0,3,4, parameter Cooling contact opening timeout must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact opening" = "Cooling contact opening" |
+| `COOLING_CONTACT_CLOSING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to heating; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact closing; If parameter Cooling contact closing is to set to 0,3,4, parameter cooling contact closing timeout must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact closing" = "Cooling contact closing" |
+| `COOLING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact opening; step 5s |
+| `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact closing; step 5s |
+| `COOLING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Cooling contact opening timeout" is different from 0, "Cooling contact closing timeout" must be set to 0. step 1 min |
+| `COOLING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact closing action; 0 corresponds to infinite. If parameter Cooling contact closing timeout is different from 0, Cooling contact opening timeout must be set to 0. step 1 min |
+| `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed | `0` | Cooling contact pushbutton locking |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling fancoil continuous ventilation |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `ACTUATOR_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 1 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 2 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 3 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 4 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 5 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 6 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 7 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 8 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Actuator 9 function; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=1_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=2_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=3_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=4_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=5_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=6_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=7_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=8_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=9_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `HEATING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). In case of FIL PILOTE, "Automatic changeover Mode" must be set disabled. |
+| `COOLING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). |
+| `PUMP_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 1 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 2 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 3 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 4 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 5 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 6 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 7 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 8 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 9 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `HEATING_PUMP_DELAY` | `0..255` | `0` | Time delay for heating pumps; step 5s |
+| `COOLING_PUMP_DELAY` | `0..255` | `0` | Time delay for cooling pumps; step 5s |
+| `NUMBER_OF_SLAVES` | `0..9` | `0` | Number of slave probes |
+| `LED_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Led enable |
+| `TEMPERATURE_FORMAT` | `0` = Celsius; `1` = Fahrenheit | `0` | Temperature format |
+| `FUNCTION_CHANGE_BY_LOCAL_BUTTON` | `0` = Enabled; `1` = Disabled | `1` | Pushbutton "heating/cooling" change |
+| `AUTOMATIC_CHANGEOVER_MODE` | `0` = Enabled; `1` = Disabled | `1` | Automatic changeover mode; Condition to check contact: - See notes contained into parameters "Heating contact opening", "Heating contact closing", "Cooling contact opening" and "Cooling contact closing". Condition to check fil pilote: - See note contained into parameter "Heating actuator type". Conditions to check for actuators and pumps: - There must be at least one actuator for heatng (actuator function set to "Heating only" or "Heating and Cooling") or at least one pump for heating (pump function set to "Heating only"). - There must be at least one actuator for cooling (actuator function set to "Cooling only" or "Heating and Cooling") or at least one pump for cooling (pump function set to "Cooling only"). - if at least one actuator function is set to "Heating and cooling", "Heating actuator type" (that must be equal to "Cooling actuator type") can only be equal to 7 or 8; if this condition related to "Heating actuator type" is not satisfied, there must be at least one pump function set to "Heating only" and one pump function set to "Cooling only". |
+| `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD` | `20..50` | `20` | Automatic changeover mode switching threshold (step 0.1 °C); Hidden, used only during device developement. |
+| `BACKLIGHT_STAND_BY_LEVEL` | `0` = `OFF`; `1` = `ON` | `1` | Backlight for display standby |
+| `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED | `0` | Room temperature visualization |
+| `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10; `11` = Automatic with off; `12` = Automatic without off | `10` | Backlight stand-by level |
+| `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled | `0` | Disable all pushbuttons |
+| `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled | `0` | Pushbutton modality change |
+| `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | Calibration procedure |
+| `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | User settings procedure |
+| `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open | `0` | Windows contact icon |
+| `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled | `0` | Windows contact number |
+| `EXTERNAL_SENSOR_TYPE` | `0` = BTicino BT-3457; `1` = Vantage 8051 | `0` | External temperature sensor type |
+| `HEATING_PID_REGULATION_BAND` | `6..30` | `16` | Heating PID regulation band (°) |
+| `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Heating PID inertia |
+| `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Heating proportional gain (low) |
+| `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Heating proportional gain (high) |
+| `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Heating integrative gain low |
+| `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Heating integrative gain high |
+| `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Heating derivative gain low |
+| `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Heating derivative gain high |
+| `HEATING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Heating proportional speed 1 (%) |
+| `HEATING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Heating proportional speed 2 (%) |
+| `HEATING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Heating proportional speed 3 (%) |
+| `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Heating pushbutton fan coil automatic speed |
+| `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Heating anti-seizing up protection |
+| `COOLING_PID_REGULATION_BAND` | `6..30` | `16` | Cooling PID regulation band (°) |
+| `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Cooling PID inertia |
+| `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Cooling proportional gain (low) |
+| `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Cooling proportional gain (high) |
+| `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Cooling integrative gain low |
+| `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Cooling integrative gain high |
+| `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Cooling derivative gain low |
+| `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Cooling derivative gain high |
+| `COOLING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Cooling proportional speed 1 (%) |
+| `COOLING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Cooling proportional speed 2 (%) |
+| `COOLING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Cooling proportional speed 3 (%) |
+| `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
+| `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
+
+#### Object `96` - Residential thermostat
+
+Section ID: `ownkb:section:d000186:s000019`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `must not`
+Provenance cues: `catalogue`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ZAZB` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `FUNCTION`, `MAXIMUM_HEATING_SETPOINT`, `MINIMUM_HEATING_SETPOINT`, `MAXIMUM_COOLING_SETPOINT`, `MINIMUM_COOLING_SETPOINT`, `NUMBER_OF_SLAVES`, `LED_ENABLE`, `TEMPERATURE_FORMAT`, `FUNCTION_CHANGE_BY_LOCAL_BUTTON`, `AUTOMATIC_CHANGEOVER_MODE`, `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD`, `BACKLIGHT_STAND_BY_LEVEL`, `AMBIENT_TEMPERATURE_VISUALIZATION`, `BACKLIGHT_STANDBY_LEVEL`, `PUSHBUTTON_MANAGEMENT`, `PUSHBUTTON_MODALITY_CHANGE`, `CALIBRATION_PROCEDURE`, `USER_SETTINGS_PROCEDURE`, `WINDOWS_CONTACT_ICON`, `WINDOWS_CONTACT_NUMBER` | Reusable schema; apply the Device and firmware restrictions below. |
+| Heating regulation | `COMFORT_HEATING_SETPOINT`, `ECO_HEATING_SETPOINT`, `ANTIFREEZE_SETPOINT`, `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `HEATING_THRESHOLDS_SETTINGS`, `HEATING_REGULATION_BAND`, `HEATING_FAN_COIL_SPEED_2_THRESHOLD`, `HEATING_FAN_COIL_SPEED_3_THRESHOLD`, `HEATING_CONTACT_OPENING`, `HEATING_CONTACT_CLOSING`, `HEATING_CONTACT_OPENING_ACTIVATION_DELAY`, `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY`, `HEATING_CONTACT_OPENING_TIMEOUT`, `HEATING_CONTACT_CLOSING_TIMEOUT`, `HEATING_CONTACT_PUSHBTN_LOCK`, `HEATING_FANCOIL_VENTILATION_FUNCTION`, `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `HEATING_ACTUATOR_TYPE`, `HEATING_PUMP_DELAY`, `HEATING_PID_REGULATION_BAND`, `HEATING_PID_INERTIA`, `HEATING_PROPORTIONAL_GAIN_LOW`, `HEATING_PROPORTIONAL_GAIN_HIGH`, `HEATING_INTEGRATIVE_GAIN_LOW`, `HEATING_INTEGRATIVE_GAIN_HIGH`, `HEATING_DERIVATIVE_GAIN_LOW`, `HEATING_DERIVATIVE_GAIN_HIGH`, `HEATING_PROPORTIONAL_SPEED_1`, `HEATING_PROPORTIONAL_SPEED_2`, `HEATING_PROPORTIONAL_SPEED_3`, `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `HEATING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Cooling regulation | `COMFORT_COOLING_SETPOINT`, `ECO_COOLING_SETPOINT`, `THERMAL_PROTECTION_SETPOINT`, `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL`, `COOLING_THRESHOLDS_SETTINGS`, `COOLING_REGULATION_BAND`, `COOLING_FAN_COIL_SPEED_2_THRESHOLD`, `COOLING_FAN_COIL_SPEED_3_THRESHOLD`, `COOLING_CONTACT_OPENING`, `COOLING_CONTACT_CLOSING`, `COOLING_CONTACT_OPENING_ACTIVATION_DELAY`, `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY`, `COOLING_CONTACT_OPENING_TIMEOUT`, `COOLING_CONTACT_CLOSING_TIMEOUT`, `COOLING_CONTACT_PUSHBTN_LOCK`, `COOLING_FANCOIL_VENTILATION_FUNCTION`, `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT`, `COOLING_ACTUATOR_TYPE`, `COOLING_PUMP_DELAY`, `COOLING_PID_REGULATION_BAND`, `COOLING_PID_INERTIA`, `COOLING_PROPORTIONAL_GAIN_LOW`, `COOLING_PROPORTIONAL_GAIN_HIGH`, `COOLING_INTEGRATIVE_GAIN_LOW`, `COOLING_INTEGRATIVE_GAIN_HIGH`, `COOLING_DERIVATIVE_GAIN_LOW`, `COOLING_DERIVATIVE_GAIN_HIGH`, `COOLING_PROPORTIONAL_SPEED_1`, `COOLING_PROPORTIONAL_SPEED_2`, `COOLING_PROPORTIONAL_SPEED_3`, `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED`, `COOLING_ANTI_SEIZING_UP_PROTECTION` | Reusable schema; apply the Device and firmware restrictions below. |
+| Actuators and pumps | `ACTUATOR_N=1_FUNCTION`, `ACTUATOR_N=2_FUNCTION`, `ACTUATOR_N=3_FUNCTION`, `ACTUATOR_N=4_FUNCTION`, `ACTUATOR_N=5_FUNCTION`, `ACTUATOR_N=6_FUNCTION`, `ACTUATOR_N=7_FUNCTION`, `ACTUATOR_N=8_FUNCTION`, `ACTUATOR_N=9_FUNCTION`, `ACTUATOR_N=1_TYPE`, `ACTUATOR_N=2_TYPE`, `ACTUATOR_N=3_TYPE`, `ACTUATOR_N=4_TYPE`, `ACTUATOR_N=5_TYPE`, `ACTUATOR_N=6_TYPE`, `ACTUATOR_N=7_TYPE`, `ACTUATOR_N=8_TYPE`, `ACTUATOR_N=9_TYPE`, `PUMP_N=1_FUNCTION`, `PUMP_N=2_FUNCTION`, `PUMP_N=3_FUNCTION`, `PUMP_N=4_FUNCTION`, `PUMP_N=5_FUNCTION`, `PUMP_N=6_FUNCTION`, `PUMP_N=7_FUNCTION`, `PUMP_N=8_FUNCTION`, `PUMP_N=9_FUNCTION` | Reusable schema; apply the Device and firmware restrictions below. |
+
+Catalogue Object key `545` maps to external Object `96`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `FUNCTION` | `0` = Heating; `1` = Cooling; `2` = Heating & cooling | `0` | Function type: -Heating -Cooling -Heating & Cooling |
+| `MAXIMUM_HEATING_SETPOINT` | `7..80` | `80` | Max; "Maximum heating setpoint > Minimum heating setpoint Maximum cooling setpoint >= Maximum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function)." 0,5 steps |
+| `MINIMUM_HEATING_SETPOINT` | `6..79` | `6` | Min; Minimum heating setpoint = Minimum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). 0,5 steps |
+| `COMFORT_HEATING_SETPOINT` | `7..80` | `42` | Comfort; Comfort heating setpoint > Eco heating setpoint Comfort heating setpoint = Minimum heating setpoint. 0,5 steps |
+| `ECO_HEATING_SETPOINT` | `6..79` | `36` | Eco; Eco heating setpoint = Minimum heating setpoint. 0,5 steps |
+| `ANTIFREEZE_SETPOINT` | `6..80` | `14` | Antifreeze; 0,5 steps |
+| `HEATING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Heating fan delay; Checked only if "Heating actuator type" is set to one of values related to fan coil 0,5 steps |
+| `HEATING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Automatic heating thresholds settings; For automatic, while checking configuration, set parameters 8, 9, 10 according to device specific settings. |
+| `HEATING_REGULATION_BAND` | `1..10` | `1` | Heating setpoint allowance; Step 0.1 °C |
+| `HEATING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 2 threshold > Heating regulation band Step 0.1°C |
+| `HEATING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Heating actuator type" is set to one of values related to fan coil and if "Heating thresholds settings" is set to Manual setting: Heating Fan coil speed 3 threshold > Heating Fan coil speed 2 threshold Step 0,1°C |
+| `HEATING_CONTACT_OPENING` | `0` = No action; `1` = Antifreeze; `2` = Off; `3` = Switch to cooling; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact opening; If parameter "Heating contact opening" is set to 0, 3, 4, parameter "Heating contact opening timeout" must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact opening" = "Cooling contact opening". If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact opening must be different from 5...25. |
+| `HEATING_CONTACT_CLOSING` | `0` = No action; `1` = Antifreeze; `2` = Off; `3` = Switch to cooling; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Heating eco; `27` = Heating comfort | `0` | Local contact closing; If parameter "Heating contact closing" is set to 0, 3, 4, parameter "Heating contact closing timeout" must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact closing" = "Cooling contact closing" If parameter Heating actuator type is set to 5 (FIL PILOTE), parameter Heating contact closing must be different from 5...25. |
+| `HEATING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact opening; Step 5 s |
+| `HEATING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact closing; Step 5 s |
+| `HEATING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Heating contact opening timeout" is different from 0, "Heating contact closing timeout" must be set to 0." |
+| `HEATING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Heating contact closing timeout" is different from 0, "Heating contact opening timeout" must be set to 0." step 1 min |
+| `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed | `0` | Heating contact pushbutton locking |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Heating fancoil continuous ventilation |
+| `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `MAXIMUM_COOLING_SETPOINT` | `7..80` | `80` | Max; Maximum cooling setpoint > Minimum cooling setpoint Maximum cooling setpoint >= Maximum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). Step 0,5°C |
+| `MINIMUM_COOLING_SETPOINT` | `6..70` | `6` | Min; Minimum cooling setpoint = Minimum heating setpoint This control (cross control between heating and cooling parameters) has to be done only if both heating and cooling function are configured (at least one actuator or one pump for each function). Step 0,5°C |
+| `COMFORT_COOLING_SETPOINT` | `6..79` | `50` | Comfort; Comfort cooling setpoint = Minimum cooling setpoint. Step 0,5°C |
+| `ECO_COOLING_SETPOINT` | `7..80` | `56` | Eco; Eco cooling setpoint > Comfort cooling setpoint Eco cooling setpoint = Minimum cooling setpoint. Step 0,5°C |
+| `THERMAL_PROTECTION_SETPOINT` | `6..80` | `70` | Thermal protection; Step 0.5°C |
+| `COOLING_VALVE_ADVANCE_TIME_FOR_FAN_COIL` | `0..255` | `0` | Cooling fan delay; Checked only if "Cooling actuator type" is set to one of values related to fan coil Step 5s |
+| `COOLING_THRESHOLDS_SETTINGS` | `0` = Automatic; `1` = Manual setting | `0` | Automatic cooling thresholds settings; For automatic, while checking configuration, set 28, 29, 30 according to device specific settings. |
+| `COOLING_REGULATION_BAND` | `1..10` | `1` | Cooling setpoint allowance; Step 0.1°C |
+| `COOLING_FAN_COIL_SPEED_2_THRESHOLD` | `2..20` | `6` | First speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 2 threshold > Cooling regulation band Step 0.1 °C |
+| `COOLING_FAN_COIL_SPEED_3_THRESHOLD` | `3..30` | `10` | Second speed threshold for fancoils; Checked only if "Cooling actuator type" is set to one of values related to fan coil and if "Cooling thresholds settings" is set to Manual setting: Cooling Fan coil speed 3 threshold > Cooling Fan coil speed 2 threshold Step 0,1 °C |
+| `COOLING_CONTACT_OPENING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to heating; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact opening; If parameter Cooling contact opening is to set to 0,3,4, parameter cooling contact opening timeout must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact opening" = "Cooling contact opening" |
+| `COOLING_CONTACT_CLOSING` | `0` = No action; `1` = Protection; `2` = Off; `3` = Switch to heating; `4` = Previous state; `5` = Manual 10°; `6` = Manual 11°; `7` = Manual 12°; `8` = Manual 13°; `9` = Manual 14°; `10` = Manual 15°; `11` = Manual 16°; `12` = Manual 17°; `13` = Manual 18°; `14` = Manual 19°; `15` = Manual 20°; `16` = Manual 21°; `17` = Manual 22°; `18` = Manual 23°; `19` = Manual 24°; `20` = Manual 25°; `21` = Manual 26°; `22` = Manual 27°; `23` = Manual 28°; `24` = Manual 29°; `25` = Manual 30°; `26` = Cooling eco; `27` = Cooling comfort | `0` | Local contact closing; If parameter Cooling contact closing is to set to 0,3,4, parameter cooling contact closing timeout must be set to 0. If automatic changeover mode: - Only values 0, 1, 2, 4, 26, 27 are accepted - "Heating contact closing" = "Cooling contact closing" |
+| `COOLING_CONTACT_OPENING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact opening; step 5s |
+| `COOLING_CONTACT_CLOSING_ACTIVATION_DELAY` | `0..255` | `0` | Activation delay for local contact closing; step 5 s |
+| `COOLING_CONTACT_OPENING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter "Cooling contact opening timeout" is different from 0, "Cooling contact closing timeout" must be set to 0. step 1 min |
+| `COOLING_CONTACT_CLOSING_TIMEOUT` | `0..255` | `0` | Timeout for local contact opening action; 0 corresponds to infinite. If parameter Cooling contact closing timeout is different from 0, Cooling contact opening timeout must be set to 0. step 1 min |
+| `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed | `0` | Cooling contact pushbutton locking |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling fancoil continuous ventilation |
+| `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `ACTUATOR_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 1; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 2; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 3; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 4; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 5; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 6; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 7; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 8; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Function actuator 9; If this parameter is set to "Heating and cooling", it must be checked that: - "Heating actuator type" and "Cooling actuator type" are equal. |
+| `ACTUATOR_N=1_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=2_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=3_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=4_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=5_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=6_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=7_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=8_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `ACTUATOR_N=9_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; The highlighted values must not be implemented into key object (they are dedicated to future use). This parameter has not to be shown. In the final check, this parameter must be assigned to: - "Heating actuator type" if "Actuator function" is set to Heating only. - "Cooling actuator type" if "Actuator function" is set to Cooling only. - "Heating actuator type" or "Cooling actuator type" if "Actuator function" is set to Heating and cooling or is set to Not installed. |
+| `HEATING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `5` = Fil Pilote; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). In case of FIL PILOTE, "Automatic changeover Mode" must be set disabled. |
+| `COOLING_ACTUATOR_TYPE` | `0` = `ON`/`OFF`; `1` = Open/Close; `2` = 2 pipes fan coil with on/off valve; `4` = Gateway; `6` = 2 pipes fan coil with proportional valve; `7` = 4 pipes fan coil with on/off valves; `8` = 4 pipes fan coil with proportional valves; `9` = Proportional valve; `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; The highlighted values must not be implemented into key object (they are dedicated to future use). |
+| `PUMP_N=1_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 1 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=2_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 2 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=3_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 3 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=4_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 4 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=5_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 5 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=6_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 6 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=7_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 7 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=8_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 8 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `PUMP_N=9_FUNCTION` | `0` = Not installed; `1` = Heating only; `2` = Cooling only; `3` = Heating and cooling | `0` | Pump 9 function; If "Heating actuator type" is set to FIL PILOTE, this parameter must be assigned to Not installed or to Cooling only. If "Heating actuator type" is set to GATEWAY, and this parameter is set to "Heating only" or to "Heating and cooling", there must be at least one actuator function set to "Heating only" or to "Heating and cooling". If "Cooling actuator type" is set to GATEWAY, and this parameter is set to "Cooling only" or to "Heating and cooling", there must be at least one actuator function set to "Cooling only" or to "Heating and cooling". |
+| `HEATING_PUMP_DELAY` | `0..255` | `0` | Time delay for heating pumps; step 5s |
+| `COOLING_PUMP_DELAY` | `0..255` | `0` | Time delay for cooling pump; step 5s |
+| `NUMBER_OF_SLAVES` | `0..9` | `0` | Number of slave probes |
+| `LED_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Led enable |
+| `TEMPERATURE_FORMAT` | `0` = Celsius; `1` = Fahrenheit | `0` | Temperature format |
+| `FUNCTION_CHANGE_BY_LOCAL_BUTTON` | `0` = Enabled; `1` = Disabled | `0` | Pushbutton "heating/cooling" change |
+| `AUTOMATIC_CHANGEOVER_MODE` | `0` = Enabled; `1` = Disabled | `1` | Automatic changeover; Condition to check contact: - See notes contained into parameters "Heating contact opening", "Heating contact closing", "Cooling contact opening" and "Cooling contact closing". Condition to check fil pilote: - See note contained into parameter "Heating actuator type". Conditions to check for actuators and pumps: - There must be at least one actuator for heatng (actuator function set to "Heating only" or "Heating and Cooling") or at least one pump for heating (pump function set to "Heating only"). - There must be at least one actuator for cooling (actuator function set to "Cooling only" or "Heating and Cooling") or at least one pump for cooling (pump function set to "Cooling only"). - if at least one actuator function is set to "Heating and cooling", "Heating actuator type" (that must be equal to "Cooling actuator type") can only be equal to 7 or 8; if this condition related to "Heating actuator type" is not satisfied, there must be at least one pump function set to "Heating only" and one pump function set to "Cooling only". |
+| `AUTOMATIC_CHANGEOVER_MODE_SWITCHING_THRESHOLD` | `20..50` | `20` | Automatic changeover mode switching threshold (step 0.1 °C); Hidden, used only during device developement. |
+| `BACKLIGHT_STAND_BY_LEVEL` | `0` = `OFF`; `1` = `ON` | `1` | Display standby backlight |
+| `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED | `0` | Ambient temperature visualization |
+| `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 | `10` | Backlight stand-by level |
+| `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled | `0` | Disable all pushbuttons |
+| `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled | `0` | Pushbutton modality change |
+| `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled | `0` | Calibration procedure |
+| `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled | `0` | User settings procedure |
+| `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open | `0` | Windows contact icon |
+| `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled | `0` | Windows contact number |
+| `HEATING_PID_REGULATION_BAND` | `6..30` | `16` | Heating PID regulation band (°) |
+| `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Heating PID inertia |
+| `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Heating proportional gain (low) |
+| `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Heating proportional gain (high) |
+| `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Heating integrative gain low |
+| `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Heating integrative gain high |
+| `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Heating derivative gain low |
+| `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Heating derivative gain high |
+| `HEATING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Heating proportional speed 1 (%) |
+| `HEATING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Heating proportional speed 2 (%) |
+| `HEATING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Heating proportional speed 3 (%) |
+| `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Heating pushbutton fan coil automatic speed |
+| `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Heating anti-seizing up protection |
+| `COOLING_PID_REGULATION_BAND` | `6..30` | `16` | Cooling PID regulation band (°) |
+| `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia | `1` | Cooling PID inertia |
+| `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` | `100` | Cooling proportional gain (low) |
+| `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` | `0` | Cooling proportional gain (high) |
+| `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` | `5` | Cooling integrative gain low |
+| `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` | `0` | Cooling integrative gain high |
+| `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` | `100` | Cooling derivative gain low |
+| `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` | `0` | Cooling derivative gain high |
+| `COOLING_PROPORTIONAL_SPEED_1` | `1..98` | `33` | Cooling proportional speed 1 (%) |
+| `COOLING_PROPORTIONAL_SPEED_2` | `2..99` | `67` | Cooling proportional speed 2 (%) |
+| `COOLING_PROPORTIONAL_SPEED_3` | `3..100` | `100` | Cooling proportional speed 3 (%) |
+| `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
+| `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled | `1` | Cooling anti-seizing up protection |
+
+#### Object `221` - Slave probe (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000186:s000020`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `00..99` | `01` | Zone |
+| `SLA` | `1..9` | `1` | Slave number |
+| `LED_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Led enable |
+| `EXTERNAL_SENSOR_TYPE` | `0` = BTicino 3457; `1` = Vantage 8051 | `0` | External temperature sensor type |
+| `RISC` | `0` = Disable; `1` = Enable | `1` | Winter modality; Winter mode |
+| `COND` | `0` = Disable; `1` = Enable | `0` | Summer modality; Summer mode |
+| `ZAZB_CENTRALE` | `00..99` | `01` | Temperature Control unit address |
+
+#### Object `144` - Remote control for thermostat (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000186:s000021`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ZAZB` | `0..99` | `01` | Zone |
+| `SLA` | `1..9` | `1` | Slave number |
+| `TEMPERATURE_FORMAT` | `0` = Celsius; `1` = Fahrenheit | `0` | Temperature format |
+| `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED | `0` | Ambient temperature visualization |
+| `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled | `0` | Disable all pushbuttons |
+| `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled | `0` | Disable pushbutton modality change |
+| `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | Disable calibration procedure |
+| `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled | `1` | Disable user settings procedure |
+| `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Heating pushbutton fan coil automatic speed |
+| `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled | `0` | Cooling pushbutton fan coil automatic speed |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000186:s000022`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000186:s000023`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `160` | `1` | `184` | `4947` | `TYPE=0` | `7204` |
+| `160` | `1` | `95` | `4939` | `TYPE=1` | `7204` |
+| `160` | `1` | `96` | `4943` | `TYPE=2` | `7204` |
+| `691` | `1` | `184` | `4947` | `TYPE=0` | `7204` |
+| `691` | `1` | `95` | `4939` | `TYPE=1` | `7204` |
+| `691` | `1` | `96` | `4943` | `TYPE=2` | `7204` |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000186:s000024`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `160` | `184` | `1643` | `RISC` | `0` = Disable; `1` = Enable (entire reusable range retained) | `1` | Winter modality |
+| `160` | `184` | `1644` | `COND` | `0` = Disable; `1` = Enable (entire reusable range retained) | `0` | Summer modality |
+| `160` | `184` | `1645` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1646` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Load type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1647` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1648` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1649` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1650` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1651` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1652` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1653` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1654` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1655` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `1716` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+| `160` | `184` | `1918` | `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED (entire reusable range retained) | `0` | Ambient temperature visualization |
+| `160` | `184` | `2667` | `COMFORT_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `7`; `8`; `9` | `42` | Comfort; reusable default `42` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2669` | `ECO_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `6`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `7`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `8`; `9` | `36` | Eco; reusable default `36` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2674` | `ANTIFREEZE_SETPOINT` | `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80` | `14` | Antifreeze; reusable default `14` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2681` | `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled when contact is open; `2` = Enabled when contact is closed (entire reusable range retained) | `0` | Heating contact pushbutton locking |
+| `160` | `184` | `2688` | `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating fancoil continuous ventilation |
+| `160` | `184` | `2695` | `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `160` | `184` | `2702` | `HEATING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Heating PID regulation band (°) |
+| `160` | `184` | `2709` | `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Heating PID inertia |
+| `160` | `184` | `2716` | `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating proportional gain (low) |
+| `160` | `184` | `2723` | `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating proportional gain (high) |
+| `160` | `184` | `2730` | `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Heating integrative gain low |
+| `160` | `184` | `2737` | `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Heating integrative gain high |
+| `160` | `184` | `2744` | `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating derivative gain low |
+| `160` | `184` | `2751` | `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating derivative gain high |
+| `160` | `184` | `2758` | `HEATING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Heating proportional speed 1 (%) |
+| `160` | `184` | `2765` | `HEATING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Heating proportional speed 2 (%) |
+| `160` | `184` | `2772` | `HEATING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Heating proportional speed 3 (%) |
+| `160` | `184` | `2779` | `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Heating pushbutton fan coil automatic speed |
+| `160` | `184` | `2786` | `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating anti-seizing up protection |
+| `160` | `184` | `2788` | `COMFORT_COOLING_SETPOINT` | `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79` | `50` | Comfort; reusable default `50` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2790` | `ECO_COOLING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `7`; `8`; `9`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80` | `56` | Eco; reusable default `56` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2795` | `THERMAL_PROTECTION_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `6`; `7`; `8`; `9` | `70` | Thermal protection; reusable default `70` is outside this subset; filter supplies no replacement default |
+| `160` | `184` | `2802` | `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled when contact is open; `2` = Enabled when contact is closed (entire reusable range retained) | `0` | Cooling contact pushbutton locking |
+| `160` | `184` | `2809` | `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling fancoil continuous ventilation |
+| `160` | `184` | `2816` | `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `160` | `184` | `2823` | `COOLING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Cooling PID regulation band (°) |
+| `160` | `184` | `2830` | `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Cooling PID inertia |
+| `160` | `184` | `2837` | `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling proportional gain (low) |
+| `160` | `184` | `2844` | `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling proportional gain (high) |
+| `160` | `184` | `2851` | `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Cooling integrative gain low |
+| `160` | `184` | `2858` | `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Cooling integrative gain high |
+| `160` | `184` | `2865` | `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling derivative gain low |
+| `160` | `184` | `2872` | `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling derivative gain high |
+| `160` | `184` | `2879` | `COOLING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Cooling proportional speed 1 (%) |
+| `160` | `184` | `2886` | `COOLING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Cooling proportional speed 2 (%) |
+| `160` | `184` | `2893` | `COOLING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Cooling proportional speed 3 (%) |
+| `160` | `184` | `2900` | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Cooling pushbutton fan coil automatic speed |
+| `160` | `184` | `2907` | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling anti-seizing up protection |
+| `160` | `184` | `2914` | `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 (entire reusable range retained) | `10` | Backlight stand-by level |
+| `160` | `184` | `2921` | `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Disable all pushbuttons |
+| `160` | `184` | `2928` | `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Pushbutton modality change |
+| `160` | `184` | `2935` | `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Calibration procedure |
+| `160` | `184` | `2942` | `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | User settings procedure |
+| `160` | `184` | `2949` | `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open (entire reusable range retained) | `0` | Windows contact icon |
+| `160` | `184` | `2956` | `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled (entire reusable range retained) | `0` | Windows contact number |
+| `160` | `95` | `857` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=1_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `160` | `95` | `858` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=2_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `160` | `95` | `869` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `870` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `871` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `872` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `873` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `874` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `875` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `876` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `877` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `878` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Heating_actuator_type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `879` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Cooling_actuator_ type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `1714` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+| `160` | `95` | `1911` | `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED (entire reusable range retained) | `0` | Ambient temperature visualization |
+| `160` | `95` | `2482` | `COMFORT_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `7`; `8`; `9` | `42` | Comfort; reusable default `42` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2484` | `ECO_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `6`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `7`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `8`; `9` | `36` | Eco; reusable default `36` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2486` | `ANTIFREEZE_SETPOINT` | `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80` | `14` | Antifreeze; reusable default `14` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2488` | `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed (entire reusable range retained) | `0` | Heating contact pushbutton locking |
+| `160` | `95` | `2490` | `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating fancoil ventilation function |
+| `160` | `95` | `2497` | `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling fancoil continuous ventilation |
+| `160` | `95` | `2499` | `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `160` | `95` | `2501` | `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `160` | `95` | `2503` | `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed (entire reusable range retained) | `0` | Cooling contact pushbutton locking |
+| `160` | `95` | `2505` | `HEATING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Heating PID regulation band |
+| `160` | `95` | `2507` | `COOLING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Cooling PID regulation band (°) |
+| `160` | `95` | `2509` | `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Heating |
+| `160` | `95` | `2511` | `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Cooling PID inertia |
+| `160` | `95` | `2513` | `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating proportional gain (low) |
+| `160` | `95` | `2515` | `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling proportional gain (low) |
+| `160` | `95` | `2517` | `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating proportional gain (high) |
+| `160` | `95` | `2519` | `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling proportional gain (high) |
+| `160` | `95` | `2521` | `COMFORT_COOLING_SETPOINT` | `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79` | `50` | Comfort; reusable default `50` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2523` | `ECO_COOLING_SETPOINT` | `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80`; `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `7`; `8`; `9` | `56` | Eco; reusable default `56` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2525` | `THERMAL_PROTECTION_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `6`; `7`; `8`; `9` | `70` | Thermal protection; reusable default `70` is outside this subset; filter supplies no replacement default |
+| `160` | `95` | `2527` | `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Heating integrative gain low |
+| `160` | `95` | `2529` | `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Cooling integrative gain low |
+| `160` | `95` | `2531` | `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Heating integrative gain high |
+| `160` | `95` | `2533` | `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Cooling integrative gain high |
+| `160` | `95` | `2535` | `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating derivative gain low |
+| `160` | `95` | `2537` | `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling derivative gain low |
+| `160` | `95` | `2539` | `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating derivative gain high |
+| `160` | `95` | `2541` | `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling derivative gain high |
+| `160` | `95` | `2543` | `HEATING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Heating proportional speed 1 (%) |
+| `160` | `95` | `2545` | `COOLING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Cooling proportional speed 1 (%) |
+| `160` | `95` | `2547` | `COOLING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Cooling proportional speed 2 (%) |
+| `160` | `95` | `2549` | `HEATING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Heating proportional speed 2 (%) |
+| `160` | `95` | `2551` | `HEATING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Heating proportional speed 3 (%) |
+| `160` | `95` | `2553` | `COOLING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Cooling proportional speed 3 (%) |
+| `160` | `95` | `2555` | `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Heating pushbutton fan coil automatic speed |
+| `160` | `95` | `2557` | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Cooling pushbutton fan coil automatic speed |
+| `160` | `95` | `2559` | `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating anti-seizing up protection |
+| `160` | `95` | `2561` | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling anti-seizing up protection |
+| `160` | `95` | `2563` | `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10; `11` = Automatic with off; `12` = Automatic without off (entire reusable range retained) | `10` | Backlight stand-by level |
+| `160` | `95` | `2565` | `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Disable all push buttons |
+| `160` | `95` | `2567` | `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Pushbutton modality change |
+| `160` | `95` | `2569` | `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Calibration procedure |
+| `160` | `95` | `2571` | `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | User settings procedure |
+| `160` | `95` | `2573` | `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open (entire reusable range retained) | `0` | Windows contact icon |
+| `160` | `95` | `2575` | `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled (entire reusable range retained) | `0` | Windows contact number |
+| `160` | `95` | `3742` | `EXTERNAL_SENSOR_TYPE` | `0` = BTicino BT-3457; `1` = Vantage 8051 (entire reusable range retained) | `0` | External temperature sensor type |
+| `160` | `96` | `880` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=1_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `160` | `96` | `881` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=2_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `160` | `96` | `884` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=5_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `160` | `96` | `892` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Cooling_actuator_ type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `893` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Heating_actuator_type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `894` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `895` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `896` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `897` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `898` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `899` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `900` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `901` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `902` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter; `11` = 2 pipes fan coil with proportional speed control; `12` = 4 pipes fan coil with proportional speed control | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `1715` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+| `160` | `96` | `1912` | `AMBIENT_TEMPERATURE_VISUALIZATION` | `0` = ENABLED; `1` = DISABLED (entire reusable range retained) | `0` | Ambient temperature visualization |
+| `160` | `96` | `2577` | `HEATING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed (entire reusable range retained) | `0` | Heating contact pushbutton locking |
+| `160` | `96` | `2579` | `HEATING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating fancoil continuous ventilation |
+| `160` | `96` | `2581` | `HEATING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Heating fan coil continuous ventilation timeout (minutes) |
+| `160` | `96` | `2583` | `COOLING_CONTACT_PUSHBTN_LOCK` | `0` = Disabled; `1` = Enabled_contact_open; `2` = Enabled_contact_closed (entire reusable range retained) | `0` | Cooling contact pushbutton locking |
+| `160` | `96` | `2585` | `COOLING_FANCOIL_VENTILATION_FUNCTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling fancoil continuous ventilation |
+| `160` | `96` | `2587` | `COOLING_FANCOIL_VENTILATION_FUNCTION_TIMEOUT` | `0..254`; `255` = Infinite (entire reusable range retained) | `0` | Cooling fan coil continuous ventilation timeout (minutes) |
+| `160` | `96` | `2589` | `BACKLIGHT_STANDBY_LEVEL` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 (entire reusable range retained) | `10` | Backlight stand-by level |
+| `160` | `96` | `2591` | `PUSHBUTTON_MANAGEMENT` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Disable all pushbuttons |
+| `160` | `96` | `2593` | `PUSHBUTTON_MODALITY_CHANGE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Pushbutton modality change |
+| `160` | `96` | `2595` | `CALIBRATION_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Calibration procedure |
+| `160` | `96` | `2597` | `USER_SETTINGS_PROCEDURE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | User settings procedure |
+| `160` | `96` | `2599` | `WINDOWS_CONTACT_ICON` | `0` = Always `OFF`; `1` = `ON` when open, `OFF` when closed; `2` = Blinking when open, `OFF` when closed; `3` = `ON` when closed, `OFF` when open; `4` = Blinking when closed, `OFF` when open (entire reusable range retained) | `0` | Windows contact icon |
+| `160` | `96` | `2601` | `WINDOWS_CONTACT_NUMBER` | `1..201`; `0` = Disabled (entire reusable range retained) | `0` | Windows contact number |
+| `160` | `96` | `2603` | `HEATING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Heating PID regulation band (°) |
+| `160` | `96` | `2605` | `HEATING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Heating PID inertia |
+| `160` | `96` | `2607` | `HEATING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating proportional gain (low) |
+| `160` | `96` | `2609` | `HEATING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating proportional gain (high) |
+| `160` | `96` | `2611` | `HEATING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Heating integrative gain low |
+| `160` | `96` | `2613` | `HEATING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Heating integrative gain high |
+| `160` | `96` | `2615` | `HEATING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Heating derivative gain low |
+| `160` | `96` | `2617` | `HEATING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Heating derivative gain high |
+| `160` | `96` | `2619` | `HEATING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Heating proportional speed 1 (%) |
+| `160` | `96` | `2621` | `HEATING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Heating proportional speed 2 (%) |
+| `160` | `96` | `2623` | `HEATING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Heating proportional speed 3 (%) |
+| `160` | `96` | `2625` | `HEATING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Heating pushbutton fan coil automatic speed |
+| `160` | `96` | `2627` | `HEATING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Heating anti-seizing up protection |
+| `160` | `96` | `2629` | `COOLING_PID_REGULATION_BAND` | `6..30` (entire reusable range retained) | `16` | Cooling PID regulation band (°) |
+| `160` | `96` | `2631` | `COOLING_PID_INERTIA` | `0` = Low inertia; `1` = Medium inertia; `2` = High inertia; `3` = Custom inertia (entire reusable range retained) | `1` | Cooling PID inertia |
+| `160` | `96` | `2633` | `COOLING_PROPORTIONAL_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling proportional gain (low) |
+| `160` | `96` | `2635` | `COOLING_PROPORTIONAL_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling proportional gain (high) |
+| `160` | `96` | `2637` | `COOLING_INTEGRATIVE_GAIN_LOW` | `0..100` (entire reusable range retained) | `5` | Cooling integrative gain low |
+| `160` | `96` | `2639` | `COOLING_INTEGRATIVE_GAIN_HIGH` | `0` (entire reusable range retained) | `0` | Cooling integrative gain high |
+| `160` | `96` | `2641` | `COOLING_DERIVATIVE_GAIN_LOW` | `0..255` (entire reusable range retained) | `100` | Cooling derivative gain low |
+| `160` | `96` | `2643` | `COOLING_DERIVATIVE_GAIN_HIGH` | `0..3` (entire reusable range retained) | `0` | Cooling derivative gain high |
+| `160` | `96` | `2645` | `COOLING_PROPORTIONAL_SPEED_1` | `1..98` (entire reusable range retained) | `33` | Cooling proportional speed 1 (%) |
+| `160` | `96` | `2647` | `COOLING_PROPORTIONAL_SPEED_2` | `2..99` (entire reusable range retained) | `67` | Cooling proportional speed 2 (%) |
+| `160` | `96` | `2649` | `COOLING_PROPORTIONAL_SPEED_3` | `3..100` (entire reusable range retained) | `100` | Cooling proportional speed 3 (%) |
+| `160` | `96` | `2651` | `COOLING_PUSHBTN_FAN_COIL_AUTO_SPEED` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Cooling pushbutton fan coil automatic speed |
+| `160` | `96` | `2653` | `COOLING_ANTI_SEIZING_UP_PROTECTION` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Cooling anti-seizing up protection |
+| `160` | `96` | `2655` | `COMFORT_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `7`; `8`; `9` | `42` | Comfort; reusable default `42` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2657` | `ECO_HEATING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `6`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `7`; `70`; `71`; `8`; `9`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79` | `36` | Eco; reusable default `36` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2659` | `ANTIFREEZE_SETPOINT` | `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `50`; `51`; `52`; `53`; `54`; `55`; `56`; `57`; `58`; `59`; `60`; `61`; `62`; `63`; `64`; `65`; `66`; `67`; `68`; `69`; `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `80` | `14` | Antifreeze; reusable default `14` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2661` | `COMFORT_COOLING_SETPOINT` | `70`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79` | `50` | Comfort; reusable default `50` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2663` | `ECO_COOLING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `7`; `71`; `72`; `73`; `74`; `75`; `76`; `77`; `78`; `79`; `8`; `80`; `9` | `56` | Eco; reusable default `56` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2665` | `THERMAL_PROTECTION_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `6`; `7`; `8`; `9`; `45`; `46`; `47`; `48`; `49` | `70` | Thermal protection; reusable default `70` is outside this subset; filter supplies no replacement default |
+| `160` | `96` | `2958` | `FUNCTION_CHANGE_BY_LOCAL_BUTTON` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Pushbutton "heating/cooling" change |
+| `691` | `184` | `1970` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1971` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1972` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1973` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1974` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1975` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1976` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1977` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1978` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1979` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Load type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1980` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Load type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `184` | `1981` | `RISC` | `0` = Disable; `1` = Enable (entire reusable range retained) | `1` | Winter modality |
+| `691` | `184` | `1982` | `COND` | `0` = Disable; `1` = Enable (entire reusable range retained) | `0` | Summer modality |
+| `691` | `184` | `2986` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+| `691` | `95` | `1920` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1921` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1922` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1923` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1924` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1925` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1926` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1927` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1928` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1929` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Heating_actuator_type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1930` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Cooling_actuator_ type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `1931` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=1_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `691` | `95` | `1932` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=2_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `691` | `95` | `2984` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+| `691` | `95` | `3089` | `ECO_COOLING_SETPOINT` | `10`; `11`; `12`; `13`; `14`; `15`; `16`; `17`; `18`; `19`; `20`; `21`; `22`; `23`; `24`; `25`; `26`; `27`; `28`; `29`; `30`; `31`; `32`; `33`; `34`; `35`; `36`; `37`; `38`; `39`; `40`; `41`; `42`; `43`; `44`; `45`; `46`; `47`; `48`; `49`; `7`; `8`; `9` | `56` | Eco; reusable default `56` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `3437` | `BACKLIGHT_STANDBY_LEVEL` | `11` = Automatic with off; `12` = Automatic without off | `10` | Backlight stand-by level; reusable default `10` is outside this subset; filter supplies no replacement default |
+| `691` | `95` | `3743` | `EXTERNAL_SENSOR_TYPE` | `0` = BTicino BT-3457; `1` = Vantage 8051 (entire reusable range retained) | `0` | External temperature sensor type |
+| `691` | `96` | `1945` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1946` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 2; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1947` | `ACTUATOR_N=3_TYPE` | `10` = IR emitter | `0` | Type actuator 3; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1948` | `ACTUATOR_N=4_TYPE` | `10` = IR emitter | `0` | Type actuator 4; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1949` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter | `0` | Type actuator 5; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1950` | `ACTUATOR_N=6_TYPE` | `10` = IR emitter | `0` | Type actuator 6; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1951` | `ACTUATOR_N=7_TYPE` | `10` = IR emitter | `0` | Type actuator 7; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1952` | `ACTUATOR_N=8_TYPE` | `10` = IR emitter | `0` | Type actuator 8; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1953` | `ACTUATOR_N=9_TYPE` | `10` = IR emitter | `0` | Type actuator 9; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1954` | `HEATING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Heating_actuator_type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1955` | `COOLING_ACTUATOR_TYPE` | `10` = IR emitter | `0` | Cooling_actuator_ type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `691` | `96` | `1956` | `ACTUATOR_N=1_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=1_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `691` | `96` | `1957` | `ACTUATOR_N=2_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=2_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `691` | `96` | `1960` | `ACTUATOR_N=5_TYPE` | `10` = IR emitter | `0` | Type actuator 1 (Actuator_N=5_type); reusable default `0` is outside this subset; filter supplies no replacement default; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `691` | `96` | `2985` | `LED_ENABLE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `0` | Led enable |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000186:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `7204` | `ZA/A=0` | `A` = `0` | `7204` |
+| `7204` | `ZA/A=0; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=0; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=1` | `A` = `1` | `7204` |
+| `7204` | `ZA/A=1; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=1; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=2` | `A` = `2` | `7204` |
+| `7204` | `ZA/A=2; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=2; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=3` | `A` = `3` | `7204` |
+| `7204` | `ZA/A=3; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=3; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=4` | `A` = `4` | `7204` |
+| `7204` | `ZA/A=4; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=4; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=5` | `A` = `5` | `7204` |
+| `7204` | `ZA/A=5; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=5; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=6` | `A` = `6` | `7204` |
+| `7204` | `ZA/A=6; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=6; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=7` | `A` = `7` | `7204` |
+| `7204` | `ZA/A=7; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=7; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=8` | `A` = `8` | `7204` |
+| `7204` | `ZA/A=8; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=8; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+| `7204` | `ZA/A=9` | `A` = `9` | `7204` |
+| `7204` | `ZA/A=9; ZB/PL=0` | `PL` = `0` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=1` | `PL` = `1` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=2` | `PL` = `2` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=3` | `PL` = `3` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=4` | `PL` = `4` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=5` | `PL` = `5` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=6` | `PL` = `6` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=7` | `PL` = `7` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=8` | `PL` = `8` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=9` | `PL` = `9` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=10` | `PL` = `10` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=11` | `PL` = `11` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=12` | `PL` = `12` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=13` | `PL` = `13` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=14` | `PL` = `14` | `7204` → `7205` |
+| `7204` | `ZA/A=9; ZB/PL=15` | `PL` = `15` | `7204` → `7205` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+| Physical-to-advanced record | Firmware | trans_data key | Description |
+| --- | --- | --- | --- |
+| `1` | `160` | `1` | Conversion rule device H4691 |
+| `2` | `691` | `3` | Conversion rule device H4691 Firmware `2.0` |
+
+`EN_PHY_TO_ADV_TRANS` supplies these opaque trans_data references; the referenced payload contents are not exposed in this extraction. These records do not resolve the separate rule `7204` A/PL versus ZAZB mismatch or justify an invented field alias.
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000186:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1686` / `modobj = 6` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`184`, `95`, `96`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000186:s000027`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Roles / override | `TYPE=0` central probe, 1 hotel, 2 residential. Probe manual setpoint lasts until next central change; local comfort/eco/protection persists until local automatic mode is restored | Installer pp. 8–11; user pp. 7–17 |
+| Loads / pumps / slaves | Sheet physical load matrix covers ON/OFF, open/close, 2/4 pipe fan-coils, gateways, Fil Pilote and proportional loads. Software supports up to 9 actuators, 9 pumps and 9 slave probes | Sheet p. 2 and software pp. 6–8; production scope below |
+| Automatic changeover | Not available as central-unit Master probe; advanced configuration required, documented from Suite 1.3. Setpoint±threshold or heating/cooling setpoint pairs govern switching | Installer pp. 12–16; software p. 7 |
+| Contact / regulation | Independent opening/closing actions per season, delays/timeouts, contact-based key locks; increasing fan thresholds, PID inertia, pump/fan delays, weekly two-minute anti-block and ventilation | Software pp. 8–14 |
+| Errors | Er 1 pump, Er 2 actuator, Er 3 slave: current mode retained and recurrence after 15 min if uncleared. Er 4 sensor/Er 5 internal: OFF and controls disabled | Installer p. 29 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000186:s000028`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000186:s000029`
+
+Applicability cues: `gateway`
+Provenance cues: `source`
+
+Physical zone ZA/ZB is 01..99. `TYPE=0` is a central-unit probe: leave HEAT, COOL and PUMP unconfigured and assign them at the central unit. `TYPE=1/2` selects hotel/residential operation. The following are physical configurator encodings, separate from reusable Object enums (MM00789-b-EN, printed/PDF p. 2).
+
+| HEAT / COOL value | Published load | Address / restrictions |
+| --- | --- | --- |
+| `0` | No load | No actuator |
+| `1` | ON/OFF valve | Heating `N=1`; cooling `N=2` |
+| `2` | Open/close valve | Heating `N=1`; cooling `N=2` |
+| `3` | Two-pipe fan-coil, ON/OFF valve | Heating `N=1`; cooling `N=2` |
+| `4` | Gateway | Heating `N=1`; cooling `N=2` |
+| `5` | Fil Pilote | Heating only; no `COOL=5` |
+| `6` | Two-pipe fan-coil, 0–10 V speed control | Heating `N=1`; cooling `N=2` |
+| `7` | Four-pipe fan-coil, ON/OFF valves | Heating `N=1`; cooling `N=2` |
+| `8` | Four-pipe fan-coil, 0–10 V speed control | Heating `N=1`; cooling `N=2` |
+| `9` | Three-point / 0–10 V valve | Heating `N=1`; cooling `N=2` |
+| `COOL=CEN` | Reuse heating configuration | Actuator `N=1`; HEAT must differ from 0 and 5 |
+
+| PUMP | Published physical assignment |
+| --- | --- |
+| `0` | None |
+| `1` | Heating `N=1` |
+| `2` | Cooling `N=2` |
+| `3` | Heating `N=1` and cooling `N=2` |
+| `4` | Common heating/cooling pump `N=1` |
+
+Heating-containing pump choices 1, 3 and 4 require HEAT other than 5 (Fil Pilote).
+
+| IN | Contact open | Contact closed |
+| --- | --- | --- |
+| `0` | Contact disabled | Contact disabled |
+| `1` | Protection | Restore previous state |
+| `2` | OFF | Restore previous state |
+| `3` | ECO | Restore previous state |
+| `4` | COMFORT | Restore previous state |
+| `5` | Switch to heating | Switch to cooling |
+
+`IN=5` is unavailable in the central-unit probe role.
+
+Software advanced configuration adds increasing fan thresholds, setpoint ordering, pump delays, fan delay or continuous ventilation (mutually exclusive), PID inertia, contact action delays/timeouts and UI locks. Local brightness: FAN≥7 s, +/−, FAN twice to confirm; units use the same menu then FAN. Calibration waits at least 5 hours after installation, +/−≥7 s, adjust and exit; a further 7 s hold clears manual calibration (installer pp. 24–27). These are source-described procedures, not tested hardware behavior.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000186:s000030`
+
+Applicability cues: `firmware`, `gateway`, `version`
+Cautions: `do not`
+Uncertainty: `contradiction`, `unresolved`
+Provenance cues: `catalogue`
+
+MM00789-b-EN dated 2May 2016 says newer functions require production batch 16W06. Installer p. 30 says week 20 of 2016; user p. 21 prints 20W16. Both manuals enumerate colored/contact icons, continuous fan, proportional control, local feature locks, brightness and unit selection. The different cutoffs are unresolved and cannot be equated to catalogue firmware `1.0` or 2.0. Installer current 13 mA differs from sheet 14 mA with backlight off. Installer p. 5 cooling eco 28 °C differs from p. 20’s 25 °C; retain the initial factory table with the contradiction visible.
+
+TYPE 0/1/2 selects 184/95/96 on each firmware. Virgin `509` also admits 144/221 but no direct slot/condition establishes reachability. Rule `7204` emits A and PL for zone digits, whereas the direct reusable Objects use ZAZB; its child map includes PL `10..15` outside firmware ZB0..9. Do not silently repair these naming/domain differences. Firmware IN text says `MOD=0` although the physical selector is TYPE; the sheet bars IN5 in the central-probe role. Numerous filters exclude ordinary actuator and setpoint defaults without replacements. Firmware `691` restricts many actuator types to 10 (IR) and Hotel 95 BACKLIGHT_STANDBY_LEVEL to 11/12, excluding default 10; this does not negate physical load classes documented by the sheet. Filters 857/858 refer to fields from another Object scope. Hotel/residential automatic-changeover, setpoint ordering, contact timeout exclusivity, Fil Pilote/gateway pump constraints and hidden threshold notes remain schema-specific. The residential HEATING_VALVE_ADVANCE_TIME description says 0.5 steps, while Hotel 95 says 5 s; unit differences are retained rather than normalized.
+
+Software-version scope also differs: the installer describes automatic changeover from MyHOME_Suite 1.3, while MM00789-b-EN p. 2 associates its broader advanced-function list with version 3.2. Neither statement supplies a firmware-version conversion or resolves the conflicting production-week cutoffs.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000186:s000031`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+- Production cutoff, off-backlight current and cooling eco default need an applicable manufacturer correction or observed revision.
+- Parameter names, excluded defaults and foreign-scope filters remain catalogue evidence; no payload or hardware test resolves the IR-only subsets, reserved load entries or Virgin-only candidates.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000186:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `H4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/77/aa/77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4691); SHA-256 `77aa94ef9d3597fe6bf35915e3db596a8d09298d8f677e419e3846a9197d92fe`.
+- `LN4691-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4691` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/ad/ce/adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4691); SHA-256 `adced5f1ae3272456c85abc178c0224f8867953120ba7e470b6f50b0335331b4`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0046)
+
+# Document: ownkb:document:d000187
+
+Source path: `devices/definitions/own-dev-0047-myhome-screen-10.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## MyHOME_Screen 10
+
+Section ID: `ownkb:section:d000187:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000187:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+MyHOME_Screen 10 is a wall-mounted 10-inch touchscreen for configured home controls, video door entry and multimedia. It combines room navigation and personal profiles with lighting, shutters, temperature, scenarios, energy and sound functions, using the connected installation and configured network sources.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0047` | Project identity |
+| Technical description | MyHOME_Screen 10 | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `MH4892`, `MH4893`, `067267`, `067268` | Canonical commercial records |
+| Catalogue item | `1768` | Canonical catalogue |
+| Main catalogue system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `54` | Canonical inventory |
+| Firmware definition | `1.0.7`; `2.0.0`; `2.1.0` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Integration, Touchscreen, Video door entry, Multimedia | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000187:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `MH4892` | established catalogue identity for item `1768` | canonical commercial record |
+| BTicino | `MH4893` | established catalogue identity for item `1768` | canonical commercial record |
+| Legrand | `067267` | established catalogue identity for item `1768` | canonical commercial record |
+| Legrand | `067268` | established catalogue identity for item `1768` | canonical commercial record |
+
+### Documentation
+
+Section ID: `ownkb:section:d000187:s000004`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `RA00079AC_S_EN` | software manual | RA00079AC; no dated imprint established | Printed/PDF pp. 4–55; both screen models, project settings, complete function families and transfer/media procedures; feature-to-release mapping remains unestablished | [Archived original](https://archive.openwebnet-ha.org/sha256/b9/ba/b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf) |
+| BTicino `MH4892` catalogue page | product page | current catalogue | `MH4892` product characteristics and integration role | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-la-smart-home/my-home---sistema-domotico/integrazione-e-controllo/BTI-MH4892-IT) |
+| `MH4892` version history | firmware history | through 2015-03-26 in identified copy | Historical `MH4892` / `MH4893` / `067267` / `067268` firmware lineage | [Archived original](https://archive.openwebnet-ha.org/sha256/ea/4c/ea4c1d9873c01cb2868edc3930f6608a5821c00d6986025a74a5f220d09042ea.pdf) | [Official source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MH4892_20150326.pdf) |
+| `MH4892-italian-product-sheet-IT.pdf` | Exact-product manufacturer export | Retrieved 2026-10-06; technical revision not printed | Printed/PDF p. 1; exact MH4892 display, supply, dimensions, mounting and media support | [Archived original](https://archive.openwebnet-ha.org/sha256/e1/bb/e1bb45c6997d72704805e4737f6dc21a7766386642bb13a6e64ef47d2eac1a8e.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-MH4892) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000187:s000005`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| MH4892 display / supply | `10 inch` 16:9 LCD; `27 Vdc` | Retained MH4892 Italian export p. 1 |
+| MH4892 size / mounting | `315 × 200 × 24 mm` (W × H × D); 506E wall box | Same source |
+| Connections / media | Ethernet or USB-miniUSB PC connection while bus-powered; export names USB, SD, LAN/IP media | RA00079AC_S_EN p. 4; export p. 1 |
+| Variant boundary | MH4892/067267 black; MH4893/067268 white in catalogue; exact MH4892 export ratings are not separately measured ratings for all variants | Canonical commercial descriptions |
+
+### Identity
+
+Section ID: `ownkb:section:d000187:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1768` | Canonical catalogue |
+| Technical item | MyHOME_Screen 10 | Canonical catalogue |
+| Main system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `54` | Canonical inventory |
+| Commercial records | `4` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000187:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `54` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000187:s000008`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `1806` | `MH4892` | `1` | `5` | `BTicino Multimedia Touch Screen Black` |
+| `1977` | `MH4893` | `1` | `5` | `BTicino Multimedia Touch Screen White` |
+| `1980` | `067267` | `2` | `5` | `Legrand Multimedia Touch Screen Black` |
+| `1981` | `067268` | `2` | `5` | `Legrand-Multimedia Touch Screen White` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000187:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `109` | `1` | `0` | `7` | `1` | Catalogue default | Official |
+| `560` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+| `696` | `2` | `1` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000187:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `109` | `833` | BTicino (key `1`) | `0` | SVM | `1768_1.0_BT\xml\SVM\svm.xml` |
+| `109` | `834` | BTicino (key `1`) | `0` | Extra | `1768_1.0_BT\xml\Extra\extra.xml` |
+| `109` | `835` | BTicino (key `1`) | `0` | Director | `1768_1.0_BT\xml\DIRECTOR\director.xml` |
+| `109` | `836` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1768_1.0_BT\xml\Protocol\protocol.xml` |
+| `109` | `838` | Legrand (key `2`) | `0` | SVM | `1768_1.0_LG\xml\SVM\svm.xml` |
+| `109` | `839` | Legrand (key `2`) | `0` | Extra | `1768_1.0_LG\xml\Extra\extra.xml` |
+| `109` | `840` | Legrand (key `2`) | `0` | Director | `1768_1.0_LG\xml\DIRECTOR\director.xml` |
+| `109` | `841` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1768_1.0_LG\xml\Protocol\protocol.xml` |
+| `109` | `842` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `109` | `843` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `560` | `296` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `560` | `297` | BTicino (key `1`) | `0` | SVM | `1768_2.0_BT\xml\SVM\svm.xml` |
+| `560` | `298` | BTicino (key `1`) | `0` | Extra | `1768_2.0_BT\xml\Extra\extra.xml` |
+| `560` | `299` | BTicino (key `1`) | `0` | Director | `1768_2.0_BT\xml\DIRECTOR\director.xml` |
+| `560` | `300` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1768_2.0_BT\xml\Protocol\protocol.xml` |
+| `560` | `301` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `560` | `302` | Legrand (key `2`) | `0` | SVM | `1768_2.0_LG\xml\SVM\svm.xml` |
+| `560` | `303` | Legrand (key `2`) | `0` | Extra | `1768_2.0_LG\xml\Extra\extra.xml` |
+| `560` | `304` | Legrand (key `2`) | `0` | Director | `1768_2.0_LG\xml\DIRECTOR\director.xml` |
+| `560` | `305` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1768_2.0_LG\xml\Protocol\protocol.xml` |
+| `696` | `902` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `696` | `903` | BTicino (key `1`) | `0` | SVM | `1768_2.1_BT\xml\SVM\svm.xml` |
+| `696` | `904` | BTicino (key `1`) | `0` | Extra | `1768_2.1_BT\xml\Extra\extra.xml` |
+| `696` | `905` | BTicino (key `1`) | `0` | Director | `1768_2.1_BT\xml\DIRECTOR\director.xml` |
+| `696` | `906` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1768_2.1_BT\xml\Protocol\protocol.xml` |
+| `696` | `907` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `696` | `908` | Legrand (key `2`) | `0` | SVM | `1768_2.1_LG\xml\SVM\svm.xml` |
+| `696` | `909` | Legrand (key `2`) | `0` | Extra | `1768_2.1_LG\xml\Extra\extra.xml` |
+| `696` | `910` | Legrand (key `2`) | `0` | Director | `1768_2.1_LG\xml\DIRECTOR\director.xml` |
+| `696` | `911` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1768_2.1_LG\xml\Protocol\protocol.xml` |
+
+All 30 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000187:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `109` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `1385` | `32` | `731` |
+| `560` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2345` | `32` | `1000` |
+| `696` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2582` | `32` | `1201` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000187:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000187:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `109` | Product Programming | `3` | Canonical firmware/mode association |
+| `560` | Product Programming | `3` | Canonical firmware/mode association |
+| `696` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `109` | Ethernet | Canonical firmware/connection association |
+| `109` | Ethernet over USB | Canonical firmware/connection association |
+| `560` | Ethernet | Canonical firmware/connection association |
+| `560` | Ethernet over USB | Canonical firmware/connection association |
+| `696` | Ethernet | Canonical firmware/connection association |
+| `696` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000187:s000014`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `109` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `109` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `109` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `109` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `560` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `560` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `560` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `560` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `696` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `696` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `696` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `696` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000187:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000187:s000016`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000187:s000017`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000187:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000187:s000019`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000187:s000020`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000187:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1768` / `modobj = 54` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`32`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000187:s000022`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Automation / lighting | Normal or hold-to-run shutter control; advanced position requires advanced actuators. Timed lights, 10/100 level dimmers, stairs and general/room/group/mixed controls | RA00079AC_S_EN pp. 12–17 |
+| Security / temperature | Alarm zone grouping; 99/4 zone programs and scenarios; external/uncontrolled probes; basic AC 20 stored IR commands versus advanced AC control | Same source pp. 17–27 |
+| Door entry / sound | Handsets, entrance panels and cameras; ONVIF H.264 second profile max 720p with compatibility caveat; mono/multichannel amplifiers and NUVO option | Same source pp. 28–38 |
+| Scenarios / energy | F420/programmer/local scenarios; local time/device conditions. Energy tariffs, thresholds/goals; load shedding requires a load central unit; advanced-actuator-only mode monitors consumption | Same source pp. 39–49 |
+| Personalization / media | RSS/weather/web radio/webcam/links, experimental browser, network media; rooms/floors and up to 10 profiles; background 1024×600 and card 171×213 px at 72 dpi | Same source pp. 50–55; image sizes do not separately prove screen resolution |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000187:s000023`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000187:s000024`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+Configure unique progressive address, clock/timezone, Celsius/Fahrenheit, selected SCS A/V or automation bus/level, internal-unit/entrance-panel/source addresses, network and user/OPEN authentication. Auto-composition assigns initial addresses; manually verify against installed devices. Send/receive configuration over Ethernet or USB; software can request info and update selected .fwz firmware. Do not publish real credentials (RA00079AC_S_EN pp. 4–15).
+
+Retained history: firmware `1.0.7`/software 1.0.28 on 9 April 2013; software 1.0.36 on 10 June 2013; firmware `1.0.21`/software 1.0.40 on 25 February 2014 adds direct floor/room/profile editing and media improvements; 1.0.23 on 18 April 2014 fixes clock accuracy; 1.1.14/software 1.0.53 on 25 November 2014 adds H4691-family Eco/Comfort display and USB improvements; 1.1.15 on 26 March 2015 optimizes sound. The catalogue 2.0/2.1 records are not covered by this release history (Version_History_MH4892_20150326, all 3 PDF pages).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000187:s000025`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+The shared software manual explicitly covers both non-C and C products, but the canonical catalogue keeps items 1768 and 1898 separate. An LCD label alone does not establish resistive sensing technology; that unsupported distinction is not used. The product’s interface objects are settings in a software project, not extra catalogue Module slots. Exact export dimensions and supply replace claims relying solely on an unretained webpage.
+
+All three records designate one Colors Touch Screen Object `32` with no associated Virgin, conditions, relation filters or conversions. Stored `FW_VER` default `3.0.0` differs from firmware tuples 1.0.7/2.0.0/2.1.0 and is not an observed release. Thirty parameter-file associations and Ethernet/USB connection associations are preserved; the software manual's many interface objects are not additional catalogue Module slots. The history ending 26March 2015 does not document the catalogue 2.x lineage.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000187:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+- Exact MH4893/Legrand hardware sheets and later 2.x release history remain unretained; linked install/user manuals and parameter payloads are unexamined.
+- The shared manual’s ONVIF/NUVO/network service functions have no release mapping proving applicability to every older firmware tuple.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000187:s000027`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0047)
+
+# Document: ownkb:document:d000188
+
+Source path: `devices/definitions/own-dev-0048-energy-display-2-modules.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Energy display 2 modules
+
+Section ID: `ownkb:section:d000188:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000188:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This two-module energy display shows consumption readings from external meters and the state of configured load-management actuators. Its 1.6-inch screen can combine or convert several readings and force eligible loads; it contains nine configurable display pages plus a separate settings Module in the catalogue.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0048` | Project identity |
+| Technical description | Energy display 2 modules | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `H4710`, `LN4710`, `067205`, `64171` | Canonical commercial records |
+| Catalogue item | `1884` | Canonical catalogue |
+| Main catalogue system | New energy saving and load control | Canonical catalogue |
+| Item model / `modobj` | `14` | Canonical inventory |
+| Firmware definition | `1.0.-1` | Canonical firmware catalogue |
+| Declared Modules | `10` | Canonical firmware catalogue |
+| Categories | Energy management, Display, Load control | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000188:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4710` | established catalogue identity for item `1884` | canonical commercial record |
+| BTicino - LivingLight | `LN4710` | established catalogue identity for item `1884` | canonical commercial record |
+| Legrand - Céliane | `067205` | established catalogue identity for item `1884` | canonical commercial record |
+| Arnould - Espace Evolution | `64171` | established catalogue identity for item `1884` | canonical commercial record |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000188:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4710` | `8005543515945` | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf), `H4710-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4710` | `8005543515952` | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf), `LN4710-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000188:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ01014_a_EN` | technical sheet | MQ01014-a-EN;2014-12-02; printed/PDF pp.1–36; final three pages have MQ00XYZ-a-EN placeholder footers | Energy display functions, pages and measuring/load-management relationships | [Archived original](https://archive.openwebnet-ha.org/sha256/c7/82/c78272e5498b209f754eafad60625450f0d87572a559c5ee6f5c13dfa59fdd9c.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MQ01014_a_EN.pdf) |
+| BTicino `H4710` catalogue page | product page | current catalogue | Current `H4710` electrical characteristics and product role | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/consumption-display/BTI-H4710-EN) |
+| `H4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4710` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710) |
+| `LN4710-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4710` to EAN-13 relationship at printed/PDF p. 1. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000188:s000006`
+
+Uncertainty: `appears`
+Provenance cues: `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | Nominal `27 Vdc`; operating `18..27 Vdc`; `33 mA` maximum backlight, `21 mA` standby backlight, `18 mA` backlight off | MQ01014-a-EN p. 1 |
+| Environment / size | `5..35 °C`; two flush-mounted modules | Same source |
+| Screen / interface | `1.6 inch` screen, line-selection/navigation keys, energy/unit/time/date and disabled/forced-load indicators; rear M1/M2 and bus | Same source |
+| Measurement boundary | Receives meter data; power readings on load-control pages require F522; original 3522 pulse interface incompatible | Same source; 3522N appears in wiring examples |
+
+### Identity
+
+Section ID: `ownkb:section:d000188:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1884` | Canonical catalogue |
+| Technical item | Energy display 2 modules | Canonical catalogue |
+| Main system | New energy saving and load control | Canonical catalogue |
+| Item model / `modobj` | `14` | Canonical inventory |
+| Commercial records | `4` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000188:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| New energy saving and load control | `14` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000188:s000009`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `2181` | `H4710` | `1` | `2` | `BTicino_Axolute_Energy Display 2M bus` |
+| `2182` | `LN4710` | `1` | `4` | `BTicino_L/N/NT_Energy Display 2M bus` |
+| `2183` | `067205` | `2` | `13` | `Legrand_Celiane_Energy Display 2M bus` |
+| `2184` | `64171` | `7` | `18` | `Arnould_Espace Evolution_Energy Display 2M bu` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000188:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `405` | `1` | `0` | `-1` | `10` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000188:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000188:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `405` | `1` | `463` Load control actuator visualization | Candidate alternative | `2324` | `492` | `987` |
+| `405` | `1` | `104` Measurement data visualization | Fixed/designated metadata | `2315` | `606` | `986` |
+| `405` | `2` | `463` Load control actuator visualization | Candidate alternative | `2325` | `492` | `987` |
+| `405` | `2` | `104` Measurement data visualization | Fixed/designated metadata | `2316` | `606` | `986` |
+| `405` | `3` | `463` Load control actuator visualization | Candidate alternative | `2326` | `492` | `987` |
+| `405` | `3` | `104` Measurement data visualization | Fixed/designated metadata | `2317` | `606` | `986` |
+| `405` | `4` | `463` Load control actuator visualization | Candidate alternative | `2327` | `492` | `987` |
+| `405` | `4` | `104` Measurement data visualization | Fixed/designated metadata | `2318` | `606` | `986` |
+| `405` | `5` | `463` Load control actuator visualization | Candidate alternative | `2328` | `492` | `987` |
+| `405` | `5` | `104` Measurement data visualization | Fixed/designated metadata | `2319` | `606` | `986` |
+| `405` | `6` | `463` Load control actuator visualization | Candidate alternative | `2329` | `492` | `987` |
+| `405` | `6` | `104` Measurement data visualization | Fixed/designated metadata | `2320` | `606` | `986` |
+| `405` | `7` | `463` Load control actuator visualization | Candidate alternative | `2330` | `492` | `987` |
+| `405` | `7` | `104` Measurement data visualization | Fixed/designated metadata | `2321` | `606` | `986` |
+| `405` | `8` | `463` Load control actuator visualization | Candidate alternative | `2331` | `492` | `987` |
+| `405` | `8` | `104` Measurement data visualization | Fixed/designated metadata | `2322` | `606` | `986` |
+| `405` | `9` | `463` Load control actuator visualization | Candidate alternative | `2332` | `492` | `987` |
+| `405` | `9` | `104` Measurement data visualization | Fixed/designated metadata | `2323` | `606` | `986` |
+| `405` | `10` | `106` Energy display settings | Fixed/designated metadata | `2333` | `608` | `988` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000188:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `405` | `524` Energy data display virgin | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `1` | `104`, `463` | `531` | `47` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000188:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `405` | Physical configuration | `0` | Canonical firmware/mode association |
+| `405` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `405` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000188:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `405` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `405` | `M1` | `0..9` | `0` | Energy display basic mode for installation in France; Basic mode 1 (0-9, with `M2=0`) |
+| `405` | `M2` | `0..6` | `0` | Energy display basic mode for installation in Italy; Basic mode 2 (0-6, with `M1=0`) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000188:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `463` - Load control actuator visualization
+
+Section ID: `ownkb:section:d000188:s000017`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `492` maps to external Object `463`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PRIORITY` | `0..63` | `1` | Priority |
+| `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
+
+#### Object `104` - Measurement data visualization
+
+Section ID: `ownkb:section:d000188:s000018`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `606` maps to external Object `104`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LINE_1_OPERATION` | `0` = Disabled; `1` = Positive; `2` = Negative | `1` | Value of the first address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_1_ADDRESS` | `0..127` | `1` | First address |
+| `LINE_2_OPERATION` | `0` = None; `1` = Addition; `2` = Subtraction | `0` | Operation with the second address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_2_ADDRESS` | `0..127` | `2` | Second address |
+| `LINE_3_OPERATION` | `0` = None; `1` = Addition; `2` = Subtraction | `0` | Operation with the third address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_3_ADDRESS` | `0..127` | `3` | Third address |
+| `LINE_4_OPERATION` | `0` = None; `1` = Addition; `2` = Subtraction | `0` | Operation with the fourth address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_4_ADDRESS` | `0..127` | `4` | Fourth address |
+| `LINE_5_OPERATION` | `0` = None; `1` = Addition; `2` = Subtraction | `0` | Operation with the fifth address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_5_ADDRESS` | `0..127` | `5` | Fifth address |
+| `LINE_6_OPERATION` | `0` = None; `1` = Addition; `2` = Subtraction | `0` | Operation with the sixth address; At least one of the parameters "Line 1 operation" - "Line 6 operation" must be different from 0. |
+| `LINE_6_ADDRESS` | `0..127` | `6` | Sixth address |
+| `COEFFICIENT_K_USE` | `0` = Disabled; `1` = Enabled | `0` | State of multiplication factor (for all the lines); "Coefficient K_L" and "Coefficient K_H" are shown and can be modified only if "Coefficient K use" is set to 1. Otherwise, they are not shown and are set to the default values. |
+| `COEFFICIENT_K_L` | `0..255` | `100` | Multiplication factor (low); The combination of parameters 26 and 27 defines a range from 1 to 10000 (from 0x0001 to 0x2710) for Coefficient K: if K_H = 0 (0x00), K_L must be in the range: 1-255 (0x01-0xFF); if K_H = 39 (0x27), K_L must be in the range: 0-16 (0x00-0x10). |
+| `COEFFICIENT_K_H` | `0..39` | `0` | Multiplication factor (high); The combination of parameters 26 and 27 defines a range from 1 to 10000 (from 0x0001 to 0x2710) for Coefficient K: if K_H = 0 (0x00), K_L must be in the range: 1-255 (0x01-0xFF); if K_H = 39 (0x27), K_L must be in the range: 0-16 (0x00-0x10). |
+| `ICON` | `0` = None; `1` = Electricity; `2` = Heating; `3` = Cooling; `4` = Water; `5` = Socket | `1` | Icon |
+| `MEASUREMENT_UNIT` | `0` = None; `1` = Watt; `2` = Litre; `3` = Cubic meter - no decimal places; `4` = Cubic meter - 1 decimal place; `5` = Cubic meter - 2 decimal places; `6` = Cubic meter - 3 decimal places | `1` | Measurement unit |
+
+#### Object `106` - Energy display settings
+
+Section ID: `ownkb:section:d000188:s000019`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `608` maps to external Object `106`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `BACKLIGHT_LEVEL` | `0` = `OFF`; `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 | `10` | Display backlight level |
+| `BUZZER` | `0` = Disabled; `1` = Enabled | `1` | Enable/Disable beep |
+| `DATE_FORMAT` | `0` = DD/MM/YYYY; `1` = MM/DD/YYYY | `0` | Display date format |
+| `THRESHOLD_USE` | `0` = Disabled; `1` = Enabled | `1` | Threshold use; Threshold address (5), Threshold value L (6) and Threshold value H (7) |
+| `THRESHOLD_ADDRESS` | `0..127` | `1` | Threshold address |
+| `THRESHOLD_VALUE_L` | `0..255` | `0` | Threshold value L; The combination of parameters 6 and 7 defines a range from 0 (`OFF`) to 65535 (from 0x0000 to 0xFFFF) for Threshold value. |
+| `THRESHOLD_VALUE_H` | `0..255` | `0` | Threshold value H; The combination of parameters 6 and 7 defines a range from 0 (`OFF`) to 65535 (from 0x0000 to 0xFFFF) for Threshold value. |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000188:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000188:s000021`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000188:s000022`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `405` | `106` | `1907` | `THRESHOLD_USE` | `0` = Disabled; `1` = Enabled (entire reusable range retained) | `1` | Threshold use |
+| `405` | `106` | `1908` | `THRESHOLD_ADDRESS` | `0..127` (entire reusable range retained) | `1` | Threshold address |
+| `405` | `106` | `1909` | `THRESHOLD_VALUE_L` | `0..255` (entire reusable range retained) | `0` | Threshold value L |
+| `405` | `106` | `1910` | `THRESHOLD_VALUE_H` | `0..255` (entire reusable range retained) | `0` | Threshold value H |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000188:s000023`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000188:s000024`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1884` / `modobj = 14` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`463`, `104`, `106`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000188:s000025`
+
+Provenance cues: `evidence`, `source`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Consumption / threshold | Instantaneous and daily/monthly/yearly values; local threshold menu unavailable in `M1=8` and `M2=6` | MQ01014-a-EN p. 1 |
+| M1 presets | 1 heat+hot-water volume; 2 hot-water energy estimate; 3 heat+hot-water heat meters; 4 electric heating/hot water; 5 gas heat; 6 shared electric split; 7 shared gas split; 8 Energy Data Logger. Other M2 must be 0 | Same source pp. 2–19; each also supplies electric/socket/cooling and supported volume pages |
+| M2 presets | 1 total electric+loads; 2 adds three electric lines; 3 total/cooling/water/heat+loads; 4 photovoltaic balance/water+loads; 5 seven electric lines/water/heat; 6 three-phase total/cooling/water/heat. Other M1 must be 0 | Same source pp. 21–33 |
+| Meter arithmetic | Preset meter addresses must match tables; absent meters suppress associated pages. Sockets sum 002+003; ‘other’ subtracts measured branches from total. `M1=6` shares meter 004 with percentages summing 1; `M1=7` splits gas using supplier coefficient | Same source pp. 5–19; setup-specific examples, not installed values |
+| Software pages | Up to 9 page Modules; `1..9` measurement/load display and 10 settings. Six signed/add/subtract inputs, coefficient, icon/unit; load pages specify actuator priority and single/three-phase selection | Same source pp. 34–36 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000188:s000026`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000188:s000027`
+
+Applicability cues: `firmware`
+Uncertainty: `appears`
+Provenance cues: `source`
+
+Physical M1 and M2 select the separate published preset tables; never activate both preset matrices simultaneously. `M1=9` exists in firmware but has no retained physical procedure. For pulse conversion, normalize meter pulses through 3522N according to its own instructions, which are unexamined here; volume-to-energy coefficients 0.01..100(default 1) require supplier/system data (MQ01014-a-EN pp. 5–19).
+
+In Suite, enable pages, select Measurement or Load display, assign first signed value and up to five further additions/subtractions; require at least one active operation. Set coefficient use/value, icon and unit or load priority/phase. Slot `10` enables settings. The source’s circuit/component labels contain copy errors: several legends shift interface/display descriptions and ‘F22’ appears where the prose identifies F522. Consult the exact component instructions rather than wiring from those label errors (pp. 23–36).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000188:s000028`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `source`
+
+The source prints Arnould 064171 while catalogue 64171 lacks the leading zero; identity remains established with the formatting difference visible. Its final three pages use the placeholder MQ00XYZ-a-EN footer, yet continue the same dated product sheet. Firmware 10Modules agree with source nine display pages plus settings. Generic K byte range and physical decimal coefficient are preserved separately without inventing a conversion rule.
+
+Firmware `405` declares ten Modules: slots `1..9` offer Measurement 104 and Load 463 alternatives; slot `10` designates Settings 106. Virgin `524` covers slots `1..9` only. No slot selectors or conversions are stored. Firmware M 1 permits `0..9`, but the published physical table enumerates `1..8`; M 1=9 remains undocumented. M 2 permits `0..6` and the sheet enumerates 1..6. Measurement 104 permits six signed/added/subtracted input addresses, with at least one operation enabled. K high/low form `1..10000` with boundary-byte constraints; defaults 0/100 encode 100, whereas the sheet describes a physical coefficient 1 and range 0.01..100. A scaling relationship is suggested but not established by a stored conversion. Settings threshold high/low combine `0..65535`; zero meansOFF in the reusable schema even though THRESHOLD_USE defaults enabled. Do not infer nine physical sensors or automatic Object selection from nine page slots.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000188:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+- The exact 3522N calibration, Energy Data Logger and load-central-unit instructions and energy display user manual remain unexamined.
+- `M1=9`, runtime page/Object selection and coefficient scaling need the applicable software implementation; no observation supplies them.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000188:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `H4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b7/40/b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4710); SHA-256 `b740bdfc8f4df2e86540725e6e2d23f9fc24347b41c1144f1736cf7e1c5c02be`.
+- `LN4710-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4710` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/fa/3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4710); SHA-256 `3ffacdc3ebb495b79006fb3b7943a0484956b5bede3381e68e8d90adff808eb4`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0048)
+
+# Document: ownkb:document:d000189
+
+Source path: `devices/definitions/own-dev-0049-myhome-screen-10-capacitive.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## MyHOME_Screen 10 Capacitive
+
+Section ID: `ownkb:section:d000189:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000189:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+MyHOME_Screen 10C is a 10-inch capacitive wall touchscreen for configured MyHOME, video-door-entry and multimedia functions. Room navigation and up to ten personal profiles organize the installation’s controls; its hardware identity and firmware records remain separate from the non-C screen.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0049` | Project identity |
+| Technical description | MyHOME_Screen 10 Capacitive | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `MH4892C`, `MH4893C`, `067228`, `067219` | Canonical commercial records |
+| Catalogue item | `1898` | Canonical catalogue |
+| Main catalogue system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `55` | Canonical inventory |
+| Firmware definition | `2.0.0`; `2.1.0` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Integration, Touchscreen, Video door entry, Multimedia | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000189:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `MH4892C` | established catalogue identity for item `1898` | canonical commercial record |
+| BTicino | `MH4893C` | established catalogue identity for item `1898` | canonical commercial record |
+| Legrand | `067228` | established catalogue identity for item `1898` | canonical commercial record |
+| Legrand | `067219` | established catalogue identity for item `1898` | canonical commercial record |
+
+### Documentation
+
+Section ID: `ownkb:section:d000189:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `RA00079AC_S_EN` | software manual | RA00079AC; no dated imprint established | Printed/PDF pp. 4–55; both screen models, project settings, complete function families and transfer/media procedures; feature-to-release mapping remains unestablished | [Archived original](https://archive.openwebnet-ha.org/sha256/b9/ba/b9baa0fea2deb196253f415c47e6fd83f52d1a9728b5bfe99f69a20e0bc47340.pdf) | [Official source](https://dar.bticino.com/asset/Documents/RA00079AC_S_EN.pdf) |
+| BTicino `MH4892C` catalogue page | product page | current catalogue | `MH4892C` product characteristics and capacitive-screen variant | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogue.bticino.com/product/smart-home-solutions/my-home---home-automation-system/integration-and-control/BTI-MH4892C-EN) |
+| `MH4892C-italian-product-sheet-IT.pdf` | Exact-product manufacturer export | Retrieved 2026-10-06; technical revision not printed | Printed/PDF p. 1; exact MH4892C capacitive display, supply, dimensions, mounting and media support | [Archived original](https://archive.openwebnet-ha.org/sha256/b8/3c/b83ca41a78ecd8dd7299d8b831150b07438d0601c657e914a133a4fb17d7b256.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-MH4892C) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000189:s000005`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| MH4892C display / supply | `10 inch` 16:9 capacitive display; `27 Vdc` | Retained MH4892C Italian export p. 1 |
+| MH4892C size / mounting | `315 × 200 × 24 mm` (W × H × D); 506E wall box | Same source |
+| Connections / media | Ethernet or USB-miniUSB PC connection while bus-powered; export names USB, SD, LAN/IP media | RA00079AC_S_EN p. 4; export p. 1 |
+| Variant boundary | MH4892C/067228 black; MH4893C/067219 white in catalogue; exact MH4892C ratings are not independently measured for every variant | Canonical commercial descriptions |
+
+### Identity
+
+Section ID: `ownkb:section:d000189:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1898` | Canonical catalogue |
+| Technical item | MyHOME_Screen 10 Capacitive | Canonical catalogue |
+| Main system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `55` | Canonical inventory |
+| Commercial records | `4` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000189:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `55` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000189:s000008`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `2420` | `MH4892C` | `1` | `5` | `MyHOME_Screen 10 C black bus` |
+| `2421` | `MH4893C` | `1` | `5` | `MyHOME_Screen 10 C white bus` |
+| `2422` | `067228` | `2` | `5` | `MyHOME_Screen 10 C black bus` |
+| `2423` | `067219` | `2` | `5` | `MyHOME_Screen 10 C white bus` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000189:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `558` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+| `697` | `2` | `1` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000189:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `558` | `714` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `558` | `715` | BTicino (key `1`) | `0` | SVM | `1898_2.0_BT\xml\SVM\svm.xml` |
+| `558` | `716` | BTicino (key `1`) | `0` | Extra | `1898_2.0_BT\xml\Extra\extra.xml` |
+| `558` | `717` | BTicino (key `1`) | `0` | Director | `1898_2.0_BT\xml\DIRECTOR\director.xml` |
+| `558` | `718` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1898_2.0_BT\xml\Protocol\protocol.xml` |
+| `558` | `776` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `558` | `777` | Legrand (key `2`) | `0` | SVM | `1898_2.0_LG\xml\SVM\svm.xml` |
+| `558` | `778` | Legrand (key `2`) | `0` | Extra | `1898_2.0_LG\xml\Extra\extra.xml` |
+| `558` | `779` | Legrand (key `2`) | `0` | Director | `1898_2.0_LG\xml\DIRECTOR\director.xml` |
+| `558` | `780` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1898_2.0_LG\xml\Protocol\protocol.xml` |
+| `697` | `912` | BTicino (key `1`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `697` | `913` | BTicino (key `1`) | `0` | SVM | `1898_2.1_BT\xml\SVM\svm.xml` |
+| `697` | `914` | BTicino (key `1`) | `0` | Extra | `1898_2.1_BT\xml\Extra\extra.xml` |
+| `697` | `915` | BTicino (key `1`) | `0` | Director | `1898_2.1_BT\xml\DIRECTOR\director.xml` |
+| `697` | `916` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1898_2.1_BT\xml\Protocol\protocol.xml` |
+| `697` | `917` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `697` | `918` | Legrand (key `2`) | `0` | SVM | `1898_2.1_LG\xml\SVM\svm.xml` |
+| `697` | `919` | Legrand (key `2`) | `0` | Extra | `1898_2.1_LG\xml\Extra\extra.xml` |
+| `697` | `920` | Legrand (key `2`) | `0` | Director | `1898_2.1_LG\xml\DIRECTOR\director.xml` |
+| `697` | `921` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1898_2.1_LG\xml\Protocol\protocol.xml` |
+
+All 20 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000189:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `558` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2431` | `32` | `1083` |
+| `697` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2583` | `32` | `1202` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000189:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000189:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `558` | Product Programming | `3` | Canonical firmware/mode association |
+| `697` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `558` | Ethernet | Canonical firmware/connection association |
+| `558` | Ethernet over USB | Canonical firmware/connection association |
+| `697` | Ethernet | Canonical firmware/connection association |
+| `697` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000189:s000014`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `558` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `558` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `558` | `FW_VER` | `######` = Firmware version | `2.0.0` | Firmware version |
+| `558` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `697` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `697` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `697` | `FW_VER` | `######` = Firmware version | `2.0.0` | Firmware version |
+| `697` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000189:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000189:s000016`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000189:s000017`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000189:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000189:s000019`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000189:s000020`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000189:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `1898` / `modobj = 55` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`32`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000189:s000022`
+
+Provenance cues: `evidence`, `source`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Automation / lights | Normal/hold-to-run control, advanced positions with advanced actuators, timed lighting and 10/100 level dimmers, general/room/group/mixed controls | RA00079AC_S_EN pp. 12–17 |
+| Alarm / HVAC | Zone groups; 99/4 zone programs/scenarios, external/uncontrolled probes and basic 20 command/advanced AC roles | Same source pp. 17–27 |
+| Door entry / sound | Handsets, entrance panels, cameras; ONVIF H.264 second profile up to 720p with compatibility caveat; mono/multichannel and NUVO option | Same source pp. 28–38 |
+| Scenarios / energy | Central/local scenarios and time/device conditions; consumption tariffs/goals/thresholds; shedding requires central unit, otherwise advanced actuators supply consumption only | Same source pp. 39–49 |
+| Media / personal UI | RSS, web radio, webcams, experimental browser, network media; rooms/floors, up to 10 profiles; 1024×600 backgrounds and 171×213 cards at 72 dpi | Same source pp. 50–55; image formats, not separate screen measurement |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000189:s000023`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000189:s000024`
+
+Applicability cues: `firmware`, `scs`, `version`
+Cautions: `do not`
+Provenance cues: `source`
+
+Configure unique address, clock/timezone, temperature format, selected SCS A/V or automation bus/level, video-door-entry/source addresses, Ethernet and authentication. Compose/check interface objects and groups, then send or receive configuration via Ethernet/USB. Software selects .fwz firmware and queries device information (RA00079AC_S_EN pp. 4–15).
+
+Configure scenario, HVAC, measurement and load roles only when the installed companion system supports them; for example an advanced actuator’s position display is not generic support for every shutter. Twenty parameter payload associations are shown but not inspected. Do not import the non-C version-history chronology into this C item.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000189:s000025`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`
+
+The shared software manual names both screen families; exact C export establishes capacitive hardware. Catalogue firmware `FW_VER` default `2.0.0` differs from reusable Object `32` default 3.0.0; neither determines observed state. No catalogue default firmware is marked for this item. Linked publisher hardware/download documentation remains distinct from the examined common software procedures.
+
+Both firmware records designate Colors Touch Screen 32 in one slot and neither is catalogue default. No Virgin, conditions, relation filters or conversions are associated. Firmware FW_VER defaults 2.0.0, while reusable Object `32` defaults 3.0.0; preserve firmware scope. Twenty parameter associations and Ethernet/USB connections are shown; payloads remain unexamined. Shared software documentation establishes common interface workflows, not shared hardware, release history or item identity with 1768.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000189:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `capture`, `catalogue`, `source`
+
+- ExactMH4893C/Legrand hardware sheets, C-specific release history and linked user/install manuals remain unexamined; parameter payloads are not available in the extraction.
+- No release mapping or hardware capture verifies every shared-manual function against firmware `558`/697.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000189:s000027`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0049)
+
+# Document: ownkb:document:d000190
+
+Source path: `devices/definitions/own-dev-0050-classe-300x.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Classe 300X
+
+Section ID: `ownkb:section:d000190:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000190:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+Classe 300X is a connected, hands-free two-wire video-door-entry indoor unit with a seven-inch touchscreen. Light/dark finishes and optional inductive-loop variants share the catalogue item; retained newer documentation adds Wi-Fi and Home+Security app functions whose availability cannot be assumed for an installed historical firmware.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0050` | Project identity |
+| Technical description | Classe 300X | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `344742`, `344743`, `344745`, `344746` | Canonical commercial records |
+| Catalogue item | `2321` | Canonical catalogue |
+| Main catalogue system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `140` | Canonical inventory |
+| Firmware definition | `1.0.1` | Canonical firmware catalogue |
+| Declared Modules | `2` | Canonical firmware catalogue |
+| Categories | Video door entry, Wi-Fi, Indoor unit, Integration | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000190:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `344742` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344743` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344745` | established catalogue identity for item `2321` | canonical commercial record |
+| BTicino | `344746` | established catalogue identity for item `2321` | canonical commercial record |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000190:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `344742` | `8005543781326` | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf), `344742-ean-product-sheet.pdf`, printed/PDF p. 2 |
+| `344743` | `8005543781388` | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf), `344743-ean-product-sheet.pdf`, printed/PDF p. 2 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000190:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `documentation`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| BTicino `344742` product page | product page | current product family | Current Classe 300X connected indoor-unit functions and documentation links | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://www.bticino.com/products/bt-344742) |
+| `FIS_C300X_1` | Multilingual installation instructions | 11/25-01 PC (November 2025) | Family mounting and English interfaces/electrical data: printed/PDF pp. 1, 3, 7–8; Dutch teleloop-reference discrepancy at p. 7; other language repetitions not fully examined | [Archived original](https://archive.openwebnet-ha.org/sha256/23/ae/23aed16981142cc869be0c0d0e10c8589c4e1a26af20303438256cfc2cc622d6.pdf) | [Official source](https://dar.bticino.it/asset/Documents/FIS_C300X_1.pdf) |
+| `ST-00002362-EN` | technical sheet | 2026-02-17; printed/PDF pp.1–24 | Loop variants: printed/PDF pp. 1–24; electrical/physical, physical presets, configuration, topology examples and functions examined. Preset diagrams pp. 6–14 visually checked | [Archived original](https://archive.openwebnet-ha.org/sha256/f5/0c/f50c64daa65dd92a67193c86524aed07e0826ab8d6249b449014435ad469fd21.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/ST-00002362-EN.pdf) |
+| `344742-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344742` to EAN-13 relationship at printed/PDF p. 2. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344742) |
+| `344743-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `344743` to EAN-13 relationship at printed/PDF p. 2. Exact SKU/EAN and applicable technical attributes examined; reference and revision limits retained; prices not incorporated. | [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000190:s000006`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Display / dimensions | `7 inch` LCD 1024×600; `172 × 125 × 19 mm` (W × H × D) | 344742/344743 exports pp. 1–2; ST-00002362-EN p. 1 for 344745/344746 |
+| Variants | 344742 Light/344743 Dark; 344745 Light/344746 Dark with inductive loop | Canonical descriptions; FIS_C300X_1 pp. 1, 7–8 |
+| SCS / additional supply | `20..27 Vdc`, `22..27 Vdc` with active loop; `38 mA` standby/`550 mA` operating. Additional 1–2:`27 Vdc`, `265 mA` or `320 mA` with loop | FIS_C300X_1 p. 8; ST sheet loop variants p. 1 |
+| Terminals / environment | 2×1 mm² per terminal; `5..40 °C`; floor-call input, extra ringtone 5M–1, 2-wire bus and additional supply | FIS_C300X_1 pp. 3, 8; ST pp. 1–2 |
+| Network / hardware revision | Current documented `2412..2472`/`5180..5825 MHz`, 802.11 b/g/n/ac/ax, WPA/WPA2/WPA3, <`20 dBm`; USB-C update connector | FIS_C300X_1 pp. 3, 8; 2026 ST pp. 1–2; not attributed to installed firmware `1.0.1` |
+
+### Identity
+
+Section ID: `ownkb:section:d000190:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2321` | Canonical catalogue |
+| Technical item | Classe 300X | Canonical catalogue |
+| Main system | Integration function | Canonical catalogue |
+| Item model / `modobj` | `140` | Canonical inventory |
+| Commercial records | `4` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000190:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `140` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000190:s000009`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `2676` | `344742` | `1` | `5` | `Classe 300X NEW White indoor unit` |
+| `2677` | `344743` | `1` | `5` | `Classe 300X NEW Dark indoor unit` |
+| `2678` | `344745` | `1` | `5` | `Classe 300X NEW White indoor unit with Teleloop` |
+| `2679` | `344746` | `1` | `5` | `Classe 300X NEW Dark indoor unit with Teleloop` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000190:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `892` | `1` | `0` | `1` | `2` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000190:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `892` | `1137` | BTicino (key `1`) | `0` | Extra | `2321_1.0_BT\xml\Extra\extra.xml` |
+| `892` | `1138` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2321_1.0_BT\xml\Protocol\protocol.xml` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000190:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `892` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `4506` | `32` | `2014` |
+| `892` | `2` | `154` Internal Unit | Fixed/designated metadata | `4507` | `154` | `2015` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000190:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000190:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `892` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `892` | USB | Canonical firmware/connection association |
+| `892` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000190:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `892` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000190:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000190:s000017`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` (publisher catalogue documentation default) | Local IP address |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000190:s000018`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000190:s000019`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000190:s000020`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000190:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000190:s000022`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000190:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `2321` / `modobj = 140` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`32`, `154`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000190:s000024`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `evidence`, `source`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Door entry | Answer/close calls, lock, entrance-panel/camera switching, intercom, stairs, video answering machine and switchboard response | ST-00002362-EN pp. 1–2, 23–24 |
+| Local UI / advanced schedules | Favorites, notifications, 15 ringtones; scheduled professional studio and silent mode | Same source pp. 23–24; newer revision scope |
+| Remote access | Home+Security association enables answering, CALL HOME, camera/Netatmo viewing, lock and firmware updates, subject to network/service setup | Same source p. 23 |
+| Inductive loop | Only 344745/344746; hearing aid T selector, recommended `25..35` cm position; `0..9` kHz, <1.005 A/m | Same source pp. 1, 24; FIS p. 8 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000190:s000025`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000190:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Use physical N/P/M or the device’s screen tutorial/settings. Physical configuration predefines objects and permits renaming, whereas screen configuration without configurators permits creation/modification. Removing existing configurators requires reset. N identifies the internal unit, P its associated entrance panel; M tens/units combine predefined intercom, camera/lock, stairs and professional-studio functions; the two digit matrices differ. The detailed matrices and address-dependent examples are in ST-00002362-EN pp. 3–16; no catalogue filter supplies those physical presets. Wait one minute before reconnecting after reconfiguration (p. 15).
+
+Installation limits depend on cable/topology, not one universal bus length: consult the table at p. 17. Examples specify additional 346020 supply for more than 10 units, one app-connected main per apartment, and maxima 5 units in apartment-interface/single-family cases versus 3 in the two-family example (pp. 18–22). Wi-Fi placement/obstructions and service availability affect app access. Power loss makes the unit unavailable (p. 1). These are documented example scopes, not observations.
+
+Physical M presets (ST-00002362-EN, printed/PDF pp. 3–14; diagram/table placement visually checked):
+
+| M digit / value | Published function set |
+| --- | --- |
+| Units 0 / absent | Staircase light |
+| Units 1–3 | Direct additional lock at P+1, P+2 or P+3 respectively |
+| Units 4–6 | Direct entrance-panel activation at P+1, P+2 or P+3 respectively |
+| Units 7 | General paging to all system handsets |
+| Units 8 | Internal intercom to all handsets with the same address |
+| Units 9 | Enable/disable professional-studio function |
+| Tens 1 | Same-address intercom; entrance panel P+1; locks P+1/P+2 |
+| Tens 2 | General paging; entrance panel P+1; locks P+1/P+2 |
+| Tens 3 | Same-address and installation-dependent apartment intercom; entrance panel P+1; lock P+1 |
+| Tens 4 | Installation-dependent apartment intercom; locks P+1/P+2 |
+| Tens 5 | Intercom among apartments through interface 346850; locks P+1/P+2 |
+| Tens 6 | Four installation-dependent apartment-intercom targets |
+| Tens 7 | Four inter-apartment targets through interface 346850 |
+| Tens 8 | Entrance panel P+1; installation-dependent apartment intercom; locks P+1/P+2 |
+| Tens 9 | Four additional locks P+1 through P+4 |
+
+The tens examples also show staircase light when the units digit is 0 or absent. Intermediate configurations combine both digit sets; for example `M=13` combines tens 1 with direct lock P+3. Apartment intercom means within an apartment when interface 346850 is present, or among apartments without that interface. The diagrams specify relative N targets and actuator alternatives: lock actuator 346210 with `MOD=5` or 346230; panel activation with 346210 `MOD=9`. The p. 13 legend instead names 346200 for the first activation example, a source discrepancy that should not silently replace the detailed p. 6/14 device number. These are published modern presets, without observed mapping to catalogue firmware `892`.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000190:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `documentation`, `specification`
+
+The catalogue records the NEW four-reference family, but its 1.0.1 tuple cannot be retrospectively mapped to the 2025/2026 publisher functions. The 2026 loop sheet supplies `22..27`V/320 mA for its loop scope, while the family instructions distinguish `20..27`V/265 mA without active loop. It repeats 344742/344743 wording in some example headings although the title names 344745/344746; keep diagram scope explicit. A Dutch FIS teleloop line names 344845 while English/Italian and the canonical four SKUs specify 344745/344746; that stray number is not a new established identity. Exact exports differ in recycled-material wording (>25%chemical for 344742, >80%mechanical for 344743); this commercial variant claim is not normalized into a shared hardware specification.
+
+Firmware `892` designates two slots: Colors Touch Screen 32 and Internal Unit 154. Only product programming is associated; canonical Ethernet/USB connection labels do not establish a physical Ethernet socket on this Wi-Fi/2-wire product. No Virgin, slot conditions, filters or conversions are stored. Reusable Object `32` `FW_VER` default `3.0.0` does not equal the firmware `1.0.1` tuple. Internal Unit 154 N`0..3999`/P`0..95` and DOSA_CALL ethernet wording are generic schemas, not complete physical N/P/M programming instructions. PEOPLE_S values 1/2 have unknown labels and IS_SLAVE has no stored default; both uncertainties remain explicit. Two linked parameter payloads remain unexamined. New 2025/2026 hardware/network/app documentation cannot establish feature availability in installed firmware `1.0.1`.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000190:s000028`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+- Full use/install manual, app/service documentation, firmware release mapping and parameter payloads remain unexamined; the physical preset matrices are referenced for their detailed combinations.
+- Canonical Ethernet connection labels do not establish a wired Ethernet connector; physical modern source hardware is Wi-Fi/2-wire with USB-C. Generic PeopleSearching values remain unknown.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000190:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `344742-ean-product-sheet.pdf`, printed/PDF p. 2: exact `344742` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/f0/d9/f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344742); SHA-256 `f0d94fbeddba68f0abd383cd37d8c2492f9e73551f92ff3f6fa9f73931c8ea29`.
+- `344743-ean-product-sheet.pdf`, printed/PDF p. 2: exact `344743` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3a/60/3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344743); SHA-256 `3a60db2122dea89843ea6bc35b6d7a2f2fd1c9a15d7cddf432c8013a49eefbd5`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0041-0050-2026-10-06.md#own-dev-0050)
+
+# Document: ownkb:document:d000191
+
+Source path: `devices/definitions/own-dev-0051-pir-ceiling-mounted-sensor.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR` ceiling-mounted sensor
+
+Section ID: `ownkb:section:d000191:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000191:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This recessed ceiling sensor combines passive infrared movement detection with a daylight threshold to control SCS lighting or a controller scenario. Its circular coverage suits open rooms, while sensitivity, switch-off delay and automatic/manual operation must be set for the installation.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0051` | Project identity |
+| Technical description | `PIR` ceiling-mounted sensor | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE3001`, `048820` | Canonical commercial records |
+| Catalogue item | `45` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `32` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000191:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE3001` | Established identity | canonical commercial record for item `45` |
+| Legrand | `048820` | Established identity | canonical commercial record for item `45` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000191:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `BMSE3001` | `8012199969244` | [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf), `BMSE3001-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `048820` | `3245060488208` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf), `048820-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000191:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE10699AA-FR` | technical/system guide | LE10699AA-FR; no dated imprint established | Printed/PDF p. 60; exact paired identities, physical ratings and full sensitivity/height coverage; unrelated guide pages and hotel-controller programming not examined | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
+| `BMSE3001-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSE3001` to EAN-13 relationship at printed/PDF p. 1. Exact-reference identifiers and technical export attributes examined; linked downloads and prices outside scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3001) |
+| `048820-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact SKU/GTIN metadata and EAN/Gencode field; other technical attributes, linked documents and prices not incorporated | [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-couloir) |
+| `ch_de_katalog_wohnbau.pdf` | Historical residential catalogue | No dated imprint established | Printed pp. 156–157, 159 / PDF pp. 158–159, 161; exact sensor entries, complete coverage and mounting-specific dimension drawing | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+| `U4615A.pdf` | Pictographic installation instructions | U4615A01SY-09W51 | No printed page numbering; PDF pp. 1–3, `BMSE3001`/`BMSE3003` ratings, mounting, cover release and mode selection | [Archived original](https://archive.openwebnet-ha.org/sha256/da/d7/dad7569e38b9cf2f7d8dca0f6eaa9022624a6067b8aff90e00527fd530f2982c.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/U4615A.pdf) |
+| `LE02817AD.pdf` | Pictographic installation instructions | Revision AD; no separate date established | No consistent printed pagination; PDF pp. 1–4; exact `048820`/21/22 sensor-type, installation and adjustment diagrams | [Archived original](https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000191:s000006`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc`; `12 mA` | LE02817AD, PDF p. 1 |
+| Environment | `−5..45 °C` | LE02817AD, PDF p. 1 |
+| Sensing | `PIR` movement detection and daylight threshold | LE02817AD, PDF p. 1 |
+| Protection / storage | IP20; IK04; −`20..70 °C` | LE10699AA-FR, printed/PDF p. 60 |
+| Ceiling opening | `65 mm` without installation box; `68 mm` with box | LE10699AA-FR, printed/PDF p. 60 |
+| Connection | SCS bus through RJ45/BUS adapter `048872` | LE10699AA-FR, printed/PDF p. 60 |
+| Detection angle | 360° | LE10699AA-FR, printed/PDF p. 60 |
+| Current commercial dimensions | `100 mm` diameter × `52 mm` depth | `BMSE3001`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Maximum installation height | 6 m | `BMSE3001`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Current commercial coverage at 2.5 m | `PIR`: 8 m diameter / 50 m² | `BMSE3001`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Surface installation accessory | LG-`048874` | `BMSE3001`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Earlier coverage headline | 45 m² | U4615A, no printed page numbers / PDF p. 1 |
+| Published settings | 500 lux / 15 min shown in instructions; light threshold `5..1275` lux; delay 30 s..255 h 59 min 59 s; sensitivity 25%, 50%, 75%, 100% | LE02817AD, PDF pp. 1, 4 |
+
+#### `PIR` coverage
+
+Section ID: `ownkb:section:d000191:s000007`
+
+Each cell gives diameter and publisher-stated area; areas are not recalculated. LE10699AA-FR, printed/PDF p. 60.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `4 m Ø / 15 m²` | `6 m Ø / 25 m²` | `6.5 m Ø / 30 m²` | `8 m Ø / 50 m²` |
+| `3` | `5.5 m Ø / 25 m²` | `6.5 m Ø / 35 m²` | `8.5 m Ø / 60 m²` | `11.5 m Ø / 100 m²` |
+| `4` | `6.5 m Ø / 35 m²` | `7.5 m Ø / 45 m²` | `12.5 m Ø / 125 m²` | `14 m Ø / 155 m²` |
+| `5` | `6 m Ø / 30 m²` | `10.5 m Ø / 90 m²` | `12 m Ø / 115 m²` | `16.5 m Ø / 215 m²` |
+| `6` | `4 m Ø / 15 m²` | `5.5 m Ø / 25 m²` | `8.5 m Ø / 60 m²` | `12.5 m Ø / 125 m²` |
+
+#### Mounting-specific dimension drawing
+
+Section ID: `ownkb:section:d000191:s000008`
+
+Provenance cues: `catalogue`
+
+The German catalogue printed p. 159 / PDF p. 161 uses drawing letters, not interchangeable whole-product dimensions. Values below retain those labels; the two mounting outlines must be read in the original.
+
+| Drawing | A | B | C | D | E | F | G | H | I | L |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `BMSE3001` | `102 mm` | `R:51 mm` | `50 mm` | `52.3 mm` | `51.5 mm` | `37 mm` | `102 mm` | `53.74 mm` | `55.6 mm` | `47 mm` |
+
+### Identity
+
+Section ID: `ownkb:section:d000191:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `45` | Canonical catalogue |
+| Technical item | `PIR` ceiling-mounted sensor | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `32` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000191:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `32` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000191:s000011`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `45` | `BMSE3001` | `1` | `4` | Empty in source |
+| `1575` | `048820` | `2` | `4` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000191:s000012`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `139` | `-1` | `-1` | `-1` | `17` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000191:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000191:s000014`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `139` | `1` | `119` Stand alone presence sensor | Candidate alternative | `436` | `119` | `330` |
+| `139` | `1` | `128` Scenarios daylight and presence sensor | Candidate alternative | `588` | `128` | `407` |
+| `139` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `437` | `164` | `331` |
+| `139` | `1` | `165` Scenarios presence sensor | Candidate alternative | `438` | `165` | `332` |
+| `139` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `439` | `166` | `333` |
+| `139` | `1` | `168` Stand alone daylight and presence sensor | Fixed/designated metadata | `440` | `168` | `334` |
+| `139` | `2` | `431` IR scenario control | Fixed/designated metadata | `441` | `431` | `335` |
+| `139` | `3` | `431` IR scenario control | Fixed/designated metadata | `442` | `431` | `335` |
+| `139` | `4` | `431` IR scenario control | Fixed/designated metadata | `443` | `431` | `335` |
+| `139` | `5` | `431` IR scenario control | Fixed/designated metadata | `444` | `431` | `335` |
+| `139` | `6` | `431` IR scenario control | Fixed/designated metadata | `445` | `431` | `335` |
+| `139` | `7` | `431` IR scenario control | Fixed/designated metadata | `446` | `431` | `335` |
+| `139` | `8` | `431` IR scenario control | Fixed/designated metadata | `447` | `431` | `335` |
+| `139` | `9` | `431` IR scenario control | Fixed/designated metadata | `448` | `431` | `335` |
+| `139` | `10` | `431` IR scenario control | Fixed/designated metadata | `449` | `431` | `335` |
+| `139` | `11` | `431` IR scenario control | Fixed/designated metadata | `450` | `431` | `335` |
+| `139` | `12` | `431` IR scenario control | Fixed/designated metadata | `451` | `431` | `335` |
+| `139` | `13` | `431` IR scenario control | Fixed/designated metadata | `452` | `431` | `335` |
+| `139` | `14` | `431` IR scenario control | Fixed/designated metadata | `453` | `431` | `335` |
+| `139` | `15` | `431` IR scenario control | Fixed/designated metadata | `454` | `431` | `335` |
+| `139` | `16` | `431` IR scenario control | Fixed/designated metadata | `455` | `431` | `335` |
+| `139` | `17` | `431` IR scenario control | Fixed/designated metadata | `456` | `431` | `335` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000191:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `139` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `12` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000191:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `139` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000191:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `139` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000191:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000191:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000191:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000191:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000191:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000191:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000191:s000024`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000191:s000025`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000191:s000026`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `must not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. The firmware surface contains only `AID`: stored M predicates are not backed by a firmware M field. Physical sockets are not inferred from them. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not establish ultrasonic hardware on a `PIR`-only SKU. Older cross-Object `US`/`INITIAL_OCC`/`MAINTAIN_OCC`/`RE-TRIGGER` references are distinct from newer same-Object fields and must not be aliased. `ALERT` filters exclude default 0 without replacements. Empty allowed-value subsets on daylight/provision fields remain unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000191:s000027`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000191:s000028`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `139` | `1` | `128` | `4477` | `M=2` | None |
+| `139` | `1` | `166` | `4461` | `M=1` | None |
+| `139` | `1` | `166` | `4505` | `M=4` | None |
+| `139` | `1` | `168` | `4439` | `M=0` | None |
+| `139` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000191:s000029`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `139` | `119` | `175` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `119` | `176` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `119` | `177` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `119` | `178` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `119` | `2322` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `139` | `119` | `2323` | `INITIAL_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `139` | `119` | `2324` | `MAINTAIN_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `139` | `119` | `2325` | `RETRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `139` | `119` | `2326` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `139` | `128` | `353` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `128` | `354` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `128` | `355` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `128` | `356` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `128` | `2329` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `139` | `128` | `2330` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `139` | `165` | `180` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `165` | `181` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `165` | `182` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `165` | `183` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `139` | `165` | `2327` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `139` | `165` | `2328` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `139` | `166` | `2108` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `139` | `166` | `2123` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `139` | `166` | `2138` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `139` | `168` | `187` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity |
+| `139` | `168` | `188` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `139` | `168` | `189` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `139` | `168` | `190` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `139` | `168` | `2154` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `139` | `168` | `2212` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | Natural light factor |
+| `139` | `168` | `2213` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `139` | `168` | `2369` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `139` | `168` | `2451` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `139` | `168` | `2463` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `139` | `431` | `2390` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000191:s000030`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000191:s000031`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `45` / `modobj = 32` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000191:s000032`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Automatic control | Auto ON/OFF responds to presence and illumination; manual ON / auto OFF requires a separate control | LE02817AD, PDF pp. 3–4 |
+| Adjustment | `088230` / `088235` tools are named in this revision; LEARN and IR `LED` are shown | LE02817AD, PDF pp. 3–4 |
+| Current setup tools | `088240` and `BMSO4001`, or configuration software; connection by terminal and RJ45 | Italian exact-product export, printed/PDF p. 1 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000191:s000033`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000191:s000034`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Select the documented sensor role and its addressed actuator/controller before reading or writing Object configuration. The historical firmware record stores only `AID` and Advanced Configuration; its M selection predicates do not establish physical configurator sockets. U4615A PDF p. 2 shows spring/boxed ceiling mounting and different front-cover release methods for `BMSE3001` and `BMSE3003`; PDF p. 3 shows Auto/Eco selection and LEARN/IR indicators. LE02817AD PDF pp. 2–4 shows the installation methods, automatic/manual operation and adjustment tools. The remote models named in these older instructions differ from the current Italian export; no interchangeability or release cutoff is established.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000191:s000035`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+Catalogue SKU relationships establish both commercial identities. The guide explicitly pairs the two references and agrees with the Italian export on current and supply. U4615A gives 500 lux/15 min and 45 m², whereas the guide/export provides sensitivity- and height-specific coverage. These headlines are source-specific, not one guaranteed effective area. The retained German catalogue PDF p. 158 / printed p. 156 gives 10 mA for `BMSE3001`/3003, conflicting with the exact instructions/export (12/17 mA), and 300 lux/15 min instead of the instructions' 500 lux. Its 256-hour ceiling conflicts with the exact delay limits. No hardware revision or correction notice resolves these differences.
+
+The historical dimension drawing distinguishes boxed and ceiling mounting outlines. Its more precise drawing labels differ from the rounded current-export overall dimensions; they are retained with their mounting context rather than silently substituted.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000191:s000036`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+- Installed thresholds, remote compatibility, active sensor Object and diagnostic results remain unobserved.
+- Applicable manufacturer export links to technical sheets, use instructions and drawings were identified but their unexamined responses are not used as evidence.
+- Coverage and factory-setting differences are not mapped to a production revision.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000191:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `BMSE3001-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSE3001` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/da/5b/da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3001); SHA-256 `da5be9f0e28958201f20b4cd2fc10bc644a8b8fe1dbc5d2cdb68fae911f8bdc2`.
+- `048820-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048820` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/51/e4/51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-couloir); SHA-256 `51e4428663389a4b107f15200e367fd26475c079998c8b1d7eff721267d8f18c`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0051)
+
+# Document: ownkb:document:d000192
+
+Source path: `devices/definitions/own-dev-0052-ballast-din-dimmer-0-10-v.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Ballast DIN dimmer 0-10 V
+
+Section ID: `ownkb:section:d000192:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000192:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This six-module DIN actuator switches and dims lighting through an analog ballast-control interface. It supports nominal 1–10 V control and selectable lower output levels for 0–10 V use, with one switched channel and local test controls.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0052` | Project identity |
+| Technical description | Ballast DIN dimmer 0-10 V | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMDI1001`, `002611` | Canonical commercial records |
+| Catalogue item | `47` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `163` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Lighting, Dimmer, DIN actuator | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000192:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMDI1001` | Established identity | canonical commercial record for item `47` |
+| Legrand | `002611` | Established identity | canonical commercial record for item `47` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000192:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00314-f-FR` | technical sheet | 2014-04-18 | Printed/PDF pp. 1–4; exact `002611` / `BMDI1001` physical characteristics, configuration and wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/36/8b36e76ccaef5d1099d03f0a8fce88d37221f3d3c9c0658f2bba75d4f9fd6c4f.pdf) | [Official source](https://assets.legrand.com/general/legrand-fr/bt/np-ft-gt/mq00314-f-fr.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical regional catalogue | No dated imprint established | Printed pp. 158, 161 / PDF pp. 160, 163; exact `BMDI1001` dimensions, analog output and configuration entry | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000192:s000005`
+
+Applicability cues: `only for`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / maximum consumption | `100..240 Vac`, 50/`60 Hz`; `165 mA` | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Output | One `4.3 A` switched channel; 1000 VA at `240 Vac` / 500 VA at `110 Vac`; maximum 160 ballasts | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Analog control | Nominal 1–10 V ballast control; minimum-output choices also permit 0–10 V | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Environment / size | `−5..45 °C`; IP20; IK04; six DIN modules | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Connections | RJ45 SCS bus; supply terminal 2 × 2.5 mm²; outputs 2 × 1.5 mm² and 1 × 2.5 mm² | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Local interface | Load `LED` and pushbutton; learning `LED` and button; physical configuration area only for MyHOME | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Regional control-output rating / dimensions | Maximum `50 mA` control output; 105 × 90 × 60/`61 mm`; `1000 W` headline is distinct from French voltage-dependent VA ratings | German catalogue, printed pp. 158, 161 / PDF pp. 160, 163 |
+
+### Identity
+
+Section ID: `ownkb:section:d000192:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `47` | Canonical catalogue |
+| Technical item | Ballast DIN dimmer 0-10 V | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `163` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000192:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `163` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000192:s000008`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `656` | `002611` | `2` | `5` | `Legrand_Undefined_Ballast DIN dimmer 0-10 V` |
+| `1769` | `BMDI1001` | `1` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000192:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `206` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000192:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000192:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `206` | `1` | `8` Dimmer actuator | Fixed/designated metadata | `664` | `8` | `460` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000192:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000192:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `206` | Physical configuration | `0` | Canonical firmware/mode association |
+| `206` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `206` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000192:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `206` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `206` | `A` | `0..9` | `0` | A; Environment |
+| `206` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `206` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (0-4, Pul, Sla) |
+| `206` | `G1` | `0..9` | `0` | `G1`; `G1` - (0-9) |
+| `206` | `G2` | `0..9` | `0` | `G2`; `G2` - (0-9) |
+| `206` | `G3` | `0..9` | `0` | `G3`; `G3` - (0-9) |
+
+#### Published physical selectors absent from the stored firmware field list
+
+Section ID: `ownkb:section:d000192:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Selector | Physical setting | Published result | Evidence |
+| --- | --- | --- | --- |
+| `L` | `0` | Minimum output `1 V` | `MQ00314-f-FR`, printed p. 2 / PDF p. 2 |
+| `L` | `1` | Minimum output `1.5 V` | Same source |
+| `L` | `2` | Minimum output `2 V` | Same source |
+| `L` | `3` | Minimum output `0 V` | Same source |
+| `L` | `4` | Minimum output `0.5 V` | Same source |
+| `TYPE` | `0` | Fluorescent ballast; soft-start accounts for typical `1.5 s` ignition delay | Same source, note 3 |
+| `TYPE` | `1` | `LED` supply; immediate soft-start | Same source, note 3 |
+
+The physical `L` selector establishes support for both 1-10 V and 0-10 V control; the apparent catalogue/product naming difference is therefore not evidence of incompatible standards. `L` and `TYPE` are printed physical positions but are absent from firmware `206`'s stored field list. Do not alias those positions to similarly named reusable Object fields without an established conversion.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000192:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `8` - Dimmer actuator
+
+Section ID: `ownkb:section:d000192:s000017`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `A`, `PL`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `M`, `LOCAL_BUTTON`, `DELAYED_OFF`, `STATE_SAVING_ON_RESET`, `HOURS`, `MINUTES`, `SECONDS`, `MIN_LEVEL`, `TYPE_LOAD`, `TYPE_STANDARD`, `MIN_LEVEL_ADV`, `MIN_AUTO`, `G3`, `G4`, `G5`, `G6`, `G7`, `G8`, `G9`, `G10` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality; mode (M,S + PULL) |
+| `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled | `0` | State saving on reset |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `MIN_LEVEL` | `1..100` | `1` | Minimum level |
+| `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `2` = Forced capacitive; `3` = Forced inductive; `5` = Fluorescent lamps; `6` = Led lamps; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI; `10` = Halogen lamp; `11` = `LED` trailing edge / electronic transformers; `12` = `LED` leading edge; `13` = CFL trailing edge; `14` = CFL leading edge | `0` | Type of load; Default value depends on device. |
+| `TYPE_STANDARD` | `0` = 1-10V standard; `1` = 0-10V standard | `0` | Voltage standard |
+| `MIN_LEVEL_ADV` | `1..100` | `0` | Minimum level advanced; Default value depends on device and Type of load value |
+| `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable | `0` | Enable / Disable minimum level |
+| `G1` | `0..255` | `0` | Group 1 |
+| `G2` | `0..255` | `0` | Group 2 |
+| `G3` | `0..255` | `0` | Group 3 |
+| `G4` | `0..255` | `0` | Group 4 |
+| `G5` | `0..255` | `0` | Group 5 |
+| `G6` | `0..255` | `0` | Group 6 |
+| `G7` | `0..255` | `0` | Group 7 |
+| `G8` | `0..255` | `0` | Group 8 |
+| `G9` | `0..255` | `0` | Group 9 |
+| `G10` | `0..255` | `0` | Group 10 |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000192:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+Firmware `206` designates one Dimmer actuator Object `8`, with no Virgin and an empty slot predicate. No conversion is associated. Firmware A/`PL`/`G1`..`G3`=`0..9` is narrower than reusable address/group domains and the sheet's virtual ten-group scope. The physical sheet has L and `TYPE` sockets absent from firmware fields. Physical `TYPE=0/1` (fluorescent/`LED`) is distinct from reusable `TYPE_LOAD`, whose relation filter excludes fluorescent 5 and `LED` 6 while retaining unrelated phase-cut/DALI/DSI labels. This does not establish those load interfaces on this ballast product. `MIN_LEVEL_ADV` domain `1..100` retains default 0: this is a source irregularity, not a legal selected level. `TYPE_STANDARD=0/1` models 1–10/0–10 V, but no stored conversion maps L to `TYPE_STANDARD` or `MIN_LEVEL`. Software slave-PUL `M=16` is reusable, beyond the physical firmware M enum.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000192:s000019`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000192:s000020`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `206` | `1` | `8` | `4145` | No textual predicate stored | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000192:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `206` | `8` | `582` | `MIN_LEVEL_ADV` | `1..100` (entire reusable range retained) | `0` | Minimum level advanced |
+| `206` | `8` | `583` | `MIN_AUTO` | `0` = Minimum not editable; `1` = Minimum editable (entire reusable range retained) | `0` | enable disable minimum level |
+| `206` | `8` | `584` | `TYPE_LOAD` | `0` = Auto detect capacitive; `1` = Auto detect inductive; `10` = Halogen lamp; `11` = `LED` trailing edge / electronic transformers; `12` = `LED` leading edge; `13` = CFL trailing edge; `14` = CFL leading edge; `2` = Forced capacitive; `3` = Forced inductive; `7` = Discharge lamps; `8` = Dali standard; `9` = DSI | `0` | Type of Load |
+| `206` | `8` | `585` | `LOCAL_BUTTON` | `0` = Toggle; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `206` | `8` | `2177` | `STATE_SAVING_ON_RESET` | `0` = Disabled; `1` = Enabled (entire reusable range retained) | `0` | State saving on reset |
+| `206` | `8` | `2494` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `206` | `8` | `2495` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `206` | `8` | `2496` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000192:s000022`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000192:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `47` / `modobj = 163` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`8`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000192:s000024`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Loads | Incandescent, halogen, compact fluorescent and `LED` lighting through suitable 1–10 V ballast interface | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Control | Configured bus control/sensor or integrated test/control button; local ON/OFF and dimming | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| `TYPE` setting | 0 fluorescent with typical 1.5 s start delay; 1 `LED` with immediate soft start | MQ00314-f-FR, printed/PDF pp. 1–4 |
+| Delayed slave OFF | Point-to-point only: master OFF is immediate; matching slave stays on for the selected delay | MQ00314-f-FR, printed/PDF pp. 1–4 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000192:s000025`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000192:s000026`
+
+Provenance cues: `catalogue`
+
+Use Virtual Configurator for Lighting Management; MyHOME supports physical configurators or MyHOME_Suite (MQ00314-f-FR p. 2). The software enables slave-PUL and preset position beyond the physical table.
+
+| Setting | Physical values | Virtual scope |
+| --- | --- | --- |
+| A / `PL` | A=`0..9`; `PL`=`1..9` | Room `0..10`; light point `0..15` |
+| Groups | G=`0..9` | Groups `1..10`, each `0..255` |
+| M | 0 master; `SLA` slave; PUL monostable ON; 1/2/3/4 delayed OFF 1/2/3/4 min | Delayed OFF `0..255` s; master/master-PUL and point-to-point applicability |
+| L | 0: 1 V; 1: 1.5 V; 2: 2 V; 3: 0 V; 4: 0.5 V | Minimum light level `1..100` |
+| `TYPE` | 0 fluorescent; 1 `LED` | Fluorescent / `LED` load selection |
+
+L selects the minimum output voltage while ON: `L=3/4` extends the nominal 1–10 V interface into 0–10 V use. This does not authorize an arbitrary phase-cut or DALI load from a reusable `TYPE_LOAD` label. The French wiring sheet p. 3 separates load/mains switching and low-voltage ballast terminals; p. 4 shows EASYWAY arrangements, not an additional catalogue connection mode. Maintenance chemicals are sheet-specific; use the original p. 3 for those instructions.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000192:s000027`
+
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The French exact-product sheet names both `002611` and `BMDI1001`. Its 1–10 V title and the catalogue's 0–10 V name describe configurable output ranges rather than conflicting identities. The German 50 mA control-output figure supplements the French sheet; its 1000 W headline does not replace the French 1000/500 VA voltage-scoped limits. Physical L/`TYPE` settings, software load labels and reusable Object enums must remain separate.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000192:s000028`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `source`
+
+- No release note maps the historical wildcard firmware to a hardware revision or resolves the `TYPE_LOAD` filter mismatch.
+- Virtual Configurator/MYHOME_Suite help and EASYWAY controller procedures are linked by the sheet but not independently examined.
+- Installed ballast compatibility, minimum dim level, startup behavior and diagnostics are unobserved.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000192:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0052)
+
+# Document: ownkb:document:d000193
+
+Source path: `devices/definitions/own-dev-0053-ultrasonic-ceiling-sensor-ir-port.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Ultrasonic ceiling sensor with IR port
+
+Section ID: `ownkb:section:d000193:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000193:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+This ceiling sensor combines ultrasonic presence detection with a daylight threshold for SCS lighting control. Unlike the `PIR` and dual-technology variants, its retained installation sheet identifies an ultrasonic detector; detailed `BMSE3002`-specific technical documentation remains incomplete.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0053` | Project identity |
+| Technical description | Ultrasonic ceiling sensor with IR port | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE3002`, `048821` | Canonical commercial records |
+| Catalogue item | `48` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `33` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000193:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE3002` | Established identity | canonical commercial record for item `48` |
+| Legrand | `048821` | Established identity | canonical commercial record for item `48` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000193:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE02817AD` | instruction sheet | Revision AD; no separate date established | No consistent printed pagination; PDF pp. 1–4; exact `048820`/21/22 sensor-type, installation and adjustment diagrams | [Archived original](https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000193:s000005`
+
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc`; `16 mA` | LE02817AD, PDF p. 1 |
+| Environment | `−5..45 °C` | LE02817AD, PDF p. 1 |
+| Sensing | ultrasonic movement detection and daylight threshold | LE02817AD, PDF p. 1 |
+| Opening / housing height | `68 mm` boxed / `65 mm` spring opening; drawing height `50 mm` | LE02817AD, PDF pp. 1–2 |
+| Coverage at 2.5 m | 8 m diameter floor coverage; 6 m `US` diameter at the 1.2 m plane shown in the diagram | LE02817AD, PDF pp. 1–2 |
+| Published settings | 500 lux / 15 min shown in instructions; light threshold `5..1275` lux; delay 30 s..255 h 59 min 59 s; sensitivity 25%, 50%, 75%, 100% | LE02817AD, PDF pp. 1, 4 |
+
+### Identity
+
+Section ID: `ownkb:section:d000193:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `48` | Canonical catalogue |
+| Technical item | Ultrasonic ceiling sensor with IR port | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `33` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000193:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `33` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000193:s000008`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `48` | `BMSE3002` | `1` | `5` | Empty in source |
+| `1580` | `048821` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000193:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `140` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000193:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000193:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `140` | `1` | `119` Stand alone presence sensor | Candidate alternative | `457` | `119` | `336` |
+| `140` | `1` | `128` Scenarios daylight and presence sensor | Candidate alternative | `589` | `128` | `408` |
+| `140` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `458` | `164` | `337` |
+| `140` | `1` | `165` Scenarios presence sensor | Candidate alternative | `459` | `165` | `338` |
+| `140` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `460` | `166` | `339` |
+| `140` | `1` | `168` Stand alone daylight and presence sensor | Fixed/designated metadata | `461` | `168` | `340` |
+| `140` | `2` | `431` IR scenario control | Fixed/designated metadata | `462` | `431` | `341` |
+| `140` | `3` | `431` IR scenario control | Fixed/designated metadata | `463` | `431` | `341` |
+| `140` | `4` | `431` IR scenario control | Fixed/designated metadata | `464` | `431` | `341` |
+| `140` | `5` | `431` IR scenario control | Fixed/designated metadata | `465` | `431` | `341` |
+| `140` | `6` | `431` IR scenario control | Fixed/designated metadata | `466` | `431` | `341` |
+| `140` | `7` | `431` IR scenario control | Fixed/designated metadata | `467` | `431` | `341` |
+| `140` | `8` | `431` IR scenario control | Fixed/designated metadata | `468` | `431` | `341` |
+| `140` | `9` | `431` IR scenario control | Fixed/designated metadata | `469` | `431` | `341` |
+| `140` | `10` | `431` IR scenario control | Fixed/designated metadata | `470` | `431` | `341` |
+| `140` | `11` | `431` IR scenario control | Fixed/designated metadata | `471` | `431` | `341` |
+| `140` | `12` | `431` IR scenario control | Fixed/designated metadata | `472` | `431` | `341` |
+| `140` | `13` | `431` IR scenario control | Fixed/designated metadata | `473` | `431` | `341` |
+| `140` | `14` | `431` IR scenario control | Fixed/designated metadata | `474` | `431` | `341` |
+| `140` | `15` | `431` IR scenario control | Fixed/designated metadata | `475` | `431` | `341` |
+| `140` | `16` | `431` IR scenario control | Fixed/designated metadata | `476` | `431` | `341` |
+| `140` | `17` | `431` IR scenario control | Fixed/designated metadata | `477` | `431` | `341` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000193:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `140` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `13` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000193:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `140` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000193:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `140` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000193:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000193:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000193:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000193:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000193:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000193:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000193:s000021`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000193:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000193:s000023`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. Object `166` retains `M=1/4` predicates; 119/128/165/168 have empty predicates, so no M-based selection is established for those alternatives. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. The firmware surface contains only `AID`: stored M predicates are not backed by a firmware M field. Physical sockets are not inferred from them. Four slot-1 conditions have empty predicates. Filters retain `PIR`-only choices on this ultrasonic product, and `INITIAL_OCC`/`RE-TRIGGER` subsets on 168 exclude their reusable defaults. `DAYLIGHT_SETPOINT` filter text says Provision of light; the referenced field identity remains `DAYLIGHT_SETPOINT`. Do not reinterpret these as a physical `PIR` detector.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000193:s000024`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000193:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `140` | `1` | `119` | `4145` | No textual predicate stored | None |
+| `140` | `1` | `128` | `4145` | No textual predicate stored | None |
+| `140` | `1` | `165` | `4145` | No textual predicate stored | None |
+| `140` | `1` | `168` | `4145` | No textual predicate stored | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000193:s000026`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `140` | `119` | `192` | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `3` | `PIR` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `119` | `193` | `INITIAL_OCC` | `1` = `PIR` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `119` | `194` | `MAINTAIN_OCC` | `1` = `PIR` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `119` | `195` | `RE-TRIGGER` | `1` = `PIR` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `128` | `358` | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `3` | `PIR` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `128` | `359` | `INITIAL_OCC` | `1` = `PIR` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `128` | `360` | `MAINTAIN_OCC` | `1` = `PIR` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `128` | `361` | `RE-TRIGGER` | `1` = `PIR` only; `4` = `PIR` or `US` | `4` | Re-trigger; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `165` | `197` | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `3` | `PIR` sensitivity; field definition belongs to a different Object scope; do not alias it to a similarly named field |
+| `140` | `166` | `2109` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `140` | `166` | `2124` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `140` | `166` | `2139` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `140` | `166` | `2286` | `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux (entire reusable range retained) | `0` | Provision of light (Lux) |
+| `140` | `166` | `2315` | `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux (entire reusable range retained) | `100` | Provision of light (Lux) |
+| `140` | `168` | `202` | `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `3` | `PIR` sensitivity |
+| `140` | `168` | `203` | `INITIAL_OCC` | `1` = `PIR` only | `3` | Initial occupancy; reusable default `3` is outside this subset; filter supplies no replacement default |
+| `140` | `168` | `204` | `MAINTAIN_OCC` | `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `140` | `168` | `205` | `RE-TRIGGER` | `1` = `PIR` only | `4` | Re-trigger; reusable default `4` is outside this subset; filter supplies no replacement default |
+| `140` | `168` | `2155` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `140` | `168` | `2269` | `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux (entire reusable range retained) | `0` | Provision of light (Lux) |
+| `140` | `168` | `2301` | `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux (entire reusable range retained) | `100` | Daylight setpoint (Lux) |
+| `140` | `168` | `2370` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `140` | `431` | `2392` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000193:s000027`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000193:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `48` / `modobj = 33` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000193:s000029`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Automatic control | Auto ON/OFF responds to presence and illumination; manual ON / auto OFF requires a separate control | LE02817AD, PDF pp. 3–4 |
+| Adjustment | `088230` / `088235` tools are named in this revision; LEARN and IR `LED` are shown | LE02817AD, PDF pp. 3–4 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000193:s000030`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000193:s000031`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Select the documented sensor role and its addressed actuator/controller before reading or writing Object configuration. The historical firmware record stores only `AID` and Advanced Configuration; its M selection predicates do not establish physical configurator sockets. LE02817AD PDF pp. 2–4 shows the installation methods, automatic/manual operation and adjustment tools. The remote models named in these older instructions differ from the current Italian export; no interchangeability or release cutoff is established.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000193:s000032`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `documentation`
+
+The manufacturer catalogue explicitly binds `BMSE3002` and `048821` to one technical item. LE02817AD identifies `048821` as ultrasonic with 16 mA, 500 lux and 15-minute settings. Its floor-level 8 m diagram and the 6 m `US` circle at the 1.2 m working plane are different measurement planes. No exact `BMSE3002` technical sheet was located; protection, independent coverage tables and physical sockets are not imported from `BMSE3001`/3003. This documentation gap does not unsettle the explicit catalogue identity.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000193:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+- No exact `BMSE3002` technical sheet or regional EAN record is retained; enclosure protection, independent detailed `US` sensitivity matrix and `BMSE3002`-specific setup are not inferred from other products.
+- The instructions' `048821` coverage diagram is retained, but installed behavior and actual detection boundaries are unobserved.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000193:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0053)
+
+# Document: ownkb:document:d000194
+
+Source path: `devices/definitions/own-dev-0054-pir-us-ceiling-mounted-sensor.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR`+`US` ceiling-mounted sensor
+
+Section ID: `ownkb:section:d000194:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000194:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This recessed ceiling sensor combines passive infrared and ultrasonic presence detection with a daylight threshold for SCS lighting or controller scenarios. Its two detection technologies have different coverage patterns, and operation can use automatic switching or manual-on/automatic-off control.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0054` | Project identity |
+| Technical description | `PIR`+`US` ceiling-mounted sensor | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE3003`, `048822` | Canonical commercial records |
+| Catalogue item | `49` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `34` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000194:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE3003` | Established identity | canonical commercial record for item `49` |
+| Legrand | `048822` | Established identity | canonical commercial record for item `49` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000194:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `BMSE3003` | `8012199969268` | [Archived original](https://archive.openwebnet-ha.org/sha256/54/95/5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077.pdf), `BMSE3003-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `048822` | `3245060488222` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ce/35/ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043.pdf), `048822-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000194:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE10699AA-FR` | technical/system guide | LE10699AA-FR; no dated imprint established | Printed/PDF p. 61; exact paired identities, physical ratings and full sensitivity/height coverage; unrelated guide pages and hotel-controller programming not examined | [Archived original](https://archive.openwebnet-ha.org/sha256/48/54/4854112b1d66d371515e11e1759d3a88d68cd2dad465a25c8799d55a74298d30.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/le10699aa-fr.pdf) |
+| `LE02817AD` | instruction sheet | Revision AD; no separate date established | No consistent printed pagination; PDF pp. 1–4; exact `048820`/21/22 sensor-type, installation and adjustment diagrams | [Archived original](https://archive.openwebnet-ha.org/sha256/72/48/7248bde719c44406319ccaff2131c760858d3ec2558c6ff7c087cf1f64b8aaa4.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/LE02817AD.pdf) |
+| `BMSE3003-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `BMSE3003` to EAN-13 relationship at printed/PDF p. 1. Exact-reference identifiers and technical export attributes examined; linked downloads and prices outside scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/54/95/5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3003) |
+| `048822-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact SKU/GTIN metadata and EAN/Gencode field; other technical attributes, linked documents and prices not incorporated | [Archived HTML](https://archive.openwebnet-ha.org/sha256/ce/35/ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-espace-de-travail) |
+| `ch_de_katalog_wohnbau.pdf` | Historical residential catalogue | No dated imprint established | Printed pp. 156–157, 159 / PDF pp. 158–159, 161; exact sensor entries, complete coverage and mounting-specific dimension drawing | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+| `U4615A.pdf` | Pictographic installation instructions | U4615A01SY-09W51 | No printed page numbering; PDF pp. 1–3, `BMSE3001`/`BMSE3003` ratings, mounting, cover release and mode selection | [Archived original](https://archive.openwebnet-ha.org/sha256/da/d7/dad7569e38b9cf2f7d8dca0f6eaa9022624a6067b8aff90e00527fd530f2982c.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/U4615A.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000194:s000006`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc`; `17 mA` | LE02817AD, PDF p. 1 |
+| Environment | `−5..45 °C` | LE02817AD, PDF p. 1 |
+| Sensing | `PIR` and ultrasonic movement detection and daylight threshold | LE02817AD, PDF p. 1 |
+| Protection / storage | IP20; IK04; −`20..70 °C` | LE10699AA-FR, printed/PDF p. 61 |
+| Ceiling opening | `65 mm` without installation box; `68 mm` with box | LE10699AA-FR, printed/PDF p. 61 |
+| Connection | SCS bus through RJ45/BUS adapter `048872` | LE10699AA-FR, printed/PDF p. 61 |
+| Detection angle | 360° | LE10699AA-FR, printed/PDF p. 61 |
+| Current commercial dimensions | `120 mm` diameter × `62 mm` depth | `BMSE3003`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Maximum installation height | 6 m | `BMSE3003`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Current commercial coverage at 2.5 m | `PIR`: 8 m diameter / 50 m²; `US`: 11 m diameter / 95 m² | `BMSE3003`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Surface installation accessory | LG-`048875` | `BMSE3003`-ean-product-sheet.pdf, printed p. 1 / PDF p. 1 |
+| Earlier coverage headline | 90 m² | U4615A, no printed page numbers / PDF p. 1 |
+| Published settings | 500 lux / 15 min shown in instructions; light threshold `5..1275` lux; delay 30 s..255 h 59 min 59 s; sensitivity 25%, 50%, 75%, 100% | LE02817AD, PDF pp. 1, 4 |
+
+#### `PIR` coverage
+
+Section ID: `ownkb:section:d000194:s000007`
+
+Each cell gives diameter and publisher-stated area; areas are not recalculated. LE10699AA-FR, printed/PDF p. 61.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `4 m Ø / 15 m²` | `6 m Ø / 25 m²` | `6.5 m Ø / 30 m²` | `8 m Ø / 50 m²` |
+| `3` | `5.5 m Ø / 25 m²` | `6.5 m Ø / 35 m²` | `8.5 m Ø / 60 m²` | `11.5 m Ø / 100 m²` |
+| `4` | `6.5 m Ø / 35 m²` | `7.5 m Ø / 45 m²` | `12.5 m Ø / 125 m²` | `14 m Ø / 155 m²` |
+| `5` | `6 m Ø / 30 m²` | `10.5 m Ø / 90 m²` | `12 m Ø / 115 m²` | `16.5 m Ø / 215 m²` |
+| `6` | `4 m Ø / 15 m²` | `5.5 m Ø / 25 m²` | `8.5 m Ø / 60 m²` | `12.5 m Ø / 125 m²` |
+
+#### Ultrasonic coverage
+
+Section ID: `ownkb:section:d000194:s000008`
+
+Each cell gives diameter and publisher-stated area. LE10699AA-FR, printed/PDF p. 61.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `4 m Ø / 15 m²` | `4 m Ø / 15 m²` | `6 m Ø / 30 m²` | `11 m Ø / 95 m²` |
+| `3` | `6 m Ø / 30 m²` | `6 m Ø / 30 m²` | `8 m Ø / 50 m²` | `13 m Ø / 150 m²` |
+| `4` | `6 m Ø / 30 m²` | `6 m Ø / 30 m²` | `10 m Ø / 80 m²` | `13 m Ø / 150 m²` |
+| `5` | `6 m Ø / 30 m²` | `6 m Ø / 30 m²` | `10 m Ø / 80 m²` | `13 m Ø / 130 m²` |
+| `6` | `0 m Ø / 0 m²` | `6 m Ø / 30 m²` | `10 m Ø / 80 m²` | `13 m Ø / 130 m²` |
+
+#### Mounting-specific dimension drawing
+
+Section ID: `ownkb:section:d000194:s000009`
+
+Provenance cues: `catalogue`
+
+The German catalogue printed p. 159 / PDF p. 161 uses drawing letters, not interchangeable whole-product dimensions. Values below retain those labels; the two mounting outlines must be read in the original.
+
+| Drawing | A | B | C | D | E | F | G | H | I | L |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `BMSE3003` | `120.72 mm` | `R:60.36 mm` | `50 mm` | `52.3 mm` | `51.5 mm` | `37 mm` | `120.72 mm` | `53.74 mm` | `62.27 mm` | `47 mm` |
+
+### Identity
+
+Section ID: `ownkb:section:d000194:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `49` | Canonical catalogue |
+| Technical item | `PIR`+`US` ceiling-mounted sensor | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `34` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000194:s000011`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `34` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000194:s000012`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `49` | `BMSE3003` | `1` | `5` | Empty in source |
+| `1581` | `048822` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000194:s000013`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `141` | `-1` | `-1` | `-1` | `17` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000194:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000194:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `141` | `1` | `119` Stand alone presence sensor | Candidate alternative | `478` | `119` | `342` |
+| `141` | `1` | `128` Scenarios daylight and presence sensor | Candidate alternative | `479` | `128` | `343` |
+| `141` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `480` | `164` | `344` |
+| `141` | `1` | `165` Scenarios presence sensor | Candidate alternative | `481` | `165` | `345` |
+| `141` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `482` | `166` | `346` |
+| `141` | `1` | `168` Stand alone daylight and presence sensor | Fixed/designated metadata | `483` | `168` | `347` |
+| `141` | `2` | `431` IR scenario control | Fixed/designated metadata | `484` | `431` | `348` |
+| `141` | `3` | `431` IR scenario control | Fixed/designated metadata | `485` | `431` | `348` |
+| `141` | `4` | `431` IR scenario control | Fixed/designated metadata | `486` | `431` | `348` |
+| `141` | `5` | `431` IR scenario control | Fixed/designated metadata | `487` | `431` | `348` |
+| `141` | `6` | `431` IR scenario control | Fixed/designated metadata | `488` | `431` | `348` |
+| `141` | `7` | `431` IR scenario control | Fixed/designated metadata | `489` | `431` | `348` |
+| `141` | `8` | `431` IR scenario control | Fixed/designated metadata | `490` | `431` | `348` |
+| `141` | `9` | `431` IR scenario control | Fixed/designated metadata | `491` | `431` | `348` |
+| `141` | `10` | `431` IR scenario control | Fixed/designated metadata | `492` | `431` | `348` |
+| `141` | `11` | `431` IR scenario control | Fixed/designated metadata | `493` | `431` | `348` |
+| `141` | `12` | `431` IR scenario control | Fixed/designated metadata | `494` | `431` | `348` |
+| `141` | `13` | `431` IR scenario control | Fixed/designated metadata | `495` | `431` | `348` |
+| `141` | `14` | `431` IR scenario control | Fixed/designated metadata | `496` | `431` | `348` |
+| `141` | `15` | `431` IR scenario control | Fixed/designated metadata | `497` | `431` | `348` |
+| `141` | `16` | `431` IR scenario control | Fixed/designated metadata | `498` | `431` | `348` |
+| `141` | `17` | `431` IR scenario control | Fixed/designated metadata | `499` | `431` | `348` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000194:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `141` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `14` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000194:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `141` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000194:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `141` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000194:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000194:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000194:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000194:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000194:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000194:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000194:s000025`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000194:s000026`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000194:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. The firmware surface contains only `AID`: stored M predicates are not backed by a firmware M field. Physical sockets are not inferred from them. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not determine which detection scheme is installed on this documented dual-technology product. The referenced occupancy fields belong to their stated Object scopes; their similar names do not make distinct fields interchangeable. `ALERT` filters exclude default 0 without replacements. Empty allowed-value subsets on daylight/provision fields remain unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000194:s000028`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000194:s000029`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `141` | `1` | `128` | `4477` | `M=2` | None |
+| `141` | `1` | `166` | `4461` | `M=1` | None |
+| `141` | `1` | `166` | `4505` | `M=4` | None |
+| `141` | `1` | `168` | `4439` | `M=0` | None |
+| `141` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000194:s000030`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `141` | `119` | `2331` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `141` | `166` | `2110` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `141` | `166` | `2125` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `141` | `166` | `2140` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `141` | `168` | `2156` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `141` | `168` | `2332` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | Natural light factor |
+| `141` | `168` | `2333` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `141` | `168` | `2371` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `141` | `168` | `2452` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `141` | `168` | `2464` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `141` | `431` | `2391` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000194:s000031`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000194:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `49` / `modobj = 34` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000194:s000033`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Automatic control | Auto ON/OFF responds to presence and illumination; manual ON / auto OFF requires a separate control | LE02817AD, PDF pp. 3–4 |
+| Adjustment | `088230` / `088235` tools are named in this revision; LEARN and IR `LED` are shown | LE02817AD, PDF pp. 3–4 |
+| Current setup tools | `088240` and `BMSO4001`, or configuration software; connection by terminal and RJ45 | Italian exact-product export, printed/PDF p. 1 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000194:s000034`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000194:s000035`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Select the documented sensor role and its addressed actuator/controller before reading or writing Object configuration. The historical firmware record stores only `AID` and Advanced Configuration; its M selection predicates do not establish physical configurator sockets. U4615A PDF p. 2 shows spring/boxed ceiling mounting and different front-cover release methods for `BMSE3001` and `BMSE3003`; PDF p. 3 shows Auto/Eco selection and LEARN/IR indicators. LE02817AD PDF pp. 2–4 shows the installation methods, automatic/manual operation and adjustment tools. The remote models named in these older instructions differ from the current Italian export; no interchangeability or release cutoff is established.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000194:s000036`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+Catalogue SKU relationships establish both commercial identities. The guide explicitly pairs the two references and agrees with the Italian export on current and supply. U4615A gives 500 lux/15 min and 90 m², whereas the guide/export provides sensitivity- and height-specific coverage. These headlines are source-specific, not one guaranteed effective area. The retained German catalogue PDF p. 158 / printed p. 156 gives 10 mA for `BMSE3001`/3003, conflicting with the exact instructions/export (12/17 mA), and 300 lux/15 min instead of the instructions' 500 lux. Its 256-hour ceiling conflicts with the exact delay limits. No hardware revision or correction notice resolves these differences.
+
+The historical dimension drawing distinguishes boxed and ceiling mounting outlines. Its more precise drawing labels differ from the rounded current-export overall dimensions; they are retained with their mounting context rather than silently substituted.
+
+For `US` at 3 m/medium sensitivity, the German printed p. 157 / PDF p. 159 states 6 m diameter / 60 m², while LE10699AA-FR p. 61 says 6 m / 30 m². The table above preserves the latter source; the discrepancy is unresolved.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000194:s000037`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+- Installed thresholds, remote compatibility, active sensor Object and diagnostic results remain unobserved.
+- Applicable manufacturer export links to technical sheets, use instructions and drawings were identified but their unexamined responses are not used as evidence.
+- Coverage and factory-setting differences are not mapped to a production revision.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000194:s000038`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `BMSE3003-ean-product-sheet.pdf`, printed/PDF p. 1: exact `BMSE3003` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/54/95/5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSE3003); SHA-256 `5495ce529bfb0f9f8bcb7df6f3aa98fd30c4a0ece1f38aa7d040acf945ca0077`.
+- `048822-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048822` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/ce/35/ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/detecteur-de-mouvements-bus-fixation-plafond-special-espace-de-travail); SHA-256 `ce350232306e7f957f4055de814ca63a77953d517952118fb84f5076b6bf2043`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0054)
+
+# Document: ownkb:document:d000195
+
+Source path: `devices/definitions/own-dev-0055-pir-us-wall-mounted-sensor.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR`+`US` wall-mounted sensor
+
+Section ID: `ownkb:section:d000195:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000195:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This wall or ceiling SCS sensor combines passive infrared, ultrasonic and daylight sensing for occupancy-based lighting control. It supports automatic switching, manual-on/automatic-off operation and dimmer regulation, with coverage depending on detection technology, height and sensitivity.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0055` | Project identity |
+| Technical description | `PIR`+`US` wall-mounted sensor | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2005`, `048823` | Canonical commercial records |
+| Catalogue item | `50` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `35` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000195:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2005` | Established identity | canonical commercial record for item `50` |
+| Legrand | `048823` | Established identity | canonical commercial record for item `50` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000195:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00300_c_EN` | technical sheet | 2013-02-04 | Printed/PDF pp. 1–7; complete exact-product specifications, route restrictions, remote matrix, physical selectors/modes, coverage and assembly | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/e5/f3e5c1d33d683b8ab75492adbde79665299ff0c0140e27c717defc1e9ae89311.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00300_c_EN.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish technical-sheet compilation | BT00300-a-ES; no separate dated imprint established | Exact `BMSE2005` leaf, printed pp. 664–669 / PDF pp. 95–100; all its specifications, modes, coverage and installation examined; other leaves outside stated scope | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical residential catalogue | No dated imprint established | Printed pp. 156–159 / PDF pp. 158–161; exact sensor entries, coverage and dimensions; no `BMSE2003` dimension row | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000195:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` from SCS; `17 mA` | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Environment / installation | `−5..45 °C`; IP42; indoor wall or ceiling using supplied bracket | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Connections / controls | RJ45 bus; `BMAC1001` RJ45/SCS adapter; light sensor, `PIR` sensor, two-way IR receiver, parameter-enable pushbutton, `LED` and six physical configurator positions | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Maximum height | 6 m | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Dimensions | `116 × 91 × 70 mm` | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Additional sensing | Ultrasonic movement detector | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Headline coverage at 2.5 m | Published as `PIR` 14 × 7 m / 77 m²; detailed `PIR` maximum is 10 × 5 m / 39 m², `US` maximum 14 × 7 m / 77 m² | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Angle | 60° / 180° | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Threshold / delay ranges | Technical headline: `5..1275` lux; 30 s..255 h 59 min 59 s. Remote table: `0..1275` lux; Spanish historical leaf: `1..2000` lux and 30 s..255 h | MM00300_c_EN, printed/PDF pp. 1–7 |
+
+#### `PIR` coverage in the MM c revision
+
+Section ID: `ownkb:section:d000195:s000006`
+
+Provenance cues: `source`
+
+Each cell preserves source A × B and stated surface; source dimensions and area are not recalculated. MM00300-c-EN, printed/PDF p. 6.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `3 × 1 m / 10 m²` | `5 × 3 m / 20 m²` | `8 × 4 m / 29 m²` | `10 × 5 m / 39 m²` |
+| `3` | `3 × 1 m / 10 m²` | `5 × 3 m / 20 m²` | `8 × 4 m / 29 m²` | `10 × 5 m / 39 m²` |
+| `4` | `3 × 2 m / 14 m²` | `6 × 3 m / 28 m²` | `9 × 5 m / 42 m²` | `12 × 6 m / 57 m²` |
+| `5` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `6` | `4 × 2 m / 25 m²` | `8 × 4 m / 50 m²` | `12 × 6 m / 75 m²` | `16 × 8 m / 100 m²` |
+
+#### Ultrasonic coverage in both retained sheets
+
+Section ID: `ownkb:section:d000195:s000007`
+
+Provenance cues: `source`
+
+Each cell preserves source A × B / surface; the English 25% heading says Alta, while Spanish says Bajo. MM00300-c-EN p. 6; Spanish BT00300-a-ES printed p. 665 / PDF p. 96.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `3` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `4` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `5` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `6` | `3 × 2 m / 14 m²` | `6 × 3 m / 28 m²` | `9 × 5 m / 42 m²` | `12 × 6 m / 57 m²` |
+
+### Identity
+
+Section ID: `ownkb:section:d000195:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `50` | Canonical catalogue |
+| Technical item | `PIR`+`US` wall-mounted sensor | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `35` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000195:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `35` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000195:s000010`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `50` | `BMSE2005` | `1` | `5` | `BTicino_Undefined_Wall mounted detector dual ` |
+| `1559` | `048823` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000195:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `136` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000195:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000195:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `136` | `1` | `119` Stand alone presence sensor | Candidate alternative | `370` | `119` | `309` |
+| `136` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `371` | `128` | `310` |
+| `136` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `372` | `164` | `311` |
+| `136` | `1` | `165` Scenarios presence sensor | Candidate alternative | `373` | `165` | `312` |
+| `136` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `374` | `166` | `313` |
+| `136` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `375` | `168` | `314` |
+| `136` | `2` | `431` IR scenario control | Fixed/designated metadata | `376` | `431` | `315` |
+| `136` | `3` | `431` IR scenario control | Fixed/designated metadata | `377` | `431` | `315` |
+| `136` | `4` | `431` IR scenario control | Fixed/designated metadata | `378` | `431` | `315` |
+| `136` | `5` | `431` IR scenario control | Fixed/designated metadata | `379` | `431` | `315` |
+| `136` | `6` | `431` IR scenario control | Fixed/designated metadata | `380` | `431` | `315` |
+| `136` | `7` | `431` IR scenario control | Fixed/designated metadata | `381` | `431` | `315` |
+| `136` | `8` | `431` IR scenario control | Fixed/designated metadata | `382` | `431` | `315` |
+| `136` | `9` | `431` IR scenario control | Fixed/designated metadata | `383` | `431` | `315` |
+| `136` | `10` | `431` IR scenario control | Fixed/designated metadata | `384` | `431` | `315` |
+| `136` | `11` | `431` IR scenario control | Fixed/designated metadata | `385` | `431` | `315` |
+| `136` | `12` | `431` IR scenario control | Fixed/designated metadata | `386` | `431` | `315` |
+| `136` | `13` | `431` IR scenario control | Fixed/designated metadata | `387` | `431` | `315` |
+| `136` | `14` | `431` IR scenario control | Fixed/designated metadata | `388` | `431` | `315` |
+| `136` | `15` | `431` IR scenario control | Fixed/designated metadata | `389` | `431` | `315` |
+| `136` | `16` | `431` IR scenario control | Fixed/designated metadata | `390` | `431` | `315` |
+| `136` | `17` | `431` IR scenario control | Fixed/designated metadata | `391` | `431` | `315` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000195:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `136` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `9` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000195:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `136` | Physical configuration | `0` | Canonical firmware/mode association |
+| `136` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `136` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000195:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `136` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `136` | `A` | `0..9` | `0` | A; Environment |
+| `136` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `136` | `M` | `0..4` | `0` | M; Mode 0-4 |
+| `136` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `136` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000195:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000195:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000195:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000195:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000195:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000195:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000195:s000023`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000195:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000195:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. Firmware `A/PL` `0..9` and `S=0..4` exceed the sheets' physical `A/PL` `1..9` and `S=0..3`. M/T/D agree as numeric domains, but reusable address domains extend to `A=10` and `PL=15`. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not determine which detection scheme is installed on this documented dual-technology product. The referenced occupancy fields belong to their stated Object scopes; their similar names do not make distinct fields interchangeable. `ALERT` filters exclude default 0 without replacements. Empty allowed-value subsets on daylight/provision fields remain unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000195:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000195:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `136` | `1` | `128` | `4477` | `M=2` | None |
+| `136` | `1` | `166` | `4461` | `M=1` | None |
+| `136` | `1` | `166` | `4505` | `M=4` | None |
+| `136` | `1` | `168` | `4439` | `M=0` | None |
+| `136` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000195:s000028`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `136` | `119` | `2344` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `136` | `166` | `2105` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `136` | `166` | `2120` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `136` | `166` | `2135` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `136` | `168` | `2151` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `136` | `168` | `2345` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `136` | `168` | `2346` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | Natural light factor |
+| `136` | `168` | `2366` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `136` | `168` | `2449` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `136` | `168` | `2461` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `136` | `431` | `2399` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000195:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000195:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `50` / `modobj = 35` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000195:s000031`
+
+Cautions: `warning`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Daylight priority | Presence does not request lighting when natural light meets the threshold; threshold tolerance prevents repeated switching | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Auto / Eco | Auto switches on/off automatically; Eco requires a bus control for manual ON and permits automatic restart within 30 s of an absence-triggered OFF | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Override | Manual ON/OFF remains effective while presence continues, returning to automatic behavior after absence timeout | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Walkthrough | Occupancy shorter than 20 s reduces a longer timeout to 3 min; shorter selected delay takes precedence | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Software roles | Local/central presence, daylight or combined detector; PLUS IR scenario control in the product sheet; direct reachability still depends on catalogue relations | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Historical audible warning | Spanish leaf reports alerts at 1 min, 30 s and 10 s before timeout; not an observed implementation | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Remote-only advanced functions | Partial ON/group OFF requires a learned light group; retrigger window 30 s; daylight regulation OFF after 10 min above threshold and ON after 20 s below threshold | MM00300_c_EN, printed/PDF pp. 1–7 |
+| Factory reset | Brief LEARN press starts slow flashing; hold LEARN 10 s until fast flashing | MM00300_c_EN, printed/PDF pp. 1–7 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000195:s000032`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000195:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+These are product-sheet physical values, separate from the reusable Object encodings (MM00300_c_EN, printed/PDF pp. 1–7).
+
+| Physical position | Published values | Consequence |
+| --- | --- | --- |
+| A / `PL` | `1..9` / `1..9` | Zero is excluded |
+| M | `0..4` | Modes below |
+| S | 0 absent: Low; 1 Medium; 2 High; 3 Very high | Source physical sensitivity; firmware additionally permits 4 |
+| T | 0 absent: 15 min; 1: 30 s; 2: 1 min; 3: 2 min; 4: 5 min; 5: 10 min; 6: 15 min; 7: 20 min; 8: 30 min; 9: 40 min | Physical delay |
+| D | 0 absent: wall 300 lux / ceiling 500 lux; 1: 20; 2: 100; 3: 300; 4: 500; 5: 1000 lux | Physical light threshold |
+
+| M | Published behavior |
+| --- | --- |
+| 0 | Presence plus daylight, automatic ON/OFF; manual OFF override lasts until absence timeout |
+| 1 | Twilight ON/OFF only; presence disabled; leave S/T empty; no GEN/ROOM/GR |
+| 2 | Report presence/light to MH200N; unique A/`PL`; no direct load control; leave S/T empty; no GEN/ROOM/GR |
+| 3 | Presence plus constant-light regulation; requires dimmer; manual dimming sets temporary setpoint until next ON |
+| 4 | Daylight regulation with manual ON and automatic OFF; presence disabled; requires dimmer; no automatic restart after daylight falls |
+
+Use `M=2` for MH200N scenarios; a scenario controller, not the sensor, manages its timing in this route. Virtual configuration is described through 3503N or a web server with Virtual Configurator. Lighting Management separately lists Plug&Go, Push&Learn and Project&Download; these commissioning workflows are not numeric catalogue mode IDs.
+
+The Italian note on MM00300_c_EN p. 3 says physical or virtual MyHOME configuration disables configuration remotes and makes remote-only advanced functions unavailable. Do not combine those routes with the following remote matrix as if all were simultaneously enabled.
+
+| Remote parameter | Printed default | Allowed adjustment / tool |
+| --- | --- | --- |
+| Delay | 15 min | `BMSO4003`: 3, 5, 10, 15, 20 min; `BMSO4001`: 30 s..255 h 59 min 59 s |
+| `PIR` sensitivity | Very high | Low / Medium / High / Maximum with either tool |
+| Light threshold | 300 lux | `BMSO4003`: 20, 100, 300, 500, 1000 lux; `BMSO4001`: `0..1275` lux |
+| Auto / Eco / Partial ON–Group OFF | Disabled / Disabled / Disabled | Auto/Eco selectable by either; partial mode `BMSO4001` only |
+| Walkthrough | Enabled | Enable/disable with either tool |
+| Initial / maintaining detection | `PIR` / `PIR` | Not editable in the printed matrix |
+| Retrigger | `PIR` | `PIR` or Disabled, `BMSO4001` only |
+| Alarm | Disabled | Enable/disable, `BMSO4001` only |
+| Calibration | No default shown | `0..99995` lux input; measure with luxmeter and send using `BMSO4001` |
+| Light regulation | Disabled | Enable/disable, `BMSO4001` only |
+| Provision of light | Auto | Auto or up to 1275 lux, `BMSO4001` only |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000195:s000034`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+The exact Spanish BT00300-a-ES leaf establishes `BMSE2005` specifications and procedures; Legrand SKU equivalence remains catalogue evidence rather than independent physical verification. The retained MM c revision uses `5..1275` lux (`0..1275` in its remote table), versus Spanish `1..2000`; Spanish factory Auto differs from MM Auto disabled. Spanish permits physical/remote/PC adjustments, whereas MM warns that physical/virtual setup disables remotes. No revision-to-firmware mapping resolves these differences. Both Spanish and English headline tables label 77 m² as `PIR`; their detailed tables assign 39 m² to `PIR` and 77 m² to `US` at 2.5 m maximum sensitivity. MM remote defaults list `PIR`-only schemes despite dual-technology hardware. Spanish `PIR` sensitivity lower bound is literally “30s”, an unresolved unit error. German printed p. 156 / PDF p. 158 says IP44 and 12 mA, versus exact sheets' IP42 and 17 mA; no production revision is given.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000195:s000035`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+- Coverage, threshold and configuration-route conflicts remain unresolved by a change log or hardware revision.
+- Exact Legrand-reference physical specifications and independent EAN records are not retained; its identity is established by the catalogue.
+- Virtual Configurator/glossary, 3503N/web-server procedures, remote manuals and Plug&Go/Project&Download guides referenced by the sheets are not independently examined here.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000195:s000036`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0055)
+
+# Document: ownkb:document:d000196
+
+Source path: `devices/definitions/own-dev-0056-pir-wall-mounted-sensor-straight-range.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR` wall-mounted sensor - straight range
+
+Section ID: `ownkb:section:d000196:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000196:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This wall or ceiling SCS sensor uses passive infrared movement detection and a daylight threshold to control lighting. The manufacturer calls it a wide-band sensor, but its historical coverage diagrams disagree; the page preserves those limits alongside its physical and software setup options.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0056` | Project identity |
+| Technical description | `PIR` wall-mounted sensor - straight range | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2001`, `048824` | Canonical commercial records |
+| Catalogue item | `51` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `36` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000196:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2001` | Established identity | canonical commercial record for item `51` |
+| Legrand | `048824` | Established identity | canonical commercial record for item `51` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000196:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00296_c_EN` | technical sheet | 2013-02-04 | Printed/PDF pp. 1–7; complete exact-product specifications, route restrictions, remote matrix, physical selectors/modes, coverage and assembly | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/06/2b0656aa8623d733caa7c863b25a05bde17d3fc5d29b11cec1048907b0a33eda.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00296_c_EN.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish technical-sheet compilation | BT00296-a-ES; no separate dated imprint established | Exact `BMSE2001` leaf, printed pp. 640–645 / PDF pp. 71–76; all its specifications, modes, coverage and installation examined; other leaves outside stated scope | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical residential catalogue | No dated imprint established | Printed pp. 156–159 / PDF pp. 158–161; exact sensor entries, coverage and dimensions; no `BMSE2003` dimension row | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000196:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` from SCS; `12 mA` | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Environment / installation | `−5..45 °C`; IP42; indoor wall or ceiling using supplied bracket | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Connections / controls | RJ45 bus; `BMAC1001` RJ45/SCS adapter; light sensor, `PIR` sensor, two-way IR receiver, parameter-enable pushbutton, `LED` and six physical configurator positions | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Maximum height | 6 m | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Dimensions | MM c drawing: `116 × 70 mm`, third dimension not labelled; Spanish exact sheet: `115.86 × 91 × 69.6 mm` | MM00296-c-EN p. 6; Spanish BT00296-a-ES printed p. 641 / PDF p. 72 |
+| Headline coverage / angle | 2 × 12 m / 24 m² at 2.5 m; 90° / 30° | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Threshold / delay ranges | Technical headline: `5..1275` lux; 30 s..255 h 59 min 59 s. Remote table: `0..1275` lux; Spanish historical leaf: `1..2000` lux and 30 s..255 h | MM00296_c_EN, printed/PDF pp. 1–7 |
+
+#### `PIR` coverage in the MM c revision
+
+Section ID: `ownkb:section:d000196:s000006`
+
+Provenance cues: `source`
+
+Each cell preserves source A × B and stated surface; source dimensions and area are not recalculated. MM00296-c-EN, printed/PDF p. 6.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `3 × 1 m / 10 m²` | `5 × 3 m / 20 m²` | `8 × 4 m / 29 m²` | `10 × 5 m / 39 m²` |
+| `3` | `3 × 1 m / 10 m²` | `5 × 3 m / 20 m²` | `8 × 4 m / 29 m²` | `10 × 5 m / 39 m²` |
+| `4` | `3 × 2 m / 14 m²` | `6 × 3 m / 28 m²` | `9 × 5 m / 42 m²` | `12 × 6 m / 57 m²` |
+| `5` | `4 × 2 m / 19 m²` | `7 × 4 m / 38 m²` | `11 × 5 m / 58 m²` | `14 × 7 m / 77 m²` |
+| `6` | `4 × 2 m / 25 m²` | `8 × 4 m / 50 m²` | `12 × 6 m / 75 m²` | `16 × 8 m / 100 m²` |
+
+#### `PIR` coverage in the historical Spanish revision
+
+Section ID: `ownkb:section:d000196:s000007`
+
+Each cell is width × depth / stated area; these are distinct from the MM c matrix. BT00296-a-ES, printed p. 641 / PDF p. 72.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `1.5 × 11 m / 15.5 m²` | `1.5 × 11 m / 15.5 m²` | `1.5 × 11 m / 17 m²` | `1.5 × 11 m / 17 m²` |
+| `3` | `1.5 × 11 m / 15.5 m²` | `1.5 × 11 m / 15.5 m²` | `1.5 × 11.5 m / 17 m²` | `1.5 × 11.5 m / 17 m²` |
+| `4` | `1.5 × 11.5 m / 17 m²` | `1.5 × 11.5 m / 17 m²` | `1.5 × 12 m / 20 m²` | `2 × 12 m / 20 m²` |
+| `5` | `1.5 × 11.5 m / 17 m²` | `1.5 × 11.5 m / 17 m²` | `1.5 × 12 m / 20 m²` | `2 × 12 m / 20 m²` |
+| `6` | `1.5 × 11.5 m / 17 m²` | `1.5 × 11.5 m / 17 m²` | `1.5 × 12 m / 20 m²` | `2 × 12 m / 20 m²` |
+
+### Identity
+
+Section ID: `ownkb:section:d000196:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `51` | Canonical catalogue |
+| Technical item | `PIR` wall-mounted sensor - straight range | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `36` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000196:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `36` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000196:s000010`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `51` | `BMSE2001` | `1` | `5` | `BTicino_Undefined_Wall mounted detector` |
+| `1557` | `048824` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000196:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `131` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000196:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000196:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `131` | `1` | `119` Stand alone presence sensor | Candidate alternative | `282` | `119` | `281` |
+| `131` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `283` | `128` | `282` |
+| `131` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `284` | `164` | `283` |
+| `131` | `1` | `165` Scenarios presence sensor | Candidate alternative | `285` | `165` | `284` |
+| `131` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `286` | `166` | `285` |
+| `131` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `287` | `168` | `286` |
+| `131` | `2` | `431` IR scenario control | Fixed/designated metadata | `288` | `431` | `287` |
+| `131` | `3` | `431` IR scenario control | Fixed/designated metadata | `289` | `431` | `287` |
+| `131` | `4` | `431` IR scenario control | Fixed/designated metadata | `290` | `431` | `287` |
+| `131` | `5` | `431` IR scenario control | Fixed/designated metadata | `291` | `431` | `287` |
+| `131` | `6` | `431` IR scenario control | Fixed/designated metadata | `292` | `431` | `287` |
+| `131` | `7` | `431` IR scenario control | Fixed/designated metadata | `293` | `431` | `287` |
+| `131` | `8` | `431` IR scenario control | Fixed/designated metadata | `294` | `431` | `287` |
+| `131` | `9` | `431` IR scenario control | Fixed/designated metadata | `295` | `431` | `287` |
+| `131` | `10` | `431` IR scenario control | Fixed/designated metadata | `296` | `431` | `287` |
+| `131` | `11` | `431` IR scenario control | Fixed/designated metadata | `297` | `431` | `287` |
+| `131` | `12` | `431` IR scenario control | Fixed/designated metadata | `298` | `431` | `287` |
+| `131` | `13` | `431` IR scenario control | Fixed/designated metadata | `299` | `431` | `287` |
+| `131` | `14` | `431` IR scenario control | Fixed/designated metadata | `300` | `431` | `287` |
+| `131` | `15` | `431` IR scenario control | Fixed/designated metadata | `301` | `431` | `287` |
+| `131` | `16` | `431` IR scenario control | Fixed/designated metadata | `302` | `431` | `287` |
+| `131` | `17` | `431` IR scenario control | Fixed/designated metadata | `303` | `431` | `287` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000196:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `131` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `4` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000196:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `131` | Physical configuration | `0` | Canonical firmware/mode association |
+| `131` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `131` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000196:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `131` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `131` | `A` | `0..9` | `0` | A; Environment |
+| `131` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `131` | `M` | `0..4` | `0` | M; Mode 0-4 |
+| `131` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `131` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000196:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000196:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000196:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000196:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000196:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000196:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000196:s000023`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000196:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000196:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. Firmware `A/PL` `0..9` and `S=0..4` exceed the sheets' physical `A/PL` `1..9` and `S=0..3`. M/T/D agree as numeric domains, but reusable address domains extend to `A=10` and `PL=15`. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not establish ultrasonic hardware on a `PIR`-only SKU. The referenced occupancy fields belong to their stated Object scopes; their similar names do not make distinct fields interchangeable. `ALERT` filters exclude default 0 without replacements. Empty allowed-value subsets on daylight/provision fields remain unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000196:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000196:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `131` | `1` | `128` | `4477` | `M=2` | None |
+| `131` | `1` | `166` | `4461` | `M=1` | None |
+| `131` | `1` | `166` | `4505` | `M=4` | None |
+| `131` | `1` | `168` | `4439` | `M=0` | None |
+| `131` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000196:s000028`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `131` | `119` | `108` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `131` | `119` | `109` | `INITIAL_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `131` | `119` | `110` | `MAINTAIN_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `131` | `119` | `111` | `RETRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `131` | `119` | `2334` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `131` | `128` | `112` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `131` | `128` | `113` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `131` | `165` | `114` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `131` | `165` | `115` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `131` | `166` | `2101` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `131` | `166` | `2116` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `131` | `166` | `2131` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `131` | `168` | `117` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity |
+| `131` | `168` | `118` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `131` | `168` | `119` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `131` | `168` | `120` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `131` | `168` | `2147` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `131` | `168` | `2335` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | Natural light factor |
+| `131` | `168` | `2336` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `131` | `168` | `2362` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `131` | `168` | `2445` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `131` | `168` | `2457` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `131` | `431` | `2395` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000196:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000196:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `51` / `modobj = 36` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000196:s000031`
+
+Cautions: `warning`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Daylight priority | Presence does not request lighting when natural light meets the threshold; threshold tolerance prevents repeated switching | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Auto / Eco | Auto switches on/off automatically; Eco requires a bus control for manual ON and permits automatic restart within 30 s of an absence-triggered OFF | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Override | Manual ON/OFF remains effective while presence continues, returning to automatic behavior after absence timeout | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Walkthrough | Occupancy shorter than 20 s reduces a longer timeout to 3 min; shorter selected delay takes precedence | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Software roles | Local/central presence, daylight or combined detector; PLUS IR scenario control in the product sheet; direct reachability still depends on catalogue relations | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Historical audible warning | Spanish leaf reports alerts at 1 min, 30 s and 10 s before timeout; not an observed implementation | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Remote-only advanced functions | Partial ON/group OFF requires a learned light group; retrigger window 30 s; daylight regulation OFF after 10 min above threshold and ON after 20 s below threshold | MM00296_c_EN, printed/PDF pp. 1–7 |
+| Factory reset | Brief LEARN press starts slow flashing; hold LEARN 10 s until fast flashing | MM00296_c_EN, printed/PDF pp. 1–7 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000196:s000032`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000196:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+These are product-sheet physical values, separate from the reusable Object encodings (MM00296_c_EN, printed/PDF pp. 1–7).
+
+| Physical position | Published values | Consequence |
+| --- | --- | --- |
+| A / `PL` | `1..9` / `1..9` | Zero is excluded |
+| M | `0..4` | Modes below |
+| S | 0 absent: Low; 1 Medium; 2 High; 3 Very high | Source physical sensitivity; firmware additionally permits 4 |
+| T | 0 absent: 15 min; 1: 30 s; 2: 1 min; 3: 2 min; 4: 5 min; 5: 10 min; 6: 15 min; 7: 20 min; 8: 30 min; 9: 40 min | Physical delay |
+| D | 0 absent: wall 300 lux / ceiling 500 lux; 1: 20; 2: 100; 3: 300; 4: 500; 5: 1000 lux | Physical light threshold |
+
+| M | Published behavior |
+| --- | --- |
+| 0 | Presence plus daylight, automatic ON/OFF; manual OFF override lasts until absence timeout |
+| 1 | Twilight ON/OFF only; presence disabled; leave S/T empty; no GEN/ROOM/GR |
+| 2 | Report presence/light to MH200N; unique A/`PL`; no direct load control; leave S/T empty; no GEN/ROOM/GR |
+| 3 | Presence plus constant-light regulation; requires dimmer; manual dimming sets temporary setpoint until next ON |
+| 4 | Daylight regulation with manual ON and automatic OFF; presence disabled; requires dimmer; no automatic restart after daylight falls |
+
+Use `M=2` for MH200N scenarios; a scenario controller, not the sensor, manages its timing in this route. Virtual configuration is described through 3503N or a web server with Virtual Configurator. Lighting Management separately lists Plug&Go, Push&Learn and Project&Download; these commissioning workflows are not numeric catalogue mode IDs.
+
+The Italian note on MM00296_c_EN p. 3 says physical or virtual MyHOME configuration disables configuration remotes and makes remote-only advanced functions unavailable. Do not combine those routes with the following remote matrix as if all were simultaneously enabled.
+
+| Remote parameter | Printed default | Allowed adjustment / tool |
+| --- | --- | --- |
+| Delay | 15 min | `BMSO4003`: 3, 5, 10, 15, 20 min; `BMSO4001`: 30 s..255 h 59 min 59 s |
+| `PIR` sensitivity | Very high | Low / Medium / High / Maximum with either tool |
+| Light threshold | 300 lux | `BMSO4003`: 20, 100, 300, 500, 1000 lux; `BMSO4001`: `0..1275` lux |
+| Auto / Eco / Partial ON–Group OFF | Disabled / Disabled / Disabled | Auto/Eco selectable by either; partial mode `BMSO4001` only |
+| Walkthrough | Enabled | Enable/disable with either tool |
+| Initial / maintaining detection | `PIR` / `PIR` | Not editable in the printed matrix |
+| Retrigger | `PIR` | `PIR` or Disabled, `BMSO4001` only |
+| Alarm | Disabled | Enable/disable, `BMSO4001` only |
+| Calibration | No default shown | `0..99995` lux input; measure with luxmeter and send using `BMSO4001` |
+| Light regulation | Disabled | Enable/disable, `BMSO4001` only |
+| Provision of light | Auto | Auto or up to 1275 lux, `BMSO4001` only |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000196:s000034`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The exact Spanish BT00296-a-ES leaf establishes `BMSE2001` specifications and procedures; Legrand SKU equivalence remains catalogue evidence rather than independent physical verification. The retained MM c revision uses `5..1275` lux (`0..1275` in its remote table), versus Spanish `1..2000`; Spanish factory Auto differs from MM Auto disabled. Spanish permits physical/remote/PC adjustments, whereas MM warns that physical/virtual setup disables remotes. No revision-to-firmware mapping resolves these differences. The Spanish narrow coverage matrix differs sharply from MM c, whose maximum at 2.5 m is 10 × 5 m / 39 m² despite a 2 × 12 m / 24 m² headline. Their dimensions differ by rounding: 115.86 × 91 × 69.6 versus MM 116 × 70 with 91 mm absent from its drawing. The source differences are not normalized into one pattern.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000196:s000035`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+- Coverage, threshold and configuration-route conflicts remain unresolved by a change log or hardware revision.
+- Exact Legrand-reference physical specifications and independent EAN records are not retained; its identity is established by the catalogue.
+- Virtual Configurator/glossary, 3503N/web-server procedures, remote manuals and Plug&Go/Project&Download guides referenced by the sheets are not independently examined here.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000196:s000036`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0056)
+
+# Document: ownkb:document:d000197
+
+Source path: `devices/definitions/own-dev-0057-pir-wall-mounted-sensor-short-range.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR` wall-mounted sensor - short range
+
+Section ID: `ownkb:section:d000197:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000197:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This wall or ceiling SCS sensor combines narrow-beam passive infrared movement detection with a daylight threshold. It can switch lighting, regulate a dimmer or report to a scenario controller; its published coverage figures vary between revisions.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0057` | Project identity |
+| Technical description | `PIR` wall-mounted sensor - short range | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2002`, `048825` | Canonical commercial records |
+| Catalogue item | `52` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `37` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000197:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2002` | Established identity | canonical commercial record for item `52` |
+| Legrand | `048825` | Established identity | canonical commercial record for item `52` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000197:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00297_c_EN` | technical sheet | 2013-02-01 | Printed/PDF pp. 1–7; complete exact-product specifications, route restrictions, remote matrix, physical selectors/modes, coverage and assembly | [Archived original](https://archive.openwebnet-ha.org/sha256/bd/3a/bd3a2ab2b78360677424609bbd4fbeca5ca2e9f4c6692eec614a1f84f1559d66.pdf) | [Official source](https://dar.bticino.com/asset/Documents/MM00297_c_EN.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish technical-sheet compilation | BT00297-a-ES; no separate dated imprint established | Exact `BMSE2002` leaf, printed pp. 646–651 / PDF pp. 77–82; all its specifications, modes, coverage and installation examined; other leaves outside stated scope | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical residential catalogue | No dated imprint established | Printed pp. 156–159 / PDF pp. 158–161; exact sensor entries, coverage and dimensions; no `BMSE2003` dimension row | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000197:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` from SCS; `12 mA` | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Environment / installation | `−5..45 °C`; IP42; indoor wall or ceiling using supplied bracket | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Connections / controls | RJ45 bus; `BMAC1001` RJ45/SCS adapter; light sensor, `PIR` sensor, two-way IR receiver, parameter-enable pushbutton, `LED` and six physical configurator positions | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Maximum height | 6 m | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Dimensions | `115.86 × 91 × 69.6 mm` | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Headline coverage / angle | 11 × 14 m / 120 m² at 2.5 m; MM00297-c-EN says 45° / 90°, Spanish leaf says 60° / 90° | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Threshold / delay ranges | Technical headline: `5..1275` lux; 30 s..255 h 59 min 59 s. Remote table: `0..1275` lux; Spanish historical leaf: `1..2000` lux and 30 s..255 h | MM00297_c_EN, printed/PDF pp. 1–7 |
+
+#### `PIR` coverage in the MM c revision
+
+Section ID: `ownkb:section:d000197:s000006`
+
+Each cell is width × depth / publisher-stated area; identical rows are printed for the five heights. MM00297-c-EN, printed/PDF p. 6.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `3 × 3 m / 31 m²` | `6 × 8 m / 62 m²` | `9 × 11 m / 89 m²` | `11 × 14 m / 120 m²` |
+| `3` | `3 × 3 m / 31 m²` | `6 × 8 m / 62 m²` | `9 × 11 m / 89 m²` | `11 × 14 m / 120 m²` |
+| `4` | `3 × 3 m / 31 m²` | `6 × 8 m / 62 m²` | `9 × 11 m / 89 m²` | `11 × 14 m / 120 m²` |
+| `5` | `3 × 3 m / 31 m²` | `6 × 8 m / 62 m²` | `9 × 11 m / 89 m²` | `11 × 14 m / 120 m²` |
+| `6` | `3 × 3 m / 31 m²` | `6 × 8 m / 62 m²` | `9 × 11 m / 89 m²` | `11 × 14 m / 120 m²` |
+
+#### `PIR` coverage in the historical Spanish revision
+
+Section ID: `ownkb:section:d000197:s000007`
+
+Each cell is width × depth / stated area; these are distinct from the MM c matrix. BT00297-a-ES, printed p. 647 / PDF p. 78.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `10 × 13.5 m / 65 m²` | `10 × 14 m / 68 m²` | `10.5 × 14 m / 68 m²` | `11 × 14 m / 70 m²` |
+| `3` | `10 × 13.5 m / 66 m²` | `10.5 × 14 m / 68 m²` | `10.5 × 14 m / 70 m²` | `11 × 14 m / 70 m²` |
+| `4` | `10 × 14 m / 68 m²` | `10.5 × 14 m / 70 m²` | `11 × 14 m / 76 m²` | `11 × 14.5 m / 76 m²` |
+| `5` | `10 × 14 m / 68 m²` | `10.5 × 14 m / 70 m²` | `11 × 14 m / 76 m²` | `11 × 14.5 m / 76 m²` |
+| `6` | `10 × 14 m / 68 m²` | `10.5 × 14 m / 70 m²` | `11 × 14 m / 76 m²` | `11 × 14.5 m / 76 m²` |
+
+### Identity
+
+Section ID: `ownkb:section:d000197:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `52` | Canonical catalogue |
+| Technical item | `PIR` wall-mounted sensor - short range | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `37` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000197:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `37` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000197:s000010`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `52` | `BMSE2002` | `1` | `5` | `BTicino_Undefined_Wall mounted detector` |
+| `1558` | `048825` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000197:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `133` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000197:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000197:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `133` | `1` | `119` Stand alone presence sensor | Candidate alternative | `304` | `119` | `288` |
+| `133` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `305` | `128` | `289` |
+| `133` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `306` | `164` | `290` |
+| `133` | `1` | `165` Scenarios presence sensor | Candidate alternative | `307` | `165` | `291` |
+| `133` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `308` | `166` | `292` |
+| `133` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `309` | `168` | `293` |
+| `133` | `2` | `431` IR scenario control | Fixed/designated metadata | `310` | `431` | `294` |
+| `133` | `3` | `431` IR scenario control | Fixed/designated metadata | `311` | `431` | `294` |
+| `133` | `4` | `431` IR scenario control | Fixed/designated metadata | `312` | `431` | `294` |
+| `133` | `5` | `431` IR scenario control | Fixed/designated metadata | `313` | `431` | `294` |
+| `133` | `6` | `431` IR scenario control | Fixed/designated metadata | `314` | `431` | `294` |
+| `133` | `7` | `431` IR scenario control | Fixed/designated metadata | `315` | `431` | `294` |
+| `133` | `8` | `431` IR scenario control | Fixed/designated metadata | `316` | `431` | `294` |
+| `133` | `9` | `431` IR scenario control | Fixed/designated metadata | `317` | `431` | `294` |
+| `133` | `10` | `431` IR scenario control | Fixed/designated metadata | `318` | `431` | `294` |
+| `133` | `11` | `431` IR scenario control | Fixed/designated metadata | `319` | `431` | `294` |
+| `133` | `12` | `431` IR scenario control | Fixed/designated metadata | `320` | `431` | `294` |
+| `133` | `13` | `431` IR scenario control | Fixed/designated metadata | `321` | `431` | `294` |
+| `133` | `14` | `431` IR scenario control | Fixed/designated metadata | `322` | `431` | `294` |
+| `133` | `15` | `431` IR scenario control | Fixed/designated metadata | `323` | `431` | `294` |
+| `133` | `16` | `431` IR scenario control | Fixed/designated metadata | `324` | `431` | `294` |
+| `133` | `17` | `431` IR scenario control | Fixed/designated metadata | `325` | `431` | `294` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000197:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `133` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `6` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000197:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `133` | Physical configuration | `0` | Canonical firmware/mode association |
+| `133` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `133` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000197:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `133` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `133` | `A` | `0..9` | `0` | A; Environment |
+| `133` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `133` | `M` | `0..4` | `0` | M; Mode 0-4 |
+| `133` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `133` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000197:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000197:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000197:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000197:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000197:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000197:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000197:s000023`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000197:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000197:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. Firmware `A/PL` `0..9` and `S=0..4` exceed the sheets' physical `A/PL` `1..9` and `S=0..3`. M/T/D agree as numeric domains, but reusable address domains extend to `A=10` and `PL=15`. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not establish ultrasonic hardware on a `PIR`-only SKU. The referenced occupancy fields belong to their stated Object scopes; their similar names do not make distinct fields interchangeable. `ALERT` filters exclude default 0 without replacements. The empty allowed-value subset on `PROVISION_OF_LIGHT` remains unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000197:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000197:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `133` | `1` | `128` | `4477` | `M=2` | None |
+| `133` | `1` | `166` | `4461` | `M=1` | None |
+| `133` | `1` | `166` | `4505` | `M=4` | None |
+| `133` | `1` | `168` | `4439` | `M=0` | None |
+| `133` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000197:s000028`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `133` | `119` | `122` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `133` | `119` | `123` | `INITIAL_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `133` | `119` | `124` | `MAINTAIN_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `133` | `119` | `125` | `RETRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `133` | `119` | `2337` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `133` | `128` | `126` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `133` | `128` | `127` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `133` | `165` | `128` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `133` | `165` | `129` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `133` | `166` | `2102` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `133` | `166` | `2117` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `133` | `166` | `2132` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `133` | `168` | `130` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity |
+| `133` | `168` | `131` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `133` | `168` | `132` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `133` | `168` | `133` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `133` | `168` | `2148` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `133` | `168` | `2338` | `NATURAL_LIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | Natural light factor |
+| `133` | `168` | `2339` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `133` | `168` | `2363` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `133` | `168` | `2458` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `133` | `431` | `2396` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000197:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000197:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `52` / `modobj = 37` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000197:s000031`
+
+Cautions: `warning`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Daylight priority | Presence does not request lighting when natural light meets the threshold; threshold tolerance prevents repeated switching | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Auto / Eco | Auto switches on/off automatically; Eco requires a bus control for manual ON and permits automatic restart within 30 s of an absence-triggered OFF | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Override | Manual ON/OFF remains effective while presence continues, returning to automatic behavior after absence timeout | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Walkthrough | Occupancy shorter than 20 s reduces a longer timeout to 3 min; shorter selected delay takes precedence | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Software roles | Local/central presence, daylight or combined detector; PLUS IR scenario control in the product sheet; direct reachability still depends on catalogue relations | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Historical audible warning | Spanish leaf reports alerts at 1 min, 30 s and 10 s before timeout; not an observed implementation | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Remote-only advanced functions | Partial ON/group OFF requires a learned light group; retrigger window 30 s; daylight regulation OFF after 10 min above threshold and ON after 20 s below threshold | MM00297_c_EN, printed/PDF pp. 1–7 |
+| Factory reset | Brief LEARN press starts slow flashing; hold LEARN 10 s until fast flashing | MM00297_c_EN, printed/PDF pp. 1–7 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000197:s000032`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000197:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+These are product-sheet physical values, separate from the reusable Object encodings (MM00297_c_EN, printed/PDF pp. 1–7).
+
+| Physical position | Published values | Consequence |
+| --- | --- | --- |
+| A / `PL` | `1..9` / `1..9` | Zero is excluded |
+| M | `0..4` | Modes below |
+| S | 0 absent: Low; 1 Medium; 2 High; 3 Very high | Source physical sensitivity; firmware additionally permits 4 |
+| T | 0 absent: 15 min; 1: 30 s; 2: 1 min; 3: 2 min; 4: 5 min; 5: 10 min; 6: 15 min; 7: 20 min; 8: 30 min; 9: 40 min | Physical delay |
+| D | 0 absent: wall 300 lux / ceiling 500 lux; 1: 20; 2: 100; 3: 300; 4: 500; 5: 1000 lux | Physical light threshold |
+
+| M | Published behavior |
+| --- | --- |
+| 0 | Presence plus daylight, automatic ON/OFF; manual OFF override lasts until absence timeout |
+| 1 | Twilight ON/OFF only; presence disabled; leave S/T empty; no GEN/ROOM/GR |
+| 2 | Report presence/light to MH200N; unique A/`PL`; no direct load control; leave S/T empty; no GEN/ROOM/GR |
+| 3 | Presence plus constant-light regulation; requires dimmer; manual dimming sets temporary setpoint until next ON |
+| 4 | Daylight regulation with manual ON and automatic OFF; presence disabled; requires dimmer; no automatic restart after daylight falls |
+
+Use `M=2` for MH200N scenarios; a scenario controller, not the sensor, manages its timing in this route. Virtual configuration is described through 3503N or a web server with Virtual Configurator. Lighting Management separately lists Plug&Go, Push&Learn and Project&Download; these commissioning workflows are not numeric catalogue mode IDs.
+
+The Italian note on MM00297_c_EN p. 3 says physical or virtual MyHOME configuration disables configuration remotes and makes remote-only advanced functions unavailable. Do not combine those routes with the following remote matrix as if all were simultaneously enabled.
+
+| Remote parameter | Printed default | Allowed adjustment / tool |
+| --- | --- | --- |
+| Delay | 15 min | `BMSO4003`: 3, 5, 10, 15, 20 min; `BMSO4001`: 30 s..255 h 59 min 59 s |
+| `PIR` sensitivity | Very high | Low / Medium / High / Maximum with either tool |
+| Light threshold | 300 lux | `BMSO4003`: 20, 100, 300, 500, 1000 lux; `BMSO4001`: `0..1275` lux |
+| Auto / Eco / Partial ON–Group OFF | Disabled / Disabled / Disabled | Auto/Eco selectable by either; partial mode `BMSO4001` only |
+| Walkthrough | Enabled | Enable/disable with either tool |
+| Initial / maintaining detection | `PIR` / `PIR` | Not editable in the printed matrix |
+| Retrigger | `PIR` | `PIR` or Disabled, `BMSO4001` only |
+| Alarm | Disabled | Enable/disable, `BMSO4001` only |
+| Calibration | No default shown | `0..99995` lux input; measure with luxmeter and send using `BMSO4001` |
+| Light regulation | Disabled | Enable/disable, `BMSO4001` only |
+| Provision of light | Auto | Auto or up to 1275 lux, `BMSO4001` only |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000197:s000034`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+The exact Spanish BT00297-a-ES leaf establishes `BMSE2002` specifications and procedures; Legrand SKU equivalence remains catalogue evidence rather than independent physical verification. The retained MM c revision uses `5..1275` lux (`0..1275` in its remote table), versus Spanish `1..2000`; Spanish factory Auto differs from MM Auto disabled. Spanish permits physical/remote/PC adjustments, whereas MM warns that physical/virtual setup disables remotes. No revision-to-firmware mapping resolves these differences. The MM p. 6 drawing labels 60 m² although its table/headline say 120 m²; Spanish maximum table gives 70 m² at 2.5 m despite the same 120 m² headline. MM 45°/90° differs from Spanish 60°/90°. The two coverage matrices remain revision-specific.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000197:s000035`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+- Coverage, threshold and configuration-route conflicts remain unresolved by a change log or hardware revision.
+- Exact Legrand-reference physical specifications and independent EAN records are not retained; its identity is established by the catalogue.
+- Virtual Configurator/glossary, 3503N/web-server procedures, remote manuals and Plug&Go/Project&Download guides referenced by the sheets are not independently examined here.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000197:s000036`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0057)
+
+# Document: ownkb:document:d000198
+
+Source path: `devices/definitions/own-dev-0058-pir-wall-mounted-sensor-dual-range.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Bidirectional narrow-beam `PIR` wall/ceiling sensor
+
+Section ID: `ownkb:section:d000198:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000198:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This wall or ceiling SCS sensor detects movement along two opposite narrow infrared beams and measures ambient light. Its bidirectional pattern suits corridor coverage, with automatic lighting, dimmer regulation or scenario reporting selected through configuration.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0058` | Project identity |
+| Technical description | `PIR` wall-mounted sensor - dual range | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2003`, `048826` | Canonical commercial records |
+| Catalogue item | `53` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `38` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000198:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2003` | Established identity | canonical commercial record for item `53` |
+| Legrand | `048826` | Established identity | canonical commercial record for item `53` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000198:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `ch_de_katalog_wohnbau.pdf` | product catalogue | historical publisher catalogue | Printed p. 156 / PDF p. 158: exact `BMSE2003` entry; printed p. 159 / PDF p. 161: dimension table omits `BMSE2003`; no adjacent-model dimension inference | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | [Official source](https://assets.legrand.com/webf/ch/ch_de_katalog_wohnbau.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Spanish exact-product technical sheet within compilation | BT00298-a-ES; undated leaf | Printed pp. 652–657 / PDF pp. 83–88; complete `BMSE2003` sheet, not an adjacent-model inference | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000198:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` from SCS; `12 mA` | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Environment / installation | `−5..45 °C`; IP42; indoor wall or ceiling using supplied bracket | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Connections / controls | RJ45 bus; `BMAC1001` RJ45/SCS adapter; light sensor, `PIR` sensor, two-way IR receiver, parameter-enable pushbutton, `LED` and six physical configurator positions | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Maximum height | 6 m | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Dimensions | `115.86 × 91 × 69.6 mm` | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Headline coverage / angle | Two opposite 9 m beams, 2 m wide / 36 m² at 2.5 m; 90° / 30° | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Threshold / delay ranges | `1..2000` lux; 30 s..255 h (parameter table omits the seconds unit beside lower value 30) | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+
+#### Bidirectional `PIR` coverage
+
+Section ID: `ownkb:section:d000198:s000006`
+
+Each cell is width × depth / publisher-stated area; it does not reproduce the 36 m² headline. BT00298-a-ES, printed p. 653 / PDF p. 84.
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `1 × 15.5 m / 20 m²` | `1.5 × 16 m / 22 m²` | `1.5 × 16 m / 24 m²` | `1.5 × 16.5 m / 26 m²` |
+| `3` | `1.5 × 16 m / 22 m²` | `1.5 × 16 m / 24 m²` | `1.5 × 16.5 m / 28 m²` | `2 × 17 m / 31 m²` |
+| `4` | `1.5 × 16 m / 26 m²` | `1.8 × 17 m / 31 m²` | `2 × 18 m / 32 m²` | `2 × 18 m / 34 m²` |
+| `5` | `1.5 × 16 m / 26 m²` | `1.8 × 17 m / 31 m²` | `2 × 18 m / 32 m²` | `2 × 18 m / 34 m²` |
+| `6` | `1.5 × 16 m / 26 m²` | `1.8 × 17 m / 31 m²` | `2 × 18 m / 32 m²` | `2 × 18 m / 34 m²` |
+
+### Identity
+
+Section ID: `ownkb:section:d000198:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `53` | Canonical catalogue |
+| Technical item | `PIR` wall-mounted sensor - dual range | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `38` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000198:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `38` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000198:s000009`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `53` | `BMSE2003` | `1` | `5` | `BTicino_Undefined_Wall mounted detector` |
+| `1799` | `048826` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000198:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `134` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000198:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000198:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `134` | `1` | `119` Stand alone presence sensor | Candidate alternative | `342` | `119` | `296` |
+| `134` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `343` | `128` | `297` |
+| `134` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `344` | `164` | `298` |
+| `134` | `1` | `165` Scenarios presence sensor | Candidate alternative | `345` | `165` | `299` |
+| `134` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `346` | `166` | `300` |
+| `134` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `347` | `168` | `301` |
+| `134` | `2` | `431` IR scenario control | Fixed/designated metadata | `326` | `431` | `295` |
+| `134` | `3` | `431` IR scenario control | Fixed/designated metadata | `327` | `431` | `295` |
+| `134` | `4` | `431` IR scenario control | Fixed/designated metadata | `328` | `431` | `295` |
+| `134` | `5` | `431` IR scenario control | Fixed/designated metadata | `329` | `431` | `295` |
+| `134` | `6` | `431` IR scenario control | Fixed/designated metadata | `330` | `431` | `295` |
+| `134` | `7` | `431` IR scenario control | Fixed/designated metadata | `331` | `431` | `295` |
+| `134` | `8` | `431` IR scenario control | Fixed/designated metadata | `332` | `431` | `295` |
+| `134` | `9` | `431` IR scenario control | Fixed/designated metadata | `333` | `431` | `295` |
+| `134` | `10` | `431` IR scenario control | Fixed/designated metadata | `334` | `431` | `295` |
+| `134` | `11` | `431` IR scenario control | Fixed/designated metadata | `335` | `431` | `295` |
+| `134` | `12` | `431` IR scenario control | Fixed/designated metadata | `336` | `431` | `295` |
+| `134` | `13` | `431` IR scenario control | Fixed/designated metadata | `337` | `431` | `295` |
+| `134` | `14` | `431` IR scenario control | Fixed/designated metadata | `338` | `431` | `295` |
+| `134` | `15` | `431` IR scenario control | Fixed/designated metadata | `339` | `431` | `295` |
+| `134` | `16` | `431` IR scenario control | Fixed/designated metadata | `340` | `431` | `295` |
+| `134` | `17` | `431` IR scenario control | Fixed/designated metadata | `341` | `431` | `295` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000198:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `134` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `7` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000198:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `134` | Physical configuration | `0` | Canonical firmware/mode association |
+| `134` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `134` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000198:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `134` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `134` | `A` | `0..9` | `0` | A; Environment |
+| `134` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `134` | `M` | `0..4` | `0` | M; Mode 0-4 |
+| `134` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `134` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+| `134` | `D` | `0..5` | `0` | D; (0-5) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000198:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000198:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000198:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000198:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000198:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000198:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000198:s000022`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000198:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000198:s000024`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`
+
+The catalogue declares 17 Modules: slot `1` offers six sensor Objects, while slots `2..17` designate IR scenario control 431. Virgin `515` applies only to slot `1` and admits the same six Objects; this is one sensing product, not seventeen physical sensors. `M=0/3` selects 168, `M=1/4` selects 166, `M=2` selects 128 where those predicates are stored. Candidate 119/164/165 membership is not proof of automatic activation. No conversion rule supplies a physical-to-Object mapping. Reusable timers default to 10 minutes in 119/168 and 15 in 128/165; these do not override the published 15-minute product setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux; `DAYLIGHT_SETPOINT` default 100 therefore encodes 500 lux, not 100 lux. Zero setpoint has no stored label; provision zero is Automatic. `TYPE_OF_REGULATION` on 431 is restricted to 3 (stereo amplifiers), excluding reusable default 1 without a replacement. This does not establish a speaker or sixteen installed IR functions. Firmware `A/PL` `0..9` and `S=0..4` exceed the sheets' physical `A/PL` `1..9` and `S=0..3`. M/T/D agree as numeric domains, but reusable address domains extend to `A=10` and `PL=15`. Filters retain `US`-only and combined `PIR`/`US` schemes; they do not establish ultrasonic hardware on a `PIR`-only SKU. The referenced occupancy fields belong to their stated Object scopes; their similar names do not make distinct fields interchangeable. `ALERT` filters exclude default 0 without replacements. Empty allowed-value subsets on daylight/provision fields remain unresolved, not unrestricted.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000198:s000025`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000198:s000026`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `134` | `1` | `128` | `4477` | `M=2` | None |
+| `134` | `1` | `166` | `4461` | `M=1` | None |
+| `134` | `1` | `166` | `4505` | `M=4` | None |
+| `134` | `1` | `168` | `4439` | `M=0` | None |
+| `134` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000198:s000027`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `134` | `119` | `135` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `134` | `119` | `136` | `INITIAL_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `134` | `119` | `137` | `MAINTAIN_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `134` | `119` | `138` | `RETRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `134` | `119` | `2340` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `134` | `128` | `139` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `134` | `128` | `140` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `134` | `165` | `141` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `134` | `165` | `142` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `134` | `166` | `2103` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `134` | `166` | `2118` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `134` | `166` | `2133` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `134` | `168` | `143` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity |
+| `134` | `168` | `144` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `134` | `168` | `145` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `134` | `168` | `146` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `134` | `168` | `2149` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `134` | `168` | `2341` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `134` | `168` | `2364` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `134` | `168` | `2447` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `134` | `168` | `2459` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `134` | `431` | `2397` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000198:s000028`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000198:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `53` / `modobj = 38` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000198:s000030`
+
+Cautions: `warning`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Daylight priority | Presence does not request lighting when natural light meets the threshold; threshold tolerance prevents repeated switching | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Auto / Eco | Auto switches on/off automatically; Eco requires a bus control for manual ON and permits automatic restart within 30 s of an absence-triggered OFF | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Override | Manual ON/OFF remains effective while presence continues, returning to automatic behavior after absence timeout | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Walkthrough | Occupancy shorter than 20 s reduces a longer timeout to 3 min; shorter selected delay takes precedence | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Software roles | Local/central presence, daylight or combined detector; PLUS IR scenario control in the product sheet; direct reachability still depends on catalogue relations | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+| Historical audible warning | Spanish leaf reports alerts at 1 min, 30 s and 10 s before timeout; not an observed implementation | BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000198:s000031`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000198:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+These are product-sheet physical values, separate from the reusable Object encodings (BT00298-a-ES, printed pp. 652–657 / PDF pp. 83–88).
+
+| Physical position | Published values | Consequence |
+| --- | --- | --- |
+| A / `PL` | `1..9` / `1..9` | Zero is excluded |
+| M | `0..4` | Modes below |
+| S | 0 absent: Low; 1 Medium; 2 High; 3 Very high | Source physical sensitivity; firmware additionally permits 4 |
+| T | 0 absent: 15 min; 1: 30 s; 2: 1 min; 3: 2 min; 4: 5 min; 5: 10 min; 6: 15 min; 7: 20 min; 8: 30 min; 9: 40 min | Physical delay |
+| D | 0 absent: wall 300 lux / ceiling 500 lux; 1: 20; 2: 100; 3: 300; 4: 500; 5: 1000 lux | Physical light threshold |
+
+| M | Published behavior |
+| --- | --- |
+| 0 | Presence plus daylight, automatic ON/OFF; manual OFF override lasts until absence timeout |
+| 1 | Twilight ON/OFF only; presence disabled; leave S/T empty; no GEN/ROOM/GR |
+| 2 | Report presence/light to MH200N; unique A/`PL`; no direct load control; leave S/T empty; no GEN/ROOM/GR |
+| 3 | Presence plus constant-light regulation; requires dimmer; manual dimming sets temporary setpoint until next ON |
+| 4 | Daylight regulation with manual ON and automatic OFF; presence disabled; requires dimmer; no automatic restart after daylight falls |
+
+Use `M=2` for MH200N scenarios; a scenario controller, not the sensor, manages its timing in this route. Virtual configuration is described through 3503N or a web server with Virtual Configurator. Lighting Management separately lists Plug&Go, Push&Learn and Project&Download; these commissioning workflows are not numeric catalogue mode IDs.
+
+| Historical parameter | Published domain | Factory setting |
+| --- | --- | --- |
+| Delay | 30 s..255 h; see unit omission in table | 15 min |
+| `PIR` sensitivity | `0..100`% | 100% |
+| Light threshold | `1..2000` lux | 300 lux ±15% |
+| Operation | Auto / Eco | Auto |
+| Walkthrough | Enabled / disabled | Enabled |
+
+The Spanish leaf names `BMSO4001`/`BMSO4002` for IR adjustment and says parameters can also be set by physical/PC configuration. The later MM sheets for other products cannot establish a different route restriction for `BMSE2003`.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000198:s000033`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+The exact Spanish BT00298-a-ES leaf establishes `BMSE2003` specifications and procedures; Legrand SKU equivalence remains catalogue evidence rather than independent physical verification. The German catalogue identifies `BMSE2003` as 9 m / 36 m², but its dimensions table omits this reference; dimensions are established by the exact Spanish leaf, not adjacent models. The exact Spanish headline 2 × (9+9) m / 36 m² differs from the detailed maximum table: 1.5 × 16.5 m / 26 m² at 2.5 m. Neither headline nor table is silently corrected; detection geometry needs installation-specific verification.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000198:s000034`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+- Coverage, threshold and configuration-route conflicts remain unresolved by a change log or hardware revision.
+- Exact Legrand-reference physical specifications and independent EAN records are not retained; its identity is established by the catalogue.
+- Virtual Configurator/glossary, 3503N/web-server procedures, remote manuals and Plug&Go/Project&Download guides referenced by the sheets are not independently examined here.
+- No separate exact `BMSE2003` MM English technical sheet was located; `BMSE2001`/2002/2005 remote restrictions are not imported into this product.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000198:s000035`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0058)
+
+# Document: ownkb:document:d000199
+
+Source path: `devices/definitions/own-dev-0059-basic-actuator.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Basic actuator
+
+Section ID: `ownkb:section:d000199:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000199:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This compact SCS relay actuator switches a single documented lighting load from a concealed Basic-module installation. It can follow a master or delay a matching slave's switch-off; its `LED`/CFL limit is much lower than its incandescent rating.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0059` | Project identity |
+| Technical description | Basic actuator | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `3475` | Canonical commercial records |
+| Catalogue item | `54` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `104` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Lighting, Actuator, Flush-mounted | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000199:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `3475` | Established identity | canonical commercial record for item `54` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000199:s000004`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00076-d-UK` | technical sheet | MQ00076-d-UK; 2013-01-09 | Printed/PDF p. 1; complete exact `3475` sheet, including load-class table and delayed slave operation | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/88/f3886a858806692c3850f820a4cad509ff86bd2789782539b6dbce67992d5574.pdf) | [Official source](https://assets.legrand.com/pim/NP-FT-GT/MQ00076-d-UK.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish technical-sheet compilation | BT00076-c-ES; undated leaf | Printed p. 618 / PDF p. 49; complete exact `3475` sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical regional catalogue | No dated imprint established | Printed p. 165 / PDF p. 167; exact `3475` consumption and dimensions | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000199:s000005`
+
+Applicability cues: `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` nominal SCS; operating `18..27 Vdc`; `13 mA` | MQ00076-d-UK, printed/PDF p. 1 |
+| Relay limits at 230 Vac | Incandescent/halogen: `460 W` / `2 A`; `LED`/CFL: `40 W`, maximum one lamp; ferromagnetic transformers: 460 VA / `2 A` cosφ 0.5 | MQ00076-d-UK, printed/PDF p. 1 |
+| Installation | Basic module for flush, junction or shutter boxes and trunking; fits behind suitable controls | MQ00076-d-UK, printed/PDF p. 1 |
+| Interface | Configurator socket, `LED`, SCS bus and 0.75 mm² load leads | MQ00076-d-UK, printed/PDF p. 1 |
+| Regional dimensions | `41 × 41 × 19 mm` | German catalogue, printed p. 165 / PDF p. 167 |
+
+### Identity
+
+Section ID: `ownkb:section:d000199:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `54` | Canonical catalogue |
+| Technical item | Basic actuator | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `104` | Canonical inventory |
+| Commercial records | `1` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000199:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `104` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000199:s000008`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `54` | `3475` | `1` | `5` | `BTicino_Undefined_Basic actuator` |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000199:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `193` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000199:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000199:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `193` | `1` | `6` Light actuator | Fixed/designated metadata | `689` | `6` | `478` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000199:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000199:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `193` | Physical configuration | `0` | Canonical firmware/mode association |
+| `193` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `193` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000199:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `193` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `193` | `A` | `0..9` | `0` | A; Environment |
+| `193` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `193` | `M` | `0..4`; `11` = `SLA`; `15` = `PUL` | `0` | M; Mode (0-4, Pul, Sla) |
+| `193` | `G1` | `0..9` | `0` | `G1`; `G1` - (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000199:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000199:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000199:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+Firmware `193` designates one Light actuator Object `6`, without a Virgin. Empty condition `4147` references conversion rule `1`. M=`1..4` maps to `DELAYED_OFF=60/120/180/240` seconds, agreeing with published delayed-slave minutes. The I/O conversion branch is outside the firmware enum; do not invent a numeric encoding or a physical input. `SLA` omits a `DELAYED_OFF` assignment, not an implicit zero. Reusable Object `M=16` slave-PUL, ten groups and area/light-point domains exceed the firmware surface. Timing/reset/zero-crossing/local-button fields remain software schema evidence, not proof of a local pushbutton or a separately tested load class.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000199:s000018`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000199:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `193` | `1` | `6` | `4147` | No textual predicate stored | `1` |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000199:s000020`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `193` | `6` | `679` | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open (entire reusable range retained) | `0` | Per energy management (State on Reset) |
+| `193` | `6` | `680` | `HOURS` | `0..255` (entire reusable range retained) | `0` | Hours |
+| `193` | `6` | `681` | `MINUTES` | `0..59` (entire reusable range retained) | `0` | Minutes |
+| `193` | `6` | `682` | `SECONDS` | `0..59` (entire reusable range retained) | `30` | Seconds |
+| `193` | `6` | `1795` | `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` (entire reusable range retained) | `0` | Local button modality |
+| `193` | `6` | `1867` | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing (entire reusable range retained) | `0` | Load_control_mode |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000199:s000021`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| `1` | `M=0` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=1` | `DELAYED_OFF` = `60`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=2` | `DELAYED_OFF` = `120`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=3` | `DELAYED_OFF` = `180`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=4` | `DELAYED_OFF` = `240`; `LOCAL_BUTTON` = `0`; `M` = `0` | `1` |
+| `1` | `M=I/O` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `9`; `M` = `0` | `1` |
+| `1` | `M=PUL` | `DELAYED_OFF` = `0`; `LOCAL_BUTTON` = `0`; `M` = `15` | `1` |
+| `1` | `M=SLA` | `LOCAL_BUTTON` = `0`; `M` = `11` | `1` |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000199:s000022`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `54` / `modobj = 104` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`6`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000199:s000023`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Relay operation | Single relay; basic automation modes exclude functions requiring two interlocked relays | MQ00076-d-UK, printed/PDF p. 1 |
+| PUL / `SLA` | Monostable ON ignores room/general commands; slave receives commands from master with same address | MQ00076-d-UK, printed/PDF p. 1 |
+| Delayed OFF | Master switches off immediately; slave remains on `1..4` min; point-to-point only | MQ00076-d-UK, printed/PDF p. 1 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000199:s000024`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000199:s000025`
+
+Applicability cues: `firmware`
+
+Physical configuration values and reusable Object settings are separate. The exact 2013 sheet supports PUL, `SLA` and M=`1..4` with delays of `1..4` minutes; delayed OFF affects the matching slave, not the master. Basic operation follows the control except two-relay interlock functions. The canonical firmware supplies A/`PL`/`G1`=`0..9`, but the sheet does not independently specify their full physical address domains.
+
+| Physical M | Published behavior |
+| --- | --- |
+| PUL | Monostable ON; ignore room/general commands |
+| `SLA` | Follow same-address master |
+| 1 / 2 / 3 / 4 | Delay slave OFF 1 / 2 / 3 / 4 min, point-to-point only |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000199:s000026`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+The historical Spanish BT00076-c-ES and exact MQ00076-d-UK agree on load-class limits, supply/current and Basic mounting. The German catalogue supplies exact dimensions without proving a new firmware revision. The device-label diagram says cosφ 0.6, while the technical load table says cosφ 0.5; these source scopes remain separate. The previous unqualified 12W31 server-compatibility statement lacked a retained cited original and has been removed pending verification.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000199:s000027`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `source`
+
+- The previously mentioned production-week compatibility cutoff has no retained cited supporting row in this dossier; installed/server-version compatibility remains unverified.
+- Load-table versus device-label power-factor wording remains source-specific.
+- MyHOME_Suite/glossary help and actual relay/input timing or diagnostics are not independently tested.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000199:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0059)
+
+# Document: ownkb:document:d000200
+
+Source path: `devices/definitions/own-dev-0060-basic-control-actuator.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Basic control actuator
+
+Section ID: `ownkb:section:d000200:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000200:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This compact SCS relay actuator combines a single load output with an input for a conventional normally open pushbutton. Its Basic format fits behind controls or inside junction boxes, and the input supports cyclic, separate ON/OFF and timed lighting commands.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0060` | Project identity |
+| Technical description | Basic control actuator | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `3476` | Canonical commercial records |
+| Catalogue item | `55` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `105` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Lighting, Actuator, Local control, Flush-mounted | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000200:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `3476` | Established identity | canonical commercial record for item `55` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000200:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `3476` | `8012199653129` | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf), `3476-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000200:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `ST_00000915_EN` | technical sheet | `ST-00000915-EN`; 2021-04-15 | Printed/PDF pp. 1–2; exact `3476` ratings, input wires, physical/virtual modes, server-channel statement and protection diagram | [Archived original](https://archive.openwebnet-ha.org/sha256/6e/8e/6e8e29681ebb902d1a1b879706213d7057a07ffabc411f2510f53f5b896b8fb6.pdf) | [Official source](https://dar.bticino.com/asset/Documents/ST_00000915_EN.pdf) |
+| `3476-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `3476` to EAN-13 relationship at printed/PDF p. 1. Exact-reference identifiers and technical export attributes examined; linked downloads and prices outside scope. | [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3476) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish technical-sheet compilation | BT00077-c-ES; undated leaf | Printed p. 619 / PDF p. 50; complete exact `3476` sheet | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical regional catalogue | No dated imprint established | Printed p. 165 / PDF p. 167; exact `3476` consumption and dimensions | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000200:s000006`
+
+Applicability cues: `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current | `27 Vdc` nominal SCS; operating `18..27 Vdc`; `13 mA` | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Relay limits at 230 Vac | Incandescent/halogen: `460 W` / `2 A`; `LED`/CFL: `40 W`, maximum one lamp; ferromagnetic transformers: 460 VA / `2 A` cosφ 0.5 | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Installation | Basic module for flush, junction or shutter boxes and trunking; fits behind suitable controls | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Interface | Configurator socket, `LED`, SCS bus and 0.75 mm² load leads | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| External input / wiring | Normally open conventional pushbutton; blue bus leads, grey/black input leads, two white load-contact leads | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Circuit protection shown | `10 A` thermal magnetic circuit breaker in the published wiring diagram | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Regional dimensions | `41 × 41 × 19 mm` | German catalogue, printed p. 165 / PDF p. 167 |
+
+### Identity
+
+Section ID: `ownkb:section:d000200:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `55` | Canonical catalogue |
+| Technical item | Basic control actuator | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `105` | Canonical inventory |
+| Commercial records | `1` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000200:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `105` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000200:s000009`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `55` | `3476` | `1` | `5` | `BTicino_Undefined_Basic control actuator` |
+
+All these records are visible, non-dependent and not marked as gateways; `visibility_type` is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000200:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `194` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000200:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000200:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `194` | `1` | `6` Light actuator | Fixed/designated metadata | `690` | `6` | `479` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000200:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000200:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `194` | Physical configuration | `0` | Canonical firmware/mode association |
+| `194` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `194` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000200:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `194` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `194` | `A` | `0..9` | `0` | A; Environment |
+| `194` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `194` | `M` | `0..8`; `11` = `SLA`; `15` = `PUL`; `9` = `O/I` | `0` | M; Mode (0-8, Pul, Sla, I/O) |
+| `194` | `G1` | `0..9` | `0` | `G1`; `G1` - (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000200:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000200:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000200:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+
+Firmware `194` designates one Light actuator Object `6`, with no Virgin, an empty slot condition and no conversion rule. Physical `A/PL` `1..9` excludes firmware defaults 0; virtual `A=0..10` / `PL` `0..15` is separately documented. Firmware `M=9` is labelled O/I, while historical conversion terminology elsewhere uses I/O; no conversion is stored for this item. Relation filter `1898` permits `LOCAL_BUTTON` 60 and 9: 60 has no reusable label, and default 0 is excluded without replacement. Do not silently repair 60 or discard the published cyclic/timed operation. The 2021 physical ON/OFF symbols are absent from the firmware enum. Software `M=16` slave-PUL and load subtypes are reusable/virtual scopes, not separate physical relays.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000200:s000019`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000200:s000020`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `194` | `1` | `6` | `4145` | No textual predicate stored | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000200:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `194` | `6` | `683` | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open (entire reusable range retained) | `0` | Per energy management (State on Reset) |
+| `194` | `6` | `1868` | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing (entire reusable range retained) | `0` | Load_control_mode |
+| `194` | `6` | `1898` | `LOCAL_BUTTON` | `60`; `9` = `ON` - `OFF` | `0` | Local button modality; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000200:s000022`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000200:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `55` / `modobj = 105` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`6`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000200:s000024`
+
+Uncertainty: `appears`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Relay operation | Single relay; basic automation modes exclude functions requiring two interlocked relays | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| PUL / `SLA` | Monostable ON ignores room/general commands; slave receives commands from master with same address | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Local control | Cyclic ON/OFF, separate ON/OFF, top ON/bottom OFF and timed ON | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+| Server scope | 2021 sheet says MyHOME Server automatically configures one channel; no production-week cutoff appears on this sheet | `ST_00000915_EN`, printed/PDF pp. 1–2 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000200:s000025`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000200:s000026`
+
+Physical configuration values and reusable Object settings are separate. The 2021 sheet explicitly distinguishes physical MyHOME configurators from MyHOME_Suite.
+
+| Setting | Physical values | Virtual scope |
+| --- | --- | --- |
+| A / `PL` | `1..9` / `1..9` | Room `0..10`; light point `0..15` |
+| Group | G=`0..9` | Groups `1..10` each `0..255` |
+| Actuator mode | `M=0` master; `SLA` slave; PUL master monostable ON | Slave-PUL and documented load subtypes require software |
+| Input command | `M=0` cyclic; ON; OFF; O/I top ON/bottom OFF | Cyclic, ON, OFF, top/bottom behavior |
+| Timed ON | `M=8`: 0.5 s; 7: 30 s; 1: 1 min; 2: 2 min; 3: 3 min; 4: 4 min; 5: 5 min; 6: 15 min | `0..255` h and timed OFF through software |
+
+The input timing belongs to `3476` and is not the delayed-slave OFF operation of `3475`. Follow the exact sheet's coloured leads and protection diagram; a generic Object `LOCAL_BUTTON` value does not substitute for input wiring.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000200:s000027`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+The historical Spanish BT00077-c-ES and exact `ST_00000915_EN` agree on load-class limits, supply/current and Basic mounting. The German catalogue supplies exact dimensions without proving a new firmware revision. The device-label diagram says cosφ 0.6, while the technical load table says cosφ 0.5; these source scopes remain separate. The Spanish sheet uses absent M for cyclic and “0/1” for ON/OFF; the 2021 sheet adds explicit ON and OFF symbols and separately lists `M=0`. Its one-channel server statement does not establish the previous uncited 12W39 cutoff, which has been removed pending verification. The Italian export agrees on 2 A/460 W/460 VA, but does not replace the exact `LED`/CFL restriction.
+
+Catalogue-specific scope and filter irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces); those relations do not establish additional physical sensors, load interfaces or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000200:s000028`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `source`
+
+- The previously mentioned production-week compatibility cutoff has no retained cited supporting row in this dossier; installed/server-version compatibility remains unverified.
+- Load-table versus device-label power-factor wording remains source-specific.
+- MyHOME_Suite/glossary help and actual relay/input timing or diagnostics are not independently tested.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, software payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000200:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `3476-ean-product-sheet.pdf`, printed/PDF p. 1: exact `3476` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/2f/97/2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3476); SHA-256 `2f97fa4647a8fb658e3c02678b1cb92d9566da6dd7ba6cc9a096581a802b334b`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0051-0060-2026-10-06.md#own-dev-0060)
+
+# Document: ownkb:document:d000201
+
+Source path: `devices/definitions/own-dev-0061-pir-wall-mounted-sensor-long-range.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## `PIR` wall-mounted sensor - long range
+
+Section ID: `ownkb:section:d000201:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000201:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This wall or ceiling SCS sensor combines long-range passive infrared movement detection with a daylight threshold. It can switch lighting, regulate a dimmer or report to a scenario controller; its published coverage and remote-configuration behavior vary between revisions.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0061` | Project identity |
+| Technical description | `PIR` wall-mounted sensor - long range | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2004`, `048829` | Canonical commercial records |
+| Catalogue item | `56` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `39` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Presence sensing, Daylight sensing, Automation | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000201:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2004` | Established identity | canonical commercial record for item `56` |
+| Legrand | `048829` | Established identity | canonical commercial record for item `56` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000201:s000004`
+
+Applicability cues: `revision`
+Uncertainty: `contradictory`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `BT00299_c_IT` | technical sheet | BT00299-c-IT; 2013-11-20 | Printed/PDF pp. 1–5; complete exact-product ratings, coverage matrix, remote/physical settings, route restrictions and mounting | [Archived original](https://archive.openwebnet-ha.org/sha256/78/58/7858fdb08933d8e3842b2855333bc7285225b8f1100f3a050052ff4c0650d144.pdf) | [Official source](https://dar.bticino.it/asset/Documents/BT00299_c_IT.pdf) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish exact-product sheet within compilation | BT00299-a-ES; undated leaf | Printed pp. 658–663 / PDF pp. 89–94; complete `BMSE2004` specifications, coverage, modes and installation | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+| `ch_de_katalog_wohnbau.pdf` | Historical regional catalogue | No dated imprint established | Printed pp. 159, 165 / PDF pp. 161, 167; exact `BMSE2004` dimension and current rows, including contradictory height | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/e5/9fe511c3ac12d861dff7d8d28ddec3b3612a27e99a804afbed89877c73a6b4ed.pdf) | Publisher URL not retained in manifest |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000201:s000005`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current / environment | `27 Vdc`; `12 mA`; `−5..45 °C`; IP42; indoor use | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Connection / interface | RJ45 `BMAC1001` adapter; bidirectional IR; LEARN button/`LED`; wall/ceiling bracket | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Italian dimensions / headline | `116 × 91 × 70 mm`; `11 × 14 m` / `120 m²`; 45°/90° | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Italian drawing | Page 2 labels `90 m²`; vertical 12° / horizontal 70°; `27 m` reach, A approximately `10 m` at `2.4 m` | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Italian adjustment headline | `5..1275` lux; `30 s`..255 h 59 min `59 s` | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Spanish headline / dimensions | `10 × 27 m` / `210 m²`; 60°/140°; maximum mounting height `6 m`; `115.86 × 91 × 69.6 mm` | BT00299-a-ES, printed pp. 658–663 / PDF pp. 89–94 |
+| Spanish adjustment headline | `1..2000` lux; `30 s`..255 h | BT00299-a-ES, printed pp. 658–663 / PDF pp. 89–94 |
+| Regional dimension discrepancy | Dimension table: `H=91`, `B=115.86`, `T=69.6 mm`; consumption-table row instead gives `H=94 mm`; both list the exact `BMSE2004` reference | German catalogue, printed pp. 159, 165 / PDF pp. 161, 167 |
+
+#### Italian `PIR` coverage
+
+Section ID: `ownkb:section:d000201:s000006`
+
+Provenance cues: `source`
+
+Each cell retains drawing A / W in metres and the stated area; these source labels and areas are not recomputed. BT00299-c-IT, printed/PDF p. 2
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `3 × 6 m / 54 m²` | `5 × 15 m / 109 m²` | `8 × 21 m / 156 m²` | `10 × 27 m / 210 m²` |
+| `3` | `3 × 6 m / 54 m²` | `5 × 15 m / 109 m²` | `8 × 21 m / 156 m²` | `10 × 27 m / 210 m²` |
+| `4` | `3 × 6 m / 54 m²` | `5 × 15 m / 109 m²` | `8 × 21 m / 156 m²` | `10 × 27 m / 210 m²` |
+| `5` | `3 × 6 m / 54 m²` | `5 × 15 m / 109 m²` | `8 × 21 m / 156 m²` | `10 × 27 m / 210 m²` |
+| `6` | `3 × 6 m / 54 m²` | `5 × 15 m / 109 m²` | `8 × 21 m / 156 m²` | `10 × 27 m / 210 m²` |
+
+#### Historical Spanish `PIR` coverage
+
+Section ID: `ownkb:section:d000201:s000007`
+
+Applicability cues: `revision`
+
+Each cell retains width × reach in metres and stated area; this is a different revision-specific matrix. BT00299-a-ES, printed p. 659 / PDF p. 90
+
+| Height (m) | Low (25%) | Medium (50%) | High (75%) | Maximum (100%) |
+| --- | --- | --- | --- | --- |
+| `2.5` | `8.5 × 25.5 m / 95 m²` | `9 × 26 m / 103 m²` | `9.5 × 27 m / 115 m²` | `9.5 × 27 m / 115 m²` |
+| `3` | `9.5 × 26 m / 107 m²` | `9.5 × 26.5 m / 111 m²` | `9.5 × 27 m / 116 m²` | `10 × 27 m / 117 m²` |
+| `4` | `9.5 × 26.5 m / 110 m²` | `9.5 × 27 m / 116 m²` | `10 × 28 m / 123 m²` | `10 × 28.5 m / 128 m²` |
+| `5` | `9.5 × 26.5 m / 110 m²` | `9.5 × 27 m / 116 m²` | `10 × 28 m / 123 m²` | `10 × 28.5 m / 128 m²` |
+| `6` | `9.5 × 26.5 m / 110 m²` | `9.5 × 27 m / 116 m²` | `10 × 28 m / 123 m²` | `10 × 28.5 m / 128 m²` |
+
+### Identity
+
+Section ID: `ownkb:section:d000201:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `56` | Canonical catalogue |
+| Technical item | `PIR` wall-mounted sensor - long range | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `39` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000201:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `39` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000201:s000010`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `56` | `BMSE2004` | `1` | `5` | `BTicino_Undefined_Wall mounted detector` |
+| `1797` | `048829` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000201:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `135` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000201:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000201:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `135` | `1` | `119` Stand alone presence sensor | Candidate alternative | `348` | `119` | `302` |
+| `135` | `1` | `128` Scenarios daylight and presence sensor | Fixed/designated metadata | `349` | `128` | `303` |
+| `135` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `350` | `164` | `304` |
+| `135` | `1` | `165` Scenarios presence sensor | Candidate alternative | `351` | `165` | `305` |
+| `135` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `352` | `166` | `306` |
+| `135` | `1` | `168` Stand alone daylight and presence sensor | Candidate alternative | `353` | `168` | `307` |
+| `135` | `2` | `431` IR scenario control | Fixed/designated metadata | `354` | `431` | `308` |
+| `135` | `3` | `431` IR scenario control | Fixed/designated metadata | `355` | `431` | `308` |
+| `135` | `4` | `431` IR scenario control | Fixed/designated metadata | `356` | `431` | `308` |
+| `135` | `5` | `431` IR scenario control | Fixed/designated metadata | `357` | `431` | `308` |
+| `135` | `6` | `431` IR scenario control | Fixed/designated metadata | `358` | `431` | `308` |
+| `135` | `7` | `431` IR scenario control | Fixed/designated metadata | `359` | `431` | `308` |
+| `135` | `8` | `431` IR scenario control | Fixed/designated metadata | `360` | `431` | `308` |
+| `135` | `9` | `431` IR scenario control | Fixed/designated metadata | `361` | `431` | `308` |
+| `135` | `10` | `431` IR scenario control | Fixed/designated metadata | `362` | `431` | `308` |
+| `135` | `11` | `431` IR scenario control | Fixed/designated metadata | `363` | `431` | `308` |
+| `135` | `12` | `431` IR scenario control | Fixed/designated metadata | `364` | `431` | `308` |
+| `135` | `13` | `431` IR scenario control | Fixed/designated metadata | `365` | `431` | `308` |
+| `135` | `14` | `431` IR scenario control | Fixed/designated metadata | `366` | `431` | `308` |
+| `135` | `15` | `431` IR scenario control | Fixed/designated metadata | `367` | `431` | `308` |
+| `135` | `16` | `431` IR scenario control | Fixed/designated metadata | `368` | `431` | `308` |
+| `135` | `17` | `431` IR scenario control | Fixed/designated metadata | `369` | `431` | `308` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000201:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `135` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `8` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000201:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `135` | Physical configuration | `0` | Canonical firmware/mode association |
+| `135` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `135` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000201:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `135` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `135` | `A` | `0..9` | `0` | A; Environment |
+| `135` | `PL` | `0..9` | `0` | `PL`; Light Point |
+| `135` | `M` | `0..4` | `0` | M; Mode 0-4 |
+| `135` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `135` | `T` | `0..9` | `0` | T; Configurator T (time) - (0-9) |
+| `135` | `D` | `0..5` | `0` | D; (0-5) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000201:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000201:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000201:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000201:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000201:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000201:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000201:s000023`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000201:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000201:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`
+
+Slot `1` admits six sensor Objects (119/128/164/165/166/168); slots `2..17` designate IR scenario Object `431`. Virgin `515` applies only to slot `1` and admits the same six alternatives. These are software placements, not seventeen physical sensors. Reusable timers default to 10 minutes in 119/168 and 15 minutes in 128/165; these do not override a product factory setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux: setpoint default 100 means 500 lux, with zero unlabelled; provision zero means Automatic. Object `431` `TYPE_OF_REGULATION` is restricted to 3 (stereo), excluding default 1 without a replacement; this does not prove sixteen installed IR functions or speaker hardware. Firmware `135` stores M predicates selecting 128 for `M=2`, 166 for `M=1/4` and 168 for `M=0/3`; alternatives 119/164/165 lack a stored M selection. Firmware A/`PL=0..9` default 0 and `S=0..4` differ from physical A/`PL=1..9` and `S=0..3`. No conversion is associated. Occupancy restrictions retain `US`-only and combined `PIR`/`US` choices on this `PIR`-only product; they are software evidence, not ultrasonic construction. `ALERT` subsets exclude default 0; `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` on 168 have subset flags with no allowed values. These remain unresolved restrictions, not unrestricted fields.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000201:s000026`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000201:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `135` | `1` | `128` | `4477` | `M=2` | None |
+| `135` | `1` | `166` | `4461` | `M=1` | None |
+| `135` | `1` | `166` | `4505` | `M=4` | None |
+| `135` | `1` | `168` | `4439` | `M=0` | None |
+| `135` | `1` | `168` | `4491` | `M=3` | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000201:s000028`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `135` | `119` | `148` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `135` | `119` | `149` | `INITIAL_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `135` | `119` | `150` | `MAINTAIN_OCCUPANCY` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `135` | `119` | `151` | `RETRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `135` | `119` | `2342` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `135` | `128` | `152` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `135` | `128` | `153` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `135` | `165` | `154` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `2` | `US` sensitivity |
+| `135` | `165` | `155` | `SCHEMA` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection Schema |
+| `135` | `166` | `2104` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `135` | `166` | `2119` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `135` | `166` | `2134` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `135` | `168` | `156` | `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum (entire reusable range retained) | `1` | `US` sensitivity |
+| `135` | `168` | `157` | `INITIAL_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `135` | `168` | `158` | `MAINTAIN_OCC` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Mantain occupancy |
+| `135` | `168` | `159` | `RE-TRIGGER` | `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `135` | `168` | `2150` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `135` | `168` | `2343` | `ALERT` | `1` = Visual; `3` = Visual and Acoustic | `0` | Alert; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `135` | `168` | `2365` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `135` | `168` | `2448` | `DAYLIGHT_SETPOINT` | Subset flag present but no allowed values stored; unresolved restriction | `100` | Daylight setpoint (Lux) |
+| `135` | `168` | `2460` | `PROVISION_OF_LIGHT` | Subset flag present but no allowed values stored; unresolved restriction | `0` | Provision of light (Lux) |
+| `135` | `431` | `2398` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000201:s000029`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000201:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `56` / `modobj = 39` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000201:s000031`
+
+Cautions: `warning`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| `M=0` presence | Switch on with presence below threshold; off after T; manual OFF inhibits restart until the absence interval | BT00299-c-IT, printed/PDF pp. 1–5 |
+| `M=1` twilight | Daylight-only switching, no `PIR`; S/T absent; GEN/AMB/GR not supported | BT00299-c-IT, printed/PDF pp. 1–5 |
+| `M=2` controller | MH200N scenario sensing with unique address; controller determines timing; S/T absent | BT00299-c-IT, printed/PDF pp. 1–5 |
+| `M=3` regulated presence | Presence and constant daylight dimming; manual adjustment becomes setpoint until absence; manual OFF inhibits automation until manual ON | BT00299-c-IT, printed/PDF pp. 1–5 |
+| `M=4` daylight regulation | No `PIR`; manual ON and automatic OFF; does not automatically restart | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Walkthrough | Presence shorter than 20 s reduces delay to 3 min; an already shorter delay wins | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Eco / retrigger | Manual ON, automatic OFF; 30 s retrigger after OFF | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Alarm / regulation | Warning intervals: 1 min, 30 s and 10 s before OFF; regulation OFF after 10 min above threshold plus stated margin | BT00299-c-IT, printed/PDF pp. 1–5 |
+| Calibration | Separate artificial/natural-light phases using lux meter; calibration input `0..99995` lux | BT00299-c-IT, printed/PDF pp. 1–5 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000201:s000032`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000201:s000033`
+
+Lighting Management supports Plug&Go through the Room Controller, Push&Learn and Virtual Configurator. MyHOME physical configurators or 3503N/web-server virtual configuration disable configuration remotes and remote-only advanced parameters in the Italian sheet; the Spanish leaf permits IR, physical and PC parameter setup. These routes cannot be assumed simultaneously available.
+
+| Physical selector | Italian values / consequence |
+| --- | --- |
+| A / `PL` | `1..9` / `1..9`; absent zero is not a valid physical address |
+| M | 0 presence; 1 twilight; 2 MH200N; 3 regulated presence; 4 twilight regulation |
+| S | 0 or absent low; 1 medium; 2 high; 3 maximum |
+| T | 0 or absent 15 min; 1=30 s; 2=1 min; 3=2 min; 4=5 min; 5=10 min; 6=15 min; 7=20 min; 8=30 min; 9=40 min |
+| D | 0 or absent wall 300 / ceiling 500 lux; 1=20; 2=100; 3=300; 4=500; 5=1000 lux |
+
+#### Italian remote settings
+
+Section ID: `ownkb:section:d000201:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+BT00299-c-IT p. 3 governs this table; factory values are not installed readings.
+
+| Parameter | Printed factory setting | Adjustment / scope |
+| --- | --- | --- |
+| Delay | 15 min | `BMSO4003`: 3/5/10/15/20 min; `BMSO4001`: 5 s..59 min 59 s |
+| `PIR` sensitivity | Maximum | `BMSO4001`/`BMSO4003`: low 25%, medium 50%, high 75%, maximum 100% |
+| Daylight threshold | 300 lux | 4003: 20/100/300/500/1000 lux; 4001: `5..1275` lux |
+| Auto / Eco / walkthrough | Disabled / disabled / enabled | BMSO4001/BMSO4003: enable or disable, subject to the documented control route |
+| Initial / maintain scheme | `PIR` / `PIR` | Not editable using 4001 |
+| Retrigger scheme | `PIR` | `BMSO4001`: `PIR` and/or `US`, `PIR`, `US`, disabled as printed; this is a source irregularity on a `PIR`-only product |
+| Alarm / regulation | Disabled / enabled | BMSO4001: enable or disable |
+| Light provision | Automatic | BMSO4001: Automatic..1275 lux |
+| Calibration | No factory value specified | BMSO4001: `0..99995` lux; two-phase procedure |
+
+The Italian p. 3 says an audible beep confirms receipt of a configuration-remote IR command. The Italian p. 3 says an audible beep confirms receipt of a configuration-remote IR command. For reset, briefly press LEARN until the slow indication, then hold about 10 s for fast flashing (Italian p. 3). The Spanish BT00299-a-ES instead names `BMSO4001`/`BMSO4002`, with Auto enabled, 15 min delay, `PIR` sensitivity 100%, 300 lux ±15% and walkthrough enabled; its sensitivity/timeout table contains incomplete unit labels. Its virtual role list includes IR scenario operation. Remote interchangeability and firmware cutoffs have not been established.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000201:s000035`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`
+
+The exact Italian c revision and historical Spanish a leaf agree on 27 V/12 mA/IP42 but disagree on coverage, optical angles, threshold range, remote models and whether physical/virtual setup disables remote adjustment. Italian factory Auto disabled differs from Spanish Auto enabled. Italian p. 1 headline 120 m², p. 2 drawing 90 m² and sensitivity table maximum 210 m² are retained separately, alongside the different Spanish matrix. Italian remote delay 5 s..59 min 59 s conflicts with the p. 1 30 s..255 h 59 min 59 s headline. Its Auto paragraph says OFF when light is insufficient, contrary to the described threshold/regulation logic; this unresolved wording is not silently corrected. German dimension entries disagree internally on height (91/94 mm). No release or hardware mapping resolves these source differences.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000201:s000036`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+- Installed detection coverage, remote compatibility and route restrictions remain unobserved; no revision-to-firmware mapping resolves the published discrepancies.
+- The Legrand identity is explicit catalogue evidence; independent exact-`048829` physical and EAN records are not retained.
+- Remote manuals, Virtual Configurator/glossary, 3503N/web-server and controller setup guides linked by the sheets are not independently examined.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000201:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0061)
+
+# Document: ownkb:document:d000202
+
+Source path: `devices/definitions/own-dev-0062-daylight-sensor-room-controller-rj45.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Daylight sensor for Room Controller + RJ45
+
+Section ID: `ownkb:section:d000202:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000202:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+The catalogue identifies this as a daylight sensor for a Room Controller, connected through RJ45. Its software model provides daylight reporting and regulation settings; exact physical specifications and setup instructions remain undocumented in the retained sources.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0062` | Project identity |
+| Technical description | Daylight sensor for Room Controller + RJ45 | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE3005`, `048828` | Canonical commercial records |
+| Catalogue item | `57` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `40` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Daylight sensing, Lighting Management, Room Controller accessory | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000202:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE3005` | Established identity | canonical commercial record for item `57` |
+| Legrand | `048828` | Established identity | canonical commercial record for item `57` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000202:s000004`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| MyHOME Suite version history | software compatibility record | Document dated 2015-03-20; applicable product list under first release 1.0.45 dated 2013-10-10 | Printed/PDF p. 4; both exact references listed for virtual configuration; software compatibility only, not physical specifications or installed firmware | [Archived original](https://archive.openwebnet-ha.org/sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf) | [Official compatibility source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MyHOME_Suite_20150320.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000202:s000005`
+
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Catalogue-established product role | daylight sensor for a Room Controller with RJ45 connection | Canonical item 57 |
+| Physical ratings | Supply, consumption, enclosure, dimensions and optical/radio limits are not established by the retained compatibility list | Canonical item 57 |
+
+### Identity
+
+Section ID: `ownkb:section:d000202:s000006`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `57` | Canonical catalogue |
+| Technical item | Daylight sensor for Room Controller + RJ45 | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `40` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000202:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `40` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000202:s000008`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `57` | `BMSE3005` | `1` | `5` | `BTicino_Undefined_Daylight sensor for Room Co` |
+| `1582` | `048828` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000202:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `151` | `-1` | `-1` | `-1` | `1` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000202:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000202:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `151` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `592` | `164` | `411` |
+| `151` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `591` | `166` | `410` |
+| `151` | `1` | `194` Daylight cell | Fixed/designated metadata | `590` | `467` | `409` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000202:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `151` | `516` Daylight sensor virgin | `1` | `164`, `166`, `194` | `516` | `25` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000202:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `151` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000202:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `151` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000202:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000202:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000202:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `194` - Daylight cell
+
+Section ID: `ownkb:section:d000202:s000018`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `467` maps to external Object `194`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `GD` | `0..255` | `0` | Daylight sensor group |
+| `DAYLIGHT_FACTOR` | `1..255` | `10` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level; Read only, just for IR commissionning |
+| `SEND_CONDITION` | `0` = Sending cyclical or on request; `1` = Sending on request or on changing; `2` = Sending on request only; `3` = Sending cyclical or on request or on changing | `3` | Sending condition |
+| `DEAD_BAND` | `1..100` | `10` | Deadband (between 1 and 100%); To define the on change sending |
+| `TIME_BASE` | `1..59` | `5` | Time between two messages (minutes); Time_base_for_Cyclical_sending_(Minutes) |
+| `LIMIT_NUMBER` | `0..255` | `60` | Number of messages per minute |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000202:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Firmware `151` declares one Module with Objects 164, 166 and external 194 (catalogue key 467). Virgin `516` admits all three at slot `1`. Object `194` has empty condition `4145`; there are no M selectors or conversions. Firmware stores only `AID` and Advanced Configuration, so physical sockets and installed role are not inferred. Object `194` `DAYLIGHT_LEVEL=0..255` default 0 differs from `DAYLIGHT_FACTOR=1..255` default 10; `SEND_CONDITION=0` cyclic/request, 1 request/change, 2 request only, 3 all (default 3); `DEAD_BAND=1..100` default 10; `TIME_BASE=1..59` minutes default 5; `LIMIT_NUMBER=0..255` default 60. Object `166` has broader reusable regulation fields; setpoint default 100 encodes 500 lux. The filter description Provision of light references `DAYLIGHT_SETPOINT` and does not rename that field. Reusable schemas do not establish occupancy sensing.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000202:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000202:s000021`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| `151` | `1` | `194` | `4145` | No textual predicate stored | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000202:s000022`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `151` | `166` | `2111` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `151` | `166` | `2126` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `151` | `166` | `2141` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `151` | `166` | `2288` | `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux (entire reusable range retained) | `0` | Provision of light (Lux) |
+| `151` | `166` | `2317` | `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux (entire reusable range retained) | `100` | Provision of light (Lux) |
+| `151` | `194` | `363` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | `DAYLIGHT_LEVEL` |
+| `151` | `194` | `364` | `DAYLIGHT_FACTOR` | `1..255` (entire reusable range retained) | `10` | `DAYLIGHT_FACTOR` |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000202:s000023`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000202:s000024`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `57` / `modobj = 40` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`164`, `166`, `194`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000202:s000025`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Software compatibility | `BMSE3005` and `048828` occur in the product list for first release 1.0.45 dated 10 October 2013 | Version_History_MyHOME_Suite_20150320, printed/PDF p. 4 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000202:s000026`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000202:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Resolve the active Module/Object and its catalogue restrictions before interpreting configuration. The only firmware-level field is `AID` and the only associated mode is Advanced Configuration; no exact retained instructions establish physical configurators or a commissioning sequence. Daylight cell 194 has reporting cadence, dead-band and sample-limit fields; their complete domains/defaults appear in Object configuration surfaces. These software settings do not establish calibrated lux accuracy or an occupancy detector.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000202:s000028`
+
+Applicability cues: `firmware`, `version`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+Both references explicitly map to the same technical item. The version history corroborates both exact references in its 1.0.45 product list (p. 4), not newly added support in the document’s 20 March 2015 release and not an installed 3.5.38 firmware. Exact-reference manufacturer searches and historical retained Spanish/German catalogues did not establish a technical sheet; the Italian exact-reference product export returned HTTP 500 on 6 October 2026. That endpoint failure is not evidence that a product or document never existed. Missing physical documentation does not make either identity unresolved.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000202:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+- Exact-product physical specifications, factory settings and commissioning instructions remain a documentation gap.
+- Optical range, accuracy, connector pinout and Room Controller compatibility are not independently established.
+- No verified EAN is retained for either reference; adjacent sensor specifications are not imported.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000202:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0062)
+
+# Document: ownkb:document:d000203
+
+Source path: `devices/definitions/own-dev-0063-occupancy-sensor-ir-zigbee.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Occupancy sensor + IR + ZigBee
+
+Section ID: `ownkb:section:d000203:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000203:s000002`
+
+Applicability cues: `firmware`, `zigbee`
+Provenance cues: `catalogue`, `evidence`
+
+The catalogue identifies this as an occupancy sensor combining IR and ZigBee communication. Its software model includes sensing and IR scenario-control roles, while the exact hardware construction, radio profile and commissioning procedure remain undocumented in the retained sources.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0063` | Project identity |
+| Technical description | Occupancy sensor + IR + ZigBee | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSE2007`, `048831` | Canonical commercial records |
+| Catalogue item | `58` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `41` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `17` | Canonical firmware catalogue |
+| Categories | Occupancy sensing, IR, ZigBee, Lighting Management | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000203:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSE2007` | Established identity | canonical commercial record for item `58` |
+| Legrand | `048831` | Established identity | canonical commercial record for item `58` |
+
+### Documentation
+
+Section ID: `ownkb:section:d000203:s000004`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| MyHOME Suite version history | software compatibility record | Document dated 2015-03-20; applicable product list under first release 1.0.45 dated 2013-10-10 | Printed/PDF p. 4; both exact references listed for virtual configuration; software compatibility only, not physical specifications or installed firmware | [Archived original](https://archive.openwebnet-ha.org/sha256/cd/c4/cdc467fa6408908a98348892c78a98439826b216197f7b17b4230da9f46554c3.pdf) | [Official compatibility source](https://myhomeswupdate.bticino.com/VersionHistory/Version_History_MyHOME_Suite_20150320.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000203:s000005`
+
+Applicability cues: `zigbee`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Catalogue-established product role | occupancy sensor with IR and ZigBee communication | Canonical item 58 |
+| Physical ratings | Supply, consumption, enclosure, dimensions and optical/radio limits are not established by the retained compatibility list | Canonical item 58 |
+
+### Identity
+
+Section ID: `ownkb:section:d000203:s000006`
+
+Applicability cues: `zigbee`
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `58` | Canonical catalogue |
+| Technical item | Occupancy sensor + IR + ZigBee | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `41` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000203:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `41` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000203:s000008`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `58` | `BMSE2007` | `1` | `5` | Empty in source |
+| `1561` | `048831` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000203:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `138` | `-1` | `-1` | `-1` | `17` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000203:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000203:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `138` | `1` | `119` Stand alone presence sensor | Candidate alternative | `414` | `119` | `323` |
+| `138` | `1` | `128` Scenarios daylight and presence sensor | Candidate alternative | `415` | `128` | `324` |
+| `138` | `1` | `164` Scenarios daylight sensor | Candidate alternative | `416` | `164` | `325` |
+| `138` | `1` | `165` Scenarios presence sensor | Candidate alternative | `417` | `165` | `326` |
+| `138` | `1` | `166` Stand alone daylight sensor | Candidate alternative | `418` | `166` | `327` |
+| `138` | `1` | `168` Stand alone daylight and presence sensor | Fixed/designated metadata | `419` | `168` | `328` |
+| `138` | `2` | `431` IR scenario control | Fixed/designated metadata | `420` | `431` | `329` |
+| `138` | `3` | `431` IR scenario control | Fixed/designated metadata | `421` | `431` | `329` |
+| `138` | `4` | `431` IR scenario control | Fixed/designated metadata | `422` | `431` | `329` |
+| `138` | `5` | `431` IR scenario control | Fixed/designated metadata | `423` | `431` | `329` |
+| `138` | `6` | `431` IR scenario control | Fixed/designated metadata | `424` | `431` | `329` |
+| `138` | `7` | `431` IR scenario control | Fixed/designated metadata | `425` | `431` | `329` |
+| `138` | `8` | `431` IR scenario control | Fixed/designated metadata | `426` | `431` | `329` |
+| `138` | `9` | `431` IR scenario control | Fixed/designated metadata | `427` | `431` | `329` |
+| `138` | `10` | `431` IR scenario control | Fixed/designated metadata | `428` | `431` | `329` |
+| `138` | `11` | `431` IR scenario control | Fixed/designated metadata | `429` | `431` | `329` |
+| `138` | `12` | `431` IR scenario control | Fixed/designated metadata | `430` | `431` | `329` |
+| `138` | `13` | `431` IR scenario control | Fixed/designated metadata | `431` | `431` | `329` |
+| `138` | `14` | `431` IR scenario control | Fixed/designated metadata | `432` | `431` | `329` |
+| `138` | `15` | `431` IR scenario control | Fixed/designated metadata | `433` | `431` | `329` |
+| `138` | `16` | `431` IR scenario control | Fixed/designated metadata | `434` | `431` | `329` |
+| `138` | `17` | `431` IR scenario control | Fixed/designated metadata | `435` | `431` | `329` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000203:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `138` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `11` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000203:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `138` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000203:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `138` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000203:s000015`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `119` - Stand alone presence sensor
+
+Section ID: `ownkb:section:d000203:s000016`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Secondary group 1 |
+| `G2` | `0..255` | `0` | Secondary group 2 |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto Walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+| `INITIAL_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial occupancy |
+| `MAINTAIN_OCCUPANCY` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RETRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Retrigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `ENABLE_LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+
+#### Object `128` - Scenarios daylight and presence sensor
+
+Section ID: `ownkb:section:d000203:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `164` - Scenarios daylight sensor
+
+Section ID: `ownkb:section:d000203:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Object `165` - Scenarios presence sensor
+
+Section ID: `ownkb:section:d000203:s000019`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `HOURS` | `0..255` | `0` | Time delay - Hours |
+| `MINUTES` | `0..59` | `15` | Time delay - Minutes |
+| `SECONDS` | `0..59` | `0` | Time delay - Seconds |
+| `SCHEMA` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Detection scheme |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `2` | `US` sensitivity |
+
+#### Object `166` - Stand alone daylight sensor
+
+Section ID: `ownkb:section:d000203:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point to point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `1` | Operating mode; Functional_mode (auto/manual/partial) |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `NATURAL_LIGHT_FACTOR` | `0..255` | `0` | Natural light factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `168` - Stand alone daylight and presence sensor
+
+Section ID: `ownkb:section:d000203:s000021`
+
+Applicability cues: `firmware`
+
+| Surface | Fields | Meaning |
+| --- | --- | --- |
+| Addressing | `ADDR_TYPE`, `A`, `PL`, `G`, `A_R`, `PL_R`, `G1`, `G2` | Reusable schema; apply the Device and firmware restrictions below. |
+| Operation, timing and presentation | `MAIN_GROUP`, `TYPE_LOOP`, `GD`, `DAYLIGHT_SETPOINT`, `PROVISION_OF_LIGHT`, `HOURS`, `MINUTES`, `SECONDS`, `FUNC_MODE`, `PIR`, `US`, `INITIAL_OCC`, `MAINTAIN_OCC`, `RE-TRIGGER`, `ALERT`, `LOAD_CONTROL`, `LIGHTING_REGULATION`, `NATURAL_LIGHT_FACTOR`, `DAYLIGHT_FACTOR`, `DAYLIGHT_LEVEL` | Reusable schema; apply the Device and firmware restrictions below. |
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `ADDR_TYPE` | `0` = Point-to-point; `2` = Group | `0` | Addressing type |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `1` | Light point |
+| `G` | `0..255` | `0` | Group number |
+| `A_R` | `0..10` | `0` | Referent area address |
+| `PL_R` | `0..15` | `0` | Referent light point address |
+| `MAIN_GROUP` | `0` = Disable; `1` = Enable | `0` | Enable secondary groups |
+| `G1` | `0..255` | `0` | Sensor group 1 |
+| `G2` | `0..255` | `0` | Sensor group 2 |
+| `TYPE_LOOP` | `0` = Closed loop; `1` = Open loop | `0` | Loop type |
+| `GD` | `0..255` | `0` | Daylight cell group |
+| `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux | `100` | Daylight setpoint (Lux) |
+| `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux | `0` | Provision of light (Lux) |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `10` | Minutes |
+| `SECONDS` | `0..59` | `0` | Seconds |
+| `FUNC_MODE` | `1` = Auto `ON`/`OFF`; `2` = Auto walkthrough; `3` = Manual `ON` / Auto `OFF`; `5` = Partial `ON` / Group `OFF` | `2` | Operating mode; Functional_mode |
+| `PIR` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `3` | `PIR` sensitivity |
+| `US` | `0` = Low; `1` = Medium; `2` = High; `3` = Maximum | `1` | `US` sensitivity |
+| `INITIAL_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `3` | Initial detection |
+| `MAINTAIN_OCC` | `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Maintain detection |
+| `RE-TRIGGER` | `0` = Disabled; `1` = `PIR` only; `2` = `US` only; `3` = `PIR` and `US`; `4` = `PIR` or `US` | `4` | Re-trigger |
+| `ALERT` | `0` = Disabled; `1` = Visual; `2` = Acoustic; `3` = Visual and Acoustic | `0` | Alert |
+| `LOAD_CONTROL` | `0` = Disabled; `1` = Enabled | `1` | Enable load control |
+| `LIGHTING_REGULATION` | `0` = Disabled; `1` = Enabled | `0` | Lighting regulation |
+| `NATURAL_LIGHT_FACTOR` | `1..255` | `10` | Natural light factor |
+| `DAYLIGHT_FACTOR` | `0..255` | `0` | Daylight factor |
+| `DAYLIGHT_LEVEL` | `0..255` | `0` | Daylight level |
+
+#### Object `431` - IR scenario control
+
+Section ID: `ownkb:section:d000203:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_SCE_1` | `1..255` | `1` | Scenario number |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `1` | Regulation type |
+| `ID1` | `0..255` | `0` | `ID1` |
+| `ID2` | `0..255` | `0` | `ID2` |
+| `ID3` | `0..15` | `0` | `ID3` |
+| `UNIT_NUMBER` | `0..15` | `0` | Push button number |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000203:s000023`
+
+Applicability cues: `firmware`, `zigbee`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Slot `1` admits six sensor Objects (119/128/164/165/166/168); slots `2..17` designate IR scenario Object `431`. Virgin `515` applies only to slot `1` and admits the same six alternatives. These are software placements, not seventeen physical sensors. Reusable timers default to 10 minutes in 119/168 and 15 minutes in 128/165; these do not override a product factory setting. `DAYLIGHT_SETPOINT` and `PROVISION_OF_LIGHT` encode `1..255` as five times the stored value in lux: setpoint default 100 means 500 lux, with zero unlabelled; provision zero means Automatic. Object `431` `TYPE_OF_REGULATION` is restricted to 3 (stereo), excluding default 1 without a replacement; this does not prove sixteen installed IR functions or speaker hardware. Firmware `138` stores only `AID` and Advanced Configuration. No slot condition or conversion is associated, so neither physical M selectors nor automatic activation of every candidate is established. Daylight restrictions retain their reusable domains; the Provision of light description on Object `166` still references `DAYLIGHT_SETPOINT`. Reusable `PIR`/`US` choices do not establish detector construction for this catalogue-described IR/ZigBee product. Catalogue private-riser/local-bus associations do not prove a wired connector on the radio-described product.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000203:s000024`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000203:s000025`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000203:s000026`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `138` | `166` | `2107` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `138` | `166` | `2122` | `NATURAL_LIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Natural light factor |
+| `138` | `166` | `2137` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `138` | `166` | `2284` | `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux (entire reusable range retained) | `0` | Provision of light (Lux) |
+| `138` | `166` | `2313` | `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux (entire reusable range retained) | `100` | Provision of light (Lux) |
+| `138` | `168` | `2153` | `DAYLIGHT_FACTOR` | `0..255` (entire reusable range retained) | `0` | Daylight factor |
+| `138` | `168` | `2267` | `PROVISION_OF_LIGHT` | `0` = Automatic; `1..255` = `5 × stored value` lux (entire reusable range retained) | `0` | Provision of light (Lux) |
+| `138` | `168` | `2299` | `DAYLIGHT_SETPOINT` | `0`; `1..255` = `5 × stored value` lux (entire reusable range retained) | `100` | Daylight setpoint (Lux) |
+| `138` | `168` | `2368` | `DAYLIGHT_LEVEL` | `0..255` (entire reusable range retained) | `0` | Daylight level |
+| `138` | `431` | `2394` | `TYPE_OF_REGULATION` | `3` = Stereo amplifiers only | `1` | Regulation type; reusable default `1` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000203:s000027`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000203:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `58` / `modobj = 41` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`119`, `128`, `164`, `165`, `166`, `168`, `431`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000203:s000029`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Software compatibility | `BMSE2007` and `048831` occur in the product list for first release 1.0.45 dated 10 October 2013 | Version_History_MyHOME_Suite_20150320, printed/PDF p. 4 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000203:s000030`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000203:s000031`
+
+Applicability cues: `firmware`, `scs`, `zigbee`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Resolve the active Module/Object and its catalogue restrictions before interpreting configuration. The only firmware-level field is `AID` and the only associated mode is Advanced Configuration; no exact retained instructions establish physical configurators or a commissioning sequence. Seventeen catalogue Modules describe alternative sensor and IR scenario roles. They do not establish seventeen physical inputs, a ZigBee profile, a pairing sequence or a wired SCS connector.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000203:s000032`
+
+Applicability cues: `firmware`, `version`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+Both references explicitly map to the same technical item. The version history corroborates both exact references in its 1.0.45 product list (p. 4), not newly added support in the document’s 20 March 2015 release and not an installed 3.5.38 firmware. Exact-reference manufacturer searches and historical retained Spanish/German catalogues did not establish a technical sheet; the Italian exact-reference product export returned HTTP 500 on 6 October 2026. That endpoint failure is not evidence that a product or document never existed. Missing physical documentation does not make either identity unresolved.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000203:s000033`
+
+Applicability cues: `firmware`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `documentation`, `source`
+
+- Exact-product physical specifications, factory settings and commissioning instructions remain a documentation gap.
+- Detector technology, radio frequency/profile, power source, pairing and IR remote compatibility are not established by the catalogue role.
+- No verified EAN is retained for either reference; adjacent sensor specifications are not imported.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000203:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0063)
+
+# Document: ownkb:document:d000204
+
+Source path: `devices/definitions/own-dev-0064-room-controller-2-output-16-a.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Room Controller - 2 outputs 16 A
+
+Section ID: `ownkb:section:d000204:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000204:s000002`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+This Room Controller combines two lighting relay outputs with a supply for local bus devices. It supports automatic Plug&Go or configured Lighting Management operation, and the two outputs share a 16 A total maximum.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0064` | Project identity |
+| Technical description | Room Controller - 2 outputs 16 A | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `BMSW3002`, `048841` | Canonical commercial records |
+| Catalogue item | `59` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `167` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `3` | Canonical firmware catalogue |
+| Categories | Lighting Management, Room Controller, Relay actuator | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000204:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `BMSW3002` | Established identity | Catalogue item `59`; named in `U3773B`, PDF p. 1 |
+| Legrand | `048841` | Established identity | canonical commercial record for item `59` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000204:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `048841` | `3245060488413` | [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf), `048841-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000204:s000005`
+
+Applicability cues: `revision`, `scs`
+Provenance cues: `catalogue`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| BTicino General Catalogue product sheet | catalogue product sheet | current publisher catalogue | `BMSW3002` Room Controller functional and electrical summary | Original not retained; discovery/provenance only; substantive claims use retained originals | [Official product page](https://catalogo.bticino.it/prodotto/soluzioni-per-lefficienza-energetica/lighting-control---sistema-filare-bus-scs/attuatori/BTI-BMSW3002-IT) |
+| `U3773B.pdf` | installation instruction sheet | U3773B01SY-09W51 | PDF pp. 1–2; first printed page marked 1/4; retained fragment covers ratings, load classes, 16 A combined diagram and 150 m bus reach; nominal pages 3–4 not retained | [Archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/U3773B.pdf) |
+| `048841-ean-publisher-page.html` | Original manufacturer HTML commercial record | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact SKU/GTIN metadata examined; other ETIM attributes, linked downloads and prices outside the reviewed scope | [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-on-off-avec-2-sorties-16a) |
+| `BT00308_c_IT.pdf` | Exact-product technical sheet | BT00308-c-IT; 2013-11-12 | Printed/PDF pp. 1–3; complete ratings, load classes, dimensions, setup routes and combined-load wiring | [Archived original](https://archive.openwebnet-ha.org/sha256/df/9a/df9af98f2aee6e52acbef8bd95c55f0dce667375d37e044c262085eaed50e687.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/BT00308_c_IT.pdf) |
+| `BMSW3002-italian-product-sheet-IT.pdf` | Exact-product Italian catalogue export | Retrieved 2026-10-06; undated export | Printed/PDF p. 1; complete technical attributes, powered bus ports, total output current and setup; prices excluded | [Archived original](https://archive.openwebnet-ha.org/sha256/7d/2e/7d2eab5aba284f94e550587e88b1495448d204e6cf656e392895cd9862fcbfe5.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-BMSW3002) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000204:s000006`
+
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / standby | `110..230 Vac`, `50/60 Hz`; `1.8 W` standby | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Environment / protection | `+5..45 °C`; IP20; IK04 | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Outputs / total limit | Two switched outputs; headline (1+1) × `16 A`, with wiring diagram combined `I_L1+I_L2=16 A` maximum | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Local-bus supply / connection | `200 mA` maximum; RJ45; supply terminals `2 × 2.5 mm²` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Dimensions / mounting | `207 × 70.5 × 49 mm`; trunking, cable basket clips or false ceiling | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Incandescent / halogen at 230 / 110 V | `3680 / 1760 W`; `16 A` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Linear fluorescent at 230 / 110 V | 10 × (`2 × 36 W`) / 5 × (`2 × 36 W`); `4.3 A` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Electronic / ferromagnetic transformers at 230 / 110 V | `3680 / 1760 W` as printed; `16 A` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Compact fluorescent at 230 / 110 V | `1150 / 550 VA`; `5 A` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| `LED` at 230 / 110 V | `1 × 500 / 1 × 250 VA`; `2.1 A` | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Local-bus wiring reach | `150 m` in p. 3 diagram | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Earlier supply / environment / transformer units | `100..240 Vac`, `50/60 Hz`; `−5..45 °C`; transformer rating `3680/1760 VA`, rather than W in BT00308-c-IT | U3773B, printed p. 1/4 / PDF p. 1 |
+| Current export supply / ports | `100..240 Vac`; two local-bus ports (terminal/RJ45) sharing `200 mA` and one riser connection (terminal/RJ45); two outputs share total `16 A` at `230 Vac` | `BMSW3002`-italian-product-sheet-IT.pdf, printed/PDF p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000204:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `59` | Canonical catalogue |
+| Technical item | Room Controller - 2 outputs 16 A | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `167` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000204:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `167` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000204:s000009`
+
+Provenance cues: `catalogue`, `source`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `59` | `BMSW3002` | `1` | `5` | Empty in source |
+| `1789` | `048841` | `2` | `5` | Empty in source |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000204:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `281` | `-1` | `-1` | `-1` | `3` | Catalogue default | Deprecated |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000204:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000204:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `281` | `1` | `6` Light actuator | Fixed/designated metadata | `994` | `6` | `600` |
+| `281` | `2` | `6` Light actuator | Fixed/designated metadata | `995` | `6` | `600` |
+| `281` | `3` | `167` Room controller | Fixed/designated metadata | `996` | `167` | `601` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000204:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000204:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `281` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000204:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `281` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000204:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `6` - Light actuator
+
+Section ID: `ownkb:section:d000204:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master; `11` = Slave; `15` = Master `PUL`; `16` = Slave and `PUL` | `0` | Modality |
+| `LOCAL_BUTTON` | `0` = Toggle; `1` = `ON`/`OFF`; `9` = `ON` - `OFF`; `15` = Pushbutton; `18` = Timed `ON` | `0` | Local button modality |
+| `DELAYED_OFF` | `0..255` | `0` | Delayed `OFF` for Slave (s) |
+| `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open | `0` | Relay state on device reset |
+| `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing | `0` | Load control mode |
+| `HOURS` | `0..255` | `0` | Hours |
+| `MINUTES` | `0..59` | `0` | Minutes |
+| `SECONDS` | `0..59` | `30` | Seconds |
+| `SUBTYPE` | `11` = Actuator; `1` = Lamp; `10` = Valve; `15` = Differential restart; `6` = Fan; `7` = Watering; `8` = Controlled socket; `9` = Lock | `11` | Type of load |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `167` - Room controller
+
+Section ID: `ownkb:section:d000204:s000018`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `MODE` | `0` = Stand-alone mode; `1` = Supervision mode | `0` | Modality; Mode |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000204:s000019`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+
+Firmware `281` declares three software Modules: Light actuator 6 in slots 1/2 and Room Controller 167 in slot `3`. This agrees with two physical outputs plus a controller role, not three load channels. Object `167` `MODE=0` standalone/1 supervision defaults to 0; no slot predicates, Virgin or conversions are stored. Firmware contains only `AID` and Advanced Configuration. `STATE_RESET=0` last value/1 closed/2 open and `LOAD_CONTROL_MODE=0` with zero crossing/1 without retain their whole reusable domains. The export documents zero-crossing hardware, but these fields do not establish installed mode or a production revision.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000204:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000204:s000021`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000204:s000022`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `281` | `6` | `1104` | `STATE_RESET` | `0` = Restore last value; `1` = Closed; `2` = Open (entire reusable range retained) | `0` | Relay state on device reset |
+| `281` | `6` | `1871` | `LOAD_CONTROL_MODE` | `0` = With zero crossing; `1` = Without zero crossing (entire reusable range retained) | `0` | Load_control_mode |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000204:s000023`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000204:s000024`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `59` / `modobj = 167` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`6`, `167`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000204:s000025`
+
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Control | Two lighting outputs and local-bus supply; local buttons test the outputs | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Setup | Plug&Go, Push&Learn and Virtual Configurator in Lighting Management; setup procedures referenced rather than reproduced | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Combined-load constraint | Individual load-class limits remain subject to the combined 16 A maximum | BT00308-c-IT, printed/PDF pp. 1–3 |
+| Switching technology | Zero Crossing is explicitly named in the current export | `BMSW3002`-italian-product-sheet-IT.pdf, p. 1 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000204:s000026`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000204:s000027`
+
+Provenance cues: `catalogue`
+
+BT00308-c-IT p. 2 distinguishes the two local test buttons from setup. Use Plug&Go for the Room Controller’s automatic association, Push&Learn for learned groups or Virtual Configurator for software setup; the referenced complete commissioning guides have not been independently examined. The catalogue controller Object `MODE` is a software role field, not a substitute for those procedures. Wiring (p. 3) separates the mains loads, riser and powered local bus; the displayed 150 m bus reach and combined load limit are installation-specific manufacturer constraints.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000204:s000028`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The exact technical sheet, U3773B and current export agree on two outputs and 200 mA local-bus supply. The c sheet specifies `110..230` Vac and `+5..45 °C`; U3773B/export specify `100..240` Vac, and U3773B says `−5..45` °C. Transformer units are W in the c sheet and VA in U3773B. These differences have no documented production/revision mapping. The combined 16 A diagram and current export resolve the earlier ambiguous per-output headline: two 16 A load classes cannot be treated as 32 A aggregate. The retained `048841` HTML supports its exact GTIN only; its other ETIM fields and linked documents are outside the examined scope.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000204:s000029`
+
+Applicability cues: `firmware`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+- Supply, temperature and transformer-unit differences remain unresolved between applicable originals.
+- The Legrand identity is explicit catalogue evidence; independently examined `048841` physical sheet and release-to-hardware mapping remain unavailable.
+- Linked DWG, commissioning, Push&Learn and Virtual Configurator guides are known but unexamined.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+- U3773B is retained as a two-PDF-page fragment whose first sheet is marked 1/4; nominal missing pages 3–4 are not claimed to have been examined. The new complete BT00308-c-IT technical sheet supplies the separate setup and installation evidence.
+
+### Sources
+
+Section ID: `ownkb:section:d000204:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [`BMSW3001`/`BMSW3002` installation instruction sheet, archived original](https://archive.openwebnet-ha.org/sha256/60/ae/60ae6cf3046778b4d5fcb59b99f9d59f24bfb86d9a7a2ffdd0eb1142b2e9e8c3.pdf)
+- `048841-ean-publisher-page.html`, HTML product record, SKU/GTIN metadata and EAN/Gencode field: exact `048841` / EAN-13 pair. [Archived HTML](https://archive.openwebnet-ha.org/sha256/e9/4b/e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a.pdf); [publisher source](https://www.legrand.fr/pro/catalogue-archives/controleurs-faux-plafond-pour-2-circuits-mosaic-a-fonction-on-off-avec-2-sorties-16a); SHA-256 `e94ba3f62fc768aa3ba3ce0563ef00b829729725158ad16e8b0a225d824ace9a`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0064)
+
+# Document: ownkb:document:d000205
+
+Source path: `devices/definitions/own-dev-0065-memory-module.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Memory module
+
+Section ID: `ownkb:section:d000205:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000205:s000002`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+This SCS memory module records lighting states and restores them after a power interruption. It excludes shutters and requires learning the loads to restore; systems joined by physical expansion can share one memory module.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0065` | Project identity |
+| Technical description | Memory module | Canonical catalogue plus reconciled publisher sources |
+| Commercial identities | `F425`, `003552` | Canonical commercial records |
+| Catalogue item | `60` | Canonical catalogue |
+| Main catalogue system | Automation | Canonical catalogue |
+| Item model / `modobj` | `54` | Canonical inventory |
+| Firmware definition | `-1.-1.-1` | Canonical firmware catalogue |
+| Declared Modules | `1` | Canonical firmware catalogue |
+| Categories | Automation, State recovery, DIN accessory | Capability model |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000205:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `F425` | Established identity | canonical commercial record for item `60` |
+| Legrand | `003552` | Established identity | canonical commercial record for item `60` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000205:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `F425` | `8012199529646` | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf), `F425-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+### Documentation
+
+Section ID: `ownkb:section:d000205:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00281-b-UK` | technical sheet | MQ00281-b-UK; 2012-12-13 | Printed/PDF p. 1; complete `F425` memory, physical expansion, ratings, indicators and learning procedure | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/28/0f28345d89b8ceccc8d7d91dba8eac68522e215c27b7ee82accb3d777a79233c.pdf) | [Official source](https://assets.legrand.com/general/mediagrp/np-ft-gt/mq00281-b-uk.pdf) |
+| `F425-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Printed/PDF p. 1; exact-reference EAN and complete technical attributes examined; linked technical/DWG downloads and prices not incorporated | [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425) |
+| `BTicino-MyHOME-Spanish-technical-sheets.pdf` | Historical Spanish exact-product sheet within compilation | BT00281-a-ES; undated leaf | Printed p. 714 / PDF p. 145; complete `F425` ratings, placement, `LED`/learning procedure and physical-expansion exception | [Archived original](https://archive.openwebnet-ha.org/sha256/89/4f/894f468c301ea2b7aaec22635d91961e1eedc00136a21e21b774e975c378b4eb.pdf) | [Publisher source](https://www.bticino.es/pdf/FICHA_TECNICA_DOMOTICA_MYHOME_BTICINO.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000205:s000006`
+
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / current / dissipation | `27 Vdc` nominal; `18..27 Vdc` operating; `5 mA`; `0.1 W` | MQ00281-b-UK, printed/PDF p. 1 |
+| Temperature / size | `0..40 °C`; two DIN modules | MQ00281-b-UK, printed/PDF p. 1 |
+| Placement | No more than `10 m` from the power supply | MQ00281-b-UK, printed/PDF p. 1 |
+| Restoration trigger / delay | Power interruption at least `400 ms`; lighting restoration about `10 s` after supply returns | MQ00281-b-UK, printed/PDF p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000205:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `60` | Canonical catalogue |
+| Technical item | Memory module | Canonical catalogue |
+| Main system | Automation | Canonical catalogue |
+| Item model / `modobj` | `54` | Canonical inventory |
+| Commercial records | `2` | Canonical catalogue |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000205:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `54` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+#### Commercial-record metadata
+
+Section ID: `ownkb:section:d000205:s000009`
+
+Provenance cues: `catalogue`
+
+| Commercial record | Reference | Brand key | Line key | Catalogue description |
+| --- | --- | --- | --- | --- |
+| `60` | `F425` | `1` | `5` | `BTicino_Undefined_Black-out memory` |
+| `1629` | `003552` | `2` | `5` | `Black-out memory` |
+
+All these records are visible, non-dependent and not marked as gateways; visibility_type is empty. These flags are catalogue metadata, not physical capability or present market availability.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000205:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `187` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000205:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000205:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `187` | `1` | `30` Memory module | Fixed/designated metadata | `642` | `30` | `446` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000205:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | - | - | - | - |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000205:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `187` | Physical configuration | `0` | Canonical firmware/mode association |
+| `187` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `187` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000205:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+Catalogue domains/defaults below are firmware-scoped, separate from the product-document and software Object domains. The source does not specify a default where the table says so.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `187` | `AID` | Identity template `********`; permitted character set not specified | Not specified in source | Device identity token; not a physical configurator |
+| `187` | `A` | `0..9` | `0` | A; Environment |
+| `187` | `PL` | `0..9` | `0` | `PL`; Light Point |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000205:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `30` - Memory module
+
+Section ID: `ownkb:section:d000205:s000017`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+
+#### Device-specific interpretation
+
+Section ID: `ownkb:section:d000205:s000018`
+
+Applicability cues: `firmware`
+Cautions: `avoid`
+
+Firmware `187` designates Black-out memory Object `30` at slot `1`, without a Virgin, slot condition, relation filter or conversion. Firmware A/`PL=0..9` default 0 differs from reusable Object `A=0..10`/`PL=0..15`. The sheet recommends `A=0` and `PL=1..9` to avoid actuator address overlap; that recommendation is not a different stored default or proof of all wider Object addresses. Physical, virtual and advanced mode associations are software applicability, separate from the front-button learning sequence.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000205:s000019`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000205:s000020`
+
+Applicability cues: `firmware`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | - | - | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000205:s000021`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | - | None | - | No relation-specific filters associated | - | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000205:s000022`
+
+Applicability cues: `firmware`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | - | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000205:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | corroborate technical identity for catalogue item `60` / `modobj = 54` | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | select/corroborate the applicable catalogue firmware tuple while preserving wildcard semantics | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | corroborate declared Module/Object topology (`30`) | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | corroborate addressing only after the active Module/Object context is resolved | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | inspect physical/software configuration against firmware fields, conditions and filters | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000205:s000024`
+
+Uncertainty: `may`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Memory | Saves lighting actuator state on each bus command and restores it after qualifying interruption | MQ00281-b-UK, printed/PDF p. 1 |
+| System boundary | Normally one module per installed system/power supply; one may cover multiple systems joined by F422 physical expansion | MQ00281-b-UK, printed/PDF p. 1 |
+| Exceptions | Shutters are not managed; timed ON restores as simple ON | MQ00281-b-UK, printed/PDF p. 1 |
+| `LED` states | Off: too far from supply; green fixed: normal; orange fixed: unacquired; red fixed: excluded; red flashing: learning; orange flashing: wrong/missing configuration | MQ00281-b-UK, printed/PDF p. 1 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000205:s000025`
+
+No additional publishable Device-specific hardware/runtime observation is currently retained for this exact technical item.
+
+### Programming
+
+Section ID: `ownkb:section:d000205:s000026`
+
+Provenance cues: `catalogue`
+
+Use a distinct address from actuators; the sheet recommends `A=0`, `PL=1..9`. For Lighting Management use Project&Download; MyHOME configuration is separately represented by the catalogue modes. Relearn after installation changes.
+
+| Learning step | Manufacturer sequence |
+| --- | --- |
+| Prepare | All loads OFF, including powered dimmers |
+| Enter / exclude | Hold front button 5 s until red; release; turn ON loads that must be excluded |
+| Acquire | Within 30 min press button; red flashes quickly while learning; after about 30 s green indicates completion |
+| Timeout | No confirmation within 30 min returns orange |
+| Test | Perform a blackout of at least 15 s as instructed; this test is distinct from the `400 ms` minimum restoration trigger |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000205:s000027`
+
+Cautions: `do not`, `limitation`
+Provenance cues: `catalogue`
+
+The exact English sheet and Spanish BT00281-a-ES agree on power, timing, placement and physical-expansion scope. The current `F425` export confirms 27 V/5 mA/two DIN modules and its exact EAN. The previous logical-expansion wording was incorrect: `F425`’s exception is physical expansion, whereas `F420` has a separate logical-expansion limitation. Reusable addresses and catalogue defaults do not replace the recommended non-overlapping learning address.
+
+Catalogue-specific scope, selectors, defaults and filter/conversion irregularities are detailed under [Object configuration surfaces](#object-configuration-surfaces). Those software relations do not establish additional physical capabilities or installed behavior.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000205:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+- Exact `003552` physical instructions and independent EAN remain unretained; catalogue identity is established.
+- F422 topology/application instructions and Project&Download help are referenced but not independently examined.
+- Restoration, excluded loads and address collision behavior remain unobserved.
+- The retained catalogue is a historical software applicability source. Installed firmware, active Objects and protocol behavior are not corroborated by hardware captures. Manufacturer software, referenced parameter payloads, unexamined download links and unrelated guide pages are not treated as inspected originals.
+
+### Sources
+
+Section ID: `ownkb:section:d000205:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `database`, `source`
+
+- [Device Database Inventory](../inventory/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Firmware](../../device-model/firmware.md)
+- [Configuration](../../device-model/configuration.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- `F425-ean-product-sheet.pdf`, printed/PDF p. 1: exact `F425` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/3f/33/3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-F425); SHA-256 `3f3380851ec72b06305ddb183b7efb83efd2abc35d381f37a0ae0f86c1bef8bc`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0061-0070-2026-10-06.md#own-dev-0065)

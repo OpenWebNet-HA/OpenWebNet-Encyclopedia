@@ -25,6 +25,9 @@ DEVICE_ID_CONTEXT_PATTERN = re.compile(
     rf"(?:(?P<device>devices?)(?:\s+(?P<label>ids?|identifiers?))?"
     rf"|(?P<unit>units?)(?:\s+(?P<unitlabel>ids?|identifiers?)))\b)"
 )
+BLOCKED_DEVICE_CONTEXT_PATTERN = re.compile(
+    r"(?ix)\s+(?:types?|models?|classes?|families|firmware|catalog(?:ue)?|codes?)\b"
+)
 DEVICE_ID_PATTERN = re.compile(
     rf"(?ix)\b(?:{QUALIFIER}\s+)?(?:device|unit)(?:\s+(?:id|identifier))?\b"
     rf"(?!\s+(?:type|model|class|family|firmware|catalog(?:ue)?|code))"
@@ -53,8 +56,7 @@ def installed_device_id_matches(text: str) -> list[SensitiveMatch]:
     public_documents = [(m.start(), m.end()) for m in PUBLIC_DOCUMENT_PATTERN.finditer(text)]
     seen: set[tuple[int, int]] = set()
     for context in DEVICE_ID_CONTEXT_PATTERN.finditer(plain):
-        tail = plain[context.end():]
-        blocked = re.match(r"(?ix)\s+(?:types?|models?|classes?|families|firmware|catalog(?:ue)?|codes?)\b", tail)
+        blocked = BLOCKED_DEVICE_CONTEXT_PATTERN.match(plain, context.end())
         if blocked:
             continue
         explicit = bool(context.group("qualifier") or context.group("label") or context.group("unitlabel"))

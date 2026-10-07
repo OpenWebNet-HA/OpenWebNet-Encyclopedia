@@ -94,6 +94,23 @@ class PrivacyPipelineTests(unittest.TestCase):
                 self.assertIn("[DEVICE_ID]", text)
                 self.assertNotRegex(text, r"(?i)\b[0-9a-f]{8}\b")
 
+    def test_public_model_contexts_at_nonzero_offsets_remain_public(self):
+        public = ("Device model A1B2C3D4", "Device types A1B2C3D4", "Devices catalogue A1B2C3D4", "Device firmware A1B2C3D4")
+        for context in public:
+            with self.subTest(context=context):
+                source = "Public explanation precedes this context. " + context + ". Installed unit ID 1A2B3C4D was captured."
+                text, removed = self.pipeline.sanitize(source)
+                self.assertIn(context, text)
+                self.assertIn("[DEVICE_ID]", text)
+                self.assertNotIn("1A2B3C4D", text)
+                self.assertEqual(["device_id"], removed)
+
+    def test_long_prefix_keeps_identifier_offsets_and_word_boundaries(self):
+        source = "Public preface. " * 1000 + "Device modeler A1B2C3D4 was recorded."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertTrue(text.endswith("Device modeler [DEVICE_ID] was recorded."))
+        self.assertEqual(["device_id"], removed)
+
     def test_installed_device_id_lists_are_fully_sanitized(self):
         tick = chr(96)
         source = (
