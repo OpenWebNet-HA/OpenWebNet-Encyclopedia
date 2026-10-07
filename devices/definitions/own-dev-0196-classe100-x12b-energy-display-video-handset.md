@@ -22,20 +22,30 @@ Classe100 X12B (344602) is a hands-free two-wire colour video handset with an in
 | --- | --- | --- | --- |
 | BTicino | `344602` | Established catalogue identity | Manufacturer database commercial record `2165` explicitly links this SKU to item `1872` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `344602` | CLASSE100 X12B | Canonical commercial record `2165` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
 | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` | Dutch video-entry design / installation guide | `Guide publication date unestablished; exact sheet BT00860-a-FR dated 01/12/2014` | Printed pp. 188-190 / PDF pp. 190-192: exact 344602 specifications, dual-BUS supply / draw, controls, physical modes, wiring and unresolved J1/J2 label. | [Archived original](https://archive.openwebnet-ha.org/sha256/09/83/0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe.pdf) | [Publisher original](https://assets.legrand.com/webf/nl/Document/nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1872`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `BT00858_a_IT.pdf` | Exact Italian Classe100 X12B technical sheet | BT00858-a-IT; 01/12/2014 | Printed/PDF pp. 1–4: exact 344602 ratings, connectors, physical modes, J1/J2 discrepancy and segment wiring limits; compared visually with Dutch guide printed 188–190/PDF 190–192 | [Archived original](https://archive.openwebnet-ha.org/sha256/a9/33/a933916b81763232061dfb7bff66c51ccfa679b2fa86e6dba4d8ab513770d03a.pdf) | [Publisher source](https://dar.bticino.it/asset/Documents/BT00858_a_IT.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
 | Video-only SCS supply / draw | `18..27 Vdc; 14.5 mA standby / 260 mA maximum` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
-| Video-plus-energy, MyHOME side draw | `18..27 Vdc; 3 mA standby / 18 mA maximum` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
-| Video-plus-energy, video-entry side draw | `18..27 Vdc; 27 mA standby / 275 mA maximum` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
+| Combined installation, supply of each BUS | `18..27 Vdc` | `BT00858_a_IT.pdf` p. 1; Dutch guide printed 188 / PDF 190 |
+| Combined installation, video-entry BUS draw | `3 mA standby / 18 mA maximum` | `BT00858_a_IT.pdf` p. 1; Dutch guide printed 188 / PDF 190, visually checked |
+| Combined installation, energy BUS draw | `27 mA standby / 275 mA maximum` | `BT00858_a_IT.pdf` p. 1; Dutch guide printed 188 / PDF 190, visually checked |
 | Operating temperature | `5..40 °C` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
 | Dimensions | `171 × 171 × 27 mm` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
 | Display / ringing | `4.3-inch colour LCD, 16:9; 16 ringtones` | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed p. 188 / PDF p. 190 |
@@ -55,6 +65,19 @@ Classe100 X12B (344602) is a hands-free two-wire colour video handset with an in
 | Main item model / `modobj` | `172` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `172` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -64,6 +87,17 @@ Classe100 X12B (344602) is a hands-free two-wire colour video handset with an in
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `546` | `721` | BTicino (key `1`) | `0` | Extra | `1872_1.0_BT\xml\Extra\extra.xml` |
+| `546` | `722` | BTicino (key `1`) | `0` | Protocol and other device parameters | `1872_1.0_BT\xml\Protocol\protocol.xml` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -83,20 +117,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `546` | Product Programming | `3` | Association key `4` |
+| `546` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `546` | USB | `3` |
+| `546` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `546` | `1` | `0` | `1872_1.0_BT\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `546` | `1` | `0` | `1872_1.0_BT\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -114,6 +141,10 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | `M=4` | Basic video / lock keys plus general intercom | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed pp. 188-190 / PDF pp. 190-192 |
 | Master / slave jumper | Text identifies J1 but explanatory fitted / removed lines name J2; unresolved label conflict | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed pp. 188-190 / PDF pp. 190-192 |
 | Termination / USB | `ON`/`OFF` end-of-line switch / firmware update; physical configuration only | `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` printed pp. 188-190 / PDF pp. 190-192 |
+
+### Installation example limits
+
+BT00858-a-IT p. 4 limits the illustrated segment to 120 F520 energy meters and 60 Classe100 X12B units; larger installations require division with 346851 configured `MOD=0`. Its parallel-unit note requires an additional supply for each extra unit for simultaneous display activation where 1–2 terminals are provided. The energy readings are not guaranteed to equal supplier-billed consumption. These are scoped installation requirements, not Module counts or unqualified whole-system capacity.
 
 ## Firmware-scoped configuration
 
@@ -226,15 +257,13 @@ The exact historical handset sheet says physical configuration only (printed pp.
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The exact Italian sheet says physical configuration only; its mini-USB connector is for firmware update (p. 1 legend 22 and p. 2). The catalogue Product Programming/USB metadata and Extra/Protocol paths do not establish software editing of all reusable Internal Unit fields. The Object `N=0..3999` domain is wider than item `N=0..99`; the exact physical selector range is not inferred from the reusable maximum. `DOSA_CALL` retains its full Boolean range/default through filter `2031`, but a forward-to-Ethernet field is not proof of an Ethernet interface in 344602.
+
 ## Source reconciliation
 
 The exact 344602 pages establish dual-BUS current figures and energy-display behavior, without substituting later connected Classe100 products. The sheet names the jumper J1 but its explanatory lines say J2 fitted / removed; this internal label conflict is preserved. No complete M-tens energy-mode matrix is present in the retained three-page sheet, so the catalogue’s software fields are not represented as a published physical map.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` | Printed pp. 188-190 / PDF pp. 190-192: exact 344602 specifications, dual-BUS supply / draw, controls, physical modes, wiring and unresolved J1/J2 label. |
+The standalone Italian sheet and Dutch-language guide both show 3/18 mA for the video-entry BUS and 27/275 mA for the energy BUS in the combined installation; the previous Device page had swapped those two rows, now corrected from visual inspection. The Dutch guide prints revision code BT00860-a-FR despite Dutch content; this code does not change its language. The Italian sheet repeats the J1 diagram/header and J2 fitted/removed wording, so it corroborates rather than resolves that label conflict. Both describe jumper removal enabling Slave; the physical label must still be checked on the applicable unit. The new fourth-page wiring example adds segment limits, but still does not supply the complete M-tens energy-mode matrix.
 
 ## Evidence limits and open work
 
@@ -253,10 +282,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `nl_nl_deurcommunicatie_ontwerp_en_installatie_gids.pdf` | `0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe` | 52382107 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/09/83/0983cf9d7719af23c4cbe4c37e963337064c5e00dfe9752415c51d51f21636fe.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0196)

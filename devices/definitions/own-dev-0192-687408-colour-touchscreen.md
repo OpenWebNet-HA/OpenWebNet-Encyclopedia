@@ -22,6 +22,14 @@ Legrand 687408 is catalogued as a colour touchscreen user interface for a MyHOME
 | --- | --- | --- | --- |
 | Legrand | `687408` | Established catalogue identity | Manufacturer database commercial record `1954` explicitly links this SKU to item `1812` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `687408` | Colour Touch Screen | Canonical commercial record `1954` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -47,6 +55,22 @@ Legrand 687408 is catalogued as a colour touchscreen user interface for a MyHOME
 | Main item model / `modobj` | `37` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `37` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -57,6 +81,19 @@ Legrand 687408 is catalogued as a colour touchscreen user interface for a MyHOME
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `103` | `125` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0100` |
+| `104` | `124` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0400` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+The two Official releases are `103: 3.0.9` and catalogue-default `104: 4.1.19`. All use external Object `32` in slot `1`. The item and reusable Object `FW_VER=3.0.0` default is not an additional release or an installed value. No attached slot predicate, filter or conversion establishes an alternative Object. `SYSADDRESS` retains its six-character mask and numeric default `1`; neither padding nor wire encoding is established.
 
 ## Module, Object, and Virgin Object model
 
@@ -77,24 +114,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `103` | Product Programming | `3` | Association key `4` |
-| `104` | Product Programming | `3` | Association key `4` |
+| `103` | Product Programming | `3` | Canonical firmware/mode association |
+| `104` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `103` | Ethernet | `2` |
-| `103` | USB | `3` |
-| `104` | Ethernet | `2` |
-| `104` | USB | `3` |
+| `103` | Ethernet | Canonical firmware/connection association |
+| `103` | USB | Canonical firmware/connection association |
+| `104` | Ethernet | Canonical firmware/connection association |
+| `104` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `103` | `2` | `0` | `ColorTouchConfigIP_0100` | Parameter type `7`; payload not inspected |
-| `104` | `2` | `0` | `ColorTouchConfigIP_0400` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -199,11 +229,15 @@ The catalogue’s configuration modes, connections and parameter associations ar
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The two parameter paths are `ColorTouchConfigIP_0100` and `ColorTouchConfigIP_0400`, both Legrand brand key 2 / line key 0. Ethernet and USB are catalogue connection labels. No exact retained manual establishes their physical connector placement or the transfer sequence. A public documentation LAN default does not establish an observed installation address.
+
 ## Source reconciliation
 
 The commercial record explicitly links 687408 to item 1812. Firmware/Object configuration extraction establishes its catalogue role, while a missing exact-product PDF leaves ratings, physical finish, dimensions and procedural evidence unestablished. Search collisions with unrelated products sharing this number do not undermine the manufacturer database identity.
 
 No exact-product document original is retained for this item. The canonical database is the source for the identity and configuration inventory; product-document discovery remains partial.
+
+Repeat exact-reference manufacturer, historical and regional searches on 7 October 2026 did not locate an accessible additional exact-product sheet. Unrelated search collisions were excluded, and specifications for nearby touchscreen references were not substituted. The manufacturer database remains affirmative identity evidence; the bounded hardware/manual gap remains visible.
 
 ## Evidence limits and open work
 
@@ -221,3 +255,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0192)

@@ -22,6 +22,14 @@ Arteor 573960 is a Legrand colour touchscreen for controlling a MyHOME installat
 | --- | --- | --- | --- |
 | Legrand - Arteor | `573960` | Established catalogue identity | Manufacturer database commercial record `1957` explicitly links this SKU to item `1814` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `573960` | Colour Touch Screen | Canonical commercial record `1957` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -48,6 +56,22 @@ Arteor 573960 is a Legrand colour touchscreen for controlling a MyHOME installat
 | Main item model / `modobj` | `39` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `39` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +83,23 @@ Arteor 573960 is a Legrand colour touchscreen for controlling a MyHOME installat
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `91` | `122` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0601` |
+| `91` | `356` | Legrand (key `2`) | `2` | external software | `ColorTouchConfigIP_0601` |
+| `92` | `123` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0500` |
+| `92` | `357` | Legrand (key `2`) | `2` | external software | `ColorTouchConfigIP_0500` |
+| `93` | `124` | Legrand (key `2`) | `0` | external software | `ColorTouchConfigIP_0400` |
+| `93` | `358` | Legrand (key `2`) | `2` | external software | `ColorTouchConfigIP_0400` |
+
+All 6 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+The three Official releases are catalogue-default `91: 6.0.1`, `92: 5.0.9` and `93: 4.1.19`. All use external Object `32` in slot `1`. The item and reusable Object `FW_VER=3.0.0` default is not an additional release or an installed value. No attached slot predicate, filter or conversion establishes an alternative Object. `SYSADDRESS` retains its six-character mask and numeric default `1`; neither padding nor wire encoding is established.
 
 ## Module, Object, and Virgin Object model
 
@@ -80,31 +121,20 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `91` | Product Programming | `3` | Association key `4` |
-| `92` | Product Programming | `3` | Association key `4` |
-| `93` | Product Programming | `3` | Association key `4` |
+| `91` | Product Programming | `3` | Canonical firmware/mode association |
+| `92` | Product Programming | `3` | Canonical firmware/mode association |
+| `93` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `91` | Ethernet | `2` |
-| `91` | USB | `3` |
-| `92` | Ethernet | `2` |
-| `92` | USB | `3` |
-| `93` | Ethernet | `2` |
-| `93` | USB | `3` |
+| `91` | Ethernet | Canonical firmware/connection association |
+| `91` | USB | Canonical firmware/connection association |
+| `92` | Ethernet | Canonical firmware/connection association |
+| `92` | USB | Canonical firmware/connection association |
+| `93` | Ethernet | Canonical firmware/connection association |
+| `93` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `91` | `2` | `0` | `ColorTouchConfigIP_0601` | Parameter type `7`; payload not inspected |
-| `91` | `2` | `2` | `ColorTouchConfigIP_0601` | Parameter type `7`; payload not inspected |
-| `92` | `2` | `0` | `ColorTouchConfigIP_0500` | Parameter type `7`; payload not inspected |
-| `92` | `2` | `2` | `ColorTouchConfigIP_0500` | Parameter type `7`; payload not inspected |
-| `93` | `2` | `0` | `ColorTouchConfigIP_0400` | Parameter type `7`; payload not inspected |
-| `93` | `2` | `2` | `ColorTouchConfigIP_0400` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -213,15 +243,13 @@ The historical catalogue names 573960 as a control associated with scenario modu
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+All six parameter associations are retained: the three ColorTouchConfigIP revisions each occur under Legrand brand key 2 with line keys 0 and 2. These line scopes do not create additional commercial identities. Ethernet and USB are catalogue connection labels. No exact retained manual establishes their physical connector placement or the transfer sequence. A public documentation LAN default does not establish an observed installation address.
+
 ## Source reconciliation
 
 The same historical catalogue page pictures 573960 and names it in the F420 compatibility text, but its touch-screen commercial paragraph lists 573958. Paragraph-level mounting / finish details are therefore not assigned to 573960. The explicit catalogue record establishes the Arteor identity; neither 573958 nor newer touchscreen ratings are substituted.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `ex212001_657.pdf` | Printed p. 657 / PDF p. 1: 002645 and 573960 exact-reference mentions; 573958 paragraph excluded from 573960 specifications. |
+Repeat exact-reference manufacturer, historical and regional searches on 7 October 2026 did not locate an accessible additional exact-product sheet. Unrelated search collisions were excluded, and specifications for nearby touchscreen references were not substituted. The manufacturer database remains affirmative identity evidence; the bounded hardware/manual gap remains visible.
 
 ## Evidence limits and open work
 
@@ -240,10 +268,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `ex212001_657.pdf` | `400d2496efd6d5d7d7ecb32711f9014db2d885f83849c64d8bbb5b262144f662` | 265011 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/40/0d/400d2496efd6d5d7d7ecb32711f9014db2d885f83849c64d8bbb5b262144f662.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0193)

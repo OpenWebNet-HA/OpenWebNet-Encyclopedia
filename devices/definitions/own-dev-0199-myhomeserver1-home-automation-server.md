@@ -22,6 +22,14 @@ MyHOMEServer1 connects a MyHOME SCS installation to an Ethernet network and app-
 | --- | --- | --- | --- |
 | BTicino | `MyHomeServer1` | Established catalogue identity | Manufacturer database commercial record `2552` explicitly links this SKU to item `2198` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `MyHomeServer1` | MyHomeServer | Canonical commercial record `2552` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -33,6 +41,8 @@ MyHOMEServer1 connects a MyHOME SCS installation to an Ethernet network and app-
 | `legrand-living-now-historical.pdf` | Historical Living Now/MyHOME catalogue | `Printed publication date not established` | Printed/PDF pp. 35, 92, 94-95, 98: exact MyHOMEServer1, F459, K4652M2 and 048834 catalogue descriptions; p. 98 PIR settings and internal threshold / timing discrepancy. | [Archived original](https://archive.openwebnet-ha.org/sha256/f7/2a/f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71.pdf) | [Publisher original](https://assets.legrand.com/webf/bg/bg_en_Living_NOW_catalogue.pdf) |
 | `ST-00001031-EN.pdf` | Previously archived MyHOME Server technical sheet | `ST-00001031-EN; 30/05/2022` | Printed/PDF pp. 1-4: exact MyHOMEServer1 electrical / interface and system limits; p. 3 explicitly lists 048834 and K4652M2 compatibility. Original publisher URL absent from legacy archival record. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) | [Previously archived original](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2198`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `Home-Project-functions-2024-EN.pdf` | Manufacturer Home + Project feature matrix, 2024 edition | Filename labels 2024 REV_5; published URL directory 2025-03; no standalone printed issue date established | Printed/PDF pp. 3–4: exact MyHOMEServer1 2.32.9 minimum and revision-specific feature matrix; compared with later edition | [Archived original](https://archive.openwebnet-ha.org/sha256/fd/53/fd533693372a2afc9d29d1a9fe33df0dcb81932559880b0acda9cb07ff29d490.pdf) | [Publisher source](https://www.bticino.com/sites/default/files/2025-03/NUOVE%20FUNZIONI%20HOME%20%2B%20PROJECT%202024_REV_5_GB.pdf) |
+| `Home-Project-functions-2025-EN.pdf` | Manufacturer Home + Project feature matrix, 2025 edition | Filename labels 2025; published URL directory 2025-05; no standalone printed issue date established | Printed/PDF pp. 3–11, 21–22: minimum firmware, visually checked full matrix and backup/offline/update/test/calibration/acquisition/overwrite limits; remaining feature-detail pages outside examined scope | [Archived original](https://archive.openwebnet-ha.org/sha256/97/17/9717ae640f96a24fd8bce8a35cfd12b30f9d5d4a1eafda43a7c99ffd8acbe23e.pdf) | [Publisher source](https://www.bticino.com/sites/default/files/2025-05/NEW%20FUNCTIONS%20HOME%20%2B%20PROJECT%202025_GB.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -45,7 +55,7 @@ MyHOMEServer1 connects a MyHOME SCS installation to an Ethernet network and app-
 | Interfaces / indicators | `Ethernet 10/100; automation SCS; auxiliary supply; USB; RS232; restart; SPEED/LINK/SYSTEM` | `ST-00001031-EN.pdf` printed/PDF p. 1, retained original dated 30/05/2022 |
 | System topology limit, sheet | `175 channels; private automation riser level 3; no logical expansion` | `ST-00001031-EN.pdf` printed/PDF p. 1, retained original dated 30/05/2022 |
 | Living Now condition, sheet | `Firmware after 2.1 or app after 2.2; wording preserved` | `ST-00001031-EN.pdf` printed/PDF p. 1, retained original dated 30/05/2022 |
-| Scenario limits, AA/AB manuals | `50 scenarios; 100 actions and 50 start conditions per scenario` | `ST-00001031-EN.pdf` printed/PDF p. 1, retained original dated 30/05/2022 |
+| Scenario limits, AA/AB manuals | `50 scenarios; 100 actions and 50 start conditions per scenario` | `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` p. 6 |
 
 ## Identity
 
@@ -57,6 +67,19 @@ MyHOMEServer1 connects a MyHOME SCS installation to an Ethernet network and app-
 | Main system | Integration function; key `26` | `AS_ITEM_SYSTEM` |
 | Main item model / `modobj` | `67` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
+
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `67` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
 
 ## Firmware and hardware
 
@@ -86,6 +109,43 @@ MyHOMEServer1 connects a MyHOME SCS installation to an Ethernet network and app-
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `729` | `1054` | Undefined (key `5`) | `0` | Extra | `2198_1.0_LGG\xml\Extra\extra.xml` |
+| `729` | `1055` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_1.0_LGG\xml\Protocol\protocol.xml` |
+| `812` | `1056` | Undefined (key `5`) | `0` | Extra | `2198_1.1_LGG\xml\Extra\extra.xml` |
+| `812` | `1057` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_1.1_LGG\xml\Protocol\protocol.xml` |
+| `813` | `1058` | Undefined (key `5`) | `0` | Extra | `2198_1.2_LGG\xml\Extra\extra.xml` |
+| `813` | `1059` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_1.2_LGG\xml\Protocol\protocol.xml` |
+| `814` | `1060` | Undefined (key `5`) | `0` | Extra | `2198_2.0_LGG\xml\Extra\extra.xml` |
+| `814` | `1061` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.0_LGG\xml\Protocol\protocol.xml` |
+| `815` | `1062` | Undefined (key `5`) | `0` | Extra | `2198_2.1_LGG\xml\Extra\extra.xml` |
+| `815` | `1063` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.1_LGG\xml\Protocol\protocol.xml` |
+| `816` | `1064` | Undefined (key `5`) | `0` | Extra | `2198_2.2_LGG\xml\Extra\extra.xml` |
+| `816` | `1065` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.2_LGG\xml\Protocol\protocol.xml` |
+| `817` | `1066` | Undefined (key `5`) | `0` | Extra | `2198_2.14_LGG\xml\Extra\extra.xml` |
+| `817` | `1067` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.14_LGG\xml\Protocol\protocol.xml` |
+| `818` | `1068` | Undefined (key `5`) | `0` | Extra | `2198_2.20_LGG\xml\Extra\extra.xml` |
+| `818` | `1069` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.20_LGG\xml\Protocol\protocol.xml` |
+| `821` | `1074` | Undefined (key `5`) | `0` | Extra | `2198_2.30_LGG\xml\Extra\extra.xml` |
+| `821` | `1075` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.30_LGG\xml\Protocol\protocol.xml` |
+| `825` | `1097` | Undefined (key `5`) | `0` | Extra | `2198_2.31_LGG\xml\Extra\extra.xml` |
+| `825` | `1098` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.31_LGG\xml\Protocol\protocol.xml` |
+| `831` | `1099` | Undefined (key `5`) | `0` | Extra | `2198_2.32_LGG\xml\Extra\extra.xml` |
+| `831` | `1100` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.32_LGG\xml\Protocol\protocol.xml` |
+| `836` | `1107` | Undefined (key `5`) | `0` | Extra | `2198_3.0_LGG\xml\Extra\extra.xml` |
+| `836` | `1108` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_3.0_LGG\xml\Protocol\protocol.xml` |
+| `839` | `1109` | Undefined (key `5`) | `0` | Extra | `2198_2.60_LGG\xml\Extra\extra.xml` |
+| `839` | `1110` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2198_2.60_LGG\xml\Protocol\protocol.xml` |
+
+All 26 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+There are 13 firmware definitions and 20 retained build rows, all Official with no catalogue-default flag. Every definition places Gateway Object `150` in slot `1` and external Object `216` (database key `512`) in slot `2`. The Object label mentioning F454 is reusable metadata, not a commercial alias or proof of every F454 audiovisual feature. Item fields contain only AID; the network/port/voice fields are reusable Object data, with no attached filters or conversions. All 26 Extra/Protocol parameter associations and their brand key 5 / line key 0 are shown separately. No package payload is present.
 
 ## Module, Object, and Virgin Object model
 
@@ -130,81 +190,50 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `729` | Product Programming | `3` | Association key `4` |
-| `812` | Product Programming | `3` | Association key `4` |
-| `813` | Product Programming | `3` | Association key `4` |
-| `814` | Product Programming | `3` | Association key `4` |
-| `815` | Product Programming | `3` | Association key `4` |
-| `816` | Product Programming | `3` | Association key `4` |
-| `817` | Product Programming | `3` | Association key `4` |
-| `818` | Product Programming | `3` | Association key `4` |
-| `821` | Product Programming | `3` | Association key `4` |
-| `825` | Product Programming | `3` | Association key `4` |
-| `831` | Product Programming | `3` | Association key `4` |
-| `836` | Product Programming | `3` | Association key `4` |
-| `839` | Product Programming | `3` | Association key `4` |
+| `729` | Product Programming | `3` | Canonical firmware/mode association |
+| `812` | Product Programming | `3` | Canonical firmware/mode association |
+| `813` | Product Programming | `3` | Canonical firmware/mode association |
+| `814` | Product Programming | `3` | Canonical firmware/mode association |
+| `815` | Product Programming | `3` | Canonical firmware/mode association |
+| `816` | Product Programming | `3` | Canonical firmware/mode association |
+| `817` | Product Programming | `3` | Canonical firmware/mode association |
+| `818` | Product Programming | `3` | Canonical firmware/mode association |
+| `821` | Product Programming | `3` | Canonical firmware/mode association |
+| `825` | Product Programming | `3` | Canonical firmware/mode association |
+| `831` | Product Programming | `3` | Canonical firmware/mode association |
+| `836` | Product Programming | `3` | Canonical firmware/mode association |
+| `839` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `729` | Ethernet | `2` |
-| `729` | Ethernet over USB | `4` |
-| `812` | Ethernet | `2` |
-| `812` | Ethernet over USB | `4` |
-| `813` | Ethernet | `2` |
-| `813` | Ethernet over USB | `4` |
-| `814` | Ethernet | `2` |
-| `814` | Ethernet over USB | `4` |
-| `815` | Ethernet | `2` |
-| `815` | Ethernet over USB | `4` |
-| `816` | Ethernet | `2` |
-| `816` | Ethernet over USB | `4` |
-| `817` | Ethernet | `2` |
-| `817` | Ethernet over USB | `4` |
-| `818` | Ethernet | `2` |
-| `818` | Ethernet over USB | `4` |
-| `821` | Ethernet | `2` |
-| `821` | Ethernet over USB | `4` |
-| `825` | Ethernet | `2` |
-| `825` | Ethernet over USB | `4` |
-| `831` | Ethernet | `2` |
-| `831` | Ethernet over USB | `4` |
-| `836` | Ethernet | `2` |
-| `836` | Ethernet over USB | `4` |
-| `839` | Ethernet | `2` |
-| `839` | Ethernet over USB | `4` |
+| `729` | Ethernet | Canonical firmware/connection association |
+| `729` | Ethernet over USB | Canonical firmware/connection association |
+| `812` | Ethernet | Canonical firmware/connection association |
+| `812` | Ethernet over USB | Canonical firmware/connection association |
+| `813` | Ethernet | Canonical firmware/connection association |
+| `813` | Ethernet over USB | Canonical firmware/connection association |
+| `814` | Ethernet | Canonical firmware/connection association |
+| `814` | Ethernet over USB | Canonical firmware/connection association |
+| `815` | Ethernet | Canonical firmware/connection association |
+| `815` | Ethernet over USB | Canonical firmware/connection association |
+| `816` | Ethernet | Canonical firmware/connection association |
+| `816` | Ethernet over USB | Canonical firmware/connection association |
+| `817` | Ethernet | Canonical firmware/connection association |
+| `817` | Ethernet over USB | Canonical firmware/connection association |
+| `818` | Ethernet | Canonical firmware/connection association |
+| `818` | Ethernet over USB | Canonical firmware/connection association |
+| `821` | Ethernet | Canonical firmware/connection association |
+| `821` | Ethernet over USB | Canonical firmware/connection association |
+| `825` | Ethernet | Canonical firmware/connection association |
+| `825` | Ethernet over USB | Canonical firmware/connection association |
+| `831` | Ethernet | Canonical firmware/connection association |
+| `831` | Ethernet over USB | Canonical firmware/connection association |
+| `836` | Ethernet | Canonical firmware/connection association |
+| `836` | Ethernet over USB | Canonical firmware/connection association |
+| `839` | Ethernet | Canonical firmware/connection association |
+| `839` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `729` | `5` | `0` | `2198_1.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `729` | `5` | `0` | `2198_1.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `812` | `5` | `0` | `2198_1.1_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `812` | `5` | `0` | `2198_1.1_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `813` | `5` | `0` | `2198_1.2_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `813` | `5` | `0` | `2198_1.2_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `814` | `5` | `0` | `2198_2.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `814` | `5` | `0` | `2198_2.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `815` | `5` | `0` | `2198_2.1_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `815` | `5` | `0` | `2198_2.1_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `816` | `5` | `0` | `2198_2.2_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `816` | `5` | `0` | `2198_2.2_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `817` | `5` | `0` | `2198_2.14_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `817` | `5` | `0` | `2198_2.14_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `818` | `5` | `0` | `2198_2.20_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `818` | `5` | `0` | `2198_2.20_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `821` | `5` | `0` | `2198_2.30_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `821` | `5` | `0` | `2198_2.30_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `825` | `5` | `0` | `2198_2.31_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `825` | `5` | `0` | `2198_2.31_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `831` | `5` | `0` | `2198_2.32_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `831` | `5` | `0` | `2198_2.32_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `836` | `5` | `0` | `2198_3.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `836` | `5` | `0` | `2198_3.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `839` | `5` | `0` | `2198_2.60_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `839` | `5` | `0` | `2198_2.60_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -219,7 +248,7 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | Fixed IP, technical sheet | 192.168.0.55; public documentation value, not an observed installation | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
 | AH capacities | 10 areas; 30 rooms per area; 50 objects per room; 50 controls per actuator; 50 favourites; 50 scenarios | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
 | AH users | 25 accounts; 7 simultaneous local and 4 remote users; 25 saved app connections | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
-| AA/AB capacities | 30 rooms; 30 zones per room; 50 objects per room; 50 controls per actuator; 50 scenarios | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
+| AA/AB capacities | 30 rooms; AB additionally lists 30 zones per room; 50 objects per room; 50 controls per actuator; 50 scenarios | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
 | AA/AB installers | 15 installer accounts; 1 simultaneous installer connection | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
 | Scenario limits | 100 actions and 50 start conditions per scenario in AH/AA/AB | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
 | AB local mode | Local plant creation / management added; do not assign to AH by inference | `ST-00001031-EN.pdf` pp. 1-4; `RA00149AH_I_EN.pdf` pp. 7, 11; `RA00211AA_I_EN.pdf` and `RA00211AB_I_EN.pdf` pp. 6, 10-11 |
@@ -361,6 +390,34 @@ These are complete explicit catalogue associations for the candidate Objects. Mu
 
 No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
 
+### Later app / server revision requirements
+
+Both retained feature documents require MyHOMEServer1 firmware `2.32.9` or later for Home + Project (p. 3). The 2025 p. 4 matrix gives the following exact MyHOMEServer1/app entries; dashes are unassigned matrix values, not a supported/unsupported conclusion. These later releases are absent from the canonical snapshot and are not retroactively assigned to `831: 2.32.0` or `836: 3.0.0`.
+
+| Feature | Published server firmware | Published Home + Project app |
+| --- | --- | --- |
+| Backup / restore | 3.83.3 | 1.0.37 |
+| System function test | 3.82.10 | 1.0.35 |
+| Device-address export | Not specified (dash) | 1.0.35 |
+| Offline configuration | Not specified (dash) | 1.0.21 |
+| App firmware update | 3.71.11 | 1.0.20 |
+| Identify loads | 3.71.31 | 1.0.24 |
+| Temperature probe calibration | 2/3.81.x | 1.0.32 |
+| Multiple controls per actuator | Not specified (dash) | 1.0.40 |
+| Automatic control/actuator association | Not specified (dash) | 1.0.40 |
+| Connection stability | Not specified (dash) | 1.0.40 |
+| Tablet compatibility | Not specified (dash) | 1.0.41 |
+| Device replacement | Not specified (dash) | 1.0.42 |
+| Control/energy-display configuration | Not specified (dash) | Not specified (dash) |
+| App evaluation pop-up | Not specified (dash) | 1.0.45 |
+| Quick device identification | Not specified (dash) | 1.0.45 |
+| New advanced MyHOME functions | Not specified (dash) | Not specified (dash) |
+| Acquire existing plant configuration | 3.84.5 | 1.1.12 |
+| Overwrite control/actuator association | 3.84.9 | 1.1.16 |
+| DALI2 colour definition | Not specified (dash) | Not specified (dash) |
+
+The 2024 matrix agrees on the first 15 entries. The 2025 matrix adds later features and separate F460/461 columns, which were visually checked to avoid transferring their requirements. Feature 17 prose describes acquisition using F460/Classe300EOS, while its matrix also supplies a MyHOMEServer1 version; that wording difference remains explicit and is not a verified migration/support guarantee.
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -371,26 +428,21 @@ The older `RA00149AH_I_EN.pdf` documents MyHOME_Up commissioning, users, rooms, 
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The newer feature guide limits backup to plants configured with Home + Project and excludes user-created temperature programmes, scenarios, notifications and scheduled automations from that backup (2025 p. 5). Offline configuration stores data for later cloud synchronisation; the AB manual additionally warns that prior desktop work is not recovered unless synchronised through the app (AB p. 35; 2025 p. 8). Firmware update downloads from cloud to the phone, then transfers locally to the server, including offline transfer (2025 p. 9). Device association overwrite excludes dehumidification and season-change actuators because they are functions rather than logical objects (2025 p. 22). These procedures depend on the stated app/server versions; their availability is not inferred from old catalogue Objects.
+
 ## Source reconciliation
 
-The already archived 2022 exact technical sheet was reused by verified fingerprint. The old MyHOME_Up manual names 10 areas and 30 rooms per area; AA/AB list 30 rooms and 30 zones per room, with 15 installer accounts and one installer connection. Their network-service tables and app workflows differ by document generation. USB is “future uses” in AH but firmware update in the newer manuals / sheet. These changes are revision-scoped and not retroactively mapped to a particular catalogue Firmware without evidence. The Classe300EOS compatibility sheet names the server as an integration component but does not replace its own technical sheet.
+The already archived 2022 exact technical sheet was reused by verified fingerprint. The old MyHOME_Up manual names 10 areas and 30 rooms per area; AA lists 30 rooms; AB additionally lists 30 zones per room, with 15 installer accounts and one installer connection. Their network-service tables and app workflows differ by document generation. USB is “future uses” in AH but firmware update in the newer manuals / sheet. These changes are revision-scoped and not retroactively mapped to a particular catalogue Firmware without evidence. The Classe300EOS compatibility sheet names the server as an integration component but does not replace its own technical sheet.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00149AH_I_EN.pdf` | Printed/PDF pp. 7, 11 and commissioning / app / object / scenario sections: limits, historical network-service table, interfaces, users and object association. AH workflow not mapped to catalogue firmware by assumption. |
-| `RA00211AA_I_EN.pdf` | Printed/PDF pp. 6, 10-11 and app / commissioning sections: limits, network services, controls / thermostats, account / cloud / system / object / scenario setup; AA generation. |
-| `RA00211AB_I_EN.pdf` | Printed/PDF pp. 6, 10-11, 35 and app / commissioning sections: limits, network services and local plant creation / management; AB generation; not assigned retroactively to AH. |
-| `ST-00001033-EN.pdf` | Printed/PDF p. 8 only: exact MyHOMEServer1, 048834 and K4652M2 entries in another product’s compatibility table; no electrical ratings transferred. |
-| `legrand-living-now-historical.pdf` | Printed/PDF pp. 35, 92, 94-95, 98: exact MyHOMEServer1, F459, K4652M2 and 048834 catalogue descriptions; p. 98 PIR settings and internal threshold / timing discrepancy. |
-| `ST-00001031-EN.pdf` | Printed/PDF pp. 1-4: exact MyHOMEServer1 electrical / interface and system limits; p. 3 explicitly lists 048834 and K4652M2 compatibility. Original publisher URL absent from legacy archival record. |
+The exact 2022 technical sheet gives public documentation fixed IP `192.168.0.55`; reusable Objects 150/216 instead default to `192.168.1.35`. These are source-specific documentation templates, not observed endpoints, and no firmware applicability mapping resolves them. AA (06/22) lists 30 rooms, but the 30-zones-per-room limit is added in AB (06/23); the previous combined capacity statement incorrectly assigned it to AA as well. Historical network service tables remain edition-scoped rather than instructions for present-day firewall setup.
 
 ## Evidence limits and open work
 
 Installed app/Firmware pairing, mapping of all catalogue tuples to document generations, exact cloud-service behavior, network endpoints and available third-party integrations remain to be corroborated.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+The later 2024/2025 feature matrices establish explicit app-version requirements but not installed state or payload behavior. Feature-detail pages 12–20 and 23 beyond the inspected matrix remain outside this review scope. The old exact-product export lead redirected to an unavailable product URL (HTTP 404); its search-only EAN was not adopted. Current firmware binaries and parameter payloads were not examined.
 
 ## Sources
 
@@ -403,15 +455,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `RA00149AH_I_EN.pdf` | `65bbf9b09ee9236f1e8041178b7cd474ff86225327a92979b09f24d8be836f78` | 26109077 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/65/bb/65bbf9b09ee9236f1e8041178b7cd474ff86225327a92979b09f24d8be836f78.pdf) |
-| `RA00211AA_I_EN.pdf` | `8a4fb3fda043ba7c1779b58ecdde1c4eb73c9dd9730825563d5a429617327a1b` | 32454547 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/8a/4f/8a4fb3fda043ba7c1779b58ecdde1c4eb73c9dd9730825563d5a429617327a1b.pdf) |
-| `RA00211AB_I_EN.pdf` | `6c48f2de37df21782b9f762f60b4260f60b8d5c8e2ebddbdd7410d7c19f7b601` | 36030150 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/6c/48/6c48f2de37df21782b9f762f60b4260f60b8d5c8e2ebddbdd7410d7c19f7b601.pdf) |
-| `ST-00001033-EN.pdf` | `e854cdd3edff2d77efb06d28600565bbe4c691ef760b6aca7ff16b2cfa8576eb` | 10907478 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/e8/54/e854cdd3edff2d77efb06d28600565bbe4c691ef760b6aca7ff16b2cfa8576eb.pdf) |
-| `legrand-living-now-historical.pdf` | `f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71` | 43227320 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/f7/2a/f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71.pdf) |
-| `ST-00001031-EN.pdf` | `14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7` | 176262 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0199)

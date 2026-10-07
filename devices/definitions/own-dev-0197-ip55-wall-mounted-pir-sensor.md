@@ -22,6 +22,14 @@ Legrand 048834 is a wall-mounted PIR movement and light sensor with IP55 protect
 | --- | --- | --- | --- |
 | Legrand | `048834` | Established catalogue identity | Manufacturer database commercial record `2490` explicitly links this SKU to item `2147` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `048834` | IP55 PIR wall mounted sensor, long range | Canonical commercial record `2490` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -54,6 +62,18 @@ Legrand 048834 is a wall-mounted PIR movement and light sensor with IP55 protect
 | Main item model / `modobj` | `81` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `81` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -63,6 +83,12 @@ Legrand 048834 is a wall-mounted PIR movement and light sensor with IP55 protect
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -99,15 +125,18 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 | --- | --- | --- | --- | --- | --- |
 | `683` | `515` Daylight and motion sensor virgin | `1` | `119`, `128`, `164`, `165`, `166`, `168` | `515` | `53` |
 
+Firmware `683` declares 17 logical Modules: slot `1` has six sensor candidate Objects, with designated Object `168`; slots 2–17 each reference IR scenario Object `431`. Virgin `515` permits exactly the six slot-1 sensor roles. These 16 IR slots are not physical buttons, extra PIR detectors or a load-rating count. Stored slot predicates cover `M=0/3` → 168, `M=1/4` → 166 and `M=2` → 128; Objects 119, 164 and 165 have no attached selection predicate. Their membership does not establish when they become active.
+
 ## Configuration modes
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `683` | Virtual Configuration | `1` | Association key `1` |
-| `683` | Advanced Configuration | `2` | Association key `2` |
-| `683` | Physical configuration | `0` | Association key `3` |
+| `683` | Physical configuration | `0` | Canonical firmware/mode association |
+| `683` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `683` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -312,6 +341,10 @@ Empty predicates, missing condition rows and fixed placement metadata are not ev
 
 These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
 
+### Sensor-specific catalogue conflicts
+
+The exact manufacturer catalogue identifies this hardware as PIR. The canonical firmware nevertheless retains US-related fields and filters admitting US-only/PIR-and-US/PIR-or-US while excluding PIR-only. These reusable and relation-specific records are preserved as source conflicts, not evidence of an ultrasonic transducer in 048834. ALERT defaults `0` fall outside subsets `{1,3}` for Objects 119/168, and Object `431` regulation default `1` lies outside subset `{3}`. Filters 2454/2466 mark subsets without storing allowed values for DAYLIGHT_SETPOINT/PROVISION_OF_LIGHT; they cannot supply a valid-domain/default resolution. No replacement value or precedence is inferred.
+
 ## Diagnostic applicability
 
 | Diagnostic surface | Device-specific use | Canonical reference |
@@ -376,15 +409,9 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 The exact catalogue paragraph and table agree on PIR, IP55 and 140°/15 m coverage, but differ on minimum brightness (20 versus 5 lux), while the table’s delay endpoint has malformed units. Both statements are retained without repairing the table by inference. The Classe300EOS sheet only names 048834 in a compatibility table (printed/PDF p. 8); it does not establish this sensor’s electrical ratings.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `ST-00001033-EN.pdf` | Printed/PDF p. 8 only: exact MyHOMEServer1, 048834 and K4652M2 entries in another product’s compatibility table; no electrical ratings transferred. |
-| `legrand-living-now-historical.pdf` | Printed/PDF pp. 35, 92, 94-95, 98: exact MyHOMEServer1, F459, K4652M2 and 048834 catalogue descriptions; p. 98 PIR settings and internal threshold / timing discrepancy. |
-| `ST-00001031-EN.pdf` | Printed/PDF pp. 1-4: exact MyHOMEServer1 electrical / interface and system limits; p. 3 explicitly lists 048834 and K4652M2 compatibility. Original publisher URL absent from legacy archival record. |
-
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+Visual inspection of historical catalogue p. 98 confirms the malformed delay table literally prints “5 s 59 min 59 h”; its paragraph instead says 5 s to 59 min. The 20/5 lux minimum discrepancy remains. Factory 300 lux/15 min is product prose, whereas reusable timing defaults include 10 min and reusable DAYLIGHT_SETPOINT defaults use encoded table values. Firmware `683` is Official `2.9` with no build row; no `.0` build is invented. No payload or connection association is stored, and the catalogue’s physical/virtual/advanced modes are separate from the IR remote-tool descriptions.
 
 ## Evidence limits and open work
 
@@ -403,12 +430,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `ST-00001033-EN.pdf` | `e854cdd3edff2d77efb06d28600565bbe4c691ef760b6aca7ff16b2cfa8576eb` | 10907478 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/e8/54/e854cdd3edff2d77efb06d28600565bbe4c691ef760b6aca7ff16b2cfa8576eb.pdf) |
-| `legrand-living-now-historical.pdf` | `f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71` | 43227320 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/f7/2a/f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71.pdf) |
-| `ST-00001031-EN.pdf` | `14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7` | 176262 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/14/97/14971697bfbdbb33587b5724c7b38ac2aa6977e05e404556941291cafa589ad7.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0197)

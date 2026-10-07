@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `F459` | `8005543547861` | `F459-publisher-product-sheet.pdf` PDF p. 1 |
+| `F459` | `8005543547861` | [F459-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/56/25/56250d59925cbc58fb2f2c36a2cdea569755c58c76d9b5b3994081761cafd70a.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `F459` | Driver Manager | Canonical commercial record `2546` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -52,7 +60,6 @@ EANs identify the named commercial variant, not the configured physical device o
 | Connections | `Ethernet 10/100 Mbit; USB for PC firmware update; reset; RS232; video-entry SCS; burglar-alarm SCS` | `MM00883-a-EN.pdf` printed/PDF p. 1 |
 | Indicators | `SPEED, LINK, SYSTEM` | `MM00883-a-EN.pdf` printed/PDF p. 1 |
 | Driver scope | `MyHOME–Nuvo preinstalled according to 2016 sheet; other integrations require the specific installed driver` | `MM00883-a-EN.pdf` printed/PDF p. 1 |
-
 | Publisher rated voltage / current | `27 Vdc` / `0.125 A` in product-characteristics paragraph; agrees with nominal SCS sheet values | `F459-publisher-product-sheet.pdf` PDF p. 1 |
 
 ### Publisher export attributes
@@ -102,6 +109,22 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `65` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `65` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -113,6 +136,21 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `721` | `1052` | Undefined (key `5`) | `0` | Extra | `2193_2.0_LGG\xml\Extra\extra.xml` |
+| `721` | `1053` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2193_2.0_LGG\xml\Protocol\protocol.xml` |
+| `811` | `1070` | Undefined (key `5`) | `0` | Extra | `2193_2.1_LGG\xml\Extra\extra.xml` |
+| `811` | `1071` | Undefined (key `5`) | `0` | Protocol and other device parameters | `2193_2.1_LGG\xml\Protocol\protocol.xml` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+Official firmware `721` is `2.0.0`; firmware `811` has two retained build rows, `2.1.0` and `2.1.1`. Neither firmware has a catalogue-default flag. Both place external Object `142` (database key `642`) in slot `1` with no filters or slot predicates. The item firmware surface contains only AID; the reusable network/gateway/address fields and four parameter-file associations are retained separately. The linked F459_020105 firmware payload was not inspected and is not a catalogue build row.
 
 ## Module, Object, and Virgin Object model
 
@@ -133,26 +171,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `721` | Product Programming | `3` | Association key `4` |
-| `811` | Product Programming | `3` | Association key `4` |
+| `721` | Product Programming | `3` | Canonical firmware/mode association |
+| `811` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `721` | Ethernet | `2` |
-| `721` | Ethernet over USB | `4` |
-| `811` | Ethernet | `2` |
-| `811` | Ethernet over USB | `4` |
+| `721` | Ethernet | Canonical firmware/connection association |
+| `721` | Ethernet over USB | Canonical firmware/connection association |
+| `811` | Ethernet | Canonical firmware/connection association |
+| `811` | Ethernet over USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `721` | `5` | `0` | `2193_2.0_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `721` | `5` | `0` | `2193_2.0_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `811` | `5` | `0` | `2193_2.1_LGG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `811` | `5` | `0` | `2193_2.1_LGG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -170,6 +199,10 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | Web password | Public default Admin123; replacement `8..10` characters; not an observed credential | `RA00147AA_I_EN.pdf` p. 16 |
 | Date / time / languages | Manual or NTP automatic time; clock always slave on SCS; timezone; driver / web language options | `RA00147AA_I_EN.pdf` pp. 17-18 |
 | Driver update / reinstall | Update retains configuration; reinstall loses configuration; separate actions | `RA00147AA_I_EN.pdf` p. 13 |
+
+### Nuvo association and restoration scope
+
+The manual requires zones first created with the Nuvo player app, controls configured for CEN+ in MyHOME Suite, and matching scenario numbers; association search listens for a control press within 10 seconds (RA00147AA_I_EN pp. 24–28). Saving and applying a zone/scenario overwrites the current configuration. The driver supports XML backup/restore; an empty driver page after loading indicates invalid configuration and the manual says not to save it (pp. 37, 43–46). These are Nuvo-driver procedures, not universal capabilities of every F459 driver.
 
 ## Firmware-scoped configuration
 
@@ -261,21 +294,15 @@ Use the web interface for platform / driver setup. `RA00147AA_I_EN.pdf` covers a
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+### Driver lifecycle and access configuration
+
+RA00147AA_I_EN pp. 8–13 lists installed driver identity/version/provider and licence state, supports enabling/disabling and upload/install, and distinguishes update retaining settings from reinstallation losing them. Nuvo is described as free in that manual; third-party examples remain conditional on a suitable installed driver/licence. Network static/DHCP setup is separate from OPEN/HMAC authentication and password-exempt IP-range configuration (pp. 14–16). These historical documentation settings are not observed credentials or an installation-specific trust range. The web password is documented as 8–10 characters; the Driver Manager is always a slave clock on SCS even when using an NTP source (pp. 16–18).
+
 ## Source reconciliation
 
 The technical sheet and English/Italian installation manuals identify F459/003549 as the Driver Manager family. Only F459 is an explicit commercial member of this catalogue item. Examples such as VRV/VRF, Hue-type lighting and Nuvo illustrate driver use; they do not guarantee that an uninstalled driver or any current third-party version is supported. The publisher export lists `230..230` V and says no LED, no update capability and no web server; its product-characteristics paragraph instead specifies 27 Vdc/0.125 A, while the 2016 technical sheet documents SCS `18..27` Vdc, LEDs, USB firmware update and web setup. These classification contradictions remain unresolved; the export is not treated as a mains wiring instruction.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MM00883-a-EN.pdf` | Printed/PDF p. 1: exact F459 interfaces, supply / draw / temperature / mounting, driver scope and published web configuration endpoint. |
-| `MyHOME Technical Guide.pdf` | PDF pp. 25, 60, 71-72, 82: exact F459 integration references; pp. 48, 54-58, 86-87, 99: K4652M2 configuration / application examples. Family examples are not measured behavior. |
-| `RA00147AA_I_EN.pdf` | Printed/PDF pp. 6-19: authentication / driver lifecycle / platform configuration; pp. 20-47: Nuvo zones, sources, scenarios and diagnostics. Driver scope remains conditional. |
-| `F459-publisher-product-sheet.pdf` | Complete description, product-characteristics and classification tables; exact commercial EAN; linked document / payload inventory remains separately scoped. |
-| `legrand-living-now-historical.pdf` | Printed/PDF pp. 35, 92, 94-95, 98: exact MyHOMEServer1, F459, K4652M2 and 048834 catalogue descriptions; p. 98 PIR settings and internal threshold / timing discrepancy. |
-| `MM00883_a_IT.pdf` | Printed/PDF p. 1: exact F459 interfaces, supply / draw / temperature / mounting, driver scope and published web configuration endpoint. |
-| `RA00147AA_I_IT.pdf` | Printed/PDF pp. 6-19: authentication / driver lifecycle / platform configuration; pp. 20-47: Nuvo zones, sources, scenarios and diagnostics. Driver scope remains conditional. |
+English and Italian AA manuals agree on free Nuvo licensing, update-versus-reinstallation consequences, OPEN/HMAC/range configuration and slave-clock behavior. Exact sheet MM00883-a-EN/IT documents Ethernet, serial, USB update and two labelled SCS terminals; the five catalogue bus associations do not establish five physical sockets. The English product export’s classification claims for Home + Control and voice assistants remain source-scoped, not evidence of native universal F459 services or current compatibility.
 
 ## Evidence limits and open work
 
@@ -309,16 +336,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `MM00883-a-EN.pdf` | `5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676` | 168950 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/5c/f5/5cf5493496f59ca1c8529f2309703c7b66d7a07d44b57d2db3fb9a36ab5b9676.pdf) |
-| `MyHOME Technical Guide.pdf` | `a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9` | 23769059 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) |
-| `RA00147AA_I_EN.pdf` | `e9c6759990488cbc2c5923bded48f71ea196657a87b358b17e8d080964abfa9b` | 12180499 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/e9/c6/e9c6759990488cbc2c5923bded48f71ea196657a87b358b17e8d080964abfa9b.pdf) |
-| `F459-publisher-product-sheet.pdf` | `56250d59925cbc58fb2f2c36a2cdea569755c58c76d9b5b3994081761cafd70a` | 404304 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/56/25/56250d59925cbc58fb2f2c36a2cdea569755c58c76d9b5b3994081761cafd70a.pdf) |
-| `legrand-living-now-historical.pdf` | `f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71` | 43227320 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/f7/2a/f72ab15db14eea29dd1693203fa242c32213717b596bcee9fd2ee96ce7d53e71.pdf) |
-| `MM00883_a_IT.pdf` | `138c8523735e23dc2ac6fd877ec0af2542a2861cf7aa3073285ed13bfe11622f` | 169252 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/13/8c/138c8523735e23dc2ac6fd877ec0af2542a2861cf7aa3073285ed13bfe11622f.pdf) |
-| `RA00147AA_I_IT.pdf` | `7a767d2e4a8cea7490a71cb8d70a0acd8f9f1103dee3570e4cd11f670e3b687d` | 12182263 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/7a/76/7a767d2e4a8cea7490a71cb8d70a0acd8f9f1103dee3570e4cd11f670e3b687d.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0198)

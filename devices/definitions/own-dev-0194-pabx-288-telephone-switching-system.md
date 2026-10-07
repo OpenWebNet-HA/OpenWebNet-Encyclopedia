@@ -22,6 +22,14 @@
 | --- | --- | --- | --- |
 | BTicino | `345829` | Established catalogue identity | Manufacturer database commercial record `1958` explicitly links this SKU to item `1819` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `345829` | PABX288 automatic telephone switching system | Canonical commercial record `1958` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -59,6 +67,19 @@
 | Main item model / `modobj` | `33` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `33` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -70,6 +91,20 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `10` | `351` | BTicino (key `1`) | `0` | external software | `TiPABX_0200` |
+| `94` | `58` | BTicino (key `1`) | `0` | external software | `TiPABX_0200` |
+| `95` | `102` | BTicino (key `1`) | `0` | external software | `TiPABX_0101` |
+
+All 3 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+The Official releases are catalogue-default `10: 2.1.0`, `94: 2.0.23` and `95: 1.0.23`. The shared item/Object `FW_VER=3.0.0` default is not an additional firmware release. All three use Object `101` in slot `1`, with no attached filters, slot predicates, conversions or Virgin membership.
 
 ## Module, Object, and Virgin Object model
 
@@ -91,28 +126,20 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `10` | Product Programming | `3` | Association key `4` |
-| `94` | Product Programming | `3` | Association key `4` |
-| `95` | Product Programming | `3` | Association key `4` |
+| `10` | Product Programming | `3` | Canonical firmware/mode association |
+| `94` | Product Programming | `3` | Canonical firmware/mode association |
+| `95` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `10` | Ethernet | `2` |
-| `10` | USB | `3` |
-| `94` | Ethernet | `2` |
-| `94` | USB | `3` |
-| `95` | Ethernet | `2` |
-| `95` | USB | `3` |
+| `10` | Ethernet | Canonical firmware/connection association |
+| `10` | USB | Canonical firmware/connection association |
+| `94` | Ethernet | Canonical firmware/connection association |
+| `94` | USB | Canonical firmware/connection association |
+| `95` | Ethernet | Canonical firmware/connection association |
+| `95` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `10` | `1` | `0` | `TiPABX_0200` | Parameter type `7`; payload not inspected |
-| `94` | `1` | `0` | `TiPABX_0200` | Parameter type `7`; payload not inspected |
-| `95` | `1` | `0` | `TiPABX_0101` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -127,6 +154,10 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | PC setup | TiPBX; serial/USB/Ethernet associations scoped in catalogue / manual | `BT00478_a_IT.pdf` printed/PDF p. 1; `U2131F.pdf` pp. 1-4; `U2132C_S_IT.pdf`; `U2132F_U_IT.pdf` |
 | Phone-dependent operations | Additional video-control / remote activations require compatible BTicino phones | `BT00478_a_IT.pdf` printed/PDF p. 1; `U2131F.pdf` pp. 1-4; `U2132C_S_IT.pdf`; `U2132F_U_IT.pdf` |
 | Backup supply | E47/12 and 3505/12 battery; separate 12 Vdc consumption values | `BT00478_a_IT.pdf` printed/PDF p. 1; `U2131F.pdf` pp. 1-4; `U2132C_S_IT.pdf`; `U2132F_U_IT.pdf` |
+
+### Default installation and phone limits
+
+U2131F p. 4 and BT00478-a-IT p. 2 give CITO1 `1`, CITO2 `2`, principal entrance `00`, and associated internal-video addresses `09` and `10`. These factory installation values are separate from the reusable Object `SYSADDRESS=1`. The user manual explicitly excludes a 56K modem downstream of the exchange and says to connect it directly to the telephone line (U2132F_U_IT p. 6), qualifying the technical sheet’s generic modem-compatibility statement. On mains loss, extensions 401/402 remain associated with outside lines 1/2 (p. 12); this is distinct from the specified optional 12 V backup supply and does not establish backup runtime.
 
 ## Firmware-scoped configuration
 
@@ -233,19 +264,13 @@ TiPBX configures and updates the exchange through its documented PC routes. Use 
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+TiPABX validates the project before allowing Download; errors disable that action. Download sets date/time and offers Ethernet address/discovery, serial COM/discovery or automatic USB detection. Upload retrieves the existing project; firmware update selects a `.fwz` and uses those connection routes (U2132C_S_IT, pp. 8, 24–26). The hardware’s serial connector is documented even though the catalogue connection associations list only Ethernet and USB.
+
 ## Source reconciliation
 
 The exact technical sheet identifies 345829, base / expanded capacities and backup supply separately. The technical sheet names cable 336904 whereas the installation leaflet names L4669/346904: their shared 700 m figure is retained without assuming all cable references are interchangeable. The nominal mains specification is 50/60 Hz despite a diagram legend mentioning 60 Hz. The Italian product export gives `110..230` Vac, while the technical sheet and installation label give `110..240` Vac; these source ranges are kept separately. The single catalogue Object is the two-wire PABX interface, independent of the telephone-extension count.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `345829-italian-product-sheet.pdf` | Exact commercial description and technical attributes; EAN used only if explicitly present; European compliance boilerplate is not a publication revision. |
-| `BT00478_a_IT.pdf` | Printed/PDF pp. 1-6: supply / current, capacity / expansion, interfaces / cables, integration and wiring examples; diagram and text differences preserved. |
-| `U2131F.pdf` | PDF pp. 1-4: mains / backup connections, cable lengths, interface diagram, mounting / expansion; source cable codes preserved. |
-| `U2132C_S_IT.pdf` | Printed/PDF pp. 4-26: prerequisites, PC connection, telephone / video parameters, project / scenarios / commands, validation, transfer and firmware update. |
-| `U2132F_U_IT.pdf` | Printed/PDF pp. 6-16: telephone / video-entry operation, DISA/DOSA, home automation commands, scenarios and recorded messages; source-dependent phone capabilities. |
+The catalogue stores private/public 8-wire video-entry bus labels, while the exact hardware sheet, U2131F and Object `101` explicitly describe a two-wire interface. Both source scopes are preserved; the database labels are not used to describe the physical wiring. The technical sheet says pulse or multifrequency dialling, but its service text says extension DC signalling is not detected and requires DTMF; the generic compatibility wording is not a promise of every legacy handset service.
 
 ## Evidence limits and open work
 
@@ -264,14 +289,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `345829-italian-product-sheet.pdf` | `c02f7175ac39f1b45fdbb55479662090469d5ded62dea10d93ab1f8f0592c4c3` | 15232 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/c0/2f/c02f7175ac39f1b45fdbb55479662090469d5ded62dea10d93ab1f8f0592c4c3.pdf) |
-| `BT00478_a_IT.pdf` | `abe77364fdab3dbcbea80c7cfae5a6aae9054fb4aa4381e6e53d9189aed7ed5e` | 2019348 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/ab/e7/abe77364fdab3dbcbea80c7cfae5a6aae9054fb4aa4381e6e53d9189aed7ed5e.pdf) |
-| `U2131F.pdf` | `a3b9b5ac80174c8c754178901b1e9b1a2c62ddfdedeb555d19fb5b07073f5537` | 686435 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/a3/b9/a3b9b5ac80174c8c754178901b1e9b1a2c62ddfdedeb555d19fb5b07073f5537.pdf) |
-| `U2132C_S_IT.pdf` | `5083ca71ad737d475fb186e5984cdc6ddcd477163b58b57cccdaa049c66bc12f` | 2897173 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/50/83/5083ca71ad737d475fb186e5984cdc6ddcd477163b58b57cccdaa049c66bc12f.pdf) |
-| `U2132F_U_IT.pdf` | `c9d072a0fccf2022ad1983f73adf85dda50175464b9e17a81a0dc5aa8906a721` | 4438870 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/c9/d0/c9d072a0fccf2022ad1983f73adf85dda50175464b9e17a81a0dc5aa8906a721.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0194)

@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 20 |
-| reviewed | 190 |
+| review-ready | 10 |
+| reviewed | 200 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 1804 | Burglar alarm control unit with contacts | 1 | review-ready | OWN-DEV-0191 | partial | complete | complete | pending | - |
-| normal | 1812 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0192 | partial | pending | complete | pending | - |
-| normal | 1814 | Colour Touch Screen | 1 | review-ready | OWN-DEV-0193 | partial | complete | complete | pending | - |
-| normal | 1819 | PABX288 automatic telephone switching system | 1 | review-ready | OWN-DEV-0194 | partial | complete | complete | pending | - |
-| normal | 1834 | Webserver Audio/Video DIN | 1 | review-ready | OWN-DEV-0195 | partial | complete | complete | pending | - |
-| normal | 1872 | CLASSE100 X12B | 1 | review-ready | OWN-DEV-0196 | partial | complete | complete | pending | - |
-| normal | 2147 | IP55 PIR wall mounted sensor, long range | 1 | review-ready | OWN-DEV-0197 | partial | complete | complete | pending | - |
-| normal | 2193 | Driver Manager | 1 | review-ready | OWN-DEV-0198 | partial | complete | complete | pending | - |
-| normal | 2198 | MyHomeServer | 1 | review-ready | OWN-DEV-0199 | partial | complete | complete | pending | - |
-| normal | 2205 | Comando unico Living Now 2 moduli | 1 | review-ready | OWN-DEV-0200 | partial | complete | complete | pending | - |
 | normal | 2208 | Comando unico Living Now 3 moduli | 1 | review-ready | OWN-DEV-0201 | partial | complete | complete | pending | - |
 | normal | 2233 | Comando-Attuatore Living Now Luci | 1 | review-ready | OWN-DEV-0202 | partial | complete | complete | pending | - |
 | normal | 2237 | Comando-Attuatore Living Now Tapparelle | 1 | review-ready | OWN-DEV-0203 | partial | complete | complete | pending | - |
@@ -199,7 +189,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1698 | IP interface (2Wire/IP) | OWN-DEV-0189 |
 | 1768 | MyHOME_Screen 10 | OWN-DEV-0047 |
 | 1771 | IP scenario module | OWN-DEV-0190 |
+| 1804 | Burglar alarm control unit with contacts | OWN-DEV-0191 |
 | 1809 | Multimedia Touch Screen | OWN-DEV-0107 |
+| 1812 | Colour Touch Screen | OWN-DEV-0192 |
+| 1814 | Colour Touch Screen | OWN-DEV-0193 |
+| 1819 | PABX288 automatic telephone switching system | OWN-DEV-0194 |
+| 1834 | Webserver Audio/Video DIN | OWN-DEV-0195 |
 | 1847 | Key card switch RFID | OWN-DEV-0039 |
 | 1852 | DIN actuator | OWN-DEV-0147 |
 | 1854 | Probe with regulation | OWN-DEV-0038 |
@@ -207,6 +202,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1859 | DIN actuator/4 | OWN-DEV-0148 |
 | 1862 | Basic probe | OWN-DEV-0041 |
 | 1864 | IP server | OWN-DEV-0149 |
+| 1872 | CLASSE100 X12B | OWN-DEV-0196 |
 | 1884 | Energy display 2 modules | OWN-DEV-0048 |
 | 1885 | Pulses counter interface | OWN-DEV-0150 |
 | 1898 | MyHOME_Screen 10 Capacitive | OWN-DEV-0049 |
@@ -216,8 +212,12 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 2115 | 2x10A actuator, 2DIN | OWN-DEV-0153 |
 | 2131 | 1x10A actuator, 2DIN | OWN-DEV-0154 |
 | 2134 | CLASSE300 V13E/M | OWN-DEV-0108 |
+| 2147 | IP55 PIR wall mounted sensor, long range | OWN-DEV-0197 |
 | 2162 | CLASSE300 X13E | OWN-DEV-0155 |
 | 2180 | Flush mounted actuator and free control with zero crossing | OWN-DEV-0006 |
+| 2193 | Driver Manager | OWN-DEV-0198 |
+| 2198 | MyHomeServer | OWN-DEV-0199 |
+| 2205 | Comando unico Living Now 2 moduli | OWN-DEV-0200 |
 | 2214 | HOME TOUCH 7 | OWN-DEV-0156 |
 | 2242 | Add-on SCS thermostat | OWN-DEV-0109 |
 | 2243 | Comando unico MYHOME 2 moduli | OWN-DEV-0110 |

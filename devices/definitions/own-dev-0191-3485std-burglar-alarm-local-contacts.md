@@ -22,6 +22,14 @@
 | --- | --- | --- | --- |
 | BTicino - Polyx | `3485STD` | Established catalogue identity | Manufacturer database commercial record `1931` explicitly links this SKU to item `1804` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `3485STD` | Burglar alarm control unit with contacts | Canonical commercial record `1931` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -58,6 +66,18 @@
 | Main item model / `modobj` | `204` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Burglar alarm system | `204` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -67,6 +87,18 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `668` | `713` | BTicino (key `1`) | `4` | external software | `TiSecurityStandard_0100` |
+
+All 1 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+Firmware `668` records Official `9.0.0` but has no catalogue-default flag. The reusable Object `133` `FW_VER=9.0.0` is a configuration default, not an installed-firmware reading. `IS_GATEWAY=0` does not negate the PSTN communicator described by the exact manual; it is a separately scoped catalogue field.
 
 ## Module, Object, and Virgin Object model
 
@@ -86,19 +118,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `668` | Product Programming | `3` | Association key `4` |
+| `668` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `668` | Serial | `1` |
+| `668` | Serial | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `668` | `1` | `4` | `TiSecurityStandard_0100` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -116,6 +142,10 @@ Physical selectors, application limits and procedures are tied to the cited docu
 | Published OPEN-SCS families | `WHO 0`, 1, 2, 4, 5, 9 in installer manual p. 90; installed revision / operations uncorroborated | `RA00100AG_I_EN.pdf` printed/PDF pp. 46-74, 90; `BQ01001-a-EN.pdf` pp. 1-3 |
 | Zone 0 capacity | Maximum nine activators | `BQ01001-a-EN.pdf` p. 1 |
 | Contact ID technical events | `AUX=8` fire, `AUX=1` gas, `AUX=2` freezer, `AUX=3` flooding, `AUX=9` remote assistance; `Z=9` auxiliary tampering; event origin zone / device where applicable | `BQ01001-a-EN.pdf` p. 2 |
+
+### Telephone call workflow
+
+The user manual calls the Jolly number first, then the numbers assigned to that alarm, with 20 seconds between calls and up to four cycles. Later cycles retry unanswered, busy or unacknowledged calls; entering the user code stops the current alarm call sequence. When portal or Ademco service is configured, the Jolly number belongs to that service (RA00100AD_U_EN, pp. 26, 28–30, 39). These are historical manufacturer procedures, not verified present-day service availability.
 
 ## Firmware-scoped configuration
 
@@ -206,18 +236,13 @@ No physical configurators are required; use the keypad / display or TiSecuritySt
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The installer manual specifies the rear six-way serial connector and interface cable 335919 or 3559 (RA00100AG_I_EN, pp. 14, 39–40). TiSecurityStandard requires selecting the PC COM port, entering Maintenance and following its connection prompts; its diagram distinguishes a serial or USB PC connection through the programming cable from the panel’s serial connector (RA00100AB_S_EN, pp. 9–11). Configuration, voice messages and event history have separate transfer operations. Firmware update requires the rear slide switch OFF; this maintenance procedure is distinct from ordinary arming/disarming.
+
 ## Source reconciliation
 
 The exact technical sheet and installer manual agree on absorption and temperature but differ in depth (25 versus 31 mm) and give nominal versus operating supply values. Both depth values remain scoped, with no inferred mounting allowance. PSTN communication is intrinsic; GSM use requires separate 3489GSM and is not described as a built-in modem. Installer manual p. 90 explicitly lists an OPEN-SCS interface for `WHO 0`, 1, 2, 4, 5, 9; applicability to installed firmware and operations is still uncorroborated.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `BQ01001-a-EN.pdf` | Printed/PDF pp. 1-3: zones, scenarios / keys, PSTN / local interfaces, current / temperature / dimensions, Contact ID events and wiring protection notes. |
-| `RA00100AG_I_EN.pdf` | Printed/PDF pp. 3-4 contents; installation / startup, local contacts, alarm / telephone setup, maintenance and p. 90 technical/OPEN-SCS families; source-specific operating procedures. |
-| `RA00100AD_U_EN.pdf` | Printed/PDF contents and user-operation sections: arming, partition / scenario selection, event review and telephone commands; not an electrical installation authority. |
-| `RA00100AB_S_EN.pdf` | Printed/PDF software workflow and project sections: receive / edit / send, vocal messages, firmware update and alarm / telephone settings; payload encoding unexamined. |
+The technical sheet’s 27 Vdc is nominal, while the installer appendix gives an 18–28 Vdc supply range; both sources give 55 mA standby and 90 mA maximum. The 25 mm sheet depth and 31 mm installer depth remain source-specific. Online discovery on 7 October 2026 found an exact Brazilian product-page lead, but direct retrieval returned HTTP 403. Its search excerpt, EAN and linked current payloads were not incorporated as verified retained evidence. The current manufacturer support portal was also unavailable; no newer payload version was assigned to the historical catalogue firmware.
 
 ## Evidence limits and open work
 
@@ -236,13 +261,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `BQ01001-a-EN.pdf` | `3ff2590acd901029aba31134d64f37c9c60eaf951a62fa3b7fa9d038e3902625` | 241683 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/3f/f2/3ff2590acd901029aba31134d64f37c9c60eaf951a62fa3b7fa9d038e3902625.pdf) |
-| `RA00100AG_I_EN.pdf` | `cb07372bda190848f48b90c7e55ad2f1d208e011daea23a408bffbe71780caa1` | 8291268 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/cb/07/cb07372bda190848f48b90c7e55ad2f1d208e011daea23a408bffbe71780caa1.pdf) |
-| `RA00100AD_U_EN.pdf` | `52025757b3d00de752207b712511e6ca8c5897c99f126b35e2b63a37de4634ef` | 18692498 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/52/02/52025757b3d00de752207b712511e6ca8c5897c99f126b35e2b63a37de4634ef.pdf) |
-| `RA00100AB_S_EN.pdf` | `2a735a9346f86d294db13ffa081ab8d19b05098c984feb953238183b86953494` | 40161553 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/2a/73/2a735a9346f86d294db13ffa081ab8d19b05098c984feb953238183b86953494.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0191)

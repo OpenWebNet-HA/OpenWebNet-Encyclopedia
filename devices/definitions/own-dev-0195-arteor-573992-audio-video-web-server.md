@@ -22,22 +22,29 @@ Arteor 573992 is the Legrand audio / video web-server reference in the catalogue
 | --- | --- | --- | --- |
 | Legrand - Arteor | `573992` | Established catalogue identity | Manufacturer database commercial record `1976` explicitly links this SKU to item `1834` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `573992` | Webserver Audio/Video DIN | Canonical commercial record `1976` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `legrand-WHO-25.pdf` | `WHO 25` dry-contact / IR protocol specification | `Version 1.0.0; 01/11/2010` | Printed/PDF p. 13: explicit 573992 / F453AV firmware 2.1.7 applicability; protocol descriptions do not supply electrical ratings. | [Archived original](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf) | [Publisher original](https://developer.legrand.com/uploads/2019/12/WHO_25.pdf) |
-| `legrand-WHO-15-25.pdf` | `CEN` and `CEN`+ protocol specification | `Version 1.0.0; 01/10/2010` | Printed/PDF p. 24: 573992 / F453AV version 2.1.7 `CEN`/`CEN` pressure/`CEN`+ support table; protocol scope only. | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf) | [Publisher original](https://developer.legrand.com/uploads/2019/12/WHO_15-25.pdf) |
+| `WHO_25.pdf` | `WHO 25` dry-contact / IR protocol specification | `Version 1.0.0; 01/11/2010` | Printed/PDF p. 13: explicit 573992 / F453AV firmware 2.1.7 applicability; protocol descriptions do not supply electrical ratings. | [Archived original](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf) | [Publisher original](https://developer.legrand.com/uploads/2019/12/WHO_25.pdf) |
+| `WHO_15-25.pdf` | `CEN` and `CEN`+ protocol specification | `Version 1.0.0; 01/10/2010` | Printed/PDF p. 24: 573992 / F453AV version 2.1.7 `CEN`/`CEN` pressure/`CEN`+ support table; protocol scope only. | [Archived original](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf) | [Publisher original](https://developer.legrand.com/uploads/2019/12/WHO_15-25.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1834`: all firmware / commercial / system/Object/Module/Virgin / field / filter / mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
 
 ## Physical and electrical characteristics
 
+No exact 573992 electrical/mechanical sheet is retained. Dimensions, supply, draw and physical connector allocation remain unestablished; protocol support belongs under Functional applicability.
+
 | Property | Value | Evidence |
 | --- | --- | --- |
-| Published version-scoped protocol reference | `573992 at version 2.1.7, listed alongside F453AV` | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` printed/PDF p. 24; canonical item `1834` |
-| `CEN` / pressure / `CEN`+ table | `Version 2.1.7: yes / yes / yes, manufacturer CEN document` | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` printed/PDF p. 24; canonical item `1834` |
-| Dry-contact / IR-state family | `Version 2.1.7 shown as a gateway allowing the function` | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` printed/PDF p. 24; canonical item `1834` |
-| Exact SKU electrical / mechanical ratings | `Not established by retained exact-product sheet` | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` printed/PDF p. 24; canonical item `1834` |
+| Supply, current draw, dimensions and physical connectors | Not established | No retained exact-product electrical/mechanical sheet; the protocol documents establish version-scoped functions only |
 
 ## Identity
 
@@ -50,6 +57,22 @@ Arteor 573992 is the Legrand audio / video web-server reference in the catalogue
 | Main item model / `modobj` | `38` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `38` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -59,6 +82,27 @@ Arteor 573992 is the Legrand audio / video web-server reference in the catalogue
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `100` | `147` | Legrand (key `2`) | `0` | SDC | `xml\SDC\sdc.xml` |
+| `100` | `148` | Legrand (key `2`) | `0` | SVM | `1834_3.0_LG\xml\SVM\svm.xml` |
+| `100` | `149` | Legrand (key `2`) | `0` | Extra | `1834_3.0_LG\xml\Extra\extra.xml` |
+| `100` | `150` | Legrand (key `2`) | `0` | Director | `1834_3.0_LG\xml\DIRECTOR\director.xml` |
+| `100` | `151` | Legrand (key `2`) | `0` | Protocol and other device parameters | `1834_3.0_LG\xml\Protocol\protocol.xml` |
+| `100` | `173` | Legrand (key `2`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `100` | `174` | Legrand (key `2`) | `2` | SVM | `1834_3.0_LG\xml\SVM\svm.xml` |
+| `100` | `175` | Legrand (key `2`) | `2` | Extra | `1834_3.0_LG\xml\Extra\extra.xml` |
+| `100` | `176` | Legrand (key `2`) | `2` | Director | `1834_3.0_LG\xml\DIRECTOR\director.xml` |
+| `100` | `177` | Legrand (key `2`) | `2` | Protocol and other device parameters | `1834_3.0_LG\xml\Protocol\protocol.xml` |
+
+All 10 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+Catalogue-default Official firmware `100` is `3.0.7`, with fixed/designated Object `56` in slot `1` and `150` in slot `2`. The item default `FW_VER=3.0.0` and reusable Object `56` default `1.0.0` remain distinct configuration defaults. No relation filter resolves that difference; neither value is a release record. The two `IS_GATEWAY=0` defaults do not negate the manufacturer’s version-scoped gateway role. Public documentation network and port defaults are templates, not observed deployment endpoints.
 
 ## Module, Object, and Virgin Object model
 
@@ -79,28 +123,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `100` | Product Programming | `3` | Association key `4` |
+| `100` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `100` | Ethernet | `2` |
+| `100` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `100` | `2` | `0` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `100` | `2` | `0` | `1834_3.0_LG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `100` | `2` | `0` | `1834_3.0_LG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `100` | `2` | `0` | `1834_3.0_LG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `100` | `2` | `0` | `1834_3.0_LG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-| `100` | `2` | `2` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
-| `100` | `2` | `2` | `1834_3.0_LG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
-| `100` | `2` | `2` | `1834_3.0_LG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
-| `100` | `2` | `2` | `1834_3.0_LG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
-| `100` | `2` | `2` | `1834_3.0_LG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Published settings and procedures
 
@@ -108,10 +137,10 @@ Physical selectors, application limits and procedures are tied to the cited docu
 
 | Setting / operation | Published meaning or limit | Evidence |
 | --- | --- | --- |
-| Firmware `2`.1.7 applicability | 573992 explicitly named with F453AV | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` p. 24 |
-| `CEN` / `CEN` pressure / `CEN`+ | Yes / yes / yes in version-scoped protocol table | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` p. 24 |
-| Dry-contact/IR states | Gateway allowing this family at 2.1.7 | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` p. 24 |
-| Programming sequence | Exact product installation / transfer procedure unestablished by these protocol documents | `legrand-WHO-25.pdf` printed/PDF p. 13; `legrand-WHO-15-25.pdf` p. 24 |
+| Firmware `2.1.7` applicability | 573992 explicitly named with F453AV | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` p. 24 |
+| `CEN` / `CEN` pressure / `CEN`+ | Yes / yes / yes in version-scoped protocol table | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` p. 24 |
+| Dry-contact/IR states | Gateway allowing this family at 2.1.7 | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` p. 24 |
+| Programming sequence | Exact product installation / transfer procedure unestablished by these protocol documents | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` p. 24 |
 
 ## Firmware-scoped configuration
 
@@ -224,6 +253,16 @@ The correspondence below is a semantic cross-reference based on the named role a
 | --- | --- | --- |
 | Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
 
+### Published firmware-specific gateway support
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Published version-scoped protocol reference | `573992 at version 2.1.7, listed alongside F453AV` | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` printed/PDF p. 24; canonical item `1834` |
+| `CEN` / pressure / `CEN`+ table | `Version 2.1.7: yes / yes / yes, manufacturer CEN document` | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` printed/PDF p. 24; canonical item `1834` |
+| Dry-contact / IR-state family | `Version 2.1.7 shown as a gateway allowing the function` | `WHO_25.pdf` printed/PDF p. 13; `WHO_15-25.pdf` printed/PDF p. 24; canonical item `1834` |
+
+The two protocol tables establish the named functions at `573992 v2.1.7`. They do not establish a blanket support matrix for every release or make F453AV a commercial alias of 573992.
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -238,12 +277,7 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 The protocol documents explicitly associate 573992 with F453AV at 2.1.7 for their respective functions. This scoped equivalence supports protocol-family applicability, not wholesale electrical or mechanical identity. The retained canonical Firmware tuple must be compared independently with the protocol version; no installed response or unlisted operation is established.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `legrand-WHO-25.pdf` | Printed/PDF p. 13: explicit 573992 / F453AV firmware 2.1.7 applicability; protocol descriptions do not supply electrical ratings. |
-| `legrand-WHO-15-25.pdf` | Printed/PDF p. 24: 573992 / F453AV version 2.1.7 `CEN`/`CEN` pressure/`CEN`+ support table; protocol scope only. |
+Repeat manufacturer/historical/regional searches found a support-page lead for this exact server, but direct retrieval returned only a temporarily unavailable product-search component. Its indexed firmware lead was not adopted or archived as functioning product evidence. No exact electrical sheet or installation manual was recovered; the retained manufacturer protocol tables remain the bounded product evidence.
 
 ## Evidence limits and open work
 
@@ -262,11 +296,4 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 
-### Retained original fingerprints
-
-All incorporated originals were checked against the public archive by SHA-256 and byte length. Their manifest registrations were pushed on main before incorporation; previously registered originals were reused by fingerprint.
-
-| Original | SHA-256 | Retention / size |
-| --- | --- | --- |
-| `legrand-WHO-25.pdf` | `122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927` | 425272 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf) |
-| `legrand-WHO-15-25.pdf` | `8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21` | 931576 bytes; [archived original](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf) |
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0191-0200-2026-10-07.md#own-dev-0195)
