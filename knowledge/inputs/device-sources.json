@@ -68,37 +68,37 @@
     {
       "device_id": "OWN-DEV-0014",
       "path": "devices/definitions/own-dev-0014-extended-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0015",
       "path": "devices/definitions/own-dev-0015-myhome-screen-3-5.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0016",
       "path": "devices/definitions/own-dev-0016-pir-flush-mounted-sensor.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0017",
       "path": "devices/definitions/own-dev-0017-flush-mounted-temperature-central-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0018",
       "path": "devices/definitions/own-dev-0018-local-display.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0019",
       "path": "devices/definitions/own-dev-0019-three-module-touch-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0020",
       "path": "devices/definitions/own-dev-0020-load-control-panel.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0021",
@@ -108,42 +108,42 @@
     {
       "device_id": "OWN-DEV-0022",
       "path": "devices/definitions/own-dev-0022-two-relay-din-actuator-10-a.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0023",
       "path": "devices/definitions/own-dev-0023-four-relay-din-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0024",
       "path": "devices/definitions/own-dev-0024-two-module-soft-touch-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0025",
       "path": "devices/definitions/own-dev-0025-din-dimmer-1000-w.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0026",
       "path": "devices/definitions/own-dev-0026-four-scenario-control-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0027",
       "path": "devices/definitions/own-dev-0027-flush-mounted-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0028",
       "path": "devices/definitions/own-dev-0028-rotary-regulation-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0029",
       "path": "devices/definitions/own-dev-0029-radio-receiver-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0030",
