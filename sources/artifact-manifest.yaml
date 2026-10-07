@@ -8117,6 +8117,27 @@ artifacts:
   language_evidence: Manufacturer filename or document-language metadata; und pending original inspection
   notes:
   - Original manufacturer response retrieved on 2026-10-05. Original PDF bytes uploaded, public retrieval SHA-256 and size verified, then immediately registered on main before incorporation.
+- id: device-doc-mosaic-historical-catalogue-excerpt-20261007
+  kind: documentation
+  publisher: Legrand
+  title: Mosaic manufacturer catalogue excerpt including touchscreen 78474
+  media_type: application/pdf
+  filename: Mosaic-historical-catalogue-excerpt.pdf
+  version_label: Historical English Mosaic catalogue excerpt, printed p.801/PDF p.10; catalogue publication date not established
+  size: 11414316
+  sha256: 43f43160656eb3a6841197c032e3fb20c4acd4ca58f32a1e4001ca465afc09af
+  source_url: https://static.chipdip.ru/lib/818/DOC035818437.pdf
+  storage:
+    bucket: openwebnet-documents
+    object_key: sha256/43/f4/43f43160656eb3a6841197c032e3fb20c4acd4ca58f32a1e4001ca465afc09af.pdf
+    visibility: public
+    public_url: https://archive.openwebnet-ha.org/sha256/43/f4/43f43160656eb3a6841197c032e3fb20c4acd4ca58f32a1e4001ca465afc09af.pdf
+  language:
+  - en
+  language_evidence: Language verified by reading the retained manufacturer original
+  notes:
+  - Manufacturer-authored historical Legrand catalogue excerpt retrieved intact from distributor Chipdip, not a publisher-hosted response. Manufacturer publication date and original publisher URL are not established.
+  - Original PDF bytes uploaded, public retrieval SHA-256 and byte length verified, then immediately registered and pushed on main before incorporation.
 - id: device-doc-mq00065-d-fr-20261006
   kind: documentation
   publisher: BTicino / Legrand
