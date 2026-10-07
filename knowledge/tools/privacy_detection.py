@@ -12,6 +12,13 @@ import re
 OCTET = r"(?:25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})"
 HEX8_PATTERN = re.compile(r"(?i)(?<![0-9a-f])[0-9a-f]{8}(?![0-9a-f])")
 MARKUP = frozenset(chr(96) + "*_[]()")
+PUBLIC_DOCUMENT_PATTERN = re.compile(
+    r"(?i)\b(?:LE\d{5}[A-Z]{2}|RA\d{5}[A-Z]{2}(?:_[A-Z_0-9]+)?|"
+    r"ST[-_]\d{8}[-_](?:REV\d+[-_])?(?:EN|IT|FR|ES|DE)(?:\.pdf)?)\b"
+)
+PRIVATE_PATH_PATTERN = re.compile(
+    r"(?i)(?:(?<![a-z0-9/:.])|(?<=file://))(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"
+)
 QUALIFIER = r"(?:installed|observed|physical|scanned|test|tested|captured|interviewed|light-control-only)"
 DEVICE_ID_CONTEXT_PATTERN = re.compile(
     rf"(?ix)(?P<context>\b(?:(?P<qualifier>{QUALIFIER})\s+)?"
@@ -43,6 +50,7 @@ def _plain_markdown(text: str) -> str:
 def installed_device_id_matches(text: str) -> list[SensitiveMatch]:
     plain = _plain_markdown(text)
     matches: list[SensitiveMatch] = []
+    public_documents = [(m.start(), m.end()) for m in PUBLIC_DOCUMENT_PATTERN.finditer(text)]
     seen: set[tuple[int, int]] = set()
     for context in DEVICE_ID_CONTEXT_PATTERN.finditer(plain):
         tail = plain[context.end():]
@@ -64,6 +72,11 @@ def installed_device_id_matches(text: str) -> list[SensitiveMatch]:
             if stop:
                 end = context.end() + stop.start()
         for token in HEX8_PATTERN.finditer(plain, context.end(), end):
+            # Exact public technical-sheet identifiers are not installed Device IDs.
+            # Keep this exception narrow: arbitrary eight-hexadecimal filenames
+            # and identifiers still require sanitization in installed contexts.
+            if any(start <= token.start() and token.end() <= end for start, end in public_documents):
+                continue
             key = (token.start(), token.end())
             if key in seen:
                 continue
@@ -79,7 +92,7 @@ NETWORK_TRANSFORMS = (
     ("hardware_id", re.compile(r"(?i)(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])"), "[MAC_ADDRESS]"),
     ("hardware_id", re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"), "[INSTANCE_IDENTIFIER]"),
     ("person_identifier", re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"), "[PERSONAL_IDENTIFIER]"),
-    ("other", re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"), "[LOCAL_PATH]"),
+    ("other", PRIVATE_PATH_PATTERN, "[LOCAL_PATH]"),
     ("credential", re.compile(r"(?i)\b(password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*[\"']?[^\s\"'<>]{4,}"), r"\1=[REDACTED]"),
 )
 

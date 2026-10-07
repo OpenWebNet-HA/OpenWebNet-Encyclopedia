@@ -18,10 +18,14 @@ GLOBAL_INPUTS = {
     "knowledge/inputs/identities.json",
     "knowledge/inputs/chunk-identities.json",
     "knowledge/inputs/canonical-sources.jsonl",
+    "knowledge/inputs/device-sources.json",
+    "devices/work-queue.yaml",
 }
 CLAIM_INPUTS = {
     "knowledge/inputs/claim-records.json",
     "knowledge/inputs/claim-coverage.json",
+    "knowledge/inputs/device-unit-review.json",
+    "knowledge/inputs/claim-context.json",
 }
 REFERENCE_INPUTS = {"knowledge/inputs/reference-records.json"}
 
@@ -92,7 +96,8 @@ def git_changes(root: Path, base: str, head: str) -> list[dict[str, str]]:
 
 
 def canonical_path(path: str) -> bool:
-    return path.endswith(".md") and path.split("/", 1)[0] in CANONICAL_AREAS
+    return (path.endswith(".md") and path.split("/", 1)[0] in CANONICAL_AREAS
+            or re.fullmatch(r"devices/definitions/own-dev-\d{4}-[a-z0-9-]+\.md", path) is not None)
 
 
 def seed_indices(root: Path) -> dict[str, Any]:

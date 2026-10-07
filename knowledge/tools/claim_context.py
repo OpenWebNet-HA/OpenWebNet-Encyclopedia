@@ -15,6 +15,7 @@ VERB = re.compile(
     re.I,
 )
 WORD = re.compile(r"[A-Za-z0-9]+")
+REVIEW_STATUSES = {"reviewed-phase16b", "reviewed-device-pilot"}
 STRIP_MARKUP = re.compile(r"[^A-Za-z0-9]+")
 
 def atomicity_reasons(statement: str) -> list[str]:
@@ -96,11 +97,14 @@ def materialize_statement(statement: str, section: dict, block_indexes: list[int
 
 
 def validate_atomicity_review(statement: str, section: dict, review: dict) -> str:
-    if set(review) != {"block_indexes", "mode", "review_status"}:
+    fields = {"block_indexes", "mode", "review_status"}
+    if review.get("review_status") == "reviewed-device-pilot":
+        fields.add("source_unit_key")
+    if set(review) != fields:
         raise ValueError("atomicity review has unknown or missing fields")
-    if review["review_status"] != "reviewed-phase16b":
+    if review["review_status"] not in REVIEW_STATUSES:
         raise ValueError("atomicity review is not approved")
-    expected = best_block_indexes(statement, section)
+    expected = reviewed_block_indexes(statement, section, review)
     if review["block_indexes"] != expected:
         raise ValueError("atomicity source block mapping is stale")
     reasons = atomicity_reasons(statement)
@@ -112,6 +116,19 @@ def validate_atomicity_review(statement: str, section: dict, review: dict) -> st
     if residual:
         raise ValueError("materialized claim is still structurally incomplete: " + ",".join(residual))
     return rendered
+
+
+def reviewed_block_indexes(statement: str, section: dict, review: dict) -> list[int]:
+    if review.get("review_status") != "reviewed-device-pilot":
+        return best_block_indexes(statement, section)
+    from device_units import source_units
+    if not section.get("provenance", {}).get("path", "").startswith("devices/definitions/"):
+        raise ValueError("Device review status used outside a Device definition")
+    units = {unit["key"]: unit for unit in source_units(section)}
+    unit = units.get(review.get("source_unit_key"))
+    if unit is None:
+        raise ValueError("Device claim has an unknown source unit")
+    return [unit["block_index"]]
 
 IMPLEMENTATION_TITLE = re.compile(r"(?:MyHOME(?:_Suite| Suite)|OPEN\.db|MHCatalogue\.db|ScenarioDevices)", re.I)
 
@@ -165,9 +182,11 @@ def validate_evidence_review(seed: dict, section: dict, review: dict,
                              resolved_source_id: str, path: str) -> None:
     expected_fields = {"applicability", "block_indexes", "evidence_class",
                        "resolved_source_id", "review_status", "widening_override"}
-    if set(review) != expected_fields or review["review_status"] != "reviewed-phase16b":
+    if review.get("review_status") == "reviewed-device-pilot":
+        expected_fields.add("source_unit_key")
+    if set(review) != expected_fields or review["review_status"] not in REVIEW_STATUSES:
         raise ValueError("claim evidence review has unknown, missing, or unapproved fields")
-    if review["block_indexes"] != best_block_indexes(seed["statement"], section):
+    if review["block_indexes"] != reviewed_block_indexes(seed["statement"], section, review):
         raise ValueError("claim evidence block mapping is stale")
     current = (seed["evidence_class"], resolved_source_id, seed["applicability"])
     reviewed = (review["evidence_class"], review["resolved_source_id"], review["applicability"])

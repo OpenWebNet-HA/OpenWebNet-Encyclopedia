@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 from prepare_sources import read_manifest, safe_source_file
-from privacy_detection import device_id_values, installed_device_id_matches
+from privacy_detection import device_id_values, installed_device_id_matches, PRIVATE_PATH_PATTERN
 
 KNOWLEDGE_ROOT = Path(__file__).resolve().parents[1]
 ROOT = KNOWLEDGE_ROOT.parent
@@ -32,7 +32,7 @@ PATTERNS = {
     "email address": re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"),
     "UUID": re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"),
     "credential assignment": re.compile(r"(?i)\b(?:password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*(?![\"']?\[REDACTED\](?=[^A-Za-z0-9_]|$))[\"']?[^\s\"'<>]{4,}"),
-    "private filesystem path": re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"),
+    "private filesystem path": PRIVATE_PATH_PATTERN,
 }
 
 def generated_files() -> list[Path]:

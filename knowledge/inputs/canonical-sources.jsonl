@@ -133,3 +133,13 @@
 {"classification":"publishable","source_id":"ownkb:source:s000157","source_path":"scenario-engine/open-questions.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000158","source_path":"scenario-engine/parameters.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000159","source_path":"scenario-engine/sources-and-identifiers.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000163","source_path":"devices/definitions/own-dev-0001-two-channel-universal-dimmer.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000164","source_path":"devices/definitions/own-dev-0002-audio-video-web-server-gateway.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000165","source_path":"devices/definitions/own-dev-0010-pir-us-daylight-presence-sensor.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000166","source_path":"devices/definitions/own-dev-0021-one-relay-din-actuator-16-a.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000167","source_path":"devices/definitions/own-dev-0045-shutter-actuator-bus.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000168","source_path":"devices/definitions/own-dev-0076-room-controller-2-universal-dimming-outputs.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000169","source_path":"devices/definitions/own-dev-0200-living-now-k4652m2-multifunction-control.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000170","source_path":"devices/definitions/own-dev-0207-f460-myhome-server.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000171","source_path":"devices/definitions/own-dev-0209-f459t-hvac-driver-manager.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000172","source_path":"devices/definitions/own-dev-0210-345000-linea-5000-entrance-panel-display.md","source_type":"canonical_documentation"}

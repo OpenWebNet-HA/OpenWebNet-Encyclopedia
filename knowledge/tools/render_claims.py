@@ -159,6 +159,9 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
         published_statement = validate_claim_context(seed, source_id, section, contexts[identity]["atomicity"])
+        if contexts[identity]["atomicity"]["review_status"] == "reviewed-device-pilot":
+            if contexts[identity]["atomicity"]["source_unit_key"] != contexts[identity]["evidence"].get("source_unit_key"):
+                raise ValueError("Device atomicity and evidence reviews name different source units")
         if INTERNAL_MARKDOWN_AST_REPR.search(published_statement):
             raise ValueError(f"internal Markdown AST leaked into claim statement: {identity}")
         validate_evidence_review(seed, section, contexts[identity]["evidence"], source_id, doc["path"])
@@ -225,7 +228,7 @@ def claim_coverage_metrics(ir: dict, claims: list[dict], coverage_path: Path) ->
     bounded_areas = ("protocol", "functional", "diagnostics", "programming", "device-model",
                      "internals", "reverse-engineering", "scenario-engine")
     target_documents = {area: [document for document in ir["documents"]
-                               if document["path"].startswith(area + "/")]
+                               if document["namespace_context"]["area"] == area]
                         for area in bounded_areas}
     actual_counts = Counter(claim["provenance"][0]["location"]["section_id"] for claim in claims)
     metrics = {"records": len(claims), "bounded_domains": {}}

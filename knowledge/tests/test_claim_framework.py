@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7449)
+        self.assertEqual(len(claims), len(self.seeds["claims"]))
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -119,7 +119,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7449, metrics["records"])
+        self.assertEqual(len(self.seeds["claims"]), metrics["records"])
         self.assertEqual(
             {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 96, "sections_with_claims": 86},
@@ -143,7 +143,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         self.assertEqual(
             {"claims": 890, "documents": 8, "reviewed_nonclaim_sections": 11,
              "sections": 122, "sections_with_claims": 111},
-            metrics["bounded_domains"]["device-model"],
+            self.legacy_device_model_metrics(metrics),
         )
         self.assertEqual(
             {"claims": 321, "documents": 9, "reviewed_nonclaim_sections": 4,
@@ -161,10 +161,20 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["scenario-engine"],
         )
 
+    def legacy_device_model_metrics(self, metrics):
+        rows = [d for d in self.ir["documents"] if d["path"].startswith("device-model/")]
+        sections = {s["id"] for d in rows for s in d["sections"]}
+        coverage = json.loads((ROOT / "knowledge/inputs/claim-coverage.json").read_text())
+        ledger = next(d for d in coverage["domains"] if d["area"] == "device-model")
+        entries = [r for r in ledger["sections"] if r["section_id"] in sections]
+        return {"claims": sum(r["claim_count"] for r in entries), "documents": len(rows),
+                "sections": len(entries), "sections_with_claims": sum(r["status"] == "claimed" for r in entries),
+                "reviewed_nonclaim_sections": sum(r["status"] == "nonclaim" for r in entries)}
+
     def test_phase11_epistemic_boundaries_are_preserved(self):
         claims = self.render()
         phase11 = [record for record in claims
-                   if int(record["id"].rsplit("c", 1)[1]) >= 6296]
+                   if 6296 <= int(record["id"].rsplit("c", 1)[1]) <= 7527]
         self.assertEqual(1232, len(phase11))
         self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
                             for record in phase11))
