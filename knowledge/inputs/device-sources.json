@@ -328,52 +328,52 @@
     {
       "device_id": "OWN-DEV-0066",
       "path": "devices/definitions/own-dev-0066-scenario-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0067",
       "path": "devices/definitions/own-dev-0067-four-relay-din-actuator-16-a.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0068",
       "path": "devices/definitions/own-dev-0068-one-module-one-relay-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0069",
       "path": "devices/definitions/own-dev-0069-scs-dali-gateway.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0070",
       "path": "devices/definitions/own-dev-0070-din-contacts-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0071",
       "path": "devices/definitions/own-dev-0071-module-contacts-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0072",
       "path": "devices/definitions/own-dev-0072-basic-contacts-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0073",
       "path": "devices/definitions/own-dev-0073-din-dimmer-1000-va.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0074",
       "path": "devices/definitions/own-dev-0074-din-dimmer-2x400-va.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0075",
       "path": "devices/definitions/own-dev-0075-room-controller-4-output-0-10-v.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0076",
@@ -383,52 +383,52 @@
     {
       "device_id": "OWN-DEV-0077",
       "path": "devices/definitions/own-dev-0077-multi-application-room-controller.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0078",
       "path": "devices/definitions/own-dev-0078-scs-scs-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0079",
       "path": "devices/definitions/own-dev-0079-room-controller-2-output-0-10-v.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0080",
       "path": "devices/definitions/own-dev-0080-scenario-programmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0081",
       "path": "devices/definitions/own-dev-0081-1-relay-din-actuator-16-a-100-240-v.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0082",
       "path": "devices/definitions/own-dev-0082-room-controller-1-output-16-amps.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0083",
       "path": "devices/definitions/own-dev-0083-2-relay-din-actuator-16-a-100-240-v.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0084",
       "path": "devices/definitions/own-dev-0084-ip55-pir-wall-mounted-sensor.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0085",
       "path": "devices/definitions/own-dev-0085-burglar-alarm-central-unit-with-communicator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0086",
       "path": "devices/definitions/own-dev-0086-polyx-alarm.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0087",
