@@ -90,7 +90,7 @@ def main() -> int:
     frame_val = Draft202012Validator(frame_schema)
     privacy_val = Draft202012Validator(privacy_schema)
 
-    packages = sorted([p for p in EVIDENCE_DIR.iterdir() if p.is_dir() and p.name != "schema" and not p.name.startswith(".")])
+    packages = sorted([p for p in EVIDENCE_DIR.iterdir() if p.is_dir() and p.name not in {"schema", "tests"} and not p.name.startswith(".")])
 
     if not packages:
         print("No evidence packages found to validate.", file=sys.stderr)
