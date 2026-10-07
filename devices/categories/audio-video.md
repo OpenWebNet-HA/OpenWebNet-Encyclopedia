@@ -1,11 +1,20 @@
 # Audio / Video
 
-| Device ID | Commercial identity | Description | Relevant functions |
+Video-entry, sound and multimedia devices, together with controls or interfaces serving those functions. A documented application may control another system device without creating an additional local protocol Object.
+
+Table abbreviations: UI = user interface; IR = infrared.
+
+## Devices
+
+| Device ID | Commercial references | Description | Relevant functions |
 | --- | --- | --- | --- |
-| [OWN-DEV-0013](../definitions/own-dev-0013-video-display.md) | 8-record Video Display family | Video Display | Internal unit, lock, autoswitch, staircase-light and paging functions |
+| [OWN-DEV-0013](../definitions/own-dev-0013-video-display.md) | `344400`, `344401`, `349311` and variants | Video Display | Internal unit, lock, autoswitch, staircase-light and paging functions |
 | [OWN-DEV-0024](../definitions/own-dev-0024-two-module-soft-touch-control.md) | `HC/HS4653/2`, `HD4653M2` | Two-module capacitive Soft Touch SCS command with configurable function and UI settings | Configured lighting, scenarios, sound and door-entry command roles; separate UI settings |
 | [OWN-DEV-0028](../definitions/own-dev-0028-rotary-regulation-control.md) | `HC/HS/HD4563`, `L/N/NT4563` | Flush-mounted rotary SCS control | Advanced dimmer adjustment and sound volume/source controls; mode-specific settings |
 | [OWN-DEV-0029](../definitions/own-dev-0029-radio-receiver-interface.md) | `HC/HS/HD4575`, `L/N/NT4575`, `L/N/NT4575N` | Flush-mounted 868 MHz radio-to-SCS receiving interface | Radio-to-SCS bridge, sound functions, self-learning and remote F420 scenes |
+| [OWN-DEV-0047](../definitions/own-dev-0047-myhome-screen-10.md) | `MH4892`, `MH4893`, `067267` and variants | MyHOME_Screen 10 | Configured home controls, video entry and multimedia; room navigation and profiles |
+| [OWN-DEV-0049](../definitions/own-dev-0049-myhome-screen-10-capacitive.md) | `MH4892C`, `MH4893C`, `067228` and variants | MyHOME_Screen 10C | Capacitive home-control/video interface; separate hardware and Firmware identity from Screen 10 |
+| [OWN-DEV-0050](../definitions/own-dev-0050-classe-300x.md) | `344742`, `344743`, `344745` and variants | Classe 300X video internal unit | Video entry and documented Wi-Fi/app functions; historical Firmware and hearing variants remain scoped |
 | [OWN-DEV-0089](../definitions/own-dev-0089-webserver-audio-video-din.md) | `F453AV` | Webserver Audio/Video DIN | Web supervision, CCTV/answering services; PC/handheld limits and command confirmation |
 | [OWN-DEV-0090](../definitions/own-dev-0090-enhanced-webserver.md) | `F453` | Enhanced Webserver | Enhanced Webserver/Open SCS; MHVISUAL version-6 compatibility, hardware gaps explicit |
 | [OWN-DEV-0097](../definitions/own-dev-0097-video-station.md) | `349320`, `349321` | Video Station | Video entry and configurable MyHOME menus; USB projects, ringing and reset |
@@ -16,13 +25,13 @@
 | [OWN-DEV-0115](../definitions/own-dev-0115-living-now-full-digital-control.md) | `KW8011`, `KM8011`, `KG8011` | Living Now FULL digital control | Three touch areas with icons/proximity; one-slot or three-slot role boundaries |
 | [OWN-DEV-0116](../definitions/own-dev-0116-living-now-alexa-voice-control.md) | `KW8013`, `KM8013`, `KG8013` | Living Now Alexa voice control | Alexa voice/account service plus local touch lights; source-specific setup |
 | [OWN-DEV-0127](../definitions/own-dev-0127-iryde-touch-phone.md) | `345020`, `345021` | Iryde Touch Phone | Touchscreen telephone with subsystem menus and USB/COM configuration |
-| [OWN-DEV-0129](../definitions/own-dev-0129-polyx-memory-display.md) | `344163`, `067546` | Polyx Memory Display | Video handset, answering memory and complete physical preset-menu matrix |
+| [OWN-DEV-0129](../definitions/own-dev-0129-polyx-memory-display.md) | `344163`, `067546` | Polyx Memory Display | Video handset, answering memory and physically selected preset menus |
 | [OWN-DEV-0155](../definitions/own-dev-0155-classe-300x13e-connected-video-internal-unit.md) | `344642`, `344643` | Classe 300X13E connected video internal unit | Connected video entry with physical/advanced setup, recording and camera limits |
 | [OWN-DEV-0156](../definitions/own-dev-0156-hometouch-home-automation-video-entry-display.md) | `067259`, `3488` | HOMETOUCH home automation and video-entry display | HOMETOUCH video/MyHOME control with mandatory supply and explicit server/alarm/load prerequisites |
-| [OWN-DEV-0157](../definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md) | `344682`, `344782` | Classe 100X16E connected video internal unit | Classe100X generation-specific app/firmware selection, physical modes and hearing variant boundary |
-| [OWN-DEV-0158](../definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md) | `318011`, `369420` | Easy Kit Connected video-entry kit | 369420 kit wiring/expansion/reset scope with318011 catalogue identity and documentation limits |
+| [OWN-DEV-0157](../definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md) | `344682`, `344782` | Classe 100X16E connected video internal unit | Classe100X generation-specific app/Firmware selection, physical modes and hearing variant boundary |
+| [OWN-DEV-0158](../definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md) | `318011`, `369420` | Easy Kit Connected video-entry kit | 369420 kit wiring/expansion/reset scope with `318011` catalogue identity and documentation limits |
 | [OWN-DEV-0159](../definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md) | `344842`, `344845` | Classe 300EOS connected video internal unit | EOS video/MyHOME commissioning, source-dependent recording/compatibility and hearing variant scope |
-| [OWN-DEV-0160](../definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md) | `335254`, `365225` | Easy Kit Home + Security connected internal unit | Exact335254/365225 replacement-monitor kit groups, supply and Home+Security applicability |
+| [OWN-DEV-0160](../definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md) | `335254`, `365225` | Easy Kit Home + Security connected internal unit | Exact `335254`/`365225` replacement-monitor kit groups, supply and Home+Security applicability |
 | [OWN-DEV-0162](../definitions/own-dev-0162-two-wire-ip-interface.md) | `346890` | Two-wire to IP interface | Two-wire/IP system interface with source-specific topology capacities and address endpoints |
 | [OWN-DEV-0163](../definitions/own-dev-0163-d45-ip-interface.md) | `323011` | D45 to IP interface | D45/IP interface with distinct bus/LAN connectors and conditional supply/configuration limits |
 | [OWN-DEV-0165](../definitions/own-dev-0165-two-wire-concierge-switchboard.md) | `346310` | Two-wire concierge switchboard | Concierge call routing, hierarchical alarms, service priority and programmable keys |
@@ -33,9 +42,21 @@
 | [OWN-DEV-0170](../definitions/own-dev-0170-sfera-proximity-badge-reader.md) | `353200` | Sfera proximity badge reader | Mifare Classic 1K reader with delegation, central mode and distinct deletion/reset scopes |
 | [OWN-DEV-0171](../definitions/own-dev-0171-sfera-inductive-loop-speech-module.md) | `352700` | Sfera inductive loop and speech module | Hearing-loop audio and spoken panel status; physical/software language-pack domains differ |
 | [OWN-DEV-0172](../definitions/own-dev-0172-sfera-residents-display-module.md) | `352500` | Sfera residents display module | Resident directory and call selection; local editing, repeat calls, tone defaults and keypad dependencies |
-| [OWN-DEV-0173](../definitions/own-dev-0173-sfera-night-day-wide-angle-camera.md) | `352400` | Sfera Night & Day wide-angle camera | Separate Night & Day camera with IR illumination; firmware update and translation limits |
+| [OWN-DEV-0173](../definitions/own-dev-0173-sfera-night-day-wide-angle-camera.md) | `352400` | Sfera Night & Day wide-angle camera | Separate Night & Day camera with IR illumination; Firmware update and translation limits |
 | [OWN-DEV-0189](../definitions/own-dev-0189-346891-two-wire-ip-interface.md) | `346891` | 346891 two-wire to IP interface | Two-wire/IP video-entry integration; source-specific addressing, capacities and advanced functions |
 | [OWN-DEV-0194](../definitions/own-dev-0194-pabx-288-telephone-switching-system.md) | `345829` | PABX 288 telephone switching system | PABX 288 telephone/video integration; expansions, PC transfers, modem and source-specific wiring limits |
-| [OWN-DEV-0195](../definitions/own-dev-0195-arteor-573992-audio-video-web-server.md) | `573992` | Arteor 573992 audio and video web server | Audio/video web server and Open SCS gateway; firmware-specific protocol applicability; bounded electrical/manual gap |
+| [OWN-DEV-0195](../definitions/own-dev-0195-arteor-573992-audio-video-web-server.md) | `573992` | Arteor 573992 audio and video web server | Audio/video web server and Open SCS gateway; Firmware-specific protocol applicability; bounded electrical/manual gap |
 | [OWN-DEV-0196](../definitions/own-dev-0196-classe100-x12b-energy-display-video-handset.md) | `344602` | Classe100 X12B energy-display video handset | Video handset with energy display; separate BUS supplies/draws, physical modes and segment limits |
 | [OWN-DEV-0210](../definitions/own-dev-0210-345000-linea-5000-entrance-panel-display.md) | `345000` | 345000 Linea 5000 entrance-panel display | Linea 5000 entrance display; call/access methods, reset revisions, supply/mounting/topology and app constraints |
+
+## Evidence and applicability
+
+Each Device link leads to its canonical definition, including retained manufacturer sources, catalogue relationships, Firmware applicability and evidence limits. Commercial references are selected navigation labels; combined finish codes and variant lists are expanded there.
+
+Category membership summarizes documented or catalogue-derived roles. It does not establish the installed Configuration, simultaneous availability of alternative Objects, universal OpenWebNet command support or current availability of historical services. Missing product-specific documentation is an evidence gap, not an unresolved commercial identity.
+
+## Related material
+
+- [Device Categories](README.md)
+- [Device Index](../index.md)
+- [Functional Protocol](../../functional/)
