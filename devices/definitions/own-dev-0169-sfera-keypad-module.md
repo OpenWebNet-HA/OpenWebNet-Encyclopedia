@@ -28,20 +28,28 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `353000` | `8005543461884` | `353000-publisher-product-sheet.pdf` PDF p. 1; `353000-italian-product-sheet.pdf` PDF p. 1 |
+| `353000` | `8005543461884` | [353000-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/c2/c4/c2c472eb41bf22b61752af44635534a2471c2497545dda7524a8dd0ed6377ea1.pdf) PDF p. 1; `353000-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `353000` | Keypad module | Canonical commercial record `1470` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, 15-17, 22-35, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
 | `O1688A.pdf` | Instruction Use O1688A | O1688A; printed publication date not established | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/e5/96/e596e600c46963e74b25661c638dcf4f671c8c7e94d4e6e530159a19b1bb9904.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1688A.pdf) |
-| `RA00176AC_S_EN.pdf` | Technical Guide RA00176AC_S_EN | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
+| `RA00176AC_S_EN.pdf` | Technical Guide RA00176AC_S_EN | RA00176AC-03/24-PC; printed revision label | PDF pp.6-9, 15-17, 22-35, 38-41: USB transfer, standalone/integrated keypad modes, address book and credential programming. Display-only settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
 | `RA00177AC_EN.pdf` | Technical Guide RA00177AC_EN | RA00177AC_EN; printed publication date not established | 353000: printed/PDF pp. 6-7, 12-32; wiring role, code management, relay / direct-call operation and reset. | [Archived original](https://archive.openwebnet-ha.org/sha256/49/45/4945a0c88f29312cae7a605b2386f1fef00278107844cdda137e11b07afc6b0c.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00177AC_EN.pdf) |
 | `ST-00000684-EN.pdf` | Technical Sheet ST-00000684-EN | ST-00000684-EN; 19/06/2020 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/63/05/630526f13a9a76f90a1be5af74f64bdff012d6b80f8735f0543aebfa64c74655.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000684-EN.pdf) |
 | `353000-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/c2/c4/c2c472eb41bf22b61752af44635534a2471c2497545dda7524a8dd0ed6377ea1.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-353000&include_technical=1) |
 | `353000-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/06/4e/064e8896e93f149ea55ff5b0f767a8d21e4d55ac9728faa3635e813ceb5759ac.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-353000) |
-| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable keypad pp.15-17 and credential/address-book sections pp.22-35; selected Italian mode/role cross-checks. Remaining UI walkthroughs not independently translated. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
 | `RA00177AC_IT.pdf` | Manufacturer Italian / installation document | RA00177AC_IT; printed publication date not established | 353000: printed/PDF pp. 6-7, 12-32; wiring role, code management, relay / direct-call operation and reset. | [Archived original](https://archive.openwebnet-ha.org/sha256/5e/3c/5e3c8793a5a5bc8327467681678a9e1f4f2d8f6c3327e8532c4a7b88053b6d10.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00177AC_IT.pdf) |
 | `ST_00000684_IT.pdf` | Manufacturer Italian / installation document | ST_00000684_IT; 19/06/2020 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/50/36/5036b9575228f57f9ac4217ef10ec3b2ca832638f36698e4edc7e6e83b0c2977.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000684_IT.pdf) |
 | `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
@@ -89,6 +97,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `0` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `0` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -100,6 +120,18 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `116` | `200` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `640` | `626` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0200` |
+| `732` | `1024` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 3 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -124,25 +156,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `116` | Product Programming | `3` | Association key `4` |
-| `640` | Product Programming | `3` | Association key `4` |
-| `732` | Product Programming | `3` | Association key `4` |
+| `116` | Product Programming | `3` | Canonical firmware/mode association |
+| `640` | Product Programming | `3` | Canonical firmware/mode association |
+| `732` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `116` | USB | `3` |
-| `640` | USB | `3` |
-| `732` | USB | `3` |
+| `116` | USB | Canonical firmware/connection association |
+| `640` | USB | Canonical firmware/connection association |
+| `732` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `116` | `1` | `7` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-| `640` | `1` | `7` | `TiSferaDesign_0200` | Parameter type `7`; payload not inspected |
-| `732` | `1` | `7` | `TiSferaDesign_0300` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -414,25 +438,34 @@ In standalone use A/B/C assigns address `000..999` and T selects local relay tim
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+### Manufacturer credential and commissioning settings
+
+| Setting / action | Documented behavior / boundary | Evidence |
+| --- | --- | --- |
+| Local relay timer T | 0 (absent): 4 s; 1: 1 s; 2: 10 s; 3: 20 s; 4: 40 s; 5: 60 s; 6: 90 s; 7: 180 s. Applies to standalone local relay; integrated speaker timing is a separate setting. | `ST-00000684-EN.pdf` p. 2 |
+| PC connection | Powered module for update; mini-USB/USB, virtual COM port. Transfer and firmware update are separate operations; offline project composition does not prove connection. | `RA00176AC_S_EN.pdf` pp. 6-9; exact user manual final configuration page |
+| PC auxiliary-button setting | Standalone software can enable the additional lock-release pushbutton. BP_AC_SFERA also contains tamper candidates, while CP-P2 is marked future application in the instruction; no operational tamper feature is established. | `RA00176AC_S_EN.pdf` p. 17; `O1688A.pdf` p. 1 |
+| Address book / transfer | Contacts belong to houses, buildings or residential complexes; device transfer accepts contacts from one group. Import .csv/.txt and export .csv; received device contacts form a new group and update existing entries. Contact fields include name, handset address, call code, B/F/A, ringtone, householder/guest/private flags and hidden-code confirmation. Display-only fields do not become reader hardware functions. | `RA00176AC_S_EN.pdf` pp. 22-29, 35, 38-41 |
+| Credential roles in software | Manager credentials program but do not unlock; passepartout and residents unlock but do not program. Duplicate badge assignments block configuration sending; badge acquisition uses a reader attached to the PC. | `RA00176AC_S_EN.pdf` pp. 30-34 |
+| Opening sequence | Standalone relay or integrated speaker lock: lock key, code, then lock key to confirm when shorter than the configured maximum; a full-length code completes without the final confirmation. Integrated second lock: two lock-key presses before code, with the same short/full-length rule; requires `M=3` or `M=23` and has fixed 4 s local relay timing. | `RA00177AC_EN.pdf` p. 12, visually checked illustrated table |
+| Direct call | `1..4`-digit internal-unit address `0..3999` followed by the call key. The local-mode illustration requires `M=20` or `M=23`; central `M=22` is a separate software/technical-sheet mode. | `RA00177AC_EN.pdf` p. 13; `RA00176AC_S_EN.pdf` p. 16 |
+| PC modes and code length | Integrated `M=0/2/3/20/22/23`. Central `M=2/22` disables keypad and speaker relays and uses the central unit contact; its address book is managed centrally. `M=22` calling is unavailable on risers. Standalone software offers `M=0/2`. Maximum code length `4..9`, default 9. | `RA00176AC_S_EN.pdf` pp. 15-17 |
+| Administrator / passepartout | 20 administrator codes, programming rights only; 100 passepartout codes, access only. Administrator enrolment starts at the concealed programming button and requires code confirmation. Passepartout enrolment requires an administrator. | `RA00177AC_EN.pdf` pp. 14-20 |
+| Resident codes | Up to 4000, one per apartment. Local enrolment and deletion select the apartment using compatible speaker and 352000/352100 call-button modules. Display-linked programming is referred to the 352500 manual; standalone resident capability is not inferred from aggregate capacity. | `RA00177AC_EN.pdf` pp. 12, 24-28 |
+| Timing / deletion boundaries | Programming starts within 30 s and key presses are no more than 2 s apart. Hold programming button through long beep at 10 s to erase all administrators; selective deletion uses software. Enter administrator three times to erase all passepartout codes (p. 21 heading incorrectly says administrators). Resident deletion confirms the selected apartment using the administrator again. | `RA00177AC_EN.pdf` pp. 16-17, 20-21, 27-28 |
+| Replacement / complete reset | The code-replacement key begins replacement of an existing passepartout/resident code, followed by old code, new code and confirmation. Power-on reset while holding programming button erases all stored codes and restores defaults; red LED lasts 4 s. Wait at least 1 minute before reprogramming a paired speaker/keypad installation. | `RA00177AC_EN.pdf` pp. 22-23, 29-31 |
+
 ## Source reconciliation
 
 The exact sheet distinguishes local relay C/NC/NO from the speaker module’s 18 V lock output; neither rating is substituted for the other. The current manual and AC software manual add role-specific code and direct-call procedures, while French HEXACT/Vigik modes remain market-scoped. Database video-entry and access-control Objects 480/481 are alternate roles. The current export reports product classification separately from technical-sheet configuration and does not establish firmware parity across the three database releases.
 
-### Retained source accounting
+### Source-specific operating boundaries
 
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00176AA_S_EN.pdf` | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. |
-| `O1688A.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_EN.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `RA00177AC_EN.pdf` | 353000: printed/PDF pp. 6-7, 12-32; wiring role, code management, relay / direct-call operation and reset. |
-| `ST-00000684-EN.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `353000-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `353000-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_IT.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `RA00177AC_IT.pdf` | 353000: printed/PDF pp. 6-7, 12-32; wiring role, code management, relay / direct-call operation and reset. |
-| `ST_00000684_IT.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
+The firmware AC_M domain is only 0 or 2 on all three catalogue releases, although manufacturer software and physical instructions describe integrated 3/20/22/23 as well. These missing mode values are a catalogue coverage limit, not a reason to discard the manufacturer instructions.
+
+Conditions 4925/4926 have no textual selection predicate; fixed placement does not establish priority. Rule `7154` combines AC_A and AC_B through 100 branches into AC_ADDRESS_AB=`0..99` for access-control Object `481`, although that Object has no reusable AC_ADDRESS_AB field; those fields belong to Object `480`. Rule `7166` maps `AC_M=0/2` to MODE_AC_SFERA for Object `480`. This target-field asymmetry remains unresolved. Neither referenced rule supplies a conversion for AC_C or relay timing. Catalogue relay default 255 means RELAY_OFF, whereas the physical absent-T selector means 4 s; these are different source scopes.
+
+English p. 21 has an administrator-deletion heading over a procedure that deletes passepartout codes; the action text governs the description. In the 2024 software central modes, both local relays are disabled; the 2020 physical sheet says central timing controls the relay. Do not combine these into an unqualified local-relay operation. AA/AC software revisions agree on reviewed local modes and credential roles; their exact binary payloads are not inspected.
 
 ## Evidence limits and open work
 
@@ -461,3 +494,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0169)

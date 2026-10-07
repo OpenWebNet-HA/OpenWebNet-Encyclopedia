@@ -2,7 +2,7 @@
 
 ## Summary
 
-This Light NOW device combines a shutter motor actuator with a local control and can also command a remote actuator. The documented Y4672M2S variant supports up / down operation and a stored preset position. Its detachable control and actuator parts are joined through the connector shown in the installation sheet.
+This shutter actuator and control, marketed as Light NOW or Céliane MyHOME, combines a shutter motor actuator with a local control and can also command a remote actuator. The documented Y4672M2S variant supports up / down operation and a stored preset position. Its detachable control and actuator parts are joined through the connector shown in the installation sheet.
 
 | Field | Value | Evidence |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ This Light NOW device combines a shutter motor actuator with a local control and
 
 | Brand / line | Reference | Relationship | Evidence |
 | --- | --- | --- | --- |
-| Legrand | `MX5220` | Established catalogue identity | Manufacturer database commercial record `2666` explicitly links this SKU to item `2310` |
+| Legrand - Céliane | `MX5220` | Established catalogue identity | Manufacturer database commercial record `2666` explicitly links this SKU to item `2310` |
 | BTicino - Light NOW | `Y4672M2S` | Established catalogue identity | Manufacturer database commercial record `2665` explicitly links this SKU to item `2310` |
 
 ### EAN-13 commercial identifiers
@@ -29,7 +29,17 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `Y4672M2S` | `8005543762295` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 1 |
+| `Y4672M2S` | `8005543762295` | [Retained Y4672M2S export](https://archive.openwebnet-ha.org/sha256/72/3c/723c29312a905e9179b26c8a4edde561f49a0a1a78260c447fe3b867e034645f.pdf), PDF p.1 |
+| `MX5220` | `3414972808781` | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf), EAN/Gencode field |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `Y4672M2S` | Acutator/Command Shutter Light Now | Canonical commercial record `2665` |
+| `MX5220` | Acutator/Command Shutter Light Now | Canonical commercial record `2666` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -38,6 +48,8 @@ EANs identify the named commercial variant, not the configured physical device o
 | `LE14827AA.pdf` | Instruction Use LE14827AA | LE14827AA; 07/24-02 PC | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14827AA.pdf) |
 | `Y4672M2S-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/72/3c/723c29312a905e9179b26c8a4edde561f49a0a1a78260c447fe3b867e034645f.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-Y4672M2S&include_technical=1) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2310`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `LE14826AC.pdf` | Exact MX5220 multilingual installation notice | LE14826AC; 05/26-01 PC | Printed/PDF pp.1-2 mounting variants; p.3 indication and adjustment controls; p.4 wiring, SCS supply and shutter-specific motor column. MX5230 lighting and MX5220C packaging references are separate scopes. | [Archived original](https://archive.openwebnet-ha.org/sha256/78/ca/78ca31a67be1a93dc933574dd7d0cf30ddff259881e23c050fe49e3d565c5660.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/LE14826AC.pdf) |
+| `MX5220-ean-publisher-page.html` | Exact French publisher product record | Retrieved 7 October 2026; live publisher record, no printed revision | MX5220 Céliane identity, EAN, shutter capabilities, dimensions, classification attributes and linked installation original. | [Archived original](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-bus-celiane-myhome-avec-commande-integree-pour-volet-roulant-460w-230v-2-modules) |
 
 ## Physical and electrical characteristics
 
@@ -111,6 +123,15 @@ These are the complete captured publisher classification values for the named va
 | Connectable by Internet box | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
 | Product use function | `Lighting management` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
 
+| Property | MX5220 value | Evidence |
+| --- | --- | --- |
+| SCS supply / motor load | `18..27 Vdc`; `460 W at 230 Vac`, `250 W at 110 Vac` | LE14826AC printed/PDF p.4; exact shutter column |
+| Notice current at maximum LED intensity | `9 mA` standby; `17 mA` shutter operation | LE14826AC printed/PDF p.4; `26 mA` concerns two lights on MX5230 |
+| Operating supply / temperature | `110..230 Vac`, `50/60 Hz`; `0..40 °C` | LE14826AC printed/PDF p.4 |
+| Dimensions / built-in depth | `45 x 45 x 39.9 mm`; `33 mm` built-in depth | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+| Protection / publisher standby | `IP20`; `7 mA` standby; LED-intensity context unstated | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+| Assembly accessories | Cover, ring, support and finish plate; Céliane and Arteor/Seano drawings are distinct mounting examples | LE14826AC pp.1-2; [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+
 ## Identity
 
 | Field | Value | Evidence |
@@ -122,6 +143,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `144` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `2` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `144` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -131,6 +164,12 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -184,11 +223,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `870` | Virtual Configuration | `1` | Association key `1` |
-| `870` | Advanced Configuration | `2` | Association key `2` |
-| `870` | Physical configuration | `0` | Association key `3` |
+| `870` | Physical configuration | `0` | Canonical firmware/mode association |
+| `870` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `870` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -200,6 +240,12 @@ Published product selectors and software settings are separate from catalogue mo
 | `Blue steady / white steady / blue flashing` | Load on / load off / Object unconfigured; indication is published, not captured feedback | `LE14827AA` PDF pp. 1, 3-4 |
 | `Brightness hold >2 s` | 60% default →30%→0%→100% | `LE14827AA` PDF pp. 1, 3-4 |
 | `App prerequisites, July 2024 sheet` | Android ≥5.0 with Google Play; iPhone iOS ≥12.0; these are sheet prerequisites, not current app-store compatibility | `LE14827AA` PDF pp. 1, 3-4 |
+
+| MX5220 control / indication | Published setting | Evidence |
+| --- | --- | --- |
+| LED indication | Magenta steady = load ON; blue steady = load OFF; flashing magenta = Object unconfigured | LE14826AC printed/PDF p.3 |
+| LED intensity button | Hold `>5 s` for shutter brightness; `60%` default → `30%` → `0%` → `100%`. The `>2 s` instruction is for MX5230 lights. | LE14826AC printed/PDF p.3 |
+| Shutter adjustment button | Hold `>3 s`; notice directs detailed adjustment to online catalogue. This alone does not specify the full calibration sequence. | LE14826AC printed/PDF p.3 |
 
 ## Firmware-scoped configuration
 
@@ -389,6 +435,87 @@ Catalogue Object key `665` maps to external Object `174`.
 | `PRIORITY` | `0` = Low; `1` = Medium; `2` = High; `3` = Safety | `1` | Priority; Shutter management command priority |
 | `PRE` | `1..9`; `0` = None | `0` | Preset; Shutter management preset number |
 
+### Object `413` - Scenario module control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+### Object `414` - Scheduled scenario (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+### Object `415` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (ON/OFF regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+### Object `417` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+### Object `419` - Sound diffusion control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `462` - Open lock command on session (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -507,6 +634,11 @@ The correspondence below is a semantic cross-reference based on the named role a
 | `463` | [Energy and load management](../../functional/who-18-energy-management/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
 | Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
 
+| MX5220 published capability | Scope / distinction | Evidence |
+| --- | --- | --- |
+| Motor control | Logical relay interlock or pulse control; up, down, stop, opening percentage, stored-position recall | Exact MX5220 publisher record; documented capability, no captured frames |
+| Position feedback / memorization | Closed, open or intermediate-position indication; direct self-learning of a stored opening level | Exact MX5220 publisher record; transport and procedure not established by this listing |
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -519,20 +651,19 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 ## Source reconciliation
 
-MX5220 and Y4672M2S are explicit database members of one technical item. The retained originals directly name Y4672M2S; they do not establish every electrical or packaging detail for MX5220. The database description says “Light Now”, while the exact current export markets Light NOW. The export labels the bus module non-detachable, whereas the installation drawing distinguishes control and actuator assemblies: a classification label does not erase the physical connector. The export’s `110..230` V operating range and 250 Vac contact label describe different properties. Its temperature classification (-`5..36` °C) conflicts with the installation sheet’s `0..40` °C. The lighting-oriented load / use classifications in the shutter export are preserved separately from the exact motor column. The installation terminal-capacity unit is printed m²; this appears malformed, but no alternate literal is invented.
-
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `LE14827AA.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `Y4672M2S-publisher-product-sheet.pdf` | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
+MX5220 and Y4672M2S are explicit database members of one technical item. The retained Y4672M2S originals and the separately retained MX5220 notice and product record establish variant-scoped specifications. MX5220 is marketed as Céliane, while the shared database description still says Light Now. The database description says “Light Now”, while the exact current export markets Light NOW. The export labels the bus module non-detachable, whereas the installation drawing distinguishes control and actuator assemblies: a classification label does not erase the physical connector. The export’s `110..230` V operating range and 250 Vac contact label describe different properties. Its temperature classification (`-5..36 °C`) conflicts with the installation sheet’s `0..40` °C. The lighting-oriented load / use classifications in the shutter export are preserved separately from the exact motor column. The installation terminal-capacity unit is printed m²; this appears malformed, but no alternate literal is invented.
 
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
 
+### Reviewed source boundaries
+
+The exact notices and product records are reconciled above. The five linked Light NOW brochures/catalogues remain unexamined marketing/composition sources; no calibration, electrical-rating or transport claim is derived from them. The MX5220 page also links catalogue page p.78 (2024), the connected-home guide and Céliane brochure; these remain unexamined regional marketing/accessory sources. Firmware `870`’s `SHUTTER_TYPE=3` filter excludes reusable default `0`; no replacement is inferred. Object `174` omits destination level `14`; retain that hole rather than extending an apparent range.
+
+The MX5220 listing describes an addressable SCS control in its functional text but marks its classification “Addressable: No”; that field is retained as a publisher classification discrepancy. Its `7 mA` standby value and the notice’s `9 mA` at maximum LED intensity have different stated measurement contexts. The MX5220 LED colours and shutter adjustment thresholds must not be copied to Y4672M2S. LE14826AC includes separate MX5230 lighting columns and MX5220C references; neither expands this dossier’s established catalogue identities.
+
 ## Evidence limits and open work
 
-An exact MX5220 original, the full application configuration / calibration procedure, and applicability of preset behavior to all catalogue releases remain documentation gaps. All catalogue identities remain established.
+The full application configuration / calibration procedure, the MX5220C packaging relationship beyond its inclusion in the notice, and applicability of preset behavior to all catalogue releases remain documentation gaps. All catalogue identities remain established.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
 
@@ -558,3 +689,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0161)

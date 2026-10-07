@@ -28,7 +28,15 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `346310` | `8005543408025` | `346310-publisher-product-sheet.pdf` PDF p. 1; `346310-italian-product-sheet.pdf` PDF p. 1 |
+| `346310` | `8005543408025` | [346310-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/7f/02/7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19.pdf) PDF p. 1; `346310-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `346310` | Management Center 2Wires | Canonical commercial record `1440` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
@@ -111,6 +119,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `167` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `167` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -120,6 +141,16 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `74` | `69` | BTicino (key `1`) | `0` | external software | `TiSwitchboardDevice_0100` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -139,19 +170,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `74` | Product Programming | `3` | Association key `4` |
+| `74` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `74` | USB | `3` |
+| `74` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `74` | `1` | `0` | `TiSwitchboardDevice_0100` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -178,6 +203,51 @@ These are the retained readme requirements, separate from product electrical rat
 | Framework | `.NET 3.5 SP1 or higher` | `TiSwitchboardDevice_README_v1` p.1 |
 | CPU / RAM | `1 GHz;1 GB(32-bit) or2 GB(64-bit)` | `TiSwitchboardDevice_README_v1` p.1 |
 | Disk / display | `1 GB;1024x768` | `TiSwitchboardDevice_README_v1` p.1 |
+
+### Documented operator and commissioning settings
+
+| Setting / role | Documented value or consequence | Retained manufacturer source (printed/PDF pages) |
+| --- | --- | --- |
+| Backbone address / alarms | Hierarchical backbone is unique, address `0`; riser `1..15` cannot receive technical alarms. Non-hierarchical Master `0..15`, but alarms require address `0`. | O1224E_I_EN pp.38,40-41; O1224E_S_EN pp.18-19 |
+| Slave address / association | Local `1..15`; associated Switchboard `0..15`; main entrance panel `1..80`; reproduces associated Master/backbone/riser function. | O1224E_I_EN pp.40-41 |
+| Hierarchy routing | Day calls can target backbone alone, or backbone plus riser; never riser alone. Riser `0` in the software list denotes backbone wiring. | O1224E_S_EN pp.20-21 |
+| Hierarchy transfer prerequisites | All entrance panels and Switchboards must be connected and working when sending hierarchy configuration. | O1224E_I_EN p.42 |
+| Service internal unit priority | Temporary forwarding to configured internal unit; Night entrance-panel routing has priority and bypasses both Switchboard and service unit. | O1224E_I_EN pp.17,29 |
+| Multiple service Switchboards | On the same stretch, all but one require additional supply when service forwarding is enabled; associated internal units need different addresses. | O1224E_I_EN p.29 |
+| Internal-unit day/night disabled | Riser forwards to backbone; backbone/Master forwards to associated main entrance panel. Enabled mode follows manual/automatic day/night setting. | O1224E_I_EN p.28 |
+| Day/night scheduling | Installer menu: up to `6` change times per weekday. PC software: maximum `3` day/night bands per day; weekday entries copied Monday-Friday, Saturday/Sunday separate. | O1224E_I_EN pp.33-34; O1224E_S_EN pp.32-35 |
+| Entrance-panel day/night scope | All, main or selected list; list choice is Master-only; hierarchy uses the separate hierarchy table. | O1224E_S_EN pp.32-33 |
+| Riser presence | Present/absent applies to riser; absent calls pass to backbone and follow its day/night status. | O1224E_U_EN p.41 |
+| Door lock / automation entries | Up to `12` entries with address, description and riser; riser `0` denotes backbone. | O1224E_I_EN p.35; O1224E_S_EN p.26 |
+| Relay call behavior | Local or external relay independently enabled for call/alarm. Call repeats `5 s` ON, `5 s` OFF until call ends; alarm stays ON until silenced/acknowledged. | O1224E_S_EN p.29; O1224E_I_EN p.21 |
+| Remote notification example | 346210 `MOD=8`; `N/P` encodes associated Switchboard address; do not customize `T` in this example. Output follows Switchboard call/alarm timing. | BT00680-c-EN / BT00680_c_IT p.10 |
+| Associated camera | Enable camera and give it the Switchboard local address in `P`; permits caller to see operator. Backbone does not display riser entrance-panel video; main entrance panels remain audio/video. | O1224E_I_EN pp.13,44; BT00680-c-EN pp.8,11 |
+| Alarm / notification setup | Enable/disable alarms, with optional Day-only reception; notifications require alarms and include mains lost/restored, low alarm-system battery and door status via `346260`. | O1224E_I_EN p.38; O1224E_S_EN p.27 |
+| Alarm status handling | Red = active, yellow = acknowledged, green = solved; acknowledgement and resolution are distinct operator actions. User Alarm Log is presented as backbone-only. | O1224E_U_EN pp.21-23,39-40 |
+| Technical alarm types | Flooding, freezer, emergency, gas leak, fire, intrusion, tampering, panic and technical alarm; these are documented UI categories, not verified wire event codes. | O1224E_U_EN p.40 |
+| Address-book call modes | Alphanumeric call code or block/floor/apartment. Each component at most `5` characters/digits as stated by installer manual; total `1..8` in software; must match Sfera entrance-panel mode. Changing mode requires clearing saved contacts. | O1224E_I_EN p.45; O1224E_S_EN pp.30-31 |
+| Repeated call rings | `1..5` | O1224E_I_EN p.47; O1224E_S_EN pp.30-31 |
+| Installer authentication | Numeric `5`-digit password, `0..99999` in software; manufacturer documentation default `12345`; manual recommends customization. Not an installation credential. | O1224E_I_EN pp.27,48; O1224E_S_EN p.22 |
+| PC project contents | Select/add localization package, save configuration, configure ringtones and contacts; send them together as the complete project. Firmware update uses `.fwz`; Request Device Info shows hardware/software features. | O1224E_S_EN pp.4-9,43-48 |
+| Ringtone authoring | Import `.mp3`, `.wav` or `.pcm`; trim to maximum `5 s`; associate to events. Ringtone and contact sections follow project-saving prerequisites. | O1224E_S_EN pp.37-44 |
+| Contact fields | Apartment, entrance panel or Switchboard type; name/surname, call code, SCS address and BFA fields when selected. Add/delete/filter are software operations; no numeric contact maximum established by text. | O1224E_S_EN pp.44-48 |
+| Call log | All, missed, received and sent calls; delete log; slow-flashing status LED can also signify missed calls. | O1224E_U_EN pp.28,36-38 |
+| Operator controls | Separate speaker/microphone/ringtone adjustments, day/night display brightness/contrast/colour, date/time, keypad beep, information and menu language. Screenshot values do not establish defaults or full numerical domains. | O1224E_I_EN pp.22-26,46; O1224E_U_EN pp.24-25,49-53 |
+
+### Twelve programmable function keys
+
+| Assignable function | Documented action |
+| --- | --- |
+| Door lock `1..12` | Selected configured entrance-panel lock or actuator |
+| IU / EP day-night toggle | Separate call-routing states for internal units and entrance panels |
+| Presence / service IU toggle | Riser presence or temporary service forwarding |
+| Staircase light | Staircase light activation |
+| IU / EP / Switchboard call | Call selected endpoint |
+| Local call / alarm siren | Toggle local call or alarm repetition |
+| External call / alarm siren | Toggle remote actuator repetition |
+| BFA letter | Associate a character to the block/floor/apartment call code |
+
+All function families listed in O1224E_I_EN printed/PDF pp.36-37 and O1224E_S_EN pp.23-24 are represented here. These assignments do not add local catalogue Objects.
 
 ## Firmware-scoped configuration
 
@@ -279,23 +349,11 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 English and Italian installation, software and user manuals have separate roles and are retained individually. Hierarchical support is firmware / production-scoped, while the single database Management Center Object is a capability definition. The product export’s current classifications do not remove the technical sheet’s 346890 exclusion or apartment-entrance-panel limit. Software address-book and alarm setup does not establish measured support for every optional field or external accessory.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `BT00680-c-EN.pdf` | Printed/PDF pp. 1-2 exact specifications / roles; pp.3-9 topology examples; pp.10-11 external audible notification and relay application. Examples do not establish unrestricted accessory compatibility. |
-| `O1224E_I_EN.pdf` | 346310 installation: printed/PDF pp. 5-15, 16-49; topology, MASTER / backbone / riser roles, connections and setup. |
-| `O1224E_S_EN.pdf` | 346310 software: printed/PDF pp. 4-10, 11-48; transfer / update, identity / address book, service internal unit, modes and alarm / automation settings. |
-| `O1224E_U_EN.pdf` | 346310 user operations: printed/PDF pp. 4-25, 26-55; calls, door / camera, alarms and operator settings. |
-| `346310-publisher-product-sheet.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `346310-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `BT00680_c_IT.pdf` | Printed/PDF pp. 1-2 exact specifications / roles; pp.3-9 topology examples; pp.10-11 external audible notification and relay application. Examples do not establish unrestricted accessory compatibility. |
-| `O1224E_I_IT.pdf` | 346310 installation: printed/PDF pp. 5-15, 16-49; topology, MASTER / backbone / riser roles, connections and setup. |
-| `O1224E_S_IT.pdf` | 346310 software: printed/PDF pp. 4-10, 11-48; transfer / update, identity / address book, service internal unit, modes and alarm / automation settings. |
-| `O1224E_U_IT.pdf` | 346310 user operations: printed/PDF pp. 4-25, 26-55; calls, door / camera, alarms and operator settings. |
-| `TiSwitchboardDevice_README_v1.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-
 The installation / software hierarchy paragraph prints interface `346581`, whereas the exact switchboard technical sheet and diagrams name `346851`. The transposed reference is preserved as a source discrepancy; no relationship to a separate `346581` product is inferred.
+
+The current publisher export excludes `346891`, whereas both 2016 technical sheets exclude `346890`; both reference-specific exclusions are retained without inferring interchangeability. The export lists `18..27 V`, `5..50 mA` and “Hands free: No”; the technical sheet specifies `19..27 V` and separate supplied/unsupplied currents, while the manuals explicitly document handsfree operation. These are publisher-classification discrepancies, not grounds to discard the exact operating manuals. Its hierarchy list adds Sfera Robur and omits Minisfera from the older list; applicability must follow the named source and Firmware/production limits.
+
+Six installer-menu change times and three software day/night bands use different units of scheduling: they can represent three paired day/night intervals, but their complete equivalence has not been tested. The installer manual describes a maximum five-digit new password while software specifies five numeric digits; leading-zero handling is uncorroborated. The user manual presents Alarm Log as backbone-only, while setup software also allows an address-zero Master to receive alarms; the corresponding non-hierarchical UI availability remains unconfirmed.
 
 ## Evidence limits and open work
 
@@ -312,6 +370,8 @@ These publisher-linked files were identified but are not used as retained eviden
 | `Switchboard_030003.fwz` | Firmware binary: payload, production / update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Switchboard_030003.fwz) |
 | `TiSwitchboardDevice_030015.exe` | Software installer: payload / installed compatibility unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/TiSwitchboardDevice_030015.exe) |
 
+The retained English operating/setup/settings sections, exact technical sheets and export/readme are reconciled for this Device. Italian manuals provide parallel source roles and checked topology/alarm/relay/password boundaries; their remaining UI walk-through pages have not been independently translated line by line. Generic editing gestures, demonstration contacts and screenshot dates do not establish configuration defaults. Firmware `Switchboard_030003.fwz`, installer `TiSwitchboardDevice_030015.exe`, localization payloads and the historical catalogue parameter file remain unexamined; no relation from their filenames to Firmware `74` is inferred.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -322,3 +382,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0165)

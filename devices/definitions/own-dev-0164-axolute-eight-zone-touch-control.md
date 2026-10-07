@@ -31,22 +31,32 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `HC4657M4` | `8012199942322` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 1 |
-| `HD4657M4` | `8005543412879` | `HD4657M4-publisher-product-sheet.pdf` PDF p. 1 |
-| `HS4657M4` | `8012199942346` | `HS4657M4-publisher-product-sheet.pdf` PDF p. 1 |
+| `HC4657M4` | `8012199942322` | [HC4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/82/c1/82c1b0688b53fba432e99f43d4ded91e3489ed823deb8b763cbd54767cb2edc7.pdf) PDF p. 1 |
+| `HD4657M4` | `8005543412879` | [HD4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/8e/d5/8ed547d2783cdb9d1eebe7d54a808bee09325bdc0ccf457e4113f9ae2449f584.pdf) PDF p. 1 |
+| `HS4657M4` | `8012199942346` | [HS4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/d8/d7/d8d710cbc63b8606de8df350950d062fd2abf49738f3ac5f013357a6834a86f7.pdf) PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `HC/HS/HD4657M4` | Touch control | Canonical commercial record `1191` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `MQ00110-f-EN.pdf` | Technical Sheet MQ00110-F-EN | MQ00110-f-EN; 07/06/2014 | Printed/PDF pp. 1-7: exact M4 supply/current, eight-zone topology, physical/software domains, learning/scenario/CEN modes, LED settings and cleaning/calibration. Separate M3/573912/13 values excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00110-f-EN.pdf) |
+| `MQ00110_f_EN.pdf` | Technical Sheet MQ00110-F-EN | MQ00110-f-EN; 07/06/2014 | Printed/PDF pp. 1-7: exact M4 supply/current, eight-zone topology, physical/software domains, learning/scenario/CEN modes, LED settings and cleaning/calibration. Separate M3/573912/13 values excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00110-f-EN.pdf) |
 | `U2701D.pdf` | Multilingual touch-control user manual | Part. U2701D - 03/11-01 CT; printed revision label | English printed/PDF pp.15-18; capacitive-key operation, configured-function record and 10-second cleaning suspension. Other language sections parallel these user operations; no electrical ratings claimed. | [Archived original](https://archive.openwebnet-ha.org/sha256/25/2d/252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U2701D.pdf) |
 | `HC4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/c1/82c1b0688b53fba432e99f43d4ded91e3489ed823deb8b763cbd54767cb2edc7.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HC4657M4&include_technical=1) |
 | `HD4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/d5/8ed547d2783cdb9d1eebe7d54a808bee09325bdc0ccf457e4113f9ae2449f584.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HD4657M4&include_technical=1) |
 | `HS4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/d8/d7/d8d710cbc63b8606de8df350950d062fd2abf49738f3ac5f013357a6834a86f7.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HS4657M4&include_technical=1) |
-| `MyHOME Technical Guide.pdf` | Installation Guide GUI-MHOME | GUI-MHOME; printed publication date not established; incidental older-sheet dates are not guide dates | F401 printed/PDF pp.47, 89, 93, 95, 99 and unnumbered wiring-example PDF p.58; HC/HS/HD4657M4 touch controls printed/PDF p.95. Other product sheets and their incidental dates do not date the whole guide or override exact-product limits. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
-| `eteris-historical-catalogue.pdf` | Historical exact-product manufacturer source | eteris-historical-catalogue; printed publication date not established | HW4684 printed pp.148, 151 / PDF pp.150, 153; touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf) | [Publisher original](https://www.bticino.es/pdf/C_50_EditorialContent_145_Lib_Props_GLib_AList_GLib_AItem_0_GLib_ABin.pdf) |
+| `MyHOME-Technical-Guide.pdf` | Installation Guide GUI-MHOME | GUI-MHOME; printed publication date not established; incidental older-sheet dates are not guide dates | HC/HS/HD4657M4 touch controls printed/PDF p.95. Other product sheets and their incidental dates do not date the whole guide or override exact-product limits. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
+| `eteris-historical-catalogue.pdf` | Historical exact-product manufacturer source | eteris-historical-catalogue; printed publication date not established | touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf) | [Publisher original](https://www.bticino.es/pdf/C_50_EditorialContent_145_Lib_Props_GLib_AList_GLib_AItem_0_GLib_ABin.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1191`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00224AA_EN.pdf` | Retained F460/F461 installation/configuration guide | Revision in retained original; compatibility scoped to its tables | Printed/PDF pp.7-8 manufacturer supported-product and production-batch table; pp.12-13 line topology and cross-line control table. Other device/server commissioning pages outside this Device review. | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | Publisher URL not retained in manifest |
+| `ST_00001000_EN.pdf` | Retained Classe 300EOS compatibility sheet | Original prints ST-00001580-EN; 27/06/2023 | Printed/PDF pp.7-9 system compatibility context and HC/HD/HS4657M4 minimum production batches. Archive filename differs from printed sheet identifier; other internal-unit features do not apply to this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/34/c4/34c45807e121af30e969e1635156cb33a423ccc21ddce8c05b1a6d733cb7ef36.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/ST_00001000_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -59,7 +69,7 @@ EANs identify the named commercial variant, not the configured physical device o
 | Brightness, physical | `25% default; 40%; 0%; proximity levels 65% / 70% / 20%` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
 | Brightness, virtual | `10 selectable levels` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
 | Cleaning lock | `touch opposite diagonal end zones; restores after 10 s without touching` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
-| Commissioning | `wait 2 min for automatic calibration; commands may be sent during calibration` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Commissioning | `wait 2 min for automatic calibration; commands may be automatically sent during calibration` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
 | Historical mounting | `504E masonry or PB504 hollow-wall box with H4704 support; corresponding M4 combinations` | `eteris-historical-catalogue.pdf` printed pp.77, 124 / PDF pp.79, 126 |
 | Occupied depth inside box | `20 mm for HC4657M4,HD4657M4,HS4657M4; separate from overall export depth` | `eteris-historical-catalogue.pdf` printed pp.163-165 / PDF pp.165-167 |
 | Historical HC/HS front outline | `150 x 95 mm; current publisher export lists150 x96 mm` | `eteris-historical-catalogue.pdf` printed p.156 / PDF p.158 |
@@ -133,6 +143,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `28` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `28` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -142,6 +165,12 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -249,11 +278,12 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `158` | Virtual Configuration | `1` | Association key `1` |
-| `158` | Advanced Configuration | `2` | Association key `2` |
-| `158` | Physical configuration | `0` | Association key `3` |
+| `158` | Physical configuration | `0` | Canonical firmware/mode association |
+| `158` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `158` | Advanced Configuration | `2` | Canonical firmware/mode association |
 
-No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -363,7 +393,7 @@ The following domains and defaults describe reusable Object definitions in the c
 | Field | Reusable domain | Reusable default | Meaning |
 | --- | --- | --- | --- |
 | `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
-| `APL` | `0` = `A=0` `PL=0`; `1` = `A=0` `PL=1`; `2` = `A=0` `PL=2`; `3` = `A=0` `PL=3`; `4` = `A=0` `PL=4`; `5` = `A=0` `PL=5`; `6` = `A=0` `PL=6`; `7` = `A=0` `PL=7`; `8` = `A=0` `PL=8`; `9` = `A=0` `PL=9`; `10` = `A=0` `PL=10`; `11` = `A=0` `PL=11`; `12` = `A=0` `PL=12`; `13` = `A=0` `PL=13`; `14` = `A=0` `PL=14`; `15` = `A=0` `PL=15`; `16` = `A=1` `PL=0`; `17` = `A=1` `PL=1`; `18` = `A=1` `PL=2`; `19` = `A=1` `PL=3`; `20` = `A=1` `PL=4`; `21` = `A=1` `PL=5`; `22` = `A=1` `PL=6`; `23` = `A=1` `PL=7`; `24` = `A=1` `PL=8`; `25` = `A=1` `PL=9`; `26` = `A=1` `PL=10`; `27` = `A=1` `PL=11`; `28` = `A=1` `PL=12`; `29` = `A=1` `PL=13`; `30` = `A=1` `PL=14`; `31` = `A=1` `PL=15`; `32` = `A=2` `PL=0`; `33` = `A=2` `PL=1`; `34` = `A=2` `PL=2`; `35` = `A=2` `PL=3`; `36` = `A=2` `PL=4`; `37` = `A=2` `PL=5`; `38` = `A=2` `PL=6`; `39` = `A=2` `PL=7`; `40` = `A=2` `PL=8`; `41` = `A=2` `PL=9`; `42` = `A=2` `PL=10`; `43` = `A=2` `PL=11`; `44` = `A=2` `PL=12`; `45` = `A=2` `PL=13`; `46` = `A=2` `PL=14`; `47` = `A=2` `PL=15`; `48` = `A=3` `PL=0`; `49` = `A=3` `PL=1`; `50` = `A=3` `PL=2`; `51` = `A=3` `PL=3`; `52` = `A=3` `PL=4`; `53` = `A=3` `PL=5`; `54` = `A=3` `PL=6`; `55` = `A=3` `PL=7`; `56` = `A=3` `PL=8`; `57` = `A=3` `PL=9`; `58` = `A=3` `PL=10`; `59` = `A=3` `PL=11`; `60` = `A=3` `PL=12`; `61` = `A=3` `PL=13`; `62` = `A=3` `PL=14`; `63` = `A=3` `PL=15`; `64` = `A=4` `PL=0`; `65` = `A=4` `PL=1`; `66` = `A=4` `PL=2`; `67` = `A=4` `PL=3`; `68` = `A=4` `PL=4`; `69` = `A=4` `PL=5`; `70` = `A=4` `PL=6`; `71` = `A=4` `PL=7`; `72` = `A=4` `PL=8`; `73` = `A=4` `PL=9`; `74` = `A=4` `PL=10`; `75` = `A=4` `PL=11`; `76` = `A=4` `PL=12`; `77` = `A=4` `PL=13`; `78` = `A=4` `PL=14`; `79` = `A=4` `PL=15`; `80` = `A=5` `PL=0`; `81` = `A=5` `PL=1`; `82` = `A=5` `PL=2`; `83` = `A=5` `PL=3`; `84` = `A=5` `PL=4`; `85` = `A=5` `PL=5`; `86` = `A=5` `PL=6`; `87` = `A=5` `PL=7`; `88` = `A=5` `PL=8`; `89` = `A=5` `PL=9`; `90` = `A=5` `PL=10`; `91` = `A=5` `PL=11`; `92` = `A=5` `PL=12`; `93` = `A=5` `PL=13`; `94` = `A=5` `PL=14`; `95` = `A=5` `PL=15`; `96` = `A=6` `PL=0`; `97` = `A=6` `PL=1`; `98` = `A=6` `PL=2`; `99` = `A=6` `PL=3`; `100` = `A=6` `PL=4`; `101` = `A=6` `PL=5`; `102` = `A=6` `PL=6`; `103` = `A=6` `PL=7`; `104` = `A=6` `PL=8`; `105` = `A=6` `PL=9`; `106` = `A=6` `PL=10`; `107` = `A=6` `PL=11`; `108` = `A=6` `PL=12`; `109` = `A=6` `PL=13`; `110` = `A=6` `PL=14`; `111` = `A=6` `PL=15`; `112` = `A=7` `PL=0`; `113` = `A=7` `PL=1`; `114` = `A=7` `PL=2`; `115` = `A=7` `PL=3`; `116` = `A=7` `PL=4`; `117` = `A=7` `PL=5`; `118` = `A=7` `PL=6`; `119` = `A=7` `PL=7`; `120` = `A=7` `PL=8`; `121` = `A=7` `PL=9`; `122` = `A=7` `PL=10`; `123` = `A=7` `PL=11`; `124` = `A=7` `PL=12`; `125` = `A=7` `PL=13`; `126` = `A=7` `PL=14`; `127` = `A=7` `PL=15`; `128` = `A=8` `PL=0`; `129` = `A=8` `PL=1`; `130` = `A=8` `PL=2`; `131` = `A=8` `PL=3`; `132` = `A=8` `PL=4`; `133` = `A=8` `PL=5`; `134` = `A=8` `PL=6`; `135` = `A=8` `PL=7`; `136` = `A=8` `PL=8`; `137` = `A=8` `PL=9`; `138` = `A=8` `PL=10`; `139` = `A=8` `PL=11`; `140` = `A=8` `PL=12`; `141` = `A=8` `PL=13`; `142` = `A=8` `PL=14`; `143` = `A=8` `PL=15`; `144` = `A=9` `PL=0`; `145` = `A=9` `PL=1`; `146` = `A=9` `PL=2`; `147` = `A=9` `PL=3`; `148` = `A=9` `PL=4`; `149` = `A=9` `PL=5`; `150` = `A=9` `PL=6`; `151` = `A=9` `PL=7`; `152` = `A=9` `PL=8`; `153` = `A=9` `PL=9`; `154` = `A=9` `PL=10`; `155` = `A=9` `PL=11`; `156` = `A=9` `PL=12`; `157` = `A=9` `PL=13`; `158` = `A=9` `PL=14`; `159` = `A=9` `PL=15`; `160` = `A=10` `PL=0`; `161` = `A=10` `PL=1`; `162` = `A=10` `PL=2`; `163` = `A=10` `PL=3`; `164` = `A=10` `PL=4`; `165` = `A=10` `PL=5`; `166` = `A=10` `PL=6`; `167` = `A=10` `PL=7`; `168` = `A=10` `PL=8`; `169` = `A=10` `PL=9`; `170` = `A=10` `PL=10`; `171` = `A=10` `PL=11`; `172` = `A=10` `PL=12`; `173` = `A=10` `PL=13`; `174` = `A=10` `PL=14`; `175` = `A=10` `PL=15` | `0` | Scenario module address |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
 | `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
 | `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
 | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
@@ -454,6 +484,33 @@ Catalogue Object key `480` maps to external Object `130`.
 | `BACKLIGHT_DELAY` | `0..255` | `15` | Delay time (seconds); Time en second to light off the backlight |
 | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
 | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
+
+### Object `417` - AUX control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `462` - Open lock command on session (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
 
 ## Conditions, filters, and conversions
 
@@ -602,6 +659,12 @@ The correspondence below is a semantic cross-reference based on the named role a
 | `419` | [Sound](../../functional/who-16-sound-system/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
 | Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
 
+| System / capability | Published restriction | Evidence |
+| --- | --- | --- |
+| F460/F461 compatibility | HC4657M4 and HD4657M4 from `11W12`; HS4657M4 from `11W14` | RA00224AA_EN printed/PDF pp.7-8 |
+| F460/F461 cross-line control | Table permits control of actuators on all lines or only on its own line; HC reference is printed `T-HC4657M4` in this table, versus `BT-HC4657M4` in compatibility table | RA00224AA_EN printed/PDF pp.12-13 |
+| Classe 300EOS integration | Same HC/HD `11W12` and HS `11W14` batches; compatibility sheet excludes physical-configurator setup in that system | ST_00001000_EN archive; printed ST-00001580-EN, pp.7-9 |
+
 ## Observed behavior and corroboration
 
 No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
@@ -612,25 +675,17 @@ Physical self-learning requires the rear programming button then selection of a 
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The exact sheet warns that commands may be automatically sent during the two-minute calibration period. Rear programming/brightness button `P` is to be operated with the supplied screwdriver. The sheet allows brightness/colour differences even within one production batch; this does not alone indicate a changed Firmware. In rocker mode, preserve the configured base address and consecutive targets rather than treating nine catalogue Modules as nine physical keys.
+
 ## Source reconciliation
 
 The combined manufacturer database code HC/HS/HD4657M4 and the exact sheet establish HC4657M4, HS4657M4 and HD4657M4 as finish members. The current HC export title describes six keys, but its own description and attribute table state eight, agreeing with the exact four-module sheet and zone drawing. Six is the technical sheet’s count for the three-module M3 model. The export’s 20 mA standby classification and technical sheet’s 25 mA maximum have different current contexts and are not treated as conflicting maxima. U2701D is a multilingual user manual, not an installation specification. The firmware’s nine Modules are not a count of touch zones. Grouped-reference metadata and per-finish EANs are kept separate.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `MQ00110-f-EN.pdf` | Printed/PDF pp. 1-7: exact M4 supply/current, eight-zone topology, physical/software domains, learning/scenario/CEN modes, LED settings and cleaning/calibration. Separate M3/573912/13 values excluded. |
-| `U2701D.pdf` | English printed/PDF pp.15-18; capacitive-key operation, configured-function record and 10-second cleaning suspension. Other language sections parallel these user operations; no electrical ratings claimed. |
-| `HC4657M4-publisher-product-sheet.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `HD4657M4-publisher-product-sheet.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `HS4657M4-publisher-product-sheet.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `MyHOME Technical Guide.pdf` | F401 printed/PDF pp.47, 89, 93, 95, 99 and unnumbered wiring-example PDF p.58; HC/HS/HD4657M4 touch controls printed/PDF p.95. Other product sheets and their incidental dates do not date the whole guide or override exact-product limits. |
-| `eteris-historical-catalogue.pdf` | HW4684 printed pp.148, 151 / PDF pp.150, 153; touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. |
-
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
 
 The historical Spanish catalogue independently confirms eight keys for all three M4 finishes. Its 20 mm depth is expressly the occupied depth inside the wall box, whereas the current export lists a 29 mm product depth; those measure different contexts. Historical HC/HS front outlines are 150 x 95 mm versus current export height 96 mm; the revision/measurement boundary remains unresolved. Historical 504E/PB504 mounting examples do not override the current 55 mm minimum-box-depth classification.
+
+The retained guide and Spanish catalogue contain unrelated F401/HW4684 material; those paragraphs do not support this Device. Applicable guide p.95 and historical catalogue touch-control/mounting pages corroborate the M4 form; installation accessory dimensions remain separate from electronics dimensions. All eight SET combinations, physical/virtual address distinctions and CEN/PLUS ranges are retained. Virgin `521` also admits Objects `417` and `421` without a direct firmware relation; their reusable fields are now explicit Virgin-only candidates. No firmware parameter, connection or package association is stored.
 
 ## Evidence limits and open work
 
@@ -647,6 +702,10 @@ These publisher-linked files were identified but are not used as retained eviden
 | `HC4657M4.dwg` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/HC4657M4.dwg) |
 | `HS4657M4.dwg` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/HS4657M4.dwg) |
 
+The linked HC/HS DWG drawings remain unexamined; no added mechanical dimensions are inferred from their filenames. The technical sheet’s `M=6` “cyclic” heading conflicts with its non-cyclic paired-command description. Runtime command mapping and selection of Virgin-only candidates remain unobserved.
+
+Other F460/F461 manual pages and Classe 300EOS product features are outside this Device-specific compatibility review. The newly discovered ST-00001807-EN F460 sheet and ST-00002123-DE regional sheet are not retained here; their complete revision-specific compatibility tables remain unexamined. The retained tables establish their own production boundaries, not universal support on all later servers.
+
 ## Sources
 
 Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
@@ -657,3 +716,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0164)

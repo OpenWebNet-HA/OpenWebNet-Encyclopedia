@@ -32,8 +32,8 @@
 | [OWN-DEV-0151](../definitions/own-dev-0151-mh202-scenario-programmer.md) | `003535`, `MH202` | MH202 scenario programmer | 300 scenarios with trigger/condition/action limits and complete firmware scope |
 | [OWN-DEV-0152](../definitions/own-dev-0152-f455-basic-gateway.md) | `003594`, `F455` | F455 basic gateway | Basic web/SCS gateway with separate web/OPEN authentication and remote-access restrictions |
 | [OWN-DEV-0159](../definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md) | `344842`, `344845` | Classe 300EOS connected video internal unit | EOS video/MyHOME commissioning, source-dependent recording/compatibility and hearing variant scope |
-| [OWN-DEV-0162](../definitions/own-dev-0162-two-wire-ip-interface.md) | `346890` | Two-wire to IP interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
-| [OWN-DEV-0163](../definitions/own-dev-0163-d45-ip-interface.md) | `323011` | D45 to IP interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
+| [OWN-DEV-0162](../definitions/own-dev-0162-two-wire-ip-interface.md) | `346890` | Two-wire to IP interface | Two-wire/IP system interface with source-specific topology capacities and address endpoints |
+| [OWN-DEV-0163](../definitions/own-dev-0163-d45-ip-interface.md) | `323011` | D45 to IP interface | D45/IP interface with distinct bus/LAN connectors and conditional supply/configuration limits |
 | [OWN-DEV-0185](../definitions/own-dev-0185-legrand-area-manager.md) | `002645` | Legrand Area Manager | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0186](../definitions/own-dev-0186-vigik-single-door-access-control-unit.md) | `348040` | Vigik single-door access-control unit | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |
 | [OWN-DEV-0188](../definitions/own-dev-0188-vigik-gprs-interface.md) | `348330` | Vigik GPRS interface | Catalogue role inventory; exact published specifications and evidence limits scoped in the dossier |

@@ -22,6 +22,14 @@
 | --- | --- | --- | --- |
 | Legrand | `323011` | Established catalogue identity | Manufacturer database commercial record `1953` explicitly links this SKU to item `1178` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `323011` | IP interface (D45/IP)  | Canonical commercial record `1953` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -52,6 +60,22 @@
 | Main item model / `modobj` | `49` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `49` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -61,6 +85,16 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `71` | `72` | Legrand (key `2`) | `0` | external software | `TiDeviceIP_0400` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -80,19 +114,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `71` | Product Programming | `3` | Association key `4` |
+| `71` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `71` | Ethernet | `2` |
+| `71` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `71` | `2` | `0` | `TiDeviceIP_0400` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -203,15 +231,13 @@ The exact sheet specifies D45/IP interface Config 2.0. Download routes are onlin
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+The sheet’s `0..239` and `240..559` grouped-riser examples are examples, not universal address maxima. Its wiring note permits omission of a main-panel supply when the panel is sufficiently close to the interface, without stating a distance/current threshold; do not generalize that topology-dependent exception. Video gain switch positions and their numerical gain remain undocumented in this two-page sheet.
+
 ## Source reconciliation
 
 The exact 2013 sheet establishes this D45 interface independently of 346890, even though both firmware definitions reuse Object `92`. Shared Object fields do not establish interchangeable terminals, supply or commissioning tools. The database label “D2009/IP” is retained implementation terminology; the product sheet uses D45. The two-page sheet establishes three configuration-transfer routes but does not document every software field or network default.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `BT00459-b-EN.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
+The catalogue associates Legrand reference `323011` with item `1178`, model `49`, firmware `71` (`4.0`, build `1`) and Object `92`; the exact D45 sheet corroborates this product without merging it into `346890` (item `1177`, model `17`). The sheet’s Config 2.0 and three download routes differ from the historical catalogue parameter path `TiDeviceIP_0400` and Ethernet association. Preserve these as source-specific commissioning metadata; the parameter payload is unexamined. SYSTEM connectors are D45 bus links, distinct from Ethernet LAN.
 
 ## Evidence limits and open work
 
@@ -229,3 +255,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0163)

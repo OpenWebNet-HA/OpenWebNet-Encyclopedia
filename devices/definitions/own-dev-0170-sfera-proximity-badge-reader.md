@@ -28,23 +28,32 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `353200` | `8005543457580` | `353200-publisher-product-sheet.pdf` PDF p. 1; `353200-italian-product-sheet.pdf` PDF p. 1 |
+| `353200` | `8005543457580` | [353200-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/7e/da/7edac414e7cccd9c606d58a2545d7d210c2941b24561025540922aba3bc4faf3.pdf) PDF p. 1; `353200-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `353200` | Proximity reader module | Canonical commercial record `1471` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, 18-19, 22-35, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
 | `O1690D.pdf` | Instruction Use O1690D | O1690D; printed publication date not established | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/19/bf/19bff3e4b870837cc5848079cc9714faad45a919077a9d61fa7186aaadd2474e.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1690D.pdf) |
-| `RA00179AA_EN.pdf` | Technical Guide RA00179AA_EN | RA00179AA_EN; printed publication date not established | 353200: printed/PDF pp. 6-7, 12-28; manager / apartment / resident / passepartout badges, configuration, deletion and reset. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/65/5565fbf438bfc4e8e3a53524d98db3816c72a451b422ca06a5bbe8cf42d860bb.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00179AA_EN.pdf) |
+| `RA00179AA_EN.pdf` | Technical Guide RA00179AA_EN | RA00179AA_EN; printed publication date not established | 353200: printed/PDF pp. 6-7, 12-29; manager / apartment / resident / passepartout badges, configuration, deletion and reset. USB transfer/update is on p.29. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/65/5565fbf438bfc4e8e3a53524d98db3816c72a451b422ca06a5bbe8cf42d860bb.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00179AA_EN.pdf) |
 | `ST-00000960-EN.pdf` | Technical Sheet ST-00000960-EN | ST-00000960-EN; 03/09/2021 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/a8/f3a8fcc9927c7866ecad96dee751061fc3f75988bafceffdb6026a9d1112826e.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000960-EN.pdf) |
 | `353200-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/7e/da/7edac414e7cccd9c606d58a2545d7d210c2941b24561025540922aba3bc4faf3.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-353200&include_technical=1) |
 | `353200-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/f8/fb/f8fbbf2924f811c94a88cb3f36f5bc2e39e451ef272b8476923265840a96b93c.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-353200) |
-| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable reader pp.18-19 and credential/address-book sections pp.22-35; selected Italian mode/role cross-checks. Remaining UI walkthroughs not independently translated. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
 | `RA00179AA_IT.pdf` | Manufacturer Italian / installation document | RA00179AA_IT; printed publication date not established | 353200: printed/PDF pp. 6-7, 12-28; manager / apartment / resident / passepartout badges, configuration, deletion and reset. | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/f4/8ef4d957f4e3eeb40e696321edce4580188dfc35ca7a7b86e4c54135d464d0ca.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00179AA_IT.pdf) |
 | `ST_00000960_IT.pdf` | Manufacturer Italian / installation document | ST_00000960_IT; 03/09/2021 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/85/22/8522e091fe8cc6f8a7e518ac6f156eedf5ce90928dbd3cd8593e4081a2e8731d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000960_IT.pdf) |
 | `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1471`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00176AC_S_EN.pdf` | TiSferaDesign software manual | RA00176AC; 03/24-PC | PDF pp. 6-9, 18-19, 22-35, 38-41: powered transfer, reader modes and badge/address-book management; compared with AA revision. Display settings are outside this reader. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
 
 ## Physical and electrical characteristics
 
@@ -86,6 +95,18 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `1` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `1` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -97,6 +118,18 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `117` | `201` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `581` | `627` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0200` |
+| `734` | `1029` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 3 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -121,25 +154,17 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `117` | Product Programming | `3` | Association key `4` |
-| `581` | Product Programming | `3` | Association key `4` |
-| `734` | Product Programming | `3` | Association key `4` |
+| `117` | Product Programming | `3` | Canonical firmware/mode association |
+| `581` | Product Programming | `3` | Canonical firmware/mode association |
+| `734` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `117` | USB | `3` |
-| `581` | USB | `3` |
-| `734` | USB | `3` |
+| `117` | USB | Canonical firmware/connection association |
+| `581` | USB | Canonical firmware/connection association |
+| `734` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `117` | `1` | `7` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-| `581` | `1` | `7` | `TiSferaDesign_0200` | Parameter type `7`; payload not inspected |
-| `734` | `1` | `7` | `TiSferaDesign_0300` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -415,26 +440,35 @@ No publishable Device-specific hardware captures or experiments are retained for
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+### Manufacturer credential and commissioning settings
+
+| Setting / action | Documented behavior / boundary | Evidence |
+| --- | --- | --- |
+| Local relay timer T | 0 (absent): 4 s; 1: 1 s; 2: 10 s; 3: 20 s; 4: 40 s; 5: 60 s; 6: 90 s; 7: 180 s. Applies to standalone local relay; integrated speaker timing is a separate setting. | `ST-00000960-EN.pdf` p. 2 |
+| PC connection | Powered module for update; mini-USB/USB, virtual COM port. Transfer and firmware update are separate operations; offline project composition does not prove connection. | `RA00176AC_S_EN.pdf` pp. 6-9; exact user manual final configuration page |
+| PC auxiliary-button setting | Standalone software can enable the additional lock-release pushbutton. BP_AC_SFERA also contains tamper candidates, while CP-P2 is marked future application in the instruction; no operational tamper feature is established. | `RA00176AC_S_EN.pdf` p. 19; `O1690D.pdf` p. 1 |
+| Address book / transfer | Contacts belong to houses, buildings or residential complexes; device transfer accepts contacts from one group. Import .csv/.txt and export .csv; received device contacts form a new group and update existing entries. Contact fields include name, handset address, call code, B/F/A, ringtone, householder/guest/private flags and hidden-code confirmation. Display-only fields do not become reader hardware functions. | `RA00176AC_S_EN.pdf` pp. 22-29, 35, 38-41 |
+| Credential roles in software | Manager credentials program but do not unlock; passepartout and residents unlock but do not program. Duplicate badge assignments block configuration sending; badge acquisition uses a reader attached to the PC. | `RA00176AC_S_EN.pdf` pp. 30-34 |
+| PC modes | Integrated and standalone software offer `M=0` resident management, `M=1` apartment-master delegation and `M=2` centrally managed access. `M=2` exposes central A/B and reader C addresses; local address book is centrally managed. | `RA00176AC_S_EN.pdf` pp. 18-19 |
+| Credential capacities / initial state | 20 manager masters, 100 passepartout, 4000 apartment masters and five resident badges per apartment (20000 resident badges). Reader has no preset badges on first power-up; these are source-documented capacities, not measured counts. | `ST-00000960-EN.pdf` pp. 1-2; `RA00179AA_EN.pdf` pp. 12-19 |
+| Manager enrolment / deletion | Hold concealed programming button until flashing green LED/tone; register manager badges, up to 20. Start within 30 s; exit by short button press or timeout. Holding through long beep at 10 s deletes all manager badges; selective removal uses PC software. | `RA00179AA_EN.pdf` pp. 13-15 |
+| Passepartout / apartment deletion | Manager enrols passepartout badges. Three successive manager presentations trigger deletion of both passepartout and apartment-master groups, not one badge; p. 18 includes a 5 s spacing instruction. The p. 25 apartment-deletion procedure does not repeat that spacing instruction. | `RA00179AA_EN.pdf` pp. 16-18, 23-25 |
+| Resident enrolment / deletion | `M=0`: manager, selected apartment on call-button/display module, then up to five residents. Local deletion confirms selected apartment with the same manager; p. 22 says all stored residents, leaving apartment versus device-wide erasure scope unclear. `M=1`: apartment master enrols residents; resident deletion requires software. | `RA00179AA_EN.pdf` pp. 19-28 |
+| Complete reset | With BUS off, hold programming button while restoring power through the extended beep; all saved badges/settings are erased, red LED steady for 4 s. This is separate from manager-only and passepartout/apartment group deletion. | `RA00179AA_EN.pdf` p. 28 |
+
 ## Source reconciliation
 
 The 2021 sheet names Mifare Classic 1K and decomposes the 20000 resident capacity as 4000 apartments times five residents. The database’s generic proximity / transponder Objects do not imply support for arbitrary badge technologies. The sheet’s integrated `M=0` wiring note says “only” residents, although its hierarchy text also describes passepartout administration; the exact mode / firmware scope of that wording remains unresolved. A standalone drawing accidentally calls 353200 a keypad; the exact reference and reader terminals establish the badge-reader role. The 2026 export’s “non-connected” classification does not prevent configured SCS operation.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00176AA_S_EN.pdf` | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. |
-| `O1690D.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00179AA_EN.pdf` | 353200: printed/PDF pp. 6-7, 12-28; manager / apartment / resident / passepartout badges, configuration, deletion and reset. |
-| `ST-00000960-EN.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `353200-publisher-product-sheet.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `353200-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_IT.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `RA00179AA_IT.pdf` | 353200: printed/PDF pp. 6-7, 12-28; manager / apartment / resident / passepartout badges, configuration, deletion and reset. |
-| `ST_00000960_IT.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-
 The 2024 software manual exposes central badge management `M=2` with controller and reader addresses beyond the local `M=0/1` technical-sheet description. This is software-revision evidence, not proof of central-mode support on every database Firmware. An apartment-master badge authorizes enrolment and does not itself open the lock.
+
+### Source-specific operating boundaries
+
+The multilingual O1690D instruction, dated 07/18-01 PC, prints working frequency as 13.56 NHz and transmission field strength below 42 dBµA/m at 10 m. NHz is retained as a source-unit irregularity, not silently converted into a verified MHz specification; the 2021 sheet identifies Mifare Classic 1K without resolving that printed unit. CP-P2 tamper is explicitly a future application despite reusable BP_AC_SFERA tamper enums.
+
+Conditions 4927/4928 contain no textual predicate; no runtime selection priority is inferred. Rule `7178` generates AC_ADDRESS_AB through 100 AC_A/AC_B branches for Object `483`, but its reusable fields contain no AB/C address fields; these exist on Object `482`. Rule `7190` maps `AC_M=0/1/2` to MODE_AC_SFERA for Object `482`. The conversion target-field asymmetry and lack of AC_C/timer conversion are explicit catalogue limits. Local physical `T=0` means 4 s, whereas reusable relay default 255 means RELAY_OFF. The export swaps dimensional orientation (width 91 / height 115) against the technical drawing’s horizontal 115 / vertical 91; do not treat this as a hardware revision. AA/AC software agrees on the reviewed credential roles and `M=0/1/2` settings.
+
+The user manual describes a selected-apartment deletion then says all resident badges are deleted; its exact erase scope is unresolved and is not presented as safe selective deletion.
 
 ## Evidence limits and open work
 
@@ -464,3 +498,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0170)

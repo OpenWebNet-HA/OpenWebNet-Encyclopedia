@@ -10,8 +10,8 @@
 | triaged | 0 |
 | research | 0 |
 | definition-in-progress | 0 |
-| review-ready | 50 |
-| reviewed | 160 |
+| review-ready | 40 |
+| reviewed | 170 |
 
 Total: **210** technical-item clusters.
 
@@ -21,16 +21,6 @@ Database extraction is mechanically available for every cluster in this catalogu
 
 | Priority | Item | Description | Commercial records | State | Definition outcome | Documents | Archive | Source reconciliation | Hardware | Blockers |
 | --- | ---: | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| normal | 2310 | Acutator/Command Shutter Light Now | 2 | review-ready | OWN-DEV-0161 | partial | complete | complete | pending | - |
-| normal | 1177 | IP interface (2Wire/IP) | 1 | review-ready | OWN-DEV-0162 | partial | complete | complete | pending | - |
-| normal | 1178 | IP interface (D45/IP)  | 1 | review-ready | OWN-DEV-0163 | partial | complete | complete | pending | - |
-| normal | 1191 | Touch control | 1 | review-ready | OWN-DEV-0164 | partial | complete | complete | pending | - |
-| normal | 1440 | Management Center 2Wires | 1 | review-ready | OWN-DEV-0165 | partial | complete | complete | pending | - |
-| normal | 1459 | Audio module | 1 | review-ready | OWN-DEV-0166 | partial | complete | complete | pending | - |
-| normal | 1460 | A/V module | 1 | review-ready | OWN-DEV-0167 | partial | complete | complete | pending | - |
-| normal | 1461 | Wide angle A/V module | 1 | review-ready | OWN-DEV-0168 | partial | complete | complete | pending | - |
-| normal | 1470 | Keypad module | 1 | review-ready | OWN-DEV-0169 | partial | complete | complete | pending | - |
-| normal | 1471 | Proximity reader module | 1 | review-ready | OWN-DEV-0170 | partial | complete | complete | pending | - |
 | normal | 1487 | Inductive loop module | 1 | review-ready | OWN-DEV-0171 | partial | complete | complete | pending | - |
 | normal | 1488 | Display module | 1 | review-ready | OWN-DEV-0172 | partial | complete | complete | pending | - |
 | normal | 1489 | N&D wide angle camera module | 1 | review-ready | OWN-DEV-0173 | partial | complete | complete | pending | - |
@@ -160,19 +150,28 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 1169 | Gateway SCS / ZIGBEE | OWN-DEV-0125 |
 | 1171 | 8 channels DALI/SCS interface, 10DIN | OWN-DEV-0126 |
 | 1175 | VideoTouchTelephone | OWN-DEV-0127 |
+| 1177 | IP interface (2Wire/IP) | OWN-DEV-0162 |
+| 1178 | IP interface (D45/IP)  | OWN-DEV-0163 |
 | 1180 | Room controller - Dimmer 4 Outputs Dali | OWN-DEV-0128 |
 | 1184 | Flush mounted actuator and free control | OWN-DEV-0003 |
 | 1190 | Touch control | OWN-DEV-0019 |
+| 1191 | Touch control | OWN-DEV-0164 |
 | 1195 | Polyx Memory Display | OWN-DEV-0129 |
 | 1311 | DIN - Dimmer 4X  1-10V 1 000VA - 230V | OWN-DEV-0130 |
 | 1331 | Scenario programmer | OWN-DEV-0131 |
 | 1340 | Multimedia Touch Screen | OWN-DEV-0102 |
 | 1376 | Touch control multifunction | OWN-DEV-0009 |
 | 1423 | Burglar alarm central unit with communicator | OWN-DEV-0132 |
+| 1440 | Management Center 2Wires | OWN-DEV-0165 |
 | 1455 | Web Server A/V Bus | OWN-DEV-0002 |
+| 1459 | Audio module | OWN-DEV-0166 |
+| 1460 | A/V module | OWN-DEV-0167 |
+| 1461 | Wide angle A/V module | OWN-DEV-0168 |
 | 1463 | Actuator DIN with 4 fil pilote outputs bus | OWN-DEV-0133 |
 | 1465 | Load Control Panel bus | OWN-DEV-0020 |
 | 1469 | MyHOME_Screen 3.5 | OWN-DEV-0015 |
+| 1470 | Keypad module | OWN-DEV-0169 |
+| 1471 | Proximity reader module | OWN-DEV-0170 |
 | 1475 | Energy data logger | OWN-DEV-0134 |
 | 1509 | Colour Touch Screen | OWN-DEV-0135 |
 | 1520 | IR emitter | OWN-DEV-0136 |
@@ -234,6 +233,7 @@ Database extraction is mechanically available for every cluster in this catalogu
 | 2301 | Easy Kit Connnected with H+S | OWN-DEV-0160 |
 | 2307 | Command Device 2M Light Now | OWN-DEV-0117 |
 | 2309 | Acutator/Command Light Light Now | OWN-DEV-0118 |
+| 2310 | Acutator/Command Shutter Light Now | OWN-DEV-0161 |
 | 2311 | Command Device 3M Light Now | OWN-DEV-0119 |
 | 2321 | Classe 300X | OWN-DEV-0050 |
 

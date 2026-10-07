@@ -22,6 +22,14 @@
 | --- | --- | --- | --- |
 | BTicino | `346890` | Established catalogue identity | Manufacturer database commercial record `1689` explicitly links this SKU to item `1177` |
 
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `346890` | IP interface (2Wire/IP) | Canonical commercial record `1689` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
@@ -57,6 +65,22 @@
 | Main item model / `modobj` | `17` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `17` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -66,6 +90,16 @@
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `70` | `71` | BTicino (key `1`) | `0` | external software | `TiDeviceIP_0400` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -85,19 +119,13 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `70` | Product Programming | `3` | Association key `4` |
+| `70` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `70` | Ethernet | `2` |
+| `70` | Ethernet | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `70` | `1` | `0` | `TiDeviceIP_0400` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -223,19 +251,15 @@ Physical selectors and software domains are separate evidence. Apply the exact F
 
 The exact English and Italian technical sheets and Italian export agree on the two-wire/IP role and 10-DIN housing. The technical sheet distinguishes 3900 quick-mode system handsets from a basic physical address range `1..3999`; those numbers are not silently equated. Its page 2 also assigns 95 entrance panels and 3900 handsets to one interface in the stated quick configuration, whereas the page 4 table labels these as system totals; the physical wiring limits still require independent topology validation. Several example inequalities omit or vary inclusive boundaries even though diagrams show endpoints; preserve configured domains and validate boundary behavior on hardware. 346891 is a different reference and is not substituted for this discontinued item. The 346310 switchboard sheet explicitly excludes installations using 346890.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `346890-italian-product-sheet.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `BT00676_a_IT.pdf` | Printed/PDF pp. 1-4 supply, interfaces, physical / software address and capacity matrix; pp.5-6 contrasting physical / advanced range examples. Ambiguous boundary and capacity labels retained. |
-| `BT00676_a_EN.pdf` | Printed/PDF pp. 1-4 supply, interfaces, physical / software address and capacity matrix; pp.5-6 contrasting physical / advanced range examples. Ambiguous boundary and capacity labels retained. |
+The two-language sheets disagree internally on address endpoints: page 3 uses physical handset range `1..3999`, while the page 4 drawing labels `1..4000` and a shifted `4001..8000` range. Page 3’s entrance-panel drawing adds base `100` to `1..95` yet labels the result `101..190`, excluding five possible values; this is an arithmetic/source discrepancy, not an inferred device truncation. The broad reusable Object `92` ranges `0..100090` and `0..103999` do not establish those quick-mode capacities. Firmware `70` alone adds digit selectors; its `C=0..9` catalogue domain includes `0`, while the physical switchboard setting is `1..9`. The empty selector interpretation and boundary discrepancies require hardware corroboration.
 
 ## Evidence limits and open work
 
 The boundary semantics in quick-mode examples, currently usable TiDeviceIP software, per-interface topology limits and installed diagnostic support remain uncorroborated.
 
 No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+The original TiDeviceIP manual and software payload referenced by parameter record `71` (`TiDeviceIP_0400`) have not been inspected. Database Ethernet programming and documented USB transfer/update describe different software workflows; neither establishes a public OpenWebNet listener on this interface.
 
 ## Sources
 
@@ -247,3 +271,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0162)

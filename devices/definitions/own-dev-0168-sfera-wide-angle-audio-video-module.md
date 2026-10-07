@@ -28,39 +28,49 @@ EANs identify the named commercial variant, not the configured physical device o
 
 | Reference | EAN-13 | Evidence |
 | --- | --- | --- |
-| `351300` | `8005543441596` | `351300-publisher-product-sheet.pdf` PDF p. 1; `351300-italian-product-sheet.pdf` PDF p. 1 |
+| `351300` | `8005543441596` | [351300-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/9f/68/9f688ab58911fc5e2541cfe3cc3e5c7c9935e72a4887a4164243c1f6ab6d9313.pdf) PDF p. 1; `351300-italian-product-sheet.pdf` PDF p. 1 |
+
+### Catalogue labels
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `351300` | Wide angle A/V module | Canonical commercial record `1461` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
 
 ## Documentation
 
 | Document | Type | Revision / date | Coverage | Archived original | Publisher source |
 | --- | --- | --- | --- | --- | --- |
-| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
 | `BT00598-c-EN.pdf` | Technical Sheet BT00598-C-EN | BT00598-c-EN; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/2e/42/2e42bd417c56d416fd542d06cbb7baae4d0879470f23a89684f48ca87ec67214.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00598-c-EN.pdf) |
 | `351300-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/68/9f688ab58911fc5e2541cfe3cc3e5c7c9935e72a4887a4164243c1f6ab6d9313.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-351300&include_technical=1) |
 | `351300-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/91/22913c049abc4f88b4b21435343adb5ac66db687b68ec687632bb64380582131.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-351300) |
-| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable speaker/pushbutton sections pp.6-14; Italian terminology/settings cross-checks. Other module/address-book sections not independently translated for this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
 | `BT00598_c_IT.pdf` | Manufacturer Italian / installation document | BT00598_c_IT; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/5c/c0/5cc0216319f28e97be38d976c69625f0b844a645e50b1c555d8bd37909e13c32.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00598_c_IT.pdf) |
 | `FIS_351300.pdf` | Manufacturer Italian / installation document | FIS_351300; printed publication date not established | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/9c/229c8efca6a2a5471f37957a3753e81fda483f405d4987df3f3366fca2265aab.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/FIS_351300.pdf) |
 | `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
 | MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1461`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00176AC_S_EN.pdf` | TiSferaDesign software manual | RA00176AC; 03/24-PC | PDF pp. 6-14: powered USB transfer, speaker and pushbutton settings; compared with AA revision. Other module settings are outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
+| `BT00680-c-EN.pdf` | Exact 346310 compatibility technical sheet | BT00680-c-EN; 18/01/2016 | PDF p.1 compatibility list: 351100/351200/351300 minimum firmware 01.02.31 for hierarchical switchboard operation; remaining switchboard features outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/68/0d6806e6d5d5a50226916ebe0fc87cfcfb964a7574f1192ceb7d056927c4f376.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/BT00680-c-EN.pdf) |
 
 ## Physical and electrical characteristics
 
 | Property | Value | Evidence |
 | --- | --- | --- |
-| SCS supply | `18..27 Vdc` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Standby, backlighting off / on | `15 mA / 20 mA` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Maximum draw | `140 mA` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Temperature / assembled protection | `-25..70 °C; IP54 for assembled entrance panel` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Face dimensions | `115 x 91 mm` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Direct lock output | `18 V, 4 A impulse / 250 mA holding; maximum 30 ohm` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Call capacity | `98 pushbutton calls` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Local controls | `speaker/microphone level; PL door-release input; status LEDs` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Additional supply | `1–2 input; enabled when J2 disconnected` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Camera sensor / resolution | `1/3-inch colour; 330 horizontal TV lines; interlace 2:1` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Lens | `F2.5 f1.8 mm` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Viewing field | `135° horizontal / 96° vertical; 240 x 115 cm at 50 cm` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
-| Night imaging | `white LEDs; automatic brightness; mist-prevention heating` | `BT00598-c-EN` printed/PDF pp. 1-3; `RA00176AC_S_EN` pp. 6-14 |
+| SCS supply | `18..27 Vdc` | `BT00598-c-EN` PDF pp. 1-3 |
+| Standby, backlighting off / on | `15 mA / 20 mA` | `BT00598-c-EN` PDF pp. 1-3 |
+| Maximum draw | `140 mA` | `BT00598-c-EN` PDF pp. 1-3 |
+| Temperature / assembled protection | `-25..70 °C; IP54 for assembled entrance panel` | `BT00598-c-EN` PDF pp. 1-3 |
+| Face dimensions | `115 x 91 mm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Direct lock output | `18 V, 4 A impulse / 250 mA holding; maximum 30 ohm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Call capacity | `98 pushbutton calls` | `BT00598-c-EN` PDF pp. 1-3 |
+| Local controls | `speaker/microphone level; PL door-release input; status LEDs` | `BT00598-c-EN` PDF pp. 1-3 |
+| Additional supply | `1–2 input; enabled when J2 disconnected` | `BT00598-c-EN` PDF pp. 1-3 |
+| Camera sensor / resolution | `1/3-inch colour; 330 horizontal TV lines; interlace 2:1` | `BT00598-c-EN` PDF pp. 1-3 |
+| Lens | `F2.5 f1.8 mm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Viewing field | `135° horizontal / 96° vertical; 240 x 115 cm at 50 cm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Night imaging | `white LEDs; automatic brightness; mist-prevention heating` | `BT00598-c-EN` PDF pp. 1-3 |
 
 | Night backlighting | `Integrated optical sensor; automatic night-backlight activation` | `351300-publisher-product-sheet.pdf` p.1 |
 
@@ -118,6 +128,19 @@ These are the complete captured publisher classification values for the named va
 | Main item model / `modobj` | `36` | `AS_ITEM_SYSTEM` |
 | Commercial record count | `1` | `EN_DEVICE` |
 
+### Catalogue system and bus scope
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `36` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
 ## Firmware and hardware
 
 | Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
@@ -129,6 +152,17 @@ These are the complete captured publisher classification values for the named va
 Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
 
 No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+### Parameter and package associations
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `113` | `198` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `637` | `1027` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
 
 ## Module, Object, and Virgin Object model
 
@@ -156,22 +190,15 @@ Module slot is the Device-local placement, not a database row identifier. Fixed 
 
 | Firmware | Mode | Catalogue mode | Evidence |
 | --- | --- | --- | --- |
-| `113` | Product Programming | `3` | Association key `4` |
-| `637` | Product Programming | `3` | Association key `4` |
+| `113` | Product Programming | `3` | Canonical firmware/mode association |
+| `637` | Product Programming | `3` | Canonical firmware/mode association |
 
-| Firmware | Connection label | Connection key |
+| Firmware | Connection | Evidence |
 | --- | --- | --- |
-| `113` | USB | `3` |
-| `637` | USB | `3` |
+| `113` | USB | Canonical firmware/connection association |
+| `637` | USB | Canonical firmware/connection association |
 
-### Associated parameter definitions
-
-| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
-| --- | --- | --- | --- | --- |
-| `113` | `1` | `7` | `TiSferaDesign_0102` | Parameter type `7`; payload not inspected |
-| `637` | `1` | `7` | `TiSferaDesign_0300` | Parameter type `7`; payload not inspected |
-
-Brand / line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
 
 ### Manufacturer configuration and operating settings
 
@@ -275,6 +302,72 @@ Catalogue Object key `497` maps to external Object `465`.
 | `CDP_ADDRESS` | `0..15` | `0` | Address |
 | `RING_TONE` | `0..3` | `0` | RingToneRequired |
 
+### Object `418` - Open lock control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `422` - Addressed autoswitch control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `423` - Relais Actuat Command(AA) (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `424` - Intercom control (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+### Object `425` - Telephonic Call (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `NUM_IN_LIST` | `0..15` | `0` | NumberIntoList |
+
+### Object `429` - Paging button (Virgin-only candidate)
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Base; `2` = Advanced | `2` | Modality; mode(Base,Advanced) |
+| `AMPL_AREA` | `0..99` | `0` | Amplifier area |
+| `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
+| `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
+
 ## Conditions, filters, and conversions
 
 ### Slot conditions
@@ -363,24 +456,34 @@ Physical P numbers entrance panels from 0, with `P=0` reserved for the common / 
 
 Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
 
+### Manufacturer selector and software settings
+
+| Setting | Documented meaning / boundary | Evidence |
+| --- | --- | --- |
+| P / N | P identifies the entrance panel; common/main panel uses `P=0`. N is the first called handset; common pushbutton panels use `N=1`. | `BT00598-c-EN.pdf` p. 2 |
+| S: older Sprint L2 | 0: two-tone 1200/600 Hz; 1: two-tone 1200/0 Hz; 2: two-tone 1200/2400 Hz; 3: one-tone 1200 Hz. Classe 100/300 use S to associate one of 16 handset-selected preset bells. | `BT00598-c-EN.pdf` p. 2 |
+| S: general call | `S=9` provides the one-family general call. The firmware field S stores only `0..4`; the sources do not explain this mismatch. | `BT00598-c-EN.pdf` p. 2; canonical firmware fields |
+| T: lock timer | 0 (absent): 4 s; 1: 1 s; 2: 2 s; 3: 3 s; 4: while pressed, maximum 10 s; 5: 6 s; 6: 8 s; 7: 10 s. A 346210 actuator configured `MOD=5` is specified for extensions beyond 10 s. | `BT00598-c-EN.pdf` p. 2 |
+| M: tones / backlight | 0: all tones; 1: lock tone off; 2: call tone off; 3: both off. M=`4..7` repeat these tone choices with backlight always on and light sensor disabled. | `BT00598-c-EN.pdf` p. 2 |
+| J1 / J2 | J1 connected: right call-button column only; removed: both columns. Remove J1 and physical configurators for PC configuration. Remove J2 to enable local supply on terminals 1–2. | `BT00598-c-EN.pdf` pp. 2-3 |
+| Status indicators | Green door LED: door open; green communication LED: active communication; green call LED: forwarded call; red call LED: system busy. | `BT00598-c-EN.pdf` p. 1 |
+| PC speaker settings | P=`0..99`; enable/disable lock-release tone and call tone; lock duration `1..10` s or while the release button is pressed; handset-associated ringtone. | `RA00176AC_S_EN.pdf` p. 13; AA p. 13 |
+| PC pushbutton settings | Basic configuration disables keys. Select none, handset call, staircase lights or switchboard call. Point/general handset call; general hides destination. Handset `0..3999`; switchboard 0..15. | `RA00176AC_S_EN.pdf` p. 14; AA p. 14 |
+| PC transfer / update | Powered module, mini-USB/USB connection, automatically detected virtual COM device and prompted drivers. Offline project composition does not establish device connection or installed firmware. | `RA00176AC_S_EN.pdf` pp. 6-9; AA pp. 6-9 |
+
 ## Source reconciliation
 
 The exact sheet and exports establish this assembly independently of other Sfera speaker / camera products. Covers, assembled IP protection and impact ratings depend on the selected Sfera New/Robur front plate; a cover rating does not rate the uncovered electronics. Database External unit and pushbutton Objects are conditional configuration roles, not additional physical call keys. AA and AC TiSferaDesign manuals are retained as distinct revisions; the 2026 V4 readme requires 64-bit Windows 10/11 and .NET 4.8, not the older software prerequisite set. The shared shooting-field diagram distinguishes 351200 from 351300; their lens / field values are not interchangeable. FIS installation drawings corroborate the named assembly’s connectors and physical configuration.
 
-### Retained source accounting
-
-| Original | Role / reconciliation scope |
-| --- | --- |
-| `RA00176AA_S_EN.pdf` | Earlier TiSferaDesign manual: device transfer, composition and module configuration sections reviewed against AC revision; retains historical software workflow. |
-| `BT00598-c-EN.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `351300-publisher-product-sheet.pdf` | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `351300-italian-product-sheet.pdf` | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `RA00176AC_S_IT.pdf` | TiSferaDesign 2024: printed/PDF pp. 4-21, 22-42; device transfer, updates, speaker / keypad / reader / display settings and address-book management, scoped by module. |
-| `BT00598_c_IT.pdf` | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `FIS_351300.pdf` | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-| `TisferaDesign_README_v4.pdf` | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. |
-
 The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+### Source-specific operating boundaries
+
+The 2026 English export classification disagrees with the 2017 exact sheet: standby 40 mA versus 15/20 mA with backlight off/on; operating temperature `-15..50` °C versus `-25..70` °C; IK07 versus IK08 for the named Sfera New covers and IK10 for Robur covers. Its AC/DC voltage-type classification does not replace the exact sheet’s dc-only bus supply; both give the nominal range `18..27 V`. The export’s camera classifications are not the source of the technical-sheet lens or shooting-field specification.
+
+No documented production boundary reconciles these attributes. The Addressable=No classification does not override P/N configuration; app capability belongs to a compatible assembled system, not proof that this module is an IP gateway. The export’s adjustable 100° camera classification does not match the exact 351300 wide-angle F2.5/f1.8 mm camera: 135° horizontal and 96° vertical, covering 240 × 115 cm at 50 cm. The 351200 ±10° aiming claim is not transferred to 351300. Both A/V sheets specify 1/3-inch colour sensor, 330 horizontal TV lines, 2:1 interlace, white illumination LEDs and an anti-mist heater. The retained FIS drawings dated 12/19-01 PC warn against strong backlighting; their lens-downward advice applies specifically to 351200.
+
+Firmware 01.02.31 is named for hierarchical switchboard operation in `BT00680-c-EN.pdf` p.1, but is absent from this catalogue snapshot (1.2 builds 25 and 30); compatibility is not extended to those builds by inference. AA and AC software sections 6-14 agree on the reviewed settings. The Virgin `505` label “Internal unit virgin pushbuttons” is reusable catalogue wording on this entrance-panel item; its candidate list does not establish additional installed roles. Staircase-light N1 retains default 0 outside its `100..255` filter. TO_ALL filters retain the complete point/general domain; no selection predicate or conversion establishes precedence. P1=`0..6` and P2=`0..9` are distinct catalogue fields, not an established encoding of the software’s full P=`0..99` domain.
 
 ## Evidence limits and open work
 
@@ -410,3 +513,5 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Catalogue Resolution](../../internals/catalogue-resolution.md)
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
+
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0168)
