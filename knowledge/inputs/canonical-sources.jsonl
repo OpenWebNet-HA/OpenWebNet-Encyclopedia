@@ -240,3 +240,7 @@
 {"classification":"publishable","source_id":"ownkb:source:s000564","source_path":"devices/definitions/own-dev-0101-eight-output-din-actuator-16-a.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000565","source_path":"devices/definitions/own-dev-0102-multimedia-touch-screen.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000566","source_path":"devices/definitions/own-dev-0103-eight-key-multifunction-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000609","source_path":"devices/definitions/own-dev-0104-do-not-disturb-make-up-room-control.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000610","source_path":"devices/definitions/own-dev-0105-do-not-disturb-make-up-room-indicator.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000611","source_path":"devices/definitions/own-dev-0106-rfid-reader-and-outside-door-indicator.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000612","source_path":"devices/definitions/own-dev-0107-legrand-multimedia-touch-screen.md","source_type":"canonical_documentation"}

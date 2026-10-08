@@ -82553,3 +82553,6833 @@ Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-25
 - `H4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/b5/57/b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4652&include_technical=1); SHA-256 `b557bf645d57e9ea72d167ec4b23c4e5ea7c2ed814e6a056f051f32c1e99c1cb`.
 - `LN4652-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4652` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/a6/e9/a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4652&include_technical=1); SHA-256 `a6e9eb147e099cf713ebddb91471594664a3782386ef335efa8767e3692687b3`.
 - [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0103)
+
+# Document: ownkb:document:d000243
+
+Source path: `devices/definitions/own-dev-0104-do-not-disturb-make-up-room-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Do Not Disturb / Make Up Room control
+
+Section ID: `ownkb:section:d000243:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000243:s000002`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+This inside-room control lets a hotel guest select Do Not Disturb or Make Up Room notifications for the corresponding outside-door indicator. Local LED feedback and adjustable illumination make the selected room request visible at the control.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0104` | Project identity |
+| Technical description | Inside-room control for Do Not Disturb (DND) and Make Up Room (MUR) notifications | Published technical sheets; canonical catalogue |
+| Commercial identities | `H4653`, `LN4653`, `067593` | Three catalogue records and both technical-sheet headers |
+| Catalogue item | `1679` | Canonical MyHOME Suite `3.5.38` catalogue |
+| Main catalogue system | Access control | Main item/system association |
+| Item model / `modobj` | `9` | Main item/system association |
+| Firmware definition | `-1.-1.-1` (wildcard / unspecified applicability) | Canonical catalogue; not an observed installed release |
+| Declared Modules | `1` | Canonical firmware metadata |
+| Categories | Commands, User interfaces | Source-derived roles |
+
+DND means Do Not Disturb; MUR means Make Up Room. These are room-service notifications. Two physical wiring-device modules do not imply two protocol Modules.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000243:s000003`
+
+Provenance cues: `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4653` | Established commercial variant | Item `1679`; `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| BTicino - LivingLight | `LN4653` | Established commercial variant | Item `1679`; `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Legrand - Céliane | `067593` | Established commercial variant | Item `1679`; `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+
+The LED-colour legend also mentions Arteor, but supplies no Arteor commercial reference. It does not establish an additional identity for this cluster.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000243:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4653` | `8005543502808` | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf), `H4653-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4653` | `8005543502747` | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf), `LN4653-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+#### Complete catalogue commercial metadata
+
+Section ID: `ownkb:section:d000243:s000005`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1735` | `H4653` | `DO NOT DISTURB-MAKE UP ROOM control` | `1` | `2` | `1` | Empty | `0` | `0` | `Axolute DND/MUR command` |
+| `1998` | `067593` | `DO NOT DISTURB-MAKE UP ROOM control` | `2` | `13` | `1` | Empty | `0` | `0` | `Celiane DND/MUR command` |
+| `2171` | `LN4653` | `DO NOT DISTURB-MAKE UP ROOM control` | `1` | `4` | `1` | Empty | `0` | `0` | `Living DND/MUR command` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
+### Documentation
+
+Section ID: `ownkb:section:d000243:s000006`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00775_a_EN.pdf` | English technical sheet | `MM00775-a-EN`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/64/4c/644c203261a27563e37554fbc31c64cfe7fe693c8b7d43c6efd7337867856745.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00775_a_EN.pdf) |
+| `MM00775-a-FR.pdf` | French technical sheet | `MM00775-a-FR`, `02/12/2013` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/fb/7cfb238df47d8658200918c41f2030f85ce3cda677dc1b9afc53595f9016eab5.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00775-a-FR.pdf) |
+| `H4653-publisher-product-sheet.pdf` | Publisher product-sheet export | `DATASHEET`, `03.10.2026` (export date) | `H4653` only; identity/product characteristics printed p. 1 / PDF p. 1; technical attributes printed pp. 2-3 / PDF pp. 2-3; download inventory printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1679`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `LN4653-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4653` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000243:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | Two flush-mounted wiring-device modules | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| SCS BUS supply | `18..27 Vdc` | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Rear interfaces | SCS BUS terminals and physical configurator socket | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Maximum current | `7.5 mA` | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Operating temperature | `5..40 °C` | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Local functions | DND/MUR controls completed with applicable key covers; local LED adjustment/disable pushbutton | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1; `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Axolute / Céliane LED colours | Blue: notification inactive; purple: active; Arteor also named in legend without a SKU | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| LivingLight LED colours | Green: inactive; orange: active | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| LED intensity sequence | Hold adjustment key for more than `2 s`; `60 %` default → `30 %` → `0 %` → `100 %` → `60 %` | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Physical configurator positions | `R1`, `R2`, `M` | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Published standards | `EN 60669-2-1`, `EN 50090-2-2`, `EN 50090-2-3`, `EN 50428` | `MM00775-a-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| H4653 online dimensions / protection | `45 x 45 x 24 mm`; minimum box depth `55 mm`; `IP20` | H4653 product-sheet export, printed p. 2 / PDF p. 2 |
+| H4653 online storage / terminals | `-10..70 °C`; `0.34..2.5 mm²`, flexible or rigid wire | H4653 product-sheet export, printed p. 2 / PDF p. 2 |
+| H4653 online construction / interfaces | Plastic / thermoplastic, untreated, opaque; RAL-like `9011`; LED, no label area, display, temperature controller, IR sensor or RF bus | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3; one-button metadata discrepancy reconciled below |
+
+### Identity
+
+Section ID: `ownkb:section:d000243:s000008`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1679` | Canonical catalogue |
+| Technical item description | DO NOT DISTURB-MAKE UP ROOM control | Canonical catalogue |
+| Item family | Control (`1`) | Catalogue family association |
+| Main system | Access control; system key `8` | `AS_ITEM_SYSTEM.main` association; not a functional WHO number |
+| Item model / `modobj` | `9` | Main item/system mapping |
+| Brand / line keys | BTicino brand key `1`, Axolute line key `2`, LivingLight line key `4`; Legrand brand key `2`, Céliane line key `13` | Commercial database keys; different from software parameter model namespaces |
+| Commercial records | `3`; record IDs `1735`, `1998`, `2171` | Three shared-item catalogue variants |
+| Gateway metadata | None of the three records is marked as a gateway | Commercial metadata; an MH201 software route is an external system connection |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000243:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `9` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000243:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `253` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Hardware revision, microcontroller and installed firmware are unknown. The firmware table records source applicability, not an observed Physical Device.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000243:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000243:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `253` | `1` | `489` DO NOT DISTURB/MAKE UP ROOM control | Fixed/designated metadata | `1344` | `555` | `702` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000243:s000013`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000243:s000014`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `253` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `253` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `253` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+Both technical sheets document physical configurators and MyHOME Suite software configuration. The software route uses the PC Ethernet network and external MH201 scenario module; the control/indicator itself remains on SCS BUS. No connection association is stored for this firmware in `AS_CONNECTION_FIRMWARE`; this absence does not invalidate the published Ethernet route. No Product Programming mode association is stored for this firmware.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000243:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults below are catalogue evidence. `AID` is an eight-character mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `253` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `253` | `R1` | `0..9` | `0` | R1; Room tens |
+| `253` | `R2` | `0..9` | `0` | R2; Room unit |
+| `253` | `M` | `0..2` | `0` | M; Mode |
+
+#### Published physical selectors
+
+Section ID: `ownkb:section:d000243:s000016`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Configurator | Published value / meaning | Evidence |
+| --- | --- | --- |
+| `R1`, `R2` | Room address tens and units; firmware domain `0..9` for each | Catalogue; `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=0` | DND and MUR, using two one-module key covers | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=1` | DND only, using one two-module key cover | `MM00775-a-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=2` | Stored as legal by the catalogue; no physical procedure or key-cover arrangement in the retained sheets | Firmware domain; Object `489.MODE=2` names MUR only but is a separate configuration scope |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000243:s000017`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `489` - DO NOT DISTURB/MAKE UP ROOM control
+
+Section ID: `ownkb:section:d000243:s000018`
+
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Catalogue Object key `555` maps to external Object `489`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `R1R2` | `0..99` | `0` | Room address |
+| `MODE` | `0` = DO NOT DISTURB and MAKE UP ROOM; `1` = DO NOT DISTURB only; `2` = MAKE UP ROOM only | `0` | Mode of DO NOT DISTURB/MAKE UP ROOM control |
+
+#### Semantic review findings
+
+Section ID: `ownkb:section:d000243:s000019`
+
+The sole Object `489` admits a MUR-only mode 2, but exact technical sheets prescribe only physical modes 0/1. The hotel example uses LN4651, LN4648 and 348210 with F411/1N; room label 127 corresponds to bus address 27. Cover count remains mode-specific, and the one-button export classification is not universal.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000243:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000243:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000243:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000243:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule or selection predicate is associated with these placements. Validate the firmware domain and the selected Object/Firmware filters separately; empty selection metadata does not establish an active Object. Generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000243:s000024`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Compare discovered model and system with catalogue main model `9` in Access control; this is a source-derived identification target, not a verified response | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Corroborate installed firmware before relating observations to wildcard catalogue applicability; no hardware fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Corroborate hardware revision separately from firmware; no verified response retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Corroborate microcontroller revision if this managed Device supports the query; no verified response retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Discover active Objects and Modules: slot `1`, external Object `489`; no Virgin Object association. Do not report database relation IDs as KEYO | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Read applicable active Object addressing; room-address semantics belong to Access Control, not Lighting A/PL; device address encoding requires actual discovery context | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Read/compare the selected Object configuration against its reusable domain/default and firmware context; default is not installed state | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are candidate corroboration surfaces of the managed Device model. Catalogue associations do not prove that every operation succeeds on this firmware/transport. Access Control management uses `WHO 1023`; catalogue system key `8` is not `WHO 8`.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000243:s000025`
+
+Provenance cues: `catalogue`, `evidence`
+
+The main catalogue family is [Access Control (`WHO 23`)](../../functional/who-23-access-control/). That implementation family has managed addressing infrastructure; its numeric catalogue system key and item model are separate namespaces. No complete DND/MUR functional WHAT or DIMENSION vocabulary is established by the retained product sheets.
+
+| Function | Published or implementation applicability | Evidence |
+| --- | --- | --- |
+| DND / MUR selection | Inside-room notification control of the corresponding outside-door indicator; physical `M=0` or `M=1`; software Object `489.MODE` also names MUR-only | Both technical sheets pp. 1-2 / PDF pp. 1-2; reusable Object `489` |
+| Status feedback | Variant-specific LED colours and local brightness/disable adjustment | Both technical sheets pp. 1-2 / PDF pp. 1-2 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000243:s000026`
+
+Provenance cues: `capture`, `experiment`, `source`
+
+No sanitized hardware fingerprint, protocol capture or commissioning experiment is retained for this exact technical item. Source diagrams, room number `127`, switch states and example addresses are publisher illustrations, not observed project installations.
+
+### Programming
+
+Section ID: `ownkb:section:d000243:s000027`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+MyHOME Suite software configuration uses PC Ethernet through MH201 to the SCS system; it offers more options than physical configuration. The technical sheets do not define a complete transfer wizard, erase scope, firmware-update package or recovery procedure. Validate the active Object and its complete configuration before applying changes; absence of slot predicates does not supply a selection algorithm.
+
+Match room-address configuration to the associated outside indicator. Use two one-module key covers for physical `M=0` or one two-module cover for `M=1`. Catalogue legal `M=2` and reusable Object MUR-only `MODE=2` must remain distinct until an exact physical/software mapping is verified. The local LED adjustment is a press longer than `2 s` with the published brightness cycle.
+
+The sheet p. 3 / PDF p. 3 hotel example uses `R1=2`, `R2=7`, `M=–` alongside `LN4651`, `LN4648`, card `348210`, `F411/1N`, `LN4652`, `LN4691`, `MH201`, `F430R8` and `E49`. A displayed room number `127` is a human label; it does not extend the two-digit bus address domain to 127. Power-supply/load protection and air-conditioning actuator choice depend on the installed loads; the example is not a universal bill of materials.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000243:s000028`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The English and French technical sheets have the same `a`, `02/12/2013` revision and agree on the Device-specific specifications, modes, procedures and scope described above. Their three-reference headers independently support the catalogue cluster. General vendor/contact text and certification marks remain in the originals; listed standards are publisher declarations, not a new certification audit. Physical wiring-device module count is independent of protocol Module count. Catalogue status/default metadata and published operating descriptions are not observations of installed firmware or behavior.
+
+| Source issue | Reconciliation / unresolved limit | Evidence |
+| --- | --- | --- |
+| Unprinted physical mode | Catalogue firmware M and Object `489` MODE both admit `2`; only reusable MODE names MUR-only. Technical sheets specify physical `M=0/1` only | Firmware/Object domains; both sheets p. 2 |
+| Button count | H4653 product-sheet attributes, printed pp. 2-3 / PDF pp. 2-3 say one button/actuation point; dated sheets show two one-module DND/MUR covers at `M=0` and a two-module DND cover at `M=1`. No universal one-button count substituted | Retained H4653 product sheet, printed p. 2 / PDF p. 2; both sheets pp. 1-2 |
+| Room-label scope | Hotel illustration label 127 accompanies bus address 27; a room-number label is not an encoded address or new legal domain | Both sheets p. 3 |
+| Arteor colour legend | Arteor is named in LED-colour grouping but no associated SKU is established | Both sheets p. 1 |
+
+The initial dossier used live product-page attributes without retaining a file. This revision replaces those evidence entries with original manufacturer PDF exports, downloaded through the publisher’s product-sheet endpoint with technical characteristics included, uploaded and registered on `main` before incorporation. These preserve the cited ratings, dimensions, material/interface attributes and their discrepancies. Their `03.10.2026` date identifies the export, not an installed release. General bus-classification, commercial image and download-list attributes establish no additional runtime commands; the PDF’s existing document references are recorded as discovery provenance. The earlier HTML response was not archived, and no earlier byte identity is reconstructed.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000243:s000029`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+- Establish whether and how firmware `M=2` selects MUR-only, and which key covers/software procedures apply; no physical `M=2` procedure is retained.
+- Resolve the current H4653 one-button attribute against the mode-specific cover arrangements; do not discard either source.
+- Corroborate Object `489`, room addressing, status feedback, brightness adjustment and firmware/hardware identity on the three commercial variants.
+- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it. Current catalogue facts are now backed by retained original publisher product-sheet exports dated `03.10.2026`.
+
+### Sources
+
+Section ID: `ownkb:section:d000243:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. `EN_ITEM`, `EN_DEVICE`, firmware/system associations, `EN_SLOTS`, Object/Virgin relationships, `EN_CONF`/`EN_CONF_RANGE`, slot conditions, filters, conversions and configuration-mode associations define the implementation scope. Exact archived PDF revisions and publisher URLs are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue metadata and retained fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [H4653 official catalogue](https://www.bticino.com/products/bt-h4653)
+- `H4653-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/14/90/1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4653&include_technical=1); SHA-256 `1490bdb7768a1762848ccfe0afcb181a1fc88354886f0dc032bddb3e544593f1`.
+- `LN4653-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4653` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/55/b2/55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4653); SHA-256 `55b2b5841c3541fc5b9a8a91d2b2ae1989ba4625409438c4b6534600272ad9d0`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0104)
+
+# Document: ownkb:document:d000244
+
+Source path: `devices/definitions/own-dev-0105-do-not-disturb-make-up-room-indicator.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Do Not Disturb / Make Up Room indicator
+
+Section ID: `ownkb:section:d000244:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000244:s000002`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+This outside-door indicator displays Do Not Disturb, Make Up Room and configured room-presence information. Its front bell button is disabled while Do Not Disturb is active, combining staff-facing status with a local call function.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0105` | Project identity |
+| Technical description | Outside-door DND/MUR indicator with room-number backlight and call-bell contact | Published technical sheets; canonical catalogue |
+| Commercial identities | `H4650`, `LN4650`, `067590` | Three catalogue records and both technical-sheet headers |
+| Catalogue item | `1680` | Canonical MyHOME Suite `3.5.38` catalogue |
+| Main catalogue system | Access control | Main item/system association |
+| Item model / `modobj` | `8` | Main item/system association |
+| Firmware definition | `-1.-1.-1` (wildcard / unspecified applicability) | Canonical catalogue; not an observed installed release |
+| Declared Modules | `1` | Canonical firmware metadata |
+| Categories | User interfaces | Source-derived roles |
+
+DND means Do Not Disturb; MUR means Make Up Room. These are room-service notifications. Two physical wiring-device modules do not imply two protocol Modules.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000244:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4650` | Established commercial variant | Item `1680`; `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| BTicino - LivingLight | `LN4650` | Established commercial variant | Item `1680`; `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Legrand - Céliane | `067590` | Established commercial variant | Item `1680`; `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+
+All three catalogue descriptions explicitly identify an indicator without RFID. The reader family `H4651` / `LN4651` / `067591`, item `1681`, remains a separate Device despite sharing mounting instructions.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000244:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4650` | `8005543502556` | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf), `H4650-ean-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4650` | `8005543502570` | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf), `LN4650-ean-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+#### Complete catalogue commercial metadata
+
+Section ID: `ownkb:section:d000244:s000005`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1736` | `H4650` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `1` | `2` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Axolute` |
+| `2001` | `LN4650` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `1` | `4` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Living` |
+| `2002` | `067590` | `DO NOT DISTURB-MAKE UP ROOM indicator` | `2` | `13` | `1` | Empty | `0` | `0` | `DND/MUR indicator NO RFID Celiane` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
+### Documentation
+
+Section ID: `ownkb:section:d000244:s000006`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00774_b_EN.pdf` | English technical sheet | `MM00774-b-EN`, `15/01/2015` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/26/8e26a521c7eb27d3d4dfce71fceaeb87badeeda3110a8331ca6c4d08e83d5ec4.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00774_b_EN.pdf) |
+| `MM00774-b-FR.pdf` | French technical sheet | `MM00774-b-FR`, `15/01/2015` | All three identities; specifications/legend printed p. 1 / PDF p. 1; physical/software configuration printed p. 2 / PDF p. 2; hotel-room system example printed p. 3 / PDF p. 3 | [Archived original](https://archive.openwebnet-ha.org/sha256/ad/da/adda1e950ff03d6c5b44197ca5082dbc7b86e606fa624b707450a33e6d3ee45b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00774-b-FR.pdf) |
+| `LE06116AC.pdf` | Multilingual label installation / reader declarations | `LE06116AC-02PC-19W15` | Indicator identities plus separate reader H4651/LN4651/067591; shared label installation; RF statements scoped to reader; no printed pagination / PDF p. 1 | [Archived original](https://archive.openwebnet-ha.org/sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/LE06116AC.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1680`; complete commercial, firmware, Module/Object and configuration records | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled with MyHOME Suite `3.5.38` |
+| `H4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `H4650` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650) |
+| `LN4650-ean-product-sheet.pdf` | Italian manufacturer product export | Retrieved `2026-10-05`; printed record date/edition remains source-scoped | Exact `LN4650` to EAN-13 relationship at printed/PDF p. 1. Exact identifier, product description and technical attributes examined during semantic review; prices are not adopted as durable technical facts. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf) | [Publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650) |
+| `H4650-publisher-product-sheet.pdf` | Exact manufacturer product export | DATASHEET; 06.10.2026 | Exact H4650 or LN4650; description/contact/bus attributes pp. 1-2; complete download list examined. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/e8/f0/e8f0a14245222ce05aad03c488ad7b88a1632c149f5552c985c43eb2128318f9.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-H4650&include_technical=1) |
+| `LN4650-publisher-product-sheet.pdf` | Exact manufacturer product export | DATASHEET; 06.10.2026 | Exact H4650 or LN4650; description/contact/bus attributes pp. 1-2; complete download list examined. Printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/49/f6/49f6dfd24dfc1eba6777bc4812f414dc13c9f4bb5c213bb5ffb4d8452f70bbda.pdf) | [Publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4650&include_technical=1) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000244:s000007`
+
+Applicability cues: `scs`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | Two flush-mounted wiring-device modules | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| SCS BUS supply | `18..27 Vdc` | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Rear interfaces | SCS BUS terminals and physical configurator socket | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Standby / maximum current | `10 mA` standby; `20 mA` maximum | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Operating temperature | `5..40 °C` | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| DND indication | Red LED on: Do Not Disturb; active DND disables the call pushbutton | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| MUR indication | Green LED on: Make Up Room | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Room-number area | Customizable label with white backlight for room presence and applicable alarm notification | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Local output | Normally open contact operated by front call key; bell active while key is held | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1; `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Published contact rating | `12 Vac/dc..230 Vac`, maximum `1 A` | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1; bell diagram `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Terminal naming discrepancy | Rear legend shows `L`, `L1`; bell schematic shows `L1`, `L2`; use exact product markings when wiring | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1; `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Physical configurator positions | `R1`, `R2`, `M`, `L` | `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| Visual alarm applicability | MH201 plus MyHOME Suite programming; lot `14w40` or later (2014 week 40) | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Published standards | `EN 60669-2-1`, `EN 50491-5-1`, `EN 50428` | `MM00774-b-EN` / French counterpart, printed p. 1 / PDF p. 1 |
+| Exact dimensions / IP / storage / MCU | Not established by the retained indicator-specific sheets | Two-module mounting size does not establish metric dimensions; no hardware fingerprint |
+| H4650/LN4650 export contact limit | One contact; `1 A`, `12..230 V`, maximum `230 W` | Original H/LN product exports p. 2; power figure is SKU-scoped, not a new Céliane rating |
+
+### Identity
+
+Section ID: `ownkb:section:d000244:s000008`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1680` | Canonical catalogue |
+| Technical item description | DO NOT DISTURB-MAKE UP ROOM indicator | Canonical catalogue |
+| Item family | Access control device (`101`) | Catalogue family association |
+| Main system | Access control; system key `8` | `AS_ITEM_SYSTEM.main` association; not a functional WHO number |
+| Item model / `modobj` | `8` | Main item/system mapping |
+| Brand / line keys | BTicino brand key `1`, Axolute line key `2`, LivingLight line key `4`; Legrand brand key `2`, Céliane line key `13` | Commercial database keys; different from software parameter model namespaces |
+| Commercial records | `3`; record IDs `1736`, `2001`, `2002` | Three shared-item catalogue variants |
+| Gateway metadata | None of the three records is marked as a gateway | Commercial metadata; an MH201 software route is an external system connection |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000244:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `8` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000244:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `255` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+Hardware revision, microcontroller and installed firmware are unknown. The indicator lot boundary `14w40` is a published production-lot limit, not a firmware version, and cannot be recovered from the wildcard tuple.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000244:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000244:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `255` | `1` | `488` Hotel indicator | Fixed/designated metadata | `1346` | `554` | `704` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000244:s000013`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000244:s000014`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `255` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `255` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `255` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+Both technical sheets document physical configurators and MyHOME Suite software configuration. The software route uses the PC Ethernet network and external MH201 scenario module; the control/indicator itself remains on SCS BUS. No connection association is stored for this firmware in `AS_CONNECTION_FIRMWARE`; this absence does not invalidate the published Ethernet route. No Product Programming mode association is stored for this firmware.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000244:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults below are catalogue evidence. `AID` is an eight-character mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `255` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `255` | `R1` | `0..9` | `0` | Room tens |
+| `255` | `R2` | `0..9` | `0` | Room unit |
+| `255` | `M` | `0..2` | `0` | DND/MUR indicator mode; Stand alone with SCE - Value : 0 Stand alone with `CEN` - Value : 1 With IP Scenario Module - Value : 2 |
+| `255` | `L` | `0..7` | `0` | led function; 0 : Presence `ON=occupied`, Presence `OFF=free`; DND Active; MUR Active 1 : Presence `ON=occupied`, Presence `OFF=free`; DND Active; MUR Hidden 2 : Presence `ON=free`, Presence `OFF=occupied`; DND Active; MUR Active 3 : Presence `ON=free`, Presence `OFF=occupied`; DND Active; MUR Hidden 4 : Presence always `ON`; DND Active; MUR Active 5 : Presence always `ON`; DND Active; MUR Hidden 6 : Presence always `OFF`; DND Active; MUR Active 7 : Presence always `OFF`; DND Active; MUR Hidden |
+
+#### Published physical mode mapping
+
+Section ID: `ownkb:section:d000244:s000016`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Configurator | Value / meaning | Evidence |
+| --- | --- | --- |
+| `R1`, `R2` | Room address tens and units; each `0..9` in catalogue | Catalogue; `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=0` | With F420 | `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=1` | With MH200N | `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+| `M=2` | With MH201 | `MM00774-b-EN` / French counterpart, printed p. 2 / PDF p. 2 |
+
+#### Physical `L` configurator
+
+Section ID: `ownkb:section:d000244:s000017`
+
+Applicability cues: `firmware`
+
+| `L` | White room backlight | Red DND LED | Green MUR LED |
+| --- | --- | --- | --- |
+| `0` | On when occupied; off when free | Enabled | Enabled |
+| `1` | On when occupied; off when free | Enabled | Disabled |
+| `2` | On when free; off when occupied | Enabled | Enabled |
+| `3` | On when free; off when occupied | Enabled | Disabled |
+| `4` | Always on | Enabled | Enabled |
+| `5` | Always on | Enabled | Disabled |
+| `6` | Always off | Enabled | Enabled |
+| `7` | Always off | Enabled | Disabled |
+
+Both technical sheets print this mapping on p. 2 / PDF p. 2; it agrees with firmware `L` descriptions. Software Object `DND_ENABLE` separately permits disabling DND; that value is not a ninth physical L choice.
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000244:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `488` - Hotel indicator
+
+Section ID: `ownkb:section:d000244:s000019`
+
+Applicability cues: `only for`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Catalogue Object key `554` maps to external Object `488`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `R1R2` | `0..99` | `01` | Room address |
+| `DND_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Enable DO NOT DISTURB indicator |
+| `MUR_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Enable MAKE UP ROOM indicator |
+| `PRESENCE_LED` | `0` = `ON=Presence`, `OFF=No` presence; `1` = `OFF=Presence`, `ON=No` presence; `2` = Always `OFF`; `3` = Always `ON` | `0` | LED presence |
+| `MODE` | `0` = Stand alone with scenaro; `1` = Stand alone with `CEN`; `2` = With IP Scenario Module | `0` | DO NOT DISTURB/MAKE UP ROOM indicator mode; For indicator with RFID: 0 = Badge stored locally 1 = Badge stored locally 2 = Badge stored in IPSM |
+| `ENTRANCE_ENABLE_GROUP` | `0..255` | `0` | Group address enabled on entrance; Only for Mode = 0 |
+| `LEAVING_DISABLE_GROUP` | `0..255` | `0` | Group address disabled on leaving |
+| `APL` | `0..175` | `0` | Address of the Key card switch; Complete stored mapping: `A=floor(value/16)`, `PL=value mod 16`; labels include `A=0..10` and `PL=0..15`, not a decimal physical A/PL configurator domain. |
+| `LOCAL_RELAY_FUNCTION` | `0` = Doorbell; `1` = Door opening | `0` | Local relay function; In case of Doorbell, parameter "Door relay address" must be different from 0. |
+| `APL_DOOR` | `0..175` | `1` | Address of the actuator of door relay; Complete stored mapping: `A=floor(value/16)`, `PL=value mod 16`; labels include `A=0..10` and `PL=0..15`, not a decimal physical A/PL configurator domain. |
+| `DOOR_RELAY_TIMER` | `1..100` | `10` | Door relay timing [s]; Complete stored label mapping: time in seconds equals value / 10 (`0.1..10 s`); stored default `10` = `1 s`. This catalogue mapping does not by itself establish a protocol wire representation. |
+| `BACKLIGHT_INTENSITY` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 | `5` | Backlight intensity |
+| `ROOM_GENERIC_SERVICE` | `0` = Enabled; `1` = Disabled | `1` | Room_Generic_Service; link to PUL_Signal Frame |
+
+`ENTRANCE_ENABLE_GROUP` is described as applicable only in `MODE=0`; the catalogue does not attach an equivalent condition row. The generic MODE description about local/IP badge storage is explicitly for indicators with RFID and does not establish an RFID reader in these three NO-RFID variants. The `ROOM_GENERIC_SERVICE` description names `PUL_Signal` without defining the frame or its Device-specific behavior.
+
+#### Semantic review findings
+
+Section ID: `ownkb:section:d000244:s000020`
+
+Cautions: `not evidence`
+Provenance cues: `evidence`
+
+The product is explicitly non-RFID. Object `488` generic reader/group/door fields are software metadata, not evidence of indicator radio hardware. Preserve the literal room default 01 and filter admitting only 0; the nonzero doorbell-address requirement is prose, not enforced by a stored condition. New H/LN exports corroborate one contact and add a SKU-scoped 230 W maximum.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000244:s000021`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000244:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000244:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `255` | `488` | `1378` | `LOCAL_RELAY_FUNCTION` | `0` = Doorbell; `1` = Door opening (entire reusable range retained) | `0` | Local relay function |
+| `255` | `488` | `1380` | `DOOR_RELAY_TIMER` | `1..100` (entire reusable range retained; value / 10 seconds) | `10` | Door relay timer, step 100ms |
+| `255` | `488` | `1792` | `APL_DOOR` | `0..175` (entire reusable range retained; `A=floor(value/16)`, `PL=value mod 16`) | `1` | Address of the actuator of door relay |
+| `255` | `488` | `3096` | `ROOM_GENERIC_SERVICE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Room_Generic_Service |
+| `255` | `488` | `3106` | `R1R2` | `0` | `01` | Room address; reusable default `01` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000244:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule or selection predicate is associated with these placements. Validate the firmware domain and the selected Object/Firmware filters separately; empty selection metadata does not establish an active Object. Generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000244:s000025`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Compare discovered model and system with catalogue main model `8` in Access control; this is a source-derived identification target, not a verified response | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Corroborate installed firmware before relating observations to wildcard catalogue applicability; also retain physical lot label for the visual-alarm boundary | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Corroborate hardware revision separately from firmware; no verified response retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Corroborate microcontroller revision if this managed Device supports the query; no verified response retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Discover active Objects and Modules: slot `1`, external Object `488`; no Virgin Object association. Do not report database relation IDs as KEYO | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Read applicable active Object addressing; room-address semantics belong to Access Control, not Lighting A/PL; device address encoding requires actual discovery context | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Read/compare the selected Object configuration against its reusable domain/default and firmware context; default is not installed state | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are candidate corroboration surfaces of the managed Device model. Catalogue associations do not prove that every operation succeeds on this firmware/transport. Access Control management uses `WHO 1023`; catalogue system key `8` is not `WHO 8`.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000244:s000026`
+
+Provenance cues: `catalogue`, `evidence`
+
+The main catalogue family is [Access Control (`WHO 23`)](../../functional/who-23-access-control/). That implementation family has managed addressing infrastructure; its numeric catalogue system key and item model are separate namespaces. No complete DND/MUR functional WHAT or DIMENSION vocabulary is established by the retained product sheets.
+
+| Function | Published or implementation applicability | Evidence |
+| --- | --- | --- |
+| DND / MUR display | Red DND and green MUR indicators; DND disables the front bell key | Both technical sheets p. 1 / PDF p. 1 |
+| Presence indication | White room-number backlight; physical L selects presence/inverted/always-on/always-off modes | Both technical sheets p. 2 / PDF p. 2 |
+| Local bell | Normally open contact active while front key is held, within published load rating | Both technical sheets pp. 1-2 / PDF pp. 1-2 |
+| Visual alarm | MH201 system, MyHOME Suite configuration and production lot 14w40 or later | Both technical sheets p. 1 / PDF p. 1; blinking pattern/event list unspecified |
+| Software door / service options | Reusable Object `488` includes local door opening, address/time, entrance/leaving groups and room service | Catalogue capability; exact non-RFID runtime mapping not corroborated |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000244:s000027`
+
+Provenance cues: `capture`, `experiment`, `source`
+
+No sanitized hardware fingerprint, protocol capture or commissioning experiment is retained for this exact technical item. Source diagrams, room number `127`, switch states and example addresses are publisher illustrations, not observed project installations.
+
+### Programming
+
+Section ID: `ownkb:section:d000244:s000028`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`
+
+MyHOME Suite software configuration uses PC Ethernet through MH201 to the SCS system; it offers more options than physical configuration. The technical sheets do not define a complete transfer wizard, erase scope, firmware-update package or recovery procedure. Validate the active Object and its complete configuration before applying changes; absence of slot predicates does not supply a selection algorithm.
+
+Set R1/R2 for the bus room address, M for the installed scenario module and L for white/MUR indications. Confirm the physical lot is `14w40` or later before enabling the MH201-only visual alarm in software. The alarm trigger set, flash pattern and reset procedure are not specified by these sheets. Bell wiring must follow the exact terminal markings and published contact rating.
+
+Both sheet examples show room label `127`, bus address `R1=2`, `R2=7`, `M=2`, `L=0`; labels and bus addresses are different scopes. The p. 3 / PDF p. 3 multi-device diagram additionally prints `A=1`, `PL=1`, `T=2` beside this indicator, although the dedicated physical configurator inventory and firmware fields do not define those positions. Preserve this diagram discrepancy; it does not establish additional firmware fields.
+
+`LE06116AC-02PC-19W15`, PDF p. 1, illustrates removal of the front/label, printing and cutting a room-number insert, then reinsertion and refitting. Its `13.56 MHz` and RED declarations explicitly name H4651/LN4651/067591 readers; neither establishes a radio in H4650/LN4650/067590.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000244:s000029`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Uncertainty: `appears`, `unresolved`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The English and French technical sheets have the same `b`, `15/01/2015` revision and agree on the Device-specific specifications, modes, procedures and scope described above. Their three-reference headers independently support the catalogue cluster. General vendor/contact text and certification marks remain in the originals; listed standards are publisher declarations, not a new certification audit. Physical wiring-device module count is independent of protocol Module count. Catalogue status/default metadata and published operating descriptions are not observations of installed firmware or behavior.
+
+| Source issue | Reconciliation / unresolved limit | Evidence |
+| --- | --- | --- |
+| Room-address default | Firmware R1 and R2 defaults each `0`; reusable Object R1R2 default is literal `01`. Filter `3106` restricts R1R2 to `0`, outside reusable default `01`, while physical addresses have two decimal digits. This unresolved software restriction is preserved; no replacement default or generic runtime-address ban inferred | Firmware `255`; Object `488` |
+| Relay requirement | Reusable LOCAL_RELAY_FUNCTION default Doorbell (`0`) accompanies APL_DOOR default `1`; the description requires nonzero Door relay address in Doorbell mode. The legal address domain also contains `0`, without an attached condition/filter enforcing the requirement | Object `488`; relay-function/address filters retain full ranges, without a conditional nonzero rule |
+| Physical and reusable LEDs | Physical L always enables red DND; software DND_ENABLE can disable it; white-presence labels and software levels are separate fields, without a conversion table | Both sheets p. 2; Object `488` |
+| Indicator and reader scope | Shared instruction RF/declaration text is expressly for the 4651/067591 reader family; catalogue names this 4650/067590 cluster NO RFID | LE06116AC p. 1; commercial catalogue |
+| Extra diagram fields | Hotel diagram prints A/PL/T beside the indicator although physical configuration lists R1/R2/M/L only and the firmware has no A/PL/T fields | Both sheets pp. 2-3; firmware `255` |
+| Bell terminal naming | Rear legend labels L/L1; bell wiring sketch labels L1/L2. No unwitnessed terminal equivalence established | Both sheets pp. 1-2 |
+| Hardware boundary | Visual alarm requires lot 14w40 or later plus MH201/software; wildcard firmware cannot establish this production-lot capability | Both sheets p. 1; firmware `255` |
+| Software RFID prose | Generic MODE field describes badge storage for RFID variants; address/group/door fields remain reusable software capability with unverified non-RFID runtime scope | Object `488` |
+
+The illustrated instruction revision `LE06116AC-02PC-19W15` has been incorporated for label handling. Multilingual reader regulatory statements add no indicator-specific radio capability; their applicability remains explicitly separate.
+
+The `06.10.2026` H4650/LN4650 originals corroborate one contact and `230 W` maximum, two wiring-device modules, LED, local control and SCS bus. They classify RF/KNX/LON/Powernet as No and connected-object as No; these are commercial classifications. “Different phases connectable” is not an installation instruction or permission to exceed the technical-sheet contact rating. Their LE06116AC/MM00774_b_EN links reuse retained originals. The H4650 broad catalogue `3211578` and linked drawing files remain unexamined; the known Italian MM00774_b_IT translation is not independently reconciled. No metric dimensions or IP rating appears in these two exports.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000244:s000030`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+- Resolve the firmware `00` versus reusable Object `01` room default and filter `3106` restriction to 0, unenforced nonzero relay-address requirement, extra A/PL/T diagram positions and L/L1 versus L1/L2 terminal notation.
+- Obtain lot-scoped hardware evidence for the MH201 visual-alarm feature, including trigger events, indication pattern, reset/acknowledgement and accepted configuration fields.
+- Verify non-RFID applicability of reusable door opening, door timer, entrance/leaving group and generic-service fields; inspect the relevant software definitions before asserting wire encoding.
+- Corroborate Object `488`, room address, bell interlock/contact behavior and LED mapping for all three variants; exact metric dimensions, IP and MCU remain undocumented by retained indicator sheets.
+- Retained exact-product source reconciliation is scoped to the listed revisions; current commercial catalogues/translations and future revisions can extend it.
+
+### Sources
+
+Section ID: `ownkb:section:d000244:s000031`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Catalogue tables were read from the registered `MHCatalogue.db` original, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. `EN_ITEM`, `EN_DEVICE`, firmware/system associations, `EN_SLOTS`, Object/Virgin relationships, `EN_CONF`/`EN_CONF_RANGE`, slot conditions, filters, conversions and configuration-mode associations define the implementation scope. Exact archived PDF revisions and publisher URLs are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue metadata and retained fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- `H4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `H4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/93/c5/93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-H4650); SHA-256 `93c59840ea69129a1dc5c4a6a7fd30456ec4dd7627d59fb6d04c4163c741dfa4`.
+- `LN4650-ean-product-sheet.pdf`, printed/PDF p. 1: exact `LN4650` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/66/bb/66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c.pdf); [publisher source](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-LN4650); SHA-256 `66bba020f08ee8c006b13559e8b03f5473ddac5e4dc7d7622affee826032862c`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0105)
+
+# Document: ownkb:document:d000245
+
+Source path: `devices/definitions/own-dev-0106-rfid-reader-and-outside-door-indicator.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## RFID reader and outside-door DND/MUR indicator
+
+Section ID: `ownkb:section:d000245:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000245:s000002`
+
+Applicability cues: `firmware`, `version`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+This outside-door unit combines an RFID room-access reader with Do Not Disturb, Make Up Room and presence indications. It recognizes documented Mifare cards and can operate a configured bell or door-release arrangement, with access-management functions dependent on the installed hotel system.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0106` | Project identity |
+| Technical description | RFID reader and outside-door DND/MUR indicator | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `H4651`, `LN4651`, `067591` | All three catalogue commercial records; confidence scoped below |
+| Catalogue item | `1681` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Access control | Main system association |
+| Item model / `modobj` | `6` | Main association; independent of project ID |
+| Firmware definition | `254` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Commands, User interfaces | Source-derived roles |
+
+DND means Do Not Disturb; MUR means Make Up Room. This reader is separate from the non-RFID 4650 indicator. Two physical wiring-device modules contain one catalogue Module. Mifare compatibility and visual alarms have an explicit production-lot boundary.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000245:s000003`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `H4651` | Established commercial variant | Catalogue record `1737`; published family/variant scope reconciled below |
+| BTicino - LivingLight | `LN4651` | Established commercial variant | Catalogue record `1999`; published family/variant scope reconciled below |
+| Legrand - Céliane | `067591` | Established commercial variant | Catalogue record `2000`; published family/variant scope reconciled below |
+
+The publisher technical sheets name all three references together. The catalogue `L/N/NT` grouping is marketed as LivingLight for `LN4651`. `3547` is a card accessory, not a fourth reader identity.
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000245:s000004`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `H4651` | `8005543502563` | [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf), `H4651-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+| `LN4651` | `8005543502587` | [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf), `LN4651-publisher-product-sheet.pdf`, printed/PDF p. 1 |
+
+Each EAN is tied to the exact commercial reference in the cited manufacturer record. Grouped catalogue codes are expanded only into their named physical references. These source-specific commercial identifiers do not establish the installed hardware or firmware revision.
+
+#### Complete catalogue commercial metadata
+
+Section ID: `ownkb:section:d000245:s000005`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1737` | `H4651` | `DO NOT DISTURB-MAKE UP ROOM reader` | `1` | `2` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Axolute` |
+| `1999` | `LN4651` | `DO NOT DISTURB-MAKE UP ROOM reader` | `1` | `4` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Living` |
+| `2000` | `067591` | `DO NOT DISTURB-MAKE UP ROOM reader` | `2` | `13` | `1` | Empty | `0` | `0` | `DND/MUR indicator with RFID Celiane` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
+### Documentation
+
+Section ID: `ownkb:section:d000245:s000006`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MM00776_c_EN.pdf` | English technical sheet | `MM00776-c-EN; 22/05/2015` | All three references; specifications/lot boundary p. 1; modes p. 2; cards and two wiring examples p. 3; hotel-room diagram p. 4. Printed and PDF pp. 1-4 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/c0/8c/c08cb70885340cf17728b2b7622cb3cd488f22c6b7dde910e93ef46da26c13d5.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/MM00776_c_EN.pdf) |
+| `MM00776-c-FR.pdf` | French technical sheet | `MM00776-c-FR; 22/05/2015` | All three references; printed and PDF pp. 1-4 coincide, including card procedures and hotel-room wiring. | [Archived original](https://archive.openwebnet-ha.org/sha256/cf/38/cf3830140b6c58c9a6c7c7b4ecc276377a47ddb68b520a03f2e5921048122550.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MM00776-c-FR.pdf) |
+| `LE06116AC.pdf` | Multilingual installation / radio declarations | `LE06116AC-02PC-19W15` | Shared 4650 indicator and 4651 reader families; reader-specific RF declaration, label removal/printing/refitting; no printed pagination / PDF p. 1. | [Archived original](https://archive.openwebnet-ha.org/sha256/19/00/1900dc5ccac4aff7c789eb73808d36b7bae7ad046bf9bc34bd0d7e574e1ea41e.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/LE06116AC.pdf) |
+| `H4651-publisher-product-sheet.pdf` | Manufacturer product export | `DATASHEET; 03.10.2026` | `H4651` description, commercial line and attributes; printed and PDF pp. 1-3 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-H4651&include_technical=1) |
+| `LN4651-publisher-product-sheet.pdf` | Manufacturer product export | `DATASHEET; 03.10.2026` | `LN4651` description, marketed line and attributes; printed and PDF pp. 1-3 coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-LN4651&include_technical=1) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1681`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000245:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Mounting | Two flush-mounted wiring-device modules | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Supply | `18..27 Vdc` from SCS BUS | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Current conditions | Standby `10 mA`; relay active `20 mA`; RFID maximum `55 mA` | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Operating temperature | `5..40 °C` | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Relay contact | Normally open; `12 Vac/dc..230 Vac`, maximum `1 A`; bell or lock function | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Reader technology | Mifare Classic `ISO 14443`, including card `3547`, lot `14w40` or later | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Radio frequency | `13.56 MHz`; reader family explicitly named | `LE06116AC-02PC-19W15`, no printed pagination / PDF p. 1 |
+| Alarm boundary | White backlight visual alarm requires MH201, MyHOME Suite programming and lot `14w40` or later | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Front controls/status | Call key; red DND; green MUR; customizable white room label; reader LED green=valid, red=error, flashing=card programming | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+| Rear interfaces | SCS, configurator socket, normally open relay; wiring sketches mark `L1`, `L` | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1; `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Physical positions | `R1`, `R2`, `M`, `L`, `A`, `PL`, `T` | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `H4651`/`LN4651` metric size | `45 x 45 x 24 mm`; minimum box depth `55 mm`; `IP20` | Both original product exports, printed/PDF p. 2 |
+| `H4651`/`LN4651` storage/connection | `-10..70 °C`; terminals `0.34..2.5 mm²`, flexible or rigid wire | Both product exports, pp. 2-3 |
+| `H4651` construction | Thermoplastic; untreated glossy finish, transparent attribute; RAL-like `9011` | `H4651` export p. 2; no Céliane extension |
+| SKU-scoped attributes | H4651: bidirectional radio Yes; LN4651: bidirectional radio No; both RF bus No; SCS; one actuation point/button; LED and no display, thermostat or IR sensor. `H4651` label-area Yes | Exports pp. 2-3; radio bus classification distinct from card-reader RF |
+| Published standards | `EN 60669-2-1`, `EN 50491-5-1`, `EN 50428` | `MM00776-c-EN/FR`, printed p. 1 / PDF p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000245:s000008`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1681` | Canonical catalogue |
+| Technical item description | DO NOT DISTURB-MAKE UP ROOM reader | Canonical catalogue |
+| Item family | Device for Access Control system; key `101` | Canonical catalogue |
+| Main system | Access control; key `8` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `6` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `3` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000245:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Access control | `6` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000245:s000010`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `254` | `-1` | `-1` | `-1` | `1` | Catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000245:s000011`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000245:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `254` | `1` | `488` Hotel indicator | Fixed/designated metadata | `1345` | `554` | `703` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000245:s000013`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000245:s000014`
+
+Applicability cues: `firmware`, `gateway`, `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `254` | Physical configuration | `0` | Canonical firmware/mode association ; association mode key `3` |
+| `254` | Virtual Configuration | `1` | Canonical firmware/mode association ; association mode key `1` |
+| `254` | Advanced Configuration | `2` | Canonical firmware/mode association ; association mode key `2` |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+No connection associations are stored for these firmware definitions. This does not negate a documented route through an external gateway.
+
+The published physical route uses rear configurators. MyHOME Suite uses Ethernet through external MH201 on SCS, not an Ethernet port on this reader. The registered Virtual/Advanced/Physical labels do not establish wire-level programming mechanics.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000245:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `254` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `254` | `R1` | `0..9` | `0` | Room tens |
+| `254` | `R2` | `0..9` | `0` | Room unit |
+| `254` | `M` | `0..2` | `0` | DND/MUR indicator mode; (Stand alone with SCE: 0) (Stand alone with `CEN`: 1) (With IP Scenario Module: 2) |
+| `254` | `L` | `0..7` | `0` | led function; 0 : Presence `ON=occupied`, Presence `OFF=free`; DND Active; MUR Active 1 : Presence `ON=occupied`, Presence `OFF=free`; DND Active; MUR Hidden 2 : Presence `ON=free`, Presence `OFF=occupied`; DND Active; MUR Active 3 : Presence `ON=free`, Presence `OFF=occupied`; DND Active; MUR Hidden 4 : Presence always `ON`; DND Active; MUR Active 5 : Presence always `ON`; DND Active; MUR Hidden 6 : Presence always `OFF`; DND Active; MUR Active 7 : Presence always `OFF`; DND Active; MUR Hidden |
+| `254` | `A` | `0..9` | `0` | Area; address of door lock actuator (if not configured, the on board relay of the indicator is used for door lock) |
+| `254` | `PL` | `0..9` | `0` | Light point; address of door lock actuator (if not configured, the on board relay of the indicator is used for door lock) |
+| `254` | `T` | `0..9` | `0` | Relay timing for door lock acutator; (0=0.5s, 1...9 = 1s...9s) |
+
+#### Published physical meanings
+
+Section ID: `ownkb:section:d000245:s000016`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `catalogue`, `evidence`
+
+| Configurator | Meaning | Evidence |
+| --- | --- | --- |
+| `R1`, `R2` | Room tens and units | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `M=0` | F420; catalogue standalone scenario mode | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `M=1` | MH200N; catalogue standalone `CEN` mode | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `M=2` | MH201; catalogue IP scenario-module mode | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `A`, `PL` | SCS address of external door-lock actuator; absent actuator configuration uses on-board relay per firmware description | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2; firmware `254` |
+| `T=0` | `0.5 s` | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `T=1..9` | `1..9 s`, value equals seconds | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+
+#### Complete physical LED mapping
+
+Section ID: `ownkb:section:d000245:s000017`
+
+Provenance cues: `evidence`
+
+| `L` | White backlight | Red DND | Green MUR | Evidence |
+| --- | --- | --- | --- | --- |
+| `0` | On occupied / off free | Enabled | Enabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `1` | On occupied / off free | Enabled | Disabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `2` | On free / off occupied | Enabled | Enabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `3` | On free / off occupied | Enabled | Disabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `4` | Always on | Enabled | Enabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `5` | Always on | Enabled | Disabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `6` | Always off | Enabled | Enabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+| `7` | Always off | Enabled | Disabled | `MM00776-c-EN/FR`, printed p. 2 / PDF p. 2 |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000245:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `488` - Hotel indicator
+
+Section ID: `ownkb:section:d000245:s000019`
+
+Applicability cues: `only for`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Catalogue Object key `554` maps to external Object `488`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `R1R2` | `0..99` | `01` | Room address |
+| `DND_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Enable DO NOT DISTURB indicator |
+| `MUR_ENABLE` | `0` = Enabled; `1` = Disabled | `0` | Enable MAKE UP ROOM indicator |
+| `PRESENCE_LED` | `0` = `ON=Presence`, `OFF=No` presence; `1` = `OFF=Presence`, `ON=No` presence; `2` = Always `OFF`; `3` = Always `ON` | `0` | LED presence |
+| `MODE` | `0` = Stand alone with scenaro; `1` = Stand alone with `CEN`; `2` = With IP Scenario Module | `0` | DO NOT DISTURB/MAKE UP ROOM indicator mode; For indicator with RFID: 0 = Badge stored locally 1 = Badge stored locally 2 = Badge stored in IPSM |
+| `ENTRANCE_ENABLE_GROUP` | `0..255` | `0` | Group address enabled on entrance; Only for Mode = 0 |
+| `LEAVING_DISABLE_GROUP` | `0..255` | `0` | Group address disabled on leaving |
+| `APL` | `0..175`; A = floor(value / 16), PL = value modulo 16 | `0` | Address of the Key card switch |
+| `LOCAL_RELAY_FUNCTION` | `0` = Doorbell; `1` = Door opening | `0` | Local relay function; In case of Doorbell, parameter "Door relay address" must be different from 0. |
+| `APL_DOOR` | `0..175`; A = floor(value / 16), PL = value modulo 16 | `1` | Address of the actuator of door relay |
+| `DOOR_RELAY_TIMER` | `1..100`; seconds = value / 10 (`0.1..10 s`) | `10` | Door relay timing [s] |
+| `BACKLIGHT_INTENSITY` | `1` = Level 1; `2` = Level 2; `3` = Level 3; `4` = Level 4; `5` = Level 5; `6` = Level 6; `7` = Level 7; `8` = Level 8; `9` = Level 9; `10` = Level 10 | `5` | Backlight intensity |
+| `ROOM_GENERIC_SERVICE` | `0` = Enabled; `1` = Disabled | `1` | Room_Generic_Service; link to PUL_Signal Frame |
+
+The address and timer compression above preserves every enumerated catalogue value. Standalone modes `0/1` store cards locally; mode `2` stores them in the IP scenario module according to Object `488` prose. Physical `T=0` and software timer value `5` both label `0.5 s` in their separate sources; no attached conversion equates their wire encoding.
+
+#### Semantic review findings
+
+Section ID: `ownkb:section:d000245:s000020`
+
+Applicability cues: `firmware`
+
+RFID card radio is documented at 13.56 MHz; RF automation bus classifications are separate. Mifare/3547 and visual alarm require lot 14w40 onward; wildcard firmware does not resolve lot. H4651 and LN4651 exports disagree on bidirectional-radio classification. Physical card programming/reset procedures and software room/default restrictions remain distinct.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000245:s000021`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000245:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000245:s000023`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `254` | `488` | `3095` | `ROOM_GENERIC_SERVICE` | `0` = Enabled; `1` = Disabled (entire reusable range retained) | `1` | Room_Generic_Service |
+| `254` | `488` | `3105` | `R1R2` | `0` | `01` | Room address; reusable default `01` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000245:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion reference is attached to these slot rows. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000245:s000025`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `6` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000245:s000026`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Function | Applicability | Evidence / canonical reference |
+| --- | --- | --- |
+| Hotel access | DND/MUR/presence and RFID room access | [`WHO 23`](../../functional/who-23-access-control/); diagnostic management context `WHO 1023`, independent of catalogue system key `8` |
+| Door/bell actuation | Front-key local relay or configured external door actuator; valid badge opening | Technical sheets pp. 1-3; local relay is not an unconditional Automation Object |
+| Scenario integration | F420/MH200N/MH201 depends on `M`; PC card validity, guest details and access controls require MH201 | Technical sheets pp. 2-3; system integration does not add runtime Objects |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000245:s000027`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000245:s000028`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`
+
+Resolve the actual firmware and Object before writing configuration. Keep two-digit room addresses separate from printed room labels: the wiring example label `110` uses bus `R1=1`, `R2=0`; label `115` uses `1`, `5`. The whole-room example label `127` uses `2`, `7`. Check production lot before relying on Mifare Classic cards or visual alarms.
+
+| Operation | Published procedure / effect | Evidence |
+| --- | --- | --- |
+| First start without master | All cards are accepted until a master is programmed | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Store master | Hold call key `10 s`, then present master card; master cannot be changed by ordinary card programming | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Reset all cards | Disconnect supply; reconnect while holding call key `10 s`; deletes every stored card | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Add customer | Present master (green slow flash); present customer (green steady `2 s`); press call key to finish | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Delete customers | Present master; present again (green fast flash); third presentation gives green steady `5 s`, then off | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Add service | Present master; press call key (orange flash); present service card (orange steady `2 s`); press call key to finish | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Delete services | Present master; press call key; present master again (fast flash); third presentation gives orange steady `5 s`, then off | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| PC card administration | MH201-only; validity, guest information, further access controls; EN calls these scheduled accesses, FR calls these limited accesses | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Bell plus external lock | Room 110: `M=2`, `A=1`, `PL=1`, `T=2`; front key operates local bell, valid card operates F411/1N door lock for `2 s`, actuator `M=PUL` | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Local lock only | Room 115: `M=2`, absent `A/PL`, `T=3`; valid card operates local lock `3 s`, front key disabled; MH201 required | `MM00776-c-EN/FR`, printed p. 3 / PDF p. 3 |
+| Labels and mounting | Remove front/label, print and cut room-number insert, reinsert/refit; use the shared sheet drawings | `LE06116AC-02PC-19W15`, PDF p. 1 |
+
+The hotel-room diagram on p. 4 / PDF p. 4 includes LN4648, LN4653, LN4652, LN4691, MH201, F430R8 and F411/1N with E49. It is an example: choose protection and actuators for installed loads; E46ADCN is the published alternative if E49 current is insufficient.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000245:s000029`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `contradictory`, `unresolved`
+Provenance cues: `evidence`, `source`
+
+The two `c` technical-sheet translations agree on the three-reference cluster, ratings, complete physical mappings, lot restrictions, card operations and wiring. Their PC-card access descriptions differ and remain source-scoped. Shared `LE06116AC` expressly attributes the RF declaration to the reader family, while retaining non-RFID indicator mounting coverage. The H/LN exports corroborate marketed lines and add SKU-scoped construction/dimensions; they do not date installed hardware.
+
+| Issue | Reconciliation / unresolved limit | Evidence |
+| --- | --- | --- |
+| Room restriction | Firmware digits default `0/0`; Object R1R2 defaults literal `01`, but filter `3105` admits only `0`, with no replacement default. Do not reinterpret this as a documented runtime ban on physical room addresses | Firmware `254`; Object `488`; published R1/R2 |
+| Relay constraint | LOCAL_RELAY_FUNCTION Doorbell requires nonzero APL_DOOR in prose; legal APL_DOOR still contains `0`, with no attached conditional enforcement. Default `1` satisfies the prose, but not every legal value does | Object `488` |
+| Lot boundary | Mifare/3547 and visual alarm apply from `14w40`; wildcard firmware cannot prove a pre/post-lot Physical Device | Sheets p. 1 |
+| Reader/local relay | Introductory legend says relay activated by front key; local-lock wiring disables front key and uses card acceptance. These are configuration-dependent examples, not contradictory unconditional behavior | Sheets pp. 1, 3 |
+| RF attribute | Both exports say RF-bus No, but H4651 says bidirectional radio Yes and LN4651 No. This SKU-specific classification conflict remains unresolved; `13.56 MHz` identifies the card-reader radio. No RF automation bus inferred | Exports p. 2; LE06116AC |
+| Unspecified limits | Card capacity, badge data format, acceptance algorithm, alarm trigger/reset and key-programming timeouts are not specified by retained sources | All reader originals |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000245:s000030`
+
+Applicability cues: `firmware`
+
+- Resolve filter `3105` room restriction and physical-to-Object mappings using actual software parameters or sanitized captures.
+- Establish card capacity, pre-`14w40` card compatibility, credential semantics and alarm event/reset behavior; corroborate the published permissive pre-master state and reset sequence.
+- Verify firmware/hardware identity and relay timing/feedback on all three variants. Céliane metric dimensions/protection have no exact retained product export.
+- Parameter/radio payloads, production-lot behavior and current additional commercial catalogues remain beyond the retained revisions.
+
+### Sources
+
+Section ID: `ownkb:section:d000245:s000031`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- `H4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `H4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/31/2d/312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-H4651&include_technical=1); SHA-256 `312de05eac5c7e1ba2ec242feb4dba44daea6bcf456b76788df056b0f97886e9`.
+- `LN4651-publisher-product-sheet.pdf`, printed/PDF p. 1: exact `LN4651` / EAN-13 pair. [Archived original](https://archive.openwebnet-ha.org/sha256/13/1e/131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204.pdf); [publisher source](https://www.bticino.com/products/pdf?sku=BT-LN4651&include_technical=1); SHA-256 `131ee5ff8ae4cf69a158b11ed49f06174dd0e8fb8ab5eca46936a7f6ebdd4204`.
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0106)
+
+# Document: ownkb:document:d000246
+
+Source path: `devices/definitions/own-dev-0107-legrand-multimedia-touch-screen.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Legrand Multimedia Touch Screen
+
+Section ID: `ownkb:section:d000246:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000246:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+This Legrand 10-inch multimedia touchscreen brings configured lighting, automation, scenarios, sound and video-door-entry functions into one wall interface. Its programmed menus and media connections support a shared control point, subject to the installed systems and the documented accessory limits.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0107` | Project identity |
+| Technical description | Legrand Multimedia Touch Screen | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `067285`, `573963`, `573962` | All three catalogue commercial records; confidence scoped below |
+| Catalogue item | `1809` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Integration functions | Main system association |
+| Item model / `modobj` | `48` | Main association; independent of project ID |
+| Firmware definition | `123`, `665`, `666`, `667` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | User interfaces, Audio video, Multifunction devices | Source-derived roles |
+
+Catalogue item `1809`, main model `48`, is separate from the BTicino item `1340`, model `41`. They share reusable Object `32`; this does not make their commercial identity, firmware or hardware interchangeable.
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000246:s000003`
+
+Applicability cues: `version`
+Cautions: `do not`
+Provenance cues: `capture`, `catalogue`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand | `067285` | Established commercial variant | Catalogue record `1950`; published family/variant scope reconciled below |
+| Legrand - Arteor | `573963` | Established commercial variant | Catalogue record `1949`; published family/variant scope reconciled below |
+| Legrand - Arteor | `573962` | Established commercial variant | Catalogue record `1951`; published family/variant scope reconciled below |
+
+Both installer covers print `672 85`, establishing catalogue `067285`. The user-manual version illustration prints `573962/63`, supporting both Arteor references; it is not a hardware capture. All three catalogue records use Arteor, but the retained manuals do not establish the marketed line of `067285`; the human-facing row therefore uses Legrand alone. Catalogue colours are Titanium, Magnesium and White respectively; accessory plates are separate identities.
+
+#### Complete catalogue commercial metadata
+
+Section ID: `ownkb:section:d000246:s000004`
+
+Applicability cues: `gateway`
+Provenance cues: `catalogue`
+
+| Record | Reference | Catalogue name | Brand key | Line key | Visible | Visibility type | Dependent | Gateway | Catalogue description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `1949` | `573963` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen Magnesium` |
+| `1950` | `067285` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen Titanium` |
+| `1951` | `573962` | `Multimedia Touch Screen` | `2` | `11` | `1` | Empty | `0` | `0` | `Multimedia Touch Screen White` |
+
+Empty catalogue values are retained as empty metadata; none is an installed-state or market-availability observation.
+
+### Documentation
+
+Section ID: `ownkb:section:d000246:s000005`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `U3970A.pdf` | French / English user manual | `U3970A; 10/09-01 PC` | Cover 672 85; settings screenshot 573962/63 p. 129. French pp. 3-65 and English pp. 67-129; applications pp. 78-119; settings pp. 122-129. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/54/1c/541cd82ee7bc13dfb3f7c959b52eae598f6b47b80cf29c4da270918555a7c065.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3970a.pdf) |
+| `U3971A.pdf` | French / English installation manual | `U3971A; 10/09-01 PC` | Cover 672 85; English pp. 15-26: interfaces pp. 17-18, mounting pp. 19-22, battery p. 23, software/PC pp. 24-25, specifications p. 26. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/5a/87/5a87da8c493ac9acc149494d6267a1ac9ae3e00415bb6a9f20730674c6a46076.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3971a.pdf) |
+| `U3971B.pdf` | Multilingual installation manual | `U3971B; 12/10-01 PC` | Cover 672 85; interfaces pp. 6-13; plates/mounting pp. 14-18; battery p. 19; software/PC pp. 20-21; specifications pp. 22-23; dimensions p. 24. Printed pages equal PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/b1/7f/b17fc56132562fb71a7f0a3e6e521f4965547ed90f004cc6705597225586c4b3.pdf) | [Publisher original](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3971b.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1809`: all firmware/commercial/system/Object/Module/Virgin/field/filter/mode associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `U3972D_S_FR.pdf` | Exact Legrand MultimediaTouchScreenConfig software manual, French | D / G from document identifier; full publication date not located | 67285 cover; all substantive configuration and transfer chapters examined. D pp. 4-67; G pp. 4-74; printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/cb/f1/cbf16a2673a9e8329795c38eb8899c841cdc435658c21cca4039fce3d2ef41aa.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3972d_s_fr.pdf) |
+| `U3972G_Software_FR.pdf` | Exact Legrand MultimediaTouchScreenConfig software manual, French | D / G from document identifier; full publication date not located | 67285 cover; all substantive configuration and transfer chapters examined. D pp. 4-67; G pp. 4-74; printed/PDF pages coincide. | [Archived original](https://archive.openwebnet-ha.org/sha256/2a/b2/2ab25e7e880b7c3b546f25d4f69545e345457c239d5b4a5b2d338084621b3152.pdf) | [Publisher source](https://assets.legrand.com/general/legrand-fr/np-ft-gt/u3972g_software_fr.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000246:s000006`
+
+Applicability cues: `revision`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Display | `10 inch`, `16:9` LCD touch screen | `U3970A`, printed/PDF p. 70 |
+| Mounting and size | Wall bracket supplied; `305 x 228 x 17 mm` | `U3971A` pp. 19-22, 26; `U3971B` pp. 14-18, 24 |
+| Supplies | SCS and mandatory separate `1-2` supply, each `18..27 Vdc`; preserve local polarity | A pp. 21, 26; B pp. 16, 22 |
+| Maximum current | Local `600 mA`; SCS `50 mA` | A p. 26; B pp. 22-23 |
+| Operating temperature | `5..45 °C` | Both exact 67285 installation revisions; A p. 26, B p. 23 |
+| Front interfaces | Microphone; USB media; Mini-USB PC; SD slot; USB webcam and Wi-Fi dongle labelled future applications | A p. 17; B pp. 6-8 |
+| Media-card limit | SD maximum `2 GB`; HC-SD unsupported; do not insert two USB drives simultaneously in revision B | A p. 17; B pp. 6-8 |
+| Bundled card by revision | A: `512 MB`; B: `2 GB` installed | A p. 16; B p. 8 |
+| Rear interfaces | SCS audio-source output; RJ45 Ethernet with link LEDs; 2-wire video SCS; `1-2` supply; termination switch; stereo speakers; factory-reset key; battery compartment; RS232 PC | A p. 18; B pp. 9-13 |
+| PSTN | Rear port labelled future application | A p. 18; B p. 10 |
+| Battery | NiMH `7.2 V`, `160 mAh` | A p. 23; B p. 19 |
+| Accessories / PC | Plates `69309`, `69319`, `69349`; serial PC cable `49234` | A pp. 19, 25; B pp. 14, 21 |
+| Installation scope | Indoors, Legrand digital 2-wire system; end-of-line switch `ON` if last device | A pp. 16, 21; B pp. 3, 17 |
+
+### Identity
+
+Section ID: `ownkb:section:d000246:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1809` | Canonical catalogue |
+| Technical item description | Multimedia Touch Screen | Canonical catalogue |
+| Item family | 0; key `100` | Canonical catalogue |
+| Main system | Integration functions; key `26` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `48` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `3` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000246:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `48` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000246:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `123` | `4` | `0` | `0` | `1` | Catalogue default | Official |
+| `665` | `3` | `0` | `0` | `1` | Not catalogue default | Official |
+| `666` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+| `667` | `1` | `1` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Associated firmware packages
+
+Section ID: `ownkb:section:d000246:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+| Firmware | Package key | Package label | Package tuple |
+| --- | --- | --- | --- |
+| `123` | `12` | GL1 | `4.0.0` |
+| `123` | `13` | GL21 | `4.0.0` |
+| `123` | `14` | GL31 | `4.0.0` |
+| `123` | `15` | GL42 | `4.0.0` |
+| `123` | `16` | GL51 | `4.0.0` |
+
+Package labels are source metadata; package applicability does not establish the installed tuple.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000246:s000011`
+
+Applicability cues: `firmware`, `version`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `123` | `236` | Legrand (key `2`) | `2` | SDC | `xml\SDC\sdc.xml` |
+| `123` | `237` | Legrand (key `2`) | `2` | SVM | `1809_4.0_LG\xml\SVM\svm.xml` |
+| `123` | `238` | Legrand (key `2`) | `2` | Extra | `1809_4.0_LG\xml\Extra\extra.xml` |
+| `123` | `239` | Legrand (key `2`) | `2` | Director | `1809_4.0_LG\xml\DIRECTOR\director.xml` |
+| `123` | `240` | Legrand (key `2`) | `2` | Protocol and other device parameters | `1809_4.0_LG\xml\Protocol\protocol.xml` |
+| `665` | `710` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0300` |
+| `666` | `711` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0200` |
+| `667` | `712` | Legrand (key `2`) | `2` | external software | `MultimediaTouchScreenConfig_0101` |
+
+All 8 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+| Firmware | Package record | Name | GL | Version | Release | Build | Unicode set | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `123` | `12` | `GL1` | `1` | `4` | `0` | `0` | `1` | Canonical package metadata |
+| `123` | `13` | `GL21` | `21` | `4` | `0` | `0` | `2` | Canonical package metadata |
+| `123` | `14` | `GL31` | `31` | `4` | `0` | `0` | `3` | Canonical package metadata |
+| `123` | `15` | `GL42` | `42` | `4` | `0` | `0` | `4` | Canonical package metadata |
+| `123` | `16` | `GL51` | `51` | `4` | `0` | `0` | `5` | Canonical package metadata |
+
+These are catalogue package metadata; package payloads have not been inspected.
+
+| Unicode set | Catalogue notes |
+| --- | --- |
+| `1` | GL1 |
+| `2` | GL21 |
+| `3` | GL31 |
+| `4` | GL42 |
+| `5` | GL51 |
+
+The five package Unicode sets and all 4534 stored set/range associations were extracted and their hexadecimal bounds checked. [Complete canonical Unicode-set and range inventory](../inventory/touch-screen-package-unicode-ranges.json) retains each association key and minimum/maximum. These package text ranges do not define the allowed characters of firmware identity or network masks. Package payloads remain unexamined.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000246:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `123` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `1386` | `32` | `732` |
+| `665` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2494` | `32` | `1144` |
+| `666` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2495` | `32` | `1145` |
+| `667` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2496` | `32` | `1146` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000246:s000013`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000246:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `123` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `665` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `666` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+| `667` | Product Programming | `3` | Canonical firmware/mode association ; association mode key `4` |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `123` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `123` | USB | Canonical firmware/connection association ; connection key `3` |
+| `665` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `665` | USB | Canonical firmware/connection association ; connection key `3` |
+| `666` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `666` | USB | Canonical firmware/connection association ; connection key `3` |
+| `667` | Ethernet | Canonical firmware/connection association ; connection key `2` |
+| `667` | USB | Canonical firmware/connection association ; connection key `3` |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Associated parameter definitions
+
+Section ID: `ownkb:section:d000246:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Brand model | Line model | Registered parameter path | Scope / limit |
+| --- | --- | --- | --- | --- |
+| `123` | `2` | `2` | `xml\SDC\sdc.xml` | Parameter type `1`; payload not inspected |
+| `123` | `2` | `2` | `1809_4.0_LG\xml\SVM\svm.xml` | Parameter type `2`; payload not inspected |
+| `123` | `2` | `2` | `1809_4.0_LG\xml\Extra\extra.xml` | Parameter type `4`; payload not inspected |
+| `123` | `2` | `2` | `1809_4.0_LG\xml\DIRECTOR\director.xml` | Parameter type `5`; payload not inspected |
+| `123` | `2` | `2` | `1809_4.0_LG\xml\Protocol\protocol.xml` | Parameter type `6`; payload not inspected |
+| `665` | `2` | `2` | `MultimediaTouchScreenConfig_0300` | Parameter type `7`; payload not inspected |
+| `666` | `2` | `2` | `MultimediaTouchScreenConfig_0200` | Parameter type `7`; payload not inspected |
+| `667` | `2` | `2` | `MultimediaTouchScreenConfig_0101` | Parameter type `7`; payload not inspected |
+
+Brand/line model codes in parameter associations are independent of commercial record keys. Paths are catalogue evidence; their XML payloads and wire encoding remain unexamined.
+
+`U3971A` pp. 24-25 and `U3971B` pp. 20-21 document MultimediaTouchScreenConfig transfer/update via USB, Ethernet and serial cable `49234`. Catalogue associations retain Ethernet and USB only; serial support is publisher evidence, not an absent-table negation. Software application/project settings are distinct from three reusable Object fields.
+
+#### Published Legrand project configuration
+
+Section ID: `ownkb:section:d000246:s000016`
+
+Applicability cues: `firmware`, `revision`, `scs`, `version`
+Cautions: `do not`
+Provenance cues: `source`
+
+| Surface | Published settings / limits | Exact source |
+| --- | --- | --- |
+| Project and transfer | Create/save `.prj`, receive an existing project, edit and send; firmware update uses `.fwz`; device-info query; D marks `.mhz` import future and exports CSV | D pp. 5-7, 63-67; G pp. 5, 8-9 |
+| Network/security | Project name, progressive screen address, IP acquisition/address/mask/router, primary/secondary DSN (printed spelling), OPEN password; no credential copied into the dossier | D p. 9; G p. 74 |
+| Clock and system | Clock Master and conditional update frequency; date formats, zone, Celsius/Fahrenheit; Multimedia/Automation bus, riser/local bus, video enabled/type SCS/IP, internal-unit address, source/amplifier address; G adds decimal separator and UI language | D p. 12; G p. 10 |
+| Automation/lighting | Normal (hold to move) or advanced (start/Stop) control; A/PL and level 3 private riser or 4 local bus plus conditional interface; lock uses video address or A/PL by bus; PUL option, point/group/room/general associations, hours/minutes/seconds for supported timed loads and staircase control | D pp. 15-19; G pp. 14-18 |
+| Alarm and supervision | Eight alarm-zone entries (source calls them sources); up to 20 Stop&Go entries, address `1..127`; load diagnostics `1..64` | D pp. 20-23; G pp. 19-22 |
+| Energy and load control | Electricity/water/gas/DHW/heating-cooling/custom; up to 20 line entries, address `1..255`, kW/€ labels, economic valuation and consumption/production; advanced load priority `1..255`, controller-dependent mode/counters; G adds monthly objectives/graph and thresholds 1/2 | D pp. 24-27; G pp. 23-27 |
+| Temperature | One controller type, external-probe category, unmanaged-zone category and AC category; four-zone controller bounds zones to four; five program entries and seasonal/scenario selection; external sensor address and unmanaged ZA/ZB/N | D/G pp. 28-33 |
+| Air conditioning | 88301 interface, 20 stored commands in base mode; advanced direct control plus stored commands; A/PL/level/interface or ZA/ZB/N `0..9`, OFF command/group, optional slave `1..8`, minimum/maximum temperature, step 0.5/1 °C, auto/high/medium/low/silent fan, swing | D/G pp. 34-38 |
+| Sound | Up to eight sources, Radio/Aux/Multimedia; do not duplicate this screen’s source address; room/group/general amplifier PF addresses and custom power-amplifier adjustment option | D/G pp. 39-41 |
+| Scenarios | A/PL/level/interface, button, module scenario selection (16 stored by scenario module), Scenario Plus address; advanced time/device condition and generated OPEN action; programmed CEN Start/Stop/Enable/Disable must match programmer assignments | D/G pp. 42-47 |
+| Video and media | Camera/entrance-panel address; internal/external intercom `1..3999`; USB/SD need no project address, Web radio streaming URL (not browser page), RSS/category and webcam URLs; Favorites with PUL and lighting/automation addresses | D/G pp. 48-56 |
+| Home tools and UI | Options cannot be removed; temperature/radio/webcam home tools; beep, date/time, numeric local password, volume/ringing/version/network/video, brightness and calibration. Cleaning 10 s..1 min; screensaver none/time/text/photo, display off 30 s..5 min, activation 30 s..2 min, image interval `2..60` s | D pp. 57-62; G pp. 57-63 |
+| Later notification/alarm/video | G: energy threshold beep and first-day-of-month consumption popup at selected time; alarm beep default or sound system, enable without losing settings, days/time; hands-free, ringing exclusion, Office and matching Tele Loop mode | G pp. 60, 64-67 |
+| Later ringtone and tariff setup | G: at most ten ringtones, choose/import MP3/WAV/PCM, trim to maximum 30 s and save/reuse; currency, tariff and decimal digits | G pp. 68-74 |
+
+These are product-project settings, separate from three protocol Object fields. The retained older U3970A user revision does not describe every feature added by the D/G software revisions.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000246:s000017`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `123` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `123` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address  Published example default, not an installed address |
+| `123` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `123` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `665` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `665` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address  Published example default, not an installed address |
+| `665` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `665` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `666` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `666` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address  Published example default, not an installed address |
+| `666` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `666` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `667` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `667` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address  Published example default, not an installed address |
+| `667` | `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `667` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000246:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000246:s000019`
+
+Applicability cues: `firmware`, `version`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address  Published example default, not an installed address |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+#### Published application limits
+
+Section ID: `ownkb:section:d000246:s000020`
+
+Applicability cues: `firmware`, `version`
+Uncertainty: `may`, `unresolved`
+
+| Surface | Published limit / behavior | Printed/PDF page |
+| --- | --- | --- |
+| Favourites | Four always-visible configured controls | U3970A p. 71 |
+| Scheduled scenarios | Up to `20` of the programmer’s `300`; enable/disable differs from forced start/stop | p. 86 |
+| Advanced scenarios | Up to `20`; time plus light/dimmer/temperature/amplifier condition; enable/disable and force start | pp. 87-88 |
+| Dimmer condition | `OFF` or `20..100 %` in `20 %` steps | p. 87 |
+| Temperature condition | `-5..50 °C`, `0.5 °C` increments | p. 88 |
+| Audio condition | Printed `0..100 %`, with “20% and 30% increases”; nonuniform wording unresolved | p. 88 |
+| Audio file | `.mp3` | p. 94 |
+| Video file | `.mp4`, at most `320 x 240 px` | p. 94 |
+| Images | `.jpg`, maximum `10 Mb` as printed; byte/bit notation unresolved; may be chosen for screensaver | p. 94 |
+| Temperature programmes/scenarios | Control-unit `3` summer / `3` winter programmes; `16` summer / `16` winter scenarios | pp. 111, 113 |
+| Temperature adjustment | Manual `0.5 °C` increments; remote-control enabled at control unit; sensor dial protection/`OFF` prevents local override | pp. 110-114 |
+| Alarm history | Intrusion, tamper, panic and technical events with date/time/zone | p. 108 |
+| Local settings | Brightness, calibration, cleaning lock, screensaver; date/time; speaker/mic volume; event ringtones; optional five-digit menu password | pp. 122-129 |
+| Cleaning lock | Default `20 s`, software-customizable | p. 124 |
+| Version view | Model/firmware/kernel/IP/netmask; illustrated `573962/63`, `1.1.3`, `2.3.3`, `[NETWORK_ADDRESS]` are examples, not defaults or observations | p. 129  Published example default, not an installed address |
+
+#### Semantic review findings
+
+Section ID: `ownkb:section:d000246:s000021`
+
+Applicability cues: `firmware`
+
+The Legrand item 1809/model 48 remains separate from BTicino item 1340/model 41. Four firmware definitions expose Object `32`; UI applications are project content. Installer revisions change bundled SD capacity; the user manual also prohibits two simultaneous USB drives. Exact Legrand D/G software manuals now supply the project procedures; executable/parameter payloads remain unexamined.
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000246:s000022`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000246:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000246:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000246:s000025`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion reference is attached to these slot rows. Resolve the active Object and apply its firmware-specific domain restrictions separately. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000246:s000026`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `48` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000246:s000027`
+
+Provenance cues: `evidence`, `source`
+
+| Function family | Published applicability | Canonical reference / evidence |
+| --- | --- | --- |
+| Lighting | Individual/group on/off, individual/group dimming, configured timed light, video-entry staircase light | [`WHO 1`](../../functional/who-1-lighting/); U3970A pp. 82-83 |
+| Automation | Blinds, gates, garage, irrigation, controlled sockets, fans, door locks; safe hold-to-run or standard start/stop configuration | [`WHO 2`](../../functional/who-2-automation/); pp. 79-81 |
+| Scenarios | Stored scenarios with module programming/deletion; advanced time-and-device conditions; scheduled enable/disable/start/stop | [`WHO 15`](../../functional/who-15-cen/); actual host/device configuration required; pp. 84-88 |
+| Sound | Source choice, radio tuning/stored stations, amplifier/group volume, per-room and multi-room/general control, local media as a source | [`WHO 16`](../../functional/who-16-sound-system/); pp. 89-92 |
+| Alarm | Arm/disarm by alarm-unit user code; zone exclusion only while disarmed; alarm history/types/time/zone and deletion | [`WHO 5`](../../functional/who-5-alarm/); pp. 107-108 |
+| Thermoregulation | Control-unit/zone commands, summer/winter, programmes, scenarios, manual/protection/off, holiday/weekend profiles and fancoil speed | [`WHO 4`](../../functional/who-4-temperature-control/); pp. 109-115 |
+| Video entry | Answer, door release, staircase light, camera display/pan-tilt where present, intercom and bell exclusion | [`WHO 6`](../../functional/who-6-basic-video-door-entry/), [`WHO 7`](../../functional/who-7-multimedia-video/); pp. 74-76, 116-119 |
+| Local/network media | USB/SD audio/video/images; configured web radio, RSS/weather, webcam views over broadband LAN | U3970A pp. 93-106; no evidence of current third-party service availability |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000246:s000028`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000246:s000029`
+
+Applicability cues: `firmware`, `tcp`
+Cautions: `must not`
+
+Use MultimediaTouchScreenConfig to compose and transfer the project; use the registered brand/line parameter scope and actual firmware generation. The physical PC routes above come from the installer revisions. Rear reset is documented as restoring factory settings, without an exact hold time or preserved-data inventory. End-of-line termination and mandatory polarized local power are installation constraints. Mount the supplied bracket, position its nut at the lower end and secure the underside screw anticlockwise as the published diagrams specify.
+
+U3970A distinguishes runtime controls from project composition. Locked scenario modules omit programming controls; scenario creation records actions then ends learning, while deletion is a separate confirmation flow. Temperature control requires the controller’s remote-control function; protected/`OFF` local sensor dials prevent overriding from the screen. Intercom/camera commands wait for a free audio/video channel; entrance-panel calls interrupt these uses. Touch cleaning/calibration changes input handling and must not be treated as protocol Object reconfiguration. Media forwarding requires the installed sound-system amplifiers and configuration.
+
+The D software manual pp. 64-66 shows Ethernet, Serial and USB in the transfer wizard: save the project, select Download/send, set date/time, choose the actual connection and transfer; Receive loads the existing configuration for inspection/editing. D describes serial cable `49234`, crossed LAN cable and remote IP/OPEN-password use with compatible PC/device IPs. G pp. 8-9 retains send/receive, device information and `.fwz` update workflows. No firmware recovery/rollback compatibility or direct TCP endpoint is inferred.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000246:s000030`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`
+
+Installer revisions A and B agree on supply, current, `5..45 °C`, metric dimensions, battery and physical PC routes. B changes the bundled card from `512 MB` to `2 GB`, states the simultaneous-USB prohibition and expands languages; U3970A also prohibits simultaneous pen drives. Both still label USB webcam, Wi-Fi dongle and PSTN as future applications; U3970A network webcam viewing is a separate configured LAN service. No shipped USB webcam/Wi-Fi/PSTN support is inferred.
+
+| Issue | Reconciliation / unresolved limit | Evidence |
+| --- | --- | --- |
+| Identity and model | 67285 cover and 573962/63 screenshot support the Legrand cluster. Catalogue line Arteor for `067285` remains unresolved; no identity transfer from the BTicino model-41 dossier | Exact Legrand manuals; item `1809` |
+| Firmware values | Applicability `4.0.0/3.0.0/2.0.0/1.1.0` differs from firmware-scoped FW_VER default `3.0.0` and user-manual example `1.1.3`; these are distinct metadata/example contexts | Firmware table, fields; U3970A p. 129 |
+| IP defaults | Catalogue default `[NETWORK_ADDRESS]` differs from screenshot `[NETWORK_ADDRESS]`; screenshot is illustrative | Object `32`; U3970A p. 129 |
+| PC connections | Serial is physically documented, although only Ethernet/USB have catalogue connection associations | Both installers; connection table |
+| Multimedia/UI limits | Advanced audio increment wording and image Mb notation remain unresolved; no normalized byte size or uniform audio step invented | U3970A pp. 88, 94 |
+| Software dossier scope | Exact Legrand French software revisions D and G are now retained and incorporated; later English user candidate 20121113_70351_1.pdf returned HTTP 403. BTicino software content is not substituted | Research `2026-10-03` |
+
+D and G software covers name `67285`. G repeats “Local Display” in introductory/currency text despite its MultimediaTouchScreenConfig cover, so this wording does not merge products. Both French revisions use Celsius `°C` and slave addresses `1..8`; the different BTicino translation’s °F/Slave 9 errors are not imported. Both still describe an obligatory time condition at p. 44 and a conditional one at p. 45. Five software program entries differ from the older user’s three seasonal programs; software screensaver four choices differ from U3970A’s No/Default menu. G adds objectives/thresholds, notifications, alarm/video settings and ringtone authoring beyond D/older-user coverage. Serial is explicit in D’s transfer wizard, though absent from canonical connection associations. General warranty/contact text and historical PC requirements remain available in the retained originals; they do not establish current software support.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000246:s000031`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `evidence`
+
+- Obtain and compare newer Legrand user revisions (the Belgian publisher candidate returned HTTP 403); confirm `067285` marketed line and Arteor variant-specific installer details.
+- Resolve audio condition steps, image-size notation, reset data preservation and optional port support for each firmware.
+- Inspect associated parameter/package payloads and corroborate installed Object, address/configuration responses and project transfer on all three variants.
+- Historical Internet services and example network/version values have no verified current service or installed-state evidence.
+
+### Sources
+
+Section ID: `ownkb:section:d000246:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 6 October 2026](../../project/review/device-reviews-0101-0110-2026-10-06.md#own-dev-0107)
+
+### Canonical package character ranges (prepared supplement)
+
+Section ID: `ownkb:section:d000246:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+Prepared supplement from [devices/inventory/touch-screen-package-unicode-ranges.json](../inventory/touch-screen-package-unicode-ranges.json); appendix SHA-256 `ad22cdfc7ad7421edf9eebf43631cc631cccb20e1f2a4ae45bb91d77d3d75b6a`; catalogue SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. These are the accepted page's linked public package character-set associations for items `1340` and `1809`. They do not establish firmware identity/network field character domains, installed glyph support, or examined package payloads. The supplementary sections below are deterministic preparation of that JSON appendix; their row provenance is the named appendix, rather than additional lines in the Device Markdown file.
+
+#### Package range associations 0001 through 0100
+
+Section ID: `ownkb:section:d000246:s000034`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `1` | `1` | `0020` | `00FF` |
+| `2` | `2` | `0020` | `017F` |
+| `3` | `1` | `0020` | `00FF` |
+| `3` | `3` | `0600` | `06FF` |
+| `3` | `4` | `FB50` | `FDFF` |
+| `3` | `5` | `FE70` | `FEFF` |
+| `3` | `6` | `2000` | `206F` |
+| `3` | `7` | `7684` | `7684` |
+| `3` | `8` | `4E00` | `4E01` |
+| `3` | `9` | `4E03` | `4E03` |
+| `3` | `10` | `4E07` | `4E0B` |
+| `3` | `11` | `4E0D` | `4E0E` |
+| `3` | `12` | `4E10` | `4E11` |
+| `3` | `13` | `4E13` | `4E16` |
+| `3` | `14` | `4E18` | `4E1F` |
+| `3` | `15` | `4E22` | `4E22` |
+| `3` | `16` | `4E24` | `4E27` |
+| `3` | `17` | `4E2A` | `4E2B` |
+| `3` | `18` | `4E2D` | `4E2D` |
+| `3` | `19` | `4E30` | `4E30` |
+| `3` | `20` | `4E32` | `4E32` |
+| `3` | `21` | `4E34` | `4E34` |
+| `3` | `22` | `4E38` | `4E3B` |
+| `3` | `23` | `4E3D` | `4E3E` |
+| `3` | `24` | `4E43` | `4E43` |
+| `3` | `25` | `4E45` | `4E45` |
+| `3` | `26` | `4E47` | `4E49` |
+| `3` | `27` | `4E4B` | `4E50` |
+| `3` | `28` | `4E52` | `4E54` |
+| `3` | `29` | `4E56` | `4E56` |
+| `3` | `30` | `4E58` | `4E59` |
+| `3` | `31` | `4E5C` | `4E61` |
+| `3` | `32` | `4E66` | `4E66` |
+| `3` | `33` | `4E69` | `4E69` |
+| `3` | `34` | `4E70` | `4E71` |
+| `3` | `35` | `4E73` | `4E73` |
+| `3` | `36` | `4E7E` | `4E7E` |
+| `3` | `37` | `4E82` | `4E82` |
+| `3` | `38` | `4E86` | `4E86` |
+| `3` | `39` | `4E88` | `4E89` |
+| `3` | `40` | `4E8B` | `4E8C` |
+| `3` | `41` | `4E8E` | `4E8F` |
+| `3` | `42` | `4E91` | `4E95` |
+| `3` | `43` | `4E98` | `4E9B` |
+| `3` | `44` | `4E9E` | `4E9F` |
+| `3` | `45` | `4EA1` | `4EA2` |
+| `3` | `46` | `4EA4` | `4EA9` |
+| `3` | `47` | `4EAB` | `4EAE` |
+| `3` | `48` | `4EB2` | `4EB3` |
+| `3` | `49` | `4EB5` | `4EB5` |
+| `3` | `50` | `4EBA` | `4EBA` |
+| `3` | `51` | `4EBF` | `4EC7` |
+| `3` | `52` | `4EC9` | `4ECB` |
+| `3` | `53` | `4ECD` | `4ECE` |
+| `3` | `54` | `4ED1` | `4ED1` |
+| `3` | `55` | `4ED3` | `4ED9` |
+| `3` | `56` | `4EDD` | `4EDF` |
+| `3` | `57` | `4EE1` | `4EE1` |
+| `3` | `58` | `4EE3` | `4EE5` |
+| `3` | `59` | `4EE8` | `4EE8` |
+| `3` | `60` | `4EEA` | `4EEC` |
+| `3` | `61` | `4EF0` | `4EF0` |
+| `3` | `62` | `4EF2` | `4EF3` |
+| `3` | `63` | `4EF5` | `4EF7` |
+| `3` | `64` | `4EFB` | `4EFB` |
+| `3` | `65` | `4EFD` | `4EFD` |
+| `3` | `66` | `4EFF` | `4EFF` |
+| `3` | `67` | `4F01` | `4F01` |
+| `3` | `68` | `4F09` | `4F0A` |
+| `3` | `69` | `4F0D` | `4F11` |
+| `3` | `70` | `4F17` | `4F1B` |
+| `3` | `71` | `4F1E` | `4F20` |
+| `3` | `72` | `4F22` | `4F22` |
+| `3` | `73` | `4F24` | `4F27` |
+| `3` | `74` | `4F2A` | `4F2B` |
+| `3` | `75` | `4F2F` | `4F30` |
+| `3` | `76` | `4F32` | `4F32` |
+| `3` | `77` | `4F34` | `4F34` |
+| `3` | `78` | `4F36` | `4F36` |
+| `3` | `79` | `4F38` | `4F38` |
+| `3` | `80` | `4F3A` | `4F3A` |
+| `3` | `81` | `4F3C` | `4F3D` |
+| `3` | `82` | `4F43` | `4F43` |
+| `3` | `83` | `4F46` | `4F47` |
+| `3` | `84` | `4F4D` | `4F51` |
+| `3` | `85` | `4F53` | `4F53` |
+| `3` | `86` | `4F55` | `4F55` |
+| `3` | `87` | `4F57` | `4F60` |
+| `3` | `88` | `4F63` | `4F65` |
+| `3` | `89` | `4F67` | `4F67` |
+| `3` | `90` | `4F69` | `4F69` |
+| `3` | `91` | `4F6C` | `4F6C` |
+| `3` | `92` | `4F6F` | `4F70` |
+| `3` | `93` | `4F73` | `4F74` |
+| `3` | `94` | `4F76` | `4F76` |
+| `3` | `95` | `4F7B` | `4F7C` |
+| `3` | `96` | `4F7E` | `4F7F` |
+| `3` | `97` | `4F83` | `4F84` |
+| `3` | `98` | `4F86` | `4F86` |
+| `3` | `99` | `4F88` | `4F89` |
+
+#### Package range associations 0101 through 0200
+
+Section ID: `ownkb:section:d000246:s000035`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `100` | `4F8B` | `4F8B` |
+| `3` | `101` | `4F8D` | `4F8D` |
+| `3` | `102` | `4F8F` | `4F8F` |
+| `3` | `103` | `4F91` | `4F91` |
+| `3` | `104` | `4F94` | `4F94` |
+| `3` | `105` | `4F97` | `4F97` |
+| `3` | `106` | `4F9B` | `4F9B` |
+| `3` | `107` | `4F9D` | `4F9D` |
+| `3` | `108` | `4FA0` | `4FA0` |
+| `3` | `109` | `4FA3` | `4FA3` |
+| `3` | `110` | `4FA5` | `4FAA` |
+| `3` | `111` | `4FAC` | `4FAC` |
+| `3` | `112` | `4FAE` | `4FAF` |
+| `3` | `113` | `4FB5` | `4FB6` |
+| `3` | `114` | `4FBF` | `4FBF` |
+| `3` | `115` | `4FC1` | `4FC1` |
+| `3` | `116` | `4FC3` | `4FC5` |
+| `3` | `117` | `4FCA` | `4FCA` |
+| `3` | `118` | `4FCE` | `4FD1` |
+| `3` | `119` | `4FD7` | `4FD8` |
+| `3` | `120` | `4FDA` | `4FDA` |
+| `3` | `121` | `4FDC` | `4FE1` |
+| `3` | `122` | `4FE3` | `4FE3` |
+| `3` | `123` | `4FE6` | `4FE6` |
+| `3` | `124` | `4FE8` | `4FEA` |
+| `3` | `125` | `4FED` | `4FEF` |
+| `3` | `126` | `4FF1` | `4FF1` |
+| `3` | `127` | `4FF3` | `4FF3` |
+| `3` | `128` | `4FF8` | `4FF8` |
+| `3` | `129` | `4FFA` | `4FFA` |
+| `3` | `130` | `4FFE` | `4FFE` |
+| `3` | `131` | `5000` | `5000` |
+| `3` | `132` | `5006` | `5006` |
+| `3` | `133` | `5009` | `5009` |
+| `3` | `134` | `500B` | `500D` |
+| `3` | `135` | `500F` | `500F` |
+| `3` | `136` | `5011` | `5012` |
+| `3` | `137` | `5014` | `5014` |
+| `3` | `138` | `5018` | `501A` |
+| `3` | `139` | `501C` | `501C` |
+| `3` | `140` | `501F` | `501F` |
+| `3` | `141` | `5021` | `5021` |
+| `3` | `142` | `5025` | `5026` |
+| `3` | `143` | `5028` | `502E` |
+| `3` | `144` | `503A` | `503A` |
+| `3` | `145` | `503C` | `503C` |
+| `3` | `146` | `503E` | `503E` |
+| `3` | `147` | `5043` | `5043` |
+| `3` | `148` | `5047` | `5049` |
+| `3` | `149` | `504C` | `504C` |
+| `3` | `150` | `504E` | `504F` |
+| `3` | `151` | `5055` | `5055` |
+| `3` | `152` | `505A` | `505A` |
+| `3` | `153` | `505C` | `505C` |
+| `3` | `154` | `5065` | `5065` |
+| `3` | `155` | `506C` | `506C` |
+| `3` | `156` | `5074` | `5077` |
+| `3` | `157` | `507B` | `507B` |
+| `3` | `158` | `507D` | `5080` |
+| `3` | `159` | `5085` | `5085` |
+| `3` | `160` | `5088` | `5088` |
+| `3` | `161` | `508D` | `508D` |
+| `3` | `162` | `5096` | `5096` |
+| `3` | `163` | `5098` | `5099` |
+| `3` | `164` | `50A3` | `50A3` |
+| `3` | `165` | `50A5` | `50A5` |
+| `3` | `166` | `50A7` | `50A9` |
+| `3` | `167` | `50AC` | `50AD` |
+| `3` | `168` | `50AF` | `50AF` |
+| `3` | `169` | `50B2` | `50B5` |
+| `3` | `170` | `50B7` | `50B7` |
+| `3` | `171` | `50BA` | `50BB` |
+| `3` | `172` | `50BE` | `50BE` |
+| `3` | `173` | `50C2` | `50C2` |
+| `3` | `174` | `50C5` | `50C5` |
+| `3` | `175` | `50C9` | `50C9` |
+| `3` | `176` | `50CF` | `50CF` |
+| `3` | `177` | `50D1` | `50D1` |
+| `3` | `178` | `50D5` | `50D6` |
+| `3` | `179` | `50DA` | `50DA` |
+| `3` | `180` | `50E5` | `50E8` |
+| `3` | `181` | `50EC` | `50EE` |
+| `3` | `182` | `50F3` | `50F3` |
+| `3` | `183` | `50F5` | `50F5` |
+| `3` | `184` | `50F9` | `50F9` |
+| `3` | `185` | `50FB` | `50FB` |
+| `3` | `186` | `5100` | `5100` |
+| `3` | `187` | `5104` | `5104` |
+| `3` | `188` | `5106` | `5109` |
+| `3` | `189` | `510B` | `510C` |
+| `3` | `190` | `5110` | `5110` |
+| `3` | `191` | `5112` | `5112` |
+| `3` | `192` | `5114` | `5115` |
+| `3` | `193` | `511F` | `511F` |
+| `3` | `194` | `5121` | `5121` |
+| `3` | `195` | `512A` | `512A` |
+| `3` | `196` | `5132` | `5132` |
+| `3` | `197` | `5137` | `5137` |
+| `3` | `198` | `513A` | `513C` |
+| `3` | `199` | `513F` | `5141` |
+
+#### Package range associations 0201 through 0300
+
+Section ID: `ownkb:section:d000246:s000036`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `200` | `5143` | `5149` |
+| `3` | `201` | `514B` | `514D` |
+| `3` | `202` | `5151` | `5152` |
+| `3` | `203` | `5154` | `5157` |
+| `3` | `204` | `515A` | `515A` |
+| `3` | `205` | `515C` | `515C` |
+| `3` | `206` | `5162` | `5162` |
+| `3` | `207` | `5165` | `5165` |
+| `3` | `208` | `5167` | `5169` |
+| `3` | `209` | `516B` | `516E` |
+| `3` | `210` | `5170` | `5171` |
+| `3` | `211` | `5173` | `5179` |
+| `3` | `212` | `517B` | `517D` |
+| `3` | `213` | `5180` | `5181` |
+| `3` | `214` | `5185` | `5185` |
+| `3` | `215` | `5188` | `518A` |
+| `3` | `216` | `518C` | `518D` |
+| `3` | `217` | `5191` | `5192` |
+| `3` | `218` | `5195` | `5195` |
+| `3` | `219` | `5197` | `5197` |
+| `3` | `220` | `5199` | `5199` |
+| `3` | `221` | `519B` | `519C` |
+| `3` | `222` | `51A0` | `51A0` |
+| `3` | `223` | `51A2` | `51A2` |
+| `3` | `224` | `51A4` | `51A5` |
+| `3` | `225` | `51AA` | `51AA` |
+| `3` | `226` | `51AC` | `51AC` |
+| `3` | `227` | `51AF` | `51B3` |
+| `3` | `228` | `51B5` | `51B7` |
+| `3` | `229` | `51BB` | `51BD` |
+| `3` | `230` | `51C0` | `51C0` |
+| `3` | `231` | `51C4` | `51C4` |
+| `3` | `232` | `51C6` | `51C7` |
+| `3` | `233` | `51C9` | `51C9` |
+| `3` | `234` | `51CB` | `51CD` |
+| `3` | `235` | `51CF` | `51CF` |
+| `3` | `236` | `51D1` | `51D1` |
+| `3` | `237` | `51DB` | `51DD` |
+| `3` | `238` | `51E0` | `51E1` |
+| `3` | `239` | `51E4` | `51E4` |
+| `3` | `240` | `51EB` | `51EB` |
+| `3` | `241` | `51ED` | `51ED` |
+| `3` | `242` | `51EF` | `51F1` |
+| `3` | `243` | `51F3` | `51F3` |
+| `3` | `244` | `51F6` | `51F6` |
+| `3` | `245` | `51F8` | `51FD` |
+| `3` | `246` | `51FF` | `5201` |
+| `3` | `247` | `5203` | `5203` |
+| `3` | `248` | `5206` | `5208` |
+| `3` | `249` | `520A` | `520A` |
+| `3` | `250` | `520D` | `520E` |
+| `3` | `251` | `5211` | `5212` |
+| `3` | `252` | `5216` | `521B` |
+| `3` | `253` | `521D` | `521D` |
+| `3` | `254` | `5220` | `5220` |
+| `3` | `255` | `5224` | `5225` |
+| `3` | `256` | `5228` | `522B` |
+| `3` | `257` | `522D` | `522E` |
+| `3` | `258` | `5230` | `5230` |
+| `3` | `259` | `5233` | `5233` |
+| `3` | `260` | `5236` | `523B` |
+| `3` | `261` | `523D` | `523D` |
+| `3` | `262` | `523F` | `5244` |
+| `3` | `263` | `5247` | `5247` |
+| `3` | `264` | `524A` | `524A` |
+| `3` | `265` | `524C` | `524E` |
+| `3` | `266` | `5250` | `5251` |
+| `3` | `267` | `5254` | `5254` |
+| `3` | `268` | `5256` | `5256` |
+| `3` | `269` | `525B` | `525E` |
+| `3` | `270` | `5261` | `5261` |
+| `3` | `271` | `5265` | `5265` |
+| `3` | `272` | `5267` | `5267` |
+| `3` | `273` | `5269` | `526A` |
+| `3` | `274` | `526E` | `526F` |
+| `3` | `275` | `5272` | `5272` |
+| `3` | `276` | `5274` | `5275` |
+| `3` | `277` | `527D` | `527D` |
+| `3` | `278` | `527F` | `527F` |
+| `3` | `279` | `5281` | `5283` |
+| `3` | `280` | `5287` | `528A` |
+| `3` | `281` | `528C` | `528D` |
+| `3` | `282` | `5290` | `5291` |
+| `3` | `283` | `5293` | `5293` |
+| `3` | `284` | `529B` | `529B` |
+| `3` | `285` | `529D` | `52A3` |
+| `3` | `286` | `52A8` | `52AD` |
+| `3` | `287` | `52B1` | `52B3` |
+| `3` | `288` | `52BE` | `52BF` |
+| `3` | `289` | `52C1` | `52C1` |
+| `3` | `290` | `52C3` | `52C3` |
+| `3` | `291` | `52C7` | `52C7` |
+| `3` | `292` | `52C9` | `52C9` |
+| `3` | `293` | `52CB` | `52CB` |
+| `3` | `294` | `52D0` | `52D0` |
+| `3` | `295` | `52D2` | `52D2` |
+| `3` | `296` | `52D5` | `52D9` |
+| `3` | `297` | `52DB` | `52DB` |
+| `3` | `298` | `52DD` | `52DF` |
+| `3` | `299` | `52E2` | `52E2` |
+
+#### Package range associations 0301 through 0400
+
+Section ID: `ownkb:section:d000246:s000037`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `300` | `52E4` | `52E4` |
+| `3` | `301` | `52F0` | `52F1` |
+| `3` | `302` | `52F5` | `52F5` |
+| `3` | `303` | `52F8` | `52F8` |
+| `3` | `304` | `52FA` | `52FB` |
+| `3` | `305` | `52FE` | `5300` |
+| `3` | `306` | `5305` | `5306` |
+| `3` | `307` | `5308` | `5308` |
+| `3` | `308` | `530D` | `530D` |
+| `3` | `309` | `530F` | `5310` |
+| `3` | `310` | `5315` | `5317` |
+| `3` | `311` | `5319` | `531A` |
+| `3` | `312` | `531D` | `531D` |
+| `3` | `313` | `5320` | `5321` |
+| `3` | `314` | `5323` | `5323` |
+| `3` | `315` | `5326` | `5326` |
+| `3` | `316` | `532A` | `532A` |
+| `3` | `317` | `532D` | `532F` |
+| `3` | `318` | `5331` | `5331` |
+| `3` | `319` | `5339` | `533B` |
+| `3` | `320` | `533E` | `5341` |
+| `3` | `321` | `5343` | `5343` |
+| `3` | `322` | `5345` | `5345` |
+| `3` | `323` | `5347` | `534A` |
+| `3` | `324` | `534E` | `534F` |
+| `3` | `325` | `5351` | `5357` |
+| `3` | `326` | `535A` | `535A` |
+| `3` | `327` | `535C` | `535C` |
+| `3` | `328` | `535E` | `5364` |
+| `3` | `329` | `5366` | `5367` |
+| `3` | `330` | `536B` | `536B` |
+| `3` | `331` | `536E` | `5371` |
+| `3` | `332` | `5373` | `5375` |
+| `3` | `333` | `5377` | `5378` |
+| `3` | `334` | `537A` | `537B` |
+| `3` | `335` | `537F` | `537F` |
+| `3` | `336` | `5382` | `5382` |
+| `3` | `337` | `5384` | `5386` |
+| `3` | `338` | `5389` | `5389` |
+| `3` | `339` | `538B` | `538D` |
+| `3` | `340` | `5395` | `5395` |
+| `3` | `341` | `5398` | `539A` |
+| `3` | `342` | `539D` | `539D` |
+| `3` | `343` | `539F` | `539F` |
+| `3` | `344` | `53A2` | `53A3` |
+| `3` | `345` | `53A5` | `53A6` |
+| `3` | `346` | `53A8` | `53A9` |
+| `3` | `347` | `53AD` | `53AE` |
+| `3` | `348` | `53B2` | `53B2` |
+| `3` | `349` | `53B4` | `53B4` |
+| `3` | `350` | `53BB` | `53BB` |
+| `3` | `351` | `53BF` | `53BF` |
+| `3` | `352` | `53C1` | `53C3` |
+| `3` | `353` | `53C8` | `53CD` |
+| `3` | `354` | `53D1` | `53D1` |
+| `3` | `355` | `53D4` | `53D4` |
+| `3` | `356` | `53D6` | `53D9` |
+| `3` | `357` | `53DB` | `53DB` |
+| `3` | `358` | `53DF` | `53E0` |
+| `3` | `359` | `53E2` | `53E6` |
+| `3` | `360` | `53E8` | `53F3` |
+| `3` | `361` | `53F5` | `53F9` |
+| `3` | `362` | `53FB` | `53FD` |
+| `3` | `363` | `5401` | `5401` |
+| `3` | `364` | `5403` | `5404` |
+| `3` | `365` | `5406` | `5406` |
+| `3` | `366` | `5408` | `540A` |
+| `3` | `367` | `540C` | `5413` |
+| `3` | `368` | `5415` | `5417` |
+| `3` | `369` | `541B` | `541B` |
+| `3` | `370` | `541D` | `5421` |
+| `3` | `371` | `5423` | `5423` |
+| `3` | `372` | `5426` | `5429` |
+| `3` | `373` | `542B` | `542F` |
+| `3` | `374` | `5431` | `5436` |
+| `3` | `375` | `5438` | `5439` |
+| `3` | `376` | `543B` | `543C` |
+| `3` | `377` | `543E` | `543E` |
+| `3` | `378` | `5440` | `5440` |
+| `3` | `379` | `5442` | `5443` |
+| `3` | `380` | `5446` | `5446` |
+| `3` | `381` | `5448` | `5448` |
+| `3` | `382` | `544A` | `544B` |
+| `3` | `383` | `5450` | `5450` |
+| `3` | `384` | `5452` | `5459` |
+| `3` | `385` | `545B` | `545C` |
+| `3` | `386` | `5462` | `5462` |
+| `3` | `387` | `5464` | `5464` |
+| `3` | `388` | `5466` | `5466` |
+| `3` | `389` | `5468` | `5468` |
+| `3` | `390` | `5471` | `5473` |
+| `3` | `391` | `5475` | `5478` |
+| `3` | `392` | `547B` | `547D` |
+| `3` | `393` | `5480` | `5480` |
+| `3` | `394` | `5482` | `5482` |
+| `3` | `395` | `5484` | `5484` |
+| `3` | `396` | `5486` | `5486` |
+| `3` | `397` | `548B` | `548C` |
+| `3` | `398` | `548E` | `5490` |
+| `3` | `399` | `5492` | `5492` |
+
+#### Package range associations 0401 through 0500
+
+Section ID: `ownkb:section:d000246:s000038`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `400` | `5494` | `5496` |
+| `3` | `401` | `5499` | `549B` |
+| `3` | `402` | `549D` | `549D` |
+| `3` | `403` | `54A3` | `54A4` |
+| `3` | `404` | `54A6` | `54AD` |
+| `3` | `405` | `54AF` | `54AF` |
+| `3` | `406` | `54B1` | `54B1` |
+| `3` | `407` | `54B3` | `54B4` |
+| `3` | `408` | `54B8` | `54B8` |
+| `3` | `409` | `54BB` | `54BD` |
+| `3` | `410` | `54BF` | `54C2` |
+| `3` | `411` | `54C4` | `54C4` |
+| `3` | `412` | `54C6` | `54C9` |
+| `3` | `413` | `54CC` | `54D5` |
+| `3` | `414` | `54D7` | `54D7` |
+| `3` | `415` | `54D9` | `54DA` |
+| `3` | `416` | `54DC` | `54DF` |
+| `3` | `417` | `54E1` | `54E1` |
+| `3` | `418` | `54E5` | `54EA` |
+| `3` | `419` | `54ED` | `54EE` |
+| `3` | `420` | `54F2` | `54F3` |
+| `3` | `421` | `54FA` | `54FA` |
+| `3` | `422` | `54FC` | `54FD` |
+| `3` | `423` | `54FF` | `54FF` |
+| `3` | `424` | `5501` | `5501` |
+| `3` | `425` | `5504` | `5504` |
+| `3` | `426` | `5506` | `5507` |
+| `3` | `427` | `5509` | `5509` |
+| `3` | `428` | `550F` | `5511` |
+| `3` | `429` | `5514` | `5514` |
+| `3` | `430` | `551B` | `551B` |
+| `3` | `431` | `5520` | `5520` |
+| `3` | `432` | `5522` | `5524` |
+| `3` | `433` | `5527` | `5527` |
+| `3` | `434` | `552A` | `552A` |
+| `3` | `435` | `552C` | `552C` |
+| `3` | `436` | `552E` | `5531` |
+| `3` | `437` | `5533` | `5533` |
+| `3` | `438` | `5537` | `5537` |
+| `3` | `439` | `553C` | `553C` |
+| `3` | `440` | `553E` | `553F` |
+| `3` | `441` | `5541` | `5541` |
+| `3` | `442` | `5543` | `5544` |
+| `3` | `443` | `5546` | `5546` |
+| `3` | `444` | `5549` | `554A` |
+| `3` | `445` | `554F` | `5550` |
+| `3` | `446` | `5555` | `5556` |
+| `3` | `447` | `555C` | `555C` |
+| `3` | `448` | `555E` | `555F` |
+| `3` | `449` | `5561` | `5561` |
+| `3` | `450` | `5564` | `5567` |
+| `3` | `451` | `556A` | `556A` |
+| `3` | `452` | `556C` | `556E` |
+| `3` | `453` | `5575` | `5578` |
+| `3` | `454` | `557B` | `557C` |
+| `3` | `455` | `557E` | `557E` |
+| `3` | `456` | `5580` | `5584` |
+| `3` | `457` | `5587` | `558B` |
+| `3` | `458` | `558F` | `558F` |
+| `3` | `459` | `5591` | `5591` |
+| `3` | `460` | `5594` | `5594` |
+| `3` | `461` | `5598` | `559A` |
+| `3` | `462` | `559C` | `559D` |
+| `3` | `463` | `559F` | `559F` |
+| `3` | `464` | `55A7` | `55A7` |
+| `3` | `465` | `55AA` | `55AA` |
+| `3` | `466` | `55AC` | `55AC` |
+| `3` | `467` | `55AE` | `55AE` |
+| `3` | `468` | `55B1` | `55B3` |
+| `3` | `469` | `55B5` | `55B5` |
+| `3` | `470` | `55B7` | `55B7` |
+| `3` | `471` | `55B9` | `55B9` |
+| `3` | `472` | `55BB` | `55BB` |
+| `3` | `473` | `55BD` | `55BE` |
+| `3` | `474` | `55C4` | `55C7` |
+| `3` | `475` | `55C9` | `55C9` |
+| `3` | `476` | `55CC` | `55CE` |
+| `3` | `477` | `55D1` | `55D4` |
+| `3` | `478` | `55D6` | `55D6` |
+| `3` | `479` | `55DC` | `55DD` |
+| `3` | `480` | `55DF` | `55DF` |
+| `3` | `481` | `55E1` | `55E1` |
+| `3` | `482` | `55E3` | `55E6` |
+| `3` | `483` | `55E8` | `55EC` |
+| `3` | `484` | `55EF` | `55EF` |
+| `3` | `485` | `55F2` | `55F3` |
+| `3` | `486` | `55F5` | `55F7` |
+| `3` | `487` | `55FD` | `55FE` |
+| `3` | `488` | `5600` | `5601` |
+| `3` | `489` | `5606` | `5606` |
+| `3` | `490` | `5608` | `5609` |
+| `3` | `491` | `560C` | `560F` |
+| `3` | `492` | `5614` | `5614` |
+| `3` | `493` | `5616` | `5618` |
+| `3` | `494` | `561B` | `561C` |
+| `3` | `495` | `561E` | `561F` |
+| `3` | `496` | `5623` | `5624` |
+| `3` | `497` | `5627` | `5627` |
+| `3` | `498` | `5629` | `5629` |
+| `3` | `499` | `562C` | `5632` |
+
+#### Package range associations 0501 through 0600
+
+Section ID: `ownkb:section:d000246:s000039`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `500` | `5634` | `5636` |
+| `3` | `501` | `5638` | `5639` |
+| `3` | `502` | `563B` | `563B` |
+| `3` | `503` | `563F` | `563F` |
+| `3` | `504` | `564C` | `564E` |
+| `3` | `505` | `5653` | `5654` |
+| `3` | `506` | `5657` | `5659` |
+| `3` | `507` | `565C` | `565C` |
+| `3` | `508` | `5660` | `5660` |
+| `3` | `509` | `5662` | `5662` |
+| `3` | `510` | `5664` | `5666` |
+| `3` | `511` | `5668` | `566C` |
+| `3` | `512` | `566F` | `566F` |
+| `3` | `513` | `5671` | `5672` |
+| `3` | `514` | `5674` | `5674` |
+| `3` | `515` | `5676` | `5676` |
+| `3` | `516` | `5678` | `5678` |
+| `3` | `517` | `567B` | `567C` |
+| `3` | `518` | `5680` | `5680` |
+| `3` | `519` | `5685` | `5687` |
+| `3` | `520` | `568C` | `568C` |
+| `3` | `521` | `568E` | `568F` |
+| `3` | `522` | `5693` | `5693` |
+| `3` | `523` | `5695` | `5695` |
+| `3` | `524` | `5699` | `5699` |
+| `3` | `525` | `56A3` | `56A3` |
+| `3` | `526` | `56A6` | `56A6` |
+| `3` | `527` | `56A8` | `56A8` |
+| `3` | `528` | `56AF` | `56AF` |
+| `3` | `529` | `56B3` | `56B4` |
+| `3` | `530` | `56B6` | `56B7` |
+| `3` | `531` | `56BC` | `56BC` |
+| `3` | `532` | `56C0` | `56C2` |
+| `3` | `533` | `56C5` | `56C5` |
+| `3` | `534` | `56C8` | `56C8` |
+| `3` | `535` | `56CA` | `56CA` |
+| `3` | `536` | `56D1` | `56D1` |
+| `3` | `537` | `56D4` | `56D4` |
+| `3` | `538` | `56DA` | `56DB` |
+| `3` | `539` | `56DD` | `56E2` |
+| `3` | `540` | `56E4` | `56E4` |
+| `3` | `541` | `56EA` | `56EB` |
+| `3` | `542` | `56ED` | `56ED` |
+| `3` | `543` | `56F0` | `56F1` |
+| `3` | `544` | `56F4` | `56F5` |
+| `3` | `545` | `56F9` | `56FA` |
+| `3` | `546` | `56FD` | `56FF` |
+| `3` | `547` | `5703` | `5704` |
+| `3` | `548` | `5706` | `570B` |
+| `3` | `549` | `570D` | `570D` |
+| `3` | `550` | `5712` | `5713` |
+| `3` | `551` | `5716` | `5716` |
+| `3` | `552` | `5718` | `5718` |
+| `3` | `553` | `571C` | `571C` |
+| `3` | `554` | `571F` | `571F` |
+| `3` | `555` | `5723` | `5723` |
+| `3` | `556` | `5728` | `572A` |
+| `3` | `557` | `572C` | `5730` |
+| `3` | `558` | `5733` | `5733` |
+| `3` | `559` | `5739` | `573B` |
+| `3` | `560` | `573E` | `573E` |
+| `3` | `561` | `5740` | `5740` |
+| `3` | `562` | `5742` | `5742` |
+| `3` | `563` | `5747` | `5747` |
+| `3` | `564` | `574A` | `574A` |
+| `3` | `565` | `574C` | `5751` |
+| `3` | `566` | `5757` | `5757` |
+| `3` | `567` | `575A` | `5761` |
+| `3` | `568` | `5764` | `5764` |
+| `3` | `569` | `5766` | `5766` |
+| `3` | `570` | `5768` | `576B` |
+| `3` | `571` | `576D` | `576D` |
+| `3` | `572` | `576F` | `5770` |
+| `3` | `573` | `5773` | `5773` |
+| `3` | `574` | `5776` | `5777` |
+| `3` | `575` | `577B` | `577C` |
+| `3` | `576` | `5782` | `5786` |
+| `3` | `577` | `578B` | `578C` |
+| `3` | `578` | `5792` | `5793` |
+| `3` | `579` | `579B` | `579B` |
+| `3` | `580` | `57A0` | `57A4` |
+| `3` | `581` | `57A6` | `57A7` |
+| `3` | `582` | `57A9` | `57A9` |
+| `3` | `583` | `57AB` | `57AB` |
+| `3` | `584` | `57AD` | `57AE` |
+| `3` | `585` | `57B2` | `57B2` |
+| `3` | `586` | `57B4` | `57B4` |
+| `3` | `587` | `57B8` | `57B8` |
+| `3` | `588` | `57C2` | `57C3` |
+| `3` | `589` | `57CB` | `57CB` |
+| `3` | `590` | `57CE` | `57CF` |
+| `3` | `591` | `57D2` | `57D2` |
+| `3` | `592` | `57D4` | `57D5` |
+| `3` | `593` | `57D8` | `57DA` |
+| `3` | `594` | `57DD` | `57DD` |
+| `3` | `595` | `57DF` | `57E1` |
+| `3` | `596` | `57E4` | `57E4` |
+| `3` | `597` | `57ED` | `57ED` |
+| `3` | `598` | `57EF` | `57EF` |
+| `3` | `599` | `57F4` | `57F4` |
+
+#### Package range associations 0601 through 0700
+
+Section ID: `ownkb:section:d000246:s000040`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `600` | `57F7` | `57FA` |
+| `3` | `601` | `57FD` | `57FD` |
+| `3` | `602` | `5800` | `5800` |
+| `3` | `603` | `5802` | `5802` |
+| `3` | `604` | `5806` | `5807` |
+| `3` | `605` | `580A` | `580B` |
+| `3` | `606` | `580D` | `580D` |
+| `3` | `607` | `5811` | `5811` |
+| `3` | `608` | `5815` | `5815` |
+| `3` | `609` | `5819` | `5819` |
+| `3` | `610` | `581D` | `581E` |
+| `3` | `611` | `5820` | `5821` |
+| `3` | `612` | `5824` | `5824` |
+| `3` | `613` | `582A` | `582A` |
+| `3` | `614` | `582F` | `5831` |
+| `3` | `615` | `5834` | `5835` |
+| `3` | `616` | `5844` | `5844` |
+| `3` | `617` | `584A` | `584D` |
+| `3` | `618` | `584F` | `584F` |
+| `3` | `619` | `5851` | `5852` |
+| `3` | `620` | `5854` | `5854` |
+| `3` | `621` | `5857` | `5858` |
+| `3` | `622` | `585E` | `585E` |
+| `3` | `623` | `5862` | `5862` |
+| `3` | `624` | `5865` | `5865` |
+| `3` | `625` | `586B` | `586C` |
+| `3` | `626` | `5875` | `5875` |
+| `3` | `627` | `5879` | `5879` |
+| `3` | `628` | `587E` | `587E` |
+| `3` | `629` | `5880` | `5881` |
+| `3` | `630` | `5883` | `5883` |
+| `3` | `631` | `5885` | `5885` |
+| `3` | `632` | `5889` | `588A` |
+| `3` | `633` | `5891` | `5893` |
+| `3` | `634` | `5899` | `589A` |
+| `3` | `635` | `589C` | `589C` |
+| `3` | `636` | `589E` | `589F` |
+| `3` | `637` | `58A8` | `58A9` |
+| `3` | `638` | `58AE` | `58AE` |
+| `3` | `639` | `58B3` | `58B3` |
+| `3` | `640` | `58BC` | `58BC` |
+| `3` | `641` | `58BE` | `58BE` |
+| `3` | `642` | `58C1` | `58C1` |
+| `3` | `643` | `58C5` | `58C5` |
+| `3` | `644` | `58C7` | `58C7` |
+| `3` | `645` | `58CE` | `58CE` |
+| `3` | `646` | `58D1` | `58D1` |
+| `3` | `647` | `58D3` | `58D3` |
+| `3` | `648` | `58D5` | `58D5` |
+| `3` | `649` | `58D8` | `58DA` |
+| `3` | `650` | `58DE` | `58E0` |
+| `3` | `651` | `58E2` | `58E2` |
+| `3` | `652` | `58E4` | `58E4` |
+| `3` | `653` | `58E9` | `58E9` |
+| `3` | `654` | `58EB` | `58EC` |
+| `3` | `655` | `58EE` | `58F0` |
+| `3` | `656` | `58F3` | `58F3` |
+| `3` | `657` | `58F6` | `58F6` |
+| `3` | `658` | `58F9` | `58FA` |
+| `3` | `659` | `58FD` | `58FD` |
+| `3` | `660` | `5904` | `5904` |
+| `3` | `661` | `5907` | `5907` |
+| `3` | `662` | `590D` | `590D` |
+| `3` | `663` | `590F` | `590F` |
+| `3` | `664` | `5914` | `5916` |
+| `3` | `665` | `5919` | `591A` |
+| `3` | `666` | `591C` | `591C` |
+| `3` | `667` | `591F` | `5920` |
+| `3` | `668` | `5922` | `5922` |
+| `3` | `669` | `5924` | `5925` |
+| `3` | `670` | `5927` | `5927` |
+| `3` | `671` | `5929` | `592B` |
+| `3` | `672` | `592D` | `592F` |
+| `3` | `673` | `5931` | `5931` |
+| `3` | `674` | `5934` | `5934` |
+| `3` | `675` | `5937` | `593A` |
+| `3` | `676` | `593C` | `593C` |
+| `3` | `677` | `593E` | `593E` |
+| `3` | `678` | `5941` | `5942` |
+| `3` | `679` | `5944` | `5944` |
+| `3` | `680` | `5947` | `5949` |
+| `3` | `681` | `594B` | `594B` |
+| `3` | `682` | `594E` | `5951` |
+| `3` | `683` | `5954` | `5958` |
+| `3` | `684` | `595A` | `595A` |
+| `3` | `685` | `5960` | `5960` |
+| `3` | `686` | `5962` | `5962` |
+| `3` | `687` | `5965` | `5965` |
+| `3` | `688` | `5967` | `5967` |
+| `3` | `689` | `5969` | `596A` |
+| `3` | `690` | `596E` | `596E` |
+| `3` | `691` | `5973` | `5974` |
+| `3` | `692` | `5976` | `5976` |
+| `3` | `693` | `5978` | `5979` |
+| `3` | `694` | `597D` | `597D` |
+| `3` | `695` | `5981` | `5984` |
+| `3` | `696` | `5986` | `5988` |
+| `3` | `697` | `598A` | `598A` |
+| `3` | `698` | `598D` | `598D` |
+| `3` | `699` | `5992` | `5993` |
+
+#### Package range associations 0701 through 0800
+
+Section ID: `ownkb:section:d000246:s000041`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `700` | `5996` | `5997` |
+| `3` | `701` | `5999` | `5999` |
+| `3` | `702` | `599D` | `599E` |
+| `3` | `703` | `59A3` | `59A5` |
+| `3` | `704` | `59A8` | `59AB` |
+| `3` | `705` | `59AE` | `59AF` |
+| `3` | `706` | `59B2` | `59B2` |
+| `3` | `707` | `59B9` | `59B9` |
+| `3` | `708` | `59BB` | `59BB` |
+| `3` | `709` | `59BE` | `59BE` |
+| `3` | `710` | `59C6` | `59C6` |
+| `3` | `711` | `59CA` | `59CB` |
+| `3` | `712` | `59CD` | `59CD` |
+| `3` | `713` | `59D0` | `59D4` |
+| `3` | `714` | `59D7` | `59D8` |
+| `3` | `715` | `59DA` | `59DA` |
+| `3` | `716` | `59DC` | `59DD` |
+| `3` | `717` | `59E3` | `59E3` |
+| `3` | `718` | `59E5` | `59E5` |
+| `3` | `719` | `59E8` | `59E8` |
+| `3` | `720` | `59EA` | `59EA` |
+| `3` | `721` | `59EC` | `59EC` |
+| `3` | `722` | `59F9` | `59F9` |
+| `3` | `723` | `59FB` | `59FB` |
+| `3` | `724` | `59FF` | `59FF` |
+| `3` | `725` | `5A01` | `5A01` |
+| `3` | `726` | `5A03` | `5A09` |
+| `3` | `727` | `5A0C` | `5A0C` |
+| `3` | `728` | `5A11` | `5A11` |
+| `3` | `729` | `5A13` | `5A13` |
+| `3` | `730` | `5A18` | `5A18` |
+| `3` | `731` | `5A1B` | `5A1C` |
+| `3` | `732` | `5A1F` | `5A20` |
+| `3` | `733` | `5A23` | `5A23` |
+| `3` | `734` | `5A25` | `5A25` |
+| `3` | `735` | `5A29` | `5A29` |
+| `3` | `736` | `5A31` | `5A32` |
+| `3` | `737` | `5A34` | `5A34` |
+| `3` | `738` | `5A36` | `5A36` |
+| `3` | `739` | `5A3C` | `5A3C` |
+| `3` | `740` | `5A40` | `5A41` |
+| `3` | `741` | `5A46` | `5A46` |
+| `3` | `742` | `5A49` | `5A4A` |
+| `3` | `743` | `5A55` | `5A55` |
+| `3` | `744` | `5A5A` | `5A5A` |
+| `3` | `745` | `5A62` | `5A62` |
+| `3` | `746` | `5A66` | `5A67` |
+| `3` | `747` | `5A6A` | `5A6A` |
+| `3` | `748` | `5A6D` | `5A6D` |
+| `3` | `749` | `5A74` | `5A77` |
+| `3` | `750` | `5A7A` | `5A7A` |
+| `3` | `751` | `5A7F` | `5A7F` |
+| `3` | `752` | `5A92` | `5A92` |
+| `3` | `753` | `5A9A` | `5A9B` |
+| `3` | `754` | `5AA7` | `5AA7` |
+| `3` | `755` | `5AAA` | `5AAA` |
+| `3` | `756` | `5AAF` | `5AAF` |
+| `3` | `757` | `5AB2` | `5AB3` |
+| `3` | `758` | `5AB5` | `5AB5` |
+| `3` | `759` | `5AB8` | `5AB8` |
+| `3` | `760` | `5ABC` | `5ABE` |
+| `3` | `761` | `5AC1` | `5AC2` |
+| `3` | `762` | `5AC9` | `5AC9` |
+| `3` | `763` | `5ACC` | `5ACC` |
+| `3` | `764` | `5AD2` | `5AD2` |
+| `3` | `765` | `5AD4` | `5AD4` |
+| `3` | `766` | `5AD6` | `5AD8` |
+| `3` | `767` | `5ADC` | `5ADC` |
+| `3` | `768` | `5AE0` | `5AE1` |
+| `3` | `769` | `5AE3` | `5AE3` |
+| `3` | `770` | `5AE6` | `5AE6` |
+| `3` | `771` | `5AE9` | `5AE9` |
+| `3` | `772` | `5AEB` | `5AEB` |
+| `3` | `773` | `5AF1` | `5AF1` |
+| `3` | `774` | `5AF5` | `5AF5` |
+| `3` | `775` | `5AFB` | `5AFB` |
+| `3` | `776` | `5B08` | `5B09` |
+| `3` | `777` | `5B0B` | `5B0C` |
+| `3` | `778` | `5B16` | `5B17` |
+| `3` | `779` | `5B19` | `5B19` |
+| `3` | `780` | `5B21` | `5B21` |
+| `3` | `781` | `5B24` | `5B24` |
+| `3` | `782` | `5B2A` | `5B2A` |
+| `3` | `783` | `5B30` | `5B30` |
+| `3` | `784` | `5B32` | `5B32` |
+| `3` | `785` | `5B34` | `5B34` |
+| `3` | `786` | `5B37` | `5B38` |
+| `3` | `787` | `5B40` | `5B40` |
+| `3` | `788` | `5B4C` | `5B4C` |
+| `3` | `789` | `5B50` | `5B51` |
+| `3` | `790` | `5B53` | `5B55` |
+| `3` | `791` | `5B57` | `5B5D` |
+| `3` | `792` | `5B5F` | `5B5F` |
+| `3` | `793` | `5B62` | `5B66` |
+| `3` | `794` | `5B69` | `5B6C` |
+| `3` | `795` | `5B70` | `5B71` |
+| `3` | `796` | `5B73` | `5B73` |
+| `3` | `797` | `5B75` | `5B75` |
+| `3` | `798` | `5B78` | `5B78` |
+| `3` | `799` | `5B7A` | `5B7A` |
+
+#### Package range associations 0801 through 0900
+
+Section ID: `ownkb:section:d000246:s000042`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `800` | `5B7D` | `5B7D` |
+| `3` | `801` | `5B7F` | `5B7F` |
+| `3` | `802` | `5B81` | `5B81` |
+| `3` | `803` | `5B83` | `5B85` |
+| `3` | `804` | `5B87` | `5B89` |
+| `3` | `805` | `5B8B` | `5B8C` |
+| `3` | `806` | `5B8F` | `5B8F` |
+| `3` | `807` | `5B93` | `5B93` |
+| `3` | `808` | `5B95` | `5B95` |
+| `3` | `809` | `5B97` | `5B9E` |
+| `3` | `810` | `5BA0` | `5BA6` |
+| `3` | `811` | `5BAA` | `5BAB` |
+| `3` | `812` | `5BAE` | `5BAE` |
+| `3` | `813` | `5BB0` | `5BB0` |
+| `3` | `814` | `5BB3` | `5BB6` |
+| `3` | `815` | `5BB8` | `5BB9` |
+| `3` | `816` | `5BBD` | `5BBF` |
+| `3` | `817` | `5BC2` | `5BC2` |
+| `3` | `818` | `5BC4` | `5BC7` |
+| `3` | `819` | `5BCC` | `5BCC` |
+| `3` | `820` | `5BD0` | `5BD0` |
+| `3` | `821` | `5BD2` | `5BD3` |
+| `3` | `822` | `5BDD` | `5BDF` |
+| `3` | `823` | `5BE1` | `5BE2` |
+| `3` | `824` | `5BE4` | `5BE9` |
+| `3` | `825` | `5BEB` | `5BEC` |
+| `3` | `826` | `5BEE` | `5BEE` |
+| `3` | `827` | `5BF0` | `5BF0` |
+| `3` | `828` | `5BF5` | `5BF6` |
+| `3` | `829` | `5BF8` | `5BFC` |
+| `3` | `830` | `5BFF` | `5BFF` |
+| `3` | `831` | `5C01` | `5C01` |
+| `3` | `832` | `5C04` | `5C04` |
+| `3` | `833` | `5C06` | `5C0B` |
+| `3` | `834` | `5C0D` | `5C0F` |
+| `3` | `835` | `5C11` | `5C11` |
+| `3` | `836` | `5C14` | `5C16` |
+| `3` | `837` | `5C18` | `5C18` |
+| `3` | `838` | `5C1A` | `5C1A` |
+| `3` | `839` | `5C1C` | `5C1D` |
+| `3` | `840` | `5C22` | `5C22` |
+| `3` | `841` | `5C24` | `5C25` |
+| `3` | `842` | `5C27` | `5C27` |
+| `3` | `843` | `5C2C` | `5C2C` |
+| `3` | `844` | `5C31` | `5C31` |
+| `3` | `845` | `5C34` | `5C34` |
+| `3` | `846` | `5C37` | `5C42` |
+| `3` | `847` | `5C45` | `5C46` |
+| `3` | `848` | `5C48` | `5C4B` |
+| `3` | `849` | `5C4D` | `5C51` |
+| `3` | `850` | `5C55` | `5C55` |
+| `3` | `851` | `5C59` | `5C59` |
+| `3` | `852` | `5C5C` | `5C5C` |
+| `3` | `853` | `5C5E` | `5C5E` |
+| `3` | `854` | `5C60` | `5C66` |
+| `3` | `855` | `5C68` | `5C68` |
+| `3` | `856` | `5C6C` | `5C6C` |
+| `3` | `857` | `5C6F` | `5C6F` |
+| `3` | `858` | `5C71` | `5C71` |
+| `3` | `859` | `5C79` | `5C7A` |
+| `3` | `860` | `5C7F` | `5C7F` |
+| `3` | `861` | `5C81` | `5C82` |
+| `3` | `862` | `5C88` | `5C88` |
+| `3` | `863` | `5C8C` | `5C8D` |
+| `3` | `864` | `5C90` | `5C91` |
+| `3` | `865` | `5C94` | `5C94` |
+| `3` | `866` | `5C96` | `5C9C` |
+| `3` | `867` | `5CA1` | `5CA3` |
+| `3` | `868` | `5CA9` | `5CA9` |
+| `3` | `869` | `5CAB` | `5CAD` |
+| `3` | `870` | `5CB1` | `5CB1` |
+| `3` | `871` | `5CB3` | `5CB3` |
+| `3` | `872` | `5CB5` | `5CB5` |
+| `3` | `873` | `5CB7` | `5CB8` |
+| `3` | `874` | `5CBD` | `5CBD` |
+| `3` | `875` | `5CBF` | `5CBF` |
+| `3` | `876` | `5CC1` | `5CC1` |
+| `3` | `877` | `5CC4` | `5CC4` |
+| `3` | `878` | `5CCB` | `5CCB` |
+| `3` | `879` | `5CD2` | `5CD2` |
+| `3` | `880` | `5CD9` | `5CD9` |
+| `3` | `881` | `5CE1` | `5CE1` |
+| `3` | `882` | `5CE4` | `5CE6` |
+| `3` | `883` | `5CE8` | `5CE8` |
+| `3` | `884` | `5CEA` | `5CEA` |
+| `3` | `885` | `5CED` | `5CED` |
+| `3` | `886` | `5CF0` | `5CF0` |
+| `3` | `887` | `5CF4` | `5CF4` |
+| `3` | `888` | `5CF6` | `5CF6` |
+| `3` | `889` | `5CFB` | `5CFB` |
+| `3` | `890` | `5CFD` | `5CFD` |
+| `3` | `891` | `5D02` | `5D03` |
+| `3` | `892` | `5D06` | `5D07` |
+| `3` | `893` | `5D0D` | `5D0E` |
+| `3` | `894` | `5D14` | `5D14` |
+| `3` | `895` | `5D16` | `5D17` |
+| `3` | `896` | `5D19` | `5D19` |
+| `3` | `897` | `5D1B` | `5D1B` |
+| `3` | `898` | `5D1E` | `5D1E` |
+| `3` | `899` | `5D20` | `5D20` |
+
+#### Package range associations 0901 through 1000
+
+Section ID: `ownkb:section:d000246:s000043`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `900` | `5D22` | `5D22` |
+| `3` | `901` | `5D24` | `5D24` |
+| `3` | `902` | `5D26` | `5D27` |
+| `3` | `903` | `5D29` | `5D29` |
+| `3` | `904` | `5D2D` | `5D2E` |
+| `3` | `905` | `5D33` | `5D34` |
+| `3` | `906` | `5D3D` | `5D3E` |
+| `3` | `907` | `5D47` | `5D47` |
+| `3` | `908` | `5D4A` | `5D4C` |
+| `3` | `909` | `5D50` | `5D50` |
+| `3` | `910` | `5D58` | `5D58` |
+| `3` | `911` | `5D5B` | `5D5B` |
+| `3` | `912` | `5D5D` | `5D5D` |
+| `3` | `913` | `5D69` | `5D69` |
+| `3` | `914` | `5D6B` | `5D6C` |
+| `3` | `915` | `5D6F` | `5D6F` |
+| `3` | `916` | `5D74` | `5D74` |
+| `3` | `917` | `5D81` | `5D82` |
+| `3` | `918` | `5D84` | `5D84` |
+| `3` | `919` | `5D87` | `5D87` |
+| `3` | `920` | `5D97` | `5D97` |
+| `3` | `921` | `5D99` | `5D99` |
+| `3` | `922` | `5D9D` | `5D9D` |
+| `3` | `923` | `5DA0` | `5DA0` |
+| `3` | `924` | `5DA7` | `5DA7` |
+| `3` | `925` | `5DB7` | `5DB8` |
+| `3` | `926` | `5DBA` | `5DBA` |
+| `3` | `927` | `5DBC` | `5DBC` |
+| `3` | `928` | `5DC5` | `5DC5` |
+| `3` | `929` | `5DCB` | `5DCB` |
+| `3` | `930` | `5DCD` | `5DCD` |
+| `3` | `931` | `5DD2` | `5DD2` |
+| `3` | `932` | `5DD4` | `5DD4` |
+| `3` | `933` | `5DDB` | `5DDB` |
+| `3` | `934` | `5DDD` | `5DDE` |
+| `3` | `935` | `5DE1` | `5DE2` |
+| `3` | `936` | `5DE5` | `5DE9` |
+| `3` | `937` | `5DEB` | `5DEB` |
+| `3` | `938` | `5DEE` | `5DEF` |
+| `3` | `939` | `5DF1` | `5DF4` |
+| `3` | `940` | `5DF7` | `5DF7` |
+| `3` | `941` | `5DF9` | `5DF9` |
+| `3` | `942` | `5DFD` | `5DFE` |
+| `3` | `943` | `5E01` | `5E03` |
+| `3` | `944` | `5E05` | `5E06` |
+| `3` | `945` | `5E08` | `5E08` |
+| `3` | `946` | `5E0C` | `5E0C` |
+| `3` | `947` | `5E0F` | `5E11` |
+| `3` | `948` | `5E14` | `5E16` |
+| `3` | `949` | `5E18` | `5E1D` |
+| `3` | `950` | `5E25` | `5E27` |
+| `3` | `951` | `5E2B` | `5E2B` |
+| `3` | `952` | `5E2D` | `5E2E` |
+| `3` | `953` | `5E31` | `5E31` |
+| `3` | `954` | `5E33` | `5E33` |
+| `3` | `955` | `5E36` | `5E38` |
+| `3` | `956` | `5E3B` | `5E3D` |
+| `3` | `957` | `5E40` | `5E40` |
+| `3` | `958` | `5E42` | `5E45` |
+| `3` | `959` | `5E4C` | `5E4C` |
+| `3` | `960` | `5E54` | `5E55` |
+| `3` | `961` | `5E57` | `5E58` |
+| `3` | `962` | `5E5B` | `5E5B` |
+| `3` | `963` | `5E5E` | `5E5F` |
+| `3` | `964` | `5E61` | `5E63` |
+| `3` | `965` | `5E6B` | `5E6C` |
+| `3` | `966` | `5E72` | `5E74` |
+| `3` | `967` | `5E76` | `5E76` |
+| `3` | `968` | `5E78` | `5E78` |
+| `3` | `969` | `5E7A` | `5E80` |
+| `3` | `970` | `5E84` | `5E84` |
+| `3` | `971` | `5E86` | `5E87` |
+| `3` | `972` | `5E8A` | `5E8B` |
+| `3` | `973` | `5E8F` | `5E91` |
+| `3` | `974` | `5E93` | `5E97` |
+| `3` | `975` | `5E99` | `5E9A` |
+| `3` | `976` | `5E9C` | `5E9C` |
+| `3` | `977` | `5E9E` | `5EA0` |
+| `3` | `978` | `5EA5` | `5EA7` |
+| `3` | `979` | `5EAB` | `5EAB` |
+| `3` | `980` | `5EAD` | `5EAD` |
+| `3` | `981` | `5EB3` | `5EB3` |
+| `3` | `982` | `5EB5` | `5EB9` |
+| `3` | `983` | `5EBE` | `5EBE` |
+| `3` | `984` | `5EC1` | `5EC2` |
+| `3` | `985` | `5EC4` | `5EC4` |
+| `3` | `986` | `5EC8` | `5ECA` |
+| `3` | `987` | `5ED1` | `5ED3` |
+| `3` | `988` | `5ED6` | `5ED6` |
+| `3` | `989` | `5EDA` | `5EDB` |
+| `3` | `990` | `5EDD` | `5EDD` |
+| `3` | `991` | `5EDF` | `5EE3` |
+| `3` | `992` | `5EE8` | `5EEA` |
+| `3` | `993` | `5EEC` | `5EEC` |
+| `3` | `994` | `5EF1` | `5EF1` |
+| `3` | `995` | `5EF3` | `5EF3` |
+| `3` | `996` | `5EF6` | `5EF7` |
+| `3` | `997` | `5EFA` | `5EFA` |
+| `3` | `998` | `5EFF` | `5F04` |
+| `3` | `999` | `5F08` | `5F08` |
+
+#### Package range associations 1001 through 1100
+
+Section ID: `ownkb:section:d000246:s000044`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1000` | `5F0A` | `5F0B` |
+| `3` | `1001` | `5F0F` | `5F0F` |
+| `3` | `1002` | `5F11` | `5F13` |
+| `3` | `1003` | `5F15` | `5F15` |
+| `3` | `1004` | `5F17` | `5F18` |
+| `3` | `1005` | `5F1B` | `5F1B` |
+| `3` | `1006` | `5F1F` | `5F20` |
+| `3` | `1007` | `5F25` | `5F27` |
+| `3` | `1008` | `5F29` | `5F29` |
+| `3` | `1009` | `5F2D` | `5F2D` |
+| `3` | `1010` | `5F2F` | `5F2F` |
+| `3` | `1011` | `5F31` | `5F31` |
+| `3` | `1012` | `5F35` | `5F35` |
+| `3` | `1013` | `5F37` | `5F37` |
+| `3` | `1014` | `5F39` | `5F3A` |
+| `3` | `1015` | `5F3C` | `5F3C` |
+| `3` | `1016` | `5F40` | `5F40` |
+| `3` | `1017` | `5F48` | `5F48` |
+| `3` | `1018` | `5F4C` | `5F4C` |
+| `3` | `1019` | `5F4E` | `5F4E` |
+| `3` | `1020` | `5F52` | `5F53` |
+| `3` | `1021` | `5F55` | `5F58` |
+| `3` | `1022` | `5F5D` | `5F5E` |
+| `3` | `1023` | `5F61` | `5F62` |
+| `3` | `1024` | `5F64` | `5F66` |
+| `3` | `1025` | `5F69` | `5F6A` |
+| `3` | `1026` | `5F6C` | `5F6D` |
+| `3` | `1027` | `5F70` | `5F71` |
+| `3` | `1028` | `5F77` | `5F77` |
+| `3` | `1029` | `5F79` | `5F79` |
+| `3` | `1030` | `5F7B` | `5F7C` |
+| `3` | `1031` | `5F80` | `5F82` |
+| `3` | `1032` | `5F84` | `5F85` |
+| `3` | `1033` | `5F87` | `5F8C` |
+| `3` | `1034` | `5F90` | `5F92` |
+| `3` | `1035` | `5F95` | `5F95` |
+| `3` | `1036` | `5F97` | `5F99` |
+| `3` | `1037` | `5F9C` | `5F9C` |
+| `3` | `1038` | `5F9E` | `5F9E` |
+| `3` | `1039` | `5FA0` | `5FA1` |
+| `3` | `1040` | `5FA8` | `5FAA` |
+| `3` | `1041` | `5FAD` | `5FAE` |
+| `3` | `1042` | `5FB5` | `5FB5` |
+| `3` | `1043` | `5FB7` | `5FB7` |
+| `3` | `1044` | `5FB9` | `5FB9` |
+| `3` | `1045` | `5FBC` | `5FBD` |
+| `3` | `1046` | `5FC3` | `5FC3` |
+| `3` | `1047` | `5FC5` | `5FC6` |
+| `3` | `1048` | `5FC9` | `5FC9` |
+| `3` | `1049` | `5FCC` | `5FCD` |
+| `3` | `1050` | `5FCF` | `5FD2` |
+| `3` | `1051` | `5FD6` | `5FD9` |
+| `3` | `1052` | `5FDD` | `5FDD` |
+| `3` | `1053` | `5FE0` | `5FE1` |
+| `3` | `1054` | `5FE4` | `5FE4` |
+| `3` | `1055` | `5FE7` | `5FE7` |
+| `3` | `1056` | `5FEA` | `5FEB` |
+| `3` | `1057` | `5FED` | `5FEE` |
+| `3` | `1058` | `5FF1` | `5FF1` |
+| `3` | `1059` | `5FF5` | `5FF5` |
+| `3` | `1060` | `5FF8` | `5FF8` |
+| `3` | `1061` | `5FFB` | `5FFB` |
+| `3` | `1062` | `5FFD` | `6006` |
+| `3` | `1063` | `600A` | `600A` |
+| `3` | `1064` | `600D` | `600F` |
+| `3` | `1065` | `6012` | `6012` |
+| `3` | `1066` | `6014` | `6016` |
+| `3` | `1067` | `6019` | `6019` |
+| `3` | `1068` | `601B` | `601D` |
+| `3` | `1069` | `6020` | `6021` |
+| `3` | `1070` | `6025` | `602B` |
+| `3` | `1071` | `602F` | `602F` |
+| `3` | `1072` | `6035` | `6035` |
+| `3` | `1073` | `603B` | `603C` |
+| `3` | `1074` | `603F` | `603F` |
+| `3` | `1075` | `6041` | `6043` |
+| `3` | `1076` | `6045` | `6046` |
+| `3` | `1077` | `604B` | `604B` |
+| `3` | `1078` | `604D` | `604D` |
+| `3` | `1079` | `6050` | `6050` |
+| `3` | `1080` | `6052` | `6052` |
+| `3` | `1081` | `6055` | `6055` |
+| `3` | `1082` | `6059` | `605A` |
+| `3` | `1083` | `605D` | `605D` |
+| `3` | `1084` | `6062` | `6065` |
+| `3` | `1085` | `6067` | `606D` |
+| `3` | `1086` | `606F` | `6070` |
+| `3` | `1087` | `6073` | `6073` |
+| `3` | `1088` | `6076` | `6076` |
+| `3` | `1089` | `6078` | `607D` |
+| `3` | `1090` | `607F` | `607F` |
+| `3` | `1091` | `6083` | `6085` |
+| `3` | `1092` | `6089` | `6089` |
+| `3` | `1093` | `608C` | `608D` |
+| `3` | `1094` | `6092` | `6092` |
+| `3` | `1095` | `6094` | `6094` |
+| `3` | `1096` | `6096` | `6096` |
+| `3` | `1097` | `609A` | `609B` |
+| `3` | `1098` | `609D` | `609D` |
+| `3` | `1099` | `609F` | `60A0` |
+
+#### Package range associations 1101 through 1200
+
+Section ID: `ownkb:section:d000246:s000045`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1100` | `60A3` | `60A3` |
+| `3` | `1101` | `60A6` | `60A6` |
+| `3` | `1102` | `60A8` | `60A8` |
+| `3` | `1103` | `60AB` | `60AD` |
+| `3` | `1104` | `60AF` | `60AF` |
+| `3` | `1105` | `60B1` | `60B2` |
+| `3` | `1106` | `60B4` | `60B6` |
+| `3` | `1107` | `60B8` | `60B8` |
+| `3` | `1108` | `60BB` | `60BC` |
+| `3` | `1109` | `60C5` | `60C6` |
+| `3` | `1110` | `60CA` | `60CB` |
+| `3` | `1111` | `60D1` | `60D1` |
+| `3` | `1112` | `60D5` | `60D5` |
+| `3` | `1113` | `60D8` | `60D8` |
+| `3` | `1114` | `60DA` | `60DA` |
+| `3` | `1115` | `60DC` | `60DD` |
+| `3` | `1116` | `60DF` | `60E1` |
+| `3` | `1117` | `60E6` | `60E9` |
+| `3` | `1118` | `60EB` | `60F4` |
+| `3` | `1119` | `60F6` | `60F6` |
+| `3` | `1120` | `60F9` | `60FB` |
+| `3` | `1121` | `6100` | `6101` |
+| `3` | `1122` | `6106` | `6106` |
+| `3` | `1123` | `6108` | `6109` |
+| `3` | `1124` | `610D` | `610F` |
+| `3` | `1125` | `6115` | `6115` |
+| `3` | `1126` | `611A` | `611C` |
+| `3` | `1127` | `611F` | `6120` |
+| `3` | `1128` | `6123` | `6124` |
+| `3` | `1129` | `6126` | `6128` |
+| `3` | `1130` | `612B` | `612B` |
+| `3` | `1131` | `6134` | `6134` |
+| `3` | `1132` | `6137` | `6137` |
+| `3` | `1133` | `613E` | `613F` |
+| `3` | `1134` | `6148` | `6148` |
+| `3` | `1135` | `614A` | `614E` |
+| `3` | `1136` | `6151` | `6151` |
+| `3` | `1137` | `6155` | `6155` |
+| `3` | `1138` | `6158` | `6158` |
+| `3` | `1139` | `615A` | `615A` |
+| `3` | `1140` | `615D` | `615D` |
+| `3` | `1141` | `615F` | `615F` |
+| `3` | `1142` | `6162` | `6163` |
+| `3` | `1143` | `6167` | `6168` |
+| `3` | `1144` | `616A` | `616B` |
+| `3` | `1145` | `616E` | `616E` |
+| `3` | `1146` | `6170` | `6170` |
+| `3` | `1147` | `6173` | `6173` |
+| `3` | `1148` | `6175` | `6177` |
+| `3` | `1149` | `6182` | `6182` |
+| `3` | `1150` | `618A` | `618B` |
+| `3` | `1151` | `618E` | `618E` |
+| `3` | `1152` | `6190` | `6192` |
+| `3` | `1153` | `6194` | `6194` |
+| `3` | `1154` | `619A` | `619A` |
+| `3` | `1155` | `619D` | `619D` |
+| `3` | `1156` | `61A4` | `61A4` |
+| `3` | `1157` | `61A7` | `61A9` |
+| `3` | `1158` | `61AB` | `61AC` |
+| `3` | `1159` | `61AE` | `61AE` |
+| `3` | `1160` | `61B2` | `61B2` |
+| `3` | `1161` | `61B6` | `61B7` |
+| `3` | `1162` | `61BE` | `61BE` |
+| `3` | `1163` | `61C2` | `61C2` |
+| `3` | `1164` | `61C7` | `61CD` |
+| `3` | `1165` | `61D1` | `61D2` |
+| `3` | `1166` | `61D4` | `61D4` |
+| `3` | `1167` | `61DF` | `61DF` |
+| `3` | `1168` | `61E3` | `61E3` |
+| `3` | `1169` | `61E6` | `61E6` |
+| `3` | `1170` | `61E8` | `61E8` |
+| `3` | `1171` | `61F2` | `61F2` |
+| `3` | `1172` | `61F5` | `61F8` |
+| `3` | `1173` | `61FA` | `61FA` |
+| `3` | `1174` | `61FC` | `61FC` |
+| `3` | `1175` | `61FE` | `6200` |
+| `3` | `1176` | `6206` | `6208` |
+| `3` | `1177` | `620A` | `6212` |
+| `3` | `1178` | `6214` | `6218` |
+| `3` | `1179` | `621A` | `621B` |
+| `3` | `1180` | `621F` | `621F` |
+| `3` | `1181` | `6221` | `6222` |
+| `3` | `1182` | `6224` | `6225` |
+| `3` | `1183` | `6227` | `6227` |
+| `3` | `1184` | `6229` | `622A` |
+| `3` | `1185` | `622C` | `622C` |
+| `3` | `1186` | `622E` | `622E` |
+| `3` | `1187` | `6230` | `6230` |
+| `3` | `1188` | `6232` | `6234` |
+| `3` | `1189` | `6236` | `6237` |
+| `3` | `1190` | `623D` | `6241` |
+| `3` | `1191` | `6243` | `6243` |
+| `3` | `1192` | `6247` | `6249` |
+| `3` | `1193` | `624B` | `624B` |
+| `3` | `1194` | `624D` | `624E` |
+| `3` | `1195` | `6251` | `6254` |
+| `3` | `1196` | `6258` | `6258` |
+| `3` | `1197` | `625B` | `625B` |
+| `3` | `1198` | `6263` | `6263` |
+| `3` | `1199` | `6266` | `6267` |
+
+#### Package range associations 1201 through 1300
+
+Section ID: `ownkb:section:d000246:s000046`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1200` | `6269` | `6270` |
+| `3` | `1201` | `6273` | `6273` |
+| `3` | `1202` | `6276` | `6276` |
+| `3` | `1203` | `6279` | `6279` |
+| `3` | `1204` | `627C` | `627C` |
+| `3` | `1205` | `627E` | `6280` |
+| `3` | `1206` | `6284` | `6284` |
+| `3` | `1207` | `6289` | `628A` |
+| `3` | `1208` | `6291` | `6293` |
+| `3` | `1209` | `6295` | `6298` |
+| `3` | `1210` | `629A` | `629B` |
+| `3` | `1211` | `629F` | `62A2` |
+| `3` | `1212` | `62A4` | `62A5` |
+| `3` | `1213` | `62A8` | `62A8` |
+| `3` | `1214` | `62AB` | `62AC` |
+| `3` | `1215` | `62B1` | `62B1` |
+| `3` | `1216` | `62B5` | `62B5` |
+| `3` | `1217` | `62B9` | `62B9` |
+| `3` | `1218` | `62BB` | `62BD` |
+| `3` | `1219` | `62BF` | `62BF` |
+| `3` | `1220` | `62C2` | `62C2` |
+| `3` | `1221` | `62C4` | `62CE` |
+| `3` | `1222` | `62D0` | `62D0` |
+| `3` | `1223` | `62D2` | `62D4` |
+| `3` | `1224` | `62D6` | `62DC` |
+| `3` | `1225` | `62DF` | `62DF` |
+| `3` | `1226` | `62E2` | `62E3` |
+| `3` | `1227` | `62E5` | `62E9` |
+| `3` | `1228` | `62EC` | `62EF` |
+| `3` | `1229` | `62F1` | `62F1` |
+| `3` | `1230` | `62F3` | `62F4` |
+| `3` | `1231` | `62F6` | `62F7` |
+| `3` | `1232` | `62FC` | `62FF` |
+| `3` | `1233` | `6301` | `6302` |
+| `3` | `1234` | `6307` | `6309` |
+| `3` | `1235` | `630E` | `630E` |
+| `3` | `1236` | `6311` | `6311` |
+| `3` | `1237` | `6316` | `6316` |
+| `3` | `1238` | `631A` | `631B` |
+| `3` | `1239` | `631D` | `6325` |
+| `3` | `1240` | `6328` | `6328` |
+| `3` | `1241` | `632A` | `632B` |
+| `3` | `1242` | `632F` | `632F` |
+| `3` | `1243` | `6332` | `6332` |
+| `3` | `1244` | `6339` | `633A` |
+| `3` | `1245` | `633D` | `633E` |
+| `3` | `1246` | `6342` | `6343` |
+| `3` | `1247` | `6345` | `6346` |
+| `3` | `1248` | `6349` | `6349` |
+| `3` | `1249` | `634B` | `6350` |
+| `3` | `1250` | `6355` | `6355` |
+| `3` | `1251` | `635E` | `635F` |
+| `3` | `1252` | `6361` | `6363` |
+| `3` | `1253` | `6367` | `6367` |
+| `3` | `1254` | `6369` | `6369` |
+| `3` | `1255` | `636B` | `636B` |
+| `3` | `1256` | `636D` | `636E` |
+| `3` | `1257` | `6371` | `6371` |
+| `3` | `1258` | `6376` | `6377` |
+| `3` | `1259` | `637A` | `637B` |
+| `3` | `1260` | `6380` | `6380` |
+| `3` | `1261` | `6382` | `6384` |
+| `3` | `1262` | `6387` | `638A` |
+| `3` | `1263` | `638C` | `638C` |
+| `3` | `1264` | `638E` | `6390` |
+| `3` | `1265` | `6392` | `6392` |
+| `3` | `1266` | `6396` | `6396` |
+| `3` | `1267` | `6398` | `6399` |
+| `3` | `1268` | `639B` | `639B` |
+| `3` | `1269` | `63A0` | `63A0` |
+| `3` | `1270` | `63A2` | `63A3` |
+| `3` | `1271` | `63A5` | `63A5` |
+| `3` | `1272` | `63A7` | `63AA` |
+| `3` | `1273` | `63AC` | `63AE` |
+| `3` | `1274` | `63B0` | `63B0` |
+| `3` | `1275` | `63B3` | `63B4` |
+| `3` | `1276` | `63B7` | `63B8` |
+| `3` | `1277` | `63BA` | `63BA` |
+| `3` | `1278` | `63BC` | `63BC` |
+| `3` | `1279` | `63BE` | `63BE` |
+| `3` | `1280` | `63C0` | `63C0` |
+| `3` | `1281` | `63C4` | `63C4` |
+| `3` | `1282` | `63C6` | `63C6` |
+| `3` | `1283` | `63C9` | `63C9` |
+| `3` | `1284` | `63CD` | `63D0` |
+| `3` | `1285` | `63D2` | `63D2` |
+| `3` | `1286` | `63D6` | `63D6` |
+| `3` | `1287` | `63DA` | `63DB` |
+| `3` | `1288` | `63DE` | `63DE` |
+| `3` | `1289` | `63E0` | `63E1` |
+| `3` | `1290` | `63E3` | `63E3` |
+| `3` | `1291` | `63E9` | `63EA` |
+| `3` | `1292` | `63ED` | `63EE` |
+| `3` | `1293` | `63F2` | `63F2` |
+| `3` | `1294` | `63F4` | `63F4` |
+| `3` | `1295` | `63F6` | `63F6` |
+| `3` | `1296` | `63F8` | `63F8` |
+| `3` | `1297` | `63FD` | `63FD` |
+| `3` | `1298` | `63FF` | `6402` |
+| `3` | `1299` | `6405` | `6405` |
+
+#### Package range associations 1301 through 1400
+
+Section ID: `ownkb:section:d000246:s000047`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1300` | `640B` | `640D` |
+| `3` | `1301` | `640F` | `6410` |
+| `3` | `1302` | `6413` | `6414` |
+| `3` | `1303` | `6416` | `6417` |
+| `3` | `1304` | `641B` | `641C` |
+| `3` | `1305` | `641E` | `6421` |
+| `3` | `1306` | `6426` | `6426` |
+| `3` | `1307` | `642A` | `642A` |
+| `3` | `1308` | `642C` | `642D` |
+| `3` | `1309` | `6434` | `6434` |
+| `3` | `1310` | `6436` | `6436` |
+| `3` | `1311` | `643A` | `643A` |
+| `3` | `1312` | `643D` | `643D` |
+| `3` | `1313` | `643F` | `6441` |
+| `3` | `1314` | `6444` | `6448` |
+| `3` | `1315` | `644A` | `644A` |
+| `3` | `1316` | `6451` | `6452` |
+| `3` | `1317` | `6454` | `6454` |
+| `3` | `1318` | `6458` | `6458` |
+| `3` | `1319` | `645C` | `645C` |
+| `3` | `1320` | `645E` | `645F` |
+| `3` | `1321` | `6467` | `6467` |
+| `3` | `1322` | `6469` | `6469` |
+| `3` | `1323` | `646D` | `646D` |
+| `3` | `1324` | `646F` | `646F` |
+| `3` | `1325` | `6473` | `6473` |
+| `3` | `1326` | `6476` | `6476` |
+| `3` | `1327` | `6478` | `647B` |
+| `3` | `1328` | `6482` | `6482` |
+| `3` | `1329` | `6484` | `6485` |
+| `3` | `1330` | `6487` | `6488` |
+| `3` | `1331` | `6490` | `6493` |
+| `3` | `1332` | `6495` | `6495` |
+| `3` | `1333` | `6499` | `6499` |
+| `3` | `1334` | `649E` | `649F` |
+| `3` | `1335` | `64A3` | `64A5` |
+| `3` | `1336` | `64A9` | `64A9` |
+| `3` | `1337` | `64AB` | `64AE` |
+| `3` | `1338` | `64B0` | `64B0` |
+| `3` | `1339` | `64B2` | `64B3` |
+| `3` | `1340` | `64B5` | `64B5` |
+| `3` | `1341` | `64B7` | `64B8` |
+| `3` | `1342` | `64BA` | `64BC` |
+| `3` | `1343` | `64BE` | `64C2` |
+| `3` | `1344` | `64C4` | `64C5` |
+| `3` | `1345` | `64C7` | `64C7` |
+| `3` | `1346` | `64CA` | `64CB` |
+| `3` | `1347` | `64CD` | `64CE` |
+| `3` | `1348` | `64D0` | `64D0` |
+| `3` | `1349` | `64D2` | `64D2` |
+| `3` | `1350` | `64D4` | `64D4` |
+| `3` | `1351` | `64D7` | `64D8` |
+| `3` | `1352` | `64DA` | `64DA` |
+| `3` | `1353` | `64DE` | `64DE` |
+| `3` | `1354` | `64E0` | `64E0` |
+| `3` | `1355` | `64E2` | `64E2` |
+| `3` | `1356` | `64E4` | `64E4` |
+| `3` | `1357` | `64E6` | `64E6` |
+| `3` | `1358` | `64EC` | `64EC` |
+| `3` | `1359` | `64EF` | `64F2` |
+| `3` | `1360` | `64F4` | `64F4` |
+| `3` | `1361` | `64F7` | `64F7` |
+| `3` | `1362` | `64FA` | `64FC` |
+| `3` | `1363` | `64FE` | `64FE` |
+| `3` | `1364` | `6500` | `6500` |
+| `3` | `1365` | `6504` | `6504` |
+| `3` | `1366` | `6506` | `6506` |
+| `3` | `1367` | `6509` | `6509` |
+| `3` | `1368` | `650F` | `650F` |
+| `3` | `1369` | `6512` | `6512` |
+| `3` | `1370` | `6514` | `6514` |
+| `3` | `1371` | `6516` | `6516` |
+| `3` | `1372` | `6518` | `6519` |
+| `3` | `1373` | `651B` | `651D` |
+| `3` | `1374` | `6522` | `6522` |
+| `3` | `1375` | `6524` | `6525` |
+| `3` | `1376` | `652A` | `652C` |
+| `3` | `1377` | `652E` | `652F` |
+| `3` | `1378` | `6534` | `6536` |
+| `3` | `1379` | `6538` | `6539` |
+| `3` | `1380` | `653B` | `653B` |
+| `3` | `1381` | `653E` | `653F` |
+| `3` | `1382` | `6545` | `6545` |
+| `3` | `1383` | `6548` | `6549` |
+| `3` | `1384` | `654C` | `654C` |
+| `3` | `1385` | `654F` | `654F` |
+| `3` | `1386` | `6551` | `6551` |
+| `3` | `1387` | `6555` | `6559` |
+| `3` | `1388` | `655B` | `655B` |
+| `3` | `1389` | `655D` | `655E` |
+| `3` | `1390` | `6562` | `6563` |
+| `3` | `1391` | `6566` | `6566` |
+| `3` | `1392` | `656B` | `656C` |
+| `3` | `1393` | `6570` | `6570` |
+| `3` | `1394` | `6572` | `6572` |
+| `3` | `1395` | `6574` | `6575` |
+| `3` | `1396` | `6577` | `6578` |
+| `3` | `1397` | `6582` | `6583` |
+| `3` | `1398` | `6587` | `6587` |
+| `3` | `1399` | `658B` | `658C` |
+
+#### Package range associations 1401 through 1500
+
+Section ID: `ownkb:section:d000246:s000048`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1400` | `6590` | `6591` |
+| `3` | `1401` | `6593` | `6593` |
+| `3` | `1402` | `6595` | `6595` |
+| `3` | `1403` | `6597` | `6597` |
+| `3` | `1404` | `6599` | `6599` |
+| `3` | `1405` | `659B` | `659C` |
+| `3` | `1406` | `659F` | `659F` |
+| `3` | `1407` | `65A1` | `65A1` |
+| `3` | `1408` | `65A4` | `65A5` |
+| `3` | `1409` | `65A7` | `65A7` |
+| `3` | `1410` | `65A9` | `65A9` |
+| `3` | `1411` | `65AB` | `65AD` |
+| `3` | `1412` | `65AF` | `65B0` |
+| `3` | `1413` | `65B2` | `65B2` |
+| `3` | `1414` | `65B7` | `65B7` |
+| `3` | `1415` | `65B9` | `65B9` |
+| `3` | `1416` | `65BC` | `65BD` |
+| `3` | `1417` | `65C1` | `65C1` |
+| `3` | `1418` | `65C3` | `65C6` |
+| `3` | `1419` | `65CB` | `65CC` |
+| `3` | `1420` | `65CE` | `65CF` |
+| `3` | `1421` | `65D2` | `65D2` |
+| `3` | `1422` | `65D6` | `65D7` |
+| `3` | `1423` | `65E0` | `65E0` |
+| `3` | `1424` | `65E2` | `65E2` |
+| `3` | `1425` | `65E5` | `65E9` |
+| `3` | `1426` | `65EC` | `65F1` |
+| `3` | `1427` | `65F6` | `65F7` |
+| `3` | `1428` | `65FA` | `65FA` |
+| `3` | `1429` | `6600` | `6600` |
+| `3` | `1430` | `6602` | `6603` |
+| `3` | `1431` | `6606` | `6606` |
+| `3` | `1432` | `660A` | `660A` |
+| `3` | `1433` | `660C` | `660C` |
+| `3` | `1434` | `660E` | `660F` |
+| `3` | `1435` | `6613` | `6615` |
+| `3` | `1436` | `6619` | `6619` |
+| `3` | `1437` | `661D` | `661D` |
+| `3` | `1438` | `661F` | `6620` |
+| `3` | `1439` | `6625` | `6625` |
+| `3` | `1440` | `6627` | `6628` |
+| `3` | `1441` | `662D` | `662D` |
+| `3` | `1442` | `662F` | `662F` |
+| `3` | `1443` | `6631` | `6631` |
+| `3` | `1444` | `6634` | `6636` |
+| `3` | `1445` | `663C` | `663C` |
+| `3` | `1446` | `663E` | `663E` |
+| `3` | `1447` | `6641` | `6643` |
+| `3` | `1448` | `6649` | `6649` |
+| `3` | `1449` | `664B` | `664C` |
+| `3` | `1450` | `664F` | `664F` |
+| `3` | `1451` | `6652` | `6657` |
+| `3` | `1452` | `665A` | `665A` |
+| `3` | `1453` | `665D` | `665D` |
+| `3` | `1454` | `665F` | `665F` |
+| `3` | `1455` | `6661` | `6661` |
+| `3` | `1456` | `6664` | `6664` |
+| `3` | `1457` | `6666` | `6666` |
+| `3` | `1458` | `6668` | `6669` |
+| `3` | `1459` | `666E` | `6670` |
+| `3` | `1460` | `6674` | `6674` |
+| `3` | `1461` | `6676` | `6677` |
+| `3` | `1462` | `667A` | `667A` |
+| `3` | `1463` | `667E` | `667E` |
+| `3` | `1464` | `6682` | `6682` |
+| `3` | `1465` | `6684` | `6684` |
+| `3` | `1466` | `6687` | `6689` |
+| `3` | `1467` | `668C` | `668C` |
+| `3` | `1468` | `6691` | `6691` |
+| `3` | `1469` | `6696` | `6697` |
+| `3` | `1470` | `669D` | `669D` |
+| `3` | `1471` | `66A2` | `66A2` |
+| `3` | `1472` | `66A7` | `66A8` |
+| `3` | `1473` | `66AB` | `66AB` |
+| `3` | `1474` | `66AE` | `66AE` |
+| `3` | `1475` | `66B1` | `66B1` |
+| `3` | `1476` | `66B4` | `66B4` |
+| `3` | `1477` | `66B9` | `66B9` |
+| `3` | `1478` | `66BE` | `66BE` |
+| `3` | `1479` | `66C4` | `66C4` |
+| `3` | `1480` | `66C7` | `66C7` |
+| `3` | `1481` | `66C9` | `66C9` |
+| `3` | `1482` | `66D6` | `66D6` |
+| `3` | `1483` | `66D9` | `66D9` |
+| `3` | `1484` | `66DB` | `66DD` |
+| `3` | `1485` | `66E0` | `66E0` |
+| `3` | `1486` | `66E6` | `66E6` |
+| `3` | `1487` | `66E9` | `66E9` |
+| `3` | `1488` | `66EC` | `66EC` |
+| `3` | `1489` | `66F0` | `66F0` |
+| `3` | `1490` | `66F2` | `66F4` |
+| `3` | `1491` | `66F7` | `66F9` |
+| `3` | `1492` | `66FC` | `66FC` |
+| `3` | `1493` | `66FE` | `6700` |
+| `3` | `1494` | `6703` | `6703` |
+| `3` | `1495` | `6708` | `670B` |
+| `3` | `1496` | `670D` | `670D` |
+| `3` | `1497` | `6710` | `6710` |
+| `3` | `1498` | `6714` | `6715` |
+| `3` | `1499` | `6717` | `6717` |
+
+#### Package range associations 1501 through 1600
+
+Section ID: `ownkb:section:d000246:s000049`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1500` | `671B` | `671B` |
+| `3` | `1501` | `671D` | `671D` |
+| `3` | `1502` | `671F` | `671F` |
+| `3` | `1503` | `6726` | `6728` |
+| `3` | `1504` | `672A` | `672D` |
+| `3` | `1505` | `672F` | `672F` |
+| `3` | `1506` | `6731` | `6731` |
+| `3` | `1507` | `6734` | `6735` |
+| `3` | `1508` | `673A` | `673A` |
+| `3` | `1509` | `673D` | `673D` |
+| `3` | `1510` | `6740` | `6740` |
+| `3` | `1511` | `6742` | `6743` |
+| `3` | `1512` | `6746` | `6746` |
+| `3` | `1513` | `6748` | `6749` |
+| `3` | `1514` | `674C` | `674C` |
+| `3` | `1515` | `674E` | `6751` |
+| `3` | `1516` | `6753` | `6753` |
+| `3` | `1517` | `6756` | `6756` |
+| `3` | `1518` | `675C` | `675C` |
+| `3` | `1519` | `675E` | `6761` |
+| `3` | `1520` | `6765` | `6765` |
+| `3` | `1521` | `6768` | `676A` |
+| `3` | `1522` | `676D` | `676D` |
+| `3` | `1523` | `676F` | `6773` |
+| `3` | `1524` | `6775` | `6775` |
+| `3` | `1525` | `6777` | `6777` |
+| `3` | `1526` | `677C` | `677C` |
+| `3` | `1527` | `677E` | `677F` |
+| `3` | `1528` | `6781` | `6781` |
+| `3` | `1529` | `6784` | `6784` |
+| `3` | `1530` | `6787` | `6787` |
+| `3` | `1531` | `6789` | `6789` |
+| `3` | `1532` | `678B` | `678B` |
+| `3` | `1533` | `6790` | `6790` |
+| `3` | `1534` | `6795` | `6795` |
+| `3` | `1535` | `6797` | `6798` |
+| `3` | `1536` | `679A` | `679A` |
+| `3` | `1537` | `679C` | `679E` |
+| `3` | `1538` | `67A2` | `67A3` |
+| `3` | `1539` | `67A5` | `67A5` |
+| `3` | `1540` | `67A7` | `67A8` |
+| `3` | `1541` | `67AA` | `67AB` |
+| `3` | `1542` | `67AD` | `67AD` |
+| `3` | `1543` | `67AF` | `67B0` |
+| `3` | `1544` | `67B3` | `67B3` |
+| `3` | `1545` | `67B5` | `67B8` |
+| `3` | `1546` | `67C1` | `67C1` |
+| `3` | `1547` | `67C3` | `67C4` |
+| `3` | `1548` | `67CF` | `67D4` |
+| `3` | `1549` | `67D8` | `67DA` |
+| `3` | `1550` | `67DC` | `67DE` |
+| `3` | `1551` | `67E0` | `67E0` |
+| `3` | `1552` | `67E2` | `67E2` |
+| `3` | `1553` | `67E5` | `67E5` |
+| `3` | `1554` | `67E9` | `67E9` |
+| `3` | `1555` | `67EC` | `67EC` |
+| `3` | `1556` | `67EF` | `67F1` |
+| `3` | `1557` | `67F3` | `67F5` |
+| `3` | `1558` | `67FD` | `67FD` |
+| `3` | `1559` | `67FF` | `6800` |
+| `3` | `1560` | `6805` | `6805` |
+| `3` | `1561` | `6807` | `680C` |
+| `3` | `1562` | `680E` | `680F` |
+| `3` | `1563` | `6811` | `6811` |
+| `3` | `1564` | `6813` | `6813` |
+| `3` | `1565` | `6816` | `6817` |
+| `3` | `1566` | `681D` | `681D` |
+| `3` | `1567` | `6821` | `6821` |
+| `3` | `1568` | `6829` | `682A` |
+| `3` | `1569` | `6832` | `6833` |
+| `3` | `1570` | `6837` | `6839` |
+| `3` | `1571` | `683C` | `683E` |
+| `3` | `1572` | `6840` | `6846` |
+| `3` | `1573` | `6848` | `6849` |
+| `3` | `1574` | `684C` | `684C` |
+| `3` | `1575` | `684E` | `684E` |
+| `3` | `1576` | `6850` | `6851` |
+| `3` | `1577` | `6853` | `6855` |
+| `3` | `1578` | `6860` | `6869` |
+| `3` | `1579` | `686B` | `686B` |
+| `3` | `1580` | `6874` | `6874` |
+| `3` | `1581` | `6876` | `6877` |
+| `3` | `1582` | `6881` | `6881` |
+| `3` | `1583` | `6883` | `6883` |
+| `3` | `1584` | `6885` | `6886` |
+| `3` | `1585` | `688F` | `688F` |
+| `3` | `1586` | `6893` | `6894` |
+| `3` | `1587` | `6897` | `6897` |
+| `3` | `1588` | `689D` | `689D` |
+| `3` | `1589` | `689F` | `689F` |
+| `3` | `1590` | `68A2` | `68A2` |
+| `3` | `1591` | `68A6` | `68A8` |
+| `3` | `1592` | `68AD` | `68AD` |
+| `3` | `1593` | `68AF` | `68B0` |
+| `3` | `1594` | `68B3` | `68B3` |
+| `3` | `1595` | `68B5` | `68B5` |
+| `3` | `1596` | `68C0` | `68C0` |
+| `3` | `1597` | `68C2` | `68C2` |
+| `3` | `1598` | `68C4` | `68C4` |
+| `3` | `1599` | `68C9` | `68C9` |
+
+#### Package range associations 1601 through 1700
+
+Section ID: `ownkb:section:d000246:s000050`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1600` | `68CB` | `68CB` |
+| `3` | `1601` | `68CD` | `68CD` |
+| `3` | `1602` | `68D2` | `68D2` |
+| `3` | `1603` | `68D5` | `68D8` |
+| `3` | `1604` | `68DA` | `68DA` |
+| `3` | `1605` | `68DF` | `68E0` |
+| `3` | `1606` | `68E3` | `68E3` |
+| `3` | `1607` | `68E7` | `68E7` |
+| `3` | `1608` | `68EE` | `68EE` |
+| `3` | `1609` | `68F0` | `68F2` |
+| `3` | `1610` | `68F5` | `68F5` |
+| `3` | `1611` | `68F9` | `68FA` |
+| `3` | `1612` | `68FC` | `68FC` |
+| `3` | `1613` | `6901` | `6901` |
+| `3` | `1614` | `6905` | `6905` |
+| `3` | `1615` | `690B` | `690B` |
+| `3` | `1616` | `690D` | `6910` |
+| `3` | `1617` | `6912` | `6912` |
+| `3` | `1618` | `691F` | `6920` |
+| `3` | `1619` | `6924` | `6924` |
+| `3` | `1620` | `692D` | `692D` |
+| `3` | `1621` | `6930` | `6930` |
+| `3` | `1622` | `6934` | `6934` |
+| `3` | `1623` | `6939` | `6939` |
+| `3` | `1624` | `693D` | `693D` |
+| `3` | `1625` | `693F` | `693F` |
+| `3` | `1626` | `6942` | `6942` |
+| `3` | `1627` | `694A` | `694A` |
+| `3` | `1628` | `6953` | `6954` |
+| `3` | `1629` | `6957` | `6957` |
+| `3` | `1630` | `695A` | `695A` |
+| `3` | `1631` | `695D` | `695E` |
+| `3` | `1632` | `6960` | `6960` |
+| `3` | `1633` | `6963` | `6963` |
+| `3` | `1634` | `6966` | `6966` |
+| `3` | `1635` | `6968` | `6968` |
+| `3` | `1636` | `696B` | `696B` |
+| `3` | `1637` | `696D` | `696E` |
+| `3` | `1638` | `6971` | `6971` |
+| `3` | `1639` | `6975` | `6975` |
+| `3` | `1640` | `6977` | `6979` |
+| `3` | `1641` | `697C` | `697C` |
+| `3` | `1642` | `6980` | `6980` |
+| `3` | `1643` | `6982` | `6982` |
+| `3` | `1644` | `6984` | `6984` |
+| `3` | `1645` | `6986` | `6989` |
+| `3` | `1646` | `698D` | `698D` |
+| `3` | `1647` | `6994` | `6995` |
+| `3` | `1648` | `6998` | `6998` |
+| `3` | `1649` | `699B` | `699C` |
+| `3` | `1650` | `69A7` | `69A8` |
+| `3` | `1651` | `69AA` | `69AB` |
+| `3` | `1652` | `69AD` | `69AE` |
+| `3` | `1653` | `69B1` | `69B1` |
+| `3` | `1654` | `69B4` | `69B4` |
+| `3` | `1655` | `69B7` | `69B7` |
+| `3` | `1656` | `69BB` | `69BB` |
+| `3` | `1657` | `69BF` | `69BF` |
+| `3` | `1658` | `69C1` | `69C1` |
+| `3` | `1659` | `69CA` | `69CE` |
+| `3` | `1660` | `69D0` | `69D0` |
+| `3` | `1661` | `69D3` | `69D4` |
+| `3` | `1662` | `69DB` | `69DB` |
+| `3` | `1663` | `69DF` | `69E0` |
+| `3` | `1664` | `69E7` | `69E8` |
+| `3` | `1665` | `69ED` | `69ED` |
+| `3` | `1666` | `69F2` | `69F3` |
+| `3` | `1667` | `69FD` | `69FD` |
+| `3` | `1668` | `69FF` | `69FF` |
+| `3` | `1669` | `6A01` | `6A02` |
+| `3` | `1670` | `6A05` | `6A05` |
+| `3` | `1671` | `6A0A` | `6A0A` |
+| `3` | `1672` | `6A13` | `6A13` |
+| `3` | `1673` | `6A17` | `6A19` |
+| `3` | `1674` | `6A1E` | `6A1F` |
+| `3` | `1675` | `6A21` | `6A21` |
+| `3` | `1676` | `6A23` | `6A23` |
+| `3` | `1677` | `6A28` | `6A28` |
+| `3` | `1678` | `6A2A` | `6A2A` |
+| `3` | `1679` | `6A2F` | `6A2F` |
+| `3` | `1680` | `6A31` | `6A31` |
+| `3` | `1681` | `6A35` | `6A35` |
+| `3` | `1682` | `6A39` | `6A3A` |
+| `3` | `1683` | `6A3D` | `6A3E` |
+| `3` | `1684` | `6A44` | `6A44` |
+| `3` | `1685` | `6A47` | `6A48` |
+| `3` | `1686` | `6A4B` | `6A4B` |
+| `3` | `1687` | `6A50` | `6A50` |
+| `3` | `1688` | `6A58` | `6A59` |
+| `3` | `1689` | `6A5B` | `6A5B` |
+| `3` | `1690` | `6A5F` | `6A5F` |
+| `3` | `1691` | `6A61` | `6A62` |
+| `3` | `1692` | `6A65` | `6A65` |
+| `3` | `1693` | `6A6B` | `6A6B` |
+| `3` | `1694` | `6A71` | `6A71` |
+| `3` | `1695` | `6A79` | `6A79` |
+| `3` | `1696` | `6A7C` | `6A7C` |
+| `3` | `1697` | `6A80` | `6A81` |
+| `3` | `1698` | `6A84` | `6A84` |
+| `3` | `1699` | `6A89` | `6A89` |
+
+#### Package range associations 1701 through 1800
+
+Section ID: `ownkb:section:d000246:s000051`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1700` | `6A8E` | `6A8E` |
+| `3` | `1701` | `6A90` | `6A91` |
+| `3` | `1702` | `6A94` | `6A94` |
+| `3` | `1703` | `6A97` | `6A97` |
+| `3` | `1704` | `6A9C` | `6A9C` |
+| `3` | `1705` | `6AA0` | `6AA0` |
+| `3` | `1706` | `6AA2` | `6AA3` |
+| `3` | `1707` | `6AA9` | `6AA9` |
+| `3` | `1708` | `6AAB` | `6AAC` |
+| `3` | `1709` | `6AB3` | `6AB3` |
+| `3` | `1710` | `6AB7` | `6AB8` |
+| `3` | `1711` | `6ABB` | `6ABB` |
+| `3` | `1712` | `6AC2` | `6AC2` |
+| `3` | `1713` | `6AD3` | `6AD3` |
+| `3` | `1714` | `6ADA` | `6ADB` |
+| `3` | `1715` | `6ADD` | `6ADF` |
+| `3` | `1716` | `6AE5` | `6AE5` |
+| `3` | `1717` | `6AE7` | `6AE8` |
+| `3` | `1718` | `6AEA` | `6AEC` |
+| `3` | `1719` | `6AF3` | `6AF3` |
+| `3` | `1720` | `6AF8` | `6AF8` |
+| `3` | `1721` | `6AFA` | `6AFB` |
+| `3` | `1722` | `6B04` | `6B04` |
+| `3` | `1723` | `6B0A` | `6B0A` |
+| `3` | `1724` | `6B0F` | `6B0F` |
+| `3` | `1725` | `6B12` | `6B12` |
+| `3` | `1726` | `6B16` | `6B16` |
+| `3` | `1727` | `6B20` | `6B24` |
+| `3` | `1728` | `6B27` | `6B27` |
+| `3` | `1729` | `6B32` | `6B32` |
+| `3` | `1730` | `6B37` | `6B37` |
+| `3` | `1731` | `6B39` | `6B3A` |
+| `3` | `1732` | `6B3D` | `6B3E` |
+| `3` | `1733` | `6B43` | `6B43` |
+| `3` | `1734` | `6B46` | `6B47` |
+| `3` | `1735` | `6B49` | `6B49` |
+| `3` | `1736` | `6B4C` | `6B4C` |
+| `3` | `1737` | `6B50` | `6B50` |
+| `3` | `1738` | `6B59` | `6B59` |
+| `3` | `1739` | `6B5F` | `6B5F` |
+| `3` | `1740` | `6B61` | `6B67` |
+| `3` | `1741` | `6B6A` | `6B6A` |
+| `3` | `1742` | `6B72` | `6B72` |
+| `3` | `1743` | `6B77` | `6B79` |
+| `3` | `1744` | `6B7B` | `6B7C` |
+| `3` | `1745` | `6B7F` | `6B7F` |
+| `3` | `1746` | `6B81` | `6B84` |
+| `3` | `1747` | `6B86` | `6B87` |
+| `3` | `1748` | `6B89` | `6B8B` |
+| `3` | `1749` | `6B8D` | `6B8D` |
+| `3` | `1750` | `6B92` | `6B93` |
+| `3` | `1751` | `6B96` | `6B96` |
+| `3` | `1752` | `6B98` | `6B98` |
+| `3` | `1753` | `6B9A` | `6B9B` |
+| `3` | `1754` | `6B9E` | `6B9E` |
+| `3` | `1755` | `6BA1` | `6BA1` |
+| `3` | `1756` | `6BA4` | `6BA4` |
+| `3` | `1757` | `6BAA` | `6BAB` |
+| `3` | `1758` | `6BAE` | `6BAF` |
+| `3` | `1759` | `6BB2` | `6BB5` |
+| `3` | `1760` | `6BB7` | `6BB7` |
+| `3` | `1761` | `6BBA` | `6BBA` |
+| `3` | `1762` | `6BBC` | `6BBC` |
+| `3` | `1763` | `6BBF` | `6BC2` |
+| `3` | `1764` | `6BC5` | `6BC6` |
+| `3` | `1765` | `6BCB` | `6BCB` |
+| `3` | `1766` | `6BCD` | `6BCD` |
+| `3` | `1767` | `6BCF` | `6BCF` |
+| `3` | `1768` | `6BD2` | `6BD7` |
+| `3` | `1769` | `6BD9` | `6BD9` |
+| `3` | `1770` | `6BDB` | `6BDB` |
+| `3` | `1771` | `6BE1` | `6BE1` |
+| `3` | `1772` | `6BEB` | `6BEB` |
+| `3` | `1773` | `6BEF` | `6BEF` |
+| `3` | `1774` | `6BF3` | `6BF3` |
+| `3` | `1775` | `6BF5` | `6BF5` |
+| `3` | `1776` | `6BF9` | `6BF9` |
+| `3` | `1777` | `6BFD` | `6BFD` |
+| `3` | `1778` | `6BFF` | `6BFF` |
+| `3` | `1779` | `6C02` | `6C02` |
+| `3` | `1780` | `6C05` | `6C08` |
+| `3` | `1781` | `6C0C` | `6C0D` |
+| `3` | `1782` | `6C0F` | `6C11` |
+| `3` | `1783` | `6C13` | `6C16` |
+| `3` | `1784` | `6C18` | `6C1B` |
+| `3` | `1785` | `6C1F` | `6C1F` |
+| `3` | `1786` | `6C21` | `6C24` |
+| `3` | `1787` | `6C26` | `6C2C` |
+| `3` | `1788` | `6C2E` | `6C30` |
+| `3` | `1789` | `6C32` | `6C34` |
+| `3` | `1790` | `6C38` | `6C38` |
+| `3` | `1791` | `6C3D` | `6C3D` |
+| `3` | `1792` | `6C40` | `6C42` |
+| `3` | `1793` | `6C46` | `6C47` |
+| `3` | `1794` | `6C49` | `6C4A` |
+| `3` | `1795` | `6C50` | `6C50` |
+| `3` | `1796` | `6C54` | `6C55` |
+| `3` | `1797` | `6C57` | `6C57` |
+| `3` | `1798` | `6C5B` | `6C61` |
+| `3` | `1799` | `6C64` | `6C64` |
+
+#### Package range associations 1801 through 1900
+
+Section ID: `ownkb:section:d000246:s000052`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1800` | `6C68` | `6C6A` |
+| `3` | `1801` | `6C70` | `6C70` |
+| `3` | `1802` | `6C72` | `6C72` |
+| `3` | `1803` | `6C74` | `6C74` |
+| `3` | `1804` | `6C76` | `6C76` |
+| `3` | `1805` | `6C79` | `6C7A` |
+| `3` | `1806` | `6C7D` | `6C7E` |
+| `3` | `1807` | `6C81` | `6C83` |
+| `3` | `1808` | `6C85` | `6C86` |
+| `3` | `1809` | `6C88` | `6C89` |
+| `3` | `1810` | `6C8C` | `6C8D` |
+| `3` | `1811` | `6C8F` | `6C90` |
+| `3` | `1812` | `6C92` | `6C94` |
+| `3` | `1813` | `6C96` | `6C96` |
+| `3` | `1814` | `6C99` | `6C99` |
+| `3` | `1815` | `6C9B` | `6C9B` |
+| `3` | `1816` | `6C9F` | `6C9F` |
+| `3` | `1817` | `6CA1` | `6CA1` |
+| `3` | `1818` | `6CA3` | `6CA7` |
+| `3` | `1819` | `6CA9` | `6CAB` |
+| `3` | `1820` | `6CAD` | `6CAE` |
+| `3` | `1821` | `6CB1` | `6CB3` |
+| `3` | `1822` | `6CB8` | `6CB9` |
+| `3` | `1823` | `6CBB` | `6CBF` |
+| `3` | `1824` | `6CC1` | `6CC1` |
+| `3` | `1825` | `6CC4` | `6CC5` |
+| `3` | `1826` | `6CC9` | `6CCA` |
+| `3` | `1827` | `6CCC` | `6CCC` |
+| `3` | `1828` | `6CD0` | `6CD0` |
+| `3` | `1829` | `6CD3` | `6CD7` |
+| `3` | `1830` | `6CDB` | `6CDB` |
+| `3` | `1831` | `6CDE` | `6CDE` |
+| `3` | `1832` | `6CE0` | `6CE3` |
+| `3` | `1833` | `6CE5` | `6CE5` |
+| `3` | `1834` | `6CE8` | `6CE8` |
+| `3` | `1835` | `6CEA` | `6CEB` |
+| `3` | `1836` | `6CEE` | `6CF1` |
+| `3` | `1837` | `6CF3` | `6CF3` |
+| `3` | `1838` | `6CF5` | `6CF8` |
+| `3` | `1839` | `6CFA` | `6CFE` |
+| `3` | `1840` | `6D01` | `6D01` |
+| `3` | `1841` | `6D04` | `6D04` |
+| `3` | `1842` | `6D07` | `6D07` |
+| `3` | `1843` | `6D0B` | `6D0C` |
+| `3` | `1844` | `6D0E` | `6D0E` |
+| `3` | `1845` | `6D12` | `6D12` |
+| `3` | `1846` | `6D17` | `6D17` |
+| `3` | `1847` | `6D19` | `6D1B` |
+| `3` | `1848` | `6D1E` | `6D1E` |
+| `3` | `1849` | `6D25` | `6D25` |
+| `3` | `1850` | `6D27` | `6D27` |
+| `3` | `1851` | `6D2A` | `6D2B` |
+| `3` | `1852` | `6D2E` | `6D2E` |
+| `3` | `1853` | `6D31` | `6D33` |
+| `3` | `1854` | `6D35` | `6D36` |
+| `3` | `1855` | `6D39` | `6D39` |
+| `3` | `1856` | `6D3B` | `6D3E` |
+| `3` | `1857` | `6D41` | `6D41` |
+| `3` | `1858` | `6D43` | `6D43` |
+| `3` | `1859` | `6D45` | `6D47` |
+| `3` | `1860` | `6D4A` | `6D4B` |
+| `3` | `1861` | `6D4D` | `6D4F` |
+| `3` | `1862` | `6D51` | `6D54` |
+| `3` | `1863` | `6D59` | `6D5A` |
+| `3` | `1864` | `6D5C` | `6D5C` |
+| `3` | `1865` | `6D5E` | `6D5E` |
+| `3` | `1866` | `6D60` | `6D60` |
+| `3` | `1867` | `6D63` | `6D63` |
+| `3` | `1868` | `6D66` | `6D66` |
+| `3` | `1869` | `6D69` | `6D6A` |
+| `3` | `1870` | `6D6E` | `6D6F` |
+| `3` | `1871` | `6D74` | `6D74` |
+| `3` | `1872` | `6D77` | `6D79` |
+| `3` | `1873` | `6D7C` | `6D7C` |
+| `3` | `1874` | `6D82` | `6D82` |
+| `3` | `1875` | `6D85` | `6D85` |
+| `3` | `1876` | `6D87` | `6D89` |
+| `3` | `1877` | `6D8C` | `6D8C` |
+| `3` | `1878` | `6D8E` | `6D8E` |
+| `3` | `1879` | `6D91` | `6D91` |
+| `3` | `1880` | `6D93` | `6D95` |
+| `3` | `1881` | `6D9B` | `6D9B` |
+| `3` | `1882` | `6D9D` | `6DA1` |
+| `3` | `1883` | `6DA3` | `6DA4` |
+| `3` | `1884` | `6DA6` | `6DAB` |
+| `3` | `1885` | `6DAE` | `6DAF` |
+| `3` | `1886` | `6DB2` | `6DB2` |
+| `3` | `1887` | `6DB5` | `6DB5` |
+| `3` | `1888` | `6DB8` | `6DB8` |
+| `3` | `1889` | `6DBC` | `6DBC` |
+| `3` | `1890` | `6DBF` | `6DC0` |
+| `3` | `1891` | `6DC4` | `6DC7` |
+| `3` | `1892` | `6DCB` | `6DCC` |
+| `3` | `1893` | `6DD1` | `6DD2` |
+| `3` | `1894` | `6DD6` | `6DD6` |
+| `3` | `1895` | `6DD8` | `6DDA` |
+| `3` | `1896` | `6DDD` | `6DDE` |
+| `3` | `1897` | `6DE0` | `6DE1` |
+| `3` | `1898` | `6DE4` | `6DE6` |
+| `3` | `1899` | `6DE8` | `6DE8` |
+
+#### Package range associations 1901 through 2000
+
+Section ID: `ownkb:section:d000246:s000053`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `1900` | `6DEA` | `6DEC` |
+| `3` | `1901` | `6DEE` | `6DEE` |
+| `3` | `1902` | `6DF1` | `6DF1` |
+| `3` | `1903` | `6DF3` | `6DF3` |
+| `3` | `1904` | `6DF5` | `6DF7` |
+| `3` | `1905` | `6DF9` | `6DFC` |
+| `3` | `1906` | `6E05` | `6E05` |
+| `3` | `1907` | `6E0A` | `6E0A` |
+| `3` | `1908` | `6E0C` | `6E0E` |
+| `3` | `1909` | `6E10` | `6E11` |
+| `3` | `1910` | `6E14` | `6E14` |
+| `3` | `1911` | `6E16` | `6E17` |
+| `3` | `1912` | `6E19` | `6E1B` |
+| `3` | `1913` | `6E1D` | `6E1D` |
+| `3` | `1914` | `6E20` | `6E21` |
+| `3` | `1915` | `6E23` | `6E26` |
+| `3` | `1916` | `6E29` | `6E29` |
+| `3` | `1917` | `6E2B` | `6E2D` |
+| `3` | `1918` | `6E2F` | `6E2F` |
+| `3` | `1919` | `6E32` | `6E32` |
+| `3` | `1920` | `6E34` | `6E34` |
+| `3` | `1921` | `6E38` | `6E38` |
+| `3` | `1922` | `6E3A` | `6E3A` |
+| `3` | `1923` | `6E3E` | `6E3E` |
+| `3` | `1924` | `6E43` | `6E44` |
+| `3` | `1925` | `6E4A` | `6E4A` |
+| `3` | `1926` | `6E4D` | `6E4E` |
+| `3` | `1927` | `6E53` | `6E54` |
+| `3` | `1928` | `6E56` | `6E56` |
+| `3` | `1929` | `6E58` | `6E58` |
+| `3` | `1930` | `6E5B` | `6E5B` |
+| `3` | `1931` | `6E5F` | `6E5F` |
+| `3` | `1932` | `6E67` | `6E67` |
+| `3` | `1933` | `6E6B` | `6E6B` |
+| `3` | `1934` | `6E6E` | `6E6F` |
+| `3` | `1935` | `6E7E` | `6E7F` |
+| `3` | `1936` | `6E83` | `6E83` |
+| `3` | `1937` | `6E85` | `6E86` |
+| `3` | `1938` | `6E88` | `6E89` |
+| `3` | `1939` | `6E8F` | `6E90` |
+| `3` | `1940` | `6E96` | `6E96` |
+| `3` | `1941` | `6E98` | `6E98` |
+| `3` | `1942` | `6E9C` | `6E9D` |
+| `3` | `1943` | `6E9F` | `6E9F` |
+| `3` | `1944` | `6EA2` | `6EA2` |
+| `3` | `1945` | `6EA5` | `6EA5` |
+| `3` | `1946` | `6EA7` | `6EA7` |
+| `3` | `1947` | `6EAA` | `6EAB` |
+| `3` | `1948` | `6EAF` | `6EAF` |
+| `3` | `1949` | `6EB1` | `6EB2` |
+| `3` | `1950` | `6EB4` | `6EB4` |
+| `3` | `1951` | `6EB6` | `6EB7` |
+| `3` | `1952` | `6EBA` | `6EBB` |
+| `3` | `1953` | `6EBD` | `6EBD` |
+| `3` | `1954` | `6EC1` | `6EC2` |
+| `3` | `1955` | `6EC4` | `6EC5` |
+| `3` | `1956` | `6EC7` | `6EC7` |
+| `3` | `1957` | `6ECB` | `6ECC` |
+| `3` | `1958` | `6ECE` | `6ECF` |
+| `3` | `1959` | `6ED1` | `6ED1` |
+| `3` | `1960` | `6ED3` | `6ED5` |
+| `3` | `1961` | `6ED7` | `6ED7` |
+| `3` | `1962` | `6EDA` | `6EDA` |
+| `3` | `1963` | `6EDE` | `6EE2` |
+| `3` | `1964` | `6EE4` | `6EE6` |
+| `3` | `1965` | `6EE8` | `6EE9` |
+| `3` | `1966` | `6EEC` | `6EEC` |
+| `3` | `1967` | `6EEF` | `6EEF` |
+| `3` | `1968` | `6EF2` | `6EF2` |
+| `3` | `1969` | `6EF4` | `6EF4` |
+| `3` | `1970` | `6EF7` | `6EF9` |
+| `3` | `1971` | `6EFE` | `6EFF` |
+| `3` | `1972` | `6F01` | `6F02` |
+| `3` | `1973` | `6F06` | `6F06` |
+| `3` | `1974` | `6F09` | `6F09` |
+| `3` | `1975` | `6F0F` | `6F0F` |
+| `3` | `1976` | `6F13` | `6F15` |
+| `3` | `1977` | `6F1A` | `6F1A` |
+| `3` | `1978` | `6F20` | `6F20` |
+| `3` | `1979` | `6F22` | `6F24` |
+| `3` | `1980` | `6F29` | `6F2D` |
+| `3` | `1981` | `6F2F` | `6F2F` |
+| `3` | `1982` | `6F31` | `6F33` |
+| `3` | `1983` | `6F35` | `6F36` |
+| `3` | `1984` | `6F38` | `6F38` |
+| `3` | `1985` | `6F3E` | `6F3F` |
+| `3` | `1986` | `6F41` | `6F41` |
+| `3` | `1987` | `6F46` | `6F47` |
+| `3` | `1988` | `6F4B` | `6F4B` |
+| `3` | `1989` | `6F4D` | `6F4D` |
+| `3` | `1990` | `6F51` | `6F51` |
+| `3` | `1991` | `6F54` | `6F54` |
+| `3` | `1992` | `6F58` | `6F58` |
+| `3` | `1993` | `6F5B` | `6F5C` |
+| `3` | `1994` | `6F5E` | `6F5E` |
+| `3` | `1995` | `6F62` | `6F62` |
+| `3` | `1996` | `6F64` | `6F64` |
+| `3` | `1997` | `6F66` | `6F66` |
+| `3` | `1998` | `6F6D` | `6F70` |
+| `3` | `1999` | `6F72` | `6F72` |
+
+#### Package range associations 2001 through 2100
+
+Section ID: `ownkb:section:d000246:s000054`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2000` | `6F74` | `6F74` |
+| `3` | `2001` | `6F77` | `6F78` |
+| `3` | `2002` | `6F7A` | `6F7A` |
+| `3` | `2003` | `6F7C` | `6F7C` |
+| `3` | `2004` | `6F7F` | `6F80` |
+| `3` | `2005` | `6F84` | `6F84` |
+| `3` | `2006` | `6F86` | `6F89` |
+| `3` | `2007` | `6F8C` | `6F8E` |
+| `3` | `2008` | `6F97` | `6F97` |
+| `3` | `2009` | `6F9C` | `6F9C` |
+| `3` | `2010` | `6FA0` | `6FA1` |
+| `3` | `2011` | `6FA4` | `6FA4` |
+| `3` | `2012` | `6FA7` | `6FA7` |
+| `3` | `2013` | `6FA9` | `6FA9` |
+| `3` | `2014` | `6FAE` | `6FAE` |
+| `3` | `2015` | `6FB1` | `6FB1` |
+| `3` | `2016` | `6FB3` | `6FB3` |
+| `3` | `2017` | `6FB6` | `6FB6` |
+| `3` | `2018` | `6FB9` | `6FB9` |
+| `3` | `2019` | `6FC0` | `6FC3` |
+| `3` | `2020` | `6FC9` | `6FC9` |
+| `3` | `2021` | `6FD1` | `6FD2` |
+| `3` | `2022` | `6FD5` | `6FD5` |
+| `3` | `2023` | `6FD8` | `6FD8` |
+| `3` | `2024` | `6FDE` | `6FE1` |
+| `3` | `2025` | `6FE4` | `6FE4` |
+| `3` | `2026` | `6FEB` | `6FEB` |
+| `3` | `2027` | `6FEE` | `6FF1` |
+| `3` | `2028` | `6FFA` | `6FFA` |
+| `3` | `2029` | `6FFC` | `6FFC` |
+| `3` | `2030` | `6FFE` | `6FFE` |
+| `3` | `2031` | `7005` | `7006` |
+| `3` | `2032` | `7009` | `7009` |
+| `3` | `2033` | `700B` | `700B` |
+| `3` | `2034` | `700F` | `700F` |
+| `3` | `2035` | `7011` | `7011` |
+| `3` | `2036` | `7015` | `7015` |
+| `3` | `2037` | `7018` | `7018` |
+| `3` | `2038` | `701A` | `701B` |
+| `3` | `2039` | `701D` | `701D` |
+| `3` | `2040` | `701F` | `7020` |
+| `3` | `2041` | `7023` | `7023` |
+| `3` | `2042` | `7026` | `7028` |
+| `3` | `2043` | `7032` | `7032` |
+| `3` | `2044` | `7039` | `7039` |
+| `3` | `2045` | `703E` | `703E` |
+| `3` | `2046` | `7043` | `7044` |
+| `3` | `2047` | `704C` | `704C` |
+| `3` | `2048` | `704F` | `704F` |
+| `3` | `2049` | `7051` | `7051` |
+| `3` | `2050` | `7058` | `7058` |
+| `3` | `2051` | `705D` | `705E` |
+| `3` | `2052` | `7060` | `7060` |
+| `3` | `2053` | `7063` | `7064` |
+| `3` | `2054` | `7069` | `7069` |
+| `3` | `2055` | `706B` | `706B` |
+| `3` | `2056` | `706D` | `706D` |
+| `3` | `2057` | `706F` | `7070` |
+| `3` | `2058` | `7075` | `7076` |
+| `3` | `2059` | `7078` | `7078` |
+| `3` | `2060` | `707C` | `7080` |
+| `3` | `2061` | `7085` | `7085` |
+| `3` | `2062` | `7089` | `708A` |
+| `3` | `2063` | `708E` | `708E` |
+| `3` | `2064` | `7092` | `7092` |
+| `3` | `2065` | `7094` | `7096` |
+| `3` | `2066` | `7099` | `7099` |
+| `3` | `2067` | `709C` | `709D` |
+| `3` | `2068` | `70AB` | `70AF` |
+| `3` | `2069` | `70B1` | `70B1` |
+| `3` | `2070` | `70B3` | `70B3` |
+| `3` | `2071` | `70B7` | `70BD` |
+| `3` | `2072` | `70C0` | `70C3` |
+| `3` | `2073` | `70C8` | `70C8` |
+| `3` | `2074` | `70CA` | `70CA` |
+| `3` | `2075` | `70CF` | `70CF` |
+| `3` | `2076` | `70D8` | `70D9` |
+| `3` | `2077` | `70DB` | `70DB` |
+| `3` | `2078` | `70DF` | `70DF` |
+| `3` | `2079` | `70E4` | `70E4` |
+| `3` | `2080` | `70E6` | `70E9` |
+| `3` | `2081` | `70EB` | `70ED` |
+| `3` | `2082` | `70EF` | `70EF` |
+| `3` | `2083` | `70F4` | `70F4` |
+| `3` | `2084` | `70F7` | `70F7` |
+| `3` | `2085` | `70F9` | `70F9` |
+| `3` | `2086` | `70FD` | `70FD` |
+| `3` | `2087` | `7109` | `710A` |
+| `3` | `2088` | `7110` | `7110` |
+| `3` | `2089` | `7113` | `7113` |
+| `3` | `2090` | `7115` | `7116` |
+| `3` | `2091` | `7118` | `711A` |
+| `3` | `2092` | `7121` | `7121` |
+| `3` | `2093` | `7126` | `7126` |
+| `3` | `2094` | `712F` | `7131` |
+| `3` | `2095` | `7136` | `7136` |
+| `3` | `2096` | `7145` | `7145` |
+| `3` | `2097` | `7149` | `714A` |
+| `3` | `2098` | `714C` | `714C` |
+| `3` | `2099` | `714E` | `714E` |
+
+#### Package range associations 2101 through 2200
+
+Section ID: `ownkb:section:d000246:s000055`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2100` | `7152` | `7152` |
+| `3` | `2101` | `7159` | `7159` |
+| `3` | `2102` | `715C` | `715C` |
+| `3` | `2103` | `715E` | `715E` |
+| `3` | `2104` | `7162` | `7162` |
+| `3` | `2105` | `7164` | `7169` |
+| `3` | `2106` | `716C` | `716C` |
+| `3` | `2107` | `716E` | `716E` |
+| `3` | `2108` | `7172` | `7173` |
+| `3` | `2109` | `7178` | `7178` |
+| `3` | `2110` | `717A` | `717A` |
+| `3` | `2111` | `717D` | `717D` |
+| `3` | `2112` | `7184` | `7184` |
+| `3` | `2113` | `718A` | `718A` |
+| `3` | `2114` | `718F` | `718F` |
+| `3` | `2115` | `7192` | `7192` |
+| `3` | `2116` | `7194` | `7194` |
+| `3` | `2117` | `7197` | `7199` |
+| `3` | `2118` | `719F` | `71A0` |
+| `3` | `2119` | `71A8` | `71A8` |
+| `3` | `2120` | `71AC` | `71AC` |
+| `3` | `2121` | `71B1` | `71B1` |
+| `3` | `2122` | `71B3` | `71B3` |
+| `3` | `2123` | `71B5` | `71B5` |
+| `3` | `2124` | `71B9` | `71B9` |
+| `3` | `2125` | `71BE` | `71BE` |
+| `3` | `2126` | `71C1` | `71C1` |
+| `3` | `2127` | `71C3` | `71C3` |
+| `3` | `2128` | `71C8` | `71C9` |
+| `3` | `2129` | `71CE` | `71CE` |
+| `3` | `2130` | `71D2` | `71D2` |
+| `3` | `2131` | `71D4` | `71D5` |
+| `3` | `2132` | `71D9` | `71D9` |
+| `3` | `2133` | `71DC` | `71DC` |
+| `3` | `2134` | `71DF` | `71E0` |
+| `3` | `2135` | `71E5` | `71E7` |
+| `3` | `2136` | `71ED` | `71EE` |
+| `3` | `2137` | `71F4` | `71F4` |
+| `3` | `2138` | `71F9` | `71F9` |
+| `3` | `2139` | `71FC` | `71FC` |
+| `3` | `2140` | `71FE` | `71FE` |
+| `3` | `2141` | `7206` | `7206` |
+| `3` | `2142` | `720D` | `720D` |
+| `3` | `2143` | `7210` | `7210` |
+| `3` | `2144` | `721B` | `721B` |
+| `3` | `2145` | `721D` | `721D` |
+| `3` | `2146` | `7228` | `7228` |
+| `3` | `2147` | `722A` | `722A` |
+| `3` | `2148` | `722C` | `722D` |
+| `3` | `2149` | `7230` | `7231` |
+| `3` | `2150` | `7235` | `723B` |
+| `3` | `2151` | `723D` | `723D` |
+| `3` | `2152` | `7246` | `7248` |
+| `3` | `2153` | `724C` | `724D` |
+| `3` | `2154` | `7252` | `7252` |
+| `3` | `2155` | `7256` | `7256` |
+| `3` | `2156` | `7258` | `7259` |
+| `3` | `2157` | `725B` | `725B` |
+| `3` | `2158` | `725D` | `725D` |
+| `3` | `2159` | `725F` | `725F` |
+| `3` | `2160` | `7261` | `7262` |
+| `3` | `2161` | `7266` | `7267` |
+| `3` | `2162` | `7269` | `7269` |
+| `3` | `2163` | `726F` | `726F` |
+| `3` | `2164` | `7272` | `7272` |
+| `3` | `2165` | `7275` | `7275` |
+| `3` | `2166` | `7279` | `727A` |
+| `3` | `2167` | `727D` | `7281` |
+| `3` | `2168` | `7284` | `7284` |
+| `3` | `2169` | `728A` | `728B` |
+| `3` | `2170` | `728D` | `728D` |
+| `3` | `2171` | `728F` | `728F` |
+| `3` | `2172` | `7292` | `7292` |
+| `3` | `2173` | `7296` | `7296` |
+| `3` | `2174` | `729F` | `729F` |
+| `3` | `2175` | `72A2` | `72A2` |
+| `3` | `2176` | `72A7` | `72A7` |
+| `3` | `2177` | `72AC` | `72AC` |
+| `3` | `2178` | `72AF` | `72B0` |
+| `3` | `2179` | `72B4` | `72B4` |
+| `3` | `2180` | `72B6` | `72B9` |
+| `3` | `2181` | `72C0` | `72C4` |
+| `3` | `2182` | `72C8` | `72C8` |
+| `3` | `2183` | `72CD` | `72CE` |
+| `3` | `2184` | `72D0` | `72D0` |
+| `3` | `2185` | `72D2` | `72D2` |
+| `3` | `2186` | `72D7` | `72D7` |
+| `3` | `2187` | `72D9` | `72D9` |
+| `3` | `2188` | `72DE` | `72DE` |
+| `3` | `2189` | `72E0` | `72E1` |
+| `3` | `2190` | `72E8` | `72E9` |
+| `3` | `2191` | `72EC` | `72F4` |
+| `3` | `2192` | `72F7` | `72FD` |
+| `3` | `2193` | `7301` | `7301` |
+| `3` | `2194` | `7303` | `7303` |
+| `3` | `2195` | `730A` | `730A` |
+| `3` | `2196` | `730E` | `730E` |
+| `3` | `2197` | `7313` | `7313` |
+| `3` | `2198` | `7315` | `7317` |
+| `3` | `2199` | `7319` | `7319` |
+
+#### Package range associations 2201 through 2300
+
+Section ID: `ownkb:section:d000246:s000056`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2200` | `731B` | `731E` |
+| `3` | `2201` | `7321` | `7322` |
+| `3` | `2202` | `7325` | `7325` |
+| `3` | `2203` | `7329` | `732C` |
+| `3` | `2204` | `732E` | `732E` |
+| `3` | `2205` | `7331` | `7331` |
+| `3` | `2206` | `7334` | `7334` |
+| `3` | `2207` | `7336` | `7339` |
+| `3` | `2208` | `733B` | `733B` |
+| `3` | `2209` | `733E` | `733F` |
+| `3` | `2210` | `7344` | `7345` |
+| `3` | `2211` | `734D` | `734E` |
+| `3` | `2212` | `7350` | `7350` |
+| `3` | `2213` | `7352` | `7352` |
+| `3` | `2214` | `7357` | `7357` |
+| `3` | `2215` | `7360` | `7360` |
+| `3` | `2216` | `7368` | `7368` |
+| `3` | `2217` | `736A` | `736D` |
+| `3` | `2218` | `736F` | `7370` |
+| `3` | `2219` | `7372` | `7372` |
+| `3` | `2220` | `7375` | `7375` |
+| `3` | `2221` | `7377` | `7378` |
+| `3` | `2222` | `737A` | `737C` |
+| `3` | `2223` | `737E` | `737E` |
+| `3` | `2224` | `7380` | `7380` |
+| `3` | `2225` | `7384` | `7384` |
+| `3` | `2226` | `7387` | `7387` |
+| `3` | `2227` | `7389` | `7389` |
+| `3` | `2228` | `738B` | `738B` |
+| `3` | `2229` | `738E` | `738E` |
+| `3` | `2230` | `7391` | `7391` |
+| `3` | `2231` | `7396` | `7396` |
+| `3` | `2232` | `739B` | `739B` |
+| `3` | `2233` | `739F` | `739F` |
+| `3` | `2234` | `73A2` | `73A2` |
+| `3` | `2235` | `73A8` | `73A9` |
+| `3` | `2236` | `73AB` | `73AB` |
+| `3` | `2237` | `73AE` | `73B0` |
+| `3` | `2238` | `73B2` | `73B3` |
+| `3` | `2239` | `73B7` | `73B7` |
+| `3` | `2240` | `73BA` | `73BB` |
+| `3` | `2241` | `73C0` | `73C0` |
+| `3` | `2242` | `73C2` | `73C2` |
+| `3` | `2243` | `73C8` | `73CA` |
+| `3` | `2244` | `73CD` | `73CD` |
+| `3` | `2245` | `73CF` | `73D1` |
+| `3` | `2246` | `73D9` | `73D9` |
+| `3` | `2247` | `73DE` | `73DE` |
+| `3` | `2248` | `73E0` | `73E0` |
+| `3` | `2249` | `73E5` | `73E5` |
+| `3` | `2250` | `73E7` | `73E7` |
+| `3` | `2251` | `73E9` | `73E9` |
+| `3` | `2252` | `73ED` | `73ED` |
+| `3` | `2253` | `73F2` | `73F2` |
+| `3` | `2254` | `73FE` | `73FE` |
+| `3` | `2255` | `7403` | `7403` |
+| `3` | `2256` | `7405` | `7406` |
+| `3` | `2257` | `7409` | `740A` |
+| `3` | `2258` | `740F` | `7410` |
+| `3` | `2259` | `741A` | `741B` |
+| `3` | `2260` | `7422` | `7422` |
+| `3` | `2261` | `7425` | `7426` |
+| `3` | `2262` | `7428` | `7428` |
+| `3` | `2263` | `742A` | `742A` |
+| `3` | `2264` | `742C` | `742C` |
+| `3` | `2265` | `742E` | `742E` |
+| `3` | `2266` | `7430` | `7430` |
+| `3` | `2267` | `7433` | `7436` |
+| `3` | `2268` | `743A` | `743A` |
+| `3` | `2269` | `743C` | `743C` |
+| `3` | `2270` | `743F` | `743F` |
+| `3` | `2271` | `7441` | `7441` |
+| `3` | `2272` | `744B` | `744B` |
+| `3` | `2273` | `7455` | `7455` |
+| `3` | `2274` | `7457` | `7457` |
+| `3` | `2275` | `7459` | `745C` |
+| `3` | `2276` | `745E` | `745F` |
+| `3` | `2277` | `7463` | `7464` |
+| `3` | `2278` | `7469` | `746A` |
+| `3` | `2279` | `746D` | `746D` |
+| `3` | `2280` | `746F` | `7470` |
+| `3` | `2281` | `7476` | `7477` |
+| `3` | `2282` | `747E` | `747E` |
+| `3` | `2283` | `7480` | `7481` |
+| `3` | `2284` | `7483` | `7483` |
+| `3` | `2285` | `7487` | `7487` |
+| `3` | `2286` | `7489` | `7489` |
+| `3` | `2287` | `748B` | `748B` |
+| `3` | `2288` | `748E` | `748E` |
+| `3` | `2289` | `7490` | `7490` |
+| `3` | `2290` | `749C` | `749C` |
+| `3` | `2291` | `749E` | `749E` |
+| `3` | `2292` | `74A3` | `74A3` |
+| `3` | `2293` | `74A6` | `74A9` |
+| `3` | `2294` | `74B0` | `74B0` |
+| `3` | `2295` | `74BA` | `74BA` |
+| `3` | `2296` | `74BD` | `74BD` |
+| `3` | `2297` | `74CA` | `74CA` |
+| `3` | `2298` | `74CF` | `74CF` |
+| `3` | `2299` | `74D2` | `74D2` |
+
+#### Package range associations 2301 through 2400
+
+Section ID: `ownkb:section:d000246:s000057`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2300` | `74D4` | `74D4` |
+| `3` | `2301` | `74DA` | `74DA` |
+| `3` | `2302` | `74DC` | `74DC` |
+| `3` | `2303` | `74DE` | `74DE` |
+| `3` | `2304` | `74E0` | `74E0` |
+| `3` | `2305` | `74E2` | `74E4` |
+| `3` | `2306` | `74E6` | `74E6` |
+| `3` | `2307` | `74EE` | `74EF` |
+| `3` | `2308` | `74F4` | `74F4` |
+| `3` | `2309` | `74F6` | `74F7` |
+| `3` | `2310` | `74FF` | `74FF` |
+| `3` | `2311` | `7504` | `7504` |
+| `3` | `2312` | `750C` | `750D` |
+| `3` | `2313` | `750F` | `750F` |
+| `3` | `2314` | `7511` | `7511` |
+| `3` | `2315` | `7513` | `7513` |
+| `3` | `2316` | `7515` | `7515` |
+| `3` | `2317` | `7518` | `751A` |
+| `3` | `2318` | `751C` | `751C` |
+| `3` | `2319` | `751F` | `751F` |
+| `3` | `2320` | `7522` | `7522` |
+| `3` | `2321` | `7525` | `7525` |
+| `3` | `2322` | `7528` | `7529` |
+| `3` | `2323` | `752B` | `752D` |
+| `3` | `2324` | `752F` | `7533` |
+| `3` | `2325` | `7535` | `7535` |
+| `3` | `2326` | `7537` | `7538` |
+| `3` | `2327` | `753A` | `753B` |
+| `3` | `2328` | `753E` | `753E` |
+| `3` | `2329` | `7540` | `7540` |
+| `3` | `2330` | `7545` | `7545` |
+| `3` | `2331` | `7548` | `7548` |
+| `3` | `2332` | `754B` | `754C` |
+| `3` | `2333` | `754E` | `754F` |
+| `3` | `2334` | `7554` | `7554` |
+| `3` | `2335` | `7559` | `755D` |
+| `3` | `2336` | `7562` | `7562` |
+| `3` | `2337` | `7565` | `7566` |
+| `3` | `2338` | `756A` | `756C` |
+| `3` | `2339` | `7570` | `7570` |
+| `3` | `2340` | `7572` | `7572` |
+| `3` | `2341` | `7574` | `7574` |
+| `3` | `2342` | `7576` | `7576` |
+| `3` | `2343` | `7578` | `7579` |
+| `3` | `2344` | `757F` | `757F` |
+| `3` | `2345` | `7583` | `7583` |
+| `3` | `2346` | `7586` | `7587` |
+| `3` | `2347` | `758A` | `758A` |
+| `3` | `2348` | `758F` | `758F` |
+| `3` | `2349` | `7591` | `7591` |
+| `3` | `2350` | `7594` | `7594` |
+| `3` | `2351` | `7596` | `7597` |
+| `3` | `2352` | `7599` | `759A` |
+| `3` | `2353` | `759D` | `759D` |
+| `3` | `2354` | `759F` | `75A1` |
+| `3` | `2355` | `75A3` | `75A5` |
+| `3` | `2356` | `75AB` | `75AC` |
+| `3` | `2357` | `75AE` | `75B5` |
+| `3` | `2358` | `75B8` | `75B9` |
+| `3` | `2359` | `75BC` | `75BE` |
+| `3` | `2360` | `75C2` | `75C5` |
+| `3` | `2361` | `75C7` | `75CA` |
+| `3` | `2362` | `75CD` | `75CD` |
+| `3` | `2363` | `75D2` | `75D2` |
+| `3` | `2364` | `75D4` | `75D6` |
+| `3` | `2365` | `75D8` | `75D9` |
+| `3` | `2366` | `75DB` | `75DB` |
+| `3` | `2367` | `75DE` | `75DE` |
+| `3` | `2368` | `75E2` | `75E4` |
+| `3` | `2369` | `75E6` | `75E8` |
+| `3` | `2370` | `75EA` | `75EB` |
+| `3` | `2371` | `75F0` | `75F1` |
+| `3` | `2372` | `75F4` | `75F4` |
+| `3` | `2373` | `75F9` | `75FA` |
+| `3` | `2374` | `75FC` | `75FC` |
+| `3` | `2375` | `75FF` | `7601` |
+| `3` | `2376` | `7605` | `7605` |
+| `3` | `2377` | `7608` | `7608` |
+| `3` | `2378` | `760A` | `760D` |
+| `3` | `2379` | `7610` | `7610` |
+| `3` | `2380` | `7615` | `7619` |
+| `3` | `2381` | `761B` | `761B` |
+| `3` | `2382` | `761E` | `7622` |
+| `3` | `2383` | `7624` | `7627` |
+| `3` | `2384` | `7629` | `762B` |
+| `3` | `2385` | `7630` | `7630` |
+| `3` | `2386` | `7633` | `7635` |
+| `3` | `2387` | `7638` | `7638` |
+| `3` | `2388` | `763A` | `763A` |
+| `3` | `2389` | `763C` | `763C` |
+| `3` | `2390` | `763E` | `7640` |
+| `3` | `2391` | `7642` | `7643` |
+| `3` | `2392` | `7646` | `7647` |
+| `3` | `2393` | `7649` | `7649` |
+| `3` | `2394` | `764C` | `764D` |
+| `3` | `2395` | `7654` | `7654` |
+| `3` | `2396` | `7656` | `7656` |
+| `3` | `2397` | `7658` | `7658` |
+| `3` | `2398` | `765C` | `765C` |
+| `3` | `2399` | `765E` | `765F` |
+
+#### Package range associations 2401 through 2500
+
+Section ID: `ownkb:section:d000246:s000058`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2400` | `7662` | `7664` |
+| `3` | `2401` | `7669` | `7669` |
+| `3` | `2402` | `766B` | `766F` |
+| `3` | `2403` | `7671` | `7672` |
+| `3` | `2404` | `7678` | `7678` |
+| `3` | `2405` | `767B` | `767E` |
+| `3` | `2406` | `7682` | `7682` |
+| `3` | `2407` | `7686` | `7688` |
+| `3` | `2408` | `768B` | `768B` |
+| `3` | `2409` | `768E` | `768E` |
+| `3` | `2410` | `7691` | `7691` |
+| `3` | `2411` | `7693` | `7693` |
+| `3` | `2412` | `7696` | `7696` |
+| `3` | `2413` | `7699` | `769A` |
+| `3` | `2414` | `76A4` | `76A4` |
+| `3` | `2415` | `76AE` | `76AE` |
+| `3` | `2416` | `76B0` | `76B2` |
+| `3` | `2417` | `76B4` | `76B4` |
+| `3` | `2418` | `76B8` | `76B8` |
+| `3` | `2419` | `76BA` | `76BA` |
+| `3` | `2420` | `76BF` | `76BF` |
+| `3` | `2421` | `76C2` | `76C2` |
+| `3` | `2422` | `76C5` | `76CA` |
+| `3` | `2423` | `76CC` | `76D8` |
+| `3` | `2424` | `76DB` | `76EC` |
+| `3` | `2425` | `76EE` | `76EF` |
+| `3` | `2426` | `76F1` | `76F4` |
+| `3` | `2427` | `76F8` | `76F9` |
+| `3` | `2428` | `76FB` | `7701` |
+| `3` | `2429` | `7703` | `770F` |
+| `3` | `2430` | `7715` | `7716` |
+| `3` | `2431` | `7718` | `771A` |
+| `3` | `2432` | `771C` | `771C` |
+| `3` | `2433` | `771E` | `7720` |
+| `3` | `2434` | `7722` | `7723` |
+| `3` | `2435` | `7725` | `7726` |
+| `3` | `2436` | `7728` | `7729` |
+| `3` | `2437` | `772B` | `7730` |
+| `3` | `2438` | `7732` | `7733` |
+| `3` | `2439` | `7735` | `773A` |
+| `3` | `2440` | `773C` | `773C` |
+| `3` | `2441` | `773E` | `773E` |
+| `3` | `2442` | `7740` | `7741` |
+| `3` | `2443` | `7743` | `7747` |
+| `3` | `2444` | `7749` | `774B` |
+| `3` | `2445` | `774D` | `7752` |
+| `3` | `2446` | `7755` | `7756` |
+| `3` | `2447` | `7758` | `775C` |
+| `3` | `2448` | `775E` | `775E` |
+| `3` | `2449` | `7760` | `7763` |
+| `3` | `2450` | `7765` | `776C` |
+| `3` | `2451` | `7771` | `7771` |
+| `3` | `2452` | `7774` | `7774` |
+| `3` | `2453` | `7779` | `777B` |
+| `3` | `2454` | `777D` | `7780` |
+| `3` | `2455` | `7782` | `7782` |
+| `3` | `2456` | `7784` | `7787` |
+| `3` | `2457` | `778B` | `7793` |
+| `3` | `2458` | `7795` | `7795` |
+| `3` | `2459` | `779C` | `779C` |
+| `3` | `2460` | `779E` | `77A3` |
+| `3` | `2461` | `77A5` | `77A5` |
+| `3` | `2462` | `77A7` | `77A7` |
+| `3` | `2463` | `77A9` | `77AD` |
+| `3` | `2464` | `77B0` | `77B0` |
+| `3` | `2465` | `77B3` | `77B3` |
+| `3` | `2466` | `77B5` | `77B5` |
+| `3` | `2467` | `77B7` | `77B7` |
+| `3` | `2468` | `77BB` | `77BD` |
+| `3` | `2469` | `77BF` | `77C0` |
+| `3` | `2470` | `77C2` | `77C5` |
+| `3` | `2471` | `77C7` | `77C7` |
+| `3` | `2472` | `77CA` | `77CA` |
+| `3` | `2473` | `77CD` | `77CE` |
+| `3` | `2474` | `77D2` | `77D4` |
+| `3` | `2475` | `77D7` | `77DF` |
+| `3` | `2476` | `77E1` | `77E3` |
+| `3` | `2477` | `77E5` | `77E5` |
+| `3` | `2478` | `77E7` | `77E7` |
+| `3` | `2479` | `77E9` | `77E9` |
+| `3` | `2480` | `77EB` | `77F0` |
+| `3` | `2481` | `77F3` | `77F3` |
+| `3` | `2482` | `77F5` | `77F6` |
+| `3` | `2483` | `77F8` | `77F8` |
+| `3` | `2484` | `77FA` | `77FB` |
+| `3` | `2485` | `77FD` | `7802` |
+| `3` | `2486` | `7809` | `7809` |
+| `3` | `2487` | `780C` | `780D` |
+| `3` | `2488` | `780F` | `780F` |
+| `3` | `2489` | `7811` | `7812` |
+| `3` | `2490` | `7814` | `7814` |
+| `3` | `2491` | `7816` | `7818` |
+| `3` | `2492` | `781A` | `781D` |
+| `3` | `2493` | `781F` | `781F` |
+| `3` | `2494` | `7822` | `7827` |
+| `3` | `2495` | `7829` | `782E` |
+| `3` | `2496` | `7830` | `7830` |
+| `3` | `2497` | `7832` | `7832` |
+| `3` | `2498` | `7834` | `7834` |
+| `3` | `2499` | `7837` | `783C` |
+
+#### Package range associations 2501 through 2600
+
+Section ID: `ownkb:section:d000246:s000059`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2500` | `783E` | `783E` |
+| `3` | `2501` | `7840` | `7845` |
+| `3` | `2502` | `7847` | `7848` |
+| `3` | `2503` | `784A` | `784A` |
+| `3` | `2504` | `784C` | `784C` |
+| `3` | `2505` | `784E` | `7850` |
+| `3` | `2506` | `7852` | `7852` |
+| `3` | `2507` | `7855` | `7857` |
+| `3` | `2508` | `7859` | `785A` |
+| `3` | `2509` | `785D` | `785D` |
+| `3` | `2510` | `785F` | `785F` |
+| `3` | `2511` | `7863` | `7864` |
+| `3` | `2512` | `7868` | `7868` |
+| `3` | `2513` | `786A` | `786F` |
+| `3` | `2514` | `7871` | `7871` |
+| `3` | `2515` | `7877` | `7877` |
+| `3` | `2516` | `787C` | `787D` |
+| `3` | `2517` | `7880` | `7881` |
+| `3` | `2518` | `7883` | `7883` |
+| `3` | `2519` | `7885` | `7885` |
+| `3` | `2520` | `7887` | `7887` |
+| `3` | `2521` | `7889` | `7889` |
+| `3` | `2522` | `788C` | `788E` |
+| `3` | `2523` | `7891` | `7895` |
+| `3` | `2524` | `7897` | `7898` |
+| `3` | `2525` | `789A` | `789C` |
+| `3` | `2526` | `789F` | `78A1` |
+| `3` | `2527` | `78A3` | `78A3` |
+| `3` | `2528` | `78A5` | `78A7` |
+| `3` | `2529` | `78A9` | `78A9` |
+| `3` | `2530` | `78AD` | `78AD` |
+| `3` | `2531` | `78B0` | `78B6` |
+| `3` | `2532` | `78B8` | `78B8` |
+| `3` | `2533` | `78BA` | `78BE` |
+| `3` | `2534` | `78C1` | `78C1` |
+| `3` | `2535` | `78C3` | `78C5` |
+| `3` | `2536` | `78C8` | `78CB` |
+| `3` | `2537` | `78D0` | `78D1` |
+| `3` | `2538` | `78D4` | `78D5` |
+| `3` | `2539` | `78D9` | `78DA` |
+| `3` | `2540` | `78DC` | `78DC` |
+| `3` | `2541` | `78DE` | `78DE` |
+| `3` | `2542` | `78E0` | `78E1` |
+| `3` | `2543` | `78E3` | `78E3` |
+| `3` | `2544` | `78E5` | `78ED` |
+| `3` | `2545` | `78EF` | `78EF` |
+| `3` | `2546` | `78F2` | `78F4` |
+| `3` | `2547` | `78F7` | `78FB` |
+| `3` | `2548` | `78FD` | `7902` |
+| `3` | `2549` | `7904` | `7905` |
+| `3` | `2550` | `7907` | `790C` |
+| `3` | `2551` | `790E` | `790E` |
+| `3` | `2552` | `7910` | `7913` |
+| `3` | `2553` | `7918` | `7919` |
+| `3` | `2554` | `791C` | `791C` |
+| `3` | `2555` | `791E` | `791E` |
+| `3` | `2556` | `7921` | `7921` |
+| `3` | `2557` | `7924` | `7924` |
+| `3` | `2558` | `7926` | `7926` |
+| `3` | `2559` | `7928` | `7928` |
+| `3` | `2560` | `792A` | `792C` |
+| `3` | `2561` | `792E` | `792E` |
+| `3` | `2562` | `7931` | `7931` |
+| `3` | `2563` | `7934` | `7934` |
+| `3` | `2564` | `793A` | `793A` |
+| `3` | `2565` | `793C` | `7943` |
+| `3` | `2566` | `7945` | `7949` |
+| `3` | `2567` | `794B` | `794B` |
+| `3` | `2568` | `794E` | `7950` |
+| `3` | `2569` | `7953` | `7960` |
+| `3` | `2570` | `7962` | `7962` |
+| `3` | `2571` | `7964` | `796B` |
+| `3` | `2572` | `796D` | `7970` |
+| `3` | `2573` | `7972` | `7973` |
+| `3` | `2574` | `7976` | `797C` |
+| `3` | `2575` | `797E` | `7981` |
+| `3` | `2576` | `7983` | `7987` |
+| `3` | `2577` | `798A` | `7991` |
+| `3` | `2578` | `7994` | `7994` |
+| `3` | `2579` | `7996` | `7998` |
+| `3` | `2580` | `799B` | `799C` |
+| `3` | `2581` | `799E` | `799E` |
+| `3` | `2582` | `79A0` | `79AE` |
+| `3` | `2583` | `79B0` | `79B1` |
+| `3` | `2584` | `79B3` | `79B3` |
+| `3` | `2585` | `79B5` | `79B5` |
+| `3` | `2586` | `79B9` | `79BB` |
+| `3` | `2587` | `79BD` | `79C1` |
+| `3` | `2588` | `79C3` | `79C3` |
+| `3` | `2589` | `79C5` | `79C6` |
+| `3` | `2590` | `79C8` | `79C9` |
+| `3` | `2591` | `79CB` | `79CD` |
+| `3` | `2592` | `79D1` | `79D2` |
+| `3` | `2593` | `79D4` | `79D5` |
+| `3` | `2594` | `79D8` | `79D9` |
+| `3` | `2595` | `79DF` | `79E0` |
+| `3` | `2596` | `79E2` | `79E4` |
+| `3` | `2597` | `79E6` | `79E7` |
+| `3` | `2598` | `79E9` | `79E9` |
+| `3` | `2599` | `79EB` | `79ED` |
+
+#### Package range associations 2601 through 2700
+
+Section ID: `ownkb:section:d000246:s000060`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2600` | `79EF` | `79F3` |
+| `3` | `2601` | `79F5` | `79F6` |
+| `3` | `2602` | `79F8` | `79FE` |
+| `3` | `2603` | `7A00` | `7A00` |
+| `3` | `2604` | `7A02` | `7A08` |
+| `3` | `2605` | `7A0B` | `7A0E` |
+| `3` | `2606` | `7A11` | `7A11` |
+| `3` | `2607` | `7A13` | `7A14` |
+| `3` | `2608` | `7A16` | `7A1C` |
+| `3` | `2609` | `7A1E` | `7A21` |
+| `3` | `2610` | `7A23` | `7A23` |
+| `3` | `2611` | `7A27` | `7A27` |
+| `3` | `2612` | `7A2C` | `7A2E` |
+| `3` | `2613` | `7A31` | `7A34` |
+| `3` | `2614` | `7A37` | `7A39` |
+| `3` | `2615` | `7A3B` | `7A3D` |
+| `3` | `2616` | `7A3F` | `7A40` |
+| `3` | `2617` | `7A43` | `7A44` |
+| `3` | `2618` | `7A46` | `7A46` |
+| `3` | `2619` | `7A48` | `7A4A` |
+| `3` | `2620` | `7A4D` | `7A4E` |
+| `3` | `2621` | `7A50` | `7A51` |
+| `3` | `2622` | `7A57` | `7A57` |
+| `3` | `2623` | `7A59` | `7A59` |
+| `3` | `2624` | `7A5B` | `7A5C` |
+| `3` | `2625` | `7A5F` | `7A5F` |
+| `3` | `2626` | `7A61` | `7A62` |
+| `3` | `2627` | `7A69` | `7A6B` |
+| `3` | `2628` | `7A6D` | `7A6D` |
+| `3` | `2629` | `7A6F` | `7A71` |
+| `3` | `2630` | `7A74` | `7A7B` |
+| `3` | `2631` | `7A7D` | `7A7D` |
+| `3` | `2632` | `7A7F` | `7A81` |
+| `3` | `2633` | `7A83` | `7A88` |
+| `3` | `2634` | `7A8A` | `7A8E` |
+| `3` | `2635` | `7A91` | `7A92` |
+| `3` | `2636` | `7A94` | `7A98` |
+| `3` | `2637` | `7A9C` | `7A9D` |
+| `3` | `2638` | `7A9F` | `7AA0` |
+| `3` | `2639` | `7AA3` | `7AA6` |
+| `3` | `2640` | `7AA8` | `7AAF` |
+| `3` | `2641` | `7AB3` | `7AB3` |
+| `3` | `2642` | `7AB6` | `7AB6` |
+| `3` | `2643` | `7AB8` | `7AB8` |
+| `3` | `2644` | `7ABA` | `7ABA` |
+| `3` | `2645` | `7ABC` | `7ABC` |
+| `3` | `2646` | `7ABE` | `7ABF` |
+| `3` | `2647` | `7AC2` | `7AC2` |
+| `3` | `2648` | `7AC4` | `7AC5` |
+| `3` | `2649` | `7AC7` | `7AC8` |
+| `3` | `2650` | `7ACA` | `7ACC` |
+| `3` | `2651` | `7ACF` | `7ACF` |
+| `3` | `2652` | `7AD1` | `7AD2` |
+| `3` | `2653` | `7AD6` | `7AD6` |
+| `3` | `2654` | `7AD9` | `7ADA` |
+| `3` | `2655` | `7ADD` | `7AE0` |
+| `3` | `2656` | `7AE2` | `7AE6` |
+| `3` | `2657` | `7AED` | `7AED` |
+| `3` | `2658` | `7AEF` | `7AEF` |
+| `3` | `2659` | `7AF6` | `7AFA` |
+| `3` | `2660` | `7AFD` | `7B00` |
+| `3` | `2661` | `7B03` | `7B04` |
+| `3` | `2662` | `7B06` | `7B0B` |
+| `3` | `2663` | `7B0D` | `7B11` |
+| `3` | `2664` | `7B14` | `7B17` |
+| `3` | `2665` | `7B19` | `7B19` |
+| `3` | `2666` | `7B1B` | `7B1C` |
+| `3` | `2667` | `7B1E` | `7B20` |
+| `3` | `2668` | `7B23` | `7B28` |
+| `3` | `2669` | `7B2A` | `7B2E` |
+| `3` | `2670` | `7B30` | `7B33` |
+| `3` | `2671` | `7B38` | `7B3A` |
+| `3` | `2672` | `7B3C` | `7B3C` |
+| `3` | `2673` | `7B3E` | `7B3F` |
+| `3` | `2674` | `7B42` | `7B42` |
+| `3` | `2675` | `7B45` | `7B4D` |
+| `3` | `2676` | `7B4F` | `7B52` |
+| `3` | `2677` | `7B54` | `7B54` |
+| `3` | `2678` | `7B56` | `7B56` |
+| `3` | `2679` | `7B58` | `7B58` |
+| `3` | `2680` | `7B5A` | `7B5B` |
+| `3` | `2681` | `7B5D` | `7B5D` |
+| `3` | `2682` | `7B60` | `7B60` |
+| `3` | `2683` | `7B62` | `7B63` |
+| `3` | `2684` | `7B65` | `7B67` |
+| `3` | `2685` | `7B69` | `7B69` |
+| `3` | `2686` | `7B6D` | `7B6E` |
+| `3` | `2687` | `7B70` | `7B72` |
+| `3` | `2688` | `7B74` | `7B79` |
+| `3` | `2689` | `7B7B` | `7B7E` |
+| `3` | `2690` | `7B80` | `7B80` |
+| `3` | `2691` | `7B84` | `7B85` |
+| `3` | `2692` | `7B87` | `7B87` |
+| `3` | `2693` | `7B8B` | `7B8B` |
+| `3` | `2694` | `7B8D` | `7B8D` |
+| `3` | `2695` | `7B8F` | `7B90` |
+| `3` | `2696` | `7B92` | `7B98` |
+| `3` | `2697` | `7B9B` | `7B9E` |
+| `3` | `2698` | `7BA0` | `7BAD` |
+| `3` | `2699` | `7BAF` | `7BAF` |
+
+#### Package range associations 2701 through 2800
+
+Section ID: `ownkb:section:d000246:s000061`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2700` | `7BB1` | `7BB1` |
+| `3` | `2701` | `7BB4` | `7BB4` |
+| `3` | `2702` | `7BB7` | `7BB9` |
+| `3` | `2703` | `7BBD` | `7BC4` |
+| `3` | `2704` | `7BC6` | `7BC7` |
+| `3` | `2705` | `7BC9` | `7BC9` |
+| `3` | `2706` | `7BCB` | `7BCC` |
+| `3` | `2707` | `7BD1` | `7BD1` |
+| `3` | `2708` | `7BD3` | `7BD3` |
+| `3` | `2709` | `7BD9` | `7BDD` |
+| `3` | `2710` | `7BDF` | `7BE1` |
+| `3` | `2711` | `7BE4` | `7BE6` |
+| `3` | `2712` | `7BE8` | `7BEA` |
+| `3` | `2713` | `7BEC` | `7BF4` |
+| `3` | `2714` | `7BF7` | `7BF8` |
+| `3` | `2715` | `7BFA` | `7BFA` |
+| `3` | `2716` | `7BFC` | `7BFC` |
+| `3` | `2717` | `7BFE` | `7BFE` |
+| `3` | `2718` | `7C00` | `7C00` |
+| `3` | `2719` | `7C03` | `7C03` |
+| `3` | `2720` | `7C07` | `7C07` |
+| `3` | `2721` | `7C0B` | `7C0D` |
+| `3` | `2722` | `7C0F` | `7C0F` |
+| `3` | `2723` | `7C11` | `7C11` |
+| `3` | `2724` | `7C15` | `7C15` |
+| `3` | `2725` | `7C18` | `7C18` |
+| `3` | `2726` | `7C1C` | `7C1C` |
+| `3` | `2727` | `7C1E` | `7C28` |
+| `3` | `2728` | `7C2A` | `7C2C` |
+| `3` | `2729` | `7C2F` | `7C30` |
+| `3` | `2730` | `7C33` | `7C34` |
+| `3` | `2731` | `7C37` | `7C44` |
+| `3` | `2732` | `7C46` | `7C47` |
+| `3` | `2733` | `7C4B` | `7C4D` |
+| `3` | `2734` | `7C50` | `7C50` |
+| `3` | `2735` | `7C52` | `7C54` |
+| `3` | `2736` | `7C59` | `7C59` |
+| `3` | `2737` | `7C5C` | `7C5C` |
+| `3` | `2738` | `7C5E` | `7C60` |
+| `3` | `2739` | `7C63` | `7C65` |
+| `3` | `2740` | `7C69` | `7C69` |
+| `3` | `2741` | `7C6C` | `7C6C` |
+| `3` | `2742` | `7C6E` | `7C6E` |
+| `3` | `2743` | `7C72` | `7C74` |
+| `3` | `2744` | `7C76` | `7C76` |
+| `3` | `2745` | `7C7B` | `7C7D` |
+| `3` | `2746` | `7C83` | `7C83` |
+| `3` | `2747` | `7C89` | `7C98` |
+| `3` | `2748` | `7C9A` | `7C9F` |
+| `3` | `2749` | `7CA1` | `7CA7` |
+| `3` | `2750` | `7CA9` | `7CAB` |
+| `3` | `2751` | `7CAD` | `7CAF` |
+| `3` | `2752` | `7CB1` | `7CC2` |
+| `3` | `2753` | `7CC5` | `7CC5` |
+| `3` | `2754` | `7CC7` | `7CCA` |
+| `3` | `2755` | `7CCC` | `7CCD` |
+| `3` | `2756` | `7CD3` | `7CD3` |
+| `3` | `2757` | `7CD5` | `7CD7` |
+| `3` | `2758` | `7CD9` | `7CD9` |
+| `3` | `2759` | `7CDC` | `7CE0` |
+| `3` | `2760` | `7CE2` | `7CE2` |
+| `3` | `2761` | `7CE6` | `7CE8` |
+| `3` | `2762` | `7CEE` | `7CF2` |
+| `3` | `2763` | `7CF4` | `7CF7` |
+| `3` | `2764` | `7CFA` | `7CFB` |
+| `3` | `2765` | `7CFE` | `7CFE` |
+| `3` | `2766` | `7D00` | `7D00` |
+| `3` | `2767` | `7D02` | `7D0B` |
+| `3` | `2768` | `7D0D` | `7D0D` |
+| `3` | `2769` | `7D0F` | `7D10` |
+| `3` | `2770` | `7D13` | `7D1D` |
+| `3` | `2771` | `7D20` | `7D24` |
+| `3` | `2772` | `7D27` | `7D27` |
+| `3` | `2773` | `7D29` | `7D29` |
+| `3` | `2774` | `7D2B` | `7D33` |
+| `3` | `2775` | `7D35` | `7D35` |
+| `3` | `2776` | `7D39` | `7D3C` |
+| `3` | `2777` | `7D3E` | `7D46` |
+| `3` | `2778` | `7D4D` | `7D50` |
+| `3` | `2779` | `7D52` | `7D53` |
+| `3` | `2780` | `7D55` | `7D55` |
+| `3` | `2781` | `7D59` | `7D59` |
+| `3` | `2782` | `7D5B` | `7D5F` |
+| `3` | `2783` | `7D61` | `7D63` |
+| `3` | `2784` | `7D66` | `7D66` |
+| `3` | `2785` | `7D68` | `7D68` |
+| `3` | `2786` | `7D6A` | `7D6B` |
+| `3` | `2787` | `7D6D` | `7D6E` |
+| `3` | `2788` | `7D71` | `7D73` |
+| `3` | `2789` | `7D76` | `7D77` |
+| `3` | `2790` | `7D79` | `7D7A` |
+| `3` | `2791` | `7D7C` | `7D86` |
+| `3` | `2792` | `7D88` | `7D8A` |
+| `3` | `2793` | `7D8D` | `7D8F` |
+| `3` | `2794` | `7D91` | `7D94` |
+| `3` | `2795` | `7D96` | `7D97` |
+| `3` | `2796` | `7D9C` | `7DA3` |
+| `3` | `2797` | `7DA6` | `7DA6` |
+| `3` | `2798` | `7DAC` | `7DAE` |
+| `3` | `2799` | `7DB0` | `7DB2` |
+
+#### Package range associations 2801 through 2900
+
+Section ID: `ownkb:section:d000246:s000062`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2800` | `7DB4` | `7DB6` |
+| `3` | `2801` | `7DB8` | `7DBF` |
+| `3` | `2802` | `7DC4` | `7DC5` |
+| `3` | `2803` | `7DC7` | `7DC7` |
+| `3` | `2804` | `7DCA` | `7DCD` |
+| `3` | `2805` | `7DD0` | `7DD0` |
+| `3` | `2806` | `7DD2` | `7DD2` |
+| `3` | `2807` | `7DD7` | `7DD7` |
+| `3` | `2808` | `7DD9` | `7DDE` |
+| `3` | `2809` | `7DE0` | `7DE1` |
+| `3` | `2810` | `7DE3` | `7DE4` |
+| `3` | `2811` | `7DE6` | `7DE6` |
+| `3` | `2812` | `7DE8` | `7DE9` |
+| `3` | `2813` | `7DEC` | `7DEC` |
+| `3` | `2814` | `7DEF` | `7DF2` |
+| `3` | `2815` | `7DF4` | `7DF7` |
+| `3` | `2816` | `7DF9` | `7DFC` |
+| `3` | `2817` | `7E00` | `7E02` |
+| `3` | `2818` | `7E06` | `7E06` |
+| `3` | `2819` | `7E08` | `7E0B` |
+| `3` | `2820` | `7E10` | `7E11` |
+| `3` | `2821` | `7E15` | `7E15` |
+| `3` | `2822` | `7E1A` | `7E23` |
+| `3` | `2823` | `7E27` | `7E27` |
+| `3` | `2824` | `7E29` | `7E2B` |
+| `3` | `2825` | `7E2D` | `7E2F` |
+| `3` | `2826` | `7E31` | `7E32` |
+| `3` | `2827` | `7E35` | `7E37` |
+| `3` | `2828` | `7E39` | `7E39` |
+| `3` | `2829` | `7E3B` | `7E43` |
+| `3` | `2830` | `7E45` | `7E47` |
+| `3` | `2831` | `7E49` | `7E49` |
+| `3` | `2832` | `7E4B` | `7E4C` |
+| `3` | `2833` | `7E50` | `7E52` |
+| `3` | `2834` | `7E54` | `7E56` |
+| `3` | `2835` | `7E59` | `7E5A` |
+| `3` | `2836` | `7E5C` | `7E5F` |
+| `3` | `2837` | `7E62` | `7E64` |
+| `3` | `2838` | `7E67` | `7E70` |
+| `3` | `2839` | `7E73` | `7E74` |
+| `3` | `2840` | `7E78` | `7E84` |
+| `3` | `2841` | `7E88` | `7E8A` |
+| `3` | `2842` | `7E8C` | `7E8D` |
+| `3` | `2843` | `7E8F` | `7E8F` |
+| `3` | `2844` | `7E91` | `7E98` |
+| `3` | `2845` | `7E9B` | `7E9C` |
+| `3` | `2846` | `7EA0` | `7EBB` |
+| `3` | `2847` | `7EBD` | `7EEB` |
+| `3` | `2848` | `7EED` | `7F0F` |
+| `3` | `2849` | `7F11` | `7F38` |
+| `3` | `2850` | `7F3A` | `7F3B` |
+| `3` | `2851` | `7F3D` | `7F3E` |
+| `3` | `2852` | `7F41` | `7F48` |
+| `3` | `2853` | `7F4B` | `7F4D` |
+| `3` | `2854` | `7F50` | `7F51` |
+| `3` | `2855` | `7F54` | `7F55` |
+| `3` | `2856` | `7F57` | `7F5A` |
+| `3` | `2857` | `7F5D` | `7F5D` |
+| `3` | `2858` | `7F5F` | `7F5F` |
+| `3` | `2859` | `7F61` | `7F63` |
+| `3` | `2860` | `7F65` | `7F65` |
+| `3` | `2861` | `7F68` | `7F6A` |
+| `3` | `2862` | `7F6E` | `7F72` |
+| `3` | `2863` | `7F74` | `7F77` |
+| `3` | `2864` | `7F79` | `7F79` |
+| `3` | `2865` | `7F7C` | `7F7E` |
+| `3` | `2866` | `7F80` | `7F81` |
+| `3` | `2867` | `7F85` | `7F8C` |
+| `3` | `2868` | `7F8E` | `7F8E` |
+| `3` | `2869` | `7F91` | `7F91` |
+| `3` | `2870` | `7F94` | `7F95` |
+| `3` | `2871` | `7F97` | `7F97` |
+| `3` | `2872` | `7F99` | `7F9A` |
+| `3` | `2873` | `7F9C` | `7FA1` |
+| `3` | `2874` | `7FA4` | `7FA5` |
+| `3` | `2875` | `7FA7` | `7FA9` |
+| `3` | `2876` | `7FAD` | `7FB0` |
+| `3` | `2877` | `7FB2` | `7FB2` |
+| `3` | `2878` | `7FB4` | `7FBA` |
+| `3` | `2879` | `7FBC` | `7FBD` |
+| `3` | `2880` | `7FBF` | `7FC3` |
+| `3` | `2881` | `7FC5` | `7FC6` |
+| `3` | `2882` | `7FC8` | `7FCA` |
+| `3` | `2883` | `7FCC` | `7FCC` |
+| `3` | `2884` | `7FCE` | `7FCE` |
+| `3` | `2885` | `7FD0` | `7FD2` |
+| `3` | `2886` | `7FD4` | `7FD6` |
+| `3` | `2887` | `7FD8` | `7FDC` |
+| `3` | `2888` | `7FDF` | `7FE3` |
+| `3` | `2889` | `7FE5` | `7FE7` |
+| `3` | `2890` | `7FE9` | `7FE9` |
+| `3` | `2891` | `7FEB` | `7FF1` |
+| `3` | `2892` | `7FF3` | `7FF3` |
+| `3` | `2893` | `7FF8` | `7FF9` |
+| `3` | `2894` | `7FFB` | `7FFC` |
+| `3` | `2895` | `8000` | `8001` |
+| `3` | `2896` | `8003` | `8008` |
+| `3` | `2897` | `800A` | `800E` |
+| `3` | `2898` | `8010` | `8012` |
+| `3` | `2899` | `8015` | `8019` |
+
+#### Package range associations 2901 through 3000
+
+Section ID: `ownkb:section:d000246:s000063`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `2900` | `801C` | `801C` |
+| `3` | `2901` | `8021` | `8022` |
+| `3` | `2902` | `8025` | `802A` |
+| `3` | `2903` | `802C` | `802C` |
+| `3` | `2904` | `802E` | `802E` |
+| `3` | `2905` | `8030` | `8031` |
+| `3` | `2906` | `8033` | `8038` |
+| `3` | `2907` | `803B` | `803B` |
+| `3` | `2908` | `803D` | `803D` |
+| `3` | `2909` | `803F` | `803F` |
+| `3` | `2910` | `8042` | `8043` |
+| `3` | `2911` | `8046` | `8046` |
+| `3` | `2912` | `804A` | `804D` |
+| `3` | `2913` | `8052` | `8052` |
+| `3` | `2914` | `8054` | `8054` |
+| `3` | `2915` | `8056` | `8056` |
+| `3` | `2916` | `8058` | `8058` |
+| `3` | `2917` | `805A` | `8061` |
+| `3` | `2918` | `8063` | `8063` |
+| `3` | `2919` | `8066` | `8067` |
+| `3` | `2920` | `8069` | `806D` |
+| `3` | `2921` | `806F` | `807B` |
+| `3` | `2922` | `807D` | `8080` |
+| `3` | `2923` | `8083` | `8087` |
+| `3` | `2924` | `8089` | `808D` |
+| `3` | `2925` | `808F` | `808F` |
+| `3` | `2926` | `8093` | `8093` |
+| `3` | `2927` | `8096` | `8096` |
+| `3` | `2928` | `8098` | `80A5` |
+| `3` | `2929` | `80A7` | `80A7` |
+| `3` | `2930` | `80A9` | `80AB` |
+| `3` | `2931` | `80AD` | `80B2` |
+| `3` | `2932` | `80B4` | `80B4` |
+| `3` | `2933` | `80B7` | `80B8` |
+| `3` | `2934` | `80BA` | `80C4` |
+| `3` | `2935` | `80C6` | `80C7` |
+| `3` | `2936` | `80CA` | `80CA` |
+| `3` | `2937` | `80CC` | `80CE` |
+| `3` | `2938` | `80D1` | `80D1` |
+| `3` | `2939` | `80D4` | `80D4` |
+| `3` | `2940` | `80D6` | `80D7` |
+| `3` | `2941` | `80D9` | `80DE` |
+| `3` | `2942` | `80E0` | `80E1` |
+| `3` | `2943` | `80E4` | `80E5` |
+| `3` | `2944` | `80E7` | `80ED` |
+| `3` | `2945` | `80EF` | `80F6` |
+| `3` | `2946` | `80F8` | `80FA` |
+| `3` | `2947` | `80FC` | `80FE` |
+| `3` | `2948` | `8102` | `8102` |
+| `3` | `2949` | `8105` | `8106` |
+| `3` | `2950` | `8108` | `810A` |
+| `3` | `2951` | `810D` | `811F` |
+| `3` | `2952` | `8123` | `8123` |
+| `3` | `2953` | `8126` | `8129` |
+| `3` | `2954` | `812B` | `8133` |
+| `3` | `2955` | `8135` | `8140` |
+| `3` | `2956` | `8142` | `8144` |
+| `3` | `2957` | `8146` | `8146` |
+| `3` | `2958` | `8148` | `8148` |
+| `3` | `2959` | `814A` | `814C` |
+| `3` | `2960` | `814E` | `814E` |
+| `3` | `2961` | `8150` | `8151` |
+| `3` | `2962` | `8153` | `8155` |
+| `3` | `2963` | `8157` | `815A` |
+| `3` | `2964` | `8160` | `8161` |
+| `3` | `2965` | `8163` | `8163` |
+| `3` | `2966` | `8165` | `816E` |
+| `3` | `2967` | `8170` | `8171` |
+| `3` | `2968` | `8173` | `8175` |
+| `3` | `2969` | `8178` | `8180` |
+| `3` | `2970` | `8182` | `8184` |
+| `3` | `2971` | `8186` | `8186` |
+| `3` | `2972` | `8188` | `8188` |
+| `3` | `2973` | `818A` | `818B` |
+| `3` | `2974` | `818F` | `818F` |
+| `3` | `2975` | `8191` | `8191` |
+| `3` | `2976` | `8195` | `8195` |
+| `3` | `2977` | `8197` | `8198` |
+| `3` | `2978` | `819A` | `819D` |
+| `3` | `2979` | `819F` | `81A0` |
+| `3` | `2980` | `81A5` | `81A6` |
+| `3` | `2981` | `81A8` | `81B6` |
+| `3` | `2982` | `81B9` | `81D3` |
+| `3` | `2983` | `81D5` | `81D8` |
+| `3` | `2984` | `81DA` | `81DC` |
+| `3` | `2985` | `81DE` | `81E0` |
+| `3` | `2986` | `81E2` | `81E3` |
+| `3` | `2987` | `81E5` | `81E5` |
+| `3` | `2988` | `81E7` | `81E8` |
+| `3` | `2989` | `81EA` | `81EA` |
+| `3` | `2990` | `81EC` | `81EF` |
+| `3` | `2991` | `81F3` | `81F4` |
+| `3` | `2992` | `81F6` | `81F6` |
+| `3` | `2993` | `81FA` | `81FC` |
+| `3` | `2994` | `81FE` | `820D` |
+| `3` | `2995` | `8210` | `8210` |
+| `3` | `2996` | `8212` | `8212` |
+| `3` | `2997` | `8214` | `8214` |
+| `3` | `2998` | `8216` | `8216` |
+| `3` | `2999` | `821B` | `821C` |
+
+#### Package range associations 3001 through 3100
+
+Section ID: `ownkb:section:d000246:s000064`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3000` | `821E` | `821F` |
+| `3` | `3001` | `8221` | `8223` |
+| `3` | `3002` | `8226` | `8226` |
+| `3` | `3003` | `8228` | `8228` |
+| `3` | `3004` | `822A` | `822D` |
+| `3` | `3005` | `822F` | `8239` |
+| `3` | `3006` | `823B` | `823B` |
+| `3` | `3007` | `823E` | `823E` |
+| `3` | `3008` | `8241` | `8242` |
+| `3` | `3009` | `8244` | `8244` |
+| `3` | `3010` | `8246` | `824B` |
+| `3` | `3011` | `824D` | `8252` |
+| `3` | `3012` | `8255` | `8256` |
+| `3` | `3013` | `8258` | `825A` |
+| `3` | `3014` | `825C` | `825C` |
+| `3` | `3015` | `825E` | `825F` |
+| `3` | `3016` | `8262` | `8264` |
+| `3` | `3017` | `8266` | `8269` |
+| `3` | `3018` | `826B` | `826B` |
+| `3` | `3019` | `826D` | `8274` |
+| `3` | `3020` | `8276` | `8278` |
+| `3` | `3021` | `827A` | `827A` |
+| `3` | `3022` | `827C` | `827F` |
+| `3` | `3023` | `8282` | `8284` |
+| `3` | `3024` | `8288` | `8288` |
+| `3` | `3025` | `828A` | `828B` |
+| `3` | `3026` | `828D` | `8292` |
+| `3` | `3027` | `8296` | `8299` |
+| `3` | `3028` | `829C` | `829D` |
+| `3` | `3029` | `829F` | `829F` |
+| `3` | `3030` | `82A1` | `82A1` |
+| `3` | `3031` | `82A4` | `82A6` |
+| `3` | `3032` | `82A8` | `82B1` |
+| `3` | `3033` | `82B3` | `82B5` |
+| `3` | `3034` | `82B7` | `82B9` |
+| `3` | `3035` | `82BB` | `82BE` |
+| `3` | `3036` | `82C1` | `82C1` |
+| `3` | `3037` | `82C3` | `82C5` |
+| `3` | `3038` | `82C7` | `82C8` |
+| `3` | `3039` | `82CA` | `82CF` |
+| `3` | `3040` | `82D1` | `82D5` |
+| `3` | `3041` | `82D7` | `82D9` |
+| `3` | `3042` | `82DB` | `82DC` |
+| `3` | `3043` | `82DE` | `82E1` |
+| `3` | `3044` | `82E3` | `82E7` |
+| `3` | `3045` | `82EB` | `82EB` |
+| `3` | `3046` | `82EF` | `82EF` |
+| `3` | `3047` | `82F1` | `82F2` |
+| `3` | `3048` | `82F4` | `82F4` |
+| `3` | `3049` | `82F6` | `82F7` |
+| `3` | `3050` | `82F9` | `82F9` |
+| `3` | `3051` | `82FB` | `830A` |
+| `3` | `3052` | `830C` | `8311` |
+| `3` | `3053` | `8314` | `8317` |
+| `3` | `3054` | `831A` | `831E` |
+| `3` | `3055` | `8322` | `8323` |
+| `3` | `3056` | `8327` | `8328` |
+| `3` | `3057` | `832B` | `832D` |
+| `3` | `3058` | `832F` | `832F` |
+| `3` | `3059` | `8331` | `8332` |
+| `3` | `3060` | `8334` | `833D` |
+| `3` | `3061` | `833F` | `8340` |
+| `3` | `3062` | `8343` | `834A` |
+| `3` | `3063` | `834F` | `8352` |
+| `3` | `3064` | `8354` | `8354` |
+| `3` | `3065` | `8356` | `8356` |
+| `3` | `3066` | `8358` | `835C` |
+| `3` | `3067` | `835E` | `836F` |
+| `3` | `3068` | `8373` | `8373` |
+| `3` | `3069` | `8377` | `8378` |
+| `3` | `3070` | `837B` | `837D` |
+| `3` | `3071` | `8381` | `8382` |
+| `3` | `3072` | `8385` | `8386` |
+| `3` | `3073` | `8389` | `838A` |
+| `3` | `3074` | `838E` | `838E` |
+| `3` | `3075` | `8392` | `8393` |
+| `3` | `3076` | `8395` | `8396` |
+| `3` | `3077` | `8398` | `839C` |
+| `3` | `3078` | `839E` | `839E` |
+| `3` | `3079` | `83A0` | `83A0` |
+| `3` | `3080` | `83A2` | `83A2` |
+| `3` | `3081` | `83A4` | `83A4` |
+| `3` | `3082` | `83A7` | `83AB` |
+| `3` | `3083` | `83B1` | `83C7` |
+| `3` | `3084` | `83C9` | `83CA` |
+| `3` | `3085` | `83CC` | `83CD` |
+| `3` | `3086` | `83CF` | `83D6` |
+| `3` | `3087` | `83D8` | `83DA` |
+| `3` | `3088` | `83DC` | `83E3` |
+| `3` | `3089` | `83E5` | `83ED` |
+| `3` | `3090` | `83EF` | `83F5` |
+| `3` | `3091` | `83F8` | `83F9` |
+| `3` | `3092` | `83FD` | `83FD` |
+| `3` | `3093` | `8401` | `8401` |
+| `3` | `3094` | `8403` | `8404` |
+| `3` | `3095` | `8406` | `8408` |
+| `3` | `3096` | `840A` | `840F` |
+| `3` | `3097` | `8411` | `8411` |
+| `3` | `3098` | `8417` | `8418` |
+| `3` | `3099` | `841A` | `841A` |
+
+#### Package range associations 3101 through 3200
+
+Section ID: `ownkb:section:d000246:s000065`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3100` | `841C` | `841D` |
+| `3` | `3101` | `8422` | `8422` |
+| `3` | `3102` | `8424` | `8429` |
+| `3` | `3103` | `842C` | `842C` |
+| `3` | `3104` | `8431` | `8431` |
+| `3` | `3105` | `8435` | `8435` |
+| `3` | `3106` | `8438` | `8438` |
+| `3` | `3107` | `843C` | `843D` |
+| `3` | `3108` | `8446` | `8447` |
+| `3` | `3109` | `8449` | `8449` |
+| `3` | `3110` | `844B` | `844F` |
+| `3` | `3111` | `8451` | `8452` |
+| `3` | `3112` | `8454` | `8454` |
+| `3` | `3113` | `8456` | `845C` |
+| `3` | `3114` | `845E` | `8463` |
+| `3` | `3115` | `8466` | `8466` |
+| `3` | `3116` | `8468` | `8469` |
+| `3` | `3117` | `846B` | `847B` |
+| `3` | `3118` | `847E` | `847E` |
+| `3` | `3119` | `8481` | `8484` |
+| `3` | `3120` | `8487` | `8489` |
+| `3` | `3121` | `848B` | `848C` |
+| `3` | `3122` | `8490` | `8491` |
+| `3` | `3123` | `8494` | `8495` |
+| `3` | `3124` | `8497` | `8499` |
+| `3` | `3125` | `849C` | `849C` |
+| `3` | `3126` | `849E` | `849F` |
+| `3` | `3127` | `84A1` | `84A1` |
+| `3` | `3128` | `84A7` | `84A8` |
+| `3` | `3129` | `84AA` | `84AA` |
+| `3` | `3130` | `84AD` | `84AD` |
+| `3` | `3131` | `84AF` | `84AF` |
+| `3` | `3132` | `84B2` | `84B2` |
+| `3` | `3133` | `84B4` | `84B4` |
+| `3` | `3134` | `84B7` | `84C4` |
+| `3` | `3135` | `84C6` | `84C7` |
+| `3` | `3136` | `84C9` | `84CB` |
+| `3` | `3137` | `84CD` | `84CD` |
+| `3` | `3138` | `84CF` | `84D1` |
+| `3` | `3139` | `84D3` | `84D7` |
+| `3` | `3140` | `84D9` | `84DB` |
+| `3` | `3141` | `84DD` | `84E1` |
+| `3` | `3142` | `84E3` | `84E3` |
+| `3` | `3143` | `84E5` | `84E8` |
+| `3` | `3144` | `84EC` | `84EC` |
+| `3` | `3145` | `84EE` | `84F1` |
+| `3` | `3146` | `84F3` | `84F5` |
+| `3` | `3147` | `84F7` | `84F8` |
+| `3` | `3148` | `84FA` | `84FA` |
+| `3` | `3149` | `84FC` | `8502` |
+| `3` | `3150` | `8504` | `8504` |
+| `3` | `3151` | `850A` | `850A` |
+| `3` | `3152` | `850C` | `850C` |
+| `3` | `3153` | `850E` | `850E` |
+| `3` | `3154` | `8511` | `8511` |
+| `3` | `3155` | `8513` | `8514` |
+| `3` | `3156` | `8517` | `851A` |
+| `3` | `3157` | `851E` | `851F` |
+| `3` | `3158` | `8521` | `8521` |
+| `3` | `3159` | `8523` | `8523` |
+| `3` | `3160` | `8525` | `8526` |
+| `3` | `3161` | `852B` | `852D` |
+| `3` | `3162` | `852F` | `852F` |
+| `3` | `3163` | `8531` | `8532` |
+| `3` | `3164` | `8534` | `8534` |
+| `3` | `3165` | `8537` | `8538` |
+| `3` | `3166` | `853A` | `853D` |
+| `3` | `3167` | `853F` | `853F` |
+| `3` | `3168` | `8541` | `8543` |
+| `3` | `3169` | `8545` | `8546` |
+| `3` | `3170` | `8548` | `854C` |
+| `3` | `3171` | `854E` | `854E` |
+| `3` | `3172` | `8552` | `8552` |
+| `3` | `3173` | `8555` | `855F` |
+| `3` | `3174` | `8561` | `8564` |
+| `3` | `3175` | `8566` | `8568` |
+| `3` | `3176` | `856A` | `856A` |
+| `3` | `3177` | `856D` | `856D` |
+| `3` | `3178` | `8570` | `8570` |
+| `3` | `3179` | `8572` | `8575` |
+| `3` | `3180` | `8577` | `8577` |
+| `3` | `3181` | `8579` | `857C` |
+| `3` | `3182` | `857E` | `8580` |
+| `3` | `3183` | `8582` | `8588` |
+| `3` | `3184` | `858A` | `858C` |
+| `3` | `3185` | `858F` | `8591` |
+| `3` | `3186` | `8594` | `8594` |
+| `3` | `3187` | `8596` | `8597` |
+| `3` | `3188` | `8599` | `8599` |
+| `3` | `3189` | `859B` | `859D` |
+| `3` | `3190` | `859F` | `85A0` |
+| `3` | `3191` | `85A2` | `85A2` |
+| `3` | `3192` | `85A4` | `85A4` |
+| `3` | `3193` | `85A6` | `85A6` |
+| `3` | `3194` | `85A8` | `85AA` |
+| `3` | `3195` | `85AD` | `85B0` |
+| `3` | `3196` | `85B3` | `85B3` |
+| `3` | `3197` | `85B7` | `85B7` |
+| `3` | `3198` | `85B9` | `85BA` |
+| `3` | `3199` | `85BE` | `85C1` |
+
+#### Package range associations 3201 through 3300
+
+Section ID: `ownkb:section:d000246:s000066`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3200` | `85C7` | `85C7` |
+| `3` | `3201` | `85C9` | `85C9` |
+| `3` | `3202` | `85CD` | `85D1` |
+| `3` | `3203` | `85D3` | `85D3` |
+| `3` | `3204` | `85D5` | `85DE` |
+| `3` | `3205` | `85E0` | `85E0` |
+| `3` | `3206` | `85E2` | `85F0` |
+| `3` | `3207` | `85F3` | `85F7` |
+| `3` | `3208` | `85F9` | `85FB` |
+| `3` | `3209` | `85FF` | `85FF` |
+| `3` | `3210` | `8601` | `8602` |
+| `3` | `3211` | `8604` | `8607` |
+| `3` | `3212` | `860A` | `860C` |
+| `3` | `3213` | `8611` | `8611` |
+| `3` | `3214` | `8613` | `8614` |
+| `3` | `3215` | `8616` | `8618` |
+| `3` | `3216` | `861A` | `861A` |
+| `3` | `3217` | `8622` | `8622` |
+| `3` | `3218` | `8627` | `8627` |
+| `3` | `3219` | `8629` | `862A` |
+| `3` | `3220` | `862D` | `862D` |
+| `3` | `3221` | `8638` | `8638` |
+| `3` | `3222` | `863A` | `863A` |
+| `3` | `3223` | `863C` | `863C` |
+| `3` | `3224` | `863F` | `8640` |
+| `3` | `3225` | `8643` | `8643` |
+| `3` | `3226` | `8648` | `8648` |
+| `3` | `3227` | `864B` | `864B` |
+| `3` | `3228` | `864E` | `8652` |
+| `3` | `3229` | `8654` | `865F` |
+| `3` | `3230` | `8661` | `8662` |
+| `3` | `3231` | `8667` | `8667` |
+| `3` | `3232` | `866B` | `866C` |
+| `3` | `3233` | `866E` | `8672` |
+| `3` | `3234` | `8675` | `8675` |
+| `3` | `3235` | `8679` | `8682` |
+| `3` | `3236` | `8688` | `8688` |
+| `3` | `3237` | `868A` | `868D` |
+| `3` | `3238` | `8691` | `8693` |
+| `3` | `3239` | `8695` | `8696` |
+| `3` | `3240` | `8698` | `8698` |
+| `3` | `3241` | `869C` | `869D` |
+| `3` | `3242` | `86A1` | `86A4` |
+| `3` | `3243` | `86A7` | `86AA` |
+| `3` | `3244` | `86AC` | `86AC` |
+| `3` | `3245` | `86AF` | `86B1` |
+| `3` | `3246` | `86B4` | `86B6` |
+| `3` | `3247` | `86BA` | `86BA` |
+| `3` | `3248` | `86BE` | `86C0` |
+| `3` | `3249` | `86C4` | `86C4` |
+| `3` | `3250` | `86C6` | `86C7` |
+| `3` | `3251` | `86C9` | `86CB` |
+| `3` | `3252` | `86CE` | `86D1` |
+| `3` | `3253` | `86D4` | `86D4` |
+| `3` | `3254` | `86D6` | `86D6` |
+| `3` | `3255` | `86D8` | `86DC` |
+| `3` | `3256` | `86DE` | `86DF` |
+| `3` | `3257` | `86E1` | `86E5` |
+| `3` | `3258` | `86E9` | `86E9` |
+| `3` | `3259` | `86EC` | `86F4` |
+| `3` | `3260` | `86F6` | `86FB` |
+| `3` | `3261` | `86FE` | `86FE` |
+| `3` | `3262` | `8700` | `8703` |
+| `3` | `3263` | `8706` | `870A` |
+| `3` | `3264` | `870C` | `8715` |
+| `3` | `3265` | `8717` | `8718` |
+| `3` | `3266` | `871A` | `871A` |
+| `3` | `3267` | `871C` | `871C` |
+| `3` | `3268` | `871E` | `871E` |
+| `3` | `3269` | `8720` | `8723` |
+| `3` | `3270` | `8725` | `8725` |
+| `3` | `3271` | `8728` | `872B` |
+| `3` | `3272` | `872E` | `872E` |
+| `3` | `3273` | `8731` | `8731` |
+| `3` | `3274` | `8734` | `8734` |
+| `3` | `3275` | `8737` | `8738` |
+| `3` | `3276` | `873A` | `8740` |
+| `3` | `3277` | `8744` | `8744` |
+| `3` | `3278` | `8747` | `8749` |
+| `3` | `3279` | `874C` | `874E` |
+| `3` | `3280` | `8751` | `8751` |
+| `3` | `3281` | `8753` | `8753` |
+| `3` | `3282` | `8755` | `8755` |
+| `3` | `3283` | `8757` | `8759` |
+| `3` | `3284` | `875D` | `875D` |
+| `3` | `3285` | `875F` | `8760` |
+| `3` | `3286` | `8763` | `8766` |
+| `3` | `3287` | `8768` | `8768` |
+| `3` | `3288` | `876E` | `876E` |
+| `3` | `3289` | `8770` | `8770` |
+| `3` | `3290` | `8774` | `8774` |
+| `3` | `3291` | `8776` | `8776` |
+| `3` | `3292` | `8778` | `8785` |
+| `3` | `3293` | `8788` | `8788` |
+| `3` | `3294` | `878B` | `878B` |
+| `3` | `3295` | `878D` | `878D` |
+| `3` | `3296` | `8790` | `8791` |
+| `3` | `3297` | `8793` | `8793` |
+| `3` | `3298` | `8795` | `8798` |
+| `3` | `3299` | `879A` | `879A` |
+
+#### Package range associations 3301 through 3400
+
+Section ID: `ownkb:section:d000246:s000067`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3300` | `879D` | `87A8` |
+| `3` | `3301` | `87AB` | `87AD` |
+| `3` | `3302` | `87AF` | `87AF` |
+| `3` | `3303` | `87B3` | `87B3` |
+| `3` | `3304` | `87B5` | `87B5` |
+| `3` | `3305` | `87BA` | `87BB` |
+| `3` | `3306` | `87BD` | `87BD` |
+| `3` | `3307` | `87C0` | `87C0` |
+| `3` | `3308` | `87C2` | `87C2` |
+| `3` | `3309` | `87C4` | `87C6` |
+| `3` | `3310` | `87C8` | `87C8` |
+| `3` | `3311` | `87CA` | `87CB` |
+| `3` | `3312` | `87D1` | `87D3` |
+| `3` | `3313` | `87DB` | `87DC` |
+| `3` | `3314` | `87E0` | `87E0` |
+| `3` | `3315` | `87E2` | `87E2` |
+| `3` | `3316` | `87E5` | `87E5` |
+| `3` | `3317` | `87E7` | `87E8` |
+| `3` | `3318` | `87EA` | `87EF` |
+| `3` | `3319` | `87F2` | `87F3` |
+| `3` | `3320` | `87F6` | `87F6` |
+| `3` | `3321` | `87F9` | `87F9` |
+| `3` | `3322` | `87FB` | `87FC` |
+| `3` | `3323` | `87FE` | `87FF` |
+| `3` | `3324` | `8803` | `8806` |
+| `3` | `3325` | `8808` | `8808` |
+| `3` | `3326` | `880A` | `8817` |
+| `3` | `3327` | `8819` | `881D` |
+| `3` | `3328` | `881F` | `881F` |
+| `3` | `3329` | `8821` | `8823` |
+| `3` | `3330` | `8825` | `8825` |
+| `3` | `3331` | `8829` | `882A` |
+| `3` | `3332` | `882D` | `882D` |
+| `3` | `3333` | `8831` | `8832` |
+| `3` | `3334` | `8836` | `8837` |
+| `3` | `3335` | `8839` | `8839` |
+| `3` | `3336` | `883B` | `883C` |
+| `3` | `3337` | `883E` | `883E` |
+| `3` | `3338` | `8840` | `8840` |
+| `3` | `3339` | `8842` | `8842` |
+| `3` | `3340` | `8844` | `8845` |
+| `3` | `3341` | `884B` | `884D` |
+| `3` | `3342` | `8852` | `8859` |
+| `3` | `3343` | `885B` | `885B` |
+| `3` | `3344` | `885D` | `885D` |
+| `3` | `3345` | `885F` | `885F` |
+| `3` | `3346` | `8861` | `8863` |
+| `3` | `3347` | `8865` | `8865` |
+| `3` | `3348` | `8868` | `8869` |
+| `3` | `3349` | `886B` | `886C` |
+| `3` | `3350` | `886E` | `886E` |
+| `3` | `3351` | `8870` | `8870` |
+| `3` | `3352` | `8872` | `8872` |
+| `3` | `3353` | `8877` | `8879` |
+| `3` | `3354` | `887C` | `888D` |
+| `3` | `3355` | `8890` | `8898` |
+| `3` | `3356` | `889A` | `88A0` |
+| `3` | `3357` | `88A2` | `88AD` |
+| `3` | `3358` | `88B1` | `88B1` |
+| `3` | `3359` | `88B4` | `88B5` |
+| `3` | `3360` | `88B7` | `88B7` |
+| `3` | `3361` | `88BC` | `88BD` |
+| `3` | `3362` | `88BF` | `88C2` |
+| `3` | `3363` | `88C5` | `88C6` |
+| `3` | `3364` | `88C8` | `88CB` |
+| `3` | `3365` | `88CE` | `88CF` |
+| `3` | `3366` | `88D2` | `88D5` |
+| `3` | `3367` | `88D8` | `88D9` |
+| `3` | `3368` | `88DB` | `88DD` |
+| `3` | `3369` | `88DF` | `88DF` |
+| `3` | `3370` | `88E1` | `88E5` |
+| `3` | `3371` | `88E8` | `88E9` |
+| `3` | `3372` | `88EF` | `88F4` |
+| `3` | `3373` | `88F6` | `88F6` |
+| `3` | `3374` | `88F8` | `88FA` |
+| `3` | `3375` | `88FC` | `88FE` |
+| `3` | `3376` | `8902` | `8902` |
+| `3` | `3377` | `8907` | `8907` |
+| `3` | `3378` | `890A` | `890C` |
+| `3` | `3379` | `890E` | `8914` |
+| `3` | `3380` | `8919` | `891C` |
+| `3` | `3381` | `8920` | `8921` |
+| `3` | `3382` | `8923` | `8923` |
+| `3` | `3383` | `8925` | `8928` |
+| `3` | `3384` | `892A` | `892B` |
+| `3` | `3385` | `892F` | `8936` |
+| `3` | `3386` | `8938` | `8939` |
+| `3` | `3387` | `893B` | `893B` |
+| `3` | `3388` | `8941` | `8941` |
+| `3` | `3389` | `8944` | `8944` |
+| `3` | `3390` | `8946` | `8946` |
+| `3` | `3391` | `8949` | `8949` |
+| `3` | `3392` | `894C` | `894D` |
+| `3` | `3393` | `8955` | `8956` |
+| `3` | `3394` | `8958` | `8958` |
+| `3` | `3395` | `895B` | `895B` |
+| `3` | `3396` | `895D` | `8960` |
+| `3` | `3397` | `8962` | `8962` |
+| `3` | `3398` | `8964` | `8964` |
+| `3` | `3399` | `8966` | `8966` |
+
+#### Package range associations 3401 through 3500
+
+Section ID: `ownkb:section:d000246:s000068`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3400` | `896A` | `896C` |
+| `3` | `3401` | `896F` | `896F` |
+| `3` | `3402` | `8971` | `8972` |
+| `3` | `3403` | `8976` | `8976` |
+| `3` | `3404` | `897B` | `897B` |
+| `3` | `3405` | `897D` | `897F` |
+| `3` | `3406` | `8981` | `8983` |
+| `3` | `3407` | `8985` | `8988` |
+| `3` | `3408` | `898A` | `898B` |
+| `3` | `3409` | `898D` | `898D` |
+| `3` | `3410` | `898F` | `8990` |
+| `3` | `3411` | `8993` | `8993` |
+| `3` | `3412` | `8996` | `899B` |
+| `3` | `3413` | `899F` | `89A1` |
+| `3` | `3414` | `89A5` | `89A6` |
+| `3` | `3415` | `89A9` | `89AA` |
+| `3` | `3416` | `89AC` | `89AC` |
+| `3` | `3417` | `89AF` | `89AF` |
+| `3` | `3418` | `89B2` | `89B2` |
+| `3` | `3419` | `89B5` | `89B5` |
+| `3` | `3420` | `89B7` | `89B7` |
+| `3` | `3421` | `89BA` | `89BA` |
+| `3` | `3422` | `89BD` | `89BD` |
+| `3` | `3423` | `89BF` | `89C2` |
+| `3` | `3424` | `89C4` | `89D4` |
+| `3` | `3425` | `89D6` | `89D6` |
+| `3` | `3426` | `89DA` | `89DA` |
+| `3` | `3427` | `89DC` | `89DE` |
+| `3` | `3428` | `89E3` | `89E3` |
+| `3` | `3429` | `89E5` | `89E6` |
+| `3` | `3430` | `89EB` | `89EB` |
+| `3` | `3431` | `89ED` | `89ED` |
+| `3` | `3432` | `89EF` | `89EF` |
+| `3` | `3433` | `89F1` | `89F1` |
+| `3` | `3434` | `89F3` | `89F4` |
+| `3` | `3435` | `89F6` | `89F6` |
+| `3` | `3436` | `89F8` | `89F8` |
+| `3` | `3437` | `89FC` | `89FD` |
+| `3` | `3438` | `89FF` | `8A00` |
+| `3` | `3439` | `8A02` | `8A0C` |
+| `3` | `3440` | `8A0E` | `8A1F` |
+| `3` | `3441` | `8A21` | `8A23` |
+| `3` | `3442` | `8A25` | `8A25` |
+| `3` | `3443` | `8A2A` | `8A2A` |
+| `3` | `3444` | `8A2D` | `8A2E` |
+| `3` | `3445` | `8A31` | `8A31` |
+| `3` | `3446` | `8A34` | `8A34` |
+| `3` | `3447` | `8A36` | `8A36` |
+| `3` | `3448` | `8A39` | `8A3E` |
+| `3` | `3449` | `8A40` | `8A41` |
+| `3` | `3450` | `8A44` | `8A48` |
+| `3` | `3451` | `8A4E` | `8A4E` |
+| `3` | `3452` | `8A50` | `8A50` |
+| `3` | `3453` | `8A52` | `8A52` |
+| `3` | `3454` | `8A55` | `8A58` |
+| `3` | `3455` | `8A5B` | `8A5B` |
+| `3` | `3456` | `8A5D` | `8A73` |
+| `3` | `3457` | `8A75` | `8A75` |
+| `3` | `3458` | `8A77` | `8A7C` |
+| `3` | `3459` | `8A7E` | `8A7F` |
+| `3` | `3460` | `8A84` | `8A87` |
+| `3` | `3461` | `8A89` | `8A8A` |
+| `3` | `3462` | `8A8C` | `8A8D` |
+| `3` | `3463` | `8A91` | `8A93` |
+| `3` | `3464` | `8A95` | `8A96` |
+| `3` | `3465` | `8A98` | `8A98` |
+| `3` | `3466` | `8A9A` | `8A9A` |
+| `3` | `3467` | `8A9E` | `8A9E` |
+| `3` | `3468` | `8AA0` | `8AA1` |
+| `3` | `3469` | `8AA3` | `8AA6` |
+| `3` | `3470` | `8AA8` | `8AA8` |
+| `3` | `3471` | `8AAA` | `8AAA` |
+| `3` | `3472` | `8AAC` | `8AAC` |
+| `3` | `3473` | `8AB0` | `8AB0` |
+| `3` | `3474` | `8AB2` | `8AB4` |
+| `3` | `3475` | `8AB6` | `8AB6` |
+| `3` | `3476` | `8AB9` | `8AB9` |
+| `3` | `3477` | `8ABB` | `8ABF` |
+| `3` | `3478` | `8AC2` | `8AC2` |
+| `3` | `3479` | `8AC4` | `8AC4` |
+| `3` | `3480` | `8AC6` | `8AC9` |
+| `3` | `3481` | `8ACB` | `8ACB` |
+| `3` | `3482` | `8ACD` | `8ACD` |
+| `3` | `3483` | `8ACF` | `8ACF` |
+| `3` | `3484` | `8AD1` | `8AD3` |
+| `3` | `3485` | `8AD6` | `8AD8` |
+| `3` | `3486` | `8ADB` | `8ADE` |
+| `3` | `3487` | `8AE0` | `8AE2` |
+| `3` | `3488` | `8AE4` | `8AE7` |
+| `3` | `3489` | `8AEB` | `8AEB` |
+| `3` | `3490` | `8AED` | `8AEE` |
+| `3` | `3491` | `8AF1` | `8AF1` |
+| `3` | `3492` | `8AF3` | `8AF3` |
+| `3` | `3493` | `8AF6` | `8AFA` |
+| `3` | `3494` | `8AFC` | `8AFC` |
+| `3` | `3495` | `8AFE` | `8AFE` |
+| `3` | `3496` | `8B00` | `8B02` |
+| `3` | `3497` | `8B04` | `8B05` |
+| `3` | `3498` | `8B07` | `8B07` |
+| `3` | `3499` | `8B0A` | `8B0A` |
+
+#### Package range associations 3501 through 3600
+
+Section ID: `ownkb:section:d000246:s000069`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3500` | `8B0E` | `8B10` |
+| `3` | `3501` | `8B14` | `8B14` |
+| `3` | `3502` | `8B16` | `8B17` |
+| `3` | `3503` | `8B19` | `8B1B` |
+| `3` | `3504` | `8B1D` | `8B1D` |
+| `3` | `3505` | `8B1F` | `8B21` |
+| `3` | `3506` | `8B25` | `8B2C` |
+| `3` | `3507` | `8B31` | `8B31` |
+| `3` | `3508` | `8B33` | `8B34` |
+| `3` | `3509` | `8B38` | `8B3A` |
+| `3` | `3510` | `8B3D` | `8B3F` |
+| `3` | `3511` | `8B41` | `8B41` |
+| `3` | `3512` | `8B43` | `8B45` |
+| `3` | `3513` | `8B49` | `8B49` |
+| `3` | `3514` | `8B4C` | `8B4C` |
+| `3` | `3515` | `8B4E` | `8B4F` |
+| `3` | `3516` | `8B53` | `8B54` |
+| `3` | `3517` | `8B56` | `8B5A` |
+| `3` | `3518` | `8B5C` | `8B5C` |
+| `3` | `3519` | `8B5E` | `8B5F` |
+| `3` | `3520` | `8B62` | `8B62` |
+| `3` | `3521` | `8B66` | `8B66` |
+| `3` | `3522` | `8B6B` | `8B6C` |
+| `3` | `3523` | `8B6F` | `8B70` |
+| `3` | `3524` | `8B74` | `8B74` |
+| `3` | `3525` | `8B77` | `8B78` |
+| `3` | `3526` | `8B7B` | `8B7B` |
+| `3` | `3527` | `8B7D` | `8B7E` |
+| `3` | `3528` | `8B80` | `8B80` |
+| `3` | `3529` | `8B88` | `8B8A` |
+| `3` | `3530` | `8B8C` | `8B8F` |
+| `3` | `3531` | `8B92` | `8B93` |
+| `3` | `3532` | `8B95` | `8B96` |
+| `3` | `3533` | `8B99` | `8B9F` |
+| `3` | `3534` | `8BA1` | `8BBA` |
+| `3` | `3535` | `8BBC` | `8C37` |
+| `3` | `3536` | `8C3B` | `8C3D` |
+| `3` | `3537` | `8C3F` | `8C42` |
+| `3` | `3538` | `8C46` | `8C4A` |
+| `3` | `3539` | `8C4C` | `8C4C` |
+| `3` | `3540` | `8C4E` | `8C4E` |
+| `3` | `3541` | `8C50` | `8C50` |
+| `3` | `3542` | `8C55` | `8C55` |
+| `3` | `3543` | `8C57` | `8C57` |
+| `3` | `3544` | `8C5A` | `8C5A` |
+| `3` | `3545` | `8C60` | `8C62` |
+| `3` | `3546` | `8C67` | `8C68` |
+| `3` | `3547` | `8C6A` | `8C6D` |
+| `3` | `3548` | `8C70` | `8C70` |
+| `3` | `3549` | `8C73` | `8C73` |
+| `3` | `3550` | `8C77` | `8C77` |
+| `3` | `3551` | `8C79` | `8C7A` |
+| `3` | `3552` | `8C82` | `8C82` |
+| `3` | `3553` | `8C85` | `8C85` |
+| `3` | `3554` | `8C89` | `8C94` |
+| `3` | `3555` | `8C97` | `8C99` |
+| `3` | `3556` | `8C9B` | `8C9B` |
+| `3` | `3557` | `8C9D` | `8C9E` |
+| `3` | `3558` | `8CA0` | `8CA4` |
+| `3` | `3559` | `8CA6` | `8CAC` |
+| `3` | `3560` | `8CAE` | `8CB0` |
+| `3` | `3561` | `8CB2` | `8CB4` |
+| `3` | `3562` | `8CB6` | `8CB8` |
+| `3` | `3563` | `8CBA` | `8CBD` |
+| `3` | `3564` | `8CBF` | `8CC5` |
+| `3` | `3565` | `8CC7` | `8CC8` |
+| `3` | `3566` | `8CCA` | `8CCA` |
+| `3` | `3567` | `8CD1` | `8CD3` |
+| `3` | `3568` | `8CD5` | `8CD5` |
+| `3` | `3569` | `8CDA` | `8CDA` |
+| `3` | `3570` | `8CDC` | `8CDC` |
+| `3` | `3571` | `8CDE` | `8CDE` |
+| `3` | `3572` | `8CE0` | `8CE3` |
+| `3` | `3573` | `8CE6` | `8CE8` |
+| `3` | `3574` | `8CEA` | `8CEA` |
+| `3` | `3575` | `8CEC` | `8CF4` |
+| `3` | `3576` | `8CF7` | `8CFE` |
+| `3` | `3577` | `8D00` | `8D02` |
+| `3` | `3578` | `8D04` | `8D0D` |
+| `3` | `3579` | `8D0F` | `8D10` |
+| `3` | `3580` | `8D13` | `8D13` |
+| `3` | `3581` | `8D16` | `8D17` |
+| `3` | `3582` | `8D1B` | `8D1B` |
+| `3` | `3583` | `8D1D` | `8D64` |
+| `3` | `3584` | `8D66` | `8D67` |
+| `3` | `3585` | `8D6A` | `8D6B` |
+| `3` | `3586` | `8D6D` | `8D6D` |
+| `3` | `3587` | `8D70` | `8D70` |
+| `3` | `3588` | `8D72` | `8D77` |
+| `3` | `3589` | `8D79` | `8D79` |
+| `3` | `3590` | `8D7D` | `8D7D` |
+| `3` | `3591` | `8D81` | `8D81` |
+| `3` | `3592` | `8D84` | `8D85` |
+| `3` | `3593` | `8D8A` | `8D8C` |
+| `3` | `3594` | `8D91` | `8D91` |
+| `3` | `3595` | `8D94` | `8D95` |
+| `3` | `3596` | `8D99` | `8D99` |
+| `3` | `3597` | `8D9D` | `8D9D` |
+| `3` | `3598` | `8D9F` | `8D9F` |
+| `3` | `3599` | `8DA1` | `8DA1` |
+
+#### Package range associations 3601 through 3700
+
+Section ID: `ownkb:section:d000246:s000070`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3600` | `8DA3` | `8DAA` |
+| `3` | `3601` | `8DAC` | `8DAC` |
+| `3` | `3602` | `8DAE` | `8DBA` |
+| `3` | `3603` | `8DBC` | `8DBF` |
+| `3` | `3604` | `8DC1` | `8DC6` |
+| `3` | `3605` | `8DC8` | `8DD4` |
+| `3` | `3606` | `8DD6` | `8DD8` |
+| `3` | `3607` | `8DDA` | `8DDB` |
+| `3` | `3608` | `8DDD` | `8DDF` |
+| `3` | `3609` | `8DE1` | `8DE1` |
+| `3` | `3610` | `8DE3` | `8DE4` |
+| `3` | `3611` | `8DE8` | `8DE8` |
+| `3` | `3612` | `8DEA` | `8DEC` |
+| `3` | `3613` | `8DEF` | `8DF1` |
+| `3` | `3614` | `8DF3` | `8DF3` |
+| `3` | `3615` | `8DF5` | `8DFE` |
+| `3` | `3616` | `8E00` | `8E00` |
+| `3` | `3617` | `8E03` | `8E06` |
+| `3` | `3618` | `8E09` | `8E0A` |
+| `3` | `3619` | `8E0C` | `8E0C` |
+| `3` | `3620` | `8E0F` | `8E10` |
+| `3` | `3621` | `8E14` | `8E14` |
+| `3` | `3622` | `8E16` | `8E16` |
+| `3` | `3623` | `8E18` | `8E18` |
+| `3` | `3624` | `8E1D` | `8E1F` |
+| `3` | `3625` | `8E21` | `8E23` |
+| `3` | `3626` | `8E25` | `8E2C` |
+| `3` | `3627` | `8E2E` | `8E31` |
+| `3` | `3628` | `8E34` | `8E35` |
+| `3` | `3629` | `8E38` | `8E3A` |
+| `3` | `3630` | `8E3D` | `8E3D` |
+| `3` | `3631` | `8E40` | `8E42` |
+| `3` | `3632` | `8E44` | `8E4C` |
+| `3` | `3633` | `8E4E` | `8E4E` |
+| `3` | `3634` | `8E50` | `8E56` |
+| `3` | `3635` | `8E59` | `8E5A` |
+| `3` | `3636` | `8E5E` | `8E61` |
+| `3` | `3637` | `8E63` | `8E64` |
+| `3` | `3638` | `8E66` | `8E69` |
+| `3` | `3639` | `8E6C` | `8E6D` |
+| `3` | `3640` | `8E6F` | `8E74` |
+| `3` | `3641` | `8E76` | `8E77` |
+| `3` | `3642` | `8E79` | `8E7F` |
+| `3` | `3643` | `8E81` | `8E81` |
+| `3` | `3644` | `8E84` | `8E85` |
+| `3` | `3645` | `8E87` | `8E87` |
+| `3` | `3646` | `8E89` | `8E8B` |
+| `3` | `3647` | `8E8D` | `8E8D` |
+| `3` | `3648` | `8E8F` | `8E95` |
+| `3` | `3649` | `8E98` | `8E98` |
+| `3` | `3650` | `8E9A` | `8E9C` |
+| `3` | `3651` | `8E9E` | `8E9E` |
+| `3` | `3652` | `8EA1` | `8EA1` |
+| `3` | `3653` | `8EA5` | `8EA6` |
+| `3` | `3654` | `8EA9` | `8EAD` |
+| `3` | `3655` | `8EAF` | `8EAF` |
+| `3` | `3656` | `8EB1` | `8EB2` |
+| `3` | `3657` | `8EB6` | `8EB6` |
+| `3` | `3658` | `8EBA` | `8EBC` |
+| `3` | `3659` | `8EBF` | `8EC0` |
+| `3` | `3660` | `8EC3` | `8EC3` |
+| `3` | `3661` | `8EC5` | `8ED0` |
+| `3` | `3662` | `8ED2` | `8ED4` |
+| `3` | `3663` | `8ED8` | `8ED9` |
+| `3` | `3664` | `8EDB` | `8EDB` |
+| `3` | `3665` | `8EDF` | `8EE3` |
+| `3` | `3666` | `8EE7` | `8EE7` |
+| `3` | `3667` | `8EEB` | `8EEC` |
+| `3` | `3668` | `8EF7` | `8EFC` |
+| `3` | `3669` | `8EFE` | `8F00` |
+| `3` | `3670` | `8F02` | `8F03` |
+| `3` | `3671` | `8F05` | `8F05` |
+| `3` | `3672` | `8F07` | `8F0B` |
+| `3` | `3673` | `8F10` | `8F10` |
+| `3` | `3674` | `8F12` | `8F18` |
+| `3` | `3675` | `8F1B` | `8F1F` |
+| `3` | `3676` | `8F25` | `8F2A` |
+| `3` | `3677` | `8F2F` | `8F30` |
+| `3` | `3678` | `8F33` | `8F36` |
+| `3` | `3679` | `8F38` | `8F38` |
+| `3` | `3680` | `8F3B` | `8F3B` |
+| `3` | `3681` | `8F3D` | `8F3F` |
+| `3` | `3682` | `8F42` | `8F42` |
+| `3` | `3683` | `8F44` | `8F47` |
+| `3` | `3684` | `8F49` | `8F49` |
+| `3` | `3685` | `8F4B` | `8F4B` |
+| `3` | `3686` | `8F4D` | `8F4E` |
+| `3` | `3687` | `8F53` | `8F55` |
+| `3` | `3688` | `8F57` | `8F58` |
+| `3` | `3689` | `8F5D` | `8F5D` |
+| `3` | `3690` | `8F5F` | `8F5F` |
+| `3` | `3691` | `8F61` | `8F62` |
+| `3` | `3692` | `8F64` | `8F9C` |
+| `3` | `3693` | `8F9E` | `8F9F` |
+| `3` | `3694` | `8FA2` | `8FA3` |
+| `3` | `3695` | `8FA6` | `8FA6` |
+| `3` | `3696` | `8FA8` | `8FA9` |
+| `3` | `3697` | `8FAB` | `8FAB` |
+| `3` | `3698` | `8FAD` | `8FB2` |
+| `3` | `3699` | `8FB5` | `8FB5` |
+
+#### Package range associations 3701 through 3800
+
+Section ID: `ownkb:section:d000246:s000071`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3700` | `8FB9` | `8FB9` |
+| `3` | `3701` | `8FBB` | `8FBE` |
+| `3` | `3702` | `8FC1` | `8FC2` |
+| `3` | `3703` | `8FC4` | `8FC8` |
+| `3` | `3704` | `8FCB` | `8FCB` |
+| `3` | `3705` | `8FCD` | `8FD5` |
+| `3` | `3706` | `8FD8` | `8FD9` |
+| `3` | `3707` | `8FDB` | `8FDF` |
+| `3` | `3708` | `8FE2` | `8FE2` |
+| `3` | `3709` | `8FE4` | `8FE6` |
+| `3` | `3710` | `8FE8` | `8FEB` |
+| `3` | `3711` | `8FED` | `8FF0` |
+| `3` | `3712` | `8FF3` | `8FF4` |
+| `3` | `3713` | `8FF7` | `8FFB` |
+| `3` | `3714` | `8FFD` | `8FFD` |
+| `3` | `3715` | `9000` | `9007` |
+| `3` | `3716` | `9009` | `900D` |
+| `3` | `3717` | `900F` | `9017` |
+| `3` | `3718` | `9019` | `901B` |
+| `3` | `3719` | `901D` | `9024` |
+| `3` | `3720` | `9026` | `9026` |
+| `3` | `3721` | `902D` | `902F` |
+| `3` | `3722` | `9031` | `9032` |
+| `3` | `3723` | `9035` | `9038` |
+| `3` | `3724` | `903B` | `903C` |
+| `3` | `3725` | `903E` | `903F` |
+| `3` | `3726` | `9041` | `9042` |
+| `3` | `3727` | `9044` | `9044` |
+| `3` | `3728` | `9046` | `9048` |
+| `3` | `3729` | `904A` | `904B` |
+| `3` | `3730` | `904D` | `9055` |
+| `3` | `3731` | `9057` | `9059` |
+| `3` | `3732` | `905B` | `905E` |
+| `3` | `3733` | `9060` | `9063` |
+| `3` | `3734` | `9065` | `9065` |
+| `3` | `3735` | `9068` | `9069` |
+| `3` | `3736` | `906D` | `906F` |
+| `3` | `3737` | `9072` | `9072` |
+| `3` | `3738` | `9074` | `907A` |
+| `3` | `3739` | `907C` | `907D` |
+| `3` | `3740` | `907F` | `908C` |
+| `3` | `3741` | `908F` | `9091` |
+| `3` | `3742` | `9093` | `9095` |
+| `3` | `3743` | `9097` | `9099` |
+| `3` | `3744` | `909B` | `909B` |
+| `3` | `3745` | `909D` | `909D` |
+| `3` | `3746` | `90A0` | `90A3` |
+| `3` | `3747` | `90A5` | `90A6` |
+| `3` | `3748` | `90A8` | `90A8` |
+| `3` | `3749` | `90AA` | `90AC` |
+| `3` | `3750` | `90AE` | `90B6` |
+| `3` | `3751` | `90B8` | `90C1` |
+| `3` | `3752` | `90C3` | `90C5` |
+| `3` | `3753` | `90C7` | `90C8` |
+| `3` | `3754` | `90CA` | `90CB` |
+| `3` | `3755` | `90CE` | `90D1` |
+| `3` | `3756` | `90D3` | `90D3` |
+| `3` | `3757` | `90D5` | `90D5` |
+| `3` | `3758` | `90D7` | `90D9` |
+| `3` | `3759` | `90DB` | `90DF` |
+| `3` | `3760` | `90E1` | `90E2` |
+| `3` | `3761` | `90E4` | `90E4` |
+| `3` | `3762` | `90E6` | `90E8` |
+| `3` | `3763` | `90EA` | `90EB` |
+| `3` | `3764` | `90ED` | `90ED` |
+| `3` | `3765` | `90EF` | `90EF` |
+| `3` | `3766` | `90F4` | `90F5` |
+| `3` | `3767` | `90F8` | `90F8` |
+| `3` | `3768` | `90FD` | `90FF` |
+| `3` | `3769` | `9102` | `9102` |
+| `3` | `3770` | `9104` | `9104` |
+| `3` | `3771` | `9106` | `9106` |
+| `3` | `3772` | `9109` | `9109` |
+| `3` | `3773` | `910D` | `910D` |
+| `3` | `3774` | `9111` | `9112` |
+| `3` | `3775` | `9114` | `9114` |
+| `3` | `3776` | `9116` | `911C` |
+| `3` | `3777` | `911E` | `9124` |
+| `3` | `3778` | `9126` | `9127` |
+| `3` | `3779` | `9129` | `9129` |
+| `3` | `3780` | `912B` | `9134` |
+| `3` | `3781` | `9136` | `9137` |
+| `3` | `3782` | `9139` | `913A` |
+| `3` | `3783` | `913D` | `913D` |
+| `3` | `3784` | `913F` | `9143` |
+| `3` | `3785` | `9146` | `914E` |
+| `3` | `3786` | `9150` | `9150` |
+| `3` | `3787` | `9152` | `9152` |
+| `3` | `3788` | `9156` | `9157` |
+| `3` | `3789` | `915A` | `915A` |
+| `3` | `3790` | `915D` | `915E` |
+| `3` | `3791` | `9161` | `9166` |
+| `3` | `3792` | `9168` | `916A` |
+| `3` | `3793` | `916C` | `916C` |
+| `3` | `3794` | `916E` | `917A` |
+| `3` | `3795` | `917C` | `917F` |
+| `3` | `3796` | `9181` | `9181` |
+| `3` | `3797` | `9183` | `9187` |
+| `3` | `3798` | `9189` | `918E` |
+| `3` | `3799` | `9190` | `9192` |
+
+#### Package range associations 3801 through 3900
+
+Section ID: `ownkb:section:d000246:s000072`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3800` | `9195` | `9196` |
+| `3` | `3801` | `919A` | `919C` |
+| `3` | `3802` | `919E` | `919E` |
+| `3` | `3803` | `91A1` | `91A3` |
+| `3` | `3804` | `91A5` | `91A5` |
+| `3` | `3805` | `91A8` | `91A8` |
+| `3` | `3806` | `91AA` | `91B2` |
+| `3` | `3807` | `91B4` | `91B5` |
+| `3` | `3808` | `91BA` | `91C1` |
+| `3` | `3809` | `91C3` | `91C3` |
+| `3` | `3810` | `91C5` | `91C7` |
+| `3` | `3811` | `91C9` | `91D1` |
+| `3` | `3812` | `91D3` | `91D5` |
+| `3` | `3813` | `91D7` | `91D9` |
+| `3` | `3814` | `91DB` | `91DD` |
+| `3` | `3815` | `91DF` | `91E7` |
+| `3` | `3816` | `91E9` | `91EA` |
+| `3` | `3817` | `91EC` | `91ED` |
+| `3` | `3818` | `91F1` | `91F1` |
+| `3` | `3819` | `91F5` | `91F5` |
+| `3` | `3820` | `91F7` | `91F7` |
+| `3` | `3821` | `91F9` | `91F9` |
+| `3` | `3822` | `91FF` | `9202` |
+| `3` | `3823` | `9204` | `9204` |
+| `3` | `3824` | `9206` | `9207` |
+| `3` | `3825` | `9209` | `9209` |
+| `3` | `3826` | `920D` | `920E` |
+| `3` | `3827` | `9210` | `9211` |
+| `3` | `3828` | `9214` | `9216` |
+| `3` | `3829` | `9219` | `9219` |
+| `3` | `3830` | `921E` | `921E` |
+| `3` | `3831` | `9221` | `9221` |
+| `3` | `3832` | `9223` | `922A` |
+| `3` | `3833` | `922E` | `922E` |
+| `3` | `3834` | `9230` | `9231` |
+| `3` | `3835` | `9233` | `923A` |
+| `3` | `3836` | `923D` | `9245` |
+| `3` | `3837` | `9248` | `9249` |
+| `3` | `3838` | `924D` | `924D` |
+| `3` | `3839` | `924F` | `9251` |
+| `3` | `3840` | `9254` | `9254` |
+| `3` | `3841` | `9257` | `9257` |
+| `3` | `3842` | `925A` | `925B` |
+| `3` | `3843` | `925E` | `925E` |
+| `3` | `3844` | `9264` | `9264` |
+| `3` | `3845` | `9266` | `9266` |
+| `3` | `3846` | `926C` | `926D` |
+| `3` | `3847` | `9274` | `9274` |
+| `3` | `3848` | `9278` | `9278` |
+| `3` | `3849` | `927A` | `927D` |
+| `3` | `3850` | `927F` | `9280` |
+| `3` | `3851` | `9283` | `9283` |
+| `3` | `3852` | `9285` | `9285` |
+| `3` | `3853` | `928A` | `928A` |
+| `3` | `3854` | `928C` | `928C` |
+| `3` | `3855` | `928E` | `928E` |
+| `3` | `3856` | `9291` | `9293` |
+| `3` | `3857` | `9296` | `9296` |
+| `3` | `3858` | `9298` | `929A` |
+| `3` | `3859` | `929C` | `929D` |
+| `3` | `3860` | `92A0` | `92A0` |
+| `3` | `3861` | `92A3` | `92A3` |
+| `3` | `3862` | `92A5` | `92AC` |
+| `3` | `3863` | `92AE` | `92AE` |
+| `3` | `3864` | `92B2` | `92B3` |
+| `3` | `3865` | `92B6` | `92B7` |
+| `3` | `3866` | `92B9` | `92B9` |
+| `3` | `3867` | `92BB` | `92BC` |
+| `3` | `3868` | `92C1` | `92C3` |
+| `3` | `3869` | `92C5` | `92C8` |
+| `3` | `3870` | `92CA` | `92CC` |
+| `3` | `3871` | `92CE` | `92D0` |
+| `3` | `3872` | `92D2` | `92D2` |
+| `3` | `3873` | `92D5` | `92D5` |
+| `3` | `3874` | `92DD` | `92DD` |
+| `3` | `3875` | `92DF` | `92DF` |
+| `3` | `3876` | `92E4` | `92E4` |
+| `3` | `3877` | `92E6` | `92E6` |
+| `3` | `3878` | `92E8` | `92F1` |
+| `3` | `3879` | `92F5` | `92F5` |
+| `3` | `3880` | `92F7` | `92FC` |
+| `3` | `3881` | `92FE` | `92FE` |
+| `3` | `3882` | `9301` | `9301` |
+| `3` | `3883` | `9303` | `9304` |
+| `3` | `3884` | `9306` | `9306` |
+| `3` | `3885` | `9308` | `9308` |
+| `3` | `3886` | `930B` | `930B` |
+| `3` | `3887` | `930F` | `9310` |
+| `3` | `3888` | `9312` | `9312` |
+| `3` | `3889` | `9315` | `9315` |
+| `3` | `3890` | `9317` | `931B` |
+| `3` | `3891` | `931E` | `9323` |
+| `3` | `3892` | `9325` | `9328` |
+| `3` | `3893` | `932B` | `932B` |
+| `3` | `3894` | `932E` | `932F` |
+| `3` | `3895` | `9332` | `9333` |
+| `3` | `3896` | `9338` | `9338` |
+| `3` | `3897` | `933E` | `933E` |
+| `3` | `3898` | `9346` | `9347` |
+| `3` | `3899` | `934A` | `934B` |
+
+#### Package range associations 3901 through 4000
+
+Section ID: `ownkb:section:d000246:s000073`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `3900` | `934D` | `9351` |
+| `3` | `3901` | `9353` | `9354` |
+| `3` | `3902` | `9358` | `9358` |
+| `3` | `3903` | `935A` | `935B` |
+| `3` | `3904` | `935F` | `9360` |
+| `3` | `3905` | `9364` | `9367` |
+| `3` | `3906` | `9369` | `936A` |
+| `3` | `3907` | `936C` | `936C` |
+| `3` | `3908` | `936E` | `936E` |
+| `3` | `3909` | `9370` | `9371` |
+| `3` | `3910` | `9373` | `9373` |
+| `3` | `3911` | `9375` | `9376` |
+| `3` | `3912` | `9378` | `9378` |
+| `3` | `3913` | `937A` | `937A` |
+| `3` | `3914` | `937C` | `937C` |
+| `3` | `3915` | `937E` | `937E` |
+| `3` | `3916` | `9382` | `9382` |
+| `3` | `3917` | `9387` | `9387` |
+| `3` | `3918` | `938A` | `938D` |
+| `3` | `3919` | `938F` | `938F` |
+| `3` | `3920` | `9394` | `9394` |
+| `3` | `3921` | `9396` | `9398` |
+| `3` | `3922` | `939A` | `939A` |
+| `3` | `3923` | `939D` | `939D` |
+| `3` | `3924` | `93A2` | `93A3` |
+| `3` | `3925` | `93A6` | `93A7` |
+| `3` | `3926` | `93A9` | `93AA` |
+| `3` | `3927` | `93AC` | `93B0` |
+| `3` | `3928` | `93B2` | `93B5` |
+| `3` | `3929` | `93B8` | `93B8` |
+| `3` | `3930` | `93C1` | `93C3` |
+| `3` | `3931` | `93C6` | `93CA` |
+| `3` | `3932` | `93CC` | `93CD` |
+| `3` | `3933` | `93CF` | `93D1` |
+| `3` | `3934` | `93D5` | `93D8` |
+| `3` | `3935` | `93DC` | `93DF` |
+| `3` | `3936` | `93E1` | `93E2` |
+| `3` | `3937` | `93E4` | `93E4` |
+| `3` | `3938` | `93E6` | `93E6` |
+| `3` | `3939` | `93E8` | `93E8` |
+| `3` | `3940` | `93ED` | `93ED` |
+| `3` | `3941` | `93F0` | `93F1` |
+| `3` | `3942` | `93F5` | `93F5` |
+| `3` | `3943` | `93F7` | `93F9` |
+| `3` | `3944` | `93FB` | `93FB` |
+| `3` | `3945` | `93FD` | `93FD` |
+| `3` | `3946` | `93FF` | `93FF` |
+| `3` | `3947` | `9403` | `9404` |
+| `3` | `3948` | `9407` | `9407` |
+| `3` | `3949` | `940D` | `9414` |
+| `3` | `3950` | `9416` | `9416` |
+| `3` | `3951` | `9418` | `9419` |
+| `3` | `3952` | `9420` | `9420` |
+| `3` | `3953` | `9423` | `9424` |
+| `3` | `3954` | `9427` | `9429` |
+| `3` | `3955` | `942B` | `942C` |
+| `3` | `3956` | `942E` | `942E` |
+| `3` | `3957` | `9430` | `9430` |
+| `3` | `3958` | `9432` | `9438` |
+| `3` | `3959` | `943A` | `943B` |
+| `3` | `3960` | `943E` | `9440` |
+| `3` | `3961` | `9444` | `9444` |
+| `3` | `3962` | `944A` | `944A` |
+| `3` | `3963` | `944C` | `944C` |
+| `3` | `3964` | `9451` | `9452` |
+| `3` | `3965` | `9455` | `9455` |
+| `3` | `3966` | `9458` | `9458` |
+| `3` | `3967` | `945B` | `945B` |
+| `3` | `3968` | `945E` | `9460` |
+| `3` | `3969` | `9462` | `9463` |
+| `3` | `3970` | `9468` | `9468` |
+| `3` | `3971` | `946A` | `946B` |
+| `3` | `3972` | `946D` | `946E` |
+| `3` | `3973` | `9470` | `9472` |
+| `3` | `3974` | `9474` | `9475` |
+| `3` | `3975` | `9477` | `9477` |
+| `3` | `3976` | `947C` | `947F` |
+| `3` | `3977` | `9481` | `9481` |
+| `3` | `3978` | `9483` | `9483` |
+| `3` | `3979` | `9485` | `94C6` |
+| `3` | `3980` | `94C8` | `94D7` |
+| `3` | `3981` | `94D9` | `94F3` |
+| `3` | `3982` | `94F5` | `951F` |
+| `3` | `3983` | `9521` | `954A` |
+| `3` | `3984` | `954C` | `9577` |
+| `3` | `3985` | `957B` | `957B` |
+| `3` | `3986` | `957F` | `9580` |
+| `3` | `3987` | `9582` | `9583` |
+| `3` | `3988` | `9586` | `9586` |
+| `3` | `3989` | `9589` | `9589` |
+| `3` | `3990` | `958B` | `958C` |
+| `3` | `3991` | `958E` | `958F` |
+| `3` | `3992` | `9591` | `9594` |
+| `3` | `3993` | `9597` | `9598` |
+| `3` | `3994` | `959B` | `959B` |
+| `3` | `3995` | `959F` | `959F` |
+| `3` | `3996` | `95A1` | `95A5` |
+| `3` | `3997` | `95A7` | `95A9` |
+| `3` | `3998` | `95AB` | `95B1` |
+| `3` | `3999` | `95B3` | `95B4` |
+
+#### Package range associations 4001 through 4100
+
+Section ID: `ownkb:section:d000246:s000074`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4000` | `95B6` | `95B7` |
+| `3` | `4001` | `95B9` | `95C0` |
+| `3` | `4002` | `95C3` | `95CD` |
+| `3` | `4003` | `95D0` | `95D0` |
+| `3` | `4004` | `95D2` | `95D2` |
+| `3` | `4005` | `95D4` | `95D6` |
+| `3` | `4006` | `95DA` | `95DC` |
+| `3` | `4007` | `95DE` | `95DF` |
+| `3` | `4008` | `95E1` | `95E2` |
+| `3` | `4009` | `95E5` | `95E5` |
+| `3` | `4010` | `95E8` | `95EB` |
+| `3` | `4011` | `95ED` | `961C` |
+| `3` | `4012` | `961F` | `961F` |
+| `3` | `4013` | `9621` | `9622` |
+| `3` | `4014` | `9624` | `9624` |
+| `3` | `4015` | `9628` | `9628` |
+| `3` | `4016` | `962A` | `962A` |
+| `3` | `4017` | `962E` | `962F` |
+| `3` | `4018` | `9631` | `9636` |
+| `3` | `4019` | `9638` | `9638` |
+| `3` | `4020` | `963B` | `963D` |
+| `3` | `4021` | `963F` | `9642` |
+| `3` | `4022` | `9644` | `9649` |
+| `3` | `4023` | `964B` | `964D` |
+| `3` | `4024` | `9650` | `9650` |
+| `3` | `4025` | `9654` | `9655` |
+| `3` | `4026` | `9657` | `9659` |
+| `3` | `4027` | `965B` | `9664` |
+| `3` | `4028` | `9667` | `966A` |
+| `3` | `4029` | `966C` | `966C` |
+| `3` | `4030` | `966E` | `966E` |
+| `3` | `4031` | `9670` | `9670` |
+| `3` | `4032` | `9672` | `9678` |
+| `3` | `4033` | `967B` | `967D` |
+| `3` | `4034` | `9682` | `9686` |
+| `3` | `4035` | `9688` | `968B` |
+| `3` | `4036` | `968D` | `9690` |
+| `3` | `4037` | `9694` | `9695` |
+| `3` | `4038` | `9697` | `9699` |
+| `3` | `4039` | `969B` | `969D` |
+| `3` | `4040` | `96A3` | `96AA` |
+| `3` | `4041` | `96B0` | `96B4` |
+| `3` | `4042` | `96B6` | `96B6` |
+| `3` | `4043` | `96B8` | `96BE` |
+| `3` | `4044` | `96C0` | `96C1` |
+| `3` | `4045` | `96C4` | `96C7` |
+| `3` | `4046` | `96C9` | `96CF` |
+| `3` | `4047` | `96D1` | `96D2` |
+| `3` | `4048` | `96D4` | `96D6` |
+| `3` | `4049` | `96D8` | `96DC` |
+| `3` | `4050` | `96DE` | `96E0` |
+| `3` | `4051` | `96E2` | `96E3` |
+| `3` | `4052` | `96E8` | `96EA` |
+| `3` | `4053` | `96EE` | `96F3` |
+| `3` | `4054` | `96F6` | `96F7` |
+| `3` | `4055` | `96F9` | `96F9` |
+| `3` | `4056` | `96FB` | `96FB` |
+| `3` | `4057` | `96FE` | `96FE` |
+| `3` | `4058` | `9700` | `9702` |
+| `3` | `4059` | `9704` | `9709` |
+| `3` | `4060` | `970D` | `970F` |
+| `3` | `4061` | `9711` | `9711` |
+| `3` | `4062` | `9713` | `9713` |
+| `3` | `4063` | `9716` | `9716` |
+| `3` | `4064` | `9718` | `9718` |
+| `3` | `4065` | `971A` | `971A` |
+| `3` | `4066` | `971C` | `971E` |
+| `3` | `4067` | `9720` | `9720` |
+| `3` | `4068` | `9723` | `9724` |
+| `3` | `4069` | `9727` | `972B` |
+| `3` | `4070` | `972D` | `972E` |
+| `3` | `4071` | `9730` | `9730` |
+| `3` | `4072` | `9732` | `9733` |
+| `3` | `4073` | `9738` | `9739` |
+| `3` | `4074` | `973D` | `973E` |
+| `3` | `4075` | `9742` | `9744` |
+| `3` | `4076` | `9748` | `9749` |
+| `3` | `4077` | `9752` | `9753` |
+| `3` | `4078` | `9756` | `9756` |
+| `3` | `4079` | `9759` | `975C` |
+| `3` | `4080` | `975E` | `975E` |
+| `3` | `4081` | `9760` | `9763` |
+| `3` | `4082` | `9765` | `9766` |
+| `3` | `4083` | `9768` | `9769` |
+| `3` | `4084` | `976D` | `976E` |
+| `3` | `4085` | `9770` | `9771` |
+| `3` | `4086` | `9773` | `977A` |
+| `3` | `4087` | `977C` | `977C` |
+| `3` | `4088` | `977F` | `9780` |
+| `3` | `4089` | `9784` | `9785` |
+| `3` | `4090` | `978A` | `978B` |
+| `3` | `4091` | `978D` | `978F` |
+| `3` | `4092` | `9791` | `9794` |
+| `3` | `4093` | `9796` | `9798` |
+| `3` | `4094` | `979A` | `979B` |
+| `3` | `4095` | `979D` | `979D` |
+| `3` | `4096` | `979F` | `97A1` |
+| `3` | `4097` | `97A3` | `97A3` |
+| `3` | `4098` | `97A6` | `97A8` |
+| `3` | `4099` | `97AA` | `97AF` |
+
+#### Package range associations 4101 through 4200
+
+Section ID: `ownkb:section:d000246:s000075`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4100` | `97B2` | `97B2` |
+| `3` | `4101` | `97B4` | `97B4` |
+| `3` | `4102` | `97BA` | `97BB` |
+| `3` | `4103` | `97BF` | `97BF` |
+| `3` | `4104` | `97C2` | `97C3` |
+| `3` | `4105` | `97C6` | `97C6` |
+| `3` | `4106` | `97C8` | `97C9` |
+| `3` | `4107` | `97CB` | `97CD` |
+| `3` | `4108` | `97D3` | `97D3` |
+| `3` | `4109` | `97D7` | `97D7` |
+| `3` | `4110` | `97D9` | `97D9` |
+| `3` | `4111` | `97DC` | `97DC` |
+| `3` | `4112` | `97DE` | `97DF` |
+| `3` | `4113` | `97E5` | `97EE` |
+| `3` | `4114` | `97F0` | `97F7` |
+| `3` | `4115` | `97FA` | `97FD` |
+| `3` | `4116` | `97FF` | `97FF` |
+| `3` | `4117` | `9801` | `9803` |
+| `3` | `4118` | `9805` | `9813` |
+| `3` | `4119` | `9817` | `9818` |
+| `3` | `4120` | `981C` | `981C` |
+| `3` | `4121` | `981E` | `981E` |
+| `3` | `4122` | `9820` | `9821` |
+| `3` | `4123` | `9824` | `9824` |
+| `3` | `4124` | `9826` | `9826` |
+| `3` | `4125` | `9828` | `9828` |
+| `3` | `4126` | `982B` | `982B` |
+| `3` | `4127` | `982D` | `982D` |
+| `3` | `4128` | `9830` | `9830` |
+| `3` | `4129` | `9833` | `9833` |
+| `3` | `4130` | `9835` | `9835` |
+| `3` | `4131` | `9837` | `983B` |
+| `3` | `4132` | `9840` | `9840` |
+| `3` | `4133` | `9846` | `9846` |
+| `3` | `4134` | `984C` | `9855` |
+| `3` | `4135` | `9857` | `9859` |
+| `3` | `4136` | `985B` | `985B` |
+| `3` | `4137` | `985D` | `985F` |
+| `3` | `4138` | `9862` | `9863` |
+| `3` | `4139` | `9865` | `9865` |
+| `3` | `4140` | `9867` | `986C` |
+| `3` | `4141` | `986F` | `9871` |
+| `3` | `4142` | `9873` | `9891` |
+| `3` | `4143` | `9893` | `9894` |
+| `3` | `4144` | `9896` | `98A2` |
+| `3` | `4145` | `98A4` | `98A9` |
+| `3` | `4146` | `98AE` | `98AF` |
+| `3` | `4147` | `98B1` | `98B1` |
+| `3` | `4148` | `98B5` | `98B7` |
+| `3` | `4149` | `98BA` | `98BC` |
+| `3` | `4150` | `98C0` | `98C0` |
+| `3` | `4151` | `98C4` | `98C4` |
+| `3` | `4152` | `98C6` | `98C6` |
+| `3` | `4153` | `98CE` | `98DB` |
+| `3` | `4154` | `98DE` | `98DF` |
+| `3` | `4155` | `98E2` | `98E2` |
+| `3` | `4156` | `98E5` | `98EB` |
+| `3` | `4157` | `98ED` | `98F0` |
+| `3` | `4158` | `98F2` | `98F4` |
+| `3` | `4159` | `98F7` | `98F8` |
+| `3` | `4160` | `98FA` | `98FA` |
+| `3` | `4161` | `98FC` | `98FE` |
+| `3` | `4162` | `9900` | `9903` |
+| `3` | `4163` | `9905` | `990A` |
+| `3` | `4164` | `990C` | `990D` |
+| `3` | `4165` | `9910` | `9914` |
+| `3` | `4166` | `9916` | `9918` |
+| `3` | `4167` | `991A` | `991C` |
+| `3` | `4168` | `991E` | `991F` |
+| `3` | `4169` | `9921` | `9921` |
+| `3` | `4170` | `9926` | `9926` |
+| `3` | `4171` | `9928` | `9928` |
+| `3` | `4172` | `992B` | `992C` |
+| `3` | `4173` | `992E` | `992E` |
+| `3` | `4174` | `9931` | `9931` |
+| `3` | `4175` | `9933` | `9933` |
+| `3` | `4176` | `9935` | `9935` |
+| `3` | `4177` | `993C` | `993F` |
+| `3` | `4178` | `9945` | `9946` |
+| `3` | `4179` | `9948` | `9949` |
+| `3` | `4180` | `994B` | `994C` |
+| `3` | `4181` | `994F` | `9952` |
+| `3` | `4182` | `9954` | `9955` |
+| `3` | `4183` | `9957` | `9958` |
+| `3` | `4184` | `995C` | `995F` |
+| `3` | `4185` | `9961` | `9961` |
+| `3` | `4186` | `9964` | `9965` |
+| `3` | `4187` | `9967` | `998B` |
+| `3` | `4188` | `998D` | `998D` |
+| `3` | `4189` | `998F` | `9999` |
+| `3` | `4190` | `99A5` | `99A5` |
+| `3` | `4191` | `99A7` | `99A8` |
+| `3` | `4192` | `99AC` | `99AE` |
+| `3` | `4193` | `99B1` | `99B1` |
+| `3` | `4194` | `99B3` | `99B4` |
+| `3` | `4195` | `99BB` | `99BB` |
+| `3` | `4196` | `99BF` | `99BF` |
+| `3` | `4197` | `99C1` | `99C1` |
+| `3` | `4198` | `99C3` | `99C3` |
+| `3` | `4199` | `99C9` | `99C9` |
+
+#### Package range associations 4201 through 4300
+
+Section ID: `ownkb:section:d000246:s000076`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4200` | `99CB` | `99CB` |
+| `3` | `4201` | `99D0` | `99D2` |
+| `3` | `4202` | `99D4` | `99D5` |
+| `3` | `4203` | `99D8` | `99DF` |
+| `3` | `4204` | `99E1` | `99E3` |
+| `3` | `4205` | `99E5` | `99E5` |
+| `3` | `4206` | `99E8` | `99E8` |
+| `3` | `4207` | `99ED` | `99EE` |
+| `3` | `4208` | `99F0` | `99F1` |
+| `3` | `4209` | `99F3` | `99F3` |
+| `3` | `4210` | `99F5` | `99F9` |
+| `3` | `4211` | `99FF` | `99FF` |
+| `3` | `4212` | `9A01` | `9A01` |
+| `3` | `4213` | `9A03` | `9A05` |
+| `3` | `4214` | `9A07` | `9A07` |
+| `3` | `4215` | `9A0A` | `9A0A` |
+| `3` | `4216` | `9A0D` | `9A0F` |
+| `3` | `4217` | `9A14` | `9A14` |
+| `3` | `4218` | `9A16` | `9A16` |
+| `3` | `4219` | `9A19` | `9A19` |
+| `3` | `4220` | `9A1B` | `9A1B` |
+| `3` | `4221` | `9A20` | `9A20` |
+| `3` | `4222` | `9A23` | `9A24` |
+| `3` | `4223` | `9A27` | `9A27` |
+| `3` | `4224` | `9A2B` | `9A2B` |
+| `3` | `4225` | `9A2D` | `9A2E` |
+| `3` | `4226` | `9A30` | `9A30` |
+| `3` | `4227` | `9A36` | `9A38` |
+| `3` | `4228` | `9A3A` | `9A48` |
+| `3` | `4229` | `9A4A` | `9A4A` |
+| `3` | `4230` | `9A4C` | `9A4F` |
+| `3` | `4231` | `9A51` | `9A51` |
+| `3` | `4232` | `9A55` | `9A5B` |
+| `3` | `4233` | `9A5F` | `9A5F` |
+| `3` | `4234` | `9A61` | `9A62` |
+| `3` | `4235` | `9A64` | `9A66` |
+| `3` | `4236` | `9A69` | `9A6A` |
+| `3` | `4237` | `9A6C` | `9A71` |
+| `3` | `4238` | `9A73` | `9A88` |
+| `3` | `4239` | `9A8A` | `9AA5` |
+| `3` | `4240` | `9AA7` | `9AA9` |
+| `3` | `4241` | `9AAB` | `9AAB` |
+| `3` | `4242` | `9AAF` | `9AB1` |
+| `3` | `4243` | `9AB3` | `9AB3` |
+| `3` | `4244` | `9AB6` | `9ABC` |
+| `3` | `4245` | `9ABE` | `9AC2` |
+| `3` | `4246` | `9AC5` | `9AC6` |
+| `3` | `4247` | `9AC9` | `9AC9` |
+| `3` | `4248` | `9ACB` | `9ACC` |
+| `3` | `4249` | `9ACF` | `9ACF` |
+| `3` | `4250` | `9AD1` | `9AD6` |
+| `3` | `4251` | `9AD8` | `9AD8` |
+| `3` | `4252` | `9ADE` | `9AE1` |
+| `3` | `4253` | `9AE3` | `9AE7` |
+| `3` | `4254` | `9AEA` | `9AEB` |
+| `3` | `4255` | `9AED` | `9AEF` |
+| `3` | `4256` | `9AF2` | `9AF4` |
+| `3` | `4257` | `9AF9` | `9AF9` |
+| `3` | `4258` | `9AFB` | `9AFD` |
+| `3` | `4259` | `9AFF` | `9B00` |
+| `3` | `4260` | `9B02` | `9B06` |
+| `3` | `4261` | `9B08` | `9B09` |
+| `3` | `4262` | `9B0B` | `9B0B` |
+| `3` | `4263` | `9B0F` | `9B11` |
+| `3` | `4264` | `9B13` | `9B13` |
+| `3` | `4265` | `9B16` | `9B16` |
+| `3` | `4266` | `9B18` | `9B1B` |
+| `3` | `4267` | `9B1F` | `9B1F` |
+| `3` | `4268` | `9B22` | `9B23` |
+| `3` | `4269` | `9B27` | `9B27` |
+| `3` | `4270` | `9B29` | `9B29` |
+| `3` | `4271` | `9B2E` | `9B2F` |
+| `3` | `4272` | `9B31` | `9B33` |
+| `3` | `4273` | `9B36` | `9B36` |
+| `3` | `4274` | `9B38` | `9B38` |
+| `3` | `4275` | `9B3B` | `9B3D` |
+| `3` | `4276` | `9B3F` | `9B3F` |
+| `3` | `4277` | `9B41` | `9B49` |
+| `3` | `4278` | `9B4B` | `9B4B` |
+| `3` | `4279` | `9B4D` | `9B4F` |
+| `3` | `4280` | `9B51` | `9B52` |
+| `3` | `4281` | `9B54` | `9B54` |
+| `3` | `4282` | `9B56` | `9B56` |
+| `3` | `4283` | `9B58` | `9B58` |
+| `3` | `4284` | `9B5A` | `9B5C` |
+| `3` | `4285` | `9B5F` | `9B5F` |
+| `3` | `4286` | `9B63` | `9B63` |
+| `3` | `4287` | `9B68` | `9B68` |
+| `3` | `4288` | `9B6B` | `9B6B` |
+| `3` | `4289` | `9B6F` | `9B71` |
+| `3` | `4290` | `9B73` | `9B75` |
+| `3` | `4291` | `9B77` | `9B78` |
+| `3` | `4292` | `9B7A` | `9B7A` |
+| `3` | `4293` | `9B7D` | `9B81` |
+| `3` | `4294` | `9B84` | `9B85` |
+| `3` | `4295` | `9B87` | `9B88` |
+| `3` | `4296` | `9B8A` | `9B8E` |
+| `3` | `4297` | `9B90` | `9B93` |
+| `3` | `4298` | `9B98` | `9B98` |
+| `3` | `4299` | `9B9A` | `9B9A` |
+
+#### Package range associations 4301 through 4400
+
+Section ID: `ownkb:section:d000246:s000077`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4300` | `9B9E` | `9BA1` |
+| `3` | `4301` | `9BA3` | `9BA3` |
+| `3` | `4302` | `9BA8` | `9BA8` |
+| `3` | `4303` | `9BAA` | `9BAB` |
+| `3` | `4304` | `9BAD` | `9BAE` |
+| `3` | `4305` | `9BB0` | `9BB0` |
+| `3` | `4306` | `9BBB` | `9BBC` |
+| `3` | `4307` | `9BBE` | `9BBE` |
+| `3` | `4308` | `9BC0` | `9BC2` |
+| `3` | `4309` | `9BC5` | `9BCB` |
+| `3` | `4310` | `9BCF` | `9BD0` |
+| `3` | `4311` | `9BD2` | `9BDB` |
+| `3` | `4312` | `9BDD` | `9BDD` |
+| `3` | `4313` | `9BE1` | `9BE2` |
+| `3` | `4314` | `9BE4` | `9BE4` |
+| `3` | `4315` | `9BE7` | `9BEC` |
+| `3` | `4316` | `9BEE` | `9BEE` |
+| `3` | `4317` | `9BF0` | `9BF0` |
+| `3` | `4318` | `9BF5` | `9BF7` |
+| `3` | `4319` | `9BFD` | `9BFD` |
+| `3` | `4320` | `9C01` | `9C01` |
+| `3` | `4321` | `9C08` | `9C09` |
+| `3` | `4322` | `9C0C` | `9C0D` |
+| `3` | `4323` | `9C12` | `9C13` |
+| `3` | `4324` | `9C15` | `9C15` |
+| `3` | `4325` | `9C1C` | `9C1C` |
+| `3` | `4326` | `9C1E` | `9C21` |
+| `3` | `4327` | `9C23` | `9C25` |
+| `3` | `4328` | `9C27` | `9C2D` |
+| `3` | `4329` | `9C30` | `9C33` |
+| `3` | `4330` | `9C35` | `9C35` |
+| `3` | `4331` | `9C37` | `9C39` |
+| `3` | `4332` | `9C3B` | `9C3B` |
+| `3` | `4333` | `9C3D` | `9C40` |
+| `3` | `4334` | `9C42` | `9C42` |
+| `3` | `4335` | `9C44` | `9C44` |
+| `3` | `4336` | `9C47` | `9C49` |
+| `3` | `4337` | `9C4C` | `9C4D` |
+| `3` | `4338` | `9C52` | `9C54` |
+| `3` | `4339` | `9C56` | `9C58` |
+| `3` | `4340` | `9C5F` | `9C5F` |
+| `3` | `4341` | `9C63` | `9C65` |
+| `3` | `4342` | `9C67` | `9C67` |
+| `3` | `4343` | `9C6D` | `9C6F` |
+| `3` | `4344` | `9C72` | `9C72` |
+| `3` | `4345` | `9C75` | `9C75` |
+| `3` | `4346` | `9C77` | `9C78` |
+| `3` | `4347` | `9C7A` | `9C97` |
+| `3` | `4348` | `9C99` | `9CB9` |
+| `3` | `4349` | `9CBB` | `9CE5` |
+| `3` | `4350` | `9CE7` | `9CE7` |
+| `3` | `4351` | `9CE9` | `9CEA` |
+| `3` | `4352` | `9CF0` | `9CF0` |
+| `3` | `4353` | `9CF3` | `9CF4` |
+| `3` | `4354` | `9CF6` | `9CF7` |
+| `3` | `4355` | `9CFE` | `9CFF` |
+| `3` | `4356` | `9D02` | `9D03` |
+| `3` | `4357` | `9D06` | `9D07` |
+| `3` | `4358` | `9D09` | `9D09` |
+| `3` | `4359` | `9D10` | `9D10` |
+| `3` | `4360` | `9D12` | `9D13` |
+| `3` | `4361` | `9D15` | `9D15` |
+| `3` | `4362` | `9D19` | `9D19` |
+| `3` | `4363` | `9D1B` | `9D1F` |
+| `3` | `4364` | `9D22` | `9D23` |
+| `3` | `4365` | `9D25` | `9D28` |
+| `3` | `4366` | `9D2A` | `9D2B` |
+| `3` | `4367` | `9D2D` | `9D35` |
+| `3` | `4368` | `9D37` | `9D37` |
+| `3` | `4369` | `9D39` | `9D42` |
+| `3` | `4370` | `9D44` | `9D44` |
+| `3` | `4371` | `9D4B` | `9D4B` |
+| `3` | `4372` | `9D4F` | `9D4F` |
+| `3` | `4373` | `9D51` | `9D53` |
+| `3` | `4374` | `9D5C` | `9D5D` |
+| `3` | `4375` | `9D5F` | `9D61` |
+| `3` | `4376` | `9D63` | `9D63` |
+| `3` | `4377` | `9D68` | `9D68` |
+| `3` | `4378` | `9D6A` | `9D6A` |
+| `3` | `4379` | `9D6C` | `9D6C` |
+| `3` | `4380` | `9D6F` | `9D70` |
+| `3` | `4381` | `9D72` | `9D73` |
+| `3` | `4382` | `9D7C` | `9D7C` |
+| `3` | `4383` | `9D83` | `9D84` |
+| `3` | `4384` | `9D86` | `9D8A` |
+| `3` | `4385` | `9D8D` | `9D8E` |
+| `3` | `4386` | `9D90` | `9D90` |
+| `3` | `4387` | `9D92` | `9D93` |
+| `3` | `4388` | `9D95` | `9D95` |
+| `3` | `4389` | `9D97` | `9D98` |
+| `3` | `4390` | `9D9A` | `9D9A` |
+| `3` | `4391` | `9D9C` | `9D9D` |
+| `3` | `4392` | `9D9F` | `9DA2` |
+| `3` | `4393` | `9DA9` | `9DA9` |
+| `3` | `4394` | `9DAB` | `9DAB` |
+| `3` | `4395` | `9DAF` | `9DAF` |
+| `3` | `4396` | `9DB2` | `9DB4` |
+| `3` | `4397` | `9DB8` | `9DB8` |
+| `3` | `4398` | `9DBA` | `9DBC` |
+| `3` | `4399` | `9DBF` | `9DBF` |
+
+#### Package range associations 4401 through 4500
+
+Section ID: `ownkb:section:d000246:s000078`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4400` | `9DC1` | `9DC3` |
+| `3` | `4401` | `9DC7` | `9DC7` |
+| `3` | `4402` | `9DC9` | `9DC9` |
+| `3` | `4403` | `9DD3` | `9DD3` |
+| `3` | `4404` | `9DD6` | `9DDA` |
+| `3` | `4405` | `9DDF` | `9DDF` |
+| `3` | `4406` | `9DE3` | `9DE3` |
+| `3` | `4407` | `9DE5` | `9DE7` |
+| `3` | `4408` | `9DE9` | `9DE9` |
+| `3` | `4409` | `9DEB` | `9DEB` |
+| `3` | `4410` | `9DED` | `9DED` |
+| `3` | `4411` | `9DEF` | `9DEF` |
+| `3` | `4412` | `9DF1` | `9DF5` |
+| `3` | `4413` | `9DF7` | `9DFA` |
+| `3` | `4414` | `9DFC` | `9DFD` |
+| `3` | `4415` | `9DFF` | `9E02` |
+| `3` | `4416` | `9E07` | `9E07` |
+| `3` | `4417` | `9E0A` | `9E0A` |
+| `3` | `4418` | `9E0D` | `9E0D` |
+| `3` | `4419` | `9E13` | `9E13` |
+| `3` | `4420` | `9E15` | `9E16` |
+| `3` | `4421` | `9E18` | `9E18` |
+| `3` | `4422` | `9E1A` | `9E1B` |
+| `3` | `4423` | `9E1D` | `9E23` |
+| `3` | `4424` | `9E25` | `9E53` |
+| `3` | `4425` | `9E55` | `9E5C` |
+| `3` | `4426` | `9E5E` | `9E61` |
+| `3` | `4427` | `9E63` | `9E64` |
+| `3` | `4428` | `9E66` | `9E71` |
+| `3` | `4429` | `9E73` | `9E73` |
+| `3` | `4430` | `9E79` | `9E7A` |
+| `3` | `4431` | `9E7C` | `9E80` |
+| `3` | `4432` | `9E82` | `9E8B` |
+| `3` | `4433` | `9E8E` | `9E93` |
+| `3` | `4434` | `9E95` | `9E97` |
+| `3` | `4435` | `9E9A` | `9E9A` |
+| `3` | `4436` | `9E9C` | `9E9F` |
+| `3` | `4437` | `9EA1` | `9EA1` |
+| `3` | `4438` | `9EA3` | `9EA9` |
+| `3` | `4439` | `9EAF` | `9EB0` |
+| `3` | `4440` | `9EB4` | `9EB5` |
+| `3` | `4441` | `9EB8` | `9EB9` |
+| `3` | `4442` | `9EBB` | `9EBF` |
+| `3` | `4443` | `9EC3` | `9EC4` |
+| `3` | `4444` | `9EC7` | `9EC7` |
+| `3` | `4445` | `9EC9` | `9EC9` |
+| `3` | `4446` | `9ECB` | `9ECF` |
+| `3` | `4447` | `9ED1` | `9ED2` |
+| `3` | `4448` | `9ED4` | `9ED4` |
+| `3` | `4449` | `9ED8` | `9ED8` |
+| `3` | `4450` | `9EDB` | `9EE2` |
+| `3` | `4451` | `9EE5` | `9EE5` |
+| `3` | `4452` | `9EE7` | `9EEA` |
+| `3` | `4453` | `9EEE` | `9EEF` |
+| `3` | `4454` | `9EF2` | `9EF2` |
+| `3` | `4455` | `9EF4` | `9EF4` |
+| `3` | `4456` | `9EF6` | `9EF7` |
+| `3` | `4457` | `9EF9` | `9EFF` |
+| `3` | `4458` | `9F02` | `9F02` |
+| `3` | `4459` | `9F04` | `9F05` |
+| `3` | `4460` | `9F07` | `9F0B` |
+| `3` | `4461` | `9F0D` | `9F11` |
+| `3` | `4462` | `9F13` | `9F13` |
+| `3` | `4463` | `9F16` | `9F19` |
+| `3` | `4464` | `9F1C` | `9F1C` |
+| `3` | `4465` | `9F1E` | `9F1E` |
+| `3` | `4466` | `9F20` | `9F20` |
+| `3` | `4467` | `9F22` | `9F22` |
+| `3` | `4468` | `9F24` | `9F25` |
+| `3` | `4469` | `9F29` | `9F2C` |
+| `3` | `4470` | `9F2E` | `9F31` |
+| `3` | `4471` | `9F34` | `9F34` |
+| `3` | `4472` | `9F36` | `9F37` |
+| `3` | `4473` | `9F39` | `9F39` |
+| `3` | `4474` | `9F3B` | `9F3B` |
+| `3` | `4475` | `9F3E` | `9F3E` |
+| `3` | `4476` | `9F41` | `9F41` |
+| `3` | `4477` | `9F44` | `9F44` |
+| `3` | `4478` | `9F46` | `9F46` |
+| `3` | `4479` | `9F4A` | `9F4B` |
+| `3` | `4480` | `9F4F` | `9F52` |
+| `3` | `4481` | `9F54` | `9F54` |
+| `3` | `4482` | `9F57` | `9F57` |
+| `3` | `4483` | `9F59` | `9F59` |
+| `3` | `4484` | `9F5B` | `9F5C` |
+| `3` | `4485` | `9F5F` | `9F63` |
+| `3` | `4486` | `9F66` | `9F67` |
+| `3` | `4487` | `9F6A` | `9F6A` |
+| `3` | `4488` | `9F6C` | `9F6C` |
+| `3` | `4489` | `9F6E` | `9F70` |
+| `3` | `4490` | `9F72` | `9F72` |
+| `3` | `4491` | `9F76` | `9F78` |
+| `3` | `4492` | `9F7A` | `9F8E` |
+| `3` | `4493` | `9F90` | `9F95` |
+| `3` | `4494` | `9F99` | `9F9D` |
+| `3` | `4495` | `9F9F` | `9FA0` |
+| `3` | `4496` | `9FA2` | `9FA2` |
+| `3` | `4497` | `9FA4` | `9FA4` |
+| `3` | `4498` | `E828` | `E829` |
+| `3` | `4499` | `E82D` | `E82D` |
+
+#### Package range associations 4501 through 4534
+
+Section ID: `ownkb:section:d000246:s000079`
+
+| Unicode set | Range key | Minimum hexadecimal | Maximum hexadecimal |
+| --- | --- | --- | --- |
+| `3` | `4500` | `E82F` | `E82F` |
+| `3` | `4501` | `E834` | `E834` |
+| `3` | `4502` | `E837` | `E837` |
+| `3` | `4503` | `E840` | `E840` |
+| `3` | `4504` | `E844` | `E847` |
+| `3` | `4505` | `E849` | `E84A` |
+| `3` | `4506` | `E84C` | `E84D` |
+| `3` | `4507` | `E84F` | `E850` |
+| `3` | `4508` | `E853` | `E853` |
+| `3` | `4509` | `E856` | `E859` |
+| `3` | `4510` | `E85C` | `E863` |
+| `3` | `4511` | `F995` | `F995` |
+| `3` | `4512` | `F9E7` | `F9E7` |
+| `3` | `4513` | `FE30` | `FE31` |
+| `3` | `4514` | `FE33` | `FE44` |
+| `3` | `4515` | `FE49` | `FE52` |
+| `3` | `4516` | `FE54` | `FE57` |
+| `3` | `4517` | `FE59` | `FE66` |
+| `3` | `4518` | `FE68` | `FE6B` |
+| `3` | `4519` | `FF01` | `FF5E` |
+| `3` | `4520` | `FFE0` | `FFE5` |
+| `3` | `4521` | `3001` | `3003` |
+| `3` | `4522` | `301D` | `301E` |
+| `3` | `4523` | `3002` | `3002` |
+| `3` | `4524` | `300D` | `300D` |
+| `4` | `1` | `0020` | `00FF` |
+| `4` | `4525` | `0401` | `04F9` |
+| `5` | `2` | `0020` | `017F` |
+| `5` | `4526` | `0374` | `0375` |
+| `5` | `4527` | `037A` | `037A` |
+| `5` | `4528` | `037E` | `037E` |
+| `5` | `4529` | `0384` | `038A` |
+| `5` | `4530` | `038C` | `038C` |
+| `5` | `4531` | `038E` | `03D6` |
