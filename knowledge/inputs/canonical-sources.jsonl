@@ -284,3 +284,11 @@
 {"classification":"publishable","source_id":"ownkb:source:s000759","source_path":"devices/definitions/own-dev-0145-two-output-0-10v-valve-actuator.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000760","source_path":"devices/definitions/own-dev-0146-relay-0-10v-fan-coil-actuator.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000761","source_path":"devices/definitions/own-dev-0147-two-relay-temperature-control-actuator.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000834","source_path":"devices/definitions/own-dev-0148-four-relay-temperature-control-actuator.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000835","source_path":"devices/definitions/own-dev-0149-hotel-ip-server.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000836","source_path":"devices/definitions/own-dev-0150-pulse-counter-interface.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000837","source_path":"devices/definitions/own-dev-0151-mh202-scenario-programmer.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000838","source_path":"devices/definitions/own-dev-0152-f455-basic-gateway.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000839","source_path":"devices/definitions/own-dev-0153-two-channel-10a-universal-actuator.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000840","source_path":"devices/definitions/own-dev-0154-single-channel-10a-lighting-actuator.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000841","source_path":"devices/definitions/own-dev-0155-classe-300x13e-connected-video-internal-unit.md","source_type":"canonical_documentation"}

@@ -738,42 +738,42 @@
     {
       "device_id": "OWN-DEV-0148",
       "path": "devices/definitions/own-dev-0148-four-relay-temperature-control-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0149",
       "path": "devices/definitions/own-dev-0149-hotel-ip-server.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0150",
       "path": "devices/definitions/own-dev-0150-pulse-counter-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0151",
       "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0152",
       "path": "devices/definitions/own-dev-0152-f455-basic-gateway.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0153",
       "path": "devices/definitions/own-dev-0153-two-channel-10a-universal-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0154",
       "path": "devices/definitions/own-dev-0154-single-channel-10a-lighting-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0155",
       "path": "devices/definitions/own-dev-0155-classe-300x13e-connected-video-internal-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0156",

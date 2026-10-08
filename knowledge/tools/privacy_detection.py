@@ -91,8 +91,24 @@ def installed_device_id_matches(text: str) -> list[SensitiveMatch]:
 # Numeric ranges and masks are abstract domains, not credential values.
 CREDENTIAL_LITERAL_PATTERN = re.compile(r"(?i)\b(password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s+`([A-Za-z0-9]{4,})`")
 
+# Property/value tables and prose may put punctuation, qualifications, or a
+# missing space between a credential label and its literal. Retain the label
+# and qualifications, while removing the value before structural parsing.
+CREDENTIAL_TABLE_PATTERN = re.compile(
+    r"(?im)^(\|[^|\n]{0,60}\b(?:password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*\|\s*`?)([0-9]{4,})(?=[`; ,|])"
+)
+CREDENTIAL_UNLOCK_PATTERN = re.compile(
+    r"(?i)(\b(?:installer\s+)?unlock\s+code\s*`?)([A-Za-z0-9_]{4,})(?=[`; ,.]|$)"
+)
+# This exact factory credential is named in F455 recovery prose without a
+# repeated label. It is a credential, not an abstract protocol value.
+CREDENTIAL_FACTORY_PATTERN = re.compile(r"(?i)\bbasic_gw\b")
+
 NETWORK_TRANSFORMS = (
     ("credential", CREDENTIAL_LITERAL_PATTERN, r"\1 `[REDACTED]`"),
+    ("credential", CREDENTIAL_TABLE_PATTERN, r"\1[REDACTED]"),
+    ("credential", CREDENTIAL_UNLOCK_PATTERN, r"\1[REDACTED]"),
+    ("credential", CREDENTIAL_FACTORY_PATTERN, "[REDACTED]"),
     ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"), "[NETWORK_ADDRESS]"),
