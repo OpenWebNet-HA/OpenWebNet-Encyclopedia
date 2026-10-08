@@ -78,6 +78,36 @@ class PrivacyPipelineTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "classify it sanitize"):
                 self.pipeline.prepare(manifest, root)
 
+    def test_concrete_markdown_password_is_removed_but_range_and_mask_survive(self):
+        source = "Published installer password `98765`; password `5..9`; password `#####`."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertEqual(["credential"], removed)
+        self.assertEqual("Published installer password `[REDACTED]`; password `5..9`; password `#####`.", text)
+        self.assertNotIn("98765", text)
+        self.assertEqual((text, []), self.pipeline.sanitize(text))
+
+    def test_concrete_markdown_password_fails_publishable_source_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "docs").mkdir()
+            (root / "docs/example.md").write_text("Published installer password `98765`.")
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
+            with self.assertRaisesRegex(ValueError, "classify it sanitize"):
+                self.pipeline.prepare(manifest, root)
+
+    def test_public_sheet_identifiers_survive_installed_context(self):
+        source = "Device-specific documentation ST-00002497-NL.pdf; reconciled Device source ST-00002498. Installed unit ID A1B2C3D4 remains private."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertIn("ST-00002497-NL.pdf", text)
+        self.assertIn("ST-00002498", text)
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_eight_hexadecimal_filename_is_not_a_sheet_identifier_exemption(self):
+        text, removed = self.pipeline.sanitize("Installed Device ID A1B2C3D4.pdf was captured.")
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
     def test_installed_device_id_forms_are_sanitized_before_ir(self):
         tick = chr(96)
         examples = (

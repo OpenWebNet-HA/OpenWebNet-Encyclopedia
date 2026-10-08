@@ -14,7 +14,7 @@ HEX8_PATTERN = re.compile(r"(?i)(?<![0-9a-f])[0-9a-f]{8}(?![0-9a-f])")
 MARKUP = frozenset(chr(96) + "*_[]()")
 PUBLIC_DOCUMENT_PATTERN = re.compile(
     r"(?i)\b(?:LE\d{5}[A-Z]{2}|RA\d{5}[A-Z]{2}(?:_[A-Z_0-9]+)?|"
-    r"ST[-_]\d{8}[-_](?:REV\d+[-_])?(?:EN|IT|FR|ES|DE)(?:\.pdf)?)\b"
+    r"ST[-_]\d{8}(?:[-_](?:REV\d+[-_])?(?:EN|IT|FR|ES|DE|NL)(?:\.pdf)?)?)\b"
 )
 PRIVATE_PATH_PATTERN = re.compile(
     r"(?i)(?:(?<![a-z0-9/:.])|(?<=file://))(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"
@@ -87,7 +87,12 @@ def installed_device_id_matches(text: str) -> list[SensitiveMatch]:
                                           text[token.start():token.end()], "[DEVICE_ID]"))
     return sorted(matches, key=lambda match: (match.start, match.end))
 
+# Concrete Markdown credential literals are sanitized even for published defaults.
+# Numeric ranges and masks are abstract domains, not credential values.
+CREDENTIAL_LITERAL_PATTERN = re.compile(r"(?i)\b(password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s+`([A-Za-z0-9]{4,})`")
+
 NETWORK_TRANSFORMS = (
+    ("credential", CREDENTIAL_LITERAL_PATTERN, r"\1 `[REDACTED]`"),
     ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"), "[NETWORK_ADDRESS]"),

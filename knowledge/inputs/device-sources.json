@@ -538,102 +538,102 @@
     {
       "device_id": "OWN-DEV-0108",
       "path": "devices/definitions/own-dev-0108-classe-300-v13e-v13m.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0109",
       "path": "devices/definitions/own-dev-0109-living-now-thermostat-with-display.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0110",
       "path": "devices/definitions/own-dev-0110-two-module-myhome-unified-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0111",
       "path": "devices/definitions/own-dev-0111-three-module-myhome-unified-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0112",
       "path": "devices/definitions/own-dev-0112-myhome-lighting-command-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0113",
       "path": "devices/definitions/own-dev-0113-myhome-shutter-command-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0114",
       "path": "devices/definitions/own-dev-0114-living-now-light-digital-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0115",
       "path": "devices/definitions/own-dev-0115-living-now-full-digital-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0116",
       "path": "devices/definitions/own-dev-0116-living-now-alexa-voice-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0117",
       "path": "devices/definitions/own-dev-0117-two-module-light-now-multifunction-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0118",
       "path": "devices/definitions/own-dev-0118-light-now-lighting-actuator-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0119",
       "path": "devices/definitions/own-dev-0119-three-module-light-now-multifunction-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0120",
       "path": "devices/definitions/own-dev-0120-three-input-electricity-meter.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0121",
       "path": "devices/definitions/own-dev-0121-load-management-central-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0122",
       "path": "devices/definitions/own-dev-0122-load-actuator-current-sensor.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0123",
       "path": "devices/definitions/own-dev-0123-load-management-automation-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0124",
       "path": "devices/definitions/own-dev-0124-flush-mounted-load-management-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0125",
       "path": "devices/definitions/own-dev-0125-scs-zigbee-gateway.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0126",
       "path": "devices/definitions/own-dev-0126-eight-output-scs-dali-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0127",
       "path": "devices/definitions/own-dev-0127-iryde-touch-phone.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0128",
