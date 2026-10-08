@@ -12,6 +12,43 @@ checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
 
 
+class DeviceIndexCoverage(unittest.TestCase):
+    def setUp(self):
+        self.db = sqlite3.connect(':memory:')
+        self.db.executescript('''
+            create table EN_DEVICE(id_device integer,id_item integer,code text);
+            insert into EN_DEVICE values(1,100,'HC/HS/HD1234');
+            insert into EN_DEVICE values(2,100,'003001');
+        ''')
+        self.items = {'100': {'state': 'reviewed', 'outcome': {'device_ids': ['OWN-DEV-0001']}}}
+
+    def tearDown(self):
+        self.db.close()
+
+    def check(self, references, did='OWN-DEV-0001'):
+        text = '## Devices\n\n| Brand / line | SKU / reference | Relationship | Device definition | Notes |\n| --- | --- | --- | --- | --- |\n'
+        for reference in references:
+            text += f'| Example | `{reference}` | Established identity | [{did}](example.md) | Synthetic fixture |\n'
+        return checker.index_coverage_errors(text, self.items, self.db)
+
+    def test_literal_catalogue_code_and_printed_spacing(self):
+        self.assertEqual(self.check(['HC/HS/HD1234', '0 030 01']), [])
+
+    def test_complete_finish_expansion(self):
+        self.assertEqual(self.check(['HC1234', 'HS1234', 'HD1234', '003001']), [])
+
+    def test_incomplete_finish_expansion_is_rejected(self):
+        self.assertTrue(any('HC/HS/HD1234' in error for error in self.check(['HC1234', 'HS1234', '003001'])))
+
+    def test_missing_commercial_record_is_rejected(self):
+        self.assertTrue(any('003001' in error for error in self.check(['HC/HS/HD1234'])))
+
+    def test_wrong_device_and_missing_definition_are_rejected(self):
+        errors = self.check(['HC/HS/HD1234', '003001'], did='OWN-DEV-0002')
+        self.assertTrue(any('accepted Device OWN-DEV-0001 is missing' in error for error in errors))
+        self.assertTrue(any('linked to another Device' in error for error in errors))
+
+
 class DeviceDefinitionSemantics(unittest.TestCase):
     def setUp(self):
         self.db = sqlite3.connect(':memory:')

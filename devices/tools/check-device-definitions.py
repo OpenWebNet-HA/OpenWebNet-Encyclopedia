@@ -130,6 +130,46 @@ def definition_device_ids(text: str) -> set[str]:
     }
 
 
+def index_coverage_errors(index_text: str, items: dict, con: sqlite3.Connection) -> list[str]:
+    """Require catalogue identities and accepted definitions in the public lookup.
+
+    A source finish code may be retained literally or expanded into all named
+    finishes. This checks discoverability, not hardware or runtime equivalence.
+    """
+    errors = []
+    references: dict[str, set[str]] = {}
+    for row in table_rows(section(index_text, "Devices")):
+        ids = re.findall(r"OWN-DEV-\d{4}", row.get("Device definition", ""))
+        values = re.findall(r"`([^`]+)`", row.get("SKU / reference", ""))
+        for did in ids:
+            references.setdefault(did, set()).update(value.replace(" ", "") for value in values)
+
+    outcomes = {}
+    for item_id, entry in items.items():
+        ids = (entry.get("outcome") or {}).get("device_ids") or []
+        if not ids:
+            continue
+        outcomes[int(item_id)] = ids
+        if entry.get("state") == "reviewed":
+            for did in ids:
+                if did not in references:
+                    errors.append(f"devices/index.md: accepted Device {did} is missing")
+
+    for item_id, code in con.execute("select id_item, code from EN_DEVICE order by id_device"):
+        if item_id not in outcomes:
+            continue
+        available = set().union(*(references.get(did, set()) for did in outcomes[item_id]))
+        normalized = code.replace(" ", "")
+        if normalized in available:
+            continue
+        grouped = re.fullmatch(r"([A-Z]+(?:/[A-Z]+)+)(\d.*)", normalized)
+        expanded = {prefix + grouped[2] for prefix in grouped[1].split("/")} if grouped else set()
+        if expanded and expanded <= available:
+            continue
+        errors.append(f"devices/index.md: catalogue reference {code!r} for item {item_id} is missing or linked to another Device")
+    return errors
+
+
 def catalogue_semantic_errors(text: str, con: sqlite3.Connection, fids: list[int]) -> list[str]:
     """Check the demonstrated semantic regressions, independently of token coverage."""
     errors = []
@@ -536,8 +576,10 @@ def main() -> int:
                         if token(row["id_condition"]) not in conditions_body:
                             errors.append(f"{prefix}: slot condition {row['id_condition']} is not accounted for")
 
+    index_text = (ROOT / "devices/index.md").read_text(encoding="utf-8")
+    errors.extend(index_coverage_errors(index_text, items, con))
     con.close()
-    for rel in ("devices/index.md", "devices/coverage.md"):
+    for rel in ("devices/index.md",):
         index_path = ROOT / rel
         index_text = index_path.read_text(encoding="utf-8")
         for lineno in blank_table_continuations(index_text):
@@ -552,18 +594,6 @@ def main() -> int:
         errors.append(f"devices/index.md: Devices section must contain exactly one continuous table; found {len(index_blocks)}")
     elif len(set(index_blocks[0][2])) != 1 or index_blocks[0][2][0] != 5:
         errors.append("devices/index.md: Devices table must have exactly 5 columns on every row")
-
-    coverage_text = (ROOT / "devices/coverage.md").read_text(encoding="utf-8")
-    coverage_body = section_body(coverage_text, "Device definitions")
-    coverage_blocks = markdown_table_blocks_with_columns(coverage_body)
-    if len(coverage_blocks) != 1:
-        errors.append(f"devices/coverage.md: Device definitions section must contain exactly one table followed only by prose; found {len(coverage_blocks)} table blocks")
-    elif len(set(coverage_blocks[0][2])) != 1 or coverage_blocks[0][2][0] != 10:
-        errors.append("devices/coverage.md: Device definitions table must have exactly 10 columns on every row")
-    lines = coverage_body.splitlines()
-    table_end = coverage_blocks[0][1] if coverage_blocks else 0
-    if table_end < len(lines) and table_end > 0 and lines[table_end].strip():
-        errors.append("devices/coverage.md: prose after Device definitions table must be separated by a blank line")
 
     if errors:
         return fail(errors)

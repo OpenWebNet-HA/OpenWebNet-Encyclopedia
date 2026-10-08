@@ -85,7 +85,7 @@ Remove unsupported columns and add hardware/microcontroller columns where releva
 
 ### Module / slot relationships
 
-| Slot | Object | Relationship | Description |
+| Module `slot` | Object | Relationship | Description |
 | --- | --- | --- | --- |
 | | | | |
 
@@ -95,7 +95,7 @@ Remove unsupported columns and add hardware/microcontroller columns where releva
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-Adapt columns when keys, conditions, candidates, or slot relationships matter. Remove empty subsections that do not apply.
+Adapt columns when keys, conditions, candidates, or slot relationships matter. A Module `slot` is a position, not an `EN_SLOTS.id_slot` database row identifier; use separately named columns when both are relevant. Remove empty subsections that do not apply.
 
 ## Configuration modes
 
@@ -139,7 +139,7 @@ Use whichever representation best preserves semantics. State Device/firmware res
 
 ### Conditions and conversions
 
-| Slot | Object | Condition | Conversion rule |
+| Module `slot` | Object | Condition | Conversion rule |
 | --- | --- | --- | --- |
 | | | | |
 

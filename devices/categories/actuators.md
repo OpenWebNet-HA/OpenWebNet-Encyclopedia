@@ -69,7 +69,7 @@ Table abbreviations: DALI = Digital Addressable Lighting Interface.
 | [OWN-DEV-0180](../definitions/own-dev-0180-f401-shutter-motor-actuator.md) | `F401` | F401 shutter motor actuator | One-motor shutter control with calibration/preset dependencies and revision/filter discrepancies |
 | [OWN-DEV-0181](../definitions/own-dev-0181-f414-127-resistive-inductive-dimmer.md) | `F414/127` | F414/127 resistive and inductive dimmer | Resistive / ferromagnetic dimming with explicitly differing English and Mexican ratings |
 | [OWN-DEV-0182](../definitions/own-dev-0182-f411-1-single-relay-din-actuator.md) | `F411/1` | F411/1 single-relay DIN actuator | Single relay including historical 150 W fluorescent rating; physical and conversion mode limits |
-| [OWN-DEV-0183](../definitions/own-dev-0183-f411-1fl-fluorescent-relay-actuator.md) | `F411/1FL` | F411/1FL fluorescent-lamp relay actuator | Conventional fluorescent switching; source-scoped 150..500 W and 3 m cable requirement |
+| [OWN-DEV-0183](../definitions/own-dev-0183-f411-1fl-fluorescent-relay-actuator.md) | `F411/1FL` | F411/1FL fluorescent-lamp relay actuator | Conventional fluorescent switching; source-scoped `150..500 W` and `3 m` cable requirement |
 | [OWN-DEV-0184](../definitions/own-dev-0184-f415-127-electronic-transformer-dimmer.md) | `F415/127` | F415/127 electronic-transformer dimmer | Electronic-transformer dimming; regional load, mains and current discrepancies retained |
 | [OWN-DEV-0202](../definitions/own-dev-0202-living-now-k4672m2l-light-actuator-control.md) | `K4672M2L` | Living Now K4672M2L light actuator and control | Two lighting relays and remote controls; neutral-dependent load matrix, Firmware restrictions and source conflicts |
 | [OWN-DEV-0203](../definitions/own-dev-0203-living-now-k4672m2s-shutter-actuator-control.md) | `K4672M2S` | Living Now K4672M2S shutter actuator and control | Shutter actuator/control; local and remote role separation, calibration, pulse PRESET and production boundaries |
@@ -78,9 +78,7 @@ Table abbreviations: DALI = Digital Addressable Lighting Interface.
 
 ## Evidence and applicability
 
-Each Device link leads to its canonical definition, including retained manufacturer sources, catalogue relationships, Firmware applicability and evidence limits. Commercial references are selected navigation labels; combined finish codes and variant lists are expanded there.
-
-Category membership summarizes documented or catalogue-derived roles. It does not establish the installed Configuration, simultaneous availability of alternative Objects, universal OpenWebNet command support or current availability of historical services. Missing product-specific documentation is an evidence gap, not an unresolved commercial identity.
+See [Category evidence and applicability](README.md#evidence-and-applicability) for reference selection, source scope and installed-state limits.
 
 ## Related material
 

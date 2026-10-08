@@ -70,9 +70,7 @@ These devices connect system components, provide input or display functions, or 
 
 ## Evidence and applicability
 
-Each Device link leads to its canonical definition, including retained manufacturer sources, catalogue relationships, Firmware applicability and evidence limits. Commercial references are selected navigation labels; combined finish codes and variant lists are expanded there.
-
-Category membership summarizes documented or catalogue-derived roles. It does not establish the installed Configuration, simultaneous availability of alternative Objects, universal OpenWebNet command support or current availability of historical services. Missing product-specific documentation is an evidence gap, not an unresolved commercial identity.
+See [Category evidence and applicability](README.md#evidence-and-applicability) for reference selection, source scope and installed-state limits.
 
 ## Related material
 

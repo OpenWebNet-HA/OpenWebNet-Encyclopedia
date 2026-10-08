@@ -9,7 +9,7 @@ Each Device definition receives a stable project-assigned Device ID, for example
 Use that ID plus a concise technical descriptor in the filename:
 
 ```text
-own-dev-0042-two-channel-din-lighting-actuator.md
+own-dev-0042-temperature-control-central-unit.md
 ```
 
 The stable ID is the canonical Encyclopedia identity. The descriptive suffix exists only to keep directory listings and repository searches understandable.
@@ -30,6 +30,6 @@ If two previously separate definitions are established to describe the same tech
 
 ## Page structure
 
-Device definitions must follow the [Device Definition Presentation Profile](../contributing/device-definition-presentation-profile.md), which specializes the Encyclopedia Style Guide for this page class and designates the mature Device exemplars.
+Device definitions must follow the [Device Definition Presentation Profile](../contributing/device-definition-presentation-profile.md), which specializes the Encyclopedia Style Guide for this page class. The written profile and template are normative; existing definitions are examples rather than authorities for other products.
 
 Start new definitions from the [Device Page Template](../contributing/device-page-template.md), which implements that profile.

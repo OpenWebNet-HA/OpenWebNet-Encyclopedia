@@ -1,6 +1,6 @@
 # Devices
 
-This section documents actual OpenWebNet-visible products and product variants.
+This section documents identifiable products and product variants relevant to OpenWebNet systems. Inclusion does not establish an OpenWebNet endpoint on every product.
 
 It complements the [Device Model](../device-model/), which defines the abstract **Physical Device → Firmware → Module → Object → Configuration** hierarchy. Pages here apply that model to identifiable real-world products and preserve the evidence needed to identify, understand, configure, and eventually represent those products in software.
 
@@ -9,13 +9,19 @@ It complements the [Device Model](../device-model/), which defines the abstract 
 | View | Purpose |
 | --- | --- |
 | [Complete Device Index](index.md) | Ctrl-F-friendly lookup of every known brand / SKU identity and synonym |
-| [Database Inventory](inventory/) | Mechanically extracted catalogue backlog: all commercial records and shared technical-item clusters |
-| [Work Queue](work-queue.md) | Curated review state and next actions for the 210 technical-item clusters |
-| [Device Coverage](coverage.md) | Documentation and research completeness across known Device definitions |
+| [Catalogue Evidence](inventory/) | Source scope and retained supplementary catalogue associations |
 | [Device Definitions](definitions/) | Canonical technical Device pages |
 | [Categories](categories/) | Many-to-many browsing by functional category |
 | [Device Definition Presentation Profile](contributing/device-definition-presentation-profile.md) | Normative presentation and information architecture for Device definitions |
 | [Device Page Template](contributing/device-page-template.md) | Starting structure implementing the Device presentation profile |
+
+## Reviewed coverage and evidence limits
+
+The MyHOME Suite `3.5.38` catalogue's 541 commercial records have been reconciled into 210 accepted Device definitions. The index also includes documented printed references and package identities beyond those catalogue records. Acceptance is scoped to the retained source revisions; it does not establish current service availability, installed Firmware or hardware corroboration for every variant.
+
+Each definition records its applicable documentation, source discrepancies and concrete evidence limits. Missing exact-product PDFs remain documentation gaps rather than unresolved catalogue identities. For example, the [F459T HVAC Driver Manager](definitions/own-dev-0209-f459t-hvac-driver-manager.md) retains catalogue configuration evidence while its exact supported HVAC systems and product commissioning remain undocumented. The [687408 colour touchscreen](definitions/own-dev-0192-687408-colour-touchscreen.md) and [Arteor audio and video web server](definitions/own-dev-0195-arteor-573992-audio-video-web-server.md) retain explicit product-manual or electrical evidence gaps. Category membership and reusable Objects do not establish an installed Configuration or runtime command support.
+
+The [Device acceptance ledger](work-queue.yaml) preserves the eight performed review checks and per-item findings. Detailed review history remains under [Device support-page review](../project/review/device-support-pages-2026-10-08.md#review-history). Future material evidence must follow the reopening rules in the presentation profile; the closed review run is not a claim that no further research is possible.
 
 ## Completion policy
 
@@ -59,14 +65,20 @@ Keep the section root intentionally small:
 devices/
 ├── README.md
 ├── index.md
-├── coverage.md
+├── work-queue.yaml
 ├── definitions/
 │   ├── README.md
-│   └── own-dev-0042-two-channel-din-lighting-actuator.md
+│   └── own-dev-0042-temperature-control-central-unit.md
 ├── categories/
 │   └── README.md
-└── contributing/
-    └── device-page-template.md
+├── contributing/
+│   ├── README.md
+│   ├── device-definition-presentation-profile.md
+│   └── device-page-template.md
+├── inventory/
+│   ├── README.md
+│   └── touch-screen-package-unicode-ranges.json
+└── tools/
 ```
 
 Device definitions use a stable Device ID plus a concise technical descriptor in the filename. The identifier provides durable identity; the descriptor keeps repository browsing human-readable.

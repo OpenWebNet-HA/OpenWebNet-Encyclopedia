@@ -25,4 +25,10 @@ The taxonomy may evolve as the documented Device set expands.
 
 Each category page introduces its scope and links to canonical Device definitions through compact reference tables. Gateways and Interfaces separates OpenWebNet gateways from other interfaces and states the evidence supporting each gateway role. The linked definitions remain authoritative for complete commercial identities, source revisions, Configuration and Firmware limits.
 
-Category membership is navigation, not an assertion that every listed capability is present on an installed Physical Device. Selected commercial references do not imply that all variants have identical hardware or documentation. All currently reviewed Device definitions appear in at least one category.
+## Evidence and applicability
+
+Each Device link leads to its canonical definition, including retained manufacturer sources, catalogue relationships, Firmware applicability and evidence limits. Commercial references are selected navigation labels; combined finish codes and variant lists are expanded there. Use the Complete Device Index for exhaustive lookup within the reviewed source scope.
+
+Category membership summarizes documented or catalogue-derived roles. It does not establish the installed Configuration, simultaneous availability of alternative Objects, universal OpenWebNet command support or current availability of historical services. Missing product-specific documentation is an evidence gap, not an unresolved commercial identity. Selected references do not imply identical hardware or documentation across variants.
+
+All 210 accepted Device definitions appear in at least one category. The gateway table distinguishes documented or observed gateway behavior from reusable catalogue gateway roles and retains the particular evidence limits at row level.

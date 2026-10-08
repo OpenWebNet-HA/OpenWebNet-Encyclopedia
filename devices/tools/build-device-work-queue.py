@@ -9,7 +9,6 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 DB = catalogue_path()
 QUEUE = ROOT / "devices" / "work-queue.yaml"
-DASH = ROOT / "devices" / "work-queue.md"
 
 STATES = ["unreviewed","triaged","research","definition-in-progress","review-ready","reviewed"]
 REVIEW_VALUES = ["pending","partial","complete","not-applicable"]
@@ -156,7 +155,7 @@ def dump(data):
     with QUEUE.open("w",encoding="utf-8") as f:
         yaml.safe_dump(data,f,sort_keys=False,allow_unicode=True,width=1000)
 
-def dashboard(data):
+def render_dashboard(data):
     cat=catalogue(); counts=Counter(e["state"] for e in data["items"].values())
     lines=[
       "# Device Work Queue","",
@@ -195,25 +194,31 @@ def dashboard(data):
       "`unreviewed -> triaged -> research -> definition-in-progress -> review-ready -> reviewed`","",
       "The state is the overall workflow position. The review dimensions explain what remains. A reviewed dossier may still record explicit evidence gaps; reviewed means all currently known sources have been processed and the remaining limits are documented, not that no future evidence can exist.",""
     ]
-    DASH.write_text("\n".join(lines),encoding="utf-8")
+    return "\n".join(lines)
 
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--sync",action="store_true")
     ap.add_argument("--check",action="store_true")
+    ap.add_argument("--output", type=Path,
+                    help="Optional research dashboard outside the public repository")
     args=ap.parse_args()
+    output = args.output.resolve() if args.output else None
+    if output is not None and output.is_relative_to(ROOT):
+        ap.error("Research dashboards must remain outside the public repository")
     data=load()
     if args.sync:
         data=sync(data); dump(data)
     validate(data)
-    if args.check:
-        expected=DASH.read_text(encoding="utf-8") if DASH.exists() else None
-        dashboard(data)
-        actual=DASH.read_text(encoding="utf-8")
-        if expected != actual:
-            raise SystemExit("dashboard out of date; regenerate")
-    else:
-        dashboard(data)
+    if output is not None:
+        actual = render_dashboard(data)
+        if args.check:
+            if not output.exists() or output.read_text(encoding="utf-8") != actual:
+                raise SystemExit("dashboard out of date; regenerate")
+        else:
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(actual, encoding="utf-8")
+    print(f"Device acceptance ledger validated ({len(data['items'])} items)")
 
 if __name__=="__main__":
     main()
