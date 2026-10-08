@@ -638,102 +638,102 @@
     {
       "device_id": "OWN-DEV-0128",
       "path": "devices/definitions/own-dev-0128-four-channel-dali-room-controller.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0129",
       "path": "devices/definitions/own-dev-0129-polyx-memory-display.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0130",
       "path": "devices/definitions/own-dev-0130-four-channel-1-10v-dimming-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0131",
       "path": "devices/definitions/own-dev-0131-mh200n-scenario-programmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0132",
       "path": "devices/definitions/own-dev-0132-burglar-alarm-pstn-communicator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0133",
       "path": "devices/definitions/own-dev-0133-four-output-fil-pilote-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0134",
       "path": "devices/definitions/own-dev-0134-energy-data-logger.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0135",
       "path": "devices/definitions/own-dev-0135-colour-touch-screen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0136",
       "path": "devices/definitions/own-dev-0136-infrared-air-conditioning-emitter.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0137",
       "path": "devices/definitions/own-dev-0137-three-module-soft-touch-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0138",
       "path": "devices/definitions/own-dev-0138-open-bacnet-gateway.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0139",
       "path": "devices/definitions/own-dev-0139-led-cfl-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0140",
       "path": "devices/definitions/own-dev-0140-normally-closed-relay-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0141",
       "path": "devices/definitions/own-dev-0141-two-channel-normally-closed-relay-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0142",
       "path": "devices/definitions/own-dev-0142-1-10v-ballast-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0143",
       "path": "devices/definitions/own-dev-0143-400va-electronic-transformer-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0144",
       "path": "devices/definitions/own-dev-0144-eight-output-temperature-control-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0145",
       "path": "devices/definitions/own-dev-0145-two-output-0-10v-valve-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0146",
       "path": "devices/definitions/own-dev-0146-relay-0-10v-fan-coil-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0147",
       "path": "devices/definitions/own-dev-0147-two-relay-temperature-control-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0148",

@@ -174,6 +174,7 @@ def compare_outputs(first: Path, second: Path, manifest: dict) -> None:
 
 
 def main() -> int:
+    from large_files import require_kb_hydrated
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
@@ -181,6 +182,7 @@ def main() -> int:
         print("Machine KB check failed: this check must run from its repository root", file=sys.stderr)
         return 1
     try:
+        require_kb_hydrated(ROOT)
         with tempfile.TemporaryDirectory(prefix="ownkb-check-") as temporary:
             base = Path(temporary)
             first, second = base / "first", base / "second"

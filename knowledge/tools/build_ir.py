@@ -35,6 +35,8 @@ def guide_findings(root: Path, canonical: list[str]) -> list[dict[str, object]]:
 
 
 def build(root: Path, manifest: Path, identities: Path, bootstrap: bool = False) -> dict:
+    from large_files import require_kb_hydrated
+    require_kb_hydrated(root)
     paths = canonical_paths(root)
     entries = read_manifest(manifest)
     declared = [r["source_path"] for r in entries if r["source_type"] == "canonical_documentation"]
