@@ -843,7 +843,7 @@
     {
       "device_id": "OWN-DEV-0169",
       "path": "devices/definitions/own-dev-0169-sfera-keypad-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0170",

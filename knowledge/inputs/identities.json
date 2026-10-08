@@ -6745,6 +6745,48 @@
       "virgin-objects-1": "ownkb:section:d000307:s000014"
     }
   },
+  "devices/definitions/own-dev-0169-sfera-keypad-module.md": {
+    "id": "ownkb:document:d000308",
+    "sections": {
+      "catalogue-labels-1": "ownkb:section:d000308:s000005",
+      "catalogue-system-and-bus-scope-1": "ownkb:section:d000308:s000010",
+      "commercial-identities-1": "ownkb:section:d000308:s000003",
+      "commissioning-software-prerequisites-1": "ownkb:section:d000308:s000017",
+      "conditions-filters-and-conversions-1": "ownkb:section:d000308:s000022",
+      "configuration-modes-1": "ownkb:section:d000308:s000015",
+      "device-specific-conversions-1": "ownkb:section:d000308:s000025",
+      "diagnostic-applicability-1": "ownkb:section:d000308:s000026",
+      "discovered-sources-outside-this-review-1": "ownkb:section:d000308:s000036",
+      "documentation-1": "ownkb:section:d000308:s000006",
+      "ean-13-commercial-identifiers-1": "ownkb:section:d000308:s000004",
+      "evidence-limits-and-open-work-1": "ownkb:section:d000308:s000035",
+      "firmware-and-hardware-1": "ownkb:section:d000308:s000011",
+      "firmware-scoped-configuration-1": "ownkb:section:d000308:s000018",
+      "functional-applicability-1": "ownkb:section:d000308:s000027",
+      "identity-1": "ownkb:section:d000308:s000009",
+      "manufacturer-configuration-and-operating-settings-1": "ownkb:section:d000308:s000016",
+      "manufacturer-credential-and-commissioning-settings-1": "ownkb:section:d000308:s000032",
+      "module-object-and-virgin-object-model-1": "ownkb:section:d000308:s000013",
+      "object-480-keypad-as-sfera-video-door-entry-module-1": "ownkb:section:d000308:s000020",
+      "object-481-keypad-as-sfera-access-control-module-1": "ownkb:section:d000308:s000021",
+      "object-configuration-surfaces-1": "ownkb:section:d000308:s000019",
+      "object-firmware-restrictions-1": "ownkb:section:d000308:s000024",
+      "observed-behavior-and-corroboration-1": "ownkb:section:d000308:s000030",
+      "parameter-and-package-associations-1": "ownkb:section:d000308:s000012",
+      "physical-and-electrical-characteristics-1": "ownkb:section:d000308:s000007",
+      "programming-1": "ownkb:section:d000308:s000031",
+      "publisher-export-attributes-1": "ownkb:section:d000308:s000008",
+      "related-functional-reference-families-1": "ownkb:section:d000308:s000029",
+      "reusable-object-system-associations-1": "ownkb:section:d000308:s000028",
+      "sfera-keypad-module-1": "ownkb:section:d000308:s000001",
+      "slot-conditions-1": "ownkb:section:d000308:s000023",
+      "source-reconciliation-1": "ownkb:section:d000308:s000033",
+      "source-specific-operating-boundaries-1": "ownkb:section:d000308:s000034",
+      "sources-1": "ownkb:section:d000308:s000037",
+      "summary-1": "ownkb:section:d000308:s000002",
+      "virgin-objects-1": "ownkb:section:d000308:s000014"
+    }
+  },
   "devices/definitions/own-dev-0200-living-now-k4652m2-multifunction-control.md": {
     "id": "ownkb:document:d000142",
     "sections": {
