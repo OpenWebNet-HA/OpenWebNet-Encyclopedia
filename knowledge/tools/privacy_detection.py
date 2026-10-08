@@ -14,7 +14,8 @@ HEX8_PATTERN = re.compile(r"(?i)(?<![0-9a-f])[0-9a-f]{8}(?![0-9a-f])")
 MARKUP = frozenset(chr(96) + "*_[]()")
 PUBLIC_DOCUMENT_PATTERN = re.compile(
     r"(?i)\b(?:LE\d{5}[A-Z]{2}|RA\d{5}[A-Z]{2}(?:_[A-Z_0-9]+)?|"
-    r"ST[-_]\d{8}(?:[-_](?:REV\d+[-_])?(?:EN|IT|FR|ES|DE|NL)(?:\.pdf)?)?)\b"
+    r"ST[-_]\d{8}(?:[-_](?:REV\d+[-_])?(?:EN|IT|FR|ES|DE|NL)(?:\.pdf)?"
+    r"|(?:EN|IT|FR|ES|DE|NL)(?:\.pdf)?)?)\b"
 )
 PRIVATE_PATH_PATTERN = re.compile(
     r"(?i)(?:(?<![a-z0-9/:.])|(?<=file://))(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"

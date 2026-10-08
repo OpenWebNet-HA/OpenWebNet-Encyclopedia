@@ -848,102 +848,102 @@
     {
       "device_id": "OWN-DEV-0170",
       "path": "devices/definitions/own-dev-0170-sfera-proximity-badge-reader.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0171",
       "path": "devices/definitions/own-dev-0171-sfera-inductive-loop-speech-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0172",
       "path": "devices/definitions/own-dev-0172-sfera-residents-display-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0173",
       "path": "devices/definitions/own-dev-0173-sfera-night-day-wide-angle-camera.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0174",
       "path": "devices/definitions/own-dev-0174-six-channel-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0175",
       "path": "devices/definitions/own-dev-0175-matix-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0176",
       "path": "devices/definitions/own-dev-0176-livinglight-air-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0177",
       "path": "devices/definitions/own-dev-0177-axolute-eteris-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0178",
       "path": "devices/definitions/own-dev-0178-mosaic-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0179",
       "path": "devices/definitions/own-dev-0179-celiane-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0180",
       "path": "devices/definitions/own-dev-0180-f401-shutter-motor-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0181",
       "path": "devices/definitions/own-dev-0181-f414-127-resistive-inductive-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0182",
       "path": "devices/definitions/own-dev-0182-f411-1-single-relay-din-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0183",
       "path": "devices/definitions/own-dev-0183-f411-1fl-fluorescent-relay-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0184",
       "path": "devices/definitions/own-dev-0184-f415-127-electronic-transformer-dimmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0185",
       "path": "devices/definitions/own-dev-0185-legrand-area-manager.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0186",
       "path": "devices/definitions/own-dev-0186-vigik-single-door-access-control-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0187",
       "path": "devices/definitions/own-dev-0187-vigik-portable-access-control-programmer.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0188",
       "path": "devices/definitions/own-dev-0188-vigik-gprs-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0189",
       "path": "devices/definitions/own-dev-0189-346891-two-wire-ip-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0190",

@@ -127,6 +127,33 @@ class PrivacyPipelineTests(unittest.TestCase):
         self.assertNotIn("A1B2C3D4", text)
         self.assertEqual(["device_id"], removed)
 
+    def test_public_sheet_with_adjacent_language_suffix_survives_device_context(self):
+        source = "IP devices use ST_00000937IT.pdf; installed Device ID A1B2C3D4 remains private."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertIn("ST_00000937IT.pdf", text)
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_public_sheet_suffix_is_narrow_and_does_not_exempt_other_identifiers(self):
+        for token in ("00000937IT.pdf", "ST_A1B2C3D4IT.pdf", "ST_00000937ZZ.pdf"):
+            with self.subTest(token=token):
+                text, removed = self.pipeline.sanitize("Installed Device ID " + token)
+                self.assertEqual(["device_id"], removed)
+                self.assertNotEqual("Installed Device ID " + token, text)
+
+    def test_public_sheet_number_still_sanitized_when_used_as_installed_identifier(self):
+        text, removed = self.pipeline.sanitize("Device ID 00000937; reference ST_00000937IT.pdf.")
+        self.assertEqual("Device ID [DEVICE_ID]; reference ST_00000937IT.pdf.", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_final_scanner_preserves_public_sheet_and_rejects_installed_id_in_json(self):
+        from validate_privacy import artifact_device_id_matches
+        public = "IP devices; ST_00000937IT.pdf is a public technical sheet."
+        self.assertEqual([], artifact_device_id_matches(json.dumps({"text": public}), ".jsonl"))
+        private = public + " Installed Device ID A1B2C3D4."
+        matches = artifact_device_id_matches(json.dumps({"text": private}), ".jsonl")
+        self.assertEqual(["A1B2C3D4"], [m.value for m in matches])
+
     def test_installed_device_id_forms_are_sanitized_before_ir(self):
         tick = chr(96)
         examples = (
